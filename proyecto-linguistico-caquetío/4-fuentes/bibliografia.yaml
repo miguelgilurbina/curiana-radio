@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 84
-  en_repo: 52
-  solo_citadas: 32
+  obras: 103
+  en_repo: 68
+  solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -59,6 +59,26 @@ obras:
   - Pedro Mártir
   - Décadas
   en_repo: true
+- id: angulo-molina
+  obra: (obra no identificada) — el compilador «AM» del glosario de Zavala Reyes 2015
+  autor: Angulo Molina (nombre de pila desconocido)
+  anio: s.f.
+  genero: glosario
+  paginas: — (no identificada)
+  acceso: '🔴 NO IDENTIFICADA, verificado el 2026-09-22. Zavala Reyes 2015 nombra a «Angulo Molina (AM)»
+    entre los nueve autores de su glosario (p. 64) y NO lo incluye en sus referencias bibliográficas (pp.
+    74-76): no hay título, año ni editorial. (Página según el encabezado del texto extraído; verificar
+    en imagen antes de citarla.) Tampoco lo trae la entrada de blog que copia el glosario (Folkloreando,
+    2015). Búsquedas web sin resultado: «Angulo Molina» con caquetío, Falcón, Coro, toponimia, glosario,
+    vocabulario, Lara, Yaracuy, Carora; y dos glosas suyas literales («Alcaboa… tierras solas», «Aburí…
+    río lleno de arena») sólo devuelven a Zavala. En el repo: 0 menciones de «Angulo Molina» en los `.txt`
+    de `fuentes_caquetios/` (sólo «Angulo» como apellido de conquistadores, obispos y un autor antillano
+    que cita Bachiller y Morales).'
+  aliases:
+  - AM
+  - Angulo Molina
+  - AM (Zavala)
+  en_repo: false
 - id: antczak-2015-las-aves
   obra: 'Las Aves: arqueología del archipiélago (navegación insular, botuto, tortugas)'
   autor: Antczak, Andrzej T. y Antczak, Maria Magdalena
@@ -152,6 +172,23 @@ obras:
   - Erythrina en Venezuela
   - avendano-castillo-2014-erythrina
   en_repo: true
+- id: aves-punteros-web-2026
+  obra: 'Punteros web de la campaña de aves: páginas de Wikipedia que remiten a Birds of the World, xeno-canto
+    y Ferrer-Paris et al. 2014'
+  autor: 'Wikipedia en inglés y en español (colaborativa); fuentes primarias citadas por ellas: Brewer
+    2020 y Burger 2020 (Birds of the World, Cornell Lab of Ornithology), xeno-canto XC220411, Ferrer-Paris
+    et al. 2014, Rojas-Suárez 2014'
+  anio: 2014-2026
+  publicacion: Wikipedia en «Vermilion cardinal», «Venezuelan troupial», «Laughing gull», «Grey plover»;
+    Wikipedia es «Amazona barbadensis»; consultadas el 2026-09-22
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea (Wikipedia). Las primarias: Birds of the World es de pago y NO se abrió; xeno-canto
+    XC220411 no se abrió; Ferrer-Paris et al. 2014, Biological Conservation 173: 133-143, no se abrió'
+  aliases:
+  - punteros web aves
+  - aves-punteros-web-2026
+  en_repo: false
 - id: bachiller-morales-1883
   obra: Cuba primitiva. Origen, lenguas, tradiciones e historia de los indios de las Antillas Mayores
     y las Lucayas
@@ -177,6 +214,35 @@ obras:
   - Obispo Ballesteros
   - Miguel Gerónimo de Ballesteros
   en_repo: false
+- id: barrios-garrido-2018
+  obra: 'Socio-economic drivers affecting marine turtle conservation status: causes and consequences'
+  autor: Barrios-Garrido, Héctor A.
+  anio: 2018
+  publicacion: Tesis doctoral, James Cook University (Townsville). doi:10.25903/5be0fecec8548
+  genero: etnografia
+  paginas: 328
+  acceso: 'Libre en ResearchOnline@JCU: https://researchonline.jcu.edu.au/56047/1/JCU_56047-barrios-garrido-2018-thesis.pdf
+    · leída en línea el 2026-09-22 (6.925.088 bytes; sha256 fdb3309d0583dd7476792456582a321f1bc5506b5a8a2f88f03a40bbb6a8933b).
+    NO se guardó en el repo: © 2018 del autor; se cita corto y se parafrasea'
+  aliases:
+  - Barrios-Garrido 2018
+  - tesis de Barrios-Garrido
+  en_repo: false
+- id: bisbal-1990
+  obra: Inventario preliminar de la fauna del Cerro Santa Ana (Península de Paraguaná, estado Falcón,
+    Venezuela)
+  autor: Bisbal, Francisco J.
+  anio: 1990
+  publicacion: 'Acta Científica Venezolana 41(3): 177-185. Leído POR INTERMEDIARIO: la lista de aves que
+    reproduce Wikipedia es, «Vertebrados terrestres del Cerro Santa Ana (Paraguaná)», consultada el 2026-09-22'
+  genero: inventario
+  paginas: 177-185 (no leídas)
+  acceso: 'El artículo original no se localizó en acceso abierto en esta sesión. Puntero: https://es.wikipedia.org/wiki/Vertebrados_terrestres_del_Cerro_Santa_Ana_(Paraguan%C3%A1)'
+  aliases:
+  - Bisbal 1990
+  - Inventario preliminar de la fauna del Cerro Santa Ana
+  - bisbal-1990
+  en_repo: false
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
   autor: Brett Martínez, Alí
@@ -196,7 +262,7 @@ obras:
   genero: linguistica-comparativa
   local:
   - fuentes_caquetios/Brinton_1871_texto.txt
-  - fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf (0 bytes)
+  - fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf
   paginas: —
   aliases:
   - Brinton 1871
@@ -205,7 +271,8 @@ obras:
   obra: Población y economía en el pasado indígena venezolano
   autor: Brito Figueroa, Federico
   anio: 1962
-  publicacion: Caracas, 1962
+  publicacion: Caracas, [Ediciones Historia], 1962. 48 pp., con mapa; 22 cm; bibliografía pp. 47-48 (catálogo
+    BNV, koha.bnv.gob.ve, biblionumber 677)
   genero: historiografia
   paginas: — (leída por Miguel en Scribd)
   aliases:
@@ -231,19 +298,22 @@ obras:
   anio: 2024
   publicacion: Geoarchaeology 39(6), pp. 609-627. doi:10.1002/gea.22017
   genero: arqueometria
+  local:
+  - fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.pdf
+  - fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.txt
   paginas: 19
-  acceso: '🔴 **Acceso abierto CC-BY 4.0** (confirmado en el registro Crossref: licencia `creativecommons.org/licenses/by/4.0/`
-    sobre la versión de registro), pero **Wiley devuelve 403 a la descarga automática**, y también a la
-    lectura del HTML. Verificado el 2026-09-22. URL del PDF: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/gea.22017
-    Lo único que se pudo leer es el **resumen**, vía la API de Crossref. Por la skill `minar-fuente` §3
-    eso NO es minar, y todo lo que esta nota diga de la obra queda degradado a `hipotetico` hasta que
-    alguien la abra de verdad (basta con un navegador).'
+  acceso: 'Acceso abierto CC-BY 4.0. Wiley está detrás de una verificación antibots (Cloudflare) y no
+    se forzó; la versión PUBLICADA se bajó el 2026-09-22 del repositorio de la KU Leuven (Lirias), por
+    su API DSpace: https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content
+    (registro: https://lirias.kuleuven.be/handle/20.500.12942/746055). Licencia CC-BY 4.0 en los metadatos
+    del archivo y en la p. 1 del artículo. El md5 coincide con el del repositorio; tamaño y sha256 los
+    imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.'
   aliases:
   - Casale et al. 2024
   - petrografía Aruba
-  en_repo: false
+  en_repo: true
 - id: castellanos-elegias
-  obra: Elegías de varones ilustres de Indias (partes I-II)
+  obra: Elegías de varones ilustres de Indias (partes I-III)
   autor: Castellanos, Juan de
   anio: 1857 [c. 1589]
   publicacion: 'Biblioteca de Autores Españoles (dir. Buenaventura Carlos Aribau), 2ª ed., Madrid, M.
@@ -253,8 +323,8 @@ obras:
   genero: cronica
   local:
   - fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt
-  paginas: '— (texto OCR: partes I y II enteras; la de Coro es la parte II, elegía I, desde la p. 185
-    de la ed. 1857)'
+  paginas: '— (texto OCR de las partes I, II y III de la BAE 1857, t. IV; la Introducción de la Parte
+    II empieza en la p. 181 y la Elegía I en la 186. Línea → página: 6-fusion/scripts/castellanos_pagina.py)'
   acceso: Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental
   aliases:
   - Castellanos
@@ -320,6 +390,20 @@ obras:
   - Historia del Almirante
   - Colón 1892
   en_repo: true
+- id: cook-forrest-2005
+  obra: Sounds Produced by Nesting Leatherback Sea Turtles (Dermochelys coriacea)
+  autor: Cook, Sarah L. y Forrest, T. G.
+  anio: 2005
+  publicacion: Herpetological Review, vol. 36, nº 4, pp. 387-390
+  genero: ciencia-natural
+  paginas: 4
+  acceso: 'Leído en línea el 2026-09-22 en la biblioteca de seaturtle.org: http://seaturtle.org/library/CookSL_2005_HerpetolRev.pdf.
+    NO se guardó en el repo: el PDF declara que se ofrece «subject to the copyright policy of the journal»;
+    se cita corto y se parafrasea'
+  aliases:
+  - Cook y Forrest 2005
+  - sonidos de la tortuga laúd
+  en_repo: false
 - id: dijkhoff-1997
   obra: 'Tanki Flip / Henriquez: an Early Urumaco Site in Aruba'
   autor: Dijkhoff, Raymundo A. C. F.
@@ -360,17 +444,35 @@ obras:
   - Idiomas y etnografía de la región oriental
   en_repo: true
 - id: federmann-1916
-  obra: Narración del primer viaje (ed. 1916)
-  autor: Federmann, Nicolás
+  obra: Narración del primer viaje de Federmann a Venezuela
+  autor: Federmann, Nicolás (trad. y notas de Pedro Manuel Arcaya)
   anio: 1916
+  publicacion: 'Caracas, Lit. y Tip. del Comercio, 1916. Traducción castellana de Arcaya hecha sobre la
+    FRANCESA de Ternaux-Compans (1837), no sobre el alemán — Arcaya lo declara (p. 20: «En el texto francés,
+    no sabemos si también en el original alemán…») —, con notas del traductor francés y de Arcaya. El
+    original es la *Indianische Historia* (Hagenau, Sigmund Bund, 1557)'
+  edicion_del_ejemplar: ejemplar de la University of North Carolina at Chapel Hill digitalizado por archive.org
+    (narraciondelprim00fede); + el original alemán de 1557 (ejemplar de la John Carter Brown Library,
+    indianischehisto00fede) y la reedición alemana de Klüpfel 1859 (nfedermannsundhs00kl)
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Federmann_1916_Narracion_Primer_Viaje_Arcaya.pdf
+  - fuentes_caquetios/Federmann_1916_Narracion_Primer_Viaje_Arcaya.txt
+  - fuentes_caquetios/Federmann_1557_Indianische_Historia.pdf
+  - fuentes_caquetios/Federmann_Kluepfel_1859_Reisen_texto_aleman.pdf
+  - fuentes_caquetios/Federmann_Kluepfel_1859_Reisen_texto_aleman.txt
+  paginas: 135 impresas (154 pp. de PDF; impresa = pdf − 10, medido en 100 páginas)
+  acceso: 'Dominio público. 1916: traductor Pedro Manuel Arcaya (1874-1958), fallecido hace más de 60
+    años (Venezuela: vida + 60) y publicada antes de 1931 (EE. UU.); archive.org no la restringe. 1557
+    y 1859: sin derechos. Descargado el 2026-09-22. 1916: 9.359.616 bytes, sha256 dbe79cd85abf437d58ad54e54b014924962605e696fa24ef3c86d7bfd1ad7ec5.
+    1557: 25.545.486 bytes, sha256 9bf5cfed6ce099de291714c7825baad34db82c263f6ad020705b2db7c423cde8. 1859:
+    12.004.554 bytes, sha256 f6c85158b4378308e4bdbdb1ab02787a514734bdc7167d4e04e7d751961d2cbe.'
   aliases:
   - Federmann
   - Federmann 1916
   - Narración de Federmann
   - Indianische Historia
-  en_repo: false
+  en_repo: true
 - id: fernandes-2020
   obra: A genetic history of the pre-contact Caribbean
   autor: Fernandes, Daniel M.; Sirak, Kendra A. et al.
@@ -393,6 +495,34 @@ obras:
   - Fernandes et al. 2021
   - genética Caribe precontacto
   en_repo: true
+- id: fishbase-sealifebase
+  obra: FishBase y SeaLifeBase — fichas de especie (descripción, biología, nombres comunes)
+  autor: Froese, R. y Pauly, D. (eds.) — FishBase; Palomares, M. L. D. y Pauly, D. (eds.) — SeaLifeBase
+  anio: '2026'
+  publicacion: www.fishbase.se y www.sealifebase.se, versiones en línea consultadas el 2026-09-22. Licencia
+    CC BY-NC 4.0
+  genero: datos
+  paginas: — (una ficha por especie; la URL va en cada entrada del YAML que la usa)
+  acceso: Libre en línea. Se leyeron las secciones «Morphology», «Biology» y la lista de nombres comunes
+    de 80 especies
+  aliases:
+  - FishBase
+  - SeaLifeBase
+  en_repo: false
+- id: fishsounds
+  obra: FishSounds — inventario mundial de los sonidos de los peces
+  autor: Looby, A.; Vela, S.; Cox, K.; Riera, A.; Davies, H. L.; Spriel, B.; Murchy, K.; Bravo, S.; Rountree,
+    R.; Juanes, F.; Reynolds, L. K. y Martin, C. W.
+  anio: '2026'
+  publicacion: FishSounds, http://www.fishsounds.net, versión 2026-Apr, consultada el 2026-09-22. Licencia
+    CC BY-NC 4.0
+  genero: datos
+  paginas: — (una página por especie; la URL va en cada entrada del YAML que la usa)
+  acceso: Libre en línea
+  aliases:
+  - FishSounds
+  - Looby et al. 2026
+  en_repo: false
 - id: gatschet-1885
   obra: The Aruba Language and the Papiamento Jargon
   autor: Gatschet, Albert S. (material recogido por Alphonse L. Pinart, 1882)
@@ -408,6 +538,44 @@ obras:
   - Gatschet 1885
   - Pinart 1882
   - The Aruba Language
+  en_repo: true
+- id: gbif-aves-paraguana-2026
+  obra: Registros de aves de la península de Paraguaná en GBIF (eBird, xeno-canto, iNaturalist y colecciones
+    de museo), consulta del 2026-09-22
+  autor: GBIF.org; Cornell Lab of Ornithology (EOD – eBird Observation Dataset); Xeno-canto Foundation;
+    iNaturalist; MNHN, MCZ, FMNH, UMMZ
+  anio: 1896-2026
+  publicacion: 'API abierta de GBIF, https://api.gbif.org/v1/occurrence/search?classKey=212&decimalLatitude=11.5,12.22&decimalLongitude=-70.32,-69.78
+    — cada dataset con su DOI y su licencia en 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (eBird:
+    doi 10.15468/aomfnb, CC BY 4.0; xeno-canto: doi 10.15468/qv0ksn, CC BY-NC 4.0; iNaturalist: doi 10.15468/ab3s5x,
+    CC BY-NC 4.0)'
+  genero: datos
+  local:
+  - 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (medición, no descarga)
+  paginas: — (datos)
+  acceso: Libre en línea, sin clave. Reproducible con python 6-fusion/scripts/medir_gbif_aves_paraguana.py
+  aliases:
+  - GBIF aves Paraguaná
+  - eBird Paraguaná
+  - gbif-aves-paraguana-2026
+  en_repo: true
+- id: gbif-paraguana-2026
+  obra: GBIF — ocurrencias de fauna de tierra en el polígono de la península de Paraguaná y el istmo de
+    los Médanos (consulta por API)
+  autor: GBIF.org (Global Biodiversity Information Facility) y los conjuntos de datos que publica
+  anio: 2026
+  publicacion: API pública https://api.gbif.org/v1/occurrence/search con facetas, consultada el 2026-09-22;
+    sin descarga (una descarga pide cuenta), así que sin DOI de descarga
+  genero: datos
+  local:
+  - 6-fusion/gbif_fauna_tierra_paraguana_2026-09-22.yaml (generado por 6-fusion/scripts/gbif_fauna_tierra_paraguana.py)
+  paginas: — (datos)
+  acceso: Libre; cada conjunto de datos tiene su licencia (CC0, CC BY o CC BY-NC), listada en el archivo
+    generado
+  aliases:
+  - GBIF Paraguaná
+  - GBIF 2026
+  - gbif-paraguana
   en_repo: true
 - id: gilij-1780-1783
   obra: Saggio di Storia Americana, vols. 1, 3 y 4
@@ -440,6 +608,23 @@ obras:
   - Goeje 1939
   - de Goeje 1939
   en_repo: true
+- id: gonzalez-batista-2002-fundacion
+  obra: 'Coro: el problema de la fundación'
+  autor: González Batista, Carlos
+  anio: 2002
+  publicacion: Boletín de la Academia Nacional de la Historia (Caracas), t. 85, n.º 338, 2002, pp. 147-172
+    (sección Miscelánea). Discurso por su designación como socio correspondiente en el Estado Falcón
+  genero: historiografia
+  local:
+  - 'fuentes_caquetios/GonzalezBatista_2002_Coro_problema_fundacion_BolANH338.pdf (+ .txt de pdftotext)
+    — ⚠️ COPIA LOCAL, NO EN GIT: obra con derechos y el repo es público; se vuelve a bajar de la URL de
+    origen'
+  paginas: 26
+  aliases:
+  - González Batista 2002
+  - 'Coro: el problema de la fundación'
+  - El problema de la fundación
+  en_repo: true
 - id: gonzalez-batista-nombre-de-coro
   obra: El nombre de Coro
   autor: González Batista, Carlos
@@ -450,6 +635,20 @@ obras:
   - González Batista
   - El nombre de Coro
   - González Batista El nombre de Coro
+  en_repo: false
+- id: granberry-vescelius-2004
+  obra: Languages of the Pre-Columbian Antilles
+  autor: Granberry, Julian y Vescelius, Gary S.
+  anio: 2004
+  publicacion: Tuscaloosa, The University of Alabama Press, 2004
+  genero: linguistica-comparativa
+  paginas: — (no disponible)
+  acceso: '🔴 En copyright (University of Alabama Press, 2004). No se buscó copia de descarga: el encargo
+    manda sólo anotarla. Dónde conseguirla: compra (la editorial la mantiene en catálogo, en papel y en
+    e-book) o préstamo interbibliotecario.'
+  aliases:
+  - Granberry y Vescelius 2004
+  - Granberry & Vescelius 2004
   en_repo: false
 - id: guerra-curvelo-palabrero
   obra: Pütchipü'üi, Palabrero Wayuu (cuadernillo, serie Patrimonio Cultural Inmaterial)
@@ -468,13 +667,28 @@ obras:
   obra: El Orinoco Ilustrado y Defendido
   autor: Gumilla, Joseph
   anio: 1791
+  publicacion: Historia natural, civil y geográfica de las naciones situadas en las riveras del río Orinoco,
+    nueva impresión, Barcelona, Imprenta de Carlos Gibert y Tutó, 1791, 2 tomos (1ª ed. con el título
+    *El Orinoco ilustrado y defendido*, Madrid, 1741; 2ª, 1745)
+  edicion_del_ejemplar: ejemplar del Getty Research Institute en archive.org (historianaturalc01gumi,
+    historianaturalc02gumi); hay otro de la Smithsonian/BHL (historianaturalc11791gumi, c21791gumi) más
+    pesado
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t1.pdf
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t1.txt
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t2.pdf
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t2.txt
+  paginas: 't. I: 396 pp. de PDF; t. II: 368. El desfase pdf→impresa NO es constante (t. I: − 24, − 32,
+    − 34 por tramos; t. II: − 8, − 10, − 12): leer el número impreso'
+  acceso: 'Dominio público (impreso en 1791; Gumilla †1750). Descargado el 2026-09-22. t. I: 21.893.451
+    bytes, sha256 0481059ecf1d81d0e4b88f33ac029e20084887dc63a6f37dd7325a5a350b4b6d. t. II: 19.819.370
+    bytes, sha256 248d1d54bf1af26f2a5e3a9b4b27f46c3f3d8f6eaa840cb4a86385c0120221b4.'
   aliases:
   - Gumilla 1791
   - Joseph Gumilla
   - El Orinoco Ilustrado
-  en_repo: false
+  en_repo: true
 - id: haviser-1990
   obra: Prehistoric Human Remains on Curaçao
   autor: Haviser, Jay B. Jr.
@@ -521,15 +735,19 @@ obras:
   anio: 2021
   publicacion: Journal of Archaeological Science 135, 105466. doi:10.1016/j.jas.2021.105466
   genero: arqueometria
-  paginas: 17
-  acceso: '🔴 **Acceso abierto CC-BY** según OpenAlex, pero **Elsevier devuelve 403 a la descarga automática**
-    (https://www.sciencedirect.com/science/article/pii/S0305440321001369/pdf). Verificado el 2026-09-22.
-    Con un navegador debería abrirse sin más: es abierto, no de pago. Copia también en el repositorio
-    institucional de Leiden (NEXUS 1492) y en ResearchGate.'
+  local:
+  - fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.pdf
+  - fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.txt
+  paginas: 15
+  acceso: 'Acceso abierto CC-BY 4.0. Elsevier devuelve 403 y Leiden y el CSIC bloquean con un sistema
+    de protección (no se forzó ninguno); la versión PUBLICADA se bajó el 2026-09-22 de la Research Collection
+    de la ETH Zürich, por su API DSpace: https://www.research-collection.ethz.ch/server/api/core/bitstreams/a2e8fcb5-1e72-4301-9aee-1676ff7053c0/content
+    (registro: https://doi.org/10.3929/ethz-b-000504053, dc.rights CC-BY 4.0). La ETH antepone una portada:
+    página impresa = página del PDF − 1. Tamaño y sha256 los imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.'
   aliases:
   - Knaf et al. 2021
   - jade Sr-Nd-Pb
-  en_repo: false
+  en_repo: true
 - id: laguna-guaranao-parque
   obra: Parque metropolitano Laguna de Guaranao — entrada enciclopédica
   autor: Wikipedia en español (colaborativa)
@@ -570,6 +788,24 @@ obras:
   - NBAE 13
   - Historiadores de Indias tomo I
   en_repo: true
+- id: libro-rojo-fauna-venezolana-2015
+  obra: Libro Rojo de la Fauna Venezolana, 4.ª edición — fichas en línea
+  autor: Rodríguez, J. P.; García-Rawlins, A.; Rojas-Suárez, F. (eds.); fichas de Colmenares, P.; Gutiérrez,
+    E. E., Ochoa-G., J. y Sánchez-Hernández, J.; Molina, C., Rojas-Runjaic, F. J. M. y Rivas, G. A.; y
+    otros
+  anio: 2015
+  publicacion: Provita y Fundación Empresas Polar, Caracas; fichas en www.especiesamenazadas.org
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea, © Provita. especiesamenazadas.org rechazó la conexión directa el 2026-09-22;
+    se leyeron las copias de archive.org (web.archive.org/web/2024id_/…). Obra con derechos: citas cortas
+    y paráfrasis'
+  aliases:
+  - Libro Rojo 2015
+  - Libro Rojo de la Fauna Venezolana
+  - especiesamenazadas.org
+  - Colmenares 2015
+  en_repo: false
 - id: maria-lionza-culto
   obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
     1972 · Barreto 1987/1989-90 · Clarac de Briceño 1970
@@ -811,6 +1047,24 @@ obras:
   - Nueva Segovia 1579
   - Arévalo y Ruiz de la Parra
   en_repo: false
+- id: obis-gbif-caja-marina
+  obra: OBIS y GBIF — registros de ocurrencia en la caja marina de Paraguaná (las dos aguas de la era
+    2)
+  autor: Ocean Biodiversity Information System (IOC-UNESCO) y Global Biodiversity Information Facility
+    (conjuntos de datos de múltiples publicadores)
+  anio: '2026'
+  publicacion: Consultados vía API (https://api.obis.org/v3/checklist y https://api.gbif.org/v1/occurrence/search)
+    el 2026-09-22. Licencias CC0 o CC-BY según el conjunto de datos
+  genero: datos
+  local:
+  - 6-fusion/fauna_mar_caja_obis_gbif_2026-09-22.yaml (generado por 6-fusion/scripts/caja_marina_obis_gbif.py)
+  paginas: '— (datos: tres cajas lon/lat, declaradas en el archivo)'
+  acceso: Libre. Se regenera con `python 6-fusion/scripts/caja_marina_obis_gbif.py` (usa red)
+  aliases:
+  - OBIS
+  - GBIF
+  - caja marina
+  en_repo: true
 - id: oliver-1989-apendice-a
   obra: 'Appendix A: Swadesh''s 100 Word List vocabularies for Arawakan Languages (en *The Archaeological,
     Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
@@ -957,13 +1211,19 @@ obras:
     ed. José Amador de los Ríos, cotejada con el códice original
   genero: cronica
   local:
+  - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf
   - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
-  paginas: '766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118'
-  acceso: 'El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La
-    imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde
-    el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización
-    lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar
-    todavía'
+  paginas: 'Cuerpo: impresas 1-614 (libros I-XIX); índice general 615-648. Copia íntegra (`_completo`):
+    776 pdf, desfase medido en `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.sondas_medidas.desfase_tomo_I_copia_integra`.
+    Copia truncada: 766 pdf, impresa = pdf − 118 (− 117 hacia la 473)'
+  acceso: 'Dos copias. La íntegra, del ítem de Internet Archive de la Biblioteca Ludwig von Mises (UFM),
+    la misma colección de los tomos II-IV, `_completo.pdf`, se descargó el 2026-09-22 (https://archive.org/details/historiageneral00fernguat,
+    dominio público — NOT IN COPYRIGHT; 55.449.811 B; sha1 e90c436186f5afd875a67078b11a6631875f09be =
+    el del ítem; sha256 02e88f2beffea91494f34e48e8bbe294a8d46626bf8c2d0383accf9c9be2369a; commiteada,
+    < 95 MB): pymupdf la abre sin reparar y renderiza TODAS las páginas. La vieja, de origen no documentado,
+    está truncada (sin imagen desde la impresa 155), tiene otra paginación de PDF y otra capa OCR (lee
+    `dalihao` donde la íntegra lee `datihao`); se conserva porque T1 cita su paginación. Los tomos II-IV:
+    ver [[oviedo-y-valdes-1852-1855]]'
   aliases:
   - Oviedo y Valdés
   - Oviedo 1851
@@ -1051,14 +1311,28 @@ obras:
   obra: Relaciones y cartas al Rey
   autor: Pérez de Tolosa, Juan (Licenciado)
   anio: 1546
+  publicacion: Publicadas por Cesáreo Fernández Duro en el apéndice documental de Oviedo y Baños, *Historia
+    de la conquista y población de la provincia de Venezuela*, t. II, Madrid, Luis Navarro, 1885 (Biblioteca
+    de los Americanistas), pp. 219-258 (cartas y relación) y 259 ss. (interrogatorio de la pesquisa contra
+    los Welser)
+  edicion_del_ejemplar: t. II de la ed. Fernández Duro 1885, ejemplar de Harvard digitalizado por Google
+    y subido a archive.org (historiadelacon00bagoog), en su versión con capa de texto de archive.org
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.pdf
+  - fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+  paginas: 219-258 impresas del t. II (el apéndice documental entero va de la p. 207 al final; impresa
+    = pdf − 11, medido en 154 páginas, con saltos en las láminas)
+  acceso: 'Dominio público: impreso en Madrid en 1885, editor Cesáreo Fernández Duro (1830-1908); archive.org
+    lo marca NOT_IN_COPYRIGHT. Descargado el 2026-09-22: 19.080.080 bytes, sha256 ed2f57985a064e17bcde0a8657917f0c59c74bcb64a5acbb1227e4b05b3137e6.
+    Hay un segundo ejemplar del mismo tomo (NYPL, historiadelacon00goog) por si una página sale mal en
+    éste. El t. I (sin las cartas) es historiadelacon01goog.'
   aliases:
   - Pérez de Tolosa
   - Pérez de Tolosa 1546
   - Juan Pérez de Tolosa
   - Ldo. Tolosa
-  en_repo: false
+  en_repo: true
 - id: perrin-1992-1995
   obra: El camino de los indios muertos (1992) · Los practicantes del sueño. El chamanismo wayuu (1995)
   autor: Perrin, Michel
@@ -1078,6 +1352,7 @@ obras:
   local:
   - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.pdf
   - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.txt
+  - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.ocr.txt
   paginas: 3ª ed.
   aliases:
   - Pichardo 1862
@@ -1129,13 +1404,59 @@ obras:
   obra: Historia de las Misiones de los Llanos de Casanare y los ríos Orinoco y Meta
   autor: Rivero, Juan
   anio: 1883
+  publicacion: Bogotá, Imprenta de Silvestre y Compañía, 1883 (ed. de Ramón Guerra Azuola; escrita hacia
+    1736)
+  edicion_del_ejemplar: ejemplar de la University of California digitalizado por Google, en archive.org
+    (historiadelasmi00rivegoog)
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.pdf
+  - fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.txt
+  paginas: '475 pp. de PDF; impresa ≈ pdf − 21 en el cuerpo (medido: el pasaje de la p. 21 cae en el pdf
+    42), con tramos a − 19: leer el número impreso'
+  acceso: 'Dominio público: impreso en Bogotá en 1883, autor Juan Rivero (1681-1736); archive.org lo marca
+    NOT_IN_COPYRIGHT. Descargado el 2026-09-22: 36.489.039 bytes, sha256 43bcb5c8dfda33b632e96599a4e575eef503b4b1bce231f434f509bfde92ef91.
+    Hay una reedición de 1956 en archive.org (historiadelasmis00rive) que NO se bajó: su aparato editorial
+    de 1956 puede tener derechos.'
   aliases:
   - Rivero 1883
   - Juan Rivero
   - Historia de las Misiones de los Llanos
-  en_repo: false
+  en_repo: true
+- id: romero-mayayo-agudo-1991
+  obra: Los cetáceos recientes de Venezuela
+  autor: Romero, Aldemaro; Mayayo, Ana y Agudo, Ignacio
+  anio: 1991
+  publicacion: Memoria de la Sociedad de Ciencias Naturales La Salle, tomo LI, nº 135-136, pp. 169-180
+  genero: ciencia-natural
+  local:
+  - 'NO está en el repo (2026-09-23): obra moderna sin licencia abierta; se descarga de la URL de `acceso`'
+  paginas: 12
+  acceso: 'Descarga gratuita, SIN licencia abierta declarada — publicaciones del decano, Southern Illinois
+    University Edwardsville: https://www.siue.edu/artsandsciences/pdf/deanspublications/260.LosCetaceosRecientesVenezuela.pdf
+    · descargado el 2026-09-22 (33.860.799 bytes; sha256 164edf177101a83adb8eec2a75fa6a1960ddc111da976f31d6230658963847c4)'
+  aliases:
+  - Romero et al. 1991
+  - Los cetáceos recientes de Venezuela
+  en_repo: true
+- id: rondon-medicci-2013
+  obra: Registro de las áreas de desove de las tortugas marinas en la Península de Paraguaná, estado Falcón
+  autor: Rondón-Médicci, María de los Ángeles
+  anio: 2013
+  publicacion: Ciencia (Facultad Experimental de Ciencias, Universidad del Zulia), vol. 21, nº 3, pp.
+    113-121
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Tortugas_desove_Paraguana_Ciencia_LUZ.pdf
+  paginas: 9
+  acceso: 'Libre, licencia CC BY-NC-SA 4.0 (la de la revista Ciencia, comprobada el 2026-09-23 en produccioncientificaluz.org/index.php/ciencia/about)
+    — revista de acceso abierto de LUZ: https://www.produccioncientificaluz.org/index.php/ciencia/article/download/18736/18720
+    · descargado el 2026-09-22 (1.168.460 bytes; sha256 4a4640f5da72df3bca10c354a8b1f7274d42af8cba8e25078e9228580904ecb2).
+    Texto: fuentes_caquetios/Tortugas_desove_Paraguana_Ciencia_LUZ.txt (pdftotext)'
+  aliases:
+  - Rondón-Médicci 2013
+  - tortugas de Paraguaná
+  en_repo: true
 - id: rouse-cruxent-1963
   obra: Venezuelan Archaeology
   autor: Rouse, Irving y Cruxent, José María
@@ -1168,17 +1489,76 @@ obras:
   - Schroeder et al. 2018
   - Taíno PNAS 2018
   en_repo: true
+- id: sherwood-gianni-zurita-2023
+  obra: 'Leveraging citizen science data to preliminarily infer the distribution and habitat associations
+    of the Venezuelan endemic Chromatopelma cyaneopubescens (Strand, 1907) (Araneae: Theraphosidae)'
+  autor: Sherwood, Danniella; Gianni-Zurita, Rafael
+  anio: 2023
+  publicacion: 'Anartia (Museo de Biología de La Universidad del Zulia) 36: 36-50; DOI 10.5281/zenodo.10429585'
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Sherwood_GianniZurita_2023_Chromatopelma_Anartia.pdf
+  - fuentes_caquetios/Sherwood_GianniZurita_2023_Chromatopelma_Anartia.txt
+  paginas: 15
+  acceso: Libre — CC BY 4.0 (Zenodo)
+  aliases:
+  - Sherwood y Gianni-Zurita 2023
+  - Sherwood & Gianni-Zurita 2023
+  - la tarántula azul en Anartia
+  en_repo: true
+- id: steward-1948-hsai-4
+  obra: 'Handbook of South American Indians, Vol. 4: The Circum-Caribbean Tribes'
+  autor: Steward, Julian H. (ed.); capítulos de Hernández de Alba, Kirchhoff, Kidder II, Rouse y otros
+  anio: 1948
+  publicacion: Smithsonian Institution, Bureau of American Ethnology, Bulletin 143, vol. 4, Washington,
+    U.S. Government Printing Office, 1948
+  edicion_del_ejemplar: ejemplar de Smithsonian Libraries en archive.org (bulletin14341948smit), volumen
+    entero
+  genero: etnologia
+  local:
+  - fuentes_caquetios/Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.pdf
+  - fuentes_caquetios/Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.txt
+  paginas: 'xx + 609; 770 pp. de PDF. El desfase pdf→impresa DERIVA por las láminas: + 124 en la arqueología
+    de Venezuela (pdf 537 = p. 413), + 136 en los capítulos de Venezuela y el comienzo de las Antillas
+    (pdf 605 = p. 469, pdf 631 = p. 495), + 152 y + 158 más adelante. Leer el número impreso'
+  acceso: 'Dominio público: publicación del gobierno federal de EE. UU. (Bureau of American Ethnology,
+    GPO 1948); archive.org la marca «Not in copyright». Los demás ítems «Handbook of South American Indians»
+    de archive.org son de préstamo controlado y NO se usaron. Descargado el 2026-09-22: 53.214.922 bytes,
+    sha256 ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto: `pdftotext -enc UTF-8`,
+    1,58 MB.'
+  aliases:
+  - HSAI 4
+  - Handbook vol. 4
+  - Circum-Caribbean Tribes
+  - Hernández de Alba 1948
+  - Kirchhoff 1948
+  en_repo: true
 - id: steward-1949
   obra: Handbook of South American Indians, Vol. V
   autor: Steward, Julian H. (ed.)
   anio: 1949
+  publicacion: 'Smithsonian Institution, Bureau of American Ethnology, Bulletin 143, vol. 5: *The Comparative
+    Ethnology of South American Indians*, Washington, U.S. Government Printing Office, 1949'
+  edicion_del_ejemplar: 'EXTRACTO del ejemplar de Smithsonian Libraries en archive.org (bulletin14351949smit):
+    portada e índice (pdf 5-14 del original), Partes 3 y 4 de Steward (pp. 655-772) y la bibliografía
+    del volumen (pp. 783-818); el volumen entero (70,6 MB) no se commiteó'
   genero: etnologia
-  paginas: 665-668 (la sección demográfica)
+  local:
+  - fuentes_caquetios/Steward_1949_HSAI_vol5_pp655-772_y_bibliografia.pdf
+  - fuentes_caquetios/Steward_1949_HSAI_vol5_pp655-772_y_bibliografia.txt
+  paginas: '655-668 (Parte 3, «The native population of South America»); 669-772 (Parte 4, «South American
+    cultures: an interpretative summary»). En el EXTRACTO: impresa = pdf + 644 para las pp. 655-772 (pdf
+    11-128) y = pdf + 654 para la bibliografía (pdf 129-164)'
+  acceso: 'Dominio público: publicación del gobierno federal de EE. UU. (Bureau of American Ethnology,
+    GPO 1949); archive.org la marca «Not in copyright». Descargado el 2026-09-22 el volumen entero (70.577.922
+    bytes, sha256 ae2d4e8249754c99cae33a7a846d299d5f5c50ca7035cb2eb36230e3377cde78) y extraídas con pymupdf
+    las páginas que usa el proyecto; el extracto pesa 12.330.426 bytes, sha256 bfbfce950e7abe912264c3276069b2767c552f510c93ef7c8dc5802fdb3aa0b7.
+    El resto del volumen se vuelve a bajar de la URL de arriba si hace falta.'
   aliases:
   - Steward 1949
   - Handbook of South American Indians
   - HSAI
-  en_repo: false
+  en_repo: true
 - id: urbina-jimenez-2007-2011
   obra: 'El Carrizal: cambios en el uso del espacio a través del tiempo (2007) · An Archaeological Survey
     for Coastal Falcón, Venezuela (2011)'
@@ -1187,7 +1567,9 @@ obras:
   genero: arqueologia
   local:
   - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf
+  - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.txt
   - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf
+  - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt
   acceso: 'El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal
     (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14.'
   aliases:
@@ -1239,6 +1621,22 @@ obras:
   - Historia de una Resistencia
   - Reinaldo Velasco
   en_repo: true
+- id: wikipedia-es-fauna-marina
+  obra: Wikipedia en español — artículos de especie de la fauna marina del Caribe sur
+  autor: Wikipedia en español (colaborativa)
+  anio: '2026'
+  publicacion: es.wikipedia.org, consultada vía la API de MediaWiki (extractos en texto plano) el 2026-09-22.
+    Licencia CC BY-SA 4.0
+  genero: datos
+  paginas: — (una página por especie; la URL va en cada entrada del YAML que la usa)
+  acceso: Libre en línea. Se leyeron los artículos en español de Chelonia mydas, Eretmochelys imbricata,
+    Caretta caretta, Dermochelys coriacea, Lepidochelys olivacea, Tursiops truncatus, Sotalia guianensis,
+    Balaenoptera edeni, Megaptera novaeangliae, Trichechus manatus y Haemulidae, y en inglés Haemulidae
+    y Alpheidae (para el sonido); los de invertebrados en español quedaron sin leer (la API cortó por
+    exceso de consultas)
+  aliases:
+  - Wikipedia es (fauna marina)
+  en_repo: false
 - id: zavala-reyes-2015
   obra: 'Palabras vivas de una lengua muerta: legado arawak-caquetío'
   autor: Zavala Reyes, Miguel Enrique
@@ -1271,4 +1669,36 @@ obras:
   - Zavala Reyes et al. 2018
   - Leal et al. 2018
   - Médanos de Coro 2018
+  en_repo: true
+- id: zayas-1931
+  obra: Lexicografía antillana. Diccionario de voces usadas por los aborígenes de las Antillas Mayores
+    y de algunas de las menores y consideraciones acerca de su significado y de su formación
+  autor: Zayas y Alfonso, Alfredo
+  anio: 1931
+  publicacion: '2ª ed., La Habana, Tipos-Molina y Cía., 1931, 2 tomos (1ª ed.: La Habana, El Siglo XX,
+    1914, un tomo)'
+  edicion_del_ejemplar: 'la 2ª ed. de 1931, ejemplar digitalizado por la University of Florida para la
+    Digital Library of the Caribbean (dLOC, AA00089831, vols. 00001 y 00002). NO es la de 1914 que cita
+    Goeje: la paginación no coincide'
+  genero: vocabulario
+  local:
+  - fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t1.txt
+  - fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t2.txt
+  paginas: 't. I: 284 pp. de PDF; t. II: el resto del diccionario (ver el .txt, un salto de página por
+    hoja)'
+  acceso: '🟡 Los PDF pesan 381.832.748 y 441.578.577 bytes (sha256 5b194ccf342cd0ce557aa02ac13f969b3bbea9e25756dacbc9c2404eeea10398
+    y 38eadc8888fc919f05fda17c6b8d68662c6b84370663299c4a7845128e77395f): pasan de 95 MB y NO se commitean;
+    en git van sólo los .txt de su capa de texto (`pdftotext -enc UTF-8`). Para ver una página en imagen,
+    se vuelven a bajar de las URL de `origen_digital`. DERECHOS: dLOC no certifica dominio público — su
+    nota dice que el ítem «may be protected by copyright» y lo sirve por uso legítimo para investigación.
+    La lectura de esta ficha: Zayas murió en 1934; en Cuba (país de origen) el plazo de vida + 50 venció
+    en 1984, antes del 1 de enero de 1996, así que la URAA no lo restauró en EE. UU. → dominio público
+    en origen y en EE. UU. Es una lectura, no un dictamen: se usa para investigación, con cita corta,
+    y la decisión de redistribuir más es de Miguel. La 1ª ed. (1914) está en HathiTrust como «pdus» (sólo
+    EE. UU.) y detrás de una verificación de navegador: no se bajó.'
+  aliases:
+  - Zayas 1914
+  - Zayas 1931
+  - Zayas y Alfonso
+  - Lexicografía antillana
   en_repo: true

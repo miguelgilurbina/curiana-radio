@@ -10,10 +10,10 @@ capa_texto: si
 descargado: 2026-09-22
 origen_digital: "Biblioteca Digital Curt Nimuendajú (etnolinguistica.org), espejo del PDF abierto de Persée"
 estado_minado: parcial
-cobertura: "el vocabulario TAÍNO entero (pp. 6-17) entrada a entrada, más «Mots taino d'origine espagnole» (p. 18) y el bloque del caribe insular del s. XV-XVI (pp. 18-19). Sin leer: la parte gramatical, el vocabulario kalinago y el suplemento arahuaco"
+cobertura: "el vocabulario TAÍNO entero (pp. 6-17; T10); las 23 voces kalinago del lexicón cruzadas con el vocabulario kalinago, cada una leída en imagen, y el «dialecte de Aruba» localizado (M5, 2026-09-23); vocabulario kalinago transcrito en pp. 31-34, 44-48, 68-69, 85-93 y 102. Sin transcribir: pp. 35-43, 49-67 (animales y plantas), 70-84, 94-101, 103-118"
 prioridad: alta
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 aliases: ["Goeje 1939", "de Goeje 1939"]
 ---
 
@@ -114,6 +114,41 @@ conceptos comparables y 0 parejas.
 
 [[brinton-1871]] · [[bachiller-morales-1883]] · la lista maestra en
 `6-fusion/taino_lista_maestra_2026-09-22.yaml`
+
+## Bitácora 2026-09-23 — tercera campaña, parcela M5 (el kalinago)
+
+**Qué se preguntó.** ¿Qué voces kalinago del lexicón (las 23 de la ESFERA DE
+CONTACTO) sostiene Goeje, y de dónde sale su «dialecte de Aruba»?
+
+**Cómo se lee el kalinago.** Con `pdftotext -layout`: sólo así la columna de
+siglas del margen (`h`/`f` = habla de hombres/mujeres; `K` kalina, `A` arawak,
+`am` arahuaco-maipure, `—` sin origen) queda en el renglón de su voz. Sin
+`-layout` la columna sale apilada y no se puede leer (por eso T10 no la usó).
+Las formas en cursiva se leen en imagen: el OCR las da en cirílico.
+
+**Qué ha dado** (todo en `6-fusion/kalinago_goeje_1939.yaml`):
+
+- **11 voces con apoyo, 4 parciales, 8 sin apoyo** (§cruce, cada una verificada
+  en imagen; las cuenta `consolidar_taino.py`). Las 8 sin apoyo (`kasabi`,
+  `yuka`, `hamaka`, `ikoa`, `kasaku`, `pira`, `baruwa`, `amourou`) son casi todas
+  la voz taína o lokono del concepto con la etiqueta kalinago.
+- El **registro**: `kati`, `marisi`, `hiñaru` son de mujeres; `barana` y
+  `Kalinago`, de hombres. `hiñaru` es 'mujer', no 'persona'. `barana` es, según
+  Goeje, de origen kalina/tupí; la arahuaca es la de mujeres, `balaua`.
+- **Sol y luna de mujeres: `kaši` y `kati`** (p. 54), la misma pareja que el
+  caquetío atestiguado (`kasi`, `kati`).
+- **El «dialecte de Aruba» = Pinart (1882) vía [[gatschet-1885]]**: `waidanga`
+  (no «luaidanga», que era el OCR) y `hanuhana` (Gatschet: `hanahana`), con la
+  comparación de Gatschet con el caribe `hage` reproducida. Y dos citas insulares
+  más que nadie había visto: `chogogo` (Bonaire, flamenco, sigla K) y `ayaka`
+  (papiamento de Curaçao). Van Buurt no tiene `waidanga` ni `hanahana`.
+- 859 entradas de vocabulario de cinco escribas de apoyo que el límite de uso
+  cortó a mitad; su cobertura, medida, en §tramos.
+
+**Qué NO ha dado.** La fuente del «dialecte de Bonaire». El vocabulario kalinago
+entero: faltan pp. 35-43, 49-67 (animales, plantas), 70-84, 94-101, 103-118.
+
+**Deuda nueva.** Breton 1665-66 directo, para las 8 sin apoyo.
 
 ---
 

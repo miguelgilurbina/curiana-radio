@@ -10,10 +10,10 @@ capa_texto: si
 descargado: 2026-09-22
 origen_digital: "Internet Archive, ejemplar de la University of North Carolina at Chapel Hill (cubaprimitivaori00bach)"
 estado_minado: parcial
-cobertura: "la sección 2ª (vocabulario, pp. 185-354) barrida objetivo por objetivo con 47 consultas; el apéndice (A) entero; el apéndice (C) en lo que toca al lexicón. Sin leer: su retraducción de Pané, la sección 3ª y la primera parte"
+cobertura: "sección 2ª barrida (47 consultas, T10); apéndice (A) y bloque eyeri ENTEROS leídos en imagen, y su retraducción de Pané (sección 2.1) cotejada con la de Wikisource (M5, 2026-09-23). Sin leer: la sección 3ª y la primera parte"
 prioridad: alta
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 aliases: ["Bachiller y Morales 1883", "Cuba primitiva"]
 ---
 
@@ -111,6 +111,29 @@ insular.
 
 [[goeje-1939]] · [[brinton-1871]] · [[pichardo-1862]] ·
 `6-fusion/taino_bachiller_morales_1883.yaml`
+
+## Bitácora 2026-09-23 — tercera campaña, parcela M5
+
+**Qué se preguntó.** La lista de Rafinesque con las islas y el bloque eyeri,
+enteros; y si su retraducción de Pané coincide con la del repo.
+
+**Qué ha dado.**
+
+- El apéndice (A) y el bloque «eyeri» **enteros, leídos en imagen** (pp.
+  388-389): `6-fusion/taino3_bachiller_morales_1883.yaml`. 🔴 El bloque tiene
+  **dos marcas**, `E.` (eyeri) y `B.` (sin definir; por el contenido,
+  Borinquen): `Piraguas` y `Ditaino` son **B.**, no eyeri, como leyó T10 en el
+  OCR. Correcciones menores: `Alco` (no Aleo), `cusi` (no casi), `Opoyun`, y
+  `hutia` es de Cuba y de las Lucayas.
+- El «eyeri», cruzado con [[goeje-1939]], es el **habla de mujeres del caribe
+  insular** (Eyeri, Inara, Kati, Kachi, Ubec, Nekera, Boyez…).
+- **Su Pané no es testigo de Pané**: `6-fusion/taino3_pane_bachiller_cotejo.yaml`
+  (script `cotejar_pane_bachiller.py`) — 12 de 49 formas restituidas, dos por
+  sustitución declarada con Pedro Mártir (`guanaba` por `guabasa`,
+  `Epilegaaanita` por `Opigielqaouiran`). Su método (p. 166) nombra a Oviedo,
+  Mártir, Rafinesque y Brasseur.
+
+**Qué NO.** La sección 3ª (cubano del XIX) y la primera parte siguen sin leer.
 
 ---
 

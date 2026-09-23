@@ -10,7 +10,7 @@ paginas: 48
 capa_texto: si
 acceso: "Libre — PDF completo: https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21)"
+cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21) + los nombres de fauna de tierra y la onomatopeya `dori` (FA1, 2026-09-22)"
 prioridad: alta
 minado: 2026-09-21
 tareas: [F1]
@@ -322,6 +322,34 @@ Ningún `-gua` sufijal glosado en ninguna de sus secciones.
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
+## Bitácora — la fauna de tierra (campaña FA1, 2026-09-22)
+
+Pregunta: ¿qué nombres papiamentos da van Buurt para la fauna de tierra, y
+alguno imita el sonido del animal? Releídas las entradas de §6 y §11 de
+animales de tierra: `dori, dori maco` (p. 30, nivel A) — el sapito lipón,
+*Pleurodema brachyops*, y **la única onomatopeya documentada de la parcela**:
+«dori is an onomatopea. Thus dori maco is the frog that calls "do-ri"», con la
+rima arubana anotada hacia 1883; `kododo` (p. 33) y `shilib` (p. 35), los
+corredores *Cnemidophorus*; `waltaca` (p. 37) y `totèki`, `kaku` (p. 46), los
+*Anolis*, y `totèki` emparentado con `tuqueque`; `yuana` (p. 39) y `washiri`
+«huevo de iguana» (p. 38); `ashibi` (p. 29), el insecto que pica; `wimpiri`
+(p. 38); `dalakochi` «grillo» y `djaka` «rata» (p. 45, nivel C). Números de
+página = el que abre cada página en el `.txt`. Lo usa
+`6-fusion/fauna_paraguana_tierra_2026-09-22.yaml`.
+
 ## Enlaces
 
 [[gatschet-1885]] · [[alvarado-1921]] · [[zavala-reyes-2015]] · [[oliver-1989-cap2]] · [[02_protocolo_habla_paraguanera]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Relectura de §3, §6, §8 y §11 buscando fauna marina (páginas impresas
+medidas por el pie de imprenta del PDF). Dio: el comercio de marisco vivo con
+las islas (p. 17); `kiwa` = *Cittarium pica* y cigua en Cuba (p. 32); `kasha
+kutu`, la cuna tigre (p. 32); `macabí`/`makambí` y el 5,2 % de Tanki Flip
+(p. 33); `palúli` (pp. 34-35); `sawáwa` «un tren de olas» (p. 35);
+`waranawa`, la lisa salada de Paraguaná, `warashi` y `wampanaria`, el abanico
+de mar que servía de cedazo (p. 37); Balashi con la raíz *bala* «mar» (p. 41);
+el 13,7 % de *warashi* en Tanki Flip (p. 43); `guengu`, `karawau`, `djakarou`
+en §11 (p. 45); `bushi` también para los erizos (p. 29). Todo en
+`6-fusion/fauna_paraguana_mar_2026-09-22.yaml`.

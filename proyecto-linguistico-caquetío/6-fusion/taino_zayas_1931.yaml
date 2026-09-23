@@ -1,0 +1,1212 @@
+meta:
+  obra_id: zayas-1931
+  autor: Zayas y Alfonso, Alfredo
+  titulo: Lexicografía antillana (2ª ed., La Habana, 1931, 2 tomos)
+  campana: tercera campaña de minería — parcela Zayas (encargo 6-fusion/issues-pendientes/encargo-mineria-zayas.md)
+  medido: '2026-09-23'
+  estado: >-
+    PROPUESTA (regla 5), PARCIAL. Prioridad baja y poco margen de uso: se leyeron
+    las cuatro voces que Goeje apoya en Zayas, las 52 claves taínas del lexicón y
+    las voces de la lista maestra sin cronista (clases ii y iii) que Zayas trae
+    como cabeza de entrada. NO se barrió el diccionario entero (≈ 3.000
+    cabezas: la mayoría topónimos y caciques de los repartimientos de 1514).
+  fuente: >-
+    fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t1.txt y _t2.txt (capa
+    de texto del PDF de dLOC; un salto de página por hoja). Página impresa = página
+    del PDF − 27 en el t. I y − 7 en el t. II (comprobado en seis puntos de cada
+    tomo). Las imágenes por página se sirven sueltas en
+    https://ufdcimages.uflib.ufl.edu/AA/00/08/98/31/0000N/NNNNN.jpg, con
+    NNNNN = página del PDF + 10 en el t. I (medido: JPG 66 = p. 29, JPG 76 = p. 39,
+    JPG 74 = p. 37) — no hace falta bajar los PDF de 381 y 441 MB para ver una página.
+  ocr: >-
+    La capa de dLOC es OCR y confunde c/e (`blaneo`, `yuea`), ñ/fi (`afio`), y se
+    come glosas enteras en cursiva: `Anaquí.— i` en la capa es «Enemigo, en el
+    dialecto Eyerí» en la imagen. Las citas de `texto` están NORMALIZADAS a ojo en
+    esos errores evidentes; sólo las marcadas `verificado_en_imagen: sí` se
+    cotejaron con la página. Verificar en imagen antes de citar una forma como exacta.
+  derechos: >-
+    Zayas murió en 1934: dominio público en origen y en EE. UU. según la lectura de
+    la ficha (4-fuentes/zayas-1931.md), que no es un dictamen. Aquí sólo citas cortas.
+  edicion: >-
+    2ª ed. (1931). Las páginas que cita Goeje son de la 1ª (1914) y NO coinciden:
+    anaiboa 1914 p. 32 → 1931 t. I p. 37; anaki p. 33 → t. I p. 39.
+  la_regla_de_esta_transcripcion: >-
+    Zayas es INTERMEDIARIO: no oyó taíno. En `fuente_que_declara_el_autor` va sólo
+    el cronista o documento del XV-XVI que Zayas cita PARA LA VOZ (que la trae en el
+    pasaje). Si lo cita sólo para la cosa (describe el animal o el objeto sin
+    nombrarlo), el nombre va en `cronistas_citados_para_la_cosa` y NO en
+    `fuente_que_declara_el_autor`, porque el consolidador cuenta cronistas por regex
+    sobre ese campo. Toda etimología, traducción morfémica u opinión de origen es de
+    Zayas (o del autor que él cite) y se marca `conjetura-del-autor`.
+  clases_de_apoyo:
+    documentada: Zayas cita un cronista del XV-XVI o un documento de época para la voz
+    secundaria: sólo cita autoridades del XVII-XX (Pichardo, Bachiller, Pezuela, Brasseur…)
+    afirmada-sin-fuente: la da por indígena y no dice de dónde
+    conjetura-del-autor: sin cronista, y Zayas (o quien cita) analiza, traduce o supone → clase iii
+    sacada-por-el-autor: Zayas la manda a otra lengua o dialecto
+  campos_propios:
+    agrupa_con: >-
+      la forma con que la lista maestra YA tiene esta voz, cuando el lema del
+      consolidador no las junta (j/h/x, ç/z/s): el lector debe unirla a
+      `forma_fuente` con ` ~ ` para que caigan en el mismo grupo.
+    efecto_en_la_lista: >-
+      qué le haría esta entrada a la voz en `taino_lista_maestra_2026-09-22.yaml` si
+      se engancha: `sube-de-ii-a-i`, `añade-cronista`, `no-cambia` (mismo cronista:
+      copiar no es atestiguar), `sacada`, `conflicto`.
+    lectura: >-
+      nota del minador. NO debe pasarse al consolidador como `aviso`: nombra
+      cronistas para descartarlos y el regex los contaría.
+
+resumen:
+  voces: 69
+  por_bloque: {voces_de_goeje: 4, voces: 39, voces_sin_cronista_en_la_lista: 26, fauna: 12}
+  por_tipo_de_apoyo:
+    afirmada-sin-fuente: 10
+    conjetura-del-autor: 3
+    documentada: 50
+    sacada-por-el-autor: 3
+    secundaria: 3
+  por_efecto_en_la_lista:
+    añade-cronista: 17
+    conflicto: 2
+    no-cambia: 26
+    sacada: 2
+    sin-voz-en-la-lista: 1
+    sube-de-ii-a-i: 19
+    sube-de-iii-a-i: 2
+  verificado_en_imagen: ['Anaquí, t. I p. 39', 'Anaiboa, t. I p. 37']
+  medido_con: 'yaml.safe_load sobre este mismo archivo (los tres bloques de voces); cada entrada, leida a mano'
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 1. LAS CUATRO VOCES QUE GOEJE 1939 APOYA EN ZAYAS (1914) CON PÁGINA
+# ═══════════════════════════════════════════════════════════════════════════
+voces_de_goeje:
+- forma_fuente: Anaquí
+  glosa_fuente: Enemigo, en el dialecto Eyerí de la isla de Boriquén.
+  texto: 'Anaquí.—Enemigo, en el dialecto Eyerí de la isla de Boriquén.'
+  pagina_impresa: 't. I, p. 39'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_nombrados: null
+  otras_autoridades: null
+  tipo_de_apoyo: sacada-por-el-autor
+  sacada_del_taino: 'eyerí (Boriquén), según Zayas — la lista eyerí es la de Rafinesque vía Rochefort'
+  variedad_o_isla: [Boriquén]
+  campo: guerra
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: anaki (ii-solo-secundaria, sólo Goeje)
+  efecto_en_la_lista: sacada
+  verificado_en_imagen: sí
+  lectura: >-
+    La capa OCR dice «Anaqui. i» y se come la glosa: la imagen (JPG 76) la da
+    entera. Zayas no cita a nadie y la asigna al EYERÍ, que es la etiqueta de la
+    lista de Rafinesque (caribe insular de Borinquen, según el bloque eyerí de
+    Bachiller que ya está en la lista maestra). Goeje la pone en su taíno apoyado
+    en Zayas sin decir «eyerí». La voz no gana cronista: pasa a sacada del taíno.
+- forma_fuente: Anaiboa
+  glosa_fuente: La flor de la yuca.
+  texto: >-
+    «De la flor de esta raíz, que se llama anaiboa, se hace un potaje blanco, que es
+    muy sabroso» — Relación de la isla Española enviada al Rey D. Felipe II por el
+    Licenciado Echagoían, Colección de Documentos Inéditos de Indias; «parece ser
+    esta Relación del año 1561».
+  pagina_impresa: 't. I, p. 37'
+  fuente_que_declara_el_autor: >-
+    documento de época: Relación del Licenciado Echagoían (c. 1561), en la
+    Colección de Documentos Inéditos de Indias
+  cronistas_nombrados: [Documento de época]
+  otras_autoridades: null
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: alimentacion
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: anaiboa (ii-solo-secundaria, sólo Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+  verificado_en_imagen: sí
+  lectura: >-
+    ✅ Verificado en imagen (JPG 74). La única de las cuatro con fuente del XVI:
+    un documento administrativo de 1561, no un cronista. Zayas añade que en Cuba
+    «actualmente se dice naiboa», aplicado al almidón de la yuca: eso es dato de
+    1931 (moderno), no del XVI. Goeje glosa «fleur, amidon de manioc» juntando las
+    dos cosas.
+- forma_fuente: Aura
+  glosa_fuente: 'Ave de rapiña, y especie única de la familia de los buitres, en las Antillas. Cathartes Aura Lin.'
+  texto: 'D''Orbigny opina que esta voz es originaria de la Guayana. En México se llama esta ave zopilote.'
+  pagina_impresa: 't. I, p. 60'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_nombrados: null
+  otras_autoridades: [D'Orbigny]
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: no-declarada
+  campo: fauna
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: 'anua (ii-solo-secundaria, sólo Goeje; `ocr: dudoso` en su transcripción)'
+  efecto_en_la_lista: sin-voz-en-la-lista
+  verificado_en_imagen: no
+  lectura: >-
+    🔴 `anua` NO EXISTE en Zayas 1931: ninguna cabeza ni mención (medido con
+    variantes `anua`, `anúa`, `annua`, y en el cuerpo). La única voz de Zayas para
+    el buitre es `Aura`, cuya posición alfabética en 1931 (t. I p. 60, entre Aumatex
+    y Ava) cae donde Goeje cita la p. 52 de 1914 (las otras dos páginas de Goeje
+    llevan el mismo desfase de 5-6 pp. entre ediciones). Y Goeje cita además
+    Friederici p. 6, que es un diccionario de americanismos donde `aura` está. La
+    lectura más probable: `anua` es `aura` mal leída (por Goeje o por el OCR de la
+    transcripción de Goeje, que ya la marcaba `ocr: dudoso`). Ver el pasaje de Goeje
+    p. 14 en imagen antes de corregir nada. Zayas no da cronista para `aura` y
+    recoge que D'Orbigny la cree de la Guayana.
+- forma_fuente: Manaya
+  glosa_fuente: Cuchilla de piedra.
+  texto: >-
+    «Según las tradiciones haitianas, con una manaya le fué abierta a Caracaracoel
+    la espalda hinchada, y le fué extraída una tortuga hembra.»
+  pagina_impresa: 't. II, p. 180'
+  fuente_que_declara_el_autor: '«las tradiciones haitianas» (el relato de Caracaracol), sin nombrar autor'
+  cronistas_nombrados: null
+  cronistas_citados_para_la_cosa: 'Pedro Mártir: que los indios cortan con piedras de río durísimas (no da la voz)'
+  otras_autoridades: null
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: [Haití]
+  campo: objeto
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: manaya (clase i por Pané, vía Goeje)
+  efecto_en_la_lista: no-cambia
+  verificado_en_imagen: no
+  lectura: >-
+    El relato de Caracaracol es el de Pané, pero Zayas no lo nombra aquí: no añade
+    atestación, y la sospecha de Goeje (¿voz italiana colada por la traducción de
+    Ulloa?) queda como estaba. En `Manaya-Tiunel` (misma página) Zayas repite
+    «manaya era la cuchilla de piedra o concha».
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 2. LAS CLAVES TAÍNAS DEL LEXICÓN (las 52 de la lista maestra) QUE ZAYAS TRAE
+# ═══════════════════════════════════════════════════════════════════════════
+voces:
+- forma_fuente: Haba
+  glosa_fuente: Equivale a Jaba.
+  texto: 'Casas da el verdadero significado: «cestillo hecho de palma, que en su lengua llamaban haba».'
+  pagina_impresa: 't. II, p. 86'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: objeto
+  en_el_lexicon: abba
+  efecto_en_la_lista: no-cambia
+  lectura: >-
+    Trampa del editor, medida por el propio Zayas: el editor de la primera
+    Colección de Documentos Inéditos anotó «una haba de oro» como imitación en oro
+    de un frijol. Zayas lo corrige con Las Casas. La nota del editor NO es dato.
+- forma_fuente: Ají
+  glosa_fuente: Planta de dos o tres pies de altura, y fruto muy usado como manjar, y sobre todo como condimento.
+  texto: '«La pimienta montés de aquellas tierras, que llaman axi.» Vol. I, p. 229 (Las Casas).'
+  pagina_impresa: 't. I, p. 27'
+  fuente_que_declara_el_autor: 'Las Casas, Historia de las Indias, vol. I p. 229 y vol. V p. 305'
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: flora
+  en_el_lexicon: aji
+  efecto_en_la_lista: no-cambia
+  lectura: 'La cabeza sale sin raya en la capa («Aji. Planta…»): el parser de cabezas no la ve; se leyó a mano.'
+- forma_fuente: Areito
+  glosa_fuente: Baile y canto usados frecuentemente por los indios.
+  pagina_impresa: 't. I, pp. 47-52'
+  fuente_que_declara_el_autor: 'Oviedo; Las Casas; Gómara'
+  cronistas_nombrados: [Oviedo, Las Casas, Gómara]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: creencia
+  en_el_lexicon: areito
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    Entrada de seis páginas; se leyeron las menciones, no el ensayo entero. Los
+    tres cronistas se citan en el hilo del areíto; que cada uno escriba la VOZ en
+    el pasaje citado no se comprobó uno por uno (la lista ya tenía Oviedo y
+    Herrera). Si Miguel quiere contarlos, verificar Las Casas y Gómara.
+- forma_fuente: Batata
+  glosa_fuente: Voz más usada en España que en América para designar unas variedades del tubérculo llamado camote en México y boniato en Cuba.
+  texto: '«Cavan también de la tierra —dice— unas raíces, que nacen naturalmente, y los indígenas llaman batatas.» (Pedro Mártir)'
+  pagina_impresa: 't. I, p. 90'
+  fuente_que_declara_el_autor: Pedro Mártir
+  cronistas_nombrados: [Pedro Mártir]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: flora
+  en_el_lexicon: batata
+  efecto_en_la_lista: añade-cronista
+  lectura: La lista tenía sólo Oviedo; Mártir es un segundo cronista independiente.
+- forma_fuente: Batey
+  glosa_fuente: Lugar llano y limpio, a modo de plaza, que en los pueblos de indios de las Antillas se destinaba a los areitos y al juego de la pelota.
+  pagina_impresa: 't. I, pp. 91-92'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_nombrados: null
+  cronistas_citados_para_la_cosa: 'Las Casas, para el juego de pelota (el pasaje citado no trae la voz)'
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: no-declarada
+  campo: sociedad
+  en_el_lexicon: batey
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Behique
+  glosa_fuente: Sacerdote, hechicero y médico, entre los indios.
+  texto: >-
+    Formas que da Zayas: bohique, boitio, bohuti, bohito, buhu, buhito, buhu-ituhu.
+    Toma de Las Casas lo de Cuba y de Pané lo de Haití («a los que llama bohuti y
+    buhu-ituhu»).
+  pagina_impresa: 't. I, pp. 99-101'
+  fuente_que_declara_el_autor: 'Las Casas (Cuba); Pané (Haití: bohuti, buhu-ituhu)'
+  cronistas_nombrados: [Las Casas, Pané]
+  cronistas_citados_para_la_cosa: 'Pedro Mártir y Herrera, para prácticas del curandero, sin la voz'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba, Haití]
+  campo: creencia
+  en_el_lexicon: bejique
+  efecto_en_la_lista: no-cambia
+  lectura: '`behique` es la forma que Zayas «considera preferible»: es SU elección de lema, no la del cronista.'
+- forma_fuente: Bija
+  glosa_fuente: Arbusto, llamado en México achiote, de flores hermosas … semillas rojas, que tiñen de este color.
+  pagina_impresa: 't. I, pp. 107-108'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_citados_para_la_cosa: 'Las Casas describe el arbusto («unos arbolitos tan altos como estado y medio…»); la voz no se vio en el pasaje'
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: no-declarada
+  campo: flora
+  en_el_lexicon: bixa
+  efecto_en_la_lista: no-cambia
+  lectura: '`bixa` ya está aclarada esta semana (Apologética p. 177). `Bixa.—Véase Bija` (t. I p. 111).'
+- forma_fuente: Bohio
+  glosa_fuente: Era el nombre genérico y común de la casa destinada a habitación.
+  texto: '«por todas estas islas, como sea toda o cuasi toda una lengua, llamaban bohío a las casas» (Las Casas)'
+  pagina_impresa: 't. I, pp. 112-113'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  cronistas_citados_para_la_cosa: 'el Almirante (vía Las Casas), para la forma de las casas'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: 'las islas («toda o cuasi toda una lengua»)'
+  campo: vivienda
+  en_el_lexicon: bohio · bohío
+  efecto_en_la_lista: no-cambia
+  lectura: >-
+    Zayas abre diciendo que la voz se usaba también en Centroamérica y partes de
+    Suramérica: es afirmación suya, sin cita. Para la esfera interesa, pero no es dato.
+- forma_fuente: Cacique
+  glosa_fuente: El Jefe superior, a modo de Rey o soberano, de una colectividad, residente en determinada comarca.
+  texto: >-
+    «rey llamaban en la lengua desta isla (Tortuga) cacique» —Casas. «Llaman al rey
+    cacique» —Martyr. López de Gómara dice que en Tierra Firme dábase al Señor
+    principal, entre otros nombres, el de Cacique.
+  pagina_impresa: 't. I, p. 131'
+  fuente_que_declara_el_autor: 'Las Casas; Pedro Mártir; Gómara (para Tierra Firme)'
+  cronistas_nombrados: [Las Casas, Pedro Mártir, Gómara]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Tortuga, Tierra Firme]
+  campo: sociedad
+  en_el_lexicon: cacique · cacike
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    Añade Mártir y Gómara a Las Casas y Oviedo. Gómara lo sitúa en TIERRA FIRME,
+    que es la esfera de la Kaketiana — pero Gómara nunca estuvo en Indias y escribe
+    en 1552, cuando `cacique` ya era la palabra española para todo jefe indio: no
+    prueba uso precontacto en la costa (regla 3).
+- forma_fuente: Caimán
+  glosa_fuente: Vocablo de la lengua de los indígenas que acaso se aplicó a las dos especies de cocodrilos existentes en las Antillas.
+  pagina_impresa: 't. I, pp. 138-139'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_nombrados: null
+  tipo_de_apoyo: afirmada-sin-fuente
+  marca: '«acaso»'
+  variedad_o_isla: [Cuba]
+  campo: fauna
+  en_el_lexicon: caiman
+  lema_en_la_lista_maestra: kaiman (ii-solo-secundaria)
+  efecto_en_la_lista: no-cambia
+  lectura: Zayas no cita cronista y duda («acaso»). Sigue sin atestación primaria.
+- forma_fuente: Caney
+  glosa_fuente: 'la casa grande de los Señores y Caciques, que llamaban caney'
+  texto: >-
+    Oviedo: «Algunas son redondas, como un pabellón, y esta manera de casas se
+    llama caney.» Herrera afirma que en lengua de Cuba caney era el bohío de forma
+    circular.
+  pagina_impresa: 't. I, p. 151'
+  fuente_que_declara_el_autor: 'Oviedo; Herrera (lengua de Cuba)'
+  cronistas_nombrados: [Oviedo, Herrera]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: vivienda
+  en_el_lexicon: caney
+  efecto_en_la_lista: añade-cronista
+  verificado_en_imagen: no
+  lectura: >-
+    La primera cita («Un caney, o casa grande y principal…») lleva el nombre de su
+    autor en la línea que el OCR se comió: probablemente Las Casas; verificar en
+    imagen (t. I p. 151 = JPG 188) antes de sumarlo. Página impresa calculada por el
+    desfase, no leída en la cabecera.
+- forma_fuente: Casabe
+  agrupa_con: 'cazabi'
+  glosa_fuente: '«pan de yuca», alimento principal de los indios antillanos'
+  texto: >-
+    «La primera vez que hallamos la palabra casabe, es en la Relación que dió Ginés
+    Navarro en 19 de noviembre de 1528. También la emplea el Cura de los Palacios,
+    Andrés Bernáldez.» Las formas más usadas en los días siguientes al descubrimiento
+    eran cacabí y cacaby.
+  pagina_impresa: 't. I, p. 172'
+  fuente_que_declara_el_autor: 'documento de época: Relación de Ginés Navarro (1528); Andrés Bernáldez, Cura de los Palacios'
+  cronistas_nombrados: [Documento de época, Bernáldez]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: alimentacion
+  en_el_lexicon: casabe · cazabi
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    ⚠️ Bernáldez (†1513, *Memorias de los Reyes Católicos*, con datos del segundo
+    viaje de Colón) es cronista del XV-XVI y NO está en `CRONISTAS` del
+    consolidador. `Casabi.—En algunos documentos se lee así` (t. I p. 174). Página
+    de Casabe calculada por el desfase.
+- forma_fuente: Cayo
+  glosa_fuente: Nombre dado por los indios a las islas pequeñas.
+  texto: >-
+    «Casas opina que lucayos podía significar como habitante de los cayos.»
+    Conocemos dos documentos relativos a Cuba, de 1526 y 1580, donde se dice cayo al
+    indio nacido en las islas.
+  pagina_impresa: 't. I, pp. 186-187'
+  fuente_que_declara_el_autor: 'documento de época (dos, de 1526 y 1580, sobre Cuba)'
+  cronistas_nombrados: [Documento de época]
+  cronistas_citados_para_la_cosa: 'Las Casas, sólo para la etimología de «lucayos» (opinión suya)'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: geografia
+  en_el_lexicon: cayo · cai
+  efecto_en_la_lista: añade-cronista
+- forma_fuente: Cemí
+  glosa_fuente: Ídolo de los indios antillanos formado de piedra o madera, imitando las más veces la figura humana.
+  texto: '«El P. Pané dice que había cemíes de varias clases, y entre ellos algunos de figura de vegetales, como un nabo»'
+  pagina_impresa: 't. I, pp. 190-193'
+  fuente_que_declara_el_autor: 'Pané (y Las Casas, que resume a Pané: la misma cadena)'
+  cronistas_nombrados: [Pané]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: creencia
+  en_el_lexicon: cemi
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    La lista tenía sólo Oviedo. Las Casas se cita aquí resumiendo «lo que pudo fray
+    Román colegir»: es Pané de segunda mano y NO cuenta aparte. Zayas da la lista de
+    cemíes (Boinael, Moroya, Buja, Aiba, Corocoto, Guabancex…) sin página de Pané.
+    `Zemi.—Alguna vez se empleó por Cemi` (t. II p. 311).
+- forma_fuente: Cobo
+  glosa_fuente: Caracol de tamaño grande, y muy abundante en los mares antillanos.
+  texto: '«Oviedo dice que era voz de la lengua de Cuba y de Haití.»'
+  pagina_impresa: 't. I, p. 206'
+  fuente_que_declara_el_autor: Oviedo
+  cronistas_nombrados: [Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba, Haití]
+  campo: fauna
+  en_el_lexicon: cobo
+  efecto_en_la_lista: añade-cronista
+  lectura: La lista tenía sólo Pané.
+- forma_fuente: Cohoba
+  glosa_fuente: La planta llamada hoy tabaco; sus hojas secas; las mismas convertidas en polvo; y —según Casas— el acto o ceremonia de absorber el humo o el polvo.
+  texto: >-
+    Las Casas: «Estos polvos y estas ceremonias o actos llamaban cohoba, la media
+    sílaba luenga, en su lenguaje». Gómara: «comen una yerba que llaman cohoba».
+  pagina_impresa: 't. I, pp. 210-212'
+  fuente_que_declara_el_autor: 'Las Casas; Gómara'
+  cronistas_nombrados: [Las Casas, Gómara]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: [flora, creencia]
+  en_el_lexicon: cohiba
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    CUARTA mano sobre la glosa de `cohiba`: para Las Casas la cohoba es el POLVO y
+    la CEREMONIA; para Gómara, la yerba. Se suma a Brinton, Goeje y Bachiller
+    contra la pareja del lexicón (la decide Miguel; no se toca la glosa en una minería).
+- forma_fuente: Conuco
+  glosa_fuente: Terreno labrado o cultivado por los indios, y utilizado para sus siembras de aje, yuca, maíz, ají, cohoba y otras plantas.
+  texto: 'Según Casas, llamábase conuco la labranza misma de la yuca, que se hacía en montones «levantados una vara de medir».'
+  pagina_impresa: 't. I, pp. 215-217'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: agricultura
+  en_el_lexicon: kunuku
+  efecto_en_la_lista: añade-cronista
+  lectura: La lista tenía sólo Oviedo.
+- forma_fuente: Daca
+  glosa_fuente: 'Afirma el P. Las Casas que este vocablo es la primera persona del singular: yo.'
+  texto: 'Pone este ejemplo: «Dios naboria daca».'
+  pagina_impresa: 't. I, p. 240'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: gramatica
+  en_el_lexicon: daca
+  efecto_en_la_lista: no-cambia
+  lectura: Ya aclarada esta semana (`daca` = 'yo'); Zayas copia a Las Casas. No es mano nueva.
+- forma_fuente: Dujo
+  agrupa_con: 'duho'
+  glosa_fuente: Asiento de madera o piedra usado por los indios.
+  texto: '«… de las que ellos usaban, que son muy lindas y bruñidas y relucientes, como si fueran de azabache, que ellos llamaban duhos.» (Las Casas)'
+  pagina_impresa: 't. I, pp. 246-247'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: objeto
+  en_el_lexicon: dujo
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Guabina
+  agrupa_con: 'Guabinas'
+  glosa_fuente: Pez de río, común en Cuba, cilíndrico y viscoso, de color oscuro, y de carne agradable.
+  texto: '«Hay otros que llaman guabinas, la media sílaba breve, las cuales tiene cuasi el parecer de truchas» (Las Casas)'
+  pagina_impresa: 't. II, p. 7'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: fauna
+  en_el_lexicon: guabina
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Guanín
+  glosa_fuente: Era la denominación de un metal, que más parece haber sido cobre que oro, o una aleación de ambos.
+  texto: >-
+    «Aunque Oviedo designa este vocablo como de la lengua de Huyapari…». Casas:
+    «cierta especie de oro bajo que llamaban guanín, que es algo morado, el cual
+    cognoscen por el olor». Herrera, Década I, lib. III: «un metal que llamaban
+    guanín». Colección de Documentos Inéditos, vol. II p. 419; carta de Diego
+    Velázquez de 1514.
+  pagina_impresa: 't. II, pp. 52-54'
+  fuente_que_declara_el_autor: 'Oviedo (lengua de Huyapari); Las Casas; Herrera, Déc. I lib. III; documento de época (Documentos Inéditos vol. II p. 419; Velázquez 1514)'
+  cronistas_nombrados: [Oviedo, Las Casas, Herrera, Documento de época]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Huyapari (Orinoco), Haití, Cuba]
+  campo: [objeto, comercio]
+  en_el_lexicon: guanin
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    🟢 PARA LA ESFERA: Oviedo la da por voz de la lengua de HUYAPARI (el Orinoco),
+    es decir, de Tierra Firme, y Zayas lo discute porque la ve en las Antillas desde
+    el primer día. Es un préstamo areal documentado en el XVI (minar-fuente §3: los
+    objetos de comercio se comparten y eso NO descarta nada). Buscar el pasaje en
+    Oviedo antes de citarlo.
+- forma_fuente: Guayaba
+  glosa_fuente: Arbusto muy común, de madera muy dura y resistente, que produce la fruta del mismo nombre.
+  texto: >-
+    Oviedo: «El guayabo es un árbol de buena vista…». Casas explica cómo las
+    guayabas de las islas eran pequeñas, y se trajeron de Tierra Firme otras «muy
+    mayores y muy más hermosas». Echagoían (1561): los guayabales como perjuicio
+    para la ganadería.
+  pagina_impresa: 't. II, pp. 67-69'
+  fuente_que_declara_el_autor: 'Oviedo; Las Casas (paráfrasis de Zayas); documento de época (Echagoían, 1561)'
+  cronistas_nombrados: [Oviedo, Las Casas, Documento de época]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití, Tierra Firme]
+  campo: flora
+  en_el_lexicon: guayaba
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    El dato de Las Casas es colonial y de esfera a la vez: guayabas grandes TRAÍDAS
+    de Tierra Firme a las islas. Es movimiento post-contacto de plantas (regla 3).
+- forma_fuente: Huracán
+  glosa_fuente: Tempestad; viento impetuoso de extraordinaria fuerza, que sopla frecuentemente en las Antillas.
+  texto: '«huracanes llamaban los indios desta isla las dichas tempestades o tormentas» —Casas.'
+  pagina_impresa: 't. II, pp. 104-105'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: clima
+  en_el_lexicon: huracan
+  efecto_en_la_lista: añade-cronista
+  lectura: La lista tenía sólo Oviedo (y el aviso de que Bachiller la pone en la lista eyerí).
+- forma_fuente: Hutía
+  glosa_fuente: Cuadrúpedo de la familia de los roedores, abundantísimo en todas las Antillas, y conocida hoy en Cuba por Jutía.
+  texto: '«Los conejos desta tierra que nombraban hutías, y eran sin número.» —Casas.'
+  pagina_impresa: 't. II, p. 105'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: fauna
+  en_el_lexicon: hutia
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    La lista tenía sólo Oviedo. Zayas añade que las tres especies cubanas (conga,
+    casabalí, andaraz) «se supone» corresponden a los animales que los indios
+    llamaban quemí, guabiniquinaje y autre: la correspondencia es suya, sin cita.
+    Página calculada por el desfase.
+- forma_fuente: Iguana
+  glosa_fuente: Lagarto de gran tamaño, con una cresta dentada a lo largo del lomo.
+  pagina_impresa: 't. II, pp. 108-110'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_citados_para_la_cosa: 'Las Casas, citando al Almirante («una sierpe de siete palmos en largo»): el pasaje no trae la voz'
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: no-declarada
+  campo: fauna
+  en_el_lexicon: iwana · higuana
+  efecto_en_la_lista: no-cambia
+  lectura: '`Higuana.—Véase Iguana` (t. II p. 98).'
+- forma_fuente: Mabuya
+  glosa_fuente: Con este vocablo se designaba a un espíritu maléfico, o genio del mal.
+  texto: 'Parece formada esta voz por Ma, prefijo, que indicaba negación, y Buya, «cosa o espíritu buenos», según Brasseur de Bourbourg.'
+  pagina_impresa: 't. II, p. 152'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_nombrados: null
+  otras_autoridades: [Brasseur de Bourbourg, Henri Chauvet]
+  tipo_de_apoyo: conjetura-del-autor
+  variedad_o_isla: no-declarada
+  campo: creencia
+  en_el_lexicon: maboya
+  lema_en_la_lista_maestra: mabuia (iii-conjetura-moderna)
+  efecto_en_la_lista: no-cambia
+  lectura: 'La etimología ma- + buya es de Brasseur (XIX). Sin cronista: sigue clase iii.'
+- forma_fuente: Mahiz
+  glosa_fuente: Así escribe Casas en su «Memorial de agravios que sufren los indios de Cuba», para indicar la planta y grano conocidos por Maíz.
+  texto: >-
+    Maíz (t. II pp. 166-168), Las Casas sobre Cuba: «del grano que llaman los indios
+    maíz, que ellos llamaban panizo, hallaban mucha cantidad».
+  pagina_impresa: 't. II, pp. 164-168'
+  fuente_que_declara_el_autor: 'Las Casas (Memorial de agravios; Historia de las Indias)'
+  cronistas_nombrados: [Las Casas]
+  cronistas_citados_para_la_cosa: 'Oviedo y Gómara, para cultivo y manjares'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: [flora, alimentacion]
+  en_el_lexicon: maisi · maíz
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    `maíz` ya está aclarada esta semana (Apologética p. 177). Lo nuevo es sólo la
+    obra: el Memorial de agravios. `Maisi` en Zayas (t. II p. 166) es el TOPÓNIMO
+    del cabo oriental de Cuba (Las Casas: «la punta de Mayci»), no el grano.
+- forma_fuente: Manatí
+  glosa_fuente: Pez de gran tamaño, que vive en la costa sur de la Isla de Cuba, en los esteros, y proximidad a la desembocadura de los ríos. Es mamífero.
+  texto: >-
+    Las Casas: «a la boca de los ríos, entre el agua salada y dulce, los que llamaban
+    los indios manatíes, la penúltima sílaba luenga; éstos se mantienen de yerba».
+    «El historiador Oviedo escribe Manathi.»
+  pagina_impresa: 't. II, pp. 178-180'
+  fuente_que_declara_el_autor: 'Las Casas; Oviedo (grafía manathi)'
+  cronistas_nombrados: [Las Casas, Oviedo]
+  cronistas_citados_para_la_cosa: 'Gómara, el manatí domesticado del cacique Caramatexi'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba, Haití]
+  campo: fauna
+  en_el_lexicon: manati
+  efecto_en_la_lista: conflicto
+  lectura: >-
+    🔴 CONFLICTO ENTRE DOS CRONISTAS. Esta semana se aclaró que Oviedo (t. I p. 434)
+    dice que el nombre se lo pusieron los CRISTIANOS. Las Casas, citado por Zayas,
+    dice lo contrario: «los que llamaban los indios manatíes», y con acento
+    anotado. No se resuelve aquí: es un par de testimonios del XVI que se
+    contradicen y lo decide Miguel. Buscar el pasaje en la Apologética o la
+    Historia antes de citarlo.
+- forma_fuente: Manigua
+  agrupa_con: 'Maniguas'
+  glosa_fuente: Vocablo con que se designa en Cuba un conjunto de malezas, arbustos y yerbas.
+  texto: >-
+    «Nombre, según Gómara, de una de las pequeñas islas de las Lucayas, que
+    descubrió Colón después de la de Guanahaní.» Para la maleza cita a Pezuela (XIX).
+  pagina_impresa: 't. II, p. 185'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_citados_para_la_cosa: 'Gómara, pero para un TOPÓNIMO (isla de las Lucayas), no para la voz ''maleza'''
+  otras_autoridades: [Pezuela]
+  tipo_de_apoyo: secundaria
+  variedad_o_isla: [Cuba]
+  campo: flora
+  en_el_lexicon: manigua
+  lema_en_la_lista_maestra: manikuas (ii-solo-secundaria, Bachiller)
+  efecto_en_la_lista: no-cambia
+  lectura: >-
+    Homografía, no atestación: el nombre de isla de Gómara no atestigua la voz
+    cubana 'maleza', que Zayas sólo apoya en Pezuela.
+- forma_fuente: Mayani
+  glosa_fuente: Bachiller da a esta voz la significación de nada.
+  pagina_impresa: 't. II, p. 200'
+  fuente_que_declara_el_autor: no-declarada
+  otras_autoridades: [Bachiller]
+  tipo_de_apoyo: secundaria
+  variedad_o_isla: no-declarada
+  campo: gramatica
+  en_el_lexicon: mayani
+  efecto_en_la_lista: no-cambia
+  lectura: Zayas copia a Bachiller; la atestación sigue siendo la de Pedro Mártir que ya tiene la lista.
+- forma_fuente: Naboria
+  glosa_fuente: El indio dedicado a trabajar, en servidumbre o dependencia de los caciques y nobles.
+  texto: 'Casas: «Quiere decir en la lengua desta isla criados.»'
+  pagina_impresa: 't. II, pp. 210-211'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: sociedad
+  en_el_lexicon: naboria
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Nitayno
+  glosa_fuente: Denominación del individuo perteneciente a una clase social, comparable a la nobleza.
+  texto: 'El P. Las Casas manifiesta que nitayno «era nombre de caballero y señor principal».'
+  pagina_impresa: 't. II, pp. 220-221'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: sociedad
+  en_el_lexicon: nitaino
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Papaya
+  glosa_fuente: Planta de tallo recto y pocas hojas en su parte superior.
+  pagina_impresa: 't. II, p. 229'
+  fuente_que_declara_el_autor: no-declarada
+  otras_autoridades: [Edwards]
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: [Cuba]
+  campo: flora
+  en_el_lexicon: papaya
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Piragua
+  glosa_fuente: Embarcación más pequeña que la canoa.
+  texto: 'Esta voz se nos figura más bien de la América Continental.'
+  pagina_impresa: 't. II, p. 231'
+  fuente_que_declara_el_autor: no-declarada
+  tipo_de_apoyo: sacada-por-el-autor
+  sacada_del_taino: 'de la América Continental, según la impresión de Zayas («se nos figura»)'
+  variedad_o_isla: no-declarada
+  campo: navegacion
+  en_el_lexicon: piragua
+  efecto_en_la_lista: no-cambia
+  lectura: >-
+    Opinión del editor, sin cita: NO saca la voz de la lista (que la tiene por
+    Oviedo), pero apunta a Tierra Firme, que es la esfera. Anotado, no contado.
+- forma_fuente: Tabaco
+  glosa_fuente: Los indios cultivaron la planta llamada hoy tabaco, pero le dieron el nombre de Cojoba o Cojiba.
+  texto: >-
+    Las Casas: «Estos mosquetes, o como los llamaremos, llaman ellos tabacos.»
+    Oviedo: «a estos palillos con que tomaban este humo llamaban tabaco, e non a la
+    yerba».
+  pagina_impresa: 't. II, pp. 254-256'
+  fuente_que_declara_el_autor: 'Las Casas (el rollo de hojas); Oviedo (el instrumento)'
+  cronistas_nombrados: [Las Casas, Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: [flora, creencia]
+  en_el_lexicon: tabako
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    Dos cronistas, dos referentes y NINGUNO es la planta: el rollo (Las Casas) y el
+    instrumento (Oviedo). Refuerza el caso `cohiba`/`tabako` de arriba.
+- forma_fuente: Taita
+  glosa_fuente: Tratamiento usado por los hijos al dirigirse a su padre, y que aún se emplea en Cuba y en Venezuela.
+  texto: 'El escritor venezolano Rojas atribuye este vocablo a la lengua de los indios Quichuas; y lo mismo dice el Sr. Bayo.'
+  pagina_impresa: 't. II, p. 259'
+  fuente_que_declara_el_autor: no-declarada
+  otras_autoridades: [Rojas, Bayo]
+  tipo_de_apoyo: sacada-por-el-autor
+  sacada_del_taino: quechua, según Arístides Rojas y Ciro Bayo, recogidos por Zayas
+  variedad_o_isla: [Cuba, Venezuela]
+  campo: parentesco
+  en_el_lexicon: taita
+  efecto_en_la_lista: sacada
+  lectura: Tercera obra (tras Bachiller) que la saca del taíno. Sin cronista.
+- forma_fuente: Tuna
+  glosa_fuente: Planta espinosa de la familia de los Cactus.
+  pagina_impresa: 't. II, pp. 269-270'
+  fuente_que_declara_el_autor: no-declarada
+  cronistas_citados_para_la_cosa: 'Las Casas describe el fruto de la tuna blanca y la colorada; Pedro Mártir, la fruta morada — la voz está en la paráfrasis de Zayas, no se vio en la cita'
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: no-declarada
+  campo: flora
+  en_el_lexicon: tuna
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Yamocá
+  glosa_fuente: Este vocablo expresaba el número dos.
+  pagina_impresa: 't. II, p. 296'
+  fuente_que_declara_el_autor: no-declarada
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: no-declarada
+  campo: numeral
+  en_el_lexicon: yamosa
+  efecto_en_la_lista: no-cambia
+  lectura: Ya aclarada (`yamosa` no existe; Las Casas da `yamocá`). Zayas escribe la forma buena.
+- forma_fuente: Yuca
+  glosa_fuente: Jathropa Manihot de los botánicos.
+  texto: >-
+    Ldo. Zuazo, 1518: yuca «que son las raíces de que se hace el pan de esta
+    tierra». Los PP. Jerónimos, 1519: «se había puesto mucha yuca, que es el pan de
+    los indios».
+  pagina_impresa: 't. II, pp. 305-306'
+  fuente_que_declara_el_autor: 'documento de época: carta del Licenciado Zuazo (1518) e informe de los PP. Jerónimos (1519)'
+  cronistas_nombrados: [Documento de época]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: [flora, alimentacion]
+  en_el_lexicon: yuca
+  efecto_en_la_lista: añade-cronista
+  lectura: >-
+    «Los indios aplicaban el vocablo yuca a la raíz comestible, y a la planta decían
+    Yucarba»: `yucarba` es afirmación de Zayas SIN fuente (conjetura-del-autor si
+    alguien la quiere recoger). Cita además a Vespucio, Bastidas y Cabral para
+    yuca en Guayana, Santa Marta y Brasil — Tierra Firme — sin pasaje.
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 3. VOCES DE LA LISTA MAESTRA SIN CRONISTA (clase ii/iii) QUE ZAYAS TRAE
+# ═══════════════════════════════════════════════════════════════════════════
+voces_sin_cronista_en_la_lista:
+- forma_fuente: Bagua
+  glosa_fuente: 'mar, en lengua de Haití'
+  texto: 'En el Apéndice agregado a la obra de Oviedo, por la Academia de la Historia de España, se da a este vocablo la significación de mar, en lengua de Haití.'
+  pagina_impresa: 't. I, p. 72'
+  fuente_que_declara_el_autor: 'glosario del EDITOR (Apéndice de la Real Academia de la Historia a la ed. de 1851-1855), no el autor'
+  cronistas_nombrados: null
+  tipo_de_apoyo: secundaria
+  variedad_o_isla: [Haití]
+  campo: geografia
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: 'bakua (ii: Brinton, Goeje)'
+  efecto_en_la_lista: no-cambia
+  lectura: >-
+    🔴 LA TRAMPA DE `datihao`, OTRA VEZ, Y DECLARADA POR EL PROPIO ZAYAS: la glosa
+    'mar' viene del glosario que la Academia añadió a Oviedo, no del cuerpo de
+    Oviedo. NO se escribe «Oviedo» en `fuente_que_declara_el_autor` a propósito.
+- forma_fuente: Bahari
+  glosa_fuente: segundo de los tres grados de dignidad de los nitaynos de Haití
+  texto: 'Refiriéndose el P. Las Casas a los nitaynos … dice que entre ellos existían tres grados de dignidad; «Casas escribe bahari, y lo equipara a señoría».'
+  pagina_impresa: 't. I, p. 73'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: sociedad
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: bahari (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Bajareque
+  glosa_fuente: Según Oviedo, esta voz significaba, en lengua de Cuba, el bohío que excedía de las proporciones normales.
+  pagina_impresa: 't. I, pp. 77-78'
+  fuente_que_declara_el_autor: 'Oviedo (lengua de Cuba)'
+  cronistas_nombrados: [Oviedo]
+  otras_autoridades: [Bachiller]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: vivienda
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: 'basareke (ii: Brinton, Goeje)'
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: Bachiller, dice Zayas, contradice a Oviedo (casa MENOR que el bohío). Conflicto de glosa sin cronista del otro lado.
+- forma_fuente: Baygua
+  glosa_fuente: Planta, tal vez rastrera, que usaban los indios de Haití, para coger peces, arrojándola en el agua machacada.
+  pagina_impresa: 't. I, p. 97'
+  fuente_que_declara_el_autor: Oviedo
+  cronistas_nombrados: [Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: [flora, pesca]
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: baikua (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+  verificado_en_imagen: no
+  lectura: 'La cita de Oviedo sale ilegible en la capa («… barbasco con que toman mucho pescado»): que la voz esté en el pasaje, verificar en imagen (t. I p. 97 = JPG 134).'
+- forma_fuente: Cabuya
+  glosa_fuente: Hoy se denomina así cualquiera cuerda, no muy gruesa, hecha de las fibras del maguey o del corojo.
+  texto: >-
+    «la cabuya es más áspera y gruesa, y el nequén más suave y delgado; ambos son
+    vocablos desta isla Española.» Oviedo: «hacen estos hilos de cabuya o henequén».
+  pagina_impresa: 't. I, pp. 127-128'
+  fuente_que_declara_el_autor: 'Oviedo; y una cita sin autor visible en la capa («vocablos desta isla Española»)'
+  cronistas_nombrados: [Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: objeto
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: kabuia (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: >-
+    La fórmula «vocablos desta isla» es la de la Apologética (la misma de macana,
+    maíz, bixa, maguey): probablemente Las Casas, sin verificar. Arrastra también a
+    `henequén` (abajo).
+- forma_fuente: Jeniquén (Henequén)
+  agrupa_con: 'henequeu'
+  glosa_fuente: Planta textil, Agave Americana, muy parecida al Maguey.
+  texto: 'Oviedo escribe Henequén.'
+  pagina_impresa: 't. II, pp. 127-128'
+  fuente_que_declara_el_autor: Oviedo
+  cronistas_nombrados: [Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: [flora, objeto]
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: enekeu (iii, Goeje «henequeu»)
+  efecto_en_la_lista: sube-de-iii-a-i
+  lectura: 'Ojo al agrupar: `henequen` y `henequeu` no comparten lema en el consolidador; puede quedar como voz aparte.'
+- forma_fuente: Cibucán
+  agrupa_con: 'sibukan'
+  glosa_fuente: manga de empleita de palma para exprimir la masa del casabe
+  texto: '«Tienen una manga que llaman cibucán, la media sílaba breve, hecha de empleita de palma» (Las Casas). Gómara: «una manera de talega, de diez palmos o más de luengo».'
+  pagina_impresa: 't. I, pp. 197-198'
+  fuente_que_declara_el_autor: 'Las Casas; Gómara'
+  cronistas_nombrados: [Las Casas, Gómara]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: [objeto, alimentacion]
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: sibukan (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Coa
+  glosa_fuente: Un palo de madera dura … aguzado por uno de sus extremos, y quemada o tostada la punta.
+  texto: 'Las Casas: «Sus coas, que son unos palos tostados que usan por azadas.»'
+  pagina_impresa: 't. I, pp. 203-204'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  cronistas_citados_para_la_cosa: 'Oviedo describe el palo sin nombrarlo en el pasaje citado'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: agricultura
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: koa (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Cocuyo
+  glosa_fuente: Coleóptero que abunda en los campos, en el período de las lluvias, y hace hermoso efecto al volar, por tener dos discos luminosos.
+  texto: '«Hay en ella unos gusanos o avecitas nocturnas que los indios llaman cocuyos, la media sílaba luenga, y en Castilla llamamos luciérnagas» (Las Casas)'
+  pagina_impresa: 't. I, pp. 209-210'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: fauna
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: 'kokuio (ii: Bachiller, Goeje)'
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Guaca
+  glosa_fuente: '(1) nombre del hermano del Dios Supremo; (2) un hoyo en la tierra; (3) según Martyr, región o comarca'
+  texto: 'Martyr atribuye a este vocablo la significación de región o comarca, y de ahí el compuesto Guaca-yarima, la comarca postrera.'
+  pagina_impresa: 't. II, pp. 9-10'
+  fuente_que_declara_el_autor: 'Pedro Mártir (sólo para el sentido ''región'')'
+  cronistas_nombrados: [Pedro Mártir]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: geografia
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: kuaka (ii, Brinton 'a vault for storing provisions')
+  efecto_en_la_lista: conflicto
+  lectura: >-
+    Mártir atestigua la FORMA con otra glosa ('región'); el 'hoyo para provisiones'
+    de Brinton y el 'hoyo' de Zayas siguen sin cronista. Si el consolidador agrupa
+    por forma, subirá la voz a clase i por una glosa que no es la suya: avisarlo.
+- forma_fuente: Guacamayo
+  glosa_fuente: Ave de vistosos colores y pico corvo, de la familia de las parleras.
+  texto: 'Refiriéndose a la llegada de Colón a la isla Guadalupe, dice Casas: «Allí hallaron los primeros papagallos, que llamaban guacamayos, tan grandes como gallos».'
+  pagina_impresa: 't. II, p. 11'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Guadalupe]
+  campo: fauna
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: kuakamaio (ii, Brinton)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: >-
+    ⚠️ GUADALUPE es isla CARIBE (kalinago), no taína: «que llamaban» no dice quién.
+    Sube de clase por custodia, pero la etiqueta de lengua queda en duda (en duda, degradar).
+- forma_fuente: Guatiao
+  glosa_fuente: intercambio de nombres entre dos personas como demostración de amistad
+  texto: '«Trocaron los nombres, y hiciéronse guatiaos, llamándose Juan Ponce, Agüeibana, y el Rey Agüeibana, Juan Ponce» —Casas.'
+  pagina_impresa: 't. II, p. 65'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Boriquén, Cuba]
+  campo: sociedad
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: 'kuatiao (ii: Brinton, Goeje)'
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Guayacán
+  glosa_fuente: Árbol muy conocido y muy apreciado … por sus virtudes medicinales.
+  texto: 'Los Licenciados Zuazo (1518) y Echagoían (1561) ensalzan las excelencias del guayacán, llamado por ellos «palo santo».'
+  pagina_impresa: 't. II, pp. 70-71'
+  fuente_que_declara_el_autor: 'documento de época: Zuazo (1518) y Echagoían (1561)'
+  cronistas_nombrados: [Documento de época]
+  cronistas_citados_para_la_cosa: 'Las Casas, para la cocción medicinal (la voz no se vio en su cita)'
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: flora
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: kuaiakan (iii, Bachiller)
+  efecto_en_la_lista: sube-de-iii-a-i
+  lectura: 'Tiene propuesta en `6-fusion/tainismos_en_medina.yaml` (voz viva en Paraguaná).'
+- forma_fuente: Hibuera
+  glosa_fuente: El fruto del árbol llamado por Casas Hibuero, y por Oviedo Higüero.
+  pagina_impresa: 't. II, p. 96'
+  fuente_que_declara_el_autor: 'Las Casas (hibuero); Oviedo (higüero)'
+  cronistas_nombrados: [Las Casas, Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: [flora, objeto]
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: ibuera (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: '`Ibuera.— Así Herrera por hibuera o higüera` (t. II p. 107).'
+- forma_fuente: Hicotea
+  glosa_fuente: Usado a veces por Jicotea, que era la pronunciación usada por los cubanos, según Oviedo.
+  pagina_impresa: 't. II, p. 98'
+  fuente_que_declara_el_autor: 'Oviedo (pronunciación de Cuba)'
+  cronistas_nombrados: [Oviedo]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: fauna
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: ikotea (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: '`Icotea.— Así escribieron Herrera y otros` (t. II p. 108). La descripción del animal (Jicotea, t. II p. 132) es de Zayas.'
+- forma_fuente: Higuaca
+  glosa_fuente: Nombre indígena del ave parlera llamada actualmente cotorra, y según la descripción del P. Las Casas, del loro, en la isla de Haití.
+  texto: '«Los mayores se llamaban por los indios higuacas, la sílaba de enmedio luenga»'
+  pagina_impresa: 't. II, p. 98'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: fauna
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: ikuaka (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Jagüey
+  agrupa_con: 'xagueye'
+  glosa_fuente: Depósitos de agua formados por las lluvias.
+  texto: 'El Padre Las Casas dice: «… e cuando la hallan en algunos yagüeyes, no hay para diez personas».'
+  pagina_impresa: 't. II, pp. 119-120'
+  fuente_que_declara_el_autor: 'Las Casas; documento de época (carta del Lic. Zuazo, Santo Domingo, 22 de enero de 1518)'
+  cronistas_nombrados: [Las Casas, Documento de época]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: geografia
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: sakueie (ii, Goeje «xagueye»)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: 'Zayas: «solamente en plural hemos encontrado este vocablo». Agrupar `xagueye`/`jagüey`/`yagüey` a mano: el lema del consolidador no los junta.'
+- forma_fuente: Jibe
+  agrupa_con: 'hibii'
+  glosa_fuente: Cedazo o cernidor, que hacían los indios con hojas de guano o palma.
+  texto: 'El P. Las Casas escribe hibiz.'
+  pagina_impresa: 't. II, p. 130'
+  fuente_que_declara_el_autor: 'Las Casas (hibiz)'
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: objeto
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: ibi (ii, Goeje «hibii»)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Jobo
+  agrupa_con: 'hobo'
+  glosa_fuente: Árbol muy común, parecido en la hoja al cedro, y en el fruto a la ciruela amarilla.
+  texto: 'se deduce de un acta de cabildo del Ayuntamiento de la Habana, de 19 de junio de 1551, que se vendía en la ciudad'
+  pagina_impresa: 't. II, pp. 136-137'
+  fuente_que_declara_el_autor: 'documento de época: acta del cabildo de La Habana, 1551'
+  cronistas_nombrados: [Documento de época]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Cuba]
+  campo: flora
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: obo (ii, Goeje «hobo ~ iobo»)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: '`Hobo.—Escrito así, pronunciándose Jobo` (t. II p. 100), sin cita. El lema del consolidador (`obo`) quita la h pero no la j: agrupar a mano.'
+- forma_fuente: Nigua
+  glosa_fuente: Insecto que se cría principalmente en el cerdo, y ataca al hombre introduciéndose bajo la piel.
+  texto: '«Las que llamaban los indios niguas; éstas son cierta especie de pulga; y son tan chiquitas que apenas pueden ser vistas» (Las Casas)'
+  pagina_impresa: 't. II, pp. 217-219'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: fauna
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: nikua (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Teitoca
+  glosa_fuente: 'Según Pedro Martyr este vocablo significaba «estate quieto».'
+  texto: 'transcribe un diálogo entre una india y un indio: «Ella: Teitocá (estate quieto) téqueta (mucho) cinato (irritado)…»'
+  pagina_impresa: 't. II, p. 263'
+  fuente_que_declara_el_autor: Pedro Mártir
+  cronistas_nombrados: [Pedro Mártir]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: [Haití]
+  campo: gramatica
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: teitoka (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+  lectura: 'Una de las pocas FRASES taínas: la segmentación y las glosas palabra a palabra son de Mártir según Zayas; verificar en Mártir.'
+- forma_fuente: Yagua
+  glosa_fuente: Llámase actualmente en algunas partes «camisa de la palma», lo que los indios denominaron yagua.
+  texto: '«Unas hojas que los indios llamaban yaguas, la última breve, de las cuales tiene diez y doce» (Las Casas)'
+  pagina_impresa: 't. II, pp. 289-290'
+  fuente_que_declara_el_autor: Las Casas
+  cronistas_nombrados: [Las Casas]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: [flora, vivienda]
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: iakua (ii, Goeje)
+  efecto_en_la_lista: sube-de-ii-a-i
+- forma_fuente: Itabo
+  glosa_fuente: Laguna de agua clara, a diferencia de Babiney que es laguna de agua turbia y fangosa.
+  pagina_impresa: 't. II, p. 113'
+  fuente_que_declara_el_autor: no-declarada
+  tipo_de_apoyo: afirmada-sin-fuente
+  variedad_o_isla: [Cuba]
+  campo: geografia
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: itabo (ii, Brinton)
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Manaca
+  glosa_fuente: Una de las especies de la palmera, que alcanza cinco o seis varas de altura.
+  pagina_impresa: 't. II, p. 176'
+  fuente_que_declara_el_autor: no-declarada
+  tipo_de_apoyo: conjetura-del-autor
+  marca: '«Puede deducirse»'
+  variedad_o_isla: no-declarada
+  campo: flora
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: manaka (iii, Goeje)
+  efecto_en_la_lista: no-cambia
+- forma_fuente: Seboruco
+  glosa_fuente: Piedra grande.
+  texto: 'Vocablo derivado de Siba, o mejor Ciba, equivalente a piedra.'
+  pagina_impresa: 't. II, p. 248'
+  fuente_que_declara_el_autor: no-declarada
+  tipo_de_apoyo: conjetura-del-autor
+  variedad_o_isla: [Cuba]
+  campo: geografia
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: sibao (ii, Goeje «sibao ~ sisbao ~ seboruko»)
+  efecto_en_la_lista: no-cambia
+  lectura: La derivación de `ciba` es de Zayas.
+- forma_fuente: Xauxau
+  glosa_fuente: Así escribe Acosta por Xabxao.
+  pagina_impresa: 't. II, p. 283'
+  fuente_que_declara_el_autor: 'José de Acosta (1590) — jesuita del XVI, escribió sobre Perú y México; no está en CRONISTAS del consolidador'
+  cronistas_nombrados: [Acosta]
+  tipo_de_apoyo: documentada
+  variedad_o_isla: no-declarada
+  campo: alimentacion
+  en_el_lexicon: null
+  lema_en_la_lista_maestra: sausau (ii, Goeje)
+  efecto_en_la_lista: no-cambia
+  lectura: >-
+    Acosta es del XVI pero NO de las Antillas ni está en la lista de cronistas del
+    script: no sube la voz salvo que Miguel lo añada. `Xabxao` y `Sablao` no se leyeron.
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 4. FAUNA (esquema común del preámbulo de la minería 3)
+# ═══════════════════════════════════════════════════════════════════════════
+fauna:
+- nombre_en_fuente: Hutía
+  especie_probable: null
+  texto: '«Los conejos desta tierra que nombraban hutías, y eran sin número.» —Casas (vía Zayas)'
+  obra: zayas-1931
+  pagina_impresa: 't. II, p. 105'
+  lugar: 'todas las Antillas (Zayas); Cuba hoy «jutía»'
+  epoca: contacto-temprano
+  sonido: null
+- nombre_en_fuente: Manatí
+  especie_probable: 'Trichechus manatus (inferido, la fuente no da binomio)'
+  texto: '«a la boca de los ríos, entre el agua salada y dulce, los que llamaban los indios manatíes … éstos se mantienen de yerba» —Las Casas (vía Zayas)'
+  obra: zayas-1931
+  pagina_impresa: 't. II, pp. 178-180'
+  lugar: 'costas de las islas, bocas de ríos'
+  epoca: contacto-temprano
+  sonido: null
+- nombre_en_fuente: Guabina
+  especie_probable: 'Philypnus dormitor, según Zayas (1931)'
+  texto: '«Hay otros que llaman guabinas … tiene cuasi el parecer de truchas, en la escama» —Las Casas (vía Zayas)'
+  obra: zayas-1931
+  pagina_impresa: 't. II, p. 7'
+  lugar: 'ríos de Cuba'
+  epoca: contacto-temprano
+  sonido: null
+- nombre_en_fuente: Higuaca
+  especie_probable: null
+  texto: '«Los mayores se llamaban por los indios higuacas … difieren de los de las otras islas en que tienen sobre el pico…» —Las Casas (vía Zayas); ave parlera, hoy cotorra'
+  obra: zayas-1931
+  pagina_impresa: 't. II, p. 98'
+  lugar: Haití
+  epoca: contacto-temprano
+  sonido: 'ave «parlera» (Zayas): habla; sin descripción del sonido'
+- nombre_en_fuente: Guacamayo
+  especie_probable: null
+  texto: '«los primeros papagallos, que llamaban guacamayos, tan grandes como gallos, de muchos colores, y lo más es colorado, poco azul y blanco» —Las Casas (vía Zayas)'
+  obra: zayas-1931
+  pagina_impresa: 't. II, p. 11'
+  lugar: 'Guadalupe (isla caribe)'
+  epoca: contacto-temprano
+  sonido: '«estos nunca chirrían ni hablan» —Las Casas (vía Zayas)'
+- nombre_en_fuente: Cocuyo
+  especie_probable: null
+  texto: '«unos gusanos o avecitas nocturnas que los indios llaman cocuyos … y en Castilla llamamos luciérnagas» —Las Casas (vía Zayas); dos discos luminosos sobre los ojos (Zayas)'
+  obra: zayas-1931
+  pagina_impresa: 't. I, pp. 209-210'
+  lugar: 'campos, en la época de lluvias'
+  epoca: contacto-temprano
+  sonido: null
+- nombre_en_fuente: Nigua
+  especie_probable: null
+  texto: '«cierta especie de pulga; y son tan chiquitas que apenas pueden ser vistas» —Las Casas (vía Zayas)'
+  obra: zayas-1931
+  pagina_impresa: 't. II, pp. 217-219'
+  lugar: Haití
+  epoca: contacto-temprano
+  sonido: null
+- nombre_en_fuente: Cobo
+  especie_probable: null
+  texto: 'Caracol de tamaño grande, y muy abundante en los mares antillanos. Partida una coronilla de este caracol, queda una concavidad por donde soplando se produce un sonido bronco.'
+  obra: zayas-1931
+  pagina_impresa: 't. I, p. 206'
+  lugar: 'mares antillanos; voz de Cuba y Haití según Oviedo'
+  epoca: moderno
+  sonido: 'la concha soplada da «un sonido bronco» (el del caracol como trompa, no el del animal)'
+- nombre_en_fuente: Aura
+  especie_probable: 'Cathartes aura, según Zayas (1931)'
+  texto: 'Se alimenta de animales muertos, los que percibe desde enorme elevación … Su plumaje es negro, y la cabeza implume es roja.'
+  obra: zayas-1931
+  pagina_impresa: 't. I, p. 60'
+  lugar: Antillas
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: Caraira
+  especie_probable: 'Polyborus brasiliensis, según Zayas (1931)'
+  texto: 'Nombre indígena del gavilán; ave de rapiña, cabeza negra, y plumaje manchado de gris y blanco … vive de otras aves pequeñas, ratones, caracoles y lagartos.'
+  obra: zayas-1931
+  pagina_impresa: 't. I, pp. 165-166'
+  lugar: Cuba
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: Caimán
+  especie_probable: null
+  texto: 'acaso se aplicó a las dos especies de cocodrilos existentes en las Antillas … En la isla de Boriquén no se conocía el caimán.'
+  obra: zayas-1931
+  pagina_impresa: 't. I, pp. 138-139'
+  lugar: 'Cuba (ríos, lagunas, ciénagas)'
+  epoca: moderno
+  sonido: null
+- nombre_en_fuente: Iguana
+  especie_probable: null
+  texto: 'Lagarto de gran tamaño, con una cresta dentada a lo largo del lomo. Es inofensivo … Los indios comían este reptil.'
+  obra: zayas-1931
+  pagina_impresa: 't. II, pp. 108-110'
+  lugar: Antillas
+  epoca: moderno
+  sonido: null
+
+# ═══════════════════════════════════════════════════════════════════════════
+# 5. LO QUE NO ESTÁ (un cero medido, con la consulta que lo mide)
+# ═══════════════════════════════════════════════════════════════════════════
+ceros:
+- consulta: 'cabezas de entrada que casen con acoa, aduri, agari, akcicyaa, thigisi, wacusi, wagulo (las 7 claves `sin-voz-en-la-lista`)'
+  resultado: 0
+  lectura: >-
+    Esperado: no tienen forma de voz antillana (tienen aire de reconstrucción desde
+    el lokono o el wayuu). Zayas no las trae. Se midió sobre las cabezas; el
+    cuerpo no se barrió.
+- consulta: '`anua`, `anúa`, `annua` como cabeza y en el cuerpo de los dos tomos'
+  resultado: 0
+  lectura: ver `Aura` en §1.
+- consulta: '`anaki`/`anaquí` en el cuerpo, fuera de su entrada'
+  resultado: 0

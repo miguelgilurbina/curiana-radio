@@ -63,7 +63,7 @@ compiten; eso se edita en `lexicon_toponimos.py`, no en el YAML generado.
 | `manati` | **taíno** | Las Casas, Apologética p. 27: «los que llamaban los indios manatíes, la penúltima sílaba luenga». Oviedo t. I p. 434 lo contradice con una etimología castellana (las manos), sin dar el nombre indio | sólo la nota |
 | `tabako` | **taíno** | el rollo encendido (Las Casas, Apologética p. 181; Historia I cap. XLVI), el cañuto y la ahumada (Oviedo t. I pp. 130-131, 143); y Oviedo t. IV p. 96: «en lengua desta isla de Hayti ó Española se diçe *tabaco*» | glosa ampliada con el rollo |
 | `cohiba` | **del editor** (1855) y del XIX | la voz de los cronistas es `cohoba`: el polvo y el rito (Pané cap. XI; Las Casas pp. 445-446), la ahumada (Oviedo p. 143) y un árbol de vainas (Oviedo p. 347) | ver abajo |
-| `bagua` | **taíno** | Oviedo t. I p. 436, en el cuerpo | nada obligado; sube en la lista maestra |
+| `bagua` | **taíno** | Oviedo t. I p. 436, en el cuerpo | nada obligado; en la lista maestra, la página primaria (hoy la sostiene Coll y Toste de segunda mano) |
 | `anaki` | **no atestiguada** | sólo en la lista de Rafinesque («eyerí», Zayas t. I p. 39) y en Adam 1879 p. 303; su pariente es el kalinago femenino *akani* | nada |
 | `anua` | **no existe** (es `aura`, sin cronista) | Goeje p. 14 en imagen | nada; corregir la transcripción de Goeje |
 | `manaya` | **no atestiguada** | sólo en la traducción italiana de Pané (Bachiller p. 192: *manaia*); *mannaia* es 'hacha' en italiano | nada; baja a clase iii en la lista |
@@ -90,18 +90,21 @@ Oviedo dicen «yerba», «hierva».
    Maracaibo. La etiqueta «(Lengua de Venezuela)» es del glosario del editor
    (t. IV p. 594). Es la trampa de `datihao` otra vez: el mismo patrón que
    sacó a `datihao` del caquetío.
-2. **El PDF de Brinton 1871 está commiteado vacío** en `main` y en esta rama
-   (blob `e69de29`, 0 bytes). #220 lo repone (2.179.167 bytes).
-3. **La transcripción de Goeje** (`6-fusion/taino_goeje_1939.yaml`) tiene
-   `anua` por `aura`, y la **lista maestra** hereda el error. La misma lista
-   debería subir `bakua` a clase i (Oviedo), bajar `manaia` a iii y agrupar
-   `kohiba` como `kohoba`.
-4. **#220** (`taino_zayas_1931.yaml` §Bagua) tiene que corregir su `lectura`
+2. **La transcripción de Goeje** (`6-fusion/taino_goeje_1939.yaml`) tiene
+   `anua` por `aura`, y la **lista maestra** hereda el error. En la lista
+   consolidada que ya está en `main`, además: `bakua` está en clase i por
+   Oviedo **de segunda mano** (Coll y Toste p. 190), y ahora tiene la página
+   primaria (t. I p. 436); `manaia` está en clase i por «Pané, Pedro Mártir»,
+   pero Coll y Toste p. 241 cita a Mártir para la COSA («todo lo cortan con
+   ciertas piedras de río»), no para la voz, así que debe bajar a iii; y
+   `kohiba` está en clase i por «Pané» vía Bachiller p. 256, que sólo dice
+   «según los cronistas de Indias», cuando Pané escribe cohoba.
+3. **#220** (`taino_zayas_1931.yaml` §Bagua) tiene que corregir su `lectura`
    («la voz sigue sin cronista») y su `efecto_en_la_lista`.
-5. **`6-fusion/medina_colina_dictado.yaml` §poporo** (p. 230) dio veredicto A
+4. **`6-fusion/medina_colina_dictado.yaml` §poporo** (p. 230) dio veredicto A
    «porque la palabra ya es caquetío-atestiguada». Sin eso, 'chichón' es
    castellano venezolano general.
-6. `lexicon_alvarado.py` y `minar_alvarado_glosario.py` dan el poporo como
+5. `lexicon_alvarado.py` y `minar_alvarado_glosario.py` dan el poporo como
    «confirma → caquetío-atestiguado JUSTIFICADO». Es lo que Alvarado afirma,
    no lo que sus referencias sostienen. Si se regeneran, que lo digan.
 

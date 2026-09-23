@@ -1,18 +1,20 @@
 ---
 tipo: fuente
-obra: "Elegías de varones ilustres de Indias (partes I-II)"
+obra: "Elegías de varones ilustres de Indias (partes I-III)"
 autor: "Castellanos, Juan de"
 anio: "1857 [c. 1589]"
 publicacion: "Biblioteca de Autores Españoles (dir. Buenaventura Carlos Aribau), 2ª ed., Madrid, M. Rivadeneyra, 1857. La parte I se imprimió en 1589; la II quedó inédita hasta la BAE. Otras ediciones que cita el repo: ANH, Caracas 1962 (t. 57 — la de Velasco, cita por versos) y ANH 1987 (la de González Batista, cita por páginas)"
 genero: cronica
 local: "fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt"
-paginas: "— (texto OCR: partes I y II enteras; la de Coro es la parte II, elegía I, desde la p. 185 de la ed. 1857)"
+paginas: "— (texto OCR de las partes I, II y III de la BAE 1857, t. IV; la Introducción de la Parte II empieza en la p. 181 y la Elegía I en la 186. Línea → página: 6-fusion/scripts/castellanos_pagina.py)"
 acceso: "Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental"
 capa_texto: si
-estado_minado: en-curso  # la lista de las once ciudades ya está en el canon (2026-09-07); la Elegía I sigue sin leer entera
+estado_minado: parcial  # 2026-09-22: lo de Coro leído entero (Parte II, Introducción + Elegía I cantos I-II y III hasta Upar); el resto, por búsqueda
+cobertura: "Parte II pp. 181-204 leídas enteras (Coro, Manaure, Ampiés, islas, Maracaibo, Federmann); resto de la Parte II y Partes I y III barridas por grafías medidas y contexto leído en cada acierto. Falta la Parte IV (Nuevo Reino), que no está en el archivo; tiene ficha propia desde el 2026-09-23, castellanos-nuevo-reino-1886 + poporo, macana junto a caquetíos y «Coro viento» releídos (2026-09-23, cc.3 y cc.6)"
+minado: 2026-09-22
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-05
+verificado: 2026-09-22
 aliases: ["Castellanos", "Castellanos 1589", "Castellanos 1857", "Elegías", "Elegías de varones ilustres de Indias", "Juan de Castellanos", "castellanos-elegias"]
 ---
 
@@ -45,10 +47,10 @@ deuda y de paso mide lo que nadie había medido del archivo.
 | | |
 |---|---|
 | Archivo | `fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt` — 3,4 MB, 147.532 líneas |
-| Qué contiene | **Parte I** (líneas 761-46824) y **Parte II** (46845-fin). Las partes III-IV NO están |
+| Qué contiene | **Parte I** (líneas 761-46824), **Parte II** (46845-94923) y **Parte III** (94924-146640), más el índice (146650-147483). ⚠️ Corregido el 2026-09-22: decía «Parte II hasta el fin; las partes III-IV NO están», y la III está entera. Falta sólo la IV (*Historia del Nuevo Reino de Granada*, ed. Paz y Meliá 1886) |
 | Origen | OCR de Google Books («Digitized by Google» en cada corte de página) vía Internet Archive |
 | Capa de texto | sí — es un `.txt`; se lee con `grep` y `sed -n 'a,bp'` |
-| Páginas impresas | en las cabeceras de página, **poco fiables**: el OCR da «905» por 205 y «109» por 199. La única cabecera limpia de la elegía de Coro es la línea 47693: «PARTE II, INTRODUCCION. 185» |
+| Páginas impresas | en las cabeceras, **poco fiables**: el OCR confunde 3↔5 y 6↔3. ⚠️ Corregido el 2026-09-22: la línea 47693 («PARTE II, INTRODUCCION. 185») NO es limpia — es la p. **183** (y «905» es 203, «109» es 199). La p. 185 va de la línea 48095 a la 48377. La tabla línea → página, con sus comprobaciones (números limpios, signaturas de pliego cada 16 pp., índice del tomo), está en `6-fusion/scripts/castellanos_pagina.py` |
 
 ### Cómo escribe los nombres (medido el 2026-09-05)
 
@@ -59,7 +61,7 @@ aquí se cumple **dos veces**: la grafía del siglo XVI y encima la del OCR.
 |---|---|---|
 | caquetío | `caquetía`, `caquetia`, `caquetíos`, y el OCR `caquetfo` | 6 |
 | Curiana | **`Coriana`** (Curiana: 0) | 1 |
-| Manaure | `Manaure` | 2 |
+| Manaure | `Manaure` 2 + el OCR **`Mauaure`** 2 (líneas 48353, 48363; medido 2026-09-22) | 4 |
 | Paraguaná | `Paraguan-` | 5 |
 | Ampiés | `Ampiés` 8 · `Ampies` 4 | 12 |
 | Todariquiba | **`Todariquibo`** (con -o; -a: 0) | 1 |
@@ -68,7 +70,7 @@ aquí se cumple **dos veces**: la grafía del siglo XVI y encima la del OCR.
 | Miraca, Cumarebo | tal cual | 1 y 1 |
 | Curazao | `Curazao` (Curaçao: 0) | 2 |
 | Alfínger | `Alfinger` | 1 |
-| Federmann | `Federm-`, `Fedreman`, `Fedeman`: **0** — cómo lo llama está por medir | ? |
+| Federmann | `Federm-`, `Fedreman`, `Fedeman`: 0 — escribe **`Fedrimán`** / «Nicolao Fedrimán» (medido 2026-09-22) | varias |
 
 ### 🔴 Dos ceros falsos, uno por sesión
 
@@ -87,9 +89,9 @@ para una cita, **aceptar cualquier carácter donde el OCR pudo fallar**
 
 | Edición | Quién la cita | Cómo | Ejemplo |
 |---|---|---|---|
-| BAE 1857 (esta) | [[arcaya-1920]] vía [[brito-figueroa-poblacion-economia]] | por página | «*Elegías*, p. 185» — y coincide: es la Introducción de la Parte II, la de Coro |
+| BAE 1857 (esta) | [[arcaya-1920]] vía [[brito-figueroa-poblacion-economia]] | por página | «*Elegías*, p. 185» — y coincide: la p. 185 (líneas 48095-48377) trae la lista de las ciudades; no por la cabecera «185» de la línea 47693, que es la p. 183 |
 | ANH Caracas 1962, t. 57 | [[velasco-2015-resistencia]] | por verso | «vv. 80-81» = «Señor de la ciudad Hurehurebo» |
-| ANH Caracas 1987 | [[gonzalez-batista-nombre-de-coro]] | por página | «p. 175» = *Coro viento / quiere decir en lengua generosa* |
+| ANH Caracas 1987 | [[gonzalez-batista-nombre-de-coro]], [[gonzalez-batista-2002-fundacion]] | por página | «p. 175» = *Coro viento / quiere decir en lengua generosa*. Concordancia medida en tres citas de 2002: ANH 174-175 = BAE 184-185; ANH 180 = BAE 189 |
 
 **Convención para esta nota y para el canon**: se cita por **línea del `.txt`**
 y, cuando la cabecera es legible, por página de la ed. 1857 — así cualquiera
@@ -161,10 +163,73 @@ ellos siguen vivos con el mismo nombre desde 1538: Zazárida y Capatárida.
   «Mayormente la gente caquetía»; **51124** «Era guanebucan y caquetia»;
   **52211** «En un pueblo de gente caquetia» — los cuatro contextos restantes
   del etnónimo, sin leer.
-- **La Elegía I entera** (líneas ~48636-53100): está *grepeada*, no leída.
-  Leerla es la tarea; los cantos van por Ampiés, Alfínger, Federmann y los
-  llanos.
-- Cómo nombra a los Welser y a Federmann (grafía por medir, ver tabla).
+- ~~La Elegía I entera~~ — leída el 2026-09-22 (ver la bitácora abajo).
+- ~~Cómo nombra a los Welser y a Federmann~~ — «Berzares» y «Fedrimán» /
+  «Nicolao Fedrimán» (medido el 2026-09-22).
+
+## Bitácora 2026-09-22 — tercera campaña de minería (parcela M7)
+
+**Qué se preguntó**: todo lo que cuente de los caquetíos de Coro y Paraguaná,
+Manaure, las islas de los Gigantes, los trueques, las armas (`poporo`), la
+navegación, el mar, las creencias, las voces indígenas en verso y la fauna.
+**Qué se leyó**: la Parte II entera desde la Introducción hasta el valle de
+Upar (líneas 47056-53240, pp. 181-204); lo demás, por búsqueda. El detalle,
+con línea y página de cada hallazgo, en
+`6-fusion/coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml` §castellanos.
+
+**Lo que salió mal en esta misma ficha** (corregido arriba): la paginación
+(la cabecera «185» era un 183; las islas son la p. 183, no la 185) y el
+alcance del archivo (la Parte III sí está).
+
+**Qué dio**, por esfera:
+
+- *Geografía política* — Manaure «sobre caciques tuvo mando y toda la comarca
+  subyectaba» (p. 185); andas con chapas de oro, generosidad, «poco a poco
+  tributario», bautizado **don Martín** con su casa y «todos los vasallos que
+  tenía por granjas y cortijos» (p. 186); paz «hasta catorce leguas más
+  adentro» (p. 186); su nombre como salvoconducto, con el gesto de las
+  «palmadas en la boca» (p. 199). **Sarasaragua**, pueblo caquetío del
+  interior (p. 201): topónimo nuevo, y un `-gua` con fecha. Un ejército
+  «guanebucán y caquetía» en la Guajira (p. 196).
+- *Lengua* — **`datos` = fruto de los cardones** con descripción (p. 189,
+  pero en Maracaibo, no en Coro); Coro tomó el nombre del **río** «que siempre
+  se llamó desta manera» (p. 185), lo mismo que dice Ballesteros 1550: dos
+  testigos; y «Coro viento en lengua generosa» es un juego culto (el castellano
+  de 1582 ya tenía *coro* 'viento del noroeste', DICTER). El único **Coriana**
+  del archivo es una aldea de La Ramada, junto a **Paraguanil** (p. 264): la
+  fuente del «Coria-na / Paragua-nil» de Oliver, que el canon sitúa mal en
+  Punta Espada. Los isleños de Curazao y Aruba hablan caquetío, visto por el
+  autor hacia 1540 (pp. 183-184). Intérpretes: Limpias, Esteban Martín,
+  Aceros (p. 185), Joan de la Puente (p. 211); Joan Calahuyare, caquetío
+  (p. 223).
+- *Economía y mar* — Coro, «tierra de fructíferos cardones», hobos,
+  cimirucos, mamones, caza y «grande pesquería» (p. 185); Maracaibo vive de
+  trocar sal y pescado por maíz (p. 189); la salina de Tapé en La Ramada, con
+  pesca estacional «para comer, ya para trueque» (p. 252); canoas monóxilas
+  labradas con piedra y fuego (p. 182); esclavos vendidos «por las islas en
+  públicos pregones» (p. 188).
+- *Fauna* — 15 registros con el esquema común (conejo, iguana, ánades con
+  señuelo de calabazo, hutía en las islas, perdiz, venado, una culebra enorme
+  «con silbos», jaguares que pescan en el lago, tiburón y raya en las flechas
+  de Trinidad), y la fauna europea ya presente hacia 1540, marcada como tal.
+
+**Qué NO dio (medido)**:
+
+- **`poporo` caquetío**: las cinco apariciones son de un guanebucán (p. 202),
+  de un areíto de Boriquén (p. 55), del calabacito de la cal con el hayo
+  (Cenú y Popayán, Parte III) y un topónimo. Alvarado remite a la p. 202 para
+  un poporo «de los antiguos Caquetíos»: el verso no lo sostiene. Queda por
+  ver la Parte IV (Nuevo Reino, I, 46 y 65).
+- **Creencia caquetía**: cero en todo lo leído entero (piache, mohán, ídolo,
+  demonio). Sólo hay creencia de los vecinos guanebucanes (el ídolo de oro de
+  Boronata; las «mil figuras de madera» de sus antecesores, p. 298 — el
+  pasaje que Oliver no encontró).
+- El «Piache de Todariquiba» de Velasco (v. 98 de la ed. 1962): sigue sin
+  aparecer, ahora con el archivo entero y la Parte III dentro.
+- La muerte por perros del señor de Hurehurebo: tampoco en la Parte III.
+
+**Deuda**: verificar en imagen los versos que se vayan a citar (el repo sólo
+tiene el `.txt`); bajar la Parte IV para cerrar `poporo`.
 
 ## Estatus epistémico: testigo de nombres, no de glosas
 
@@ -184,8 +249,7 @@ etiquetan. La rima deforma nombres (`Todariquibo` por la asonancia con
 ## Bitácora: el poporo, la macana y el viento (2026-09-23, cc.3 y cc.6)
 
 Páginas de la BAE sacadas con `6-fusion/scripts/castellanos_pagina.py`
-(#207). Esa ficha, en la rama de #207, corrige además el «185» de la línea
-47693 y la afirmación de que las partes III-IV faltan: la III está.
+(#207).
 
 - **Poporo** (`grep popor-`: 5 líneas en las partes I-III). Ninguna es de un
   caquetío. La que cita Alvarado («*Eleg*. I. c. 3º») es la de las líneas

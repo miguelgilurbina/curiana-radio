@@ -14,8 +14,8 @@
 # CÓMO SE CITA
 #   - Castellanos, partes I-III (castellanos-elegias): `linea` = línea del .txt
 #     del repo; página de la BAE 1857 calculada con
-#     6-fusion/scripts/castellanos_pagina.py (rama campana/mineria3-coro, #207),
-#     corrida el 2026-09-23 sobre las líneas que se citan aquí.
+#     6-fusion/scripts/castellanos_pagina.py (#207), corrida el 2026-09-23
+#     sobre las líneas que se citan aquí.
 #   - Castellanos, parte IV (castellanos-nuevo-reino-1886, NUEVA): la ficha
 #     trae el desfase medido.
 #   - «✅ imagen» = cotejado en la imagen de la página (pymupdf). Lo demás sale
@@ -42,12 +42,19 @@ meta:
     - bachiller-morales-1883
     - adam-1879
     - brinton-1871
-    - zayas-1931                        # la clave entra con #220 (rama campana/mineria3-zayas); aquí se lee su .txt desde esa rama
+    - zayas-1931                        # la ficha y los .txt entraron con #220
   copia_de_trabajo: >-
     Oviedo t. I se leyó en el PDF ÍNTEGRO que bajó M3 (#206,
-    fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf,
-    rama campana/mineria3-oviedo), porque el del repo está truncado desde la
-    impresa 155. Las páginas son las mismas.
+    fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf),
+    porque el viejo está truncado desde la impresa 155.
+  integrado_con_main: >-
+    La rama salió de tanda/base-2026-09-22 y mientras se trabajaba entraron en
+    main #201-#225 (incluidos #206, #207, #219 y #220). Se integró main en la
+    rama y se revisaron contra la lista maestra ya consolidada las propuestas
+    que la tocan (§zayas).
+  medido_para_la_macana: >-
+    las 12 líneas con caqu- se barrieron con una ventana de 80 líneas antes y
+    120 después.
   fuera_del_repo:
     - 'DICTER 2.0 (Diccionario de la Ciencia y de la Técnica del Renacimiento, Univ. de Salamanca), s.v. coro 2: https://dicter.usal.es/lema/coro&acepcion=2 (consultado el 2026-09-23)'
     - 'Vocabolario Treccani, s.v. mannaia: https://www.treccani.it/vocabolario/mannaia/ (consultado el 2026-09-23)'
@@ -118,8 +125,8 @@ meta:
         `cohiba` 'tabaco': «Taíno atestiguado: cohiba; cognado Lok. iuli;
         Brinton 1871» (curiana_lexicon.py).
       medido: >-
-        Brinton p. 12 escribe «Cohóba, the native name of tobacco» (texto del
-        repo y taino_brinton_1871.yaml), no cohiba. Ningún cronista del XVI
+        Brinton p. 12 escribe «Cohóba, the native name of tobacco» (✅
+        imagen), no cohiba. Ningún cronista del XVI
         del repo escribe cohiba. La forma sale del glosario del editor de
         Oviedo (t. IV p. 604, 1855: «la planta llamada cohiba ó cojiba») y
         de Pichardo 1862, sin cita. En el cuerpo de los cronistas, la
@@ -772,6 +779,7 @@ zayas:
           sin cronista para la glosa. Los pasajes que cita después (Las Casas
           y los mosquetes) son del ROLLO, no de la planta.
       - obra: brinton-1871
+        verificado_en_imagen: sí
         texto: '«Cohóba, the native name of tobacco» (p. 12) · «Tabaco, the pipe used in smoking the cohoba» (p. 13)'
         valor: >-
           Brinton escribe cohoba, NO cohiba. La nota del lexicón que atribuye
@@ -839,10 +847,12 @@ zayas:
           Detalle en 6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml
           §zayas.cohiba_tabako.
       consecuencia: >-
-        la lista maestra agrupa cohiba/cohoba en el lema `kohiba`; el lema
-        debería ser `kohoba` (la forma de los cronistas). Y el comentario de
-        SE_QUEDA_CON_SU_GRAFIA («Taíno atestiguado: cohiba … Brinton 1871»)
-        cambia con la fusión.
+        la lista maestra (la consolidada de main) agrupa cohiba/cohoba en el
+        lema `kohiba`, en clase i por «Pané» vía Bachiller p. 256, que sólo
+        dice «según los cronistas de Indias». El lema debería ser `kohoba`
+        (la forma de los cronistas) y la glosa, la del polvo y el rito. Y el
+        comentario de SE_QUEDA_CON_SU_GRAFIA («Taíno atestiguado: cohiba …
+        Brinton 1871») cambia con la fusión.
 
   bagua:
     etiqueta_recomendada: taíno
@@ -888,10 +898,12 @@ zayas:
         la esfera, entra como `bagua` 'mar', taíno, con esta cita. Lo decide
         Miguel.
       lista_maestra: >-
-        `bakua` pasa de ii-solo-secundaria a i-primaria-del-XVI (Oviedo), con
-        variedad «La Española». La entrada Bagua de taino_zayas_1931.yaml
-        (#220) debe corregir su `lectura` y su `efecto_en_la_lista`
-        (añade-cronista, no no-cambia).
+        en la lista consolidada que ya está en main, `bakua` está en clase i
+        por Oviedo, pero de SEGUNDA mano (Coll y Toste p. 190, «Oviedo (lib.
+        XIII, cap. IX) dice»). Falta la página primaria: oviedo-valdes-1851
+        p. 436, variedad «La Española». La entrada Bagua de
+        taino_zayas_1931.yaml (#220) debe corregir su `lectura` («la voz sigue
+        sin cronista»).
       cruce_taino_caquetio: >-
         el par `paragua ~ bagua` 'mar' del cruce del 2026-09-22 citaba sólo a
         Brinton del lado taíno. Ahora tiene cronista. Si el cruce cuenta
@@ -967,15 +979,18 @@ zayas:
     cambio_propuesto:
       lexicon: ninguno (no es clave)
       lista_maestra: >-
-        `manaia` baja de i-primaria-del-XVI a iii-conjetura-moderna, con la
-        razón: la única vía es la traducción italiana y la forma es el
-        italiano «mannaia». Su `solo_conjetura: true` ya lo apuntaba.
+        en la lista consolidada de main, `manaia` está en clase i por «Pané,
+        Pedro Mártir». Mártir entra por Coll y Toste p. 241, que lo cita para
+        la COSA («todo lo cortan con ciertas piedras de río durísimas»), no
+        para la voz (Zayas lo separa igual: cronistas_citados_para_la_cosa).
+        Pané sólo llega por la traducción italiana. Propuesta: baja a
+        iii-conjetura-moderna.
 
   resumen_para_cc7:
     - {voz: manati,  etiqueta: taíno,             cambia_el_lexicon: 'sólo la nota (con las dos citas y el conflicto)'}
     - {voz: tabako,  etiqueta: taíno,             cambia_el_lexicon: 'glosa ampliada (el rollo) y nota que cierra lo abierto'}
     - {voz: cohiba,  etiqueta: del editor (1855) / XIX, cambia_el_lexicon: 'A: se archiva y entra `cohoba` taíno, polvo y rito'}
-    - {voz: bagua,   etiqueta: taíno,             cambia_el_lexicon: 'nada obligado; sube en la lista maestra (Oviedo t. I p. 436)'}
+    - {voz: bagua,   etiqueta: taíno,             cambia_el_lexicon: 'nada obligado; la lista maestra gana la página primaria (Oviedo t. I p. 436)'}
     - {voz: anaki,   etiqueta: no atestiguada,    cambia_el_lexicon: 'nada; pariente kalinago femenino akani'}
     - {voz: anua,    etiqueta: 'no existe (es aura, no atestiguada)', cambia_el_lexicon: 'nada; corregir la transcripción de Goeje y la lista'}
     - {voz: manaya,  etiqueta: no atestiguada,    cambia_el_lexicon: 'nada; baja a iii en la lista'}

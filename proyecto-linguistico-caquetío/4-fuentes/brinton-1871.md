@@ -4,7 +4,9 @@ obra: "The Arawack Language of Guiana in its Linguistic and Ethnological Relatio
 autor: "Brinton, Daniel G."
 anio: 1871
 genero: linguistica-comparativa
-local: ["fuentes_caquetios/Brinton_1871_texto.txt", "fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf (0 bytes)"]
+local: ["fuentes_caquetios/Brinton_1871_texto.txt", "fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf"]
+descargado: 2026-09-22
+origen_digital: "Internet Archive — https://archive.org/details/arawacklanguageo00brinrich (ejemplar de University of California; dominio público, 1871). PDF: 2.179.167 bytes, sha256 3495b3174fd100a7442354c2f4de6f87e6e707d402e13d636f5877ed0026d4df. Rellena el PDF que estaba en 0 bytes; el .txt del repo es el mismo OCR del ítem (86 KB)"
 paginas: "—"
 capa_texto: si
 estado_minado: minado
@@ -125,13 +127,21 @@ un nombre único.**
 
 [[oliver-1989-cap2]] · [[perea-alonso-1942]]
 
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Se le preguntó por el mar en la cosmovisión arahuaca. **p. 18**: el mito de
+Orehu, el espíritu de las aguas, que sale de las olas y le da a Arawanili la
+maraca del piache (lokono de Guayana, s. XIX; Brinton no dice de qué misionero
+lo toma). Va como comparanda —no como dato caquetío— en
+`6-fusion/fauna_paraguana_mar_2026-09-22.yaml` §cosmovision_marina (cm-c1).
+Nada de fauna marina con nombre.
+
 ---
 
 ## Bitácora: Brinton escribe *cohoba*, no *cohiba* (2026-09-23, cc.7)
 
 p. 12, «Cohóba, the native name of tobacco»; p. 13, «Tabaco, the pipe used in
 smoking the cohoba» (texto del repo y `6-fusion/taino_brinton_1871.yaml`). La
-nota del lexicón que atribuye `cohiba` a Brinton cita mal la forma. 🔴 El PDF
-del repo está commiteado VACÍO en esta rama (blob `e69de29`, 0 bytes); #220
-lo repone (2.179.167 bytes). Por eso no se vio la imagen: la forma sale de la
-capa de texto y de la transcripción de T10, que coinciden. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.
+nota del lexicón que atribuye `cohiba` a Brinton cita mal la forma. ✅
+Verificado en imagen (pdf 20 = p. 12; pdf 21 = p. 13), sobre el PDF que
+repuso #204: la rama de la tanda de la base lo tenía vacío. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.
