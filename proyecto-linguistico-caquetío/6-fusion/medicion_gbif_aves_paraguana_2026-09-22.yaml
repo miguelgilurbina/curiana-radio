@@ -1,0 +1,6122 @@
+# GENERADO por 6-fusion/scripts/medir_gbif_aves_paraguana.py — no editar a mano.
+meta:
+  medido: '2026-09-22'
+  script: 6-fusion/scripts/medir_gbif_aves_paraguana.py
+  consulta: https://api.gbif.org/v1/occurrence/search?classKey=212&decimalLatitude=11.5,12.22&decimalLongitude=-70.32,-69.78
+  caja: 11,50-12,22 N / 70,32-69,78 O (península, istmo norte, Golfete y costa; fuera Coro y Aruba)
+  periodos:
+    P1_tiempo_de_viento:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    P2_seca_larga:
+    - 6
+    - 7
+    - 8
+    - 9
+    P3_tiempo_de_siembra:
+    - 10
+    - 11
+    - 12
+  regla_3: GBIF dice que el ave cabe en este medio HOY; no dice que estuviera en el s. XV.
+  regla_6: 'un mes sin registro mide también el esfuerzo de observación: comparar con `esfuerzo_por_mes`.'
+  licencias: cada dataset declara la suya (lista `datasets`); se citan por DOI.
+total_filas_aves_en_gbif: 36308
+filas_con_cantidad_cero: 480
+total_registros_aves: 35828
+especies_distintas: 230
+especies_solo_o_con_ceros:
+- speciesKey: 2479606
+  cientifico: Amazona farinosa
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 0
+- speciesKey: 2479612
+  cientifico: Amazona ochrocephala
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 1
+- speciesKey: 2479623
+  cientifico: Amazona autumnalis
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 0
+- speciesKey: 2479635
+  cientifico: Amazona dufresniana
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 0
+- speciesKey: 2479636
+  cientifico: Amazona mercenaria
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 0
+- speciesKey: 2479652
+  cientifico: Amazona festiva
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 0
+- speciesKey: 2479666
+  cientifico: Amazona amazonica
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 1
+- speciesKey: 2479668
+  cientifico: Amazona barbadensis
+  filas_con_cantidad_cero: 60
+  presencias_reales_en_la_caja: 0
+esfuerzo_por_mes:
+  1: 2708
+  2: 6348
+  3: 3749
+  4: 3406
+  5: 1297
+  6: 668
+  7: 3269
+  8: 2655
+  9: 3555
+  10: 2091
+  11: 1785
+  12: 4289
+esfuerzo_por_periodo:
+  P1_tiempo_de_viento: 17508
+  P2_seca_larga: 10147
+  P3_tiempo_de_siembra: 8165
+datasets:
+- datasetKey: 4fa7b334-ce0d-4e88-aaae-2e0c138d049e
+  titulo: EOD – eBird Observation Dataset
+  doi: 10.15468/aomfnb
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  registros_aves_en_la_caja: 35476
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: dd282bd6-6e30-4f02-bb36-6bdae0a46090
+  titulo: Detection histories for eight species of Amazona parrots in Venezuela during the NeoMaps bird
+    surveys in 2010
+  doi: 10.1594/pangaea.803430
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  registros_aves_en_la_caja: 480
+  de_ellos_con_cantidad_cero: 480
+- datasetKey: 50c9509d-22c7-4a22-a47d-8c48425ef4a7
+  titulo: iNaturalist Research-grade Observations
+  doi: 10.15468/ab3s5x
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  registros_aves_en_la_caja: 283
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: b1047888-ae52-4179-9dd5-5448ea342a24
+  titulo: Xeno-canto - Bird sounds from around the world
+  doi: 10.15468/qv0ksn
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  registros_aves_en_la_caja: 39
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: be5507b9-7abf-4b69-afe1-5ca2b7561734
+  titulo: University of Michigan Museum of Zoology, Division of Birds
+  doi: 10.15468/lns1qm
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  registros_aves_en_la_caja: 10
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: bb5b30b4-827e-4d5e-a86a-825d65cb6583
+  titulo: Paleobiology Database
+  doi: 10.15468/jfqhiu
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  registros_aves_en_la_caja: 8
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: 4bfac3ea-8763-4f4b-a71a-76a6f5f243d3
+  titulo: Museum of Comparative Zoology, Harvard University
+  doi: 10.15468/p5rupv
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  registros_aves_en_la_caja: 4
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: ba0c03ab-fa61-4a3c-8db7-35c8c3454168
+  titulo: The birds collection (ZO) of the Muséum national d'Histoire Naturelle (MNHN - Paris)
+  doi: 10.15468/h0xtwv
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  registros_aves_en_la_caja: 4
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: 36f15a36-6b45-442e-9c31-cd633423aee0
+  titulo: Field Museum of Natural History (Zoology) Bird Collection
+  doi: 10.15468/exkxdx
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  registros_aves_en_la_caja: 3
+  de_ellos_con_cantidad_cero: 0
+- datasetKey: 8a863029-f435-446a-821e-275f4f641165
+  titulo: Observation.org, Nature data from around the World
+  doi: 10.15468/5nilie
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  registros_aves_en_la_caja: 1
+  de_ellos_con_cantidad_cero: 0
+especies:
+- speciesKey: 5231676
+  cientifico: Mimus gilvus
+  orden: Passeriformes
+  familia: Mimidae
+  registros: 1354
+  registros_con_mes: 1354
+  meses:
+    1: 116
+    2: 205
+    3: 108
+    4: 124
+    5: 72
+    6: 27
+    7: 95
+    8: 90
+    9: 140
+    10: 105
+    11: 68
+    12: 204
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 625
+    P2_seca_larga: 352
+    P3_tiempo_de_siembra: 377
+  anio_primero: 1989
+  anio_ultimo: 2024
+- speciesKey: 2480189
+  cientifico: Fregata magnificens
+  orden: Suliformes
+  familia: Fregatidae
+  registros: 1167
+  registros_con_mes: 1167
+  meses:
+    1: 104
+    2: 274
+    3: 176
+    4: 112
+    5: 21
+    6: 23
+    7: 126
+    8: 45
+    9: 70
+    10: 40
+    11: 32
+    12: 144
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 687
+    P2_seca_larga: 264
+    P3_tiempo_de_siembra: 216
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 5229158
+  cientifico: Pelecanus occidentalis
+  orden: Pelecaniformes
+  familia: Pelecanidae
+  registros: 876
+  registros_con_mes: 876
+  meses:
+    1: 94
+    2: 172
+    3: 71
+    4: 58
+    5: 13
+    6: 18
+    7: 112
+    8: 57
+    9: 69
+    10: 15
+    11: 50
+    12: 147
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 408
+    P2_seca_larga: 256
+    P3_tiempo_de_siembra: 212
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 5789281
+  cientifico: Thalasseus maximus
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 874
+  registros_con_mes: 874
+  meses:
+    1: 87
+    2: 255
+    3: 109
+    4: 53
+    5: 17
+    6: 13
+    7: 75
+    8: 34
+    9: 53
+    10: 13
+    11: 41
+    12: 124
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 521
+    P2_seca_larga: 175
+    P3_tiempo_de_siembra: 178
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2481942
+  cientifico: Coragyps atratus
+  orden: Accipitriformes
+  familia: Cathartidae
+  registros: 809
+  registros_con_mes: 809
+  meses:
+    1: 57
+    2: 154
+    3: 80
+    4: 93
+    5: 40
+    6: 15
+    7: 45
+    8: 66
+    9: 53
+    10: 61
+    11: 38
+    12: 107
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 424
+    P2_seca_larga: 179
+    P3_tiempo_de_siembra: 206
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2487583
+  cientifico: Polioptila plumbea
+  orden: Passeriformes
+  familia: Polioptilidae
+  registros: 733
+  registros_con_mes: 733
+  meses:
+    1: 65
+    2: 102
+    3: 51
+    4: 85
+    5: 43
+    6: 7
+    7: 51
+    8: 45
+    9: 83
+    10: 58
+    11: 44
+    12: 99
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 346
+    P2_seca_larga: 186
+    P3_tiempo_de_siembra: 201
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2495869
+  cientifico: Columbina passerina
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 682
+  registros_con_mes: 682
+  meses:
+    1: 39
+    2: 75
+    3: 48
+    4: 55
+    5: 47
+    6: 24
+    7: 53
+    8: 81
+    9: 81
+    10: 64
+    11: 29
+    12: 86
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 264
+    P2_seca_larga: 239
+    P3_tiempo_de_siembra: 179
+  anio_primero: 1989
+  anio_ultimo: 2024
+- speciesKey: 2480327
+  cientifico: Pluvialis squatarola
+  orden: Charadriiformes
+  familia: Charadriidae
+  registros: 658
+  registros_con_mes: 658
+  meses:
+    1: 32
+    2: 185
+    3: 155
+    4: 48
+    5: 11
+    6: 10
+    7: 42
+    8: 32
+    9: 49
+    10: 10
+    11: 21
+    12: 63
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 431
+    P2_seca_larga: 133
+    P3_tiempo_de_siembra: 94
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 6065844
+  cientifico: Leucophaeus atricilla
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 651
+  registros_con_mes: 651
+  meses:
+    1: 71
+    2: 132
+    3: 55
+    4: 47
+    5: 9
+    6: 9
+    7: 80
+    8: 46
+    9: 62
+    10: 12
+    11: 31
+    12: 97
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 314
+    P2_seca_larga: 197
+    P3_tiempo_de_siembra: 140
+  anio_primero: 2004
+  anio_ultimo: 2024
+- speciesKey: 2481776
+  cientifico: Arenaria interpres
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 619
+  registros_con_mes: 619
+  meses:
+    1: 35
+    2: 149
+    3: 118
+    4: 41
+    5: 9
+    6: 8
+    7: 64
+    8: 33
+    9: 50
+    10: 8
+    11: 27
+    12: 77
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 352
+    P2_seca_larga: 155
+    P3_tiempo_de_siembra: 112
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 5229915
+  cientifico: Icterus icterus
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 595
+  registros_con_mes: 595
+  meses:
+    1: 56
+    2: 72
+    3: 45
+    4: 75
+    5: 29
+    6: 12
+    7: 35
+    8: 45
+    9: 64
+    10: 53
+    11: 41
+    12: 68
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 277
+    P2_seca_larga: 156
+    P3_tiempo_de_siembra: 162
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2480989
+  cientifico: Caracara plancus
+  orden: Falconiformes
+  familia: Falconidae
+  registros: 589
+  registros_con_mes: 589
+  meses:
+    1: 44
+    2: 135
+    3: 73
+    4: 50
+    5: 23
+    6: 10
+    7: 48
+    8: 51
+    9: 27
+    10: 27
+    11: 21
+    12: 80
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 325
+    P2_seca_larga: 136
+    P3_tiempo_de_siembra: 128
+  anio_primero: 1896
+  anio_ultimo: 2026
+- speciesKey: 2490404
+  cientifico: Cardinalis phoeniceus
+  orden: Passeriformes
+  familia: Cardinalidae
+  registros: 588
+  registros_con_mes: 588
+  meses:
+    1: 36
+    2: 47
+    3: 38
+    4: 66
+    5: 25
+    6: 17
+    7: 46
+    8: 47
+    9: 85
+    10: 43
+    11: 48
+    12: 90
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 212
+    P2_seca_larga: 195
+    P3_tiempo_de_siembra: 181
+  anio_primero: 1989
+  anio_ultimo: 2024
+- speciesKey: 5231190
+  cientifico: Passer domesticus
+  orden: Passeriformes
+  familia: Passeridae
+  registros: 579
+  registros_con_mes: 579
+  meses:
+    1: 40
+    2: 60
+    3: 61
+    4: 52
+    5: 58
+    6: 19
+    7: 38
+    8: 30
+    9: 65
+    10: 59
+    11: 26
+    12: 71
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 271
+    P2_seca_larga: 152
+    P3_tiempo_de_siembra: 156
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 2481748
+  cientifico: Calidris alba
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 571
+  registros_con_mes: 571
+  meses:
+    1: 36
+    2: 150
+    3: 124
+    4: 52
+    5: 3
+    6: 3
+    7: 46
+    8: 31
+    9: 48
+    10: 7
+    11: 16
+    12: 55
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 365
+    P2_seca_larga: 128
+    P3_tiempo_de_siembra: 78
+  anio_primero: 2004
+  anio_ultimo: 2024
+- speciesKey: 2480888
+  cientifico: Egretta rufescens
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 567
+  registros_con_mes: 567
+  meses:
+    1: 51
+    2: 143
+    3: 79
+    4: 47
+    5: 16
+    6: 12
+    7: 56
+    8: 35
+    9: 35
+    10: 7
+    11: 18
+    12: 68
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 336
+    P2_seca_larga: 138
+    P3_tiempo_de_siembra: 93
+  anio_primero: 1896
+  anio_ultimo: 2024
+- speciesKey: 2478125
+  cientifico: Melanerpes rubricapillus
+  orden: Piciformes
+  familia: Picidae
+  registros: 565
+  registros_con_mes: 565
+  meses:
+    1: 38
+    2: 47
+    3: 53
+    4: 65
+    5: 47
+    6: 17
+    7: 45
+    8: 42
+    9: 69
+    10: 56
+    11: 28
+    12: 58
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 250
+    P2_seca_larga: 173
+    P3_tiempo_de_siembra: 142
+  anio_primero: 1941
+  anio_ultimo: 2024
+- speciesKey: 2495888
+  cientifico: Columbina squammata
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 565
+  registros_con_mes: 565
+  meses:
+    1: 29
+    2: 52
+    3: 42
+    4: 71
+    5: 28
+    6: 12
+    7: 31
+    8: 74
+    9: 62
+    10: 68
+    11: 38
+    12: 58
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 222
+    P2_seca_larga: 179
+    P3_tiempo_de_siembra: 164
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 9752617
+  cientifico: Ardea alba
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 558
+  registros_con_mes: 558
+  meses:
+    1: 56
+    2: 155
+    3: 59
+    4: 23
+    5: 24
+    6: 13
+    7: 62
+    8: 28
+    9: 26
+    10: 10
+    11: 17
+    12: 85
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 317
+    P2_seca_larga: 129
+    P3_tiempo_de_siembra: 112
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2484159
+  cientifico: Quiscalus lugubris
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 518
+  registros_con_mes: 518
+  meses:
+    1: 43
+    2: 60
+    3: 55
+    4: 49
+    5: 35
+    6: 16
+    7: 41
+    8: 44
+    9: 62
+    10: 44
+    11: 6
+    12: 63
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 242
+    P2_seca_larga: 163
+    P3_tiempo_de_siembra: 113
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 9399113
+  cientifico: Phalacrocorax brasilianus
+  orden: Suliformes
+  familia: Phalacrocoracidae
+  registros: 500
+  registros_con_mes: 500
+  meses:
+    1: 52
+    2: 148
+    3: 41
+    4: 53
+    5: 7
+    6: 10
+    7: 66
+    8: 38
+    9: 8
+    10: 1
+    11: 13
+    12: 63
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 301
+    P2_seca_larga: 122
+    P3_tiempo_de_siembra: 77
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2481930
+  cientifico: Cathartes aura
+  orden: Accipitriformes
+  familia: Cathartidae
+  registros: 476
+  registros_con_mes: 476
+  meses:
+    1: 47
+    2: 160
+    3: 35
+    4: 37
+    5: 5
+    6: 3
+    7: 6
+    8: 3
+    9: 22
+    10: 22
+    11: 33
+    12: 103
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 284
+    P2_seca_larga: 34
+    P3_tiempo_de_siembra: 158
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2480295
+  cientifico: Charadrius semipalmatus
+  orden: Charadriiformes
+  familia: Charadriidae
+  registros: 468
+  registros_con_mes: 468
+  meses:
+    1: 29
+    2: 112
+    3: 104
+    4: 48
+    5: 10
+    7: 38
+    8: 35
+    9: 34
+    10: 8
+    11: 12
+    12: 38
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 303
+    P2_seca_larga: 107
+    P3_tiempo_de_siembra: 58
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2493744
+  cientifico: Coereba flaveola
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 462
+  registros_con_mes: 462
+  meses:
+    1: 35
+    2: 68
+    3: 43
+    4: 56
+    5: 29
+    6: 11
+    7: 26
+    8: 27
+    9: 60
+    10: 33
+    11: 34
+    12: 40
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 231
+    P2_seca_larga: 124
+    P3_tiempo_de_siembra: 107
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2481720
+  cientifico: Tringa melanoleuca
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 457
+  registros_con_mes: 457
+  meses:
+    1: 19
+    2: 137
+    3: 57
+    4: 40
+    5: 9
+    6: 8
+    7: 57
+    8: 31
+    9: 29
+    10: 12
+    11: 5
+    12: 53
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 262
+    P2_seca_larga: 125
+    P3_tiempo_de_siembra: 70
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 2481784
+  cientifico: Numenius phaeopus
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 435
+  registros_con_mes: 435
+  meses:
+    1: 27
+    2: 103
+    3: 110
+    4: 15
+    5: 2
+    6: 2
+    7: 43
+    8: 46
+    9: 20
+    10: 6
+    11: 13
+    12: 48
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 257
+    P2_seca_larga: 111
+    P3_tiempo_de_siembra: 67
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 5789298
+  cientifico: Tringa semipalmata
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 435
+  registros_con_mes: 435
+  meses:
+    1: 40
+    2: 99
+    3: 85
+    4: 29
+    5: 3
+    6: 1
+    7: 43
+    8: 34
+    9: 31
+    10: 2
+    11: 18
+    12: 50
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 256
+    P2_seca_larga: 109
+    P3_tiempo_de_siembra: 70
+  anio_primero: 2007
+  anio_ultimo: 2024
+- speciesKey: 5229939
+  cientifico: Icterus nigrogularis
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 429
+  registros_con_mes: 429
+  meses:
+    1: 36
+    2: 26
+    3: 34
+    4: 47
+    5: 32
+    6: 12
+    7: 19
+    8: 28
+    9: 66
+    10: 54
+    11: 29
+    12: 46
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 175
+    P2_seca_larga: 125
+    P3_tiempo_de_siembra: 129
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 9426540
+  cientifico: Melanospiza bicolor
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 425
+  registros_con_mes: 425
+  meses:
+    1: 18
+    2: 41
+    3: 29
+    4: 53
+    5: 31
+    6: 17
+    7: 27
+    8: 22
+    9: 68
+    10: 48
+    11: 28
+    12: 43
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 172
+    P2_seca_larga: 134
+    P3_tiempo_de_siembra: 119
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2480873
+  cientifico: Egretta thula
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 423
+  registros_con_mes: 423
+  meses:
+    1: 42
+    2: 115
+    3: 38
+    4: 27
+    5: 12
+    6: 14
+    7: 43
+    8: 33
+    9: 20
+    10: 13
+    11: 15
+    12: 51
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 234
+    P2_seca_larga: 110
+    P3_tiempo_de_siembra: 79
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2496060
+  cientifico: Leptotila verreauxi
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 419
+  registros_con_mes: 419
+  meses:
+    1: 32
+    2: 37
+    3: 30
+    4: 67
+    5: 22
+    6: 5
+    7: 21
+    8: 29
+    9: 60
+    10: 48
+    11: 31
+    12: 37
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 188
+    P2_seca_larga: 115
+    P3_tiempo_de_siembra: 116
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2481745
+  cientifico: Calidris minutilla
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 400
+  registros_con_mes: 400
+  meses:
+    1: 30
+    2: 117
+    3: 31
+    4: 43
+    5: 6
+    7: 23
+    8: 31
+    9: 46
+    10: 13
+    11: 14
+    12: 46
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 227
+    P2_seca_larga: 100
+    P3_tiempo_de_siembra: 73
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 2495358
+  cientifico: Zenaida auriculata
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 386
+  registros_con_mes: 386
+  meses:
+    1: 21
+    2: 35
+    3: 24
+    4: 35
+    5: 18
+    6: 11
+    7: 31
+    8: 43
+    9: 57
+    10: 49
+    11: 15
+    12: 47
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 133
+    P2_seca_larga: 142
+    P3_tiempo_de_siembra: 111
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 5228112
+  cientifico: Colinus cristatus
+  orden: Galliformes
+  familia: Odontophoridae
+  registros: 377
+  registros_con_mes: 377
+  meses:
+    1: 32
+    2: 42
+    3: 23
+    4: 29
+    5: 22
+    6: 5
+    7: 23
+    8: 16
+    9: 45
+    10: 38
+    11: 29
+    12: 73
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 148
+    P2_seca_larga: 89
+    P3_tiempo_de_siembra: 140
+  anio_primero: 1938
+  anio_ultimo: 2024
+- speciesKey: 9691034
+  cientifico: Phoenicopterus ruber
+  orden: Phoenicopteriformes
+  familia: Phoenicopteridae
+  registros: 377
+  registros_con_mes: 377
+  meses:
+    1: 48
+    2: 104
+    3: 25
+    4: 26
+    5: 12
+    6: 8
+    7: 32
+    8: 34
+    9: 21
+    10: 8
+    11: 14
+    12: 45
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 215
+    P2_seca_larga: 95
+    P3_tiempo_de_siembra: 67
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2481240
+  cientifico: Thalasseus sandvicensis
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 371
+  registros_con_mes: 371
+  meses:
+    1: 31
+    2: 88
+    3: 35
+    4: 30
+    5: 5
+    6: 7
+    7: 42
+    8: 41
+    9: 40
+    10: 6
+    11: 10
+    12: 36
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 189
+    P2_seca_larga: 130
+    P3_tiempo_de_siembra: 52
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2495331
+  cientifico: Patagioenas corensis
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 369
+  registros_con_mes: 369
+  meses:
+    1: 21
+    2: 35
+    3: 13
+    4: 44
+    5: 24
+    6: 11
+    7: 44
+    8: 25
+    9: 58
+    10: 28
+    11: 16
+    12: 50
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 137
+    P2_seca_larga: 138
+    P3_tiempo_de_siembra: 94
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 9105847
+  cientifico: Saltator olivascens
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 359
+  registros_con_mes: 359
+  meses:
+    1: 33
+    2: 30
+    3: 20
+    4: 50
+    5: 23
+    6: 6
+    7: 10
+    8: 24
+    9: 62
+    10: 42
+    11: 26
+    12: 33
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 156
+    P2_seca_larga: 102
+    P3_tiempo_de_siembra: 101
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2480273
+  cientifico: Haematopus palliatus
+  orden: Charadriiformes
+  familia: Haematopodidae
+  registros: 353
+  registros_con_mes: 353
+  meses:
+    1: 30
+    2: 87
+    3: 36
+    4: 17
+    5: 2
+    6: 8
+    7: 49
+    8: 25
+    9: 19
+    10: 4
+    11: 9
+    12: 67
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 172
+    P2_seca_larga: 101
+    P3_tiempo_de_siembra: 80
+  anio_primero: 1992
+  anio_ultimo: 2026
+- speciesKey: 2481764
+  cientifico: Calidris pusilla
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 352
+  registros_con_mes: 352
+  meses:
+    1: 19
+    2: 82
+    3: 54
+    4: 42
+    5: 4
+    6: 1
+    7: 3
+    8: 45
+    9: 48
+    10: 7
+    11: 11
+    12: 36
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 201
+    P2_seca_larga: 97
+    P3_tiempo_de_siembra: 54
+  anio_primero: 2005
+  anio_ultimo: 2024
+- speciesKey: 5229204
+  cientifico: Eudocimus ruber
+  orden: Pelecaniformes
+  familia: Threskiornithidae
+  registros: 332
+  registros_con_mes: 332
+  meses:
+    1: 10
+    2: 71
+    3: 30
+    4: 45
+    5: 4
+    6: 7
+    7: 99
+    8: 21
+    9: 14
+    10: 3
+    11: 8
+    12: 20
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 160
+    P2_seca_larga: 141
+    P3_tiempo_de_siembra: 31
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2484936
+  cientifico: Synallaxis albescens
+  orden: Passeriformes
+  familia: Furnariidae
+  registros: 330
+  registros_con_mes: 330
+  meses:
+    1: 20
+    2: 43
+    3: 24
+    4: 29
+    5: 17
+    6: 1
+    7: 19
+    8: 20
+    9: 48
+    10: 30
+    11: 30
+    12: 49
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 133
+    P2_seca_larga: 88
+    P3_tiempo_de_siembra: 109
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2475165
+  cientifico: Hypnelus ruficollis
+  orden: Piciformes
+  familia: Bucconidae
+  registros: 318
+  registros_con_mes: 318
+  meses:
+    1: 31
+    2: 31
+    3: 23
+    4: 39
+    5: 12
+    6: 5
+    7: 19
+    8: 21
+    9: 39
+    10: 36
+    11: 36
+    12: 26
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 136
+    P2_seca_larga: 84
+    P3_tiempo_de_siembra: 98
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2480519
+  cientifico: Buteo albicaudatus
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 309
+  registros_con_mes: 309
+  meses:
+    1: 7
+    2: 54
+    3: 28
+    4: 39
+    5: 6
+    6: 7
+    7: 13
+    8: 48
+    9: 25
+    10: 12
+    11: 17
+    12: 53
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 134
+    P2_seca_larga: 93
+    P3_tiempo_de_siembra: 82
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 2490049
+  cientifico: Sakesphorus canadensis
+  orden: Passeriformes
+  familia: Thamnophilidae
+  registros: 307
+  registros_con_mes: 307
+  meses:
+    1: 29
+    2: 40
+    3: 26
+    4: 45
+    5: 11
+    6: 5
+    7: 13
+    8: 9
+    9: 44
+    10: 23
+    11: 28
+    12: 34
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 151
+    P2_seca_larga: 71
+    P3_tiempo_de_siembra: 85
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2476233
+  cientifico: Leucippus fallax
+  orden: Apodiformes
+  familia: Trochilidae
+  registros: 303
+  registros_con_mes: 303
+  meses:
+    1: 24
+    2: 43
+    3: 16
+    4: 37
+    5: 11
+    6: 7
+    7: 13
+    8: 15
+    9: 35
+    10: 34
+    11: 30
+    12: 38
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 131
+    P2_seca_larga: 70
+    P3_tiempo_de_siembra: 102
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 5229662
+  cientifico: Tyrannus melancholicus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 303
+  registros_con_mes: 303
+  meses:
+    1: 25
+    2: 12
+    3: 17
+    4: 20
+    5: 25
+    6: 9
+    7: 12
+    8: 30
+    9: 44
+    10: 59
+    11: 19
+    12: 31
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 99
+    P2_seca_larga: 95
+    P3_tiempo_de_siembra: 109
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2481742
+  cientifico: Calidris mauri
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 301
+  registros_con_mes: 301
+  meses:
+    1: 10
+    2: 74
+    3: 53
+    4: 27
+    5: 1
+    6: 1
+    7: 42
+    8: 26
+    9: 29
+    10: 1
+    11: 6
+    12: 31
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 165
+    P2_seca_larga: 98
+    P3_tiempo_de_siembra: 38
+  anio_primero: 2008
+  anio_ultimo: 2024
+- speciesKey: 5789285
+  cientifico: Sternula antillarum
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 298
+  registros_con_mes: 298
+  meses:
+    1: 7
+    2: 15
+    3: 38
+    4: 31
+    5: 11
+    6: 16
+    7: 109
+    8: 27
+    9: 31
+    10: 3
+    11: 8
+    12: 2
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 102
+    P2_seca_larga: 183
+    P3_tiempo_de_siembra: 13
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 5229678
+  cientifico: Tyrannus dominicensis
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 295
+  registros_con_mes: 295
+  meses:
+    1: 33
+    2: 50
+    3: 4
+    4: 17
+    5: 3
+    6: 4
+    7: 15
+    8: 14
+    9: 52
+    10: 39
+    11: 15
+    12: 49
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 107
+    P2_seca_larga: 85
+    P3_tiempo_de_siembra: 103
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2481721
+  cientifico: Tringa flavipes
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 292
+  registros_con_mes: 292
+  meses:
+    1: 28
+    2: 79
+    3: 28
+    4: 11
+    5: 3
+    7: 16
+    8: 31
+    9: 45
+    10: 10
+    11: 3
+    12: 38
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 149
+    P2_seca_larga: 92
+    P3_tiempo_de_siembra: 51
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 2480803
+  cientifico: Platalea ajaja
+  orden: Pelecaniformes
+  familia: Threskiornithidae
+  registros: 289
+  registros_con_mes: 289
+  meses:
+    1: 38
+    2: 78
+    3: 14
+    4: 9
+    5: 6
+    6: 4
+    7: 65
+    8: 17
+    9: 9
+    10: 6
+    11: 5
+    12: 38
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 145
+    P2_seca_larga: 95
+    P3_tiempo_de_siembra: 49
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2480881
+  cientifico: Egretta tricolor
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 289
+  registros_con_mes: 289
+  meses:
+    1: 19
+    2: 81
+    3: 31
+    4: 21
+    5: 9
+    6: 7
+    7: 45
+    8: 24
+    9: 17
+    10: 1
+    11: 6
+    12: 28
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 161
+    P2_seca_larga: 93
+    P3_tiempo_de_siembra: 35
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2483420
+  cientifico: Sublegatus arenarum
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 283
+  registros_con_mes: 283
+  meses:
+    1: 24
+    2: 19
+    3: 21
+    4: 28
+    5: 20
+    6: 6
+    7: 18
+    8: 28
+    9: 47
+    10: 30
+    11: 12
+    12: 30
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 112
+    P2_seca_larga: 99
+    P3_tiempo_de_siembra: 72
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 5230154
+  cientifico: Xiphorhynchus picus
+  orden: Passeriformes
+  familia: Furnariidae
+  registros: 283
+  registros_con_mes: 283
+  meses:
+    1: 29
+    2: 29
+    3: 17
+    4: 38
+    5: 9
+    6: 4
+    7: 9
+    8: 12
+    9: 50
+    10: 26
+    11: 30
+    12: 30
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 122
+    P2_seca_larga: 75
+    P3_tiempo_de_siembra: 86
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 9367409
+  cientifico: Sterna hirundo
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 283
+  registros_con_mes: 283
+  meses:
+    1: 12
+    2: 44
+    3: 29
+    4: 33
+    5: 6
+    6: 5
+    7: 62
+    8: 38
+    9: 34
+    10: 2
+    11: 8
+    12: 10
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 124
+    P2_seca_larga: 139
+    P3_tiempo_de_siembra: 20
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2481672
+  cientifico: Limnodromus griseus
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 269
+  registros_con_mes: 269
+  meses:
+    1: 12
+    2: 60
+    3: 74
+    4: 31
+    5: 4
+    7: 26
+    8: 39
+    9: 9
+    10: 2
+    11: 3
+    12: 9
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 181
+    P2_seca_larga: 74
+    P3_tiempo_de_siembra: 14
+  anio_primero: 2008
+  anio_ultimo: 2024
+- speciesKey: 6100904
+  cientifico: Formicivora intermedia
+  orden: Passeriformes
+  familia: Thamnophilidae
+  registros: 268
+  registros_con_mes: 268
+  meses:
+    1: 22
+    2: 30
+    3: 18
+    4: 24
+    5: 9
+    6: 4
+    7: 19
+    8: 6
+    9: 39
+    10: 28
+    11: 37
+    12: 32
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 103
+    P2_seca_larga: 68
+    P3_tiempo_de_siembra: 97
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2495414
+  cientifico: Columba livia
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 267
+  registros_con_mes: 267
+  meses:
+    1: 24
+    2: 21
+    3: 34
+    4: 28
+    5: 17
+    6: 4
+    7: 28
+    8: 17
+    9: 29
+    10: 11
+    11: 4
+    12: 50
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 124
+    P2_seca_larga: 78
+    P3_tiempo_de_siembra: 65
+  anio_primero: 2016
+  anio_ultimo: 2024
+- speciesKey: 2480726
+  cientifico: Pandion haliaetus
+  orden: Accipitriformes
+  familia: Pandionidae
+  registros: 261
+  registros_con_mes: 261
+  meses:
+    1: 18
+    2: 59
+    3: 59
+    4: 24
+    5: 3
+    6: 2
+    7: 16
+    8: 1
+    9: 4
+    10: 12
+    11: 18
+    12: 45
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 163
+    P2_seca_larga: 23
+    P3_tiempo_de_siembra: 75
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 5229205
+  cientifico: Eudocimus albus
+  orden: Pelecaniformes
+  familia: Threskiornithidae
+  registros: 249
+  registros_con_mes: 249
+  meses:
+    1: 3
+    2: 48
+    3: 25
+    4: 37
+    5: 6
+    6: 5
+    7: 82
+    8: 20
+    10: 1
+    11: 9
+    12: 13
+  meses_sin_registro:
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 119
+    P2_seca_larga: 107
+    P3_tiempo_de_siembra: 23
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2491862
+  cientifico: Sicalis flaveola
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 244
+  registros_con_mes: 244
+  meses:
+    1: 16
+    2: 18
+    3: 18
+    4: 23
+    5: 20
+    6: 7
+    7: 17
+    8: 16
+    9: 45
+    10: 36
+    11: 16
+    12: 12
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 95
+    P2_seca_larga: 85
+    P3_tiempo_de_siembra: 64
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 5229128
+  cientifico: Himantopus mexicanus
+  orden: Charadriiformes
+  familia: Recurvirostridae
+  registros: 244
+  registros_con_mes: 244
+  meses:
+    1: 22
+    2: 25
+    3: 10
+    4: 17
+    5: 12
+    6: 9
+    7: 49
+    8: 36
+    9: 22
+    10: 15
+    11: 4
+    12: 23
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 86
+    P2_seca_larga: 116
+    P3_tiempo_de_siembra: 42
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2496211
+  cientifico: Crotophaga sulcirostris
+  orden: Cuculiformes
+  familia: Cuculidae
+  registros: 234
+  registros_con_mes: 234
+  meses:
+    1: 30
+    2: 32
+    3: 17
+    4: 18
+    5: 8
+    6: 4
+    7: 6
+    8: 11
+    9: 20
+    10: 33
+    11: 16
+    12: 39
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 105
+    P2_seca_larga: 41
+    P3_tiempo_de_siembra: 88
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2491988
+  cientifico: Coryphospingus pileatus
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 226
+  registros_con_mes: 226
+  meses:
+    1: 16
+    2: 21
+    3: 7
+    4: 33
+    5: 14
+    6: 3
+    7: 14
+    8: 20
+    9: 21
+    10: 24
+    11: 24
+    12: 29
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 91
+    P2_seca_larga: 58
+    P3_tiempo_de_siembra: 77
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2483589
+  cientifico: Myiarchus tyrannulus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 204
+  registros_con_mes: 204
+  meses:
+    1: 16
+    2: 17
+    3: 3
+    4: 12
+    5: 11
+    6: 5
+    7: 17
+    8: 19
+    9: 42
+    10: 28
+    11: 15
+    12: 19
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 59
+    P2_seca_larga: 83
+    P3_tiempo_de_siembra: 62
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2479127
+  cientifico: Aratinga pertinax
+  orden: Psittaciformes
+  familia: Psittacidae
+  registros: 203
+  registros_con_mes: 203
+  meses:
+    1: 13
+    2: 9
+    3: 21
+    4: 20
+    5: 18
+    6: 6
+    7: 13
+    8: 19
+    9: 29
+    10: 38
+    11: 9
+    12: 8
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 81
+    P2_seca_larga: 67
+    P3_tiempo_de_siembra: 55
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 7341834
+  cientifico: Setophaga petechia
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 193
+  registros_con_mes: 193
+  meses:
+    1: 10
+    2: 67
+    3: 25
+    4: 16
+    5: 3
+    6: 7
+    7: 20
+    8: 3
+    9: 13
+    10: 2
+    11: 7
+    12: 20
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 121
+    P2_seca_larga: 43
+    P3_tiempo_de_siembra: 29
+  anio_primero: 1941
+  anio_ultimo: 2024
+- speciesKey: 5229400
+  cientifico: Calidris himantopus
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 192
+  registros_con_mes: 192
+  meses:
+    1: 6
+    2: 72
+    3: 11
+    4: 19
+    5: 1
+    7: 4
+    8: 19
+    9: 20
+    10: 8
+    11: 4
+    12: 28
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 109
+    P2_seca_larga: 43
+    P3_tiempo_de_siembra: 40
+  anio_primero: 2017
+  anio_ultimo: 2024
+- speciesKey: 2481928
+  cientifico: Cathartes burrovianus
+  orden: Accipitriformes
+  familia: Cathartidae
+  registros: 178
+  registros_con_mes: 178
+  meses:
+    1: 14
+    2: 26
+    3: 18
+    4: 22
+    5: 9
+    6: 9
+    7: 2
+    8: 14
+    9: 18
+    10: 12
+    11: 12
+    12: 22
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 89
+    P2_seca_larga: 43
+    P3_tiempo_de_siembra: 46
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 2476063
+  cientifico: Chlorostilbon gibsoni
+  orden: Apodiformes
+  familia: Trochilidae
+  registros: 166
+  registros_con_mes: 166
+  meses:
+    1: 20
+    2: 31
+    3: 6
+    4: 19
+    5: 2
+    6: 2
+    7: 6
+    8: 7
+    9: 31
+    10: 4
+    11: 18
+    12: 20
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 78
+    P2_seca_larga: 46
+    P3_tiempo_de_siembra: 42
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 5232118
+  cientifico: Glaucidium brasilianum
+  orden: Strigiformes
+  familia: Strigidae
+  registros: 154
+  registros_con_mes: 154
+  meses:
+    1: 15
+    2: 18
+    3: 15
+    4: 19
+    5: 8
+    6: 2
+    7: 5
+    8: 3
+    9: 23
+    10: 8
+    11: 18
+    12: 20
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 75
+    P2_seca_larga: 33
+    P3_tiempo_de_siembra: 46
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2484971
+  cientifico: Synallaxis candei
+  orden: Passeriformes
+  familia: Furnariidae
+  registros: 152
+  registros_con_mes: 152
+  meses:
+    1: 13
+    2: 21
+    3: 14
+    4: 28
+    5: 7
+    6: 3
+    7: 8
+    8: 4
+    9: 12
+    10: 14
+    11: 14
+    12: 14
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 83
+    P2_seca_larga: 27
+    P3_tiempo_de_siembra: 42
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 9515886
+  cientifico: Hirundo rustica
+  orden: Passeriformes
+  familia: Hirundinidae
+  registros: 143
+  registros_con_mes: 143
+  meses:
+    2: 10
+    3: 13
+    4: 42
+    8: 18
+    9: 51
+    10: 8
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 5
+  - 6
+  - 7
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 65
+    P2_seca_larga: 69
+    P3_tiempo_de_siembra: 9
+  anio_primero: 2013
+  anio_ultimo: 2024
+- speciesKey: 2481798
+  cientifico: Actitis macularius
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 139
+  registros_con_mes: 139
+  meses:
+    1: 7
+    2: 45
+    3: 14
+    4: 17
+    5: 1
+    7: 2
+    8: 12
+    9: 11
+    10: 2
+    11: 6
+    12: 22
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 84
+    P2_seca_larga: 25
+    P3_tiempo_de_siembra: 30
+  anio_primero: 2008
+  anio_ultimo: 2024
+- speciesKey: 2480894
+  cientifico: Egretta caerulea
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 120
+  registros_con_mes: 120
+  meses:
+    1: 6
+    2: 30
+    3: 3
+    4: 7
+    5: 1
+    6: 1
+    7: 18
+    8: 15
+    9: 7
+    10: 4
+    11: 8
+    12: 20
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 47
+    P2_seca_larga: 41
+    P3_tiempo_de_siembra: 32
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2480410
+  cientifico: Parabuteo unicinctus
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 118
+  registros_con_mes: 118
+  meses:
+    1: 9
+    2: 11
+    3: 4
+    4: 13
+    5: 5
+    6: 1
+    7: 4
+    8: 12
+    9: 13
+    10: 15
+    11: 5
+    12: 26
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 42
+    P2_seca_larga: 30
+    P3_tiempo_de_siembra: 46
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 2481710
+  cientifico: Tringa solitaria
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 115
+  registros_con_mes: 115
+  meses:
+    1: 16
+    2: 8
+    3: 26
+    4: 7
+    5: 2
+    7: 10
+    8: 9
+    9: 13
+    10: 17
+    11: 3
+    12: 4
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 59
+    P2_seca_larga: 32
+    P3_tiempo_de_siembra: 24
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2489133
+  cientifico: Progne chalybea
+  orden: Passeriformes
+  familia: Hirundinidae
+  registros: 115
+  registros_con_mes: 115
+  meses:
+    1: 5
+    2: 8
+    3: 20
+    4: 16
+    5: 16
+    6: 5
+    7: 5
+    8: 10
+    9: 15
+    10: 6
+    11: 1
+    12: 8
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 65
+    P2_seca_larga: 35
+    P3_tiempo_de_siembra: 15
+  anio_primero: 2019
+  anio_ultimo: 2024
+- speciesKey: 5229715
+  cientifico: Inezia tenuirostris
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 114
+  registros_con_mes: 114
+  meses:
+    1: 7
+    2: 21
+    3: 7
+    4: 13
+    5: 7
+    6: 2
+    7: 17
+    8: 13
+    9: 20
+    10: 4
+    11: 1
+    12: 2
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 55
+    P2_seca_larga: 52
+    P3_tiempo_de_siembra: 7
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2480710
+  cientifico: Gampsonyx swainsonii
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 113
+  registros_con_mes: 113
+  meses:
+    1: 12
+    2: 14
+    3: 1
+    4: 13
+    5: 7
+    6: 2
+    7: 3
+    8: 14
+    9: 14
+    10: 15
+    11: 2
+    12: 16
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 47
+    P2_seca_larga: 33
+    P3_tiempo_de_siembra: 33
+  anio_primero: 2014
+  anio_ultimo: 2024
+- speciesKey: 2481263
+  cientifico: Gelochelidon nilotica
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 113
+  registros_con_mes: 113
+  meses:
+    1: 2
+    2: 9
+    3: 4
+    4: 10
+    6: 2
+    7: 35
+    8: 22
+    9: 12
+    10: 2
+    11: 5
+    12: 10
+  meses_sin_registro:
+  - 5
+  por_periodo:
+    P1_tiempo_de_viento: 25
+    P2_seca_larga: 71
+    P3_tiempo_de_siembra: 17
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 9395900
+  cientifico: Rallus longirostris
+  orden: Gruiformes
+  familia: Rallidae
+  registros: 113
+  registros_con_mes: 113
+  meses:
+    1: 2
+    2: 32
+    3: 10
+    4: 8
+    5: 1
+    6: 1
+    7: 30
+    8: 1
+    9: 7
+    10: 2
+    11: 2
+    12: 17
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 53
+    P2_seca_larga: 39
+    P3_tiempo_de_siembra: 21
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 5229146
+  cientifico: Vanellus chilensis
+  orden: Charadriiformes
+  familia: Charadriidae
+  registros: 112
+  registros_con_mes: 112
+  meses:
+    1: 21
+    2: 17
+    3: 10
+    4: 4
+    5: 5
+    6: 2
+    7: 15
+    8: 6
+    9: 13
+    10: 5
+    12: 14
+  meses_sin_registro:
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 57
+    P2_seca_larga: 36
+    P3_tiempo_de_siembra: 19
+  anio_primero: 2007
+  anio_ultimo: 2024
+- speciesKey: 2487404
+  cientifico: Cyclarhis gujanensis
+  orden: Passeriformes
+  familia: Vireonidae
+  registros: 103
+  registros_con_mes: 103
+  meses:
+    1: 4
+    2: 14
+    3: 3
+    4: 12
+    5: 3
+    6: 2
+    8: 1
+    9: 18
+    10: 9
+    11: 21
+    12: 16
+  meses_sin_registro:
+  - 7
+  por_periodo:
+    P1_tiempo_de_viento: 36
+    P2_seca_larga: 21
+    P3_tiempo_de_siembra: 46
+  anio_primero: 1999
+  anio_ultimo: 2024
+- speciesKey: 2484396
+  cientifico: Molothrus bonariensis
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 93
+  registros_con_mes: 93
+  meses:
+    1: 3
+    2: 10
+    3: 14
+    4: 12
+    5: 7
+    6: 6
+    7: 4
+    8: 12
+    9: 18
+    10: 3
+    12: 4
+  meses_sin_registro:
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 46
+    P2_seca_larga: 40
+    P3_tiempo_de_siembra: 7
+  anio_primero: 2008
+  anio_ultimo: 2024
+- speciesKey: 2481209
+  cientifico: Rynchops niger
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 89
+  registros_con_mes: 89
+  meses:
+    2: 19
+    3: 4
+    4: 8
+    6: 3
+    7: 26
+    8: 21
+    9: 7
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 5
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 31
+    P2_seca_larga: 57
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2004
+  anio_ultimo: 2024
+- speciesKey: 2482934
+  cientifico: Machetornis rixosa
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 89
+  registros_con_mes: 89
+  meses:
+    1: 14
+    2: 8
+    3: 13
+    4: 8
+    5: 2
+    7: 2
+    8: 13
+    9: 3
+    10: 2
+    11: 5
+    12: 19
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 45
+    P2_seca_larga: 18
+    P3_tiempo_de_siembra: 26
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 2481047
+  cientifico: Falco peregrinus
+  orden: Falconiformes
+  familia: Falconidae
+  registros: 88
+  registros_con_mes: 88
+  meses:
+    1: 11
+    2: 13
+    3: 22
+    4: 20
+    10: 5
+    11: 2
+    12: 15
+  meses_sin_registro:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 66
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 22
+  anio_primero: 2013
+  anio_ultimo: 2024
+- speciesKey: 2481765
+  cientifico: Calidris canutus
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 88
+  registros_con_mes: 88
+  meses:
+    2: 26
+    3: 49
+    4: 8
+    9: 5
+  meses_sin_registro:
+  - 1
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 83
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 0
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 9630752
+  cientifico: Ardea herodias
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 85
+  registros_con_mes: 85
+  meses:
+    1: 13
+    2: 10
+    3: 19
+    4: 3
+    5: 6
+    7: 1
+    8: 11
+    10: 1
+    11: 2
+    12: 19
+  meses_sin_registro:
+  - 6
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 51
+    P2_seca_larga: 12
+    P3_tiempo_de_siembra: 22
+  anio_primero: 2007
+  anio_ultimo: 2024
+- speciesKey: 2476077
+  cientifico: Chlorostilbon mellisugus
+  orden: Apodiformes
+  familia: Trochilidae
+  registros: 78
+  registros_con_mes: 78
+  meses:
+    1: 3
+    2: 12
+    3: 5
+    4: 16
+    5: 2
+    6: 3
+    7: 4
+    8: 5
+    9: 3
+    10: 6
+    11: 14
+    12: 5
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 38
+    P2_seca_larga: 15
+    P3_tiempo_de_siembra: 25
+  anio_primero: 1991
+  anio_ultimo: 2023
+- speciesKey: 2496209
+  cientifico: Crotophaga ani
+  orden: Cuculiformes
+  familia: Cuculidae
+  registros: 75
+  registros_con_mes: 75
+  meses:
+    1: 1
+    2: 11
+    3: 5
+    4: 5
+    5: 1
+    6: 3
+    7: 6
+    8: 1
+    9: 11
+    10: 10
+    11: 9
+    12: 12
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 23
+    P2_seca_larga: 21
+    P3_tiempo_de_siembra: 31
+  anio_primero: 2006
+  anio_ultimo: 2023
+- speciesKey: 2480975
+  cientifico: Sula leucogaster
+  orden: Suliformes
+  familia: Sulidae
+  registros: 70
+  registros_con_mes: 70
+  meses:
+    1: 5
+    2: 2
+    3: 9
+    4: 1
+    7: 7
+    8: 2
+    10: 2
+    11: 11
+    12: 31
+  meses_sin_registro:
+  - 5
+  - 6
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 17
+    P2_seca_larga: 9
+    P3_tiempo_de_siembra: 44
+  anio_primero: 2006
+  anio_ultimo: 2023
+- speciesKey: 2482044
+  cientifico: Tachybaptus dominicus
+  orden: Podicipediformes
+  familia: Podicipedidae
+  registros: 67
+  registros_con_mes: 67
+  meses:
+    1: 5
+    2: 1
+    3: 10
+    4: 12
+    5: 7
+    6: 2
+    7: 3
+    9: 4
+    10: 10
+    12: 13
+  meses_sin_registro:
+  - 8
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 35
+    P2_seca_larga: 9
+    P3_tiempo_de_siembra: 23
+  anio_primero: 2005
+  anio_ultimo: 2024
+- speciesKey: 2487430
+  cientifico: Vireo olivaceus
+  orden: Passeriformes
+  familia: Vireonidae
+  registros: 67
+  registros_con_mes: 67
+  meses:
+    1: 4
+    2: 1
+    7: 2
+    8: 3
+    9: 15
+    10: 6
+    11: 22
+    12: 14
+  meses_sin_registro:
+  - 3
+  - 4
+  - 5
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 20
+    P3_tiempo_de_siembra: 42
+  anio_primero: 1992
+  anio_ultimo: 2024
+- speciesKey: 2498393
+  cientifico: Dendrocygna autumnalis
+  orden: Anseriformes
+  familia: Anatidae
+  registros: 65
+  registros_con_mes: 65
+  meses:
+    1: 9
+    2: 5
+    3: 7
+    4: 5
+    5: 4
+    7: 1
+    8: 8
+    9: 8
+    10: 9
+    11: 1
+    12: 8
+  meses_sin_registro:
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 30
+    P2_seca_larga: 17
+    P3_tiempo_de_siembra: 18
+  anio_primero: 2019
+  anio_ultimo: 2024
+- speciesKey: 6092935
+  cientifico: Setophaga striata
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 59
+  registros_con_mes: 59
+  meses:
+    1: 2
+    2: 15
+    3: 1
+    5: 1
+    10: 9
+    11: 16
+    12: 15
+  meses_sin_registro:
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 19
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 40
+  anio_primero: 2016
+  anio_ultimo: 2024
+- speciesKey: 2481119
+  cientifico: Chlidonias niger
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 58
+  registros_con_mes: 58
+  meses:
+    7: 9
+    8: 19
+    9: 30
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 58
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2024
+- speciesKey: 5229249
+  cientifico: Sterna dougallii
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 54
+  registros_con_mes: 54
+  meses:
+    2: 2
+    3: 11
+    4: 14
+    7: 4
+    8: 11
+    9: 11
+    12: 1
+  meses_sin_registro:
+  - 1
+  - 5
+  - 6
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 27
+    P2_seca_larga: 26
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 9813242
+  cientifico: Falco columbarius
+  orden: Falconiformes
+  familia: Falconidae
+  registros: 54
+  registros_con_mes: 54
+  meses:
+    1: 7
+    2: 15
+    3: 9
+    4: 4
+    5: 1
+    10: 1
+    11: 3
+    12: 14
+  meses_sin_registro:
+  - 6
+  - 7
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 36
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 18
+  anio_primero: 1998
+  anio_ultimo: 2024
+- speciesKey: 2489985
+  cientifico: Setophaga ruticilla
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 52
+  registros_con_mes: 52
+  meses:
+    2: 4
+    3: 2
+    4: 16
+    5: 1
+    8: 2
+    9: 8
+    10: 10
+    11: 9
+  meses_sin_registro:
+  - 1
+  - 6
+  - 7
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 23
+    P2_seca_larga: 10
+    P3_tiempo_de_siembra: 19
+  anio_primero: 2016
+  anio_ultimo: 2024
+- speciesKey: 2497240
+  cientifico: Athene cunicularia
+  orden: Strigiformes
+  familia: Strigidae
+  registros: 52
+  registros_con_mes: 52
+  meses:
+    1: 6
+    2: 14
+    3: 3
+    4: 5
+    7: 11
+    8: 4
+    9: 7
+    12: 2
+  meses_sin_registro:
+  - 5
+  - 6
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 28
+    P2_seca_larga: 22
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2013
+  anio_ultimo: 2026
+- speciesKey: 9685907
+  cientifico: Falco sparverius
+  orden: Falconiformes
+  familia: Falconidae
+  registros: 51
+  registros_con_mes: 51
+  meses:
+    1: 3
+    2: 7
+    3: 2
+    4: 18
+    6: 2
+    7: 1
+    9: 2
+    10: 3
+    11: 4
+    12: 9
+  meses_sin_registro:
+  - 5
+  - 8
+  por_periodo:
+    P1_tiempo_de_viento: 30
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 16
+  anio_primero: 1998
+  anio_ultimo: 2023
+- speciesKey: 5959208
+  cientifico: Thamnophilus doliatus
+  orden: Passeriformes
+  familia: Thamnophilidae
+  registros: 48
+  registros_con_mes: 48
+  meses:
+    1: 1
+    2: 9
+    3: 1
+    4: 6
+    5: 1
+    6: 2
+    7: 2
+    8: 3
+    9: 9
+    10: 6
+    11: 5
+    12: 3
+  meses_sin_registro: []
+  por_periodo:
+    P1_tiempo_de_viento: 18
+    P2_seca_larga: 16
+    P3_tiempo_de_siembra: 14
+  anio_primero: 1999
+  anio_ultimo: 2023
+- speciesKey: 2495858
+  cientifico: Columbina talpacoti
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 41
+  registros_con_mes: 41
+  meses:
+    1: 3
+    2: 10
+    3: 1
+    7: 6
+    8: 5
+    9: 5
+    10: 2
+    11: 7
+    12: 2
+  meses_sin_registro:
+  - 4
+  - 5
+  - 6
+  por_periodo:
+    P1_tiempo_de_viento: 14
+    P2_seca_larga: 16
+    P3_tiempo_de_siembra: 11
+  anio_primero: 2012
+  anio_ultimo: 2024
+- speciesKey: 6093856
+  cientifico: Parkesia noveboracensis
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 41
+  registros_con_mes: 41
+  meses:
+    1: 1
+    2: 13
+    3: 1
+    4: 5
+    9: 5
+    10: 6
+    11: 7
+    12: 3
+  meses_sin_registro:
+  - 5
+  - 6
+  - 7
+  - 8
+  por_periodo:
+    P1_tiempo_de_viento: 20
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 16
+  anio_primero: 2016
+  anio_ultimo: 2024
+- speciesKey: 2474393
+  cientifico: Fulica americana
+  orden: Gruiformes
+  familia: Rallidae
+  registros: 35
+  registros_con_mes: 35
+  meses:
+    1: 1
+    3: 8
+    4: 5
+    5: 2
+    7: 1
+    8: 6
+    9: 2
+    12: 10
+  meses_sin_registro:
+  - 2
+  - 6
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 16
+    P2_seca_larga: 9
+    P3_tiempo_de_siembra: 10
+  anio_primero: 2021
+  anio_ultimo: 2024
+- speciesKey: 2480863
+  cientifico: Nycticorax nycticorax
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 35
+  registros_con_mes: 35
+  meses:
+    1: 2
+    4: 6
+    5: 1
+    6: 1
+    7: 3
+    8: 14
+    9: 3
+    10: 1
+    11: 1
+    12: 3
+  meses_sin_registro:
+  - 2
+  - 3
+  por_periodo:
+    P1_tiempo_de_viento: 9
+    P2_seca_larga: 21
+    P3_tiempo_de_siembra: 5
+  anio_primero: 2012
+  anio_ultimo: 2024
+- speciesKey: 2481756
+  cientifico: Calidris fuscicollis
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 34
+  registros_con_mes: 34
+  meses:
+    1: 2
+    2: 7
+    3: 2
+    4: 3
+    5: 5
+    6: 1
+    8: 1
+    9: 6
+    10: 3
+    12: 4
+  meses_sin_registro:
+  - 7
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 19
+    P2_seca_larga: 8
+    P3_tiempo_de_siembra: 7
+  anio_primero: 2004
+  anio_ultimo: 2024
+- speciesKey: 5230618
+  cientifico: Conirostrum bicolor
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 34
+  registros_con_mes: 34
+  meses:
+    1: 2
+    2: 14
+    3: 4
+    4: 5
+    7: 5
+    11: 2
+    12: 2
+  meses_sin_registro:
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 25
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 4
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2498090
+  cientifico: Anas bahamensis
+  orden: Anseriformes
+  familia: Anatidae
+  registros: 33
+  registros_con_mes: 33
+  meses:
+    1: 4
+    2: 9
+    3: 7
+    8: 6
+    12: 7
+  meses_sin_registro:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 20
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 7
+  anio_primero: 2018
+  anio_ultimo: 2024
+- speciesKey: 9539567
+  cientifico: Butorides virescens
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 31
+  registros_con_mes: 31
+  meses:
+    2: 14
+    6: 1
+    7: 6
+    11: 5
+    12: 5
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 8
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 14
+    P2_seca_larga: 7
+    P3_tiempo_de_siembra: 10
+  anio_primero: 2008
+  anio_ultimo: 2021
+- speciesKey: 9422220
+  cientifico: Spatula discors
+  orden: Anseriformes
+  familia: Anatidae
+  registros: 30
+  registros_con_mes: 30
+  meses:
+    1: 1
+    2: 5
+    3: 7
+    4: 2
+    10: 3
+    11: 1
+    12: 11
+  meses_sin_registro:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 15
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 15
+  anio_primero: 1998
+  anio_ultimo: 2023
+- speciesKey: 2480830
+  cientifico: Bubulcus ibis
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 26
+  registros_con_mes: 26
+  meses:
+    1: 1
+    2: 14
+    4: 2
+    7: 5
+    11: 2
+    12: 2
+  meses_sin_registro:
+  - 3
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 17
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2008
+  anio_ultimo: 2023
+- speciesKey: 2491741
+  cientifico: Volatinia jacarina
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 26
+  registros_con_mes: 26
+  meses:
+    2: 7
+    3: 1
+    4: 7
+    8: 6
+    11: 4
+    12: 1
+  meses_sin_registro:
+  - 1
+  - 5
+  - 6
+  - 7
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 15
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 5
+  anio_primero: 1991
+  anio_ultimo: 2024
+- speciesKey: 2481817
+  cientifico: Gallinago delicata
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 25
+  registros_con_mes: 25
+  meses:
+    1: 14
+    2: 1
+    3: 1
+    10: 7
+    12: 2
+  meses_sin_registro:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 16
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 9
+  anio_primero: 2020
+  anio_ultimo: 2024
+- speciesKey: 2483318
+  cientifico: Euscarthmus meloryphus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 25
+  registros_con_mes: 25
+  meses:
+    2: 2
+    3: 3
+    4: 5
+    5: 2
+    7: 5
+    10: 2
+    11: 2
+    12: 4
+  meses_sin_registro:
+  - 1
+  - 6
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 12
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 8
+  anio_primero: 2017
+  anio_ultimo: 2024
+- speciesKey: 5229693
+  cientifico: Tyrannus savana
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 25
+  registros_con_mes: 25
+  meses:
+    7: 6
+    8: 3
+    9: 15
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 24
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2020
+  anio_ultimo: 2023
+- speciesKey: 2481174
+  cientifico: Larus fuscus
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 24
+  registros_con_mes: 24
+  meses:
+    1: 3
+    2: 11
+    4: 6
+    7: 2
+    12: 2
+  meses_sin_registro:
+  - 3
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 20
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2016
+  anio_ultimo: 2023
+- speciesKey: 2481744
+  cientifico: Calidris melanotos
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 24
+  registros_con_mes: 24
+  meses:
+    8: 1
+    9: 13
+    10: 9
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 14
+    P3_tiempo_de_siembra: 10
+  anio_primero: 2019
+  anio_ultimo: 2022
+- speciesKey: 2496287
+  cientifico: Coccyzus americanus
+  orden: Cuculiformes
+  familia: Cuculidae
+  registros: 24
+  registros_con_mes: 24
+  meses:
+    10: 15
+    11: 8
+    12: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 24
+  anio_primero: 2019
+  anio_ultimo: 2024
+- speciesKey: 2488633
+  cientifico: Thraupis glaucocolpa
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 23
+  registros_con_mes: 23
+  meses:
+    2: 1
+    4: 5
+    5: 2
+    6: 3
+    8: 1
+    9: 7
+    11: 1
+    12: 3
+  meses_sin_registro:
+  - 1
+  - 3
+  - 7
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 8
+    P2_seca_larga: 11
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2017
+  anio_ultimo: 2022
+- speciesKey: 6093209
+  cientifico: Setophaga magnolia
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 22
+  registros_con_mes: 22
+  meses:
+    2: 11
+    11: 4
+    12: 7
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 11
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 11
+  anio_primero: 2016
+  anio_ultimo: 2021
+- speciesKey: 2481236
+  cientifico: Hydroprogne caspia
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 21
+  registros_con_mes: 21
+  meses:
+    2: 3
+    3: 10
+    5: 1
+    6: 4
+    7: 1
+    10: 1
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 4
+  - 8
+  - 9
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 14
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2009
+  anio_ultimo: 2022
+- speciesKey: 2498003
+  cientifico: Sarkidiornis sylvicola
+  orden: Anseriformes
+  familia: Anatidae
+  registros: 21
+  registros_con_mes: 21
+  meses:
+    1: 11
+    2: 3
+    3: 1
+    5: 1
+    7: 1
+    10: 1
+    11: 1
+    12: 2
+  meses_sin_registro:
+  - 4
+  - 6
+  - 8
+  - 9
+  por_periodo:
+    P1_tiempo_de_viento: 16
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2019
+  anio_ultimo: 2021
+- speciesKey: 5229447
+  cientifico: Ortalis ruficauda
+  orden: Galliformes
+  familia: Cracidae
+  registros: 21
+  registros_con_mes: 21
+  meses:
+    1: 2
+    3: 1
+    4: 6
+    5: 1
+    8: 3
+    9: 6
+    10: 1
+    11: 1
+  meses_sin_registro:
+  - 2
+  - 6
+  - 7
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 10
+    P2_seca_larga: 9
+    P3_tiempo_de_siembra: 2
+  anio_primero: 1999
+  anio_ultimo: 2022
+- speciesKey: 6093374
+  cientifico: Setophaga citrina
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 20
+  registros_con_mes: 20
+  meses:
+    1: 5
+    2: 4
+    11: 9
+    12: 2
+  meses_sin_registro:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 9
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 11
+  anio_primero: 2006
+  anio_ultimo: 2024
+- speciesKey: 7676017
+  cientifico: Hydropsalis cayennensis
+  orden: Caprimulgiformes
+  familia: Caprimulgidae
+  registros: 20
+  registros_con_mes: 20
+  meses:
+    1: 5
+    3: 3
+    4: 4
+    5: 3
+    7: 1
+    9: 1
+    10: 2
+    12: 1
+  meses_sin_registro:
+  - 2
+  - 6
+  - 8
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 15
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 3
+  anio_primero: 2020
+  anio_ultimo: 2024
+- speciesKey: 2490726
+  cientifico: Turdus leucomelas
+  orden: Passeriformes
+  familia: Turdidae
+  registros: 19
+  registros_con_mes: 19
+  meses:
+    1: 2
+    3: 1
+    4: 5
+    6: 2
+    7: 1
+    8: 3
+    9: 2
+    10: 1
+    11: 2
+  meses_sin_registro:
+  - 2
+  - 5
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 8
+    P2_seca_larga: 8
+    P3_tiempo_de_siembra: 3
+  anio_primero: 1998
+  anio_ultimo: 2022
+- speciesKey: 5229606
+  cientifico: Elaenia flavogaster
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 19
+  registros_con_mes: 19
+  meses:
+    3: 1
+    6: 2
+    7: 3
+    8: 1
+    10: 4
+    11: 8
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 9
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 12
+  anio_primero: 1992
+  anio_ultimo: 2021
+- speciesKey: 2482786
+  cientifico: Empidonax traillii
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 18
+  registros_con_mes: 18
+  meses:
+    1: 2
+    3: 2
+    4: 10
+    5: 1
+    9: 3
+  meses_sin_registro:
+  - 2
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 15
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2022
+- speciesKey: 8346347
+  cientifico: Troglodytes musculus
+  orden: Passeriformes
+  familia: Troglodytidae
+  registros: 18
+  registros_con_mes: 18
+  meses:
+    1: 3
+    3: 2
+    4: 2
+    5: 1
+    6: 2
+    10: 1
+    11: 7
+  meses_sin_registro:
+  - 2
+  - 7
+  - 8
+  - 9
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 8
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 8
+  anio_primero: 2013
+  anio_ultimo: 2024
+- speciesKey: 5229564
+  cientifico: Fluvicola pica
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 17
+  registros_con_mes: 17
+  meses:
+    1: 3
+    2: 10
+    5: 1
+    7: 2
+    8: 1
+  meses_sin_registro:
+  - 3
+  - 4
+  - 6
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 14
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2012
+  anio_ultimo: 2024
+- speciesKey: 5789280
+  cientifico: Sternula superciliaris
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 17
+  registros_con_mes: 17
+  meses:
+    3: 1
+    4: 3
+    5: 1
+    6: 1
+    7: 4
+    8: 5
+    10: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 10
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2006
+  anio_ultimo: 2023
+- speciesKey: 6093345
+  cientifico: Setophaga americana
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 17
+  registros_con_mes: 17
+  meses:
+    2: 12
+    3: 1
+    10: 4
+  meses_sin_registro:
+  - 1
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 13
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2008
+  anio_ultimo: 2017
+- speciesKey: 2480951
+  cientifico: Ardea cocoi
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 15
+  registros_con_mes: 15
+  meses:
+    2: 8
+    3: 1
+    5: 1
+    7: 2
+    12: 3
+  meses_sin_registro:
+  - 1
+  - 4
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 10
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 3
+  anio_primero: 1998
+  anio_ultimo: 2020
+- speciesKey: 2482755
+  cientifico: Pitangus sulphuratus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 15
+  registros_con_mes: 15
+  meses:
+    1: 4
+    4: 2
+    9: 5
+    10: 2
+    11: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 6
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2013
+  anio_ultimo: 2024
+- speciesKey: 2483647
+  cientifico: Pyrocephalus rubinus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 15
+  registros_con_mes: 15
+  meses:
+    1: 2
+    2: 2
+    4: 2
+    7: 2
+    10: 5
+    12: 2
+  meses_sin_registro:
+  - 3
+  - 5
+  - 6
+  - 8
+  - 9
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 6
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 7
+  anio_primero: 2008
+  anio_ultimo: 2023
+- speciesKey: 2484254
+  cientifico: Sturnella magna
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 15
+  registros_con_mes: 15
+  meses:
+    1: 1
+    2: 2
+    7: 5
+    9: 1
+    10: 2
+    12: 4
+  meses_sin_registro:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 8
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 3
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 6
+  anio_primero: 2022
+  anio_ultimo: 2024
+- speciesKey: 2488602
+  cientifico: Thraupis episcopus
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 15
+  registros_con_mes: 15
+  meses:
+    1: 3
+    4: 1
+    7: 2
+    10: 7
+    12: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 5
+  - 6
+  - 8
+  - 9
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 4
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 9
+  anio_primero: 1998
+  anio_ultimo: 2023
+- speciesKey: 2495853
+  cientifico: Columbina minuta
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 14
+  registros_con_mes: 14
+  meses:
+    7: 1
+    8: 1
+    11: 6
+    12: 6
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 9
+  - 10
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 12
+  anio_primero: 1992
+  anio_ultimo: 2023
+- speciesKey: 2480824
+  cientifico: Butorides striata
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 13
+  registros_con_mes: 13
+  meses:
+    2: 3
+    5: 2
+    8: 6
+    12: 2
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2009
+  anio_ultimo: 2024
+- speciesKey: 2487413
+  cientifico: Vireo griseus
+  orden: Passeriformes
+  familia: Vireonidae
+  registros: 12
+  registros_con_mes: 12
+  meses:
+    1: 3
+    2: 9
+  meses_sin_registro:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 12
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2017
+  anio_ultimo: 2024
+- speciesKey: 2490363
+  cientifico: Spiza americana
+  orden: Passeriformes
+  familia: Cardinalidae
+  registros: 12
+  registros_con_mes: 12
+  meses:
+    1: 5
+    2: 1
+    3: 2
+    12: 4
+  meses_sin_registro:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 8
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2020
+  anio_ultimo: 2023
+- speciesKey: 5229213
+  cientifico: Phaetusa simplex
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 12
+  registros_con_mes: 12
+  meses:
+    7: 3
+    8: 6
+    11: 3
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 9
+    P3_tiempo_de_siembra: 3
+  anio_primero: 2008
+  anio_ultimo: 2024
+- speciesKey: 2480320
+  cientifico: Charadrius vociferus
+  orden: Charadriiformes
+  familia: Charadriidae
+  registros: 11
+  registros_con_mes: 11
+  meses:
+    1: 2
+    2: 1
+    7: 6
+    12: 2
+  meses_sin_registro:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 3
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2010
+  anio_ultimo: 2023
+- speciesKey: 2489160
+  cientifico: Riparia riparia
+  orden: Passeriformes
+  familia: Hirundinidae
+  registros: 11
+  registros_con_mes: 11
+  meses:
+    4: 5
+    9: 4
+    11: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 4
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2017
+  anio_ultimo: 2023
+- speciesKey: 2491367
+  cientifico: Sporophila minuta
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 10
+  registros_con_mes: 10
+  meses:
+    4: 10
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 10
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2479081
+  cientifico: Forpus passerinus
+  orden: Psittaciformes
+  familia: Psittacidae
+  registros: 9
+  registros_con_mes: 9
+  meses:
+    4: 3
+    7: 6
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 3
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2013
+  anio_ultimo: 2023
+- speciesKey: 2481846
+  cientifico: Jacana jacana
+  orden: Charadriiformes
+  familia: Jacanidae
+  registros: 9
+  registros_con_mes: 9
+  meses:
+    1: 2
+    7: 1
+    8: 6
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 7
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2011
+  anio_ultimo: 2024
+- speciesKey: 5228199
+  cientifico: Gallinula chloropus
+  orden: Gruiformes
+  familia: Rallidae
+  registros: 9
+  registros_con_mes: 9
+  meses:
+    5: 1
+    6: 1
+    8: 7
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 7
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 8
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2024
+- speciesKey: 2480953
+  cientifico: Nyctanassa violacea
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 8
+  registros_con_mes: 8
+  meses:
+    1: 2
+    3: 3
+    9: 3
+  meses_sin_registro:
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2024
+- speciesKey: 2482077
+  cientifico: Podilymbus podiceps
+  orden: Podicipediformes
+  familia: Podicipedidae
+  registros: 8
+  registros_con_mes: 8
+  meses:
+    1: 2
+    8: 6
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2024
+  anio_ultimo: 2024
+- speciesKey: 5959118
+  cientifico: Bubo virginianus
+  orden: Strigiformes
+  familia: Strigidae
+  registros: 8
+  registros_con_mes: 8
+  meses:
+    1: 1
+    2: 1
+    3: 1
+    4: 1
+    5: 1
+    8: 1
+    10: 1
+    11: 1
+  meses_sin_registro:
+  - 6
+  - 7
+  - 9
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2007
+  anio_ultimo: 2021
+- speciesKey: 5959228
+  cientifico: Ara severus
+  orden: Psittaciformes
+  familia: Psittacidae
+  registros: 8
+  registros_con_mes: 8
+  meses:
+    3: 3
+    4: 1
+    5: 2
+    8: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 6
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2020
+  anio_ultimo: 2024
+- speciesKey: 2480328
+  cientifico: Pluvialis dominica
+  orden: Charadriiformes
+  familia: Charadriidae
+  registros: 6
+  registros_con_mes: 6
+  meses:
+    12: 6
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 6
+  anio_primero: 2021
+  anio_ultimo: 2023
+- speciesKey: 2481794
+  cientifico: Numenius americanus
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 6
+  registros_con_mes: 6
+  meses:
+    3: 3
+    8: 2
+    9: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 3
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2019
+  anio_ultimo: 2022
+- speciesKey: 2484103
+  cientifico: Chrysomus icterocephalus
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 6
+  registros_con_mes: 6
+  meses:
+    8: 6
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2024
+  anio_ultimo: 2024
+- speciesKey: 2497365
+  cientifico: Megascops choliba
+  orden: Strigiformes
+  familia: Strigidae
+  registros: 6
+  registros_con_mes: 6
+  meses:
+    2: 1
+    7: 1
+    9: 2
+    10: 2
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 8
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2012
+  anio_ultimo: 2022
+- speciesKey: 5229389
+  cientifico: Phalaropus tricolor
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 6
+  registros_con_mes: 6
+  meses:
+    2: 2
+    3: 4
+  meses_sin_registro:
+  - 1
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 6
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2024
+  anio_ultimo: 2024
+- speciesKey: 5230759
+  cientifico: Tachycineta albiventer
+  orden: Passeriformes
+  familia: Hirundinidae
+  registros: 6
+  registros_con_mes: 6
+  meses:
+    9: 6
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 6
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2024
+  anio_ultimo: 2024
+- speciesKey: 2480283
+  cientifico: Charadrius melodus
+  orden: Charadriiformes
+  familia: Charadriidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    2: 5
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2018
+  anio_ultimo: 2018
+- speciesKey: 2481621
+  cientifico: Stercorarius parasiticus
+  orden: Charadriiformes
+  familia: Stercorariidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    3: 2
+    7: 3
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2019
+  anio_ultimo: 2022
+- speciesKey: 2483283
+  cientifico: Todirostrum viridanum
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    2: 1
+    4: 2
+    12: 2
+  meses_sin_registro:
+  - 1
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 3
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2005
+  anio_ultimo: 2023
+- speciesKey: 2483511
+  cientifico: Camptostoma obsoletum
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    3: 1
+    10: 4
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 4
+  anio_primero: 1991
+  anio_ultimo: 2015
+- speciesKey: 2489169
+  cientifico: Petrochelidon pyrrhonota
+  orden: Passeriformes
+  familia: Hirundinidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    9: 5
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 5
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2019
+  anio_ultimo: 2021
+- speciesKey: 2489208
+  cientifico: Notiochelidon cyanoleuca
+  orden: Passeriformes
+  familia: Hirundinidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    9: 3
+    10: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2021
+  anio_ultimo: 2023
+- speciesKey: 2489871
+  cientifico: Protonotaria citrea
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    10: 5
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 5
+  anio_primero: 2008
+  anio_ultimo: 2016
+- speciesKey: 9803471
+  cientifico: Anous minutus
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 5
+  registros_con_mes: 5
+  meses:
+    1: 3
+    5: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 5
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2023
+- speciesKey: 2474639
+  cientifico: Porzana carolina
+  orden: Gruiformes
+  familia: Rallidae
+  registros: 4
+  registros_con_mes: 4
+  meses:
+    2: 2
+    12: 2
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2022
+  anio_ultimo: 2024
+- speciesKey: 2489590
+  cientifico: Seiurus aurocapilla
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 4
+  registros_con_mes: 4
+  meses:
+    3: 2
+    12: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 1991
+  anio_ultimo: 2022
+- speciesKey: 2489613
+  cientifico: Mniotilta varia
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 4
+  registros_con_mes: 4
+  meses:
+    12: 4
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 4
+  anio_primero: 2019
+  anio_ultimo: 2019
+- speciesKey: 2490494
+  cientifico: Pheucticus ludovicianus
+  orden: Passeriformes
+  familia: Cardinalidae
+  registros: 4
+  registros_con_mes: 4
+  meses:
+    4: 1
+    11: 3
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 3
+  anio_primero: 2016
+  anio_ultimo: 2019
+- speciesKey: 2491041
+  cientifico: Arremonops tocuyensis
+  orden: Passeriformes
+  familia: Passerellidae
+  registros: 4
+  registros_con_mes: 4
+  meses:
+    3: 1
+    4: 1
+    12: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 1999
+  anio_ultimo: 2007
+- speciesKey: 5230925
+  cientifico: Saltator orenocensis
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 4
+  registros_con_mes: 4
+  meses:
+    1: 2
+    5: 1
+    12: 1
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 3
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2017
+  anio_ultimo: 2023
+- speciesKey: 2480967
+  cientifico: Sula dactylatra
+  orden: Suliformes
+  familia: Sulidae
+  registros: 3
+  registros_con_mes: 3
+  meses:
+    1: 2
+    11: 1
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2020
+  anio_ultimo: 2024
+- speciesKey: 2496286
+  cientifico: Coccyzus erythropthalmus
+  orden: Cuculiformes
+  familia: Cuculidae
+  registros: 3
+  registros_con_mes: 3
+  meses:
+    11: 3
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 3
+  anio_primero: 2019
+  anio_ultimo: 2019
+- speciesKey: 2496990
+  cientifico: Nyctidromus albicollis
+  orden: Caprimulgiformes
+  familia: Caprimulgidae
+  registros: 3
+  registros_con_mes: 3
+  meses:
+    6: 2
+    9: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2017
+  anio_ultimo: 2021
+- speciesKey: 4408523
+  cientifico: Numenius hudsonicus
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 3
+  registros_con_mes: 3
+  meses:
+    9: 2
+    12: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2021
+  anio_ultimo: 2022
+- speciesKey: 5229743
+  cientifico: Contopus cooperi
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 3
+  registros_con_mes: 3
+  meses:
+    10: 3
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 3
+  anio_primero: 2022
+  anio_ultimo: 2022
+- speciesKey: 9512459
+  cientifico: Anous stolidus
+  orden: Charadriiformes
+  familia: Laridae
+  registros: 3
+  registros_con_mes: 3
+  meses:
+    9: 3
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 3
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2022
+- speciesKey: 2474337
+  cientifico: Aramus guarauna
+  orden: Gruiformes
+  familia: Aramidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    5: 1
+    6: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2480367
+  cientifico: Elanus leucurus
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    3: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2019
+  anio_ultimo: 2019
+- speciesKey: 2480812
+  cientifico: Phimosus infuscatus
+  orden: Pelecaniformes
+  familia: Threskiornithidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    2: 2
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2024
+  anio_ultimo: 2024
+- speciesKey: 2481937
+  cientifico: Mycteria americana
+  orden: Ciconiiformes
+  familia: Ciconiidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    6: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2008
+  anio_ultimo: 2008
+- speciesKey: 2483410
+  cientifico: Megarynchus pitangua
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    1: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2483531
+  cientifico: Myiarchus tuberculifer
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    9: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2483597
+  cientifico: Myiarchus crinitus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    11: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2019
+  anio_ultimo: 2019
+- speciesKey: 2484109
+  cientifico: Gymnomystax mexicanus
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    10: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2023
+  anio_ultimo: 2023
+- speciesKey: 2484340
+  cientifico: Icterus galbula
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    5: 1
+    12: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2019
+  anio_ultimo: 2024
+- speciesKey: 2487463
+  cientifico: Vireo altiloquus
+  orden: Passeriformes
+  familia: Vireonidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    12: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2020
+  anio_ultimo: 2020
+- speciesKey: 2487963
+  cientifico: Euphonia trinitatis
+  orden: Passeriformes
+  familia: Fringillidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    4: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2013
+  anio_ultimo: 2013
+- speciesKey: 2488485
+  cientifico: Piranga rubra
+  orden: Passeriformes
+  familia: Cardinalidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    4: 1
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2018
+  anio_ultimo: 2020
+- speciesKey: 2488583
+  cientifico: Tachyphonus rufus
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    1: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2497052
+  cientifico: Chordeiles acutipennis
+  orden: Caprimulgiformes
+  familia: Caprimulgidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    9: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2022
+  anio_ultimo: 2022
+- speciesKey: 5231480
+  cientifico: Campylorhynchus griseus
+  orden: Passeriformes
+  familia: Troglodytidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    1: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 5844398
+  cientifico: Rupornis magnirostris
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    10: 1
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2015
+  anio_ultimo: 2021
+- speciesKey: 6093350
+  cientifico: Setophaga cerulea
+  orden: Passeriformes
+  familia: Parulidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    3: 1
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2006
+  anio_ultimo: 2017
+- speciesKey: 6100757
+  cientifico: Furnarius longirostris
+  orden: Passeriformes
+  familia: Furnariidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    1: 2
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 2
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 7341088
+  cientifico: Thryophilus rufalbus
+  orden: Passeriformes
+  familia: Troglodytidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    6: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 2
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2017
+  anio_ultimo: 2017
+- speciesKey: 9393917
+  cientifico: Ramphocaenus melanurus
+  orden: Passeriformes
+  familia: Polioptilidae
+  registros: 2
+  registros_con_mes: 2
+  meses:
+    11: 2
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 2
+  anio_primero: 2019
+  anio_ultimo: 2019
+- speciesKey: 2479612
+  cientifico: Amazona ochrocephala
+  orden: Psittaciformes
+  familia: Psittacidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    8: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2479666
+  cientifico: Amazona amazonica
+  orden: Psittaciformes
+  familia: Psittacidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 1998
+  anio_ultimo: 1998
+- speciesKey: 10941997
+  cientifico: Chionomesa fimbriata
+  orden: Apodiformes
+  familia: Trochilidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    1: 1
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 11006952
+  cientifico: Chrysuronia goudoti
+  orden: Apodiformes
+  familia: Trochilidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    2: 1
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2018
+  anio_ultimo: 2018
+- speciesKey: 2475472
+  cientifico: Megaceryle alcyon
+  orden: Coraciiformes
+  familia: Alcedinidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2476346
+  cientifico: Chrysolampis mosquitus
+  orden: Apodiformes
+  familia: Trochilidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    3: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2017
+  anio_ultimo: 2017
+- speciesKey: 2477082
+  cientifico: Streptoprocne zonaris
+  orden: Apodiformes
+  familia: Apodidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    4: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2023
+  anio_ultimo: 2023
+- speciesKey: 2480541
+  cientifico: Buteo albonotatus
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    9: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2008
+  anio_ultimo: 2008
+- speciesKey: 2480655
+  cientifico: Buteogallus meridionalis
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2015
+  anio_ultimo: 2015
+- speciesKey: 2480720
+  cientifico: Ictinia plumbea
+  orden: Accipitriformes
+  familia: Accipitridae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    4: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 1999
+  anio_ultimo: 1999
+- speciesKey: 2480773
+  cientifico: Plegadis falcinellus
+  orden: Pelecaniformes
+  familia: Threskiornithidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2480921
+  cientifico: Syrigma sibilatrix
+  orden: Pelecaniformes
+  familia: Ardeidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    3: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2018
+  anio_ultimo: 2018
+- speciesKey: 2480972
+  cientifico: Sula sula
+  orden: Suliformes
+  familia: Sulidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    12: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2481609
+  cientifico: Stercorarius pomarinus
+  orden: Charadriiformes
+  familia: Stercorariidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    7: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2009
+  anio_ultimo: 2009
+- speciesKey: 2481684
+  cientifico: Limosa fedoa
+  orden: Charadriiformes
+  familia: Scolopacidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    3: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2022
+  anio_ultimo: 2022
+- speciesKey: 2482082
+  cientifico: Anhinga anhinga
+  orden: Suliformes
+  familia: Anhingidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    11: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2483497
+  cientifico: Myiodynastes maculatus
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    3: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2007
+  anio_ultimo: 2007
+- speciesKey: 2484076
+  cientifico: Phaeomyias murina
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    5: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2016
+  anio_ultimo: 2016
+- speciesKey: 2490327
+  cientifico: Passerina cyanea
+  orden: Passeriformes
+  familia: Cardinalidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    5: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2020
+  anio_ultimo: 2020
+- speciesKey: 2491310
+  cientifico: Sporophila intermedia
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    3: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2007
+  anio_ultimo: 2007
+- speciesKey: 2495922
+  cientifico: Claravis pretiosa
+  orden: Columbiformes
+  familia: Columbidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 1998
+  anio_ultimo: 1998
+- speciesKey: 2496432
+  cientifico: Piaya cayana
+  orden: Cuculiformes
+  familia: Cuculidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    10: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 1
+  anio_primero: 2015
+  anio_ultimo: 2015
+- speciesKey: 2498155
+  cientifico: Mareca americana
+  orden: Anseriformes
+  familia: Anatidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    1: 1
+  meses_sin_registro:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2021
+  anio_ultimo: 2021
+- speciesKey: 2498396
+  cientifico: Dendrocygna viduata
+  orden: Anseriformes
+  familia: Anatidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    2: 1
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2005
+  anio_ultimo: 2005
+- speciesKey: 5229716
+  cientifico: Inezia caudata
+  orden: Passeriformes
+  familia: Tyrannidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    2: 1
+  meses_sin_registro:
+  - 1
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2018
+  anio_ultimo: 2018
+- speciesKey: 5230928
+  cientifico: Saltator striatipectus
+  orden: Passeriformes
+  familia: Thraupidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    3: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 1
+    P2_seca_larga: 0
+    P3_tiempo_de_siembra: 0
+  anio_primero: 1991
+  anio_ultimo: 1991
+- speciesKey: 7342291
+  cientifico: Chordeiles nacunda
+  orden: Caprimulgiformes
+  familia: Caprimulgidae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    9: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2022
+  anio_ultimo: 2022
+- speciesKey: 9476062
+  cientifico: Quiscalus mexicanus
+  orden: Passeriformes
+  familia: Icteridae
+  registros: 1
+  registros_con_mes: 1
+  meses:
+    8: 1
+  meses_sin_registro:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 9
+  - 10
+  - 11
+  - 12
+  por_periodo:
+    P1_tiempo_de_viento: 0
+    P2_seca_larga: 1
+    P3_tiempo_de_siembra: 0
+  anio_primero: 2016
+  anio_ultimo: 2016
