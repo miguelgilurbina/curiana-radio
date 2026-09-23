@@ -1,0 +1,102 @@
+# EL CATÁLOGO DE REFERENTES PARA LA BASE — PROPUESTA (2026-09-23)
+#
+# Lo que la simulación larga le pone delante a los agentes para NOMBRAR. Sale de
+# la decisión db.4 (Miguel, 2026-09-22): novedades + huecos, uno cada dos días,
+# fuera las dos coloniales, y «las cosas que debemos empezar por nombrar son las
+# de los animales que no sabemos cómo se llamaban originalmente, por ejemplo la
+# Tarántula azul». Los animales vienen de las tres campañas de fauna (PRs #211
+# tierra, #205 aves, #208 mar): este archivo ELIGE y ORDENA; la evidencia de cada
+# uno está en su YAML de origen y no se repite aquí.
+#
+# PROPUESTA (regla 5): Miguel la aprueba antes de que entre al motor.
+
+meta:
+  base: 30 días del Tiempo de Viento (P1), uno cada dos días → 15 referentes, días 1, 3, … 29
+  extension: si la base se alarga a 50 días, los de `reserva` entran en su orden
+  criterios:
+    - hueco real (sin voz caquetía conocida) o novedad (lo que no habían visto)
+    - presencia en el siglo XV segura o probable (regla 3), con su fuente en el YAML de origen
+    - de la estación: todos valen para el Tiempo de Viento; la tortuga que desova (junio-julio, P2) queda fuera
+    - variedad: tierra, aire y agua se alternan, para que las disputas no se mezclen
+    - los animales primero (db.4); la tarántula azul abre
+  el_sonido: >-
+    `se_oye` DESCRIBE el sonido (cuántas veces, grave o agudo, a qué hora) y NO lo
+    transcribe. Si se le escribe «ua-chará-cá», el agente lo copia, y varias
+    transcripciones son casi el nombre castellano del animal. Así la onomatopeya
+    la inventa el agente. Las transcripciones de fuente se quedan en los YAML de
+    origen. PENDIENTE DE MIGUEL (ver `lo_que_falta_decidir`).
+  estimulo: >-
+    Hoy el estímulo dice «[ALGO NUEVO EN PARAGUANÁ]: … Esto no tiene nombre en
+    caquetío todavía». Un HUECO no es nuevo: se ve siempre. Hace falta un segundo
+    molde para `tipo: hueco` («Esto lo ves siempre y no le has dado nombre…») y una
+    línea «[Lo que se oye]» cuando haya sonido. Es cambio de código, va con la tanda.
+
+referentes:
+  - {orden: 1, dia: 1, tipo: hueco, id: tarantula_azul, de: 'fauna_paraguana_tierra fa1-001',
+     desc: 'la araña grande y peluda de patas azules y vientre naranja que vive en un hueco de árbol forrado de tela blanca, en el monte del cerro',
+     se_oye: 'nada: sólo el roce de sus patas sobre la tela seca'}
+  - {orden: 2, dia: 3, tipo: hueco, id: guacharaca, de: 'fauna_paraguana_aves ave-011',
+     desc: 'un ave parda del tamaño de una gallina, de cola larga y papada roja, que desde los árboles del cerro grita al amanecer antes que todas',
+     se_oye: 'un grito fuerte, áspero, de tres golpes, repetido a coro al abrir el día'}
+  - {orden: 3, dia: 5, tipo: hueco, id: delfin, de: 'fauna_paraguana_mar fm-006/007 · hueco-lex-009',
+     desc: 'unos peces grandes y grises que andan en grupo junto a la canoa, asoman el lomo, soplan y se hunden otra vez',
+     se_oye: 'un soplo corto y húmedo cada vez que asoman'}
+  - {orden: 4, dia: 7, tipo: hueco, id: cascabel, de: 'fauna_paraguana_tierra fa1-036',
+     desc: 'la serpiente gruesa de rombos oscuros y cabeza de triángulo que duerme entre los cujíes y, al sentir el paso, levanta la cola y la hace sonar',
+     se_oye: 'la cola seca que suena al agitarse, un siseo como de semillas en una calabaza'}
+  - {orden: 5, dia: 9, tipo: hueco, id: cardenal, de: 'fauna_paraguana_aves ave-001',
+     desc: 'un pájaro rojo entero con un penacho alto siempre erguido, que canta desde la punta del cardón; su hembra es gris y sólo lleva rojo el penacho',
+     se_oye: 'silbidos claros que suben y se repiten, dos o tres veces seguidas'}
+  - {orden: 6, dia: 11, tipo: hueco, id: cardumen, de: 'fauna_paraguana_mar fm-024 · hueco-lex-002',
+     desc: 'desde la punta se ve una mancha en el mar que hierve y brilla: miles de pececillos que suben juntos, con las aves cayendo encima',
+     se_oye: 'un chapoteo que crece como lluvia sobre el agua'}
+  - {orden: 7, dia: 13, tipo: novedad, id: cometa, de: 'REFERENTES_NOVEDOSOS (se queda)',
+     desc: 'una estrella con cola que cruza el cielo varias noches seguidas',
+     se_oye: null}
+  - {orden: 8, dia: 15, tipo: hueco, id: conejo, de: 'fauna_paraguana_tierra fa1-011',
+     desc: 'el animal pardo de orejas largas y cola blanca que se agacha quieto entre la paja y huye corriendo; al que no se le tira echado',
+     se_oye: 'casi nada: huye callado entre la paja'}
+  - {orden: 9, dia: 17, tipo: hueco, id: corocoro, de: 'fauna_paraguana_aves ave-041',
+     desc: 'unas aves zancudas rojas como la sangre, de pico largo y curvo, que cruzan en fila sobre la laguna y el manglar',
+     se_oye: 'una voz corta y ronca, repetida mientras vuelan'}
+  - {orden: 10, dia: 19, tipo: hueco, id: tortugas_de_mar, de: 'fauna_paraguana_mar fm-001/002 · hueco-lex-009',
+     desc: 'dos tortugas de mar que parecen pareja: una de pico curvo y concha de placas aserradas, otra de cabeza redonda que pace en los bajos',
+     se_oye: null}
+  - {orden: 11, dia: 21, tipo: novedad, id: eclipse, de: 'REFERENTES_NOVEDOSOS (se queda)',
+     desc: 'el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera',
+     se_oye: null}
+  - {orden: 12, dia: 23, tipo: hueco, id: perro_mudo, de: 'fauna_paraguana_tierra fa1-023 (Oviedo t. II p. 331)',
+     desc: 'el perro pequeño de pelo corto que duerme junto al fogón y sigue a la gente al conuco, y que nunca ladra',
+     se_oye: 'nada: el perro de la casa no ladra'}
+  - {orden: 13, dia: 25, tipo: hueco, id: gaviota, de: 'fauna_paraguana_aves ave-053',
+     desc: 'unas aves blancas de lomo gris y pico rojo que siguen a la canoa y se pelean el pescado en la orilla; en la cría llevan la cabeza negra',
+     se_oye: 'un grito ronco y entrecortado que suena a risa'}
+  - {orden: 14, dia: 27, tipo: novedad, id: metal_amarillo, de: 'REFERENTES_NOVEDOSOS (se queda; es el guanín, ahora con fuente: campaña del taíno 2, T7/T8)',
+     desc: 'un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque',
+     se_oye: null}
+  - {orden: 15, dia: 29, tipo: hueco, id: ballena, de: 'fauna_paraguana_mar fm-008/009 (sustituye a `bestia_orilla`)',
+     desc: 'mar afuera, un animal más largo que diez canoas echa un chorro de agua al aire y enseña un lomo gris con una aleta curva',
+     se_oye: 'un bufido hondo que llega de lejos sobre el agua'}
+
+reserva:
+  en_orden: [pitirre, colibri, pez_que_ronca, marea_roja, raya, carpintero, mapurite, turpial, planta_quema, cuenta_insular, tambor_caribe, alcatraz, concha_perlifera, chicharra]
+  y_los_huecos_no_animales: >-
+    la duna, el alisio como ser con nombre, la marea, el istmo, la costra de sal,
+    la madera de canoa (hueco-lex-001, 003, 005, 007, 008) — para la extensión o la
+    era 3.
+
+fuera:
+  - {id: cuentas_vidrio, por_que: 'el vidrio es europeo (regla 3); decisión db.4'}
+  - {id: fiebre_manchas, por_que: 'apunta a la viruela, que llegó en 1518 (regla 3); decisión db.4'}
+  - {id: bestia_orilla, por_que: 'la sustituye la ballena, con descripción de fuente'}
+  - {id: tortuga_que_desova, por_que: 'desova en junio-julio (P2): fuera del Tiempo de Viento'}
+  - {id: manglar_que_chasquea, por_que: 'el manglar con fauna que la campaña pudo situar es moderno; queda para cuando haya dato del s. XV'}
+
+lo_que_falta_decidir:
+  onomatopeya_y_raiz: >-
+    Con la regla de la raíz (db.1 A + C) una raíz nueva por onomatopeya se
+    rechaza. Opciones: A mantenerla (el agente compone con raíces conocidas); B
+    abrir una puerta estrecha SÓLO para los referentes de animal, con el filtro de
+    forma caquetía; C dejar los animales para la era 3. Recomendación del
+    escriba: B. Sin esto, varios de los 12 animales pueden no llegar a fijarse.
+  el_sonido_en_el_prompt: 'describirlo sin transcribirlo (recomendado) o dar la transcripción de fuente'
