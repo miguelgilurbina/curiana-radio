@@ -250,3 +250,29 @@ hace match», leer la segunda.
 
 [[arcaya-1920]] · [[jahn-1927]] · [[oviedo-y-banos]] · [[pane-c1498]] ·
 [[las-casas-1875]] · [[03_creencia_caquetia]]
+
+---
+
+## Bitácora: manatí, cohoba, tabaco y bagua (2026-09-23, cc.7)
+
+Leído en el PDF ÍNTEGRO que bajó M3 (#206, `..._vol1_completo.pdf`), porque
+el del repo está truncado desde la impresa 155. Las cuatro páginas, ✅ vistas
+en imagen:
+
+- **p. 434** (lib. XIII cap. IX): «por esso los chripstianos le llamaron
+  *manatí* […] en esta Isla Española le quitaron su nombre é le dieron este».
+  Oviedo da una etimología castellana (por las manos) y no el nombre indio.
+  Las Casas lo contradice (Apologética p. 27).
+- **p. 436** (lib. XIII cap. IX): «Llaman los indios de aquesta Isla Española
+  á la mar *bagua* (no digo *baygua*, porque baygua es aquel barbasco […] sino
+  *bagua* es el nombre de la mar en esta isla)». 🔴 **Un cero de las
+  cursivas**: la capa OCR da «tagua», «Ikuj-ijua» e «Imijiut», y un grep de
+  «bagua» en este tomo sólo encuentra «Cu-bagua». Por eso #220 y Zayas
+  creyeron que la voz venía sólo del glosario del editor (t. IV p. 594).
+- **p. 143** (lib. V cap. V): «haciendo sus *cahobas* ó ahumadas, que los
+  indios toman, que assimismo llaman *tabacos*».
+- **p. 347** (lib. IX cap. XIII): el árbol parecido al tharay, «llámanle en
+  esta Isla Española *cohoba*», con «vaynas […] de un palmo». La cohoba de
+  Oviedo es también un ÁRBOL, no la planta del tabaco.
+
+Detalle y propuestas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.

@@ -124,3 +124,14 @@ un nombre único.**
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[perea-alonso-1942]]
+
+---
+
+## Bitácora: Brinton escribe *cohoba*, no *cohiba* (2026-09-23, cc.7)
+
+p. 12, «Cohóba, the native name of tobacco»; p. 13, «Tabaco, the pipe used in
+smoking the cohoba» (texto del repo y `6-fusion/taino_brinton_1871.yaml`). La
+nota del lexicón que atribuye `cohiba` a Brinton cita mal la forma. 🔴 El PDF
+del repo está commiteado VACÍO en esta rama (blob `e69de29`, 0 bytes); #220
+lo repone (2.179.167 bytes). Por eso no se vio la imagen: la forma sale de la
+capa de texto y de la transcripción de T10, que coinciden. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.

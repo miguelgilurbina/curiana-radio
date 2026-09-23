@@ -317,3 +317,15 @@ restituyendo los acentos; el texto sin ellos es reproducible con `pdftotext
 -enc UTF-8`. Añádase a la receta de esta obra, junto al «pypdf devuelve vacío».
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
+---
+
+## Bitácora: «Coro viento» (2026-09-23, cc.6)
+
+**p. 170**, ✅ imagen: «De aquí han deducido algunos que Coro significaba
+viento en la lengua de los indígenas, mas esto es un error, porque
+Castellanos sólo quiso aludir a la coincidencia de que ese vocablo de los
+indios fuese idéntico al español "Coro", que entre otras acepciones tiene la
+ahora desusada de "viento que corre de la parte donde se pone el sol en el
+solsticio de verano"». Es la refutación que el canon ya citaba; ahora con
+el castellano de 1582 (DICTER) detrás. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §coro.
