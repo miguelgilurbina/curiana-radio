@@ -435,7 +435,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-21), declarado.** Trece cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-23), declarado.** Catorce cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -1232,7 +1232,98 @@ abierta abajo.
 >    (`6-fusion/scripts/medir_tanda_21.py`); tests en
 >    `curiana_sim/tests/test_tanda_21.py`, uno por decisión.
 >
-> Ninguno de los trece toca `capas_de_score`, y `curiana_observer` sigue sin
+> 14. **La tanda de la base: lo que quedaba antes de congelar el motor, en UN
+>    corte y UNA medición** (2026-09-23, `6-fusion/decisiones_base_2026-09-22.yaml`
+>    db.1-db.6 y `6-fusion/decisiones_campanas_2026-09-21.yaml` dc.2 y dc.3).
+>    «Debemos decidir un punto base desde el cual ya hacer una simulación más
+>    larga» (Miguel, 2026-09-21): todo lo que cambia el prompt entra aquí, se
+>    mide una vez, y después el motor no se toca hasta que la serie larga
+>    cierre.
+>
+>    - **Lo que cambia.**
+>
+>      | | decide | qué se hizo |
+>      |---|---|---|
+>      | **db.1 C** | A + C | la **casi-raíz** se perdona: una raíz de **6 letras o más** que difiere en una de una raíz caquetía VIVA se lee como ella (`pütshi-bana` → `pütchi`). La forma se guarda como la escribió el agente |
+>      | **db.1** | — | **el agujero de `kira`**: en la puerta —registro, competencia, recuento, lengua de acuñación— una raíz ARCHIVADA ya no avala. `kira` 'brillo', inventada el 09-21, pasaba por `kira` 'escuchar', archivada. El clasificador no cambia |
+>      | **db.2** | A de T6 | `datihao` pasa a **taíno** (en Oviedo sólo está en San Juan; la «lengua de Venezuela» era del editor de 1855) |
+>      | **db.3.1** | A | la semilla de la persona es la de la **cadena**: `guardar_koine` la escribe, `--continuar` la recupera, `random.seed` sigue con la del día |
+>      | **db.3.2** | — | las **8 `taíno-reconstruido`** (lokono con otra grafía) al archivo con su capa; `daca` se queda con la voz que atestigua Las Casas: **'yo'** |
+>      | **db.3.3** | — | glosas según su cronista: `mayani` 'de ningún valor', `caney` la casa REDONDA, `batey` el juego, `tabako` el cañuto «é no la hierva», `siba` taína ('las cibas' de Pané) |
+>      | **db.4** | — | la era 2 lee **una** tabla, `6-fusion/referentes_era2.yaml`: quince referentes, uno cada dos días, los animales primero —la tarántula azul abre—; **novedad** y **hueco** se dicen distinto; `[Lo que se oye]` describe el sonido sin transcribirlo |
+>      | **db.6** | B | la **puerta onomatopéyica**: en el turno de un animal, UNA raíz nueva con forma caquetía entra, marcada `raiz_onomatopeyica` |
+>      | **dc.2** | C + E | `-gua` 'región' → **`-wa`**, sin glosa (Oliver 1989 cap. 2 p. 148) |
+>      | **dc.3** | B | la **derivación cero** se enseña: «jusual es sembrar y la siembra» |
+>      | d21.6 | — | lo que faltaba: el ejemplo ideal decía `buko-ana` «el lugar de la represa» |
+>
+>    - **El largo de la casi-raíz se midió antes de fijarlo**, sobre las formas
+>      de la base cuya raíz no conoce ninguna tabla (327 formas, 4.489 usos):
+>
+>      | largo mínimo | formas perdonadas | usos | lo que se colaba |
+>      |---:|---:|---:|---|
+>      | 3 | 157 | 3.330 | `duma`→`duna`, `karu`→`kuru`, `puri`→`yuri` |
+>      | 4 | 149 | 3.287 | ídem: palabras DISTINTAS a una letra |
+>      | 5 | 59 | 2.391 | `uyama`→`yama` (la auyama) |
+>      | **6** | **35** | **1.677** | variantes de grafía: `chacamba`→`chakamba`, `hamaca`→`hamaka`, `cudanga`→`kudanga`, `pütshi`→`pütchi` |
+>      | 7 | 12 | 1.266 | pierde `hamaca` y `pütshi` |
+>
+>      Con 6, `lumina`, `duma` y `kira` siguen cayendo. Residuo declarado: el
+>      grueso de lo perdonado son grafías castellanas de voces atestiguadas
+>      (`chacamba`, 913 usos), casi todas de la era 1.
+>    - **El agujero de `kira` es más grande que `kira`**: 120 formas de la base
+>      (4.827 usos) tienen como única raíz conocida una ARCHIVADA —`kali` 868,
+>      `kira-ni` 530, `paa-da` 449, `wanee` 276…—. El clasificador las sigue
+>      leyendo; la puerta ya no las deja registrarse, competir ni contar como
+>      emergentes. Consecuencia: **`kali-bana` deja de poder acuñarse**, que es
+>      lo que la nota de archivo de `kali` ya prometía y el código no hacía.
+>    - **dc.2 casi no toca el desafijador**: 54 formas (112 usos) se segmentan
+>      distinto y una sola cambia de clase, `baro-ana-gua`, que ahora pasa por
+>      el `ana` que el `-gua` ya no pela. Control del segmentador: 0 desvíos.
+>    - **El prompt**: `prompt_reglas_completo` 5.122 → 5.152, `prompt_reglas_breve`
+>      1.192 → 1.263; el system prompt medio de los 63, **7.462,2 → 7.541,0
+>      (+1,06 %)**. `[Voces de fuera]` 43 → 42 (salen `akcicyaa` y `wagulo`,
+>      entra `datihao`). `FORMAS_DE_PLANTILLA` 5.981 → 5.980 (sale `buko-ana`).
+>      Los quince mensajes de nombramiento miden 250-465 caracteres y los
+>      quince sobreviven enteros a `decir_para_el_mundo`. Al comprobarlos salió
+>      la guacharaca «del tamaño de una **gallina**»: animal europeo, corregido.
+>    - **El score**, re-puntuando la serie C repetida (216 + 216) con tres
+>      motores. **Control contra el del run (`114c991`): 216 de 216 en los dos
+>      brazos** — tras arreglar el replay, que tomaba los días en el orden de
+>      los UUID (`order by run_id`) y procesaba el día 3 antes que el 1: el
+>      primer control salió en ROJO por eso, no por el motor. Antes → hoy:
+>
+>      | | con escena | control |
+>      |---|---|---|
+>      | score cambia en | **12 de 216**, todas a la baja | **0 de 216** |
+>      | \|Δ\| máx | 0,4 | 0 |
+>      | score medio | 7,4486 → **7,4375** | 7,3870 → 7,3870 |
+>      | `palabras_caquetias` cambia en | 18 | 0 |
+>      | koiné fijada | igual | igual |
+>
+>      Las doce por la misma forma: **`kira-iro-aima`** —sobre `kira`
+>      'brillo', la inventada— deja de adoptarse. Es exactamente el caso que
+>      db.1 quería cerrar.
+>    - **La semilla**: con la del día, a **7 de 63** agentes les cambiaba el
+>      `[Tu emocionar]` el día 2 y a 7 el día 3 (diez distintos: Uria, Naure,
+>      Wache…); con la de la cadena, a 0.
+>    - **Lo que NO se aplicó, dicho.** La forma perdonada NO se normaliza a la
+>      clave (haría falta tocar el scorer). La puerta onomatopéyica mira la
+>      FORMA: una raíz latina con forma caquetía (`lumina`) pasaría en el turno
+>      de un animal — se mide aparte con su marca. `analizar_nodos` usa la
+>      puerta del módulo y no conoce las raíces que la puerta admitió en un
+>      run: las leerá como ajenas. Y el CONTENIDO del catálogo de referentes
+>      sigue pendiente de Miguel; editar una descripción obliga a repasar el
+>      pre-vuelo.
+>
+>    **Desde qué run aplica**: desde la **base** (serie `era2-base`). La serie C
+>    repetida queda del otro lado del corte. Medición entera en
+>    `6-fusion/medicion_tanda_base_2026-09-23.yaml`
+>    (`6-fusion/scripts/medir_tanda_base.py`); pre-vuelo en verde en los cuatro
+>    casos (`6-fusion/scripts/prevuelo_de_prompts.py`, que ahora mira también
+>    el MENSAJE del turno de nombramiento); tests en
+>    `curiana_sim/tests/test_tanda_base.py`, uno por decisión.
+>
+> Ninguno de los catorce toca `capas_de_score`, y `curiana_observer` sigue sin
 > modificarse.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3

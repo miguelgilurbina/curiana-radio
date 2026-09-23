@@ -28,10 +28,11 @@ acceso: >-
   dictamen: se usa para investigación, con cita corta, y la decisión de
   redistribuir más es de Miguel. La 1ª ed. (1914) está en HathiTrust como
   «pdus» (sólo EE. UU.) y detrás de una verificación de navegador: no se bajó.
-estado_minado: sin-minar
-cobertura: "nada minado; comprobado al descargar que el .txt contiene tres de las voces que Goeje apoya en Zayas (ver abajo)"
+estado_minado: parcial
+cobertura: "minado el 2026-09-23 para la lista maestra taína: las 4 voces que Goeje apoya en Zayas, las claves taínas del lexicón que Zayas trae y las voces de la lista sin cronista que Zayas trae como cabeza, más la fauna que describe (6-fusion/taino_zayas_1931.yaml). SIN barrer: el resto del diccionario, sobre todo topónimos y caciques de los repartimientos de 1514"
 prioridad: media
-verificado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 aliases: ["Zayas 1914", "Zayas 1931", "Zayas y Alfonso", "Lexicografía antillana"]
 ---
 
@@ -68,6 +69,44 @@ variantes y el t. II).
 No se lanzó minero (no es de las prioritarias de esta campaña). La pregunta
 natural es la de la campaña del taíno: las voces de `6-fusion/taino_lista_maestra_2026-09-22.yaml`
 que Goeje apoya en Zayas, verificadas aquí con su fuente declarada.
+
+## Bitácora
+
+### 2026-09-23 — minería 3, parcela Zayas (para la lista maestra taína)
+
+**Qué se preguntó**: (1) qué dice Zayas de las cuatro voces que Goeje apoya en
+él; (2) qué cronista del XVI declara Zayas para las claves taínas del lexicón y
+para las voces de la lista maestra sin cronista; (3) fauna con descripción.
+
+**Qué se halló** (datos en `6-fusion/taino_zayas_1931.yaml`; cómo engancharlo y
+lo que mueve, en `6-fusion/issues-pendientes/zayas-1931-en-la-lista-maestra-2026-09-23.md`):
+
+- De las cuatro de Goeje, sólo `anaiboa` tiene fuente del XVI (Relación de
+  Echagoían, c. 1561; ✅ imagen, t. I p. 37). `anaki` es **eyerí** según Zayas
+  (✅ imagen, t. I p. 39); `anua` no existe en esta edición y lo más probable es
+  que sea `aura` mal leída; `manaya` viene de «las tradiciones haitianas» sin
+  nombrar a Pané.
+- Zayas **nombra al cronista** con la voz dentro del pasaje en la mayoría de
+  las entradas leídas (sobre todo Las Casas, Oviedo, Pedro Mártir, Gómara,
+  Herrera y documentos de 1514-1561). Por eso sube de clase voces que la lista
+  tenía sin cronista.
+- Dos trampas de editor, declaradas por el propio Zayas: `bagua` 'mar' viene del
+  apéndice de la Academia a Oviedo (como `datihao`), y la «haba de oro» del
+  editor de los Documentos Inéditos es un error que Zayas corrige con Las Casas.
+- Un conflicto entre cronistas: `manatí` (Las Casas: «los que llamaban los
+  indios manatíes»; Oviedo: nombre de los cristianos).
+
+**Cómo se lee esta obra** (clave ortográfica para `leer-fuente` §5): la capa de
+dLOC es OCR; confunde c/e y ñ/fi y **se come las glosas en cursiva** (`Anaquí.— i`
+por «Enemigo, en el dialecto Eyerí»). Algunas cabezas salen sin raya
+(`Aji. Planta…`, `Caney.`), y un parser de «Cabeza.—» no las ve. Página impresa
+= PDF − 27 (t. I) y PDF − 7 (t. II). Las imágenes se bajan por página, sin el PDF
+entero: `…/AA/00/08/98/31/00001/NNNNN.jpg`, con NNNNN = PDF + 10 en el t. I (medido
+en tres páginas); el desfase del t. II no se midió.
+
+**Qué NO se halló / qué falta**: ninguna de las siete claves del lexicón
+`sin-voz-en-la-lista` está en Zayas (medido sobre las cabezas). No se barrió el
+diccionario entero. Sólo dos entradas se verificaron en imagen.
 
 ## Enlaces
 
