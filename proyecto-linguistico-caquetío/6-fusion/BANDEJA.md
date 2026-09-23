@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-23**.
 
-**7175 ítems propuestos** en 136 propuestas, más **55 issue(s)/comentario(s) redactados sin publicar**.
+**7189 ítems propuestos** en 140 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -61,6 +61,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-21.yaml` | ? | 0 |  |
+| `decisiones_tanda_final_2026-09-23.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_era2.yaml` | ? | 11 |  |
@@ -89,6 +90,7 @@ editar_a_mano: no
 | `medicion_clases_de_raiz_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medicion_d11_fase3_2026-09-23.yaml` | ? | 0 |  |
+| `medicion_d11_voces_wayuu_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_fauna_flora_2026-09-22.yaml` | ? | 0 |  |
 | `medicion_formas_de_plantilla_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
@@ -102,6 +104,7 @@ editar_a_mano: no
 | `medicion_tanda_21_2026-09-21.yaml` | ? | 13 |  |
 | `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
+| `medicion_tanda_final_2026-09-23.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -117,6 +120,7 @@ editar_a_mano: no
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml` | ? | 9 |  |
+| `propuesta_d11_voces_wayuu_2026-09-23.yaml` | ? | 12 |  |
 | `propuesta_gua_procedencia_2026-09-21.yaml` | oliver-1989-cap2 · zavala-reyes-2015 · van-buurt-2014 · esteves-1989 · alvarado-1921 · jahn-1927 · arcaya-1920 · medina-colina-sxx | 7 |  |
 | `propuesta_macana_etiqueta_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nominalizador_2026-09-21.yaml` | ? | 4 |  |
@@ -187,7 +191,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 217 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 169 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 171 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 | `lexicon_perea.py` | perea-alonso-1942 | 173 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 
@@ -205,6 +209,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
 | `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
+| `d11-voces-wayuu-2026-09-23.md` | D11 · las voces wayuu que quedan en el habla — qué pasa con cada una |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 | `decisiones-pendientes-2026-09-23.md` | Las decisiones pendientes, juntas — para contestarlas de una sentada |
 | `encargo-mineria-federmann.md` | Encargo de minería — Federmann (1530-1531): Paraguaná y Coro |
