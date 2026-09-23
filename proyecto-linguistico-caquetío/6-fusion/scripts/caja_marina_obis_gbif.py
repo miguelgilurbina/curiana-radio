@@ -122,23 +122,67 @@ def wkt(caja):
     return f"POLYGON(({x0} {y0},{x1} {y0},{x1} {y1},{x0} {y1},{x0} {y0}))"
 
 
-def obis_checklist(caja):
-    q = urllib.parse.urlencode({"geometry": wkt(caja), "size": 5000})
-    url = f"https://api.obis.org/v3/checklist?{q}"
-    d = _get(url)
-    return url, d.get("total"), d.get("results", [])
+def _es_cero(v):
+    """organismQuantity / individualCount que valen 0: una AUSENCIA disfrazada
+    de presencia (trampa medida por la parcela de aves, PR #205: NeoMaps 2010
+    marca cada punto de muestreo `present` con cantidad 0)."""
+    if v is None or v == "":
+        return False
+    try:
+        return float(str(v).replace(",", ".")) == 0.0
+    except ValueError:
+        return False
+
+
+def obis_registros(caja):
+    """Todos los registros de la caja, uno a uno (no la checklist agregada),
+    para poder descartar ausencias. Devuelve (url, total, n_brutos, filas, descartes)."""
+    campos = ("id,scientificName,taxonRank,class,order,family,occurrenceStatus,"
+              "organismQuantity,individualCount,date_year,species")
+    filas, despues, total, url0 = [], None, None, None
+    while True:
+        p = {"geometry": wkt(caja), "size": 5000, "fields": campos}
+        if despues:
+            p["after"] = despues
+        url = "https://api.obis.org/v3/occurrence?" + urllib.parse.urlencode(p)
+        url0 = url0 or url
+        d = _get(url)
+        total = d.get("total") if total is None else total
+        res = d.get("results", [])
+        if not res:
+            break
+        filas.extend(res)
+        despues = res[-1].get("id")
+        if len(res) < 5000:
+            break
+    descartes = {"estado_no_presente": 0, "cantidad_cero": 0}
+    buenas = []
+    for r in filas:
+        if (r.get("occurrenceStatus") or "present").lower() not in ("present", "presente"):
+            descartes["estado_no_presente"] += 1
+            continue
+        if _es_cero(r.get("organismQuantity")) or _es_cero(r.get("individualCount")):
+            descartes["cantidad_cero"] += 1
+            continue
+        buenas.append(r)
+    return url0, total, len(filas), buenas, descartes
 
 
 def gbif_cuenta(nombre, caja):
-    q = urllib.parse.urlencode({"scientificName": nombre, "geometry": wkt(caja),
-                                "limit": 0, "facet": "year", "facetLimit": 300})
+    """Registros PRESENT de la especie en la caja, menos los que tienen
+    organismQuantity = 0 (ausencias disfrazadas, PR #205)."""
+    base = {"scientificName": nombre, "geometry": wkt(caja), "occurrenceStatus": "PRESENT"}
+    q = urllib.parse.urlencode({**base, "limit": 0, "facet": "year", "facetLimit": 300})
     url = f"https://api.gbif.org/v1/occurrence/search?{q}"
     d = _get(url)
     anios = []
     for f in d.get("facets", []):
         if f.get("field") == "YEAR":
             anios = sorted(int(c["name"]) for c in f.get("counts", []))
-    return url, d.get("count", 0), (min(anios) if anios else None), (max(anios) if anios else None)
+    q0 = urllib.parse.urlencode({**base, "organismQuantity": 0, "limit": 0})
+    ceros = _get(f"https://api.gbif.org/v1/occurrence/search?{q0}").get("count", 0)
+    n = d.get("count", 0) - ceros
+    return url, n, ceros, (min(anios) if anios else None), (max(anios) if anios else None)
 
 
 def main():
@@ -158,6 +202,9 @@ def main():
             "licencia": "OBIS y GBIF: CC0 o CC-BY según el conjunto de datos; se cita la API y la fecha",
             "regla_3": "un registro moderno NO es presencia en el s. XV: dice qué hay (o se vio) hoy",
             "regla_6": "un cero de OBIS/GBIF mide el muestreo, no la fauna",
+            "ausencias": ("se descartan los registros con occurrenceStatus distinto de present y los de "
+                          "organismQuantity o individualCount = 0 (ausencias disfrazadas de presencia, "
+                          "trampa medida en PR #205); lo descartado va contado en cada caja"),
         },
         "obis": {},
         "clave": {},
@@ -165,11 +212,11 @@ def main():
 
     nombres_por_caja = {}
     for nombre_caja, caja in CAJAS.items():
-        url, total, res = obis_checklist(caja)
-        grupos = {}
-        nombres = {}
-        for r in res:
-            if r.get("taxonRank") != "Species":
+        url, total, n_filas, filas, descartes = obis_registros(caja)
+        grupos, nombres, fam = {}, {}, {}
+        for r in filas:
+            # taxonRank viene en minúsculas o falta: manda el campo `species`
+            if not r.get("species"):
                 continue
             cl = r.get("class") or r.get("order")
             if r.get("order") == "Testudines":
@@ -180,41 +227,43 @@ def main():
                 continue
             if cl == "Reptilia" and r.get("order") != "Testudines":
                 continue
-            g = CLASES_MAR[cl]
-            grupos.setdefault(g, []).append({
-                "especie": r.get("scientificName"),
-                "familia": r.get("family"),
-                "registros": r.get("records"),
-            })
-            nombres[r.get("scientificName")] = r.get("records")
+            sp = r.get("species")
+            nombres[sp] = nombres.get(sp, 0) + 1
+            fam[sp] = (CLASES_MAR[cl], r.get("family"))
+        for sp, n in nombres.items():
+            g, f = fam[sp]
+            grupos.setdefault(g, []).append({"especie": sp, "familia": f, "registros": n})
         for g in grupos:
-            grupos[g].sort(key=lambda e: -(e["registros"] or 0))
+            grupos[g].sort(key=lambda e: (-e["registros"], e["especie"]))
         nombres_por_caja[nombre_caja] = nombres
         salida["obis"][nombre_caja] = {
-            "url": url,
-            "taxones_totales_obis": total,
+            "url_primera_pagina": url,
+            "registros_brutos": n_filas,
+            "total_declarado_por_obis": total,
+            "descartados": descartes,
             "especies_de_la_parcela": sum(len(v) for v in grupos.values()),
             "por_grupo_n": {g: len(v) for g, v in sorted(grupos.items())},
             "por_grupo": dict(sorted(grupos.items())),
         }
-        print(f"OBIS {nombre_caja}: {total} taxones; parcela del mar: "
-              f"{salida['obis'][nombre_caja]['especies_de_la_parcela']} especies")
+        print(f"OBIS {nombre_caja}: {n_filas} registros ({descartes} descartados); "
+              f"parcela del mar: {salida['obis'][nombre_caja]['especies_de_la_parcela']} especies")
         time.sleep(1)
 
     caja = CAJAS["paraguana_dos_aguas"]
     for nombre in CLAVE:
         try:
-            url, n, a0, a1 = gbif_cuenta(nombre, caja)
+            url, n, ceros, a0, a1 = gbif_cuenta(nombre, caja)
         except Exception as e:
-            url, n, a0, a1 = f"(error: {e})", None, None, None
+            url, n, ceros, a0, a1 = f"(error: {e})", None, None, None, None
         salida["clave"][nombre] = {
             "obis_registros": {k: v.get(nombre, 0) for k, v in nombres_por_caja.items()},
             "gbif_registros_caja": n,
+            "gbif_descartados_cantidad_cero": ceros,
             "gbif_primer_anio": a0,
             "gbif_ultimo_anio": a1,
         }
         print(f"  {nombre:28s} OBIS={salida['clave'][nombre]['obis_registros']} "
-              f"GBIF={n} ({a0}-{a1})")
+              f"GBIF={n} (ceros fuera: {ceros}; {a0}-{a1})")
         time.sleep(0.4)
 
     if args.resumen:

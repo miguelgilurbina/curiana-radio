@@ -1,0 +1,1507 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — La fauna del MAR y de las orillas de Paraguaná en el s. XV
+# Campaña de fauna, parcela FA3 (el mar). FA1 = tierra (campana/fauna-tierra),
+# FA2 = aves, también las marinas y costeras (campana/fauna-aves): aquí NO se
+# repiten; se citan.
+#
+# Encargo de Miguel, 2026-09-22 (verbatim, del preámbulo de la campaña):
+#   «otro agente que busque y mine todas las especies que conviven en La
+#    Península que podamos intuir que lo hacían en esa fecha, pensando en el
+#    territorio pero también en el Mar tomando en cuenta que el aspecto marino
+#    era esencial en la cosmovisión caquetía, el agente debe, buscar todos los
+#    animales que son de la ecología de Paraguaná, sean migratorios, endémicos
+#    o que sean simplemente de la ecología de la región, y luego va a realizar
+#    una campaña para describirlos visualmente, y si es posible encontrar la
+#    onomatopeya que hacen, así le damos a los agentes una descripción y
+#    onomatopeya que "escuchar" por así decirlo.»
+#
+# Regla 5: esto PROPONE. No toca el motor, ni el lexicón, ni 3-mundo/corpus/.
+# Mide y valida: 6-fusion/scripts/medir_fauna_mar.py (regla 1: las cifras de
+# `meta.medido` las escribe ese script; si no coinciden, es un bug de aquí).
+# Datos de ocurrencia: 6-fusion/fauna_mar_caja_obis_gbif_2026-09-22.yaml
+# (generado por 6-fusion/scripts/caja_marina_obis_gbif.py).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-22'
+  estado: sin-fusionar
+  quien: FA3 (Claude Opus 5.5), campaña de minería 3
+  rama: campana/fauna-mar
+  pregunta: >-
+    ¿Qué animales del mar y de la orilla vivían en las dos aguas de la era 2
+    —el Golfete de Coro (GUARANAO) y la costa oeste del Golfo de Venezuela
+    (AMUAY)— en el s. XV, cómo se veían y cómo sonaban, cómo se llaman en las
+    lenguas de la esfera, cuáles no tienen nombre caquetío, y qué sostiene (y
+    qué no) que el mar fuera esencial en la cosmovisión caquetía?
+  respuesta_corta: >-
+    El mar de la era 2 se puede poblar con prueba, pero la prueba es desigual:
+    lo que se COMÍA está en los conchales (Zavala Reyes et al. 2018, Médanos de
+    Coro, s. XIV-XVIII: chipichipi, almejas, lapas, botutito, ostra de mangle,
+    y el botuto apenas el 1 %) y en la arqueología de las islas (Antczak 2015:
+    botuto, quigua, tortugas decapitadas); lo que se VEÍA sale de la historia
+    natural moderna, que vale para la forma y el sonido del animal pero no
+    para su abundancia. Delfín y tortugas marinas siguen sin nombre caquetío
+    (hueco-lex-009 confirmado): el castellano costero, el papiamento y el
+    wayuu sí los nombran. El mar suena de verdad —el mero que retumba, los
+    roncos que roncan al sacarlos, la tortuga cardón que resopla y gruñe al
+    tapar el nido, el delfín que la costa llama «soplón»— y casi ninguna
+    fuente da la onomatopeya: da el nombre del sonido. Sobre la cosmovisión:
+    lo que está SOSTENIDO es que el mar es la despensa, la moneda (conchas),
+    el camino a las islas y una de las faenas que se consultan al tabaco; lo
+    que NO está sostenido todavía, con ninguna fuente caquetía, es un dueño,
+    un mito o un rito del mar.
+  lo_que_resulto_falso_al_medirlo:
+    - que: 'la laguna de Guaranao como agua con manglar y peces para el s. XV'
+      realidad: >-
+        El manglar y la laguna de hoy nacieron hacia 1985 de un colector roto
+        (ecologia-084, degradado el 2026-09-16; Aular Leal 2014). En el s. XV
+        Guaranao era SALINA en la boca de una quebrada (Arcaya p. 22). Su
+        fauna marina moderna (lisa, corocoro, lenguado) NO se proyecta.
+    - que: 'Tabla II de Zavala Reyes et al. 2018 en la p. 404'
+      realidad: >-
+        La tabla está en la p. 405 de Interciencia 43(6): la cabecera y el
+        pie de la página que la contiene dicen 405 (✅ imagen, 2026-09-22).
+        La ficha zavala-reyes-2018 y el aviso del coordinador dicen 404.
+    - que: 'kumarawa «caracol de las costas de Paraguaná» sin conflicto de especie'
+      realidad: >-
+        Esteves 1989 p. 33 (entrada CUMARAGUAS, las salinas) da otra cosa:
+        «Cumaragua es el nombre que dan a un pequeño cangrejo de caparazón
+        rosada», con la significación «espuma rosada». D10 adjudicó la glosa
+        a Alvarado por localización sin tener este testigo. Va al issue.
+    - que: '«manatí» como nombre taíno del animal'
+      realidad: >-
+        Oviedo (t. I, p. 434) dice lo contrario: los cristianos lo llamaron
+        manatí por sus «dos manos», y le quitaron su nombre en la Española;
+        en Tierra Firme «los nombran diversamente» según la lengua. El
+        lexicón tiene `manati` como taíno sin procedencia y la lista maestra
+        del taíno lo da como atestiguado primario por Oviedo p. 433 (que es
+        la captura, no el nombre).
+    - que: 'Esteves registra un topónimo «Manate» (p. 50 del índice)'
+      realidad: 'es «Manare» (voz cumanagota, «cesto de fibra»): error del OCR del índice. Cero de manatí en el gazeteer.'
+  como_se_midio:
+    - 'OBIS y GBIF por API en tres cajas (península entera, Golfete, costa oeste): 6-fusion/scripts/caja_marina_obis_gbif.py → 6-fusion/fauna_mar_caja_obis_gbif_2026-09-22.yaml'
+    - 'repo: 3-mundo/corpus/ecologia.yaml y creencia.yaml enteros; 6-fusion/sitios_era2.yaml y clima_era2.yaml; curiana_lexicon.VOCABULARIO_BASE filtrado por glosa marina y por capa; lexicon_gatschet.py; 6-fusion/medina_colina_dictado.yaml'
+    - 'texto crudo releído: los seis OCR de Esteves 1989 (barridos por 40 raíces de fauna marina); Arcaya 1920 (pdftotext -layout; impresa = pdf − 8); van Buurt 2014 §3, §6, §8 y §11 enteros; Oviedo 1851 libro XIII caps. I-IX (impresa = pdf − 118, medido en 424 y 434); Pané caps. IX-X; Brinton 1871 p. 18; Zavala Reyes et al. 2018 Tabla II (imagen)'
+    - 'fuentes nuevas leídas enteras o por capítulo: Rondón-Médicci 2013, Romero et al. 1991 (OCR, verificado en imagen), Barrios-Garrido 2018 caps. 6-7, Cook y Forrest 2005'
+    - 'descripciones: FishBase/SeaLifeBase (80 fichas, «Morphology» y «Biology»), Wikipedia es (10 artículos de tortugas y mamíferos); sonidos: FishSounds (27 especies)'
+    - 'Docker no se consultó: la campaña no necesita la base'
+  convencion_de_paginas: >-
+    Página IMPRESA en todas las obras. Esteves 1989 por el número de pie del
+    OCR (el marcador «impresa» del OCR de Esteves es el del PDF de cada tomo,
+    no el del libro). Oviedo 1851 t. I: impresa = pdf − 118 también en el libro XIII
+    (verificado por la cabecera impresa en las pp. 424 y 434; la ficha avisa
+    de que el desfase deriva en otros tramos).
+    Romero et al. 1991: impresa = pdf + 168.
+  vocabulario_de_etiquetas:
+    presencia_s_xv:
+      segura: 'en un conchal o sitio arqueológico de la esfera, o en crónica del contacto para esta costa, o con nombre caquetío atestiguado que la nombra'
+      probable: 'presente hoy en estas aguas, hábitat constante desde ~4000 BP (ecologia-002), sin prueba arqueológica ni de crónica'
+      dudosa: 'fuera de su área moderna conocida, o sólo por analogía, o con un único testimonio débil'
+      excluida: 'llegó después de 1500 o su hábitat aquí es posterior (la laguna de Guaranao, 1985)'
+    etiqueta: 'la del resto del repo: atestiguado · reconstruido · hipotetico · retro-abstraido (una por dato; en duda, degradar)'
+  aguas:
+    golfete: 'el Golfete de Coro, bahía somera de marea pequeña: orilla de GUARANAO (Tacuato, El Cayude), zona ZG2'
+    costa_oeste: 'la orilla este del Golfo de Venezuela: AMUAY (Carirubana, Punta Cardón, Amuay), zona ZA1, con las atalayas de cardúmenes'
+    costa_norte_y_este: 'la costa de barlovento de la península (Adícora, Buchuacos, El Supí, Cabo San Román): fuera de las dos zonas de la era 2, pero es donde salen las tortugas'
+    islas: 'Aruba, Curazao, Bonaire y Las Aves: el alcance de las expediciones (ecologia-016, ecologia-021)'
+    laguna_guaranao: 'en el s. XV, salina y ensenada (Arcaya p. 22); la laguna salobre con manglar es de 1985 (ecologia-084): su fauna NO se proyecta'
+  periodos_del_canon: 'clima_era2.yaml: P1 Tiempo de Viento (enero-mayo), P2 la seca larga (junio-septiembre), P3 Tiempo de Siembra (octubre-diciembre)'
+  regla_3: >-
+    El animal (su forma, su sonido, su hábitat) es historia natural y no
+    cambia en 600 años; su ABUNDANCIA sí (ecologia-039: el escenario es
+    constante, el elenco no). Toda cifra de nidos, registros o capturas de
+    abajo es del s. XX-XXI y no dice cuántos había en el s. XV — había más
+    (ecologia-044). Lo que la gente HACÍA con el animal es de crónica del
+    s. XVI o de tradición del s. XX, y se marca.
+  regla_4: >-
+    La unidad es la esfera. El papiamento guarda voces caquetías de las islas
+    (van Buurt 2014); el wayuu es el vecino del otro lado del Golfo; el taíno
+    es la esfera de contacto, y Oviedo describe peces de la Española y de
+    Tierra Firme en general. Ninguno se importa como si fuera la orilla de
+    Tacuato: se dice de dónde viene cada nombre.
+  medido:
+    # Lo escribe 6-fusion/scripts/medir_fauna_mar.py --conteos. No editar a mano.
+    especies: 46
+    por_grupo: {cetaceos: 5, crustaceos: 8, equinodermos_y_cnidarios: 3, moluscos: 11, otros_mamiferos: 2,
+      peces: 15, tiburones_y_rayas: 4, tortugas: 5}
+    por_presencia: {dudosa: 4, excluida: 2, probable: 25, segura: 15}
+    es_hueco: 32
+    con_nombre_caquetio: 11
+    con_sonido_documentado: 14
+    candidatos_referente: 10
+    propuestas_ecologia: 8
+    obras_citadas: 27
+  ceros_verificados:
+    - que: 'delfín, ballena, manatí o foca en la toponimia y el léxico de Paraguaná'
+      raices: [delf, tonin, toñin, soplon, ballen, manat, lobo marin, foca]
+      resultado: >-
+        CERO en los seis OCR de Esteves (el único «delf» es el nombre propio
+        Adolfo; «Manate» del índice es «Manare»), en Arcaya, en el dictado de
+        Medina y en el lexicón caquetío (sólo `manatü`, acuñación hipotética
+        sin cita). Oviedo sí nombra «toñinas» y «ballenas asaz» en su lista
+        de los mares de las Indias (t. I, p. 424), no en la costa de Coro.
+    - que: 'tortuga marina con nombre en Paraguaná'
+      raices: [tortug, quel, carey, caguam, cardón, hicotea, jicotea]
+      resultado: >-
+        Esteves da «quelónidos» (Tumatey, p. 66) y «carey» sólo como ejemplo
+        de fonética taína (p. 16). El lexicón tiene `hikotea` (tortuga de agua
+        DULCE, reconstruida) y `hikoteya` (acuñación hipotética genérica).
+        Los nombres de especie están en el castellano de los pescadores
+        (Rondón-Médicci 2013) y en el wayuu (Barrios-Garrido 2018).
+    - que: 'vertebrados marinos grandes en OBIS/GBIF dentro de la caja de la península'
+      resultado: >-
+        CERO registros de delfines, ballenas, manatí, foca monje, pez sierra,
+        mero guasa y de tortugas verde y cabezona. Es un cero de MUESTREO:
+        Rondón-Médicci 2013 da nidos de las dos tortugas y Romero et al. 1991
+        un rorcual tropical «Paraguaná, Estado Falcón».
+    - que: 'onomatopeya literal de un animal marino en las fuentes del repo'
+      raices: [suena, sonido, ronca, ronc, sopla, resopl, chilla, bram, bufa, grita]
+      resultado: >-
+        Ninguna fuente de la costa transcribe el sonido de un animal marino.
+        Lo que hay son NOMBRES que son sonido (ronco, roncador, soplón) y
+        descripciones: la foca que «ronca tan recio que desde lejos se oye»
+        (Oviedo p. 428), la guarura de caracol de «sonido agudo que se
+        escuchaba a gran distancia» (Medina). Las onomatopeyas de FishSounds
+        son inglesas (Boom, Croak, Boop).
+    - que: 'un mito, un dueño o un rito del MAR caquetío'
+      raices: [dueño, madre del agua, espíritu, mar, sirena, pescad]
+      resultado: 'CERO en creencia.yaml, Arcaya, Oviedo (lo caquetío), Castellanos y Esteves. Ver cosmovision_marina.no_sostenido.'
+  lo_que_no_se_encontro:
+    - 'Ninguna lista de fauna de un conchal de la costa OESTE ni del Golfete paraguanero: el conchal cuantificado más cercano es el de los Médanos (Zavala Reyes et al. 2018). El de Pueblo Viejo (FAL-77, chipichipi) es foto sin cuenta (Oliver). La campaña de arqueología (M8, PR #203) no halló cuantificación por especie en Urbina, Casale ni Knaf'
+    - 'Ningún hueso de pez identificado en un sitio caquetío de tierra firme. El único porcentaje de peces es de Aruba: Tanki Flip, macabí 5,2 % y macabí de hueso 13,7 % de los restos de pez (Versteeg y Rostain 1997, vía van Buurt pp. 33 y 43)'
+    - 'Ninguna fuente fecha una estación de cardúmenes en el Golfo de Venezuela: la surgencia del Caribe sur (alisio fuerte de diciembre a abril) está en la literatura oceanográfica pero NO se leyó en esta sesión (403 en SciELO): deuda'
+    - 'Ningún registro de delfín en Paraguaná ni en el Golfete en las fuentes leídas; la tonina costera (Sotalia) está documentada en el Lago de Maracaibo, en el mismo sistema del Golfo'
+    - 'Ninguna fuente sobre sonido de tortugas verde, carey o cabezona; sólo de la cardón'
+
+# ══════════════════════════════════════════════════════════════════
+# LAS ESPECIES
+# Cada `descripcion_visual` ≤ 220 caracteres, lo que ve un pescador del
+# s. XV, sin comparaciones modernas; la fuente de la descripción va en
+# `descripcion_fuente`. `sonido.silabeo_propuesto` es SIEMPRE hipotético.
+# ══════════════════════════════════════════════════════════════════
+especies:
+
+  # ── TORTUGAS MARINAS (hueco-lex-009) ─────────────────────────────
+  - id: fm-001
+    grupo: tortugas
+    nombre: tortuga verde
+    cientifico: Chelonia mydas
+    aguas: [golfete, costa_norte_y_este, costa_oeste]
+    presencia_s_xv: probable
+    por_que: >-
+      Hoy pace en la península, que es zona de ALIMENTACIÓN de la especie más
+      que de anidación; se confirmó desove en el Golfete y 6 nidos en la costa
+      norte (2010). En la arqueología insular hay tortugas marinas consumidas
+      en masa (Antczak 2015, ecologia-044), sin especie declarada: el grupo es
+      seguro, la especie es probable.
+    epoca: 'nidos en junio (2010) → P2, la seca larga; Guada y Vernet (1988) dieron Tacuato como playa de anidación de la verde, que 2010 no confirmó'
+    antes_y_ahora: 'la especie más observada en los informes de 1988 y 2000; en 2010 ya no la más anidadora (Rondón-Médicci p. 119)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: tortuga verde, obra: rondon-medicci-2013, pagina: 116, nota: 'algunos pescadores la tienen por la HEMBRA del carey'}
+      wayuu: {forma: 'Sawain (Sawaiunrrü)', obra: barrios-garrido-2018, pagina: 203, nota: 'es la `sa''wainrü` «tortuga de…» del lexicón (wayunaiki, glosa truncada)'}
+      lokono: {forma: hikolhi, sentido: 'tortuga (genérico)', fuente_repo: 'curiana_lexicon, Goeje 1928 vía Pet 1987'}
+      taino: {forma: null, nota: 'Oviedo sólo da «tortugas muy grandes» sin nombre indígena; «hicoteas» son las pequeñas (t. I, p. 424)'}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'Tortuga grande de caparazón liso de escudos pardos manchados, vientre amarillento, cabeza corta de pico sin gancho y una uña por aleta; pace en los bajos y sube a la playa sólo de noche.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Chelonia_mydas'}
+    sonido: {suena: sin-dato, nota: 'ninguna fuente leída describe su sonido'}
+    procedencia:
+      - {obra: rondon-medicci-2013, pagina: '114, 116, 119'}
+      - {obra: antczak-2015-las-aves, pagina: 13}
+
+  - id: fm-002
+    grupo: tortugas
+    nombre: tortuga carey
+    cientifico: Eretmochelys imbricata
+    aguas: [costa_norte_y_este, costa_oeste, islas]
+    presencia_s_xv: probable
+    por_que: 'la más anidadora de la península hoy (37 nidos entre Punta Chaure y Punta Macolla, jul-sep 2010) y la única tortuga con registros en OBIS dentro de la caja (costa oeste)'
+    epoca: 'nidos en abril (El Codo) y julio-septiembre (Punta Chaure-Punta Macolla) → P1 al final y P2'
+    antes_y_ahora: 'su concha es el «carey» del comercio: la más cara en la Guajira hoy (Barrios-Garrido p. 187)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: carey, obra: rondon-medicci-2013, pagina: 116, nota: 'tenida por el MACHO de la verde'}
+      wayuu: {forma: Carrei, obra: barrios-garrido-2018, pagina: 203, nota: 'el autor lo lee como calco del castellano (p. 206)'}
+      taino: {forma: carey, nota: 'Esteves lo pone como ejemplo de fonética «caribe insular» (p. 16); sin cita de cronista en el repo'}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'Tortuga mediana de pico curvo y afilado como de ave, caparazón de placas superpuestas con el borde de atrás aserrado, y dos uñas en cada aleta; hurga entre las piedras y los corales.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Eretmochelys_imbricata'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: rondon-medicci-2013, pagina: '116, 119'}
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Eretmochelys imbricata'}
+
+  - id: fm-003
+    grupo: tortugas
+    nombre: tortuga cabezona
+    cientifico: Caretta caretta
+    aguas: [costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'nidos en tres playas de la costa norte en mayo-junio de 2010 (Playa Sur, Rancho Grande, Piedras Negras: Tabla 2)'
+    epoca: 'nidos en mayo y junio → final de P1 y P2'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'cabezona; caguama', obra: rondon-medicci-2013, pagina: 116, nota: '«caguama» para Venezuela la trae SeaLifeBase (fishbase-sealifebase)'}
+      wayuu: {forma: "Tagüari (Tagüari'já)", obra: barrios-garrido-2018, pagina: 203}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'Tortuga grande de cabeza muy ancha y pesada, caparazón pardo rojizo con tonos amarillos; sale del agua, sube la playa y raspa un hoyo en la arena donde cabe su cuerpo.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Caretta_caretta'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: rondon-medicci-2013, pagina: '116, 119'}
+
+  - id: fm-004
+    grupo: tortugas
+    nombre: tortuga cardón (laúd)
+    cientifico: Dermochelys coriacea
+    aguas: [costa_norte_y_este, golfete]
+    presencia_s_xv: probable
+    por_que: 'la más reportada por los pescadores (38 %) y con más nidos junto a la carey (La Encrucijada, Playa Norte, Puerto Escondido, Piedras Negras); desove confirmado también en el Golfete (Guada y Vernet 1990)'
+    epoca: 'nidos en junio-julio → P2, la seca larga, de NOCHE'
+    antes_y_ahora: 'los pescadores del Pico dicen que los turistas las alejaron (p. 119); los zorros se comen las crías en Cabo San Román (p. 118)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: tortuga cardón, obra: rondon-medicci-2013, pagina: 116}
+      wayuu: {forma: 'Öjono (Achepa en la Guajira colombiana)', obra: barrios-garrido-2018, pagina: '203, 206'}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'La tortuga más grande: sin escudos, de cuero oscuro con siete quillas a lo largo del lomo, aletas delanteras larguísimas; sale de noche a cavar sobre la línea de la marea alta.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Dermochelys_coriacea'}
+    sonido:
+      suena: true
+      que_suena: 'al desovar respira fuerte (exhalación-inhalación de casi un segundo), hace bombeos cortos con la garganta y, al tapar el nido, gruñe'
+      onomatopeya_documentada: {forma: null, nombre_del_sonido: 'exhale/inhale, gular pumps, grunts', obra: cook-forrest-2005, pagina: '387-389'}
+      silabeo_propuesto: {forma: 'jaaa-ju … gru', etiqueta: hipotetico, nota: 'resoplido largo y gruñido corto; forma de la campaña, no de fuente'}
+    procedencia:
+      - {obra: rondon-medicci-2013, pagina: '114, 116, 118, 119'}
+      - {obra: cook-forrest-2005, pagina: '387-389'}
+
+  - id: fm-005
+    grupo: tortugas
+    nombre: tortuga maní (golfina)
+    cientifico: Lepidochelys olivacea
+    aguas: [costa_oeste]
+    presencia_s_xv: dudosa
+    por_que: 'hoy sólo de paso a comer, la reconocen los pescadores de Amuay, Las Piedras y El Cayude (2,8 % de los reportes); no anida en la península'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'tortuga maní o guaraguá', obra: rondon-medicci-2013, pagina: '116, 120'}
+      wayuu: {forma: null, nota: 'sin nombre wayuu; la tienen por una verde rara (Barrios-Garrido p. 206)'}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'La tortuga más pequeña del mar, verde oliva, de caparazón redondeado casi como un corazón; no sale a esta playa, se la ve de paso comiendo.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Lepidochelys_olivacea'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: rondon-medicci-2013, pagina: '116, 120'}
+      - {obra: barrios-garrido-2018, pagina: 206}
+
+  # ── DELFINES Y BALLENAS (hueco-lex-009) ─────────────────────────
+  - id: fm-006
+    grupo: cetaceos
+    nombre: tonina costera (delfín estuarino)
+    cientifico: Sotalia guianensis
+    aguas: [costa_oeste]
+    presencia_s_xv: probable
+    por_que: >-
+      Vive en el Lago de Maracaibo (ejemplares desde 1911, Romero et al. 1991
+      p. 172), que desagua en el Golfo de Venezuela frente a la costa AMUAY:
+      es el delfín de agua turbia y somera del sistema. Sin registro en
+      Paraguaná (cero de muestreo, OBIS/GBIF).
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'tonina; soplón; delfín estuarino', obra: romero-mayayo-agudo-1991, pagina: 172}
+      taino: {forma: null, nota: 'Oviedo usa el castellano «toñinas» (t. I, p. 424)'}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'Delfín pequeño, gris azulado por el lomo y los costados y gris claro por debajo, de hocico corto y bien marcado; anda en grupos por el agua turbia y baja de la costa.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Sotalia_guianensis'}
+    sonido:
+      suena: true
+      que_suena: 'el resoplido al salir a respirar; el castellano de la costa le puso nombre por eso'
+      onomatopeya_documentada: {forma: soplón, tipo: 'nombre vernáculo que ES el sonido', obra: romero-mayayo-agudo-1991, pagina: 172}
+      silabeo_propuesto: {forma: 'juu', etiqueta: hipotetico}
+    procedencia:
+      - {obra: romero-mayayo-agudo-1991, pagina: 172}
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Sotalia guianensis (0)'}
+
+  - id: fm-007
+    grupo: cetaceos
+    nombre: delfín mular (tonina)
+    cientifico: Tursiops truncatus
+    aguas: [costa_oeste, costa_norte_y_este, golfete]
+    presencia_s_xv: probable
+    por_que: 'registrado en la costa de Falcón (Isla de Pájaros, Morrocoy, 1986) y citado para todo el Caribe venezolano; Oviedo cuenta «toñinas» entre lo que hay en estos mares'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'tonina; tursión; guamachín; delfín negro', obra: romero-mayayo-agudo-1991, pagina: 173}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'Delfín grande y gris, de hocico corto y grueso, que va en grupo, sale a respirar asomando el lomo y la aleta, y se acerca a la canoa.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Tursiops_truncatus', etiqueta: reconstruido, nota: 'la ficha leída da el comportamiento y el sonido; «gris» y «hocico grueso» son de la identificación, no de una frase leída'}
+    sonido:
+      suena: true
+      que_suena: 'chasquidos y silbidos (sobre todo bajo el agua) y el soplo al respirar'
+      onomatopeya_documentada: {forma: null, nombre_del_sonido: 'chasquidos; silbidos', obra: wikipedia-es-fauna-marina, pagina: 'Tursiops truncatus, §Sentidos y comunicación'}
+      silabeo_propuesto: {forma: 'juu … tik-tik', etiqueta: hipotetico}
+    procedencia:
+      - {obra: romero-mayayo-agudo-1991, pagina: 173}
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-008
+    grupo: cetaceos
+    nombre: rorcual tropical (ballena de Bryde)
+    cientifico: Balaenoptera edeni
+    aguas: [costa_norte_y_este, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'la única ballena con registro en Paraguaná («Paraguaná, Estado Falcón», Mondolfi in litt., Romero et al. 1991 p. 176); es ballena de aguas tropicales todo el año'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'ballena arenquera; ballena tropical; ballenato', obra: romero-mayayo-agudo-1991, pagina: 176}
+    es_hueco: true
+    descripcion_visual: 'Ballena larga y gris oscura de vientre claro, con tres crestas en la cabeza y una aleta de lomo en hoz; rara vez enseña la cola y se junta donde hay peces.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Balaenoptera_edeni'}
+    sonido:
+      suena: true
+      que_suena: 'el soplo al respirar, con chorro visible'
+      onomatopeya_documentada: null
+      nota: 'sin fuente leída que describa su soplo: deuda'
+      silabeo_propuesto: {forma: 'fuuj', etiqueta: hipotetico}
+    procedencia:
+      - {obra: romero-mayayo-agudo-1991, pagina: 176}
+
+  - id: fm-009
+    grupo: cetaceos
+    nombre: ballena jorobada
+    cientifico: Megaptera novaeangliae
+    aguas: [costa_norte_y_este]
+    presencia_s_xv: dudosa
+    por_que: 'en Venezuela sólo registros en el centro-oriente (Isla La Tortuga, Higuerote); es migratoria (se reproduce en el trópico) y Oviedo dice «ballenas asaz» en estos mares, sin lugar ni especie'
+    epoca: 'migra a aguas tropicales en el invierno del norte → P1, Tiempo de Viento (sin fuente leída para esta costa: deuda)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'ballena jorobada; ballena de aleta grande', obra: romero-mayayo-agudo-1991, pagina: 175}
+    es_hueco: true
+    descripcion_visual: 'Ballena enorme de cabeza con bultos y aletas del pecho larguísimas, blancas por debajo; tras el chorro asoma una aleta de lomo baja y luego la cola.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Megaptera_novaeangliae'}
+    sonido:
+      suena: true
+      que_suena: 'el chorro («geyser» en la fuente) al respirar'
+      onomatopeya_documentada: null
+      silabeo_propuesto: {forma: 'fuuj', etiqueta: hipotetico}
+    procedencia:
+      - {obra: romero-mayayo-agudo-1991, pagina: 175}
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  # ── OTROS MAMÍFEROS ────────────────────────────────────────────
+  - id: fm-010
+    grupo: otros_mamiferos
+    nombre: manatí
+    cientifico: Trichechus manatus
+    aguas: [costa_oeste, golfete]
+    presencia_s_xv: dudosa
+    por_que: >-
+      Hoy sólo en Maracaibo, Paria y el Delta (ecologia-043). Necesita
+      pastos marinos y agua dulce: el Golfete no tiene ríos perennes y
+      Paraguaná ninguno. Oviedo dice que en Tierra Firme «hay muchos destos
+      pescados» (t. I, p. 434), sin lugar. Ningún registro, ningún topónimo,
+      ningún hueso en la costa caquetía. La glosa «vaca marina del golfete»
+      de `manatü` es una acuñación de la simulación sin cita, no prueba.
+    nombres:
+      caquetio: {clave: manatü, capa: caquetío-hipotético, nota: 'acuñación F8 sin cita: NO es dato'}
+      taino: {forma: manatí, nota: 'Oviedo p. 434: el nombre lo pusieron los cristianos («por esso los chripstianos le llamaron manatí») y en Tierra Firme lo nombran diverso según la lengua'}
+      achagua: {forma: apia, fuente_repo: 'lexicon_achagua (Neira y Ribero 1762)', nota: 'Llanos: regla 4'}
+    es_hueco: true
+    descripcion_visual: 'Animal de agua corpulento y sin cuello, gris pardo, de piel arrugada con algas pegadas, dos brazos cortos con uñas y cola ancha como una pala; pace hierba en el fondo.'
+    descripcion_fuente: {obra: wikipedia-es-fauna-marina, url: 'https://es.wikipedia.org/wiki/Trichechus_manatus'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: '433-434'}
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Trichechus manatus (0)'}
+
+  - id: fm-011
+    grupo: otros_mamiferos
+    nombre: foca monje del Caribe («lobo marino» de Oviedo)
+    cientifico: Neomonachus tropicalis
+    aguas: [islas]
+    presencia_s_xv: dudosa
+    por_que: 'extinta (UICN 1994); su área llegaba a la costa de Venezuela (ecologia-040), sin prueba arqueológica en el Golfete. Oviedo: «muchos lobos marinos… por entre aquestas islas, como en las costas de la Tierra-Firme» (t. I, p. 428)'
+    antes_y_ahora: 'CAPA 0 de la biosfera: ya no existe en ningún mar'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: lobo marino, obra: oviedo-y-valdes-1851, pagina: 428}
+    es_hueco: true
+    descripcion_visual: 'Animal de pelo corto y lustroso, de aletas en lugar de brazos, que sale a dormir a las islas y playas y duerme tan hondo que se le puede acercar uno.'
+    descripcion_fuente: {obra: oviedo-y-valdes-1851, pagina: 428, etiqueta: atestiguado, nota: 'paráfrasis del cap. V del libro XIII: pelo «muy hermoso», dos aletones en vez de brazos, «profundo é pesado sueño»'}
+    sonido:
+      suena: true
+      que_suena: 'ronca al dormir en tierra, tan fuerte que se oye de lejos'
+      onomatopeya_documentada: {forma: null, texto: '«roncan tan recio, que desde lexos se oyen»', obra: oviedo-y-valdes-1851, pagina: 428}
+      silabeo_propuesto: {forma: 'grooo', etiqueta: hipotetico}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 428}
+
+  # ── PECES ───────────────────────────────────────────────────────
+  - id: fm-012
+    grupo: peces
+    nombre: cunaro (el pez de la manteca de los jachos)
+    cientifico: 'Epinephelus itajara (mero guasa) o Rhomboplites aurorubens (pargo cunaro): en disputa'
+    aguas: [golfete]
+    presencia_s_xv: segura
+    por_que: >-
+      Nombre caquetío atestiguado («Pez del golfete de Coro. Promicops
+      Guasa», Zavala #96) y técnica con él (Esteves p. 33: la manteca que unta
+      los jachos). La especie está en disputa: «promicrops guasa» es el mero
+      guasa, pez enorme y graso que vive en bajos y estuarios, y casa con la
+      manteca; el cunaro de FishBase (Rhomboplites) es un pargo de altura
+      pequeño y magro. LECTURA de esta campaña: la manteca apunta al mero.
+    antes_y_ahora: 'el mero guasa es muy vulnerable a la sobrepesca de sus agregaciones (FishBase/Wikipedia); cero registros hoy en la caja'
+    nombres:
+      caquetio: {clave: kunaro, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#96'}
+      castellano_regional: {forma: 'cunaro; cuna', obra: esteves-1989, pagina: 33}
+    es_hueco: false
+    descripcion_visual: 'Pez enorme y macizo, pardo amarillento o verdoso con pintas negras en la cabeza y el lomo, boca ancha; vive solo en los bajos de piedra y fango y entra a la boca de los caños.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Epinephelus-itajara.html', nota: 'describe al mero guasa, la lectura de la manteca'}
+    sonido:
+      suena: true
+      que_suena: 'un golpe grave y hondo bajo el agua'
+      onomatopeya_documentada: {forma: Boom, lengua: inglés, obra: fishsounds, pagina: 'Epinephelus itajara'}
+      silabeo_propuesto: {forma: 'buun', etiqueta: hipotetico}
+    procedencia:
+      - {obra: zavala-reyes-2015, pagina: '#96'}
+      - {obra: esteves-1989, pagina: 33}
+      - {obra: fishsounds, pagina: 'Epinephelus itajara'}
+
+  - id: fm-013
+    grupo: peces
+    nombre: cuna (meros y cunas de piedra)
+    cientifico: 'Mycteroperca bonaci, M. interstitialis y afines'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: segura
+    por_que: 'nombre caquetío atestiguado («Pez del golfete de Coro», Zavala #95) y topónimo Iticuna («Cuna es el nombre de un pez que hay en el Golfete de Coro», Esteves p. 44); en Curazao el papiamento guarda kasha kutu para la cuna tigre (van Buurt p. 32)'
+    nombres:
+      caquetio: {clave: kuna, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#95'}
+      papiamento: {forma: 'kasha kutu (M. tigris); puruntsi (meros pequeños, Gatschet)', obra: van-buurt-2014, pagina: 32}
+    es_hueco: false
+    descripcion_visual: 'Pez de piedra grande y alargado, pardo o gris con manchas oscuras en cuadros, aletas de atrás con borde negro; se esconde solo entre las rocas y sale a cazar peces.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Mycteroperca-bonaci.html'}
+    sonido:
+      suena: true
+      que_suena: 'retumbos y un rodar como de trueno bajo el agua'
+      onomatopeya_documentada: {forma: 'Boom; Thundering Roll', lengua: inglés, obra: fishsounds, pagina: 'Mycteroperca bonaci'}
+      silabeo_propuesto: {forma: 'bu-rrum', etiqueta: hipotetico}
+    procedencia:
+      - {obra: zavala-reyes-2015, pagina: '#95'}
+      - {obra: esteves-1989, pagina: 44}
+      - {obra: van-buurt-2014, pagina: 32}
+
+  - id: fm-014
+    grupo: peces
+    nombre: guaranaro (lisa)
+    cientifico: 'Mugil curema / Mugil incilis'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: segura
+    por_que: >-
+      Nombre caquetío atestiguado («Pez lisa», Zavala #139; «un pez más
+      pequeño que la lisa», Esteves p. 41) y un derivado en papiamento,
+      waranawa, «mullet salado… viene de Paraguaná» (van Buurt p. 37): el
+      pescado salado que viajaba de la península a las islas. La lisa vive en
+      lagunas salobres y costas arenosas, el agua de las dos orillas.
+    epoca: 'M. incilis se reproduce a comienzos del año, en grupos en las bocas de los caños (FishBase) → P1'
+    nombres:
+      caquetio: {clave: waranaro, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#139'}
+      papiamento: {forma: waranawa, sentido: 'lisa salada', obra: van-buurt-2014, pagina: 37}
+      castellano_regional: {forma: 'guaranaro; lisa', obra: esteves-1989, pagina: 41}
+    es_hueco: false
+    descripcion_visual: 'Pez plateado y rechoncho, redondo de cuerpo y de cabeza ancha, con el ojo medio tapado por un párpado de grasa; anda en bandos por el agua baja y salobre.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Mugil-curema.html'}
+    sonido: {suena: sin-dato, nota: 'FishSounds tiene estudios de Mugil curema sin nombre de sonido propio; el salto de la lisa sobre el agua no tiene fuente leída'}
+    procedencia:
+      - {obra: zavala-reyes-2015, pagina: '#139'}
+      - {obra: esteves-1989, pagina: 41}
+      - {obra: van-buurt-2014, pagina: 37}
+
+  - id: fm-015
+    grupo: peces
+    nombre: paguara
+    cientifico: Chaetodipterus faber
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'topónimo Paguara en el Istmo de Médanos, glosado «pez muy espinoso» (Esteves p. 55); la identificación con la paguara (Chaetodipterus) es de esta campaña: pez de aletas altas y espinosas, abundante en la costa somera'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: paguara, obra: esteves-1989, pagina: 55, nota: 'voz regional; filiación indígena sin probar'}
+    es_hueco: true
+    descripcion_visual: 'Pez alto y aplastado como un disco, de hocico romo, con fajas negras de arriba abajo que se borran con la edad y aletas de atrás altas; anda en bandos grandes junto a la orilla.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Chaetodipterus-faber.html'}
+    sonido: {suena: sin-dato, nota: 'FishSounds registra estudios de la especie sin nombre de sonido'}
+    procedencia:
+      - {obra: esteves-1989, pagina: 55}
+
+  - id: fm-016
+    grupo: peces
+    nombre: corocoro y roncos (los que roncan)
+    cientifico: 'Orthopristis ruber, Haemulon spp., Conodon nobilis'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'familia de fondos de arena, fango y hierba de toda la costa; el corocoro está en la laguna de Guaranao de hoy (Wikipedia, ecologia-084), que NO se proyecta, y en las cuentas de OBIS de la caja'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'corocoro; ronco; roncador', obra: laguna-guaranao-parque, pagina: fauna, nota: 'ronco/roncador: nombre del sonido'}
+    es_hueco: true
+    descripcion_visual: 'Pez mediano de boca chica, pardo grisáceo con reflejos violeta en el lomo y plateado en los flancos, salpicado de pintas pardo anaranjadas; anda en los fondos de arena y hierba.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Orthopristis-ruber.html'}
+    sonido:
+      suena: true
+      que_suena: 'ronca: rechina los dientes de la garganta y la vejiga lo agranda, sobre todo al sacarlo del agua'
+      onomatopeya_documentada: {forma: 'roncos (esp.); grunts (ingl.)', tipo: 'nombre común que ES el sonido', obra: wikipedia-es-fauna-marina, pagina: 'es: Haemulidae (los «roncos»); en: Haemulidae (el nombre viene de rechinar los dientes faríngeos)'}
+      silabeo_propuesto: {forma: 'korr-korr', etiqueta: hipotetico, nota: '¿el propio «corocoro»? Sólo parecido: sin fuente que diga que el nombre sea onomatopéyico'}
+    procedencia:
+      - {obra: fishsounds, pagina: 'Orthopristis chrysoptera; Haemulon plumierii; Conodon nobilis'}
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Orthopristis rubra'}
+
+  - id: fm-017
+    grupo: peces
+    nombre: corvina y roncadina (los que tamborean)
+    cientifico: 'Micropogonias furnieri, Bairdiella ronchus, Cynoscion spp.'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'fondos de fango y arena y estuarios; en la caja hay registros de varias Cynoscion y de las dos especies (OBIS); corvina está en la lista del corpus (ecologia-015)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'corvina; roncadina', nota: 'Oviedo da «corbinetas» entre los peces de estas mares (t. I, p. 424)'}
+    es_hueco: true
+    descripcion_visual: 'Pez plateado con reflejo dorado y lomo gris, con rayas oscuras oblicuas siguiendo las escamas; anda en bandos sobre el fondo de fango y en las bocas salobres.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Micropogonias-furnieri.html'}
+    sonido:
+      suena: true
+      que_suena: 'tamborileo de un músculo contra la vejiga; en la familia, coros al atardecer en la época de freza'
+      onomatopeya_documentada: {forma: 'croaker / drum (ingl.)', tipo: 'nombre común que es el sonido', obra: fishsounds, pagina: 'Micropogonias furnieri; Bairdiella ronchus; Cynoscion jamaicensis'}
+      silabeo_propuesto: {forma: 'tum-tum-tum', etiqueta: hipotetico}
+    procedencia:
+      - {obra: fishsounds, pagina: 'Sciaenidae'}
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-018
+    grupo: peces
+    nombre: pargo
+    cientifico: 'Lutjanus synagris, L. griseus y afines'
+    aguas: [costa_norte_y_este, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'Esteves: el cerro Matividiro orienta a «los pescadores de pargo que se internan hasta las quince millas» (p. 51); corpus ecologia-015; «parguetes» en Oviedo (p. 424)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: pargo, obra: esteves-1989, pagina: 51}
+    es_hueco: true
+    descripcion_visual: 'Pez rosado a rojizo por el lomo, con un tinte verde y barras oscuras difusas, de hocico en punta; se junta en bandos grandes sobre fondos de piedra y hierba.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Lutjanus-synagris.html'}
+    sonido:
+      suena: true
+      que_suena: 'golpes secos'
+      onomatopeya_documentada: {forma: Knock, lengua: inglés, obra: fishsounds, pagina: 'Lutjanus synagris'}
+      silabeo_propuesto: {forma: 'tok', etiqueta: hipotetico}
+    procedencia:
+      - {obra: esteves-1989, pagina: 51}
+      - {obra: fishsounds, pagina: 'Lutjanus synagris'}
+
+  - id: fm-019
+    grupo: peces
+    nombre: macabí
+    cientifico: Elops saurus
+    aguas: [golfete, islas]
+    presencia_s_xv: segura
+    por_que: '5,2 % de los restos de pez de Tanki Flip, aldea caquetía de Aruba (Versteeg y Rostain 1997, vía van Buurt p. 33); vive en lagunas y bahías hipersalinas, el agua del Golfete'
+    nombres:
+      caquetio: null
+      papiamento: {forma: 'macabí (Aruba), makambí (Curazao)', obra: van-buurt-2014, pagina: 33, nota: 'van Buurt la cree caquetía además de taína'}
+    es_hueco: true
+    descripcion_visual: 'Pez plateado, largo y fino, de lomo azulado y escamas menudas; forma bandos grandes pegados a la orilla y tiene la carne llena de espinitas.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Elops-saurus.html'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: van-buurt-2014, pagina: 33}
+
+  - id: fm-020
+    grupo: peces
+    nombre: macabí de hueso (warashi)
+    cientifico: Albula vulpes
+    aguas: [golfete, islas]
+    presencia_s_xv: segura
+    por_que: '13,7 % de los restos de pez de Tanki Flip (van Buurt p. 43, vía Versteeg y Rostain 1997); vive en bajos de arena y fango'
+    nombres:
+      caquetio: null
+      papiamento: {forma: warashi, obra: van-buurt-2014, pagina: 37, nota: 'topónimo arubeño Arashi, «uno de los mejores sitios para pescar warashi» (p. 43)'}
+    es_hueco: true
+    descripcion_visual: 'Pez plateado de aletas oscuras y base amarilla en las del pecho, cuerpo alargado; en los bajos se le ve la aleta del lomo asomar sobre el agua cuando hoza el fondo.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Albula-vulpes.html'}
+    sonido:
+      suena: true
+      que_suena: 'retumbos, chasquidos y golpes'
+      onomatopeya_documentada: {forma: 'Boom; Click; Knock', lengua: inglés, obra: fishsounds, pagina: 'Albula vulpes'}
+      silabeo_propuesto: {forma: 'tik … bum', etiqueta: hipotetico}
+    procedencia:
+      - {obra: van-buurt-2014, pagina: '37, 43'}
+      - {obra: fishsounds, pagina: 'Albula vulpes'}
+
+  - id: fm-021
+    grupo: peces
+    nombre: sábalo
+    cientifico: Megalops atlanticus
+    aguas: [golfete]
+    presencia_s_xv: probable
+    por_que: 'bocas de caño, bahías y lagunas con mangle; Oviedo da «sávalos» (p. 424); en la lista del corpus (ecologia-036)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: sábalo, obra: oviedo-y-valdes-1851, pagina: 424}
+    es_hueco: true
+    descripcion_visual: 'Pez grande de escamas plateadas enormes y boca hacia arriba, que sube a la superficie a tragar aire con un revolcón; anda en bandos en las bocas de los caños.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Megalops-atlanticus.html', etiqueta: reconstruido, nota: 'la ficha da que respira aire y su hábitat; escamas y boca son de la identificación'}
+    sonido: {suena: sin-dato, nota: 'FishSounds registra estudios de la especie; el revolcón al respirar no tiene fuente leída'}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-022
+    grupo: peces
+    nombre: róbalo
+    cientifico: Centropomus undecimalis
+    aguas: [golfete]
+    presencia_s_xv: probable
+    por_que: 'costas, estuarios y lagunas con mangle; «robalos» en Oviedo (p. 424); ecologia-015'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: róbalo, obra: oviedo-y-valdes-1851, pagina: 424}
+    es_hueco: true
+    descripcion_visual: 'Pez alargado y plateado con una línea negra muy marcada a lo largo del costado, de hocico en punta; caza peces y camarones en los caños y entre las raíces.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Centropomus-undecimalis.html'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-023
+    grupo: peces
+    nombre: bagre marino
+    cientifico: 'Bagre marinus, Sciades herzbergii'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'fondos de fango y estuarios; ecologia-015. `bagre` del lexicón es caquetío atestiguado pero glosa sólo «pez» (Zavala #21, homógrafo del castellano)'
+    nombres:
+      caquetio: {clave: bagre, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#21', nota: 'glosa «pez»: no nombra la especie'}
+      achagua: {forma: culirri, fuente_repo: lexicon_achagua, nota: 'Llanos, de río: regla 4'}
+    es_hueco: true
+    descripcion_visual: 'Pez de fango sin escamas, con bigotes largos y planos en la boca y el primer radio de las aletas alargado en hilo y aserrado; pica al que lo agarra mal.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Bagre-marinus.html'}
+    sonido:
+      suena: true
+      que_suena: 'en la familia (Ariopsis felis, pariente del Golfo de México): gruñidos, chirridos y coros'
+      onomatopeya_documentada: {forma: 'Growl; Squeak', lengua: inglés, obra: fishsounds, pagina: 'Ariopsis felis', nota: 'de la familia, no de la especie de esta costa'}
+      silabeo_propuesto: {forma: 'grrk', etiqueta: hipotetico}
+    procedencia:
+      - {obra: zavala-reyes-2015, pagina: '#21'}
+      - {obra: fishsounds, pagina: 'Bagre marinus; Ariopsis felis'}
+
+  - id: fm-024
+    grupo: peces
+    nombre: sardina (el cardumen)
+    cientifico: 'Sardinella aurita, Opisthonema oglinum'
+    aguas: [costa_oeste, golfete]
+    presencia_s_xv: probable
+    por_que: 'las atalayas de Sarabón y Suriquiba para «avistar los cardúmenes» en la costa oeste (Esteves pp. 58 y 61, ecologia-080); sardina y sardineta en Oviedo (p. 424); la sardina forma cardúmenes que suben a la superficie'
+    epoca: 'la atalaya ABRE en P1 (canon-simulación de clima_era2.yaml); la surgencia que alimentaría el cardumen en la estación de alisio fuerte NO tiene fuente leída: deuda'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'sardina; sardineta', obra: oviedo-y-valdes-1851, pagina: 424}
+    es_hueco: true
+    hueco_canon: hueco-lex-002
+    descripcion_visual: 'Pececillos plateados y alargados que andan en bandos inmensos; el bando sube a la superficie y el agua se ve hervir y brillar, con las aves cayendo encima.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Sardinella-aurita.html', etiqueta: reconstruido, nota: 'la ficha da el cardumen que sube a la superficie; las aves que caen son lectura (ecologia-038; FA2)'}
+    sonido: {suena: sin-dato, nota: 'el chapoteo del cardumen en la superficie no tiene fuente leída'}
+    procedencia:
+      - {obra: esteves-1989, pagina: '58, 61'}
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-025
+    grupo: peces
+    nombre: jurel
+    cientifico: Caranx hippos
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'común en los bajos de la costa y en estuarios fangosos (FishBase); «xureles» en Oviedo (p. 424)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: jurel, obra: oviedo-y-valdes-1851, pagina: 424}
+    es_hueco: true
+    descripcion_visual: 'Pez fuerte de frente empinada, cuerpo alto y plateado con escudos duros a lo largo de la cola; corre en bandos por los bajos persiguiendo a los peces chicos.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Caranx-hippos.html'}
+    sonido:
+      suena: true
+      que_suena: 'croa'
+      onomatopeya_documentada: {forma: Croak, lengua: inglés, obra: fishsounds, pagina: 'Caranx hippos'}
+      silabeo_propuesto: {forma: 'kroa', etiqueta: hipotetico}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+      - {obra: fishsounds, pagina: 'Caranx hippos'}
+
+  - id: fm-026
+    grupo: peces
+    nombre: sapo (pez sapo de piedra)
+    cientifico: Amphichthys cryptocentrus
+    aguas: [costa_oeste, costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'fondos de arena y piedra de poca agua; los grandes se esconden en grietas a menos de un metro (FishBase); en la caja hay dos parientes (Porichthys, Thalassophryne, OBIS)'
+    nombres:
+      caquetio: null
+    es_hueco: true
+    descripcion_visual: 'Pez de cabeza chata y ancha, pardo con manchas negras difusas y vientre pálido, con puntos blancos en fila por el costado; se esconde en las grietas del fondo de piedra.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Amphichthys-cryptocentrus.html'}
+    sonido:
+      suena: true
+      que_suena: 'llamadas cortas y gruñidos desde la grieta'
+      onomatopeya_documentada: {forma: 'Boop; Grunt; Swoop', lengua: inglés, obra: fishsounds, pagina: 'Amphichthys cryptocentrus'}
+      silabeo_propuesto: {forma: 'bup', etiqueta: hipotetico}
+    procedencia:
+      - {obra: fishsounds, pagina: 'Amphichthys cryptocentrus'}
+
+  - id: fm-027
+    grupo: peces
+    nombre: tamboril (pez erizo)
+    cientifico: Diodon hystrix
+    aguas: [costa_norte_y_este, islas]
+    presencia_s_xv: probable
+    por_que: 'arrecifes y cuevas de poca agua; en Aruba, Gatschet recogió ginga para el pez erizo (nivel C en el repo)'
+    nombres:
+      caquetio: null
+      papiamento: {forma: ginga, obra: gatschet-1885, pagina: 'vocabulario de animales', nota: 'nivel C: sospechosa de ser el epíteto «atinga» recortado (lexicon_gatschet)'}
+    es_hueco: true
+    descripcion_visual: 'Pez redondo cubierto de espinas largas y agudas, plegadas hacia atrás, que se infla como una bola cuando lo sacan; de noche rompe conchas con los dientes soldados.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Diodon-hystrix.html', etiqueta: reconstruido, nota: 'espinas, dientes y hábitos de la ficha; el inflarse es de la identificación de la familia'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: gatschet-1885, pagina: 'vocabulario (vía curiana_sim/lexicon_gatschet.py)'}
+
+  # ── TIBURONES Y RAYAS ──────────────────────────────────────────
+  - id: fm-028
+    grupo: tiburones_y_rayas
+    nombre: cazón y tiburones
+    cientifico: 'Rhizoprionodon lalandii, Carcharhinus leucas, Sphyrna lewini, Ginglymostoma cirratum'
+    aguas: [costa_oeste, golfete, costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'cazones de costa arenosa, el toro que entra a lagunas hipersalinas, la gata que duerme en el fondo; Oviedo dedica dos capítulos a los tiburones de estas costas (pp. 429-431); ecologia-015 y 036'
+    nombres:
+      caquetio: {clave: kanawari, capa: caquetío-hipotético, nota: 'acuñación F8 sin cita: NO es dato'}
+      castellano_regional: {forma: 'tiburón; cazón; tollo', obra: oviedo-y-valdes-1851, pagina: '424, 429-431'}
+    es_hueco: true
+    descripcion_visual: 'Pez grande y gris de piel áspera, con dos o más hileras de dientes afilados en una boca ancha; la gata, parda y con barbillas, duerme quieta en el fondo de día.'
+    descripcion_fuente: {obra: oviedo-y-valdes-1851, pagina: 430, etiqueta: atestiguado, nota: 'las «dos órdenes de dientes» son de Oviedo; la gata dormida, de FishBase (Ginglymostoma cirratum)'}
+    sonido: {suena: false, nota: 'los tiburones no tienen sonido conocido'}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: '429-431'}
+      - {obra: fishbase-sealifebase, pagina: 'Ginglymostoma cirratum'}
+
+  - id: fm-029
+    grupo: tiburones_y_rayas
+    nombre: chucho (raya pintada que salta)
+    cientifico: Aetobatus narinari
+    aguas: [costa_oeste, costa_norte_y_este, golfete]
+    presencia_s_xv: probable
+    por_que: 'raya de costa que forma bandos grandes; Oviedo: «rayas muchas, y en algunas partes muy grandes» (p. 424)'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'raya; chucho', obra: oviedo-y-valdes-1851, pagina: 424, nota: '«chucho» es venezolano general, sin fuente leída en esta sesión'}
+      achagua: {forma: yiaduri, sentido: 'raya, pescado', fuente_repo: lexicon_achagua, nota: 'Llanos: regla 4'}
+    es_hueco: true
+    descripcion_visual: 'Raya de hocico largo y romo como pico de pato y cuerpo en rombo de puntas curvas, con cola larga; nada cerca de la superficie y a veces salta fuera del agua.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Aetobatus-narinari.html'}
+    sonido: {suena: sin-dato, nota: 'el golpe al caer tras el salto no tiene fuente leída'}
+    procedencia:
+      - {obra: fishbase-sealifebase, pagina: 'Aetobatus narinari'}
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-030
+    grupo: tiburones_y_rayas
+    nombre: raya temblador
+    cientifico: 'Narcine brasiliensis'
+    aguas: [costa_oeste, costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'raya con registros en la caja (OBIS); arenales de costa; el achagua tiene nombre para el temblador (chumaí), el caquetío no'
+    nombres:
+      caquetio: null
+      achagua: {forma: chumaí, sentido: 'temblador, pescado', fuente_repo: lexicon_achagua, nota: 'probablemente el pez eléctrico de río: regla 4'}
+    es_hueco: true
+    descripcion_visual: 'Raya pequeña y redonda color arena, con anillos de pintas oscuras en el lomo y bandas en la cola; se entierra en el arenal de la orilla y el que la pisa siente un temblor.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.fishbase.se/summary/Narcine-brasiliensis.html', etiqueta: reconstruido, nota: 'forma y color de la ficha; la descarga es del género, no de una frase leída'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: obis-gbif-caja-marina, pagina: 'tiburones y rayas'}
+
+  - id: fm-031
+    grupo: tiburones_y_rayas
+    nombre: pez sierra
+    cientifico: Pristis pectinata
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: dudosa
+    por_que: 'de bahías, lagunas y bocas de río, y entra a agua dulce (FishBase); cero registros en la caja; Oviedo describe el «pexe vihuela» con espada de dientes (p. 426), sin lugar'
+    antes_y_ahora: 'casi desaparecido del Caribe; si estuvo, es de lo que había y ya no'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'pexe vihuela', obra: oviedo-y-valdes-1851, pagina: 426}
+    es_hueco: true
+    descripcion_visual: 'Pez largo y chato de tiburón con el hocico prolongado en una hoja dura con dientes a los dos lados, como una espada dentada; anda en el fondo de las bahías.'
+    descripcion_fuente: {obra: oviedo-y-valdes-1851, pagina: 426, etiqueta: atestiguado, nota: 'la espada «orlada de unos colmillos» es de Oviedo'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 426}
+      - {obra: fishbase-sealifebase, pagina: 'Pristis pectinata'}
+
+  # ── MOLUSCOS ───────────────────────────────────────────────────
+  - id: fm-032
+    grupo: moluscos
+    nombre: chipichipi
+    cientifico: Donax striatus
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: segura
+    por_que: 'el 42,4 % de los fragmentos de concha de los sitios caquetíos de los Médanos (s. XIV-XVIII), el primero de la cuenta; y «chipi-chipe (Donax spp.) middens» en Pueblo Viejo (Oliver, sitios_era2)'
+    nombres:
+      caquetio: {clave: kiwa, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#214', nota: '«concha de almeja y otros moluscos»: genérico, no la especie'}
+      castellano_regional: {forma: chipichipi, obra: oliver-1989-cap3, pagina: 'DOC 265'}
+    es_hueco: true
+    descripcion_visual: 'Almejita del largo de una uña, de concha lisa en cuña con rayas finas y colores que cambian; vive enterrada en la arena donde rompe la ola y se saca a puñados.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Donax-striatus.html', etiqueta: reconstruido, nota: 'la ficha sólo da el hábitat (arena somera); tamaño y forma son de la identificación: deuda'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: zavala-reyes-2018, pagina: 405}
+      - {obra: oliver-1989-cap3, pagina: 'DOC 265'}
+
+  - id: fm-033
+    grupo: moluscos
+    nombre: almeja de conchal (Callista)
+    cientifico: 'Callista sp.'
+    aguas: [golfete]
+    presencia_s_xv: segura
+    por_que: 'el 27,0 % de los fragmentos de los Médanos, y el primero (48,2 %) en el sitio con alfarería MCa/10-20'
+    nombres:
+      caquetio: {clave: kiwa, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#214', nota: 'genérico'}
+    es_hueco: true
+    descripcion_visual: 'Almeja lisa y brillante de forma oval, de las que se sacan del fango arenoso de la orilla; su concha va al fogón y luego al montón junto a la casa.'
+    descripcion_fuente: {deuda: sin-procedencia, etiqueta: hipotetico, nota: 'sin ficha de especie (sólo género en la fuente)'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: zavala-reyes-2018, pagina: 405}
+
+  - id: fm-034
+    grupo: moluscos
+    nombre: botuto (caracol reina)
+    cientifico: 'Aliger (Lobatus, Strombus) gigas'
+    aguas: [islas, golfete]
+    presencia_s_xv: segura
+    por_que: >-
+      En las islas, en densidades altísimas y omnipresente en los sitios
+      (Antczak 2015, ecologia-016 y 044); en tierra firme, apenas el 1,0 % de
+      la concha de los Médanos (3 de 304). El botuto es de las islas y del
+      agua clara; en la orilla del Golfete se come otra cosa.
+    antes_y_ahora: 'hoy bajo veda por sobrepesca (ecologia-044)'
+    nombres:
+      caquetio: {clave: kurubo, capa: caquetío-retroabstraido, nota: '«caracol marino» de Medina p. 86 (especie abierta: ¿Lobatus? ¿Melongena?); y kumarawa, en disputa (ver issue)'}
+      taino: {forma: cobo, fuente_repo: 'curiana_lexicon (taíno, sin procedencia)'}
+      castellano_regional: {forma: 'botuto; guarura (la bocina)', obra: medina-colina-sxx, pagina: 'no dictada (mc-mundo-023)'}
+    es_hueco: false
+    descripcion_visual: 'Caracol enorme y pesado, de concha gruesa con púas romas en la vuelta de arriba y un labio ancho y liso de color rosado por dentro; vive en los fondos de arena y hierba del agua clara.'
+    descripcion_fuente: {deuda: sin-procedencia, etiqueta: reconstruido, nota: 'Antczak 2015 no lo describe; el artículo de Wikipedia no se pudo leer (429): deuda'}
+    sonido:
+      suena: true
+      que_suena: 'el animal no; su concha sí, como bocina: la guarura'
+      onomatopeya_documentada: {forma: null, texto: '«producía un sonido agudo que se escuchaba a gran distancia»', obra: medina-colina-sxx, pagina: 'no dictada (mc-mundo-023)', capa: 's. XX'}
+      silabeo_propuesto: {forma: 'tuuu', etiqueta: hipotetico}
+    procedencia:
+      - {obra: antczak-2015-las-aves, pagina: '4, 13, 21-23'}
+      - {obra: zavala-reyes-2018, pagina: 405}
+      - {obra: medina-colina-sxx, pagina: 'mc-mundo-023'}
+
+  - id: fm-035
+    grupo: moluscos
+    nombre: quigua (burgao)
+    cientifico: Cittarium pica
+    aguas: [costa_norte_y_este, islas]
+    presencia_s_xv: segura
+    por_que: 'en la arqueología de Las Aves (Antczak 2015, ecologia-016); nombre caquetío atestiguado que sobrevive en Venezuela (quigua), en Curazao/Aruba/Bonaire (kiwa) y en Cuba (cigua)'
+    antes_y_ahora: 'extirpada o en declive en muchos sitios por sobreexplotación (SeaLifeBase)'
+    nombres:
+      caquetio: {clave: kiwa, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#214'}
+      papiamento: {forma: kiwa, obra: van-buurt-2014, pagina: 32}
+      castellano_regional: {forma: quigua, obra: fishbase-sealifebase, pagina: 'Cittarium pica, nombres comunes (Venezuela)'}
+      taino: {forma: cigua, obra: van-buurt-2014, pagina: 32, nota: '«in Cuba as cigua»'}
+    es_hueco: false
+    descripcion_visual: 'Caracol de piedra de la orilla, grueso y redondo como un trompo, con manchas negras y blancas en zigzag; se pega a las rocas donde bate el mar.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Cittarium-pica.html', etiqueta: reconstruido, nota: 'hábitat de la ficha; color y forma de la identificación: deuda'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: antczak-2015-las-aves, pagina: '10, 21-23'}
+      - {obra: van-buurt-2014, pagina: 32}
+
+  - id: fm-036
+    grupo: moluscos
+    nombre: botutito
+    cientifico: Strombus pugilis
+    aguas: [golfete]
+    presencia_s_xv: segura
+    por_que: 'el 6,3 % de la concha de los Médanos y el 19,3 % en el sitio con alfarería (MCa/10-20): el caracol de la orilla que sí se comía en tierra firme'
+    nombres:
+      caquetio: null
+    es_hueco: true
+    descripcion_visual: 'Caracol mediano de concha gruesa y anaranjada, con una corona de nudos en la vuelta alta y labio ancho; salta en la arena con su uña cuando se le voltea.'
+    descripcion_fuente: {deuda: sin-procedencia, etiqueta: hipotetico}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: zavala-reyes-2018, pagina: 405}
+
+  - id: fm-037
+    grupo: moluscos
+    nombre: ostra de mangle
+    cientifico: Crassostrea rhizophorae
+    aguas: [golfete]
+    presencia_s_xv: segura
+    por_que: 'el 4,9 % de la concha de los Médanos; se pega a las raíces del mangle rojo (SeaLifeBase), que existe en el borde oeste del Golfete (ecologia-011) — NO en Guaranao en el s. XV'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'ostra; ostión', nota: '«hostias» en la lista de Oviedo (p. 424)'}
+    es_hueco: true
+    descripcion_visual: 'Ostra de concha áspera e irregular, gris y morada, que crece en racimos pegada a las raíces del mangle que la marea baja deja al aire.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Crassostrea-rhizophorae.html', etiqueta: reconstruido, nota: 'pegada a las raíces de Rhizophora, de la ficha; color y forma, de la identificación'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: zavala-reyes-2018, pagina: 405}
+
+  - id: fm-038
+    grupo: moluscos
+    nombre: ostra perlífera
+    cientifico: Pinctada imbricata
+    aguas: [costa_norte_y_este, costa_oeste, islas]
+    presencia_s_xv: segura
+    por_que: 'los oficiales reales informan de perlas «descubiertas en las costas de Paraguaná» y Alfínger «halló muy buenas muestras de ostrales» (Arcaya pp. 197 y 233; contacto, c. 1530)'
+    antes_y_ahora: 'CAPA 1: los bancos de Cubagua colapsaron hacia 1545 y la pepitona ocupó su lugar (ecologia-041, 042)'
+    nombres:
+      caquetio: {clave: tüma, capa: caquetío-hipotético, nota: '«perla»: acuñación F8 sin cita; el MOLUSCO no tiene palabra (hueco-lex-009)'}
+    es_hueco: true
+    hueco_canon: hueco-lex-009
+    descripcion_visual: 'Concha plana y delgada de borde escamoso, parda por fuera y nacarada por dentro, que se pega a las piedras del fondo; algunas guardan una bolita blanca que brilla.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Pinctada-imbricata.html', etiqueta: reconstruido, nota: 'hábitat de la ficha; forma y nácar, de la identificación'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: arcaya-1920, pagina: '197, 233'}
+
+  - id: fm-039
+    grupo: moluscos
+    nombre: pepitona
+    cientifico: Arca zebra
+    aguas: [costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'forma bancos densos sobre fondos de piedra de 1 a 20 m (SeaLifeBase); registros en la caja (OBIS)'
+    antes_y_ahora: 'la que desplazó a la ostra perlífera en Cubagua (ecologia-042): lo que había antes en ese fondo era perla'
+    nombres:
+      caquetio: null
+    es_hueco: true
+    descripcion_visual: 'Concha alargada como una caja, con rayas pardas en zigzag sobre fondo claro, pegada con hilos a la cara de abajo de las piedras.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Arca-zebra.html', etiqueta: reconstruido, nota: 'fijación por hilos de la ficha; las rayas, del nombre de la especie'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Arca zebra'}
+
+  - id: fm-040
+    grupo: moluscos
+    nombre: corrugao y lapas (los caracoles del fango y la piedra)
+    cientifico: 'Melongena melongena, Diodora cayenensis'
+    aguas: [golfete]
+    presencia_s_xv: segura
+    por_que: 'Melongena 3,3 % y Diodora 8,9 % de la concha de los Médanos; Melongena vive en lagunas, mangles y aguas poco saladas (SeaLifeBase)'
+    nombres:
+      caquetio: {clave: yagruma, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#282', nota: '«caracol, molusco»: genérico'}
+    es_hueco: true
+    descripcion_visual: 'Caracol oscuro de fango, ancho de hombros y con una corona de púas, que anda por los bajos salobres; junto a él, la lapa pegada a la piedra con un agujerito en la cima.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Melongena-melongena.html', etiqueta: reconstruido, nota: 'hábitat de las fichas; forma de la identificación'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: zavala-reyes-2018, pagina: 405}
+
+  - id: fm-041
+    grupo: moluscos
+    nombre: pulpo
+    cientifico: 'Octopus vulgaris (s. l.)'
+    aguas: [costa_norte_y_este, islas]
+    presencia_s_xv: probable
+    por_que: '«pulpos» en la lista de Oviedo (p. 424); fondos de piedra de la costa'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: pulpo, obra: oviedo-y-valdes-1851, pagina: 424}
+    es_hueco: true
+    descripcion_visual: 'Animal blando de ocho brazos con ventosas, sin concha, que cambia de color y se mete en las grietas; al sacarlo se pega a la mano.'
+    descripcion_fuente: {deuda: sin-procedencia, etiqueta: hipotetico}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-042
+    grupo: moluscos
+    nombre: mejillón de mangle (palúli)
+    cientifico: Brachidontes exustus
+    aguas: [golfete, islas]
+    presencia_s_xv: probable
+    por_que: 'se pega a lo duro en los estuarios (SeaLifeBase); voz probablemente caquetía en el papiamento (van Buurt, Gatschet nivel A)'
+    nombres:
+      caquetio: null
+      papiamento: {forma: palúli, obra: van-buurt-2014, pagina: '34-35', nota: 'nivel A en lexicon_gatschet'}
+    es_hueco: true
+    descripcion_visual: 'Mejillón pequeño y oscuro, de concha con costillas finas, que forma alfombras pegadas a las piedras y las raíces de la orilla salobre.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Brachidontes-exustus.html', etiqueta: reconstruido}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: van-buurt-2014, pagina: '34-35'}
+      - {obra: gatschet-1885, pagina: 'vocabulario (vía lexicon_gatschet.py)'}
+
+  # ── CRUSTÁCEOS ─────────────────────────────────────────────────
+  - id: fm-043
+    grupo: crustaceos
+    nombre: jaiba
+    cientifico: 'Callinectes sapidus, C. bocourti, C. danae'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'la jaiba es el crustáceo con más registros del Golfete en OBIS; «xaybas» en la lista de Oviedo (p. 424); voz del habla paraguanera (Medina)'
+    nombres:
+      caquetio: {clave: jaiba, capa: caquetío-reconstruido, nota: 'tainismo de Medina; la vía pudo ser el castellano'}
+      taino: {forma: xayba, obra: oviedo-y-valdes-1851, pagina: 424}
+    es_hueco: false
+    descripcion_visual: 'Cangrejo nadador de caparazón ancho con una púa larga a cada lado, patas del final aplanadas como remos y pinzas azuladas; entra y sale de las bocas salobres.'
+    descripcion_fuente: {deuda: sin-procedencia, etiqueta: reconstruido, nota: 'SeaLifeBase sólo da la biología; la forma es de la identificación'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Callinectes sapidus'}
+
+  - id: fm-044
+    grupo: crustaceos
+    nombre: cangrejos de orilla (huaymujo, cangrejo de piedra, cangrejo azul)
+    cientifico: 'Grapsus grapsus, Cardisoma guanhumi, Uca spp., Aratus pisonii (especie de huaymujo abierta)'
+    aguas: [golfete, costa_oeste, costa_norte_y_este]
+    presencia_s_xv: segura
+    por_que: 'huaymujo «pequeño cangrejo» es caquetío atestiguado (Zavala #158) y está en el topónimo Imujo (Esteves p. 43); los cangrejos de piedra y de tierra tienen registros en la caja (OBIS)'
+    nombres:
+      caquetio: {clave: huaymujo, capa: caquetío-atestiguado, obra: zavala-reyes-2015, pagina: '#158'}
+      papiamento: {forma: 'guengu (cangrejo de piedra, §11: vínculo menos cierto)', obra: van-buurt-2014, pagina: 45}
+      achagua: {forma: cabarrai, sentido: cangrejo, fuente_repo: lexicon_achagua, nota: 'regla 4'}
+    es_hueco: false
+    descripcion_visual: 'En la piedra de la rompiente corre un cangrejo rojo que se tira al agua si uno se acerca; en el fango, cangrejitos de una pinza enorme salen de sus cuevas con la marea baja.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Grapsus-grapsus.html', etiqueta: reconstruido, nota: 'la huida al agua es de la ficha de Grapsus; el color y los violinistas, de la identificación.'}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: zavala-reyes-2015, pagina: '#158'}
+      - {obra: esteves-1989, pagina: 43}
+
+  - id: fm-045
+    grupo: crustaceos
+    nombre: cumaragua (el cangrejito rosado de las salinas)
+    cientifico: null
+    aguas: [golfete]
+    presencia_s_xv: dudosa
+    por_que: 'Esteves: «Cumaragua es el nombre que dan a un pequeño cangrejo de caparazón rosada» (p. 33, s.v. CUMARAGUAS, las salinas al este de El Vínculo). El lexicón da `kumarawa` como caracol (Alvarado). Un solo testigo por lado: conflicto abierto'
+    nombres:
+      caquetio: {clave: kumarawa, capa: caquetío-atestiguado, nota: 'glosa del lexicón «caracol de las costas de Paraguaná» (Alvarado 1921 p. 102); Esteves p. 33 dice cangrejo'}
+    es_hueco: false
+    descripcion_visual: 'Cangrejito de caparazón rosado que anda en las charcas de las salinas, donde el agua también se tiñe de rosa.'
+    descripcion_fuente: {obra: esteves-1989, pagina: 33, etiqueta: atestiguado, nota: 'el agua rosada de las salinas es ecologia-009 (Dunaliella); juntar las dos cosas es lectura'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: esteves-1989, pagina: 33}
+      - {obra: alvarado-1921, pagina: 102}
+
+  - id: fm-046
+    grupo: crustaceos
+    nombre: camarón pistola (el que chasquea)
+    cientifico: 'Alpheus spp.'
+    aguas: [golfete, costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'un registro en la caja (OBIS); viven en madrigueras entre ostiones, hierba marina y piedra de poca agua'
+    nombres:
+      caquetio: null
+    es_hueco: true
+    descripcion_visual: 'Camaroncito de una pinza desproporcionada que vive escondido en madrigueras entre las ostras y la hierba del fondo; casi nunca se le ve, se le oye.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Alpheus-heterochaelis.html', etiqueta: reconstruido}
+    sonido:
+      suena: true
+      que_suena: 'el chasquido de la pinza, que hace estallar una burbuja; en colonia es un crepitar continuo en el agua baja'
+      onomatopeya_documentada: {forma: 'snap (ingl.)', tipo: 'nombre del sonido', obra: wikipedia-es-fauna-marina, pagina: 'en: Alpheidae (el chasquido y la burbuja que estalla)'}
+      silabeo_propuesto: {forma: 'chik-chik-chik', etiqueta: hipotetico}
+    procedencia:
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Alpheus heterochaelis'}
+
+  - id: fm-047
+    grupo: crustaceos
+    nombre: langosta
+    cientifico: Panulirus argus
+    aguas: [costa_norte_y_este, islas]
+    presencia_s_xv: probable
+    por_que: 'fondos de piedra y hierba (SeaLifeBase); «langostas» en Oviedo (p. 424); registros en la caja'
+    nombres:
+      caquetio: null
+      nota: '⚠️ `tara` «langosta» del lexicón es el INSECTO (#45), no la del mar'
+    es_hueco: true
+    descripcion_visual: 'Bicho de mar grande y espinoso, pardo con manchas claras, de antenas larguísimas y sin pinzas grandes; se esconde en las cuevas de piedra en fila con otros.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Panulirus-argus.html', etiqueta: reconstruido}
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  - id: fm-048
+    grupo: crustaceos
+    nombre: camarón blanco
+    cientifico: 'Penaeus (Litopenaeus) schmitti'
+    aguas: [golfete, costa_oeste]
+    presencia_s_xv: probable
+    por_que: 'fondos blandos de fango, juveniles en bahías y estuarios (SeaLifeBase); «camarones» en Oviedo (p. 424); registros en la caja'
+    nombres:
+      caquetio: null
+      castellano_regional: {forma: 'camarón blanco; langostino blanco', obra: fishbase-sealifebase, pagina: 'Penaeus schmitti, nombres comunes (Venezuela)'}
+    es_hueco: true
+    descripcion_visual: 'Camarón claro y casi transparente, de cuerpo curvo y cola en abanico, que salta hacia atrás al tocarlo; se junta en el fango de las bocas salobres.'
+    descripcion_fuente: {deuda: sin-procedencia, etiqueta: reconstruido}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: oviedo-y-valdes-1851, pagina: 424}
+
+  # ── EQUINODERMOS Y CNIDARIOS ───────────────────────────────────
+  - id: fm-049
+    grupo: equinodermos_y_cnidarios
+    nombre: erizos
+    cientifico: 'Echinometra lucunter, Diadema antillarum'
+    aguas: [costa_norte_y_este, islas]
+    presencia_s_xv: probable
+    por_que: 'Echinometra en la piedra de la rompiente y el erizo negro Diadema, los dos con registros en la caja (OBIS)'
+    antes_y_ahora: 'el erizo negro de espinas largas murió en masa en todo el Caribe en 1983 (sin fuente leída en esta sesión: deuda); era abundante antes'
+    nombres:
+      caquetio: null
+      papiamento: {forma: bushi, obra: van-buurt-2014, pagina: 29, nota: 'el mismo nombre del cardo globoso (Melocactus) «is also used for sea urchins»'}
+    es_hueco: true
+    descripcion_visual: 'Bola de espinas negras o moradas metida en los huecos de la piedra donde revienta la ola; el negro tiene las espinas larguísimas y quien lo pisa se clava.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Echinometra-lucunter.html', etiqueta: reconstruido}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: van-buurt-2014, pagina: 29}
+      - {obra: obis-gbif-caja-marina, pagina: 'clave: Echinometra lucunter'}
+
+  - id: fm-050
+    grupo: equinodermos_y_cnidarios
+    nombre: abanico de mar (gorgonia)
+    cientifico: 'Gorgonia ventalina, G. flabellum'
+    aguas: [islas, costa_norte_y_este]
+    presencia_s_xv: probable
+    por_que: 'en las islas su nombre es voz probablemente caquetía, y el abanico servía de cedazo para la harina (van Buurt p. 37); un registro en la caja'
+    nombres:
+      caquetio: null
+      papiamento: {forma: 'wampanaria / manaria', sentido: 'abanico de mar; cedazo', obra: van-buurt-2014, pagina: 37, nota: 'emparentado con manare «cesto de fibra» de Esteves (p. 50) y wayuu manái'}
+    es_hueco: true
+    descripcion_visual: 'Abanico morado de red fina que crece de pie en el fondo bajo donde corre el agua, y se mece con la ola; seco, sirve de cedazo.'
+    descripcion_fuente: {obra: van-buurt-2014, pagina: 37, etiqueta: atestiguado, nota: 'el cedazo y el agua movida son de van Buurt; el color, de la identificación'}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: van-buurt-2014, pagina: 37}
+
+  - id: fm-051
+    grupo: equinodermos_y_cnidarios
+    nombre: medusa invertida
+    cientifico: Cassiopea frondosa
+    aguas: [golfete, islas]
+    presencia_s_xv: probable
+    por_que: 'de fondos blandos y estuarinos (SeaLifeBase); en Aruba, kimakima (Gatschet, nivel C)'
+    nombres:
+      caquetio: null
+      papiamento: {forma: kimakima, obra: gatschet-1885, pagina: 'vocabulario de animales', nota: 'nivel C (reduplicación sin atestación externa)'}
+    es_hueco: true
+    descripcion_visual: 'Medusa que vive boca arriba en el fondo de las lagunas quietas, como una flor verde y parda que late despacio.'
+    descripcion_fuente: {obra: fishbase-sealifebase, url: 'https://www.sealifebase.se/summary/Cassiopea-frondosa.html', etiqueta: reconstruido}
+    sonido: {suena: false}
+    procedencia:
+      - {obra: gatschet-1885, pagina: 'vocabulario (vía lexicon_gatschet.py)'}
+
+  # ── LOS EXCLUIDOS: llegaron después ────────────────────────────
+  - id: fm-052
+    grupo: peces
+    nombre: pez león
+    cientifico: Pterois volitans
+    aguas: [costa_norte_y_este]
+    presencia_s_xv: excluida
+    por_que: 'nativo del Indo-Pacífico (FishBase); sus registros en la caja (OBIS) son de la invasión moderna del Atlántico. Hay hoy y no había'
+    nombres: {caquetio: null}
+    es_hueco: false
+    descripcion_visual: null
+    sonido: {suena: sin-dato}
+    procedencia:
+      - {obra: fishbase-sealifebase, pagina: 'Pterois volitans, distribución'}
+      - {obra: obis-gbif-caja-marina, pagina: 'peces óseos'}
+
+  - id: fm-053
+    grupo: crustaceos
+    nombre: jaiba del Indo-Pacífico
+    cientifico: Charybdis hellerii
+    aguas: [costa_oeste, costa_norte_y_este]
+    presencia_s_xv: excluida
+    por_que: '«Indo-Pacific. Introduced in the Atlantic» (SeaLifeBase); sus registros en la caja son modernos'
+    nombres: {caquetio: null}
+    es_hueco: false
+    descripcion_visual: null
+    sonido: {suena: false}
+    procedencia:
+      - {obra: fishbase-sealifebase, pagina: 'Charybdis hellerii, distribución'}
+
+# ══════════════════════════════════════════════════════════════════
+# COSMOVISIÓN MARINA — lo sostenido y lo no sostenido (regla 2)
+# Miguel (2026-09-22): «el aspecto marino era esencial en la cosmovisión
+# caquetía». Aquí se separa, sin mezclar, lo que dice una fuente de lo que
+# todavía es su intuición. Las dos cosas valen.
+# ══════════════════════════════════════════════════════════════════
+cosmovision_marina:
+  sostenido:
+    - id: cm-s1
+      dato: 'El caquetío atestiguado tiene palabras propias para el mar y su borde: `para` «agua dulce o salada en grandes cantidades» y `parawa` «mar», `kari` «orilla del mar», `samuro` «punta hacia el mar», `supi` «sitio a orilla del mar, arena».'
+      etiqueta: atestiguado
+      procedencia: {obra: zavala-reyes-2015, pagina: '#66, #190, #191, #223, #230'}
+    - id: cm-s2
+      dato: 'La tierra misma se llama con el mar: Paraguaná. «Está suficientemente averiguado que Para significa agua», y «Conuco en medio del mar es la más repetida de las significaciones que le dan al topónimo».'
+      etiqueta: atestiguado
+      capa: 's. XX (tradición local impresa); la etimología «rodeada de mar» es LECTURA y depende de na = «tierra», que ninguna fuente da (toponimo-018, #109)'
+      procedencia: {obra: esteves-1989, pagina: 56}
+    - id: cm-s3
+      dato: 'El mar es la despensa que la crónica le ve a esta gente: «pueblos medianos y mucha caza, pesca y ropa de hamacas»; «viciosos de comida de carne y pescado»; «mucho pescado de mar y de río».'
+      etiqueta: atestiguado
+      capa: 'contacto (Pérez de Tolosa 1546)'
+      procedencia: {obra: arcaya-1920, pagina: '41, 46, 264'}
+    - id: cm-s4
+      dato: 'El mar da la moneda: «se servían como de monedas de ciertas conchas marinas»; «unas conchezuelas de pescados que tratan entre sí a valor de un real cada una».'
+      etiqueta: atestiguado
+      capa: contacto
+      procedencia: {obra: arcaya-1920, pagina: '120, 264'}
+    - id: cm-s5
+      dato: 'Ir a pescar es una de las decisiones que se le preguntan al tabaco: «para ver si caminarán o yrán a pescar o sembrarán… cada uno es boratio».'
+      etiqueta: atestiguado
+      capa: 'contacto (Oviedo, vía Arcaya); regla 4: Oviedo generaliza para la provincia'
+      procedencia: {obra: arcaya-1920, pagina: '98-99'}
+    - id: cm-s6
+      dato: 'El mar es camino: los caquetíos iban en canoa de Coro a Curazao; las islas son parte de su mundo y las expediciones a Las Aves traían botuto, quigua, tortugas decapitadas y aves.'
+      etiqueta: atestiguado
+      procedencia: {obra: arcaya-1920, pagina: 120}
+      apoyo_en_repo: [ecologia-016, ecologia-021, ecologia-044]
+    - id: cm-s7
+      dato: 'El cerro sagrado es también la marca desde el mar: el «m. alto» de Juan de la Cosa es el cerro de Santa Ana, y Matividiro orienta a los pescadores de pargo mar adentro. El centro del bosque con dueño (Capó) se ve desde la canoa.'
+      etiqueta: atestiguado
+      capa: 'contacto (el mapa, c. 1500) y s. XX (Esteves); que eso sea UNA SOLA idea sagrada es lectura'
+      procedencia: {obra: arcaya-1920, pagina: 134}
+      apoyo_en_repo: ['creencia.yaml, Capó (Esteves p. 26)', 'sitios_era2.yaml, Capubana']
+    - id: cm-s8
+      dato: 'El pez da la luz para pescar: de noche, con jachos untados con manteca de cunaro. Técnica con dos voces caquetías atestiguadas (`jachos`, `kunaro`).'
+      etiqueta: atestiguado
+      capa: 's. XX sin fecha (Esteves); ecologia-078'
+      procedencia: {obra: esteves-1989, pagina: 33}
+  no_sostenido:
+    - id: cm-n1
+      intuicion: 'Que el mar tuviera un DUEÑO espiritual al que el pescador pedía permiso.'
+      estado: >-
+        Está escrito en el canon (CULTURA_CAQUETIA.md «[reconstruido]»;
+        ecologia-036 lo pone en su implicación) pero sin fuente caquetía:
+        creencia-015 (dueños del paisaje) es retro-abstraído desde María
+        Lionza y habla de cerros, manantiales y salinas, no del mar. El único
+        dueño atestiguado de la península es Capó, del BOSQUE del cerro.
+      que_lo_subiria: 'una crónica, un topónimo o una voz caquetía que nombre a un ser del mar; en el repo, cero (ceros_verificados)'
+    - id: cm-n2
+      intuicion: 'Que el mar fuera ESENCIAL en la cosmovisión (mito de origen, rito, deidad marina).'
+      estado: >-
+        Sin fuente. Los ritos caquetíos atestiguados son la bebida de los
+        huesos (creencia-010), el funeral del díao, el poder sobre los
+        temporales (Manaure «da los temporales») y la adivinación con tabaco.
+        El cielo y la lluvia tienen más peso atestiguado que el mar.
+      que_lo_subiria: 'en orden de rendimiento esperado: (1) Oviedo t. II, libro XXV, capítulos de Coro, releído entero buscando «mar», «pescado», «tiburón», «tortuga» en contexto ritual; (2) los ajuares de los enterramientos dabajuroides (¿conchas marinas, dientes de tiburón?) — cruzar con M8; (3) la iconografía de los petroglifos (moron-2012-petroglifos) buscando motivos marinos'
+    - id: cm-n3
+      intuicion: 'Que la guarura (caracol-bocina) fuera instrumento ritual caquetío.'
+      estado: 'La guarura es s. XX (Medina); la trompeta de botuto como objeto ritual es de la glosa del lexicón para el taíno `cobo` («trompeta ritual»), sin procedencia. Sin dato caquetío.'
+      que_lo_subiria: 'un botuto con la punta cortada (bocina) en un sitio dabajuroide'
+  comparanda:
+    - id: cm-c1
+      lengua: lokono
+      dato: >-
+        El mito arahuaco de Guayana recogido por Brinton: el espíritu de las
+        aguas, la mujer Orehu, sale de las olas y le da a Arawanili la maraca
+        del piache y el saber para tratar con el ser supremo; los arahuacos
+        vivían entonces «en una isla al norte». La maraca de piedritas es el
+        sonido que llama a lo invisible.
+      etiqueta: atestiguado
+      capa: 's. XIX (Brinton 1871, sobre fuentes de misioneros); lokono de Guayana'
+      procedencia: {obra: brinton-1871, pagina: 18}
+      limite: 'regla 4: es el lokono, lengua del andamio, no el caquetío. Dice que en la familia arahuaca el poder del piache PUEDE venir del mar; no dice que lo hiciera en Paraguaná'
+    - id: cm-c2
+      lengua: taíno
+      dato: 'El origen del mar en la Española: Yaya guardó los huesos de su hijo en una calabaza colgada; los huesos se volvieron peces, la calabaza cayó y el agua que salió hizo el mar.'
+      etiqueta: atestiguado
+      capa: 'contacto (Pané, c. 1498); Española'
+      procedencia: {obra: pane-c1498, pagina: 'caps. IX-X'}
+      limite: 'la esfera de contacto, no el caquetío (la campaña del taíno: «ni vecino ni pariente medible»). Rima con que el caquetío BEBE los huesos (creencia-010): esa rima es lectura de esta campaña, no dato'
+    - id: cm-c3
+      lengua: wayuu
+      dato: 'Para los wayuu las tortugas marinas son el «ganado» de Pulowi, y un cerro sagrado es donde ella las cura; son don de Maleiwa.'
+      etiqueta: atestiguado
+      capa: 'moderno (etnografía 2002-2017)'
+      procedencia: {obra: barrios-garrido-2018, pagina: '187-188'}
+      limite: 'el «ganado» es posterior a 1500 por definición; Pulowi es nombre wayuu y no se caquetiza (CULTURA_CAQUETIA.md)'
+  veredicto: >-
+    El mar es ESENCIAL en la economía, la moneda, el camino y el nombre de la
+    tierra de los caquetíos, con fuente. En la RELIGIÓN, las fuentes caquetías
+    no dicen nada del mar: lo que hay es comparanda de tres vecinos (lokono,
+    taíno, wayuu) donde el mar sí da el poder del piache, el origen del agua
+    o el rebaño de una dueña. La intuición de Miguel queda como hipótesis
+    fuerte con tres caminos de prueba (cm-n2), no como dato.
+
+# ══════════════════════════════════════════════════════════════════
+# CANDIDATOS A REFERENTE — para REFERENTES_NOVEDOSOS (curiana_koine.py)
+# Formato de la casa: `desc` ≤ 180 (algo que se ve y hay que nombrar),
+# `se_oye` ≤ 80. Empieza por los dos huecos declarados en el canon.
+# NO se tocan el motor ni el koine: esto es borrador para Miguel.
+# ══════════════════════════════════════════════════════════════════
+candidatos_referente:
+  - id: delfin_soplon
+    especie: [fm-006, fm-007]
+    hueco_canon: hueco-lex-009
+    desc_referente: 'unos peces grandes y grises que andan en grupo junto a la canoa, asoman el lomo, soplan y se hunden otra vez'
+    se_oye: 'un soplo corto y húmedo cada vez que asoman'
+    agua: 'las dos; la tonina costera, sobre todo la costa oeste'
+    periodo: todo el año
+    por_que: 'hueco declarado; animal visto a diario; la costa ya le puso nombre de sonido («soplón»)'
+  - id: tortuga_que_desova
+    especie: [fm-004]
+    hueco_canon: hueco-lex-009
+    desc_referente: 'de noche una tortuga enorme, de cuero y sin escudos, sale del mar, cava en la arena con aletas larguísimas, pone y tapa el hoyo'
+    se_oye: 'resoplidos largos y, al tapar, gruñidos bajos'
+    agua: costa_norte_y_este y Golfete
+    periodo: 'P2 (junio-julio)'
+    por_que: 'hueco declarado; el único animal marino del que hay sonido grabado en la playa'
+  - id: tortuga_de_pico
+    especie: [fm-002, fm-001]
+    hueco_canon: hueco-lex-009
+    desc_referente: 'dos tortugas de mar que parecen pareja: una de pico curvo y concha de placas aserradas, otra de cabeza redonda que pace en los bajos'
+    se_oye: '—'
+    agua: 'costa_norte_y_este; la verde también come en las dos aguas'
+    periodo: 'P1-P2'
+    por_que: 'hueco declarado; los pescadores de Paraguaná y los wayuu las tienen por macho y hembra: la clasificación está viva y pide nombre'
+  - id: cardumen_que_hierve
+    especie: [fm-024]
+    hueco_canon: hueco-lex-002
+    desc_referente: 'desde la punta se ve una mancha en el mar que hierve y brilla: miles de pececillos que suben juntos, con las aves cayendo encima'
+    se_oye: 'un chapoteo que crece como lluvia sobre el agua'
+    agua: costa_oeste (las atalayas)
+    periodo: P1
+    por_que: 'hueco declarado; tiene lugar propio (Sarabón, Suriquiba) y oficio (el vigía) sin palabra'
+  - id: pez_que_truena
+    especie: [fm-012, fm-013]
+    desc_referente: 'un pez enorme y manchado que vive en las cuevas del fondo; de noche, bajo la canoa, se siente un golpe grave que retumba'
+    se_oye: 'un retumbo hondo, como de tambor grande, bajo el agua'
+    agua: golfete
+    periodo: todo el año, de noche
+    por_que: '`kunaro` nombra al pez pero no su voz; el sonido es de fuente (Boom) y el pez es el de la manteca de los jachos'
+    aviso: 'no es hueco de especie (kunaro y kuna existen): es hueco del SONIDO'
+  - id: pez_que_ronca
+    especie: [fm-016]
+    desc_referente: 'un pez plateado de pintas anaranjadas que, al sacarlo del agua, ronca en la mano'
+    se_oye: 'un ronquido áspero, repetido, desde la garganta del pez'
+    agua: las dos
+    periodo: todo el año
+    por_que: 'animal de pesca diaria sin nombre caquetío; el sonido ES el nombre en castellano (ronco, roncador)'
+  - id: ballena_que_sopla
+    especie: [fm-008, fm-009]
+    desc_referente: 'mar afuera, un animal más largo que diez canoas echa un chorro de agua al aire y enseña un lomo gris con una aleta curva'
+    se_oye: 'un bufido hondo que llega de lejos sobre el agua'
+    agua: costa_norte_y_este, costa_oeste
+    periodo: 'todo el año (rorcual tropical); P1 (jorobada, dudosa)'
+    por_que: 'no hay palabra caquetía ni en el lexicón; distinto del referente vigente «bestia_orilla» (el animal varado y muerto)'
+  - id: raya_que_vuela
+    especie: [fm-029]
+    desc_referente: 'una raya ancha y pintada, de hocico de pato y cola larga, sale volando del agua y cae de plano'
+    se_oye: 'un golpe plano y seco al caer'
+    agua: las dos
+    periodo: todo el año
+    por_que: 'animal visible desde la orilla y sin nombre caquetío'
+    aviso: 'el sonido del golpe es inferencia del salto (FishBase), no de fuente'
+  - id: manglar_que_chasquea
+    especie: [fm-046]
+    desc_referente: 'con la marea baja, entre las ostras de las raíces del mangle, se oye un crepitar que no se ve de dónde sale'
+    se_oye: 'chasquidos secos y seguidos, como leña fina que cruje'
+    agua: 'golfete (borde oeste, ecologia-011) — NO la laguna de Guaranao'
+    periodo: todo el año
+    por_que: 'un referente que se OYE antes de verse: pone a prueba el nombrar por el sonido'
+  - id: concha_que_guarda_luz
+    especie: [fm-038]
+    hueco_canon: hueco-lex-009
+    desc_referente: 'una concha plana y parda del fondo que por dentro brilla de colores, y a veces guarda una bolita blanca y dura'
+    se_oye: '—'
+    agua: 'costa_norte_y_este, costa_oeste, islas'
+    periodo: 'P1 (agua clara del buceo, ecologia-017)'
+    por_que: 'hueco declarado: la perla tiene palabra hipotética (tüma) y el molusco no tiene ninguna'
+
+# ══════════════════════════════════════════════════════════════════
+# PROPUESTAS AL CORPUS DE ECOLOGÍA (para Miguel; regla 5)
+# ══════════════════════════════════════════════════════════════════
+propuestas_ecologia:
+  - id: pe-1
+    tipo: hecho-nuevo
+    contenido: 'Lo que se comía en la orilla del Golfete no era el botuto: en los sitios caquetíos de los Médanos (s. XIV-XVIII) el 42,4 % de la concha es chipichipi (Donax striatus) y el 27,0 % almeja (Callista); el botuto es el 1,0 %. El botuto es comida de las islas.'
+    fuente: atestiguado
+    procedencia: {obra: zavala-reyes-2018, pagina: 405}
+    lectura: 'corrige el peso que ecologia-016/044 dan al botuto cuando se lee como comida de tierra firme'
+    limite: 'el rango del sitio llega al s. XVIII: la tabla no separa precontacto de colonial'
+  - id: pe-2
+    tipo: hecho-nuevo
+    contenido: 'Las cuatro tortugas marinas anidan hoy en Paraguaná, en la costa norte y este, de abril a septiembre (el pico en junio-julio: la seca larga); la costa oeste no tiene nidos y allí la tortuga sólo se ve en la pesca. En el Golfete se ha confirmado desove de la cardón y la verde, y Tacuato fue reportada como playa de la verde (1988).'
+    fuente: atestiguado
+    procedencia: {obra: rondon-medicci-2013, pagina: '114, 117, 119, 120'}
+    limite: 'capa moderna; la abundancia del s. XV era mayor (ecologia-044). Los meses tienen techo: se recorrió marzo-septiembre'
+  - id: pe-3
+    tipo: hecho-nuevo
+    contenido: 'Los pescadores de Paraguaná tienen al carey por el macho y a la tortuga verde por la hembra; los wayuu, al otro lado del Golfo, también.'
+    fuente: atestiguado
+    procedencia: {obra: rondon-medicci-2013, pagina: 116}
+    apoyo: {obra: barrios-garrido-2018, pagina: 206}
+    limite: 'moderno; la folk-taxonomía compartida entre las dos orillas del Golfo es dato de esfera, no de s. XV'
+  - id: pe-4
+    tipo: hecho-nuevo
+    contenido: 'En Aruba caquetía el pescado de todos los días era de la orilla y del bajo: en Tanki Flip el macabí de hueso (warashi) es el 13,7 % de los restos de pez y el macabí el 5,2 %; peces que hoy casi no se comen por sus espinas.'
+    fuente: atestiguado
+    procedencia: {obra: van-buurt-2014, pagina: '33, 43'}
+    limite: 'cita de segunda mano de Versteeg y Rostain 1997; islas, no la península'
+  - id: pe-5
+    tipo: hecho-nuevo
+    contenido: 'La lisa salada viajaba de Paraguaná a las islas con su nombre: waranawa en papiamento, guaranaro en la península.'
+    fuente: reconstruido
+    procedencia: {obra: van-buurt-2014, pagina: 37}
+    limite: 'el comercio que van Buurt describe llega hasta el s. XX; que el nombre viajara en el s. XV es su hipótesis'
+  - id: pe-6
+    tipo: hecho-nuevo
+    contenido: 'El mar suena: el mero y la cuna retumban bajo el agua, los roncos roncan al sacarlos, las corvinas tamborean en la freza, el camarón pistola crepita entre las ostras, la tortuga cardón resopla y gruñe al tapar su nido, la tonina resopla al respirar (la costa la llama «soplón»).'
+    fuente: atestiguado
+    procedencia: {obra: fishsounds, pagina: 'Epinephelus itajara; Mycteroperca bonaci; Haemulidae; Sciaenidae'}
+    apoyo: [{obra: cook-forrest-2005, pagina: '387-389'}, {obra: romero-mayayo-agudo-1991, pagina: 172}]
+    implicacion_simulacion: 'canal sonoro para el motor ambiental (ecologia-038 ya lo pide para las aves): el agente puede OÍR el mar sin que se le explique'
+  - id: pe-7
+    tipo: re-etiqueta
+    objetivo: ecologia-015
+    contenido: 'El cunaro del corpus (Rhomboplites aurorubens, pargo de altura) no casa con la manteca de los jachos; la especie que da Zavala y Esteves («promicrops guasa») es el mero guasa (Epinephelus itajara), pez grande y graso de bajos y estuarios. Proponer que la identificación de `kunaro` quede en disputa y no fijada.'
+    fuente: reconstruido
+    procedencia: {obra: esteves-1989, pagina: 33}
+  - id: pe-8
+    tipo: hecho-nuevo
+    contenido: 'Dos animales del mar de las Indias que Oviedo vio y ya no están o casi: el «lobo marino» (foca monje) que salía a dormir a las islas y roncaba tan fuerte que se oía de lejos, y el «pexe vihuela» (pez sierra) con su espada dentada.'
+    fuente: atestiguado
+    procedencia: {obra: oviedo-y-valdes-1851, pagina: '426, 428'}
+    limite: 'Oviedo escribe de la Española y de Tierra Firme en general; su presencia en Paraguaná es dudosa (ecologia-040)'
+
+# ══════════════════════════════════════════════════════════════════
+# FAUNA QUE ESTA PARCELA DEJA A OTRAS (esquema común de la campaña)
+# ══════════════════════════════════════════════════════════════════
+para_otras_parcelas:
+  FA2_aves: 'bobas (Sula) de las islas (ecologia-016), tigi «pequeña paloma que se alimenta de peces» (caquetío atestiguado, Zavala #247), las aves que caen sobre el cardumen (ecologia-038), tokoko (hipotético), la chogogo del papiamento (flamenco)'
+  FA1_tierra: 'el zorro que se come las crías de tortuga en Cabo San Román (Rondón-Médicci p. 118); los caimanes de la laguna de Guaranao son POST-1985 (ecologia-084)'
+  M8_arqueologia: 'Zavala Reyes et al. 2018 Tabla II está en la p. 405, no 404; buscar dientes de tiburón, conchas marinas y botutos perforados en ajuares dabajuroides (cm-n2)'
