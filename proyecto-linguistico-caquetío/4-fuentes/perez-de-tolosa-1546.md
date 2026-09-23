@@ -20,12 +20,13 @@ acceso: >-
   ed2f57985a064e17bcde0a8657917f0c59c74bcb64a5acbb1227e4b05b3137e6. Hay un
   segundo ejemplar del mismo tomo (NYPL, historiadelacon00goog) por si una
   página sale mal en éste. El t. I (sin las cartas) es historiadelacon01goog.
-estado_minado: sin-minar
-cobertura: "nada minado; localizadas las secciones al descargar (ver bitácora 2026-09-22)"
+estado_minado: minado
+cobertura: "leídos ENTEROS, página a página, los siete documentos del apéndice de Fernández Duro t. II pp. 209-276: carta de Ampíes (209-213), relación anónima de gobernadores (215-218), primera carta (219-224), relación de las tierras (225-236), segunda carta y su continuación (236-248), tercera carta (248-258) e interrogatorio (259-276); trece citas verificadas en imagen. Preguntado: costa y Paraguaná 1546, subsistencia y trata, lengua, jefes, otras polities y fauna. NO leído: el resto del apéndice (pp. 277 ss.: cédulas, relación de Maracaibo de 1579) ni el cuerpo de Oviedo y Baños. Detalle en 6-fusion/perez_de_tolosa_1546_2026-09-23.yaml → meta"
 prioridad: alta
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 aliases: ["Pérez de Tolosa", "Pérez de Tolosa 1546", "Juan Pérez de Tolosa", "Ldo. Tolosa"]
 ---
 
@@ -125,5 +126,108 @@ la costera, regla 4). Toca la regla 4, `curiana_social.py` y
 `6-fusion/issues-pendientes/encargo-mineria-perez-de-tolosa.md`): la costa y
 Paraguaná en 1546, nodo por nodo; la frase de la habla; Manaure y los jefes;
 el despoblamiento y la trata; y la fauna y la pesca.
+
+---
+
+## 2026-09-23 — minada (campaña minería 3)
+
+Propuesta entera en `6-fusion/perez_de_tolosa_1546_2026-09-23.yaml`; dos
+issues de decisión en `6-fusion/issues-pendientes/`
+(`habla-llanos-coro-perez-de-tolosa-2026-09-23.md`,
+`ampies-como-dios-o-como-digo-2026-09-23.md`).
+
+### Cómo se lee
+
+- **Desfase**: impresa = pdf − 11, **constante** en pdf 220-287, comprobado
+  leyendo el número de cada página (el OCR lo lee mal en muchas: `%%J` = 227).
+- **Extractor**: `pdftotext` página a página; el `.txt` del repo no trae
+  marcadores de página. El OCR de archive.org es bueno en el cuerpo, y en dos
+  párrafos del interrogatorio intercala dos líneas: en la p. 266 el nombre del
+  cacique sale ilegible y hay que verlo en imagen.
+- **Imagen**: escaneo de 4,167 px/pt; con factor 1,4 se lee el cuerpo y con 4
+  una palabra dudosa.
+- **Sondas**: `Caquet` (la obra no usa `caiquet` en el apéndice),
+  `Manaor|Manabre|Naure|Anaure`, `Paragua` (ojo: `Paraguachoa` y
+  `Paragrachoa` no son Paraguaná sin más), `Xira|Pira` para los jirajaras.
+
+### Qué es cada documento (corrige la tabla del 2026-09-22)
+
+| pp. | Documento | Fecha |
+|---|---|---|
+| 209-213 | Carta de Juan de Ampíes (no es de Tolosa) | sin fecha; c. 1525-1526 según Arcaya |
+| 215-218 | Relación anónima de gobernadores. **No trae a Manaure**: la tabla anterior se equivocaba | hasta 1555 |
+| 219-224 | Primera carta | Tocuyo, 15-X-1546 |
+| 225-236 | Relación de las tierras | con la primera carta |
+| 236-248 | Segunda carta y su continuación (autos de Villegas en Tacarigua y Burburata) | XII-1546 a II-1548 |
+| 248-258 | Tercera carta | **Coro, 8-VII-1548** (en imagen) |
+| 259-276 | Interrogatorio contra los Welser (sólo las PREGUNTAS del fiscal, sin respuestas) | «año de 1545» |
+
+### Qué ha dado
+
+- **Costa (p. 227)**: sotavento y barlovento «solía estar poblada» de
+  caquetíos con «medianos pueblos», caza, pesca y «ropa de hamacas»; en 1546,
+  de Burburata a Coro «no hay en toda ella cien indios», y hacia Maracaibo
+  despoblada. Coro «tiene hasta sesenta casas» (la ciudad española).
+- **Paraguaná (p. 228)**: sin ríos, jagüeyes, sed en la seca; caza de venados,
+  conejos, perdices y tórtolas, y pescado; «no hay en toda ella trecientos
+  indios» en **cuatro poblezuelos**. Ésa es la cifra de Paraguaná, y es de
+  después de la trata.
+- **Trata**: Federmann saca de 4-5 pueblos comarcanos a Coro más de 500
+  caquetíos (p. 274) y luego más de 700 (p. 275); Espira hace esclavos «en
+  Paragrachoa y en las sierras de los Ayamanes» (p. 252). Y la «esclavitud
+  entre ellos» de la capitulación es un pretexto, según el propio Tolosa
+  (p. 254): no prueba esclavitud precontacto.
+- **Lengua (p. 234)**: ⭐ los caquetíos de los **llanos** «algo difieren en la
+  habla á los de Coro». El dato es de segunda mano y no da ni una palabra. Va al
+  issue. Además: la **india intérprete** que Ampíes manda a la costa (p. 212) y
+  el proyecto de intérpretes de Tolosa (p. 238). Las voces indígenas del texto
+  (jagüey, hamaca, cazabi, buyo, carcuri) son del castellano indiano, no
+  caquetías.
+- **Manaure**: «**Manaore**, el mayor principal que en la gente caquetia se
+  hallaba» (p. 248); «**Manabre**» en el impreso del interrogatorio (p. 266), a
+  quien Alfinger quitó «ciertas canoas que el dicho cacique tenía en mucho»; y
+  «Naure ó Anaure» en Ampíes (p. 212). Ningún otro jefe con nombre.
+- **Otras polities**: Barquisimeto (riego y maíz), el valle de las Damas
+  («nación Caquetia», 1547), la sierra de Coro (Piracoras / Xiracoras / Xiraras,
+  maiceros), el Tocuyo («docientos y más caciques», que NO son de la costa) y
+  Maracapana.
+- **Fauna**: quince entradas con el esquema común. Ninguna describe un sonido.
+  El «tigre» no sale ni una vez en la costa caquetía.
+- **Primario de `geografia_politica-011`** (Onotos y Bubures, p. 229): el corpus
+  lo cita en tercera mano, y el primario no nombra a los kirikires ni a los
+  caquetíos.
+
+### Qué NO ha dado
+
+- ⚠️ **Las «cuatrocientas casas» no están en la edición.** Buscado en el tomo
+  entero con los espacios normalizados: `cuatrocient` da diez casos y ninguno con
+  «casas»; `\d+\s*casas` da cero. Hay dos cifras de casas: «pueblo de á
+  **seiscientas** casas» (p. 226), que son los **Chirigotos del Unare** y no
+  caquetíos, y «**ochocientas** casas» (p. 216), los Macatoas de la entrada de
+  Hutten. La frase de la obra secundaria calca la p. 226 («tenían los pueblos
+  muy buenos asientos: había pueblo de á seiscientas casas»). **No entra como
+  demografía caquetía.**
+- Los dos pasajes que motivaron la ficha existen, pero la obra secundaria los
+  **parafrasea**: dice «muy pobladas», y el texto dice «solía estar poblada»,
+  sin el «muy».
+- La relación anónima no dice nada de la costa caquetía.
+
+### Cotejo con Arcaya (carta de Ampíes)
+
+Arcaya pp. 160-161 copia esta edición y **se confirma en lo sustancial**
+(Baracoica «pariente y deudo», Naure/Anaure, la hija «con su marido»), pero
+**elide con puntos suspensivos** la frase «se hace adorar como Dios, dando á
+entender á los indios que él da los temporales», que sí está en la p. 212. Y
+esa frase tiene una **variante** con la lectura del manuscrito de Velasco 2015
+(«como digo»): ver el issue. La página es la **212**, no la 209.
+
+### Deuda
+
+- El manuscrito de Ampíes (AGI), para decidir «como Dios» o «como digo».
+- Identificar la obra secundaria de las cuatrocientas casas.
+- La relación de Maracaibo de 1579 (Pina Ludueña) del mismo tomo, que es la
+  esfera occidental y está sin minar.
+- ¿Ficha propia para la carta de Ampíes (`ampies-c1526`)? Lo decide Miguel;
+  hoy se cita con `obra: perez-de-tolosa-1546` y `documento:`.
 
 Índice: [[INDICE_FUENTES]]
