@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-23**.
 
-**7189 ítems propuestos** en 140 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
+**7193 ítems propuestos** en 142 propuestas, más **57 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -82,6 +82,7 @@ editar_a_mano: no
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `kalinago_goeje_1939.yaml` | ? | 859 |  |
+| `kalinago_mujeres_2026-09-23.yaml` | ? | 4 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
@@ -96,6 +97,7 @@ editar_a_mano: no
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_gbif_aves_paraguana_2026-09-22.yaml` | ? | 230 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
+| `medicion_kalinago_mujeres_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
 | `medicion_nominalizacion_emergente_2026-09-21.yaml` | ? | 92 |  |
 | `medicion_nominalizador_2026-09-21.yaml` | ? | 82 |  |
@@ -230,6 +232,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `guaiqueries-manaure-dabajuroide-2026-09-23.md` | El asiento de Manaure, los guaiqueríes y la cronología dabajuroide (cc.5) |
 | `gumilla-cacatia-y-achagua-2026-09-23.md` | Gumilla 1791: los «Cacatia» de los Llanos y lo que aporta al achagua |
 | `habla-llanos-coro-perez-de-tolosa-2026-09-23.md` | «Aunque algo difieren en la habla á los de Coro» — ¿a dónde va este testigo? |
+| `kalinago-mujeres-2026-09-23.md` | El habla de las mujeres kalinago: la cuarta hermana |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |

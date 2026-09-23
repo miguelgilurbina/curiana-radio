@@ -1,0 +1,1416 @@
+# MEDICIÓN — el habla de las mujeres kalinago (2026-09-23).
+# GENERADO por 6-fusion/scripts/medir_kalinago_mujeres.py — no se edita a mano (regla 1).
+# La propuesta que lo usa: 6-fusion/kalinago_mujeres_2026-09-23.yaml
+prueba:
+  conceptos_leidos: 14
+  con_forma_de_hombres_y_de_mujeres_distintas:
+    n: 8
+    veredictos:
+      con-las-mujeres: 7
+      ambiguo: 1
+    fuerza_de_los_que_van_con_las_mujeres:
+      fuerte: 3
+      moderada: 3
+      debil: 1
+    cuales:
+    - kasi
+    - kati
+    - parawa
+    - para
+    - dare
+    - ateri
+    - iero
+    - kiba
+  con_una_sola_forma_kalinago:
+    n: 6
+    veredictos:
+      con-el-caribe: 2
+      de-la-esfera: 3
+      arahuaco-comun: 1
+    cuales:
+      kachikamo: con-el-caribe
+      maure: con-el-caribe
+      chogogo: de-la-esfera
+      kerekere: de-la-esfera
+      wakoa: de-la-esfera
+      buiamati: arahuaco-comun
+  atestiguadas_caquetias_buscadas_sin_equivalente: 60
+pronombres:
+  dai:
+    capa_hoy: caquetío-reconstruido
+    si_el_kalinago_cuenta: caquetío-reconstruido
+  bui:
+    capa_hoy: caquetío-hipotético
+    si_el_kalinago_cuenta: caquetío-reconstruido
+  lihi:
+    capa_hoy: caquetío-hipotético
+    si_el_kalinago_cuenta: caquetío-reconstruido
+  tuhu:
+    capa_hoy: caquetío-hipotético
+    si_el_kalinago_cuenta: caquetío-reconstruido
+  waya:
+    capa_hoy: caquetío-reconstruido
+    si_el_kalinago_cuenta: caquetío-reconstruido
+  naya:
+    capa_hoy: caquetío-reconstruido
+    si_el_kalinago_cuenta: caquetío-reconstruido
+voces:
+  meta:
+    medido: '2026-09-23'
+    script: 6-fusion/scripts/medir_kalinago_mujeres.py (con medir_d11_voces_wayuu.medir)
+    motor_medido: '6aa43a5 Merge pull request #233 from miguelgilurbina/docs/bandeja-tras-tanda-final'
+    vocabulario_base: 5496
+    fuera_del_habla: 36
+    todas_las_reglas: 22
+    elenco:
+      era1: 60
+      era2: 63
+    base:
+      word_uses: 105792
+      agent_responses: 3811
+      simulation_runs: 51
+      formas_distintas: 2805
+    fonotactica:
+      formas_base: 184
+      nota: el filtro del módulo tal cual (medir()); los esqueletos de colisión usan gu→w (D5c)
+    puerta: es_raiz_de_ninguna_parte(forma, archivadas_avalan=False) sobre cada forma distinta de word_uses, con
+      la voz movida a FUERA_DEL_HABLA (y fuera de _RAICES_VERB) y las cachés reiniciadas; se restaura después
+  la_lista:
+    como_se_reconoce: 'la etiqueta F8 de la nota: `wayunaiki-cogn` o `wayunaiki/lokono`'
+    voces:
+    - anasa
+    - jashichi
+    - kasuta
+    - kataa
+    - mütsia
+    - outa
+    - sünatü
+    - talata
+    n: 8
+    por_que_tf5_no_las_vio: tf.5 buscó la cadena «DEUDA D11»; estas notas dicen «entra en la deuda de D11 fase 3»
+      (o nada) y la búsqueda distingue mayúsculas
+    ya_decididas_por_tf5_con_DEUDA_D11:
+    - bana
+    - naya
+    - waya
+    hipoteticas_con_la_misma_etiqueta:
+    - alaain
+    - japü
+    nota_hipoteticas: no las muestrea el perfil era2 ni las enseña ninguna plantilla
+  voces_viejas:
+    anasa:
+      glosa: bueno, bien, bello (< anasü Wayunaiki)
+      cat: adj
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: pasa
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 122
+          respuestas: 122
+          runs: 25
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 2
+          usos: 53
+          ejemplos:
+          - ma-anasa
+          - anasa-bana
+        texto_de_respuestas:
+          apariciones: 342
+          respuestas: 220
+          runs: 28
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 3
+          usos: 175
+          ejemplos:
+          - anasa
+          - ma-anasa
+          - anasa-bana
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    jashichi:
+      glosa: rabia, ira, enojo (< jashichi Wayunaiki)
+      cat: sust
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: pasa
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 7
+          respuestas: 7
+          runs: 5
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 3
+          usos: 3
+          ejemplos:
+          - ka-jashichi
+          - ma-jashichi
+          - ta-jashichi
+        texto_de_respuestas:
+          apariciones: 44
+          respuestas: 36
+          runs: 18
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 4
+          usos: 10
+          ejemplos:
+          - jashichi
+          - ka-jashichi
+          - ma-jashichi
+          - ta-jashichi
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kasuta:
+      glosa: blanco, claro, luminoso (< kasüttaa Wayunaiki)
+      cat: adj
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: pasa
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 225
+          respuestas: 225
+          runs: 27
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 23
+          usos: 133
+          ejemplos:
+          - kasuta-iro-kana
+          - kasuta-bana-iro
+          - ma-kasuta
+          - kasuta-ico-kana
+          - kashi-kasuta-iro
+          - pütchi-kasuta-bana-iro
+        texto_de_respuestas:
+          apariciones: 794
+          respuestas: 445
+          runs: 28
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 7
+        tests_que_la_nombran:
+        - test_export_escena_seed.py
+        - test_formas_de_plantilla.py
+        - test_koine.py
+        - test_raiz_de_ninguna_parte.py
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 18
+          usos: 352
+          ejemplos:
+          - kasuta
+          - kasuta-iro-kana
+          - kasuta-bana-iro
+          - ma-kasuta
+          - kasuta-ico-kana
+          - kashi-kasuta-iro
+          - pütchi-kasuta-bana-iro
+          - ka-kasuta
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kataa:
+      glosa: vida, aliento vital (< kataa Wayunaiki)
+      cat: sust
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: pasa
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 1
+          respuestas: 1
+          runs: 1
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 8
+          respuestas: 6
+          runs: 6
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 1
+          usos: 1
+          ejemplos:
+          - kataa
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    mütsia:
+      glosa: negro, oscuro (< mütsiisü Wayunaiki)
+      cat: adj
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: 'letras fuera del inventario: ü; clusters no atestiguados: ts'
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 111
+          respuestas: 111
+          runs: 20
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 21
+          usos: 122
+          ejemplos:
+          - kali-mütsia-rua
+          - dali-mütsia-ana
+          - mütsia-barsure-uco
+          - mütsia-kasi-bwara-bana
+          - mütsia-biri-bana
+          - suka-mütsia
+        texto_de_respuestas:
+          apariciones: 629
+          respuestas: 301
+          runs: 24
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 5
+          usos: 126
+          ejemplos:
+          - mütsia
+          - mütsia-biri-bana
+          - kali-mütsia
+          - ma-mütsia
+          - mütsia-bana
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    outa:
+      glosa: muerte, fin de la vida (< outaa Wayunaiki)
+      cat: sust
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: pasa
+      comparte_esqueleto_con:
+      - - o'uta
+        - wayunaiki
+        - VOCABULARIO_BASE
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 1
+          respuestas: 1
+          runs: 1
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 18
+          respuestas: 14
+          runs: 13
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 1
+          usos: 1
+          ejemplos:
+          - outa
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    sünatü:
+      glosa: rojo, color de la sangre (< ishasü)
+      cat: adj
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: 'letras fuera del inventario: ü'
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco: []
+      uso:
+        word_uses_suelta:
+          usos: 46
+          respuestas: 46
+          runs: 16
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 1
+          usos: 1
+          ejemplos:
+          - kati-sünatü-da
+        texto_de_respuestas:
+          apariciones: 75
+          respuestas: 65
+          runs: 23
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 0
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 1
+          usos: 46
+          ejemplos:
+          - sünatü
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    talata:
+      glosa: alegría, contento, gozo (< talataa Wayunaiki)
+      cat: sust
+      fuente: caquetío-reconstruido
+      fonotactica_atestiguada: pasa
+      comparte_esqueleto_con: []
+      segmento_de_nombre_del_elenco:
+      - Talata
+      uso:
+        word_uses_suelta:
+          usos: 17
+          respuestas: 17
+          runs: 12
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 3
+          usos: 6
+          ejemplos:
+          - ma-talata
+          - ta-talata
+          - wa-talata
+        texto_de_respuestas:
+          apariciones: 67
+          respuestas: 53
+          runs: 24
+      ensenanza:
+        plantillas_que_la_ensenan: 0
+        apariciones_en_plantillas: 0
+        por_plantilla: {}
+        en_reglas_del_motor: 0
+        koine: {}
+        escena_marca_caquetia: false
+        eventos_curiana_eventos: 0
+        apariciones_en_tests: 0
+        tests_que_la_nombran: []
+        en_fichas_del_elenco: 2
+      si_se_archiva:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 4
+          usos: 23
+          ejemplos:
+          - talata
+          - ma-talata
+          - ta-talata
+          - wa-talata
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+  candidatas:
+    saika:
+      opciones:
+      - anasa.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: saika
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    saino:
+      opciones:
+      - anasa.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: saino
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    wele:
+      opciones:
+      - mütsia.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - were
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: wele
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    uli:
+      opciones:
+      - mütsia.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: uli
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    halira:
+      opciones:
+      - kasuta.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: alira
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kasare:
+      opciones:
+      - kasuta.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - kadare
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: kasare
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kule:
+      opciones:
+      - sünatü.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico:
+        - - cule
+          - lokono
+          - VOCABULARIO_BASE
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - kuté
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: kule
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    huda:
+      opciones:
+      - outa.A
+      colisiones:
+        clave_exacta:
+        - - huda
+          - lokono
+          - morir (y 2 acepción/es más)
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: uda
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      ya_es_clave:
+      - huda
+      - lokono
+      - morir (y 2 acepción/es más)
+      al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+    hila:
+      opciones:
+      - outa.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: ila
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 1
+          respuestas: 1
+          runs: 1
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kake:
+      opciones:
+      - kataa.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico:
+        - - c-ake
+          - lokono
+          - VOCABULARIO_BASE
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - koke
+        - take
+        - wache
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: kake
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 4
+          respuestas: 2
+          runs: 2
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kaku:
+      opciones:
+      - kataa.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico:
+        - - cakù
+          - lokono
+          - VOCABULARIO_BASE
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - kapu
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: kaku
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 4
+          respuestas: 4
+          runs: 4
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    halikebe:
+      opciones:
+      - talata.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: alikebe
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    ulabu:
+      opciones:
+      - talata.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: ulabu
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    iama:
+      opciones:
+      - jashichi.A
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - ama
+        - kama
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: iama
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 2
+          respuestas: 1
+          runs: 1
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    kain:
+      opciones:
+      - jashichi.B
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla: []
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: kain
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+    aiima:
+      opciones:
+      - jashichi.C
+      colisiones:
+        clave_exacta: []
+        archivada: []
+        clave_con_desambiguador: []
+        mismo_esqueleto_fonemico: []
+        choque_con_la_tanda_final: []
+        vecinas_a_una_letra_en_el_caquetio_del_habla:
+        - arima
+        nombre_del_elenco: []
+        segmento_de_nombre: []
+        es_afijo_del_motor: []
+        castellano_en_las_listas: false
+        castellano_mismo_esqueleto: []
+        fonotactica_atestiguada: pasa
+        neologismo_valido: true
+        esqueleto: aiima
+      uso_previo:
+        word_uses_suelta:
+          usos: 0
+          respuestas: 0
+          runs: 0
+        word_uses_como_nucleo_de_otra_forma:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        texto_de_respuestas:
+          apariciones: 0
+          respuestas: 0
+          runs: 0
+      al_entrar:
+        formas_que_pasan_a_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+        formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+          formas: 0
+          usos: 0
+          ejemplos: []
+  coste_por_opcion:
+    anasa:
+      A:
+        formas:
+        - saika
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 122
+        usos_como_nucleo_de_otra_forma: 53
+        respuestas_que_la_dicen: 220
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 3
+        colisiones_de_la_nueva:
+          saika: 0
+        fonotactica_de_la_nueva:
+          saika: pasa
+      B:
+        formas:
+        - saino
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 122
+        usos_como_nucleo_de_otra_forma: 53
+        respuestas_que_la_dicen: 220
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 3
+        colisiones_de_la_nueva:
+          saino: 0
+        fonotactica_de_la_nueva:
+          saino: pasa
+      recomendada: A
+    mütsia:
+      A:
+        formas:
+        - wele
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 111
+        usos_como_nucleo_de_otra_forma: 122
+        respuestas_que_la_dicen: 301
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 5
+        colisiones_de_la_nueva:
+          wele: 0
+        fonotactica_de_la_nueva:
+          wele: pasa
+      B:
+        formas:
+        - uli
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 111
+        usos_como_nucleo_de_otra_forma: 122
+        respuestas_que_la_dicen: 301
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 5
+        colisiones_de_la_nueva:
+          uli: 0
+        fonotactica_de_la_nueva:
+          uli: pasa
+      recomendada: B
+    kasuta:
+      A:
+        formas:
+        - halira
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 225
+        usos_como_nucleo_de_otra_forma: 133
+        respuestas_que_la_dicen: 445
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 18
+        colisiones_de_la_nueva:
+          halira: 0
+        fonotactica_de_la_nueva:
+          halira: pasa
+      B:
+        formas:
+        - kasare
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 225
+        usos_como_nucleo_de_otra_forma: 133
+        respuestas_que_la_dicen: 445
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 18
+        colisiones_de_la_nueva:
+          kasare: 0
+        fonotactica_de_la_nueva:
+          kasare: pasa
+      recomendada: A
+    sünatü:
+      A:
+        formas:
+        - kule
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 46
+        usos_como_nucleo_de_otra_forma: 1
+        respuestas_que_la_dicen: 65
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 1
+        colisiones_de_la_nueva:
+          kule: 1
+        fonotactica_de_la_nueva:
+          kule: pasa
+      B:
+        formas:
+        - (archivar sin sustituta)
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 46
+        usos_como_nucleo_de_otra_forma: 1
+        respuestas_que_la_dicen: 65
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 1
+        colisiones_de_la_nueva: {}
+        fonotactica_de_la_nueva: {}
+      recomendada: A
+    outa:
+      A:
+        formas:
+        - huda
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 1
+        usos_como_nucleo_de_otra_forma: 0
+        respuestas_que_la_dicen: 14
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 1
+        colisiones_de_la_nueva:
+          huda: 1
+        fonotactica_de_la_nueva:
+          huda: pasa
+      B:
+        formas:
+        - hila
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 1
+        usos_como_nucleo_de_otra_forma: 0
+        respuestas_que_la_dicen: 14
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 1
+        colisiones_de_la_nueva:
+          hila: 0
+        fonotactica_de_la_nueva:
+          hila: pasa
+      recomendada: A
+    kataa:
+      A:
+        formas:
+        - kake
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 1
+        usos_como_nucleo_de_otra_forma: 0
+        respuestas_que_la_dicen: 6
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 1
+        colisiones_de_la_nueva:
+          kake: 1
+        fonotactica_de_la_nueva:
+          kake: pasa
+      B:
+        formas:
+        - kaku
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 1
+        usos_como_nucleo_de_otra_forma: 0
+        respuestas_que_la_dicen: 6
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 1
+        colisiones_de_la_nueva:
+          kaku: 1
+        fonotactica_de_la_nueva:
+          kaku: pasa
+      recomendada: A
+    talata:
+      A:
+        formas:
+        - halikebe
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 17
+        usos_como_nucleo_de_otra_forma: 6
+        respuestas_que_la_dicen: 53
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 4
+        colisiones_de_la_nueva:
+          halikebe: 0
+        fonotactica_de_la_nueva:
+          halikebe: pasa
+      B:
+        formas:
+        - ulabu
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 17
+        usos_como_nucleo_de_otra_forma: 6
+        respuestas_que_la_dicen: 53
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 4
+        colisiones_de_la_nueva:
+          ulabu: 0
+        fonotactica_de_la_nueva:
+          ulabu: pasa
+      recomendada: A
+    jashichi:
+      A:
+        formas:
+        - iama
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 7
+        usos_como_nucleo_de_otra_forma: 3
+        respuestas_que_la_dicen: 36
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 4
+        colisiones_de_la_nueva:
+          iama: 0
+        fonotactica_de_la_nueva:
+          iama: pasa
+      B:
+        formas:
+        - kain
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 7
+        usos_como_nucleo_de_otra_forma: 3
+        respuestas_que_la_dicen: 36
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 4
+        colisiones_de_la_nueva:
+          kain: 0
+        fonotactica_de_la_nueva:
+          kain: pasa
+      C:
+        formas:
+        - aiima
+        se_queda_la_forma: false
+        usos_de_la_voz_vieja_que_dejan_de_contar: 7
+        usos_como_nucleo_de_otra_forma: 3
+        respuestas_que_la_dicen: 36
+        plantillas_a_tocar: 0
+        apariciones_en_plantillas: 0
+        formas_de_la_base_a_raiz_de_ninguna_parte: 4
+        colisiones_de_la_nueva:
+          aiima: 0
+        fonotactica_de_la_nueva:
+          aiima: pasa
+      recomendada: C
+  coste_de_la_recomendacion:
+    voces_que_cambian: 8
+    usos_sueltos: 530
+    usos_como_nucleo: 318
+    suma_por_voz_de_respuestas_que_la_dicen: 1140
+    apariciones_en_plantillas: 0
+    apariciones_en_reglas_del_motor: 0
+    apariciones_en_la_koine: 0
+    apariciones_en_tests: 7
+    respuestas_distintas_con_alguna_voz_que_cambia: 942
+    agent_responses: 3811
+    en_la_puerta_todo_junto:
+      formas_que_pasan_a_raiz_de_ninguna_parte:
+        formas: 37
+        usos: 734
+        ejemplos:
+        - kasuta
+        - anasa
+        - mütsia
+        - ma-anasa
+        - sünatü
+        - kasuta-iro-kana
+        - kasuta-bana-iro
+        - ma-kasuta
+      formas_que_dejan_de_ser_raiz_de_ninguna_parte:
+        formas: 0
+        usos: 0
+        ejemplos: []
