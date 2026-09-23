@@ -183,6 +183,14 @@ Todo con página en `6-fusion/arqueologia_insular_falcon_2026-09-22.yaml`.
 4. Perseguir **Arvelo y López 2004**, el proyecto de prospección del que sale
    Falco 270.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Verificado** en el `.txt` de 2007 (p. 65): las clases de ARAAPICO (Arvelo y
+López 2004) — «Ocupación Tortolitan (100 a.C.- 800 d.C.); Ocupación Dabajuro
+(800 d.C.- 1492 d.C)». Un bloque sin fases; 1492 es el corte del informe.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[oliver-1989-cap4]] · [[zavala-reyes-2018]] · [[martinez-cruzado-2003]] ·

@@ -396,6 +396,16 @@ Lo usa `6-fusion/fauna_paraguana_tierra_2026-09-22.yaml` (especies y
 `propuestas_ecologia`). La `cobertura` del frontmatter no se tocó para no chocar
 con la campaña de Oviedo que corre en paralelo: el cap. XXII ya estaba leído.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se halló**: **t. IV p. 531** (lib. L cap. XX, el naufragio): «las sierras
+de Paraguachoa, que son en la provincia de Venezuela», y a continuación el
+puerto de Coro. Paraguachoa es de la costa de Falcón, no Margarita. Cero de
+guaiquer-/guaycar-/Manaure en la capa de los cuatro tomos (medido con pymupdf;
+la OCR parte palabras, así que el cero es de consulta).
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[arcaya-1920]] · [[oliver-1989-cap2]] ·

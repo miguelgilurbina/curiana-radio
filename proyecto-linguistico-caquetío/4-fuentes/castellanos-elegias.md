@@ -240,6 +240,21 @@ sus glosas de lengua («Coro viento») son etimologías de cronista y así se
 etiquetan. La rima deforma nombres (`Todariquibo` por la asonancia con
 `Hurehurebo`) — otra razón para permutar vocales al buscar.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se halló**: **p. 185** (script de M7): Manaure «sobre caciques tuvo
+mando / Y toda la comarca subyectaba»; Todariquibo entre las ciudades «doce
+leguas en torno del asiento» (de Coro), no como su casa. **p. 199**: «cacique
+Manaure, rey de Coro». **Parte I, Elegía II, canto I, p. 24** (la cabecera OCR
+dice «21»; va entre la 22 y la 25; fuera de los tramos del script): Juan de
+Salas habla a los caribes de un asalto en Guayama (Puerto Rico, 1550) «en
+lengua guayqueri que bien entienden». **p. 213**: un «guayqueri» de guía en la
+entrada de Espira por los llanos.
+
+**Qué NO se halló**: el pueblo de Manaure; guaiqueríes en Falcón.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[esteves-1989]] · [[velasco-2015-resistencia]] · [[gonzalez-batista-nombre-de-coro]] · [[arcaya-1920]] · [[alvarado-1921]] · [[brito-figueroa-poblacion-economia]] · [[01-rastreo-fuentes]] · [[toponimia]] · [[INDICE_FUENTES]]

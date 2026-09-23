@@ -165,6 +165,17 @@ que ya estaba en el canon como descartado por no tener glosa en ninguna fuente.
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se usó**: **p. 93** (la lista de Castellanos, «Elegías, pág. 185»);
+**p. 113** (la estrofa de Manaure, citada «pág. 183»); **p. 166** (el encuentro
+bajo el cují es tradición «aunque sobre esto no hay documentos»); **pp.
+199-200** (la huida de Manaure tras Alfinger y la tradición de los llanos);
+**p. 230** (la protesta de Bastidas: «el pueblo de todariqueva» entre los
+pueblos caquetíos de Coro). Ninguna da el pueblo de Manaure antes de 1527.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[03_creencia_caquetia]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]
