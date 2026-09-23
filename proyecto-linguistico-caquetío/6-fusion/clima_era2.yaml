@@ -373,8 +373,8 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '8-9'}
         apoyo_en_repo: [ecologia-005, ecologia-006]
         estacion: 'todo el año'
-        voz_caquetia: {clave: tüshi, capa: caquetío-reconstruido}
-        nota: '`tüshi` «frío» existe en el lexicón y en este mundo casi no tiene referente: es una palabra para la noche y para el agua, no para el año'
+        voz_caquetia: {clave: kasalini, capa: caquetío-hipotético}
+        nota: '`kasalini` «frío» (achagua; sustituye desde el 2026-09-23 a `tüshi`, reconstruida desde el wayuu y archivada por D11, tf.5) existe en el lexicón y en este mundo casi no tiene referente: es una palabra para la noche y para el agua, no para el año'
     el_dia:
       amanecer:
         - dato: 'El viento amanece flojo; la corriente del Golfete es la más suave del día. Es la ventana de la canoa y del calado del chinchorro.'
@@ -382,7 +382,8 @@ periodos:
           procedencia: {obra: camacho-2011, pagina: '(vía ecologia-026: el viento «arrecia en el curso del día»)'}
           apoyo_en_repo: [ecologia-026]
           estacion: 'seca — amanecer'
-          voz_caquetia: {clave: kapua, capa: caquetío-reconstruido}
+          # tf.5 (2026-09-23): era `kapua`, reconstruida desde el wayuu y archivada.
+          voz_caquetia: {clave: mautia, capa: caquetío-hipotético}
       mañana:
         - dato: 'El alisio va montando. La sal de la noche está seca y es la hora del raspado; el conuco se trabaja antes del sol alto.'
           etiqueta: canon-simulacion

@@ -34,7 +34,10 @@ from curiana_observer import ObserverAgent                 # noqa: E402
 from curiana_perfiles import cargar_perfil                 # noqa: E402
 from curiana_state import estado_inicial                   # noqa: E402
 
-RESPUESTA = "Taya wana-ka arima wara kari. Ta-barsure naba-ni."
+# Tanda final (D11 fase 3): la respuesta fija del ensayo, dicha con el canon de
+# hoy. Con la vieja, el turno 2 devolvía «taya, wana-ka» por [Tu manera de
+# hablar] y el pre-vuelo lo leía como plantilla.
+RESPUESTA = "Dai diki-kuba arima wara para. Da-barsure kuburuku."
 
 
 def ensayo(escena: bool, capubana_cada: int, dia: int, turnos: int = 2,
@@ -74,8 +77,12 @@ def ensayo(escena: bool, capubana_cada: int, dia: int, turnos: int = 2,
     return capturas
 
 
-# Lo que TIENE que estar en los 63 (la tanda del 21 y la de la base) y lo que
-# NO puede estar.
+# Lo que TIENE que estar en los 63 (la tanda del 21, la de la base y la final)
+# y lo que NO puede estar. La tanda final (2026-09-23) añade D11 fase 3: los
+# pronombres, el aspecto y el posesivo de las hermanas, y fuera las voces que
+# se reconstruyeron desde el wayuu.
+_P = r"(?<![\w-])"      # borde izquierdo: ni letra ni guion
+_F = r"(?![\w])"        # borde derecho
 DEBE = {
     "el estado es verbo (d21.4)": r"UN ESTADO ES UN VERBO|ESTADO: un estado se predica",
     "ka- atributivo (d21.5)": r"ka-biro|ATRIBUTIVO: ka-",
@@ -84,6 +91,9 @@ DEBE = {
     "ejemplo biro-bana": r"biro-bana",
     "derivación cero (dc.3)": r"jusual es sembrar",
     "-wa sin glosa (dc.2)": r"-wa y -ana",
+    "pronombre dai (tf.1)": _P + r"[Dd]ai" + _F,
+    "aspecto -kuba (tf.2)": r"-kuba",
+    "posesivo da- (tf.3)": _P + r"[Dd]a-barsure",
 }
 NO_DEBE = {
     "-naiki (retirado d21.9)": r"-naiki\b",
@@ -93,6 +103,14 @@ NO_DEBE = {
     "región de (glosa sin fuente)": r"región de",
     "buko-ana (d21.6)": r"buko-ana",
     "gallina (europea)": r"gallina",
+    "taya (D11)": _P + r"[Tt]aya" + _F,
+    "pia (D11)": _P + r"[Pp]ia" + _F,
+    "nüma (D11)": _P + r"[Nn]üma" + _F,
+    "aspecto viejo -ka/-ni/-da (D11)": r"\w-(?:ka|ni|da)" + _F,
+    "posesivo ta- (D11)": _P + r"[Tt]a-\w",
+    "voces wayuu (tf.5)": _P + r"(?:kashi|yama|sulu|wana|naba|tüshi|kapua|anüiki|pütchi|wanü)" + _F,
+    "kari en el ejemplo (sigla E)": r"arima wara kari",
+    "cohiba (del editor)": _P + r"cohiba" + _F,
     "ka-biro = el salinero": r"ka-biro\s*=\s*el salinero",
     "Shaboro (era 1)": r"Shaboro",
     "Buio-sha (era 1)": r"Buio-sha",
