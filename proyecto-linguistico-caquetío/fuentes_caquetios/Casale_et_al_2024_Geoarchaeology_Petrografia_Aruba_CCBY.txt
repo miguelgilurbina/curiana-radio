@@ -1,0 +1,1332 @@
+| | Received: 23 August 2023 Revised: 15 February 2024 Accepted: 16 June 2024
+DOI: 10.1002/gea.22017
+RESEARCH ARTICLE
+
+Petrographic insight into the sourcing and production of pre‐colonial Ceramics from Aruba
+
+Simone Casale1,2 | Niels Groot1 | Raymundo A. C. F. Dijkhoff3 | Harold J. Kelly1,2 | Loe Jacobs1,2 | Patrick Degryse1,4 | Corinne L. Hofman1,2
+
+1Faculty of Archaeology, Leiden University, Leiden, The Netherlands 2Royal Netherlands Institute of Southeast Asian and Caribbean Studies, Leiden, The Netherlands 3National Archaeological Museum Aruba, Oranjestad, Aruba 4Department of Earth and Environmental Sciences, Division of Geology, KU Leuven, Leuven, Belgium
+Correspondence Simone Casale, Faculty of Archaeology, Leiden University, Einsteinweg 2, Leiden 2333CC, The Netherlands. Email: casale@kitlv.nl
+Scientific editing by Hector Neff.
+
+Abstract
+This research presents the findings of a petrographic analysis conducted on pre‐colonial Ceramics from Aruba, focusing on understanding ceramic mineral resources and production. The study compared ceramics from nine sites with a selection of clay sources from the island. Petrographic analysis identified the existence of three different mineralogical compositions. Two groups of undecorated vessels were likely manufactured using locally sourced clay materials. Group 1 ceramics show a connection with the weathering of quartz‐diorite intrusions in the northwest part of the island and suggest the exploitation of multiple, geographically close sources with similar compositions. Group 2 ceramics are related to clay sources found in the southeast of Aruba, with a mixed geological composition, including limestone, volcanic tuff and quartz‐diorite. In contrast, Group 3 ceramics are mostly decorated and belong to the Early Urumaco Period. They display a distinct composition characterized by a calcareous matrix with clay pellets, clay streaks and the presence of shell fragments added as temper. The extensive clay preparation practice leaves uncertainties concerning the origin of ceramics from Group 3. The study also highlights clay selection and use patterns, indicating that different clay sources were interchangeably utilized by communities across Aruba.
+KEYWORDS Caribbean archaeology, ceramic and clay studies, ceramic technology, geoarchaeology, petrography
+
+1 | INTRODUCTION
+In the 1880s, Father A. J. van Koolwijk gathered a varied collection of archaeological objects from Amerindian sites on the three so‐called ABC islands: Aruba, Bonaire and Curaçao (Figure 1). From this point, interest was raised in the human occupation during the pre‐colonial period, and a number of
+
+surveys and excavations have been conducted on the three islands since the 1970s (Boerstra, 1974, 1977, 1982; Dijkhoff, 2004; Du Ry, 1960; Lester, 1968; Oliver, 1989; Versteeg & Rostain, 1997; Versteeg & Ruiz, 1995).
+To gain insight into the interactions both between and beyond the islands, and to grasp a deeper understanding of the different ceramic styles that are commonly found in the region, in 2010, the
+
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited. © 2024 The Author(s). Geoarchaeology published by Wiley Periodicals LLC.
+
+Geoarchaeology. 2024;1–19.
+
+| wileyonlinelibrary.com/journal/gea
+
+1
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+2|
+
+CASALE ET AL.
+
+F I G U R E 1 On the right, the general map of the Caribbean Region with a focus on the study area. On the left, a zoom on the ABC islands and the north coast of Venezuela. The arrows indicate the main connection between the islands and the mainland established through stylistic analysis.
+
+National Archaeological Museum of Aruba and the Faculty of Archaeology of Leiden University began a pilot study on ceramic technology that encompasses the ABC islands and the Venezuelan mainland. The first step of the study was performed by Groot (2011), studying a selection of Dabajuroid ceramics from Indigenous sites in Aruba and conducting a clay sampling survey of the island. To obtain more detailed information on the provenance of the pottery retrieved in Aruba, here we compared the clay samples collected in 2010 with a selection of decorated and undecorated ceramics from different sites in Aruba through petrographic analysis.
+The ceramic manufacturing process follows a set of standardized steps, starting with raw material collection and preparation, followed by the shaping of the clay mass to determine the vessel's final form. Finishing operations and surface treatments are then carried out before decoration and final firing. Each phase in this process reflects learning and transmission of knowledge between individuals, across generations within social groups, or through social and exchange networks (Cresswell, 1976, 1983; Rice, 2015; Roux, 2016, 2019a, 2019b; Thér, 2020). A combination of reoccurring features within a region can be distinct for a certain community or for a larger cluster of
+
+communities that are tied through a network. A detailed understanding of the available clay sources on the island and a direct comparison with the ceramic bodies retrieved on the sites contribute insights into the ceramic manufacturing traditions, the origin of the materials and human–environment interactions and movements within Aruba. The aim of this study is to form the foundation for the creation of a reference data set of the ceramic traditions in Aruba, which will allow us to discern what is locally produced and used and what may be the result of exchange with/from other sites and/or regions.
+1.1 | Research background: Aruba
+Aruba is the westernmost of the three ABC islands. The island is situated 30 km north of the coast of the Venezuelan Paraguaná peninsula. It measures approximately 31 km in length and 10 km in width and is known for being one of the driest islands in the region, with xerophytic vegetation due to low precipitation. Arid conditions alternate twice a year with wetter conditions, resulting in heavy but short‐lived rainfall during the rainy season that causes severe landscape erosion through
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+|3
+
+gullies and flooding (Ruiz, 2004). Aruba consists of a core of igneous and sedimentary rocks, which is partly covered by limestone (Versteeg & Ruiz, 1995). The limestone formation, deposited ca. 1.6 million years ago, surrounds both landscapes and comprises a flat terrace, white sandy beaches and lower‐lying terraces along the west coast (Ruiz, 2004).
+Most of the island is covered by a composite batholith landscape that intruded the Aruba Lava Formation and is found north‐ and southwest of the hilly terrain. This geological formation is cut by several dry streams, which only discharge water during the rainy season. On the island of Aruba, such a seasonal stream is called a rooi (pl. rooien) from the Spanish word ‘arroyo’. Likely already during the Ceramic Period, a number of these rooien have been canalized and extended for agricultural purposes (Versteeg & Rostain, 1997).
+The combination of climate and geology is the cause for the presence of the different landscape types characterizing this island. Since the arrival of Europeans, the landscape of the island has changed dramatically. Among other factors, deforestation has caused severe erosion of the soils, and therefore, the large barren landscape of today cannot be compared with the situation during the pre‐ colonial period (Ruiz, 1997, pp. 7–15). Interestingly, only around 11% of the island's surface area is suitable for rain‐dependent agriculture under special conditions, with unsuitable soils comprising the rest of the island. Suitable soil types occur mainly within the batholith landscape and are concentrated in the northwest and southeast near the leeward coast, with patches in the middle of the island bordered by low hills. The areas with suitable soils and large gully systems also contain the largest Ceramic Period sites (Versteeg & Ruiz, 1995).
+1.1.1 | Archaeological background
+Archaeological results showed that populations from the north coast of Venezuela visited the ABC islands and southeastern archipelagos (Los Aves, Los Roques, La Tortuga and Isla Margarita), with the first evidence dating to ca. 4500 years B.P. (Kelly & Hofman, 2019). The earliest human presence was limited to fishing and gathering activities. Temporary settlements along the mangrove areas and lagoons were established for their rich shellfish (Antczak & Antczak, 2005, 2006, 2015; Hofman, Berman, et al., 2024; Hoogland & Hofman, 2015; Kelly & Hofman, 2019). The presence of unifacial and bifacial flakes together with shell materials that resembled the Manicuaroid series led to a hypothesis of early visits
+
+to the islands by people from eastern Venezuela such as Cubagua and Margarita island (Rouse & Allaire, 1978).
+The transition from the periods defined in Caribbean archaeology as Archaic Age (ending ca. 800–500 B.C.E.) and Ceramic Period (lasting until the beginning of the colonization period ca. 1500–1600 C.E.) is still unclear and shows variability within the ABC islands, the mainland and other archipelagos. Ceramic materials associated with the Ocumaroid, Dabajuroid and Valencioid series were retrieved across the region from coastal areas of western Venezuela, Colombia, the ABC islands and the archipelagos of Los Aves, Los Roques and Margaritas (Antczak, 1998; Antczak & Antczak, 2015; Hofman, Boomert, et al., 2024; Hofman & Antczak, 2019). Compositional analysis of Amerindian pottery figurines from Los Roques archipelago and stylistic analysis of pottery from Bonaire and Curacao showed ceramic materials associated with the Yaracuy river and the Valencia region (Haviser, 1991, p. 65; Kasztovszky et al., 2004, Bohus et al., 2005). Aruba seems to have been in more contact with populations residing in the coastal region of Falcón, based on the presence of ceramic material of Los Médanos and Urumaco styles, which are associated with the Dabajuroid series of western Venezuela (Dijkhoff, 1997; Groot, 2011; Oliver, 1989; Sterks, 1982; Versteeg & Rostain, 1997).
+1.1.2 | Main Ceramic Period sites
+Archaeological results revealed different aspects of the indigenous cultures, and several archaeological sites were identified spanning from 900/1000 to ca. 1515 C.E. (Table 1). Five are large habitation sites, Tanki Flip, Santa Cruz/Ser'i Noka, Savaneta, Parkietenbos and Tanki Leendert, while the remaining sites yield evidence that suggests uses related more to temporary encampments, special activity locations, or raw material extraction areas.
+Tanki Flip This site is located in the northwestern part of the island. This area is relatively flat with only some gentle hills. Underneath this region lies a tonalite bedrock. In the vicinity of Tanki Flip, a major rooi is situated, which runs nearby the site into rainwater reservoirs, a manmade deepened pond, a so‐called tanki (Dijkhoff, 1997). After the tanki , the rooi continues further west until it hits the permeable limestone bedrock near the sea.
+
+T A B L E 1 Overview of the dates for the different periods and discerned ceramic styles in Aruba (Dijkhoff, 2022; Haviser, 1987, pp. 48–52; Nomland, 1933; Oliver, 1997, pp. 395–396).
+
+Period
+
+Ceramic style (Falcón region)
+
+Substyle
+
+Date
+
+Aruban larger sites
+
+Early Dabajuran period (850–1350 C.E.)
+
+Túcua
+
+850–1200 C.E.
+
+Santa Cruz Tanki Flip
+
+Urumaco
+
+Early Urumaco
+
+1200–1350 C.E.
+
+Santa Cruz, Tanki Flip, Savaneta
+
+Late Urumaco
+
+1350–1500 C.E.
+
+Santa Cruz, Tanki Flip, Savaneta
+
+Late Dabajuran period (1350–1515 C.E.) Los Médanos
+
+Los Médanos‐A
+
+1400–1450 C.E.
+
+Santa Cruz, Savaneta
+
+Los Médanos‐B
+
+1450–1515 C.E.
+
+Savaneta
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+4|
+
+CASALE ET AL.
+
+Tanki Flip is, archaeologically, the best‐known site in Aruba and was subjected to several excavations in the last decades (Boerstra, 1976, 1983; Heidecker & Siegel, 1969; Versteeg & Rostain, 1997). The excavations revealed that Tanki Flip was a large village with likely more than 100 inhabitants delimited with a large fence/palisade, which functioned as the northern border of the settlement. This palisade probably not only marked the border of the settlement but was also interpreted to have had a defensive function. Thirteen structures were identified as houses. Within the settlement, people have also been (re)buried among other large pottery urns. Occupation of the site dates to around 950–1250 C.E., which is the Early Urumaco period, the first part of the Ceramic Period (Dijkhoff, 1997; Versteeg & Rostain, 1997). Figure 2 displays a number of sherds that were selected for the
+
+current analysis. The sherds were collected during the Tanki Flip excavations by Boerstra between 1975 and 1977 and Versteeg in 1994 (Boerstra, 1982; Groot, 2011).
+Santa Cruz/Ser'i Noka The second major site on the island Santa Cruz, also called Ser'i Noka, is situated 300 m west of the present‐day town of Santa Cruz. The site is located in the western part of the arid central plain of Santa Cruz. Similar to Tanki Flip, it is also situated on top of the quartz diorite/tonalite bedrock. On top of this geological formation, a coarse yellow sand deposition is present, which displays no soil formation. The plain of Santa Cruz is cut by several rooien (Boerstra, 1974, p. 13). The archaeological site of Santa Cruz/Ser'i Noka is located on a gentle slope and adjacent to a rooi. The nearby location of the
+
+F I G U R E 2 Examples of ceramic samples from the larger archaeological sites that were selected for the analysis Drawings by Groot (2011).
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+|5
+
+modern town of Santa Cruz has led to the destruction of most of the site by extensive construction activities, already in the 1970s (Boerstra, 1974, p. 13). The first excavation of the site was conducted in 1922–1923 by J. P. B. De Josselin de Jong (Jong de, 1923). These excavations yielded, among others, circa 2700 pottery sherds (Du Ry, 1960, p. 82, 88). The subsequent excavation of the site was conducted during the 1970s (Boerstra, 1974) and led to the identification of a myriad of pits, postholes, a number of burials (mostly in a pit) and one urn burial. The stratigraphic analysis identified evidence of at least two phases of occupation (Boerstra, 1974, 1976), and a campaign in the 1990s by Versteeg led to the finding of two complete house plans and a large number of burials, refuse pits and hearths (Oliver, 1997; Versteeg, 1997, pp. 418–419). In general, the site can be dated to the Ceramic Period as there is evidence for earlier and later occupations. Figure 2 displays a number of the sherds from Santa Cruz/Ser'i Noka that have been selected for the analysis.
+
+California‐2: This special activity site related to marine food exploitation is situated on an elongated dune at the island's northern tip. It measures 525 m² and is located about 15 m from the sea. The site contains materials such as stone, shells and undecorated pottery (Kelly, 2005).
+Malmok‐4: Located on the beach on the northwestern coast, the site was uncovered by recent extreme storm events caused by hurricanes. Measuring approximately 20 m in diameter, the site mainly contains fragments of undecorated pottery, except for one complete vessel that resurfaced after wave storm erosion.
+Altovista: The site, situated about 550 m from the northeastern coast, measures 2500 m². It is located in an area with limestone and has a diorite subsoil. During the 1990 survey, materials such as shells, coral, pottery and colonial materials were observed (Versteeg & Ruiz, 1995).
+
+Savaneta The last of the three major sites is Savaneta, located in the south‐eastern part of the island. The site is situated approximately 1 km from the sea at the junction of a few rooien. In contrast to the two other sites, Savaneta was founded on top of limestone bedrock.
+The current town of Savaneta has been built over the site, and archaeological research has been limited in comparison to Tanki Flip and Santa Cruz/Ser'i Noka. According to Boerstra (1982), a significant amount of shell, stone, bone, pottery and many burial urns were retrieved, indicating intense human activities at the site. Over time, additional group burials and burial urns have been discovered in the General Majoor de Bruinewijk neighbourhood in eastern Savaneta (Bongers, 1963; Dijkhoff, 2001). Based on stylistic pottery studies, it seems probable that Savaneta was occupied during the entire Ceramic Period (Du Ry, 1960). Du Ry referred to the pottery as the Savaneta style, which was tempered with shell and quartz. This style closely resembled the Santa Cruz pottery, except for the greyish, thin‐walled ware (Du Ry, 1960). The dominant painting was black on red, a common characteristic of the Los Médanos phases in Venezuela (1400–1600/1650 C.E.), implying that Savaneta was transitioning into these phases between Early and Late Urumaco. Figure 2 displays a number of the sherds from Savaneta that were selected for the current analysis.
+1.1.3 | Smaller sites
+Manzanilla‐2: The site is located on the island's southeastern coast, has a size of 30 m in diameter and lies approximately 400 m from the coast. Materials recovered during the 1990 survey were pottery, shell, stone and coral (Versteeg & Ruiz, 1995).
+Banki Jerome‐1: This site, located approximately 300 m southwest of Manzanilla‐2 on the southeastern coast, measures 100 m in diameter and lies approximately 450 m from the coast. Materials seen during the 1990 survey were pottery, shell, coral and stone (Versteeg & Ruiz, 1995).
+
+2 | MATERIALS AND METHODS
+Petrographic analysis proved to be a well‐suited method to study ceramic technology and provenance in the Caribbean Region (e.g., Casale, 2022; Casale et al., 2021, 2022, 2023; Donahue et al., 1990; Fitzpatrick et al., 2008; Lawrence et al., 2016; Pavia et al., 2013; Stienaers, 2024; Stienaers et al., 2020; Ting et al., 2016, 2018). Petrographic analysis allows us to identify two important components that constitute the ceramic body: the clay matrix and the aplastic inclusions (e.g., temper materials). Additionally, substantial information relating to the manufacturing process can be inferred through the observation of voids and pores left during the shaping of the body—as well as the presence of surface treatment methods and an estimation of the firing temperatures and conditions (Casale, 2022; Quinn, 2013). The interpretation of these characteristics, in combination with a good understanding of the geological context of the studied area, provides insights into the possible provenance of the materials and the distinction of ceramic objects that were manufactured from different raw material sources.
+Fifty sherds were selected based on the preliminary technological results by Groot (2011), with the aim of obtaining as many diverse rim shapes and decoration modes as possible. The selection was integrated with clay samples collected across the island. The clay survey was performed with the intention of obtaining a better understanding of the available clays and tempering materials available in the vicinity of the sites, with the goal of identifying possible use and exploitation of different clay sources. The survey was designed primarily based on geological maps (Helmers & Beets, 1977) to see if different geological areas could be distinguished. During the survey, potential clay outcrops were collected and tested to establish whether they were suitable for manufacturing ceramics. Workability (e.g., coiling and pinching) and firing resistance tests were performed. A total of 17 samples were retrieved all over the island (Figure 3), with properties that would allow potters to manufacture ceramics. Petrographic analysis was carried out with a polarized microscope (Leica DM750P) at the Material Culture Studies lab at the Faculty of Archaeology of Leiden University.
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+6|
+
+CASALE ET AL.
+
+F I G U R E 3 Geological map of Aruba (after Helmers & Beets, 1977 and Groot, 2011) with the location of the clay outcrops selected for the studies in relation to the archaeological sites.
+
+3 | RESULTS
+The petrographic analysis identified the presence of three main petrographic groups that evidenced a degree of internal variability with the presence of subgroup division. There are four samples that do not group with any others. The petrographic data described below is
+
+semiquantitative, and the reported presence approximates the relative quantity of the inclusions. The range values used to quantify the inclusions are as follows: frequent (30%–50%), common (15%–30%), few (2%–15%), rare (0.5%–2%)m, very rare (0.5%) and absent (0%). The summaries of the petrographic observations are shown in Table 2 for the ceramic samples and in Table 3 for the clays (Figure 4‐6).
+
+CASALE ET AL.
+
+T A B L E 2 Summary of the petrographic results for the main identified groups. The following abbreviations are used: equant (eq.), elongate (el.), angular‐rounded (a‐r.), subrounded (sr.), subangular (sa.) and angular (a.).
+
+Inclusions frequency:
+
+Group Matrix
+
+Voids
+
+Inclusions: size
+
+and shape
+
+Frequent (30%–50%)
+
+Common (15%–30%)
+
+Few (5%–15%)
+
+Rare (0.5%–5%)
+
+Very rare (0,5%)pr
+
+Group 1
+
+50%. Sorting is poor and the matrix is heterogeneous. Noncalcareous. Light red‐brown to darker red‐brown in PPL, deep red‐brown to black in XP.
+
+Mainly meso‐ elongate voids and meso‐ and macro vughs. They are moderately oriented to the margins of sections.
+
+Eq. and el. a‐r. <1500 μm. Poorly aligned to margins, unimodal, poorly sorted grain size distribution. The size varies from 50 to 1500 μm, with a mode of 500 μm.
+
+Quartz, a‐r. 100–1500 μm, mode = 500 μm. (TL.6 and MK.1 only) Hornblende (amphibole), eq. a‐sa. 100–400 μm, mode 200 μm. Biotite, eq‐el. 100–400 μm, mode 300 μm.
+
+Feldspars (oligoclase and andesine) eq‐el. a‐sa 200–1200 μm, mode = 400 μm single mineral with often altered by sericite. • Subgroup 1a (TL.6 and
+MK.1): a higher proportion of hornblende (amphibole), eq. a‐sa. 100–400 μm, mode 200 μm; biotite, eq‐el. 100–400 μm, mode 300 μm. • Subgroup 1b (A.116, A.153, A.149, SC5): rock fragments (600–1800 μm): sandstone— polycrystalline quartz. • Subgroup 1c MK.2, MK.3: plagioclase feldspars as single euhedral inclusions and in rock inclusions, sa. 400–1200 μm.
+
+Hornblende (amphibole), eq. a‐sa. 100–400 μm, mode 200 μm. Biotite, eq‐el. 100–400 μm, mode 300 μm. Olivine, 50–400 μm, mode 100 μm.
+
+Rock inclusions of intrusive intermediate (quartz‐diorite) and mafic origin (gabbro) (olivine, feldspars and pyroxenes), sr‐r. 600–1300 μm. Opaques, eq. sr‐r. 200 μm. Orthopyroxenes and augite eq. sa. 200–400 μm, mode 200 μm.
+
+Sandstone inclusions, sa‐sr. 500–1200 μm.
+
+Group 2
+
+50%. Noncalcareous. Light brown to dark brown in PPL, brown XP. Heterogeneous matrix. Samples present mostly a uniform colour and a minimal core‐margin differentiation. The matrix is optically active.
+
+Mainly meso‐ elongate voids and meso‐ and macro vughs. They are moderately oriented to the margins of sections.
+
+Eq. and el. a‐r. <1800 μm. Poorly aligned to margins, unimodal, poorly sorted grain size distribution. Mode 700 μm.
+
+Quartz sandstone; eq. a‐ r. <1800 μm; single quartz; eq. a‐r. <500 μm, mode 300 μm. Usually straight extinction but can be undulated.
+
+Plagioclase (oligoclase and andesite, Ca‐rich), eq. <500 μm; rock fragments with plagioclase <1800 μm, mode 600–800 μm, often altered by sericite.
+
+Olivine, eq., a‐sa <200 μm; orthopyroxenes 300 μm; opaque, eq., r. <50 μm.
+
+(Continues)
+
+|7
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Abbreviations: a., angular; a‐r., angular‐rounded; el, elongate; eq., equant; sa., subangular; sr., subrounded.
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+8|
+
+Inclusions frequency:
+
+Inclusions: size
+
+Voids
+
+and shape
+
+Frequent (30%–50%)
+
+Common (15%–30%)
+
+Few (5%–15%)
+
+Mainly meso‐ elongate voids and meso‐ and macro vughs. They are moderately oriented to the margins of sections.
+
+Eq. and el. a‐r. <700 μm. Poorly aligned to margins, unimodal, poorly sorted grain size distribution.
+
+Shell and marine inclusions, a‐sa. 200–700 μm, mode = 500 μm; • Subgroup 3a: Clay
+streaks or clay pellets, sr‐r. 200–900 μm, mode = 400 μm. They occur in different colour, from light brown to dark black brown with different mineral inclusions.
+
+Clay streaks or clay pellets, sr‐r 200–700 μm, mode = 400 μm. They occur in different colours, from light brown to dark black brown with different mineral inclusions.
+
+Subgroup 3a: opaque, sa‐r. 50–300 μm, Quartz eq. sa‐sr 200–300 μm.
+
+Rare (0.5%–5%) Calcite eq. a‐sa. 200–400 μm. Quartz eq. sa‐sr. 200–300 μm.
+
+Very rare (0,5%)pr Olivine, eq. sa‐sr. 200 μm • subgroup 3a:
+calcite eq. a‐sa. 200–400 μm; olivine, eq. sa‐ sr. 200 μm.
+
+CASALE ET AL.
+3.1 | Tonalite—Group 1 (22 ceramic and 4 clay samples)
+This petrographic group is the largest and includes 22 ceramics and four clay samples. The ceramic samples included in this petrographic group show a heterogeneous coarse to medium‐coarse fabric, which is characterized by the presence of generally poorly sorted, subangular to subrounded inclusions of quartz, plagioclase feldspars (oligoclase and andesine), with the frequent presence of amphibole, biotite, olivine and pyroxenes. Rock fragments are present, often composed of sandstone or an igneous origin with feldspar, olivine and pyroxenes. The fabrics vary moderately within the group, ranging from a frequent quartz presence (A.18, A.19, BJ.3) to fabrics with more common plagioclase, biotite and amphibole (A.66, A.75, MA.1, AV.2). The principal mineral inclusions and their medium‐coarse size suggest an origin from the weathering of a plutonic intermediate/mafic rock, such as diorite. The proportion of quartz that varies between samples can be seen as the grade of weathering or the indicative factor of the composition of diorite, moving from a quartz‐diorite to a tonalite. The increasing presence of amphibole and biotite for samples TL.1, A.66, A.75, MA.1, AV.2 and strongly for samples TL.6 and MK.1 can be associated with the weathering of the Hooibergite intrusion (Hornblende rich diorite). The general shape of the inclusions varies from subangular to subrounded, with a low degree of sorting, and the frequent presence of accessory minerals and mica suggests that this clay was probably a residual clay with a minimal transportation process. The presence of coarse rock fragments together with a subrounded shape and the majority of inclusions with a heterogeneous size, from angular to rounded, suggest a nontempering action. However, the average size is between 500 and 600 μm, and it is possible that ceramics were made from weathered clay with minimal sieving action to remove the coarsest fragments. The porosity of the sherds consists mainly of meso‐elongate voids and meso‐ and macro vughs. The voids are sometimes aligned with the external surface of the ceramic body. The matrix is optically active, indicating that the ceramics were fired at a range of temperatures around 750°C in oxidizing conditions. The atmospheric conditions seem to have varied often, suggesting an open‐fired event with nonprecise control of temperature, which produced some vessels with a completely oxidized body (A.23, A.38) or with an incompletely oxidized body (A.18, A.21).
+Within the group, there is some compositional and textural variation that allows us to further define three subgroups due to the higher proportion of hornblende (petrographic Group 1a), higher proportion of rock fragments rich in feldspars (petrographic 1b) and higher proportion of plagioclase feldspars as single euhedral inclusions (petrographic Group 1c).
+
+65%. Calcareous. Light yellowish‐brown to beige in PPL, light yellowish‐brown to light brown in XP. Heterogeneous matrix.
+
+Group Matrix
+
+T A B L E 2 (Continued)
+
+Group 3
+
+3.2 | Quartz sandstone—Group 2 (seven ceramic and two clay samples)
+The sample included in this group is made of a heterogeneous very coarse to medium coarse fabric, characterized by the presence of
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+T A B L E 3 Clay samples with a general description of their inclusions and connection with the petrographic groups identified for the ceramics.
+
+Samples
+
+Group
+
+Comments
+
+Texture
+
+Size inclusions
+
+Qz
+
+Clay 1
+
+0
+
+0
+
+Very fine
+
+(<200 μm, mode 50 μm)
+
+X
+
+Clay 2
+
+Group 2
+
+Clay 2 and Clay 3 are very similar
+
+Medium‐coarse
+
+a‐sr. (<1000 μm, mode 400 μm)
+
+X (dominant)
+
+Clay 3
+
+Group 2
+
+Clay 2 and Clay 3 are very similar
+
+Medium‐coarse
+
+a‐sr. (<1000 μm, mode 400 μm)
+
+X (dominant)
+
+Clay 4
+
+0
+
+0
+
+Very fine with very rare coarse rock fragments
+
+sr‐r. (<1500 μm, mode 400 μm)
+
+X (Rare)
+
+Clay 5
+
+0
+
+0
+
+Medium‐coarse
+
+sa‐sr. (<1200 μm, mode 500 μm)
+
+X (dominant)
+
+Clay 6 Clay 7
+
+0 Group 1
+
+0 Most similar to Group 1
+
+Medium‐fine Coarse and fine
+
+sa‐sr. (<600 μm, mode 300 μm) sa‐sr. (<1500 μm, mode 300 μm)
+
+X (common) X (common)
+
+Clay 8
+
+group 1
+
+Clay 9
+
+group 1
+
+Clay 10
+
+0
+
+Clay 11
+
+0
+
+Clay 12
+
+Group 1
+
+Clay 13
+
+0
+
+Clay 14
+
+0
+
+Clay 15
+
+0
+
+Clay 16
+
+0
+
+Clay 17
+
+0
+
+Samples Clay 1 Clay 2
+
+Ol X X (rare)
+
+Most similar to Group 1/ subgroup
+Most similar to Group 1/ subgroup
+Rich in reddish unknown mineral, looks like alteration
+Gabbro rich clay
+
+Coarse and very coarse Coarse and very coarse Coarse and very coarse Coase and medium
+
+Clay 8, Clay 9 and Clay 12 are very similar Gabbro rich clay
+0 0
+
+Same as AR.10; AR.11
+Coarse and richer in rock inclusions and lamellar biotite Similar to AR.9 Medium‐coarse
+
+0 Calcareous matrix
+Clp 0 0
+
+Coarse
+
+Coarse‐fine
+
+Oth
+
+Bi
+
+Mu
+
+X
+
+0
+
+0
+
+X (very rare) 0
+
+0
+
+sa‐sr. (<2000) Heterogeneous
+
+X (common)
+
+sa‐sr. (<2000) Heterogeneous
+
+X (common)
+
+a‐sa. (<2500) heterogeneous
+
+X
+
+a‐sa. (<2700, mode 500)
+
+X
+
+heterogeneous
+
+0
+
+0
+
+0
+
+X (few, single and in rock
+
+inclusions)
+
+0
+
+0
+
+a‐sr. (<2500–3000; mode 500–600)
+a‐sr. (<2500–3000)
+
+X (common) 0
+
+a‐sa (2000, mode 300)
+
+X (Rare)
+
+Hrn
+
+Rk frag
+
+X
+
+0
+
+0
+
+X (quartz + Feldspars + orthopyroxenes)
+
+Fld X X (in rock inclusions)
+
+X (in rock inclusions)
+
+0
+
+X (Common, plagioclase, oligoclase and Andesine)
+X (few)
+X (Common, plagioclase, oligoclase and andesine)
+X (Common, plagioclase, oligoclase and andesine)
+X (Common, plagioclase, oligoclase and andesine)
+0
+
+X (in rock inclusions)
+
+0
+
+X (frequent, in single and rock inclusions) 0
+X (common)
+
+0 0 Lm Sh 00 00
+
+Op 0 X (very rare)
+(Continues)
+
+|9
+
+CASALE ET AL.
+
+10 |
+
+T A B L E 3 (Continued)
+
+Samples Ol
+
+Clp
+
+Oth
+
+Bi
+
+Mu
+
+Hrn
+
+Rk frag
+
+Lm Sh
+
+Op
+
+Clay 3 X (rare)
+
+0
+
+X (very rare) 0
+
+0
+
+0
+
+X (quartz + Feldspars + orthopyroxenes)
+
+00
+
+X (very rare)
+
+Clay 4 0
+
+0
+
+X (very rare) 0
+
+0
+
+0
+
+X (Feldspars + orthopyroxenes + olivine rich); (quartz) 0 0
+
+X (very rare)
+
+Clay 5 X (rare)
+
+0
+
+X (rare)
+
+0
+
+X (frequent) 0
+
+X (quartz + Feldspars + orthopyroxenes)
+
+00
+
+0
+
+Clay 6 X (few)
+
+0
+
+X (few)
+
+X (rare) 0
+
+0
+
+X (quartz; Feldpsars), very rare
+
+00
+
+X (very rare)
+
+Clay 7 X
+
+X
+
+X
+
+X
+
+0
+
+X
+
+X (Feldspars + orthopyroxenes); (quartz)
+
+00
+
+X (very rare)
+
+Clay 8 X (few)
+
+X
+
+X (few)
+
+X (few) 0
+
+X (few)
+
+X (Feldspars + orthopyroxenes); (quartz)
+
+00
+
+X (rare)
+
+Clay 9 X (few)
+
+X
+
+X (few)
+
+X (few) 0
+
+X (few)
+
+X (Feldspars + orthopyroxenes); (quartz)
+
+00
+
+X (rare)
+
+Clay 10 0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+X (quartz; rock igneous with olivine)
+
+0 X (few) 0
+
+Clay 11 X
+
+0
+
+X (rare)
+
+X (rare) 0
+
+X (rare)
+
+X (quartz; feldspars + olivine)
+
+00
+
+X (very rare)
+
+Clay 12 0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+00
+
+0
+
+Clay 13 X (frequent, lamellar) X (rare, diopside) X (frequent) 0
+
+0
+
+X (common) 0
+
+00
+
+0
+
+Clay 14 0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+00
+
+0
+
+Clay 15 X (few)
+
+X (rare)
+
+(X (few)
+
+0
+
+0
+
+0
+
+X (quartz; feldspars + olivine)
+
+00
+
+0
+
+Clay 16 0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+X (quartz; feldspars + olivine)
+
+00
+
+0
+
+Clay 17 X (rare)
+
+0
+
+0
+
+0
+
+0
+
+0
+
+X (irregular with alteration)
+
+XX
+
+X (rare)
+
+CASALE ET AL.
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+| 11
+
+F I G U R E 4 Group 1, 1a, 1b,1c (a–d) and Group 2 (e, f). Photo taken in XP. From top left to lower right: sample AV.2 (a); MK.1 (b); A.116 (c); MK.2 (d); A.9 (e) and A.67 (f). Bi, biotite; Hbl, hornblende; Int. Incl., intermediate intrusive inclusion; Ol, olivine; Opx, orthopyroxene; Pl, plagioclase; Qz, quartz; Qz‐di, quartz‐diorite; Ss, sandstone.
+
+poorly sorted inclusions, angular to rounded quartz, sandstone and a minor quantity of plagioclase. Accessory minerals (olivine and orthopyroxenes) are very rare. The size of the inclusions is heterogeneous from fine (50 μm) to very coarse (1800 μm) with a
+
+mode of 700 μm. The general composition of the mineral inclusions appears to have derived from a mixed parent rock, with the rock fragments originating from calcareous sandstones, while the plagioclase, olivine and orthopyroxenes could have been weathered from
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+12 |
+
+CASALE ET AL.
+
+the quartz‐diorite outcrop. The general shape of the inclusions, varying from subangular to subrounded, and the low degree of sorting suggest that this clay was probably a residual clay with minimal transportation. The porosity consists mainly of meso‐ elongate voids and meso‐ and macro vughs, which are partially parallel with the external surface of the ceramic body. The matrix is optically active and indicates that the ceramic samples were fired at a range of temperatures around 750°C in oxidizing conditions. The atmospheric conditions seem to have varied, suggesting a nonprecise control of fire, such as a possible open‐fired event, which produced some vessels with a completely oxidized body (A.9, MA.2) or with an incompletely oxidized body (CW3, CW4).
+3.3 | Shell inclusions and clay streaks—Group 3 (14 ceramic samples)
+This large heterogeneous medium‐coarse to medium‐grain fabric is characterized by the presence of poorly sorted clay pellets or clay streaks. They have shapes that vary from subrounded to rounded and yield a composition similar to the general matrix, with a frequent occurrence of shell inclusions and rare calcite and quartz. The common occurrence of clay streaks may suggest that more clays were mixed to achieve a certain quality intended by the potters. The principal mineral inclusions in the matrix are shell and marine remains plus crystals of quartz, calcite and evaporite. According to the presence of those inclusions, the raw materials used to manufacture these ceramics most likely originated from marine sedimentation. The clay streaks present a similar composition to the general matrix with quartz, shell inclusions and calcite. However, the colour is often different suggesting the possibility that some clay streaks might be grog or fired clay. The samples present relic coils and internal voids disposed in a semicircular disposition that suggests coil building, which is a typical manufacturing tradition in the Caribbean region (e.g., Boomert, 2016; Casale, 2022; Hofman, 1993; Jacobson, 2023; Keegan & Hofman, 2017). The ceramics were fired at a temperature lower than 750°C as is shown by the high optical activity of the clay matrix. The firing conditions were oxidizing but often incompletely oxidizing.
+This group presents a variation for five samples (sub‐group 3a). The major difference is the almost complete absence of shell marine inclusions. The rest of the texture is quite similar, such as the presence of clay streaks and rare opaque minerals. The heterogeneous colour of the matrix suggests that, possibly, more clays were mixed.
+3.4 | Other samples
+A.175: this sample has a fine unimodal matrix, and it is completely dominated by quartz inclusions with subangular to subrounded shape (100–500 μm), mode 200 μm. The matrix is noncalcareous, and the firing conditions were incomplete as indicated by the difference in
+
+colour between the core and the margins. The matrix is low optically active, suggesting higher firing conditions (>750–800°C) than the rest of the assemblage.
+TL.5: dominated by rock inclusions with visible lamellar plagioclase but with extensive surface weathering. Possible basalt or andesite. Common quartz and rock fragments are composed of quartz.
+TL.2: the matrix is calcareous and dominated by limestone and shell inclusions (angular to subrounded, <500 μm). Common is also quartz (<200 μm). Few opaque inclusions (subrounded to rounded, <500 μm).
+A.46: the matrix is dominated by limestone/calcite fragments (angular to subangular, <200 μm) and common shell inclusions (<2000 μm). The inclusions are highly angular with fresh fractures that suggests a possible addition as temper.
+3.5 | Clay samples
+The clay sources on the island are divided into two main groups, groups A and B, and other samples, which do not match and appear to have a more distinctive composition. Clay group A (clay 2 and 3) is characterized by a medium coarse texture dominated by quartz inclusions present both as single minerals and polycrystalline fragments. There are also a few rock fragments composed of feldspars, with a rare presence of orthopyroxenes and olivine. Clay group B consists of four samples (clay 7, 8, 9 and 12) and is characterized by coarse‐sized rock fragments (feldspars and orthopyroxenes) and the common presence of quartz and plagioclase as single grains. There are also a few appearances of pyroxenes (both ortho‐ and clinopyroxenes), biotite and hornblende as single minerals. The other clay samples present a general composition that includes quartz, feldspars, olivine, pyroxenes and hornblende in different proportions and rare shell and marine inclusions (clay 10 and 17).
+4 | DISCUSSION
+The petrographic analysis of the ceramics reveals the presence of three main groups, as well as four samples that do not group with the others. The general geological composition of the three main groups partly reflects the local geology of Aruba and suggests a local production for Groups 1 and 2, while for Group 3a, precise provenance cannot be determined.
+Group 1 is the largest and includes 22 ceramics samples from all analysed sites with the exception of California Westpoint. These ceramics present a heterogeneous body with medium to coarse inclusions and a composition that points to an igneous plutonic parent rock. This composition is associated with a quartz‐diorite/ tonalite parent rock that can be related to the weathering of Hooibergite and tonalite intrusions that extensively cover the entire northwest part of the island. The group presents three subgroups that diverge due to the presence of accessory minerals like amphibole and biotite or the proportion of rock fragments rich in quartz and
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+| 13
+
+plagioclase. These mineralogical variations are related to the provenance of the clays used in the production. Potters most likely collected the raw clay materials in different areas, which yield a similar general composition related to the weathering of the quartz‐ diorite/tonalite intrusion that dominates the northwest part of Aruba. Subgroups 1a, 1b and 1c are the result of microregional variation in the transportation and accumulation of the clayish material. The weathering, erosion and transportation processes work as a filter that slowly removes and sorts minerals following their physical and chemical characteristics. These natural geological processes are visible in the analysis of the clays collected throughout the island. Results show a similar mineral composition for four clay outcrops (clays 7, 8, 9, 12). All of these outcrops are located in the northwest part of the island and have a similar mineralogical composition, which includes orthopyroxenes, plagioclase and quartz. Several rooien that run seasonally are recorded in this part of Aruba and they may have facilitated the accumulation of clay deposits. These outcrops are all associated with Group 1 and highlight the fact that multiple sources with a similar mineralogical composition may possibly exist on the northwest part of the island. These sources could have been exploited contemporaneously or at different times, following the possible exhaustion of sources or seasonal variation in accessibility due to the rainy season that opens or closes paths through rooien.
+The other two identified groups are characterized by a different geological origin of the clay materials. Group 2 includes seven samples from four different sites: Tanki Flip, Ser'i Noka, California Westpoint and Manzanilla. These ceramics show a body characterised by the presence of mostly quartz and sandstone with minimal presence of accessory minerals. Clay 2 and 3 are very similar in composition to this group and indicate that a possible area of clay sources was located in the southeast part of Aruba, an area characterized by the presence of mixed geology that includes limestone and quartz‐diorite/tonalite. Surprisingly, there are no ceramics from Savaneta associated with this group even though Savaneta is the closest major settlement from a geographical perspective.
+Group 3 presents a mineral composition that diverges strongly from the previous groups (1 and 2). It mainly includes sherds from Tanki Flip, Ser'i Noka and Savaneta. The general composition of the matrix is calcareous with a very low presence of minerals and other coarser inclusions, except for shell fragments, clay pellets and clay streaks. Group 3 presents a subgroup variation that is characterised by the absence of shell inclusions. Evidence of clay mixing is visible through the change of colour and texture in the fabric. It is likely that potters prepared the clay material to reach particular characteristics such as plasticity and firing resistance before the manufacturing process. This hypothesis is further supported by the presence in Group 3, and absence in subgroup 3, of shell inclusions that might have been added as a temper. The shell inclusions present a high angularity and poor degree of sorting (see Figure 5a). The addition of temper and the possible mixing of clay sources make it difficult to source the origin of the clays. Notably, the decorated ceramics are all associated stylistically with the Early Urumaco period and are
+
+included in Group 3. This suggests a hypothesis of a centralized production that served decorated vessels to the three major settlements on the island (Tanki Flip, Savaneta, Ser'i Noka). A second possibility is the sharing of technological knowledge among potters that led to the manufacture of similar products in different settlements or the exchange of clay materials (Figure 6).
+The remaining samples that did not match any clay outcrops showed a composition that is not related to Aruba's geology. These petrographic observations, together with the presence of ceramic materials exclusively from the three largest inhabitation sites of Aruba (Savaneta, Tanki Flip and Ser'i Noka), lead us to propose that the four outlier ceramics were likely imported from outside Aruba or manufactured with clay sources not identified during the clay survey.
+The observation of manufacturing traces, such as inclusions and void orientation, confirmed the use of the coiling technique as the initial step of the fashioning process as was highlighted by Groot (2011) for all the analysed sites. Evidence for coiling is through the presence of a semicircular disposition of the inclusions in the fabric's core. The coiling action was possibly followed by a strong pressure or percussion action on the external margin of the vessels to uniform the surface. The evidence of this strong pressure is the partial orientation of the voids and semialignment of the coarse inclusions with the external margins of the vessel bodies.
+Turning to clay selection and use, it appears that none of the large habitation areas analysed (Savaneta, Tanki Flip, Ser'i Noka) had a single, preferential option for a specific clay source—though the clay sources located close to the most fertile areas in the northwest and southeast were targeted. The ceramic samples associated with Groups 1 and 2 are undecorated and associated with both Early and Late Urumaco phases (Groot, 2011) and also with a possible continuation into historic ceramic production. The general picture is that communities were interchangeably using different sources for the undecorated locally produced ceramics, sharing sources with other peoples on the island or exchanging finished products. During the Urumaco phase, inhabitants exploited the island in its entirety, with evidence of several activity areas (e.g., food procurement, agriculture, tool processing and raw material extraction). These activity areas are located near major settlements, but in some cases are kilometres away (Kelly, 2012). Therefore, visiting other family members and/or interactions between north and south communities through the sharing activity areas may have led to the movement of ceramics and knowledge relating to the position and quality of clay outcrops. The use of these local sources also likely extended into the Historic Period (Table 4). Distinct from the rest of the Caribbean islands, between the 16th and 19th centuries, Aruba maintained a majority population of Indigenous origin—with limited interaction with the rest of the Caribbean region (Kelly, 2012). The continuative presence of indigenous populations likely led to a knowledge continuity in the selection and use of clay sources.
+Group 3, on the contrary, included mostly decorated ceramics that were associated with the Early Urumaco phase. The clay bodies show evidence of the mixing of more sources and the use of shell tempers. This suggests that for the manufacturing of decorated
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+14 |
+
+CASALE ET AL.
+
+F I G U R E 5 Group 3, sample A.80 (a), group 3a, sample A.37 (b), outliers A.175 (c) and TL.5 (d). clay st, clay streak; Ca, calcite; Sh, shell; Vl frg, volcanic fragments.
+
+ceramics of the Early Urumaco phase, a certain quality of the clay was targeted.
+5 | CONCLUSION
+The petrographic analysis conducted on the ceramics from Aruba has provided valuable insights into the geological composition and provenance of the clay materials used. The analysis identified three main groups, as well as four samples that do not align with any specific group or clay source. The composition of Groups 1 and 2 suggests a local origin within Aruba, specifically pointing to the weathering of the Hooibergite and quartz‐diorite/tonalite intrusions in the northwest part of the island for Group 1. These groups exhibit mineralogical variations indicating the collection of raw clay materials from different areas within Aruba. Furthermore, the analysis revealed the presence of multiple clay outcrops with similar mineral compositions in the northwest region, which were associated with Group 1. This suggests that potters had access to multiple sources with similar
+
+mineralogical compositions and may have exploited them concurrently or at different times.
+On the other hand, Group 2 comprises ceramics with clay materials originating from the southeast part of Aruba, characterized by a different geological composition including limestone and partly quartz‐diorite/tonalite. Surprisingly, no ceramics from Savaneta were associated with this group, despite its geographical proximity. Group 3 displayed a distinct mineral composition, primarily consisting of the calcareous matrix with clay pellets, clay streaks and a minimal presence of mineral and coarse inclusions, with the exception of shell fragments. Subgroup variations within Group 3 indicate the presence or absence of shell inclusions, possibly added as temper during clay preparation. An important pattern to note is the almost exclusive presence of decorated ceramic in Group 3. This evidence suggests that, for a certain type of vessel during the Early Urumaco period, a precise clay preparation recipe was used. The extensive processing of the raw materials, however, inhibits an understanding of whether the vessels were imported or locally produced. Group 1 and Group 2 included undecorated ceramics, suggesting the use of local sources
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+| 15
+
+F I G U R E 6 Clay samples that matched petrogroups 1 and 2. From top left to lower right: Clay 7, Clay 8, Clay 9, Clay 12, Clay 2 and Clay 3. Qz, quartz; Int. Incl., intermediate intrusive inclusion; Pl, plagioclase; Opx, orthopyroxene; Hbl, hornblende.
+
+for daily use, in contrast with Group 3, which included decorated ceramics, belonging to the Early Urumaco phase.
+Regarding clay selection and use, the analysis revealed that the inhabitants of Savaneta, Tanki Flip and Santa Cruz/Ser'i Noka used the clay sources from the northwest, and the southeast, targeting
+
+clay outcrops located near areas that were also fertile for agricultural activities. Communities interchanged and shared different sources— as is shown by the presence of shared clays within ceramics retrieved from different locations on the island. The presence of decorated ceramics belonging to the Early Urumaco phase indicates the
+
+16 |
+
+T A B L E 4 Summary of the petrographic results combined with stylistic association and provenance.
+
+Decorated/
+
+Clay group
+
+Site
+
+Code
+
+Stylistic association
+
+undecorated
+
+connection
+
+Tanki Flip
+
+A.75
+
+Urumaco
+
+Undecorated
+
+B
+
+Tanki Flip
+
+A.66
+
+Urumaco
+
+Undecorated
+
+B
+
+Tanki Flip
+
+A.67
+
+Urumaco
+
+Undecorated
+
+A
+
+Tanki Flip
+
+A.79
+
+Early Urumaco
+
+Decorated
+
+Tanki Flip
+
+A.83
+
+Early Urumaco
+
+Decorated
+
+Tanki Flip
+
+A.80
+
+Early Urumaco
+
+Decorated
+
+Tanki Flip
+
+A.78
+
+Early Urumaco
+
+Decorated
+
+Savaneta
+
+A.24
+
+Early Urumaco
+
+Undecorated
+
+Savaneta
+
+A.46
+
+Urumaco
+
+Undecorated
+
+Savaneta
+
+A.18
+
+Urumaco
+
+Undecorated
+
+B
+
+Savaneta
+
+A.21
+
+Urumaco
+
+Undecorated
+
+B
+
+Savaneta
+
+A.19
+
+Urumaco
+
+Undecorated
+
+B
+
+Savaneta
+
+A.30
+
+unknown
+
+Undecorated
+
+B
+
+Savaneta
+
+A.51
+
+Urumaco
+
+Decorated
+
+Savaneta
+
+A.37
+
+Urumaco
+
+Decorated
+
+Savaneta
+
+A.7
+
+unknown
+
+Undecorated
+
+Ser'i Noka
+
+A.116
+
+Urumaco
+
+Undecorated
+
+B
+
+Ser'i Noka
+
+A.153
+
+Urumaco
+
+Undecorated/
+
+B
+
+incision punctuation
+
+Ser'i Noka
+
+A.149
+
+Urumaco
+
+Undecorated
+
+B
+
+Ser'i Noka
+
+A.165
+
+Urumaco
+
+Undecorated/
+
+B
+
+incision punctuation
+
+Ser'i Noka
+
+A.175
+
+Tucua/Early Urumaco
+
+Decorated
+
+Ser'i Noka
+
+A.9
+
+Urumaco
+
+Undecorated
+
+A
+
+Ser'i Noka
+
+A.38
+
+Urumaco
+
+Undecorated
+
+B
+
+Ser'i Noka
+
+A.23
+
+Urumaco
+
+Undecorated
+
+B
+
+Ser'i Noka
+
+A.171
+
+Early Urumaco
+
+Decorated
+
+Ser'i Noka
+
+A.124
+
+Early Urumaco
+
+Decorated
+
+Ser'i Noka
+
+A.135
+
+Early Urumaco
+
+Decorated
+
+Ser'i Noka
+
+A.174
+
+Early Urumaco
+
+Decorated
+
+Tanki Leendert
+
+TL.6
+
+Urumaco
+
+Undecorated
+
+B
+
+California
+
+CW.4
+
+Dabajuran or Historic
+
+Undecorated
+
+A
+
+Westpoint
+
+Malmok
+
+MK.1
+
+Urumaco or Historic
+
+Undecorated
+
+B
+
+Manzaia
+
+MA.2
+
+Dabajuran or Historic
+
+Decorated
+
+A
+
+Banki Jerome
+
+BJ.3
+
+Urumaco or Historic
+
+Undecorated
+
+B
+
+Manzaia
+
+MA.1
+
+Urumaco
+
+Undecorated
+
+B
+
+California
+
+CW.3
+
+Dabajuran or Historic
+
+Undecorated
+
+A
+
+Westpoint
+
+Manzaia
+
+MA.4
+
+Urumaco
+
+Undecorated
+
+A
+
+CASALE ET AL.
+Petro‐groups 1 1 2 3 3 3 3a 3a Ungrouped 1 1 1 1 3a 3 3 1b 1b
+1b 1
+Ungrouped
+2 1 1 3 3 3 3a 1a 2
+1a 2 1 1 2
+2
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+T A B L E 4 (Continued)
+
+Site Tanki Leendert Alta Vista Tanki Leendert Santa Cruz
+Tanki Leendert Tanki Leendert Malmok Banki Jerome Malmok Manzaia Tanki Leendert Bona Vista Santa Cruz Santa Cruz
+
+Code TL.1 AV.2 TL.3 SC.1
+TL.2 TL.4 MK.3 BJ.1 MK.2 MA.3 TL.5 BV.1 SC.5 SC.2
+
+Stylistic association Urumaco Urumaco or Historic Urumaco Early Urumaco
+Urumaco Early Urumaco Early Urumaco Dabajuran or Historic unknown Dabajuran or Historic Early Urumaco Dabajuran o Historic Urumaco Urumaco
+
+Decorated/ undecorated Undecorated Undecorated Undecorated Surface extensively weathered Decorated Undecorated Undecorated Undecorated Undecorated Decorated Undecorated Undecorated Undecorated Undecorated
+
+Clay group connection B B
+B B A A B B
+
+| 17
+Petro‐groups 1 1 3 3a
+Ungrouped 3 1c 3 1c 2 Ungrouped 2 1b 1
+
+preferential use of one type of clay mixture for a certain decorated vessel. Most likely, to achieve certain aesthetic and manufacturing features, a specific body preparation was required and maintained during the Early Urumaco phase.
+The petrographic observations bring some insight into the ceramic production in Aruba, with multiple clay sources being utilized and the possibility of external trade and interaction with neighbouring regions. Future technological studies on the north coast of Venezuela and islands such as Curacao, Bonaire and the Los Roques Archipelago that investigate the entire manufacturing process following the chaîne opératoire concept (Roux, 2016) in combination with petrographic and chemical analysis should provide more detailed insights on the extension of technological behaviours and social networks in the region. This will undoubtedly provide a better understanding of the movement of people, the extension of the networks and the directionality of the exchange of goods.
+
+L. Hofman: Conceptualization; investigation; resources; data curation; writing—review and editing; funding acquisition; methodology; project administration; supervision.
+ACKNOWLEDGEMENTS The authors thank the National Archaeological Museum Aruba (NAMA) for setting up a collaboration with Leiden University to study the archaeological collections preserved in the museum and for having facilitated the research on Aruba. They thank Nicole Vargas for her valuable help in classifying the ceramic samples and they acknowledge the Laboratory of the Geology Department of KU Leuven that prepared the thin sections needed in this research and the CaribTRAILS project that partially funded the study.
+DATA AVAILABILITY STATEMENT The data that support the findings of this study are available from the corresponding author upon reasonable request.
+
+AUTHOR CONTRIBUTIONS Simone Casale: Investigation; writing—original draft; methodology; writing—review and editing; formal analysis; data curation; conceptualization; visualization; validation; software. Niels Groot: Investigation; methodology; conceptualization. Raymundo A. C. F. Dijkhoff: Investigation; writing—review and editing; data curation; resources; funding acquisition; methodology; conceptualization. Harold J. Kelly: Investigation; writing—review and editing; methodology. L. Jacobs: Conceptualization; investigation; data curation; methodology. Patrick Degryse: Methodology; supervision; writing—review and editing; resources; data curation; funding acquisition; investigation. Corinne
+
+ORCID Patrick Degryse
+
+http://orcid.org/0000-0003-3604-6505
+
+REFERENCES
+Antczak, A. T. (1998). Late prehistoric economy and society of the Islands off the coast of Venezuela: A contextual interpretation of the non‐ceramic evidence [PhD dissertation, Institute of Archaeology, University College London].
+Antczak, A. T., & Antczak, M. M. (2005). Pre‐Hispanic Fishery of the Queen Conch, Strombus gigas, on the Islands off the Coast of Venezuela. In P. Miloslavich & E. Klein (Eds.), Caribbean Marine biodiversity: The known and the unknown (pp. 213–243). DEStech Publications, Inc.
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+18 |
+
+CASALE ET AL.
+
+Antczak, M. M., & Antczak, A. T. (2006). Los Ídolos de las Islas Prometidas. Arqueología Prehispánica del Archipiéago de los Roques. Editorial Equinoccio.
+Antczak, M. M., & Antczak, A. T. (2015). Late pre‐colonial and early colonial archaeology of the Las Aves Archipelagos, Venezuela. Contributions in New World Archaeology, 8, 7–44.
+Boerstra, E. H. J. (1974). Preliminary report on the 1971 Ceru Noka Excavations, Aruba, Netherlands Antilles. In Egbert (Ed.), Proceedings of the Fifth International Congress for the Study of Pre‐Columbian Cultures of the Lesser Antilles, pp. 13–20.
+Boerstra, E. H. J. (1976). Burying the dead in pre‐Columbian Aruba. In Egbert (Ed.), Proceedings of the Sixth International Congress for the Study of Pre‐Columbian Cultures of the Lesser Antilles, pp. 125–133.
+Boerstra, E. H. J. (1977). Prehistorical inhabitants of Aruba. Aruba, zijn Voorgeschiedenis, zijn Dieren. Stinapa, 4, 7–16.
+Boerstra, E. H. J. (1982). De Precolumbiaanse Bewoners van Aruba, Curaçao en Bonaire. De Walburg Pers.
+Boerstra, E. H. J. (1983). Some of the soil marks in the Tanki Flip excavation, Aruba, Netherlands Antilles: the Ditches. In Egbert (Ed.), Proceedings of the Ninth International Congress for the Study of Pre‐ Columbian Cultures of the Lesser Antilles, pp. 173–183.
+Bohus L. S., Mackowiak de Antczak, M. M., Greaves, E. D., Antczak, A., & Simonits, A. (2005). Incipient archaeometry in Venezuela: Provenance study of pre‐Hispanic pottery figurines. Journal of Radioanalytical and Nuclear Chemistry, 265(2), 247–256. https:// doi.org/10.1007/s10967‐005‐0816‐4
+Bongers, H. P. (1963). Personal notes of Savaneta. National Archaeological Museum Aruba.
+Boomert, A. (2016). The indigenous peoples of Trinidad and Tobago: From the first settlers until today. Sidestone Press.
+Casale S. (2022). Asyèt yo, Ollas, and Vasijas: situating pottery production in the circum‐Caribbean through a technological perspective [PhD thesis, Leiden University].
+Casale, S., van Dessel, K., Hoogland, M. L. P., Degryse, P., & Hofman, C. L. (2022). Technological persistence in ceramic production in the Southeastern Hispaniola. The case study of El Cabo (600–1502 CE). Journal of Anthropological Archaeology, 65, 101387. https://doi.org/ 10.1016/j.jaa.2021.101387
+Casale, S., Jean, J. S., Capelli, C., Braekmans, D., Degryse, P., & Hofman, C. (2021). Transatlantic connections in colonial and post‐colonial Haiti: Archaeometric evidence for Taches Noires glazed tableware imported from Albissola, Italy to Fort Liberté, Haiti. International Journal of Historical Archaeology, 25, 423–447. https://doi.org/10. 1007/s10761‐020‐00559‐3
+Casale, S., López Belando, A., Shelley, D., Narganes, Y., Hernández, I., & Degryse, P. (2023). Sharing ceramic manufacturing processes: A technological and petrographic study on ceramic production and exchange between Hispaniola and Puerto Rico (350–1200 CE). The Journal of Island and Coastal Archaeology, 1–21. https://doi.org/10. 1080/15564894.2023.2220284
+Cresswell, R. (1976). Techniques et culture, les bases d'un programme de travail. Techniques & Culture, 1, 7–59.
+Cresswell, R. (1983). Transfert de techniques et chaine opératoires. Techniques et Culture, 2, 143–164.
+Dijkhoff, R. A. C. F. (1997). Tanki Flip Henriquez an Early Urumaco site in Aruba [Unpublished Master thesis]. Leiden University.
+Dijkhoff, R. A. C. F. (2001). Salvage excavations and accidental finds in Aruba: 1996‐2001. Paper presented at the Nineteenth International Congress for Caribbean Archaeology.
+Dijkhoff, R. A. C. F. (2004). The history of archaeological research in Aruba. In R. A. C. F. Dijkhoff & M. Linville (Eds.), The archaeology of Aruba: The marine shell heritage (pp. 35–51). Archaeological Museum Aruba 10.
+Dijkhoff, R. A. C. F. (2022). Arqueología de Aruba y sus Relaciones con el Norte de Suramérica [Paper presentation]. Permanent Online Seminar
+
+Version 2, Procesos socioculturales antiguos en América organized. CHAKANA‐ARQ (2022) Red de Arqueólogos de América Latina y el Caribe. Donahue, J., Watters, D. R., & Millspaugh, S. (1990). Thin section petrography of Northern Lesser Antilles Ceramics. Geoarchaeology, 5(3), 229–254. https://doi.org/10.1002/gea.3340050303 Fitzpatrick, S., Carstensen, J., & Marsaglia, K. (2008). Preliminary petrographic and chemical analyses of prehistoric ceramics from Carriacou, West Indies. Journal of Caribbean Archaeology, 2, 59–82. Groot, N. (2011). Searching for traditions: The study of the production and exchange of Amerindian pottery from Aruba [Unpublished report 2011]. Archaeological Museum Aruba 10. Haviser, J. B. (1987). Amerindian cultural geography on Curacao. [PhD dissertation, Leiden University]. Haviser, J. B. (1991). The first Bonaireans. Reports of the Archaeological‐ Anthropological Institute of the Netherlands Antilles. Heidecker, L., & Siegel, M. L. (1969). Preliminary report on the excavation of the Henriquez‐1 site, Tanki Flip, Aruba, Netherlands Antilles. Florida Anthropologist, 22(1–4), 12–26. Helmers, H., & Beets, D. (1977). Geology of the cretaceous of Aruba. GUA Paper in Geology, 1(10). Hofman, C. L. (1993). In search of the native population of pre‐Columbian Saba. Part One. Pottery styles and their interpretations [PhD thesis, Leiden University]. Hofman, C. L. & Antczak, A. T. (Eds.). (2019). Early settlers of the insular Caribbean. Dearchaizing the Archaic. Sidestone Press. Hofman, C. L., Berman, M. J., Antczak, M. M., & Ulloa Hung, J. (2024). Americas, Caribbean: The Greater and Lesser Antilles and the Bahamas. In E. Nikita & T. Rehren (Eds), Encyclopedia of archaeology (2nd ed). Elsevier. Hofman, C. L., Boomert, A., Mans, J., & Antczak, M. M. (2024) Movement, interaction and diversity in the Caribbean Basin. Coastal connections between Northern South America and the insular Caribbean. In M. Aldenderfer, M. Sepulveda, & E. Goes Neves (Eds.), Oxford handbook of South American archaeology. Oxford University Press. Hoogland, M. L. P., & Hofman, C. L. (2015). Archaeological assessment in compliance with the Valetta Treaty. Spanish Water, Curacao. In C. L. Hofman & J. B. Haviser (Eds.), Managing our past into the future: Archaeological heritage management in the Dutch Caribbean (pp. 183–194). Sidestone Press. Jacobson, K. (2023). Jeu d'argile: céramique, identité culturelle, créolisation; Une étude archéo‐anthropologique de la céramiques des sociétés caribéennes multiculturelles de la période précoloniale à nos hours [PhD thesis, Leiden University]. Jong de, J. P. B. (1923). Verslag van de Deensch‐Nederlandsche Archeologische Expeditie naar de Antillen. Maatschappij ter bevordering van het Natuurkundig Onderzoek der Nederlandse Koloniën. Bulletin, 79. Kasztovszky, Z., Antczak, M. M., Antczak, A., Millan, B., Bermúdez, J., & Sajo‐Bohus, L. (2004). Provenance study of Amerindian pottery figurines with prompt gamma activation analysis. Nukleonika, 49, 107–113. Keegan, W. F., & Hofman, C. L. (2017). The Caribbean before Colombus. Oxford University Press. Kelly, H. J. (2005). California 2 site documentation form. National Archaeological Museum Aruba. Kelly, H. J. (2012). Socio economic ties between Aruba and La Guajira since the pre‐Columbian period. Revista Jangwa Pana, 11, 49–63. Kelly, H. J., & Hofman, C. L. (2019). The Archaic Age of Aruba: New evidence on the first migrations to the island. In C. L. Hofman & A. T. Antczak (Eds.), Early settlers of the insular Caribbean: Dearchaizing the archaic (pp. 147–162). Sidestone. Lawrence, J., Marsaglia, K., & Fitzpatrick, S. (2016). Petrographic analysis of pre‐Columbian pottery from four Islands in the Lesser Antilles and implications for inter‐Island transport and interactions. Journal of
+
+15206548, 0, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/gea.22017 by Cochrane France, Wiley Online Library on [01/07/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+CASALE ET AL.
+
+| 19
+
+Archaeological Science: Reports, 9, 663–680. https://doi.org/10. 1016/j.jasrep.2016.08.033 Lester, G. D. (1968). Preliminary survey of archaeological material. Tanki Flip, Site Number One. Aruba, Netherlands Antilles. National Archaeological Museum Aruba. Nomland, G. A. (1933). Archaeological site of Hato Vieto, Venezuela. American Anthropologist, 35, 718–741. Oliver, J. R. (1989). The archaeological, linguistic and ethno‐historical evidence for the expansion of Arawakan into Northwestern Venezuela and Northeastern Colombia. [PhD dissertation, University of Illinois at Urbana‐Champaign, University Microfilms]. Oliver, J. R. (1997). Dabajuroid archaeology, settlements and house structures: An overview from mainland western Venezuela. In A. Versteeg & S. Rostain (Eds.), The archaeology of Aruba: The Tanki Flip Site, 363‐428 (pp. 141). Co‐Publication of the Archaeological Museum of Aruba, Monograph 8 and the Foundation for Scientific Research in the Caribbean Region. Pavia, J. A., Marsaglia, K. M., & Fitzpatrick, S. M. (2013). Petrography and provenance of Sand Temper within Ceramic Sherds from Carriacou, Southern Grenadines, West Indies. Geoarchaeology, 28(5), 450–477. https://doi.org/10.1002/gea.21449 Quinn, P. (2013). Ceramic petrography, the interpretation of archaeological pottery & related artifacts in thin‐section. Archaeo Press. Rice, P. M. (2015). Pottery analysis: A sourcebook. University of Chicago Press. Rouse, I., & Allaire, L. (1978). Caribbean. In R. E. Taylor & C. W. Meighan (Eds.), Chronologies in new world archaeology (pp. 431–481). Academic Press. Roux, V. (2016). Ceramic manufacture. In A. Hunt (Ed.), The Oxford handbook of archaeological ceramics analysis (9, pp. 100–113). Oxford University Press. Roux, V. (2019a). Ceramic and society. Springer International Publishing. Roux, V. (2019b). Modeling the relational structure of ancient societies through the chaine operatoire: The chalcolithic societies of the Southern Levant as a Case Study. In M. Saqalli & M. Vander Linden (Eds.), Integrating qualitative and social science factors in archaeological modelling. Computational social sciences (pp. 163–184). Springer. Ruiz, A. C. (1997). The natural environment of Tanki Flip. In A. Versteeg & S. Rostain (Eds.), The archaeology of Aruba: The Tanki Flip Site, 7‐22 (pp. 141). Co‐publication of the Archaeological Museum of Aruba, Monograph 8 and the Foundation for Scientific Research in the Caribbean Region. Ruiz, A. C. (2004). The geography and geology of Aruba. In R. A. C. F. Dijkhoff & M. S. Linville (Eds.), The archaeology of Aruba: The Marine Shell Heritage (p. 9–14). Publication of the Archaeological Museum Aruba 10.
+
+Du Ry, C. J. (1960). Notes on the pottery of Aruba, Curaçao and Bonaire. Nieuwe West‐Indische Gids, 40, 81–102.
+Sterks, W. B. J. (1982). Het Archeologisch Aardewerk van Aruba, Curaçao en Bonaire met als Uitgangspunt de Van Heekeren Collectie [Unpublished Master's thesis]. Utrecht University.
+Stienaers, A. (2024). Use of natural resources for indigenous ceramic production in the lesser antilles during the ceramic age and early colonial period [PhD thesis, KU Leuven].
+Stienaers, A., Neyt, B., Hofman, C., & Degryse, P. (2020). A petrographic and chemical analysis of trinidad pre‐colonial ceramics. Science & Technology of Archaeological Research, 6, 72–86. https://doi.org/10. 1080/20548923.2020.1771898
+Thér, R. (2020). Ceramic technology. How to reconstruct and describe pottery‐forming practices. Archaeological and Anthropological Sciences, 12(8), 172. https://doi.org/10.1007/s12520‐020‐01131‐0
+Ting, C., Neyt, B., Ulloa Hung, J., Hofman, C., & Degryse, P. (2016). The production of pre‐colonial ceramics in northwestern hispaniola: A technological study of Meillacoid and Chicoid Ceramics from La Luperona and El Flaco, Dominican Republic. Journal of Archaeological Science: Reports, 6, 376–385. https://doi.org/10.1016/J.JASREP. 2016.02.031
+Ting, C., Ulloa Hung, J., Hofman, C., & Degryse, P. (2018). Indigenous technologies and the production of early colonial ceramics in Dominican Republic. Journal of Archaeological Science: Reports, 17, 47–57. https://doi.org/10.1016/J.JASREP.2017.10.035
+Versteeg, A. H. (1997). Tanki flip pottery. In A. Versteeg & S. Rostain (Eds.), The archaeology of Aruba: The Tanki Flip site, 279‐302 (pp. 141). Co‐ Publication of the Archaeological Museum of Aruba, Monograph 8 and the Foundation for Scientific Research in the Caribbean Region.
+Versteeg, A. H., & Ruiz, A. C. (1995). Reconstructing Brasilwood Island: The archaeology and landscape of Indian Aruba. Archaeological Museum Aruba 6.
+Versteeg, A. H., & Rostain, S. (Eds.). (1997). The archaeology of Aruba: The Tanki Flip site. Archaeological Museum Aruba 8/Publication of the Foundation for Scientific Research in the Caribbean Region.
+How to cite this article: Casale, S., Groot, N., Dijkhoff, R. A. C. F., Kelly, H. J., Jacobs, L., Degryse, P., & Hofman, C. L. (2024). Petrographic insight into the sourcing and production of pre‐colonial Ceramics from Aruba. Geoarchaeology, 1–19. https://doi.org/10.1002/gea.22017
+
+

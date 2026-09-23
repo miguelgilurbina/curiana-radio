@@ -1,0 +1,1265 @@
+# ══════════════════════════════════════════════════════════════════════
+# HSAI 4 (1948) y 5 (1949) — QUÉ DICE EL *HANDBOOK* DE LOS CAQUETÍOS Y DE
+# DÓNDE LO SACA. Tercera campaña de minería, parcela «steward-hsai»,
+# 2026-09-23.
+#
+# PROPUESTA (regla 5). Nada de aquí entra al canon sin que Miguel lo fusione.
+#
+# El Handbook es SÍNTESIS de 1948-1949 sobre crónicas del XVI y la
+# arqueología de su tiempo. Nada de aquí sube a `atestiguado` por el Handbook
+# (regla 2): el valor está en saber de qué crónica sale cada lugar común y
+# en lo POCO que el Handbook trae y las fuentes primarias del repo no.
+#
+# Cómo leer cada afirmación:
+#   cita              lo que dice el Handbook, verbatim y recortado (dominio
+#                     público: publicación del gobierno federal de EE. UU.)
+#   cita_el_autor     la fuente que el autor del capítulo pone, tal cual
+#   fuente_real       de dónde sale DE VERDAD, comprobado en el repo cuando se
+#                     pudo (página impresa y cita de la primaria)
+#   en_repo           si esa primaria está en 4-fuentes/bibliografia.yaml
+#   vault             si el vault ya lo tenía y de dónde
+#   polity / epoca    regla 4 y regla 3
+#   nuevo             si es lo único que el Handbook trae y el repo no
+#   etiqueta_maxima   el techo que le permite su procedencia (regla 2)
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  parcela: "steward-hsai — HSAI vol. 4 (Circum-Caribbean Tribes) y vol. 5 (extracto pp. 655-772)"
+  fecha: 2026-09-23
+  campana: "Tercera campaña de minería (minería 3)"
+  encargo: 6-fusion/issues-pendientes/encargo-mineria-steward-hsai.md
+  obras:
+    # claves foráneas → 4-fuentes/bibliografia.yaml (regla 8)
+    - steward-1948-hsai-4
+    - steward-1949
+  obras_primarias_cotejadas:
+    # lo que se abrió para comprobar de dónde sale cada afirmación
+    - {obra: oviedo-y-valdes-1852-1855, que: "t. II, Libro XXV, caps. IX (pp. 297-300) y XXII (pp. 328-329)"}
+    - {obra: oviedo-y-banos, que: "cap. III, pp. 26-28 (Biblioteca Ayacucho)"}
+    - {obra: castellanos-elegias, que: "Parte II, introducción y Elegía I (texto plano del repo, líneas 48220-48450 y 52060-52540)"}
+    - {obra: perez-de-tolosa-1546, que: "relación de 1546, pp. 226-234 del t. II de Oviedo y Baños 1885"}
+    - {obra: federmann-1916, que: "pp. 89-92 (los guaycaríes)"}
+    - {obra: arcaya-1920, que: "pp. 101-102 (Relación de Nueva Segovia 1579, citada) y 112-118 (Manaure, díao)"}
+    - {obra: "(sin clave) carta de Juan de Ampíes", que: "en Oviedo y Baños 1885, t. II (Documentos), p. 212 — el mismo PDF que perez-de-tolosa-1546"}
+  desfase_pdf_impresa:
+    vol4: >-
+      DERIVA por las láminas; se leyó el número impreso de cada página.
+      Medido: pdf 20 = p. xvi (prefacio); pdf 45 = p. 21 (resumen de
+      Steward); pdf 463 = p. 353; pdf 509 = p. 385; pdf 556 = p. 426; pdf 568
+      = p. 434; pdf 571 = p. 437; pdf 598 = p. 464; pdf 600 = p. 466; pdf 605
+      = p. 469 … pdf 610 = p. 474; pdf 611 = p. 475.
+    vol5: "extracto: impresa = pdf + 644 (pp. 655-772); = pdf + 654 (bibliografía)"
+  extractor: >-
+    pdftotext -enc UTF-8 por página (-f/-l) sobre el PDF, y pymupdf para
+    localizar páginas. El .txt de fuentes_caquetios/ es OCR de archive.org
+    pasado por pdftotext: sirve para contar, no para citar sin mirar la
+    página.
+  sondas_de_ortografia_vol4: >-
+    En el PDF (pymupdf, página a página): caquet|caiquet|caguet salen en 15
+    páginas (pdf 20, 45, 463, 464, 473, 509, 598, 600, 605-610, 735). El OCR
+    escribe una vez «Caguetio» (p. 474) y «Jivajara» por Jirajara (pp. 469,
+    472): se añadieron a las sondas. En el .txt: `Caquet` 38, `caiquet` 2,
+    `Paraguan` 7, `Manaur` 2, `Jirajar` 22, `Curiana` 8, `Aruba` 4.
+
+  # ─────────────────────────────────────────────────────────────────
+  # §0. LO PRIMERO: qué del encargo y de las fichas resultó falso al medir
+  # ─────────────────────────────────────────────────────────────────
+  lo_que_resulto_falso:
+  - afirmacion: "«86.300 y 144.000» son las cifras de «Venezuela, north of Orinoco» (ficha steward-1949 y encargo §4)"
+    medido: "Verificado en imagen (p. 663): 86.300 es el total de OTRA fila, «Northwestern South America» (motilones, guajiros, costa pacífica de Colombia). La de Venezuela al norte del Orinoco es sólo 144.000 — y sale de la densidad de Humboldt hacia 1800 subida de 38 a 45 (p. 660). Ver v5-01, v5-02."
+  - afirmacion: "Steward parte el poblamiento venezolano en tres áreas y la «Costero-Montañosa» tiene «aldeas de elevada densidad … riego sistemático» (ficha steward-1949; prop-polity-016)"
+    medido: "No está en Steward (Parte 3 leída en las cuatro páginas donde sale Venezuela). Es de Brito Figueroa. El 350.000 de prop-polity-015 sí está (tabla 3, p. 666). Ver v5-03, v5-04."
+  - afirmacion: "el tiempo medido «when such and such fruits ripen» es un dato del caquetío (ficha steward-1948-hsai-4, p. 474)"
+    medido: "La sección no cita nada, y no se encontró en ninguna primaria del repo. Sus vecinas son de la Relación de Nueva Segovia (BARQUISIMETO, 1579) vía Antolínez 1943. Hipotético, y probablemente del interior. Ver hda-28."
+  - afirmacion: "Kirchhoff, «Tribes north of the Orinoco» (pp. 481-493), habla de los caquetíos (encargo §2)"
+    medido: "Ese capítulo no los nombra (cero en pdf 611-734). Kirchhoff habla de ellos en los guamo (pp. 464-466), el guayupé (p. 385) y, con Métraux, la extensión andina (pp. 353, 363). Su «overlords» es lectura suya: Federmann 1916 pp. 89-90 dice paz, necesidad mutua y aldeas separadas. Lo que «Tribes north of the Orinoco» sí trae es la CURIANA, y la pone en la costa oriental caribe (k-03, #33)."
+  - afirmacion: "casi todo lo que el Handbook dice de los caquetíos viene de Oviedo, Castellanos, Federmann y Pérez de Tolosa (añadido del coordinador)"
+    medido: "Casi todo, sí, y lo de Oviedo t. II cap. IX sin citarlo. Pero hay una segunda vena que no es costera: la Relación de Nueva Segovia 1579 (Barquisimeto) vía Antolínez 1943 — casas en pares, casa del piache, Capu, y el sol, la luna y el sacrificio de la niña, que la Relación da de los AXAGUAS (Arcaya p. 102). Y el poder de Manaure sobre los temporales viene de Aguado (no está en el repo) y de Ampíes (sí está, en Oviedo y Baños 1885 t. II p. 212)."
+  - afirmacion: "citas del propio capítulo de Hernández de Alba"
+    medido: "Cuatro citas no dicen lo que se les atribuye: Oramas 1916 (no trata el caquetío; y el jirajara no es arahuaco), Pérez de Tolosa 1546 («casas pobres y hamacas»: dice «ropa de hamacas», y «pobres» es de oro y de otros caquetíos), Oviedo y Baños («diaos» como jefes menores: el díao es el de arriba) y Antolínez 1943 (sol, luna y sacrificio: axaguas). Ver hda-03, hda-07, hda-12, hda-21, hda-22."
+
+  cobertura:
+    hecho:
+      - "§1 Hernández de Alba, noroeste (pp. 469-474): entero, 28 afirmaciones, cada una contra las primarias del repo"
+      - "§1b resumen de Steward (pp. 21-22): la parte del noroeste"
+      - "§2 Kirchhoff: guamo (pp. 463-468), guayupé (p. 385), Métraux y Kirchhoff (pp. 353, 363), «north of the Orinoco» (pp. 481-493) leído por caquetíos, Curiana, comercio y fauna"
+      - "§3 Kidder: el noroeste (pp. 425-429) y la síntesis (pp. 434-437)"
+      - "§4 vol. 5: Parte 3 (pp. 655-668) por Venezuela; Parte 4 por cada rasgo con «Caquetio» o «northwestern Venezuela»"
+      - "§5 Rouse: sondas sobre sus cuatro capítulos; negativo"
+      - "§6 fauna de los capítulos anteriores"
+    no_hecho:
+      - "Hernández de Alba, «north central Venezuela» (pp. 475-480): sin leer (los vecinos del este)"
+      - "Kirchhoff «north of the Orinoco»: sólo lo dicho arriba; su religión, parentesco y guerra, sin leer"
+      - "Parte 4 del vol. 5: sólo los pasajes que nombran caquetíos o el noroeste de Venezuela"
+      - "fuentes sin localizar: hda-05 (datos, cocuy), hda-10 (canoas), hda-14 (clases), hda-17 (poliginia), hda-18 (tabaco y oro), hda-20 (maguey, bocinas), hda-28 (frutas), k-02 (intérprete de Spira), k-04 (Chiguará)"
+
+# ══════════════════════════════════════════════════════════════════════
+# §1. HERNÁNDEZ DE ALBA, «THE TRIBES OF NORTHWESTERN VENEZUELA»
+#     HSAI 4, pp. 469-474 (pdf 605-610)
+# ══════════════════════════════════════════════════════════════════════
+hernandez_de_alba_noroeste:
+  capitulo: "The tribes of northwestern Venezuela"
+  autor: "Gregorio Hernández de Alba"
+  paginas: "469-474 (pdf 605-610)"
+  obra: steward-1948-hsai-4
+
+  aviso_del_propio_handbook:
+    # Lo primero que hay que saber del capítulo, y lo dice el editor
+    - pagina_impresa: xvi
+      pdf: 20
+      autor: Steward (prefacio)
+      cita: >-
+        «Hernandez de Alba's articles are not exhaustive studies; they are
+        merely preliminary essays hurriedly written to fill in gaps in the
+        Handbook coverage»
+    - pagina_impresa: 475
+      pdf: 611
+      autor: "el editor, nota al pie del capítulo siguiente (north central Venezuela)"
+      cita: >-
+        «Time permitted neither the coordination of cultural data and tribal
+        locations with Kirchhoff's material dealing with closely related
+        tribes nor inclusion of the modern ethnology.»
+    - lectura: >-
+        El capítulo de los caquetíos es un ensayo de urgencia, escrito en las
+        últimas semanas antes de imprenta, y su sistema de citas es desigual:
+        de las 28 afirmaciones de esta lista, 16 no citan nada (medido sobre
+        este YAML: `afirmaciones[].cita_el_autor == null`).
+        Casi todo lo que no cita sale de Oviedo y Valdés t. II, Libro XXV,
+        cap. IX, que el vault ya lee directo. Lo que sí cita a veces no dice
+        lo que se le atribuye (ver `lo_que_resulto_falso` en §0).
+
+  afirmaciones:
+
+  - id: hda-01
+    tema: territorio
+    pagina_impresa: 469
+    cita: >-
+      «The Caquetio, northern neighbors of the Jirajara, must have occupied the
+      Atlantic Coast, especially the Peninsula of Paraguana and the Islands of
+      Aruba, Curacao, and Bonaire. On the west they were bounded by the Coculza
+      River, on the south by the Tocuyo and Baragua Rivers, and on the east by
+      the Gueque River (Salas, 1920).»
+    cita_el_autor: "Salas 1920 (Etnografía americana. Los indios caribes)"
+    fuente_real: >-
+      Salas 1920, síntesis moderna; no da fuente primaria en la cita. Los
+      linderos coinciden con la definición del territorio que usa Arcaya 1920
+      (introducción, pdf 16: los límites del Estado Falcón por el río Cocuicita y las cabeceras del Baragua), que es la del
+      Estado Falcón moderno.
+    en_repo: {salas-1920: false, arcaya-1920: true}
+    vault: "el vault ya tiene Paraguaná + ABC por fuentes primarias (Pérez de Tolosa, Castellanos, Ampíes); los linderos fluviales no"
+    polity: "costera + frontera interior (Tocuyo, Baragua)"
+    epoca: "no declarada (síntesis de 1920)"
+    nuevo: "los linderos fluviales como frontera caquetía — pero son los de Falcón, y huelen a proyección de la división política moderna (regla 4, reverso: la esfera no es una comarca)"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-02
+    tema: "territorio de los llanos; etnónimo en boca achagua"
+    pagina_impresa: 469
+    cita: >-
+      «Pericot Garcia (1936) … assigns the Jirajara not only the islands
+      previously mentioned but also the Venezuelan coast from Lake Maracaibo to
+      the Yaracuy River and the inland territory south to the Ele River, where
+      the Achagua call them the Tamud.»
+    cita_el_autor: "Pericot García 1936 (América indígena)"
+    fuente_real: >-
+      ⚠️ Errata del propio capítulo: «Jirajara» por Caquetío (el sujeto de la
+      frase anterior; nadie asigna las ABC a los jirajaras). El «Tamud» es el
+      *tamude* que el vault ya tiene por Jahn 1927 p. 213 y Rivero; Pericot es
+      un intermediario más de la misma cadena (minar-fuente §8: dos obras que
+      se copian son UNA atestación).
+    en_repo: {pericot-1936: false, jahn-1927: true, rivero-1883: true}
+    vault: "3-mundo/corpus/parentesco.yaml (tamude, Jahn 1927:213 y Rivero) y ensayos/01_familia_caquetia.md"
+    polity: llanos
+    epoca: colonial (misiones de los llanos)
+    nuevo: false
+    etiqueta_maxima: "la que ya tiene en el corpus (el Handbook no añade atestación)"
+
+  - id: hda-03
+    tema: lengua
+    pagina_impresa: 469
+    cita: >-
+      «the Jirajara and Caquetio speak an Arawakan language (Oramas, 1916).»
+    cita_el_autor: "Oramas 1916, «Materiales para el estudio de los dialectos Ayamán, Gayón, Jirajara, Ajagua» (así en la bibliografía del vol. 4, pdf 751)"
+    fuente_real: >-
+      ❌ Doble error. (1) Oramas 1916 trata del ayamán, gayón, jirajara y
+      ajagua —la familia jirajarana—, no del caquetío: no puede sostener la
+      filiación caquetía. (2) El jirajara NO es arahuaco; es la familia
+      jirajarana, como el propio título de Oramas agrupa. La filiación
+      arahuaca del caquetío descansa en otras pruebas (Oliver, Zavala), no en
+      esta cita.
+    en_repo: {oramas-1916: false}
+    vault: "la filiación arahuaca está en 2-lengua/ por otras vías; el jirajara ya se trata como vecino de otra familia"
+    polity: general
+    epoca: "no aplica"
+    nuevo: false
+    etiqueta_maxima: "no usar como apoyo de nada"
+
+  - id: hda-04
+    tema: "historia del contacto"
+    pagina_impresa: 469-470
+    cita: >-
+      «The Caquetio, on the other hand, were more pacific, and they fled from
+      the conquistadors to take refuge in the jungles of the interior in the
+      region of the Ele River.»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita. Probablemente la misma línea de Pericot (hda-02). Mezcla las
+      dos polities: la costera «amiga de los españoles» (Pérez de Tolosa 1546,
+      p. 227: «muy amigos de los españoles»; Oviedo y Baños p. 27: la nación
+      caiquetía que «jamás faltaron … al cumplimiento de la fe») y los
+      caquetíos de los llanos (el Ele es afluente del Casanare). Que los de
+      Coro «huyeran» al Ele no está en ninguna primaria del repo; lo que dice
+      Pérez de Tolosa (p. 227) es que los de la costa «se andan por los
+      montes» por huir de los malos tratos.
+    en_repo: {perez-de-tolosa-1546: true, oviedo-y-banos: true}
+    vault: "no"
+    polity: "mezcla costa y llanos (regla 4)"
+    epoca: contacto
+    nuevo: "la migración al Ele como explicación de los caquetíos de los llanos — sin fuente; no usar"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-05
+    tema: subsistencia
+    pagina_impresa: 470
+    cita: >-
+      «the Caquetio and Jirajara being the most intensive farmers. The Indians
+      near Barquisimeto had an irrigation system … The Caquetio and Jirajara
+      also ate cactus fruits or "datos" and tender cocuy leaves (Agave cocui).
+      They prepared maize in various ways, including a boiled soup, called
+      "caza," which was seasoned with aji … deer, tapirs, and other game,
+      killed with the bow and arrow or surrounded with fire»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita en todo el párrafo. El riego de Barquisimeto es la Relación de
+      Nueva Segovia 1579 (el vault lo tiene de segunda mano, ficha
+      nueva-segovia-1579). La «caza» es la `caça` de Oviedo t. II p. 299
+      («maçamorra rala de mahiz que ellos llaman caça»), que el vault ya tiene
+      (taino2, y Oliver apéndice A #19): Oviedo la da como la comida de AYUNO
+      de la casa del enfermo, no como sopa sazonada con ají — el ají es
+      añadido de Hernández de Alba. Datos y cocuy: sin fuente localizable en
+      el repo; el cocuy es planta de la sierra de Lara-Falcón.
+    en_repo: {oviedo-y-valdes-1852-1855: true, nueva-segovia-1579: "no-disponible"}
+    vault: "caça y el riego de Barquisimeto, sí; «datos» y cocuy como comida caquetía, no por esta vía"
+    polity: "interior (Barquisimeto) mezclado con genérico"
+    epoca: "colonial temprano (1546-1579)"
+    nuevo: "«datos» (fruta de cactus) y cocuy tierno como comida — sin fuente citada; pista para buscar en la Relación de Nueva Segovia si aparece"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-06
+    tema: "casas: pares o cuartetos junto a las labranzas; casa del piache"
+    pagina_impresa: 471
+    cita: >-
+      «The Jirajara and Caquetio grouped their houses in two's or four's,
+      preferably by their cultivated fields, in order to protect them against
+      dangerous animals (Descripción de la Ciudad . . . , 1579). The houses were
+      rectangular huts of poles, vines, and grass, and there was a separate
+      house for the shaman (piache) (Antolinez, 1943).»
+    cita_el_autor: "Descripción de la Ciudad de Nueva Segovia … 2 de enero de 1579; Antolínez 1943, «Aporte etnográfico de la Relación Geográfica de Nueva Segovia, 1579», Acta Americana vol. 1 n.º 4"
+    fuente_real: >-
+      Relación de Nueva Segovia 1579 = BARQUISIMETO. La casa aparte del piache
+      la confirma Arcaya 1920 p. 101, que cita la misma Relación: los médicos
+      hechiceros «tenían chozas de paja que sólo les servían para invocar allí
+      al demonio».
+    en_repo: {nueva-segovia-1579: "no-disponible (ficha sin PDF)", antolinez-1943: false, arcaya-1920: true}
+    vault: "creencia-004 (ayuno y cabello largo del piache) sale de la misma Relación vía Arcaya p. 101; las casas en pares o cuartetos, no"
+    polity: "INTERIOR — Nueva Segovia / Barquisimeto (regla 4)"
+    epoca: "colonial (1579)"
+    nuevo: "casas agrupadas de dos en dos o de cuatro en cuatro junto a las labranzas — dato de Barquisimeto que el vault no tiene; NO es de la costa"
+    etiqueta_maxima: "atestiguado de segunda mano PARA BARQUISIMETO; nada para la costa"
+
+  - id: hda-07
+    tema: "casas pobres y hamacas (Pérez de Tolosa)"
+    pagina_impresa: 471
+    cita: >-
+      «A letter written in 1546 by the Licenciado Juan Pérez de Tolosa to the
+      King of Spain states that the Caquetio built poor houses and slept in
+      hammocks.»
+    cita_el_autor: "Pérez de Tolosa 1546"
+    fuente_real: >-
+      ❌ No dice eso. Leído en el repo (Oviedo y Baños 1885, t. II): de la
+      costa de Coro, «tenían medianos pueblos y mucha caza y pesca y ropa de
+      hamacas; es gente muy pulida y limpia» (p. 227). Lo de «pobres» es de
+      OTROS caquetíos y habla de ORO, no de casas: Barquisimeto, «los indios
+      son pobres, que es miseria el oro que tratan» (p. 233); los llanos, «esta
+      nación de Caquetíos es gente pobre y miserable» (p. 234). Y la hamaca es
+      «ropa de hamacas», es decir, textil de intercambio, no el dato de que
+      durmieran en ella.
+    en_repo: {perez-de-tolosa-1546: true}
+    vault: "Pérez de Tolosa se está minando en esta misma campaña (otro agente); p. 234 ya circula («algo difieren en la habla á los de Coro»)"
+    polity: "el capítulo funde tres polities (costa p. 227, Barquisimeto p. 233, llanos p. 234) en una frase"
+    epoca: "contacto (1546)"
+    nuevo: false
+    etiqueta_maxima: "no usar la paráfrasis; usar Pérez de Tolosa directo"
+
+  - id: hda-08
+    tema: vestido
+    pagina_impresa: 471
+    cita: >-
+      «Caquetio men wore calabash penis covers, and women wore genital covers
+      that were evidently woven ("de manta").»
+    cita_el_autor: null
+    fuente_real: >-
+      Oviedo t. II p. 329 (cap. XXII, informe del obispo Bastidas): «los que
+      son varones traen el miembro viril metido en un calabaçito» y las
+      mujeres «unas bragas, que es una mantilleja ó trapo de algodón». Oviedo
+      lo dice de los indios de la gobernación en general, no de los
+      caquetíos; quien lo extiende a ellos es Arcaya 1920 p. 118 («todos los
+      indios, inclusive los Caquetíos»).
+    en_repo: {oviedo-y-valdes-1852-1855: true, arcaya-1920: true}
+    vault: "no como hecho del corpus"
+    polity: "genérico de la gobernación de Venezuela (Coro como centro del informe)"
+    epoca: "contacto (c. 1535-1540)"
+    nuevo: false
+    etiqueta_maxima: "atestiguado para la gobernación por Oviedo; para los caquetíos, sólo por extensión"
+
+  - id: hda-09
+    tema: "adorno: perlas, orejeras, diademas; bija y jagua"
+    pagina_impresa: 471
+    cita: >-
+      «diadems for chiefs and nobles, gold earrings, and, especially among the
+      Caquetio of the maritime region of Paraguana, pearl bracelets.» ·
+      «a pigment called "onoto" and … a fruit called "jagua" or "buxera"
+      (Genipa). The paint was mixed with a resin (Castellanos, 1852).»
+    cita_el_autor: "Castellanos 1852 (sólo para la pintura)"
+    fuente_real: >-
+      Perlas y orejeras: Oviedo y Baños cap. III p. 27 — los «cien indios
+      nobles … con penachos de vistosas plumas, brazaletes de perlas y
+      orejeras de oro» que acompañan a Manaure en Coro en 1527. «De
+      Paraguaná» es añadido del capítulo. «Buxera» es la `busera` de Oviedo
+      t. II p. 300 («bixa y de xagua, que allí llaman busera»), que el vault ya
+      tiene (creencia-010c).
+    en_repo: {oviedo-y-banos: true, oviedo-y-valdes-1852-1855: true, castellanos-elegias: true}
+    vault: "busera sí; brazaletes de perlas del séquito de Manaure, sí vía Oviedo y Baños"
+    polity: costera (Coro)
+    epoca: "contacto (1527), contado en 1723"
+    nuevo: false
+    etiqueta_maxima: "la de Oviedo y Baños, que es crónica del XVIII"
+
+  - id: hda-10
+    tema: "navegación y canoas"
+    pagina_impresa: 471-472
+    cita: >-
+      «These Indians were excellent navigators of the coast and lake,
+      traveling and carrying their goods in dugout canoes that could
+      accommodate three or four persons. After the Conquest they became
+      handlers of cargo … from the coast to Barquisimeto and Nueva Segovia.»
+    cita_el_autor: null
+    fuente_real: "sin cita; «these Indians» son las tres naciones del capítulo, quiriquires de la laguna incluidos. No localizado en las primarias del repo cotejadas."
+    en_repo: null
+    vault: "no"
+    polity: "genérico (laguna + costa)"
+    epoca: "no declarada; el porteo es colonial"
+    nuevo: "canoas de tres o cuatro personas — sin fuente; no usar para la costa caquetía sin localizarla"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-11
+    tema: sal
+    pagina_impresa: 472
+    cita: >-
+      «Salt was prepared in the Caquetio region, possibly by the evaporation of
+      tidal water confined in the low portions of the beaches.»
+    cita_el_autor: null
+    fuente_real: >-
+      El método es conjetura del autor («possibly»). La sal junto a Coro sí es
+      primaria: Pérez de Tolosa p. 227, «una legua de la ciudad de Coro hay
+      unas salinas de mucha cantidad de sal»; Oviedo y Baños p. 28,
+      «abundantes salinas» (ya del XVIII).
+    en_repo: {perez-de-tolosa-1546: true, oviedo-y-banos: true}
+    vault: "la sal como mercancía caquetía está en CULTURA_CAQUETIA y ecologia"
+    polity: costera
+    epoca: "contacto (1546)"
+    nuevo: false
+    etiqueta_maxima: "hipotetico para el método de evaporación"
+
+  - id: hda-12
+    tema: "Manaure, señor de Paraguaná, en hamaca; los «diaos» como jefes menores"
+    pagina_impresa: 472
+    cita: >-
+      «The Caquetio were likewise divided into various lesser "chieftaincies"
+      but had a general chief, the Señor de Paraguana, named Manaure (Oviedo y
+      Baños, 1824, 1935), who was ceremoniously carried in a hammock which was
+      decorated by the lesser chiefs or "diaos."»
+    cita_el_autor: "Oviedo y Baños 1824, 1935"
+    fuente_real: >-
+      Oviedo y Baños p. 27 (leído en el repo): Manaure es «señor de toda
+      aquella provincia» —la de Coriana, no «de Paraguaná»— y viene «en una
+      hamaca, tejida de curiosas labores, en que venía (cargado en hombros de
+      caciques)». Nada de «diaos». ❌ Y el capítulo INVIERTE el término: en
+      Oviedo y Valdés t. II p. 299 el díao es el de ARRIBA —«el señor
+      principal, que tiene muchos indios y le son subjetos otros caciques,
+      llámanle diao»—, no los jefes menores que llevan la hamaca. Ampíes
+      (carta, Oviedo y Baños 1885 t. II p. 212) sitúa además al «Naure ó
+      Anaure» «diez leguas la tierra adentro en la provincia de Coro».
+    en_repo: {oviedo-y-banos: true, oviedo-y-valdes-1852-1855: true, "carta de Ampíes": "sí, sin clave propia (PDF de perez-de-tolosa-1546)"}
+    vault: "diao 'señor principal' ya en cognados.yaml (Oliver cap. 2) y en creencia-001b (Oviedo t. II p. 299); Castellanos pp. 185-186 (Manaure «sobre caciques tuvo mando», en andas) ya circula en esta campaña"
+    polity: costera (Coro)
+    epoca: contacto (1527)
+    nuevo: false
+    etiqueta_maxima: "no usar la paráfrasis: «diaos = jefes menores» contradice la fuente"
+
+  - id: hda-13
+    tema: "el jefe controla la naturaleza y la fertilidad"
+    pagina_impresa: 472
+    cita: >-
+      «He was attributed divine or magical power to control nature and to make
+      the crops fertile.»
+    cita_el_autor: "la misma cita de Oviedo y Baños (1824, 1935) de la frase anterior"
+    fuente_real: >-
+      Oviedo y Baños no lo dice (cap. III leído entero, pp. 26-28), ni
+      Castellanos en las estrofas de Manaure. Las fuentes que SÍ lo dicen las
+      trae Arcaya 1920 pp. 114-115, y una está en el repo: (1) la CARTA DE
+      JUAN DE AMPÍES al rey, Oviedo y Baños 1885 t. II p. 212 — «el cual por
+      ser tan gran señor se hace adorar como Dios, dando á entender á los
+      indios que él da los temporales» (leída en el repo, pdf 223); (2) FRAY
+      PEDRO DE AGUADO, Historia de Venezuela, ed. Caracas t. I p. 40, citado
+      por Arcaya p. 115 — Manaure les había hecho creer «que él era el autor y
+      hacedor de … las lluvias, granizos, truenos y relámpagos y heladas y
+      secas», de lo que dependían «los buenos temporales y fructificación de
+      la tierra», y lo llevaban «cargado en los hombros en un género de lecho
+      que corrientemente llamaban hamaca». La paráfrasis de Hernández de Alba
+      («control nature … make the crops fertile») es la de AGUADO, con la cita
+      de Oviedo y Baños puesta al lado.
+    en_repo: {"carta de Ampíes": "sí (sin clave propia)", aguado: false, arcaya-1920: true}
+    vault: >-
+      CULTURA_CAQUETIA.md §1 lo da por «bien atestiguado» y creencia-013 por
+      `atestiguado` con referencia «crónicas del contacto sobre Manaure» —
+      sin página ni obra. Lo está: dos testigos (la carta de Ampíes, sin fecha
+      en la edición pero anterior a la fundación de Coro en 1527, y Aguado,
+      crónica de fines del XVI), independientes entre sí. Lo que faltaba era la clave foránea
+      (regla 8).
+    polity: costera (Coro)
+    epoca: "contacto (c. 1526-1527)"
+    nuevo: false
+    propuesta_para_el_corpus: >-
+      creencia-013: cambiar `referencia` por «Ampíes, carta al rey, en Oviedo y
+      Baños 1885 t. II p. 212; Aguado, Historia de Venezuela t. I p. 40 vía
+      Arcaya 1920 p. 115». Y para la regla 8 hace falta una clave para la
+      carta de Ampíes (hoy vive dentro del PDF de perez-de-tolosa-1546, sin
+      ficha propia) y otra para Aguado (no está en el repo). Lo decide Miguel.
+    etiqueta_maxima: "atestiguado (por Ampíes y Aguado, no por el Handbook)"
+
+  - id: hda-14
+    tema: "clases: nobles guerreros y ricos"
+    pagina_impresa: 472
+    cita: >-
+      «In addition to the chiefs there was a noble class consisting of
+      distinguished warriors and another class of rich men.»
+    cita_el_autor: null
+    fuente_real: "sin cita. Lo más cercano en el repo: los «cien indios nobles» de Oviedo y Baños p. 27. La partición en guerreros y ricos no se localizó."
+    en_repo: null
+    vault: "no como clases"
+    polity: "no declarada"
+    epoca: "no declarada"
+    nuevo: "dos clases (guerreros distinguidos, ricos) — sin fuente; Steward la repite en su resumen (p. 21)"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-15
+    tema: "los pueblos caquetíos; Miraca como principal"
+    pagina_impresa: 472
+    cita: >-
+      «The Caquetio villages were Todaquiribo, Zacerida, Carao, Tamodoré,
+      Gapatarida, Guaybacoa, Miraca, Hurraqui, Hurehurebo, Cacicare, Cacorida,
+      and Sarasaragua, of which Miraca was the principal one.»
+    cita_el_autor: "(la cita de Castellanos 1852 cierra el párrafo)"
+    fuente_real: >-
+      Castellanos, Parte II, introducción (texto del repo, líneas 48253-48260):
+      «Todariquibo, Zacerida, / … Carao, Tamadoré, Capatarida, / Carona,
+      Guaybacoa, Cumarebo, / Miraca, Hurraqui, Hurehurebo». El capítulo omite
+      Carona y Cumarebo, escribe «Gapatarida» (errata) y «Todaquiribo».
+      Sarasaragua es de Castellanos pero de OTRO pasaje: el pueblo de la
+      «gente caquetía» que guía a Federmann de vuelta a la costa en 1531
+      (línea 52537). «Cacicare» y «Cacorida»: CERO en Castellanos, Federmann
+      1916, Oviedo t. II Libro XXV, Arcaya y Oviedo y Baños (sondas
+      cacicar|cacorid|cacori|cazicar), y cero en el vault. «Miraca was the
+      principal one»: no está en el verso de Castellanos.
+    en_repo: {castellanos-elegias: true}
+    vault: "la lista de once ya está en el canon desde el 2026-09-07 (6-fusion/castellanos_1589_toponimos.yaml); Miraca es nodo-031"
+    polity: "costera (Coro y su comarca) + Sarasaragua, de la ruta de Federmann"
+    epoca: "contacto"
+    nuevo: >-
+      Cacicare y Cacorida — dos nombres de pueblo que sólo trae el Handbook y
+      sin fuente. Y la jerarquía «Miraca, la principal». Candidatos para la
+      campaña de topónimos SÓLO si aparecen en una primaria; hoy, hipotéticos.
+    etiqueta_maxima: hipotetico
+
+  - id: hda-16
+    tema: "jefes nombrados «por los alemanes»"
+    pagina_impresa: 472
+    cita: >-
+      «Among the chiefs mentioned by the Germans, who first contacted the tribe
+      in the early 16th century, were Catimayagua, Categue, Geeoagua, and
+      Badurajara (Castellanos, 1852).»
+    cita_el_autor: "Castellanos 1852"
+    fuente_real: >-
+      Castellanos, Parte II, Elegía I, canto II (líneas 52078-52082): los
+      nombra un guía caquetío en la entrada de FEDERMANN «en demanda de los
+      llanos». El Handbook los presenta como jefes caquetíos sin más. La
+      forma «Geeoagua» es la misma lectura dudosa que da el OCR del repo
+      («Geeoagúa»; el vault lee Gecoagua).
+    en_repo: {castellanos-elegias: true}
+    vault: "6-fusion/antroponimos_caquetios.yaml ya los marca INTERIOR / llanos (regla 4), no reutilizables sin marca"
+    polity: "INTERIOR — camino de Coro a los llanos"
+    epoca: "contacto (c. 1530-1531)"
+    nuevo: false
+    etiqueta_maxima: "la que ya tienen en antroponimos (atestiguado, interior)"
+
+  - id: hda-17
+    tema: matrimonio
+    pagina_impresa: 472
+    cita: "«The only information on marriage is references to polygyny.»"
+    cita_el_autor: null
+    fuente_real: "sin cita; no se buscó la fuente (fuera de la prioridad)."
+    en_repo: null
+    vault: "el parentesco del vault está trabajado (matrilineal precontacto); la poliginia no se cotejó"
+    polity: "no declarada"
+    epoca: "no declarada"
+    nuevo: false
+    etiqueta_maxima: hipotetico
+
+  - id: hda-18
+    tema: "comercio: pescado por maíz; sal y tabaco por oro"
+    pagina_impresa: 472
+    cita: >-
+      «The Quiriquire traded with the Caquetio and Bubure, exchanging fish for
+      maize and other products. The Caquetio traded salt and tobacco to the
+      Curarigua, Jirajara, and Nirgua, and obtained objects of gold from the
+      last two.»
+    cita_el_autor: null
+    fuente_real: >-
+      La primera frase es Oviedo t. II p. 300: los de la laguna «rescatan é
+      venden aquel pescado que matan, por mahiz é por otras cosas, con otras
+      generaçiones de indios çaquitios é bubures». La sal de los caquetíos
+      tierra adentro es Federmann 1916 (los xaguas «tienen comercio de sal»
+      con las tribus caquetías de Barquisimeto). El tabaco y el oro de
+      Nirgua/Jirajara: no localizados en las primarias cotejadas.
+    en_repo: {oviedo-y-valdes-1852-1855: true, federmann-1916: true}
+    vault: "sal-por-pescado está en CULTURA_CAQUETIA (con los guaycaríes del elenco); el de la laguna, no"
+    polity: "laguna de Maracaibo y el interior (Curarigua, Nirgua = Lara-Yaracuy)"
+    epoca: contacto
+    nuevo: "sal y TABACO caquetíos por ORO jirajara/nirgua — sin fuente localizada"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-19
+    tema: "funeral del noble y del jefe"
+    pagina_impresa: 473
+    cita: >-
+      «At the death of a Caquetio noble … The next day they desiccated his
+      corpse on a babracot over a fire and cleaned his bones, which they ground
+      and mixed with masato and drank. In the case of a chief, they put the
+      desiccated corpse in a new hammock, beneath which they placed a wooden
+      image … the people spent 3 days consuming the powdered bones in masato
+      and burning the wooden image»
+    cita_el_autor: null
+    fuente_real: >-
+      Oviedo t. II pp. 297-300, sin citarlo. Con dos desvíos: (1) al noble
+      Oviedo lo QUEMA («queman el cuerpo … apartan los huesos antes que se
+      hagan çeniza»), no lo deseca en barbacoa; la desecación en hamaca sobre
+      brasa es sólo del díao; (2) Oviedo dice «dos ó tres dias», no tres.
+    en_repo: {oviedo-y-valdes-1852-1855: true}
+    vault: "creencia-010, 010b, 010c, directo de Oviedo t. II pp. 299-300 y Arcaya pp. 116-118"
+    polity: "los çaquitios de la gobernación (Oviedo); el del díao «en algunas partes desta gobernaçion»"
+    epoca: "contacto (Oviedo escribe 1535-1548)"
+    nuevo: false
+    etiqueta_maxima: "la del corpus; el Handbook no añade y distorsiona"
+
+  - id: hda-20
+    tema: "música, tabaco del piache, bebidas"
+    pagina_impresa: 473
+    cita: >-
+      «Musical instruments reported are horns and shell trumpets. … The
+      Caquetio shaman smoked tobacco together with various herbs which "robbed
+      him of his senses." The Caquetio made an intoxicating drink of maguey, or
+      fique, which was probably very similar to Mexican pulque.»
+    cita_el_autor: null
+    fuente_real: >-
+      El tabaco con hierbas es Oviedo t. II p. 298 («unas ahumadas que llaman
+      tabacos con tales hierbas que le sacan de sentido»). Las bocinas de
+      caracol y el licor de maguey/fique: no localizados en las primarias
+      cotejadas (el maguey apunta, otra vez, a la sierra de Lara).
+    en_repo: {oviedo-y-valdes-1852-1855: true}
+    vault: "tabaco del boratio sí (creencia)"
+    polity: "genérico / interior"
+    epoca: contacto
+    nuevo: "trompetas de caracol y licor de maguey caquetío — sin fuente"
+    etiqueta_maxima: hipotetico
+
+  - id: hda-21
+    tema: "el jefe principal con poder religioso; templos; sol y luna"
+    pagina_impresa: 474
+    cita: >-
+      «The head chief of the Caquetio had great religious power, being capable
+      of increasing the fertility of crops and of controlling natural
+      phenomena. There were community temples (adoratorios), but each family
+      also had its own idols. The principal gods were the sun and moon, to
+      whom the shamans (boratios), acting in the capacity of priests, made
+      offerings or sacrifices.»
+    cita_el_autor: null
+    fuente_real: >-
+      Tres fuentes cosidas. El poder del jefe: Ampíes y Aguado (hda-13).
+      Boratios como sacerdotes, uno «en cada pueblo pringipal»: Oviedo t. II
+      p. 298. ❌ El SOL Y LA LUNA: la Relación de Nueva Segovia (Barquisimeto,
+      1579) lo dice de los AXAGUAS, no de los caquetíos — Arcaya 1920 p. 102,
+      citándola: «se agrega respecto a los Axaguas: "Esta generación adora al
+      sol y a la luna…"». Y Arcaya concluye (p. 102) que no les rendía culto
+      «toda la tribu, sino que los invocaban individuos especialmente
+      dedicados», lo contrario de los «community temples».
+    en_repo: {oviedo-y-valdes-1852-1855: true, arcaya-1920: true}
+    vault: "CULTURA_CAQUETIA §1: el Sol (kali) y la Luna (kasha) ordenan el tiempo, marcado [reconstruido] — no lo sostiene esta vía"
+    polity: "sol y luna: AXAGUAS de Nueva Segovia; boratios: gobernación de Coro"
+    epoca: "contacto / colonial (1579)"
+    nuevo: false
+    etiqueta_maxima: "sol y luna como dioses caquetíos: NO por el Handbook (es axagua)"
+
+  - id: hda-22
+    tema: "sacrificio de una niña al sol por la lluvia"
+    pagina_impresa: 474
+    cita: >-
+      «The Caguetio and Jirajara, according to the account of the city of Nueva
+      Segovia (Antolinez, 1943), offered a 10-year-old girl to the Sun as his
+      wife in order to obtain rain for their fields.»
+    cita_el_autor: "Antolínez 1943, sobre la Relación de Nueva Segovia 1579"
+    fuente_real: >-
+      ❌ La Relación lo dice de los AXAGUAS (Arcaya 1920 p. 102, cita textual:
+      «una muchacha de diez años para arriba … la sangre ofrecen … y dicen que
+      aquella la quieren dar al sol por su muger … porque llueva»). Y es un
+      dato de 1579 que la misma Relación declara vigente BAJO la colonia:
+      «después que poblamos lo hacen, más hacenlo de escondidas».
+    en_repo: {arcaya-1920: true, nueva-segovia-1579: "no-disponible", antolinez-1943: false}
+    vault: "no está en creencia.yaml (bien: no es caquetío)"
+    polity: "AXAGUAS de Nueva Segovia (Barquisimeto) — ni caquetío ni jirajara según la cita de Arcaya"
+    epoca: "colonial (1579)"
+    nuevo: false
+    etiqueta_maxima: "no atribuible a los caquetíos; para los axaguas, atestiguado de segunda mano (Arcaya)"
+    aviso: >-
+      Steward lo recoge en su resumen del área (p. 21) como rasgo del noroeste
+      («young girls were beheaded and their blood offered to the sun»). Es la
+      vía por la que un dato axagua de 1579 puede llegar al vault como
+      caquetío. No debe entrar.
+
+  - id: hda-23
+    tema: "adivinación con tabaco"
+    pagina_impresa: 474
+    cita: >-
+      «the priest-shaman shut himself up for 3 days smoking tobacco … He
+      advised individuals on the outcome of projected enterprises by placing
+      tobacco ash on a dried maize leaf. If the ash formed a curve, the
+      enterprise would succeed, but if it remained straight, failure was
+      certain.»
+    cita_el_autor: null
+    fuente_real: >-
+      Oviedo t. II p. 298, sin citarlo. ❌ Con un cambio de sujeto: para lo
+      que no es de tanta importancia, dice Oviedo, «cada uno es boratio» —cada
+      cual quema su tabaco envuelto en la hoja de la mazorca y lee la ceniza—;
+      no es el piache quien aconseja. El encierro es de «un día, y dos y tres,
+      é á veçes mas».
+    en_repo: {oviedo-y-valdes-1852-1855: true}
+    vault: "creencia.yaml lleva el tabaco del piache; la adivinación doméstica «cada uno es boratio» vale la pena comprobar si está"
+    polity: "los indios de la gobernación de Venezuela (Oviedo)"
+    epoca: contacto
+    nuevo: false
+    etiqueta_maxima: "la de Oviedo; la paráfrasis no"
+
+  - id: hda-24
+    tema: "ayuno con «caza» antes de la batalla y en la cura"
+    pagina_impresa: 474
+    cita: >-
+      «To insure the success of a battle, the shaman required that people limit
+      their diet to a daily meal of the soup called "caza."»
+    cita_el_autor: null
+    fuente_real: >-
+      Fusión de dos pasajes de Oviedo t. II: la `caça` («maçamorra rala de
+      mahiz … no mas de una vez cada dia») es el ayuno de la casa del ENFERMO
+      (cap. IX, p. 299); el ayuno antes de la guerra es otro, del cap. XXII
+      (pp. 328-329, informe del obispo Bastidas), con «una maçamorra … como
+      unas poleadas» y SIN nombre indígena, y no lo manda el piache sino que
+      ayunan el indio y toda su casa.
+    en_repo: {oviedo-y-valdes-1852-1855: true}
+    vault: "creencia-004b (ayuno antes de la guerra, vía Arcaya p. 118) y caça (taino2)"
+    polity: "gobernación de Venezuela"
+    epoca: contacto
+    nuevo: false
+    etiqueta_maxima: "la de Oviedo; no mezclar"
+
+  - id: hda-25
+    tema: "Capu, el espíritu malo, y el nombre de los españoles"
+    pagina_impresa: 474
+    cita: >-
+      «At Nueva Segovia the Caquetio called the evil spirit "Capu," the same
+      name given the Spaniards (Antolinez, 1943)»
+    cita_el_autor: "Antolínez 1943"
+    fuente_real: >-
+      Relación de Nueva Segovia 1579, citada por Arcaya 1920 p. 101: «que en
+      su lengua llaman Capu y esto es en lengua caquetía y este nombre que
+      ellos tienen puesto al demonio nos tienen puestos a nosotros». Cierto,
+      y bien atribuido a la lengua caquetía — de BARQUISIMETO.
+    en_repo: {arcaya-1920: true}
+    vault: "3-mundo/cronista.md (capu = «demonio» es glosa del marco cristiano; se lo daban también a los españoles); y capu en toponimia (Capubana, Zavala #60-61)"
+    polity: "INTERIOR (Nueva Segovia) — la voz, por la regla 4, es del caquetío de Barquisimeto"
+    epoca: "colonial (1579)"
+    nuevo: false
+    etiqueta_maxima: "la que tenga en el lexicón; el Handbook es tercera mano (Relación → Antolínez → HdA)"
+
+  - id: hda-26
+    tema: "la cura por succión"
+    pagina_impresa: 474
+    cita: >-
+      «he passed his hands over the ailing place … then blew on it and sucked
+      out the disease-causing object—a thorn, piece of stone, or piece of
+      wood—which he spit out. The shaman was customarily paid for his services
+      with gold ornaments.»
+    cita_el_autor: null
+    fuente_real: "Oviedo t. II pp. 298-299 (y la joya de oro, p. 298), sin citarlo."
+    en_repo: {oviedo-y-valdes-1852-1855: true}
+    vault: "sí, vía Arcaya p. 116 (ficha arcaya-1920) y creencia"
+    polity: "gobernación de Venezuela"
+    epoca: contacto
+    nuevo: false
+    etiqueta_maxima: "la del corpus"
+
+  - id: hda-27
+    tema: "purgante de piñón y cañafístola"
+    pagina_impresa: 474
+    cita: >-
+      «the Indians made a purgative of "piñón" fruits (Jatropha curcas) mixed
+      with "cañafístola" (Cassia fistula).»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita; el contexto (Nueva Segovia en las frases vecinas) apunta a la
+      Relación de 1579. ⚠️ REGLA 3: *Cassia fistula* es del Viejo Mundo
+      (sur de Asia) y llegó a América con los españoles; una receta que la
+      lleva es COLONIAL por construcción, aunque el piñón sea nativo.
+    en_repo: null
+    vault: "no"
+    polity: "interior (probable)"
+    epoca: "colonial — no proyectable al XIV-XV"
+    nuevo: "la receta; y el aviso de que es colonial"
+    etiqueta_maxima: "no para el precontacto"
+
+  - id: hda-28
+    tema: "el tiempo medido por la maduración de las frutas"
+    pagina_impresa: 474
+    cita: >-
+      «It is probable that time, at least seasons of the year, was measured not
+      in terms of astronomical phenomena but of the ripening of wild fruits,
+      for the Caquetio would set a date by saying "when such and such fruits
+      ripen."»
+    cita_el_autor: null
+    fuente_real: >-
+      SIN CITA, y no localizado. Sondas: `madur`, `fruct`, `frut` en Oviedo t.
+      II Libro XXV (sólo «mahiz é muchas fructas», p. 328), en Arcaya 1920 (el
+      único «madurar los frutos» es de los reyes MEXICANOS en la analogía de
+      Spencer, p. 112) y en Federmann 1916 (sólo frutas como mercancía, p. 90).
+      La sección «Learning» del capítulo no trae ninguna cita; las frases
+      vecinas son de Nueva Segovia (Antolínez 1943), de modo que la
+      procedencia más probable es la Relación de Barquisimeto 1579, que no
+      está en el repo. Es además una inferencia del autor («It is probable»)
+      apoyada en una sola frase entrecomillada.
+    en_repo: false
+    vault: "no — la ficha steward-1948-hsai-4 lo destacaba como dato del caquetío; el corpus ancla el calendario en las dos estaciones (creencia-014) y no en frutas"
+    polity: "desconocida; probable INTERIOR (Nueva Segovia)"
+    epoca: "no declarada; si es la Relación, 1579"
+    nuevo: >-
+      Es lo más interesante que trae el capítulo y lo único de su sección de
+      saber: un calendario fenológico. Pero no tiene fuente ni polity. Para
+      usarlo hay que encontrar la frase en una primaria.
+    etiqueta_maxima: hipotetico
+    como_verificar: >-
+      Buscar la frase en la Relación de Nueva Segovia (edición de Arellano
+      Moreno, *Relaciones geográficas de Venezuela*, o el Boletín del Centro
+      Histórico Larense n.º 11, 1942 — ver la ficha nueva-segovia-1579) o en
+      Antolínez 1943 (Acta Americana vol. 1 n.º 4, 1943). Si está allí, es de
+      Barquisimeto y la regla 4 manda marcarlo.
+
+# ══════════════════════════════════════════════════════════════════════
+# §1b. EL VEHÍCULO: EL RESUMEN DE STEWARD (HSAI 4, pp. 21-22, pdf 45-46)
+#
+# Por aquí viaja el capítulo de Hernández de Alba a quien no lee el
+# capítulo: Steward lo condensa en su introducción al volumen, sin citas.
+# ══════════════════════════════════════════════════════════════════════
+steward_resumen_noroeste:
+  autor: "Julian H. Steward (introducción al volumen)"
+  paginas: "21-22 (pdf 45-46)"
+  obra: steward-1948-hsai-4
+  afirmaciones:
+  - id: st-01
+    cita: >-
+      «In religion and political organization the Arawakan Jirajara and
+      Caquetio have certain specific resemblances to the Arawakan Taino of the
+      Antilles.»
+    lectura: >-
+      Es la tesis que las dos campañas del taíno midieron y no sostuvieron
+      («ni vecino ni pariente medible»). Aquí va sin argumento ni cita, y con
+      el mismo error de hda-03 (el jirajara no es arahuaco). Útil sólo como
+      origen posible del lugar común.
+    polity: general
+    etiqueta_maxima: "no usar como dato"
+  - id: st-02
+    cita: >-
+      «The Caquetio chief was accredited with supernatural power to control
+      natural phenomena and plant growth, he was carried in a hammock, and he
+      received special treatment at death. Under the chief were nobles,
+      warriors, and rich men, each forming a special class.»
+    lectura: "repite hda-12, hda-13 y hda-14; lo sostenido está en hda-13 (Ampíes, Aguado)"
+    polity: costera
+  - id: st-03
+    cita: >-
+      «There was some kind of community temple (adoratorio) where offerings were
+      made by shamans to the sun and moon … Human sacrifice was practiced: young
+      girls were beheaded and their blood offered to the sun in order to obtain
+      rain.»
+    lectura: >-
+      ❌ Aquí el dato AXAGUA de Nueva Segovia (hda-21, hda-22) ya aparece como
+      rasgo del noroeste en general, sin nombre de nación. Es el camino por el
+      que un rito ajeno y colonial (1579, «después que poblamos lo hacen … de
+      escondidas») llegaría al vault como caquetío.
+    polity: "axaguas de Nueva Segovia, generalizado"
+    etiqueta_maxima: "no atribuible a los caquetíos"
+
+# ══════════════════════════════════════════════════════════════════════
+# §2. KIRCHHOFF (y Métraux y Kirchhoff): LOS CAQUETÍOS VISTOS DESDE LOS
+#     VECINOS — llanos, Andes y la costa oriental
+# ══════════════════════════════════════════════════════════════════════
+kirchhoff:
+  obra: steward-1948-hsai-4
+  medido: >-
+    El encargo mandaba a Kirchhoff, «Tribes north of the Orinoco» (pp.
+    481-493), por los caquetíos. Ese capítulo NO los nombra (sondas
+    caquet|caiquet|caguet sobre las páginas del PDF: ninguna página entre la
+    pdf 611 y la 734). Donde Kirchhoff habla de caquetíos es en OTROS tres
+    capítulos: los recolectores de los llanos (pp. 463-468), el guayupé
+    (p. 385) y, con Métraux, la extensión nororiental de la cultura andina
+    (pp. 353 y 363). Y «Tribes north of the Orinoco» sí trae algo que toca al
+    proyecto de frente: la CURIANA (k-03).
+
+  afirmaciones:
+
+  - id: k-01
+    capitulo: "The Guamontey, Guamo, Taparita and Ature (en «Food-gathering tribes of the Venezuelan Llanos»)"
+    autor: Paul Kirchhoff
+    pagina_impresa: "464 y 466"
+    cita: >-
+      «Some sources called the Guamo, both in the east and the west, Guaikeri
+      (Guayquiri, Gaiqueri, Guaycari) … (The name Guaikeri occurs also outside
+      of our region as a designation of tribes that live exclusively or largely
+      by fishing.)» · «The westermost Guamo (Federmann's Guaycari) had retained
+      their fishing culture, but their settlements were intermingled with those
+      of the Caquetio, who seem to have been their overlords, and these tribes
+      carried on an active exchange of their respective products.» (p. 464) ·
+      «The western Guamo, who lived in the same territory as that of their
+      Caquetio overlords, though in separate settlements, seem to have had
+      permanent villages.» (p. 466)
+    cita_el_autor: "Federmann 1840 (ed. francesa); Castellanos 1852; Gilij 1780-84"
+    fuente_real: >-
+      Federmann 1916 (en el repo), pp. 89-90: los guaycaríes, «gentes
+      completamente negras», al otro lado del río; «Allí hacen mercado con los
+      Caquetíos, que cambian frutas y otros víveres por pescado, porque es la
+      pesca su única industria y hanse adueñado del río. Viven estas dos
+      naciones en paz en el mismo territorio porque se necesitan mutuamente,
+      pero cada una habita aldeas distintas». Y p. 92: el cacique de Itabana
+      «era también señor de la mayor parte de las aldeas por donde había yo
+      cruzado y le está sujeta una gran parte de la nación Caquetia». El
+      «overlords» es LECTURA de Kirchhoff: Federmann dice paz y necesidad
+      mutua, y que los dueños del río son los guaycaríes.
+    en_repo: {federmann-1916: true, gilij-1780-1783: "ficha en el repo, sin cotejar aquí"}
+    vault: >-
+      Es una respuesta —de 1948 y como hipótesis— a un hueco que el vault tiene
+      declarado: `3-mundo/esfera-de-interaccion.md` §6, «si los guaycaríes eran
+      un grupo distinto o una denominación de otra cosa», y a la rareza de
+      `3-mundo/etnias.yaml` etnia-002 (guayquerí en el Cojedes, «geográficamente
+      rara: los guayqueríes se documentan en Margarita»). Según Kirchhoff,
+      «Guaikeri» era un nombre GENÉRICO para pueblos pescadores, y los
+      guaycaríes de Federmann eran los guamos del oeste, en el Portuguesa,
+      Pao, Cojedes, Guanare y Acarigua.
+    polity: "LLANOS (Cojedes-Portuguesa) — regla 4"
+    epoca: "contacto (1530-1531)"
+    nuevo: >-
+      Sí: (1) «Guaikeri» como designación genérica de pueblos pescadores; (2)
+      la filiación de los guaycaríes de Federmann con los GUAMO, que Kirchhoff
+      emparenta lingüísticamente con el taparita y el otomaco (p. 464); (3) el
+      marco de la relación caquetío-guaycarí como simbiosis de agricultores y
+      pescadores en el mismo territorio y en aldeas separadas, que Federmann
+      sí sostiene.
+    consecuencia_para_el_elenco: >-
+      Los guaycaríes de la era 1 («en la orilla» de la Curiana) no tienen
+      fuente COSTERA: la única atestación es la de Federmann, en los llanos,
+      y el nombre sería el de cualquier pescador. Eso no obliga a nada (son
+      `canon-simulacion`), pero el día que se les busque fuente, la fuente
+      dice llanos y pescadores de río. Lo decide Miguel.
+    etiqueta_maxima: "atestiguado para los llanos (Federmann); la filiación guamo, hipotetico (Kirchhoff)"
+
+  - id: k-02
+    capitulo: "The Guayupé and Sae"
+    autor: Paul Kirchhoff
+    pagina_impresa: 385
+    cita: >-
+      «The Guayupé and Sae had relations with the Caquetio to the north (Speyer
+      came to the Guayupé with a Caquetio interpreter)»
+    cita_el_autor: null
+    fuente_real: "sin cita en la frase; es la entrada de Spira (1535-1538). No se cotejó."
+    en_repo: null
+    vault: "no"
+    polity: "LLANOS del sur (Meta-Guaviare): los caquetíos como intérpretes de la entrada"
+    epoca: contacto
+    nuevo: "el caquetío como lengua de paso hacia el guayupé — hipotetico hasta ver la fuente"
+    etiqueta_maxima: hipotetico
+
+  - id: k-03
+    capitulo: "The tribes north of the Orinoco River"
+    autor: Paul Kirchhoff
+    pagina_impresa: "481, 483, 485-486"
+    cita: >-
+      «All tribes, with the exception of one town on the eastern fringe of the
+      area, Aruacay, probably Arawakan, belong to the Cariban family. …
+      "Provinces" mentioned … are Aruacay, Paria, Cumana, Chiribichi, Piriti,
+      Maracapana, Anoantal, Guacharuco, Paripamotu, and Curiana.» (p. 481) ·
+      «In Curiana at least two kinds of domesticated ducks, or ducklike birds,
+      were known, one of them possibly being the Muscovy duck.» (p. 483) · «The
+      Curiana obtained gold, in exchange for pearls, from a country 6 days'
+      travel to the west, called Cauchieta. … According to Petrus Martyr …
+      however, the Curiana were headhunters» (pp. 485-486)
+    cita_el_autor: "Pedro Mártir (Anghiera 1912), Gómara 1552-53"
+    fuente_real: >-
+      Anglería (en el repo, angleria-1892): el viaje de Niño y Guerra,
+      1499-1500 («curianenses», Cauchieto «hacia el Occidente … seis soles»,
+      vol. 1 p. 310, según la ficha). Gómara no está en el repo.
+    en_repo: {angleria-1892: true, gomara: false}
+    vault: >-
+      El vault tiene abierta la identidad de la Curiana (#33; fichas
+      angleria-1892 y navarrete-1829-viages-menores: Navarrete separa DOS
+      Curianas y pone la de Niño en Cumaná-Cariaco). Kirchhoff 1948 es una
+      tercera voz en el mismo sentido: mete la Curiana de Niño en el bloque
+      CARIBE de la costa oriental, entre Paria y Cabo Codera. No es
+      independiente de Anglería (lo lee a él), pero es la clasificación de
+      referencia de la etnología de 1948.
+    polity: "costa ORIENTAL según Kirchhoff — si #33 no decide que la Curiana de Niño es la de Coro, nada de esto es caquetío"
+    epoca: "contacto (1499-1500)"
+    nuevo: >-
+      Los patos domésticos (quizá el pato real, *Cairina moschata*) y la
+      deformación craneal frontooccipital con cojines de algodón atribuidos a
+      la Curiana — datos que el vault no tiene, y que NO deben entrar a la
+      Kaketiana sin resolver #33.
+    etiqueta_maxima: "hipotetico para la Kaketiana"
+
+  - id: k-04
+    capitulo: "The northeastern extension of Andean culture"
+    autor: "Alfred Métraux y Paul Kirchhoff"
+    pagina_impresa: 353
+    cita: >-
+      «the Chiguará, on the slopes north of Lagunillas; ethnographically
+      unknown but important because of being mentioned in the traditions of the
+      ruling family of the Caquetio of Coro, who claimed to have come from this
+      region; … the Torondoy, like the Chiguará, are mentioned in the traditions
+      of a Caquetio group, far to the northeast, in this case those of Yaracuay»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita en la frase. CERO en el repo: sondas chiguar|torondoy|lagunillas
+      en Oviedo y Baños (sólo el río Torondoy y la montaña de Lagunillas de
+      Terepaima, sin relación), Castellanos, Federmann 1916 y Arcaya; y cero en
+      3-mundo/ y 4-fuentes/. Por la materia (Mérida) apunta a fray Pedro Simón
+      o a Aguado, que son fuentes principales del capítulo.
+    en_repo: false
+    vault: "no — es lo más nuevo del volumen para la geografía política de la esfera"
+    polity: "costera (la familia gobernante de Coro) con origen declarado en los Andes de Mérida"
+    epoca: "tradición recogida en el contacto; lo que dice es de antes"
+    nuevo: >-
+      Una tradición de ORIGEN de la casa gobernante de Coro en el Chiguará
+      (vertiente norte de Lagunillas, Mérida), y otra de un grupo caquetío de
+      Yaracuy en el Torondoy. Si se localiza la fuente, alimenta geografía
+      política (de dónde decía venir la casa del Manaure) y creencia.
+    etiqueta_maxima: hipotetico
+    como_verificar: "buscar «Chiguará» en Simón, Noticias historiales (la parte de Mérida), y en Aguado; ninguno está en el repo"
+
+  - id: k-05
+    capitulo: "The northeastern extension of Andean culture"
+    autor: "Alfred Métraux y Paul Kirchhoff"
+    pagina_impresa: 363
+    cita: >-
+      «The Lache, in contrast to all the other tribes of this area and almost
+      certainly through the influence of their neighbors and friends, the
+      Arawakan Caquetio, publicly recognized male homosexuals, whom they married
+      and buried as if they were women.»
+    cita_el_autor: null
+    fuente_real: >-
+      Sin cita; la influencia caquetía es inferencia de los autores («almost
+      certainly»). Los lache están en la sierra del Cocuy: los caquetíos
+      vecinos son los de los LLANOS de Casanare-Apure, no los de Coro.
+    en_repo: null
+    vault: "no"
+    polity: "LLANOS — regla 4"
+    epoca: contacto
+    nuevo: "sí, pero es inferencia sobre los caquetíos llaneros; no para la costa"
+    etiqueta_maxima: hipotetico
+
+# ══════════════════════════════════════════════════════════════════════
+# §3. KIDDER II, «THE ARCHEOLOGY OF VENEZUELA» — el noroeste
+#     HSAI 4, pp. 425-429 y 434-437 (pdf 555-563, 568-571)
+#
+# Contrapeso a la falta de rouse-cruxent-1963. Kidder resume a Osgood y
+# Howard 1943 y a Nomland 1933-1935 (ninguno en el repo). No hay una sola
+# fecha absoluta: el volumen es anterior al radiocarbono.
+# ══════════════════════════════════════════════════════════════════════
+kidder_noroeste:
+  autor: "Alfred Kidder II"
+  obra: steward-1948-hsai-4
+  fuentes_que_resume: "Osgood y Howard 1943 (An archeological survey of Venezuela, Yale Univ. Publ. Anthrop. 27); Nomland 1933, 1935 — ninguna en el repo"
+  afirmaciones:
+  - id: kd-01
+    tema: "sitios y conchales del llano costero de Falcón y de Paraguaná; relación con las ABC"
+    pagina_impresa: 426
+    cita: >-
+      «Village sites and shell heaps on the Falcon coastal plain are recorded
+      from Coro and to the west (Nomland, 1933, 1935), and on the Paraguana
+      Peninsula (Osgood and Howard, 1943). The general relationship of the
+      culture of this area to that of Quibor and Carache, as well as to that of
+      Curacao, Aruba, and Bonaire … is obvious, although differences in detail
+      and in frequency of certain traits are apparent.»
+    vault: "la relación Falcón-ABC está en el vault por vía arqueológica moderna (Oliver cap. 4, Haviser, Dijkhoff); esto es su enunciado de 1948"
+    nuevo: false
+    etiqueta_maxima: "reconstruido (arqueología de 1943-1948, sin fechas)"
+  - id: kd-02
+    tema: "entierro secundario en urna cerca de Coro"
+    pagina_impresa: "426 y 436"
+    cita: >-
+      «Secondary urn burials, from near Coro, for example, are in contrast to
+      the primary burials of Carache and central Lara.» · «Primary burials at
+      Carache contrast with secondary urn burials, found on the Falcón coast,
+      the Goajira Peninsula, and at the two Maracaibo sites» (p. 436)
+    vault: >-
+      Toca de frente a creencia-010b («un SEGUNDO ENTIERRO caquetío
+      atestiguado», por Oviedo): la arqueología de 1943 registra el
+      entierro secundario en urna en la costa de Falcón. Es un apoyo
+      material, independiente de la crónica, a que el tratamiento en dos
+      tiempos del muerto sea costero y no sólo de un informante de Oviedo.
+      Ojo: una urna con huesos no es beber los huesos; apoya el «segundo
+      tiempo», no el endocanibalismo.
+    polity: "costera (Coro, Falcón)"
+    epoca: "precontacto probable, sin fecha"
+    nuevo: "como enlace, sí: el vault no cruza el entierro secundario arqueológico con creencia-010b"
+    etiqueta_maxima: "reconstruido (dato arqueológico sin fecha, de segunda mano)"
+  - id: kd-03
+    tema: "Cayerúa (Paraguaná): la única estratigrafía"
+    pagina_impresa: "426, 429 y 434"
+    cita: >-
+      «At the Cayerua site on Paraguana Peninsula, pottery marked by impression
+      of knotless netting showed a marked increase in the upper level of a
+      shallow excavation, with a proportionate decrease in linear painting.»
+      (p. 426) · «Bone artifacts are rare, one bone point and a carved pendant
+      having been found in the Cayerua site. Shell … occurs in the Coro district
+      in the form of beads and pendants, and Cayerua produced beads, a
+      Strombus-shell ax, and Strombus tips.» (p. 429) · «in a total depth of 50
+      cm. (about 20 inches)» (p. 434)
+    vault: >-
+      nodo-025 (cayerua) en 3-mundo/asentamientos.yaml: sitio FAL-143 de
+      Oliver, «Dabajuroide [cf. Howard 1943]», `precontacto: probable`. Esto
+      añade lo que Osgood y Howard vieron al excavar: dos niveles en 50 cm,
+      cambio de la pintura lineal a la impresión de red sin nudos, hacha de
+      Strombus, cuentas, punta de hueso. Sigue sin fecha.
+    polity: "costera (Paraguaná)"
+    epoca: "precontacto probable (sin fecha)"
+    nuevo: "sí, como detalle material del sitio; no cambia su `precontacto: probable`"
+    etiqueta_maxima: "reconstruido"
+  - id: kd-04
+    tema: "cerámica del área de Coro"
+    pagina_impresa: "426-427 y 436"
+    cita: >-
+      «Plain ware is commonly incised at Coro, much less frequently so at other
+      Falcon sites. … Bowls and jars with corrugated necks … are characteristic
+      of this area; hollow rims also occur. The linear decoration of painted
+      ware is strikingly similar in style to that of Quibor and Carache but
+      occurs on double-spouted jars … in the north coastal area» · «The La
+      Maravilla Aspect is set off from the Coro Aspect on account of the
+      preponderance of incised, as contrasted to painted, decoration at the Coro
+      site» (p. 436)
+    nuevo: "los «aspectos» de Osgood y Howard (Coro, La Maravilla, Cayerúa) como unidades de 1943; el vault usa la serie dabajuroide de Oliver"
+    etiqueta_maxima: "reconstruido"
+  que_no_da: >-
+    Ninguna fecha, ninguna secuencia regional para Falcón (Kidder, p. 434:
+    fuera de Cayerúa, la poca profundidad de los depósitos no deja ver
+    cambio), nada de la seriación dabajuroide (el nombre es posterior). No
+    reemplaza a rouse-cruxent-1963: sólo confirma que en 1948 ya se sabía
+    que Falcón, Lara y las ABC eran un mismo horizonte cerámico con
+    variantes.
+
+# ══════════════════════════════════════════════════════════════════════
+# §4. HSAI 5 (1949), STEWARD: LA POBLACIÓN (Parte 3) Y LOS RASGOS
+#     «CIRCUM-CARIBEÑOS» (Parte 4)
+# ══════════════════════════════════════════════════════════════════════
+steward_1949:
+  obra: steward-1949
+  poblacion:
+    - id: v5-01
+      pagina_impresa: 663
+      pdf_extracto: 19
+      verificado_en_imagen: true
+      cita: >-
+        Tabla 2, «Sub-Andean Tribes: Venezuela, north of Orinoco» —
+        Population 144,000 · Size in units of 100 km² 3,200 · Persons per 100
+        km² 45 · «Humboldt's estimates (1822-27) give 38 persons per 100 km.²
+        in 1800.»
+      lectura: >-
+        ❌ La ficha y el encargo daban «86.300 y 144.000» como las dos cifras
+        de «Venezuela, north of Orinoco». Mirado en imagen: 86.300 es OTRA
+        fila, «Total Northwestern South America» (motilones 40.000 + guajiros
+        31.300 + costa pacífica de Colombia 15.000). La única cifra de
+        Venezuela al norte del Orinoco es 144.000, sobre 320.000 km² a 45 por
+        cada 100 km². Y Steward la clasifica como «Sub-Andean», no como
+        «Circum-Caribbean».
+    - id: v5-02
+      pagina_impresa: 660
+      tema: método
+      cita: >-
+        «The best source for Venezuela is Humboldt (1862), whose observations
+        made about 1800 give sample densities of 38 per 100 km.². The native
+        population was greater, but it is impossible to say how much greater
+        without utilization of Contact Period sources. It is allowed a density
+        of 45.»
+      lectura: >-
+        El 144.000 no sale de ninguna fuente del contacto: es la densidad de
+        HUMBOLDT hacia 1800 subida a ojo de 38 a 45 y multiplicada por el área.
+        Steward lo declara él mismo. Nivel máximo `hipotetico`, como decía la
+        ficha, y con una razón más: la base es de 1800.
+    - id: v5-03
+      pagina_impresa: 666
+      verificado_en_imagen: true
+      cita: >-
+        Tabla 3, «South American Indian population» — Venezuela: 1500,
+        350,000; 1940, 103,000; 3.7 por ciento de la población nacional (1946).
+      lectura: >-
+        El 350.000 que el vault atribuye a Steward (prop-polity-015 en
+        6-fusion/polities_no_costeras_federmann.yaml, vía Brito Figueroa, «pp.
+        665-668») SÍ está, en la p. 666, como población de 1500. La página que
+        da el vault es buena; la cifra, también.
+    - id: v5-04
+      pagina_impresa: "655-668"
+      tema: "las «tres áreas demográficas» y el «Área Costero-Montañosa»"
+      lectura: >-
+        ❌ NO están en Steward. La ficha steward-1949 cita como suyo el
+        «Área Costero-Montañosa … aldeas de elevada densidad demográfica en
+        las zonas de agricultura intensiva y riego sistemático», y
+        prop-polity-016 lo atribuye a steward-1949 pp. 665-668. Medido:
+        «Venezuel*» sale en la Parte 3 sólo en las pp. 660 (método), 663
+        (tabla 2), 666 (tabla 3) y 667 (supervivientes en las montañas del
+        oeste); ninguna partición en tres áreas, ninguna mención de riego.
+        La partición es de Brito Figueroa, que discute a Steward en ese mismo
+        pasaje. Lo más cercano de Steward es genérico (p. 665): «The next
+        greatest densities were in the Circum-Caribbean area, where the people
+        relied on ocean resources as much as on farming.»
+      propuesta: >-
+        prop-polity-016: cambiar la procedencia a brito-figueroa-poblacion-economia
+        como lectura PROPIA del autor, no «vía» Steward. Y corregir la ficha
+        steward-1949 (hecho en esta rama, bitácora 2026-09-23).
+  rasgos_caquetios_parte_4:
+    # Cada rasgo con el nombre «Caquetio» en la síntesis de Steward, y de dónde
+    # sale. Medido: caquet|caiquet|caguet en el extracto → pp. 720, 721 y 724
+    # (la p. 702 es «Caquetá», el río de Colombia).
+    - id: v5-10
+      pagina_impresa: 720
+      cita: "«Northern Venezuela is inadequately known, but considerable intervillage solidarity seems indicated for the Timoteans, Caquetio, Cumanagoto, and Aruacay.»"
+      fuente_real: "el jefe general de hda-12 (Oviedo y Baños p. 27; Castellanos pp. 185-186; Oviedo t. II p. 299, díao)"
+      polity: costera
+    - id: v5-11
+      pagina_impresa: 720
+      cita: "«by being carried in a hammock or gold-adorned litter (Chibcha and other Colombia tribes, Caquetio, Unaré River in Venezuela, Antillean Arawak)»"
+      fuente_real: "Oviedo y Baños p. 27 (hamaca, en hombros de caciques); Castellanos pp. 185-186 («en unas andas / con chapas de oro»; Arcaya p. 113 lo cita como «Elegías, pág. 183», de otra edición); Aguado vía Arcaya p. 115 (hamaca)"
+      polity: costera
+    - id: v5-12
+      pagina_impresa: 721
+      cita: "«desiccated, placed in a hammock, later cremated, and the ashes drunk (Caquetio)» · «The custom of cremating the ashes and drinking them with chicha occurs among a few Venezuela tribes, but is more characteristic of the Tropical Forests, especially of the western Amazon.»"
+      fuente_real: "Oviedo t. II pp. 299-300 (el díao). Oviedo dice huesos molidos, no «cenizas»: aparta los huesos antes de que se hagan ceniza"
+      lectura: >-
+        Lo útil es la segunda frase: para Steward, beber los huesos NO es un
+        rasgo circum-caribeño sino de la selva tropical. Eso pesa en la
+        lectura de creencia-010d, que busca el porqué en la analogía wayuu.
+      polity: costera
+    - id: v5-13
+      pagina_impresa: 724
+      cita: "«often he had political power equal to that of the chief or he was the chief (Northern Venezuela, Caquetio, Island Arawak)»"
+      fuente_real: "Oviedo t. II p. 299 (el díao, señor y boratio); Arcaya pp. 113-118"
+      polity: costera
+    - id: v5-14
+      pagina_impresa: "724-726"
+      cita: >-
+        «celestial beings, especially the sun and moon (… northwestern and
+        northern Venezuela …)» (p. 724) · «There was a special temple among …
+        the tribes of northwestern Venezuela» (p. 725) · «to supplicate the sun
+        for rain with the blood of young girls (northwestern Venezuela)»
+        (p. 726)
+      fuente_real: >-
+        ❌ Sin el nombre «Caquetio», pero es el dato AXAGUA de la Relación de
+        Nueva Segovia (hda-21, hda-22) ya disuelto en «northwestern Venezuela».
+        Y la p. 723 del mismo texto dice que el culto de sacerdote-templo-ídolo
+        «seems to have been entirely absent from Northern Venezuela».
+      polity: "axaguas de Nueva Segovia, generalizado"
+      etiqueta_maxima: "no atribuible a los caquetíos"
+    - id: v5-15
+      pagina_impresa: 727
+      cita: "«Pearls were probably used by most Coastal tribes, including … the peoples of northwestern and northern Venezuela.» · «the tribes of northern Venezuela and perhaps the Island Arawak used a wild species [of cotton]»"
+      fuente_real: "perlas: Oviedo y Baños p. 27 (brazaletes del séquito de Manaure). El algodón silvestre: no se cotejó"
+      polity: "costera / norte de Venezuela"
+  que_no_da: >-
+    Ninguna cifra para la costa caquetía ni para el Golfete: la unidad
+    mínima de Steward es «Venezuela, north of Orinoco». Y ningún rasgo
+    caquetío que no venga, por Hernández de Alba, de las mismas crónicas.
+
+# ══════════════════════════════════════════════════════════════════════
+# §5. ROUSE, «THE WEST INDIES» Y «THE ARAWAK» (HSAI 4, pp. 495 ss.)
+# ══════════════════════════════════════════════════════════════════════
+rouse:
+  obra: steward-1948-hsai-4
+  capitulos_medidos: "The West Indies: an introduction (pdf 631-632), The Ciboney (pdf 633), The Arawak (pdf 651-691), The Carib (pdf 699 ss.)"
+  medido: >-
+    Sondas sobre pdf 630-720: Venezuel* 1, Cura[cçgz]ao/Corazao 0, Aruba/Oruba
+    0, Bonaire/Buinare 0, Coro 0, Paraguan* 0, caquet|caiquet 0, Tierra Firme
+    0, Maracaibo 0. «Dutch» sale 2 veces y son Saba, San Eustaquio y la
+    colonización del XVII. La única mención de Venezuela es cerámica (p. 510,
+    pdf 654): la alfarería modelada-incisa antillana «is more like» la del
+    nivel bajo de Los Tamarindos (Maracay, Kidder II 1944) y la de Los
+    Barrancos en el bajo Orinoco.
+  veredicto: >-
+    NEGATIVO bien medido: Rouse no trata la esfera de contacto con la costa
+    caquetía ni las ABC; su puente antillano con el continente es por el
+    Orinoco y el centro-norte, no por Falcón. Encaja con lo que ya
+    concluyeron las dos campañas del taíno. Visto de paso y FUERA del HSAI:
+    el documento que sí liga ABC y costa está en el repo, la carta de
+    Ampíes (Oviedo y Baños 1885 t. II pp. 209-213: las islas declaradas
+    «inútiles», don Juan Baracoica, cacique en las islas y «pariente y
+    deudo» de los de la costa, que «muchas veces se pasaban allá á holgar
+    con ellos»).
+
+# ══════════════════════════════════════════════════════════════════════
+# §6. FAUNA (esquema común del preámbulo)
+#
+# Sólo lo que traen los capítulos de Venezuela. Casi todo es de la costa
+# ORIENTAL (Kirchhoff) o de los LLANOS; lo de la Kaketiana es poco y va
+# primero. Casi ningún pasaje describe un SONIDO animal (medido: sondas
+# sound|cry|song|howl|nois|moan|roar|whistl|sing sobre pdf 555-563, 597-602,
+# 605-610 y 617-629 — el único es el «moaning» del tapir herido de la costa
+# oriental, p. 482; el resto son cantos y ruidos de gente).
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+  # ── noroeste (Hernández de Alba) y costa de Falcón (Kidder) ──
+  - {nombre_en_fuente: "deer", especie_probable: null, texto: "deer, tapirs, and other game, killed with the bow and arrow or surrounded with fire, constituted an important portion of the diet of the Jirajara and Caquetio", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "noroeste de Venezuela (sin precisar; el cerco con fuego apunta al interior)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "tapirs", especie_probable: "Tapirus terrestris", texto: "deer, tapirs, and other game … of the Jirajara and Caquetio", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "noroeste — el tapir no es de Paraguaná: apunta a la sierra y al interior (regla 4)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "fish, taken with a drug, barbasco (Lonchocarpus sp.)", especie_probable: null, texto: "Fish, taken with a drug, barbasco (Lonchocarpus sp.), provided the staple food of the Quiriquire", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "laguna de Maracaibo (quiriquires)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "fish and shellfish", especie_probable: null, texto: "the greater ease of procuring fish and shellfish", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "laguna de Maracaibo (palafitos)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "mosquitoes", especie_probable: null, texto: "the numerous and annoying mosquitoes of the hot sections", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "orillas de la laguna de Maracaibo", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "dangerous animals", especie_probable: null, texto: "grouped their houses in two's or four's, preferably by their cultivated fields, in order to protect them against dangerous animals", obra: steward-1948-hsai-4, pagina_impresa: 471, lugar: "Nueva Segovia / Barquisimeto (Relación de 1579) — interior", epoca: colonial, sonido: null}
+  - {nombre_en_fuente: "shell trumpets", especie_probable: "probablemente Strombus (Lobatus) gigas — no lo dice la fuente", texto: "Musical instruments reported are horns and shell trumpets.", obra: steward-1948-hsai-4, pagina_impresa: 473, lugar: "noroeste de Venezuela (sin precisar)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "Strombus", especie_probable: "Strombus (Lobatus) sp.", texto: "Cayerua produced beads, a Strombus-shell ax, and Strombus tips", obra: steward-1948-hsai-4, pagina_impresa: 429, lugar: "Cayerúa, Paraguaná (sitio arqueológico)", epoca: precontacto, sonido: null}
+  - {nombre_en_fuente: "shell (beads and pendants)", especie_probable: null, texto: "Shell, lacking at Quibor and Carache, occurs in the Coro district in the form of beads and pendants", obra: steward-1948-hsai-4, pagina_impresa: 429, lugar: "distrito de Coro (arqueológico)", epoca: precontacto, sonido: null}
+  - {nombre_en_fuente: "sharks", especie_probable: null, texto: "The mention of sharks being eaten by the Tocuyo, a tribe far to the west, suggests that they were not eaten within the area under consideration.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "«the Tocuyo, a tribe far to the west» — sin precisar: puede ser la costa del río Tocuyo (Falcón oriental); sin fuente citada", epoca: contacto, sonido: null}
+  # ── costa ORIENTAL (Kirchhoff, Paria-Cabo Codera): NO es la Kaketiana ──
+  - {nombre_en_fuente: "oysters", especie_probable: "Pinctada imbricata (perlera) probable", texto: "Along the coast and on the islands oysters were collected.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental e islas (Margarita, Cubagua)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "shrimp", especie_probable: null, texto: "Both shrimp and fish were dried and ground into powder, which was taken in cassava wine.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "costa oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "sting ray", especie_probable: null, texto: "points of stone, the infectuous bones of some fish, or the prong of the sting ray", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "fish (arreo a nado)", especie_probable: null, texto: "a group of men swam shoreward in a half circle. By making a noise with their hands … they drove great masses of fish to the beach.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "costa oriental", epoca: contacto, sonido: "el ruido es de los pescadores, no del animal: «making a noise with their hands»"}
+  - {nombre_en_fuente: "iguana", especie_probable: "Iguana iguana", texto: "The iguana was eaten in Chiribichi but not in Piritu. … The iguana was sometimes caught alive", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental (Chiribichi)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "tortoises", especie_probable: "Chelonoidis carbonarius probable", texto: "The tortoise was chased out of its hiding place in grassy plains by setting fire to the grass.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental y sus sabanas", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "tapirs (y su gemido)", especie_probable: "Tapirus terrestris", texto: "after killing the first animal the hunters climbed the nearest tree, from which they shot its fellows, attracted by the moaning of the wounded tapir", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental", epoca: contacto, sonido: "«the moaning of the wounded tapir» — el único sonido animal descrito en los capítulos de Venezuela"}
+  - {nombre_en_fuente: "deer, peccaries (saguino), porcupines, anteaters, a kind of skunk (mapurichi), cuchicuchis (araguato), acuris, zapiguas, rabbits, squirrels, three different kinds of rats or mice, lions, jaguars, tortoises, and cachicans", especie_probable: null, texto: "The following animals are said to have been eaten: Tapirs, deer, peccaries (saguino), porcupines, anteaters, a kind of skunk (mapurichi), cuchicuchis (araguato), acuris, zapiguas, rabbits, squirrels, three different kinds of rats or mice, lions, jaguars, tortoises, and cachicans.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental (Paria-Cabo Codera) — lista de caza entera, sin separar por especie; varias voces indígenas (mapurichi, acuri, cachicán, saguino) son del caribe oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "pigeons, turtle doves, quails, partridges, ducks, and certain birds described as being like turkeys and chickens", especie_probable: null, texto: "Birds hunted were pigeons, turtle doves, quails, partridges, ducks, and certain birds described as being like turkeys and chickens.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "domesticated ducks, or ducklike birds", especie_probable: "Cairina moschata (lo sugiere Kirchhoff: «possibly being the Muscovy duck»)", texto: "In Curiana at least two kinds of domesticated ducks, or ducklike birds, were known", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "Curiana — la de Niño y Guerra, que Kirchhoff pone en la costa oriental (ver k-03, #33)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "small wild bees", especie_probable: "abejas sin aguijón (Meliponini) probable", texto: "Small wild bees were eaten raw, fried, or boiled.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "costa oriental", epoca: contacto, sonido: null}
+  # ── LLANOS (Kirchhoff, guamos): NO es la Kaketiana ──
+  - {nombre_en_fuente: "manatee", especie_probable: "Trichechus manatus", texto: "Animals living in the rivers and lagoons, especially manatee, may have been more important, especially to the Guamo, than land animals", obra: steward-1948-hsai-4, pagina_impresa: 465, lugar: "llanos (guamos)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "caimans", especie_probable: null, texto: "The Guamo caught caimans by the same method used by the Otomac", obra: steward-1948-hsai-4, pagina_impresa: 465, lugar: "llanos (guamos)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "sting ray spine", especie_probable: null, texto: "into which he had stuck a sting ray spine", obra: steward-1948-hsai-4, pagina_impresa: 468, lugar: "llanos (guamontey; cura chamánica)", epoca: contacto, sonido: null}

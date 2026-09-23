@@ -1,0 +1,515 @@
+ETH Library
+Trace-elemental and multi-isotopic (Sr-Nd-Pb) discrimination of jade in the circum-Caribbean: Implications for pre-colonial interisland exchange networks
+Journal Article Author(s):
+Knaf, Alice C.S.; Habiba; Shafie, Termeh; Koornneef, Janne M.; Hertwig, Andreas; Cárdenas-Párraga, Juan; García-Casco, Antonio; Harlow, George E.; Schertl, Hans-Peter; Maresch, Walter V.; López Belando, A.J.; Hofman, Corinne L.; Brandes, Ulrik ; Davies, Gareth R. Publication date: 2021-11 Permanent link: https://doi.org/https://doi.org/10.3929/ethz-b-000504053 Rights / license: Creative Commons Attribution 4.0 International Originally published in: Journal of Archaeological Science 135, https://doi.org/10.1016/j.jas.2021.105466
+This page was generated automatically upon download from the ETH Zurich Research Collection. For more information, please consult the Terms of use.
+
+Journal of Archaeological Science 135 (2021) 105466 Contents lists available at ScienceDirect
+Journal of Archaeological Science
+journal homepage: www.elsevier.com/locate/jas
+
+Trace-elemental and multi-isotopic (Sr-Nd-Pb) discrimination of jade in the circum-Caribbean: Implications for pre-colonial inter-island exchange networks
+A.C.S. Knaf a,b,*, Habiba c, T. Shafie d, J.M. Koornneef a, A. Hertwig e,i, J. Ca´rdenas-P´arraga f, A. García-Casco f,g, G.E. Harlow h, H.-P. Schertl i,j, W.V. Maresch i, A.J. Lo´pez Belando k, C. L. Hofman l,n, U. Brandes m, G.R. Davies a
+a Department of Earth Sciences, Free University Amsterdam, Amsterdam, the Netherlands b Institute for the Preservation of Cultural Heritage, Yale University, New Haven, USA c CSIRO Data61, Eveleigh, New South Wales, Australia d Department of Social Statistics, University of Manchester, Manchester, UK e Earth, Planetary and Space Sciences, University of California, Los Angeles, USA f Department of Mineralogy and Petrology, University of Granada, Granada, Spain g Andalusian Earth Science Institute, Spanish Research Council and University of Granada, Armilla, Spain h Department of Earth and Planetary Sciences, American Museum of Natural History, New York, USA i Institute of Geology, Mineralogy and Geophysics, Ruhr-University Bochum, Bochum, Germany j College of Earth Science and Engineering, Shandong University of Science and Technology, Qingdao, China k Salvador Sturla, 13, Edificio RH, Ensanche Naco, Santo Domingo, Dominican Republic l Faculty of Archaeology, Leiden University, Leiden, the Netherlands m Department of Humanities, Social and Political Sciences, ETH Zürich, Zürich, Switzerland n Royal Netherlands Institute of Southeast Asian and Caribbean Studies, Leiden, the Netherlands
+
+ARTICLE INFO
+Keywords: Jade Circum-Caribbean Source discrimination Geochemical characterisation Statistical approaches Provenance studies Indigenous mobility networks
+
+ABSTRACT
+Dense and strong, hydrothermal-metasomatic jadeitite and jadeite-omphacite rocks were used as tools and adornments throughout the wider Caribbean since initial inhabitation. Regionally, rich sources of jadeitite and jadeite-omphacite jade are known only in Guatemala (north and south of the Motagua Fault Zone), eastern Cuba and the northern Dominican Republic, establishing that humans transported jadeitic material over vast distances. This study validates that geochemical fingerprinting is a viable provenance method for Caribbean pre-colonial jadeitic lithologies. An assemblage of 101 source rocks has been characterised for trace element and com­ bined Sr-Nd-Pb isotope compositions. Four statistical approaches (Principal Component Analysis, t-Distributed Stochastic Neighbour Embedding, Decision Tree, and Multiclass Regression) were assessed, employing sourcedistinct trace element ratios. A multiclass regression technique based on trace element ratios of immobile high field strength, light to medium rare earth and fluid-mobile, large-ion-lithophile elements is shown to be most effective in discriminating the four source regions.
+Ninety-one % of the Guatemalan samples can be discriminated from the Dominican and Cuban sources using La/Th, Zr/Hf and Y/Th ratios. Jadeitic rocks cropping out in the Dominican Republic can be distinguished from Cuban jades employing Er/Yb, Nb/Ta and Ba/Rb ratios with 71% certainty. Furthermore, the two Guatemala sources, north and south of the Motagua Fault Zone, can be discriminated by using (among others) Zr/Hf, Ta/Th, La/Sm and Dy/Y ratios with an 89% success rate. This raises the possibility of determining, in detail, former trading and mobility networks between different islands and the Meso- and Central American mainland within the Greater Caribbean.
+The provenance technique was applied to 19 pre-colonial jade celts excavated from the Late Ceramic Age Playa Grande archaeological site in the northern Dominican Republic. Three artefacts are discriminated as derived from the Guatemalan source, indicating that, despite a source of jade within 25 km, material was traded
+
+* Corresponding author. Yale University, Institute for the Preservation of Cultural Heritage, 300 Heffernan Drive, West Haven, CT, 06516, USA. E-mail address: alice.knaf@yale.edu (A.C.S. Knaf).
+https://doi.org/10.1016/j.jas.2021.105466 Received 9 June 2020; Received in revised form 27 July 2021; Accepted 13 August 2021 Available online 1 September 2021 0305-4403/© 2021 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+A.C.S. Knaf et al.
+
+Journal of Archaeological Science 135 (2021) 105466
+from Guatemala. The presence of Guatemalan jade in the Playa Grande lithic assemblage provides further evi­ dence of large scale (>3000 km), regional trading and indigenous knowledge transfer networks.
+
+1. Introduction
+Chemical fingerprinting and elemental mapping of materials encountered in cultural heritage can determine how, when and where objects were made. Over the last two decades, major- and trace elemental (ME and TE), as well as isotopic composition (IC) analyses have become increasingly prominent tools for solving and answering questions in cultural heritage (Glascock, 2016). Archaeometry has been applied to answer a broad variety of archaeological research questions, related to past interactions, trade, migration and mobility networks, including studies of organic remains (human/animal/plant (Giblin et al., 2013; Laffoon and Leppard, 2019; Laffoon et al., 2017); and inorganic raw materials and objects (metals, rocks, glass, ceramics, pigments) (Degryse and Schneider, 2008; Pollard et al., 2007; Pollard and Heron, 2008; Rademakers et al., 2019).
+Among inorganic materials, jade has aroused the interest of scholars. Various archaeometric studies on jade artefacts and their potential sources were conducted employing destructive (Wang, 2011; Domí­ nguez-Bella et al., 2016) and non-destructive analyses (Man­ rique-Ortega et al., 2019). Semi-precious jade offers an intensely and appealing blaze of colour which brilliance is enhanced by polishing. Hence, it was considered invaluable and sometimes sacred among pre­ historic hunters and gatherers. On a global scale, the comprehension of these physical properties was highly cherished by Neolithic cultures which employed jade as a tool - or paraphernalia stone. The term jade is widely used in gemology and archaeology but actually refers to three different nearly monomineralic rocks. The most commercially valued jade is a rock formed almost exclusively of the sodium-rich pyroxene jadeite (NaAlSi2O6) and is termed jadeite-jade. Traditionally (e.g. Har­ low, 1994; Harlow and Sorensen, 2005), the term jadeitite was used when the content of jadeite exceeded 90 vol%. Following more recent nomenclature guidelines (Schmid et al., 2007) the name jadeitite is used when jadeite contents exceed 75 vol% jadeite. Omphacite-jade or omphacitite (>75 vol% omphacite) is a rock composed mainly of the pyroxene omphacite [(Ca,Na) (Mg,Fe2+,Al)Si2O6], which is an inter­ mediate member of the augite-jadeite partial solid-solution series. Many other types of cations, such as Mn2+, can substitute in minor proportions as well. Mixed jadeite-omphacite jade can occur. Nephrite-jade refers to a rock composed of felty amphibole from the tremolite to ferro-actinolite solid-solution series [Ca2(Mg, Fe2+)5Si8O22(OH)2]. Due to the variations in cation abundances (especially of Fe but also Mn), the three types of jade range in colour from apple-green, greenish white, purplish blue, blue-green, violet, white, to black. Worldwide jade sources hosted in metamorphic complexes have restricted occurrences. In total less than 20 locations are known, i.e., Circum-Pacific (Japan, Indonesia, Russia, USA/California), Alps/Himalayas (Greece/Cyclades, Western Alps, Iran, Myanmar), Uralides (Polar Urals/Russia), Central Asia/Altaids (Russia, east Kazakhstan), Circum-Caribbean (Guatemala, Cuba, Dominican Re­ public) (Tsujimori and Harlow, 2012; Harlow et al., 2015). Therefore, raw materials and/or finished objects circulated over vast distances and extensive exchange networks.
+Variations in inter-Island exchange networks before and after the arrival of Columbus are key to understanding the temporal and spatial developments of the complex regional interactions within the Greater Caribbean. Studies of lithic artefacts, such as tools and adornments, may play a role as they provide information on the entire process of pro­ curement of raw materials, production and artefact use, and distribution and trade. Pre-colonial lithic artefacts, such as flint and chert, were extensively traded between different regions in the Caribbean and are, due to their durability and relative high value in societies, well pre­ served (Hofman et al., 2010; Knippenberg, 2007). The localisation and
+
+geochemical characterisation of potential source rocks for artefact provenance has received relatively little attention in Caribbean Archaeology (Hofman et al., 2008). Metamorphic rocks were used throughout pre-colonial times to manufacture a wide range of daily tools and ornaments. Among these, jade appears to be a highly esteemed li­ thology (Rodríguez-Ramos et al., 2010; Breukel, 2019). All three types of jade can be found as artefacts in Caribbean collections. The possession of similar physical properties makes it difficult to distinguish between them macroscopically. This study focusses on the circum-Caribbean geological occurrences of jadeite-jade and omphacite-jade that are rare and regionally limited. These jades are somewhat harder and denser than nephrite-jade and therefore better suited for making durable working equipment and complex ornaments. Nephrite sources are assumed in Bahía in Brazil or the Santa Elena Peninsula in northwestern Costa Rica (Ferna´ndez Esquivel, 2005) but so far no nephrite source has been geologically confirmed, neither in the Caribbean, nor in South and Central America (Middletown and GemsO’Donoghue, 2006). Nephrite artefacts tend to be small which supports the argument for more difficult transport dynamics. It is assumed that jadeite- and omphacite-jade were highly prized by pre-colonial indigenous populations due to their workability, noteworthy colours and limited accessibility. Control over one of the rare jadeite-/omphacite-jade resources presumably offered nearby settlements a superiority compared to other communities (Lange, 1993). Consequently, jade might have played an important role in the socio-political status between different socio-political entities. Assemblages recovered from archaeological sites include figurines, adornments like pendants and beads, as well as utilitarian tools like celts. Jadeite–omphacite-rich artefacts are reported on islands throughout the Greater and Lesser Antilles and most of the Bahamian archipelago, establishing long distance inter-Island trade networks possibly even connecting to the Mesoamerican mainland (Hofman et al., 2010, 2014; Harlow et al., 2006, 2019; Garcia-Casco et al., 2013). These exchange routes are of great archaeological interest as they constrain knowledge and material exchange networks between different islands and societies, inter-group actions, and how pre- and post-colonial soci­ eties were organized and operated.
+The aim of this work is to develop a technique to evaluate the provenance of jadeite-rich, omphacite-rich and pyroxene-bearing archaeological artefacts without the need to utilise highly invasive techniques such as petrographic analysis that require thin sections and electron microprobe analysis. A comprehensive geochemical database of trace elements (TE) and combined Sr-Nd-Pb isotope compositions (IC) of Caribbean jadeitite and jadeite-omphacite source rocks has been created to document local and regional variations. The geochemical data are evaluated using multiple statistical methods to establish which methods are most effective to quantitatively source archaeological Caribbean lithic artefacts.
+2. Geological setting and jade formation
+Globally jadeitite and jadeite–omphacite-rich lithologies have restricted occurrences and are found within serpentinite m´elanges, comprising fragments of oceanic crust and high-pressure/lowtemperature (HP/LT) metamorphic and metasomatic rocks formed in or above subduction channels and emplaced serpentinized mantle wedge slices associated with major transform or thrust faults (Harlow and Sorensen, 2005; Tsujimori and Harlow, 2012; Harlow et al., 2007, 2014). Sources are known in the Caribbean, the Circum-Pacific and the Alpine-Himalayan and Caledonian orogenic belts, all linked to former subduction zones. The current paradigm is that jadeitite formation oc­ curs in the mantle wedge and predominantly in the serpentinite-rich
+
+2
+
+A.C.S. Knaf et al.
+subduction channel (Harlow et al., 2015; Stern et al., 2013; Tsujimori and Ernst, 2014). In this tectonic setting, jadeite-jade forms under moderate-to-low T and HP by metasomatism of a precursor rock or as vein precipitation from an Al–Si–Na-rich hydrous fluid (Tsujimori and Harlow, 2012; Yui et al., 2010). Jadeitites crop out in close spatial as­ sociation with other subduction-related HP-LT metamorphic rocks, such as blueschist, eclogite and garnet amphibolite.
+In the Caribbean, jadeite- and omphacite-jade sources are aligned along the northern border of the North American – Caribbean plate boundary which extends from western Guatemala to the Antillean Arc (Fig. 1) (Rosencrantz and Sclater, 1986; Martens et al., 2017; Pindell et al., 2009a). Exhumation of the HP/LT rocks by tectonic reconfigu­ ration of the plates in the northern Caribbean occurred during the latest Cretaceous to Eocene (García-Casco et al., 2008; Pindell et al., 2009b). In the Greater Caribbean, all jadeitite and jadeite–omphacite-rich sources generally feature similar tectonic settings, P-T conditions and formation ages. In general, therefore, it can be expected that regional jadeitite and jadeite–omphacite-rich rocks should display mineralogical and geochemical similarities. Nevertheless, the intra-source variability is considerable, so that discrimination by visual or even petrographical and mineralogical methods is exceedingly difficult (Harlow et al., 2006, 2019; Garcia-Casco et al., 2013; Schertl et al., 2019; Harlow, 1993).
+The jade source in Hispaniola lies in the northern Dominican Re­ public in the Jagua Clara m´elange, a unit of the Rio San Juan Complex that contains tectonic blocks of jadeitite and jadeite-omphacite rich rocks (Escuder-Viruete and P´erez-Estaún, 2006; Krebs et al., 2008, 2011;
+
+Journal of Archaeological Science 135 (2021) 105466
+Schertl et al., 2007a, 2007b, 2012; Hertwig, 2014). Jadeite-bearing rocks can be divided into a suite in which quartz occurs only as min­ ute inclusions in jadeite and the matrix is dominated by albite, and a suite where quartz also occurs in the rock matrix (La´zaro et al., 2009; Ca´rdenas-Pa´rraga et al., 2012). The matrix-quartz-free suite can contain significant amounts of omphacite of up to 45 vol%. The quartz-bearing jadeitite grades into jadeite and jadeite-lawsonite quartzite. All rock types commonly occur as lag deposits on weathered serpentinite or as cobbles in river deposits. However, quartz-bearing examples can also be found as concordant layers and discordant veins in tectonic blocks of blueschist host rocks, a rare type of occurrence in the world. A pre­ liminary age of 114.9 ± 2.9 Ma originally thought to date jadeitite formation (La´zaro et al., 2009) was later shown to be the age of inherited magmatic zircon (Ca´rdenas-Pa´rraga, 2019). The age of jadeitite forma­ tion can be constrained to ≈78 Ma at conditions of 350–500◦C and 15–17 kbar (La´zaro et al., 2009; Ca´rdenas-P´arraga et al., 2010, 2012; Ca´rdenas-Pa´rraga, 2019), contemporaneous with blueschist-facies metamorphism at 80-60 Ma during the final stages of subduction (Ca´rdenas-Pa´rraga, 2019). These P-T conditions are similar to those of analogous rocks found south of the MFZ in Guatemala.
+Jadeitite in eastern Cuba occurs as tectonic blocks in the Sierra del Convento serpentinite-matrix m´elange, in an area of 5–7 km2 (La´zaro et al., 2009; C´ardenas-Pa´rraga et al., 2010, 2012; Ca´rdenas-Pa´rraga, 2019; García-Casco et al., 2009). Jadeitite blocks are found associated with high-pressure tectonic blocks (garnet–amphibolites and related anatectic trondhjemites), and other varied lithologies formed during
+
+Fig. 1. Map of the Caribbean including large scale tectonic boundaries modified from García-Casco et al. (Garcia-Casco et al., 2013) showing the known jade source regions in the northern Dominican Republic (Rio San Juan Complex/M´elange), eastern Cuba (Sierra del Convento Me´lange) and Guatemala (north and south of the Motagua Fault Zone) associated with serpentinite m´elanges. Purple shaded areas represent territories with ultramafic rocks/serpentinite me´langes cropping out including/excluding blocks of HP rocks. Red star indicates finds of jadeitite artefacts on the Playa Grande archaeological site. (For interpretation of the references to colour in this figure legend, the reader is referred to the Web version of this article.)
+3
+
+A.C.S. Knaf et al.
+Early Cretaceous in a context of hot subduction (La´zaro et al., 2009; C´ardenas-Pa´rraga et al., 2010, 2012; Ca´rdenas-Pa´rraga, 2019; García-­ Casco et al., 2009). Blocks of massive jadeitite are characterized by oscillatory zoning in jadeite crystals plus omphacite, clinozoisite/epi­ dote, biotite/phologpite, albite, phengite, titanite, rutile, zircon, and apatite (Ca´rdenas-Pa´rraga et al., 2012; García-Casco et al., 2009). Near pure jadeitite and epidote-rich jadeitite formed by vein precipitation during episodic opening of the fractures, while the omphacitite rocks, that appear in edges of blocks or late veins, suggest a metasomatic origin after previously formed jadeitite (Ca´rdenas-Pa´rraga et al., 2010, 2012; C´ardenas-Pa´rraga, 2019; García-Casco et al., 2009). Mineral chemistry and U–Pb geochronology (zircon 206Pb/238U ages of 107.4 ± 0.5 Ma and 107.8 ± 1.1 Ma) suggest generation during onset of cooling of the m´elange in the upper plate at 1.5 GPa and T higher than 500◦C (Ca´rdenas-P´arraga et al., 2012).
+Guatemala hosts the most extensive jadeitite source, with outcrops north and south of the Motagua Fault Zone (MFZ) occurring over an area of ~210×100 km2 (Harlow, 1994; Foshag and Leslie, 1955; Johnson and Harlow, 1999; Harlow et al., 2004, 2011; Sorensen et al., 2006; Tsuji­ mori et al., 2006; McBirney et al., 1967). Jadeitites mainly exist as loose tectonic blocks on sheared serpentinite; but a few primary contacts with serpentinite are preserved (Harlow et al., 2011). Guatemalan jadeitites are interpreted as P-type (Tsujimori and Harlow, 2012) or vein-type (Yui et al., 2010), therefore any protolith is only that for the solutes in the precipitating fluid. Based on zircon ages, northern jadeitites are esti­ mated to be 95 to 98 ± 2 Ma old (Yui et al., 2012; Flores et al., 2017), whereas southern jadeitites formed earlier, ranging from 154 to 158 Ma (Flores et al., 2013). However, Fu et al. (2010) contested that zircon ages of southern jades are inherited. Mineral assemblages in northern jadei­ tites (clinozoisite- and paragonite-bearing) indicate formation at 0.6–1.2 GPa and 300–400◦C. These jadeitites are variably retrogressed to amphibolite and greenschist facies conditions (Tsujimori and Harlow, 2012). Serpentinite me´langes south of the MFZ comprise tectonic blocks of lawsonite- and pumpellyite-bearing jadeitite. Jadeitite may contain quartz and estimated PT conditions of formation are 1–2 GPa and 300–400◦C (Harlow, 1994; Tsujimori and Harlow, 2012; Martens et al., 2017; Harlow et al., 2011). Petrographically, northern jadeitites are heterogeneous and record grain boundary alteration and albitization, whereas southern jadeitites are more translucent and darker in colour, commonly contain multiple generations of omphacite and include a distinct pumpellyite-jadeite assemblage (Harlow et al., 2003).
+3. Archaeological context
+In Mesoamerica, jade was used by pre-Colombian cultures like the Olmec (1200/1500BC-400BC, Olmec blue-green jade), Maya, Aztec and various groups in the Valley of Mexico. The earliest documented use of jadeite-omphacite rich rocks on the mainland appears as beads in the Barra Phase (1500BC) on the Pacific coast of Chiapas (Clark et al., 1987). In the Formative Period (Preclassical period, 2000BC – 200AD), the Olmec of the Gulf Coast were among the first Mesoamerican people to shape jade into tools around 1200–1000BC. During the Postclassical Period (950–1539AD), the use of jadeite-rich rocks dropped dramati­ cally in the Maya area (Lange, 1993; Seitz et al., 2001). Jadeite-jade and omphacite-jade rich artefacts have been identified from most Greater and Lesser Antilles and the Lucayan Archipelago (Harlow et al., 2006, 2019; Garcia-Casco et al., 2013; Cody, 1991b; Rodríguez Ramos, 2011; Falci et al., 2020). Jade used for manufacturing tools and lapidary ob­ jects was spatially and temporally widespread throughout the circum-Caribbean and recorded at sites exhibiting occupation phases
+
+Journal of Archaeological Science 135 (2021) 105466
+between 450BC to the early colonial period (Rodríguez Ramos, 2011). As objects made of jadeitites and related rocks are durable because of their structure and texture, it is impossible to date the manufacturing process itself; objects for domestic and ceremonial use could have been inherited and passed on and reused by many generations.
+The jadeitite artefacts analysed in this study were excavated in 2011/ 2012 at the Late Ceramic Age Playa Grande settlement (750–1600AD) (Schertl et al., 2019; Lo´pez Belando, 2012) in the northern Dominican Republic, located approximately 25 km northeast of the Jagua Clara jadeitite outcrops of the northern Rio San Juan Complex. A broad range of lithic tools were excavated, mostly axes and adzes, and reflect li­ thologies available in the Jagua Clara serpentine m´elange, i.e., eclogites, blueschists, meta-sediments, orthogneiss, leucotonalite and jadeitites. Rocks from the adjoining Gaspar Herna´ndez serpentinite were also used, including serpentinite, gabbro, dolerite and mafic schists (Draper and Nagle, 1991). Unprocessed or incipient blanks have water-worn surfaces suggesting that manufacture involved eroded rocks collected from the valley bottoms and mouths of the San Juan, Can˜o Claro, Bebedero or Portuguese rivers, which drain the jade-bearing units and flow near (max. 10 km) to the site. It is noteworthy that these types of geological raw materials in general are neither abundant nor easily accessible in the Caribbean. In this specific case, the geological occurrence to and effortless procurement of these lithologies in the form of river pebbles, cobbles and boulders could favour greater usage in the manufacture of these tools for their exchange.
+
+4. Sampling strategy and sample description
+
+A total of 101 representative jadeite and omphacite-bearing source
+
+rocks were sampled from the four jade source regions in the Greater
+
+Caribbean to cover the local mineralogical and geochemical variations.
+
+Multiple tectonic blocks and sources were sampled in each region. The
+
+samples reflect the compositional variability among jadeite- and
+
+omphacite-rich and -bearing source rocks. An overview of all samples
+
+and locations is given in Table 1.
+
+Twenty-eight samples were analysed from the Jagua Clara m´elange
+
+(Rio San Juan and Loma Magante localities) (Escuder-Viruete et al.,
+
+2011, 2013). The samples include jadeitites ranging from >75 to >90
+
+vol% jadeite, albite–jadeitite, phengite–jadeitite, jadeitite–omphacitite,
+
+lawsonite–quartz–garnet–jadeitite and garnet–jadeite–lawsonite–quar
+
+tzite (Schertl et al., 2012).
+
+In addition to the Dominican source rocks, 19 archaeological arte­
+
+facts were analysed for trace element abundances and isotopic compo­
+
+sition from the Late Ceramic Age (750–1600AD) archaeological site of
+
+Playa Grande (Lo´pez Belando, 2012; Lo´pez Belando, 2019). Trace
+
+element data of artefacts from the Playa Grande site (n=9) (Harlow
+
+et al., 2003), plus reanalysed Guatemalan source rock data from Harlow
+
+et al. (2016) (n=22) are used to assess the potential effect of
+
+inter-laboratory analytical bias on the statistical models.
+
+The 17 samples analysed from the Sierra del Convento Complex in
+
+eastern Cuba comprise 5 jadeitites (jadeite >90 vol%), 10 epidote-rich
+
+jadeitites and 2 omphacitites, including a chromium (Cr)-rich sample
+
+containing chrome-omphacite that overprint jadeite.
+
+To assure a representative assemblage of the Guatemalan sources, 56
+
+jadeitite and omphacitite rocks from north (N) and south (S) of the MFZ
+
+were incorporated into the study. Twenty–two samples with a range of
+
+jadeite-rich and -bearing lithologies were selected for isotopic analyses
+
+(NMFZ n=12 and SMFZ n=10). Ten locations north of the MFZ comprise
+
+jadeitite, jadeitite–omphacitite and albite–jadeitite rocks (n=12).
+
+Jadeitite,
+
+pumpellyite–jadeitite,
+
+phengite–jadeitite,
+
+4
+
+A.C.S. Knaf et al.
+
+Journal of Archaeological Science 135 (2021) 105466
+
+Table 1 Sample list of selected circum-Caribbean jade source rocks (n=101) and jadeitite artefacts (n=19) from the Late Ceramic age archaeological site Playa Grande located in the northern Dominican Republic. List includes a summary of samples initially presented in Schertl et al., 2012, 2019 and Harlow et al. (2016). Sample name abbreviations from this study (VU ID): DR-SR Dominican Republic source rock; CU-SR Cuba source rock; NMFZ-SR Guatemala North Motagua Fault Zone source rock; SMFZ-SR Guatemala South Motagua Fault Zone source; DR-PG Dominican Republic Playa Grande archaeological site artefact. Other ID’s refer to samples re-analysed from Schertl et al. (Petrology Group at the Ruhr-University Bochum), Garcia-Casco et al. (Metamorphic Petrology Group at the University of Granada) and Harlow et al. (Department of Earth and Planetary Sciences at the American Museum of Natural History). Data for Guatemalan source rocks without a VU ID is from Harlow et al. (2016). Mineral abbreviations after SCMR (Siivola, Schmid): Ab Albite, Ep Epidote, Grs Grossular, Grt Garnet, Jd Jadeite, Lws Lawsonite, Ne Nepheline, Ph Phengite, Pmp Pumpellyite, Qtz Quartz.
+
+VU ID
+
+Other ID
+
+Lithology
+
+Region
+
+Location
+
+DR-SR-10 DR-SR-11 DR-SR-12 DR-SR-13 II DR-SR-14 DR-SR-15 DR-SR-17 DR-SR-23 DR-SR-24 DR-SR-25 DR-SR-28 DR-SR-49 DR-SR-50 DR-SR-51 DR-SR-52 DR-SR-53 DR-SR-54 DR-SR-55 DR-SR-56 DR-SR-57 DR-SR-58 DR-SR-59 DR-SR-60 DR-SR-61 DR-SR-62 DR-SR-63 DR-SR-64 DR-SR-65 DR-PG-11 DR-PG-12 DR-PG-13 DR-PG-14 DR-PG-15 DR-PG-16 DR-PG-17 DR-PG-18 DR-PG-19 DR-PG-20 DR-PG-21 DR-PG-22 DR-PG-23 DR-PG-24 DR-PG-25 DR-PG-26 DR-PG-27 DR-PG-28 DR-PG-29 CU-SR-02 CU-SR-03 CU-SR-04 CU-SR-05 CU-SR-06 CU-SR-07 CU-SR-08 CU-SR-09 CU-SR-10 CU-SR-11 CU-SR-12 CU-SR-13 CU-SR-14 CU-SR-15 CU-SR-16 CU-SR-17 CU-SR-18 NMFZ-SR-01 NMFZ-SR-02 NMFZ-SR-03
+
+12711 30790 30108 30823 30092 30101 a 30772 II 26322 26325 II 30852 30871 31049 31034 a 30828 31074 30071 30858
+31100 31101 31102 31103 31104
+31105 31106 31107 31108 31109 09-SC-9i 09-SC-7b CV-234-t CV-237-b 09-SC-9h CV-237-k SCJ-1 09-SC-31q MCB-16 MCB-4a 09-SC-27e MCB-2c 09-SC-9g MCB-1d 09-SC-27m 09-SC-27n 09-SC-31j MVE07B-19-1 ® MVE04-44-1 MVJ84-3-4
+
+Jadeitite Jadeitite Jadeitite Jadeitite-Omphacitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Lws-Jadeitite Jadeitite Ab-Jadeitite Jadeitite Jadeitite Grt-Jd-Lws-Quarzite Lws-Jadeitite Jd-Lws-Quarzite Jadeititie Jd-Lws-Quarzite Jadeititie Jadeitite-Omphacitite Jadeititie Jadeititie Jadeitite-Omphacitite Jadeititie Ph-Jadeitite Lws-Qtz-Grt-Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Lws-Jadeitite Jadeitite Jadeitite Lws-Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Omphacitite Kos-Omphacitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Ep-Jadeitite Jadeitite Jadeitite Jadeitite
+
+Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Dominican Republic Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Cuba Guatemala Guatemala Guatemala
+
+Jagua Clara M´elange, Loma Magante Jagua Clara Me´lange, Loma Magante Jagua Clara Me´lange, Loma Magante Jagua Clara M´elange, Loma Magante Jagua Clara M´elange, Loma Magante Jagua Clara M´elange, Loma Magante Jagua Clara Me´lange, Rio San Juan, Riverbed Jagua Clara M´elange, Rio San Juan, Riverbed Jagua Clara Me´lange, Rio San Juan, Riverbed Jagua Clara M´elange, Rio San Juan, Riverbed Jagua Clara Me´lange, Rio San Juan, Riverbed Jagua Clara M´elange Jagua Clara M´elange, Loma Magante Jagua Clara Me´lange, Loma Magante Jagua Clara M´elange, Loma Magante Jagua Clara M´elange, Loma Magante Jagua Clara Me´lange, Loma Magante Jagua Clara Me´lange, Loma Magante Jagua Clara M´elange, Loma Magante Jagua Clara Me´lange, Loma Magante Jagua Clara M´elange Jagua Clara Me´lange Jagua Clara Me´lange Jagua Clara M´elange Jagua Clara M´elange Jagua Clara Me´lange Jagua Clara Me´lange Jagua Clara M´elange Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Rio San Juan Department, Playa Grande site Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region Sierra del Convento M´elange, Macambo Region north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone
+(continued on next page)
+
+5
+
+A.C.S. Knaf et al.
+
+Journal of Archaeological Science 135 (2021) 105466
+
+Table 1 (continued ) VU ID NMFZ-SR-04 NMFZ-SR-05 NMFZ-SR-06 NMFZ-SR-07 NMFZ-SR-08 NMFZ-SR-09 NMFZ-SR-10 NMFZ-SR-11 NMFZ-SR-12
+SMFZ-SR-01 SMFZ-SR-02 SMFZ-SR-03 SMFZ-SR-04 SMFZ-SR-05 SMFZ-SR-06 SMFZ-SR-07 SMFZ-SR-08 SMFZ-SR-09 SMFZ-SR-10
+
+Other ID
+MVJ90-24-3 MVE03-82-3 MVE07B-3-2 MVE02-2-5 MVR07-24C MVE07B-3-1 MVE07-4 MVE04-26-2 MVJ84-29-2 MVE07B-19-4 ® MVE07B-19-6 MVE06-X-1 MVE06-13-4 MVE02-26-15 MVE02-26-18 MVE07B-4-3 MVJ84-9B-Dk MVJ84-9C-2 MVJ84-10-1 MVJ84-42-1 MVE06-12-1 MVE07-10 MVJ84-51-5 MVR07-23A MVR07-23B MVE07B-6-5 ® MVE04-44-2 MVE04-25-6 MVE07-8 01GSn1-4 JE01-3-2 JE01-6-1 MVE04-14-6 JJE01-X-3 MVE02-17-5 MVE03-77-3 MVE04-20-3 MVE03-77-7 MVE02-15-5 MVE02-8-5 JJE01-X-1 RSJ00-1 01GSn2-12 MVE03-76-11 MVE04-20-2 MVE04-21-2 JE01-7-7 ® MVE04-21-7 MVE04-15-2 MVE06-17-2 MVE02-15-6 MVE02-15-9 MVE02-15-10 ®
+
+Lithology
+Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite-Omphacitite Omphacitite Ab-Jadeitite Ab-Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Ex-Jadeitite-Ab-Ne symplectite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Jadeitite Mylonitized Jadeitite-Omphacitite Jadeitite Omphacitite Omphacitite Omphacitite Jadeitite Jadeitite-Omphacitite Jadeitite Jadeitite Jadeitite Jadeitite Pmp-Jadeitite Omphacitite Lws-Omphacitite Ph-Jadeitite Jadeitite Jadeitite Jadeitite Pmp-Jadeitite Pmp-Jadeitite Ab-Jadeitite Omphacitite Ab-Grt-Qtz-Omphacitite Omphacitite Grt-Ab-Qtz-Jadeitite Ab-Qtz-Jadeitite Ab-Qtz-Jadeitite Ab-Qtz-Jadeitite
+
+Region
+Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala Guatemala
+
+Location
+north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone north of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone south of Motagua Fault Zone
+
+jadeitite–omphacitite, lawsonite–omphacitite and omphacitite were sampled from 6 locations south of the MFZ (n=10) (Harlow, 1994; Harlow et al., 2011, 2016). Trace element data (n=34) from Harlow et al. (2016) were supplemented with additional TE and new isotope composition data from this study (NMFZ n=12 and SMFZ n=10).
+5. Experimental techniques and standard data
+Full details of the methods used in source rock and artefact sample preparation are included in Appendix A. Analytical techniques for TE analyses of 34 Guatemalan source rocks are described in Harlow et al., 2011, 2016. For TE and isotope composition analyses about 80 mg of whole rock powder were digested in high-pressure Parr™ digestion vessels. After sample decomposition the total solution was dried down, nitrated and aliquoted for TE analyses and lead (Pb), strontium (Sr) and neodymium (Nd) ion-exchange chromatography (see Appendix A).
+
+Trace element abundances were determined on a Thermo Fisher X-ser­ ies-II inductively coupled plasma mass spectrometer (ICP-MS) following the protocol of Eggins et al. (Eggins, 1997) using a USGS BHVO-2 standard reference material for calibration and instrumental drift correction. Repeated analysis of USGS standard reference material BCR-2 yields better than 12% (2RSD) for all measured trace elements and <18% for TE ratios. Isotopic determinations for small Nd (<75 ng) and Pb (<50 ng) samples and all Sr samples (>100 ng) were determined in static mode on outgassed rhenium filaments on a TRITON-Plus ther­ mal ionisation mass spectrometer (TIMS). Instrumental mass fraction­ ation was corrected using an exponential law normalizing to 86Sr/88Sr=0.1194 and 146Nd/144Nd=0.721903. Over the period of this study, the long-term values for 200ng of the NBS987 Sr standard resulted in 87Sr/86Sr 0.710247±0.000023 (2SD, n=79), 200 ng loads of the in-house CIGO Nd standard yielded 143Nd/144Nd 0.511329±0.000011 (2SD, n=36) and the JNdi measured on 100 ng
+
+6
+
+A.C.S. Knaf et al.
+gave 143Nd/144Nd 0.512095±0.000007 (2SD, n=14). A207Pb–204Pb double spike technique was employed for Pb samples <50 ng following the protocol of Klaver et al. (2016); 50 ng (n=3) of the NBS981 resulted in 206Pb/204Pb 16.9421±0.0010 (2SD), 207Pb/204Pb 15.4995±0.0007 (2SD), 208Pb/204Pb 36.724±0.002 (2SD) and 500 pg (n=4) gave 206Pb/204Pb 16.930±0.008 (2SD), 207Pb/204Pb 15.4858±0.0095 (2SD), 208Pb/204Pb 36.695±0.026 (2SD). Isotope data for samples with higher amounts of Nd (>75 ng) and Pb (>50 ng) were acquired on a Thermo Scientific NEPTUNE in static, multi-collector mode. The NBS981 (50 ppb, n=28) yielded 206Pb/204Pb 16.9415±0.0018 (2SD), 207Pb/204Pb 15.4996±0.0020 (2SD), 208Pb/204Pb 36.7247±0.0046 (2SD) and the in-house CPI (50 ppb, n=53) gave 206Pb/204Pb, 17.8988±0.0047 (2SD), 207Pb/204Pb, 15.5656±0.0035 (2SD), 208Pb/204Pb 38.018±0.013 (2SD). The long-term values of 200 ppb CIGO resulted in 143Nd/144Nd 0.511330±0.000020 (2SD, n=62), 200ppb in-house CPI gave 143Nd/144Nd 0.511737±0.000018 (2SD, n=16), as well as 143Nd/144Nd 0.512099±0.000016 (2SD, n=33) for 200 ppb JNdi. Total procedural blanks did not exceed 25 pg Pb, 70 pg Sr and 5 pg Nd and are therefore negligible.
+6. Geochemical results
+The geochemical data of jadeitite and jadeite–omphacite-rich source rocks and artefacts are presented in Supplementary Table 2 (trace element abundances, TE) and Supplementary Table 3 (Sr-Nd-Pb isotope compositions, IC). Trace element data are presented in Fig. 2 normalised to chondritic values (Fig. 2A–D) and normal mid ocean ridge basalt (NMORB, Fig. 2E–H) (Gale et al., 2013), respectively.
+Jadeite-rich source rocks from the Dominican Republic have REE signatures (Fig. 2A) that resemble average continental crust and enriched mid ocean ridge basalt (E-MORB) with LaN/YbN ratios of 0.37–12.33 (median 2.48) and almost ubiquitous positive Eu anomalies (Eu*=EuN/SQRT(SmN+GdN), Eu*=0.64–3.78, only samples DR-SR-28/ 33/57 are <1). The REE contents (except DR-SR-15/54/57) range from ~2 to ~67 times C1 chondrite. These source rocks are enriched in incompatible TE, such as Ba, La, Rb compared to N-MORB (Fig. 2E). They feature flat HREE patterns (TbN/YbN ratios of 0.28–6.93 with a median of 1.00) and LREE fractionation with LaN/SmN ratios between 0.57 and 9.40 (median of 1.91). Exceptions are DR-SR-15 and DR-SR-54, which are depleted by a factor of 3 compared to the other source rocks, and DR-SR-57 with a signature similar to alkali basalt. Dominican jadeitite source rocks display pronounced positive Pb anomalies in NMORB element normalised diagrams (Fig. 2E), except for samples DRSR-33 and DR-SR-63. In comparison with N-MORB almost all TE are enriched, apart from Dy, Ti and Y. Nearly all samples yield relative positive Zr–Hf anomalies. All samples have clearly sub-N-MORB LaN/ NbN ratios of 0.07–11.10 (median 2.05). With the exception of the large ion lithophile elements (LILE; Cs, Rb, Ba) and Pb, sample DR-SR-15 is strongly depleted compared to the other source rocks. Incompatible el­ ements, such as the LILE and Th, U, Nb, Ta exhibit a marked variability (3 orders of magnitude), whereas the more compatible elements Dy, Ti, Y, Yb and Lu vary by less than an order of magnitude.
+Artefacts from the Playa Grande site exhibit nearly flat REE patterns (Fig. 2B) with a LaN/YbN median of 1.96; exceptions are DR-PG-11 with 6.41 and DR-PG-23 with 13.60. REE contents in the artefacts vary from ≈1.5 to ≈22.0 times chondritic, except sample DR-PG-23, which ex­ hibits depleted HREE compared to chondrite. Overall, the samples feature REE patterns similar to average continental crust and E-MORB. Samples containing lawsonite (DR-PG-16 and DR-PG-19) show similar patterns to artefacts with >90% vol. jadeite. With 2 exceptions, DR-PG11 and DR-PG-22, all samples demonstrate positive Eu anomalies (Eu*=1.02–3.65 with median of 1.47). Most of the artefact trace element normalised patterns (Fig. 2F) are subparallel. Artefacts have positive and strongly developed Zr–Hf anomalies (except for DR-PG-27). In all samples, compatible elements Dy, Ti, Y, Yb and Lu are depleted with respect to N-MORB. In contrast, most samples are enriched in LILE
+
+Journal of Archaeological Science 135 (2021) 105466
+(Cs, Ba and partly Rb), Pb (exceptions are DR-PG-11/22/27), Sr (except DR-PG-11/13/14/17/28) compared to N-MORB. Sr isotope ratios range from 0.70332 to 0.70564 (median=0.70372, Fig. 3A) and 143Nd/144Nd between 0.51287 and 0.51318 (median=0.512101, Fig. 3B).
+Cuban jadeitite (>90 vol% jadeite) displays similar REE patterns (Fig. 2C) with a pronounced positive Eu anomaly, enriched LREE with LaN/SmN ratios of 1.89–3.39 and flat HREE (average TbN/YbN=1.44). Omphacitites have similar patterns and resemble element abundances comparable to N-MORB values apart from the LILE (Cs, Rb, Ba). Epi­ dote–jadeitites have relatively flat REE patterns (av. LaN/SmN=1.04 and av. TbN/YbN=1.56) with weakly developed positive Eu anomalies. Only CU-SR-14 displays an enriched LREE pattern (LaN/YbN ratio of 9.66). All Cuban source rocks possess slightly enriched La–Nb values compared to N-MORB with LaN/NbN ranging from 0.41 to 48.19 (median 4.40), pointing towards an arc type signature. All Cuban source rocks are enriched in Pb compared to N-MORB and show positive Zr–Hf anoma­ lies. Apart from the omphacitites and samples CU-SR-06/11/14/15, jade source rocks have pronounced negative Ba peaks. In general, epi­ dote–jadeitites are more enriched in TE compared to jadeitite and omphacitite (Fig. 2G).
+The Guatemalan source rocks record both LREE enrichment and depletion (LaN/SmN=0.09–11.17, median 2.34) and are generally rela­ tively enriched in HREE (TbN/YbN=0.11–1.65; median 0.71, Fig. 3D). Samples from NFMZ have more variable REE contents (~0.02–~288 times C1 chondrite) than SMFZ samples (~15–~92 x C1; except SMFZSR-07). NMFZ HREE patterns tend to be flatter than those of the SMFZ samples with TbN/YbN=0.15–1.65 (median 0.69) versus 0.11–1.08 (median 0.75); except for NMFZ-SR-01/05/10). Europium anomalies range from 0.57 to 1.65, except for sample SMFZ-SR-07 (Eu*=6.34) and NMFZ-SR-01 (Eu*=0.30). Despite the highly variable mineralogy of the Guatemalan source rocks, REE patterns show similarities. Almost all SMFZ and most NMFZ source rocks have REE patterns typical of felsic rocks, i.e., plagiogranite or albite rich sediment. The exceptions are SMFZ-SR-07 and NMFZ-SR-06/08/12 with patterns comparable to NMORB. All Guatemalan jadeitic rocks show relative Rb depletion that might be attributed to the loss of Rb from the metasomatic fluids to mica and amphibole bearing lithologies (Harlow et al., 2016). The samples are characterised by relative depletion in La and Nb (LaN/NbN=0.07–57.72, median 1.43), pointing towards a subduction related setting, and a strong positive Zr–Hf and Ti anomaly (Fig. 2H). Refractory element Zr/Hf ratios (median 29.58) comparable to N-MORB (36.1 from Sun and McDonough, 1989) might be a result of increasing Zr and HFSE solubility in the presence of high alkali/Al, jadeite–albite precipitating fluids leading to Zr and HFSE transport in the lower crust and upper mantel (Bernini et al., 2013; Wilke et al., 2012). Nearly all Guatemalan source rocks record high concentrations of Cs, Ba, Pb and Sr. Elevated LILE, Ba, Pb and Sr values point towards jadeite precipi­ tating fluids that originated from a sediment rich source (Harlow et al., 2016). Generally, most TE normalised patterns are sub-parallel with the greatest TE enriched concentrations for jadeitites from south of the MFZ. Nevertheless, in detail there are clear regional variations with, for example, distinct LREE fractionation: LaN/CeN ratios of NMFZ samples range between 0.84 and 8.42 versus 0.92–1.96 for samples from the SMFZ. Compared to typical N-MORB, NMFZ samples record lower Ti, Zr and Nb, suggesting formation from a precipitating fluid derived from a protolith formed by larger degrees of partial melting of a melt depleted mantle source than for MORB and hence formation in an ocean island arc setting.
+The variability of the isotopic data for each region are presented in Table 3, box whisker diagrams (Fig. 3A–D) and in Sr–Nd and Pb–Pb isotope covariation diagrams (Figs. 4 and 5). The narrow range in Sr isotope ratios in Cuba (87Sr/86Sr 0.70336–0.70477, n=17) implies a single major jadeitite formation event and minimal late-stage hydro­ thermal alteration. This is compatible with the similar age of jadeitite formation and peak metamorphism (1–10Ma difference), pointing to­ wards a short jadeitite formation process (Harlow et al., 2015). In
+
+7
+
+A.C.S. Knaf et al.
+
+Journal of Archaeological Science 135 (2021) 105466
+
+Fig. 2. Whole rock REE (A, B, C, D) and multi-element variation (E, F, G, H) diagrams showing the range of jadeitite, jadeite–omphacite-rich jade, omphacitite, jadeite–lawsonite-quartzite source rocks from the Dominican Republic (Fig. A+E, Rio San Juan Complex), Cuba (Fig. C+G, Sierra del Convento M´elange), Guatemala (Fig. D+H, NMFZ and SMFZ); and jadeitite artefacts retrieved from the Dominican Playa Grande archaeological site (Fig. B+F). Normalisation values for C1 chondrite and N-MORB from Sun and McDonough (Sun and McDonough, 1989).
+8
+
+A.C.S. Knaf et al.
+
+Journal of Archaeological Science 135 (2021) 105466
+
+Fig. 3. Sr-Nd-Pb isotope compositions presented as boxplots of jadeitite to jadeite-omphacite rich source rocks, (A) 87Sr/86Sr variability, (B) 143Nd/144Nd variability, (C) 206Pb/204Pb variability and (D) 207Pb/204Pb variability. Source and artefact abbreviations, as well as colour coding are: Rio San Juan Complex (light blue DR), Sierra del Convento M´elange (orange CU) and Guatemala (GM) considered as one source (grey GM all) and divided into two sources as NMFZ (yellow) and SMFZ (bright blue), as well as Playa Grande jade artefacts (green). Crosses indicate average isotopic compositions, the interquartile range (IQR=Q1-Q3) displays 50% of the data and the median isotopic composition is marked by a horizontal line inside the box. Samples lying outside the whiskers (<Q1-1.5xIQR and > Q3+1.5xIQR) represent 0.7%, meaning 99.3% of the data are within ±2.698σ. Note Sr-Nd-Pb radiogenic isotope compositions of jade sources overlap. (For interpretation of the references to colour in this figure legend, the reader is referred to the Web version of this article.)
+
+contrast, the isotopic variability recorded by the Dominican (87Sr/86Sr 0.70337–0.70871, n=28) and Guatemalan (87Sr/86Sr 0.70393–0.70907,
+
+n=22) source rocks implies genesis involving inter alia multiple types of
+
+protoliths and potentially multiple events. There is substantial overlap between NMFZ (87Sr/86Sr 0.70393–0.70616, n=12) and SMFZ (87Sr/86Sr 0.70452–0.70907, n=9). Notably, 99.3% of the Sr isotope
+
+data for the Cuba data are between 0.70336 and 0.70375, for the
+
+Dominican Republic this range is between 0.70337 and 0.70526 and for Guatemala 0.70451–0.70613. The 143Nd/144Nd ratio of the source rocks
+
+varies for Cuba between 0.51293 and 0.51305 (n=17) and for the
+
+Dominican Republic from 0.51259 to 0.51314 (n=29). Guatemalan
+
+jades feature 0.51280–0.51319 (n=11) for the NMFZ and
+
+0.51287–0.512101 (n=10) for the SMFZ (Figs. 3 and 4). Lead isotope
+
+composition of Cuban jades records significant variation;
+
+206Pb/204Pb=18.39–19.01,
+
+207Pb/204Pb=15.56–15.61
+
+and
+
+208Pb/204Pb=38.09–39.43. More radiogenic values are recorded in the
+
+Dominican and Guatemalan source with 206Pb/204Pb=18.36–20.38,
+
+207Pb/204Pb=15.48–15.75 and 208Pb/204Pb=38.03–40.43 and
+
+206Pb/204Pb=18.34–22.30,
+
+207Pb/204Pb=15.59–15.77
+
+and
+
+208Pb/204Pb=38.14–43.82, respectively. Jades from north and south of
+
+the MFZ generally have overlapping Pb isotope ratios although jades
+
+from SMFZ include the highest ratios. Nd and Pb isotope ratios range
+
+from those typical of MORB to more crustal values and in some cases
+
+high time-integrated U+Th/Pb ratios (Figs. 4 and 5). Overall isotopic
+
+compositions are relatively restricted in the Cuban source, whereas
+
+Dominican and especially Guatemalan jades record marked isotopic
+
+variabilities. Jadeitite artefacts from Playa Grande have variable lead
+
+isotope
+
+compositions
+
+with
+
+206Pb/204Pb=18.39–18.99,
+
+207Pb/204Pb=15.56–15.72 and 208Pb/204Pb=38.05–38.91 (Fig. 3C and
+
+D). Sample DR-PG-22 stands out, reaching high time-integrated radio­ genic values, i.e., 87Sr/86Sr 0.70564, 143Nd/144Nd 0.51318, 206Pb/204Pb 20.07 and 208Pb/204Pb 38.91 (Figs. 4 and 5).
+
+7. Statistical methodology and results
+
+The geochemical database of the circum-Caribbean jade source rocks presented above is the fundamental input required to evaluate the possibility to provenance jade artefacts in the circum-Caribbean. If successful, it would allow future research to geochemically fingerprint pre-colonial Caribbean jade artefacts recovered from various islands to trace exchange and mobility networks linking communities throughout the Caribbean. However, institutions that hold Caribbean collections often do not permit sampling, transport, or bulk destructive analysis of their artefacts. Analyses must be essentially non-invasive and preferably carried out on-location. Thus, to conduct elemental and isotope composition analyses of artefacts and art objects, portable minimally destructive instrumentation is required. Recent breakthroughs in sam­ pling techniques (Glaus et al., 2012; Knaf et al., 2017) and mass spec­ trometry techniques (Koornneef et al., 2014) now enable precise and accurate analyses on μg amounts of material, ensuring that the integrity of an object is preserved. Using this methodology, samples that are deposited onto a filter are not weighed (μg range) to avoid increasing the blank contribution. Consequently, elemental abundances cannot be determined, but crucial trace element ratios will be unaffected by
+
+9
+
+A.C.S. Knaf et al.
+
+Journal of Archaeological Science 135 (2021) 105466
+
+Fig. 4. 87Sr/86Sr versus εNd diagram showing isotopic compositions of jade source rocks from the Rio San Juan Complex (DR), Sierra del Convento M´elange (CU) and Guatemala divided into two sources (NMFZ and SMFZ). Green circles are displaying artefact data from the Playa Grande settlement in the northern Dominican Republic. (For interpretation of the references to colour in this figure legend, the reader is referred to the Web version of this article.)
+
+Fig. 5. 206Pb/204Pb versus 207Pb/204Pb diagram showing isotopic compositions of jade source rocks from the Rio San Juan Complex (DR), Sierra del Convento Me´lange (CU) and Guatemala divided into two.
+
+analytical uncertainties. TE ratios are a strong tool for provenance an­ alyses (Knaf et al., 2017). The data given in section 6 show that the isotopic compositions of circum-Caribbean jades by themselves have limited resolving power. Hence TE ratios will be evaluated as potential provenance indicators.
+Generally, jade chosen by indigenous people for crafting tools and paraphernalia is fine grained and homogenous, allowing for represen­ tative of the whole rock and reproducible laser ablation sampling. However, a minority of precolonial jade artefacts (<10%) are relatively coarse grained (>500 μm) and have heterogeneous textures such that representative sampling by laser ablation is an issue. Importantly, provenance prediction is conducted with TE ratios, which are less influenced by grain size and sample heterogeneity than isotopic com­ positions. However, it needs to be emphasized that petrography is important, as accessory phases such as zircon, titanite, rutile etc. can influence elemental abundances. Hence, HFSE, such as Nb, Ta, Zr, and Hf, which are enriched in accessory phases, should not be considered for predictive modelling when using high spatial resolution sampling through portable laser ablation.
+
+With the aim of assigning the 101 samples into distinguishable jade source regions, 37 TE ratios are used, including various combinations of TE groups with different geochemical behaviour, such as LILE, HFSE, LREE, MREE and HREE. Four statistical methods are applied to the samples to determine the most robust discriminatory provenance model. Specifically, we aim to find combinations of TE ratios that identify sources of origin. The set of various statistical techniques applied for source identification are explained in detail in Appendix B. In the following section we provide an extended overview of the most prom­ ising methods and results. In addition, the provenance of the 19 Dominican Playa Grande jadeitite artefacts will be evaluated, with the initial assumption that they are likely to be of local origin (Harlow et al., 2003). The statistical methods have been chosen and developed to be applied to the relatively small sample set (four classes with a total of n=101) and considering that, with the many explanatory variables (TE ratios), there is the potential problem of over-fitting or feature selection. In addition, the similar geochemical behaviour of some elements may introduce the issue of multi-collinearity. Four statistical methods are thus evaluated for feature compression, feature engineering, and feature
+
+10
+
+A.C.S. Knaf et al.
+selection, multiclass classification, and prediction (see Appendix B for details). The TE data are separated into 3 jade source regions (DR, CU, GM general) and subsequently assessed to establish if it was possible to resolve 4 sources (DR, CU, NMFZ, SMFZ).
+Logistic regression is a classification method to separate samples belonging to more than one class. For the jade rock provenance analysis, we use the binary logistic regression method for separating the 4 jade sources using the trace element ratios identified by the Welch’s test above as good candidates for source discrimination. Here we use this technique to separate samples from DR, CU, and GM regions by training three binary classifiers. For a detailed summary of the multiclass regression analyses see Appendix C.
+First GM (NMFZ/SMFZ) is split from the DR/CU group by applying La/Th (or Ce/Th, similar geochemical behaviour), Y/Th, and Zr/Hf. Of the 101 jadeitic source rocks, 17 Cuban, 24 Dominican and 54 Guate­ malan source rocks (32 NMFZ and 22 SMFZ) are correctly assigned (Table 2). Four Dominican source rocks (DR-SR-53/56/58/59) and 2 Guatemalan jades (NMFZ-SR-01 and MVE02-15-9) are misclassified and assigned to GM and DR/CU (91% success overall), respectively. Subse­ quently, the predicted classification split from the DR/CU and GM (NMFZ/SMFZ) model is used to further split DR from CU and NMFZ from SMFZ based on Er/Yb, Ba/Rb and Nb/Ta, and Zr/Hf, Ta/Th, Ce/Gd, La/ Sm, Dy/Y, Sm/Nd. Seven Dominican source rocks (DR-SR-12/17/24/ 49/52/62/64) are falsely assigned to Cuba and 5 Cuban jades (CU-SR02/03/06/11/17) are misclassified and clustered with Dominican jades, compared to 29 correctly classified samples (71% successful assign­ ment). For the latter split model, 48 GM source rocks are correctly classified, and 6 are falsely assigned to either the NMFZ – (SMFZ-SR-08, JE01-7-7 ® and MVE04-15-2) or SMFZ class (NMFZ-SR-10, MVE04-44-2 and 01GSn1-4); i.e., 89% are correctly assigned. Using the GM vs DR/CU group classification model the 19 jadeitite artefacts from the Playa Grande site (DR-PG-1 to DR-PG-19) split resulted in 16 samples being sourced to the DR/CU group and 3 (DR-PG-11/13/18) to GM. Moreover, all 16 samples from the DR/CU group are assigned in a second step to the DR.
+8. Discussion
+The statistical approach employed to classify potential source rocks serves as a base for future provenance studies. Binary regression method is shown to yield superior class classification compared to classical PCA, t-SNE or decision tree approaches. By using multiple TE ratios at a specific split, the analytical error is insignificant, which is important for future predictive models for artefact data assignment. The logistic regression classifier based on La/Th, Zr/Hf and Y/Th trace element ra­ tios is able to separate 91% of the DR/CU sources from the GM sources (NMFZ and SMFZ). Further, the classification based on Er/Yb, Nb/Ta and Ba/Rb trace element ratios further discriminate 71% of DR and Cuba sources, and finally classification model built on Zr/Hf, Ta/Th, La/ Sm, Ce/Gd, Sm/Nd and Dy/Y trace element ratios separate the NMFZ from SMFZ (89%) samples. It is therefore concluded that it will be feasible to provenance Caribbean precolonial – colonial jade artefacts.
+The objective of this study is to characterise jade sources in the Greater Caribbean and to evaluate the potential to discriminate them based on the geochemical characteristics. The success of this exercise strongly depends, however, on how representative the sample set is. Tectonic blocks of jade of the Macambo region of Cuba crop out within a few square km (approx. 4×3 km2). The 17 samples are considered suf­ ficient to characterise the eastern Cuban source. This conclusion is supported by the limited variability in 87Sr/86Sr, 0.70359±0.00065 (2SD, n=17; Fig. 3) and most trace element ratios. The DR source spans an area of roughly 25×35 km2 but extensive sampling is spatially limited to a few jadeitite containing localities. All known jadeitite occurrences, as well as eroded and transported jadeitite in boulder beds of the Rio San Juan, its tributaries and the Rio Arroyo Sabana are incorporated in this study. Our findings demonstrate that there is marked geochemical
+
+Journal of Archaeological Science 135 (2021) 105466
+variance (e.g., 87Sr/86Sr 0.70448±0.00289, 2SD; Fig. 3). Compared to the Cuban and Dominican sources, the jadeite-omphacite source rocks in Guatemala cover a much larger area (circa 210×100 km2) and include multiple jade bearing locations (>10). With only 52 samples (NMFZ+SMFZ, 22 for IC analyses) it is probable that not all geochemical variances are covered in this work. Significantly, however, there is a large isotopic variance in the geochemical data, e.g., NMFZ 87Sr/86Sr 0.70490±0.00168, 2SD; SMFZ 87Sr/86Sr 0.70623±0.00318, 2SD; and GM including NMFZ and SMFZ 87Sr/86Sr 0.70547±0.00273, 2SD (Figs. 3A and 4). The elevated 87Sr/86Sr ratios from Guatemala and the Dominican Republic compared to MORB and to most rocks that derive from island arc magmatism imply alteration by hydrothermal fluids, which are most distinct for the SMFZ source rocks. The complex con­ ditions that form jade at depth (30–70 km) and the necessary exhuma­ tion process makes its occurrence rare and locally spatially limited. Jade deposits are present as veins or blocks ranging from several centimeters to decameters in size. The areas in which the jadeite-rich rocks were observed are partly very large and not all have been fully surveyed. Certainly, not all occurrences have yet been discovered, since some of them occur only very locally (dm-m range). Therefore, it cannot be ruled out in the future that, e.g., lawsonite-bearing rocks are discovered in Cuba or kosmochlor/ureyite-bearing rocks in the Dominican Republic.
+An additional aspect to consider is the contrast between our sys­ tematic sampling and the indigenous communities who collected the jadeitic lithologies based on subjective aspects, such as accessibility, appearance and physical properties, i.e., hardness, workability, colour and availability. From the study of artefacts recovered at manufacturing sites such Playa Grande, it is known that the indigenous people exploited pre-shaped cobbles as templates (Schertl et al., 2019), incising and eroding deposits, ergo not including all types of local jade into the production process. From the visual inspection of the large suite of jadeitite artefacts (>50 celt fragments and complete celts) from Playa Grande, coupled with visual studies of Museum collections (n≈500, Muse´e du Quai Branly, National Museum of Denmark, Museo Altos de Chavo´n, Museo de la Hombre Dominicano, Antiquities Monuments and Museum Corporation, Smithsonian National Museum of the American Indian, Smithsonian National Museum of Natural History, Peabody Museum of Natural History, Peabody Museum of Archaeology and Ethnology, American Museum of Natural History), it is clear that indigenous people preferentially sampled dark green coloured, fine grained and homogenously textured jadeite–omphacite-rich rocks
+
+Table 2 True sources (vertical) vs predicted sources (horizontal) summary (3 and 4 class model). First split to separate Guatemala (GM = NMFZ and SMFZ) from DR and CU based on La/Th (or Ce/Th), Y/Th, and Zr/Hf. Subsequent splits by using the predicted classification split from the (DR, CU) and (NMFZ, SMFZ) model to further split DR from CU and NMFZ from SMFZ. Separating DR from CU based on Er/Yb, Ba/Rb and Nb/Ta; and NMFZ from SMFZ by using Zr/Hf, Ta/Th, Ce/Gd, La/Sm, Dy/Y, Sm/Nd.
+
+CU/DR
+
+GM
+
+DR
+
+24
+
+4
+
+CU
+
+17
+
+0
+
+NMFZ
+
+1
+
+32
+
+SMFZ
+
+1
+
+22
+
+DR
+
+DR
+
+17
+
+CU
+
+12
+
+NMFZ
+
+SMFZ
+
+1
+
+CU
+
+NMFZ
+
+SMFZ
+
+7 5
+1
+
+DR
+
+DR
+
+2
+
+CU
+
+1
+
+NMFZ
+
+SMFZ
+
+NMFZ
+2 28 3
+
+SMFZ
+3 19
+
+11
+
+A.C.S. Knaf et al.
+(approx. >75%). Furthermore, old museum collections of jade artefacts which were donated or received as a gift by early and amateurish ar­ chaeologists (19th and early 20th centuries), mainly comprise pristine and complete artefacts (>90%). It is evident that the collections of gathered and excavated objects are biased, as pieces were subjectively selected, excluding broken and worn-out artefacts. Comparing the geochemical data from the Playa Grande artefacts with the three source regions it is apparent that the indigenous communities did not procure raw materials from all available outcrops. They used specific sources, which is evident by the narrow variation of TE abundances (e.g., La 2.52±2.58 2SD), 87Sr/86Sr (0.70409±0.00161 2SD) and 143Nd/144Nd (0.51299±0.00013). Broadly speaking, we conclude that source rocks depleted in TE relative to bulk Earth and more silicic crustal composi­ tions were not used (Fig. 2) which is evident in the Playa Grande assemblage.
+Generally, provenance studies will have to include multiple data­ bases, i.e., produced at different institutions and/or using different analytical methods, potentially introducing a systematic analytical error. Data published by Schertl et al. (2019) and Harlow et al. (2016) allow us to assess this issue. TE analyses carried out by Acme Labora­ tories, Vancouver, Canada (see Schertl et al., 2019), yielded higher limits of quantification (LOQ) than this study and did not report some elements essential for Caribbean jade discrimination (e.g., Ta and Th). Reported data are typical within analytical error (<15% 2RSD). Some differences in element concentrations exceeding 15% 2RSD (e.g., sample DR-PG-15=31100 has 41% difference in Hf) can be attributed to het­ erogeneities of the rock sample, as small sub-samples were analysed (<100 mg). Importantly, however, the effect of any analytical bias in element concentrations between the data sets does not have a major influence on final TE ratios, e.g., Zr/Hf of 40.8 for DR-PG-15 and Zr/Hf of 43.6 for 31100 (4.6% 2RSD). Likewise, a comparison with TE data published by Harlow et al. (2016), gained from 50 g of whole rock powder and analysed by a NSF sanctioned lab, indicates that there are no significant analytical biases in the trace element ratio data.
+Previous studies have illustrated that a combined petrographic and analytical approach can be used to provenance circum-Caribbean jades (Harlow et al., 2006, 2019; Garcia-Casco et al., 2013). In most cases, however, this destructive approach cannot be applied. Nevertheless, in some rare cases, mineralogy may indicate a specific source. The occur­ rence(Ha¨nni and Meyer, 1997) of lawsonite in jadeitite is globally rare and in the Greater Caribbean only reported in the Rio San Juan Complex (Schertl et al., 2012) and the Carrizal Grande Group south of the MFZ (Harlow et al., 2011). Kosmochlor/ureyite (Ou and Chiu, 1984) is only present in jade from the La Palmilla region in Guatemala and points towards fluid-rock interactions involving altering peridotites which are enriched in Cr (Harlow et al., 2011; Sorensen et al., 2010; Harlow and Olds, 1987). It is also notable that paragonite is very rare in jadeitites from the Dominican Jagua Clara me´lange but found in the Playa Grande artefacts (DR-PG-19) (Schertl et al., 2019) and can be common in jadeitites from Cuba and Guatemala (Harlow et al., 2006, 2011; Gar­ cia-Casco et al., 2013). Hence, lawsonite, kosmochlor/ureyite and par­ agonite are suited as source classifier.
+Due to varying parent-daughter isotope ratios in the source rocks, variable formation ages and geochemical differences in the precipitating fluids and precursor rocks (ultramafic, mafic, or intermediate), Sr-, Ndand Pb-isotope ratios are highly variable and generally overlap (Fig. 3). The mineralogical and chemical differences between the source regions result from formation under varying regional conditions and influence the TE compositions due to differences in element mobility. Individual regions show distinct LILE, high field strength element (HFSE: Ti, Nb, Ta, Hf, Zr) and LREE abundances due to their different mobility in metamorphic fluids and during dehydration reactions. Specific TE ratios show a general difference between source regions, (e.g., La/Th and Ce/ Hf), but, because of similar geological settings and conditions of for­ mation, there is no single TE ratio that provides a definitive separation. A key requirement for successfully implementing TE ratios into the
+
+Journal of Archaeological Science 135 (2021) 105466
+discrimination algorithm is a trace elemental inter-sources variability greater than the analytical error. This is generally the case for trace element ratios for the whole rock samples used in this study (Table 2; Fig. 2). Hence a decision tree approach is well suited for this study. Application of the approach to less precise data sets might, however, raise issues. For example, Knaf et al. (2017) demonstrated that when analysing <5 μg samples taken with a portable laser ablation (pLA) device 2RSD could exceed >10% and may reach ~25% for some trace elements. In such cases it will be important to critically examine data quality before attempting a provenance study. The order of magnitude increase in sensitivity of the ICPMS technique in the last decades (Craig et al., 2018), certainly, means that analytical issues will generally not hinder the approach, provided work is carried out under low blank conditions. As mentioned above, the majority of the examined jade ar­ tefacts in various collections are composed of fine-grained and homog­ enous jades. However, a small proportion of artefacts (<25%) is made of coarse-grained, mottled and heterogenous jades, posing the question of the representativeness of the sample(s) taken with the pLA device compared to a conventional whole rock sample.
+The approach favoured here does not require data normalisation, which is imperative for any other data modelling method, as the TE ratios can have different absolute scales. In most other methods of data modelling, normalizing values would be required so that the results are not skewed due to differences in range of values, e.g., Ba/Ta (12–219846) and Nb/Hf (0.02–45.88). The decision tree considers each TE ratio independently and determines the best split within the TE ratio based on the defined classes. It does this independently for each TE ratio and then picks the most discriminating value. However, the model does not consider the analytical error of the samples. Therefore, we adopted multiple variables (TE ratios) at a split node, applying a multiclass regression model, which limits the influence of any analytical error in an individual TE ratio. The multiclass regression modelling technique is designed based on TE with distinct geochemical properties, i.e., combing immobile high field strength, light and heavy rare earth, highly incompatible elements such as Th and fluid mobile large ion lithophile elements. The multiclass regression analysis establishes that the Gua­ temalan source(s) can be discriminated from the Dominican and Cuban source to 91% using La/Th, Zr/Hf and Y/Th (Table 2). Four jadeiteomphacite rich jades from the Dominican Republic (DR-SR-53/56/58/ 59) were falsely assigned to the Guatemalan source(s).
+Sample DR-SR-59 is 1 OM enriched compared to N-MORB, possess a flat REE pattern (Fig. 2A) with no obvious Eu anomaly and high LILE abundances (Pb, Cs, Ba 1055 ppm possibly in barian phengite, Rb 27.2 ppm) with Pb 21.1 ppm being 2 times more enriched with respect to NMORB than other Dominican jades (DR-SR <11 ppm) and Cs 1.94 ppm, showing 4 times enrichment (Fig. 2E). Geochemically, sample DR-SR-58 is similar to DR-SR-59 except for 2 times more enriched LREE pattern, and slightly negative Pb-, Sr- and Ti anomalies. Notably, with respect to the geochemistry of the excavated Playa Grande artefacts, these rock types were not employed by the indigenous communities for making celts. Samples DR-SR-53 and DR-SR-56 display a similar REE and TE pattern with high Th (0.24 ppm and 0.43 ppm) and U abundances (0.15 ppm and 0.55 ppm). Compared to chondrite values, they are both enriched in LREE and offer flat HREE pattern (Fig. 2A).
+Jade from the Dominican Republic can be distinguished from the Cuban source employing Er/Yb, Nb/Ta and Ba/Rb ratios to 71% (Table 2). Misclassified Dominican samples (DR-SR-12/17/24/49/52/ 62/64) show comparable TE abundances with Cuban source rocks, except for Yb and Lu elemental abundances which are 1–2 OM higher in the Cuban assemblage (Fig. 2C). In addition, DR-SR-17 is depleted in Zr and Hf compared to N-MORB and the Cuban samples by 1 OM. Falsely assigned Cuban jades (CU-SR-02/03/06/11/17) have similar TE pat­ terns as Dominican jades; nevertheless, CU-SR-17 exhibits a 4 OM depletion in Ba and Ti and 2 to 3 OM enrichments in Yb. The two source areas in Guatemala, north and south of the Motagua Fault Zone, can be distinguished to 89% by using Zr/Hf, Sm/Nd, Ta/Th, La/Sm, Dy/Y and
+
+12
+
+A.C.S. Knaf et al.
+Ce/Gd (Table 2). Our data show that misclassified samples from the DR, CU, NMFZ and SMFZ are characterised by a mineral assemblage that implies formation at similar and/or overlapping PT conditions. Harlow et al. (2015) demonstrated that quartz free jades from the DR were generated under similar PT conditions to jades derived from south of the MFZ. Quartz bearing jades from the Jagua Clara M´elange were formed at the same P as jades from the NMFZ. Source rocks from the Sierra del Convento M´elange in eastern Cuba generally experienced a “hotter” subduction (up to 600◦C and perhaps even higher) than the other source regions nevertheless have overlapping PT conditions with parts of the DR and GM suites. Geochemically the same issue is encountered, and 22.8% of samples studied cannot be discriminated, i.e., assigned to the correct source class (9 DR, 5 CU, 5 NMFZ and 4 SMFZ out of a total of 101 jade samples).
+Until now, it has never been possible to prove, based on studies of archaeological materials recovered in the process of formal excavations, the contacts between Hispaniola and Central America in pre-Hispanic times. Geochemical analyses and predictive modelling of 19 jadeitite celts excavated from the Late Ceramic Age Site Playa Grande in the northern Dominican Republic determined 3 celts of exotic origin (16%, Fig. 2), connecting Hispaniola to Guatemala. Apart from samples DRPG-11/13/18, all jadeitite artefacts have a Dominican signature. Our findings are corroborated by Schertl et al. (2019) who determined for sample DR-PG-18 (31103) very low REE abundances which are not in the range of the Rio San Juan spectra. The stratigraphic unit in which celt fragment DR-PG-18 (31103, UE 3 of Corte 7 A-H) was found cor­ responds to pre-Hispanic levels with a calibrated radiocarbon date of 790–1000AD. A second date of UE 3 (1340–1470AD) was identified which places the archaeologic stratum a later date, but always within pre-Hispanic levels. (Lo´pez Belando, 2012; Lo´pez Belando, 2019). From this result, it is derived that most likely the pieces arrived in Hispaniola between the end of the 8th century AD and the 11th century AD, although the greatest probability is based on the fact that the dating is centered between the 9th century AD and 10th century AD. The inferred Guatemalan source for jade celts indicates long distance exchange routes; 2000 km linear distance but with respect to indigenous transport routes >3200 km (Hofman et al., 2010, 2014; Slayton, 2018; Laffoon et al., 2014). Although an extensive workshop was discovered at the site, currently there is insufficient archaeological evidence to determine if the finished product or raw materials were traded throughout Caribbean islands or only used locally. The ability to provenance the source rocks offers the possibility to address this question in the future which is of greatest interest to reconstruct the prehistory of the Caribbean.
+9. Conclusion
+We have shown that it is possible to discriminate between the four circum-Caribbean jade sources which might have been exploited as source for raw material procurement by pre-colonial communities. Thus, it is feasible to provenance objects from archaeological sites made from jade. This study reports comprehensive geochemical coverage of known Cuban and Dominican Republic sources but only a proportion of the larger Guatemalan sources (NMFZ and SMFZ). Additional terrain inspections are crucial to find and describe new deposits, thereby reducing the bias. We propose the development of a MesoamericanCaribbean database of natural jade-rich rocks and artefacts including for example associated mineralogy, geochemistry, and age.
+The geochemical variability within the individual source regions is much larger than the analytical error, a precondition for a statistical analysis. In comparison to the source rock study, selective sampling of raw materials, either because of appearance, social or cosmological value, or availability, will have led to a sampling bias by the indigenous populations. With a few exceptions, rock types that are coarse grained and heterogeneous are not represented among artefacts. Artefact se­ lection, however, may be biased in private and public collections as a result of collection by pioneer and amateur archaeologists.
+
+Journal of Archaeological Science 135 (2021) 105466
+We have demonstrated that inter-laboratory analytical bias is not a significant issue in comparison to the observed geochemical variation of jadeitite source rocks. Jade in the Greater Caribbean was formed in similar tectonic settings within subduction zone settings. Jade sources feature comparable mineralogy and similar geochemical signatures and overlapping Sr-Nd-Pb isotope compositions. Individual regions record major intra– and inter-source variability, e.g., Y/Th for all sources, including data from Harlow et al. (2016), ranges from 0.31 to 1207.79 with DR 2.84–673.19, CU 17.46–1207.79, NMFZ 0.37–459.96 and SMFZ 1.08–63.62. Trace element ratios are better suited for separating sources from each other than element concentrations. Due to the rela­ tively young age of most protoliths and the time of jade formation, Sr-Nd-Pb isotope compositions are not distinct between source regions, although Cuban samples generally have the least radiogenic 87Sr/86Sr ratios, a characteristic that may prove helpful in characterizing artefacts in the future.
+A first application of predictive modelling artefact provenance constituted conclusive evidence of pre-colonial networking. The pres­ ence of source rocks from Guatemala in the Dominican Playa Grande lithic assemblage provides further evidence of large scale (>3000 km) regional trading and indigenous knowledge transfer networks across the Caribbean.
+Declaration of competing interest
+There are no conflicts of interest.
+Acknowledgments
+This research received funding from the European Research Council under the European Union’s Seventh Framework Programme (FP7/ 2007–2013)/ERC grant agreement No 319209 (ERC-Synergy NEXUS 1492) and the European Union’s Horizon 2020 research and innovation programme under grant agreement No 654208 (Europlanet 2020 RI). We are grateful to the Museo del Hombre Dominicano for providing the Playa Grande samples. Thanks to Richard Smeets, Bas van der Wagt, Kirsten van Zuilen, Bouke Lacet, Eva Kelderman and Quinty Boosten for analytical assistance.
+Appendices. Supplementary data
+Supplementary data to this article can be found online at https://doi. org/10.1016/j.jas.2021.105466.
+References
+Bernini, D., Aud´etat, A., Dolejs, D., Keppler, H., 2013. Zircon solubility in aqueous fluids at high temperatures and pressures. Geochem. Cosmochim. Acta 119, 178–187. https://doi.org/10.1016/j.gca.2013.05.018.
+Breukel, T.W., 2019. Tracing Interactions in the Indigenous Caribbean through a Biographical Approach: Microwear and Material Culture across the Historical Divide (AD 1200-1600).
+C´ardenas-Pa´rraga, J., García-Casco, A., Nun˜ez-Cambra, K., Rodríguez-Vega, A., BlancoQuiintero, I.F., Harlow, G.E., La´zaro, C., 2010. Jadeitite jade ocurrence from the Sierra del Convento m´elange (eastern Cuba). Bol. Soc. Geol. Mex. 62, 199–205.
+C´ardenas-Pa´rraga, J., 2019. Mineralogy, geochemistry and petrogenesis of a new jade deposit, Sierra del Convento m´elange, E. Cuba. Universidad de Granada, Granada, Spain.
+C´ardenas-Pa´rraga, J., García-Casco, A., Harlow, G.E., Blanco-Quintero, I.F., Agramonte, Y.R., Kro¨ner, A., 2012. Hydrothermal origin and age of jadeitites from Sierra del Convento M´elange (Eastern Cuba). Eur. J. Mineral 24, 313–331. https:// doi.org/10.1127/0935-1221/2012/0024-2171.
+Clark, J.E., Blake, M., Guzzy, P., Cuevas, M., Salcedo, T., 1987. El Preclasico temprano en la costa del Pacifico: Informe final. Instituto Nacional de Antropologia e Historia, Mexico.
+Cody, A.K., 1991. Distribution of exotic stone artifacts through the Lesser Antilles: Their implications for prehistoric interaction and exchange. International Congress for Caribbean Archaeology 14, 204–226.
+Craig, G., Managh, A.J., Stremtan, C., Lloyd, N.S., Horstwood, M.S.A., 2018. Doubling sensitivity in multicollector ICPMS using high-efficiency, rapid response laser ablation technology. Anal. Chem. 90, 11564–11571. https://doi.org/10.1021/acs. analchem.8b02896.
+
+13
+
+A.C.S. Knaf et al.
+Degryse, P., Schneider, J., 2008. Pliny the Elder and Sr–Nd isotopes: tracing the provenance of raw materials for Roman glass production. J. Archaeol. Sci. 35, 1993–2000. https://doi.org/10.1016/j.jas.2008.01.002.
+Domínguez-Bella, S., Cassen, S., P´etrequin, P., Pˇrichystal, A., Martínez, J., Ramos, J., Medina, N., 2016. Aroche (huelva, andalucía): a new neolithic axehead of alpine jade in the southwest of the iberian Peninsula. Archaeological and Anthropological Sciences 8, 205–222.
+Draper, G., Nagle, F., 1991. Geology, structure, and tectonic development of the Rio San Juan Complex, northern Dominican Republic. Geologic and tectonic development of the north America-Caribbean plate boundary in Hispaniola. Geol. Soc. Am. Spec. Pap. 262, 77–95.
+Eggins, S.M., 1997. A simple method for the precise determination of ≥ 40 trace elements in geological samples by ICPMS using enriched isotope internal standardisation. Chem. Geol. 134, 311–326. https://doi.org/10.1016/S0009-2541(96)00100-3.
+Escuder-Viruete, J., P´erez-Estaún, A., 2006. Subduction-related P–T path for eclogites and garnet glaucophanites from the Samana´ Peninsula basement complex, northern Hispaniola. Int. J. Earth Sci. 95, 995–1017. https://doi.org/10.1007/s00531-0060079-5.
+Escuder-Viruete, J., Pe´rez-Estaún, A., Booth-Rea, G., Valverde-Vaquero, P., 2011. Tectonometamorphic evolution of the Samana´ complex, northern Hispaniola: implications for the burial and exhumation of high-pressure rocks in a collisional accretionary wedge. Lithos 125, 190–210. https://doi.org/10.1016/j. lithos.2011.02.006.
+Escuder-Viruete, J., Valverde-Vaquero, P., Rojas-Agramonte, Y., Jabites, J., Pe´rezEstaún, A., 2013. From intra-oceanic subduction to arc accretion and arc-continent collision: insights from the structural evolution of the Río San Juan metamorphic complex, northern Hispaniola. J. Struct. Geol. 46, 34–56. https://doi.org/10.1016/j. jsg.2012.10.008.
+Falci, G.C., Knaf, A.C.S., van Gijn, A., Davies, G.R., Hofman, C.L., 2020. Lapidary production in the eastern Caribbean: a typo-technological and microwear study of ornaments from the site of Pearls, Grenada. Archaeological and Anthropological Sciences 12, 53. https://doi.org/10.1007/s12520-019-01001-4.
+Ferna´ndez Esquivel, P., 2005. Oro precolombino de Costa Rica. Fundacio´n Museos Banco Central de Costa Rica, Costa Rica.
+Flores, K.E., Martens, U.C., Harlow, G.E., Brueckner, H.K., Pearson, N.J., 2013. Jadeitite formed during subduction: in situ zircon geochronology constraints from two different tectonic events within the Guatemala Suture Zone. Earth Planet Sci. Lett. 371, 67–81.
+Flores, K.E., Bonnet, G., Cai, Y., Martin, C., Hemming, S.R., Brueckner, H.K., Harlow, G. E., 2017. 50 Myr. in a serpentinite subduction channel: insights into slow eclogite exhumation. AGU Fall Meeting Abstracts 2017. V31D-03.
+Foshag, W.F., Leslie, R., 1955. Jadeite from Manzanal, Guatemala. Am. Antiq. 21, 81–83. Fu, B., Valley, J.W., Kita, N.T., Spicuzza, M.J., Paton, C., Tsujimori, T., Bro¨cker, M.,
+Harlow, G.E., 2010. Multiple origins of zircons in jadeitite. Contrib. Mineral. Petrol. 159, 769–780. Gale, A., Dalton, C.A., Langmuir, C.H., Su, Y., Schilling, J.-G., 2013. The mean composition of ocean ridge basalts. G-cubed 14, 489–518. https://doi.org/10.1029/ 2012GC004334. García-Casco, A., Iturralde-Vinent, M.A., Pindell, J., 2008. Latest cretaceous collision/ accretion between the Caribbean plate and Caribeana: origin of metamorphic terranes in the Greater Antilles. Int. Geol. Rev. 50, 781–809. https://doi.org/ 10.2747/0020-6814.50.9.781. García-Casco, A., Rodríguez-Vega, A., Ca´rdenas-Pa´rraga, J., Iturralde-Vient, M.A., L´azaro, C., Blanco-Quintero, I.F., Rojas Agramonte, Y., Kro˝ner, A., Nun˜ezCambra, K., Milla´n, G., et al., 2009. A new jadeitite jade locality (Sierra del Convento, Cuba): first report and some petrological and archeological implications. Contributions to Minerology and Petrology 158, 1–16. https://doi.org/10.1007/ s00410-008-0367-0. Garcia-Casco, A., Knippenberg, S., Rodríguez Ramos, R., Harlow, G.E., Hofman, C., Pomo, J.C., Blanco-Quintero, I.F., 2013. Pre-Columbian jadeitite artifacts from the Golden Rock Site, St. Eustatius, Lesser Antilles, with special reference to jadeitite artifacts from Elliot’s, Antigua: implications for potential source regions and longdistance exchange networks in the Greater Caribbean. J. Archaeol. Sci. 40, 3153–3169. https://doi.org/10.1016/j.jas.2013.03.025. Giblin, J.I., Knudson, K.J., Bereczki, Z., Pa´lfi, G., Pap, I., 2013. Strontium isotope analysis and human mobility during the Neolithic and Copper Age: a case study from the Great Hungarian Plain. J. Archaeol. Sci. 40, 227–239. https://doi.org/10.1016/j. jas.2012.08.024. Glascock, M.D., 2016. Compositional Analysis in Archaeology. https://doi.org/10.1093/ oxfordhb/9780199935413.013.8. Glaus, R., Koch, J., Günther, D., 2012. Portable laser ablation sampling device for elemental fingerprinting of objects outside the laboratory with laser ablation inductively coupled plasma mass spectrometry. Anal. Chem. 84, 5358–5364. https://doi.org/10.1021/ac3008626. Ha¨nni, H.A., Meyer, J., 1997. Maw-sit-sit (kosmochlor jade): a metamorphic rock with a complex composition from Myanmar (Burma). 26th International Gemmological Conference 22–24. Harlow, G.E., 1993. Middle American jade: geologic and petrologic perspectives on variability and source. Precolumbian jade: new geological and cultural interpretations 9–29. Harlow, G.E., 1994. Jadeitites, albitites and related rocks from the Motagua Fault Zone, Guatemala. J. Metamorph. Geol. 12, 49–68. Harlow, G.E., Olds, E.P., 1987. Observations on terrestrial ureyite and ureyitic pyroxene. Am. Mineral. 72, 126–136. Harlow, G., Sorensen, S.S., 2005. Jade (nephrite and jadeitite) and serpentinite: metasomatic connections. Int. Geol. Rev. 47, 113–146.
+
+Journal of Archaeological Science 135 (2021) 105466
+Harlow, G.E., Sisson, V.B., Av´e Lallemant, H.G., Sorensen, S.S., Seitz, R., 2003. Highpressure metasomatic rocks along the Motagua Fault Zone, Guatemala. Ofioliti 28, 115–120.
+Harlow, G.E., Hemming, S.R., Lallemant, H.G.A., Sisson, V.B., Sorensen, S.S., 2004. Two high-pressure–low-temperature serpentinite-matrix me´lange belts, Motagua fault zone, Guatemala: A record of Aptian and Maastrichtian collisions. Geology 32, 17–20. https://doi.org/10.1130/G19990.1.
+Harlow, G.E., Murphy, A.R., Hozjan, D.J., de Mille, C.N., Levinson, A.A., 2006. Precolumbian jadeite axes from Antigua, West Indies: description and possible sources. Can. Mineral. 44, 305–321. https://doi.org/10.2113/gscanmin.44.2.305.
+Harlow, G.E., Sorensen, S.S., Sisson, V.B., 2007. The geology of jade deposits. In: Groat, L.A. (Ed.), The geology of gem deposits. Short course Handbook Series, 37. Mineralogical Society of Canada, Quebec, Canada, pp. 207–254.
+Harlow, G.E., Sisson, V.B., Sorensen, S.S., 2011. Jadeitite from Guatemala: New observations and distinctions among multiple occurrences. Geol. Acta 9, 363–387.
+Harlow, G.E., Sorensen, S.S., Sisson, V.B., Shi, G., Groat, L.A., 2014. The geology of jade deposits.. Mineralogical Association of Canada. Short-Course Series, 44, pp. 305–374.
+Harlow, G.E., Tsujimori, T., Sorensen, S.S., 2015. Jadeitites and plate tectonics. Annu. Rev. Earth Planet Sci. 43, 105–138. https://doi.org/10.1146/annurev-earth-060614105215.
+Harlow, G.E., Flores, K.E., Marschall, H.R., 2016. Fluid-mediated mass transfer from a paleosubduction channel to its mantle wedge: evidence from jadeitite and related rocks from the Guatemala Suture Zone. Lithos 258, 15–36.
+Harlow, G.E., Berman, M.J., Ca´rdenas Pa´rraga, J., Hertwig, A., García-Casco, A., Gnivecki, P.L., 2019. Pre-Columbian jadeitite artifacts from San Salvador Island, Bahamas and comparison with jades of the eastern Caribbean and jadeitites of the greater Caribbean region. J. Archaeol. Sci.: Report 26, 101830. https://doi.org/ 10.1016/j.jasrep.2019.04.019.
+Hertwig, A., 2014. In: Genesis of jadeitites and their country rocks, Rio San Juan Complex, Dominican Republic. Ruhr-Universita¨t Bochum Germany.
+Hofman, C.L., Hoogland, M.L.P., Van Gijn, A.L., 2008. Crossing the Borders. New Methods and Techniques in the Study of Archaeological Materials from the Caribbean. Alabama University Press, Tuscaloosa.
+Hofman, C.L., Bright, A.J., Rodriguez Ramos, R., 2010. Crossing the Caribbean Sea: towards a holistic view of pre-colonial mobility and exchange. Journal of Caribbean Archaeology, Special Publication 3, 1–18.
+Hofman, C., Mol, A., Hoogland, M., Valc´arcel Rojas, R., 2014. Stage of encounters: migration, mobility and interaction in the pre-colonial and early colonial Caribbean. World Archaeol. 46, 590–609.
+Johnson, C.A., Harlow, G.E., 1999. Guatemala jadeitites and albitites were formed by deuterium-rich serpentinizing fluids deep within a subduction zone. Geology 27, 629–632.
+Klaver, M., Smeets, R.J., Koornneef, J.M., Davies, G.R., Vroon, P.Z., 2016. Pb isotope analysis of ng size samples by TIMS equipped with a 1013 Ω resistor using a 207Pb–204Pb double spike. J. Anal. Atomic Spectrom. 31, 171–178. https://doi.org/ 10.1039/C5JA00130G.
+Knaf, A.C.S., Koornneef, J.M., Davies, G.R., 2017. “Non-invasive” portable laser ablation sampling of art and archaeological materials with subsequent Sr–Nd isotope analysis by TIMS using 1013 Ω amplifiers. J. Anal. Atomic Spectrom. 32, 2210–2216. https:// doi.org/10.1039/C7JA00191F.
+Knippenberg, S., 2007. Stone Artefact Production and Exchange Among the Lesser Antilles. Amsterdam University Press.
+Koornneef, J.M., Bouman, C., Schwieters, J.B., Davies, G.R., 2014. Measurement of small ion beams by thermal ionisation mass spectrometry using new 1013 Ohm resistors. Anal. Chim. Acta 819, 49–55. https://doi.org/10.1016/j.aca.2014.02.007.
+Krebs, M., Maresch, W.V., Schertl, H.-P., Münker, C., Baumann, A., Draper, G., Idleman, B., Trapp, E., 2008. The dynamics of intra-oceanic subduction zones: a direct comparison between fossil petrological evidence (Rio San Juan Complex, Dominican Republic) and numerical simulation. Lithos 103, 106–137. https://doi. org/10.1016/j.lithos.2007.09.003.
+Krebs, M., Schertl, H.-P., Maresch, W.V., Draper, G., 2011. Mass flow in serpentinitehosted subduction channels: P–T–t path patterns of metamorphic blocks in the Río San Juan m´elange (Dominican Republic). J. Asian Earth Sci. 42, 569–595.
+Laffoon, J.E., Leppard, T.P., 2019. 87Sr/86Sr data indicate human post-juvenile residence mobility decreases over time-elapsed since initial Holocene island colonization in the Pacific and Caribbean. Archaeological and Anthropological Sciences 11, 1757–1768. https://doi.org/10.1007/s12520-018-0623-9.
+Laffoon, J.E., Rodríguez-Ramos, R.R., Baik, L.C., Storde, Y.N., Lopez, M.R., Davies, G.R., Hofman, C.L., 2014. Long-distance exchange in the precolonial Circum-Caribbean: a multi-isotope study of animal tooth pendants from Puerto Rico. J. Anthropol. Archaeol. 35, 220–233.
+Laffoon, J.E., Sonnemann, T.F., Shafie, T., Hofman, C.L., Brandes, U., Davies, G.R., 2017. Investigating human geographic origins using dual-isotope (87Sr/86Sr, δ18O) assignment approaches. PloS One 12. https://doi.org/10.1371/journal. pone.0172562 e0172562-e0172562.
+Lange, F.W., 1993. Precolumbian Jade: New Geological and Cultural Interpretations. University of Utah Press.
+La´zaro, C., Garc´Ia-Casco, A., Rojas Agramonte, Y., Kro¨ner, A., Neubauer, F., IturraldeVinent, M., 2009. Fifty-five-million-year history of oceanic subduction and exhumation at the northern edge of the Caribbean plate (Sierra del Convento m´elange, Cuba). J. Metamorph. Geol. 27, 19–40.
+Lo´pez Belando, A.J., 2012. El sitio arqueolo´gico de Playa Grande, Río San Juan, María Trinidad Sa´nchez. Informe de las excavaciones arqueolo´gicas campan˜a 2011–2012. Santo Domingo, Dominican Republic.
+
+14
+
+A.C.S. Knaf et al.
+Lo´pez Belando, A.J., 2019. El Poblado Taino de Playa Grande. Informe Arqueolo´gico. Academia de Ciencias de la República Dominicana, Fundacio´n Shelley, Santo Domingo, República Dominicana, pp. 1–300.
+Manrique-Ortega, M., Mitrani, A., Casanova-Gonz´alez, E., Jim´enez-Galindo, L., Ruvalcaba-Sil, J., 2019. Methodology for the non–destructive characterization of jadeite-jade for archaeological studies. Spectrochim. Acta Mol. Biomol. Spectrosc. 217, 294–309.
+Martens, U., Tsujimori, T., Liou, J.G., 2017. Eclogite varieties and petrotectonic evolution of the northern Guatemala Suture Complex. Int. Geol. Rev. 59, 721–740. https://doi.org/10.1080/00206814.2016.1245592.
+McBirney, A., Aoki, K.-I., Bass, M.N., 1967. Eclogites and jadeite from the Motagua fault zone, Guatemala. Am. Mineral.: Journal of Earth and Planetary Materials 52, 908–918.
+Middletown, A., 2006. Jade-Geology and Mineralogy. In: Gems, O’Donoghue, M. (Eds.). Elsevier, Oxford, pp. 332–355.
+Ou, Y., Chiu, M., 1984. A terrestrial source of ureyite. Am. Mineral. 69, 1180–1183. Pindell, J.L., Kennan, L., 2009a. The origin and evolution of the Caribbean plate. In:
+James, K.H., Lorente, M.A., Pindell, J.L. (Eds.), Tectonic Evolution of the Gulf of Mexico, Caribbean and Northern South America in the Mantle Reference Frame: an Update, vol. 328. Geological Society, London, Special Publications, London,UK, pp. 1–55. Pindell, J.L., Kennan, L., 2009b. Tectonic evolution of the Gulf of Mexico, Caribbean and northern South America in the mantle reference frame: an update. In: James, K.H., Lorente, M.A., Pindell, J.L. (Eds.), The Origin and Evolution of the Caribbean Plate, vol. 328. Geological Society, London, Special Publications, pp. 1–55. Pollard, M., Heron, C., 2008. Archaeological Chemistry. RSC Publishing, Cambridge, UK. Pollard, A.M., Batt, C.M., Stern, B., Young, S.M.M., 2007. Analytical Chemistry in Archaeology. Cambridge University Press, Cambridge. Rademakers, F.W., Nikis, N., De Putter, T., Degryse, P., 2019. Provenancing Central African copper croisettes: a first chemical and lead isotope characterisation of currencies in Central and Southern Africa. J. Archaeol. Sci. 111, 105010. https://doi. org/10.1016/j.jas.2019.105010. Rodríguez Ramos, R., 2011. The circulation of jadeitite across the caribbeanscape. In: Hofman, C.L., Van Duijvenbode, A. (Eds.), Communities in Contact: Essays in Archaeology, Ethnohistory and Ethnography of the Amerindian Circum-Caribbean. Sidestone Press, Leiden, The Netherlands, pp. 117–136. Rodríguez-Ramos, R., de Utuado, R., de Ciencias Sociales, P., 2010. What is the Caribbean? An archaeological perspective. J. Caribb. Archaeol. 3, 19–51. Rosencrantz, E., Sclater, J.G., 1986. Depth and age in the cayman trough. Earth Planet Sci. Lett. 79, 133–144. https://doi.org/10.1016/0012-821X(86)90046-4. Schertl, H.-P., Krebs, M., Maresch, W.V., 2007a. The Rio san juan serpentinite complex and its jadeitites (Dominican republic). IGCP 10. Schertl, H.-P., Krebs, M., Maresch, W.V., Draper, G., 2007b. Jadeitite from Hispaniola: a link between Guatemala and antigua? 20th Colloquium on Latin American Earth Science 167–168. Schertl, H.-P., Maresch, W.V., Stanek, K.P., Hertwig, A., Krebs, M., Baese, R., Sergeev, S. S., 2012. New ocurrences of jadeitite, jadeite quarzite and jadeite-lawsonite quarzite in the Dominican Republic, Hispanola: petrological and geochronological overview. Eur. J. Mineral 24, 199–216. https://doi.org/10.1127/0935-1221/2012/0024-2201.
+
+Journal of Archaeological Science 135 (2021) 105466
+Schertl, H.-P., Maresch, W.V., Knippenberg, S., Hertwig, A., Belando, A.L., Ramos, R.R., Speich, L., Hofman, C.L., 2019. Petrography, mineralogy and geochemistry of jadeite-rich artefacts from the Playa Grande excavation site, northern Hispaniola: evaluation of local provenance from the Río San Juan Complex. Geological Society, London, Special Publications 474, 231–253.
+Schmid, R., Fettes, D., Harte, B., Davis, E., Desmons, J., 2007. 1. How to Name a Metamorphic Rock. Metamorphic Rocks: A Classification and Glossary of Terms. Cambridge University Press, Cambridge, pp. p3–15.
+Seitz, R., Harlow, G., Sisson, V.B., Taube, K., 2001. “Olmec blue jade” and formative jade sources: new discoveries in Guatemala. Antiquity 75, 687–688.
+Siivola, J.; Schmid, R. List of Mineral Abbreviations. IUGS Subcommission on the Systematics of Metamorphic Rocks. Web version 01.02.07 (www.bgs.ac.uk/scmr/ home.html).Availabe online: (accessed on.
+Slayton, E.R., 2018. Seascape Corridors: Modeling Routes to Connect Communities across the Caribbean Sea. Sidestone Press.
+Sorensen, S.S., Harlow, G.E., Rumble III, D., 2006. The origin of jadeitite-forming subduction-zone fluids: CL-guided SIMS oxygen-isotope and trace-element evidence. Am. Mineral. 91, 979–996.
+Sorensen, S.S., Sisson, V.B., Harlow, G.E., Ave´ Lallemant, H.G., 2010. Element residence and transport during subduction-zone metasomatism: evidence from a jadeititeserpentinite contact, Guatemala. Int. Geol. Rev. 52, 899–940.
+Stern, R.J., Tsujimori, T., Harlow, G., Groat, L.A., 2013. Plate tectonic gemstones. Geology 41, 723–726.
+Sun, S.s., McDonough, W.F., 1989. Chemical and isotopic systematics of oceanic basalts: implications for mantle composition and processes. Geological Society, London, Special Publications 42, 313. https://doi.org/10.1144/GSL.SP.1989.042.01.19.
+Tsujimori, T., Ernst, W., 2014. Lawsonite blueschists and lawsonite eclogites as proxies for paleosubduction zone processes: a review. J. Metamorph. Geol. 32, 437–454.
+Tsujimori, T., Harlow, G.E., 2012. Petrogenetic relationships between jadeitite and associated high-pressure and low-temperature metamorphic rocks in worldwide jadeitite localities: a review. Eur. J. Mineral 24, 371–390. https://doi.org/10.1127/ 0935-1221/2012/0024-2193.
+Tsujimori, T., Sisson, V.B., Liou, J.G., Harlow, G.E., Sorensen, S.S., 2006. Very-lowtemperature record of the subduction process: a review of worldwide lawsonite eclogites. Lithos 92, 609–624. https://doi.org/10.1016/j.lithos.2006.03.054.
+Wang, R., 2011. Progress review of the scientific study of Chinese ancient jade. Archaeometry 53, 674–692.
+Wilke, M., Schmidt, C., Dubrail, J., Appel, K., Borchert, M., Kvashnina, K., Manning, C.E., 2012. Zircon solubility and zirconium complexation in H2O+Na2O+SiO2±Al2O3 fluids at high pressure and temperature. Earth Planet Sci. Lett. 349–350, 15–25. https://doi.org/10.1016/j.epsl.2012.06.054.
+Yui, T.-F., Maki, K., Usuki, T., Lan, C.-Y., Martens, U., Wu, C.-M., Wu, T.-W., Liou, J., 2010. Genesis of Guatemala jadeitite and related fluid characteristics: insight from zircon. Chem. Geol. 270, 45–55.
+Yui, T.-F., Maki, K., Wang, K.-L., Lan, C.-Y., Usuki, T., Iizuka, Y., Wu, C.-M., Wu, T.-W., Nishiyama, T., Martens, U., et al., 2012. Hf isotope and REE compositions of zircon from jadeitite (Tone, Japan and north of the Motagua fault, Guatemala): implications on jadeitite genesis and possible protoliths. Eur. J. Mineral 24, 263–275. https://doi. org/10.1127/0935-1221/2011/0023-2127.
+
+15
+
+

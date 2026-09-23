@@ -4,7 +4,9 @@
 Nació el 2026-09-21, antes de repetir la serie C con la tanda del 21 dentro
 («siempre falta un detalle que termina costándonos una corrida», Miguel).
 Las listas DEBE / NO_DEBE son las de ESE corte: al cambiar el instrumento se
-cambian aquí, y el script falla (exit 1) si algo no cuadra.
+cambian aquí, y el script falla (exit 1) si algo no cuadra. Última puesta al
+día: la tanda de la base (2026-09-23), que añade además un cuarto caso — el
+turno en que se NOMBRA a un animal (el mensaje, no sólo el system prompt).
 
 Uso:  python 6-fusion/scripts/prevuelo_de_prompts.py [--volcar]
 
@@ -35,7 +37,8 @@ from curiana_state import estado_inicial                   # noqa: E402
 RESPUESTA = "Taya wana-ka arima wara kari. Ta-barsure naba-ni."
 
 
-def ensayo(escena: bool, capubana_cada: int, dia: int, turnos: int = 2):
+def ensayo(escena: bool, capubana_cada: int, dia: int, turnos: int = 2,
+           nombrar: dict | None = None):
     elenco = dict(_era2.ALL_AGENTS)
     perfil = cargar_perfil("era2")
     roster = list(elenco)
@@ -57,28 +60,39 @@ def ensayo(escena: bool, capubana_cada: int, dia: int, turnos: int = 2):
         lexico = L.LexicoComunitario()
         observer = ObserverAgent(None, lexico)
         memoria = orch.AgentMemory()
+        competencia = orch.CompetenciaLexica()
         for _ in range(turnos):
             orch.run_turn(None, state, memoria, lexico, observer,
                           verbose=False, agentes_por_turno=len(roster),
-                          roster=list(roster), capas=perfil.capas)
+                          roster=list(roster), capas=perfil.capas,
+                          competencia=competencia, naming_referente=nombrar)
+        # la puerta onomatopéyica vale UN turno (db.6)
+        assert lexico.puerta_onomatopeyica is None, "la puerta quedó abierta"
     finally:
         orch._invoke, orch.ALL_AGENTS = _invoke, _agentes
         orch.director_narrate, orch.director_select_event = _narrar, _evento
     return capturas
 
 
-# Lo que TIENE que estar en los 63 (la tanda del 21) y lo que NO puede estar.
+# Lo que TIENE que estar en los 63 (la tanda del 21 y la de la base) y lo que
+# NO puede estar.
 DEBE = {
     "el estado es verbo (d21.4)": r"UN ESTADO ES UN VERBO|ESTADO: un estado se predica",
     "ka- atributivo (d21.5)": r"ka-biro|ATRIBUTIVO: ka-",
     "u- no-poseído (d21.13)": r"(?<![\w-])u- ",
     "-bakoa": r"-bakoa",
     "ejemplo biro-bana": r"biro-bana",
+    "derivación cero (dc.3)": r"jusual es sembrar",
+    "-wa sin glosa (dc.2)": r"-wa y -ana",
 }
 NO_DEBE = {
     "-naiki (retirado d21.9)": r"-naiki\b",
     "-bacoa (migrado d21.14)": r"-bacoa\b",
     "kali-bana (ejemplo viejo)": r"kali-bana",
+    "-gua (migrado dc.2)": r"(?<![\w])-gua\b",
+    "región de (glosa sin fuente)": r"región de",
+    "buko-ana (d21.6)": r"buko-ana",
+    "gallina (europea)": r"gallina",
     "ka-biro = el salinero": r"ka-biro\s*=\s*el salinero",
     "Shaboro (era 1)": r"Shaboro",
     "Buio-sha (era 1)": r"Buio-sha",
@@ -157,6 +171,31 @@ if __name__ == "__main__":
         ok, sistemas = revisar(nombre, caps)
         todo_ok &= ok
         muestras[nombre] = sistemas[0]
+
+    # EL TURNO DE NOMBRAMIENTO (db.4, db.6): el MENSAJE es lo que cambia. Se
+    # nombra a la guacharaca —hueco, animal, con sonido— y se lee lo que los
+    # 63 reciben DESPUÉS de pasar por `decir_para_el_mundo`.
+    from curiana_koine import REFERENTES_ERA2
+    guacharaca = next(r for r in REFERENTES_ERA2 if r["id"] == "guacharaca")
+    caps = ensayo(escena=False, capubana_cada=0, dia=1, turnos=1, nombrar=guacharaca)
+    mensajes = [u for _, u in caps]
+    print(f"\n=== nombramiento (guacharaca, día 1): {len(mensajes)} mensajes")
+    comprobaciones = {
+        "molde del hueco": r"^\[LO QUE VES SIEMPRE, EN PARAGUANÁ\]",
+        "[Lo que se oye]": r"\[Lo que se oye\]: un grito fuerte",
+        "invita a nombrar por la voz": r"por cómo suena",
+        "no dice ALGO NUEVO": None,
+    }
+    for etiqueta, patron in comprobaciones.items():
+        if patron is None:
+            n = sum(1 for u in mensajes if "ALGO NUEVO" not in u)
+        else:
+            n = sum(1 for u in mensajes if re.search(patron, u))
+        marca = "ok " if n == len(mensajes) else "MAL"
+        todo_ok &= n == len(mensajes)
+        print(f"  [{marca}] {etiqueta:<30} {n}/{len(mensajes)}")
+    print(f"  [inf] largo del mensaje: {len(mensajes[0]) if mensajes else 0} caracteres")
+    muestras["nombramiento (mensaje)"] = mensajes[0] if mensajes else ""
     print("\n" + ("PRE-VUELO VERDE" if todo_ok else "PRE-VUELO ROJO"))
     if "--volcar" in sys.argv:
         for n, s in muestras.items():
