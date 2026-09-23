@@ -112,7 +112,7 @@ meta:
       II: 15
       III: 1
       IV: 7
-    correcciones: 10
+    correcciones: 11
 
   # ← lo escribe 6-fusion/scripts/medir_oviedo_restante.py (regla 1)
 
@@ -2374,7 +2374,7 @@ correcciones:
     medido: >-
       Era cierto del PDF del repo (truncado). La misma digitalización está
       completa en Internet Archive y ya está en el repo (`meta.descarga`): las
-      47 formas `ocr-sin-imagen` de T1 se pueden verificar ahora. Esta parcela
+      formas `ocr-sin-imagen` de T1 se pueden verificar ahora. Esta parcela
       verificó las suyas; las de T1 quedan como tarea (issue §D).
   - afirmacion: >-
       «✅ Ésta sí es independiente» — `comoho` del t. I (pp. 313-314) y del t. II
@@ -2410,6 +2410,15 @@ correcciones:
       la nota de `waitiao` en el lexicón: «el pacto de guaitiao … lo describe
       Oviedo para el área circuncaribe»
     medido: "ver §4: Oviedo no usa la palabra y lo cuenta sólo de San Juan («en estas islas»)."
+  - afirmacion: "«`Curiana` sale 2 veces en 544 páginas del tomo II, las dos en este mismo pasaje» (T6, t. II p. 131)"
+    medido: >-
+      Sale **3** veces, en **dos** pasajes: el del libro XXI (p. 131) y la
+      apertura del libro XXV (p. 269: «Desde el rio Curiana en aquella costa,
+      sale una punta ó promontorio diez leguas en la mar, que se llama el cabo de
+      Sanct Román»). Y el segundo DECLARA su fuente: «Esto es quanto á la figura é
+      reglas de la carta moderna del cosmógrapho Alonso de Chaves» (p. 270). El
+      río Curiana de Oviedo es un nombre de la CARTA (el padrón de Chaves), no un
+      testimonio oído: `atribucion: carta de marear` (verificación: ocr-limpio).
   - afirmacion: "el desfase del t. I «impresa = pdf − 118»"
     medido: >-
       En la COPIA NUEVA el desfase es otro (la nueva trae más páginas de

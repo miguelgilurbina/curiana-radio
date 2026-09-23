@@ -933,13 +933,19 @@ obras:
     ed. José Amador de los Ríos, cotejada con el códice original
   genero: cronica
   local:
+  - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf
   - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
-  paginas: '766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118'
-  acceso: 'El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La
-    imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde
-    el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización
-    lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar
-    todavía'
+  paginas: 'Cuerpo: impresas 1-614 (libros I-XIX); índice general 615-648. Copia íntegra (`_completo`):
+    776 pdf, desfase medido en `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.sondas_medidas.desfase_tomo_I_copia_integra`.
+    Copia truncada: 766 pdf, impresa = pdf − 118 (− 117 hacia la 473)'
+  acceso: 'Dos copias. La íntegra, del ítem de Internet Archive de la Biblioteca Ludwig von Mises (UFM),
+    la misma colección de los tomos II-IV, `_completo.pdf`, se descargó el 2026-09-22 (https://archive.org/details/historiageneral00fernguat,
+    dominio público — NOT IN COPYRIGHT; 55.449.811 B; sha1 e90c436186f5afd875a67078b11a6631875f09be =
+    el del ítem; sha256 02e88f2beffea91494f34e48e8bbe294a8d46626bf8c2d0383accf9c9be2369a; commiteada,
+    < 95 MB): pymupdf la abre sin reparar y renderiza TODAS las páginas. La vieja, de origen no documentado,
+    está truncada (sin imagen desde la impresa 155), tiene otra paginación de PDF y otra capa OCR (lee
+    `dalihao` donde la íntegra lee `datihao`); se conserva porque T1 cita su paginación. Los tomos II-IV:
+    ver [[oviedo-y-valdes-1852-1855]]'
   aliases:
   - Oviedo y Valdés
   - Oviedo 1851
