@@ -1,0 +1,102 @@
+# Decisiones de Miguel para CERRAR LA INVESTIGACIÓN (2026-09-23)
+#
+# Respuesta, punto por punto, a la lista de pendientes que el escriba le dio al
+# terminar la tanda de la base. La orden que lo ordena todo:
+#
+#   «prioricemos específicamente eh, poder ya cerrar todo el tema investigativo
+#   para que nos enfoquemos solamente en la parte creativa de lo que es la
+#   simulación»
+#
+# Las citas son del mensaje dictado, tal como llegó.
+
+cc.1_referentes:
+  decision_literal: '«me parece que la, el listado que hiciste está súper bien. Por lo menos para así probar y, y, y, y ver qué onda»'
+  eleccion: el catálogo de 6-fusion/referentes_era2.yaml queda APROBADO para probar la base
+  estado: registrado en referentes_era2.yaml y en decisiones_base §db.4
+
+cc.2_los_merges:
+  decision_literal: '«Mergemos 201 y 202 […] levantemos un nuevo agente Opus que revise los 20 PRs abiertos y eh, se encargue de todo ese merge»'
+  eleccion: un agente Opus revisa y mergea #201-#220, en orden y sin romper nada; Miguel da los permisos
+  cuidado: >-
+    #209 (Pérez de Tolosa) y #217 (Rivero) vienen marcados «no mergear» por sus
+    autores: el agente lee por qué antes de tocarlos y lo dice.
+
+cc.3_poporo:
+  decision_literal: '«lo de Poporo bueno, eh, también entonces hay que revisarla Y caso de que no sea caquetía, la, levantamos […] hay que leer la parte 4 de castellanos, eso lo podemos levantar con otro agente»'
+  contexto: >-
+    Error del escriba: afirmó que el poporo era el arma caquetía atestiguada (vía
+    Alvarado) y la nota de la macana en main lo repite; el pasaje de Castellanos
+    que lo sostiene habla de los guanebucanes de Boronata.
+  eleccion: un agente lee las Elegías, Parte IV, y dice si hay poporo caquetío; si no lo hay, la nota se corrige
+
+cc.4_la_sigla_E_de_zavala:
+  decision_literal: '«la sigla es Zavala Esteves, eh, ok, miramos también el canon de eso»'
+  eleccion: se re-mide el canon sabiendo que (E) = Esteves (43 de las 228 voces atestiguadas dependen sólo de esa fuente) — la opción 1-A
+
+cc.5_manaure_guaiqueries_dabajuroide:
+  decision_literal: >-
+    «donde se sentaba Manaure donde ubicar los guaqueríes […] me encantaría poder
+    tener la cronología de Ajuroide ubicar los guayqueríes eh, también hay que ver
+    porque supuestamente los guayqueríes también estaban en la isla de Margarita
+    entonces sería bien interesante ya que son parte de la esfera de contacto
+    piensa que también le habíamos leído que Ferman identificó Eh, que había un
+    poblado de guayquerías con caquetíos»
+  eleccion: una campaña — el asiento de Manaure, los guaiqueríes (Margarita y el poblado que da Federmann) y la cronología dabajuroide
+  lectura: los guaiqueríes entran como parte de la ESFERA de contacto (regla 4), no como caquetíos
+
+cc.6_coro_no_es_viento:
+  decision_literal: >-
+    «lo de que coro es viento eh, era una apreciación de Oviedo era eh, de por el
+    latín, así que efectivamente hay que sacarlo hay que sacar que esa definición
+    significa viento»
+  eleccion: >-
+    «viento» sale de las lecturas de `coro`: es la etimología de un cronista por
+    el latín (Corus/Caurus, el viento del noroeste), no una glosa caquetía
+  a_verificar: >-
+    el lexicón atribuye 'viento' a Castellanos 1589, no a Oviedo. La decisión no
+    depende de quién fue; la NOTA sí, y se escribe con la atribución verificada.
+    Archivar no es borrar: la lectura queda en `notas` como descartada y por qué.
+
+cc.7_zayas:
+  decision_literal: '«guardemos solamente el texto de Sayas. Eh, y bueno, eh, me parece también revisar ahí lo de […] las cosas que salen […] de Sayas. Este, y, efectivamente, decir si son taíno o no. Este, definirlo. En base a lo que decía el texto.»'
+  eleccion: >-
+    (1) sólo el texto: los dos PDF (381 y 441 MB, sin commitear) se mandaron a la
+    Papelera el 2026-09-23; los .txt están en el repo. (2) se decide, leyendo el
+    pasaje, si son taínas: manatí (Las Casas contra Oviedo), cohiba/tabako,
+    bagua (glosario de la Academia, la trampa de datihao), anaki (eyerí),
+    anua (no está en Zayas) y manaya (sin cronista).
+
+cc.8_las_opciones_de_los_agentes:
+  decision_literal: '«Hay que juntarlas, sí o sí. Eh, recomiendo un agente que junte todos. Eh, para a, a, a que el trabajo sea más sencillo.»'
+  eleccion: un agente junta en UNA lista todas las opciones con letras de los informes de minería, con recomendación
+
+cc.9_web_y_wiki:
+  decision_literal: '«lo que nos empezó la presentación del proyecto web, ya, perfecto»'
+  eleccion: queda para después de cerrar lo investigativo
+
+cc.10_cosmovision_marina:
+  decision_literal: '«esa campaña de Cosmovisión Marina tenemos que dejarla a lo último, efectivamente no hay nada eh, que tengamos establecido […] es una intuición nuestra por los momentos»'
+  eleccion: al final; hoy es intuición, no dato (regla 2)
+
+cc.11_angulo_molina_y_nueva_segovia:
+  decision_literal: '«si podemos conseguir eh, dónde eh, escribirle a Zavala, por lo de Angulo Molina, sería bien interesante […] conseguir el trabajo de sobre Nueva Segovia para poder comprarlo, eh, igual no es prioritario»'
+  eleccion: el escriba da la vía de contacto profesional y la referencia completa; no es prioritario
+
+cc.12_d11_pronombres_y_aspectos:
+  decision_literal: >-
+    «los pronombres y aspectos siguen reconstruidos desde el Wayu. Esto, no
+    podemos seguir teniendo reconstrucciones desde el Wayu, tendría que ser desde
+    el Locono. O el Taíno […] o el Achagua también, que tienen una relación más eh,
+    de parentesco, mucho más grande […] eso sí o sí lo tenemos que hacer»
+  eleccion: D11 fase 3 es OBLIGATORIA — pronombres y aspectos se reconstruyen desde lokono, taíno o achagua, nunca desde el wayuu
+  consecuencia_que_el_escriba_declara: >-
+    Cambia el núcleo de lo que el prompt enseña (taya, pia, nüma, waya, naya;
+    -ka, -ni, -da). Correr los 30 días de la base ANTES sería correrlos con el
+    núcleo que esta decisión retira. Orden propuesto: se mergea #202 (medida y
+    sana), pero la corrida base espera a una última tanda —D11 fase 3 + coro +
+    poporo + la sigla E + las voces de Zayas—, medida una vez, y entonces se
+    etiqueta el motor.
+
+cc.13_el_analisis_por_nodos:
+  decision_literal: '«podrías explicarme más sobre lo, el análisis por nodos para poder entender»'
+  estado: pregunta, no decisión; el escriba la explica en la conversación

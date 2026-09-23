@@ -47,6 +47,15 @@ db.1_raiz_inventada:
     Es una decisión de era, con su propio diseño en `5-experimento/disenos/`.
     No entra en la base.
   se_aplica_en: 'la tanda de la base (C + el agujero de kira, medidos); el criterio futuro, en el issue'
+  estado: >-
+    APLICADA en tanda/base-2026-09-22 (0baa1f0) y MEDIDA (6-fusion/medicion_tanda_base_2026-09-23.yaml): C con largo
+    mínimo 6 contra raíces caquetías vivas —con 4 se perdonaban palabras
+    distintas (duma→duna), con 5 uyama→yama—; perdona 35 formas, 1.677 usos,
+    casi todas grafías castellanas de voces atestiguadas. La forma se guarda
+    como la escribió: normalizar a la clave obligaría a tocar el scorer. El
+    agujero de kira cierra 120 formas (4.827 usos) cuya única raíz es
+    archivada; en la serie C repetida mueve 12 de 216 respuestas del brazo con
+    escena, todas por kira-iro-aima.
 
 db.2_datihao_y_diao:
   tipo: re-etiqueta de lexicón + corte de serie (cambia la muestra del prompt)
@@ -94,3 +103,138 @@ db.2_datihao_y_diao:
       lectura de corpus de paso.
     la_glosa: 'la de Oviedo (namesake, «el que como yo se nombra») frente a la del editor (padrino de cautivo)'
   se_aplica_en: '6-fusion/scripts/reetiquetar_datihao_diao.py, en la tanda de la base (no se mergea sin medir)'
+  estado: APLICADA en la rama tanda/base-2026-09-22 (2026-09-22) y MEDIDA con toda la tanda (6-fusion/medicion_tanda_base_2026-09-23.yaml): [Voces de fuera] gana datihao
+  aplicado_por: [6-fusion/scripts/reetiquetar_datihao_diao.py]
+  medido_al_aplicar: >-
+    5.507 entradas activas antes y después; cambian sólo datihao.fuente,
+    datihao.notas, diao.notas y boratio.notas. La huella de los 378 prompts del
+    pre-vuelo cambia (faa1a039… → adb3da5d…) aunque `datihao` no sale en
+    ninguno: el sorteo de la muestra caquetía tiene una voz menos. `[Voces de
+    fuera]` pasa de 43 a 44 candidatas, y la que entra lo hace con la glosa del
+    editor, 'padrino de cautivo'.
+
+db.3_los_defectos_del_instrumento:
+  tipo: corte de serie (los tres cambian el prompt)
+  decision_literal: '«Te doy el si a todos los defectos»'
+  lo_que_se_le_preguntó: >-
+    «¿Entran los tres? 1. la semilla de la persona pasa a ser la de la cadena;
+    2. las 9 “taíno-reconstruido”, que son lokono, salen de la esfera; 3. las
+    glosas mal leídas (`mayani`, `daca`, `siba`, `caney`, `batey`, `tabaco`).»
+  eleccion: los tres
+  lectura_operativa: >-
+    (1) Opción A del issue `semilla-del-dia-mueve-a-la-persona-2026-09-21.md`:
+    `guardar_koine` escribe con qué semilla se sembró la cadena, `cargar_koine`
+    la recupera y el dado de la ficha se fija con ésa; `random.seed()` sigue con
+    la del día. Arregla el `[Tu emocionar]` que cambiaba a 7 de 63 y el aviso
+    falso. (2) Las 9 `taíno-reconstruido` pasan a `FUERA_DEL_HABLA` con su capa
+    intacta (archivar no es degradar, política d19.b); dejan de ser candidatas
+    de `[Voces de fuera]`. (3) Las glosas, cada una con su fuente primaria:
+    `mayani` 'de ningún valor' (Brinton p. 13 —no p. 11, corregido al aplicarla—, «of no value», con Mártir),
+    `daca` 'yo' (Pané cap. XXV y la Apologética, «Dios naboria daca»), `siba`
+    taíno además de lokono, y `caney`, `batey` y `tabaco` según Oviedo t. I —
+    las cinco de la campaña T1 medidas en `6-fusion/taino_oviedo_valdes_1851.yaml`.
+  se_aplica_en: la tanda de la base
+  estado: >-
+    APLICADA y MEDIDA (6-fusion/medicion_tanda_base_2026-09-23.yaml). (1) semilla: con la del día cambiaba el
+    [Tu emocionar] de 7 de 63 agentes el día 2 y 7 el día 3; con la de la
+    cadena, 0; la config lo sella como `semilla_de_la_persona`. (2) las 8 al
+    archivo; `daca` NO se archiva aparte: la forma sigue en el habla con la
+    glosa de Las Casas ('yo', Apologética cap. CLXVII p. 447, «en la lengua
+    más comun y más universal desta Isla») y la reconstrucción 'mano' queda en
+    sus notas. (3) cinco glosas verificadas en su fuente al aplicarlas (Oviedo
+    t. I pp. 90, 130-131, 143, 163-165, 471; Brinton p. 13; Pané cap. VI); la
+    lokono pasa a `siba-lokono`. [Voces de fuera] pierde akcicyaa y wagulo.
+
+db.4_los_referentes:
+  tipo: corte de serie (cambia qué se nombra y cuándo)
+  decision_literal: >-
+    «en cuanto a tus propuestas, me parecen genial, la idea es probar la koiné,
+    cuando ya estemos seguros de la convergencia podemos pasar a la era 3 donde
+    podemos ser más creativos y jugar con estos agujeros y será la run larga y
+    más de "imaginación del caquetío". […] yo creo que las cosas que debemos
+    empezar por nombrar son las de los animales que no sabemos como se llamaban
+    originalmente, por ejemplo La Tarantula azul, que si o si tuvo que ser una
+    especie muy importante ya que es endémica de la Península. Y la gente la
+    conoce como Tarantula azul.»
+  las_propuestas_que_acepta: >-
+    Dos clases de referente, NOVEDAD (lo que no habían visto) y HUECO (lo que
+    nombraban y nosotros perdimos); uno cada 2 días; fuera las dos que violan la
+    regla 3 (`cuentas_vidrio`, `fiebre_manchas`).
+  lectura_operativa: >-
+    La base sirve para PROBAR LA KOINÉ; la era 3 será la corrida larga de
+    «imaginación del caquetío», donde se juega con los agujeros con más
+    libertad (y donde se abriría la puerta de la raíz inventada, db.1). Por eso
+    la base se queda en 30 días (15 referentes a uno cada dos días) y se alarga
+    sólo si la convergencia no es clara. El catálogo EMPIEZA por los animales sin
+    nombre caquetío conocido: la tarántula azul primero. Un animal con voz
+    caquetía atestiguada (`korie` armadillo, `arata` mono, `chawanko` zorro,
+    `barbache` iguana…) NO es hueco: la voz ya está.
+  la_tarantula_azul: >-
+    Está en el canon de sitios (6-fusion/sitios_era2.yaml, Capubana, monte_y_caza:
+    «guacharaca, pavita hormiguera, venado matacán, zarigüeya y tarántula azul
+    son la fauna actual del Monumento Natural»), etiqueta atestiguado, capa
+    MODERNO. No está en ecologia.yaml ni en el lexicón. Regla 3, que el propio
+    canon escribe al lado: es fauna de hoy, prueba que el animal cabe en el medio,
+    no que estuviera; «endémica de la península» y «tuvo que ser importante» son
+    lectura de Miguel sin fuente todavía — el referente describe al animal y no
+    afirma su importancia. Hace falta un hecho de ecología con fuente (endemismo,
+    distribución) antes de escribir el referente.
+  se_aplica_en: 'la tanda de la base; el catálogo propuesto va a 6-fusion/ para que Miguel lo apruebe'
+  estado: >-
+    MECANISMO APLICADO y MEDIDO (6-fusion/medicion_tanda_base_2026-09-23.yaml); CONTENIDO APROBADO por Miguel el 2026-09-23 («me parece que el listado que hiciste está súper bien. Por lo menos para así probar y ver qué onda»). El motor
+    lee una sola tabla, 6-fusion/referentes_era2.yaml (la propuesta,
+    renombrada al entrar). Molde propio para el hueco, línea [Lo que se oye],
+    uno cada dos días en el quinto momento de los días impares. La era 1 dice
+    su estímulo carácter a carácter. Se corrigió «del tamaño de una gallina»
+    (animal europeo) en la guacharaca.
+
+db.5_waitiao:
+  tipo: nota, sin corte (`notas` no llega al prompt)
+  decision_literal: >-
+    «En cuanto a guaitiao, si no está confirmado que no está en Oviedo y no sabemos
+    si es taína mantengamosla no más pero con ese foot note.»
+  eleccion: se queda caquetío-atestiguado, con la nota
+  medido_antes: >-
+    `guaitiao`/`guatiao`/`waitiao`/`guaytiao`: 0 en la capa de texto de los cuatro
+    tomos de Oviedo — con la reserva de que las voces indígenas van en cursiva y
+    el OCR falla ahí, así que no es ausencia probada —; 0 en la Apologética;
+    sólo Brinton 1871 y Goeje 1939, sin cronista.
+  estado: APLICADA en la rama tanda/base-2026-09-22 (2026-09-22)
+  aplicado_por: [6-fusion/scripts/anotar_waitiao.py]
+  verificado_que_no_mueve_nada: 'huella de los 378 prompts igual antes y después (adb3da5d)'
+
+db.6_la_onomatopeya_de_los_animales:
+  tipo: corte de serie (cambia la puerta de raíces y el estímulo)
+  decision_literal: '«Vale retomemos lo recordato y sigamos tu recomendación con lo de lo de las onomatopeyas animales.»'
+  la_recomendacion_que_acepta: >-
+    «B + el sonido descrito»: (B) una puerta estrecha sólo para los referentes de
+    animal — se admite una raíz nueva si responde al estímulo de un animal y pasa
+    el filtro de forma caquetía; y el sonido va DESCRITO en el estímulo (cuántas
+    veces, grave o agudo, a qué hora), no transcrito.
+  por_que: >-
+    El caquetío atestiguado ya nombra aves por su canto (`dara`, `wakoa`,
+    `chuchubi`, `warawara`, `chogogo`, `tijua`: campaña de aves, #205), así que
+    nombrar por el sonido es lo que hacían. Con db.1 A + C a secas, la raíz
+    onomatopéyica de un agente se rechazaría y los animales del catálogo no
+    llegarían a fijarse. El criterio de Miguel en db.1 — «el que invente tiene
+    que ser el agente caquetío, no el agente español-inglés-latín-caquetío» —
+    es el filtro: la raíz nueva tiene que tener forma caquetía.
+  lectura_operativa: >-
+    (1) La excepción vale SÓLO dentro de la competencia de un referente marcado
+    `animal: true` y sólo para la forma que ese turno propone para ESE referente;
+    fuera de ahí, db.1 A + C sin cambios. (2) El filtro: `neologismo_valido()`
+    (blocklist castellana, marcas ortográficas, bigramas) más la fonotáctica del
+    proyecto; una raíz con marca castellana o que sea palabra castellana cae
+    igual. (3) La raíz admitida se registra marcada `raiz_onomatopeyica`, para
+    poder medirla aparte. (4) `se_oye` describe; la transcripción de fuente se
+    queda en los YAML de fauna. Es la puerta que db.1 reservaba para la era 3,
+    abierta sólo una rendija: la amplia sigue reservada.
+  se_aplica_en: 'la tanda de la base, medida con todo lo demás'
+  estado: >-
+    APLICADA (6-fusion/medicion_tanda_base_2026-09-23.yaml). La puerta vale en el registro y en la competencia del turno
+    de un animal y sólo ahí; admite UNA raíz nueva (la reduplicación cuenta
+    como una) si pasa neologismo_valido, no lleva marca castellana, cabe en la
+    fonotáctica del caquetío atestiguado, no es una raíz archivada y no es el
+    nombre castellano del animal con otra grafía (`wacharaka` no pasa por la
+    guacharaca). Residuo declarado: el filtro mira la forma, así que una raíz
+    latina con forma caquetía pasaría — por eso va marcada y se mide aparte.

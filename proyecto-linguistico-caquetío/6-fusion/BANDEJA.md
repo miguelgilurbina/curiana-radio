@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-22**.
 
-**3820 ítems propuestos** en 102 propuestas, más **26 issue(s)/comentario(s) redactados sin publicar**.
+**3820 ítems propuestos** en 103 propuestas, más **26 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -70,6 +70,7 @@ editar_a_mano: no
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_clases_de_raiz_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
+| `medicion_fauna_flora_2026-09-22.yaml` | ? | 0 |  |
 | `medicion_formas_de_plantilla_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
