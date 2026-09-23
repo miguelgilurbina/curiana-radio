@@ -45,6 +45,10 @@ meta:
     conjetura-del-autor: sin cronista, y Zayas (o quien cita) analiza, traduce o supone → clase iii
     sacada-por-el-autor: Zayas la manda a otra lengua o dialecto
   campos_propios:
+    agrupa_con: >-
+      la forma con que la lista maestra YA tiene esta voz, cuando el lema del
+      consolidador no las junta (j/h/x, ç/z/s): el lector debe unirla a
+      `forma_fuente` con ` ~ ` para que caigan en el mismo grupo.
     efecto_en_la_lista: >-
       qué le haría esta entrada a la voz en `taino_lista_maestra_2026-09-22.yaml` si
       se engancha: `sube-de-ii-a-i`, `añade-cronista`, `no-cambia` (mismo cronista:
@@ -336,6 +340,7 @@ voces:
     imagen (t. I p. 151 = JPG 188) antes de sumarlo. Página impresa calculada por el
     desfase, no leída en la cabecera.
 - forma_fuente: Casabe
+  agrupa_con: 'cazabi'
   glosa_fuente: '«pan de yuca», alimento principal de los indios antillanos'
   texto: >-
     «La primera vez que hallamos la palabra casabe, es en la Relación que dió Ginés
@@ -440,6 +445,7 @@ voces:
   efecto_en_la_lista: no-cambia
   lectura: Ya aclarada esta semana (`daca` = 'yo'); Zayas copia a Las Casas. No es mano nueva.
 - forma_fuente: Dujo
+  agrupa_con: 'duho'
   glosa_fuente: Asiento de madera o piedra usado por los indios.
   texto: '«… de las que ellos usaban, que son muy lindas y bruñidas y relucientes, como si fueran de azabache, que ellos llamaban duhos.» (Las Casas)'
   pagina_impresa: 't. I, pp. 246-247'
@@ -451,6 +457,7 @@ voces:
   en_el_lexicon: dujo
   efecto_en_la_lista: no-cambia
 - forma_fuente: Guabina
+  agrupa_con: 'Guabinas'
   glosa_fuente: Pez de río, común en Cuba, cilíndrico y viscoso, de color oscuro, y de carne agradable.
   texto: '«Hay otros que llaman guabinas, la media sílaba breve, las cuales tiene cuasi el parecer de truchas» (Las Casas)'
   pagina_impresa: 't. II, p. 7'
@@ -595,6 +602,7 @@ voces:
     contradicen y lo decide Miguel. Buscar el pasaje en la Apologética o la
     Historia antes de citarlo.
 - forma_fuente: Manigua
+  agrupa_con: 'Maniguas'
   glosa_fuente: Vocablo con que se designa en Cuba un conjunto de malezas, arbustos y yerbas.
   texto: >-
     «Nombre, según Gómara, de una de las pequeñas islas de las Lucayas, que
@@ -816,6 +824,7 @@ voces_sin_cronista_en_la_lista:
     maíz, bixa, maguey): probablemente Las Casas, sin verificar. Arrastra también a
     `henequén` (abajo).
 - forma_fuente: Jeniquén (Henequén)
+  agrupa_con: 'henequeu'
   glosa_fuente: Planta textil, Agave Americana, muy parecida al Maguey.
   texto: 'Oviedo escribe Henequén.'
   pagina_impresa: 't. II, pp. 127-128'
@@ -829,6 +838,7 @@ voces_sin_cronista_en_la_lista:
   efecto_en_la_lista: sube-de-iii-a-i
   lectura: 'Ojo al agrupar: `henequen` y `henequeu` no comparten lema en el consolidador; puede quedar como voz aparte.'
 - forma_fuente: Cibucán
+  agrupa_con: 'sibukan'
   glosa_fuente: manga de empleita de palma para exprimir la masa del casabe
   texto: '«Tienen una manga que llaman cibucán, la media sílaba breve, hecha de empleita de palma» (Las Casas). Gómara: «una manera de talega, de diez palmos o más de luengo».'
   pagina_impresa: 't. I, pp. 197-198'
@@ -959,6 +969,7 @@ voces_sin_cronista_en_la_lista:
   lema_en_la_lista_maestra: ikuaka (ii, Goeje)
   efecto_en_la_lista: sube-de-ii-a-i
 - forma_fuente: Jagüey
+  agrupa_con: 'xagueye'
   glosa_fuente: Depósitos de agua formados por las lluvias.
   texto: 'El Padre Las Casas dice: «… e cuando la hallan en algunos yagüeyes, no hay para diez personas».'
   pagina_impresa: 't. II, pp. 119-120'
@@ -972,6 +983,7 @@ voces_sin_cronista_en_la_lista:
   efecto_en_la_lista: sube-de-ii-a-i
   lectura: 'Zayas: «solamente en plural hemos encontrado este vocablo». Agrupar `xagueye`/`jagüey`/`yagüey` a mano: el lema del consolidador no los junta.'
 - forma_fuente: Jibe
+  agrupa_con: 'hibii'
   glosa_fuente: Cedazo o cernidor, que hacían los indios con hojas de guano o palma.
   texto: 'El P. Las Casas escribe hibiz.'
   pagina_impresa: 't. II, p. 130'
@@ -984,6 +996,7 @@ voces_sin_cronista_en_la_lista:
   lema_en_la_lista_maestra: ibi (ii, Goeje «hibii»)
   efecto_en_la_lista: sube-de-ii-a-i
 - forma_fuente: Jobo
+  agrupa_con: 'hobo'
   glosa_fuente: Árbol muy común, parecido en la hoja al cedro, y en el fruto a la ciruela amarilla.
   texto: 'se deduce de un acta de cabildo del Ayuntamiento de la Habana, de 19 de junio de 1551, que se vendía en la ciudad'
   pagina_impresa: 't. II, pp. 136-137'
