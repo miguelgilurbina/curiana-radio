@@ -1,0 +1,628 @@
+# GENERADO por 6-fusion/scripts/oliver1989_restante.py — no se edita a mano.
+meta:
+  generado_por: 6-fusion/scripts/oliver1989_restante.py
+  campana: tercera campaña de minería, parcela M1
+  fecha: '2026-09-22'
+a9_vs_lexicon:
+  filas: 50
+  numeracion_completa_1_a_50: true
+  cursivas:
+    n: 4
+    filas:
+    - 4
+    - 40
+    - 41
+    - 47
+  estado:
+    activa-caquetio: 39
+    activa-otra-lengua: 1
+    ausente: 5
+    solo-referencia: 5
+  con_fuente_nombrada_por_oliver:
+    n: 18
+    filas:
+    - 1
+    - 2
+    - 5
+    - 6
+    - 7
+    - 9
+    - 10
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 23
+    - 31
+    - 32
+    - 33
+    - 50
+  polity_de_la_fuente:
+    yaracuy: 1
+    barquisimeto: 7
+    costera: 3
+  epoca_de_la_fuente:
+    colonial: 7
+    contacto-temprano: 3
+    moderno: 3
+  ausentes:
+  - buxera
+  - çabana
+  - guaro
+  - macoya
+  - quicidi
+  ausentes_que_aparecen_si_la_ç_se_lee_c:
+  - çabana → VOCABULARIO_BASE:kabana (caquetío-atestiguado)
+  activas_en_otra_lengua:
+  - auri → VOCABULARIO_BASE:auri (achagua)
+  solo_referencia:
+  - adabacoa → TOPONIMOS_ZAVALA:adabacoa (zavala-referencia); lexicon_toponimos.NIVEL_B:adabacoa (toponimo)
+  - báquiro → DESCARTADOS_ZAVALA:baquiro (zavala-referencia)
+  - Caquetío → TOPONIMOS_ZAVALA:caquetio (zavala-referencia)
+  - Guacaubana → TOPONIMOS_ZAVALA:guacaubana (zavala-referencia); lexicon_toponimos.NIVEL_A:guacaubana
+    (toponimo)
+  - guacurebo → TOPONIMOS_ZAVALA:guacurebo (zavala-referencia); lexicon_toponimos.NIVEL_C:guacurebo (toponimo)
+  detalle:
+  - num: 1
+    forma: adabacoa
+    cursiva: false
+    estado: solo-referencia
+    donde:
+    - TOPONIMOS_ZAVALA:adabacoa (zavala-referencia)
+    - lexicon_toponimos.NIVEL_B:adabacoa (toponimo)
+    solo_si_la_ç_se_lee_c: null
+  - num: 2
+    forma: -bana
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:bana (caquetío-reconstruido)
+    solo_si_la_ç_se_lee_c: null
+  - num: 3
+    forma: báquiro
+    cursiva: false
+    estado: solo-referencia
+    donde:
+    - DESCARTADOS_ZAVALA:baquiro (zavala-referencia)
+    solo_si_la_ç_se_lee_c: null
+  - num: 4
+    forma: baperón
+    cursiva: true
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:baperon (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 5
+    forma: barbasco
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:barbasko (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 6
+    forma: barici-
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - TOPONIMOS_ZAVALA:barisi (zavala-referencia)
+    - VOCABULARIO_BASE:barici (caquetío-atestiguado)
+    - lexicon_toponimos.NIVEL_A:barisi (toponimo)
+    solo_si_la_ç_se_lee_c: null
+  - num: 7
+    forma: bariqui/e
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:bariki (caquetío-atestiguado)
+    - lexicon_toponimos.NIVEL_B:bariquí (toponimo)
+    solo_si_la_ç_se_lee_c: null
+  - num: 8
+    forma: bisure
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:bisure (caquetío-atestiguado)
+    - lexicon_toponimos.NIVEL_A:bisure (toponimo)
+    solo_si_la_ç_se_lee_c: null
+  - num: 9
+    forma: boratio
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:boratio (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 10
+    forma: buco
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:buko (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 11
+    forma: budare
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:budare (caquetío-retroabstraido)
+    solo_si_la_ç_se_lee_c: null
+  - num: 12
+    forma: buxera
+    cursiva: false
+    estado: ausente
+    donde: []
+    solo_si_la_ç_se_lee_c: null
+  - num: 13
+    forma: çabana
+    cursiva: false
+    estado: ausente
+    donde: []
+    solo_si_la_ç_se_lee_c:
+    - VOCABULARIO_BASE:kabana (caquetío-atestiguado)
+  - num: 14
+    forma: caduchi
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kaduchi (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 15
+    forma: cama
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kama (caquetío-hipotético)
+    solo_si_la_ç_se_lee_c: null
+  - num: 16
+    forma: Capú
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kapu (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 17
+    forma: Capubana
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kapubana (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 18
+    forma: Caquetío
+    cursiva: false
+    estado: solo-referencia
+    donde:
+    - TOPONIMOS_ZAVALA:caquetio (zavala-referencia)
+    solo_si_la_ç_se_lee_c: null
+  - num: 19
+    forma: caça
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kasá (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 20
+    forma: Cegue
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:cege (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 21
+    forma: cocuy
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kokuy (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 22
+    forma: comoho
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:komoho (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 23
+    forma: coque
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:koke (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 24
+    forma: corie
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:korie (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 25
+    forma: cumaragua
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:kumarawa (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 26
+    forma: chaure
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:chaure (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 27
+    forma: chirgua
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:chirwa (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 28
+    forma: chirigua
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:chiriwa (caquetío-retroabstraido)
+    solo_si_la_ç_se_lee_c: null
+  - num: 29
+    forma: chiriguare
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:chiriware (caquetío-retroabstraido)
+    solo_si_la_ç_se_lee_c: null
+  - num: 30
+    forma: chuchube
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:chuchube (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 31
+    forma: dare
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:dare (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 32
+    forma: datihao
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:datihao (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 33
+    forma: diao
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:diao (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 34
+    forma: Guacaubana
+    cursiva: false
+    estado: solo-referencia
+    donde:
+    - TOPONIMOS_ZAVALA:guacaubana (zavala-referencia)
+    - lexicon_toponimos.NIVEL_A:guacaubana (toponimo)
+    solo_si_la_ç_se_lee_c: null
+  - num: 35
+    forma: guacoa
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:wakoa (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 36
+    forma: guacurebo
+    cursiva: false
+    estado: solo-referencia
+    donde:
+    - TOPONIMOS_ZAVALA:guacurebo (zavala-referencia)
+    - lexicon_toponimos.NIVEL_C:guacurebo (toponimo)
+    solo_si_la_ç_se_lee_c: null
+  - num: 37
+    forma: guairón
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:wairon (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 38
+    forma: guaranaro
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:waranaro (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 39
+    forma: guaro
+    cursiva: false
+    estado: ausente
+    donde: []
+    solo_si_la_ç_se_lee_c: null
+  - num: 40
+    forma: hayo
+    cursiva: true
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:hayo (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 41
+    forma: icoroata
+    cursiva: true
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:ikoroata (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 42
+    forma: machire
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:machire (caquetío-retroabstraido)
+    solo_si_la_ç_se_lee_c: null
+  - num: 43
+    forma: macoya
+    cursiva: false
+    estado: ausente
+    donde: []
+    solo_si_la_ç_se_lee_c: null
+  - num: 44
+    forma: maure
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:maure (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 45
+    forma: mene
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:mene (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 46
+    forma: quicidi
+    cursiva: false
+    estado: ausente
+    donde: []
+    solo_si_la_ç_se_lee_c: null
+  - num: 47
+    forma: raporón
+    cursiva: true
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:raporon (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 48
+    forma: taboro
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:taboro (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 49
+    forma: tara
+    cursiva: false
+    estado: activa-caquetio
+    donde:
+    - VOCABULARIO_BASE:tara (caquetío-atestiguado)
+    solo_si_la_ç_se_lee_c: null
+  - num: 50
+    forma: auri
+    cursiva: false
+    estado: activa-otra-lengua
+    donde:
+    - VOCABULARIO_BASE:auri (achagua)
+    solo_si_la_ç_se_lee_c: null
+a9_vs_dictado:
+  entradas_en_el_dictado: 49
+  entradas_sin_numero_en_el_dictado: 32
+  cursivas_marcadas_en_el_dictado: 3
+  cursivas_en_la_imagen: 4
+  filas_de_la_imagen_que_faltan_en_el_dictado:
+  - taboro
+c1_c3:
+  a9_no_cursiva:
+    n: 45
+    iniciales:
+      b: 9
+      p: 0
+      d: 3
+      t: 2
+  lexicon_caquetio_atestiguado:
+    n: 228
+    iniciales:
+      b: 26
+      p: 11
+      d: 16
+      t: 21
+    claves_con_p_inicial:
+    - pana
+    - para
+    - parawa
+    - parawatan
+    - pariri
+    - paro
+    - patapati
+    - paugis
+    - piritu
+    - popoi
+    - poporo
+    claves_con_t_inicial:
+    - taboro
+    - tabri
+    - take
+    - takes
+    - tara
+    - taratore
+    - tarika
+    - tauta
+    - tebe
+    - tigi
+    - tijua
+    - tiwa
+    - tomatei
+    - tuba
+    - tubarao
+    - tukinemo
+    - tupure
+    - turicha
+    - turumako
+    - turupia
+    - tuturutos
+a8_aritmetica:
+  porcentajes:
+  - par: Jirajara-Ayoman
+    fraccion: 20/26
+    impreso: 76.9
+    calculado: 76.9
+    cuadra: true
+  - par: Jirajara-Ayoman
+    fraccion: 22/26
+    impreso: 84.6
+    calculado: 84.6
+    cuadra: true
+  - par: Jirajara-Cuyon
+    fraccion: 19/24
+    impreso: 79.2
+    calculado: 79.2
+    cuadra: true
+  - par: Jirajara-Cuyon
+    fraccion: 21/24
+    impreso: 97.5
+    calculado: 87.5
+    cuadra: false
+  - par: Ayoman-Cuyon
+    fraccion: 29/32
+    impreso: 87.8
+    calculado: 90.6
+    cuadra: false
+  - par: Ayoman-Cuyon
+    fraccion: 30/32
+    impreso: 93.8
+    calculado: 93.8
+    cuadra: true
+  no_cuadran: 2
+tabla15:
+  filas_escaneo_1989: 23
+  filas_doc: 23
+  filas_que_difieren: 0
+  detalle: []
+fauna:
+  entradas: 38
+  por_obra:
+    oliver-1989-cap4: 12
+    oliver-1989-cap3: 3
+    oliver-1989-cap3-vecinos: 2
+    oliver-1989-apendice-a: 21
+  por_epoca:
+    precontacto: 13
+    contacto-temprano: 14
+    colonial: 3
+    moderno: 8
+  con_especie_probable: 1
+  con_sonido: 0
+mar:
+  cap3_doc_2006:
+    menciones_del_mar: 114
+    ventanas_con_creencia: 2
+    ventanas:
+    - pagina: 249
+      mar: sailed
+      creencia:
+      - cosmographer
+      texto: '1976: 85-87; Navarrete 1829 [3]: 6). The site of Puerto Flechado has been dully noted by
+        the famous cosmographer Juan de La Cosa, also known as "El Vizcaíno", who provided the first map
+        of the New World (1500; Fig. 40: 3). After this incident, Ojeda sailed further along the coast,
+        floundering in a s'
+    - pagina: 258
+      mar: Islands
+      creencia:
+      - god
+      - worshiped
+      texto: a great Señor [Lord] makes himself be worshiped as God, telling the Indians that he gives
+        [controls, predicts] the storms..." (Ampíes [1525] in CoDoIn 1868:30-31 [my translation from Spanish
+        and clarifications in brackets]).109 In other words, these Islands were under the control of Manaure,
+        whom Am
+  cap3_s323_chibchas:
+    menciones_del_mar: 7
+    ventanas_con_creencia: 0
+    ventanas: []
+  cap3_s324_caribes:
+    menciones_del_mar: 5
+    ventanas_con_creencia: 0
+    ventanas: []
+  cap3_s33_falcon_lara:
+    menciones_del_mar: 24
+    ventanas_con_creencia: 1
+    ventanas:
+    - pagina: 241
+      mar: shell
+      creencia:
+      - rituals
+      texto: uct Federmann's precise route. It took him five more days of travel before leaving the Ayoman
+        territory (October 6 to 12, 1530). Of the Ayoman between Carohana and the terminus of their territory,
+        Federmann said that they obtained jet (azabache) and shell necklaces by trade. Judging from the
+        quote b
+  cap4_s47_s415:
+    menciones_del_mar: 37
+    ventanas_con_creencia: 0
+    ventanas: []
+ortografia:
+  cap3_s323_chibchas:
+    caquet: 16
+    manaur: 0
+    paraguan: 0
+    coro: 1
+    jirajar: 1
+    curazao|curacao|curaçao: 0
+    aruba: 0
+  cap3_s324_caribes:
+    caquet: 17
+    manaur: 0
+    paraguan: 0
+    coro: 1
+    jirajar: 0
+    curazao|curacao|curaçao: 0
+    aruba: 0
+  cap3_s33_falcon_lara:
+    caquet: 30
+    manaur: 2
+    paraguan: 3
+    coro: 13
+    jirajar: 41
+    curazao|curacao|curaçao: 1
+    aruba: 1
+  cap4_s47_s415:
+    caquet: 39
+    manaur: 2
+    paraguan: 15
+    coro: 35
+    jirajar: 2
+    curazao|curacao|curaçao: 9
+    aruba: 6
+  cap3_doc_2006:
+    caquet: 527
+    manaur: 65
+    paraguan: 38
+    coro: 101
+    jirajar: 53
+    curazao|curacao|curaçao: 15
+    aruba: 12
+antillas:
+  antillas_mayores: 0
+  antillas_neerlandesas: 36
+  portacelli_rancheria: 49
+voces_cap4:
+  tucua: []
+  zazare: []
+  sasare: []
+  guarataro:
+  - VOCABULARIO_BASE:warataro
+  - lexicon_toponimos.NIVEL_B:guarataro
+  warataro:
+  - VOCABULARIO_BASE:warataro

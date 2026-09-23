@@ -57,82 +57,411 @@ meta:
 # (Arellano Moreno 1964) es de la polity de Barquisimeto, no de la costera.
 
 tabla_a9_verificada:
-  - {num: 1,  forma: adabacoa,    fonemica: "(h)adabakoa", glosa_es: valle con arboleda,        glosa_en: '"wooded" valley', cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: página en blanco en el original, «OJO»): «the valley of hadabacoa [...] which means in Spanish language 'all trees'» — el valle de Yaracuy", pagina_doc_cap2: 142-143, polity: yaracuy, epoca: colonial}
-  - {num: 2,  forma: -bana,       fonemica: -bana,        glosa_es: null,                     glosa_en: surrounding, cursiva: false,
-     fuente_en_oliver: "análisis de Oliver sobre topónimos; lokono «'sorrounding' or 'expanse'», 'roof (e.g. cover)'", pagina_doc_cap2: 150, polity: null, epoca: null,
-     nota: "La glosa de Oliver para -bana es 'surrounding/cover', NO 'cerro'. Ver §3."}
-  - {num: 3,  forma: báquiro,     fonemica: bákiro,       glosa_es: báquiro,                  glosa_en: peccary,          cursiva: false, fuente_en_oliver: null}
-  - {num: 4,  forma: baperón,     fonemica: baperón,      glosa_es: calabaza con cal,         glosa_en: lime gourd flask, cursiva: true,  fuente_en_oliver: null,
-     nota: "misma voz que la 47 («(also baperón)»)"}
-  - {num: 5,  forma: barbasco,    fonemica: barbasko,     glosa_es: hierba de borrachera,     glosa_en: fish poison,      cursiva: false, fuente_en_oliver: "«definitively Arawakan, and very widespread»", pagina_doc_cap2: 146}
-  - {num: 6,  forma: barici-,     fonemica: barisi,       glosa_es: (agua) turbia/o,          glosa_en: '"muddy" opaque', cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 178): «the water [...] comes muddy, hence the Indians call it barisi»", pagina_doc_cap2: 141, polity: barquisimeto, epoca: colonial}
-  - {num: 7,  forma: bariqui/e,   fonemica: bariki/-ke,   glosa_es: almagre,                  glosa_en: red hematite,     cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579 (ibid.: 191): «painted [their bodies] with bariki which is like almagre»", pagina_doc_cap2: 141, polity: barquisimeto, epoca: colonial}
-  - {num: 8,  forma: bisure,      fonemica: bisure,       glosa_es: lagartija,                glosa_en: lizard species,   cursiva: false, fuente_en_oliver: null}
-  - {num: 9,  forma: boratio,     fonemica: boratio,      glosa_es: sacerdote, médico,        glosa_en: shaman,           cursiva: false, fuente_en_oliver: "sin fuente nombrada; etimología sobre /-ati/ + /-(h)o/", pagina_doc_cap2: 146-147}
-  - {num: 10, forma: buco,        fonemica: buko,         glosa_es: represa,                  glosa_en: cut into the ground, cursiva: false,
-     fuente_en_oliver: "Ballesteros [1550] en Bécker 1950a (página en blanco en el original): «a channel dug into the earth for the purpose of irrigation»", pagina_doc_cap2: 147, polity: costera, epoca: contacto-temprano}
-  - {num: 11, forma: budare,      fonemica: budare,       glosa_es: plato llano de barro,     glosa_en: clay griddle,     cursiva: false, fuente_en_oliver: null,
-     nota: "En el cap. 4 (p. 440 n. 308, tesis 1989) el propio Oliver dice que budare es «definitively of a Maipuran (Arawakan) origin, although it may not necessarily be a Caquetío term since the Spanish used it widely in Venezuela»."}
-  - {num: 12, forma: buxera,      fonemica: bujera,       glosa_es: pintura negra-Genipa,     glosa_en: black body paint, cursiva: false, fuente_en_oliver: null,
-     nota: "Contradice su propia n. 213 del cap. 3 (tesis p. 284), que da `busera` por pigmento ROJO de Bixa. Ver §4."}
-  - {num: 13, forma: çabana,      fonemica: sabana,       glosa_es: prado,                    glosa_en: savannah,         cursiva: false, fuente_en_oliver: "«definitively Arawakan, and very widespread»", pagina_doc_cap2: 146}
-  - {num: 14, forma: caduchi,     fonemica: caduchi,      glosa_es: higo, breva,              glosa_en: cactus fruit,     cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 193): cardones con dos frutos, «caduchi, which we call breva» y «dato»", pagina_doc_cap2: 146, polity: barquisimeto, epoca: colonial,
-     nota: "en la fonética, «chi» va subrayado"}
-  - {num: 15, forma: cama,        fonemica: K-ama,        glosa_es: danta,                    glosa_en: tapir,            cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 183): «The term "cama" or "çama" (probably /kama/) is defined as danta»", pagina_doc_cap2: 142, polity: barquisimeto, epoca: colonial}
-  - {num: 16, forma: Capú,        fonemica: kapú,         glosa_es: demonio,                  glosa_en: spirit, goblin,   cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579: lo aplicaban al diablo y a los españoles", pagina_doc_cap2: 144, polity: barquisimeto, epoca: colonial}
-  - {num: 17, forma: Capubana,    fonemica: kapu-bana,    glosa_es: null,                     glosa_en: "a hill in Paraguaná, cf. #2 and #16 (ocupa las dos columnas)", cursiva: false,
-     fuente_en_oliver: "leyenda MODERNA que Oliver oyó cerca de Santa Ana, Paraguaná: un duende que habita la cima de un cerro cercano", pagina_doc_cap2: 144, polity: costera, epoca: moderno}
-  - {num: 18, forma: Caquetío,    fonemica: Kaketío,      glosa_es: ser viviente,             glosa_en: people (general), cursiva: false,
-     fuente_en_oliver: "etimología de Oliver: cognado del lokono kakïtho 'people, living beings' (Taylor 1977); la glosa NO es de una crónica", pagina_doc_cap2: 147}
-  - {num: 19, forma: caça,        fonemica: "kasa, kaza", glosa_es: puche de maíz,            glosa_en: maize porridge,   cursiva: false, fuente_en_oliver: null}
-  - {num: 20, forma: Cegue,       fonemica: cegue,        glosa_es: lechuza,                  glosa_en: owl,              cursiva: false, fuente_en_oliver: null}
-  - {num: 21, forma: cocuy,       fonemica: kokuy,        glosa_es: penca,                    glosa_en: Agave species,    cursiva: false, fuente_en_oliver: null}
-  - {num: 22, forma: comoho,      fonemica: komoho,       glosa_es: higo, tuna,               glosa_en: cactus,           cursiva: false, fuente_en_oliver: null}
-  - {num: 23, forma: coque,       fonemica: koke,         glosa_es: hormiga roja,             glosa_en: red ant species,  cursiva: false,
-     fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 193): «red ants which are called in the Indian [Caquetío] language coques»", pagina_doc_cap2: 144-145, polity: barquisimeto, epoca: colonial}
-  - {num: 24, forma: corie,       fonemica: korie,        glosa_es: armadillo,                glosa_en: armadillo,        cursiva: false, fuente_en_oliver: null}
-  - {num: 25, forma: cumaragua,   fonemica: kumarawa,     glosa_es: viruela,                  glosa_en: smallpox,         cursiva: false, fuente_en_oliver: null,
-     nota: "La viruela llegó a las Indias con los españoles: esta acepción es COLONIAL por construcción (regla 3). Arcaya 1920 la da sobre la misma Relación de Barquisimeto 1579."}
-  - {num: 26, forma: chaure,      fonemica: chaure,       glosa_es: búho,                     glosa_en: owl,              cursiva: false, fuente_en_oliver: null}
-  - {num: 27, forma: chirgua,     fonemica: chirwa,       glosa_es: vasija para el agua,      glosa_en: pot for water,    cursiva: false, fuente_en_oliver: null}
-  - {num: 28, forma: chirigua,    fonemica: chiriwa,      glosa_es: tinaja pequeña,           glosa_en: small jar,        cursiva: false, fuente_en_oliver: null}
-  - {num: 29, forma: chiriguare,  fonemica: chiriware,    glosa_es: gavilán,                  glosa_en: hawk,             cursiva: false, fuente_en_oliver: null}
-  - {num: 30, forma: chuchube,    fonemica: chuchube,     glosa_es: paraulata,                glosa_en: bird species,     cursiva: false, fuente_en_oliver: null}
-  - {num: 31, forma: dare,        fonemica: dare,         glosa_es: diente,                   glosa_en: tooth,            cursiva: false,
-     fuente_en_oliver: "«At present, in coastal Falcón we find the term dare for tooth, although it is known to just a few individuals in Paraguaná»", pagina_doc_cap2: 146, polity: costera, epoca: moderno}
-  - {num: 32, forma: datihao,     fonemica: datihao,      glosa_es: señor,                    glosa_en: '"lesser" chief', cursiva: false,
-     fuente_en_oliver: "Oviedo y Valdés, ed. 1944, vol. XVI: 265 / 41 — «DATIHAO: lord: the one that loans his name to the slave»", pagina_doc_cap2: 145, epoca: contacto-temprano,
-     nota: "La forma de la cita (lema en mayúsculas + definición) es la de un GLOSARIO, y la campaña del taíno ya midió que la entrada «datihao (Lengua de Venezuela)» es del glosario que Amador de los Ríos añadió en 1855 (6-fusion/taino2_oviedo_venezuela.yaml). La A-9 hereda esa entrada del editor, y su glosa inglesa «"lesser" chief» es interpretación de Oliver, no de Oviedo."}
-  - {num: 33, forma: diao,        fonemica: diao,         glosa_es: señor principal,          glosa_en: principal chief,  cursiva: false,
-     fuente_en_oliver: "Oviedo y Valdés, ed. 1944: «DIAO: Lord or cacique of the zaquitios territory in the Gobernación of Venezuela»", pagina_doc_cap2: 145, epoca: contacto-temprano,
-     nota: "misma forma de glosario que la 32; el diao sí sale en el cuerpo de Oviedo (t. II pp. 299-300), así que no depende del editor"}
-  - {num: 34, forma: Guacaubana,  fonemica: wakaubana,    glosa_es: '"río escondido"',        glosa_en: underground creek, cursiva: false, fuente_en_oliver: null}
-  - {num: 35, forma: guacoa,      fonemica: wakoa,        glosa_es: especie de paloma,        glosa_en: pigeon species,   cursiva: false, fuente_en_oliver: null}
-  - {num: 36, forma: guacurebo,   fonemica: wakurebo,     glosa_es: quebrada que crece,       glosa_en: creek with water, cursiva: false, fuente_en_oliver: null}
-  - {num: 37, forma: guairón,     fonemica: wairon,       glosa_es: hoguera,                  glosa_en: fire hearth,      cursiva: false, fuente_en_oliver: null}
-  - {num: 38, forma: guaranaro,   fonemica: waranaro,     glosa_es: pez lisa,                 glosa_en: fish species,     cursiva: false, fuente_en_oliver: null}
-  - {num: 39, forma: guaro,       fonemica: waro,         glosa_es: cotorra,                  glosa_en: parrot,           cursiva: false, fuente_en_oliver: null}
-  - {num: 40, forma: hayo,        fonemica: hayo,         glosa_es: '"hierba que quita la sed"', glosa_en: Coca leaves, cursiva: true,  fuente_en_oliver: null}
-  - {num: 41, forma: icoroata,    fonemica: ikoroata,     glosa_es: caraotas,                 glosa_en: black beans,      cursiva: true,  fuente_en_oliver: null}
-  - {num: 42, forma: machire,     fonemica: machire,      glosa_es: loza con grumos/defectos, glosa_en: defective pottery, cursiva: false, fuente_en_oliver: null}
-  - {num: 43, forma: macoya,      fonemica: makoya,       glosa_es: cuerda,                   glosa_en: rope,             cursiva: false, fuente_en_oliver: null}
-  - {num: 44, forma: maure,       fonemica: maure,        glosa_es: tejido de maure (algodón), glosa_en: type of textile (cotton), cursiva: false, fuente_en_oliver: null}
-  - {num: 45, forma: mene,        fonemica: mene,         glosa_es: viruela/pez derretida,    glosa_en: smallpox/tar,     cursiva: false, fuente_en_oliver: null,
-     nota: "la acepción 'viruela' es colonial por construcción (ver la 25)"}
-  - {num: 46, forma: quicidi,     fonemica: kuicidi,      glosa_es: serranía,                 glosa_en: (specific?) sierra, cursiva: false, fuente_en_oliver: null}
-  - {num: 47, forma: raporón,     fonemica: (also baperón), glosa_es: calabaza con cal,       glosa_en: gourd flask with lime, cursiva: true, fuente_en_oliver: null}
-  - {num: 48, forma: taboro,      fonemica: taboro,       glosa_es: serranía,                 glosa_en: mountain (specific?), cursiva: false, fuente_en_oliver: null,
-     nota: "FALTABA en tabla_a9_oliver.yaml"}
-  - {num: 49, forma: tara,        fonemica: tara,         glosa_es: langosta,                 glosa_en: locust,           cursiva: false, fuente_en_oliver: null}
-  - {num: 50, forma: auri,        fonemica: auri,         glosa_es: perro,                    glosa_en: dog,              cursiva: false,
-     fuente_en_oliver: "«I discovered the term not in reference to Caquetío vocabularies, but rather in reference to a Cuyón vocabulary list (Appendix A: Table A8, A9) [...] there is little doubt that the Cuyón borrowed the term from the neighboring Caquetío of Barquisimeto»", pagina_doc_cap2: 151, polity: barquisimeto, epoca: moderno,
-     nota: "NO es voz atestiguada en caquetío: es una INFERENCIA de Oliver sobre una lista cuyón. La Tabla 8 (p. 592) la da en la columna CUYON como «auri (ARAWAKAN)»; las listas son de Jahn 1927, Loukotka 1968 y Oramas 1916."}
+  - num: 1
+    forma: 'adabacoa'
+    fonemica: "(h)adabakoa"
+    glosa_es: 'valle con arboleda'
+    glosa_en: '"wooded" valley'
+    cursiva: false
+    fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: página en blanco en el original, «OJO»): «the valley of hadabacoa [...] which means in Spanish language 'all trees'» — el valle de Yaracuy"
+    pagina_doc_cap2: '142-143'
+    polity: 'yaracuy'
+    epoca: 'colonial'
+  - num: 2
+    forma: '-bana'
+    fonemica: '-bana'
+    glosa_es: null
+    glosa_en: 'surrounding'
+    cursiva: false
+    fuente_en_oliver: "análisis de Oliver sobre topónimos; lokono «'sorrounding' or 'expanse'», 'roof (e.g. cover)'"
+    pagina_doc_cap2: 150
+    polity: null
+    epoca: null
+    nota: "La glosa de Oliver para -bana es 'surrounding/cover', NO 'cerro'. Ver §3."
+  - num: 3
+    forma: 'báquiro'
+    fonemica: 'bákiro'
+    glosa_es: 'báquiro'
+    glosa_en: 'peccary'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 4
+    forma: 'baperón'
+    fonemica: 'baperón'
+    glosa_es: 'calabaza con cal'
+    glosa_en: 'lime gourd flask'
+    cursiva: true
+    fuente_en_oliver: null
+    nota: "misma voz que la 47 («(also baperón)»)"
+  - num: 5
+    forma: 'barbasco'
+    fonemica: 'barbasko'
+    glosa_es: 'hierba de borrachera'
+    glosa_en: 'fish poison'
+    cursiva: false
+    fuente_en_oliver: "«definitively Arawakan, and very widespread»"
+    pagina_doc_cap2: 146
+  - num: 6
+    forma: 'barici-'
+    fonemica: 'barisi'
+    glosa_es: '(agua) turbia/o'
+    glosa_en: '"muddy" opaque'
+    cursiva: false
+    fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 178): «the water [...] comes muddy, hence the Indians call it barisi»"
+    pagina_doc_cap2: 141
+    polity: 'barquisimeto'
+    epoca: 'colonial'
+  - num: 7
+    forma: 'bariqui/e'
+    fonemica: 'bariki/-ke'
+    glosa_es: 'almagre'
+    glosa_en: 'red hematite'
+    cursiva: false
+    fuente_en_oliver: "Relación de Barquisimeto 1579 (ibid.: 191): «painted [their bodies] with bariki which is like almagre»"
+    pagina_doc_cap2: 141
+    polity: 'barquisimeto'
+    epoca: 'colonial'
+  - num: 8
+    forma: 'bisure'
+    fonemica: 'bisure'
+    glosa_es: 'lagartija'
+    glosa_en: 'lizard species'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 9
+    forma: 'boratio'
+    fonemica: 'boratio'
+    glosa_es: 'sacerdote, médico'
+    glosa_en: 'shaman'
+    cursiva: false
+    fuente_en_oliver: "sin fuente nombrada; etimología sobre /-ati/ + /-(h)o/"
+    pagina_doc_cap2: '146-147'
+  - num: 10
+    forma: 'buco'
+    fonemica: 'buko'
+    glosa_es: 'represa'
+    glosa_en: 'cut into the ground'
+    cursiva: false
+    fuente_en_oliver: "Ballesteros [1550] en Bécker 1950a (página en blanco en el original): «a channel dug into the earth for the purpose of irrigation»"
+    pagina_doc_cap2: 147
+    polity: 'costera'
+    epoca: 'contacto-temprano'
+  - num: 11
+    forma: 'budare'
+    fonemica: 'budare'
+    glosa_es: 'plato llano de barro'
+    glosa_en: 'clay griddle'
+    cursiva: false
+    fuente_en_oliver: null
+    nota: "En el cap. 4 (p. 440 n. 308, tesis 1989) el propio Oliver dice que budare es «definitively of a Maipuran (Arawakan) origin, although it may not necessarily be a Caquetío term since the Spanish used it widely in Venezuela»."
+  - num: 12
+    forma: 'buxera'
+    fonemica: 'bujera'
+    glosa_es: 'pintura negra-Genipa'
+    glosa_en: 'black body paint'
+    cursiva: false
+    fuente_en_oliver: null
+    nota: "Contradice su propia n. 213 del cap. 3 (tesis p. 284), que da `busera` por pigmento ROJO de Bixa. Ver §4."
+  - num: 13
+    forma: 'çabana'
+    fonemica: 'sabana'
+    glosa_es: 'prado'
+    glosa_en: 'savannah'
+    cursiva: false
+    fuente_en_oliver: "«definitively Arawakan, and very widespread»"
+    pagina_doc_cap2: 146
+  - num: 14
+    forma: 'caduchi'
+    fonemica: 'caduchi'
+    glosa_es: 'higo, breva'
+    glosa_en: 'cactus fruit'
+    cursiva: false
+    fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 193): cardones con dos frutos, «caduchi, which we call breva» y «dato»"
+    pagina_doc_cap2: 146
+    polity: 'barquisimeto'
+    epoca: 'colonial'
+    nota: "en la fonética, «chi» va subrayado"
+  - num: 15
+    forma: 'cama'
+    fonemica: 'K-ama'
+    glosa_es: 'danta'
+    glosa_en: 'tapir'
+    cursiva: false
+    fuente_en_oliver: '"Relación de Barquisimeto 1579 (Arellano Moreno 1964: 183): «The term "cama" or "çama" (probably /kama/) is defined as danta»"'
+    pagina_doc_cap2: 142
+    polity: 'barquisimeto'
+    epoca: 'colonial'
+  - num: 16
+    forma: 'Capú'
+    fonemica: 'kapú'
+    glosa_es: 'demonio'
+    glosa_en: 'spirit, goblin'
+    cursiva: false
+    fuente_en_oliver: "Relación de Barquisimeto 1579: lo aplicaban al diablo y a los españoles"
+    pagina_doc_cap2: 144
+    polity: 'barquisimeto'
+    epoca: 'colonial'
+  - num: 17
+    forma: 'Capubana'
+    fonemica: 'kapu-bana'
+    glosa_es: null
+    glosa_en: "a hill in Paraguaná, cf. #2 and #16 (ocupa las dos columnas)"
+    cursiva: false
+    fuente_en_oliver: "leyenda MODERNA que Oliver oyó cerca de Santa Ana, Paraguaná: un duende que habita la cima de un cerro cercano"
+    pagina_doc_cap2: 144
+    polity: 'costera'
+    epoca: 'moderno'
+  - num: 18
+    forma: 'Caquetío'
+    fonemica: 'Kaketío'
+    glosa_es: 'ser viviente'
+    glosa_en: 'people (general)'
+    cursiva: false
+    fuente_en_oliver: "etimología de Oliver: cognado del lokono kakïtho 'people, living beings' (Taylor 1977); la glosa NO es de una crónica"
+    pagina_doc_cap2: 147
+  - num: 19
+    forma: 'caça'
+    fonemica: "kasa, kaza"
+    glosa_es: 'puche de maíz'
+    glosa_en: 'maize porridge'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 20
+    forma: 'Cegue'
+    fonemica: 'cegue'
+    glosa_es: 'lechuza'
+    glosa_en: 'owl'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 21
+    forma: 'cocuy'
+    fonemica: 'kokuy'
+    glosa_es: 'penca'
+    glosa_en: 'Agave species'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 22
+    forma: 'comoho'
+    fonemica: 'komoho'
+    glosa_es: 'higo, tuna'
+    glosa_en: 'cactus'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 23
+    forma: 'coque'
+    fonemica: 'koke'
+    glosa_es: 'hormiga roja'
+    glosa_en: 'red ant species'
+    cursiva: false
+    fuente_en_oliver: "Relación de Barquisimeto 1579 (Arellano Moreno 1964: 193): «red ants which are called in the Indian [Caquetío] language coques»"
+    pagina_doc_cap2: '144-145'
+    polity: 'barquisimeto'
+    epoca: 'colonial'
+  - num: 24
+    forma: 'corie'
+    fonemica: 'korie'
+    glosa_es: 'armadillo'
+    glosa_en: 'armadillo'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 25
+    forma: 'cumaragua'
+    fonemica: 'kumarawa'
+    glosa_es: 'viruela'
+    glosa_en: 'smallpox'
+    cursiva: false
+    fuente_en_oliver: null
+    nota: "La viruela llegó a las Indias con los españoles: esta acepción es COLONIAL por construcción (regla 3). Arcaya 1920 la da sobre la misma Relación de Barquisimeto 1579."
+  - num: 26
+    forma: 'chaure'
+    fonemica: 'chaure'
+    glosa_es: 'búho'
+    glosa_en: 'owl'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 27
+    forma: 'chirgua'
+    fonemica: 'chirwa'
+    glosa_es: 'vasija para el agua'
+    glosa_en: 'pot for water'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 28
+    forma: 'chirigua'
+    fonemica: 'chiriwa'
+    glosa_es: 'tinaja pequeña'
+    glosa_en: 'small jar'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 29
+    forma: 'chiriguare'
+    fonemica: 'chiriware'
+    glosa_es: 'gavilán'
+    glosa_en: 'hawk'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 30
+    forma: 'chuchube'
+    fonemica: 'chuchube'
+    glosa_es: 'paraulata'
+    glosa_en: 'bird species'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 31
+    forma: 'dare'
+    fonemica: 'dare'
+    glosa_es: 'diente'
+    glosa_en: 'tooth'
+    cursiva: false
+    fuente_en_oliver: "«At present, in coastal Falcón we find the term dare for tooth, although it is known to just a few individuals in Paraguaná»"
+    pagina_doc_cap2: 146
+    polity: 'costera'
+    epoca: 'moderno'
+  - num: 32
+    forma: 'datihao'
+    fonemica: 'datihao'
+    glosa_es: 'señor'
+    glosa_en: '"lesser" chief'
+    cursiva: false
+    fuente_en_oliver: "Oviedo y Valdés, ed. 1944, vol. XVI: 265 / 41 — «DATIHAO: lord: the one that loans his name to the slave»"
+    pagina_doc_cap2: 145
+    epoca: 'contacto-temprano'
+    nota: '"La forma de la cita (lema en mayúsculas + definición) es la de un GLOSARIO, y la campaña del taíno ya midió que la entrada «datihao (Lengua de Venezuela)» es del glosario que Amador de los Ríos añadió en 1855 (6-fusion/taino2_oviedo_venezuela.yaml). La A-9 hereda esa entrada del editor, y su glosa inglesa «"lesser" chief» es interpretación de Oliver, no de Oviedo."'
+  - num: 33
+    forma: 'diao'
+    fonemica: 'diao'
+    glosa_es: 'señor principal'
+    glosa_en: 'principal chief'
+    cursiva: false
+    fuente_en_oliver: "Oviedo y Valdés, ed. 1944: «DIAO: Lord or cacique of the zaquitios territory in the Gobernación of Venezuela»"
+    pagina_doc_cap2: 145
+    epoca: 'contacto-temprano'
+    nota: "misma forma de glosario que la 32; el diao sí sale en el cuerpo de Oviedo (t. II pp. 299-300), así que no depende del editor"
+  - num: 34
+    forma: 'Guacaubana'
+    fonemica: 'wakaubana'
+    glosa_es: '"río escondido"'
+    glosa_en: 'underground creek'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 35
+    forma: 'guacoa'
+    fonemica: 'wakoa'
+    glosa_es: 'especie de paloma'
+    glosa_en: 'pigeon species'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 36
+    forma: 'guacurebo'
+    fonemica: 'wakurebo'
+    glosa_es: 'quebrada que crece'
+    glosa_en: 'creek with water'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 37
+    forma: 'guairón'
+    fonemica: 'wairon'
+    glosa_es: 'hoguera'
+    glosa_en: 'fire hearth'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 38
+    forma: 'guaranaro'
+    fonemica: 'waranaro'
+    glosa_es: 'pez lisa'
+    glosa_en: 'fish species'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 39
+    forma: 'guaro'
+    fonemica: 'waro'
+    glosa_es: 'cotorra'
+    glosa_en: 'parrot'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 40
+    forma: 'hayo'
+    fonemica: 'hayo'
+    glosa_es: '"hierba que quita la sed"'
+    glosa_en: 'Coca leaves'
+    cursiva: true
+    fuente_en_oliver: null
+  - num: 41
+    forma: 'icoroata'
+    fonemica: 'ikoroata'
+    glosa_es: 'caraotas'
+    glosa_en: 'black beans'
+    cursiva: true
+    fuente_en_oliver: null
+  - num: 42
+    forma: 'machire'
+    fonemica: 'machire'
+    glosa_es: 'loza con grumos/defectos'
+    glosa_en: 'defective pottery'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 43
+    forma: 'macoya'
+    fonemica: 'makoya'
+    glosa_es: 'cuerda'
+    glosa_en: 'rope'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 44
+    forma: 'maure'
+    fonemica: 'maure'
+    glosa_es: 'tejido de maure (algodón)'
+    glosa_en: 'type of textile (cotton)'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 45
+    forma: 'mene'
+    fonemica: 'mene'
+    glosa_es: 'viruela/pez derretida'
+    glosa_en: 'smallpox/tar'
+    cursiva: false
+    fuente_en_oliver: null
+    nota: "la acepción 'viruela' es colonial por construcción (ver la 25)"
+  - num: 46
+    forma: 'quicidi'
+    fonemica: 'kuicidi'
+    glosa_es: 'serranía'
+    glosa_en: '(specific?) sierra'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 47
+    forma: 'raporón'
+    fonemica: '(also baperón)'
+    glosa_es: 'calabaza con cal'
+    glosa_en: 'gourd flask with lime'
+    cursiva: true
+    fuente_en_oliver: null
+  - num: 48
+    forma: 'taboro'
+    fonemica: 'taboro'
+    glosa_es: 'serranía'
+    glosa_en: 'mountain (specific?)'
+    cursiva: false
+    fuente_en_oliver: null
+    nota: "FALTABA en tabla_a9_oliver.yaml"
+  - num: 49
+    forma: 'tara'
+    fonemica: 'tara'
+    glosa_es: 'langosta'
+    glosa_en: 'locust'
+    cursiva: false
+    fuente_en_oliver: null
+  - num: 50
+    forma: 'auri'
+    fonemica: 'auri'
+    glosa_es: 'perro'
+    glosa_en: 'dog'
+    cursiva: false
+    fuente_en_oliver: "«I discovered the term not in reference to Caquetío vocabularies, but rather in reference to a Cuyón vocabulary list (Appendix A: Table A8, A9) [...] there is little doubt that the Cuyón borrowed the term from the neighboring Caquetío of Barquisimeto»"
+    pagina_doc_cap2: 151
+    polity: 'barquisimeto'
+    epoca: 'moderno'
+    nota: "NO es voz atestiguada en caquetío: es una INFERENCIA de Oliver sobre una lista cuyón. La Tabla 8 (p. 592) la da en la columna CUYON como «auri (ARAWAKAN)»; las listas son de Jahn 1927, Loukotka 1968 y Oramas 1916."
 
 nota_al_pie_verbatim: "(words in tialics are probably not Caquetío, but from the Santa Marta area [chibchan?])"
 
@@ -147,14 +476,15 @@ nota_al_pie_verbatim: "(words in tialics are probably not Caquetío, but from th
 propuestas_lexicon:
 
   - forma: busera
-    variantes_en_fuente: [busera (Oviedo), buxera (Oliver A-9 #12)]
+    variantes_en_fuente: ['busera (Oviedo)', 'buxera (Oliver A-9 n.º 12)']
     glosa_propuesta: "jagua, tinte negro-azulado (Genipa americana) con que se pinta el cuerpo"
     etiqueta_propuesta: caquetío-atestiguado
     procedencia:
-      - {obra: oviedo-valdes-1851, tomo: II, pagina: 300, texto: "«embixados y pintados de bixa y de xagua, que allí llaman busera»", verificado: imagen, por: 6-fusion/taino2_oviedo_venezuela.yaml}
+      - {obra: oviedo-y-valdes-1852-1855, tomo: II, pagina: 300, texto: "«embixados y pintados de bixa y de xagua, que allí llaman busera»", verificado: imagen, por: 6-fusion/taino2_oviedo_venezuela.yaml}
       - {obra: oliver-1989-apendice-a, pagina: 593, texto: "12. buxera | bujera | pintura negra-Genipa | black body paint", verificado: imagen}
     epoca: contacto-temprano
-    polity: costera (Oliver, tesis p. 283, asume que el funeral que describe Oviedo es el de la costa: «it is reasonable to assume that he is referring to that of Coastal Falcon»)
+    polity: costera
+    polity_nota: "Oliver (tesis p. 283) asume que el funeral que describe Oviedo es el de la costa: «it is reasonable to assume that he is referring to that of Coastal Falcon». Es una suposición declarada, no un dato de Oviedo."
     por_que: >-
       No está en el lexicón bajo ninguna grafía (busera, buxera, bujera: 0 —
       medido). Es la ÚNICA voz de la A-9 con dos lecturas de glosa que se
@@ -177,7 +507,7 @@ propuestas_lexicon:
     propuesta: subir a caquetío-atestiguado, con polity barquisimeto declarada
     procedencia:
       - {obra: oliver-1989-apendice-a, pagina: 593, texto: "15. cama | K-ama | danta | tapir", verificado: imagen}
-      - {obra: oliver-1989-cap2, pagina: 142, texto: "«The term "cama" or "çama" (probably /kama/) is defined as danta (Spanish) or tapir ([1579] Arellano Moreno 1964:183)»"}
+      - {obra: oliver-1989-cap2, pagina: 142, texto: '«The term "cama" or "çama" (probably /kama/) is defined as danta (Spanish) or tapir ([1579] Arellano Moreno 1964:183)»'}
     por_que: >-
       La nota de `kama` dice que no hay rastro y que su «ruta» era la fila
       'tapir' de la A-7, que no existe. La fila existe, pero en la A-9 (#15), y
@@ -291,7 +621,7 @@ notas_a_entradas_existentes:
       `hayo`.
 
   - clave: datihao
-    hallazgo: "A-9 #32 glosa «señor / "lesser" chief»"
+    hallazgo: 'A-9 n.º 32 glosa «señor / "lesser" chief»'
     nota_propuesta: "La glosa de Oliver viene de la entrada de glosario de Oviedo ed. 1944 (lema en mayúsculas); la campaña del taíno midió que esa entrada es del editor (1855). No suma atestación."
 
   - clave: [capu, kapubana]
@@ -381,3 +711,55 @@ tabla_a1:
     Tables A1 and A2)»: la A-1 es la FUENTE de la columna paraujana de la A-2,
     que ya está transcrita, verificada por Miguel y en lexicon_a2.py.
   pendiente: "cotejar la A-1 manuscrita contra la columna paraujana de la A-2 (Oliver avisa de diferencias de alófono entre las dos). No se hizo aquí."
+
+# ══════════════════════════════════════════════════════════════════════════
+# 7. TRES VOCES QUE SALEN DEL CAP. 4 (arqueología), no del Apéndice A
+# ══════════════════════════════════════════════════════════════════════════
+# Oliver las da de pasada, en la descripción de los sitios y las pastas.
+# Verificadas en imagen: p. 438 (pdf 465); la p. 447 (pdf 474) sobre OCR.
+voces_del_cap4:
+
+  - forma: Túcua
+    obra: oliver-1989-cap4
+    pagina_impresa: 438
+    verificado: imagen
+    texto: "«an intermittent creek named Túcua. The name itself is of Caquetío origin and glosses as 'point' or 'horn'; a reference to the way the mountain of Barroso prolongs diagonally to the coastal plains, ending in a distinct hill known as Cabimo»"
+    es_ya: "no está en el lexicón ni en lexicon_toponimos (lo mide el script)"
+    propuesta: >-
+      Topónimo para la mesa de topónimos (skill campana-toponimos), con la
+      glosa de Oliver como LECTURA, no como atestación: el cap. 2 (DOC p. 148)
+      dice de dónde la saca — el lokono `ukoa (tucua)` 'cuerno' y el sufijo
+      -coa 'punta, proa'. Es etimología suya por el lokono, no dato de un
+      hablante. Capa: reconstruido. El sitio es FAL-60, el más antiguo fechado
+      de la serie dabajuroide (cal. d.C. 944).
+    region: Falcón occidental (Dabajuro) — fuera de Paraguaná, dentro de la Kaketiana
+
+  - forma: zazare
+    variante_en_fuente: "/çaçare/"
+    obra: oliver-1989-cap4
+    pagina_impresa: 438
+    verificado: imagen
+    texto: "«The Calcareous matrix (zazare /çaçare/) obtained from sedimentary concretions such as quartzite, calicte, and gypsum, is almost invariably used in the Ordinary Ware cooking and/or storage vessels»"
+    es_ya: "no está (lo mide el script)"
+    propuesta: >-
+      NO al lexicón como caquetía: Oliver no dice de qué lengua es — la da en
+      cursiva junto a `chamote` (castellano) como término local de alfarería.
+      Candidata para el dictado de Medina y para la mesa de topónimos: el río
+      ZAZÁRIDA (toponimo-097) comparte el arranque, y la coincidencia merece
+      una pregunta, no una conclusión.
+    epoca: moderno (término de las loceras de Falcón que Oliver oyó en 1981-83)
+
+  - forma: guarataro
+    obra: oliver-1989-cap4
+    pagina_impresa: 447
+    verificado: ocr (prosa limpia; la forma coincide con la de Esteves y Medina)
+    texto: "«Shell tempering is by far the most common temper associated with Ordinary Ware [...] about 75% of the sample consisted of what is locally designated as guarataro; that is, a fossilized oyster (Tertiary?) that has been burned and crushed»"
+    es_ya: "warataro — caquetío-atestiguado 'barro de loza, para la fábrica de budares y ollas' (Zavala #141 = Esteves); lexicon_toponimos cita a Medina Colina: «la tierra de grano que se mezcla con el barro de loza, el desgrasante»"
+    propuesta: >-
+      Nota en `warataro`: tercera fuente, independiente de Esteves y de Medina
+      (prospección propia de Oliver, 1981-83), que CONVERGE con Medina en que
+      es el DESGRASANTE y no el barro, y añade qué es materialmente: ostra
+      fósil quemada y molida. La glosa de Zavala/Esteves ('barro de loza')
+      queda en minoría. No se reescribe (minar-fuente §8): se anota, y la
+      curación la decide Miguel.
+    epoca: moderno (el término); el USO de concha como desgrasante es precontacto, medido en la cerámica de Corralito
