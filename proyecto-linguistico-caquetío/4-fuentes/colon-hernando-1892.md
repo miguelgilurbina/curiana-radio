@@ -10,11 +10,11 @@ local: "fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt"
 paginas: "vol. 2 (la obra completa son 2 vols.)"
 capa_texto: si
 estado_minado: parcial
-cobertura: "el tercer viaje (caps. LXIX-LXXIII) y el cuarto (Cariai, Veragua), preguntados por el guanín y por la lengua — 2026-09-22, campaña del taíno 2, T7"
+cobertura: "el tercer viaje (caps. LXIX-LXXIII) y el cuarto (Cariai, Veragua), preguntados por el guanín y por la lengua — 2026-09-22, campaña del taíno 2, T7 + barrido por la COSTA OCCIDENTAL y lectura del cap. LXXXIV (Hojeda en La Española, 1499) — 2026-09-23, minería 3, M2"
 prioridad: media
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 descargado: 2026-09-22
 origen_digital: "archive.org/details/historiadelalmir02col — texto OCR (historiadelalmir02col_djvu.txt), 448.515 bytes, sha256 252028b564a6fd3c241db1b1cc4daf7a3ab2e8e514bcd17cd2964750dfbbd5eb. Dominio público (ed. 1892; autor † 1539). Descargado el 2026-09-22 con la autorización de Miguel de esta campaña"
 aliases: ["Hernando Colón", "Fernando Colón", "Historia del Almirante", "Colón 1892"]
@@ -107,6 +107,27 @@ dice que se supo; Anglería dice que se coligió **por señas** (vol. 1, p. 268)
 - Ni una noticia de tráfico entre las Antillas Mayores y la costa de Coro.
 - Nada sobre quién habla qué lengua en Paria: no dice que se entendieran ni
   que no.
+
+## 2026-09-23 — la costa occidental (minería 3, parcela M2)
+
+**Qué se preguntó.** Qué dice de la costa occidental (Coquibacoa, Coro,
+Curiana, los Gigantes). Barrido con
+`6-fusion/scripts/medir_cronicas_costa_occidental.py`, que cose los guiones de
+fin de línea: sin eso, `tigre` da cero aquí, porque el texto dice «ti- gres».
+
+**Qué dio: una sola cosa, y no la había visto nadie.** p. 115 (cap. LXXXIV),
+septiembre de 1499, Hojeda recién llegado a La Española: «dándole cuenta de su
+viaje, dijo que venía de descubrir por la costa de Paria al Occidente,
+seiscientas leguas, donde había hallado gente, que peleaba con los cristianos,
+con igual partido, y que le habían herido veinte hombres, por lo cual no pudo
+valerse de las riquezas de la tierra en que había hallado **ciervos, conejos,
+pieles y garras de tigres y guaninis**, que mostró á Roldan en las carabelas».
+Lo que el primer viaje por la Kaketiana se llevó, dicho por el que lo llevaba.
+Sin sitio: es la costa entera de Paria al cabo de la Vela. Va a la clave
+`fauna:` de `6-fusion/cronicas_contacto_costa_occidental_2026-09-22.yaml`
+(m2.m3). ⚠️ El folio del OCR sale `1x5`; es la 115 entre la 114 y la 116.
+
+**Qué NO dio:** Coquibacoa, Curiana, Coro, Curazao: cero, con control.
 
 ## Qué falta
 

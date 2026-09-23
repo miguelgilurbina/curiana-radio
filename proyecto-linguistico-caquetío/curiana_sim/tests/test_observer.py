@@ -5,6 +5,11 @@ from curiana_lexicon import LexicoComunitario, extraer_neologismos_del_texto
 from curiana_observer import ObserverAgent, RegistroInteraccion
 
 
+
+# Tanda de la base (2026-09-23): `kali` está ARCHIVADA desde el 2026-09-19 y
+# una raíz archivada ya no avala una acuñación (db.1, el agujero de `kira`).
+# Las formas de ejemplo de este archivo acuñan sobre `kasi`, la atestiguada.
+
 def _observer():
     """ObserverAgent sin cliente Anthropic (solo análisis local)."""
     lex = LexicoComunitario()
@@ -18,34 +23,34 @@ def _observer():
 
 def _proponer(lex, forma, autor="Manaure"):
     neos = extraer_neologismos_del_texto(
-        f"[{forma}: kali+ni = luz continua]", autor, dia=1, turno=1)
+        f"[{forma}: kasi+ni = luz continua]", autor, dia=1, turno=1)
     assert neos, f"el neologismo de test '{forma}' no pasó la compuerta"
     lex.registrar_neologismo(neos[0])
 
 
 def test_adopcion_exige_frontera_de_palabra():
-    """'kali-ni' NO debe adoptarse desde 'kali-nima' (bug de substring)."""
+    """'kasi-ni' NO debe adoptarse desde 'kasi-nima' (bug de substring)."""
     obs, lex = _observer()
-    _proponer(lex, "kali-ni")
-    obs.procesar_adopciones("Taya wana-ka kali-nima wara.", "Shaboro", turno=1, dia=2)
-    obs.procesar_adopciones("Nüma maa-ni kali-nima.", "Tawaka", turno=2, dia=2)
+    _proponer(lex, "kasi-ni")
+    obs.procesar_adopciones("Taya wana-ka kasi-nima wara.", "Shaboro", turno=1, dia=2)
+    obs.procesar_adopciones("Nüma maa-ni kasi-nima.", "Tawaka", turno=2, dia=2)
     assert lex.neologismos_adoptados() == []
 
 
 def test_adopcion_con_uso_exacto():
     obs, lex = _observer()
-    _proponer(lex, "kali-ni")
-    assert obs.procesar_adopciones("Taya wana-ka kali-ni.", "Shaboro", turno=1, dia=2) == []
+    _proponer(lex, "kasi-ni")
+    assert obs.procesar_adopciones("Taya wana-ka kasi-ni.", "Shaboro", turno=1, dia=2) == []
     oficializados = obs.procesar_adopciones(
-        "Kali-ni wara, naa-da yama.", "Tawaka", turno=2, dia=3)
+        "Kasi-ni wara, naa-da yama.", "Tawaka", turno=2, dia=3)
     assert len(oficializados) == 1
-    assert oficializados[0].forma == "kali-ni"
+    assert oficializados[0].forma == "kasi-ni"
     assert oficializados[0].dia_resolucion == 3
 
 
 def test_autor_no_se_adopta_a_si_mismo():
     obs, lex = _observer()
-    _proponer(lex, "kali-ni", autor="Manaure")
+    _proponer(lex, "kasi-ni", autor="Manaure")
     obs.procesar_adopciones("Kali-ni wara.", "Manaure", turno=1, dia=2)
     neo = lex.neologismos_pendientes()[0]
     assert neo.adoptado_por == []

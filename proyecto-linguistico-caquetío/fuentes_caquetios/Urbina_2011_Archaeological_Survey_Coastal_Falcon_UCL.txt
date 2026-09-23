@@ -1,0 +1,676 @@
+AN ARCHAEOLOGICAL SURVEY FOR COASTAL FALCÓN-VENEZUELA.
+EDUY MARÍA URBINA JIMÉNEZ
+Dissertation submitted in partial fulfilment of Requirements for the degree of Ma in Archaeology
+Of University College London in 2011
+UCL INSTITUTE OF ARCHAEOLOGY
+Note: this dissertation is an unrevised examination copy for consultation only and it should not be quoted or
+cited without the permission of the Director of the Institute
+
+Abstract
+The present dissertation is focuses on the devise of a survey/sampling strategy in Coastal Falcón, Venezuela that is adapted to the particular conditions of the region. To achieve this goal we used the archaeological information derived from non–systematic surveys in the state and created a database of 192 archaeological sites associated with the pre-Hispanic agro-ceramic period. We correlated this data with environmental variables and studied their behavior in the space with the aim of evaluating possible pattern. We could observe that there is a correlation between the main rivers and the location of the sites; we also could see a possible differentiated use of space when we correlated the sites associated with the Tortolitan and Dabajuran Subtradition and the sites’ location. We used these possible patterns to design a survey/sampling strategy in which the environmental and the archaeological variable were taken into account. We also factorized the logistic variable in the design of the methodology. The result is an informed strategy that takes note of the environmental particularities and systematizes the previous archaeological information with the aim of producing prediction about the site location.
+1
+
+List of Contents
+Abstract ............................................................................................................ 1 List of Contents................................................................................................ 2 List of Tables.................................................................................................... 2 List of Figures .................................................................................................. 2 Acknowledgement ........................................................................................... 3 Acknowledgement ........................................................................................... 3 Introduction ..................................................................................................... 4 Chapter 1: Research Problem........................................................................ 6
+1.1 General Considerations................................................................................................6
+1.2 The Problem.................................................................................................................8
+1.3 Research Project ..........................................................................................................9
+1.4 Objectives ....................................................................................................................9
+Chapter 2: The State of Falcón.................................................................... 11
+2. 1. The Geographical Setting ........................................................................................11
+2.1.1. Relief and Geology ............................................................................................11 2.1.2 Climate................................................................................................................13 2.1.3. Soil .....................................................................................................................14 2.1.4. Hydrology ..........................................................................................................14 2.1.5. Vegetation ..........................................................................................................14 2.2 The Paleoenviroment .................................................................................................15
+2.3 Archaeological Background.......................................................................................15
+2.3.1 Previous Research...............................................................................................15 2.3.1. Ceramic complexes proposed for Falcón...........................................................19 2.4. Issues with the context and chronology....................................................................22
+Chapter III: Considerations about Regional Archaeology, Spatial Analysis and Landscape Archaeology......................................................... 24
+3.1 Regional Archaeology ...............................................................................................24
+3.1.1. Sampling in Archaeology ..................................................................................25 3.2. Space and Spatial Analysis .......................................................................................26
+3.3. Landscape Archaeology............................................................................................29
+3.4. Some Examples of Regional Surveys .......................................................................30
+3.4.1 The Valley of Mexico .........................................................................................30 3.4.2 Sardinia ...............................................................................................................31
+Chapter 4: The Methodology ....................................................................... 34
+4.1. The Archaeological Data ..........................................................................................34
+4.1.1. Dimensions of Analysis .....................................................................................34 4.2. The Environmental Data ...........................................................................................36
+4.2.1. Dimensions of Analysis .....................................................................................37
+
+4.3 The Space...................................................................................................................38 4.4 The Methodology proposed for regional surveys in Falcón. .....................................38
+Chapter V: The Survey Strategy ................................................................. 40
+5.1 Results and Analysis ..................................................................................................40 5.1.1 Spatial Distribution by Type of Site ...................................................................40 5.1.2 Spatial distribution by Cultural Identification ....................................................40 5.1.3 Hydrology ...........................................................................................................40 5.1.4 Soil (Relief system) ............................................................................................41 5.1.5 Vegetation ...........................................................................................................42 5.1.6 Altitude ...............................................................................................................42
+5.2 Discussion ..................................................................................................................43 5.3 A Regional Survey.....................................................................................................44
+5.3.1. The Scale of the Study and the Region..............................................................45 5.3.2. The Survey Strategy...........................................................................................45 5.3.3. The Resources....................................................................................................47
+Conclusions .................................................................................................... 49 Bibliography .................................................................................................. 51 TABLES ......................................................................................................... 56 FIGURES ....................................................................................................... 60
+3
+
+List of Tables
+Table 1: Dabajuroid Serie. Cruxent & Rouse 1982 [1958-59] ..........................................57 Table 2: Tocuyanoide Macrotradition. Data taken from Oliver 1989 .................................58 Table 3: Dabajuroid Macrotradition. Data taken from Oliver 1989 ...................................59
+
+List of Figures
+Figure 1: Venezuela Geographical Location. Source: Google Maps. Retrieved on the 31/08/2011 ....................................................................................................................................... 61 Figure 2: Falcón State Location and Coro Area. Source: Bing. Retrieved on the 15/01/2011. .......................................................................................................................................................... 62 Figure 3: Area surveyed by Oliver and location of archaeological sites. Source: Oliver (1989) .......................................................................................................................................................... 63 Figure 4: Area Surveyed during the Archaeological Rescue Project. 203km long by 50 m wide.................................................................................................................................................. 64 Figure 5: Relief Systems. Source: Matteuci et al 2002............................................................... 65 Figure 6: Salinity Map. Source: Matteuci et al 2002. ................................................................. 66 Figure 7: Map of Erosion. Source: Matteuci et al 2002.............................................................. 67 Figure 8: Map of Soil. Source: Matteuci et al 2002..................................................................... 68 Figure 9: The two wave of migratory expansion. Source: Oliver 1989. .................................... 69 Figure 10: Hierarchical Model. Oliver 1989................................................................................ 70 Figure 11: Falcón Ceramic Complexes. Oliver 1989 .................................................................. 71 Figure 12: Map of rivers and river basins. The Different colours in the base map are the different basins. .............................................................................................................................. 72 Figure 13: Map showing the different kinds of soil according to FAO. .................................... 73 Figure 14: Map of Relief system ................................................................................................... 74 Figure 15: Map of different vegetation. ....................................................................................... 75 Figure 16: Map of Altitude............................................................................................................ 76 Fig 17: Spatial Distribution by Type ............................................................................................ 77 Figure 18: Spatial Distribution by Cultural Identification ........................................................ 78 Figure 19: Spatial Distribution by Cultural Identification and Hydrology. The different colours in map indicate the basin of the main rivers. ................................................................. 79 Figure 20: Zoom of the central area of Falcón showing the Spatial Distribution by Cultural Identification and Hydrology. ....................................................................................................... 80 Figure 21: Zoom of the western area of Falcón showing the Spatial Distribution by Cultural Identification and Hydrology. ....................................................................................................... 81 Figure 22: Spatial Distribution by Types and Hydrology .......................................................... 82 Figure 23: Spatial Distribution by Relief/Soil System. ............................................................... 83 Figure 24: Zoom of Spatial Distribution by Relief/Soil .............................................................. 84 Figure 25: Spatial Distribution by Types and Relief/Soil........................................................... 85 Figure 26: Zoom Spatial Distribution by Types and Relief/Soil................................................ 86 Figure 27: Spatial Distribution and Vegetation .......................................................................... 87 Figure 28: Satellite image showing the Spatial Distribution of Sites and the areas with vegetation cover in Falcón ............................................................................................................. 88 Figure 29: Spatial Distribution by Cultural identification and Altitude. ................................. 89 Figure 30: Spatial Distribution by Type and Altitude ................................................................ 90 Figure 31: Areas were 100% coverage have been suggested. .................................................... 91
+
+Acknowledgement
+My journey to UCL started several years ago so my list of acknowledgments is long. If I start chronologically, I should thank first Dr. Lilliam Arvelo and Dr. Kay Tarble de Scaramelli, their constant lectures and advices were (and still are) a great encouragement to continue growing academically. Dr Franz Scaramelli was a huge help during all the process of applying to UCL.
+At UCL I should thank Dr. José Oliver, not only as my supervisor, but also as a mentor. He kindly gave me access to unpublished data from his work in Falcón, he lent me books and articles, and our conversations were an essential guide in my attempt to continue my career as an archaeologist.
+I am very grateful with my course Co-coordinators Dr. Karen Wright and Dr. Andrew Gardner. They were incredible patient helping solve all the problems that I had during my studies, without their help my experience at UCL would have not been the same. Dr. Sue Hamilton and Dr. Stephen Shennan were also helpful and for that I thank them.
+Part of the data that I used in this work is still unpublished; I had access to it thanks to Dr Lilliam Arvelo, the Anthropologist Marcia López and the Anthropologist Ana Cristina Rodriguez. They allowed me to use the information from the rescue project that they directed giving me access to the original data, for that I am in debt with them.
+I have to thanks Israel Hinojosa, Eduardo Herrera, Moisés Hernandez, Leah Holguin and Mafalda Martins, all students of the MSc in GIS and Spatial Analysis in Archaeology, for their help in teaching how to use ArcGIS.
+And last but not least I thank the Institute of Archaeology and all its staff. I spent a year that without doubt changed my life for good. The experience at UCL was enriching and unforgettable, incredible stressful, but wonderful all the same.
+3
+
+Introduction
+In The State of Falcón, northwestern Venezuela, there has been several archaeological projects focused on studying the pre-Hispanic period; some typologies have been proposed and questions about migration process and socio-political organization have been broached. To some extent there is a fair amount of archaeological information; however none of the archaeological projects done in the region have implemented a well designed, systematic methodology for surveying the area; instead, it has been an opportunistic sampling of the sites that has, in consequence, generated a database lacking of information about settlement pattern, type of sites, the association between them and so on.
+Because of a lack of well designed, systematic surveys, the objective of this study is to design a strategy of regional survey adapted to the particular condition of the region. The purpose of designing a systematic survey is to generate a dataset that would allow us to analyze settlement distribution in relation to land use and resource management. We would expect produce some predictions about the occupants choice of location in regard to their use of the resources.
+We are aware that there is not one method of surveying, as Mattingly (2000: 5) said there is no “cookbook approach” to field survey or standardization of a method. Our task is not developing such a “cookbook” recipe but to develop a sampling strategy that takes into consideration the specific physiographic, geographic, topographic conditions of the region, to explore which strategies of sampling in survey will be most effective to address the questions at hand and, of course, to establish a base line that can also be useful to address other issues/questions that other researchers might be interested to resolve in future archaeological investigations.
+Nowadays there are many survey strategies (and their sampling methods) that have been implemented in other semi-arid and desert areas of the world, not unlike the current environmental conditions in Falcón State (Sanders et al 1979; Arvelo 1995; Van Dummelen 1998; Lock et al 1999; Ward and Larcombe 2003). For this dissertation we evaluated some of these strategies and how they can or cannot be successfully applied (wholly or in part) to Falcón.
+4
+
+Due to the numerous archaeological surveys implemented around the world is safe to predict that some elements of surveying strategies/tactics used elsewhere will also be useful in Falcón. Still, it is necessary to develop a strategy that is best suited for the region in question.
+To design the survey strategy for this region we first analyzed the spatial distribution of the already known (reported) archaeological sites from the pre-Hispanic agro-ceramic period in relation to environmental factors. Based on the differential distribution of sites in particular environments, we developed arguments to justify and support a methodology of regional survey that is designed to optimize the archaeological and environmental data.
+This work is organized into 5 chapters. In the first chapter, we will discuss the reasons gave rise to the need to design a regional survey methodology. It will provide a description and analysis of the methodologies –or lack thereof- that have been used in the field works in Falcón to date and then present my critiques. In the second chapter we will discuss the geographical setting, synthesize the previous archaeological work done in the region and the chronological and cultural sequence that has been proposed for the State of Falcón. In the third chapter we will discuss the theoretical background that served as the framework of this dissertation, focusing in the theories that underpin the methodologies and strategies developed by others archaeologist. We also will give a brief recount of other archaeological surveys and explain how their methodology would be suitable or not for Falcón. The fourth chapter will focus on the methodology that we proposed for organizing and analyzing the available environmental and archaeological information. In the last chapter we will present the distribution pattern of the archaeological sites with respect to the various environmental variables (soil, relief, vegetation, climate, hydrology and other resources). In the second part of the chapter we will present my arguments for the strategies herein developed for the regional survey and sampling, designed to optimize the archaeological database of coastal Falcón.
+5
+
+Chapter 1: Research Problem
+1.1 General Considerations The history of archaeology -as a scientific discipline- in Venezuela (See Fig. 1) is relatively recent. It started in the first half of the twentieth century and even today there is still only one institution (Universidad Central de Venezuela) where is possible to purse a university degree in the subject. This roughly translates in the existence of very few professional archaeologists, given the size and magnitude of Venezuela, that are or have been active in any one region.
+Falcón does not escape of this situation; however, the richness of archaeological and paleontological vestiges and the ease in which these remains are found have stimulated the organization of archaeological projects, resulting in the fact that, relative to the rest of Venezuela, the State is one of the most studied areas, specially the Paleo-Indian period.
+The second most studied period in Falcón is the one associated with the production of pottery during the pre-Hispanic times. As in the rest of Venezuela, the first serious attempts of an archaeological research of this period were done during the first half of the twentieth century. Tamayo (1932 in Oliver 1989: 1) was the first in correlating the pottery with ethnohistoric indigenous groups (the Caquetíos) and describing the ceramics of the area. Then in the 30’s Nomland (1933, 1935 in Oliver 1989: 1) published a couple of articles describing the pottery from several sites located around the Coro Area (See Fig. 2); this material was collected by her husband and other geologists from the Creole Petroleum Co. Indeed, although she analyzed pottery for each site, the methods of collection were undoubtedly, opportunistic and unsystematic.
+In the 1950s, Osgood performed a survey and excavations –the first stratigraphy excavation in the State- in the Paraguaná Peninsula (Osgood and Howard 1943 in Oliver 1989: 1). And during the late 1940’s Cruxent conducted a preliminary survey in the region, that was published, jointly with Rouse in 1958-59, in “Arqueología Cronológica de
+6
+
+Venezuela” (Cruxent and Rouse 1982 [1958-59]: 128-147 and 444-447) offering their analysis and interpretation of the pottery style prevalent in the area1.
+Later on, a series of small field investigations and test-pit excavations were done, one of them to collect charcoal for C14 dating, which unfortunately were not processed. Other archaeological reports for the region were those published by members of the Venezuelan Speleological Society (Perera 1969, 1970, 1973). All in all, up to this point in time there were neither archaeological projects with a clear survey methodology for gathering the data nor was there a rational for site (or artefact) sampling. Most of the sites reported and the material collected were the product of chance: a sample collected by locals sent to the museum in Caracas, a site known by locals, or stumbled upon by Creole geologists or workers laying down the pipeline, and the like.
+It was not until the late seventies and early eighties with the creation of the Centro de Investigaciones Antropológicas, Arqueológicas y Paleontológicas (CIAAP) of the Universidad Nacional Experimental “Francisco de Miranda” (UNEFM) in the State that a somewhat more structured approach to the archaeology of the region was devised (Oliver, 1989). The Centre (CIAAP) was dedicated to research and several surveys were conducted; José Oliver, part of the staff of the CIAAP did the most extensive and intensive regional survey in Falcón and his work still remains the most complete research done in the area (See Fig. 3).
+Regardless of the impact and importance of Oliver’s research in the archaeology of the region, and in fact of the country, his survey methodology is still opportunistic rather than systematic. He decided to examine the sites already reported (but not yet investigated) by Cruxent, and along the way to visit these, other as yet unreported sites in the neighbourhood were added to the site inventory. He surveyed more than a hundred of sites and excavated a good number of them but his research questions and his set of hypotheses where designed to address issues regarding several ideas about the origins of the aboriginal population of the region, focused on migration modelling, so as to test the long-standing “Theory of the H” formulated by Osgood -which sets Venezuela as an intermediate area
+1 A more detailed description of the work presented in this monograph follows in Chapter 2 of this Dissertation.
+7
+
+between two big centres of “civilisation” in the Americas -the Andean and Mesoamerica2. In Oliver’s 1989 PhD thesis, there is no mention of the survey methodology used. In fact, Oliver (personal communication, 2011) explained to me that his survey methodology was opportunistic. Nonetheless, his data collection is highly detailed and is contained in a series of field and laboratory notebooks that remain unpublished, but which I have been able to consult to support a large part of the present work.
+Since Oliver’s research in Falcón (1981-1983), there have been limited advances on archaeological investigations regarding the pre-Hispanic ceramic period; the scheme of the archaeological traditions, subtraditions and complexes, and the inferred socio-political organization of the aborigines proposed by Oliver remain largely unchallenged. Since then, the only major project focusing on the agro-ceramic period carried out in the region was a rescue archaeological project between 2004 and 2006. Because the objective was to mitigate the adverse impact of a pipeline, the survey methodology was restricted to a narrow but long transect -203 Km by 50 m wide (See Fig. 4) - that limits the interpretative possibilities of, for example, discerning settlement patterns. In this project it was found cultural material remains associated with all the periods known to Falcón. A representative sample of every type of material present was taken from every site and, in at least 8 sites, intensive surface collection and excavation were performed (Arvelo and Lopez 2004, Rodriguez Yilo 2005, 2006).
+Although this rescue project was based on an explicit, systematic survey and sampling methodology, the emerging data is still biased, offering limited interpretative possibilities because the sampled area was comprised of a long a transect of only 50 m wide, which has resulted in poor knowledge of the space surrounding each site and hence its context.
+1.2 The Problem
+In the section above I gave a brief history of field research in Falcón; with the descriptions given it becomes evident that it is not possible to use the existing archaeological data to address questions such as: Why different types of sites are located where they are and not somewhere else? How their distributions might (or not) correlate with different economic resource zones and their varying potential for exploitation; or are there as well other social
+2 To Further discussion see Cruxent & Rouse 1982 [1958-59]; Rouse & Cruxent 1963; Arvelo, 1987; Oliver, 1989.
+8
+
+or political reasons for the observed spatial distribution? Are these patterns relatively stable or unstable through time?
+To even contemplate answering any such questions it is necessary to first develop a systematic regional survey methodology that offers confidence in the degree of representativeness (open to statistical or quantitative assessments) of the sample; i.e., the sites, types of sites in terms of their possible functions farmstead, village, dedicated burial ground, fishing camp?). The particularity of Falcón, a semi-arid and arid region, makes imperative to consider the post-abandonment environmental factors that have affected both the visibility and the preservation or integrity of sites. At the same time, the environmental factors in relation to site location, based on current survey data (with all its problems), can begin to provide preliminary clues as to emerging settlement patterns, such as availability or abundance of food resources, key raw materials, sources of potable water, and so on.
+1.3 Research Project It is thus the goal of this dissertation to develop and justify a regional survey/sampling strategy that will optimize the archaeological database in the area in order to establish a baseline upon which larger questions about settlement patterns (as noted above) can be fruitfully addressed in the future. By judiciously using the available site survey data from previous investigations, the survey methodology proposed in this dissertation is based on some “hard facts” that will permit testing its effectiveness, even furnish tentative predictive models.
+To this end, the archaeological information that exists for the region was plotted on maps together with information about diverse environments. The final result displays, on maps, the distribution of the different types of sites and their relationships to the soil, the hydrology, the vegetation, the geology and various economic resources. The study of this correlation will allow us to test different sampling methods and to decide which one is best suited for the particular (archaeological, environmental, and logistics) conditions of the region.
+1.4 Objectives
+9
+
+Having as a central aim to develop an effective and realistic regional survey/sampling methodology for Falcón we studied the spatial distribution of the reported archaeological sites in Falcón and how they relate with the environment. The purpose was to use this information as the justification for designing the strategy. To achieve this, the following steps need to be followed:
+1. Organize the archaeological information (published and unpublished) that deals with data from pre-Hispanic agro-ceramic periods in Falcón in a database.
+2. Plot the environmental information (including information about the geology, hydrology and vegetation) in maps.
+3. Observe the spatial distribution of the archaeological sites in each of the environmental maps.
+4. Evaluate different systematic regional surveys done in semiarid environments around the world that might be applicable (at least in part) to Falcón.
+5. Design a systematic methodology for regional survey and sampling that takes into account all the previous archaeological and environmental information.
+10
+
+Chapter 2: The State of Falcón
+2. 1. The Geographical Setting
+The State of Falcón is the most boreal state of South America, in northwestern Venezuela (See Figs. 1 and 2). The state is bound to the west by the Venezuelan Gulf and the state of Zulia, in the north and east by the Caribbean Sea and the islands of Aruba, Curacao and Bonaire, and to the south by the states Yaracuy and Lara. It has an area of approximately 24,800 km2, divided into 25 municipalities, making it the 10th largest state in area in Venezuela.
+The geographical (abiotioc) and biotic aspects of the State of Falcón that we used for this dissertation came from a CD-Rom compilation published in 2002 (Matteucci et al 2002). The advantage of using this CD is that it contains and synthesizes all the investigations that have been done up to 2002 concerning the geographical setting of the region. It is the most up-to-date research data available on the subject. Although the CD contains a detailed review of every mayor geographical and biotic aspect of the state, we are going to input only those aspects that are most likely to directly affect the archaeological record; namely, relief, geology, climate, hydrology, vegetation and soil.
+2.1.1. Relief and Geology
+Several authors have divided Falcón’s territory into several natural entities on the basis of morphological and geological criteria (Matteucci et al 2002). Following this division there are five main geomorphological provinces (See Fig. 4). For this dissertation we are more interested in the Coastal Plain System and the Piedmont Coastal System because 90% of the surveyed sites are located in these areas. Here we will give a brief summary of every geologic System; however, in the following sections that deal with the Climate, Vegetation, Hydrology and Soil we will describe only the characteristics of these two systems (The Coastal Plains and the Coastal Piedmont).
+1) Coastal Plain System: It runs parallel to the coast, it has an extension of 6,820 Km2; the topography is flat with a gentle surface slope gradient of 2% towards the coastline. It has altitudes that range from 0 to 80 m.a.s.l., with the sole exception of Cerro Santa Ana (830 m.a.s.l.) in the Paraguaná Peninsula. Throughout the Coastal Plain, erosion is
+11
+
+a predominant occurrence, mainly caused by water and wind. Due to its geology and landscape, this system has been further divided into four subsystems:
+a. Paraguaná Peninsula: is formed by flat and bas-reliefs (80%) with the exception of the “Cerro Santa Ana”. Paraguana has a relatively distinct geology and geomorphology, which separate it from the continental geomorphology. The slope gradient is from 1 - 2%
+b. Marine Littoral: is a narrow strip that runs along the coastal plain. It is subjected to the constant action of ocean currents and wind. It is covered by dune fields and beaches; among these dune fields the Médanos de Coro is stands out as a more extensive example of active dunes.
+c. Urumaco Sulcus: is a rocky and uneven surface. The altitude ranges from 200 m in the south portion to 40 m in the north toward the sea. The slope gradient is 1-3% but locally can reach up to 13%. Due to the type of soil, sandstone and mudstone, and the phenomena of differential erosion3 taking place here causes a particular type of landscape called Dientes de Sierra or saw tooth.
+d. Floodplains: these are the floodplains of the rivers (west to east): Matícora, Cocuiza, Borojó, Capatárida, Zazarida, Seco y Mitare. The slope gradient is less than 2% and the altitude is no more than 80 m. In the floodplains of the rivers Mítare and Seco the soil has a medium to heavy texture, while in the western plains the soil is heavy. Nevertheless, in all the floodplains there are deep deposits of sand. Between the rivers Mitare and Seco the sheet and gully erosion has caused a phenomenon known as badlands. Between the rivers Borojó and Zazárida there are sand accumulations although the erosion is less severe; however, the banks of the tributary streams, due to differential erosion, are frequently characterized by badlands.
+2) Piedmont Coastal System: It consists of a series of intermediate elevations spreading west to east, evincing a rough topography with monoclinal landforms, hills and basrelief. It has an extension of 1240 Km2. The altitude ranges from 150 to 400 m.a.s.l. It has a slope gradient that ranges from 2% to 6% but locally can reach the 45%. This
+3 The differential erosion is a consequence of the presence of sandstone and mudstone. Sandstone is resistant to the erosion but Mudstone is not. Its weak structure fails and drains away (Matteucci et al 2002).
+12
+
+subsystem also presents the problems with differential erosion due to the present of a sandstone and mudstone soil type.
+3) Mountain Systems: They occupy most of the territory; there are several sub-systems, such as the Serrania de Ziruma, which is part of the northern Andes, and the Serranía de Bobare, which is part of the Coastal Cordillera System that runs parallel to the Caribbean coast. Their altitudes vary from 200 to 1500 m.a.s.l. with equal variable slope gradient percentages that can be as much as 30%.
+4) Depression Systems: located in the centre of the state is a series of depressed areas that were originally formed during the Orogenic uplift (Pliocene Epoch). Their altitude range from 80 to 200 m.a.s.l. and they are relatively flat areas, with a slope of 2 to 6 %. Depressions are heavily eroded areas with predominate sheet and gully erosion.
+5) Maritime Valley Systems: These consist of low flat lands and flood plains that face the sea and the Trade Winds; the average altitude is 80 m.a.s.l and does not exceed 300 m.a.s.l., the slope goes from 0.1% to 3%.
+The most important fact of these descriptions is that we now have information about the environmental context of the sites located in every subsystem. This information will help us to design a survey/sampling strategy that is sensible to the particularities of the landscape, especially in regard of the erosion and visibility of sites.
+2.1.2 Climate This region has an arid and semiarid climate, with a low annual average rainfall (411-596 mm/yr) and a dry season that can last from 9 to 12 months. The annual average temperature varies between 28 and 29°C but during the dry season can reach the 44°C. This region has been particularly studied as a case of the so-called coastal deserts areas of South and North America, Australia and North and South Africa (Matteuci et al 2002). The north of South America differs from these deserts in some aspects; yet the lack of studies
+13
+
+in the area focusing in the study of these different makes difficult to pinpoint the causes4 (Matteuci et al, 2002).
+2.1.3. Soil The geology and the climate of this region are the main factors that impact the soil of this area; there are salinity problems (evapotraspiration) (See Fig. 6), heavy soils and erosion (See Figs. 7 and 8). Most of the soils are mudstone and sandstone and up to 40% of the state has problems with water and wind erosion (sheet and gully erosion) (Matteuci et al 2002). The stability of the soil depends mostly of plant cover and soil management, but the water deficit and the sudden violent rains cause a cyclic process of deflation and subsequent deposition. This cycle can also be caused by the wind.
+2.1.4. Hydrology This state has the lowest levels of water discharge of the country, with an annual average volume 0.33% (Matteuci et al 2002). The east of the state has more water, this has to do with coastal current temperatures, trade wind direction and the orographic configuration of the eastern coast; the result is that most of the rivers in this side of the State carry water most of the year.
+The centre of the state has as a primary source of water the Serranía de San Luis; however, there is still a considerable scarcity of water. Most of the rivers and streams are seasonal and with a sporadic regime, many of them are with little or no water most of the year.
+2.1.5. Vegetation The vegetation found in this state is typical of desert landscape, is heterogeneous in terms of appearance but all the same belonging to the xerophytic species. The most common are the cactus, divi-divi (olive tree), cardón (prickly pear cactus) and cardón de dato (Stenocereus griseus). Some of these plants are used as food and others as fuel and fence markers (See Photo 1).
+4 It has been speculated that the difference between the north of South America and the other coastal deserts lays in the fact that there are not cold currents colliding with the continent (Lahey, 1973); however this phenomena has not been studied in depth, so everything said about this subject remains speculative.
+14
+
+It is necessary to highlight the impact that the introduction of goats in the regions after the arrival of Europeans had over the vegetation. According to Matteucci et al (2002) the goats have helped to reduce plant diversity and have facilitated the spread of two species in particular, the cují (Prosopis juliflora) and the prickly pear (Opuntia wentiana) are typical of the semiarid coastal areas but they could be a fairly recent secondary forest formed by the introduction of goats since the arrival of Europeans in the 1520s.
+2.2 The Paleoenviroment The studies of the paleoenvironment in the area have been scarce. What little is known today is based on data obtained by Schubert (1988). On this basis, we know that between the late Pleistocene and early Holocene (11500 BP) the humidity levels Falcón in the area were higher than today with temperatures between 2° and 3°C lower the current average. The evidence has led to the conclusion that during that period (11,000 and 10,000 years) there was a process of aridity.
+On the other hand, some researchers have postulated that the environment of the northcoast region during the late Pleistocene and Early Holocene was a swamp, based on some data collected in a paleontological research currently being undertaken in Northwestern Venezuela (Rincón 2010 personal communication). Another hypothesis is that the coastline was farther north during that time (Adams & Faure 1997).
+2.3 Archaeological Background
+2.3.1 Previous Research In the first chapter we provided a brief history of the archaeological projects carried out in Falcón. In this section we are going to discuss the results of these projects and the chronological and cultural sequence proposed for the area. Again, we are focused on the research that dealt with data associate with agro-ceramics periods.
+The first work that we are going to discuss is the research done by José María Cruxent in Falcón. He co-wrote with Rouse “Arqueología Cronológica de Venezuela”, a landmark
+15
+
+monograph about the archaeology of Venezuela (Cruxent and Rouse 1982 [1958-59]) written at the height of normative, culture-historic approach to archaeology. As is to be expected this work have been criticized by processual and postprocessual archaeologist; however a critical review of this book is beyond the scope of this dissertation, and is not crucial for developing a regional survey methodology.
+In this book, cultural and chronological sequences of occupation for the entire country are presented, including Falcón State. These sequences allowed them to make comparisons with other areas and cultures. It was in “Arqueologia Cronológica” were the Venezuelan past was divided into 4 epochs or stages, related not only with the attributes of the material culture but also with a particular way of subsistence. Thus, the archaeological past in Venezuela is divided into the following stages: the Paleoindian (15,000 to 6000 BP), characterized by hunting of megafauna; the Mesoindian (5000 BC-1000 BC), associated with sea fishing and gathering; the Neoindian (1000 BC-1500 AD), which starts with the appearance of pottery, agriculture and permanent settlement; and the Indo-Hispanic (1500 1700 AD) that begins with the arrival of Europeans (Rouse & Cruxent, 1963). For this work we will focus exclusively on what they identified as the Neoindian epoch (adapted from the European Palaeolithic, Mesolithic, Neolithic stages).
+For the “Coro Area”5 they used the data from Nomland (1935) and Osgood and Howard (1943) and the one reported by Cruxent (1955) to propose the presence of a pre-Hispanic ceramic component called Dabajuro Style.6 Following the culture-historic rationale, this style is the dominant one in the area and the variations found within it are not enough to postulate a different style (Cruxent and Rouse 1982 [1958-59]); therefore the Dabajuro Style is the type style of the Dabajuroid Series, which runs along the Venezuelan coast and consists of the closely related Styles Cumarebo, Guarguapo, Punta Arenas, and Guacuco, all of them on the coast), whereas Capacho y La Mulera Styles are representatives of the series inland (See Table 1).
+5 The Coro Area refers to one of the archaeological areas proposed by these authors, geographically its match the limits of the state of Falcón. 6 Roughly stated, a style, as defined and used by Cruxent and Rouse, is similar, if not identical, to the cultural complex used by others. It also refers to the culture (based on a complex of traits or modes that define the material of a culture; i.e., Dabajuro Culture) as well as to the people who produced/used a given style (i.e., Dabajuro people). Hence, Dabajuro style is a cultural complex defined by a set of traits or modes that were produced and used by a given population (a people). This usage is different from the style as defined and used in other areas, such as Southeastern United States.
+16
+
+In their work, they include some ceramic components that in spite of not having the set of attributes sufficient and necessary to belong to the Dabajuro Style, may be included because they share some traits like the rectilinear decoration (Cruxent and Rouse 1982 [1958-59]). An example of this is the ceramic collection from the site called Casas Viejas, in northwestern Falcón; nevertheless, they were aware that it was necessary to perform a better analysis on the basis on new evidence.
+During the seventies, another study that mentions the archaeology of Falcón is published. Sanoja and Vargas (1974) presented a new organization of the past based on the premises of the Latin American Social Archaeology, which follow a version of Marxist Archaeology (MacGuire 1992: 55). For the State of Falcón they proposed the presence of a Chiefdom Mode of Production that is basically a local version of Steward and Faron’s Theocratic Chiefdom (Steward and Faron 1959). Sanoja and Vargas assumed that this Mode of Production is associated with the producers and users of the Dabajuro style ceramics. But this mode of production is primarily defined on data provided by the chronicles from the historical period that “The Great Cacique or Diao Manaure” ruled (Sanoja and Vargas 1974: 189). Manaure was a paramount (diao) chief (cacique) of the Caquetío polity of Caçicure on coastal Falcón (see Oliver 1989, Chapter X, for an analysis of the Caquetío ethnohistory).7
+During the 70’s and 80’s most of the works were influenced by Cultural Ecology, although there is still a strong cultural history influence. An example of this is the research done by José R. Oliver during the eighties, which is the most comprehensive work done so far in the region. Oliver (1989) proposes a model of migratory expansion from the Amazon that represented the first sedentary pottery-making populations who lived in Northwestern Venezuela (See Figs. 9 and 10). He formulate a model based on the study of archaeological, linguistic and ethnohistorical evidence with an analysis that included his own research on the northwestern coast of Falcón and the investigation done by others archaeologists in Northwestern Venezuela.
+7 Oliver (personal communication, 2011) mentioned that the noun ‘cacique’ (kasike) in Mapiuran (of the Arawak Stock) languages gloss as “head of the house” (from Proto-M *ka [with] and *sikua [house]); hence, kasiku/a-re may well be a gloss of the place (territory) of the head of the house (i.e., a chiefdom). Caquetío (kaketio or kakitho) glosses as ‘people’ but those whom are of a more intimate contact (in contrasts to human beings.)
+17
+
+Oliver (1989) in his work presents a new hierarchical classification scheme of all the ceramic complexes (styles) and series in northwest Venezuela. He defined two macrotraditions that represent the two succeeding waves of migration of proto-Arawakan and proto-Maipuran speaking and pottery-making groups. Oliver makes a reclassification of certain ceramic styles (such as material from the site Casas Viejas), whose ceramic traits (modes) were part of Cruxent and Rouse’s original definition Dabajuro Style. However, for Oliver the Casas Viejas along with another ceramic collection from Nueva Venecia (near Borojó) represent the most easterly occupation of the Tortolita Subtradition (from the Tocuyanoid Macrotradition), and thus the earliest occupation of potter groups known in the area with a broad relative chronological range extending from 100 BC to 800 - 1200 AD.8
+Some of the complexes (styles) proposed by Oliver continued well into the Spanish Contact period; this fact, plus the ethnographic evidence served him to reasonably argue that the Caquetío people (and their direct ancestors) were the producers/users of these ceramics. The Caquetío were a historical indigenous group whose language belonged to the Maipuran family of the great Arawak linguistic stock (see footnote 8). Another contribution of this work is the political characterization of the societies in the region, where the Caquetío were held as an archetype to illustrate and define a sub-type of political system (theocratic chiefdom) by anthropologists (Steward and Faron 1959; for a discussion and critique, see Oliver 1989).
+The latest research done in Falcón was a rescue project conducted by a team of archaeologist form the IVIC and CIAAP-UNEFM, financed by PDVSA-Gas9. This project allowed the rescue of a large number of archaeological sites along a transect 50m wide by 203 km long on the coast of Falcón State, which was intensively and extensively prospected (See Fig. 4). The data obtained from this project, which was a representative sample of every moment of occupation, was used to update the work of Cruxent and Rouse
+8 The Casas Viejas ceramics were surface collected and have no absolute dates. Nueva Venecia, the other member of the Tortolitas tradition is likewise a surface collection obtained from an almost completely eroded site. They also lack absolute dates. The latter’s incised curvilinear designs and vessel forms are close to Tortolitas complex (in the Maracaibo Basin) is dated to around 100 BC, whereas Casas Viejas incised decoration are more rectilinear and sometimes are found in Dabajuro Style assemblages; hence the broad relative chronology proposed by Oliver (1989). IVIC stands for Instituto Venezolano de Investigaciones Científicas (Venezuelan Institute for Science Research). PDVSA is the National Oil Company, and PDVSA Gas is the branch of this company that deal with Natural Gas. By law they have to finance the rescue of archaeological or paleontological remains that could be affected by any of their development projects.
+18
+
+(1982 [1958-59]) and Oliver (1989), and allowed to suggest that the region has a deep temporal sequence of human occupation from very early times (late Pleistocene) until present. This conclusion was tested in the site as El Carrizal (Urbina 2008) area with evidence from the Paleo-Indian period to the present.
+2.3.1. Ceramic complexes proposed for Falcón Due to the previous works done in the area there is a fairly complete ceramic sequence of occupations proposed and still used; Oliver’s hierarchical model (1989) is today the model that is used –in most cases- to organize the ceramic style or complex, tradition and subtradition in Northwestern Venezuela because is the most complete and the one that has better analysis of the pre-Hispanic pottery from the region.
+Oliver (1989) proposed that during the pre-Hispanic period in Falcón there were two major groups represented by two macro ceramic traditions, an early one belonging to the Tocuyanoid Macrotradition and a later belonging to the Dabajuroid Macrotradition. In addition to the complexes belong to these two macro-traditions, there are a set of unaffiliated complexes.
+Tocuyanoid Macrotradition In Falcón the Tocuyanoid Macrotradition (1000 BC - 800 AD) (See Table 2) is represented by the Tortolita Subtradition (See Figs. 10 and 11); the Tortolitan Subtradition represents the eastern ceramic tradition belonging to the Tocuyanoid Macrotradition. At the time of Oliver’s research this subtradition, represented by the Matícora (Matícora River valley) and Nueva Venecia complexes (along the Borojó River) in western Falcón, was not known further to the east. However, the recent work (Arvelo and López 2004; Rodriguez 2005, 2006; Urbina 2005, 2008) on eastern Falcón yielded a ceramic assemblage that shares some of the attributes with the Tortolitan Subtradition (e.g., the continuous parallel line incision). Others attributes of the of this subtradition are the present of broad uniform line, unilateral band, appliques; the leg-ring bases, the restricted bowls with incurving rims and the fact that the painted decoration is not well preserved (i.e., because the painting techniques are different).
+19
+
+For the Tortolitan Subtadition there is only one radiocarbon dating from the site Las Tortolitas, in the basin of the Maracaibo Lake (2050 ±50 BP), but the analysis of the pottery and the comparison with other tradition helped to set a relative chronology that start around 100 B.C. and goes till the 800-1200 A.D (Arvelo and Wagner 1983).
+Dabajuroid Macrotradition This is the second macrotradition that Oliver proposes for northwestern Venezuela (See Figs. 10 and 11, Table 3); it is represented in Falcón by the Dabajuro Subtradition, which in turn is composed of three complexes: Túcua, Urumaco (with early and late phases)10 and Los Médanos (with an early phase A and a late phase B).
+Unlike the other traditions and complexes, this one is the result of Oliver’s own field work and analysis done during 1981-1983 in the State. He located and surveyed more than 100 sites mostly along the Dabajuro Coastal Platform, three of these sites are crucial for his discussion of the Subtradition.
+One of the characteristics that defines the Dabajuroid Macrotradition is the presence of two very distinct ceramic wares, one crudely made and intended for culinary use and storage, and a very fine decorated ware associated with food serving, storage of drinks and in some cases as funerary vessels (Oliver, 1989). Another particularity is the predominance of the rectilinear or geometric polychrome and bichrome painted designs (red and/or black on white or plain surfaces), which distinguished it from the Tocuyanoid Macrotradition, where the designs are curvilinear. Los Médanos Complex has a distinctive zoomorphic (ornithomorphic) designs painted black on red, which is only characteristic of this complex.
+There are several absolute dates for this subtradition. The Túcua Complex has a chronology that goes from 800 A.D. to 1100/1200 A.D.; the Urumaco Complex from 1100/1200 A.D to 1400/1450 A.D.; and the Los Médanos Complex from the 1350 to 1600/1650 A.D.
+10 The early and late Urumaco partially overlaps with what Cruxent (1982 [1958-59]) defined as Dabajuro Style, since the latter’s definition included an unwarranted mixture of Matícora complex traits.
+20
+
+Isolated Complexes There are three complexes that cannot (yet) be classified into any of the known macrotraditions or subtraditions thus far discussed. Mauroa Complex. There is an “isolated” ceramic complex located around the Matícora River (San Félix) whose set of attributes are different from those of the Tocuyanoid and Dabajuroid Macrotradition. There have been suggestion of a relation of this site with pottery found around the Magdalena Area in Colombia and the Guajira Peninsula (at Kusi site and around Cabo de La Vela); however, this will remain a poorly understood complex, until further work is done, especially west of the Matícora River and into the Guajira Peninsula.
+Coy- Coy Complex. The ceramic associated with this complex comes from the context of a cave, Coy Coy de Uria, in the Sierra de San Luis; this complex is mixed with Dabajuran pottery. There are three dates for this site: one C14 dated to 1450±80 B.P. and two TL dates yielding 400±43 B.P. and 295 ±57 BP (Pitevill, 1984). Excluding the less reliable TL assays, it seems that the Coy-Coy Complex is older than the Dabajuran complexes. Mitigating against this is the fact that Coy-Coy assemblage included several Los Médanos complex black on red painted ceramics, which date from AD 1200 onwards. Coy Coy pottery has been found in other sites in coastal Falcón, but again is necessary a more extensive and intensive work in the area, mainly because we know next to nothing about the archaeology of the Sierra de San Luis. Interestingly, some of the features of fabric, decoration and vessel form have analogues in another poorly studied and heavily eroded site, El Camay, located further south in the State of Lara.
+Guacoa Complex: This complex is known from only one site in La Guacoa range, near the modern El Pedregal village, south west of the State. It was discovered by chance when Oliver and Alexader (2003) were conducting the El Pedregal survey in 1985 in search of Palaeindian sites. It is located on a ridge top overlooking the Pedregal valley. No excavations were performed, albeit the ridge top was eroded to the caliche layer, leaving a few sherds and one complete metate on the surface. This pottery is characterized by an extremely coarse plain ware and only one mode of plastic decoration: large round puntactions. This same decorative mode was also found and dated in Túcua, dating between 800 A.D. and 1200 A.D. Of course, Guacoa could be earlier or later. Oliver (personal communication 2011) has a strong hunch that Guacoa is perhaps related to an
+21
+
+ethnic group, the Xaguas, that were forced into a wandering lifestyle (what the Spaniards called “alzados”) to avoid forced resettlement in mission towns by the colonial and ecclesiastic authorities. Traditionally the Xagua were located further south in the State of Lara’s Carora region and were both traditional foes of the Caquetio polity in Barquisimeto, yet in times of peace were trading partners.
+2.4. Issues with the context and chronology
+Falcón is a region with a fair amount of archaeological data; even though, most of the research done there had highlighted the challenges of the area: establishing a chronology and the context of the sites. The problems with the chronology are related with the stratigraphy and the conditions of the soil and climate. The erosion is a big part of the problem. The most common feature in the landscape, particularly in the Coastal Plain System, is a type of incisive erosion called gully erosion (cárcava, in Spanish). A subsystem like the Urumaco Sulcus has a more percentage of eroded area than all other subsystems. Wind and water erosion is what defines this region. Whilst sheet erosion exposes sites to the surface (high visibility), the denser stands of xerophytic vegetation (while arresting erosion) make it harder to find archaeological remains (poor ground visibility). And while in sheet-eroded landscapes sites can be defined easily, their integrity is usually poor and (cultural) depositions of potentially different times are conflated. In zones of denser vegetation cover, one should expect a better preservation or integrity of the deposits (contingent upon the stability, resilience of the vegetation in the zone).
+The characteristics of the soils make these semi-arid zones susceptible to sheet erosion; particularly the one caused by the water. The rain is scarce but when it does rain the sediments are stripped from the surface and travel to a lower point, but due to the relatively gentle slope gradient (as noted in the relief and geology section) the sediments liquefy and spread along slowly and gradually. It deflates the higher surfaces and then solidifies in slightly lower points. Lateral displacement (stripping) is the predominant force (Oliver and Alexander 2003, 84). As noted, the result of this process is a conflation of materials: the “flowering” of formerly buried (older) features that often end up co-residing with the younger ones that are usually of heavier weight and size and, hence, are less prone to extended lateral displacements. The cultural stratum of many of the sites is 30 cm at the
+22
+
+most, and this in the best of the cases where the sites are protected by vegetation or topography, whereas in a good number of sites located in sheet-eroded plains, all the materials and artefacts rest on the deflated hard clay pan (Oliver, unpublished field journals, 1981-82). Consequently, everything is on the surface, from a projectile point associated with the Paleo-Indian period (13,000 BP) to a glass bottle or a plastic toy that are clearly modern. To reiterate the paradox, while erosion makes the finding of archaeological sites quite easy, at the same time it condemns the site to a serious lack of stratigraphic integrity: dating a site becomes difficult if not downright impossible, save for dating individual artefacts and ecofacts, but whose association with other artefacts and cultural features is tenuous at best (i.e., strictly speaking, there is no assemblage).11 While mechanical admixtures and displacements due to erosion are predominant, there is as well the problem of bioturbation. Oliver and Alexander (2003) have observed and described the impact of this phenomenon on the integrity of Paleoindian lithic workshops and sites in Pedregal Valley, where both ants and rabbits are the most frequent agents of bioturbation. There is no need to detail how over the many centuries, bioturbation on a site can result in admixtures of materials from different temporal and spatial contexts, often hard-to-detect in excavations.
+11 Following Oliver (1989; citing Lathrap), I define assemblage as a set of associated materials that were laid down or deposited in a short time span and in a bounded space.
+23
+
+Chapter III: Considerations about Regional Archaeology, Spatial Analysis and Landscape Archaeology.
+3.1 Regional Archaeology Talking about regional archaeology brings the need of explain what it is known as a region in archaeology. This is a term difficult to define, however most archaeologists assume a region as a spatially defined unit of territory in which should exist some sort of topographical or cultural coherence (Orton 2000: 67). This idea of geographical / cultural coherence is translated into archaeology as the interest for the study of patterns in the space or region, which is one of the reasons for the boom of regional studies.
+The studies at a regional level in archaeology started during the forties with the pioneering Virú Valley Project in Peru led by Gordon R. Willey (1953). He studied the settlement pattern of the valley focusing on the whole valley and not just in individual sites. Then, during the sixties, with the development of the processual archaeology and the understanding of culture as a system, the studies at a regional level peaked and became what is now, a common occurrence in archaeology12.
+Binford (1964) was one of the first to bring into the fore the need of systematic regional studies to consider probabilistic sampling. They bring scientific rigour to the discipline by incorporating statistics in regional site sampling with environmental variables. They were useful to evaluate change and evolutionary development trends at a regional scale –beyond a site level-. Regional archaeology goes hand in hand with spatial analysis because through them we could: "be able to detect those specific changes over time between groups" ... and to talk about "the behaviour at the regional level, the internal core, the situational complex, the archaeological site and also, the level of activities" (Binford 2004 [1983], 151). Binford also highlighted the advances of using “natural units” as region in archaeological studies (Binford 1964: 427).
+Regional studies are a level of analysis of space; the research conducted within this perspective normally focus on answering questions about resource management, catchment
+12 To further discussion about regional archaeology, specifically regional surveys see Kowalewski (2008). He presents a good summary of a great number of regional archaeological projects.
+24
+
+analysis, energy, and settlement patterns; or -within the social spectrum- social, economical and political relationships, among others.
+There is a concept that comes into focus with this approach: the off-sites. The off-sites are what lay in between sites, but the mere conception of sites is a methodological decision made by the archaeologist. The archaeologist is the one who sets the site boundaries, so the criterion is arbitrary, nevertheless justified. Still, the incorporation of off-sites studies, and with it the study of material culture densities, has allowed approaching issues about landuse.
+Nowadays, regional archaeology is scale of analysis used in rescue projects or cultural resource management and cultural heritage projects. The amount of data produced in these investigations is impressive and today it is used for academic proposes too, especially in countries as the United States (Kowalewski 2008: 234).
+In regional archaeology, the decision of how much area is going to be covered is made according to the objectives of the study, the size of the area and, more often than no, the financial resources available (Nance 1983: 289). Hence, the relevant of sampling and how it plays a vital role in archaeology.
+3.1.1. Sampling in Archaeology Sampling is an activity that has been practiced in archaeology since the very beginning. The simple task of choosing which sherds to collect or not is a decision of sampling (Orton 2000: 5). Again, Binford (1964) was among the first to summarize in a paper this activity when he introduced regional archaeology. His argument is that in several cases it is impossible to cover the total region, thus sampling becomes the answer to that problem: “probabilistic sampling techniques are the way of achieving representative and reliable data with less than total coverage” (Binford 1964: 427).
+According to Mueller (1975: ix) “probabilistic sampling has been recognized in recent years as a useful tool for selecting units of investigation and for generating larger units of
+25
+
+analysis”. In archaeology there are several methods of sampling design, two of the most common are 1) Simple Random Sampling, in which the units are divided in equivalent elements and the selections of which one to survey is random; 2) Stratified Sampling, in which there is a previous division of the units into different segments and is within these segments that the simple random sampling happens.
+It became obvious that to sample a region is necessary to be familiar with it. Orton (2000: 76) even argues that today is “virtually impossible” to carry out a regional survey in an area unknown archaeologically. Furthermore, the topography is a variable that we have to factorise in the process of choosing which areas to sampling, the beautiful designed square grids not always match the region to study. So, is necessary to balance what we know about an area and the statistical techniques that we are using in our research “in order to make best use of resources and to achieve reliable outcomes” (Orton 2000: 3).
+In our research we use arguments like this to support the use of the existing evidence, albeit all its problems. In sum, we have a good chronological and cultural sequence and we have a significant number of sites. In addition, the environmental variables that we are including in our study give us enough ground, if not to answer question about settlement pattern or political and economical relationship, to propose a strategy of regional survey and sampling to precisely answer those kinds of questions.
+3.2. Space and Spatial Analysis Space, as a variable in archaeological studies, is not new. However, a systemic approach to the study of space started after the second half of the twentieth century, more exactly with the emergence of the Processual Archaeology. L. Binford, also know as the “Father” of processualism (Johnson, 2000) was one of the first to raise questions about the space. His work, as happens with the work of an important faction of processualists, was influenced by the New Geography; so, space was considered as “an abstract dimension or container in which human activities and events took place”… “Space is literally a nothingness, a simple surface of action, lacking depth” (Tilley 1994, 9).
+26
+
+For Binford space was the “scenario” were material remains were found, this scenario was part of the context, and therefore it provided information about the mechanism of adaptation to the environment that human used; thus space is a level of analysis that allowed studying the technological, socio-technical and ideotechnical functions of the artefacts within the cultural system.
+During the seventies several papers and books dealing with the space were published, one of these, Clarke’s Spatial Archaeology (1977), is one of the most influential works on this matter. In this book, Clarke explains that “the aim of spatial archaeology is to make the archaeologist aware of the vast matrix of spatial relationships and the many kinds of information which contain” (1977, 15). For Clarke the way the sites were organized in the space (whether patterned of not) were the result of the behavior of past societies, “thus, the spatial structure is potentially informative about the way the society organized itself” (1977, 18).
+In Clarke’s work the scale in the studies of space or spatial analysis is also discussed. He states that there are several stages in the study of space; this could be studied within structures or areas, a set of structures in the site and between sites. For this dissertation we are concerned with the last level of analysis, which according to Clark could help to broad questions about economical, political and geographical reason of the location of the sites in the system.
+Hodder’s paper in this book (Clarke 1977) is an attempt to systematize the studies of space at a macro level or regional scale. He explained how the spatial analysis were subjective, specially the study of patterns and archaeological distribution. He provided a mathematical alternative that could help to minimize this subjectivity and explained that randomness is the sites distribution not necessarily means randomness in the processes that led to it (Hodder 1977, 224). Nonetheless, he pointed out the useless of spatial analysis if the final distribution showed in maps were the product of non systematic recovering techniques or the survival of the site was not assessed.
+This last part concerns us directly because the data used for this work is from nonsystematic surveys; added to this, the survival of the site and recovery factor were not assessed, which means that –according to Hodder in this paper- our data lacks of the
+27
+
+necessary qualities to be used in any of the statistical or mathematical tools of spatial analysis.
+The space was intensively discussed during the seventies but Kent V. Flannery took the discussion to another level when, with the publication of the “Early Mesoamerican Village” (1974), he proposed a methodology to do the spatial analysis. Flannery analyzes the formative period in the Oaxaca Valley, Mexico, and from his analysis he extract observable unit in which the space is divided. These units are stages in the analysis and go from the household level, activities areas and so on, to the largest regional level. One of the different of his approach is the fact that for him the space is dynamic and external, it promotes change and complexity.
+One of the most important contributions that must be drawn from these works was the emphasis in the systematic approach in the study of space. The fact is that in most cases the evidences is not well preserved, so methodologically consistent techniques in the collecting of the data are the key to the study this variable.
+After the seventies, a lot has been said about the space. Most of the discussion came from the processual critique and the emerging of the Postprocessual School of Thought. There are different positions within this school; however they all share the same critique with regard the space; the space “is a medium rather than a container for action, something that is involved in action and cannot be divided from it” (Tilley 1994: 10). They all share the concept that space is socially produced a does not exist apart the event and activities that happens within.
+Hodder (1984) suggests that space is an active part of the social organization. He criticized the previous approaches –including his own work- saying that “such models skim across the surface of the data and do not take into account all the contextual information to which archaeologists has access”.
+New concepts as places and landscape started to be used as replacement of the word space. This was –or better to say- this is done in order to distinguish the conception of space as a ‘simple’ container, from the concept of space as an active participant in the production on
+28
+
+meaning. Without doubt, this notion of space highlight the need to broad the techniques and methodologies used to study it. It also opens the door to self-criticism about the use of others terms that, with the meaning to incorporate social variable in the study of space, have overdone it. An example is the tern landscape, which in Julian Thomas word’s has became a palimpsest, “an accumulate record of continuity and tradition, which give us access to and authentic past” (Thomas 2001, 166).
+3.3. Landscape Archaeology In the previous section we briefly discussed the space and what it means by space through, at least, the last decades of history in archaeology. Undoubtedly, today in not possible to talk about space without referring to landscape and for some archaeologist, the only way to study space is studying the landscape.
+Landscape is then “a cultural process in which social life and cultural values take first place” (Hirsch 1995). The studies of landscape highlight the dialectic relationships between human and their environment is not only one influencing/domination/ adapting the other, is a reciprocal action that in the end affects both (Balée 1998).
+For this dissertation we are discussing the landscape because “it stresses the bringing together of different kinds of data and other disciplines, and it have the potential of holistic studies of place” (Kowalewski 2008: 251).
+Erickson (2008) points out that “People do most of their daytime activities such as farming, building walls, visiting neighbours, sharing labour, and collecting wild resources in the landscape rather than within the confines of sites which are primarily used for eating and sleeping. Because the totality of people’s lives in the past is important, archaeologists must include landscapes in their studies.” In this sense we are including the concept of landscape as the medium in which activities are carried out.
+The scale of the studies in Landscape Archaeology is small, which it could contradict our aim of a regional approach. However there is not one methodology to do landscape archaeology, it advantage is in the fact that allows you to incorporate environmental and
+29
+
+social variables that play a relevant place in the archaeological record, for that we would incorporate its concept in the design of our regional survey strategy.
+3.4. Some Examples of Regional Surveys
+We discussed in the previous pages how regional surveys have become the methodology for dealing with the archaeology of regions. In this section I will give a brief description on some of these projects around the world and I will give my informed opinion about it level of effectiveness in the recovering of archaeological data and the relation between timeeffort-resources available.
+3.4.1 The Valley of Mexico The first example that I like to discuss is the survey in the Basin of Mexico, specifically the Teotihuacan valley Project (Sanders et al 1979). This was conducted during the sixties and seventies and consisted in five seasons: three seasons of 3 months and two seasons of 6 month. The particularity of this project is that even when it was in a regional scale, the strategy of the survey was 100% coverage on the whole area, although there are areas that were not surveyed due to the present of modern settlement (e.g.; Mexico City in the southwest).
+The objectives of the project were to answer question about the socioeconomic institution of cultural system at different periods, and to explain the ecological process of evolutionary change that led to the increase of centralization and differentiation, all this within a materialism paradigm (Sanders et al 1979). Thus, the aim was to design a methodology that would allow them to measure centralization and differentiation through time and at a regional level.
+Their justification of 100% coverage came from the previous knowledge of a cultural and environmental heterogeneity in the region (Sander et al 1979: 19). They were highly influence by cultural ecology so, other of the reasons was the importance of the location of natural resources and how they influenced the localization of sites.
+30
+
+In the project there was not a set methodology from the beginning; the surveys tactics were changed during the fieldwork in order to adapt to the particular conditions of the region. One of the first methods was the use of modern fields as visible unit that then was numbered in an aerial photography. A reconnaissance survey was done with the aim of plotting the sites in 1:25000 scale aerial photography; then, they made intensive collections on those areas plotted in the photos. Soon, this strategy proved to be to complicated; first, not all the area was delimited by modern fields; and second, the use of 1:25000 imagery to plot the sites made difficult to pinpoint the actual location of the site in the field (Sanders et al 1979). They solved this problem using 1:5000 aerial photography and designing surfaces transect located in close intervals (they could go from 15m to 75m). These transects were walked by groups of 3 archaeologist and a workman, they made visuals estimation of sherd density and made collection in the sites.
+This project was carried out for 15 years, the initial objective of the study of settlement pattern was met and an impressive among of data was collected. They managed to made almost- 100% coverage survey which at the end allowed them to made interpretations that would not has been possible otherwise. The main critique that can be made to this kind of surveys is the cost, a 100% coverage survey of that magnitude imply an astronomic amount of money that nowadays it would not be easy to find.
+While a regional survey in Falcón with a 100% of coverage would be ideal, there are serious logistical problems to achieve such coverage. The first is the size of the area, even if we choose to survey only a fraction of the region. The second problem is the human resource; there are simply not enough trained personnel, much less archaeologists, in the country to participate in a project of this magnitude, and using less people obviously means that more time would be need. All this without talking about funding such a survey. In Venezuela there are few –and lately none - organizations that would be willing to fund archeological projects.
+3.4.2 Sardinia
+The study of the environment and its influence on human organization of space is one of the main themes in regional studies (Van Dummelen 1998: 37). Several investigations in these subjects have a tendency to be environmental deterministic (explicit or implicitly);
+31
+
+but in spite of such latent determinism in several of these works, the focus on the physical aspect of the environment in which the archaeological remains are found has been valuable in reconstructing past landscapes. It is this line of thinking that we found the regional survey project in west Sardinia.
+In the survey of Sardinia attention was focused on the study of the physical landscape, on how the material was discovered, collected and documented. Their aim was to study the human human agency of rural landscapes (Van Dummenlen 1998: 60).
+One of the advantages of this project was that they had access to information about a geomorphological survey done in the area previously and, hence, of a range of postdepositional factors that affected sampling. So, their first step was to factorize this information, plus the archaeological background, into the design of the survey methodology.
+With the geomorphological information they were able to determinate which areas were more likely to be affected by post-depositional process and which not. With this information in hand they assessed the previous archaeological data of the area and were able to determinate their weak and strong points.
+They used all these data to design the methodology of the Riu Mannu field survey project. The strategy was to divide the area into 9 subareas more or less coherent with the geomorphogical composition of the region. From this point they sampled the landscape through transects that were “at right angle to the ‘grain’ of the terrain which is set by features as rivers, valleys bottoms and ridges” (Van Dummenlen 1998: 60). The transects (1 x 5 Km) were perpendicular to the axes of these features and were plotted on maps to incorporate the environmental variables. From this point they systematically selected 1 of every 4 transects to sample.
+An interesting aspect of this survey is that to divide the areas they also used the historical and archaeological information. These criteria were always used at the moment of choosing what area to sample. This stratified sample allowed them to address particular questions to the evidence.
+32
+
+Their method for recovering the surface remains was point by point; in every point they collected everything, in between points they only collected diagnostic remains. They studied the variation in density and concentration across the landscape; this was done in order keep track of human activities in particular places. Under this perspective there was not distinction between off-sites and on-sites in the landscape. This project presented a consisted methodology that was adapted to the region. They were lucky enough to have a good geomorphological survey that enhanced the archaeological data; but they also incorporate variables as the “impact” of archaeologist in the retrieval of the evidence (Van Dummenlen 1998: 66). For our particular case, this seems to be a good methodology that could be applied to Falcón. The incorporation of the geomorphological variable at the moment of dividing the region is a task that we definitely are incorporating in our studies. However, we would like to be more careful in the use of the background archaeological information for choosing what areas to sampling, as Orton (2000: 3) explained “looking only in areas where one expects to find ‘something’ may merely confirm what one already knows”.
+33
+
+Chapter 4: The Methodology
+The methodology of this dissertation is designed to meet the aims of this study; that is, to design a strategy of regional survey that is realistic and adapted to the particular conditions of coastal Falcon. The design of this strategy is based on the results generated by correlating our archaeological and environmental variables and how they interact in the space. In this chapter I will explain how we studied this interaction and what our dimensions of analysis were. In the last section we explain how we designed the strategy.
+4.1. The Archaeological Data
+Our archaeological data is composed by archaeological sites. These sites were reported, surveyed and excavated in prior works in the region (Nomland (1935), Osgood and Howard (1943), Cruxent and Rouse (1982 [1958-59]), Pitevill (1984), Oliver (1989) and Informe Final Araapico (2004, 2005, 2006). Most of the information of these sites and how they were discovered comes from an opportunistic survey rather than a systematic one. Even when we have good information about the sites per se, there is a lack of information about the sites in a bigger scale; however it is still possible to use certain facts about the archaeological evidence as a base to develop the regional survey strategy.
+In sum, with this exercise of plotting the sites into the space and sort them out according to different dimension of analysis, including the environmental variable, we were able to start studying the sites on a regional scale. We are aware that this is just a first approach to the matter and our interpretation is standing in a muddy ground, however our knowledge of the region plus the information obtained from the sites gave us the necessary footing to start our analysis and projection.
+4.1.1. Dimensions of Analysis In order to study the ‘archeological site’ variable we created a data base with the dimensions of analysis that we thought were most likely to give us information on a bigger
+34
+
+scale. The sources of our information are two: 1) the data13 –published and unpublishedcollected by Dr. José Oliver during his field work in the eighties, consisting of maps, field notes and his PhD thesis (Oliver, 1989); and 2) the data from the rescue project done between 2004 and 2006, again published and unpublished. The data base served to organize the information but it also helped us to understand what kind of information I had.
+For the construction of this data base we deliberate chose to keep the categories given to the material culture and sites by the archaeologist who surveyed and analyzed them. One of the reasons for this decision is the fact that I did not have enough information about the criteria used by these archaeologists to classify the data. In other words, I do not know which criteria –or if there was a explicit one- were used to decide when an accumulation of material culture in the terrain was a site or not; or what reason led the archaeologist to call a site a household or a campsite, that it, what reason beyond the present of obvious features (e.g.: a shell mound).
+For our data base we have 192 archaeological sites associated with the pre-Hispanic period. We organized these data into the following dimensions: Name: it refers to the local name of the site, if it has any. Site Code: is the code assigned to the site. We used the code of each project: Oliver’s sites have a code that start with “Fal”, which stand for Falcón and it is followed by an Arabic number. A portion of the sites surveyed in the Araapico (the rescue project) continued the site code used by Oliver adding only another termination corresponding to the name of the municipality, eg: FalMi (Fal: Falcón, Mi: Miranda). However there is a small part of sites surveyed is this project that has a different code, simply the name “Site” followed by the arabic number. Geographical location: in this section we used the north and east coordinates. To obtain Oliver’s sites we used ArcGIS 10 to import Oliver’s map (See Fig. 12) and georeferenced it, that way we were able to pinpoint the coordinate of each site. All the sites reported in the Araapico Project have a GPS point. Accuracy: this dimension is about how accurate is the location of the sites. They could either be: GPS, because the coordinate comes from a GPS; Relative, because the coordinate was obtained using Oliver’s Map in ArcGIS; or Reported, because is a site that
+13 This data include all the previous work in the area.
+35
+
+was not visited, therefore we only know its general location. 70 of our sites have a GPS Point, 117 have a relative location and five were reported. Size: the measurement of each site (Length and Width) if the information was available. For the data base we had the size of 35,41% of the sizes. Associated Features: any information about the features that could be related to the site was written in this section. They could be burials, hearths, shell mounds, floor-plan. Material Culture: since we are only studying the sites associated with the pre-Hispanic ceramic period, here we put whether the sites have pottery, lithics, bones, shells. We decided to add the information about the presence of any Post-contact material, even when is not relevant for the present study, in order to know if there was continuity in the use of the space, which is a case in several sites. Type of Site: in this section we input the information about the type of site as said in the original data. It could be: a high concentration, dispersion, a shell mound, a mound, a camp site, burial ground or cemetery, a household or a cave. Cultural Identification (General or specific): in this column we put whether the site had material culture associated to a particular style, complex, tradition or subtradition.. The general section was created in order to simplify the graphication on maps. The attributes are: Tortolitan Subtradition, Dabajuroid Subtradition, Both, Other or NI (No Information). In the specific section there is more detail about what complex, subtradition, tradition or serie they are. Chronology: is the date range associated with each “cultural identification”. Preservation Degree: all the information about how affected was the site by erosion, population grown, roads, and the like was in this section. Source: is about where we took the information from. Observations: any relevant information about the site was inputted her, e.g.: if it was C14 dated.
+For our analysis we only choose to correlate those dimensions that were going to inform about the distribution in the space. The dimensions “associated features” and “preservation degree” could have given us information about the context, however the data is either old or incomplete or, in the case of the Araapico project is necessary to assess the preservation of the sites after the installation of the pipeline.
+4.2. The Environmental Data
+36
+
+The environmental data comes from an ecological atlas published in a CD-Rom format in 2002 (Matteuci et al 2002). The original work was done by hand during the seventies and eighties and was moved to digital about 20 years later. The atlas contains information about all the biotic resources of the region. For this dissertation we choose only the variables that could have a direct impact in the location of archaeological sites.
+In the CD-Rom all the maps with the environmental information were done using the same raster image, which was a 1:100.000 scale map of the region. The maps were not georeferenced. Again, we solved this problem importing the maps layer by layer to ArcGIS 10 and georeferencing them with that program.
+4.2.1. Dimensions of Analysis The fist correlation that we made was between the dimensions of analysis in the variable archaeological sites. Say, location, cultural identification and type. Then, with the intention of studying the environmental variable in relation to the archaeological sites we chose the maps that would show better this relationship and the maps that carried information about the resources. These are the dimension that we used:
+Hydrology: the water is one the most –if not the most- important resources. We have discussed before that Falcón has an arid to semi-arid environment. In this kind of environment, potable water, or the access to drink water, is a constant struggle. These are the reasons why we decided to use hydrology as one of our dimensions of analysis. We have two different set of maps, one with all the rivers and one with the river basin. Combining the two maps make possible to see which part of the land drains to which river (See Fig. 12).
+Soil: to study this dimension we are using the maps that show the relief system. We do have access to the soil maps used by FAO, however the information in there is too general (See Fig 13) and the scale too large. The map that shows the types of soil (See Fig 8) divided the region into too many types, which makes harder to control the variable and its interaction with the sites at a smaller scale. Using the maps that show the relief system allowed us to divide the state into five large areas for which we have enough specific
+37
+
+information about the soils. In this way we were able to observe the behaviour of this variable in a medium scale (See Fig. 14).
+Vegetation: in Falcón the vegetation has a huge impact in the soil’s stability; in our experience in the field, as soon as a zone becomes bereft of vegetation, gullies and sheet erosion appear. This affects the visibility of the sites and the integrity of cultural deposits. The vegetation also provides clues about past and current activities within the sites. In our vegetation map we show what areas are densely vegetated and the type of vegetation cover (See Fig. 15).
+Altitude: our last environmental variable is altitude. Even when the landscape is arid and semiarid, there are considerable variations in the altitude (ranging from 0 to 1500 m.a.s.l.). With the study of this variable we tried to observe if there was a correlation between altitude and the sites (See Fig 16)
+4.3 The Space The space is our dependent variable; its existence is linked to the presence of sites, in this particular case, how these sites interact with the environment. To study this variable we did a visual analysis of the distribution of sites (the dimension location, cultural identification and type) along the landscape and how they interact with each environmental dimension of analysis. For this analysis we only correlated the following dimensions:
+• Archaeological Data: geographical location, types of site and cultural identification. • Environmental Data: soil (relief system), hydrology, vegetation, altitude.
+We are aware that there are specific statistical techniques to study the pattern of distribution of the sites (e.g.: cluster analysis, point pattern analysis); however, for reasons already discussed –see chapter 3- is not possible for us to use these techniques due to the imprecision of our data. The fact is that our archaeological data comes from opportunistic surveys, and our environmental data was plotted into maps with a big scale (1:100.000) which makes impossible to be sure about it level of accuracy.
+4.4 The Methodology proposed for regional surveys in Falcón.
+38
+
+The objective of this dissertation is to produce a realistic and adequate methodology for regional surveys in Falcón. We are basing our methodology in the sites distribution pattern in specific environmental features. To design our methodology we did a visual analysis of the distribution of sites to see if there was a pattern in the occurrence of a particular type of site or if the location of sites was associated with the cultural identification. We asked several question to the data:
+- Is there a correlation between the rivers and the archaeological sites? - Is there a preference of settlement along the rivers? If so, which rivers. - Are the sites located in areas with access to a particular resource? Which resource?
+Which areas? - Is there a correlation in the presence of sites and the presence of vegetation? Which
+kind of vegetation? What kind of sites? - Is there are correlation between the altitude and the location of sites? - Is there a type of sites exclusive to a cultural identification?
+Answering these questions allowed us to see which factors have more impact in the presence of archaeological sites. We also observed key areas with archaeological potential.
+39
+
+Chapter V: The Survey Strategy
+This chapter is constructed in two parts. First I am going to discuss the result of our analysis and the correlation of each variable, pointing out which aspect helped us to design the strategy of regional survey. The second part is the proposed regional survey/sampling strategy.
+5.1 Results and Analysis Our analysis is the result of correlating the variable ‘archaeological site’ with our environmental variable and to study their behavior in the space. The first correlating that we did was with the Archaeological Site variable, meaning the distribution of the sites in the space according to the type and the cultural identification dimensions.
+Then, we crossed the dimensions location, type and cultural identification with the environmental variables, specifically the hydrology, soil / relief, vegetation and altitude. Here are the results:
+5.1.1 Spatial Distribution by Type of Site In our representation of the types of sites (See Fig. 17) we could observe that the mounds and shell mounds are concentrated in the west end of the map. We also observed that in the areas where there are shell mounds or mounds along the coast the burials are more inland while in the areas where there are no mounds and only one shell mound the burials are also in the coast.
+5.1.2 Spatial distribution by Cultural Identification The spatial behavior of this dimension (See Fig. 18) suggests that most of the sites with material culture that has not been identified are in the east coast. This could be for a number of reasons, including the fact that the team that did the archaeological rescue project in that area only used Cruxent and Rouse (1892 [1958-59]) criteria for the pottery analysis and did not used the most detailed work done by Oliver (1989).
+5.1.3 Hydrology
+40
+
+This dimension of analysis is the one that provided more information. In the map (See Fig. 19) it can easily be seem a clustering of sites along the main rivers. Without trying to sound environmental determinist, this clustering of sites (See Figs. 20 and 21) could be interpreted as a result of the preference of human – and also animals- to be settle near a source of water. In this particular case, not only water but the access a several natural resources; those are rivers that came from the mountains and get to the sea, which mean that around them it can be found several ecological niches, and therefore different resources to be exploded.
+In the Paraguaná Peninsula this pattern is repeated (See Fig. 19). Most of the sites are located in the eastern portion of the Peninsula, where more of the water resources are situated.
+Regarding the cultural identification and it relationship with the hydrology, it does not seem to be a relationship between these two dimensions, nor an exclusive or differentiated use of the space in relation with the water source.
+As for the spatial distribution between the types of sites and the hydrology the map (See Fig. 22) did not show any correlation between the water sources or basins and the types of sites. We are not saying in any way that there is not correlation –we need to remind the problems of our data -, just that the map does not carry enough information to say anything concerning this crossing of dimensions.
+5.1.4 Soil (Relief system) In this dimension of analysis we could observe that most of the sites are located in the Coastal Plains System (See Fig. 23). This, without doubt is product of the focus of Oliver’s survey in the area. There is an important group of sites along the Maritime Valley System; again the “shape” that they seem to present is due to the survey strategy (a rescue project to mitigate the impact of a pipeline along a narrow strip -50m – and a long section -203Km-).
+The other interesting aspect is in regard the cultural identification; the sites associated with the Tortolitan Subtradition seem to be in the beginning of the Piedmont System or
+41
+
+Mountain System (See Fig. 24). On the other hand, the sites associated with the Dabajuro Subtradition, while predominantly coastal are also found inland.
+Concerning the spatial distribution by types (See Fig. 25) it can be seem that the “dispersion” of material culture is along the piedmont. I’ll venture to hypothesize that these “dispersions” could be part of sites that have been washed out from the nearby mountains. We can see the same pattern in the eastern part of the state (See Fig. 26); the type of site “dispersion” is predominant in this area. Moreover, the Maritime Valley System is a region subjected to the constant action of water, which seem to support this idea.
+5.1.5 Vegetation Of the four variables studied, the map showing the vegetation seems to be the one with less practical information (See Fig. 27). We can see the distribution of sites but the types of vegetation variety makes it more complicated to read. Thus, for this variable we choose to use a satellite image provided by Google Earth (Fig 28). With this image is possible to see which areas have a vegetation cover or which are more eroded.
+Using the satellite image we can see that more of the sites are in areas with little vegetation cover and high level of erosion. The reasons for this seem obvious, when the erosion process start the vegetation in the area is gone and in consequence the archaeological sites are easier to spot.
+5.1.6 Altitude The study of this dimension (See Fig. 29) confirmed the impression of the patterns seem in the others. First, the Tortolitan sites are mostly in the beginning of the Piedmont System with altitudes that go from 160 m to 400. Dabajuran sites commonly are found in the plains where the altitude does not exceed the 80m, however is not exclusive of this attribute.
+The spatial distribution by types of sites (See Fig. 30) does not seem to show any particular pattern, save the preference for the settle of sites in the range 0-160 m of altitude. Still, this could be more a problem of the area sampled and surveyed that a pattern itself.
+42
+
+5.2 Discussion
+The first thing that we have to point out is the fact that our analysis and interpretation of the distribution pattern was not done to talk about the economic, social or political factors that could have affect this distribution. Our analysis had two main purposes: study the correlation between sites and the environmental variables; and to infer whether this correlation is casual or the sites are located there, at least partly (there may be social or political reason) because of the environmental variable. Moreover, the aim of this analysis was to optimize the data that we already have from this region and use it to design our sample/survey strategy.
+Our discussion has to start highlighting the complexity of Falcón as a macroregion. The State has a multiplicity of environments, each one with its particularities. Some of them share some features in a general sense, but in a more detail scale this particularities are more obvious. In this regard, we thing that is too pretentious to propose a survey methodology for the whole region; first because of the environmental variability, but also because we only have archaeological data from a portion of the region, the rest is still unknown. Another factor is that we have a good ceramic sequence (and with this a solid social and political interpretation) for the Dabajuran Subtradition and the coastal plains, but before that (800 A.D) our knowledge is still incomplete. Keeping this in mind, our strategy should be based on microregional studies because with them we can approach questions such as subsistence strategies (Lock et al 1999: 56)
+Also, from our analysis, we could infer that there is, in fact, a correlation between the sites and the locations of resources, primary the water resources (not only the access to potable water, because due to the high level of manganese14 not all the water is drinkable without be treated first, but also food and raw material –e.g.: shell-). Consequently, one of the focuses of our strategy should the study of this correlation.
+Another issue raised from our analysis is the impact that post abandonment process has in the sites. Obviously, this is not something new and unknown before this dissertation; it has been emphasized by almost all the people that have worked in the area (Oliver and
+14 This reference about the high level of Manganese in some of the main rivers of the region was given to me by Dr Oliver (personal communication 2011).
+43
+
+Alexander have an excellent discussion about this, but focused in the paleoindian period). However, with the inclusion of the environmental variable in our analysis we were able to assess how high this impact was; furthermore, the specific study of each relief system gave us some clues about which areas could be more affected and which were relative save.
+With our analysis we hinted the possibility of a differentiated use of space by the people associated with the Dabajuran and Tortolitan Subtradition. This issue need a little more discussion; the first different between this two subtradition is chronological, so time is something that has to be factorize in our analysis. We do not have enough ground to discuss this matter, we can only speculate about this apparent preference in the use of space.
+Furthermore, it is possible that the evidence of this earlier period has simply not been conserved or even sample. An example with the problem of conservation with early material is presented by Oliver (1989) who proposed that the reason why we could not see painted designs in the pottery from the Matícora Complex and even the Túcua Complex (the earliest in the Dabajuran Subtradition) is because is not preserved. Extrapolating this factor to every other archaeological evidence from earliest period is a stretch; nonetheless, is something to look at and the study of environmental dimension could give us the answers.
+Now that we have this information is possible to use it for designing our sampling/survey strategy.
+5.3 A Regional Survey
+The aim of the survey that we are proposing for Falcón is to study the settlement pattern and land use across the state for the pre-Hispanic agro-ceramic period. The other aim is to determinate how accurate were the “patterns” observed in our analysis; in other words, analyze if is possible to predict the location of archaeological sites based on the relation between the environment and the material culture. In addition to these two general objectives we would like to study how affected are the sites by the postdepositional process.
+44
+
+5.3.1. The Scale of the Study and the Region This study is set to be a regional survey / sampling strategy. Due to the size of the State (24,800 Km2) and the archaeological background discussed in the previous chapters we decided to concentrate our survey in two of the Geologic Systems proposed by Matteuci et al (2001). In this way, once we have the data from this survey we are going to be able to study the predictability of finding archaeological sites in the region comparing the data gathered with this survey and the data from previous research.
+The two geological systems are the Coastal Plain and the Piedmont; they have an area of 6,868 Km2 and 1240 Km2 respectively (See Fig. 2). The Coastal Plain System is divided into 5 subsystem and we are taking this subdivision as a stratigraphied sample of the area. Again, the surface is too big to propose 100% coverage (though, it would be ideal); therefore, we are proposing an extensive survey at a regional scale, with an intensive survey at a microregional scale.
+The microregions are area defined before hand taking into consideration the visibility, the slope gradient, the erosion and the archaeological knowledge of the area. In this way, we are going to choose areas that due to particular conditions (having to do with the variables afore mentioned) warranted 100% coverage.
+5.3.2. The Survey Strategy
+In our analysis we presented several pattern in the way the archaeological sites are arranged in the space in relation with some environmental variables. This “special arrangement” of sites gave us enough ground to start discerning the use of space. We are using this pattern to decide which area to sample in our regional survey.
+Based on these patterns we are proposing four areas that warrant 100% coverage, these areas are: The Borojó Area, the Mitare River basin, the Maticora River basin and the Coro River basin. We chose the Borojó area due to the abundance of archaeological remains and the particular conditions of the area: eroded area near a river. The Mitare and Matícora were chose because those are rivers that run from the piedmont to the sea, thus the different ecosystems are represented along the river; in addition there is the distribution of
+45
+
+sites according the cultural identification (See Fig. 19), distribution that it can be assessed surveying those two rivers. In addition to these areas there are several caves in the Piedmont system, mainly in the Cumarebo Area (See Fig. 31). Surveying these caves would allow us to asses the potentiality of finding material in stratigraphy for future excavations.
+The collection strategy for this intensive part of the survey would be the gathering of all the material. We are also proposing mapping the variation of density on the surface, this with the aim of studying, first the ground visibility and second, the land use.
+We are aware that in some areas it will not be possible to survey due to visibility, erosion, modern constructions and the like. However, any variation on the surface would be documented and assessed on a daily basis.
+The rest of the area is going to be randomly sampled, but this sampling would be on the already stratified areas, namely the six geological subsystems. Again, the rivers are going to be our naturals transect and from them we are going to map out perpendicular transects of 500 meter of wide 2 Km of large.
+Due to the particularities of the six geological subsystems the strategy of survey has to be adapted to each of them. It is no the same to walk around an eroded area that doing it around a heavily vegetated area, or a dune and the piedmont. Therefore, we organize the strategies as follow:
+• Eroded Area: this are the areas where archaeological sites are easier to spot, in consequence the strategy is to cover 100% of the area. One important task would be walking inside the gullies and observe the “wall” in order to determinate if there is material culture in stratigraphy.
+• Dunes: the issue with the dunes is their mobility; as a result archaeological evidence could be overlooked one day and appear in the following. In the spirit of dealing with this problem, we are proposing to prospect these areas twice in different moments in order to estimated how affected are the sites by the mobility of the dunes.
+46
+
+• Vegetated areas: the difficulties of working in areas with vegetation are the visibility of archaeological sites and the sometime impossibility of walking and surveying the area. To help solving this problem we are going to use aerial photography in order of looking for changes in the vegetation density or shape. The satellite image are also a resource to be utilized.
+The decision of which transect to survey would be random and the collection strategy will continue to be the gathering of all the material found on the surface. Conversely, we will not map the variation in density on the surface because doing so could raise statistical problem of representation due to the size of the transect walked in comparison with the no walked area.
+According to the general consideration of sampling in archaeology the ideal number of representative of sites to be surveyed is 20%. In numbers, this means that it would be necessary to survey at least 1,621.6 Km2. This is not an easy task, I participated in the rescue archaeological project and it took approximately 6 months to survey 203 Km x 50m. Then, making an estimate doing a survey of this magnitude would take, in the best conditions possible, at least 2 years. This brings the issue of the resources needed, which we will discuss in the next section.
+5.3.3. The Resources A Project with the objectives proposed here could no be done by one person; in this regard the first task would be finding Institutional support. The local university UNEFM has several research centres, one of this is the CIEZA (Centro de Investigaciones en Ecología y Zonas Áridas –Ecology and Arid Zones Research Centre) and the other is the CIAAP, before mentioned. Also, the IVIC, which is the most important research centre in Venezuela, would be an excellent support for this project.
+The human resource is the key factor in taking this project to action, not only archaeologist but also specialist in other areas as geology, ecology, topography, physical and cultural anthropology and conservation. We can not forget that the environment is a variable to study in this survey thus, the knowledge of experts in different areas of science would be necessary. It could also help to produce a map of the resources in the area.
+47
+
+The local knowledge is one of the most fruitful resources, today there are small town around the region and the local “campesinos” have an understanding of the region that sometimes exceed the one of the specialist. We are aware that using a local as part of the time could add a bias on our sampling, nevertheless it is a resource. Financing the project present a challenge, archaeology is not a priority in Venezuela so founding should come either from foreign organizations or from the Universities or Institutions that will be involved in this research. Again, the important of institutional affiliation plays an important role in the development of this project.
+48
+
+Conclusions
+The objective of this dissertation was to devise a strategy to survey/sampling the State of Falcón. We judiciously used the archaeological data already existing for our area and analyzed its spatial distribution with the aim of study the possible patterns presented. The study of these patterns allowed us to identified possible correlations between the archaeological sites and the environment. We used this information to design our methodology.
+The first task that we did was organizing the archaeological information, published and unpublished into a database. We produce a data base with 192 archaeological sites associated with the pre-Hispanic agro-ceramic period in Falcón. Our second task was to plot the environmental information in maps. We did this using ArcGIS, which turned out to be a crucial tool in our analysis since it allowed us to import the database into the program, resulting in maps with all the information at the same time.
+The use of ArcGIS also facilitated the observation of the spatial distribution of the sites according to their types, cultural identification and actually any other variable available (e.g.: accuracy). We also observed the correlation between the types of sites and each environmental variable; and the distribution by cultural identification and every environmental dimension studied.
+Once we analyzed these correlations we were able to see some pattern in the behavior of some dimensions. One of the dimensions that gave us more information was the hydrology and it relationship with the sites. We could see that the sites are located around the main rivers in the region; those rivers go from the mountains in the south to the sea in the north, therefore they offer different ecological niches and have the potential for the exploitation of different resources.
+Based on this analysis we proposed a survey strategy in which the basin of three rivers (Matícora, Mitare and Coro) have to be 100% covered. We also proposed this 100% of coverage around the Borojó area, this decision is supported by the analysis of the distribution by type of sites.
+49
+
+Another aim of this dissertation was to evaluate different systematic regional surveys done in areas with similar conditions. Due to the word limits we only show our evaluation of two projects (Sander’s Basin of Mexico and Van Dummelen’s in Sardinia). The examples of these two project served to discuss the important of having geomorphology data (in the case of the survey in Sardenia), and the relevant of choosing a 100% coverage instead of sampling in order to broad the question that could be asked to the data.
+With the evaluation of other surveys and the study of the pattern distribution we were able to design a systematic methodology for regional survey and sampling that takes into account all the previous archaeological and environmental information available. We tried to factorized variables as funding or local knowledge in order to produce a realistic strategy. However, we are aware that this strategy is going to suffer modification once it implementation in the field start.
+Our intention, once this strategy is performed would be to evaluate how accurate was our methodology for predicting the appearance of archaeological sites in the landscape. In this way we are going to be able to proof the usefulness of project like the present, in which no systemic data is used optimize the surveys and sampling of a given region.
+We also point out the impact that has in our research the use of Geographical Information System, even in it most simplified way. It opens our eyes to the possibilities this tool offers the study of landscape, and this without doubt is something that we are going to considerate in future research. The study of the environment and geomorphology is also highlighted in this project; in areas as Falcón, with all the challenge that present with the context and the chronology, the environmental factors present the venue to begin to discern this complexity.
+50
+
+Bibliography
+Adams, J., M. and Faure, H., 1997. Preliminary vegetation maps of the World since the last glacial maximun: An aid to archaeology understanding. Journal Archaelogical Science 24, 623-647.
+Arvelo, L., 1987. Un Modelo de Poblamiento de la Cuenca del Lago de Maracaibo. Tesis MSc. Instituto Venezolano de Investigaciones Científicas. Caracas: Centro de Estudios Avanzados.
+Arvelo, L., 1995. The Evolution of Prehispanic Complex Social Systems in the Quibor Valley, Northwestern Venezuela. PhD Dissertation, Pittsburgh: University of Pittsburgh.
+Arvelo, L. y M. López 2004. Proyecto ARAAPICO Informe Final. Caracas: PDVSA-Gas
+Arvelo, L. and Wagner, E., 1981. Las Tortolitas: Un yacimiento arqueológico del Distrito Mara, Edo Zulia. Informe Preliminar. Boletín del programa de arqueología de rescate año 3, enero –diciembre N 3.
+Balee, W. 1998. Advances in historical ecology. W, Balee Ed. New York: Columbia University
+Binford, L. 1964. A consideration of archaeological research design. American Antiquty 29/4: 425-441
+Binford, L. 2004 En busca del pasado. Barcelona: ROMANYÁ/VALLS, S.A.
+Clarke, D., 1977. Spatial Archaeology. London: Academic Press.
+Cruxent, J. M. 1955 Descripción de una colección arqueológica del Municipio de Dabajuro, Estado Falcón, Venezuela. Memorias de la Sociedad de Ciencias Naturales La Salle, Caracas, Venezuela. Vol. 15, Nº 41: 89-113. .
+51
+
+Cruxent, J., M. and Rouse, J., 1982. Arqueología Cronológica de Venezuela. Vols 1 y 2. Ernesto Armitano Editor.
+Erickson, C. 2008 Amazonia: The Historical Ecology of a Domesticated Landscape. In Handbook of South American Archaeology. Edited by Helaine Silverman and William H. Isbell. New York: Springer.
+Flannery, K., 1974. The early Mesoamerican Village. New York: Academy Press.
+Hirsch, E. 1995. Landscape: between place and space. In The Anthropology of Landscape Eds. E. Hirsch and M. O’Harlon 1-30. Oxford: Oxford University Press.
+Hodder, I., 1977. Some new direction in spatial analysis of archaeological data at a regional scale (macro). In: Spatial Archaeology. Ed. D. Clarke. London: Academic Press.
+Hodder, I., 1984. New Generations of Spatial Analysis in Archaeology. Seminario de Arqueología y Etnología Turolense. Turuel: Colegio Universitario de Turuel.
+Johnson, M., 2000. Teoría arqueológica. Una Introducción. Barcelona: Editorial Ariel. S.A.
+Kowalewski, S. 2008. Regional Settlement Pattern Studies. J Archaeol Res 16:225–285
+Lahey, J. F.1973. On the Origin of the Dry Climate in Northern South America and the Southern Caribbean. Coastal Deserts: Their Natural and Human Environments. Tucson, Arizona: The University of Arizona Press.
+Lock, G. T. Bell and J, Lloyd. 1999. Toward a methodology for modeling surface. Survey Data in the Sangro Valley Project. In: Geographical Information System and Landscape Archaeology. Ed. Mark Gilling, David Matingly and Jan Van Dalen.: Oxford: Alden Press.
+Matteucci, S., A. Colma, and L. Plá; 2002. Falcón y sus recursos naturales. Base electrónica de información biofísica.
+52
+
+Mattingly, D. 2000. Method of Collection, recording and quantification. In: Extracting meaning from ploughsoil assemblages. Ed. by Riccardo Francovich and Helen Patterson. The archaeology of Mediterranean landscapes v. 5. Oxford.
+Mueller, P. 1975. Sampling in Archaeology. Tucson: University of Arizona Press
+Nomland, G., 1935. New Archaeological Sites From the State of Falcon, Venezuela. Berkeley, California: University of California Press.
+Oliver, J.R. 1981-82. Unpublished Field Journals.
+Oliver, J., R., 1989. An Archaeological, Linguistic and Ethnohistorical Evidence for the Arawakan Expansion into Northwestern Venezuela. Tesis Doctoral. Chicago: UrbanaCamping.
+Oliver, J. and Alexander, C., 2003. Ocupaciones Humanas del pleistoceno Terminal en el occidente de Venezuela. Maguaré Revista del Departamento de Antropología, 17, 83-246.
+Orton, C. 2000. Sampling in Archaeology. Cambridge: Cambridge University Press
+Osgood, C. and Howard, J., 1943. An archaeological Survey of Venezuela. New Haven: Yale University Publications In Anthropology. Nº 27.
+Perera, M. A. 1969 Breve relación sobre dos cuevas de interees arqueológico. Boletín de la Sociedad Venezolana de Espeleología. Vol. 2, Nº1: 49-61. Caracas, Venezuela.
+Perera, M. A. 1970 Notas arqueológicas sobre la alfarería de la Cueva del Toro, Estado Falcón, Venezuela. Boletín de la Sociedad Venezolana de Espeleología. Vol. 3, Nº1: 7382. Caracas, Venezuela.
+Perera, M. A. 1973 La alfarería de la cueva de Coy-Coy de Uria, Sierra de San Luís Estado Falcón. Boletín de la Sociedad Venezolana de Espeleología. Vol. 4, Nº1: 97-107. Caracas, Venezuela.
+53
+
+Pittevil, M. G. 1984 Coy-coy de Uria: Investigaciones arqueológicas en la Sierra de San Luis, Estado Falcón. Trabajo Final de grado presentado para optar al titulo de Antropólogo. Escuela de Antropología, Universidad Central de Venezuela..
+
+Rodriguez A.C. 2005. Proyecto de Arqueologica de Rescate del Proyecto ICO. Caracas: PDVSA-Gas
+
+Rodriguez A.C. 2006. Proyecto de Arqueologica de Rescate del Proyecto ICO. Caracas: PDVSA-Gas
+
+Rouse, I. and Cruxent, J., M., 1963. Arqueología Venezolana. Caracas: Ediciones Vega.
+
+Schubert, C, 1988. Climatic Changes during the Late Last Glacial maximum in Northern South America and the Caribbean: A Review. Interciencia 13, 128-137.
+
+Sanders, W., Parsons, J. and Santley, R., 1979. The Basin of Mexico : the ecological processes in the evolution of a civilization. New York: Academic Press.
+
+Sanoja, M. and Vargas, I., 1974. Antiguas formaciones y modos de producción venezolanos. Monte Ávila Editores, Venezuela
+
+Steward, J. and L. Faron, L., 1959. MacGraw-Hill.
+
+Native Peoples of South America. New York:
+
+Tilley, C. 1994. A Phenomenology of Landscape: Places, paths and monuments. Explorations in Anthropology. Oxford: University College London.
+
+Thomas, J. 2001. Archaeology of Place and Landscape. In Archaeological Theory Today. Ed. I. Hodder. Pp 165-186. Cambridge: Polity Press
+
+54
+
+Urbina, E., 2005. Estudio comparativo de tres sitios prehispánicos en el Noroccidente del Estado Falcón Venezuela. Póster presentado en: En: LV Convención Anual de ASOVAC. Facultad de Ciencias, Universidad Central de Venezuela. 20 al 25 de Noviembre. Urbina, E. 2008. El Carrizal; cambios en el uso del espacio a través del tiempo. Trabajo Final de grado presentado para optar al titulo de Antropólogo. Escuela de Antropología, Universidad Central de Venezuela. Van Dummelen, P. 1998. On Colonial Grounds. Archaeological Studies Leiden University. Faculty of Archaeology. The Netherlands Warda, I. and R. Larcombe. 2003. A process-orientated approach to archaeological site formation: application to semi-arid Northern Australia. In: Journal of Archaeological Science 30: 1223–1236 Willey, G. 1953. Prehistoric Settlement Pattern in the Virú Valley, Perú. Bureau of American Ethonology Bulletin 155. Washington DC: Smithsonian Institute.
+Electronic Sources El Estado Falcón. Retrived on 04 September 2011 from the world wide web. http://www.gobiernoenlinea.ve Google Earth
+55
+
+TABLES
+56
+
+Styles
+
+Area
+
+Dabajuro (cabecero) Coro (Falcón)
+
+Cumarebo
+
+Central Coast
+
+Guaraguapo
+
+Barcelona
+
+Punta Arenas
+
+Cumana
+
+Guacuco
+
+Isle of Margarita
+
+Dabajuro
+
+Maracaibo
+
+Capacho*
+
+San Cristóbal (no coast)
+
+La Mulera* San Cristóbal (no coast)
+
+Aruba
+
+Curazao
+
+Table 1: Dabajuroid Serie. Cruxent & Rouse 1982 [1958-59] 57
+
+TOCUYANOID
+
+Macrotradition
+
+Tradition Tocuyanoid
+Hornoid Lagunilloid Malamboid
+
+Subtradition
+Tocuyano
+Cerro Machado Loma Pitia
+Betijoque Lagunilla Malambo Las Tortolitas
+* C14 Dated
+
+Complex Tocuyano
+Camay Aeródromo Agua Blanca
+Sanare Tuñame Cerro Machado Loma Horno
+Kusu Hokomo Siruma Betijoque - El Jobal Santa Elena - Arenales Lagunillas Santa Ana Tabay Los Mangos Malambo Las Tortolitas Hato Nuevo Nueva Venecia Matícora
+
+Chronological Range 2180+/-300 A.P*
+500-400 a.C. 500-400 a.C. 500-400 a.C. 500-400 a.C. 1930+/-70 A.P.* 2420+/-30 y 2370+/-60 A.P.* 1365+/-75 A.P.*
+1880+/- 110 A.P.* 1400-1500 d.C. 1670+/-70 A.P.*
+2330+/-70 A.P.*
+3070+/-200* 2050+/-50*
+100 a.C.-800/1200 d.C 100 a.C.-800/1200 d.C
+
+Table 2: Tocuyanoide Macrotradition. Data taken from Oliver 1989
+
+58
+
+DABAJUROID
+
+Macrotradition
+
+Tradition Dabajuroid
+Tierroid
+
+Subtradition Dabajuro
+Bachaquero
+Campoma Capacho
+Tierra Mirinday
+
+Complex Tucua
+Urumaco Los medanos Bachaquero
+Las Minas Supidero/Antuñez
+Guaraguao Punta Arena Campoma
+Capacho La Mulera Tierra de los Indios San Pablo Mirinday Chipepe
+
+Chronology 800 d.C.-1100/1200 1100 d.C. - 1200/1400 1350 d.C.-1600/1650
+1300-1600 d.C 1300 - 1500 d.C. 1300-1450 d.C. 1000-1500 d.C
+1100-1300 d.C. 1000-1250/1300 d.C 1250/1300-1500 d.C. 1000 d.C.- postcontacto 1000 d.C.- postcontacto
+1100-1550 d.C. 1000-1500 d.C.
+
+Table 3: Dabajuroid Macrotradition. Data taken from Oliver 1989
+
+59
+
+FIGURES
+60
+
+Figure 1: Venezuela Geographical Location. Source: Google Maps. Retrieved on the 31/08/2011 61
+
+Figure 2: Falcón State Location and Coro Area. Source: Bing. Retrieved on the 15/01/2011. 62
+
+Figure 3: Area surveyed by Oliver and location of archaeological sites. Source: Oliver (1989) 63
+
+Figure 4: Area Surveyed during the Archaeological Rescue Project. 203km long by 50 m wide. 64
+
+2
+
+5
+
+1
+
+4
+
+3
+Semiarid zone Subhumid zone
+Figure 5: Relief Systems. Source: Matteuci et al 2002.
+65
+
+Severe Strong
+
+Moderade Sodium
+
+Figure 6: Salinity Map. Source: Matteuci et al 2002. 66
+
+Figure 7: Map of Erosion. Source: Matteuci et al 2002.
+
+Severe Strong Moderat
+
+67
+
+Legend: A) Falcón Anticlinorium arid and semiarid; B) Falcón Anticlinorium humid and subhumid; E) Western end of the Cordillera de la Costa; H) Coastal Piedmont arid and semiarid; I) Coastal Piedmont humid and subhumid; J) Maritime Valleys arid and semiarid; K) Maritime Valleys humid and buhumid; L) Paraguaná Peninsula. Figure 8: Map of Soil. Source: Matteuci et al 2002.
+68
+
+Figure 9: The two wave of migratory expansion. Source: Oliver 1989. 69
+
+Figure 10: Hierarchical Model. Oliver 1989. 70
+
+Range
+1700 1600 1500 1400 1300 1200 1100 1000 900
+
+Falcón
+
+800
+
+700
+
+?
+
+Nueva Venecia Coy Coy El Manglar
+
+600
+
+500
+
+400
+
+300
+
+200
+
+100 A.D.
+
+0
+
+100 B.C.
+Figure 11: Falcón Ceramic Complexes. Oliver 1989
+
+cu a
+Los Medanos
+
+Subtradition Dabajuran Tortolitan
+Independent
+71
+
+Ravine Creek Stream River
+Figure 12: Map of rivers and river basins. The Different colours in the base map are the different basins. 72
+
+Figure 13: Map showing the different kinds of soil according to FAO. 73
+
+Figure 14: Map of Relief system 74
+
+Figure 15: Map of different vegetation. 75
+
+Figure 16: Map of Altitude 76
+
+Fig 17: Spatial Distribution by Type 77
+
+Figure 18: Spatial Distribution by Cultural Identification 78
+
+Figure 19: Spatial Distribution by Cultural Identification and Hydrology. The different colours in map indicate the basin of the main rivers. 79
+
+Figure 20: Zoom of the central area of Falcón showing the Spatial Distribution by Cultural Identification and Hydrology. 80
+
+Figure 21: Zoom of the western area of Falcón showing the Spatial Distribution by Cultural Identification and Hydrology. 81
+
+Figure 22: Spatial Distribution by Types and Hydrology 82
+
+Figure 23: Spatial Distribution by Relief/Soil System. 83
+
+Figure 24: Zoom of Spatial Distribution by Relief/Soil 84
+
+Figure 25: Spatial Distribution by Types and Relief/Soil 85
+
+Figure 26: Zoom Spatial Distribution by Types and Relief/Soil 86
+
+Figure 27: Spatial Distribution and Vegetation 87
+
+Figure 28: Satellite image showing the Spatial Distribution of Sites and the areas with vegetation cover in Falcón. 88
+
+Figure 29: Spatial Distribution by Cultural identification and Altitude. 89
+
+Figure 30: Spatial Distribution by Type and Altitude 90
+
+Figure 31: Areas were 100% coverage have been suggested. 91
+
+

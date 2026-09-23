@@ -9,11 +9,11 @@ paginas: "460 + 492"
 capa_texto: si
 estado_minado: parcial
 prioridad: alta
-cobertura: "transmisión del saber, vol. 4 (sesión 4) + la costa y su red de intercambio, vol. 1 (2026-09-21, campaña del taíno T5) + la etnohistoria del contacto en los dos volúmenes (2026-09-22, campaña del taíno 2, T7)"
+cobertura: "transmisión del saber, vol. 4 (sesión 4) + la costa y su red de intercambio, vol. 1 (2026-09-21, campaña del taíno T5) + la etnohistoria del contacto en los dos volúmenes (2026-09-22, campaña del taíno 2, T7) + la COSTA OCCIDENTAL y las dos Curianas, vol. 1 libro VIII releído y los dos volúmenes barridos (2026-09-23, minería 3, M2)"
 desfase_pagina: "impresa = pdf − 64 en el vol. 1; impresa = pdf − 8 en el vol. 4 (medido 2026-09-22 sobre los folios que el escaneo conserva)"
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0}
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 aliases: ["Anglería 1892", "Pedro Mártir", "Décadas"]
 ---
 
@@ -180,6 +180,46 @@ lengua… pero, *como no había intérpretes, no entendieron lo que decía*»
    [[navarrete-1829-viages-menores]], no aquí.
 2. **El vol. 4 escribe `yucayo` (11) tanto como `lucayo` (10).** Un barrido con
    una sola grafía se pierde la mitad (regla 6).
+
+## 2026-09-23 — la costa occidental y las dos Curianas (minería 3, parcela M2)
+
+**Texto.** Los dos volúmenes están ahora extraídos junto a sus PDF, con
+`pdftotext -enc UTF-8` y un marcador por página (`=== pdf N · impresa M ===`):
+`fuentes_caquetios/Angleria_1892_Fuentes_Historicas_Colon_America_vol1.txt` y
+`…_vol4.txt`. No hace falta volver a extraer ni a recalcular el desfase.
+
+**Qué se preguntó.** Qué dice de la costa de Tierra Firme occidental
+(Coquibacoa, Coro, Curiana, los Gigantes) y de su gente. Medido con
+`6-fusion/scripts/medir_cronicas_costa_occidental.py`; datos en
+`6-fusion/cronicas_contacto_costa_occidental_2026-09-22.yaml`.
+
+**Qué dio:**
+
+- **Ni el vol. 1 ni el vol. 4 narran la costa occidental.** El vol. 1 es la
+  Década I y su libro VIII es Niño y Guerra; el viaje de Hojeda de 1499 no se
+  cuenta. `Cuchibacoa` sale una vez en cada volumen, en una lista (vol. 1
+  p. 48; vol. 4 p. 132). Lo de Hojeda en Tierra Firme estaría en la Década II
+  (vol. 2), fuera del repo.
+- **Dónde pone Anglería su Curiana** (verificado en imagen): «dejadas atrás las
+  regiones Cumana y Manacapana, llegó á una región que dice llaman los
+  indígenas Curiana» (p. 303) — pasado Cumaná, no en Cumaná como glosa
+  Navarrete; y él mismo lo duda: «Hay quien dice que Niño no se hizo con las
+  perlas en Curiana… y dicen que la Curiana no da margaritas. Todavía no está
+  en claro» (p. 318). Es la Curiana **oriental**.
+- **Tres voces indígenas, verificadas en imagen** (en cursiva en la edición):
+  *galitas* 'canoas' y *tenoras* 'perlas' en Curiana (p. 304), *corixas*
+  'perlas' en Cauchieto (p. 311). Dos palabras para «perla» a seis días de
+  distancia. Son de la costa oriental, no de la Kaketiana.
+- **«Casi dos mil hombres, armados á su modo»** cerraron la playa al oeste de
+  Cauchieto (p. 312); Navarrete los pone, por inferencia, en Chichiriviche.
+- **Fauna de la Curiana oriental** (pp. 305-306, 311): ciervos, jabalíes,
+  conejos, palomas, tórtolas, patos criados en casa, pavos, faisanes, monos y
+  loros, y los «**mugidos horrendos**» nocturnos de «animales grandes pero
+  inofensivos». ⚠️ La atribución al jaguar o al puma es del **traductor de
+  1892** (nota de la p. 39, citando a Malte-Brun), no de Anglería.
+
+**Qué NO dio:** Coro, Paraguaná, Curazao, Aruba, Bonaire, caquetíos: cero en
+los dos volúmenes (con `isla`, `oro` e `indio` por centenares de control).
 
 ## Qué falta
 

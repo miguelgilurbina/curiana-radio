@@ -1,0 +1,627 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — mundo. Un minador propone, el humano fusiona (regla 5).
+# Tercera campaña de minería, parcela M1: Oliver 1989, lo que quedaba a medias.
+# La lengua va aparte: 6-fusion/oliver1989_lexico_restante_2026-09-22.yaml.
+#
+# DOS EDICIONES Y DOS PAGINACIONES — no se mezclan:
+#   · `tesis`: el escaneo UMI de 1989 (fuentes_caquetios/
+#     Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf). Página impresa =
+#     pdf − 27, comprobado en tres puntos: 559 (pdf 586), 593 (pdf 620) y 745
+#     (pdf 771, número leído por OCR sobre la cabecera). El texto sale del OCR
+#     guardado en fuentes_caquetios/ (tres .ocr.txt nuevos de esta campaña).
+#   · `doc`: la versión DOC del cap. 3 que tiene el repo («Chapter 3
+#     Ethnohistory.DOC-comprimido.pdf», con capa de texto). Es la edición
+#     REVISADA para el PDF de 2006 («Illustration added for the PDF version
+#     only»): página = pdf + 182, y NO coincide con la tesis (el funeral del
+#     díao está en la p. 270 del DOC y en la 283-284 de la tesis). La ficha
+#     oliver-1989-cap3 cita por el DOC.
+#
+# Verificado en imagen: la Tabla 15 (p. 459), p. 438, p. 439 y p. 483. El
+# resto es OCR de prosa limpia en inglés: sirve para citar la idea; una forma
+# que decida algo se mira en la imagen antes de citarla.
+#
+# Las cifras de este archivo (cuántas fauna, cuántas páginas, cuántas
+# menciones del mar) las emite 6-fusion/scripts/oliver1989_restante.py en
+# 6-fusion/medicion_oliver1989_restante_2026-09-22.yaml. Aquí no hay cifras
+# de conteo escritas a mano (regla 1); las que hay son del autor (fechas,
+# porcentajes) y van entre comillas.
+# ─────────────────────────────────────────────────────────────────────────
+
+meta:
+  recogido: '2026-09-22'
+  campana: tercera campaña de minería, parcela M1
+  obras: [oliver-1989-cap3-vecinos, oliver-1989-cap4, oliver-1989-apendice-a]
+  obras_de_contraste: [oliver-1989-cap3, oliver-1989-cap2]
+  estado: propuesta — nada fusionado
+  medicion: 6-fusion/medicion_oliver1989_restante_2026-09-22.yaml
+  ocr_nuevo:
+    - fuentes_caquetios/Oliver_1989_cap3_s323_chibchas.ocr.txt       # tesis pp. 211-222
+    - fuentes_caquetios/Oliver_1989_cap3_s33_falcon_lara.ocr.txt     # tesis pp. 231-254
+    - fuentes_caquetios/Oliver_1989_cap4_s47_s415_dabajuroide.ocr.txt  # tesis pp. 411-487
+
+# ══════════════════════════════════════════════════════════════════════════
+# A. GEOGRAFÍA POLÍTICA Y VECINOS (cap. 3, §3.2.3 y §3.3)
+# ══════════════════════════════════════════════════════════════════════════
+
+vecinos:
+
+  - grupo: coanao
+    variantes: [coanaos, guamos (Castellanos)]
+    familia: 'chibcha (probable) — «can not be proven on linguistic grounds, but rather in terms of dress etiquette»'
+    donde: 'Ranchería medio y César alto, compartido con los buredes; puestos en el norte de la Sierra de Jarara (Guajira)'
+    relacion_con_caqueties: >-
+      Socios comerciales: sal hacia el interior a cambio de oro. El intérprete
+      Esteban Martín, que dominaba el caquetío, se entendía con coanaos y
+      buredes sin intermediario, y Oliver concluye que «the Caquetío of coastal
+      Falcón could and did communicate with the Coanao as well as the Burede».
+    polity_caquetia: occidental
+    tipo_de_contacto: mercado
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '214-218', edicion: tesis}
+    en_etnias_yaml: 'NO — nombrado en polities-caquetias.md y en la ficha, sin entrada en etnias.yaml'
+    epoca: contacto-temprano
+
+  - grupo: wanebucán
+    variantes: [guanebucán, Duanabuká (tradición kogi)]
+    familia: 'desconocida — Oliver sospecha arahuaca por nombres de aldea «suspiciously Caquetío» (Paragua-nil, Coria-na)'
+    donde: 'La Ramada, costa entre la Sierra Nevada y el río Hacha; con aldeas en la Guajira (Punta Espada–Chichibacoa)'
+    relacion_con_caqueties: >-
+      Nexo comercial en Punta Espada–Chichibacoa. «excellent sailors and
+      fishermen», con canoas monóxilas y una casa ceremonial con «a thousand
+      Indians sculptured in wood» (Castellanos vía Reichel-Dolmatoff). Tras la
+      conquista se refugian en la Sierra Nevada y los absorben los kogi como
+      clanes (tuxe/dake).
+    polity_caquetia: occidental
+    tipo_de_contacto: mercado
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '211-213', edicion: tesis}
+    en_etnias_yaml: 'NO'
+    epoca: contacto-temprano
+
+  - grupo: tairo / tairona
+    familia: chibcha (antepasados de los kogi)
+    donde: Sierra Nevada de Santa Marta (Buritaca, Guachaca)
+    relacion_con_caqueties: 'indirecta: vecinos de los wanebucanes «never there was war between them»; sin contacto caquetío documentado'
+    polity_caquetia: occidental
+    tipo_de_contacto: ninguno
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '211-213', edicion: tesis}
+    en_etnias_yaml: 'NO'
+
+  - grupo: xiriguana
+    variantes: [yrriguanas, jiriguana]
+    familia: desconocida («other differences in their speech»)
+    donde: al sur de coanaos y buredes, a 25 leguas; aldeas de 10 a 15 casas
+    rasgo: 'las mujeres se tatuaban pechos y brazos con pintura negra «fijas que nunca se quitan»'
+    polity_caquetia: occidental
+    tipo_de_contacto: ninguno
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '215-216', edicion: tesis}
+    en_etnias_yaml: 'NO'
+
+  - grupo: arhuaco / haruacana
+    variantes: [aruaco, aruacana, aruago, haroacana, haraocana]
+    familia: 'chibcha (Oliver: los de Chinacota, quizá barí/motilón)'
+    donde: laderas sur y sureste de la Sierra Nevada; valle de Chinacota (Pamplona); dos aldeas en el suroeste del lago
+    rasgo: flechas envenenadas; aldea de tres barrios de doce casas (quizá organización tripartita)
+    polity_caquetia: occidental
+    tipo_de_contacto: guerra
+    contacto_nota: 'con los españoles (mataron a Alfinger y a Monsarrate); con los caquetíos, ninguno documentado'
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '218-220', edicion: tesis}
+    en_etnias_yaml: 'NO'
+
+  - grupo: jirajara
+    variantes: [girara, jirara, xidehara, piracoras (Pérez de Tolosa, «in all probability a mistranscription»)]
+    familia: jirajara (con ayomán y gayón; Greenberg la mete en el paezano, Oliver tiene «serious doubts»)
+    donde: 'Sierra de San Luis, «three leagues from the city of Coro»; Nirgua, Aroa, valle del Yaracuy; Sierra de Jirajara'
+    relacion_con_caqueties: >-
+      El vecino de TIERRA ADENTRO inmediato de la polity costera. Tres hechos:
+      (1) entre 1527 y 1530, en paz, abastecían de maíz a Coro — «excellent
+      maize farmers» (Pérez de Tolosa 1546); (2) Federmann cruzó la sierra
+      cercana a Coro sin ataques y sólo los halló hostiles en Churuguara;
+      (3) Oliver propone que las «hijas de caribes» con que estaba casado
+      Manaure (Probanza de Ampíes, 1526) eran JIRAJARAS de San Luis, porque a
+      los jirajaras se los llamaba «caribes» por belicosos (DOC pp. 269-270;
+      tesis pp. 281-282). Hacia el interior, guerra endémica de rapto de
+      mujeres y niños y «shifting and ephemeral alliances»; comercio de
+      cuentas de concha, sal y azabache aun entre enemigos.
+    polity_caquetia: costera
+    tipo_de_contacto: corresidencia
+    contacto_nota: 'matrimonio del diao (propuesta de Oliver, no dato) y abasto de maíz (dato colonial temprano); ⚠️ compilar_etnias exige procedencia para `costera`'
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '236-237, 244-245', edicion: tesis}
+    en_etnias_yaml: 'NO como pueblo — sólo como etnónimo `ayaman`/`ajagua` en el lexicón, y parentesco-019 advierte contra agrupar por etnónimo'
+    epoca: contacto-temprano
+    aviso_regla_3: 'el abasto de maíz y la boda son de 1526-1530, con los españoles ya en Coro'
+
+  - grupo: ayomán
+    variantes: [ayamán]
+    familia: jirajara
+    donde: 'sur de Churuguara, valle del Tocuyo, Sierra de Parúpano-Matarere («midgets»)'
+    relacion_con_caqueties: >-
+      Ninguna directa. Importa por lo que dice del MAR desde fuera: compraban
+      conchas marinas a otras naciones «and because they live far from it
+      [sea] they esteem them as exotic items, since they know nothing about
+      the sea and never go there» (Federmann, tesis p. 243).
+    polity_caquetia: barquisimeto
+    tipo_de_contacto: mercado
+    contacto_nota: 'comercio «down-the-line» de azabache y concha; la concha, «perhaps via Yaracuy»'
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '237-243', edicion: tesis}
+    en_etnias_yaml: 'NO'
+
+  - grupo: gayón
+    variantes: [coyón, cuyón, cayones]
+    familia: jirajara
+    donde: sierras al norte de Barquisimeto, «three leagues» de Nueva Segovia
+    relacion_con_caqueties: 'archienemigos de ayomanes y jaguas; su lista es la que trae `auri` perro (ver la propuesta léxica)'
+    polity_caquetia: barquisimeto
+    tipo_de_contacto: ninguno
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '244', edicion: tesis}
+    en_etnias_yaml: 'NO'
+
+  - grupo: xagua
+    variantes: [axagua, jagua]
+    familia: desconocida («the few words recorded [...] have no relationship to either Jirajaran or Caquetío»)
+    donde: Sabana de Carora; hacia 1546, en las alturas de Baragua
+    relacion_con_caqueties: >-
+      Con los caquetíos de Barquisimeto, enemigos Y socios: «some Xaguas of the
+      last villages [...] trade salt with those [Caquetío] peacefully»
+      (Federmann, tesis p. 247). Oliver no acepta que sean los achaguas.
+    polity_caquetia: barquisimeto
+    tipo_de_contacto: mercado
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '245-247', edicion: tesis}
+    en_etnias_yaml: 'NO'
+
+  - grupo: camagos
+    donde: sierras al norte de Barquisimeto, junto a gayones, jaguas y jirajaras
+    familia: desconocida («todos éstos diferentes en lenguas»)
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '244', edicion: tesis, via: 'Relación de Nueva Segovia 1579 (Arellano 1964: 182)'}
+    polity_caquetia: barquisimeto
+    tipo_de_contacto: ninguno
+    en_etnias_yaml: 'NO'
+
+  - grupo: chipa
+    variantes: [cyparicotes, chiparicotos]
+    familia: 'desconocida — «clearly different from the Caquetío, and perhaps related to Carib»'
+    donde: montaña de Aroa
+    relacion_con_caqueties: >-
+      «There is a reference to a Chipa Indian who knew how to speak Caquetío»;
+      enemigos de los caquetíos de Barquisimeto. Oliver: `chipa` es
+      probablemente voz CAQUETÍA para esa gente ('piedra, montaña'), y -coto
+      un sufijo caribe que, siguiendo a Butt Colson, NO significa 'esclavo'
+      sino gente de un tramo de río: chipa-coto = «Mountain People».
+    polity_caquetia: yaracuy
+    tipo_de_contacto: vecindad
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '249-251', edicion: tesis}
+    en_etnias_yaml: 'SÍ — es etnia-003 `ciparicoto`, y ver la contradicción abajo'
+
+cruce_con_etnias_yaml:
+  ya_estan: [etnia-003 ciparicoto (= chipa), etnia-004 bubure, etnia-005 burede, etnia-006 pemeno, etnia-007 kirikire]
+  faltan_con_pagina_de_oliver: [coanao, wanebucán, tairo, xiriguana, haruacana, jirajara, ayomán, gayón, xagua, camagos]
+  contradice:
+    - entrada: etnia-003 ciparicoto
+      campo: familia_linguistica
+      canon: 'arahuaca (Zavala Reyes 2015 p. 61 vía Molina 2009)'
+      oliver: '«Their language was clearly different from the Caquetío, and perhaps related to Carib, since no one in Federmann''s expedition could communicate with them» (tesis p. 251)'
+      propuesta: 'bajar a `desconocida` con aviso_familia que dé las dos lecturas; en duda, degradar (regla 2)'
+    - entrada: etnia-003 ciparicoto
+      campo: etimologia
+      canon: 'formantes «cotos y gotos» caribes = «pueblo, gente» (Arcaya 1920 p. 36)'
+      oliver: 'n. 178: chipa + -coto = «Mountain People»; «the inference of coto or goto as a "slave" is wrong»'
+      propuesta: 'no contradice a Arcaya; añadir a Oliver como segunda lectura concordante'
+  la_propuesta_de_jirajara_costera: >-
+    Si Miguel quiere al jirajara como vecino de la polity costera, es la
+    primera entrada de etnias.yaml con `polity_caquetia: costera` y fuente
+    (el caribe del elenco, etnia-008, no la tiene). El guardián lo exige y
+    aquí la hay: tesis pp. 236-237 (San Luis a tres leguas de Coro, maíz a
+    Coro) y DOC pp. 269-270 (la propuesta de las esposas). La etiqueta, por la
+    boda: `hipotetico` — es inferencia de Oliver sobre la palabra «caribes».
+
+cruce_con_polities_caquetias_md:
+  lo_que_ya_esta: 'la tabla de cinco polities, el diao paramount que es gran chamán, la occidental como avanzada comercial'
+  lo_que_falta:
+    - 'los LÍMITES de la costera según Oliver: «between the Golfo Triste and somewhere near the Cocuiza-Maticora river», con Aruba, Curazao, Bonaire y Paraguaná (tesis p. 251)'
+    - 'el correlato arqueológico por polity: costera = subtradición Dabajurana; Barquisimeto-Yaracuy = Tierrana (cap. 4, pp. 424, 481-485)'
+    - 'la sede de Manaure (abajo)'
+  lo_que_contradice: 'nada medido: el cap. 3 §3.3 y el cap. 4 sostienen la tabla tal como está'
+
+manaure:
+  sede_segun_oliver: >-
+    Dos datos que no se deben fundir. (1) PROPUESTA de Oliver para antes del
+    pacto: «I would venture to suggest that Manaure's immediate and most direct
+    authority as a great diao was the territory (cacicazgo?) of Caçicure, with
+    its seat of power being in the so-called (by the Spanish) Pueblo Viejo»,
+    que él identifica con el sitio FAL-77, al NE de Mitare (tesis p. 277 n.
+    206 = DOC pp. 265-266 n. 114; «I have a strong hunch»). (2) DATO de 1527:
+    Manaure acuerda con Ampíes «to resettle near what is today Coro (a village
+    called Todariquiba)» (DOC p. 251); Todariquiba estaba «about 1 or so
+    leagues from Coro» y Oliver sospecha que quedó «within the urban expansion
+    of modern Coro» (DOC p. 259). Y Manaure y su hijo Alexandre dejan
+    Todariquiba juntos por los abusos de Santillana (DOC p. 268).
+  al_lado_de_lo_que_trajeron_otros:
+    castellanos: 'pp. 185-186: «sobre caciques tuvo mando», en andas, bautizado don Martín (dato del coordinador, otra parcela)'
+    cey_1545: 'pone a Manaure en Coro y no en Todariquiba (dato del coordinador, otra parcela)'
+    lectura: >-
+      No chocan con Oliver: si Todariquiba quedó dentro del Coro moderno,
+      «en Coro» y «en Todariquiba» pueden ser el mismo sitio visto por un
+      cronista de 1545 y por un documento de 1527. Lo que Oliver añade que nadie
+      más da es la sede ANTERIOR al pacto (Caçicure / Pueblo Viejo, en la costa
+      occidental), y ésa es la única que toca el precontacto. Es corazonada
+      suya, declarada como tal.
+  andas_y_adornos: 'DOC p. 266: «always carried in hammocks by a retinue of Indians»; oro y collares de cuentas de concha (coincide con Castellanos)'
+  poder_sobre_el_clima: >-
+    Ampíes 1525 (DOC p. 258): «makes himself be worshiped as God, telling the
+    Indians that he gives [controls, predicts] the storms»; Aguado vía Nectario
+    María (DOC p. 266): autor de «the rain, hale, thunders and lightenings,
+    coldness, and drought; and the fruitfulness of the land». Ya en creencia
+    (creencia-001b y el hecho de las tormentas). Es cielo y tierra de cultivo:
+    NO nombra el mar.
+  esposas_y_parientes: >-
+    Casado con doña Sancha; «confederated and married with daughters of the
+    caribes» (Probanza 1526); hija casada con un principal de Hurihurebo, con
+    residencia en el pueblo del marido; los hijos, virilocales. Oliver lee
+    «caribes» como jirajaras (arriba).
+  sucesion: 'el oficio de diao «in the XVIth century inherited by the son of the diao»; Alexandre hereda «upon retiring» su padre (DOC pp. 268, 289). Ya en parentesco-001: nada nuevo.'
+  guerra: 'la costa «Military organizations were deemphasized» (DOC p. 291). Nada nuevo.'
+  comercio: 'sal hacia el interior; cuentas de concha (boroyda, mamas, querequetero o quitero) con valor «fixed», casi moneda (DOC p. 271). Ya en estructura_social_era2.yaml.'
+
+# ══════════════════════════════════════════════════════════════════════════
+# B. ARQUEOLOGÍA (cap. 4, §4.7-4.15)
+# ══════════════════════════════════════════════════════════════════════════
+
+arqueologia:
+
+  cronologia_dabajurana:   # tesis pp. 422-423 (verbatim de la clasificación)
+    tucua: 'A.D. 800 to 1100/1200'
+    urumaco: 'A.D. 1100/1200 to 1400/1450'
+    los_medanos: 'A.D. 1350 to 1600/1650'
+    bachaqueroan: {bachaquero: 'A.D. 1300-1600', las_minas: 'ca 1300-1500', supidebo_antunez: 'A.D. 1300-1450'}
+    campoman: 'Guaraguao, Punta Arenas, Playa Guacuco ca. A.D. 1000-1500; Campoma A.D. 1100-1300 (costa oriental: Cumaná, Barcelona, Margarita)'
+    tierran: 'Tierra de Los Indios y San Pablo, ca. A.D. 1000 to Post-Contact (Barquisimeto-Quíbor y Yaracuy)'
+    antes_de_800: >-
+      «I have not found any evidence of pottery complexes in coastal Falcón
+      prior to A.D. 800» salvo Coy-Coy y un Tortolitan en el Borojó (p. 434);
+      la costa la ocupaban «Meso-Indian hunters, gatherers, and fishermen until
+      very late», y Oliver cree que sobrevivieron «until, and probably well
+      after, the colonization of the region by the Dabajuran peoples»
+      (pp. 434-435). La costa que colonizan los dabajuranos NO estaba vacía.
+
+  expansion:   # p. 452 y p. 483, verificada en imagen la 483
+    - 'Early Urumaco: expansión «fairly rapid, perhaps a matter of two to three generations»; «By A.D. 1200 most of the region delimited above had been settled» (p. 452)'
+    - '«By A.D. 1100 to 1200 the Dabajuran (Earl Urumaco) had colonized much of Eastern Falcón [...], Coro, Paraguana, and had settled along major coastal rivers in western Falcón between Borojó and Mitare rivers. At this time the Dabajuran (Urumaco) had also learned maritime navigation, and had colonized the Netherlands Antilles» (p. 483)'
+    - '«by at least A.D. 1300 the Dabajuran peoples had sailed as far as the west coast of the Guajira» (p. 483)'
+    - 'Bachaqueroan: expansión tardía y «regresiva» hacia el oeste de Falcón y la cuenca de Maracaibo, 1350-1500 (pp. 427, 483)'
+
+  sitios_nombrados_en_el_texto:
+    # El inventario completo (134 códigos) ya está en 6-fusion/nodos_oliver_apendice_e.yaml.
+    # Aquí sólo lo que el TEXTO del cap. 4 dice de cada uno.
+    - {codigo: FAL-60, nombre: Túcua, dice: 'piedemonte, cul-de-sac; complejo Túcua abajo, Early Urumaco arriba; fogones con fauna (ver `fauna`); pocas conchas marinas', pagina: '436-443'}
+    - {codigo: FAL-69, nombre: Corralito, dice: '= El Mamón de Nomland 1935; junto al Urumaco (Codore); «extensive shell refuse»; se ve el cerro Santa Ana de Paraguaná', pagina: '436, 444-452'}
+    - {codigo: FAL-100, nombre: José Gregorio Hernández, dice: 'Los Médanos A y B; sin estratigrafía (dunas); tres C14; jarra de aceite española s. XVI en el sector 2', pagina: '452-476'}
+    - {codigo: FAL-101, nombre: La Maternidad, dice: 'mismo patrón que FAL-100; saqueado por turistas y huaqueros', pagina: '473-475'}
+    - {codigo: 'FAL-18 a 23', nombre: Supidebo, dice: 'Bachaqueroan; conchero «C» con una lente de concha SIN cerámica bajo arena estéril', pagina: '427, 459'}
+    - {codigo: 'FAL-30, 31, 33, 34', nombre: Quebrada Antúnez, dice: 'Bachaqueroan (posible)', pagina: '427'}
+    - {codigo: FAL-154, nombre: Santa Ana (Paraguaná), dice: 'Late Urumaco «still lavishly decorated», fecha terminal cal. A.D. 1415 (IVIC-14, de Zucchi)', pagina: '473'}
+    - {codigo: 'FAL-143 / FAL-149', nombre: 'Cayerúa / Moruy (Paraguaná)', dice: 'quizá un Los Médanos-A local, por pocos bordes huecos y más engobe rojo en los datos de Howard; sin el motivo zoomorfo negro-sobre-rojo — «do not allow me to be absolutely certain»', pagina: '471-472'}
+    - {codigo: FAL-7, nombre: 'Maticora', dice: 'planta de una maloca de 18 × 22 m con dos fogones, complejo Maticora: «the only known Pre-Columbian structure in Falcón State»', pagina: '431 n. 300'}
+    - {codigo: 'FAL-94 / FAL-93', nombre: 'Coy-Coy de Uria / La Maleta (Sierra de San Luis)', dice: 'cuevas con cerámica dabajurana tardía mezclada; Oliver liga lo Dabajuroide de 1500-1600 en la sierra a la huida de la costa y a las esposas jirajaras de Manaure', pagina: '432-433'}
+    - {codigo: FAL-77, nombre: Pueblo Viejo (NE de Mitare), dice: 'la sede propuesta de Manaure; concheros de chipichipi (foto del PDF de 2006)', pagina: 'tesis 277 n. 206; DOC 265'}
+
+  tabla_15_escaneo:
+    # Leída en IMAGEN en el escaneo de 1989, p. 459 (pdf 486). Se compara con
+    # 6-fusion/tabla15_c14_oliver.yaml, que salió del .DOC y dice «recalibrada
+    # por el propio Oliver con OxCal v3.10 para la versión PDF de 2006». El
+    # script mide si las cifras difieren.
+    pagina_impresa: 459
+    titulo: 'Table 15: C14 dates from Coastal Falcón and the Netherlands Antilles'
+    calibracion_declarada_en_el_texto: 'Stuiver and Reimer 1986 (pp. 440, 447, 456)'
+    filas:
+      - [ISGS-1173, 'Túcua', '1100 ± 70', 783, 944, 998]
+      - [ISGS-1174, 'Píritu-La Luz', '920 ± 110', 1000, 1098, 1220]
+      - [IVIC-223, 'Knip-9', '910 ± 50', 1027, 1112, 1192]
+      - [IVIC-224, 'Knip-9', '830 ± 60', 1158, 1215, 1261]
+      - [IVIC-12, 'La Luz, Parag.', '830 ± 50', 1160, 1215, 1260]
+      - [IVIC-18, 'Sta. Ana, Parag.', '790 ± 100', 1160, 1257, 1280]
+      - [ISGS-1255, 'Túcua', '790 ± 70', 1164, 1257, 1279]
+      - [I-4026, 'Tanki Flip', '765 ± 105', 1162, 1262, 1284]
+      - [I-4025, 'Tanki Flip', '740 ± 105', 1209, 1277, 1383]
+      - [IVIC-16, 'Sta. Ana, Parag.', '730 ± 110', 1210, 1278, 1387]
+      - [IVIC-250, 'Knip-26', '720 ± 60', 1258, 1279, 1285]
+      - [ISGS-1184, 'Corralito', '720 ± 70', 1257, 1279, 1377]
+      - [ISGS-1257, 'Corralito', '650 ± 70', 1278, 1336, 1393]
+      - [IVIC-249, 'Knip-27', '630 ± 50', 1281, 1344, 1395]
+      - [ISGS-1256, 'Supidebo*', '630 ± 150', 1260, 1344, 1430]
+      - [ISGS-1188, 'Antunez-5', '580 ± 110', 1280, 1362, 1430]
+      - [ISGS-1253, 'FAL-100: S1', '570 ± 70', 1299, 1363, 1424]
+      - [ISGS-1423, 'FAL-100: NW', '550 ± 110', 1280, 1407, 1440]
+      - [IVIC-14, 'Sta. Ana, Par.', '520 ± 120', 1299, 1415, 1451]
+      - [ISGS-1254, 'Supibedo 1b', '470 ± 70', 1409, 1432, 1452]
+      - [IVIC-241, 'Gaito', '340 ± 50', 1455, 1567, 1640]
+      - [ISGS-1424, 'FAL-100: S2', '330 ± 110', 1521, 1572, 1641]
+      - [IVIC-236, 'Savaan(eta)', '70 ± 60', 1880, 1927, 1955]
+    discrepancia_interna: >-
+      El TEXTO (p. 456, verificado en imagen) da ISGS-1423 como «500 ± 110
+      B.P.»; la TABLA, «550 ± 110». La calibración (1280-[1407]-1440) es la
+      misma en los dos. Una de las dos BP es errata del autor; no se decide aquí.
+    errata_de_sitio: 'la p. 436 dice «Túcua (FAL-69 [...])» y la p. 419 y el resto, FAL-60: FAL-69 es Corralito. Errata del original.'
+
+  cultura_material:
+    ceramica:
+      - 'dos vajillas netamente separadas: «Ordinary Ware» de cocina y almacén, tosca, y «Fine Ware» de servir, pintada; en algunas subtradiciones la fina guarda los huesos de los muertos (p. 421)'
+      - 'desgrasantes: calcáreo (zazare /çaçare/) en Túcua; en Corralito, CONCHA — «about 75%» guarataro, ostra fósil quemada y molida, y el resto otras conchas marinas (pp. 438, 447)'
+      - 'del budare al aripo: Túcua usa budares gruesos; en Early Urumaco aparecen los aripos finos y en Corralito el budare ya se abandonó. Oliver: «One is tempted to suggest a shift from caçabe (cassava bread) to arepa (maize "cake") consumption» (pp. 440-441)'
+      - 'el maíz, desde el principio: impresiones de tusa en las bases, del penúltimo nivel de Túcua en adelante; la técnica sigue viva en Pola Urbina de Sarinao, Paraguaná (pp. 441-443)'
+      - 'el cuenco tetrápodo biomorfo para beber, con pico y cabeza modelada, asociado a urnas de entierro secundario: Oliver lo liga al masato del segundo funeral del díao; el más antiguo fechado, Corralito, cal. A.D. 1278-[1336]-1393 (p. 442)'
+      - 'motivos: un BATRACIO aplicado (patas, manos, ojos, cabeza) que se abstrae con el tiempo hasta una «M» (p. 451); el motivo «claviforme», exclusivo dabajurano (p. 452); y en Los Médanos un AVE negro-sobre-rojo que llega de Portacelli y se vuelve espiral en el lugar (pp. 473-474)'
+    piedra: 'manos y metates abundantes en Túcua, Corralito y Los Médanos (p. 438); cuentas de cuarzo y serpentinita de baja calidad (DOC p. 271); fogones de piedra en anillo (p. 456)'
+    concha: 'cuentas de concha «as small as a pinhead», con valor por largo de sarta (DOC p. 271); concha como desgrasante (p. 447); concheros (abajo, `fauna`)'
+    metal: >-
+      CERO en la arqueología del cap. 4. El oro de los caquetíos es dato
+      ETNOHISTÓRICO (Neukomm 1535, Naveros y Vázquez de Acuña 1534): narigueras
+      y orejeras biomorfas, brazaletes, collares; Oliver añade que el oro «is
+      negligible in the coastal plains of Falcón» y tenía que venir de fuera
+      — la Guajira/Ranchería o las serranías de Nirgua-Buria (tesis pp. 217-218).
+    entierros: 'urnas de entierro secundario; en Túcua, un grupo de huesos humanos cortados y quemados junto a cuencos tetrápodos (tesis p. 284); «more than one type of (secondary) burial» por fase (tesis p. 284)'
+
+  contactos:
+    norte_antillas: >-
+      Sólo las ABC, y dentro de la polity: fechas en Knip-9, Knip-26, Knip-27
+      (Curazao), Tanki Flip y Savaneta (Aruba); el estilo Santa Cruz de du Ry =
+      Early Urumaco y el Savaneta = Late Urumaco / Los Médanos-A (p. 424); «the
+      great majority of the archaeological sites reported for Aruba, Curacao
+      and Bonaire» son Urumaco (p. 452). NINGÚN contacto con las Antillas
+      Mayores en el cap. 4: medido en la medición §antillas.
+    ruta_maritima_oeste: >-
+      El hallazgo mayor del capítulo. Tras A.D. 1300, cuencos negro-sobre-rojo
+      con un ave idéntica a la de Portacelli-2 (valle del Ranchería) aparecen
+      en FAL-100 y FAL-101, hechos EN Coro (pasta local), y en Curazao; en
+      ningún sitio intermedio por tierra. Oliver: «This contact and diffusion
+      must have involved a maritime route, from Ranchería [...] to Curacao, and
+      from there to J. Gregorio Hernández (FAL-100) and La Maternidad
+      (FAL-101)» (pp. 474-475). Y propone que la gente de Los Médanos eran los
+      caquetíos de frontera de Chichibacoa y el Cabo de la Vela «who commuted
+      via the Islands back and forth to Coro» (p. 477). Coanaos y wanebucanes
+      son sus candidatos a la gente de Portacelli (p. 476).
+    al_lado_de_casale_2024: >-
+      Dato del coordinador (otra parcela): Casale 2024 une cada isla ABC sólo
+      con la costa de enfrente. Oliver no lo contradice en lo LOCAL (la gente de
+      Curazao con «strong kinship ties to the Caquetío of Paraguaná», p. 476),
+      pero propone además un tránsito largo Ranchería–Curazao–Coro. Las dos
+      cosas pueden ser ciertas; si Casale midió redes y no halló ese tránsito,
+      ése es el punto a contrastar.
+    oeste_por_tierra: 'Bachaqueroan hacia Maracaibo (1350-1500); tiestos «Mauroa-like» en Kusi''a, Guajira oriental (p. 432); Hakaritama emparentado con el guajiro (p. 411 n. 285)'
+    este: 'Dabajurano en Campoma (Cumaná) y Margarita; tiestos Urumaco de comercio en Chuao (p. 428); y en Nueva Cádiz de Cubagua (1516-1543), por caquetíos cautivos «as pearl divers for the Spanish» — COLONIAL (p. 428)'
+
+# ══════════════════════════════════════════════════════════════════════════
+# C. FAUNA — esquema común del preámbulo de la campaña
+# ══════════════════════════════════════════════════════════════════════════
+# `especie_probable`: sólo si la fuente la da (Donax spp. es la única).
+# `sonido`: la fuente no describe el sonido de ningún animal (null en todos).
+# Advertencia general, y es un cero bien medido: «all of the faunal remains
+# recovered at Túcua and at Corralito. These remain lost as well» (tesis
+# p. 438 n. 305). NO hay análisis zooarqueológico publicado de Oliver; lo que
+# sigue es lo que el texto nombra de pasada.
+
+fauna:
+
+  # ── zooarqueología (cap. 4) ──
+  - nombre_en_fuente: deer (female skull)
+    especie_probable: null
+    texto: "«dense mammal bone debris, including a female skull of a deer, rabbits, snake vertebra, avian bones, tapir, and other rodents»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 439
+    lugar: 'Túcua (FAL-60), fogones-horno F-25 a F-27, excavación 1'
+    epoca: precontacto
+    epoca_nota: 'niveles Túcua / Early Urumaco: ISGS-1173 cal. A.D. 944 e ISGS-1255 cal. A.D. 1257'
+    verificado: imagen
+    sonido: null
+  - nombre_en_fuente: rabbits
+    especie_probable: null
+    texto: "(misma frase) «rabbits»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 439
+    lugar: Túcua (FAL-60)
+    epoca: precontacto
+    sonido: null
+  - nombre_en_fuente: snake vertebra
+    especie_probable: null
+    texto: "(misma frase) «snake vertebra»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 439
+    lugar: Túcua (FAL-60)
+    epoca: precontacto
+    sonido: null
+  - nombre_en_fuente: avian bones
+    especie_probable: null
+    texto: "(misma frase) «avian bones»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 439
+    lugar: Túcua (FAL-60)
+    epoca: precontacto
+    sonido: null
+  - nombre_en_fuente: tapir
+    especie_probable: null
+    texto: "(misma frase) «tapir»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 439
+    lugar: Túcua (FAL-60), piedemonte al este de Dabajuro
+    epoca: precontacto
+    nota: 'apoya `kama` danta (ver la propuesta léxica): hubo tapir en el territorio dabajurano, aunque en el piedemonte, no en la península'
+    sonido: null
+  - nombre_en_fuente: other rodents
+    especie_probable: null
+    texto: "(misma frase) «and other rodents»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 439
+    lugar: Túcua (FAL-60)
+    epoca: precontacto
+    sonido: null
+  - nombre_en_fuente: marine shells (a few basketful "dumps")
+    especie_probable: null
+    texto: "«Túcua has but a few basketful \"dumps\" of marine shells, whereas Corralito --as all near-coastal Dabajuran sites-- is characterized by extensive shell refuse [...] Otherwise, the terrestrial faunal remains are nearly identical»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 438
+    lugar: 'Túcua (piedemonte) frente a Corralito y todos los sitios dabajuranos cerca de la costa'
+    epoca: precontacto
+    nota: 'la concha marina sube tierra adentro, en canasta; la fauna terrestre es la misma en la costa y en el piedemonte'
+    sonido: null
+  - nombre_en_fuente: shell-fish; deer, rabbit, and peccary (báquiro) bones
+    especie_probable: null
+    texto: "«These sites also show intensive shell-fish collection, although there are abundant mano-metate artifacts, as well as deer, rabbit, and peccary (báquiro) bones»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 475
+    lugar: 'Los Médanos de Coro (FAL-100, FAL-101), istmo de Paraguaná'
+    epoca: precontacto
+    epoca_nota: 'Los Médanos A, cal. A.D. 1363 y 1407; el sector 2 ya es de contacto (1521-1572)'
+    sonido: null
+  - nombre_en_fuente: guarataro (fossilized oyster)
+    especie_probable: null
+    texto: "«about 75% of the sample consisted of what is locally designated as guarataro; that is, a fossilized oyster (Tertiary?) that has been burned and crushed [...] The remainder are assumed to be other kinds of marine shells»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 447
+    lugar: Corralito (FAL-69), desgrasante de la cerámica de cocina
+    epoca: precontacto
+    nota: 'no es alimento: es concha como materia prima de la olla'
+    sonido: null
+  - nombre_en_fuente: 'aceramic shell lense (Shell mound "C")'
+    especie_probable: null
+    texto: "«Supidebo Coast, Shell mound \"C\", aceramic shell lense beneath sterile sand and, in turn, beneath a ceramic shell lense»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 459
+    lugar: 'costa de Supidebo, Borojó (Falcón occidental)'
+    epoca: precontacto
+    epoca_nota: 'ISGS-1256 cal. A.D. 1260-[1344]-1430; la lente sin cerámica es anterior'
+    verificado: imagen
+    sonido: null
+  - nombre_en_fuente: chipi-chipe (Donax spp.) middens
+    especie_probable: Donax spp.
+    texto: "«The eroded surfaces of Pueblo Viejo site (FAL-77). The arrows point to discrete chipi-chipe (Donax spp.) middens»"
+    obra: oliver-1989-cap3
+    pagina_impresa: 265
+    pagina_nota: 'paginación DOC; es un pie de foto «added for the PDF version only» (2006), no de la tesis de 1989'
+    lugar: 'Pueblo Viejo (FAL-77), al NE de Mitare — la sede que Oliver propone para Manaure'
+    epoca: precontacto
+    epoca_nota: 'el conchero es precontacto por el sitio; la observación, de la revisión de 2006'
+    al_lado: 'Zavala Reyes et al. 2018, Tabla II p. 405 (otra parcela): chipichipi 42,4 % de la malacofauna fechada, botuto 1,0 %'
+    sonido: null
+
+  # ── etnohistoria (cap. 3) ──
+  - nombre_en_fuente: mariscos or marine shells
+    especie_probable: null
+    texto: "«They also use some mariscos or marine shells, that they buy from other nations, and because they live far from it [sea] they esteem them as exotic items, since they know nothing about the sea and never go there»"
+    obra: oliver-1989-cap3-vecinos
+    pagina_impresa: 243
+    lugar: 'tierra ayomán, entre Carohana y el Tocuyo'
+    epoca: contacto-temprano
+    epoca_nota: Federmann 1530
+    sonido: null
+  - nombre_en_fuente: fish (lake fish sold by the Onoto)
+    especie_probable: null
+    texto: "«they are the lords of the Lake, and fish with nets and hooks many kinds of fish that inhabit the Lake»"
+    obra: oliver-1989-cap3
+    pagina_impresa: 203
+    pagina_nota: paginación DOC; Pérez de Tolosa 1546
+    lugar: lago de Maracaibo (polity occidental, no la costera)
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: game; excellent fishing
+    especie_probable: null
+    texto: "«with lots of game [for hunting] and excellent fishing, and hammock cloth»"
+    obra: oliver-1989-cap3
+    pagina_impresa: 261
+    pagina_nota: paginación DOC; Pérez de Tolosa 1546 sobre la costa de Borburata a Coro
+    lugar: costa de Falcón
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: "partridges, rabbit, and deer; great fisheries of fish"
+    especie_probable: null
+    texto: "«Abundantísima de toda caza: / Hay perdices, conejos y venados, / Y grande pesquería de pescados»"
+    obra: oliver-1989-cap3-vecinos
+    pagina_impresa: 252
+    lugar: costa de Falcón
+    epoca: colonial
+    epoca_nota: 'Castellanos 1589, testigo de los años 1540; la misma estrofa ya pone cabras y ganado en los campos'
+    nota: 'ya en el corpus (ecología: venados de Castellanos); aquí sólo se registra que Oliver la cita'
+    sonido: null
+
+  # ── fauna nombrada en las listas de voces (Apéndice A) ──
+  # Las voces caquetías (A-9) y las del vecino jirajarano (A-8). La época de la
+  # atestación sale de la fuente que Oliver da para cada una (propuesta léxica).
+  - {nombre_en_fuente: 'báquiro — peccary', especie_probable: null, texto: '3. báquiro | bákiro | báquiro | peccary', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'bisure — lagartija', especie_probable: null, texto: '8. bisure | bisure | lagartija | lizard species', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'cama — danta', especie_probable: null, texto: '15. cama | K-ama | danta | tapir', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'Barquisimeto (Relación de 1579, según el cap. 2)', epoca: colonial, sonido: null}
+  - {nombre_en_fuente: 'Cegue — lechuza', especie_probable: null, texto: '20. Cegue | cegue | lechuza | owl', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'coque — hormiga roja', especie_probable: null, texto: '23. coque | koke | hormiga roja | red ant species', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'Barquisimeto (Relación de 1579: «These [ants] destroy all the trees»)', epoca: colonial, sonido: null}
+  - {nombre_en_fuente: 'corie — armadillo', especie_probable: null, texto: '24. corie | korie | armadillo | armadillo', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'chaure — búho', especie_probable: null, texto: '26. chaure | chaure | búho | owl', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'chiriguare — gavilán', especie_probable: null, texto: '29. chiriguare | chiriware | gavilán | hawk', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'chuchube — paraulata', especie_probable: null, texto: '30. chuchube | chuchube | paraulata | bird species', obra: oliver-1989-apendice-a, pagina_impresa: 593, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'guacoa — especie de paloma', especie_probable: null, texto: '35. guacoa | wakoa | especie de paloma | pigeon species', obra: oliver-1989-apendice-a, pagina_impresa: 594, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'guaranaro — pez lisa', especie_probable: null, texto: '38. guaranaro | waranaro | pez lisa | fish species', obra: oliver-1989-apendice-a, pagina_impresa: 594, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, nota: 'la ÚNICA voz marina de las 50 de la A-9', sonido: null}
+  - {nombre_en_fuente: 'guaro — cotorra', especie_probable: null, texto: '39. guaro | waro | cotorra | parrot', obra: oliver-1989-apendice-a, pagina_impresa: 594, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'tara — langosta', especie_probable: null, texto: '49. tara | tara | langosta | locust', obra: oliver-1989-apendice-a, pagina_impresa: 594, lugar: 'sin lugar (tabla general)', epoca: contacto-temprano, sonido: null}
+  - {nombre_en_fuente: 'auri — perro', especie_probable: null, texto: '50 auri | auri | perro | dog', obra: oliver-1989-apendice-a, pagina_impresa: 594, lugar: 'lista CUYÓN (Barquisimeto), no caquetía', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Deer — agui / anguiye / haguio', especie_probable: null, texto: 'f. Deer | agui | anguiye/agúid | haguio', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'jirajara, ayomán, cuyón (Falcón-Lara)', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Snake — tub- / ugi/juji/jusji / juji', especie_probable: null, texto: 'g. Snake | tub- | ugi/juji/jusji | juji', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'jirajara, ayomán, cuyón', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Rabbit — soux / sap/sop', especie_probable: null, texto: 'h. Rabbit | ---- | soux | sap/sop', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'ayomán, cuyón', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Armadillo — dok / doux/dou / dot/dok', especie_probable: null, texto: 'i. Armadillo | dok | doux/dou | dot/dok', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'jirajara, ayomán, cuyón', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Peccary — monduj / monduo / moi', especie_probable: null, texto: 'j. Peccary | monduj | monduo | moi', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'jirajara, ayomán, cuyón', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Tapir — yoye / deleryi (yoye)', especie_probable: null, texto: 'k. Tapir | yoye | deleryi (yoye) | ----', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'jirajara, ayomán', epoca: moderno, sonido: null}
+  - {nombre_en_fuente: 'Dog — peru (Spanish) / auri (ARAWAKAN)', especie_probable: null, texto: '21. Dog | peru (Spanish) | peru (Spanish) | auri (ARAWAKAN)', obra: oliver-1989-apendice-a, pagina_impresa: 592, lugar: 'jirajara, ayomán, cuyón', epoca: moderno, sonido: null}
+
+  # ── fauna en la iconografía (cap. 4): no es fauna comida, es fauna PENSADA ──
+  - nombre_en_fuente: batracian motif
+    especie_probable: null
+    texto: "«This motif, resembling a batracian, also seems to shift in style from a realistic depiction in Early Urumaco phase (at Corralito), showing legs, hands, eyes, and head, to a very abstract design consisting of just an \"M\" shaped fillet»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 451
+    lugar: 'cuencos del complejo Urumaco (Corralito y costa)'
+    epoca: precontacto
+    sonido: null
+  - nombre_en_fuente: bird (avemorphic motif)
+    especie_probable: null
+    texto: "«Most diagnostic of these designs is the zoomorphic motif of what appears to be a bird. The exact same design [...] is found only in Portacelli»"
+    obra: oliver-1989-cap4
+    pagina_impresa: 473
+    lugar: 'Los Médanos (FAL-100, FAL-101), Curazao y Portacelli (Ranchería)'
+    epoca: precontacto
+    epoca_nota: 'después de A.D. 1300; el ave se vuelve espiral en Los Médanos-B, ya de contacto'
+    sonido: null
+
+# ══════════════════════════════════════════════════════════════════════════
+# D. EL MAR — lo que Oliver dice, y el cero bien medido
+# ══════════════════════════════════════════════════════════════════════════
+# La pregunta de Miguel: ¿era el mar esencial en la cosmovisión caquetía?
+# Respuesta de Oliver 1989: el mar es ESENCIAL en la economía, el territorio y
+# la expansión de los caquetíos costeros, y no aparece NUNCA en lo que dice de
+# su creencia. El cero está medido (medición §mar): en qué ventanas de texto
+# coinciden una palabra del mar y una de la creencia, y qué dicen.
+
+mar:
+  lo_que_si_dice:
+    - {tema: navegacion, pagina: 483, obra: oliver-1989-cap4, texto: '«At this time the Dabajuran (Urumaco) had also learned maritime navigation, and had colonized the Netherlands Antilles»', verificado: imagen}
+    - {tema: ruta, pagina: '474-475', obra: oliver-1989-cap4, texto: '«This contact and diffusion must have involved a maritime route, from Ranchería [...] to Curacao, and from there to [...] FAL-100 [...] and [...] FAL-101»'}
+    - {tema: ruta, pagina: 475, obra: oliver-1989-cap4, texto: '«I would hypothesize that these FAL-100 people often travelled to Curacao and along with other Dabajurans of Curacao travelled to the coast of the lower Ranchería (Río de la Hacha)»'}
+    - {tema: parentesco_insular, pagina: 476, obra: oliver-1989-cap4, texto: '«there is no doubt that the inhabitants of Curaçao had strong kinship ties to the Caquetío of Paraguaná»'}
+    - {tema: territorio, pagina: 264, obra: oliver-1989-cap3, edicion: doc, texto: 'amuayes y guaranaos: «Each sub-group had its own beach heads, entitling them to specific fishing grounds»'}
+    - {tema: concha, pagina: 438, obra: oliver-1989-cap4, texto: 'los sitios dabajuranos cerca de la costa, «extensive shell refuse»', verificado: imagen}
+    - {tema: concha_como_moneda, pagina: 271, obra: oliver-1989-cap3, edicion: doc, texto: 'cuentas de concha «as small as a pinhead», «almost like a monetary system»'}
+    - {tema: sal, pagina: 189, obra: oliver-1989-cap3, edicion: doc, texto: '«The Caquetío traded maritime products, such as salt, for gold»'}
+    - {tema: pescadores, pagina: 263, obra: oliver-1989-cap3, edicion: doc, texto: 'los palafitos de San Bartolomé: pescadores especializados — caquetíos, o supervivientes arcaicos en simbiosis, o un grupo subordinado mixto; Oliver no decide'}
+    - {tema: pescadores_arcaicos, pagina: '434-435', obra: oliver-1989-cap4, texto: 'la costa, ocupada por «Meso-Indian hunters, gatherers, and fishermen» hasta muy tarde, que sobrevivieron a la llegada dabajurana'}
+    - {tema: el_mar_visto_de_tierra_adentro, pagina: 243, obra: oliver-1989-cap3-vecinos, texto: 'los ayomanes: «they know nothing about the sea and never go there»'}
+    - {tema: palabra, pagina: 241, obra: oliver-1989-cap3-vecinos, texto: 'n. 167: «The Spanish had problems in interpreting the concept of bodies of water in the various indigenous languages, where distinctions between our "sea", "lake", "lagoon", etc. were not the same as theirs»'}
+  lo_que_no_dice: >-
+    Ni un rito, un mito, un ser, una ofrenda ni un tabú ligado al mar para la
+    polity costera. Lo sagrado que Oliver atribuye a la costa es el poder de
+    Manaure sobre la lluvia, el granizo, el trueno, el frío, la sequía y «the
+    fruitfulness of the land» (DOC p. 266): cielo y tierra de labranza. El
+    rito descrito con detalle (la muchacha dada «al sol por mujer» junto al
+    río) es de Barquisimeto. La iconografía dabajurana es de batracio y de ave,
+    no de pez ni de concha. Y la A-9, el vocabulario caquetío que Oliver
+    reúne, trae una sola voz marina (guaranaro, la lisa) y ninguna palabra
+    para 'mar' — la del proyecto, `para`, sale de su cap. 2.
+  lectura_para_miguel: >-
+    Oliver no refuta que el mar fuera central en la cosmovisión: no la tiene.
+    Su fuente de creencia costera es mínima (Ampíes, Aguado, Oviedo para el
+    funeral) y ninguna la pregunta. Lo que SÍ sostiene, con fechas, es que la
+    polity costera se hizo NAVEGANDO: colonizó las ABC hacia 1100-1200, tuvo
+    parientes en Curazao y, desde 1300, una ruta de mar hasta el Ranchería que
+    cambió hasta la manera de servir la comida en Coro. Si el mar era esencial
+    en la vida, lo era en la de los que cruzaban. Llevar eso a CREENCIA es un
+    paso que la fuente no da: iría como `hipotetico`, no como dato.

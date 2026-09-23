@@ -12,9 +12,9 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21) + entradas sueltas de fauna de tierra (cachicamo, mapurite, mato, cocuyo, sucumba) y la búsqueda de araña/tarántula (FA1, 2026-09-22); sin barrido sistemático de fauna"
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21) + entradas sueltas de fauna de tierra (cachicamo, mapurite, mato, cocuyo, sucumba) y la búsqueda de araña/tarántula (FA1, 2026-09-22); sin barrido sistemático de fauna + las AVES: entradas con glosa de ave, descripción y onomatopeya (campaña de fauna FA2, 2026-09-22)"
 verificado: 2026-09-10
-minado: 2026-09-21
+minado: 2026-09-22
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
 ---
 
@@ -316,3 +316,43 @@ del texto son una planta «como con tela de araña», un escarabajo y una
 «pollera» de niño (`6-fusion/scripts/buscar_tarantula_azul.py`). No es un
 barrido sistemático de fauna: queda para otra campaña. Lo usa
 `6-fusion/fauna_paraguana_tierra_2026-09-22.yaml`.
+
+---
+
+## Bitácora 2026-09-22 — las aves: qué se ve y qué se oye (campaña de fauna, FA2)
+
+**Pregunta.** ¿Qué aves de Paraguaná describe Alvarado, y cuáles da con la
+onomatopeya de su canto o con un nombre que la imita?
+
+**Cómo.** El mismo `pdftotext -enc UTF-8` (703.917 bytes), partido por lemas y
+filtrado por las entradas cuya cabeza nombra un ave (script de sesión; el
+resultado vive en el YAML). Desfase medido de nuevo: impresa = pdf − 30. Cada
+onomatopeya que se cita se miró **en imagen** (pymupdf), y hace falta: el
+pdftotext da `ííízchará-cá` donde la página dice *ua-chará-cá*, y `tii-tu-cú`
+donde dice *tu-tu-cú*.
+
+**Qué dio** (todo en `6-fusion/fauna_paraguana_aves_2026-09-22.yaml`):
+
+- Onomatopeyas literales, verificadas en imagen: GUACHARACA p. 143
+  (*ua-chará-cá*, «anuncian mui temprano la llegada del día»), MARAQUÍTA
+  p. 212 (*tu-tu-cú*, y el «ruido de castañuelas» de las alas), TITIRIJÍ p. 291
+  (*ti-tiri-gi-gí*), COROCÓRO p. 92 («la palabra *coró* repetida»).
+- Nombres que la fuente dice onomatopéyicos: GUACÓA p. 143 (las formas
+  calínago, cumanagoto, chaima, macusi, acavayo, caliña y **aruaco** «imitan…
+  el canto de esta ave» — la `wakoa` caquetía es una de ellas), PITIRRÍ p. 255,
+  SUNSÚN p. 279 (el colibrí, por el zumbido), GURUGÚSO p. 170 (el zamuro de
+  Margarita, «quizá»). Estas tres, sin verificar en imagen.
+- Descripciones visuales citables de caricare (p. 65), corocoro (p. 82),
+  cotúa (p. 96), chiriguare (p. 126), guanaguare (p. 151), güira (p. 169),
+  oripopo (p. 233), samuro (p. 270), toche (p. 293), turpial (p. 302).
+- ⭐ TOCOCO p. 292 (pelícano), verificado en imagen: la cadena comparada que le
+  faltaba a `tokoko` del lexicón (gal. *tokoka* «flamenco», car. *tokóko* y ar.
+  *tukkuku* «corocoro») y la pregunta **«¿Es el TOGOGO de Coro?»**, que Esteves
+  1989 p. 134 contesta a su modo: «Togogo: ave ansérida». Ver el issue
+  `fauna-paraguana-aves-2026-09-22.md`.
+
+**Qué NO dio.** DARA, CHUCHUBE, CRISTOFUÉ, PARAULATA y CURRUCUCÚ no son lemas
+(0, medido por lema sin tilde): los nombres de ave más paraguaneros no están
+en un glosario nacional de voces indígenas. CHÁURE (p. 116) sí está, pero como
+*Strix flammea* (la lechuza de campanario), no como la lechuza de los arenales
+que glosa Zavala: dos lecturas del mismo nombre, anotadas en el YAML.

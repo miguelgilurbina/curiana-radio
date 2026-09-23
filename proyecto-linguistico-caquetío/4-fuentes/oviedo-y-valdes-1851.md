@@ -5,12 +5,14 @@ autor: "Fernández de Oviedo y Valdés, Gonzalo"
 anio: "1851 [s. XVI]"
 genero: cronica
 publicacion: "Madrid, Imprenta de la Real Academia de la Historia, 1851. Primera parte (libros I-XIX), ed. José Amador de los Ríos, cotejada con el códice original"
-local: "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf"
-paginas: "766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118"
+local:
+  - "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf"
+  - "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf"
+paginas: "Cuerpo: impresas 1-614 (libros I-XIX); índice general 615-648. Copia íntegra (`_completo`): 776 pdf, desfase medido en `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.sondas_medidas.desfase_tomo_I_copia_integra`. Copia truncada: 766 pdf, impresa = pdf − 118 (− 117 hacia la 473)"
 capa_texto: si
 estado_minado: minada-parcial
-cobertura: "medida, no escrita a mano (+ el guanín y la calidad de intermediación, 2026-09-22, campaña del taíno 2 T7): `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos`. Las cifras las emite `python 6-fusion/scripts/medir_taino_oviedo.py --check`"
-acceso: "El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar todavía"
+cobertura: "medida, no escrita a mano. T1 (voces taínas, 2026-09-21) y T7 (guanín): `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos` (`medir_taino_oviedo.py --check`). M3 (2026-09-22: libro XIX entero, historia natural XII-XIV, las frutas de Venezuela del VIII, VI y XI, el intercambio de nombres del XVI): `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.cobertura`, `meta.libros_leidos` y `meta.sondas_medidas` (`medir_oviedo_restante.py --check`)"
+acceso: "Dos copias. La íntegra, del ítem de Internet Archive de la Biblioteca Ludwig von Mises (UFM), la misma colección de los tomos II-IV, `_completo.pdf`, se descargó el 2026-09-22 (https://archive.org/details/historiageneral00fernguat, dominio público — NOT IN COPYRIGHT; 55.449.811 B; sha1 e90c436186f5afd875a67078b11a6631875f09be = el del ítem; sha256 02e88f2beffea91494f34e48e8bbe294a8d46626bf8c2d0383accf9c9be2369a; commiteada, < 95 MB): pymupdf la abre sin reparar y renderiza TODAS las páginas. La vieja, de origen no documentado, está truncada (sin imagen desde la impresa 155), tiene otra paginación de PDF y otra capa OCR (lee `dalihao` donde la íntegra lee `datihao`); se conserva porque T1 cita su paginación. Los tomos II-IV: ver [[oviedo-y-valdes-1852-1855]]"
 prioridad: alta
 tareas: [F9]
 verificado: 2026-09-22
@@ -48,6 +50,10 @@ nadie había probado. **Cuando los dos fallan, probar MuPDF antes de declarar
 ilegible una fuente.**
 
 ## ⚠️ Pero la imagen sólo llega hasta la impresa 154
+
+> 🟢 **Superado el 2026-09-22 (M3):** eso vale para la copia truncada. La
+> copia íntegra (`_completo.pdf`, ver `acceso`) renderiza todas las páginas.
+> Lo de abajo sigue valiendo como historia y como aviso sobre la cursiva.
 
 Medido página a página sobre las 766: las impresas **1-154** se renderizan; de
 la **155 a la 618** el escaneo está roto (`format error: object is not a
@@ -219,21 +225,81 @@ la de «los indios de la Provincia de Venezuela» está en un tomo que el repo n
 tiene y llega por [[jahn-1927]] p. 213 n. 29. Antes de llamarlo «cognado que
 hace match», leer la segunda.
 
+## 2026-09-22 — M3: el libro XIX, la historia natural y `guaitiao` (tercera campaña)
+
+**Qué se preguntó.** Lo que T1 dejó sin leer: el libro XIX, los libros de
+historia natural (todo animal de Tierra Firme o de las costas de Venezuela, con
+su SONIDO si Oviedo lo da, en la clave `fauna:` común), las voces de esos
+pasajes y la palabra `guaitiao`. Datos en
+[`6-fusion/oviedo_restante_2026-09-22.yaml`](../6-fusion/oviedo_restante_2026-09-22.yaml);
+discusión en
+[`6-fusion/issues-pendientes/oviedo-restante-2026-09-22.md`](../6-fusion/issues-pendientes/oviedo-restante-2026-09-22.md).
+Cifras: `python 6-fusion/scripts/medir_oviedo_restante.py --check`.
+
+**Primero, la copia.** Se descargó la **copia íntegra** del tomo (ver
+`acceso`). Renderiza todas las páginas: se acabó el límite de la impresa 154.
+Todo lo que esta parcela cita en cursiva está leído en la página.
+
+**🔴 Lo que resultó falso al medirlo:**
+
+- **El libro XIX no es «Tierra-Firme» ni llega a la 618.** Su título: «el qual
+  tracta de las islas de Cubagua é la Margarita». Ocupa las impresas
+  **586-614**; en la 615 empieza el índice general (esta ficha decía «618
+  impresas de cuerpo + índice (619-648)»: el cuerpo termina en la 614). Y no
+  trae Coro, Paraguaná, Coquibacoa, Curiana, las islas ABC, Manaure ni Ampíes:
+  leído entero, el cero es de la fuente.
+- **`dalihao` era el OCR de la copia truncada: la página dice `datihao`** (p.
+  473, cursiva, con zoom). Queda cerrado el punto 1 de «Qué falta».
+- **`talara`, el pez de Cubagua, es `tatara`** en la página (pp. 209 y 592).
+- **Los capítulos venezolanos del libro VIII no son una segunda fuente**: el
+  propio Oviedo dice en el t. II p. 331 que los añadió a esta primera parte con
+  la información del obispo Bastidas, y el de los cardones lo nombra.
+
+**Qué ha dado, lo mejor:**
+
+- **`dactos` / `dacto`** (lib. VIII cap. XXVII, pp. 311-312) — «los quales
+  llaman los indios de Veneçuela dactos»: la primera fuente primaria de `dato`,
+  con su estación de fruto. Y **`mamon`** (p. 327), **`çimirucos`** (p. 328), el
+  **vino de comoho** (p. 315).
+- **`thenocas` y `coçixas`**, las perlas en la costa de Cubagua (p. 591).
+- **`uchibican`**: «en la lengua desta Isla Española se diçe serra, en lengua
+  destos magueyes ó chacopati el trocar quiere deçir uchibican» (pp. 208, 385).
+  El único par Tierra Firme–Antillas de los cuatro tomos, dentro de un rito: al
+  eclipse de luna los chacopati le tiran flechas y lo truecan todo con sus
+  vecinos, pueblo por pueblo.
+- **Los indios de Maracapana gritan «Hayti, Hayti»** a los navíos en 1520 (p.
+  598): conocen el nombre indígena de La Española — conocimiento colonial.
+- **`bagua`, la mar** (p. 436) y **`manicato`** (p. 435), voces taínas que T1 no
+  recogió.
+- **Fauna con sonido**: el flamenco de Cubagua «graznan como ánsares» (p. 592),
+  la cascabel de Margarita (p. 209), el lobo marino que ronca (p. 428), el
+  pecarí que castañetea (p. 409), la bivana de Paria que silba (p. 417), el
+  perico ligero y sus seis notas (p. 413). La tabla, en el issue §A.
+
+**`guaitiao`: cero, y ahora con la página delante.** Oviedo cuenta el
+intercambio de nombres en San Juan (pp. 467, 469, 472-473: «es de costumbre de
+los indios en estas islas, que quando toman nueva amistad, toman el nombre
+proprio del capitan») y en ninguno de esos pasajes aparece la palabra. La voz que
+da es `datihao`. La nota de `waitiao` en el lexicón («lo describe Oviedo para el
+área circuncaribe») no se sostiene: decisión en el issue §B.
+
+**Qué NO dio:** ningún canto de ave de la costa de Venezuela aparte del
+flamenco; las aves que cantan son de La Española. El capítulo de ranas y sapos
+no dice cómo suenan. Nada de la gente de las islas ABC.
+
 ## Qué falta
 
-1. **Conseguir una copia con la imagen completa** (Internet Archive, ed. Amador
-   de los Ríos). Desbloquea las 47 formas que hoy son sólo OCR — entre ellas
-   `eracra`, `datihao` y las cinco batatas. Es lo más rentable de toda la lista.
-   🔴 **Y es ahora más urgente**: con t7.d1 medido, `dalihao` es el único
-   portador de la forma en todo el volumen y la imagen no llega a la p. 473.
-2. **Leer el Libro XIX** (impresas 586-618): Tierra-Firme, Cubagua, Cumaná,
-   Maracapana. Es el que más costa de Venezuela tiene y quedó sin leer.
-3. **Leer los libros XV y XVIII** y el grueso de VIII-XVII fuera de las páginas
-   ya citadas.
-4. **Tomo II** para el funeral del díao (pp.299-300, 329) y el ayuno ritual
-   (p.329), que es lo que sostiene `creencia-010` y `creencia-004b` vía Arcaya.
-5. **Decidir lo de `creencia-001`**: Oviedo atribuye `dalihao` a San Juan. El
-   corpus lo trata como caquetío. Ver §C del issue.
+1. ~~Conseguir una copia con la imagen completa~~ — **hecho** (2026-09-22). Lo
+   que queda es USARLA para las formas `ocr-sin-imagen` de T1 (`eracra`, las
+   cinco batatas…): cuántas son lo dice `meta.cobertura.por_verificacion` de
+   `taino_oviedo_valdes_1851.yaml`.
+2. ~~Leer el Libro XIX~~ — **hecho** por M3: es Cubagua y Margarita, 586-614.
+3. **El libro VI («de los depósitos»)** entero: es el cajón de sastre de Oviedo
+   y M3 sólo leyó los caps. XVI y XXII-XXIV. Allí aparecieron los chacopati.
+4. **Los libros XV y XVIII**, y las plantas de La Española de VIII-XI fuera de
+   las páginas ya citadas.
+5. ~~Tomo II para el funeral del díao~~ — hecho por T6 ([[oviedo-y-valdes-1852-1855]]).
+6. **Decidir `creencia-001` y `waitiao`** (issues de T6 y de M3).
 
 ## Qué sostenía antes (todo de segunda mano) — y qué cambia
 
