@@ -1,0 +1,96 @@
+# Decisiones de Miguel para CONGELAR LA BASE (2026-09-22)
+#
+# «Debemos decidir un punto base desde el cual ya hacer una simulación más larga
+# y esa mostrarla» (Miguel, 2026-09-21). Lo que cambia el prompt va todo junto
+# en una sola tanda, medida una vez; después se etiqueta el motor y no se toca
+# hasta que la serie larga cierre. Cada decisión con su cita literal.
+
+db.1_raiz_inventada:
+  tipo: decisión de canon + corte de serie (C mueve el score)
+  issue: 6-fusion/issues-pendientes/raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md
+  pregunta: >-
+    ¿Puede un agente inventar una RAÍZ nueva, o sólo combinar raíces del lexicón?
+    A: la raíz tiene que estar en el lexicón (lo aplicado). B: la glosa avala la
+    raíz si declara componentes conocidos. C: se perdona la raíz que difiere en
+    un carácter de una clave (recupera `pütshi-bana`, no `lumina`).
+  decision_literal: >-
+    «Yo creo que A + C está bien, el tema es que justamente si dejamos que
+    invente raíces debe ser el agente caquetío, no el agente "español - inglés -
+    latín - caquetío" me entiendes? Yo creo que lo que si deberíamos dejar es
+    que inventen agujeros de cosas que no tenemos de la lengua. Yo creo que el
+    A + C está bien por ahora.»
+  eleccion: A + C, «por ahora»
+  lectura_operativa: >-
+    (A) Una acuñación cuya raíz no está en el lexicón no se registra, no compite
+    y no cuenta como forma emergente — lo que ya hace `es_raiz_de_ninguna_parte()`.
+    (C) La casi-raíz se perdona: una raíz que difiere en UN carácter de una clave
+    del lexicón se lee como esa clave (`_difieren_en_un_caracter` ya existe).
+    Queda por decidir al aplicarlo si la forma se guarda como la escribió el
+    agente o normalizada a la clave; recomendación: se guarda lo que dijo
+    (`forma_dicha`) y se cuenta bajo la clave, como hace `save_loanword_uses`.
+    C mueve `palabras_caquetias` y el score: se mide antes, en la tanda.
+  y_el_agujero_de_kira: >-
+    Independiente de A/B/C y va en la tanda: una raíz ARCHIVADA (`FUERA_DEL_HABLA`)
+    no avala una raíz inventada homógrafa. `kira` 'brillo' (inventada el
+    2026-09-21, 49 usos, en dos disputas) pasó la puerta porque `kira` 'escuchar'
+    está archivada. Archivada quiere decir que no se habla; si el agente la dice
+    con otro sentido, es invento, y cae por A.
+  la_puerta_que_queda_para_despues: >-
+    Miguel deja escrito el criterio para cuando se abra: (1) el que inventa tiene
+    que ser el AGENTE CAQUETÍO, no el sustrato del modelo — `lumina` (latín),
+    `raspa-ni`, `rebosa-ka` (castellano con afijo) son el modelo hablando; una
+    raíz nueva legítima tendría que pasar un filtro de FORMA (fonotáctica
+    caquetía: `neologismo_valido()` ya tiene blocklist castellana, marcadores
+    ortográficos y bigramas; habría que endurecerlo y medirlo); (2) sólo para
+    AGUJEROS — conceptos para los que la lengua no tiene voz, que es justo lo que
+    son los referentes novedosos (el cometa, el eclipse, las cuentas de vidrio).
+    Es una decisión de era, con su propio diseño en `5-experimento/disenos/`.
+    No entra en la base.
+  se_aplica_en: 'la tanda de la base (C + el agujero de kira, medidos); el criterio futuro, en el issue'
+
+db.2_datihao_y_diao:
+  tipo: re-etiqueta de lexicón + corte de serie (cambia la muestra del prompt)
+  propuesta: 6-fusion/taino2_oviedo_venezuela.yaml §4 (campaña del taíno 2, T6, #195)
+  pregunta: >-
+    La «atestación venezolana» de `datihao` que citan Oliver, Jahn y Arcaya es una
+    entrada del GLOSARIO DEL EDITOR de 1855 (Oviedo t. IV, impresa 598: «Datihao:
+    señor: el que presta su nombre al esclavo. (Lengua de Venezuela.)»), no un
+    pasaje de Oviedo: en el cuerpo de los cuatro tomos aparece UNA vez, en San
+    Juan (t. I p. 473, en boca de Agüeybana). `diao` sí es de Oviedo con
+    atribución (t. II p. 299, «en algunas partes desta gobernación de Venezuela
+    el señor principal… llámanle diao»). ¿`datihao` pasa a taíno y `diao` carga
+    con la voz caquetía para 'señor'?
+  decision_literal: '«vale, dale con el punto 2., y comentame más sobre el punto 1.»'
+  el_punto_2_era: >-
+    «`datihao` a `taíno-atestiguado`, con `diao` como la voz caquetía. Es cambio
+    de prompt, porque hoy `datihao` está en el vocabulario base como caquetía y
+    puede salir en la muestra.» (el escriba, 2026-09-22)
+  eleccion: A de T6 — `datihao` → `taíno`; `diao` se queda `caquetío-atestiguado` con Oviedo como cita primaria
+  lectura_operativa: >-
+    `taíno` a secas es la etiqueta del lexicón para la voz taína atestiguada (43
+    entradas), y está en FUENTES_CANONICAS; «taíno-atestiguado» no existe como
+    valor. `datihao` sale de la muestra caquetía y pasa a ser voz de la esfera
+    (no penaliza, se mide aparte). No se cambian `sig` ni la forma: la glosa del
+    lexicón es la del EDITOR («el que presta su nombre al esclavo») y la de
+    Oviedo en el pasaje es otra («mi señor, ó el que, como yo, se nombra») —
+    se escribe en `notas` y se le lleva a Miguel; cambiar una glosa es otra
+    decisión. `diao` y `boratio` reciben su cita primaria en `notas` sin mover
+    etiqueta: Oviedo t. II pp. 298-299, y el alcance que Oviedo declara, «en
+    algunas partes desta gobernación de Venezuela» (regla 4: la gobernación,
+    no sólo Coro). `creencia-001` cita la fuente primaria de `boratio`.
+  saltado_y_llevado_a_miguel:
+    waitiao: >-
+      `waitiao` 'amigo ritual, aliado de alianza' (forma_fuente `guaitiao`) está
+      como `caquetío-atestiguado` citando «Oliver 1989 cap. 2 p. 147, sobre
+      Oviedo y Valdés». Medido hoy: `guaitiao`/`guatiao` 0 en el tomo II de
+      Oviedo, 0 en la Apologética; la lista maestra taína la tiene sólo en
+      secundarias (Brinton, Goeje) sin cronista. Es el mismo caso que `datihao`
+      y NO se toca sin decisión.
+    ecologia_gatiao: >-
+      La `lectura` del hecho de `gatiao` (ecologia.yaml) usa `datihao` y
+      `waitiao` como ejemplos de «-ao que en el caquetío atestiguado marca
+      palabras de filiación propia». Con `datihao` fuera y `waitiao` en duda,
+      la regla práctica se apoya en `diao` y `waranao`. No se reescribe una
+      lectura de corpus de paso.
+    la_glosa: 'la de Oviedo (namesake, «el que como yo se nombra») frente a la del editor (padrino de cautivo)'
+  se_aplica_en: '6-fusion/scripts/reetiquetar_datihao_diao.py, en la tanda de la base (no se mergea sin medir)'
