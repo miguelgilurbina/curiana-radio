@@ -35,7 +35,7 @@ meta:
         El alemán YA es una traducción. Las voces que Federmann glosa con
         «also heissen…» (canoa, hamaca, barbacoa, buhio, mahys) son el
         vocabulario antillano del escribano castellano, no necesariamente lo
-        que decían los caquetíos (ver `lengua.voces_de_la_esfera`).
+        que decían los caquetíos (ver `lengua` fed-len-005).
     - eslabon: 1
       que: "Indianische Historia, Hagenau 1557 (póstuma, la edita el cuñado Kiefhaber)"
       archivo: fuentes_caquetios/Federmann_1557_Indianische_Historia.pdf
@@ -147,7 +147,7 @@ meta:
       torno a Coro como aquí — y sólo habitan la tierra llana y fértil (1557
       [48], imagen 58, verificado). La sintaxis del alemán es torpe y la
       lectura es mía: va como `reconstruido`, pero la «excepción» de Coro no
-      está en el original. Ver `geografia_politica.coro_en_el_llano`.
+      está en el original. Ver `coro` fed-coro-003.
 
   - afirmacion: >-
       «la india rescatada por Ampíes» = una hija de Manaure (encargo, punto 2,
@@ -394,3 +394,448 @@ paraguana:
     epoca: contacto-temprano
     etiqueta: atestiguado
     nota: "Distancias y tiempos para el modelo del camino Paraguaná–Coro; la cifra es del diario."
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. CORO Y SU GENTE — caps. I-III, VIII (de pasada) y XIII-XIV
+# ══════════════════════════════════════════════════════════════════════
+coro:
+
+  - id: fed-coro-001
+    esfera: geografia_politica
+    tema: "los cristianos viven «en la tierra del cacique Manuaury»"
+    afirmacion: >-
+      Volviendo por la costa oriental (marzo de 1531), Federmann manda a los
+      caquetíos que traía de Coro a decir a los de la costa que ellos son
+      «los cristianos que viven en Coro, en la tierra del cacique o señor
+      llamado Manuaury». Coro se presenta como tierra de Manaure, y los
+      cristianos como sus moradores.
+    cita_1916: "debían anunciarles que éramos cristianos que habitábamos el territorio del cacique Manuaury (Manaure)"
+    pagina_impresa: 120
+    aleman: "«das wir die Christen weren so in Coro, in des Cacique oder herren Manu-/aury gehaissen, lande wonetten» (1557 [112], imagen 124, verificado en imagen)"
+    eslabon_que_lo_da: 1557
+    forma: Manuaury
+    lugar: "dicho en la costa de la boca del Yaracuy, a unas 80 Meilen al este de Coro"
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      ⭐ Es la ÚNICA vez que Federmann nombra a Manaure, y lo hace como
+      referencia que sirve a 80 Meilen de Coro: los caquetíos de esa costa
+      debían reconocer el nombre. Grafía del original: `Manuaury` (el
+      paréntesis «(Manaure)» es de Arcaya). Tres formas del mismo nombre ya en
+      la primera generación: Naure / Anaure (Ampíes, Fernández Duro 1885 t. II
+      p. 212), Manuaury (Federmann 1557), Manaure (Castellanos y el canon).
+      Para antroponimos_caquetios.yaml, sin tocarlo. Federmann NO nombra su
+      pueblo, NO habla de sucesores ni de parientes, y NO lo vio: en 1530
+      Manaure ya no aparece como actor en su relato.
+
+  - id: fed-coro-002
+    esfera: geografia_politica
+    tema: Coro, ciudad «recién fundada» de cristianos
+    afirmacion: >-
+      Coro es «la ciudad donde residen el Gobernador y los cristianos y la
+      cual está recién fundada»; el puerto de Coro (Arcaya: La Vela) se toma
+      el 8 de marzo de 1530.
+    cita_1916: "Así se llama la ciudad donde residen el Gobernador y los cristianos y la cual está recién fundada."
+    pagina_impresa: 18
+    aleman: "«gehn Coro, also haißt le statt, da der Gubernator und die Christen wonen, und erst haben gebawen und edificiert» (Klüpfel p. 12, OCR corregido)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Nada sobre dónde viven los indios de Coro respecto de la ciudad."
+
+  - id: fed-coro-003
+    esfera: geografia_politica
+    tema: los caquetíos de Coro también en el llano
+    afirmacion: >-
+      Todas las otras naciones fueron empujadas por los caquetíos a la sierra;
+      los caquetíos no viven en la sierra en ninguna parte y ocupan sólo la
+      tierra llana y fértil, «tanto en torno a Coro como aquí» (Barquisimeto).
+    cita_1916: "excepto los que viven cerca de Coro, estos indios habitan las mejores tierras y no permiten que ninguna otra tribu se establezca donde ellos moran"
+    pagina_impresa: 60
+    aleman: "«dann dise Caquetios an keinem orte / das gebirge / gleich als wol umb Coro / als an disen orten / allein das beste / fruchtbarest und ebnes lande bewonen / vn auch andere nation in keiner ebne gedulden» (1557 [47]-[48], imágenes 57-58, verificado en imagen)"
+    eslabon_que_lo_da: 1557
+    epoca: contacto-temprano
+    etiqueta: reconstruido
+    nota: >-
+      🔴 La 1916 invierte el alemán (ver meta.lo_que_resulto_falso). La
+      etiqueta baja a `reconstruido` porque la construcción alemana es torpe
+      y la lectura «tanto… como…» es mía; lo que sí es seguro es que la
+      «excepción de Coro» no está. Encaja con el corpus: la Sierra de Coro es
+      de los Xideharas (cap. IV) y los caquetíos de Coro ocupan el llano del
+      Golfete. Mismo párrafo, también verificado: los de Coro conocían «la
+      fuerza, bravura y habilidad» de los caquetíos de Barquisimeto («von
+      denen so bei Coro wonen, erfaren», [47]) — la costa tenía noticias del
+      interior antes de que llegara el primer europeo.
+
+  - id: fed-coro-004
+    esfera: familia
+    tema: ¿la india de Paraguaná era hija de Manaure? — la cadena de Arcaya
+    afirmacion: >-
+      Arcaya (1916 p. 18-19 n. c) identifica la aldehuela de tres casas con
+      Hurehurebo, a su señor con el don Fernán García de Castellanos, a la
+      india con parientes de él (doña Juana García, doña Teresa) y a doña
+      Juana con «una hija del Gran Cacique de Coro» de la carta de Ampíes.
+    cita_1916: "Ampies en carta al Elmperador Carlos V […] refiere el incidente de haber sido cautivados falazmente «una hija del Gran Cacique de Coro con su marido.»"
+    pagina_impresa: 19
+    fuente_de_la_carta: >-
+      Fernández Duro 1885 t. II p. 212 (fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt,
+      pdf 223): «tomó parte de aquellos indios é una india hija del gran
+      Cacique de Coro […] este gran Cacique al cual trujeron una hija suya
+      con su marido». La misma carta llama al cacique «Naure ó Anaure» y dice
+      que «se hace adorar como Dios, dando á entender á los indios que él da
+      los temporales». ⚠️ Esa carta (pp. 207-218) queda FUERA de la clave
+      perez-de-tolosa-1546 (pp. 219 ss.): no tiene clave propia en la
+      bibliografía (deuda).
+    epoca: contacto-temprano
+    etiqueta: hipotetico
+    nota: >-
+      Cuatro eslabones de inferencia de un editor de 1916. Federmann sólo
+      dice que la india fue vendida, rescatada por Ampíes y devuelta. Sirve
+      como pista para Castellanos (fuera de esta parcela), no como dato.
+
+  - id: fed-coro-005
+    esfera: geografia_politica
+    tema: los cien porteadores caquetíos — y lo que dicen los otros
+    afirmacion: >-
+      Federmann sale de Coro el 12 de septiembre de 1530 con 110 infantes, 16
+      jinetes y «como cien» indios naturales de la nación caquetía que cargan
+      víveres y pertrechos. Al mes se le han fugado casi todos «a su tierra».
+    cita_1916: "acompañados de cien indios del país, de la nación llamada Caquetíos que portaban nuestros víveres y todo lo necesario para nuestra defensa"
+    pagina_impresa: 27-28
+    aleman: "«sampt bei ainem hundert Indios naturales vom land / der Nation Caquecios gehaissen / weliche unsere notturfftige speiß vnnd andern plunder […] trügen» (1557 [19], imagen 29, verificado en imagen)"
+    fuga: >-
+      «die Indios so wir zu Coro außgefüret, fast entloffen und zurück wider
+      haim gekert waren» (Klüpfel p. 26, en tierra ayamán, octubre de 1530);
+      la 1916 p. 43 lo traduce sin «de Coro».
+    contradiccion: >-
+      Pérez de Tolosa, interrogatorio de la pesquisa, cargo 39: Federmann
+      «despobló cuatro ó cinco pueblos de indios amigos de cristianos de
+      nación Caquetios, comarcanos á la ciudad de Coro, y de los dichos indios
+      llevó cantidad de más de quinientos por fuerza y en cadenas» y a los que
+      no podían andar «les cortaban las cabezas» (Fernández Duro 1885 t. II
+      p. 274; perez-de-tolosa-1546; citado por Arcaya 1916 p. 28 n. b).
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      Dos testigos en conflicto (el acusado y el juez de residencia) y un
+      tercer dato del acusado contra sí mismo (la fuga). Lo que no está en
+      disputa: en 1530 los pueblos caquetíos «comarcanos a Coro» eran
+      requisables como cargadores. Qué cifra vale no lo decide esta minería.
+
+  - id: fed-coro-006
+    esfera: geografia_politica
+    tema: un caquetío de Coro, siervo y lengua
+    afirmacion: >-
+      El envoy a los caquetíos de Barquisimeto es «uno de los indios
+      Caquetíos que nos seguían desde Coro», al que el alemán llama «der
+      Caquetio oder Tolmetsch»; Federmann lo hace libre porque «hasta
+      entonces» servía a un cristiano al que él mismo lo había dado.
+    cita_1916: "Para recompensar este servicio al Caquetío, le hice algunos presentes y lo manumití porque hasta entonces era esclavo de un cristiano."
+    pagina_impresa: 60-61
+    aleman: "«der Caquetio oder Tolmetsch, so ich […] mit mir auß Coro gefürt» y «freimachete, dann er biß der zeit, einem Christen zudienen, von mir geschenckt was» (Klüpfel pp. 37-38, [49]-[50])"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Ver lengua.fed-len-002: este hombre es la prueba de que el caquetío de Coro servía en Barquisimeto."
+
+  - id: fed-coro-007
+    esfera: geografia_politica
+    tema: la costa oriental de vuelta (Xaragua → Martinico → Coro)
+    afirmacion: >-
+      Los caquetíos de la costa cerca de la boca del Yaracuy habían
+      abandonado sus aldeas por las razzias de esclavistas de Santo Domingo;
+      los que traía de Coro los encuentran («bien conoce un ratón las cuevas
+      de los demás»). En Martinico empiezan los caquetíos amigos, ganados
+      «hace un año» por el capitán Bartolomé Carco [sic en Klüpfel; Careo en
+      la 1916]. De allí a Coro, 65 Meilen de costa «habitada por los
+      caquetíos, nuestros aliados», que los reciben bien; los enfermos van
+      por mar en dos canoas. En la sierra, los Atycares, confederados con
+      dos aldeas caquetías.
+    pagina_impresa: 120-123
+    aleman: "«ein maus weißt der andern meüße unterschleiff wol» (1557 [112], imagen 124, verificado) · Martinico y «vor einem Jare» (Klüpfel p. 80; la 1916 omite el año) · «mit zweien Caquetischen Pueblos oder flecken Confederiert» (Klüpfel p. 81)"
+    eslabon_que_lo_da: 1557
+    lugares_nuevos:
+      - forma: Xaragua / Xaraxaragua
+        donde: "costa, cerca de la boca del Yaracuy (Arcaya p. 121 n. d); «ochenta» o «sesenta y cinco» Meilen de Coro según el pasaje"
+      - forma: Martinico
+        donde: "costa entre el Yaracuy y Coro; primera aldea caquetía amiga"
+      - forma: Hytodes (Mitotes / Itotes)
+        donde: "sierra a 4 Meilen de la costa; «enemigos de estos caquetíos». Arcaya: los jirajaras de Nirgua"
+      - forma: Atycares
+        donde: "sierra, entre Martinico y Coro; confederados con dos aldeas caquetías"
+      - forma: Iracuy
+        donde: "el río Yaracuy, «casi tan grande como el Rhin»"
+    polity: costa-oriental
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      ⚠️ ¿Kaketiana o no? Es costa y es caquetía, pero no es el Golfete: es
+      la costa oriental de Falcón hasta el Yaracuy. Si entra en la esfera
+      (regla 4, reverso) lo decide Miguel; aquí sólo se propone con su
+      etiqueta. Ninguno de estos lugares es hoy nodo de asentamientos.yaml.
+      El dato que vale para la costa del Golfete por analogía: una red de
+      aldeas caquetías costeras aliadas y comunicadas por canoa, y una alianza
+      «confederada» entre una nación de la sierra y dos aldeas caquetías.
+
+  - id: fed-coro-008
+    esfera: geografia_politica
+    tema: armas de los de Coro
+    afirmacion: >-
+      En el valle de Vararida «termina la hierba envenenada»: no la tienen y
+      usan sólo el arco «como los de Coro». Por comparación, los caquetíos de
+      Coro tiraban flechas SIN veneno.
+    cita_1916: "El uso de las flechas envenenadas es desconocido allí; sus armas son las mismas que se usan en la provincia de Coro."
+    pagina_impresa: 110
+    aleman: "«hört die vergiffte herba oder kraut auff, und haben auch dern kaine, gebrauchen sich allain des geschoß als die zu Coro» (Klüpfel p. 72)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "`herba` es la «hierba» castellana del escribano (veneno de flecha)."
+
+  - id: fed-coro-009
+    esfera: familia
+    tema: el aspecto de la gente de Coro
+    afirmacion: >-
+      Los naturales de La Española se parecen en todo a los de Coro: «desnudos
+      andan como ellos y son del mismo color».
+    cita_1916: "aquéllos se asemejan en todo a los de Coro, de que trataré más abajo; desnudos andan como ellos y son del mismo color"
+    pagina_impresa: 14
+    aleman: "«wie auch die zu Coro […] ain nacket volck, und eben der selbigen farbe» (Klüpfel p. 9)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      El «de que trataré más abajo» no se cumple: Federmann no describe
+      nunca las costumbres de los de Coro. Es un cero de fuente, no de
+      consulta: se buscó `Coro` en toda la 1916 (112 apariciones) y en el
+      alemán.
+
+  - id: fed-coro-010
+    esfera: geografia_politica
+    tema: una enana ayamán dejada en Coro
+    afirmacion: >-
+      Un cacique ayamán da a Federmann una mujer «de cuatro palmos» como
+      prenda de paz; ella llora porque cree que la entregan «a demonios»; él
+      la lleva a Coro y la deja allí.
+    pagina_impresa: 44
+    aleman: "«ein zwergin bei vier spannen lang» · «Dise zwergin habe ich mit mir biß gen Coro gefürt, daselbst sie bliben ist» (Klüpfel p. 28)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Va aquí porque acaba en Coro; importa para el seretón (ver `sereton`)."
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LENGUA — intérpretes, la costa frente al interior, y todas las voces
+# ══════════════════════════════════════════════════════════════════════
+lengua:
+
+  - id: fed-len-001
+    esfera: lengua
+    tema: la cadena de intérpretes
+    afirmacion: >-
+      Para «la primera lengua, la de los caquetíos», Federmann llevaba DOS
+      CRISTIANOS de confianza que la sabían «muy bien»; con los Xideharas
+      hablaba a través de dos intérpretes, con los Ayamanes de tres, con los
+      Cayones de cuatro y con los Xaguas de cinco — y de cada diez palabras
+      «apenas una» llegaba como la dijo.
+    cita_1916: "Hablaba al principio de mi viaje con los Caquetíos por órgano de dos cristianos en quienes tenía entera confianza y que conocían perfectamente el idioma; mas me eran menester dos intérpretes con los Xideharas, tres con los Ayamanes, cuatro con los Cayones y cinco con los Xaguas."
+    pagina_impresa: 58
+    aleman: "«dann ich allein der ersten sprach / alls der Caquetios zwen Christen und vertrawte Tolmetschen / die die selbige sprach fast wol kundten / bei mir hette / und hernach bei den Xideharas durch zwen / bei den Ayamones durch drei / bei den Cayones durch vier / und bei den Xaguas durch fünff personen / reden muste» (1557 [46], imagen 56, verificado en imagen)"
+    eslabon_que_lo_da: 1557
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      ⭐ En 1530, a tres años de Ampíes, hay ya cristianos que hablan
+      caquetío «muy bien». Otros intérpretes con nombre o nación: `Cara
+      Vanicero`, «Tolmetsch» que va delante a los Xideharas (Klüpfel p. 17,
+      página [20] de 1557 sin ver en imagen; nombre de origen no decidido — puede ser castellano); un
+      xidehara de Hittova para los Ayamanes; dos cayones que sabían xagua; una
+      india de Barquisimeto que sabía «algo» de cuyba. La cadena prueba que
+      la sierra entre Coro y Barquisimeto hablaba cuatro lenguas ajenas al
+      caquetío (Federmann dice «cinco naciones» entre medias y lista cuatro).
+
+  - id: fed-len-002
+    esfera: lengua
+    tema: "⭐ la costa y el interior: ¿hablaban igual? — Federmann y Pérez de Tolosa juntos"
+    federmann_1530:
+      pasaje: >-
+        Al oír a los Xaguas que al otro lado vivían «Caquetíos», no lo
+        creyeron: aunque tuvieran el mismo nombre, pensaron, no hablarían como
+        los indios de Coro, estando a más de 73 Meilen y con cinco naciones
+        de lengua distinta de por medio; y la buena noticia, «como suele
+        pasar», les pareció por eso más increíble.
+      aleman: >-
+        «vermainende / ob sie schon auch den namen Caquetios hetten / so
+        heten sie schon oder doch der sprache nicht wie die Indios zu Coro /
+        da wir außgezogen waren / auch nicht also Redten / dann […] wir ob
+        drei und sibentzig meiln von den selbigen / und entzwischen fünff
+        Nation / dern jegkliche ein besundere sprach redten / fürgeraisset
+        hetten / und was uns solichs alls ein ding / das uns erfrewete / wie
+        gewonlich beschicht / dest ungleublicher» (1557 [46], imagen 56,
+        verificado en imagen)
+      cita_1916: "No podíamos imaginarnos que esta nación hablase también el mismo idioma, sobre todo después de haber atravesado el territorio de cinco pueblos de lenguas distintas. Pero tanto más nos regocijó aquéllo cuanto menos era de esperarse"
+      pagina_impresa: 58
+      y_en_los_hechos: >-
+        (a) El caquetío de Coro que llevaba como siervo sirve de «Tolmetsch»
+        y de embajador ante los caquetíos de Barquisimeto (fed-coro-006,
+        [49]); (b) en el valle del Yaracuy no necesitan guías de Barquisimeto
+        «porque llevábamos con nosotros intérpretes que sabían el idioma de
+        los Caquetíos» — alemán «dieweil wir diser sprache der Caquetios selber
+        tolmetschen hetten» (Klüpfel p. 70, [97]; 1916 p. 108); (c) nunca
+        menciona una cadena de intérpretes con ningún grupo caquetío.
+    perez_de_tolosa_1546:
+      pasaje: >-
+        De los llanos al pie de la cordillera, desde Barquisimeto hacia el
+        sur: «docientas leguas de tierra, sin entrar en la sierra, son los
+        indios de nación Caquetios, aunque algo difieren en la habla á los de
+        Coro».
+      obra: perez-de-tolosa-1546
+      pagina_impresa: 234
+      donde: "fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt, pdf 245 (impresa = pdf − 11); verificado por texto, no en imagen"
+    lectura: >-
+      No se contradicen: miden cosas distintas en sitios distintos.
+      Federmann (1530), con los caquetíos de Coro → Barquisimeto → valle del
+      Yaracuy: el mismo idioma, entendido por los mismos intérpretes y por un
+      caquetío de Coro sin intermediario — lo dice sólo por implicación en el
+      alemán (la sorpresa feliz) y por los hechos; la 1916 lo hace explícito.
+      Pérez de Tolosa (1546), con los caquetíos de los LLANOS: la misma
+      nación, pero «algo difieren en la habla». Juntos dibujan una lengua
+      caquetía extendida de la costa a los llanos, inteligible entre polities
+      enemigas entre sí (Barquisimeto y Vararida, fed-int-004), con variación
+      dialectal que un juez de residencia notó en los extremos.
+    epoca: contacto-temprano
+    etiqueta: >-
+      atestiguado lo que hicieron (los mismos intérpretes sirvieron);
+      reconstruido «la misma lengua» como enunciado de Federmann, porque el
+      alemán lo implica y no lo dice con esas palabras.
+    nota: >-
+      Es la primera prueba de dos testigos independientes (un alemán en 1530
+      y un juez castellano en 1546) de que «caquetío» es también un nombre de
+      LENGUA con variación interna, no sólo de nación. Ninguno de los dos da
+      una sola palabra de esa lengua.
+
+  - id: fed-len-003
+    esfera: lengua
+    tema: el caquetío como lengua de los vecinos
+    afirmacion: >-
+      Gente de otras naciones sabía caquetío: un cyparicote «que hablaba
+      también el idioma de los Caquetíos» trae el oro de su cacique; dos
+      guaycaríes que sabían caquetío «porque estas dos naciones viven
+      mezcladas».
+    aleman: >-
+      «der auch der Nation Cyparicotes was / aber die sprach der Caquetios
+      kundte» (1557 [111], imagen 123, verificado en imagen) · «zwen Indios
+      Guaycaries […] die auch der Caquetios sprach kundten, dann dise zwo
+      Nation undereinander […] wonen» (Klüpfel p. 61)
+    pagina_impresa: "119-120 (cyparicote); 94 (guaycaríes)"
+    eslabon_que_lo_da: 1557
+    polity: interior
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      Del interior (regla 4), pero es dato de LENGUA: el caquetío como
+      segunda lengua de vecinos no caquetíos, que es lo que se espera de una
+      lengua de prestigio en una esfera de intercambio. No hay equivalente
+      medido para la costa en este texto.
+
+  - id: fed-len-004
+    esfera: lengua
+    tema: el etnónimo en el original
+    formas:
+      - forma: Caquecios
+        donde: "1557 [19], imagen 29 — primera mención («der Nation Caquecios gehaissen»), verificado en imagen"
+      - forma: Caquetios
+        donde: "1557 [46]-[48] e [111]-[112], imágenes 56-58 y 123-124, verificado; es la forma dominante"
+      - forma: Caquetio / Caquetischen
+        donde: "singular y adjetivo (Klüpfel pp. 37, 81)"
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      La t/c ya varía dentro del mismo impreso (cf. `çaquitios` de Oviedo,
+      «Caquesíos» de Simón según Arcaya 1916 p. 28 n.). La etimología
+      bakairí que propone Arcaya en esa nota (zakaitío 'viejo/alto') es suya y
+      no se propone. El recuento Klüpfel por grafía no vale como censo: el
+      OCR hace `Caquelios` de `Caquetios`.
+
+  - id: fed-len-005
+    esfera: lengua
+    tema: "voces de la esfera en boca del escribano: todas, con su «así se llaman»"
+    voces:
+      - forma: Cacique
+        uso: "«Cacique oder herr», passim desde los Xideharas; Federmann lo glosa siempre con «oder herr»"
+        lugar: todo el viaje
+      - forma: Canoa / Canoen
+        uso: "«in einer Canoa, also heissen der Indios schiff» (Klüpfel p. 80) · «in zweien Canoen, das seind der Indios schiffe» (p. 81)"
+        lugar: "costa caquetía entre Martinico y Coro (polity costa-oriental)"
+      - forma: Hamaca / Hamacos
+        uso: "«in Hamacos, also heissen die Indianische beth» (Klüpfel p. 40) · un falso cacique llevado «in ainer Hamaca» (p. 69)"
+        lugar: "Barquisimeto y más allá (interior)"
+      - forma: Buhio
+        uso: "«den Buhio oder das hauß» (Klüpfel p. 47, p. 74)"
+        lugar: "interior (Cuybas; valle de Vararida)"
+      - forma: Barbacoa
+        uso: "«in diser Barbacoa, also haißt es»: un tablado en medio de la casa sobre cuatro postes, tres hombres de alto, donde guardan «ihr korn oder Mahys» (Klüpfel p. 74)"
+        lugar: "valle de Vararida (interior)"
+      - forma: Mahys / Mahis
+        uso: "«Mahys, das ist ihr korn» (Klüpfel p. 44); «Mahis / Juca / Batata / Oyama» (1557 [24], imagen 34, verificado)"
+        lugar: "Mahis… en una aldea AYAMÁN (sierra); Mahys en tierra cuyba (llanos)"
+      - forma: Juca
+        uso: "1557 [24], imagen 34, verificado"
+        lugar: "aldea ayamán"
+      - forma: Batata
+        uso: "1557 [24], imagen 34, verificado"
+        lugar: "aldea ayamán"
+      - forma: Oyama
+        uso: "1557 [24], imagen 34, verificado; la 1916 p. 35 lo da como «ñames»"
+        lugar: "aldea ayamán"
+        nota: >-
+          ⚠️ Pregunta abierta: `Oyama` se parece más a *auyama/ahuyama*
+          (calabaza, voz de Venezuela) que a *ñame*. La equivalencia «ñames»
+          es de Ternaux o de Arcaya. No se decide aquí.
+      - forma: Weschuco
+        uso: "«ein Weschuco, dorn es vil inn den wälden hat, das ist ein zehe gewechs wie die weiden» (Klüpfel p. 77); la 1916 p. 118 escribe «weshuco (bejuco)»"
+        lugar: "sierra de los Cyparicotes (interior)"
+      - forma: Viroles
+        uso: "la viruela que mató a los de La Española (Klüpfel p. 10): castellano"
+        lugar: "La Española"
+      - forma: Principal · Pueblo · Naturales · herba
+        uso: "castellano del escribano, sin glosa indígena"
+        lugar: todo el viaje
+    epoca: contacto-temprano
+    etiqueta: hipotetico
+    nota: >-
+      🔴 Ninguna es caquetío-atestiguado por Federmann. Son voces antillanas y
+      castellanas del diario notarial (eslabón 0) que Federmann glosa con
+      «así se llaman»: prueban que en 1530-31 ese vocabulario ya viajaba con
+      los españoles por la tierra caquetía, no que los caquetíos lo dijeran.
+      La única en boca y tierra caquetía costera es `Canoa`, y también es del
+      escribano. Van con `hipotetico` en cuanto uso caquetío; como
+      atestaciones fechadas de la esfera (1530-31) son firmes. Y un aviso de
+      traducción: el «botuto» de la 1916 p. 35 (los ayamanes «sonando el
+      botuto») NO está en el alemán, que dice «ihre hörner … blasende»
+      (1557 [24], imagen 34, verificado): la voz la puso Arcaya.
+
+  - id: fed-len-006
+    esfera: lengua
+    tema: nombres propios de la costa, en la grafía del original
+    formas:
+      - {forma: "Paragnana / Baragnana", tipo: toponimo, donde: "1557 [13]-[14]", ver: fed-par-008}
+      - {forma: Miraca, tipo: toponimo, donde: "1557 [13]", ver: fed-par-008}
+      - {forma: Buynari, tipo: toponimo, donde: "1557 [9]", ver: fed-par-008}
+      - {forma: Coro, tipo: toponimo, donde: passim}
+      - {forma: Manuaury, tipo: antroponimo, donde: "1557 [112]", ver: fed-coro-001}
+      - {forma: "Xaragua / Xaraxaragua", tipo: toponimo, donde: "Klüpfel pp. 80-81", ver: fed-coro-007}
+      - {forma: Martinico, tipo: toponimo, donde: "Klüpfel p. 80", nota: "¿castellano (Martinico)? no se decide"}
+      - {forma: Hytodes, tipo: etnonimo, donde: "1557 [112]"}
+      - {forma: Atycares, tipo: etnonimo, donde: "Klüpfel p. 81"}
+      - {forma: Iracuy, tipo: hidronimo, donde: "Klüpfel p. 80"}
+      - {forma: "Cara Vanicero", tipo: antroponimo, donde: "Klüpfel p. 17 ([20], sin ver en imagen)", nota: "intérprete; puede no ser indígena"}
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      Para la mesa de topónimos (campana-toponimos) y antroponimos_caquetios.yaml;
+      no se tocan. Ninguna trae glosa en Federmann. Los del interior
+      (Xideharas, Hittova, Ayamanes, Carohana, Cayones, Xaguas, Coary,
+      Cacaridi, Variquecemeto, Vararida, Cuybas, Hacarigua, Guaycaries,
+      Cyparicotes, Itabana, Curahamara, Coahery, Carahao…) no se cotejaron
+      uno a uno en 1557.
