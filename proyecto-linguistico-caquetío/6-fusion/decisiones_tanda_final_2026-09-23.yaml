@@ -77,3 +77,19 @@ tf.8_merges:
 tf.9_el_orden:
   decision_literal: '«y obviamente hagamos esto antes de arrancar la corrida porque no quiero que hagamos una, una sesión para luego tener que repetirla»'
   eleccion: todo esto entra en UNA tanda, medida una vez; la corrida base arranca después
+
+estado_de_la_tanda:
+  aplicada: 'rama tanda/final-2026-09-23 (2026-09-23), con las ramas tanda/final-lexicon y tanda/final-mundo integradas'
+  medida: >-
+    6-fusion/medicion_tanda_final_2026-09-23.yaml (control 216/216 en los dos
+    brazos; system prompt +4,38 %; la serie C re-leída con el instrumento nuevo
+    cae de 7,4 a 4,0 — no comparable, no es predicción). Bitácora, punto 15 del
+    «Cambio de instrumento».
+  prevuelo: verde en los cuatro casos
+  guardianes: '9 en verde; 965 tests'
+  decidido_al_aplicar_sin_pedirlo: >-
+    La frase del viento de [Tu tierra] («el juri sopla firme del este») pasa a
+    «sopla firme del este»: `juri` quedó hipotética por la sigla (E) y la
+    frase fija la seguía enseñando como la palabra conocida. Cambian 45 de 126
+    bloques en el Tiempo de Viento. Se revierte en una línea de
+    clima_era2.yaml si Miguel prefiere que se diga.

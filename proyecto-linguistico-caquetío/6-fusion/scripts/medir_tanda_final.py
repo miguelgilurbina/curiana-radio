@@ -115,18 +115,30 @@ def medir_en_proceso(args) -> dict:
     return d
 
 
+_WORKTREES: list[str] = []
+
+
 def modulos_de_ref(ref: str) -> str:
+    """Un checkout ENTERO del commit, en un directorio temporal.
+
+    Copiar sólo los módulos (el patrón de `medir_tanda_21.py`) no basta aquí:
+    `curiana_mundo` lee `6-fusion/sitios_era2.yaml` y `clima_era2.yaml` por
+    ruta relativa, y esta tanda cambió esos YAML. El brazo de «antes» tiene
+    que leer el canon del mundo de `ref`, no el de hoy. Se borra al final."""
     tmp = tempfile.mkdtemp(prefix=f"curiana_ref_{ref}_")
-    for nombre in MODULOS:
-        out = subprocess.run(
-            ["git", "-C", RAIZ, "show", f"{ref}:./curiana_sim/{nombre}"],
-            capture_output=True, encoding="utf-8")
-        if out.returncode != 0:
-            continue                    # el módulo no existía en ese commit
-        with io.open(os.path.join(tmp, nombre), "w", encoding="utf-8",
-                     newline="\n") as f:
-            f.write(out.stdout)
-    return tmp
+    os.rmdir(tmp)
+    out = subprocess.run(["git", "-C", RAIZ, "worktree", "add", "--detach", tmp, ref],
+                         capture_output=True, encoding="utf-8")
+    if out.returncode != 0:
+        raise RuntimeError(f"git worktree add {ref} falló: {out.stderr[:300]}")
+    _WORKTREES.append(tmp)
+    return os.path.join(tmp, "proyecto-linguistico-caquetío", "curiana_sim")
+
+
+def _limpiar_worktrees() -> None:
+    for tmp in _WORKTREES:
+        subprocess.run(["git", "-C", RAIZ, "worktree", "remove", "--force", tmp],
+                       capture_output=True, encoding="utf-8")
 
 
 def correr_brazo(lexicon_dir: str | None, extra: list[str]) -> dict:
@@ -156,6 +168,13 @@ def main(argv=None):
 
     tmp = tempfile.mkdtemp(prefix="curiana_tanda_final_")
     ref_antes, ref_run = modulos_de_ref(REF), modulos_de_ref(REF_RUN)
+    try:
+        return _medir(tmp, ref_antes, ref_run)
+    finally:
+        _limpiar_worktrees()
+
+
+def _medir(tmp: str, ref_antes: str, ref_run: str) -> int:
 
     formas = M21.formas_de_la_base()
     f_formas = os.path.join(tmp, "formas.json")

@@ -314,19 +314,26 @@ enlaces; lo que se rompe son los enlaces markdown relativos.
 ## Morfología (lo mínimo para leer el output)
 
 ```
-Orden: pronombre + verbo-aspecto + complemento
-Pronombres: taya (yo), pia (tú), nüma (él/ella), waya (nosotros), naya (ellos)
-            — reconstruidos desde el wayuu: deuda de D11 fase 3
+Orden: pronombre + verbo (+ aspecto) + complemento
+Pronombres: dai (yo), bui (tú), lihi (él) / tuhu (ella, ello), waya (nosotros),
+            naya (ellos) — de las HERMANAS desde la tanda final (2026-09-23,
+            D11 fase 3, tf.1: «no podemos seguir teniendo reconstrucciones
+            desde el Wayu»): dai reconstruido (lokono = taíno), bui/lihi/tuhu
+            hipotéticos (lokono), waya/naya reconstruidos (achagua). taya,
+            pia y nüma están archivados.
             + kudanga (usted), kuté (a usted) — caquetío ATESTIGUADO, registro
             formal (Zavala p. 73 vía Arcaya; d21.10, 2026-09-21)
-Aspectos:   -ka (completivo), -ni (continuativo), -da (prospectivo)
-            — los tres reconstruidos del wayuu, sin apoyo caquetío: deuda D11
+Aspectos:   el verbo SOLO es el presente; -kuba = ya pasó (lokono -cuba,
+            kalinago -kuba); -ba = vendrá (achagua, kalinago, lokono de Goeje).
+            Hipotéticos: el taíno no atestigua ninguna marca (tf.2). -ka, -ni y
+            -da ya no se enseñan ni cuentan como aspecto, pero el desafijador
+            los sigue pelando (REGLAS_EN_DESUSO)
 Verbos:     dos clases — ESTATIVO (propiedad o estado: apo 'grande', usera
             'seco') y DE ACCIÓN. Un estado se predica con aspecto igual que una
             acción; el alineamiento pospuesto del lokono NO se importa, porque
             no hay dato caquetío (d21.4 → B)
-Posesivos:  ta- (mi), wa- (nuestro), u- (no-poseído: la cosa sin dueño —
-            Perea p. 587; d21.13 → B)
+Posesivos:  da- (mi — era ta-, del wayuu; tf.3), wa- (nuestro), u-
+            (no-poseído: la cosa sin dueño — Perea p. 587; d21.13 → B)
 Atributivo: ka- (hay X, tiene X) / privativo ma- (sin X) — NO son posesivos:
             van Buurt §8 (Casibari 'hay rocas duras') y Perea p. 555. Un NOMBRE
             se predica con ka-, así que «hay viento» es ka-juri, no juri-ni
@@ -346,9 +353,11 @@ Derivación: un verbo es también su nombre, sin marca — `jusual` «sembrar,
 Neologismos: [forma: componentes = significado]
 ```
 
-`REGLAS_ZAVALA` añade seis afijos atestiguados: `-iro` (diminutivo), `-aima`,
-`-ima`, `-uco` (variante `-uto`: se enseña, el scorer no la reconoce —
-residuo declarado), `-ubana`, `-uru`; y `REGLAS_TOPONIMICAS`, `-bakoa` (el lema
+`REGLAS_ZAVALA` añade cuatro afijos atestiguados: `-aima`, `-ima`, `-ubana`,
+`-uru`; `-iro` (diminutivo) y `-uco` (variante `-uto`) salieron de ahí en la
+tanda final a `REGLAS_ESTEVES` —«leídos en topónimos»: su única fuente era
+Esteves por la sigla (E) de Zavala—, se siguen enseñando con ese rótulo y
+siguen en el desafijador (sacarlos reabría el agujero de *lumina*); y `REGLAS_TOPONIMICAS`, `-bakoa` (el lema
 fonémico de D5; era `-bacoa` hasta el corte 13). **Retirados**: `-ko` y `-sha`
 (2026-09-14) y `-naiki` (d21.9 — 0 usos en 95.445). El detalle, su evidencia,
 su capa y qué puerta del motor los ve, en `2-lengua/morfologia.md`; las catorce

@@ -435,7 +435,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-23), declarado.** Catorce cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-23), declarado.** Quince cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -1323,7 +1323,67 @@ abierta abajo.
 >    el MENSAJE del turno de nombramiento); tests en
 >    `curiana_sim/tests/test_tanda_base.py`, uno por decisión.
 >
-> Ninguno de los catorce toca `capas_de_score`, y `curiana_observer` sigue sin
+> 15. **La tanda final: sin wayuu en el núcleo, y lo investigativo cerrado**
+>    (2026-09-23, `6-fusion/decisiones_tanda_final_2026-09-23.yaml` tf.0-tf.9,
+>    sobre `decisiones_cierre_2026-09-23.yaml`). «Hagamos esto antes de
+>    arrancar la corrida porque no quiero que hagamos una sesión para luego
+>    tener que repetirla» (Miguel). Seis campañas de cierre (#222, #226-#229,
+>    #231) y un solo corte:
+>
+>    - **Lo que cambia.**
+>
+>      | | qué se hizo |
+>      |---|---|
+>      | **tf.1** pronombres | `dai` (reconstruido: lokono = taíno), `bui`, `lihi`/`tuhu` (hipotéticos, lokono), `waya`/`naya` se quedan con la justificación achagua; `taya`, `pia` y `nüma` al archivo |
+>      | **tf.2** aspecto | el presente sin marca; `-kuba` ya pasó; `-ba` vendrá (hipotéticos). El detector se SUSTITUYE; `-ka`/`-ni`/`-da` a `REGLAS_EN_DESUSO` (el desafijador los sigue pelando) |
+>      | **tf.3** posesivo | `da-` en lugar de `ta-` |
+>      | **tf.5** voces wayuu | `kashi`, `yama`, `sulu`, `wana`, `naba`, `tüshi`, `kapua`, `anüiki`, `pütchi` y `wanü` al archivo; entran `danu`, `ruku`, `diki`, `kuburuku`, `kasalini`, `mautia`; `yama` → `popoi` y `wanü` → `wasima` (atestiguadas); `bana` baja a hipotética |
+>      | **tf.6** fuentes | `poporo` fuera (español colonial: el de Castellanos es de Boronata y de los muiscas); notas de `macana`; `coro` pierde «viento» (Castellanos, por el latín *corus*); `cohiba` → `cohoba`; manatí, tabaco y bagua según su cronista; `daca` con un solo testigo |
+>      | **tf.0** sigla (E) | 40 voces cambian de capa (12 → hipotéticas, 26 → retroabstraídas, 2 → reconstruidas); `jachos` es el castellano «hacho»; `-iro`/`-uco` pasan a «leídos en topónimos»; `baperon`/`raporon` a los pemenos (`caribe-pemeno`) |
+>      | **tf.7** mundo | Manaure A, guaiqueríes A + B + E (ficha nueva, polity `ninguna`), cronología dabajurana C regional; cuatro topónimos bajan de nivel |
+>      | plantillas | IDENTIDAD dice «Dai diki-kuba arima wara para. Da-barsure kuburuku»; la breve añade PRONOMBRES y VOCES (la capa hipotética no sale en la muestra del perfil `era2`); sin `kari` ni `waranao` |
+>
+>    - **El instrumento, medido** (`6-fusion/medicion_tanda_final_2026-09-23.yaml`,
+>      contra `main` 1a97628):
+>
+>      | | antes | después |
+>      |---|---:|---:|
+>      | `VOCABULARIO_BASE` | 5.500 | 5.496 |
+>      | `FUERA_DEL_HABLA` | 21 | 36 |
+>      | caquetío atestiguado · reconstruido · retroabstraído · hipotético | 227 · 80 · 49 · 37 | 184 · 69 · 75 · 58 |
+>      | `[Voces de fuera]` | 42 | 44 (sale `cohiba`; entran `cohoba`, `baperon`, `raporon`) |
+>      | system prompt medio de los 63 | 7.541,0 | 7.871,2 (**+4,38 %**) |
+>      | `[Tu emocionar]` / semilla de idiolecto distintas | — | 63 de 63 / 63 de 63 |
+>
+>      En el desafijador cambian de núcleo 5 formas (`naa-da-ba`…), una pasa a
+>      «de ninguna parte» (`pütshi-bana`: `pütchi` se archivó) y 15 cambian de
+>      familia (`jachos` → español, `baperon`/`raporon` → caribe).
+>    - **El score de la serie C, re-leído: NO es una predicción.** Con el motor
+>      de los runs el control reproduce 216 de 216 en los dos brazos. Con el de
+>      hoy, las 432 respuestas caen: 7,44 → 4,00 y 7,39 → 4,11. Es lo que tiene
+>      que pasar al leer texto dicho con el canon viejo: el aspecto va de 1,98 a
+>      0,00 (no hay `-kuba`/`-ba`) y `taya`, `wana-ka`, `kashi`… dejan de ser
+>      caquetío. Lo que dice es que **la serie C y la base no son comparables**;
+>      cómo puntúe la base, con agentes que hablan el canon nuevo, sólo lo dirá
+>      la base. La koiné fijada de la serie C no cambia.
+>    - **Pre-vuelo** verde en los cuatro casos, con DEBE/NO_DEBE de este corte;
+>      la respuesta fija del ensayo pasó al canon de hoy (la vieja volvía por
+>      `[Tu manera de hablar]` en el turno 2). 965 tests, 9 guardianes.
+>    - **Visto al aplicar.** `bana` tenía dos claves `notas` y la segunda pisaba
+>      la nota nueva: fundidas. Cinco entradas más tienen el mismo defecto
+>      (maure, saruro, curiana, ma, ana), fuera de esta tanda. La frase del
+>      viento de `[Tu tierra]` ya no dice `juri` (pasó a hipotética): cambian 45
+>      de 126 bloques en el Tiempo de Viento. Residuos: una forma con raíz
+>      archivada y sufijo con clave ajena se clasifica por el sufijo
+>      (`tüshi-ima` → lokono, 3 usos); `cognados.yaml`, `arahuaco_comparative`
+>      y `lexicon_alvarado` todavía dicen `cohiba` y «poporo atestiguado» (son
+>      tooling, no motor); `bagua` 'mar' no entró al lexicón.
+>
+>    **Desde qué run aplica**: desde la **base** (serie `era2-base`). Todo lo
+>    corrido antes queda del otro lado del corte. Tests en
+>    `curiana_sim/tests/test_tanda_final.py` y `test_tanda_final_lexicon.py`.
+>
+> Ninguno de los quince toca `capas_de_score`, y `curiana_observer` sigue sin
 > modificarse.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3
