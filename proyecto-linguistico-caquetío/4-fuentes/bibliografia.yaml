@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
   obras: 83
-  en_repo: 51
-  solo_citadas: 32
+  en_repo: 53
+  solo_citadas: 30
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -231,17 +231,20 @@ obras:
   anio: 2024
   publicacion: Geoarchaeology 39(6), pp. 609-627. doi:10.1002/gea.22017
   genero: arqueometria
+  local:
+  - fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.pdf
+  - fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.txt
   paginas: 19
-  acceso: '🔴 **Acceso abierto CC-BY 4.0** (confirmado en el registro Crossref: licencia `creativecommons.org/licenses/by/4.0/`
-    sobre la versión de registro), pero **Wiley devuelve 403 a la descarga automática**, y también a la
-    lectura del HTML. Verificado el 2026-09-22. URL del PDF: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/gea.22017
-    Lo único que se pudo leer es el **resumen**, vía la API de Crossref. Por la skill `minar-fuente` §3
-    eso NO es minar, y todo lo que esta nota diga de la obra queda degradado a `hipotetico` hasta que
-    alguien la abra de verdad (basta con un navegador).'
+  acceso: 'Acceso abierto CC-BY 4.0. Wiley está detrás de una verificación antibots (Cloudflare) y no
+    se forzó; la versión PUBLICADA se bajó el 2026-09-22 del repositorio de la KU Leuven (Lirias), por
+    su API DSpace: https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content
+    (registro: https://lirias.kuleuven.be/handle/20.500.12942/746055). Licencia CC-BY 4.0 en los metadatos
+    del archivo y en la p. 1 del artículo. El md5 coincide con el del repositorio; tamaño y sha256 los
+    imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.'
   aliases:
   - Casale et al. 2024
   - petrografía Aruba
-  en_repo: false
+  en_repo: true
 - id: castellanos-elegias
   obra: Elegías de varones ilustres de Indias (partes I-II)
   autor: Castellanos, Juan de
@@ -497,15 +500,19 @@ obras:
   anio: 2021
   publicacion: Journal of Archaeological Science 135, 105466. doi:10.1016/j.jas.2021.105466
   genero: arqueometria
-  paginas: 17
-  acceso: '🔴 **Acceso abierto CC-BY** según OpenAlex, pero **Elsevier devuelve 403 a la descarga automática**
-    (https://www.sciencedirect.com/science/article/pii/S0305440321001369/pdf). Verificado el 2026-09-22.
-    Con un navegador debería abrirse sin más: es abierto, no de pago. Copia también en el repositorio
-    institucional de Leiden (NEXUS 1492) y en ResearchGate.'
+  local:
+  - fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.pdf
+  - fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.txt
+  paginas: 15
+  acceso: 'Acceso abierto CC-BY 4.0. Elsevier devuelve 403 y Leiden y el CSIC bloquean con un sistema
+    de protección (no se forzó ninguno); la versión PUBLICADA se bajó el 2026-09-22 de la Research Collection
+    de la ETH Zürich, por su API DSpace: https://www.research-collection.ethz.ch/server/api/core/bitstreams/a2e8fcb5-1e72-4301-9aee-1676ff7053c0/content
+    (registro: https://doi.org/10.3929/ethz-b-000504053, dc.rights CC-BY 4.0). La ETH antepone una portada:
+    página impresa = página del PDF − 1. Tamaño y sha256 los imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.'
   aliases:
   - Knaf et al. 2021
   - jade Sr-Nd-Pb
-  en_repo: false
+  en_repo: true
 - id: laguna-guaranao-parque
   obra: Parque metropolitano Laguna de Guaranao — entrada enciclopédica
   autor: Wikipedia en español (colaborativa)
@@ -1163,7 +1170,9 @@ obras:
   genero: arqueologia
   local:
   - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf
+  - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.txt
   - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf
+  - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt
   acceso: 'El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal
     (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14.'
   aliases:
