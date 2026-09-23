@@ -5,70 +5,91 @@ autor: "Casale, Simone; Groot, Niels; Dijkhoff, Raymundo A. C. F.; Kelly, Harold
 anio: 2024
 publicacion: "Geoarchaeology 39(6), pp. 609-627. doi:10.1002/gea.22017"
 genero: arqueometria
+local: ["fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.pdf", "fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.txt"]
 paginas: 19
-capa_texto: no-disponible
+capa_texto: si
 acceso: >-
-  🔴 **Acceso abierto CC-BY 4.0** (confirmado en el registro Crossref: licencia
-  `creativecommons.org/licenses/by/4.0/` sobre la versión de registro), pero
-  **Wiley devuelve 403 a la descarga automática**, y también a la lectura del
-  HTML. Verificado el 2026-09-22.
-  URL del PDF: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/gea.22017
-  Lo único que se pudo leer es el **resumen**, vía la API de Crossref. Por la
-  skill `minar-fuente` §3 eso NO es minar, y todo lo que esta nota diga de la
-  obra queda degradado a `hipotetico` hasta que alguien la abra de verdad
-  (basta con un navegador).
-estado_minado: pendiente
+  Acceso abierto CC-BY 4.0. Wiley está detrás de una verificación antibots
+  (Cloudflare) y no se forzó; la versión PUBLICADA se bajó el 2026-09-22 del
+  repositorio de la KU Leuven (Lirias), por su API DSpace:
+  https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content
+  (registro: https://lirias.kuleuven.be/handle/20.500.12942/746055). Licencia
+  CC-BY 4.0 en los metadatos del archivo y en la p. 1 del artículo. El md5
+  coincide con el del repositorio; tamaño y sha256 los imprime
+  `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.
+descargado: 2026-09-22
+origen_digital: "Lirias (KU Leuven), versión publicada, CC-BY 4.0"
+estado_minado: minado
+cobertura: "leída entera (M8, 2026-09-22): sitios de Aruba, grupos petrográficos, Tabla 4 transcrita y verificada en imagen, conexiones isla-costa, fauna y mar; en 6-fusion/arqueologia_insular_falcon_2026-09-22.yaml. Nada pendiente para las preguntas de la esfera"
 prioridad: alta
 verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Casale et al. 2024", "petrografía Aruba"]
 ---
 
 # Casale et al. 2024 — Petrografía de la cerámica precolonial de Aruba
 
-## Por qué importa: es el hilo vivo de la parcela T8
+## Qué es
 
-Predicción 3 (**la cerámica**): ¿hay algún tiesto antillano en las ABC? La
-arqueología arubeña clásica clasifica por estilo, y [[dijkhoff-1997]] cierra
-en 1997 diciendo que de conexiones con las Antillas Mayores «no se puede decir
-mucho todavía». Esta obra es la primera que mira las **pastas**, que es donde
-la pregunta se contesta o no se contesta.
+Análisis petrográfico de 50 tiestos de nueve yacimientos de Aruba contra 17
+muestras de arcilla recogidas en la isla (proyecto de Leiden y el Museo
+Arqueológico Nacional de Aruba). La paginación que se cita es la de la versión
+en línea (1-19); en el volumen, sumar 608.
 
-## Qué dice el resumen (y sólo el resumen)
+## Bitácora
 
-Análisis petrográfico de cerámica de **nueve yacimientos** de Aruba contra una
-selección de fuentes de arcilla de la isla. Tres composiciones mineralógicas:
+### 2026-09-22 — campaña del taíno, T8
 
-- **Grupo 1** — vasijas sin decorar, arcillas locales, ligadas a la
-  meteorización de intrusiones de cuarzo-diorita del noroeste de la isla;
-  sugiere explotación de varias fuentes próximas de composición parecida.
-- **Grupo 2** — vasijas sin decorar, arcillas del sureste de Aruba, de
-  composición geológica mixta (caliza, toba volcánica, cuarzo-diorita).
-- **Grupo 3** — ⭐ **mayoritariamente DECORADO**, del **Urumaco Temprano**,
-  con matriz calcárea, pellets y vetas de arcilla y **desgrasante de concha
-  añadido**. «The extensive clay preparation practice leaves uncertainties
-  concerning the origin of ceramics from Group 3.»
+Sólo se pudo leer el resumen (Wiley devolvía 403). Quedó como `cer-02`,
+degradado a hipotético, en `6-fusion/taino2_evidencia_material_contacto.yaml`.
 
-Y una conclusión general: distintas fuentes de arcilla se usaban
-indistintamente por comunidades de toda la isla.
+### 2026-09-22 — tercera campaña de minería, M8
 
-## Qué haría falta, y es barato
+Bajada de Lirias y leída entera. Lo que dio, con página, está en
+`6-fusion/arqueologia_insular_falcon_2026-09-22.yaml` (`sit-01`…`sit-05`,
+`mov-01`…`mov-03`, `mov-07`, `mar-01`, `mar-03`, `mar-05`, `fauna:`). Lo
+esencial:
 
-Abrir el artículo y leer el pasaje del **grupo 3**. Es la única pista viva de
-esta parcela hacia una cerámica NO local en las ABC. Tres resultados posibles
-y los tres valen:
+- **Sitios** (pp. 3-5): Tanki Flip, aldea de más de 100 personas con trece
+  casas, empalizada y enterramientos entre urnas grandes (950-1250 d.C. según
+  el texto); Ser'i Noka, dos plantas de casa, enterramientos en fosa y en urna;
+  Savaneta, muchas urnas y entierros colectivos, ocupada hasta Los Médanos B.
+  Son resúmenes de Dijkhoff 1997 y Versteeg y Rostain 1997, no atestación
+  independiente.
+- **El grupo 3** (el hilo que T8 dejó abierto): pasta calcárea de
+  sedimentación marina, con mezcla de arcillas y concha añadida como
+  desgrasante, casi toda decorada y del Urumaco Temprano. Los autores dicen
+  que la preparación impide saber si es local o importada (p. 14). No
+  proponen origen, ni antillano ni continental.
+- **Cuatro tiestos** que no casan con ninguna arcilla de la isla, «likely
+  imported», sin origen propuesto.
+- **Conexiones**: la fig. 1 (verificada en imagen) une cada isla con la costa
+  de enfrente —Aruba con Falcón, Curazao con Falcón, Bonaire y Los Roques con
+  Valencia— y ninguna isla con otra ni con las Antillas.
+- **Cero antillano en el cuerpo**: las apariciones de «Antill-», «chicoid»,
+  «meillacoid» e «Hispaniola» están todas en la bibliografía (lo imprime el
+  script).
+- **Fauna**: sólo conchas y coral sin especie, un sitio de «marine food
+  exploitation» (California-2) y los mariscos de los campamentos ARCAICOS.
+  Ninguna tabla de fauna.
+- **Creencia**: cero (la única sonda que salta es el título de Antczak 2006,
+  «Los Ídolos de las Islas Prometidas», en la bibliografía).
 
-1. el grupo 3 es local con otra receta → la esfera arubeña es más autónoma de
-   lo que se cree, y el «límite del dabajuroide» es de gente que se muda, no
-   de cacharros que viajan;
-2. el grupo 3 es continental → confirma el eje oeste/sur por otra vía;
-3. el grupo 3 es antillano → sería la primera pieza material del contacto
-   norte, y cambiaría la parcela entera.
+⚠️ **Discrepancias internas, declaradas y no corregidas**: el texto cuenta
+siete tiestos en el grupo 2 y catorce en el 3, y la Tabla 4 da otros números
+que sí suman los cincuenta del muestreo; el texto dice que los cuatro
+importados vienen sólo de los tres poblados mayores, y la tabla pone dos en
+Tanki Leendert; el texto fecha Tanki Flip en 950-1250 «Early Urumaco» y la
+Tabla 1 pone el Urumaco Temprano en 1200-1350. Todo lo mide el script sobre la
+transcripción.
 
-Hoy el artículo dice que no se sabe. Eso ya es un dato: **la petrografía de
-Aruba no ha encontrado cerámica antillana**, porque ni siquiera ha podido
-adscribir el grupo dudoso.
+## Qué falta
+
+Nada para las preguntas de la esfera. Si algún día se quiere el origen de los
+cuatro tiestos importados, la obra lo deja para análisis químicos futuros en
+la costa venezolana, Curazao, Bonaire y Los Roques (p. 17).
 
 ## Enlaces
 
-[[dijkhoff-1997]] · [[fernandes-2020]] · [[martinez-cruzado-2003]] ·
-[[rouse-cruxent-1963]]
+[[dijkhoff-1997]] · [[fernandes-2020]] · [[urbina-jimenez-2007-2011]] ·
+[[knaf-2021]]

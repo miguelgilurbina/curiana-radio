@@ -6,11 +6,13 @@ anio: "sin confirmar — posterior a 2000 (cita a Fernández Heres 2000)"
 publicacion: "Coro, Falcón"
 paginas: "— (leída por Miguel en capturas)"
 capa_texto: no
-estado_minado: en-curso
+estado_minado: parcial  # 2026-09-22: lo que Miguel capturó está minado entero; el texto completo no se consigue por vía legítima
+cobertura: "sólo las capturas de Miguel del 2026-08-25, sin página (transcritas en 6-fusion/toponimia_coro_espina.yaml). Búsqueda del texto el 2026-09-22: archive.org 0, HEVILA 0 (sí está su artículo de 2002, otra obra), Google Books sin vista; la copia de Scribd no es acceso abierto legítimo"
+minado: 2026-09-22
 prioridad: alta
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-08-25
+verificado: 2026-09-22
 aliases: ["González Batista", "El nombre de Coro", "González Batista El nombre de Coro"]
 ---
 
@@ -132,5 +134,49 @@ Ver `6-fusion/toponimia_coro_espina.yaml` para el detalle. En resumen:
 1. Confirmar **año y editorial**.
 2. Conseguir [[arcaya-obra-inedita-1995]] p. 247 — la fórmula de salutación de
    Mitare, que es la pista más valiosa que deja esta obra.
+
+## Bitácora 2026-09-22 — tercera campaña de minería (parcela M7)
+
+**Qué se preguntó**: el argumento completo de `coro` = 'espina' / Curiana =
+Coriana con sus fuentes, lo demás de toponimia y etnohistoria de Coro, y si de
+aquí viene lo que Miguel recordaba (d21.15): «curiana era realmente Coriana y
+venía de espina porque Coro era un bosque tupido de cardones».
+
+**El texto no se pudo conseguir.** No está en archive.org (búsqueda por
+autor: 0), ni en HEVILA/Biblat, ni con vista en Google Books; la copia que
+Miguel vio estaba en Scribd, que el repo no acepta como acceso abierto
+(sesión 07, 2026-08-14). Año, editorial y páginas siguen sin saberse. Lo que
+sí apareció, del mismo autor y en acceso abierto, es su discurso de 2002
+[[gonzalez-batista-2002-fundacion]], que **no** trata el nombre (medido: espina
+0, cardón 0, viento 0, Paragua- 0, tococoro 0).
+
+**Veredicto sobre el recuerdo de Miguel, por partes**:
+
+| Parte | ¿Es de aquí? | Página |
+|---|---|---|
+| «Coriana, y no Curiana» | sí (capturas transcritas) | no recuperable |
+| `coro` 'espina' → Coriana 'tierra de las espinas' | sí | no recuperable |
+| «bosque tupido de cardones» | **no literalmente**: el autor dice «vegetación espinosa, e indirectamente, tierra de cardones» | — |
+
+La imagen del bosque de cardones tiene fuente primaria en otro sitio:
+**Castellanos 1589, p. 185** (líneas 48221-48223), Coro «es tierra de
+fructíferos cardones / Con que gran parte della se embaraza» — la misma
+página que González Batista cita en la ed. ANH 1987 (p. 175). Es muy
+probable que el recuerdo junte las dos cosas.
+
+**Lo que se suma a la discusión de `coro`** (detalle en
+`6-fusion/coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml`):
+
+- La forma **Coriana** con cadena documental: 1526 («el cacique de Coro y
+  Coriana»), 1646 (Coro, «que los Yndios diçen coriana», verificado en
+  imagen) y 1723 — vía el artículo de 2002.
+- Dos testigos independientes (Ballesteros 1550, Castellanos 1589) de que
+  Coro era el nombre del **río** antes que de la ciudad.
+- «Coro = viento» deja de competir como etimología indígena: es el latín
+  *corus/caurus*, que el castellano culto de 1582 ya decía *coro*.
+- El único Coriana de Castellanos es una aldea guanebucana de La Ramada.
+
+**Deuda**: conseguir la obra por vía legítima (Miguel: ejemplar físico o
+separata) para ponerle año, editorial y página a cada afirmación.
 
 Índice: [[INDICE_FUENTES]]

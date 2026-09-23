@@ -10,11 +10,11 @@ local: "fuentes_caquetios/Navarrete_1829_Coleccion_Viages_t3_Viages_Menores_Vesp
 paginas: "~470 + apéndices"
 capa_texto: si
 estado_minado: parcial
-cobertura: "la Sección Primera entera (viajes menores de 1499-1502: Hojeda–La Cosa–Vespucio, Niño y Guerra, Bastidas, Hojeda 1502) y los pasajes de Vespucio sobre la isla de los Gigantes — 2026-09-22, campaña del taíno 2, T7"
+cobertura: "la Sección Primera entera (viajes menores de 1499-1502: Hojeda–La Cosa–Vespucio, Niño y Guerra, Bastidas, Hojeda 1502) y los pasajes de Vespucio sobre la isla de los Gigantes — 2026-09-22, campaña del taíno 2, T7 + la COSTA OCCIDENTAL 1499-1502 y su gente, por esferas (Sección Primera pp. 3-41 entera, docs. X-XI y XVII-XX, suplemento doc. XLVII, pleitos pp. 543-545 y 590, Vespucio pp. 210-262) — 2026-09-23, minería 3, M2"
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 descargado: 2026-09-22
 origen_digital: "archive.org/details/bub_gb_HFzXrEyoeCAC — texto OCR (bub_gb_HFzXrEyoeCAC_djvu.txt), 1.766.446 bytes, sha256 2574a0dca4fd41083a68596a3b180492f671febb20dd9202940c9c7be69ec251. Dominio público (Public Domain Mark 1.0 declarado por archive.org; ed. 1829). Descargado el 2026-09-22 con la autorización de Miguel de esta campaña"
 aliases: ["Navarrete 1829", "Navarrete t. III", "Viages menores", "Colección de los viages y descubrimientos t. III"]
@@ -129,6 +129,15 @@ Y en 1502, con las indias que Hojeda tomó por la fuerza: «unas se rescataron
 mismas prendas **á precio de guanines**» (p. 34). El guanín funcionando como
 unidad de rescate en Tierra Firme.
 
+> 🔴 **Corregido el 2026-09-23 (minería 3, M2).** Este apartado junta las dos
+> Curianas. Las pp. 16-17 son la **oriental** (Niño y Guerra, 1499); el
+> rescate de 1502 es de la **occidental** —«una tierra de riego que los indios
+> llamaban Curiana y él nombró Valfermoso» (p. 32)— y está en la **p. 33**, no
+> en la 34. Y «adquirir guanines que indicaban venirles de… Cauchieto» es frase
+> de Navarrete (o de Muñoz): Anglería, su fuente, no usa la palabra. Ver abajo
+> §2026-09-23 y `6-fusion/cronicas_contacto_costa_occidental_2026-09-22.yaml`
+> (m2.m1).
+
 ### 5. La lengua: el negativo medido (p. 34)
 
 `intérprete` sale **19** veces en el volumen y **cero** en todo el relato de los
@@ -165,8 +174,57 @@ se llama Coquibacoa**». Es la ruta declarada bajo juramento: **costeando**.
 - Ni una mención de Manaure, de los caquetíos por su nombre, ni de Paraguaná
   con ese nombre (el cabo es «de S. Román»).
 
+## 2026-09-23 — la costa occidental y su gente (minería 3, parcela M2)
+
+**Qué se preguntó.** Lo que T7 no: qué cuenta el tomo de la costa de Tierra
+Firme occidental —Coquibacoa, San Román, Paraguaná, Coro, las dos Curianas,
+los Gigantes— y de su gente, esfera por esfera, más toda mención de animales y
+del mar. Leído a mano: la Sección Primera entera (pp. 3-41), los documentos X,
+XI y XVII-XX (pp. 85-108), el doc. XLVII del suplemento (pp. 518-519), los
+pleitos de las pp. 543-545 y 590, y la Lettera de Vespucio pp. 210-262. El
+volumen entero, barrido con `6-fusion/scripts/medir_cronicas_costa_occidental.py`,
+que además cose los guiones de fin de línea (`Co-`/`quibacoa`) y asigna cada
+`curiana` a la oriental o a la occidental con reglas declaradas. Datos y citas:
+`6-fusion/cronicas_contacto_costa_occidental_2026-09-22.yaml`.
+
+**Qué dio (lo nuevo):**
+
+- **La Curiana occidental de 1502** (p. 32): «una tierra de riego que los
+  indios llamaban Curiana y él nombró Valfermoso», donde Hojeda firmó la
+  instrucción del 7 de abril (doc. XIX, p. 107). Coro según Navarrete (p. 8
+  n. 3), con su itinerario en contra (Puerto Flechado). El OCR dice «rieeo».
+- **El rescate «á precio de guanines»** allí mismo (p. 33).
+- **La cédula del 3-IX-1501** (suplemento, pp. 518-519): los castellanos sacaban
+  guanines «de las islas de la Paria é de Caquibacoa» y se los vendían a los
+  indios de La Española. El vector castellano del guanín, documentado.
+- **Isabel**, la intérprete indígena de 1502 (doc. XX, pp. 107-108; p. 36 n. 1).
+- **La capitulación**: la «isla» de Coquibacoa «donde están las piedras
+  verdes, de las cuales trugistes muestra» (p. 86); y que en 1499 tomaron
+  Paraguaná por isla (p. 8).
+- **El palafito de Vespucio: «veinte grandes casas»** (p. 219), y distinto del
+  lago de San Bartolomé, donde «tomamos las indias» (doc. XVIII, p. 105).
+- **La isla de los Gigantes**: cinco casas en una hondonada (p. 256); y la
+  **isla de las hierbas** (pp. 251-255), con hierba y polvo blanco en
+  calabacitas, que Navarrete tiene por Marajó y el relato pone junto a Curazao.
+- **Las grafías de Coquibacoa** de los documentos, que el medidor lista con
+  folio: ⚠️ **todas del OCR**, sin ver en imagen.
+
+**Qué NO dio:** ni Paraguaná ni Aruba ni Bonaire por su nombre, ni los
+caquetíos, ni una palabra de la lengua de esa costa.
+
+**⚠️ Trampas de esta obra, medidas:** (1) el guion de fin de línea parte
+`Co-quibacoa` y `ti-gres` (en Hernando): se cose antes de contar; (2) las
+cabeceras del OCR traen folios rotos (`303` por `203`, `91` por `21`): el
+medidor se queda con la cadena que crece a ritmo de página y marca con «≈» lo
+interpolado; (3) Navarrete pone palabras que su fuente no tiene («guanines»,
+«macanas», pp. 15 y 17, donde Anglería escribe «oro aunque no puro» y
+«armados á su modo»).
+
 ## Qué falta
 
+- **Verificar en imagen** las pp. 32 («riego»), 86-89, 518 y 544 (las grafías
+  de Coquibacoa). El PDF no se bajó; está en archive.org
+  (`bub_gb_HFzXrEyoeCAC`).
 - **Los autos del pleito Hojeda-Vergara-Ocampo**, citados aquí por folio
   (fols. 16-17, 19, 21, 29, 44, 67, 69-73, 85-88) y publicados en la
   *Colección diplomática*, tomo II de esta misma obra. Cerrarían el punto del

@@ -8,10 +8,12 @@ genero: genetica
 local: "fuentes_caquetios/MorenoMayar_et_al_2018_Science_Early_Human_Dispersals.pdf"
 paginas: 14
 capa_texto: si
-estado_minado: sin-minar
+estado_minado: minado
+cobertura: "barrida entera (M8, 2026-09-22): es el poblamiento temprano de América; del Caribe sólo usa el genoma taíno de Schroeder 2018 y a los yukpa como referencia (p. 5 of 11). No alimenta ninguna esfera. CERRADA"
 prioridad: baja
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-21
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Moreno-Mayar 2018"]   # ⚠️ el alias «Schroeder 2018» se retiró el 2026-09-21: apuntaba a otra obra y el error volvió a circular
 ---
 
@@ -68,6 +70,23 @@ Beringia y del poblamiento temprano de América. La genética taína es
 [[schroeder-2018]]; la genética caribeña precontacto con varias poblaciones es
 [[fernandes-2020]], que está vacía; y el mtDNA de Aruba es
 [[martinez-cruzado-2003]]. Ninguna de las tres es ésta.
+
+## ✅ Minada y cerrada (tercera campaña de minería, M8, 2026-09-22)
+
+Barrido del `pdftotext` entero (sondas en
+`6-fusion/scripts/medir_arqueologia_insular_falcon.py`). Confirmado lo que
+dijo la campaña del taíno: **es Beringia y el poblamiento temprano** —genomas
+del Pleistoceno tardío y el Holoceno temprano de Alaska a la Patagonia
+(Trail Creek, Spirit Cave, Lovelock, Lagoa Santa)—, no el Caribe.
+
+Lo único caribeño es UNA frase de método (p. 5 of 11 del artículo, p. 7 del
+PDF): al modelar a los suramericanos usa como poblaciones de referencia, entre
+otras, a los yukpa de Venezuela y «the ancient Taino» de Schroeder et al. 2018.
+Cero caquetíos, cero ABC, cero Falcón, cero arahuaco; nada de fauna, mar,
+lengua ni creencia. Las apariciones de «mito» son de *mitochondrial*.
+
+**No alimenta ninguna esfera y no hay nada que volver a preguntarle.** La
+genética del Caribe precontacto es [[fernandes-2020]] y [[schroeder-2018]].
 
 ## Enlaces
 

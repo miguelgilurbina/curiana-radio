@@ -12,8 +12,9 @@ capa_texto: datos
 estado_minado: en-curso
 prioridad: media
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
+cobertura: "volcado de 2026-09-07 por regiones + lote 7 de Esteves (2026-09-07) + cruce de la cola entera de Esteves con el mapa (2026-09-23, medicion_lote_esteves_2026-09-22.yaml). Falta: Golfete y Falcón occidental contra Arcaya y las crónicas; islas ABC contra van Buurt y Gatschet"
 verificado: 2026-09-07
-minado: 2026-09-07
+minado: 2026-09-23
 aliases: ["OSM", "OpenStreetMap", "el mapa vivo", "osm-kaketiana", "barrido del mapa"]
 ---
 
@@ -93,6 +94,38 @@ Procesar los `por-clasificar` nuevos de Paraguaná por §2-§8 de la skill
 (permutar, buscar en el cuerpo de Esteves, Medina Colina), confirmar o
 descartar los aproximados, y decidir si los inventarios del Golfete y Falcón
 occidental se cruzan contra Arcaya y las crónicas antes de entrar a la cola.
+
+## Bitácora — la cola de Esteves contra el mapa (2026-09-23, tercera campaña, M6)
+
+**Qué se preguntó.** Dos cosas: cuántos nombres de la cola de Esteves siguen
+en el mapa vivo, y si los descartados del canon que entraron por OSM «sin
+fuente» la tienen en Esteves. Se regeneró antes `barrer_mapa.py --lote` (sin
+descargar: el volcado es el del 2026-09-07). El cruce lo hace
+`6-fusion/scripts/medir_lote_esteves_2026-09-22.py` con las funciones de
+barrer_mapa (misma clave, misma permutación laxa).
+
+**Qué se halló.**
+
+- De los nombres del lote de Esteves, los que están tal cual, los que sólo
+  aproximan y los que OSM no tiene los da `mapa_vivo` en
+  `6-fusion/medicion_lote_esteves_2026-09-22.yaml`, con coordenadas. Entre los
+  que están: Coduto en los DOS sitios que dice Esteves (Los Taques y Médanos),
+  Guaranao, Tumatey, Matacán, Sarinao, Tacaduto.
+- **Cuatro candidatos** para descartados del canon sin fuente: Cumairebo ~
+  Curaidebo (toponimo-132, en la posición exacta que da Esteves), La Miraba ~
+  Niraba (138), Tabe ~ Jabe o San José de Tarbes (135), caduto ~ Coduto (176).
+  Ninguna permutación está documentada: a revisar.
+- **Lo que el informe mide mal**: los ocho «nuevos» de Paraguaná que imprime
+  `--lote` están en el canon desde el lote 7 con la forma de Esteves (el script
+  cruza por forma y la forma viva vive en `observacion`), y dos aproximados
+  («Cerro Capuana», «Cuabana») caen ahora en `capana` —Parte II, Buchivacoa—
+  en vez de en Capuhana y Coabana. Propuesta (decide Miguel, es
+  `curiana_sim/`): un campo `forma_viva` con coordenada en el canon que el
+  script lea antes del aproximado.
+
+**Qué no.** Ningún nombre nuevo de Paraguaná entró a la cola por el mapa en
+esta sesión, y el Golfete y Falcón occidental siguen sin cruzar contra Arcaya
+y las crónicas.
 
 ## Enlaces
 

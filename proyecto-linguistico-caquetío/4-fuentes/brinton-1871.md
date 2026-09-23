@@ -4,7 +4,9 @@ obra: "The Arawack Language of Guiana in its Linguistic and Ethnological Relatio
 autor: "Brinton, Daniel G."
 anio: 1871
 genero: linguistica-comparativa
-local: ["fuentes_caquetios/Brinton_1871_texto.txt", "fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf (0 bytes)"]
+local: ["fuentes_caquetios/Brinton_1871_texto.txt", "fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf"]
+descargado: 2026-09-22
+origen_digital: "Internet Archive — https://archive.org/details/arawacklanguageo00brinrich (ejemplar de University of California; dominio público, 1871). PDF: 2.179.167 bytes, sha256 3495b3174fd100a7442354c2f4de6f87e6e707d402e13d636f5877ed0026d4df. Rellena el PDF que estaba en 0 bytes; el .txt del repo es el mismo OCR del ítem (86 KB)"
 paginas: "—"
 capa_texto: si
 estado_minado: minado

@@ -5,11 +5,13 @@ autor: "Oliver, José R."
 anio: 1989
 genero: arqueologia
 local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf (tesis completa, escaneo; el .DOC con texto limpio sigue en 'Info para Miguel/PhD Oliver Edited/')"
-capa_texto: si
+capa_texto: ocr  # el escaneo no tiene capa; el .DOC de 'Info para Miguel' no está en el repo ni se halló en OneDrive el 2026-09-22. §4.7-4.15 en fuentes_caquetios/Oliver_1989_cap4_s47_s415_dabajuroide.ocr.txt (pdf 438-514)
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/."
 estado_minado: parcial
 prioridad: alta
-verificado: 2026-08-14
+cobertura: "sitios FAL y Apéndice E (2026-08-17), Tabla 15 de C14 (2026-08-18, del .DOC; cotejada con el escaneo de 1989 el 2026-09-22), §4.7-4.15 enteros para cronología, sitios, cultura material, fauna de los depósitos, contactos y mar (2026-09-22, tercera campaña M1). Sin minar: §4.1-4.6 (Macro-Tocuyanoide), Tablas 16-17, Apéndices C y D"
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Oliver 1989 cap. 4", "Oliver Chapter 4 Archaeology"]
 ---
 
@@ -200,6 +202,54 @@ Late Urumaco-Los Médanos*, *Santa Ana (FAL-154) — Urumaco Complex*, *Cayerúa
    contener el capítulo 1 —cuyo archivo real son 162 bytes de bloqueo— o la
    tesis entera.
 4. El **Apéndice A** ([#62](https://github.com/miguelgilurbina/curiana-radio/issues/62)) sigue sin aparecer. No está en esta carpeta.
+
+## Bitácora — tercera campaña de minería, parcela M1 (2026-09-22)
+
+**Qué se le preguntó.** Los sitios dabajuroides de Falcón, Paraguaná y las ABC
+con su cronología; la cultura material (cerámica, concha, piedra, metal); los
+conchales y la fauna de los depósitos; los contactos al norte (Antillas) y al
+oeste (Ranchería, Guajira); y el mar. Se hizo OCR de §4.7-4.15 (tesis
+pp. 411-487; seis páginas venían giradas y `--rotar auto` las enderezó) y se
+miraron en imagen la Tabla 15 (p. 459) y las pp. 438, 439, 456 y 483.
+Propuesta en `6-fusion/oliver1989_restante_2026-09-22.yaml` (con la clave
+`fauna:`); cifras en `6-fusion/medicion_oliver1989_restante_2026-09-22.yaml`.
+
+**Qué dio.**
+
+- **La cronología dabajurana**, verbatim: Túcua 800-1100/1200, Urumaco
+  1100/1200-1400/1450, Los Médanos 1350-1600/1650, y las otras subtradiciones.
+  Antes de 800 la costa estaba ocupada por pescadores y recolectores
+  «Meso-Indian» que sobrevivieron a la llegada dabajurana (pp. 434-435).
+- **La navegación**: «At this time the Dabajuran (Urumaco) had also learned
+  maritime navigation, and had colonized the Netherlands Antilles» (p. 483, en
+  imagen), hacia 1100-1200; y desde 1300 una **ruta de mar Ranchería–Curazao–
+  Coro** que se ve en el ave negro-sobre-rojo de Portacelli copiada en Los
+  Médanos (pp. 473-477). Antillas Mayores: cero menciones en estos capítulos
+  (medición §antillas).
+- **La cultura material**: dos vajillas; concha como desgrasante («guarataro»,
+  ostra fósil, p. 447); del budare al aripo, «from caçabe to arepa»; maíz desde
+  Túcua; el cuenco tetrápodo del masato funerario; el batracio y el ave. **Metal:
+  cero en la arqueología**; el oro es dato etnohistórico.
+- **La fauna de los depósitos**, sólo de pasada: en los fogones de Túcua,
+  venado, conejos, culebra, aves, danta y roedores (p. 439, en imagen); en Los
+  Médanos, marisqueo intensivo y venado, conejo y báquiro (p. 475); concheros en
+  todos los sitios cerca de la costa.
+
+**Qué NO dio.** Zooarqueología: **los restos de fauna de Túcua y Corralito se
+perdieron** en el envío a EE. UU. (p. 438 n. 305) y el análisis sigue en el
+manuscrito inédito Oliver Ms. 1987c. Ninguna especie con nombre científico.
+Nada del mar en la creencia.
+
+**Tres correcciones a esta ficha.** (1) `capa_texto: si` era falso: el escaneo
+no tiene capa y el `.DOC` no está en el repo. (2) La Tabla 15 que
+`6-fusion/tabla15_c14_oliver.yaml` dice «recalibrada en 2006» tiene **las mismas
+cifras** que la del escaneo de 1989 (medición §tabla15). (3) Dos erratas del
+original: ISGS-1423 es 550 ± 110 en la tabla y 500 ± 110 en el texto (p. 456),
+y la p. 436 llama a Túcua «FAL-69», que es Corralito.
+
+**Qué queda.** §4.1-4.6 (la tradición Macro-Tocuyanoide, anterior a los
+caquetíos); las Tablas 16-17 de frecuencias; los Apéndices C (figuras) y D
+(histogramas; sólo se miró el perfil D-77 de Corralito).
 
 ## Enlaces
 
