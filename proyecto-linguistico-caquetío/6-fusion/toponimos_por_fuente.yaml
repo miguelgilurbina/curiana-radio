@@ -3,7 +3,7 @@
 # trabaja desde aquí, pero el canon sigue siendo 2-lengua/toponimos.yaml.
 meta:
   generado_por: curiana_sim/juntar_toponimos.py
-  generado: '2026-09-22'
+  generado: '2026-09-23'
   editar_a_mano: no — se edita la fuente y se regenera
   que_es: 'vista: todos los topónimos del proyecto, agrupados por obra y cruzados entre sí. No es canon ni propuesta
     de fusión.'
@@ -55,15 +55,15 @@ meta:
       sin-procedencia:
         menciones: 6
         formas: 6
-      jahn-1927:
-        menciones: 1
-        formas: 1
-      alvarado-1921:
-        menciones: 2
-        formas: 2
       osm-kaketiana:
         menciones: 7
         formas: 7
+      alvarado-1921:
+        menciones: 2
+        formas: 2
+      jahn-1927:
+        menciones: 1
+        formas: 1
     en_canon: 180
     en_nodos: 19
     sin_canon_ni_nodo: 356
@@ -1198,11 +1198,17 @@ por_fuente:
     ref: toponimo-024
   - forma: Acaboa
     tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Adaro
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-153
   - forma: Aguaque
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-154
+  - forma: Carirubana
+    tipo: indice
+    donde: 6-fusion/toponimos_esteves_indice.yaml §ya_registrados
+    ref: toponimo-148
+  - forma: Adaro
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Antuní
@@ -1275,9 +1281,6 @@ por_fuente:
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Cariguariana
-    tipo: indice
-    donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
-  - forma: Carirubana
     tipo: indice
     donde: 6-fusion/toponimos_esteves_indice.yaml §por_procesar
   - forma: Caujarito
@@ -3974,33 +3977,6 @@ por_fuente:
     dato: 'OSM 2026, poblado, 11.960 -69.842: colectivo castellano -al sobre buche ''melocacto'' [caquetío-atestiguado];
       c…'
     ref: toponimo-142 · nivel descartado · topónimo · fuente deuda
-- obra: jahn-1927
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 1
-  formas: 1
-  toponimos:
-  - forma: curarí
-    tipo: lectura:glosa-fuente
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
-    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
-- obra: alvarado-1921
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 2
-  formas: 2
-  toponimos:
-  - forma: curarí
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: árbol de la región occidental, propio para la construcción civil
-    ref: toponimo-180 · nivel C · topónimo · fuente declarada-en-lexicon_toponimos
-  - forma: araguan
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: árbol indeterminado de Lara y Falcón
-    ref: toponimo-152 · nivel C · topónimo · fuente declarada-en-lexicon_toponimos
 - obra: osm-kaketiana
   en_bibliografia: true
   descripcion: ''
@@ -4045,6 +4021,33 @@ por_fuente:
     dato: poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y sin fuente; no es
       Miraca
     ref: toponimo-138 · nivel descartado · topónimo · fuente procedencia
+- obra: alvarado-1921
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 2
+  formas: 2
+  toponimos:
+  - forma: curarí
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: árbol de la región occidental, propio para la construcción civil
+    ref: toponimo-180 · nivel C · topónimo · fuente declarada-en-lexicon_toponimos
+  - forma: araguan
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: árbol indeterminado de Lara y Falcón
+    ref: toponimo-152 · nivel C · topónimo · fuente declarada-en-lexicon_toponimos
+- obra: jahn-1927
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: curarí
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
+    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
 indice_de_formas:
 - forma: abudure
   variantes:
@@ -4084,7 +4087,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · canon · toponimo-153 · nivel descartado · topónimo · fuente procedencia
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-153
 - forma: acatute
   variantes: []
   fuentes:
@@ -4174,7 +4177,7 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · canon · toponimo-154 · nivel descartado · topónimo · fuente procedencia
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-154
 - forma: Aiyo
   variantes: []
   fuentes:
@@ -5476,7 +5479,7 @@ indice_de_formas:
   - esteves-1989 · canon · toponimo-148 · nivel B · topónimo · fuente procedencia
   - proyecto · lectura:etimologia-popular · toponimo-148 · divulgación local · 2026-09-10 · ⭐ vale como CORROBORACIÓN
     independiente de la glosa de `ban…
-  - esteves-1989 · indice
+  - esteves-1989 · indice · toponimo-148
   - medina-colina-sxx · lugar-s-xx
 - forma: carona
   variantes:
