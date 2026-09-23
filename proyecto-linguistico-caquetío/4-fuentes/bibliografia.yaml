@@ -348,9 +348,9 @@ obras:
   - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t1.txt
   - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.pdf
   - fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.txt
-  paginas: 't. I: 520 pdf, impresa = pdf − 63 en el cuerpo (medido: pdf 109 = p. 46, pdf 128 = p. 65,
-    pdf 187 = p. 124) · t. II: 464 pdf, impresa = pdf − 3 en el glosario (pdf 384 = p. 381, pdf 388 =
-    p. 385)'
+  paginas: 't. I: 520 pdf, impresa = índice pymupdf (desde 0) − 63 en el cuerpo (medido: doc[109] = p.
+    46, doc[128] = p. 65, doc[187] = p. 124) · t. II: 464 pdf, impresa = índice pymupdf − 3 en el glosario
+    (doc[384] = p. 381, doc[388] = p. 385)'
   aliases:
   - Castellanos 1886
   - Historia del Nuevo Reino de Granada

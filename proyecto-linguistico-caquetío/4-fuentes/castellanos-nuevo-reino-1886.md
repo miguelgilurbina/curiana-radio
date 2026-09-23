@@ -10,7 +10,7 @@ local:
   - "fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t1.txt"
   - "fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.pdf"
   - "fuentes_caquetios/Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.txt"
-paginas: "t. I: 520 pdf, impresa = pdf − 63 en el cuerpo (medido: pdf 109 = p. 46, pdf 128 = p. 65, pdf 187 = p. 124) · t. II: 464 pdf, impresa = pdf − 3 en el glosario (pdf 384 = p. 381, pdf 388 = p. 385)"
+paginas: "t. I: 520 pdf, impresa = índice pymupdf (desde 0) − 63 en el cuerpo (medido: doc[109] = p. 46, doc[128] = p. 65, doc[187] = p. 124) · t. II: 464 pdf, impresa = índice pymupdf − 3 en el glosario (doc[384] = p. 381, doc[388] = p. 385)"
 capa_texto: si
 estado_minado: minada-parcial
 prioridad: baja
@@ -53,7 +53,10 @@ salieron de `pdftotext -enc UTF-8` sobre la capa de texto del PDF.
 
 - Página impresa: **t. I = pdf − 63** en el cuerpo del poema, medido en tres
   puntos (46, 65, 124). **t. II = pdf − 3** en el glosario (381, 385).
-  El prólogo va en romanos: la p. XXII del t. I es la pdf 25.
+  El prólogo va en romanos: la p. XXII del t. I es la pdf 25. ⚠️ En toda
+  esta ficha «pdf N» es el **índice de pymupdf, que cuenta desde 0**
+  (`doc[N]`). Contando las páginas del visor desde 1, se suma uno: t. I =
+  página del visor − 64, t. II = página del visor − 4.
 - El OCR de archive.org (`_djvu.txt`) mete **dobles espacios** entre palabras.
   Por eso aquí se guarda el texto de `pdftotext`, no aquel.
 - Grafías medidas en los dos tomos: `caqu-` **0**, `guanebuc-` 0 en el t. I y
