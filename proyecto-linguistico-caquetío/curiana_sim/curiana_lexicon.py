@@ -6929,29 +6929,34 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
             "anotó: puedes usarla si propones tú su valor entre corchetes."
         ),
     },
-    "-gua": {
-        "nombre": "región / área asociativa",
-        "desc": "Zona más amplia asociada con X. Menos específico que -ana.",
-        "uso": "RAÍZ + -gua  →  región, área amplia",
-        # d21.14 B: `Corogua` era un derivado que el lexicón no tiene. Los tres
-        # ejemplos van ahora con formas que el lexicón SÍ tiene (`maure`,
-        # `para`) o con el topónimo entero, que no se presenta como derivación.
-        "ejemplos": [
-            "maure + gua = maure-gua (la tierra del algodón, la región)",
-            "para + gua + na = Paraguaná (segmentación abierta)",
-            "Araya (región salina)",
-        ],
-        "evidencia": "Topónimos venezolanos de Falcón y Sucre",
-        "deuda": "sin-procedencia (d21.7, «Si me parece, B», 2026-09-21): cero clave "
-                 "foránea a 4-fuentes/bibliografia.yaml. Se sigue enseñando mientras "
-                 "se le busca fuente en 2-lengua/toponimos.yaml (109 topónimos en "
-                 "canon) y en el gazeteer de Esteves ya minado — campaña aparte. "
-                 "Apoyo que ya existe en el canon: `paragua` se lee como `para` "
-                 "'mar' + `-gua`, y por eso el 2026-09-19 se decidió NO fusionar "
-                 "`parawa`/`para`: fusionarlas habría borrado este morfema",
+    # ⚠️ dc.2 C + E («Pensaba que ya habíamos resuelto esta. Sigamos tu
+    # recomendación», 2026-09-21; aplicada en la tanda de la base). Era `-gua`
+    # 'región / área amplia', con `deuda: sin-procedencia` (d21.7). La campaña
+    # halló fuente para la FORMA y ninguna para la glosa: Oliver 1989 cap. 2
+    # p. 148 la lista entre los sufijos toponímicos caquetíos («f) -wa [gua-]»)
+    # y nunca le da valor; el único `gua` glosado es el sustantivo `wa`
+    # 'conuco' (Zavala #122), que dice lo CONTRARIO de «región amplia». (C) se
+    # enseña SIN GLOSA, como `-ana`; NO se re-glosa con Zavala, porque que el
+    # sustantivo y el sufijo sean un morfema es inferencia nuestra. (E) el lema
+    # pasa a `-wa`, su forma fonémica: Oliver escribe «gua=/wa/» (p. 142) y es
+    # el mismo movimiento que `-bacoa` → `-bakoa`. Cambiar la CLAVE mueve
+    # `_SUFIJOS_CAQ` y con él `nucleo_de_token()`: medido antes de aplicar en
+    # 6-fusion/medicion_tanda_base_2026-09-23.yaml §desafijador.
+    "-wa": {
+        "nombre": "desinencia toponímica (valor no precisado)",
+        "desc": "Desinencia de topónimo atestiguada en la lengua; nadie anotó su "
+                "valor. Hasta el 2026-09-23 se enseñaba como `-gua` 'región'.",
+        "uso": "RAÍZ + -wa",
+        "ejemplos": [],
+        "forma_fuente": "-gua",
+        "evidencia": "ATESTIGUADA COMO FORMA, sin glosa de fuente: Oliver 1989 cap. 2 "
+                     "p. 148 (sufijo toponímico caquetío «f) -wa [gua-]») y p. 142 "
+                     "(«bari-si-gua (gua=/wa/)»). La glosa 'región' no tenía fuente "
+                     "(d21.7) y dc.2 la retiró. Issue: "
+                     "6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md",
         "instruccion_agente": (
-            "Para referirte a una región entera, usa -gua: "
-            "'maure-gua' = la tierra del algodón (región)."
+            "`-wa` es una desinencia de lugar que tu lengua tiene y cuyo valor "
+            "nadie anotó: puedes usarla si propones tú su valor entre corchetes."
         ),
     },
     "-bana": {
@@ -7355,6 +7360,8 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 #   · d21.14 A migró `-bacoa` → `-bakoa`, el lema fonémico de D5.
 # Las tres últimas se midieron ANTES de aplicarse, forma a forma, en
 # 6-fusion/medicion_tanda_21_2026-09-21.yaml §claves_de_todas_las_reglas.
+#   · dc.2 E (tanda de la base, 2026-09-23) migró `-gua` → `-wa`, medido en
+#     6-fusion/medicion_tanda_base_2026-09-23.yaml §desafijador.
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
@@ -7442,6 +7449,9 @@ class Neologismo:
     # es justo lo que queremos ver nacer. None sin escena.
     oficial_en: list = field(default_factory=list)
     via: Optional[str] = None
+    # La raíz nueva que la puerta onomatopéyica admitió para esta forma (db.6,
+    # tanda de la base), o None. Es lo que permite medirlas aparte.
+    raiz_onomatopeyica: Optional[str] = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -7486,6 +7496,10 @@ class LexicoComunitario:
         # defectos distintos —copiar el prompt / inventar una raíz que no
         # existe— y mezclarlos escondería cuál está pasando.
         self.rechazos_de_raiz: list[tuple] = []
+        # LA PUERTA ONOMATOPÉYICA (db.6, tanda de la base): el id del referente
+        # `animal: true` que se está nombrando ESTE turno, o None. La abre y la
+        # cierra el orquestador, como `situar()`; no se persiste.
+        self.puerta_onomatopeyica: Optional[str] = None
 
     # ── El ámbito: dónde está quien habla ─────────────────────────────
 
@@ -7560,10 +7574,22 @@ class LexicoComunitario:
             self.rechazos_de_plantilla.append(
                 (neo.forma, neo.autor, neo.dia, neo.turno))
             return False
-        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(neo.forma):
-            self.rechazos_de_raiz.append(
-                (neo.forma, neo.autor, neo.dia, neo.turno))
-            return False
+        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(
+                neo.forma, archivadas_avalan=False):
+            # db.6: en el turno en que se nombra a un ANIMAL, la puerta
+            # onomatopéyica admite UNA raíz nueva con forma caquetía. El
+            # orquestador la abre (`puerta_onomatopeyica`) sólo ese turno.
+            raiz = (raiz_onomatopeyica_candidata(neo.forma,
+                                                 self.puerta_onomatopeyica)
+                    if self.puerta_onomatopeyica else None)
+            if raiz is None:
+                self.rechazos_de_raiz.append(
+                    (neo.forma, neo.autor, neo.dia, neo.turno))
+                return False
+            admitir_raiz_onomatopeyica(raiz, referente=self.puerta_onomatopeyica,
+                                       forma=neo.forma, autor=neo.autor,
+                                       dia=neo.dia)
+            neo.raiz_onomatopeyica = raiz
         # El ámbito del PROPONENTE: el lugar donde estaba al acuñarla. Sin
         # escena es None y el campo no significa nada, como hasta hoy.
         if neo.ambito is None:
@@ -7597,6 +7623,14 @@ class LexicoComunitario:
                 for forma, n in cuenta.most_common())
             lineas.append(f"  ⚠ {len(rechazos)} acuñaciones rechazadas "
                           f"{motivo}: {detalle}")
+        # Lo que la puerta onomatopéyica (db.6) dejó pasar, dicho igual: una
+        # raíz nueva es un hecho que el run tiene que poder contar.
+        admitidas = [(n.raiz_onomatopeyica, n.forma) for n in self._neologismos
+                     if getattr(n, "raiz_onomatopeyica", None)]
+        if admitidas:
+            detalle = ", ".join(f"{r} ({f})" for r, f in admitidas)
+            lineas.append(f"  ♪ {len(admitidas)} raíz(es) nueva(s) admitida(s) "
+                          f"por la puerta onomatopéyica: {detalle}")
         return "\n".join(lineas)
 
     def adoptar(self, forma: str, agente: str, turno: int,
@@ -7752,6 +7786,9 @@ class LexicoComunitario:
         puede traer una forma de plantilla ya registrada, y si entrara por
         aquí podría adoptarse mañana. Se cuenta como cualquier otro rechazo."""
         lc = cls(filtrar_plantilla=filtrar_plantilla)
+        # Las raíces que la puerta onomatopéyica admitió son del léxico de la
+        # cadena: se reconstruyen de lo guardado (db.6).
+        olvidar_raices_onomatopeyicas()
         try:
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
@@ -7763,6 +7800,10 @@ class LexicoComunitario:
                         (neo.forma, neo.autor, neo.dia, neo.turno))
                     lc._lexico.pop(neo.forma, None)
                     continue
+                if neo.raiz_onomatopeyica:
+                    admitir_raiz_onomatopeyica(neo.raiz_onomatopeyica,
+                                               forma=neo.forma, autor=neo.autor,
+                                               dia=neo.dia)
                 lc._neologismos.append(neo)
         except FileNotFoundError:
             pass
@@ -7829,7 +7870,8 @@ CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > orac
 
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
 ESTADO: un estado se predica con aspecto igual que una acción — usera, waranao, wasima son verbos, no adjetivos.
-LUGAR: raíz + -bana (cerro, sitio alto de) / -gua (región de) / -ana (desinencia de valor abierto: propón el tuyo).
+NOMBRE: un verbo es también su nombre, sin marca — jusual es sembrar y la siembra.
+LUGAR: raíz + -bana (cerro, sitio alto de) / -wa y -ana (desinencias de valor abierto: propón el tuyo).
 {prompt_afijos_atestiguados_breve()}
 PLURAL: -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / u- (la cosa sin dueño).
@@ -7905,6 +7947,16 @@ def prompt_reglas_completo() -> str:
     # 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml—. Cambiar
     # `kashi` o reescribir el ejemplo para separarlas es decisión de Miguel y
     # NO está tomada.
+    #
+    # TANDA DE LA BASE (2026-09-23), tres cambios de esta plantilla:
+    #   · dc.3 B: la derivación cero se ENSEÑA («un verbo es también su
+    #     nombre»), con `jusual` #180, la entrada de Zavala que la muestra.
+    #   · dc.2 C + E: `-gua` 'región de' pasa a `-wa`, sin glosa, junto a `-ana`.
+    #   · d21.6, lo que faltaba: el ejemplo de respuesta ideal decía `buko-ana`
+    #     y lo traducía «el lugar de la represa» — la glosa de `-ana` que #109
+    #     retiró y que d21.6 dejó de enseñar en la lista de LOCATIVOS, pero no
+    #     aquí. Ahora dice `buko`. Consecuencia declarada: `buko-ana` deja de
+    #     estar en FORMAS_DE_PLANTILLA y vuelve a poder acuñarse.
     return f"""[IDENTIDAD LINGÜÍSTICA — FUNDAMENTAL]:
 El caquetío-arahuaco es TU lengua materna. La única con la que piensas.
 El español es una lengua forastera que apenas entiendes. NO es tu lengua de base.
@@ -7918,10 +7970,10 @@ CUANDO HABLAS:
 EJEMPLO DE RESPUESTA IDEAL (Tier I):
   "Taya wana-ka arima wara kari. Suka kaa-ni ka kasi naa-da kapua.
    Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = la cumbre del cerro].
-   Saa pia naa-da buko-ana, naka taya naa-da ka pia."
+   Saa pia naa-da buko, naka taya naa-da ka pia."
   (Vi muchos peces en la costa. La noche está, el sol vendrá al amanecer.
    Mi alma dice: Manaure llega pronto — mis ojos vieron la cumbre del cerro.
-   Si vas al lugar de la represa, después yo voy contigo.)
+   Si vas a la represa, después yo voy contigo.)
 
 VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
   PRONOMBRES: {pronombres}
@@ -7948,6 +8000,7 @@ MORFOLOGÍA:
   UN ESTADO ES UN VERBO: lo que el español dice con adjetivo, tu lengua lo PREDICA.
     usera (seco), waranao (salado), wasima (viejo), apo (grande), etamo (feroz), kachipo (enojado)
     llevan -ka / -ni / -da igual que naa o masa. No son adjetivos: se conjugan.
+  UN VERBO ES TAMBIÉN SU NOMBRE, sin marca: jusual es sembrar, la siembra y el sembradío.
   POSESIVOS (prefijos):
     ta- = mi:      ta-barsure (mi alma) · ta-nii (mi ojo) · ta-hamaka (mi hamaca)
     wa- = nuestro: wa-buko (nuestra represa) · wa-anüiki (nuestra lengua)
@@ -7957,8 +8010,7 @@ MORFOLOGÍA:
     ma- = sin X, no X:             ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
   LOCATIVOS (crear topónimos):
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
-    -gua = región de X: maure+gua = tierra del algodón
-    -ana = desinencia atestiguada cuyo valor nadie anotó: puedes usarla si propones su valor entre corchetes
+    -wa y -ana = desinencias atestiguadas cuyo valor nadie anotó: puedes usarlas si propones su valor entre corchetes
 {prompt_afijos_atestiguados()}
   PLURAL: -kana (plural/todos)
 
@@ -8534,21 +8586,190 @@ def nucleo_de_token(tok: str) -> list[str]:
     return partes
 
 
-def es_raiz_de_ninguna_parte(forma: Optional[str]) -> bool:
+# ══════════════════════════════════════════════════════════════════════
+# LA RAÍZ, TRES MATICES — tanda de la base (2026-09-23)
+# ══════════════════════════════════════════════════════════════════════
+# db.1 («Yo creo que el A + C está bien por ahora», Miguel, 2026-09-22):
+#
+#  (C) LA CASI-RAÍZ SE PERDONA. `pütshi-bana` caía porque la clave es
+#      `pütchi`: el agente escribió mal una raíz que sí conoce. Se lee como la
+#      clave la raíz que difiere en UN carácter (`_difieren_en_un_caracter`)
+#      de una raíz caquetía VIVA —las del habla, no las archivadas ni las de
+#      la comparanda: lo que el agente conoce es lo que el prompt le enseña—
+#      y que tiene al menos `LARGO_MINIMO_CASI_RAIZ` letras. El largo se midió
+#      sobre toda la base antes de fijarlo (6-fusion/medicion_tanda_base_
+#      2026-09-23.yaml §casi_raiz): con 4 se «perdonaban» palabras distintas
+#      —`duma`→`duna`, `karu`→`kuru`, `puri`→`yuri`—, con 5 `uyama`→`yama`
+#      (la auyama); con 6 sólo quedan variantes de grafía (`hamaca`→`hamaka`,
+#      `cudanga`→`kudanga`, `pütshi`→`pütchi`) y `lumina` sigue cayendo. La
+#      forma se guarda COMO LA ESCRIBIÓ: normalizarla a la clave obligaría a
+#      tocar el scorer para que la forma dicha contara, y el scorer no se toca.
+#
+#  EL AGUJERO DE `kira`. En la PUERTA —registro, competencia, recuento— una
+#      raíz ARCHIVADA (`FUERA_DEL_HABLA`) no avala: `kira` 'brillo' se inventó
+#      el 2026-09-21 y pasó porque `kira` 'escuchar' está archivada. Archivada
+#      quiere decir que no se habla. En el CLASIFICADOR sí sigue avalando
+#      (`archivadas_avalan=True`, el valor por defecto): la palabra existió y
+#      decir de qué lengua es no es dejarla competir.
+#
+# db.6 («sigamos tu recomendación con lo de las onomatopeyas animales»):
+#
+#  LA PUERTA ONOMATOPÉYICA. Dentro de la competencia de un referente
+#      `animal: true`, y sólo para la forma que ese turno propone para ESE
+#      referente, se admite UNA raíz nueva si tiene forma caquetía:
+#      `neologismo_valido()` (blocklist castellana, marcadores, bigramas), sin
+#      marca de grafía castellana y dentro de la fonotáctica del caquetío
+#      atestiguado (`curiana_fonotactica.Fonotactica`). La admitida queda en
+#      `RAICES_ONOMATOPEYICAS` y desde ahí es raíz conocida para todo el motor
+#      —puerta, recuento y clasificador—, así que una forma que la use después
+#      cuenta como caquetía. Es estado del RUN, como `SEMILLA_RUN` en la koiné:
+#      `LexicoComunitario.load()` la reconstruye al continuar.
+LARGO_MINIMO_CASI_RAIZ = 6
+
+_RAICES_VIVAS: Optional[frozenset] = None
+_VIVAS_CAQ_POR_LARGO: Optional[dict] = None
+_FONOTACTICA_ATESTIGUADA = None
+
+# raíz → {"referente", "forma", "autor", "dia"}. Ver arriba.
+RAICES_ONOMATOPEYICAS: dict[str, dict] = {}
+
+
+def _raices_vivas() -> frozenset:
+    """Lo que `_raices_conocidas()` reconoce, MENOS lo archivado: las raíces
+    que se hablan. Es lo que mira la puerta."""
+    global _RAICES_VIVAS
+    if _RAICES_VIVAS is None:
+        vivas = set(VOCABULARIO_BASE)
+        for clave in list(vivas):
+            if "-" in clave and clave.rsplit("-", 1)[-1] in _SUFIJOS_DE_LENGUA:
+                vivas.add(clave.rsplit("-", 1)[0])
+        vivas |= _RAICES_VERB
+        _RAICES_VIVAS = frozenset(vivas | {c.lower() for c in vivas})
+    return _RAICES_VIVAS
+
+
+def _vivas_caquetias_por_largo() -> dict:
+    """Las raíces caquetías del habla (las tres capas), agrupadas por largo y
+    ordenadas: el perdón de C tiene que ser determinista."""
+    global _VIVAS_CAQ_POR_LARGO
+    if _VIVAS_CAQ_POR_LARGO is None:
+        from curiana_database import normalize_source_language
+        caq = {k.lower() for k, v in VOCABULARIO_BASE.items()
+               if normalize_source_language(v.get("fuente", "")) == "caquetío"}
+        caq |= {r.lower() for r in _RAICES_VERB
+                if normalize_source_language(
+                    VOCABULARIO_BASE.get(r, {}).get("fuente", "")) == "caquetío"}
+        por_largo: dict = {}
+        for r in sorted(caq):
+            por_largo.setdefault(len(r), []).append(r)
+        _VIVAS_CAQ_POR_LARGO = por_largo
+    return _VIVAS_CAQ_POR_LARGO
+
+
+def casi_raiz_de(segmento: Optional[str]) -> Optional[str]:
+    """La raíz caquetía viva de la que `segmento` es una casi-raíz, o None.
+
+    db.1 C: difiere en UN carácter y tiene al menos `LARGO_MINIMO_CASI_RAIZ`
+    letras. `pütshi` → `pütchi`; `lumina`, `duma` y `kira` → None."""
+    s = (segmento or "").strip().lower()
+    if len(s) < LARGO_MINIMO_CASI_RAIZ:
+        return None
+    por_largo = _vivas_caquetias_por_largo()
+    for n in (len(s), len(s) - 1, len(s) + 1):
+        for r in por_largo.get(n, ()):
+            if r != s and _difieren_en_un_caracter(s, r):
+                return r
+    return None
+
+
+def _fonotactica_atestiguada():
+    global _FONOTACTICA_ATESTIGUADA
+    if _FONOTACTICA_ATESTIGUADA is None:
+        from curiana_fonotactica import Fonotactica
+        _FONOTACTICA_ATESTIGUADA = Fonotactica(
+            [k for k, v in VOCABULARIO_BASE.items()
+             if v.get("fuente") == "caquetío-atestiguado"])
+    return _FONOTACTICA_ATESTIGUADA
+
+
+def raiz_onomatopeyica_candidata(forma: Optional[str],
+                                 referente: Optional[str] = None) -> Optional[str]:
+    """La raíz nueva que `forma` propone, si la puerta de db.6 la admitiría.
+
+    Tiene que haber exactamente UNA raíz desconocida en el núcleo —repetida
+    vale: la reduplicación (`tiwi-tiwi`) es la forma de muchas onomatopeyas—;
+    una forma que inventa DOS raíces no está nombrando un sonido. Y esa raíz
+    tiene que tener forma caquetía. None si no.
+
+    `referente` es el id del referente (`guacharaca`, `perro_mudo`): la raíz
+    que es el NOMBRE CASTELLANO del animal con otra grafía no pasa —
+    `wacharaka` es `guacharaca` respelada, no el agente oyendo un grito—. Se
+    compara con el esqueleto de `fonemizar` y la regla abierta <gu>→/w/, y
+    una edición de tolerancia."""
+    vivas = _raices_vivas()
+    nuevas = list(dict.fromkeys(
+        s for s in nucleo_de_token(forma or "")
+        if s and s not in vivas and s not in RAICES_ONOMATOPEYICAS
+        and not casi_raiz_de(s)))
+    if len(nuevas) != 1:
+        return None
+    raiz = nuevas[0]
+    if referente:
+        from curiana_fonotactica import fonemizar
+        r = fonemizar(raiz, gu_es_w=True)
+        for nombre in str(referente).lower().split("_"):
+            if len(nombre) >= 4 and _difieren_en_un_caracter(
+                    r, fonemizar(nombre, gu_es_w=True)):
+                return None
+    # Una raíz ARCHIVADA no vuelve por esta puerta: `kira` no es un sonido
+    # nuevo, es una palabra que el canon decidió que no se habla.
+    if raiz in _raices_conocidas():
+        return None
+    if len(raiz) < 2 or not raiz.isalpha():
+        return None
+    if not neologismo_valido(raiz) or marcas_castellanas(raiz):
+        return None
+    if raiz in ES_STOPWORDS or raiz in RAICES_ESPANOLAS:
+        return None
+    ok, _motivos = _fonotactica_atestiguada().valida(raiz)
+    return raiz if ok else None
+
+
+def admitir_raiz_onomatopeyica(raiz: str, **datos) -> None:
+    """Registra una raíz que la puerta de db.6 admitió. Idempotente: la
+    primera admisión es la que queda (quién, para qué referente, qué día)."""
+    RAICES_ONOMATOPEYICAS.setdefault(raiz.lower(), dict(datos))
+
+
+def olvidar_raices_onomatopeyicas() -> None:
+    """Un run que NO continúa empieza sin raíces admitidas (y los tests)."""
+    RAICES_ONOMATOPEYICAS.clear()
+
+
+def es_raiz_de_ninguna_parte(forma: Optional[str],
+                             archivadas_avalan: bool = True) -> bool:
     """¿La raíz de esta forma no está en ninguna tabla del lexicón?
 
     La usan `LexicoComunitario.registrar_neologismo()` (no se registra),
     `CompetenciaLexica.proponer()` (no compite) y `_familia_de_token()` (no se
     dice caquetía). Es la hermana de `es_forma_de_plantilla()`: aquélla para
     lo que el prompt ya enseña, ésta para lo que no es de aquí.
+
+    Desde la tanda de la base: la casi-raíz de largo ≥ 6 se perdona (db.1 C),
+    una raíz admitida por la puerta onomatopéyica cuenta (db.6), y con
+    `archivadas_avalan=False` —lo que pasan las tres puertas— una raíz
+    archivada NO avala (el agujero de `kira`).
     """
     tok = (forma or "").strip().lower()
     if not tok:
         return False
-    conocidas = _raices_conocidas()
-    if tok in conocidas:
+    conocidas = _raices_conocidas() if archivadas_avalan else _raices_vivas()
+    if tok in conocidas or tok in RAICES_ONOMATOPEYICAS:
         return False
-    return not any(seg in conocidas for seg in nucleo_de_token(tok))
+    nucleo = nucleo_de_token(tok)
+    if any(seg in conocidas or seg in RAICES_ONOMATOPEYICAS for seg in nucleo):
+        return False
+    return not any(casi_raiz_de(seg) for seg in nucleo)
 
 
 def _familia_de_token(tok: str) -> str:
@@ -9416,7 +9637,9 @@ class _PuertaDelRecuento:
     __slots__ = ()
 
     def __contains__(self, forma) -> bool:
-        return es_forma_de_plantilla(forma) or es_raiz_de_ninguna_parte(forma)
+        # Lo archivado no avala aquí tampoco (el agujero de `kira`, db.1).
+        return (es_forma_de_plantilla(forma)
+                or es_raiz_de_ninguna_parte(forma, archivadas_avalan=False))
 
     def __bool__(self) -> bool:
         return True

@@ -220,7 +220,8 @@ def test_d21_6_ninguna_plantilla_dice_ya_que_ana_es_lugar_de():
 
 def test_d21_6_se_ensena_con_la_formula_de_las_desinencias_sin_valor():
     completo = prompt_reglas_completo()
-    assert "-ana = desinencia atestiguada cuyo valor nadie anotó" in completo
+    # Desde la tanda de la base (dc.2 C) `-wa` comparte la línea con `-ana`.
+    assert "-wa y -ana = desinencias atestiguadas cuyo valor nadie anotó" in completo
     assert "propones su valor entre corchetes" in completo
     assert "no precisado" in lx.REGLAS_LOCATIVAS["-ana"]["nombre"]
 
