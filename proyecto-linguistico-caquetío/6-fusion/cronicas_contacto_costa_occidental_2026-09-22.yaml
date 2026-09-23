@@ -1,0 +1,958 @@
+# ─────────────────────────────────────────────────────────────────────────
+# La costa occidental en las crónicas del primer contacto (1499-1502)
+#
+# Tercera campaña de minería, parcela M2 (2026-09-22/23).
+# Obras: angleria-1892 (vols. 1 y 4) · navarrete-1829-viages-menores ·
+#        navarrete-1859-viages-colon · colon-hernando-1892 (vol. 2)
+#
+# LA PREGUNTA: ¿qué cuentan estos cronistas de la COSTA DE TIERRA FIRME
+# occidental —Coquibacoa, el cabo de San Román, Paraguaná, Coro, las dos
+# Curianas, las islas de los Gigantes— y de su gente? La campaña del taíno
+# (T7, `6-fusion/taino2_etnohistoria_contacto.yaml`) los leyó sólo para el
+# contacto con las Antillas; esto no lo repite: lo cita por su id (t7.*).
+#
+# ⚠️ Esto PROPONE (regla 5). No se ha tocado `curiana_lexicon.py`,
+#    `3-mundo/`, `2-lengua/` ni `curiana_sim/`.
+# ⚠️ NINGUNA CIFRA DE CONTEO ESTÁ ESCRITA A MANO (regla 1). Las imprime
+#        python 6-fusion/scripts/medir_cronicas_costa_occidental.py
+#    Los números que aparecen entre comillas («veinte casas», «dos mil
+#    hombres») son de la FUENTE, no medidas nuestras.
+# ⚠️ PÁGINAS: Anglería por los marcadores del .txt (impresa = pdf − 64 en el
+#    vol. 1); Navarrete y Hernando por el folio impreso que el OCR lleva en la
+#    cabecera de cada página, leído a mano en el pasaje (el medidor da una
+#    guía «≈N» cuando la cabecera está rota). Lo verificado en IMAGEN va
+#    marcado `verificado_en_imagen`; el PDF de Navarrete no está en el repo y
+#    esta sesión no tuvo red, así que sus formas se citan del OCR y se dice.
+#
+# CÓMO SE ETIQUETA CADA HALLAZGO (como T7, para que se puedan cruzar):
+#   clase   noticia-indigena-recogida · inferencia-del-cronista ·
+#           inferencia-del-editor (Navarrete 1829, Torres Asensio 1892) ·
+#           hecho-colonial (lo que hicieron o vieron los españoles) ·
+#           documento (capitulación, instrucción, cédula, testimonio jurado)
+#   epoca   precontacto · contacto-temprano (1499-1502) · colonial
+#   regla_3 por qué lo visto en 1499-1502 NO es automáticamente el s. XV
+#   lugar   el que la fuente declara, y cuál de las dos Curianas si toca
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-23'
+  campana: Tercera campaña de minería — parcela M2 (crónicas del primer contacto)
+  autor: minador M2
+  rama: campana/mineria3-cronicas
+  mide: 6-fusion/scripts/medir_cronicas_costa_occidental.py
+  textos: >-
+    Navarrete y Hernando: los `.txt` de archive.org que bajó T7 (ya en el
+    repo). Anglería: esta parcela extrajo los dos volúmenes con pdftotext y los
+    dejó junto a sus PDF con marcadores de página
+    (`fuentes_caquetios/Angleria_1892_Fuentes_Historicas_Colon_America_vol{1,4}.txt`).
+  aviso_de_derechos: >-
+    las cuatro obras son de dominio público (ediciones de 1829, 1858, 1892 de
+    textos de 1499-1539). Se citan literalmente. La nota del traductor de
+    Anglería (1892) se cita como del EDITOR.
+  cruces_con_otras_parcelas_de_esta_campana: >-
+    Federmann 1530 (PR #210): Paraguaná en enero de 1530, pesca nocturna con
+    hogueras, una aldehuela de tres casas, miedo a la trata. Pérez de Tolosa
+    1546 (PR #209): «cuatro poblezuelos» en Paraguaná. Coro colonial (PR #207):
+    el único «Coriana» de Castellanos es una aldea de La Ramada junto a
+    «Paraguanil» (p. 264). Se cruzan abajo donde tocan; no se repiten.
+
+# ══════════════════════════════════════════════════════════════════════
+# 0. LO QUE DEL ENCARGO (Y DE LO QUE DEJÓ T7) RESULTÓ FALSO AL MEDIRLO
+# ══════════════════════════════════════════════════════════════════════
+lo_que_resulto_falso:
+
+- afirmacion: >-
+    «T7 halló que Navarrete separa DOS Curianas y la de Niño y Guerra 1499 está
+    en Cumaná»
+  medido: >-
+    **Verdad en lo esencial —la Curiana de 1499 NO es la de Coro— y falso en el
+    detalle.** «Comprende la costa de Cumaná y golfo de Cariaco» es la glosa de
+    Navarrete (p. 13 n. 4). Su fuente, Anglería, la sitúa DESPUÉS de Cumaná:
+    Niño, «dejadas atrás las regiones Cumana y Manacapana, llegó á una región
+    que dice llaman los indígenas Curiana» (vol. 1, p. 303, verificado en
+    imagen). Y el documento que manda —la capitulación de Hojeda (Navarrete
+    p. 86) y el requerimiento al veedor del 12-14 de marzo de 1502 (pp. 103-105)—
+    la define como una franja: «dende el parage de los Frailes é seña antes de
+    la Margarita, é de la otra parte hasta el Farallón, é de toda aquella tierra
+    que se llama Curiana», y el veedor certifica haberla pasado ANTES de cabo
+    Codera. La Curiana de 1499 es la costa centro-oriental entre Maracapana y el
+    Farallón, no Cumaná a secas. Ver §las_dos_curianas.
+
+- afirmacion: >-
+    T7 (ficha de Navarrete §4): «El guanín de Curiana venía del oeste, y era
+    moneda de rescate (pp. 16-17, 34)»
+  medido: >-
+    🔴 **Mezcla las dos Curianas.** Las pp. 16-17 son la Curiana ORIENTAL de
+    1499; el rescate de las indias «por guanines» es de la Curiana OCCIDENTAL de
+    1502 —«una tierra de riego que los indios llamaban Curiana y él nombró
+    Valfermoso» (p. 32)— y cae en la **p. 33**, no en la 34. Lo que T7 leyó como
+    un solo circuito del guanín son dos costas distintas, con tres años de
+    diferencia. Y además: la frase «adquirir guanines que indicaban venirles de…
+    Cauchieto» (p. 16) **es de Navarrete (o de Muñoz, a quien sigue)**; Anglería,
+    su fuente declarada, no usa la palabra guanín ni una vez en el vol. 1 (lo
+    midió el propio T7) y escribe «oro… aunque no puro» (p. 309). Es la trampa
+    del glosario del editor, otra vez.
+
+- afirmacion: >-
+    T7 (t7.l4): «el único hombre que en toda la costa entiende a los indios en
+    1502 es un español que se quedó trece meses a aprender. Nadie llevó un
+    intérprete de las islas que sirviera.»
+  medido: >-
+    **La segunda frase se sostiene; la primera, no.** La armada de 1502 llevaba
+    una intérprete indígena de TIERRA FIRME: «la india Isabel la trajo Hojeda á
+    Castilla en su primer viage según puede inferirse; y la llevó en el segundo
+    para facilitar por su medio la comunicación con los indios» (Navarrete p. 36
+    n. 1), y la instrucción de Hojeda del 20 de mayo de 1502 (doc. XX,
+    pp. 107-108) la pone a trabajar: «venios costa á costa hablando á los indios
+    en todas las partes que podierdes, y trabajad con Isabel que traiga algún
+    pariente suyo». El cero de `intérprete` en ese tramo medía la PALABRA, no la
+    práctica (regla 6): la palabra no sale y la persona sí.
+
+- afirmacion: >-
+    Canon, `geografia_politica-006` y `asentamientos.yaml` nodo-008: el palafito
+    de Vespucio es «el Puerto de San Bartolomé»; y la nota «Pendiente de
+    verificar contra Vespucio directamente» sobre las «40 casas»
+  medido: >-
+    En Navarrete son **dos sitios distintos**: el poblado sobre estacas de la
+    costa oriental del golfo, sin nombre (p. 8), y el «lago y puerto de
+    S. Bartolomé», descubierto el 24 de agosto, que es donde «tomamos las indias»
+    (instrucción de Hojeda, doc. XVIII, p. 105). Y la Lettera de Vespucio dice
+    «veinte grandes casas, con corta diferencia» (p. 219; latín «ingentes xx
+    aedes aut circiter»): **las 40 no están en la Lettera.** La carta de Vespucio
+    a Médicis de 1500, que Navarrete sólo cita (ed. Canovai 1817, pp. 59-66), no
+    está en el repo; si la cifra de Miguel viene de algún texto, ése es el
+    candidato — sin verificar.
+
+- afirmacion: implícita — «Anglería narra el viaje de Hojeda de 1499»
+  medido: >-
+    **No en los volúmenes que tenemos.** El vol. 1 es la Década I entera y su
+    libro VIII es Niño y Guerra; Hojeda 1499 no se narra. `Cuchibacoa` sale una
+    vez en cada volumen, y las dos en una LISTA de provincias (vol. 1 p. 48;
+    vol. 4 p. 132). Lo de Hojeda en Tierra Firme estaría en la Década II
+    (vol. 2), que el repo no tiene.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. EL VEREDICTO, EN UNA FRASE
+# ══════════════════════════════════════════════════════════════════════
+veredicto: >-
+  La Kaketiana entra en las crónicas por DOS viajes de Hojeda —agosto de 1499 y
+  abril-mayo de 1502— y casi todo lo que se sabe de su gente en ese momento
+  viene de los papeles de Hojeda que Navarrete imprime, no de ningún cronista:
+  un poblado de «veinte» casas sobre estacas en la costa oriental del golfo que
+  los indios llamaban de Coquibacoa, una isla de los Gigantes con casas en una
+  hondonada y gente que defendía lo suyo, una «tierra de riego que los indios
+  llamaban Curiana» donde en 1502 se pagaba rescate en guanines, y una
+  intérprete indígena, Isabel, capturada en el primer viaje; de la lengua no
+  quedó apuntada ni una palabra de la costa occidental, y de Paraguaná sólo su
+  perfil desde el mar («una que juzgaron ser isla»).
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LAS DOS CURIANAS (y una tercera que trae PR #207)
+# ══════════════════════════════════════════════════════════════════════
+las_dos_curianas:
+  medido: >-
+    Cada acierto de `curiana` en Navarrete t. III se asigna por TRAMO y por
+    CONTEXTO con reglas declaradas en el medidor (`cual_curiana`); el resumen
+    que imprime es el censo (oriental · occidental · índice). No se decide a
+    mano acierto por acierto.
+  curiana_oriental:
+    que_es: >-
+      El nombre castellano de la franja del rescate de las perlas: «desde el
+      parage de los Frailes… fasta el Farallón, tierra que se llama Curiana».
+      Donde Niño y Guerra comerciaron en 1499-1500.
+    donde: >-
+      costa centro-oriental de Venezuela, entre Maracapana y el Farallón
+      (Centinela, a la altura del cabo Codera). Anglería la pone pasado Cumaná
+      y Manacapana (vol. 1 p. 303) y a «más de ciento veinte leguas» de la Boca
+      del Drago (p. 318); Navarrete lo corrige a «ni á ciento» y la extiende a
+      Cumaná (p. 13 n. 4).
+    documentos: 'capitulación de Hojeda, Navarrete p. 86; requerimiento de marzo de 1502, pp. 103-105'
+    aviso_de_la_propia_fuente: >-
+      Anglería, p. 318 (verificado en imagen): «Hay quien dice que Niño no se
+      hizo con las perlas en Curiana… sino en las pequeñas regiones de Cumana
+      y Manacapana… y dicen que la Curiana no da margaritas. Todavía no está en
+      claro». Y Hojeda, en el pleito con Vergara y Ocampo, sostuvo que «la
+      tierra de Curiana no se llamaba así» (Navarrete p. 13 n. 3). El nombre
+      estaba en disputa ya en 1502-1503.
+  curiana_occidental:
+    que_es: >-
+      «llegó á una tierra de riego que los indios llamaban Curiana y él nombró
+      Valfermoso» (Navarrete p. 32; abril de 1502). Allí firmó Hojeda la
+      instrucción del 7 de abril: «Fecho en Valfermoso» (doc. XIX, p. 107).
+    donde: >-
+      entre el cabo Codera y el golfo de Coquibacoa. Navarrete la identifica con
+      Coro («la ensenada de Valfermoso (Coro)», p. 8 n. 3) apoyándose en Pedro
+      Simón («la ciudad de Coro está fundada en una provincia de indios llamada
+      Curiana», p. 32 n. 3).
+    aviso: >-
+      ⚠️ Es una INFERENCIA de Navarrete, y su propio itinerario la tensa: de
+      Valfermoso Hojeda «pasó… á reunirse» con Ocampo y Guevara en Puerto
+      Flechado, y de allí fueron a Curazao (p. 34); pero Navarrete pone Puerto
+      Flechado en Chichiriviche (p. 6), al ESTE de Coro. O Hojeda volvió atrás,
+      o Valfermoso está más al este. Lo cerrarían los autos del pleito (fols.
+      16-17, 61, 88), que el repo no tiene. **En duda, degradar**: «costa
+      occidental, entre Codera y Coquibacoa; Coro según Navarrete».
+    que_nombre_es: >-
+      «que los indios llamaban Curiana» es frase de Navarrete sobre los autos;
+      ninguno de los documentos de 1502 impresos en el tomo dice «Curiana» para
+      Valfermoso. Nombre indígena **atribuido**, no transcrito.
+  tercera_curiana_para_cruzar:
+    fuente: 'PR #207 (Coro colonial): Castellanos, p. 264 — «Coriana», aldea de La Ramada junto a «Paraguanil»'
+    cruce: >-
+      coincide con lo que el canon ya tenía de Oliver (cap. 3 p. 207): «Coria-na»
+      y «Paragua-nil» entre las aldeas wanebucán de Punta Espada–Chichibacoa
+      (toponimo de `2-lengua/toponimos.yaml`, lectura de 2026-09-07). Con esto
+      son **tres** Curianas en tres costas. Qué hace eso con #33 (¿nombre común
+      'tierra de X', o nombre que viajó?) es de Miguel.
+  consecuencia: >-
+    lo que el repo tenía como «la red Curiana ↔ Cauchieto» es ORIENTAL (T7 ya
+    lo dijo) y lo que tenía como «el guanín de Curiana era moneda de rescate» es
+    OCCIDENTAL y de 1502 (esto es nuevo). Ninguna de las dos cosas sirve para la
+    otra costa.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LOS HALLAZGOS, POR ESFERA
+#    lugar: Kaketiana (costa de Falcón, Paraguaná, Golfete, ABC) · Coquibacoa
+#    (golfo y Guajira: la polity occidental «futura» del canon) · oriental
+# ══════════════════════════════════════════════════════════════════════
+hallazgos:
+
+# ── GEOGRAFÍA Y TOPÓNIMOS ─────────────────────────────────────────────
+- id: m2.g1
+  esfera: geografia_politica / toponimos
+  titulo: 'El primer paso europeo por la Kaketiana, agosto de 1499 — y Paraguaná vista como isla'
+  cita: >-
+    «de Coro, donde permanecieron veinte dias. Desde aquel punto se dirigieron
+    á la isla de Curazao, que llamaron de los Gigantes… Pasaron luego á una que
+    juzgaron ser isla, distante diez leguas de la de Curazao, y en ella vieron
+    el Cabo que forma una península y llamaron de S. Román, quizá por haberle
+    descubierto el dia 9 de Agosto»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '7-8'
+  lugar: Kaketiana — ensenadas entre Puerto Flechado y «la Vela de Coro»; Curazao; cabo de San Román (Paraguaná)
+  clase: hecho-colonial (reconstruido por Navarrete sobre las declaraciones de Hojeda y del piloto Morales)
+  epoca: contacto-temprano
+  regla_3: >-
+    ruta y fechas, no sociedad. «la Vela de Coro» es el topónimo de 1829, no
+    de 1499. Ya estaba en T7 (t7.kak1); lo nuevo es el detalle de que tomaron
+    Paraguaná por una ISLA, que explica el «gobernación de la isla de
+    Coquibacoa» de m2.g3.
+  fuerza: alta para la ruta
+
+- id: m2.g2
+  esfera: toponimos
+  titulo: '«Los indios le llamaban Golfo de Coquibacoa» — y cómo lo escriben los papeles de 1500-1515'
+  cita: >-
+    «Llamó Hojeda á este Golfo de Venecia por la semejanza á esta célebre ciudad
+    de Italia. Los indios le llamaban Golfo de Coquibacoa, y nosotros le
+    conocemos ahora con el nombre de Golfo de Venezuela.» (p. 8) · y en el
+    pleito colombino, Hojeda bajo juramento: «descubriendo toda aquella costa
+    de la tierra firme desde los Frailes hasta en par de las islas de los
+    Gigantes, el golfo de Venecia que es en la tierra firme, y la provincia
+    Quinquíbacoa» (p. 544)
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '8; 86-89; 518-519; 543-545; 590'
+  lugar: Coquibacoa (golfo de Venezuela y Guajira)
+  clase: documento + inferencia-del-editor («los indios le llamaban» es de Navarrete)
+  epoca: contacto-temprano (1499-1502) y testimonios de 1512-1515
+  grafias: >-
+    el medidor las lista todas, con folio. Por documento: capitulación de
+    1500/1501 (doc. X) «Qoiquevacoa» (p. 86, en la frase de las piedras verdes)
+    y «Caquevacoa» (p. 87); nombramiento de gobernador de 1501 (doc. XI)
+    «Caquivacoa» (p. 89); cédula de 1501 sobre los guanines (doc. XLVII del
+    suplemento) «Caquibacoa» (pp. 518-519); testimonios del pleito de 1512-1515:
+    Morales y Hojeda «Quinquíbacoa/Quínquibacoa/Quinquihacoa» (pp. 544-545),
+    Miguel de Toro «Conqucboca» (p. 590). Navarrete escribe «Coquibacoa».
+  aviso: >-
+    ⚠️ **TODO es OCR sin verificar en imagen** (el PDF de Navarrete no está en
+    el repo y esta sesión no tuvo red). `Qoiquevacoa` tiene once letras, como
+    «Quiquevacoa», no doce como «Quinquevacoa»: el OCR apunta a la forma
+    reduplicada SIN nasal en la capitulación, mientras el canon
+    (`toponimo-034`) la cita como «Quinquevacoa» por Otte 1963 vía Oliver. Y
+    `Caquevacoa`/`Caquivacoa` podrían ser `Co-` mal leído. **No se cita
+    ninguna forma hasta verla en la página** (archive.org
+    `bub_gb_HFzXrEyoeCAC`).
+  para_que_sirve: >-
+    `toponimo-034` (quiquiba + bacoa, nivel C) pide para subir «un segundo
+    caso de reduplicación plural o una glosa impresa»: esto no es un segundo
+    caso, pero sí da la forma reduplicada en boca del propio Hojeda (1512-15) y,
+    si la imagen lo confirma, en la capitulación que Navarrete transcribió de
+    Simancas: dos transcripciones independientes del mismo documento (Navarrete
+    1829 y Otte 1963) que habría que cotejar.
+
+- id: m2.g3
+  esfera: geografia_politica
+  titulo: 'La «isla de Coquibacoa» de los papeles de Hojeda, «donde están las piedras verdes»'
+  cita: >-
+    «Item: Que vos el dicho Alonso de Hojeda… entréis en la isla é en las otras
+    que allí están cerca della, que se dicen [Quiquevacoa] en la parte de la
+    tierra firme, donde están las piedras verdes, de las cuales trugistes
+    muestra, é traigáis dellas las mas que pudiéredes» · «vos hacen merced de
+    la gobernación de la isla [Coquevacoa], que vos descubristeis»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '86-87 (doc. X, capitulación: cédula del 28-VII-1500 y asiento aprobado el 8-VI-1501)'
+  lugar: Coquibacoa — «la isla… y las otras que allí están cerca della… en la parte de la tierra firme»
+  clase: documento
+  epoca: contacto-temprano
+  lectura_del_minador: >-
+    ⚠️ inferencia mía, no de la fuente: si en 1499 tomaron Paraguaná por una
+    isla (m2.g1), «la isla de Coquibacoa y las otras que allí están cerca»
+    puede ser Paraguaná con Curazao y sus vecinas —el corazón de la Kaketiana—
+    y no la Guajira. Navarrete no lo dice; sólo que la gobernación
+    «comprendía el golfo de Venezuela» (p. 8 n. 3). Hipótesis.
+  regla_3: >-
+    las «piedras verdes» son muestras que Hojeda trajo en 1499: estaban en la
+    costa en el primer contacto. Qué eran (cuentas de piedra verde, material
+    en bruto) y de dónde venían, no lo dice.
+  fuerza: alta para el documento; baja para la identificación de la «isla»
+
+- id: m2.g4
+  esfera: geografia_politica
+  titulo: 'Coquibacoa = cabo Chichibacoa, ya en Navarrete 1829'
+  cita: '«Coquibacoa parece ser lo que hoy llaman cabo de Chichibacoa, que es la punta mas occidental del golfo de Maracaibo»'
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '34, nota 4'
+  lugar: Guajira (Coquibacoa occidental)
+  clase: inferencia-del-editor
+  epoca: contacto-temprano (el hecho) / 1829 (la identificación)
+  cruce: >-
+    es la misma identificación que el canon toma de Oliver (cap. 3 p. 249
+    n. 94) para `toponimo-034`. Oliver cita Navarrete 1829 t. III, así que
+    **no cuenta como segunda atestación** hasta ver si la saca de aquí (skill §8).
+
+# ── CASAS Y PUEBLOS ───────────────────────────────────────────────────
+- id: m2.c1
+  esfera: geografia_politica / asentamientos
+  titulo: 'El poblado sobre estacas: «veinte grandes casas», no cuarenta'
+  cita: >-
+    «descubrimos una población á manera de lugar ó villa, colocada sobre las
+    aguas, como Venecia, en que habia veinte grandes casas, con corta
+    diferencia, construidas á modo de campanas… y fundadas sobre sólidas y
+    fuertes estacas, delante de cuyos portales habia unos como puentes
+    levadizos, por los cuales se pasaba de unas á otras» (Lettera, p. 219) ·
+    «en cuya costa oriental… vieron una gran población y las casas que la
+    formaban fundadas artificiosamente en el agua sobre estacas hincadas en el
+    fondo y comunicándose de unas á otras con canoas» (Navarrete, p. 8)
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '8 (narración); 219 (Vespucio, trad. de Navarrete; nota: «Esto sucedió en el primer viage de Hojeda»)'
+  lugar: >-
+    costa ORIENTAL del golfo que entraron tras doblar el cabo de San Román — es
+    decir, la orilla paraguanera o la del Golfete, no la del lago de
+    Maracaibo. Ramos Pérez (vía Oliver, en el canon) lo pone en el Golfete.
+  clase: hecho-colonial (lo vieron)
+  epoca: contacto-temprano
+  regla_3: >-
+    un poblado visto un día de agosto de 1499; que el palafito sea forma de
+    asentamiento del XV en esa orilla es verosímil, pero la fuente es UN
+    avistamiento y Vespucio lo coloca en su «primera navegación» de 1497, que
+    Navarrete tiene por fingida y reconstruida sobre este viaje.
+  toca: 'geografia_politica-006 y nodo-008 (ver §lo_que_resulto_falso): son dos sitios; la cifra es «veinte»'
+  fuerza: media (Vespucio es testigo de baja fiabilidad para cifras; el hecho lo confirma la narración de Navarrete sobre los papeles de Hojeda)
+
+- id: m2.c2
+  esfera: geografia_politica / asentamientos
+  titulo: 'La isla de los Gigantes: cinco casas en una hondonada, a una legua de la playa'
+  cita: >-
+    «encontramos un camino que guiaba tierra dentro… Habiendo caminado la
+    senda adelante cerca de una legua, descubrimos en una hondonada cinco casas
+    que parecían habitadas, y entrando en ellas hallamos cinco mugeres, dos
+    viejas y tres jóvenes; todas las cuales eran de tanta estatura, que nos
+    causó grande admiración… las viejas comenzaron á hablar con nosotros en su
+    lengua cariñosamente, y recogiéndose todas en una casa sola, nos ofrecieron
+    muchos de sus comestibles»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '255-256 (Vespucio, Lettera, «segunda navegación»; nota de Navarrete p. 259: «Esta isla… debe ser la de Curazao»)'
+  lugar: Kaketiana — isla de los Gigantes (Curazao según Navarrete)
+  clase: hecho-colonial (lo vieron) + la estatura, inferencia-del-cronista
+  epoca: contacto-temprano
+  regla_3: >-
+    cinco casas tierra adentro y no en la playa: una disposición concreta de un
+    día de 1499. La «estatura» la pone en duda la propia fuente: en 1502
+    «volvieron á reconocer esta isla… y no hallaron ningún gigante ni giganta»
+    (Navarrete p. 7 n. 3).
+  cruce: 'Federmann 1530 (PR #210): una aldehuela de tres casas en Paraguaná. El patrón de caserío pequeño se repite 31 años después, en otra orilla de la esfera.'
+  fuerza: media
+
+- id: m2.c3
+  esfera: ecologia / agricultura
+  titulo: '«una tierra de riego que los indios llamaban Curiana» — Valfermoso, abril de 1502'
+  cita: >-
+    «siguiendo la costa, rescatando perlas y alguna ropa de algodón, llegó á una
+    tierra de [riego] que los indios llamaban Curiana y él nombró Valfermoso…
+    acordaron procurarse el remedio en el país, tomando al mismo tiempo las
+    hamacas, ollas, cántaros y otras cosas que necesitaban para establecer su
+    colonia en otra parte»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '32'
+  lugar: Curiana OCCIDENTAL / Valfermoso (Coro según Navarrete; ver §las_dos_curianas)
+  clase: hecho-colonial (narración de Navarrete sobre los autos del pleito)
+  epoca: contacto-temprano
+  aviso_de_lectura: >-
+    ⚠️ el OCR dice «tierra de rieeo». La lectura «riego» la sostiene la nota 3
+    de la MISMA página, que Navarrete cierra con «También en Sta. Marta y sus
+    inmediaciones usaban los indios regar las tierras»: está comentando el riego.
+    Verificar en imagen antes de citar.
+  regla_3: >-
+    si se confirma, es la PRIMERA mención de regadío en esa costa, 1502, antes
+    de cualquier asentamiento español allí. El canon tiene el buco (sistema de
+    riego caquetío, `ecologia` «buco») sin fecha de fuente: esto le daría una
+    atestación de contacto-temprano. Tres años de trato esporádico con naves
+    no hacen un sistema de riego: la proyección al XV es razonable, pero la
+    decide Miguel.
+  fuerza: media (por la lectura del OCR)
+
+# ── COMIDA, PESCA Y NAVEGACIÓN ────────────────────────────────────────
+- id: m2.p1
+  esfera: ecologia / mar
+  titulo: 'La isla de las hierbas: pescadores sin agua dulce, que mascaban hierba con polvo blanco'
+  cita: >-
+    «Todos tenían la boca llena de cierta yerba verde que rumiaban… Traían
+    también todos, colgando del cuello, dos calabacillas curadas, llenas la una
+    de la yerba que tenían en la boca y la otra de cierta harina blanquizca
+    semejante á yeso molido, y con cierto palo… sacaban la suficiente para
+    rociar… aquella yerba» · «nos insinuaron por señas que carecían
+    absolutamente de tales aguas… la que bebían era el rocío recogido en
+    ciertas hojas semejantes á orejas de asno» · «Carecen enteramente de los
+    comestibles que hay en tierra firme, y se mantienen de los peces que cogen
+    en el mar. Son grandes pescadores… Nos regalaron muchísimas tortugas» ·
+    «Las mugeres no usaban la yerba… pero todas llevaban una calabaza llena de
+    agua» · «No tienen poblaciones… solamente se defienden debajo de unas hojas
+    grandes del rigor del sol… Cuando van al mar á pescar, llevan consigo una
+    hoja de estas»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '251-255 (Vespucio, Lettera, «segunda navegación»)'
+  lugar: >-
+    «una isla distante 15 leguas de tierra», la inmediatamente ANTERIOR a la
+    isla de los Gigantes en el relato. **Sin identificar.** Navarrete (p. 252
+    n. 1) la tiene por Marajó, en la boca del Pará.
+  lectura_del_minador: >-
+    ⚠️ inferencia mía: Navarrete identifica la isla SIGUIENTE con Curazao
+    (p. 259 n. 1), y en el relato van de la una a la otra sin más; Marajó
+    queda a miles de kilómetros de Curazao. Una isla sin agua, de pescadores,
+    a unas quince leguas de la costa y justo antes de Curazao encaja con las
+    islas de sotavento (Bonaire, por la distancia). **No se afirma**: es una
+    hipótesis que pide cotejo con la arqueología de las ABC (parafernalia de
+    coca y cal) antes de ponerla en la Kaketiana.
+  clase: hecho-colonial (lo vieron) — Vespucio
+  epoca: contacto-temprano
+  regla_3: >-
+    si fuera de la esfera, sería la observación más temprana del hayo con cal
+    (el canon ya tiene la cal del hayo como hueco, `ecologia` mc-mundo-015).
+    Mientras la isla no se identifique, NO es dato de la Kaketiana.
+  paralelo: >-
+    Niño y Guerra vieron mascar «cierta yerba» en la Curiana oriental, «para
+    conservar blanca la dentadura» (Anglería vol. 1 p. 308; Navarrete p. 15).
+    Navarrete los enlaza (p. 252 n. 2). La costa entera conocía el uso.
+  fuerza: alta para la descripción; nula, por ahora, para el lugar
+
+- id: m2.p2
+  esfera: mar / navegación
+  titulo: 'Gente de agua: canoas monóxilas, nadadores armados, saltar al mar disparando'
+  cita: >-
+    palafito: «doce barcas suyas, poco mas ó menos, cada una de ellas abierta en
+    un tronco de árbol» · «Otros que venían nadando por el mar desde las casas
+    traían consigo cada uno su lanza ocultándola en el agua» · «las jóvenes que
+    habían puesto en nuestras naves se arrojaron repentinamente al mar» (pp.
+    219-221) · Gigantes: «todos ellos se arrojaron á el mar disparándonos
+    muchas saetas» (p. 258) · Coquibacoa 1502: «á su vista parecieron muchos
+    indios en la costa» (p. 34)
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '219-221; 258; 34'
+  lugar: Kaketiana (palafito, Gigantes) y Coquibacoa
+  clase: hecho-colonial
+  epoca: contacto-temprano
+  regla_3: 'conductas vistas en encuentros hostiles; la destreza en el agua es de 1499, sin fecha anterior'
+  fuerza: media (Vespucio)
+
+# ── ADORNOS Y METALES ─────────────────────────────────────────────────
+- id: m2.m1
+  esfera: geografia_politica / intercambio
+  titulo: '🔴 El guanín como RESCATE en la Curiana occidental, 1502'
+  cita: >-
+    «tomaron muchas hamacas, cantidad de algodón, varios enseres y aún
+    prendieron algunas indias, de las cuales unas se rescataron por guanines,
+    otras quedaron en plena libertad… Los pobres indios venían después con
+    seguro á rescatar estas mismas prendas á precio de guanines, quejándose
+    amargamente del mal que sin causa se les había hecho»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '33 (no 34, como dejó T7)'
+  lugar: Curiana OCCIDENTAL / Valfermoso
+  clase: hecho-colonial (narración sobre la declaración del escribano Entramasaguas, fol. 16)
+  epoca: contacto-temprano
+  regla_3: >-
+    que la gente de esa costa tuviera guanines para pagar en 1502 es dato; que
+    los tuviera en el XV, casi seguro, pero hay que decirlo con su reserva:
+    desde 1499 los españoles sacaban guanines de «Caquibacoa» y los vendían en
+    La Española (m2.m2), así que el metal circulaba ya por manos castellanas.
+    Y la institución del rescate «á precio de guanines» es aquí una respuesta a
+    un saqueo español, no una costumbre observada en paz.
+  fuerza: alta para el hecho
+
+- id: m2.m2
+  esfera: intercambio / contacto
+  titulo: '🔴 La cédula de 1501: los españoles sacaban guanines de Paria y Coquibacoa y se los VENDÍAN a los taínos'
+  cita: >-
+    «algunas personas, sin tener para ello mi licencia é mandado, se han
+    entrometido á descubrir é sacar mineros de ciertos metales que se dicen
+    guanines en las islas de la Paria é de Caquibacoa, é de otras de las dichas
+    islas é tierra-firme, é los han traído é traen á vender á los dichos indios
+    de la dicha isla Española, é á otras partes»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '518-519 (suplemento, doc. XLVII: real cédula, Granada, 3-IX-1501; del proceso de Vergara y Ocampo contra Hojeda)'
+  lugar: Paria y Coquibacoa → La Española
+  clase: documento (hecho-colonial)
+  epoca: contacto-temprano
+  por_que_importa: >-
+    es el **vector 1 de Oliver documentado en el acto**, y en la dirección que
+    interesa a la campaña del taíno: entre 1499 y 1501 el guanín de Tierra
+    Firme —de Coquibacoa incluida— entraba en La Española en barcos
+    castellanos. Todo guanín de las Antillas Mayores posterior a 1499 queda
+    contaminado como prueba de contacto precolombino. Es un aviso para dc.4 y
+    para T7 (t7.g1-g8).
+  aviso: >-
+    «mineros de ciertos metales» es la idea castellana (minas de guanín); no
+    dice que se extrajera allí, sino que de allí se sacaba.
+  fuerza: alta
+
+- id: m2.m3
+  esfera: intercambio / fauna
+  titulo: 'Lo que Hojeda le enseñó a Roldán en septiembre de 1499: ciervos, conejos, pieles y garras de tigres, y guanines'
+  cita: >-
+    «dándole cuenta de su viaje, dijo que venía de descubrir por la costa de
+    Paria al Occidente, seiscientas leguas, donde había hallado gente, que
+    peleaba con los cristianos, con igual partido, y que le habían herido
+    veinte hombres, por lo cual no pudo valerse de las riquezas de la tierra en
+    que había hallado ciervos, conejos, pieles y garras de tigres y guaninis,
+    que mostró á Roldan en las carabelas»
+  obra: colon-hernando-1892
+  pagina_impresa: '115'
+  lugar: la costa de Paria al cabo de la Vela (viaje de Hojeda 1499) — sin sitio
+  clase: noticia de Hojeda transmitida (Hernando ← papeles de su padre)
+  epoca: contacto-temprano
+  aviso: 'cadena larga (castellano ← italiano de Ulloa ← castellano perdido); y es el mismo episodio que Las Casas copia de la carta de Roldán (Navarrete p. 7 n. 1), que no trae la lista'
+  fuerza: media
+
+- id: m2.m4
+  esfera: intercambio
+  titulo: 'Santa Cruz (Bahía Honda), 1502: «una espuerta de guanines y de oro»'
+  cita: >-
+    «amedrentados los naturales se presentaron de paz con una espuerta de
+    guanines y de oro que recibió Hojeda; á quien dijeron que fuese á otro
+    cacique muy cercano que les daría mayor cantidad» (p. 35) · «un testigo
+    ocular declara que pesaron cuarenta y dos marcos, seis onzas y cinco
+    tomines» (p. 38)
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '35; 38'
+  lugar: Coquibacoa occidental (Guajira, Bahía Honda según Navarrete)
+  clase: hecho-colonial
+  epoca: contacto-temprano
+  regla_3: 'Guajira, no Kaketiana: la polity occidental «futura» del canon'
+  fuerza: alta
+
+# ── LENGUA ────────────────────────────────────────────────────────────
+- id: m2.l1
+  esfera: lengua / transmision
+  titulo: '🔴 Isabel, la lengua indígena de Hojeda (1502)'
+  cita: >-
+    «en el cabo de la Vela estad siete ú ocho dias por amor de Isabel, y
+    trabajad por saber lo de las perlas, y que las pesquise delante vos… Y ahí
+    mirad mucho por Isabel, non la dejeis un momento de noche ni de dia sin
+    guarda y quien la vele disimuladamente y de cerca; de Cirurma y del rio mas
+    acá trabajad por traer de cada parte dos ó tres indios, y tratadlos bien…
+    venios costa á costa hablando á los indios en todas las partes que
+    podierdes, y trabajad con Isabel que traiga algún pariente suyo»
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '107-108 (doc. XX, instrucción al piloto Juan López, puerto de Santa Cruz, 20-V-1502); nota de Navarrete p. 36 n. 1'
+  lugar: Coquibacoa — cabo de la Vela; su origen no se declara
+  clase: documento + inferencia-del-editor (que la trajo en 1499)
+  epoca: contacto-temprano
+  lo_que_dice: >-
+    (a) había una intérprete indígena de TIERRA FIRME en la armada; (b) la
+    tenían vigilada día y noche, es decir, cautiva; (c) el plan era hacer más
+    «lenguas»: dos o tres indios de Citarma y otros tantos «del río» (la
+    Hacha), y un pariente de ella; (d) Hojeda esperaba poder «hablar á los
+    indios en todas las partes» costa a costa con ella.
+  lo_que_no_dice: >-
+    de dónde era Isabel. El único sitio donde el primer viaje «tomó indias»,
+    según el propio Hojeda, es el lago de San Bartolomé (doc. XVIII, p. 105);
+    que ella sea una de ésas es inferencia. Ni dice si la entendían en la
+    Guajira: «por amor de Isabel» sugiere que allí tenía gente.
+  regla_3: >-
+    es la PRIMERA intérprete documentada de la costa occidental, y es una
+    cautiva. Para el taíno (T7) importa en sentido contrario al que buscaba:
+    en 1502 los españoles se hicieron sus propios intérpretes EN la costa, no
+    los trajeron de las islas.
+  fuerza: alta para el documento
+
+- id: m2.l2
+  esfera: lengua
+  titulo: 'Dos palabras para «perla» a seis días de distancia: tenoras y corixas'
+  cita: >-
+    Curiana (oriental): «Tiénenlas [las canoas] de un solo madero, como los
+    demás, pero más toscas y menos aptas que las de los caníbales y los
+    isleños de la Española. Las llaman galitas… llevaban todos á porfía sartas
+    de perlas: llaman á éstas tenoras» (p. 304) · Cauchieto: «Estos llaman á
+    las perlas corixas» (p. 311)
+  obra: angleria-1892
+  pagina_impresa: 'vol. 1, pp. 304 y 311'
+  verificado_en_imagen: 'sí — las tres formas van en cursiva en la edición (pdf 368 y 375)'
+  lugar: Curiana ORIENTAL y Cauchieto (costa central, entre Codera y La Guaira según Navarrete p. 16) — NO la Kaketiana
+  clase: noticia-indigena-recogida
+  epoca: contacto-temprano
+  por_que_importa: >-
+    son las ÚNICAS voces indígenas de Tierra Firme que estos cronistas apuntan
+    para toda la costa al oeste de Paria, y ninguna es de la costa occidental.
+    Que dos pueblos a «seis soles» llamen a la perla de dos maneras distintas
+    es un indicio (sólo eso) de dos lenguas. Candidatas a cotejar con el
+    cumanagoto y el caribe continental (no se hizo).
+  fuerza: media
+
+- id: m2.l3
+  esfera: lengua
+  titulo: 'Lo que la costa occidental dejó de su lengua en 1499-1502: nada apuntado'
+  medido: >-
+    ni una voz indígena de Coquibacoa, Paraguaná, Coro o los Gigantes en las
+    cuatro obras, fuera de los topónimos (Coquibacoa/Quinquibacoa, Curiana).
+    Lo que sí queda dicho: los Gigantes hablaban «en su lengua cariñosamente»
+    (p. 256) y entre sí «como en ademan de querer prendernos» (p. 257); en la
+    isla de las hierbas, «por señas» (p. 253); y, 80 leguas más allá del
+    palafito (lugar sin identificar), «otra gente del todo diversa de la
+    primera en idioma y en trato» (p. 223) — la única observación de
+    diferencia lingüística de toda la serie, en un pasaje de Vespucio que no se
+    puede situar.
+  obra: navarrete-1829-viages-menores
+  clase: negativa-medida
+  epoca: contacto-temprano
+
+- id: m2.l4
+  esfera: lengua (trampa)
+  titulo: 'Las palabras del EDITOR: «guanines» y «macanas» en Navarrete, no en Anglería'
+  medido: >-
+    Navarrete escribe que los de la Curiana oriental hacían joyeles «que
+    llamaban guanines» (p. 15) y que los dos mil hombres que les cerraron la
+    playa iban «con macanas, arcos y flechas» (p. 17). Anglería, su fuente para
+    ese viaje, dice «oro, aunque no puro» (vol. 1 p. 309) y «armados á su
+    modo» (p. 312). Las dos voces son del editor o de la Relación italiana de
+    1507 que también usó (no está en el repo): no cuentan como atestación de
+    esa costa.
+  clase: inferencia-del-editor
+  epoca: '1829 (el editor) sobre un hecho de 1499-1500'
+
+# ── TRATO Y GUERRA ────────────────────────────────────────────────────
+- id: m2.t1
+  esfera: geografia_politica / contacto
+  titulo: 'El trato en la costa occidental, 1499: honra en unas partes, flechas en otras, y mujeres tomadas'
+  cita: >-
+    carta de Roldán, 29-IX-1499 (vía Las Casas): «hallaron gente que peleaba
+    tantos con tantos con ellos, y hirieron veinte hombres y mataron uno. En
+    algunas partes saltaron en tierra y les hacían mucha honra, y en otras no
+    les consentían saltar en tierra» (p. 7 n. 1) · Puerto Flechado: «donde me
+    firieron cierta gente» (Hojeda, doc. XVIII, p. 105) · «requerid donde
+    tomamos las indias, que se llama lago de S. Bartolomé» (ibid.) · Gigantes:
+    «tuvimos que pelear con ellos muchas veces, porque no consentían que
+    tomásemos cosa alguna de su país» (p. 259) · palafito: les pusieron
+    muchachas en las naves y luego atacaron con arcos y lanzas; «quedando
+    muertos 20 y heridos muchísimos más» (pp. 220-222)
+  obra: navarrete-1829-viages-menores
+  pagina_impresa: '7; 105; 220-222; 259'
+  lugar: Kaketiana y Coquibacoa
+  clase: documento + hecho-colonial
+  epoca: contacto-temprano
+  regla_3: >-
+    es el primer año del contacto y ya hay capturas: el «miedo a la trata» que
+    Federmann ve en Paraguaná en 1530 (PR #210) tiene 31 años de historia
+    documentada, empezando por las indias del lago de San Bartolomé (1499) y
+    las de Valfermoso (1502). Nada de esto es precontacto.
+  fuerza: alta
+
+- id: m2.t2
+  esfera: contacto
+  titulo: '«Casi dos mil hombres» cerraron la playa — ¿en el borde oriental de la Kaketiana?'
+  cita: >-
+    Anglería: «Habiéndose adelantado después por la misma costa, he aquí que se
+    presentan casi dos mil hombres, armados á su modo, para impedirles que
+    desembarquen… no consintieron nunca en tener con los nuestros comercio ni
+    trato ninguno» (vol. 1 p. 312, verificado en imagen) · Navarrete: «un
+    hermoso lugar con casas y castillos, y ademas con un rio y jardines…
+    unos dos mil indios» (p. 16-17)
+  obra: angleria-1892
+  pagina_impresa: 'vol. 1 p. 312; Navarrete 1829 pp. 16-17'
+  lugar: >-
+    más de diez días al oeste de Cauchieto. Navarrete (p. 17 n. 2) lo pone
+    «al parecer» en Chichiriviche, pasado el Golfo Triste, y lo explica por la
+    refriega de Hojeda de agosto: inferencia del editor. Sería el borde oriental
+    de la costa falconiana.
+  clase: hecho-colonial + inferencia-del-editor (el lugar)
+  epoca: contacto-temprano (noviembre-diciembre de 1499)
+  fuerza: media para el hecho; baja para el lugar
+
+# ── LA COSTA ORIENTAL, SEPARADA (no es la Kaketiana) ─────────────────
+- id: m2.o1
+  esfera: 'fuera de la Kaketiana — se anota para que NO se mezcle'
+  titulo: 'Lo que Anglería cuenta de la Curiana oriental y de Cauchieto'
+  resumen: >-
+    aldea de ocho casas (Anglería p. 303; Navarrete dice «ochenta», p. 14);
+    casas de madera cubiertas de palma; comen ostras perleras y caza; mujeres a
+    la agricultura; hierba para blanquear los dientes; ferias «de cerca»;
+    joyeles de oro aleado en figura de aves y ranas; calabacita o concha marina
+    como estuche genital (p. 309, en latín); cabeza de caribe clavada en la
+    puerta de un principal (p. 315); en Haraia, sal en ladrillos y cadáveres de
+    principales secados sobre parrillas a fuego lento (p. 316); en Cauchieto,
+    algodón, calzoncillos, oro nativo, mujeres detrás de los hombres (pp.
+    310-312).
+  obra: angleria-1892
+  pagina_impresa: 'vol. 1, pp. 303-316'
+  lugar: Curiana ORIENTAL y Cauchieto
+  epoca: contacto-temprano
+  regla_4: >-
+    es la esfera oriental (Cumanagoto, costa central). Importarlo a la
+    Kaketiana sería el error que Oliver denuncia. Sirve de COMPARACIÓN: lo que
+    sí se repite en las dos costas en 1499 (canoa monóxila, mascar hierba,
+    guanín, caserío pequeño) es rasgo areal; lo que sólo sale en la oriental,
+    no se proyecta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. FAUNA (esquema común de la campaña)
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+  - nombre_en_fuente: conejo
+    especie_probable: 'Sylvilagus floridanus — probable: único lepórido silvestre de la región; la fuente sólo dice «semejante á los de Castilla»'
+    texto: 'Hicieron aguada, y se llevaron á bordo una india y un conejo semejante á los de Castilla'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 34
+    lugar: 'Coquibacoa (Navarrete: cabo de Chichibacoa), mayo de 1502'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: ciervos
+    especie_probable: null
+    texto: 'la tierra en que había hallado ciervos, conejos, pieles y garras de tigres y guaninis, que mostró á Roldan en las carabelas'
+    obra: colon-hernando-1892
+    pagina_impresa: 115
+    lugar: 'costa de Tierra Firme de Paria al cabo de la Vela (Hojeda 1499), sin sitio'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: conejos
+    especie_probable: null
+    texto: 'ciervos, conejos, pieles y garras de tigres y guaninis'
+    obra: colon-hernando-1892
+    pagina_impresa: 115
+    lugar: 'costa de Tierra Firme de Paria al cabo de la Vela (Hojeda 1499), sin sitio'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: tigres (pieles y garras)
+    especie_probable: 'null — «tigre» de los cronistas es por lo común el jaguar, pero puede ser un felino menor; la fuente no distingue'
+    texto: 'pieles y garras de tigres'
+    obra: colon-hernando-1892
+    pagina_impresa: 115
+    lugar: 'costa de Tierra Firme de Paria al cabo de la Vela (Hojeda 1499), sin sitio'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: tortugas
+    especie_probable: 'null — tortuga marina (Cheloniidae) por contexto; la traducción de Navarrete dice «tortugas» y el latín de la Lettera «turtures» (el editor anota que quizá deba leerse «testudines»)'
+    texto: 'Son grandes pescadores, y tienen abundancia de peces. Nos regalaron muchísimas tortugas, y otras varias clases de buena pesca'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 254
+    lugar: 'isla de las hierbas, sin identificar (Navarrete: Marajó; el orden del relato la pone junto a Curazao) — ver m2.p1'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: peces
+    especie_probable: null
+    texto: 'Carecen enteramente de los comestibles que hay en tierra firme, y se mantienen de los peces que cogen en el mar'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 254
+    lugar: 'isla de las hierbas, sin identificar — ver m2.p1'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: animales (de la isla de las hierbas)
+    especie_probable: null
+    texto: 'Son muchos y varios los géneros de animales que hay en esta isla; pero todos beben agua cenagosa'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 255
+    lugar: 'isla de las hierbas, sin identificar — ver m2.p1'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: serpiente (sin alas, con pies)
+    especie_probable: 'Iguana iguana — la descripción lo permite: sin alas, patas largas con uñas fuertes, piel de muchos colores, «una especie de cerda» del hocico a la cola, del tamaño de un cabrito'
+    texto: 'estaban asando varios animales y muchas clases de peces. Nos llamó la atención un animal que estaban asando, muy semejante á una serpiente, solo que no tenia alas… hallamos muchísimas de estas serpientes vivas, atados los pies y con una especie de bozales á la boca… y sin embargo de eso los comen'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: '223-224'
+    lugar: 'SIN IDENTIFICAR: «80 leguas» más allá del palafito según Vespucio, en su «primera navegación» (que Navarrete tiene por fingida); no se puede asignar a la Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: peces (pan de peces)
+    especie_probable: null
+    texto: 'Fabrican estos su pan de los peces que cogen en el mar; para lo cual… los cuecen ligeramente en agua hirviendo, después los machacan, amasan é hiñen á manera de panes, cociéndolos sobre las brasas'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 225
+    lugar: 'SIN IDENTIFICAR — el mismo pasaje de Vespucio que la iguana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: aves (de los farallones)
+    especie_probable: null
+    texto: 'dos farallones distantes tres ó cuatro leguas de la tierra firme: rocas peladas… aunque se albergaba en ellas multitud de aves de varias especies… en un cuarto de hora le llevaron cerca de cuarenta muy grandes'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 31
+    lugar: 'entre Margarita y cabo Codera, marzo de 1502 — costa centro-oriental, NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: peces pequeños
+    especie_probable: null
+    texto: 'otras dos canoas que venían de pescar, y su gente con gran risa y alborozo echó en la carabela dos peces pequeños'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 31
+    lugar: 'costa hacia cabo Codera, 14-III-1502 — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: animales grandes de la selva (mugidos)
+    especie_probable: 'null — el traductor de 1892 remite a su nota de la p. 39, que lo atribuye al «bramar del cuguar ó del jaguar» (Malte-Brun): es del EDITOR. «Grandes pero inofensivos», nocturnos y en la selva no bastan para decidir'
+    texto: 'En las selvas… oían de noche, desde las casas de los indígenas, mugidos horrendos de animales grandes pero inofensivos'
+    obra: angleria-1892
+    pagina_impresa: 306
+    lugar: 'Curiana ORIENTAL — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: 'mugidos horrendos (de noche, desde las casas)'
+  - nombre_en_fuente: ciervos, jabalíes, conejos, palomas, tórtolas
+    especie_probable: null
+    texto: 'Cría aquella tierra en abundancia ciervos, jabalíes, conejos, en el vello, en el color y en el tamaño semejantes á las liebres, y palomas y tórtolas'
+    obra: angleria-1892
+    pagina_impresa: 305
+    lugar: 'Curiana ORIENTAL — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: patos y ánades (criados en casa)
+    especie_probable: 'null — el único pato domesticado de América es el criollo, pero la fuente no lo dice'
+    texto: 'las mujeres crían en las casas patos y ánades, como entre nosotros'
+    obra: angleria-1892
+    pagina_impresa: 305
+    lugar: 'Curiana ORIENTAL — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: pavos; faisanes
+    especie_probable: null
+    texto: 'En los bosques revoloteaban á cada paso los pavos (mas no pintados y de varios colores, pues el macho se diferencia poco de la hembra), y por los arbustos de las lagunas, los faisanes'
+    obra: angleria-1892
+    pagina_impresa: 305
+    lugar: 'Curiana ORIENTAL — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: conchas de las perlas (ostras)
+    especie_probable: 'null — ostra perlera de la costa oriental; no se identifica sin la fuente'
+    texto: 'Su comida es, en su mayor parte, de las conchas de que sacan las perlas, de que están llenas las costas'
+    obra: angleria-1892
+    pagina_impresa: 305
+    lugar: 'Curiana ORIENTAL — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: testa marina (concha)
+    especie_probable: null
+    texto: 'Ibi homines cucurbitula quadam… vel testa marina, mentulam et genitalia includunt'
+    obra: angleria-1892
+    pagina_impresa: 309
+    lugar: 'Curiana ORIENTAL — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: avecillas y animales de oro
+    especie_probable: null
+    texto: 'Unían á las perlas avecillas y otros muchos animales primorosamente formados de oro, aunque no puro'
+    obra: angleria-1892
+    pagina_impresa: 309
+    lugar: 'Curiana ORIENTAL — NO Kaketiana (figura en metal, no animal vivo)'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: cercopitecos (monos); loros
+    especie_probable: null
+    texto: 'Lleváronse de allí muy hermosos cercopitecos (monos) y muchos loros de varios colores'
+    obra: angleria-1892
+    pagina_impresa: 311
+    lugar: 'Cauchieto (costa central) — NO Kaketiana'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: ostiales de perlas
+    especie_probable: null
+    texto: 'tierra estéril y sin mas agua que la que cae del cielo, pero rica de ostiales de perlas, de las que se sacó gran suma al principio de la conquista'
+    obra: navarrete-1829-viages-menores
+    pagina_impresa: 36
+    lugar: 'costa de la Guajira entre el río de la Hacha y el cabo de la Vela (Coquibacoa occidental)'
+    epoca: colonial (es la descripción de Navarrete/Simón, no de 1502)
+    sonido: null
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LO QUE NO SE ENCONTRÓ (medido; los ceros, con su control)
+# ══════════════════════════════════════════════════════════════════════
+no_se_encontro:
+- >-
+  **Paraguaná** por su nombre: cero en las cuatro obras (`paraguan`,
+  `paragoan`); de la península sólo sale el cabo de San Román y que la
+  tomaron por isla. Ni una casa, ni una persona de Paraguaná en 1499-1502.
+  Control: `isla`, `oro` e `indio` salen por centenares en las mismas obras
+  (lo imprime el medidor).
+- >-
+  **Aruba y Bonaire**: cero por su nombre (`aruba`, `oruba`, `bonair`,
+  `buinar`). Sólo «la isla de los Gigantes» (Curazao según Navarrete) y la
+  isla de las hierbas sin identificar.
+- >-
+  **Caquetíos, Manaure**: cero (`caquet`, `caiquet`, `caquit`, `manaur`). El
+  pueblo no tiene nombre en estas fuentes; la tierra, sí (Curiana, Coquibacoa).
+- >-
+  **Ninguna voz indígena** de la costa occidental fuera de los topónimos
+  (m2.l3). Las únicas palabras de Tierra Firme al oeste de Paria son
+  orientales: galitas, tenoras, corixas.
+- >-
+  **Navarrete t. I (viajes de Colón) y Hernando vol. 2**: la costa occidental
+  no sale, salvo el regreso de Hojeda en Hernando p. 115 (m2.m3). Esperable:
+  Colón no pasó por allí.
+- >-
+  **Anglería vols. 1 y 4**: el viaje de Hojeda de 1499 no se narra;
+  `Cuchibacoa` sale sólo en listas.
+- >-
+  **Los autos del pleito Hojeda–Vergara–Ocampo**, que decidirían dónde está
+  Valfermoso, si había oro en Curazao (t7.kak2) y qué dijo Entramasaguas de
+  la Curiana occidental: citados por folio, publicados en la Colección
+  diplomática t. II, **no están en el repo**.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. COBERTURA POR OBRA (qué se leyó de verdad)
+# ══════════════════════════════════════════════════════════════════════
+cobertura:
+  navarrete-1829-viages-menores: >-
+    leídos a mano: Sección Primera pp. 3-41 (Hojeda 1499, Niño y Guerra,
+    Bastidas, Hojeda 1502); documentos X, XI, XVII-XX (pp. 85-108); suplemento
+    doc. XLVII (pp. 518-519); pleitos, preguntas 4.ª-5.ª (pp. 543-545) y la 16.ª
+    (p. 590); Vespucio, Lettera, 1.ª navegación pp. 210-233 y 2.ª pp. 242-262.
+    Barrido con el medidor: el volumen entero. **Sin leer**: la Sección Tercera
+    (Darién) y el resto de los pleitos más allá de lo que el medidor señaló.
+  angleria-1892: >-
+    vol. 1: libro VIII entero (pp. 301-318), releído para la costa, y la nota
+    del traductor de la p. 39. Vol. 4: sólo barrido (no narra la costa
+    occidental). Los vols. 2-3 siguen fuera del repo.
+  navarrete-1859-viages-colon: 'barrido con el medidor: cero en la costa occidental, con control'
+  colon-hernando-1892: 'barrido con el medidor + lectura del cap. LXXXIV (pp. 113-118, Hojeda en La Española, 1499)'
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. QUÉ PROPONE (regla 5: lo decide Miguel)
+# ══════════════════════════════════════════════════════════════════════
+propone:
+- opcion: A
+  que: >-
+    Registrar la separación de las Curianas donde el canon la necesita: la
+    oriental (franja de los Frailes al Farallón, 1499-1502, uso castellano) y la
+    occidental (Valfermoso 1502, Coro según Navarrete), con la tercera de
+    PR #207 al lado. Toca #33 y la ficha de Anglería.
+- opcion: B
+  que: >-
+    Llevar al corpus, con `epoca: contacto-temprano` y su regla 3 escrita, los
+    tres hechos más firmes: el rescate en guanines de la Curiana occidental
+    (m2.m1), la cédula de 1501 sobre el guanín castellano (m2.m2) y el poblado
+    de «veinte» casas sobre estacas (m2.c1, que además corrige la nota
+    pendiente de geografia_politica-006 y el nombre de nodo-008).
+- opcion: C
+  que: >-
+    Verificar en imagen (archive.org `bub_gb_HFzXrEyoeCAC`, dominio público)
+    las páginas 32, 86-89, 518 y 544 de Navarrete: «riego» y las grafías de
+    Coquibacoa. Es una tarde, y sin eso m2.c3 y m2.g2 no se citan.
+- opcion: D
+  que: 'Isabel (m2.l1) como hecho de contacto/transmisión y como corrección de t7.l4.'
+- opcion: E
+  que: >-
+    La isla de las hierbas (m2.p1) queda como hipótesis: no entra en la
+    Kaketiana hasta cotejar la arqueología de las ABC.
+  recomendacion: 'C primero (sin imagen no se cita nada de Navarrete que dependa de una letra), luego A + B; D como nota; E en espera.'

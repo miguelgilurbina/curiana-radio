@@ -1,0 +1,1101 @@
+# ══════════════════════════════════════════════════════════════════════
+# PÉREZ DE TOLOSA 1546-1548 — la costa caquetía veinte años después
+# Tercera campaña de minería (2026-09-22/23), parcela «Pérez de Tolosa».
+#
+# PROPUESTA (regla 5). Nada de aquí entra al canon sin que Miguel lo fusione.
+#
+# ⚠️ NADA DE ESTO ES PRECONTACTO (regla 3). Son cartas de 1546-1548 y un
+# interrogatorio de 1545 sobre una gobernación que los Welser tienen desde
+# 1528. Describen una costa YA despoblada por la trata. Lo que «solía» haber
+# es una retrospectiva a ~1529, no el s. XIV-XV.
+#
+# ⚠️ Y NO TODO ES DE LA POLITY COSTERA (regla 4). La relación recorre la
+# gobernación entera, de Maracapana al Cabo de la Vela. Cada hallazgo lleva
+# `polity`; los de Barquisimeto, el Tocuyo, los llanos y el lago están
+# marcados como OTRA polity o como otro pueblo.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  parcela: "Pérez de Tolosa — cartas, relación e interrogatorio (y los documentos que van con ellos)"
+  fecha: 2026-09-23
+  campana: "Tercera campaña de minería — «las fuentes que faltan»"
+  encargo: 6-fusion/issues-pendientes/encargo-mineria-perez-de-tolosa.md
+  obra: perez-de-tolosa-1546        # clave foránea → 4-fuentes/bibliografia.yaml (regla 8)
+  edicion: >-
+    Oviedo y Baños, Historia de la conquista y población de la provincia de
+    Venezuela, ed. Cesáreo Fernández Duro, t. II, Madrid, Luis Navarro, 1885
+    (Biblioteca de los Americanistas), apéndice «DOCUMENTOS» desde la p. 207.
+    Ejemplar de Harvard digitalizado por Google (archive.org
+    historiadelacon00bagoog).
+  archivo: fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.pdf
+  desfase_medido: >-
+    impresa = pdf − 11, CONSTANTE en todo el tramo leído (pdf 220-287 =
+    impresas 209-276). Comprobado leyendo el número impreso de cada página,
+    no sumando: pdf 220=209, 236=225, 259=248, 270=259, 286=275. Las páginas
+    pares llevan el número a la izquierda y las impares en la cabecera
+    «HISTORIA DE VENEZUELA». El OCR lee mal el número en muchas (`%%J`=227,
+    `*58`=238, `2Ó2`=262): el número se tomó de la secuencia, no del OCR.
+  extractor: >-
+    pdftotext sobre la capa de texto de archive.org, página a página, con
+    marcador pdf/impresa (el .txt del repo no trae marcadores de página). El
+    OCR es bueno en el cuerpo y falla en: tildes sueltas, `ç`, cabeceras,
+    números de página, y en DOS párrafos donde intercala dos líneas
+    (pp. 234 y 266 del interrogatorio — la p. 266 es la de Manaure, y ahí el
+    nombre sale ilegible). Toda cita que decide algo se miró en imagen
+    (pymupdf, factor 1,4-4,0 sobre un escaneo de 4,167 px/pt).
+
+  que_se_leyo:
+    entero:
+      - "p. 209-213 — Carta de Juan de Ampíes al Rey desde Santo Domingo (sin fecha en el impreso; c. 1525-1526 según Arcaya p. 160)"
+      - "p. 215-218 — «Relación de diferentes Gobernadores … desde 1530 á 1555», anónima (MS. del Archivo Histórico Nacional)"
+      - "p. 219-224 — Primera carta de Pérez de Tolosa, Tocuyo, 15-X-1546"
+      - "p. 225-236 — «Relación de las tierras y provincias de la gobernación de Venezuela» (va con la primera carta)"
+      - "p. 236-240 — Segunda carta, Tocuyo, XII-1546; y p. 240-248 su continuación (Tocuyo 1547, autos de Juan de Villegas en Tacarigua y Burburata, XII-1547 / II-1548)"
+      - "p. 248-258 — Tercera carta, Coro, 8-VII-1548 (fecha verificada en imagen: «en VIII de julio MDXLVIII»)"
+      - "p. 259-276 — Interrogatorio de la pesquisa secreta contra los Welser, «año de 1545» (MS. Academia de la Historia, col. Muñoz, t. LXXXIX, fol. 84)"
+    de_paso:
+      - "p. 388-389 — notas del EDITOR (88)-(94) a estos documentos (Manatos, carcuris, totuma, Amazonas, hijada, chafalonía, buyo). Son de Fernández Duro, no de Tolosa"
+      - "índice onomástico del editor: «Manaure (Cacique). — I, 36. — II, 248. 266.»"
+    no_se_leyo:
+      - "p. 277-280 — Real cédula sobre la muerte de Hutten y Welser (1549): fuera de la pregunta"
+      - "el resto del apéndice (desde p. 281: cédulas, relaciones de Maracaibo 1579, etc.) y el cuerpo de Oviedo y Baños del t. II. La relación de Maracaibo de 1579 (Pina Ludueña) merece minería propia: ver `deuda`"
+
+  verificado_en_imagen:
+    - {pagina: 212, que: "Ampíes: Baracoica, «Naure ó Anaure», «se hace adorar como Dios», la india intérprete, la hija del gran cacique"}
+    - {pagina: 226, que: "«había pueblo de á seiscientas casas» (Chirigotos del Unare)"}
+    - {pagina: 227, que: "la costa de sotavento y barlovento; Coro «tiene hasta sesenta casas»; «no hay en toda ella cien indios»"}
+    - {pagina: 228, que: "Paraguaná entera, y «Piracoras» en la sierra"}
+    - {pagina: 229, que: "Onotos y Bubures «de la provincia de Puruara»"}
+    - {pagina: 232, que: "«sierras de Xiracoras, comarcanas á Coro»"}
+    - {pagina: 234, que: "«aunque algo difieren en la habla á los de Coro»"}
+    - {pagina: 248, que: "«un cacique llamado Manaore, el mayor principal que en la gente caquetia se hallaba»"}
+    - {pagina: 252, que: "«hizo muchos esclavos de los Caquetios, en Paragrachoa y en las sierras de los Ayamanes»"}
+    - {pagina: 258, que: "fecha de la tercera carta"}
+    - {pagina: 259, que: "título y año del interrogatorio (1545)"}
+    - {pagina: 266, que: "pregunta 21: el cacique «Manabre», las canoas"}
+    - {pagina: 274, que: "pregunta 39: «cuatro ó cinco pueblos», «más de quinientos»"}
+  citado_sin_ver_en_imagen: >-
+    las demás citas (pp. 216, 223, 225, 230-231, 233, 235, 238-241, 253-256,
+    263-265, 271, 275-276) salen de la capa de texto, que en esos pasajes es
+    limpia; se cotejaron con el contexto pero NO con la imagen.
+
+  lo_que_resulto_falso:
+    - afirmacion: >-
+        «los poblados indígenas estaban en muy buenos asientos y los había hasta
+        de cuatrocientas casas» — citado por una obra secundaria como
+        «Pérez de Tolosa, en Oviedo y Baños, Doc., pp. 255-256».
+      medido: >-
+        NO ESTÁ en esta edición, ni en esas páginas ni en ninguna. Buscado en el
+        texto del tomo ENTERO (777 KB) con los espacios normalizados:
+        `cuatrocient` da 10 casos y ninguno con «casas» (hombres, españoles,
+        caballos, leguas, gandules, y «cuatrocientas ánimas» del valle de las
+        Damas, p. 271); `cuatro-\s*cien`, `quatrocient`, `\d+\s*casas` y
+        `[a-z]+ientas casas` → sólo dos casas con número: «pueblo de á
+        SEISCIENTAS casas» (p. 226) y «poblaciones de OCHOCIENTAS casas»
+        (p. 216). Las pp. 255-256 de esta edición tratan de la cata de perlas en
+        Paraguaná, del obispo Bastidas, de los Xiraras y de la gente traída de
+        Cubagua; no hablan de casas.
+      lo_que_si_hay: >-
+        La frase de la obra secundaria calca, casi palabra por palabra, la
+        p. 226: «tenían los pueblos muy buenos asientos: había pueblo de á
+        seiscientas casas». Pero ese pasaje es de la **costa de Maracapana**,
+        los **Chirigotos** del río Unare, en el otro extremo de la gobernación:
+        **no son caquetíos**. Y la p. 256 vuelve sobre esa misma tierra («en
+        todas las Indias no había más linda, ni mejor, ni más gruesa tierra
+        para se poblar»), lo que explicaría la cita «pp. 255-256».
+      veredicto: >-
+        Lo más probable (hipotético: no hemos visto la obra secundaria ni su
+        edición) es que la cita traslade a los caquetíos, y con otra cifra, el
+        dato de los Chirigotos. **No entra en `asentamientos.yaml` como
+        demografía caquetía.** Si Miguel tiene a mano la obra secundaria, basta
+        mirar a qué pueblo atribuye las casas.
+    - afirmacion: >-
+        la ficha: la «Relación de diferentes Gobernadores» anónima (p. 215) «trae
+        a Manaure/"Manaore"».
+      medido: >-
+        No lo trae: leída entera (pp. 215-218), ni Manaure ni ningún cacique con
+        nombre. «Manaore» es de la TERCERA CARTA (p. 248). El índice del editor
+        lo confirma: Manaure en t. II sólo en pp. 248 y 266.
+    - afirmacion: >-
+        la ficha: «Primera carta 219-235» y la obra fechada en bloque «1546».
+      medido: >-
+        La primera carta ocupa las pp. 219-224 (Tocuyo, 15-X-1546); la relación,
+        225-236; la segunda carta es de diciembre de 1546 y su continuación llega
+        a febrero de 1548; la **tercera carta es de Coro, 8-VII-1548** (verificado
+        en imagen). Y el interrogatorio se titula «año de 1545». El episodio de
+        Manaore y el de los esclavos de Espira salen de la carta de 1548.
+    - afirmacion: >-
+        las dos citas que motivaron la ficha: «estas costas de sotavento y
+        barlovento solían estar muy pobladas de indios…» y «Los Caquetíos de
+        Paraguaná […] son muy domésticos, sustentan a los españoles de caza y
+        pesca».
+      medido: >-
+        Existen, pero la obra secundaria las parafrasea. El texto (verificado en
+        imagen) dice «esta costa de sotavento y barlovento **solía estar
+        poblada**» (singular, y **sin «muy»**, p. 227), y el de Paraguaná es de
+        la p. 228 con otro orden. Quitar el «muy» importa: Tolosa NO dice que la
+        costa estuviera muy poblada; dice que tenía «medianos pueblos».
+    - afirmacion: >-
+        el encargo: «los esclavos de Paraguaná» de Espira (tercera carta).
+      medido: >-
+        El impreso dice **«Paragrachoa»** (p. 252, verificado en imagen), no
+        Paraguaná. Puede ser errata por Paraguaná o por **Paraguachoa**, que en
+        la carta de Ampíes del mismo tomo es OTRO sitio: «desde Paraguachoa hasta
+        la punta de Coquibacoa … que son Sauca, y Paraguana» (p. 212) nombra los
+        dos a la vez. Queda EN DUDA (regla 2): no se atribuye a Paraguaná.
+    - afirmacion: >-
+        `6-fusion/antroponimos_caquetios.yaml` (Naure/Anaure): «ed. Fernández
+        Duro, t. II, p. 209».
+      medido: >-
+        La carta EMPIEZA en la p. 209; el pasaje de Naure/Anaure, Baracoica y la
+        hija está en la **p. 212**. Arcaya p. 160 n. 3 da la página de inicio y de
+        ahí se copió.
+
+  propuesta_de_claves:
+    nota: >-
+      Tres de los documentos no son de Pérez de Tolosa. Aquí se citan como
+      `obra: perez-de-tolosa-1546` con `documento:` y `autor_del_documento:`,
+      porque el canon sólo tiene esa clave y la edición es la misma. Si Miguel
+      prefiere clave propia (regla 8, una obra = un autor), éstas son las
+      propuestas; crearlas es hacer ficha y regenerar la bibliografía, y NO se
+      hizo en esta parcela.
+    claves:
+      - {clave: ampies-c1526, documento: "Carta de Juan de Ampíes al Rey", paginas: "209-213", nota: "la del episodio de la hija de Manaure y la embajada de Baracoica; la cita Arcaya p. 160-161 y Velasco 2015 la leyó en el manuscrito (folios 14-15)"}
+      - {clave: relacion-gobernadores-1555, documento: "Relación de diferentes Gobernadores … 1530-1555, anónima", paginas: "215-218", nota: "nada sobre la costa caquetía; sólo la entrada de Hutten (Macatoas, «ochocientas casas»)"}
+      - {clave: "(sin clave propia)", documento: "Interrogatorio de la pesquisa contra los Welser, 1545", paginas: "259-276", nota: "es de la residencia de Pérez de Tolosa: puede quedarse en su clave"}
+
+# ══════════════════════════════════════════════════════════════════════
+# HALLAZGOS, por esfera
+# Campos: esfera · obra · documento · pagina_impresa · cita (verbatim,
+# recortada) · verificado_en_imagen · epoca · etiqueta · polity · nota.
+# `etiqueta: atestiguado` dice que la FUENTE lo afirma, no que valga para
+# el s. XIV-XV: eso lo dice `epoca`.
+# ══════════════════════════════════════════════════════════════════════
+hallazgos:
+
+  # ─── 1. ASENTAMIENTO Y DEMOGRAFÍA ────────────────────────────────────
+  asentamiento_y_demografia:
+
+    - id: ptol-01
+      esfera: mundo — geografía política (asentamiento)
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 227
+      cita: >-
+        «esta costa de sotavento y barlovento solía estar poblada de indios de
+        nación Caquetios; tenían medianos pueblos y mucha caza y pesca y ropa de
+        hamacas; es gente muy pulida y limpia y muy amigos de los españoles:
+        hase despoblado y perdido á causa de que Ambrosio de Alfiguer […] no
+        repartió los dichos indios y pueblos»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        «Sotavento» es la costa de Coro hacia Maracaibo; «barlovento», de Coro
+        hacia Burburata. «Solía» mira a ~1529 (la llegada de Alfinger), no
+        antes. «Medianos pueblos», sin número. «Alfiguer» es así en el impreso.
+
+    - id: ptol-02
+      esfera: mundo — geografía política (demografía)
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 227
+      cita: >-
+        «Desde el puerto de Burburuata á la ciudad de Coro puede haber cincuenta
+        leguas: está toda la costa despoblada que no hay en toda ella cien
+        indios […] la ciudad de Coro está dos leguas y media del puerto; tiene
+        hasta sesenta casas […] la costa abajo hasta la laguna de Maracaibo está
+        despoblada, que hay de camino sesenta leguas»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        Las dos únicas cifras de la costa en 1546: menos de cien indios en 50
+        leguas de barlovento, y sotavento «despoblada». Las sesenta casas son
+        de la ciudad española de Coro, no de un pueblo indígena.
+
+    - id: ptol-03
+      esfera: mundo — geografía política (demografía) + ecología
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 228
+      cita: >-
+        «Doce leguas de la ciudad de Coro hace la mar una anconada de tierra,
+        que casi se podía llamar isla; llámase Paraguana, y los mareantes la
+        llaman Cabo de San Román: esta provincia de Paraguana terná en redondez
+        veinticinco leguas; es tierra llana y casi en el comedio á una sierra
+        que se parece por la mar navegando […] los indios que en ella habitan
+        son de nación Caquetios, muy domésticos, amigos de los españoles; había
+        en ella medianamente de indios, y á causa de haberlos sacado y llevado á
+        las entradas é descubrimientos, está casi esta provincia despoblada,
+        que no hay en toda ella trecientos indios […] están poblados con estos
+        indios cuatro poblezuelos»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        ⭐ La única cifra de Paraguaná del s. XVI que tenemos en primario:
+        menos de 300 indios en CUATRO poblezuelos, en 1546, después de la
+        trata. «Había medianamente» es el antes (~1529), sin cifra. La sierra
+        «en el comedio» es Santa Ana. Los cuatro poblezuelos NO se nombran.
+
+    - id: ptol-04
+      esfera: mundo — geografía política
+      obra: perez-de-tolosa-1546
+      documento: "Interrogatorio (1545), preguntas 39 y 40"
+      pagina_impresa: [274, 275]
+      cita: >-
+        p. 274: «despobló cuatro ó cinco pueblos de indios amigos de cristianos
+        de nación Caquetios, comarcanos á la ciudad de Coro, y de los dichos
+        indios llevó cantidad de más de quinientos por fuerza y en cadenas».
+        p. 275: «mandó ranchear muchos pueblos de los indios amigos y de paz, de
+        nación Caquetios, comarcanos á la ciudad de Coro, en cantidad de más de
+        setecientas ánimas»
+      verificado_en_imagen: "p. 274 sí; p. 275 no"
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        ⚠️ Son PREGUNTAS del fiscal («Si saben que…»), no testimonios: la
+        edición no trae las respuestas. Es la acusación contra Federmann, no un
+        hecho probado. Aun así es la mejor escala que hay: 4-5 pueblos
+        comarcanos a Coro dan >500 personas (~100-125 por pueblo, cálculo
+        nuestro, hipotético) hacia 1530.
+
+    - id: ptol-05
+      esfera: mundo — geografía política
+      obra: perez-de-tolosa-1546
+      documento: "Interrogatorio (1545), preguntas 18 y 34"
+      pagina_impresa: [264, 273]
+      cita: >-
+        p. 264: «hallando la tierra ya pacificada por el factor Juan de Ampies,
+        conquistada toda la nación Caquetia». p. 273: «no hay otro pueblo que el
+        puerto de Coro, el cual estaba poblado por el factor Juan de Ampies antes
+        é al tiempo que los Belzares tomasen la posesión»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        «Conquistada» en boca del fiscal de 1545 = pacificada por pacto; la
+        misma carta de Ampíes (p. 212) muestra que fue por embajada.
+
+    - id: ptol-06
+      esfera: mundo — geografía política
+      obra: perez-de-tolosa-1546
+      documento: "Tercera carta (1548)"
+      pagina_impresa: 255
+      cita: >-
+        «el dicho Obispo Bastidas se partió para la Española, dejando repartidos
+        la poca parte de indios que había en la comarca de Coro»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: "c. 1540-1541: un repartimiento de los caquetíos de Coro cuando ya eran «poca parte» (Alfinger no había repartido, p. 227)."
+
+  # ─── 2. SUBSISTENCIA ─────────────────────────────────────────────────
+  subsistencia:
+
+    - id: ptol-07
+      esfera: mundo — ecología (agua)
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 228
+      cita: >-
+        «no hay río ninguno en toda ella; beben de jagüeyes, y muchas veces,
+        cuando hay seca, tienen mucha necesidad de agua los naturales della»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        Segunda atestación primaria de que Paraguaná no tiene ríos (ecologia-007
+        y el bloque [El mundo] del Director ya lo dicen). `jagüey` es voz de la
+        esfera en boca de un castellano, no dato de lengua caquetía.
+
+    - id: ptol-08
+      esfera: mundo — ecología (caza y pesca) + transmisión (tributo)
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 228
+      cita: >-
+        «esta provincia es muy abundosa de caza de venados, conejos, perdices,
+        tórtolas, pescado […] estos indios sustentan á los españoles que residen
+        en Coro de caza y pesca, porque son muy domésticos indios […] hay en ella
+        grandes pedazos de sabanas, donde, con perros y caballos, se matan
+        muchos venados»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        ⚠️ Regla 3: «con perros y caballos» es caza ESPAÑOLA (caballo = colonial).
+        Lo indígena es la abundancia y que los paraguaneros pagaban en caza y
+        pesca. Que Paraguaná abasteciera a Coro de proteína es relación
+        colonial; no dice nada del intercambio precontacto.
+
+    - id: ptol-09
+      esfera: mundo — ecología / salud
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 228
+      cita: "«es tierra muy sana, que cuando algund hombre enferma en Coro le envían á aquella provincia»"
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: "Costumbre española. Sirve como descripción del medio, no del mundo indígena."
+
+    - id: ptol-10
+      esfera: mundo — ecología (recursos)
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546); Tercera carta (1548)"
+      pagina_impresa: [227, 238, 255]
+      cita: >-
+        p. 227: «una legua de la ciudad de Coro hay unas salinas de mucha
+        cantidad de sal». p. 238: Coro «aunque tiene sal, no se puede sacar sin
+        que sea más la costa que el provecho». p. 255: «hizo dar […] cata de
+        perlas en el Cabo de San Román, que es en la provincia de Paraguana, y
+        aunque alguna muestra hobo, no pareció cosa de provecho»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        Perlas en Paraguaná: probadas por Espira hacia 1540 (murió el 11-VI-1540)
+        con «alguna muestra». No hay palabra de que los caquetíos las
+        explotaran.
+
+    - id: ptol-11
+      esfera: mundo — economía / textil
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: [226, 227]
+      cita: >-
+        costa caquetía, p. 227: «mucha caza y pesca y ropa de hamacas». Caracas,
+        p. 226: «esta gente trata algund oro y ropa de hamacas».
+      verificado_en_imagen: "p. 227 sí"
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        «Ropa de hamacas» = tejido de algodón en forma de hamaca, que circula
+        como bien de trueque (lo que los de Cubagua vienen a «resgatar», p. 227).
+        Tolosa lo da a la costa caquetía y a los Caracas: un bien de la esfera.
+        La segunda carta (p. 240) muestra que en los llanos de Acarigua había
+        tanto algodón e hilo que vistió a un campo entero: otra polity.
+
+    - id: ptol-12
+      esfera: mundo — economía (comercio del lago)
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 229
+      cita: >-
+        «la gente que habitaba en la laguna era de nación Onotos […] estos
+        indios no siembran, son señores de la laguna, pescan con redes y
+        anzuelos mucho género de pescado […] y este pescado venden en sus
+        mercados á los indios Bubures de la provincia de Puruara á trueco de
+        maíz y yuca y otras cosas, y desta manera los unos y los otros tienen
+        pescado y maíz»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: "occidental (Onotos y Bubures; NO caquetíos)"
+      nota: >-
+        Es el PRIMARIO de `geografia_politica-011`, que hoy lo cita en tercera
+        mano (Tolosa → Arellano 1964 → Oliver 1989 pp. 227-228). Dos
+        diferencias con lo que el corpus dice: el primario escribe «Puruara»
+        aquí y «Xuruara» después (pp. 229, 231), y **no menciona a los
+        kirikires ni a los caquetíos**: «and possibly the Caquetío as well» es
+        de Oliver. Propuesta abajo.
+
+  # ─── 2b. DESPOBLAMIENTO Y TRATA ──────────────────────────────────────
+  despoblamiento_y_trata:
+
+    - id: ptol-13
+      esfera: mundo — geografía política
+      obra: perez-de-tolosa-1546
+      documento: "Tercera carta (1548)"
+      pagina_impresa: 252
+      cita: >-
+        «el dicho Jorge Despira, en virtud de cierta provisión que llevó consigo
+        para que los indios enemigos que no quisiesen venir á la amistad, fechos
+        ciertos requerimientos los hiciesen esclavos, hizo muchos esclavos de
+        los Caquetios, en Paragrachoa y en las sierras de los Ayamanes: estos
+        esclavos se trajeron á Coro y fueron sentenciados por tales, y se pagó
+        el quinto á S. M.»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: "costera (EN DUDA el lugar: «Paragrachoa»)"
+      nota: >-
+        1535. «Paragrachoa» es la grafía del impreso: ver lo_que_resulto_falso.
+        Las «sierras de los Ayamanes» son vecinas de otra etnia (ayamán), y el
+        texto dice que allí se hicieron esclavos DE LOS CAQUETÍOS: o había
+        caquetíos en esas sierras o el texto junta dos razias.
+
+    - id: ptol-14
+      esfera: mundo — geografía política / guerra
+      obra: perez-de-tolosa-1546
+      documento: "Tercera carta (1548)"
+      pagina_impresa: 254
+      cita: >-
+        «un capítulo de la capitulación de los dichos Belzares, que dice que los
+        cristianos puedan rescatar con los indios los esclavos que ellos entre
+        sí tienen por tales, so esta causa se dio la primera ocasión á la rotura
+        de tanta gente de indios […] se hacían guerra los unos á los otros, y con
+        favor y inducimiento de los cristianos se tomaban unos á otros, siendo
+        amigos, y á manadas los vendían á los cristianos por muy poquita cosa
+        […] este trato duró hasta el año de 45»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: "toda la gobernación"
+      nota: >-
+        🔴 NO es prueba de esclavitud indígena precontacto. La «esclavitud entre
+        ellos» es la PREMISA JURÍDICA de la capitulación, y Tolosa dice que fue
+        el pretexto: la guerra de captura la indujeron los cristianos. Oliver
+        documenta el comercio de naborías sólo en el bajo Cojedes (polity
+        llanos, `curiana_polities`); esto no lo extiende a la costa.
+
+    - id: ptol-15
+      esfera: mundo — geografía política
+      obra: perez-de-tolosa-1546
+      documento: "Relación (1546); Tercera carta (1548); Interrogatorio (1545) pregunta 45"
+      pagina_impresa: [227, 255, 276]
+      cita: >-
+        p. 227: «los que han gobernado han consentido tomar los dichos indios de
+        la costa y llevarlos á las entradas é descubrimientos […] y los que han
+        quedado son muy pocos, é por huir de los españoles […] se andan por los
+        montes». p. 255-256: los Xiraras «mataron tres cristianos que fueron á
+        rescatar con ellos», y Diego de Buiza «hizo esclavos» a cuantos pudo.
+        p. 276: Pedro de Limpias «ha robado y rancheado y preso mucha cantidad
+        de indios amigos comarcanos á esta ciudad de Coro […] cuando el dicho
+        Fedreman le envió desde Bariquisimeto á Barlovento»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: "costera; los Xiraras son la sierra (jirajara)"
+      nota: >-
+        La despoblación de la costa tiene dos mecanismos distintos en la fuente:
+        sacar gente como porteadores para las entradas (Federmann, Espira) y la
+        huida al monte. Ninguno es precontacto.
+
+  # ─── 3. LENGUA ───────────────────────────────────────────────────────
+  lengua:
+
+    - id: ptol-16
+      esfera: lengua — variación (polities) · experimento
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: 234
+      cita: >-
+        «es toda tierra, por donde fueron, de muy grandes sabanas y de mucha
+        caza de venados, é teniéndose un poco de la parte de los llanos, muy
+        grandes pesquerías: la mayor parte de los ríos entran en el río y golfo
+        de Paria, do es gobernador Jirónimo de Ortal, y docientas leguas de
+        tierra, sin entrar en la sierra, son los indios de nación Caquetios,
+        aunque algo difieren en la habla á los de Coro; es gente bien dispuesta
+        y viciosos de comida de carne y pescado; no son grandes labradores»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: llanos
+      contexto:
+        que_gente: >-
+          Los caquetíos de los LLANOS, a lo largo de la ruta de Espira (1535-38)
+          y Hutten (1541-46): desde Barquisimeto, diez leguas hasta los llanos,
+          luego al sur «llevando siempre las sierras á la mano derecha» (p. 233),
+          sin entrar en la cordillera, por ríos que van «al río y golfo de
+          Paria» (= el Orinoco). Es el piedemonte andino de Portuguesa, Barinas y
+          Apure: la polity `llanos` de `curiana_polities`.
+        frente_a_quien: >-
+          «los de Coro»: la polity COSTERA, la que simulamos. Tolosa escribe en
+          el Tocuyo con Coro como norma de referencia.
+        de_quien_es_el_dato: >-
+          De SEGUNDA MANO. Tolosa no hizo esa ruta: la relación la compone con
+          lo que «he andado y visto, y á la mayor parte de personas cuerdas que
+          han andado toda la tierra» (primera carta, p. 223). Los informantes
+          son los de las entradas de Espira y Hutten, que llevaban porteadores
+          caquetíos de Coro en cadenas (interrogatorio, p. 274-275). Quién
+          percibió la diferencia —los españoles por sus intérpretes, o los
+          propios porteadores— el texto no lo dice.
+      lo_que_dice: >-
+        Una atestación de 1546 de que la gente que el español llama «de nación
+        Caquetios» en los llanos habla ALGO distinto de la de Coro: misma
+        nación, mismo idioma a ojos del informante, diferencia perceptible y
+        menor («algo»).
+      lo_que_NO_dice: >-
+        (1) No dice en qué difieren (léxico, pronunciación…): ni una palabra.
+        (2) No dice nada de variación DENTRO de la costa (Paraguaná frente a
+        Coro, ni las islas): el contraste es llanos ↔ Coro. (3) No mide la
+        distancia: «algo» es la palabra de un castellano. (4) No es precontacto:
+        son dos poblaciones ya desplazadas por la trata. (5) Tampoco dice que
+        sean la misma sociedad: en la misma página son pobres, pocos, «no son
+        grandes labradores» y comen carne y pescado — otra economía que la del
+        valle de Barquisimeto (p. 233, «grandes labradores de maíz»).
+      a_que_toca: >-
+        Regla 4 y `3-mundo/polities-caquetias.md` («hablaban una lengua y no
+        tenían una sola sociedad»): la matiza sin contradecirla — una lengua,
+        con variedades. `curiana_social.DIALECTOS` hoy perfila dialectos POR
+        ETNIA; este dato es de variación DENTRO de una etnia y ENTRE polities,
+        que el motor no modela. Y `DISENO_KOINE.md` («misma lengua, distinta
+        sociedad» como escenario de contacto): el testigo dice que ese
+        escenario traería también habla distinta. Pide decisión → issue
+        `habla-llanos-coro-perez-de-tolosa-2026-09-23.md`.
+
+    - id: ptol-17
+      esfera: lengua — intérpretes · transmisión
+      obra: perez-de-tolosa-1546
+      documento: "Carta de Juan de Ampíes (c. 1526)"
+      autor_del_documento: Juan de Ampíes
+      pagina_impresa: 212
+      cita: >-
+        «é luego yo envié una carabela mía con sólo cinco cristianos, é los
+        dichos indios é una india que en mi casa se ha criado, muy buena
+        cristiana, para que les hablase y supiese si aquello que los indios me
+        habían dicho fuese verdad»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        La primera intérprete de la costa caquetía de que hay noticia, sin
+        nombre. Criada en casa de Ampíes en Santo Domingo; lo más probable
+        (hipotético) es que fuera una de los ~2.000 indios sacados de Aruba,
+        Curazao y Bonaire en 1515 (p. 209-210), porque son los que Ampíes tenía
+        en su casa. Si es así, una isleña hablaba con los de Coro: apoyo
+        indirecto a la inteligibilidad islas↔costa, que ya se da por supuesta.
+        La misma carta dice que los de la costa «muchas veces se pasaban allá á
+        holgar» con los de las islas (p. 212).
+
+    - id: ptol-18
+      esfera: lengua — diversidad de la gobernación
+      obra: perez-de-tolosa-1546
+      documento: "Relación (1546); Segunda carta (1546)"
+      pagina_impresa: [225, 233, 235, 238]
+      cita: >-
+        p. 225, Chirigotos de Maracapana: «es toda una lengua». p. 233,
+        Barquisimeto: «junto con estos Caquetios hay otras naciones de indios de
+        diversas lenguas». p. 235, Tocuyo: «Cuibas y Coyones y de otras muchas y
+        diversas lenguas». p. 238: «se aprenderían los lenguajes por los que
+        agora nacen, que son tantos en esta provincia cuantas hay lenguas»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: "barquisimeto, Tocuyo y Maracapana — NO la costera"
+      nota: >-
+        La p. 238 es un proyecto de intérpretes: los nacidos en la tierra
+        aprenderían las lenguas. Tolosa no nombra ningún intérprete en sus
+        cartas.
+
+    - id: ptol-19
+      esfera: lengua — voces indígenas en el texto
+      obra: perez-de-tolosa-1546
+      documento: "Relación, cartas e interrogatorio"
+      pagina_impresa: [220, 227, 228, 230, 231, 258, 267, 269]
+      voces:
+        - {forma: guazabaras, pagina: 220, glosa_del_texto: "combates (con los de las montañas de Carora)"}
+        - {forma: hamacas, pagina: 227, glosa_del_texto: "«ropa de hamacas»"}
+        - {forma: jagüeyes, pagina: 228, glosa_del_texto: "pozos de agua en Paraguaná"}
+        - {forma: carcuris, pagina: 230, glosa_del_texto: "piezas de oro que trataban los de camino a Upar; el EDITOR (n. 89, p. 388) glosa «piezas de hoja de oro con que los indios de algunas naciones cubrían las partes pudendas»"}
+        - {forma: totuma, pagina: 231, glosa_del_texto: "«totuma toda de oro» entre los Pacabuyes; el EDITOR (n. 90) la glosa como fruto de árbol, «güiro», «calabazo»"}
+        - {forma: cazabi, pagina: 258, glosa_del_texto: "«socorro de maíz y de cazabi» (también en Ampíes p. 210, «pan cazabi»)"}
+        - {forma: buyo, pagina: 267, glosa_del_texto: "casa grande en la provincia Carara; el EDITOR (n. 94) glosa «Bohío»"}
+        - {forma: barbacoas, pagina: 267, glosa_del_texto: "tablados en alto"}
+        - {forma: "baroda / Varoida / Cacorota verde", pagina: 269, glosa_del_texto: "cuentas y piedras de rescate de Santa Marta"}
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: "ninguna voz es de la costa caquetía en boca caquetía"
+      nota: >-
+        🔴 Ninguna es una voz caquetía atestiguada: son voces del castellano
+        indiano de la esfera (taíno la mayoría) que el escribano usa, o voces
+        de otras regiones (Upar, Santa Marta, Carara). NO proponen entrada al
+        lexicón caquetío. Las glosas de las notas son de Fernández Duro (1885).
+
+  # ─── 4. MANAURE Y LOS JEFES ──────────────────────────────────────────
+  jefes:
+
+    - id: ptol-20
+      esfera: mundo — geografía política (autoridad) · antropónimos
+      obra: perez-de-tolosa-1546
+      documento: "Tercera carta (Coro, 8-VII-1548)"
+      pagina_impresa: 248
+      cita: >-
+        «en la comarca de la ciudad de Coro residía un cacique llamado Manaore,
+        el mayor principal que en la gente caquetia se hallaba, y andando el
+        tiempo, por malos tratamientos, se ausentó do murió»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        Grafía nueva para `antroponimos_caquetios.yaml`: **Manaore**. Dos cosas
+        que el canon ya tiene y aquí se confirman en primario: el paramount de
+        TODA la gente caquetía («el mayor principal»), y que se fue por los
+        malos tratos. «Do murió» es vago: no dice dónde.
+
+    - id: ptol-21
+      esfera: mundo — geografía política · economía (canoas) · antropónimos
+      obra: perez-de-tolosa-1546
+      documento: "Interrogatorio (1545), pregunta 21"
+      pagina_impresa: 266
+      cita: >-
+        «Si saben que siendo el cacique de Coro llamado Manabre amigo de los
+        cristianos, é que por su causa se sustentaba la paz de toda la nación
+        Caquetia, con maña, el dicho Ambrosio de Alfinguer le quitó por fuerza é
+        contra su voluntad ciertas canoas que el dicho cacique tenía en mucho, é
+        sobre ello le prendió é molestó, y envió las canoas con mercaderías de
+        Belzares á vender al pueblo de Maracaibo, el cual dicho indio, después
+        de suelto, se alzó y despobló toda la dicha tierra y llevó consigo todo
+        el oro, que era en muy gran cantidad, él y todos los suyos, que fueron
+        mucha gente é de muchos pueblos»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        ⚠️ Pregunta del fiscal, no testimonio. El impreso dice **«Manabre»**
+        (con una marca de tinta detrás, verificado a 4×); el OCR lo da
+        ilegible. El índice del editor lo asienta como Manaure (II, 266), y el
+        contexto no deja duda. Lo nuevo para el canon: (a) las CANOAS como bien
+        del cacique «que tenía en mucho» — el paramount costero controla
+        canoas, y Alfinger las usa para el tráfico a Maracaibo; (b) su causa
+        sostenía «la paz de toda la nación Caquetia»; (c) al alzarse se llevó
+        a «mucha gente é de muchos pueblos». Cuadra con la huida a los llanos
+        que Arcaya (p. 199) recoge de la tradición.
+
+    - id: ptol-22
+      esfera: mundo — creencia · geografía política · antropónimos
+      obra: perez-de-tolosa-1546
+      documento: "Carta de Juan de Ampíes (c. 1526)"
+      autor_del_documento: Juan de Ampíes
+      pagina_impresa: 212
+      cita: >-
+        «acordaron de me inviar un cacique que se dice D. Juan Baracoica, que
+        está en las islas y es su pariente y deudo, con otro indio que entre
+        ellos señalaron […] y esto principalmente me enviaba á decir un gran
+        cacique que está diez leguas la tierra adentro en la provincia de Coro,
+        y el dicho cacique se llama Naure ó Anaure, el cual por ser tan gran
+        señor se hace adorar como Dios, dando á entender á los indios que él da
+        los temporales»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        Ver `cotejo_ampies` abajo: aquí está el pasaje que Arcaya ELIDE con
+        puntos suspensivos, y una variante de lectura con Velasco 2015
+        («como Dios» / «como digo») que decide qué dice la fuente sobre el
+        culto al cacique.
+
+    - id: ptol-23
+      esfera: mundo — parentesco · geografía política
+      obra: perez-de-tolosa-1546
+      documento: "Carta de Juan de Ampíes (c. 1526)"
+      autor_del_documento: Juan de Ampíes
+      pagina_impresa: 212
+      cita: >-
+        «aportó allí un armada de cristianos, é tomó parte de aquellos indios é
+        una india hija del gran Cacique de Coro, é los trujeron á esta isla por
+        esclavos […] en especial este gran Cacique al cual trujeron una hija
+        suya con su marido»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: >-
+        La hija no tiene nombre en la carta; «Judibana» y «el cacique de
+        Jurijurebo» como su marido son de Velasco 2015 (p. 30), que lo dice sin
+        cita (ya anotado en su ficha). La carta sólo dice «con su marido».
+
+    - id: ptol-24
+      esfera: mundo — parentesco (principales)
+      obra: perez-de-tolosa-1546
+      documento: "Interrogatorio (1545), pregunta 40"
+      pagina_impresa: 275
+      cita: >-
+        «el dicho Fedreman mandó quitar á ciertos principales sus mujeres para
+        él, y por quitárselas mataron y herieron á ciertos de los dichos
+        principales»
+      verificado_en_imagen: false
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      polity: costera
+      nota: "Caquetíos comarcanos a Coro. «Principales» con mujeres propias; sin nombres."
+
+    - id: ptol-25
+      esfera: negativa medida
+      que: "¿Hay otros jefes caquetíos con nombre en estos documentos?"
+      medido: >-
+        No. Leídos enteros los siete documentos, los únicos nombres indígenas de
+        la costa son Manaore/Manabre (Tolosa), Naure/Anaure y D. Juan Baracoica
+        (Ampíes). Ni Don Alexandre, ni Don Martín, ni los pueblos de 1538
+        (Todariquiba, Hurihurebo, Miraca): esos vienen de otras fuentes
+        (Velasco, Oliver). La relación anónima no nombra a ningún indígena.
+
+  # ─── 6. OTRAS POLITIES (regla 4) ─────────────────────────────────────
+  otras_polities:
+
+    - id: ptol-26
+      polity: barquisimeto
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: [232, 233]
+      cita: >-
+        «El valle de Bariquisimeto está medianamente poblado […] con el agua
+        deste río siembran de riego; son grandes labradores de maíz […] es gente
+        de nación Caquetios; éstos la mayor parte están de paz, y sirven á los
+        españoles»
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        Riego y maíz: el contraste con la costa (caza, pesca, hamacas) que
+        Oliver hace, aquí en primario. NO se importa a la costera.
+
+    - id: ptol-27
+      polity: "yaracuy (probable) — interior, NO costera"
+      obra: perez-de-tolosa-1546
+      documento: "Segunda carta, continuación (1547)"
+      pagina_impresa: 241
+      cita: >-
+        «el valle que se dice de las Damas, el cual hice todo de paz: es uno de
+        los valles más gentiles que puede haber en Indias, de muchos indios y
+        muchos principales, aunque todos ellos no tienen oro; es nación
+        Caquetia, y á las aldas de las montañas del dicho valle hay una nación
+        que se dice Chipas»
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        Caquetíos en el valle de las Damas en 1547. El interrogatorio (p. 271)
+        dice que Espira sacó de ese valle «más de cuatrocientas ánimas atadas».
+        La asignación a la polity yaracuy es nuestra (hipotético): el texto no
+        lo sitúa con precisión.
+
+    - id: ptol-28
+      polity: "sierra de Coro — jirajara (vecinos, otra etnia)"
+      obra: perez-de-tolosa-1546
+      documento: "Relación (1546); Tercera carta (1548)"
+      pagina_impresa: [228, 232, 255]
+      cita: >-
+        p. 228: «De la ciudad de Coro están las sierras tres leguas; están
+        pobladas de indios de nación Piracoras, gente belicosa y guerrera; son
+        grandes labradores de maíz, que en tiempo que con ellos se conservó la
+        paz, se proveían dellos los españoles de la ciudad de Coro de maíz […]
+        no tenían pueblos grandes». p. 232: «las sierras de Xiracoras,
+        comarcanas á Coro». p. 255: «los indios Xiraras».
+      verificado_en_imagen: "pp. 228 y 232 sí"
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        Tres grafías de la misma gente en el mismo impreso: «Piracoras»
+        (probable errata por Xiracoras), «Xiracoras», «Xiraras». La sierra
+        maicera abastecía a Coro: el reparto costa-pesca / sierra-maíz, visto en
+        1546. Para `3-mundo/etnias.yaml`: dato para el vecino jirajara.
+
+    - id: ptol-29
+      polity: "Tocuyo (Cuibas, Coyones) — otra gente"
+      obra: perez-de-tolosa-1546
+      documento: "Primera carta (1546); Relación (1546)"
+      pagina_impresa: [223, 235]
+      cita: >-
+        p. 223: «tierra muy poblada de indios y muy pobres […] están docientos
+        y más caciques de paz con su gente». p. 235: «los indios son de nación
+        Cuibas y Coyones y de otras muchas y diversas lenguas».
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        ⚠️ «Docientos y más caciques» es del TOCUYO, no de la costa. Fácil de
+        confundir porque Tolosa escribe «este asiento» sin nombrarlo.
+
+    - id: ptol-30
+      polity: "Maracapana (Chirigotos) — otro extremo de la gobernación"
+      obra: perez-de-tolosa-1546
+      documento: "Relación de las tierras (1546)"
+      pagina_impresa: [225, 226]
+      cita: >-
+        «por la población pasa un río muy caudaloso que se llama Hunare: tenían
+        los pueblos muy buenos asientos: había pueblo de á seiscientas casas:
+        era gente que, sobre sus pesquerías y términos, tenían guerra unos con
+        otros»
+      verificado_en_imagen: true
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: >-
+        El pasaje que la obra secundaria parece haber trasladado a los caquetíos
+        (ver lo_que_resulto_falso). Guerra «sobre sus pesquerías y términos»:
+        territorios de pesca defendidos — dato de los Chirigotos, no de la
+        costa caquetía.
+
+# ══════════════════════════════════════════════════════════════════════
+# COTEJO: la carta de Ampíes en Fernández Duro (1885) contra Arcaya (1920)
+# y contra Velasco (2015, que leyó el manuscrito)
+# ══════════════════════════════════════════════════════════════════════
+cotejo_ampies:
+  por_que: >-
+    La carta de Ampíes es la fuente del episodio de la hija de Manaure y de la
+    embajada de Baracoica. El repo la cita por Arcaya pp. 160-161; aquí está el
+    texto de la edición que Arcaya dice copiar.
+  arcaya_dice_copiar_de: >-
+    «Está publicada en la Historia de Oviedo y Baños, edición de Fernández Duro,
+    tomo II, pág. 209» (Arcaya p. 160 n. 3). Es esta edición.
+  veredicto: >-
+    **La cita de Arcaya se confirma en lo sustancial**: Baracoica «está en las
+    islas y es su pariente y deudo», el gran cacique «diez leguas la tierra
+    adentro en la provincia de Coro», «Naure ó Anaure», la india criada en su
+    casa, Gonzalo de Sevilla, la armada que tomó «una india hija del gran
+    Cacique de Coro», «una hija suya con su marido». Pero con cuatro diferencias
+    que importan:
+  diferencias:
+    - que: "ELISIÓN"
+      detalle: >-
+        Arcaya corta con «. . . .» justo después de «Naure o Anaure» y se salta
+        la frase «el cual por ser tan gran señor se hace adorar como Dios, dando
+        á entender á los indios que él da los temporales». Quien cite a Manaure
+        «vía Arcaya p. 160» NO tiene el dato del culto ni el de los temporales:
+        el repo lo tenía sólo por Velasco 2015 (folio 14 del manuscrito).
+    - que: "VARIANTE DE LECTURA — decide el dato de creencia"
+      detalle: >-
+        Fernández Duro imprime «se hace adorar **como Dios**» (verificado en
+        imagen, p. 212). Velasco 2015, leyendo el manuscrito del AGI, transcribe
+        «se haze adorar **como digo**» (ficha `velasco-2015-resistencia`, §2).
+        Son la misma carta: o el editor de 1885 leyó «dios» donde había «digo»,
+        o Velasco al revés. Con «como digo» el cacique se hace adorar y punto;
+        con «como Dios», se hace adorar COMO UN DIOS. Lo que no cambia en
+        ninguna lectura: «se hace adorar» y «él da los temporales». Pide ver el
+        manuscrito → issue.
+    - que: "PÁGINA"
+      detalle: >-
+        El pasaje está en la p. 212, no en la 209 (donde empieza la carta).
+        `antroponimos_caquetios.yaml` hereda la 209 de Arcaya.
+    - que: "GRAFÍAS"
+      detalle: >-
+        Arcaya moderniza: «Paraguaná» con tilde (el impreso: «Paraguana»),
+        «enviar» (impreso: «inviar»), «recibir» (impreso: «rescibir»), «Sauca e
+        Paraguaná e otras» (impreso: «Sauca, y Paraguana é otros»). Velasco da
+        «Baracoyca» del manuscrito; Fernández Duro y Arcaya, «Baracoica».
+  lo_que_la_carta_no_dice:
+    - >-
+      que Baracoica sea hijo de Manaure. La carta dice «es su pariente y deudo»,
+      y el «su» son los indios de la costa que lo envían. «Hijo del mismo
+      Manaure» es de Arcaya p. 199, que no da fuente allí.
+    - >-
+      el nombre de la hija («Judibana»), ni el pueblo del marido.
+    - >-
+      la fecha. El impreso no la trae; «fines de 1525 o principios de 1526» es
+      inferencia de Arcaya (p. 160), anclada en la cédula de 17-XI-1526.
+  independencia: >-
+    Fernández Duro, Arcaya y Velasco son TRES lecturas de UNA atestación (la
+    carta), no tres atestaciones (minar-fuente §8). La de Fernández Duro y la
+    de Velasco son independientes ENTRE SÍ como lecturas (el impreso de 1885,
+    cuya procedencia no localicé en el tomo, y la del manuscrito del AGI);
+    Arcaya depende de Fernández Duro.
+
+# ══════════════════════════════════════════════════════════════════════
+# PROPUESTAS AL CANON (propone, no toca — regla 5)
+# ══════════════════════════════════════════════════════════════════════
+propuestas:
+
+  - destino: 3-mundo/asentamientos.yaml
+    que: >-
+      Añadir a los nodos de la región `paraguana` (o a una nota de región) el
+      dato demográfico de 1546: «cuatro poblezuelos», «no hay en toda ella
+      trecientos indios» (p. 228), con `atestacion: colonial` y
+      `precontacto: desconocido`. NO es un nodo nuevo: los cuatro no tienen
+      nombre. Y a la región `golfete-de-coro`: «4-5 pueblos» comarcanos a Coro
+      y «más de quinientos» sacados (p. 274, acusación de 1545).
+    no_proponer: >-
+      El «pueblo de cuatrocientas casas»: no está en la fuente, y el de
+      seiscientas es de los Chirigotos.
+
+  - destino: 3-mundo/corpus/geografia_politica.yaml — geografia_politica-011
+    que: >-
+      Cambiar `procedencia` a la fuente primaria: `{obra: perez-de-tolosa-1546,
+      pagina: "229"}`, dejando a Oliver 1989 como apoyo; y corregir el
+      `contenido`: el primario NO nombra a los kirikires ni a los caquetíos en
+      ese comercio (eso es de Oliver/Oviedo y Valdés), y escribe «Puruara» /
+      «Xuruara».
+
+  - destino: 3-mundo/corpus/creencia.yaml — creencia-013
+    que: >-
+      Su `referencia` es vaga («crónicas del contacto sobre Manaure»). Tiene
+      cita primaria: Ampíes, en esta edición p. 212 («se hace adorar como Dios,
+      dando á entender á los indios que él da los temporales»), y en el
+      manuscrito vía Velasco 2015 (folio 14). Con la variante «Dios/digo» a la
+      vista (issue).
+
+  - destino: 6-fusion/antroponimos_caquetios.yaml
+    que: >-
+      (a) Naure/Anaure: página 209 → 212. (b) Manaure: añadir las grafías
+      primarias **Manaore** (Tolosa, tercera carta, p. 248) y **Manabre**
+      (interrogatorio, p. 266, errata probable; el índice del editor la asienta
+      como Manaure). (c) Baracoica: la carta dice «pariente y deudo», no
+      «hijo»; el «hijo del mismo Manaure» de Arcaya p. 199 queda sin fuente
+      primaria en este tomo.
+
+  - destino: 3-mundo/polities-caquetias.md y curiana_sim/curiana_polities.py (polity `llanos`)
+    que: >-
+      Añadir a la polity `llanos` el rasgo de LENGUA, que hoy no tiene: «de
+      nación Caquetios, aunque algo difieren en la habla á los de Coro» (p. 234,
+      de segunda mano), y el de ECONOMÍA: «viciosos de comida de carne y
+      pescado; no son grandes labradores». Ver el issue: es decisión.
+
+  - destino: 3-mundo/etnias.yaml (jirajara)
+    que: >-
+      Tres grafías del impreso (Piracoras, Xiracoras, Xiraras; pp. 228, 232,
+      255) y el dato «grandes labradores de maíz» que abastecían a Coro en
+      tiempo de paz, «no tenían pueblos grandes».
+
+# ══════════════════════════════════════════════════════════════════════
+# FAUNA (esquema común de la campaña)
+# Lo que la fuente dice de cada animal, con su lugar. NINGÚN pasaje describe
+# un sonido: `sonido: null` en todos (cero verificado leyendo los siete
+# documentos enteros, no con grep).
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+  - nombre_en_fuente: venados
+    especie_probable: 'Odocoileus virginianus (el venado de sabana; en Paraguaná sigue siendo el cérvido presente)'
+    texto: '«esta provincia es muy abundosa de caza de venados, conejos, perdices, tórtolas, pescado» · «con perros y caballos, se matan muchos venados»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 228
+    lugar: Paraguaná
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: conejos
+    especie_probable: 'Sylvilagus floridanus (el único lagomorfo de la región; el «conejo» del castellano indiano)'
+    texto: '«caza de venados, conejos, perdices, tórtolas»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 228
+    lugar: Paraguaná
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: perdices
+    especie_probable: null
+    nota: 'la fuente no permite especie; en el castellano regional «perdiz» suele ser la codorniz crestada (Colinus cristatus): equivalencia NUESTRA'
+    texto: '«caza de venados, conejos, perdices, tórtolas»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 228
+    lugar: Paraguaná
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: tórtolas
+    especie_probable: null
+    nota: 'la fuente no permite especie (candidatas NUESTRAS: Columbina, Zenaida)'
+    texto: '«caza de venados, conejos, perdices, tórtolas»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 228
+    lugar: Paraguaná
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: pescado
+    especie_probable: null
+    texto: '«estos indios sustentan á los españoles que residen en Coro de caza y pesca» (p. 228) · costa caquetía: «mucha caza y pesca» (p. 227)'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: [227, 228]
+    lugar: 'Paraguaná y costa de sotavento y barlovento de Coro'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: pescado (del lago)
+    especie_probable: null
+    texto: '«pescan con redes y anzuelos mucho género de pescado que hay en la laguna muy excelente» · «muy grande cantidad y género de pescado»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 229
+    lugar: 'laguna de Maracaibo (Onotos) — polity occidental'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: Manatos
+    especie_probable: 'Trichechus manatus — lectura del EDITOR (n. 88, p. 388: «Manatis?»); el texto es corrupto en ese punto'
+    texto: '«hay en esta laguna, como dicho es, muy grande cantidad y género de pescado, y muchos Manatos (88)»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 229
+    lugar: 'laguna de Maracaibo — polity occidental'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: 'venados, perdices, palomas, conejos; miel'
+    especie_probable: null
+    texto: '«muy grandes sabanas, y en ellas mucha caza de venados y perdices y palomas y conejos, y mucha miel»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 229
+    lugar: 'sabanas junto al pueblo de Maracaibo — polity occidental'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: tigres
+    especie_probable: 'Panthera onca (el «tigre» del castellano indiano)'
+    texto: '«se cebaron los tigres en ellos, de manera que los dichos tigres señorean la mayor parte de la tierra» (p. 225, Maracapana) · «hay tantos tigres, que dentro del pueblo de los españoles […] bebían del agua de la laguna» (p. 229, Maracaibo) · «estos tigres es cosa peligrosa y temerosa, porque sus saltos hacen á traición» (p. 235, llanos) · la culata del lago: «se han cebado tigres, que no los solía haber» (p. 231)'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: [225, 229, 231, 235, 256]
+    lugar: 'Maracapana, Maracaibo, culata del lago, llanos — NINGUNA mención en la costa caquetía ni en Paraguaná'
+    epoca: contacto-temprano
+    sonido: null
+    nota: 'Tolosa atribuye el aumento de jaguares «cebados» a la despoblación por la trata: dato ecológico COLONIAL, no precontacto.'
+  - nombre_en_fuente: 'venados y conejos'
+    especie_probable: null
+    texto: '«unas grandes sabanas y caza de venados y conejos» (Quibure, p. 221) · «llanos de Carora, que es una tierra fértil de caza de venados» · «mucha miel» (p. 220) · Barquisimeto: «matan venados y algunos conejos» (p. 233)'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: [220, 221, 233]
+    lugar: 'Carora, Quibure (Tocuyo), Barquisimeto — interior, otras polities'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: dantas
+    especie_probable: 'Tapirus terrestris'
+    texto: '«pelean con dardos y adargas de cuero de dantas, tan grandes, que con cada una se cubre un indio»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 234
+    lugar: 'llanos, nación Guaipis (más allá de los caquetíos de los llanos)'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: 'arañas, hormigas y culebras'
+    especie_probable: null
+    texto: '«comen arañas, hormigas y culebras y todo género de ponzoña»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 234
+    lugar: 'llanos, nación Choques'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: puercos monteses
+    especie_probable: 'Tayassuidae (báquiro: Pecari tajacu o Tayassu pecari; «manadas de quinientos» sugiere T. pecari)'
+    texto: '«de mucha caza de venados, y de grandes manadas de puercos monteses de menor grandeza que los de España: dicen los que han pasado los llanos que hay manadas de quinientos puercos»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 239
+    lugar: 'llanos entre el Tocuyo y el Nuevo Reino'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: mosquitos
+    especie_probable: null
+    texto: '«es tierra muy enferma é de muchos mosquitos por causa de las ciénegas»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: 232
+    lugar: 'culata del lago de Maracaibo (Bubures)'
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: 'caballos, yeguas, vacas, ovejas, puercos (ganado europeo)'
+    especie_probable: 'ganado introducido'
+    texto: '«hay entre ellos setenta de á caballo; habrá cien caballos, docientas yeguas, trecientas vacas de vientre, quinientas ovejas y algunos puercos»'
+    obra: perez-de-tolosa-1546
+    pagina_impresa: [221, 222]
+    lugar: 'campo español del Tocuyo'
+    epoca: colonial
+    sonido: null
+    nota: '🔴 INTRODUCIDO. Se anota para que ningún agente de fauna lo tome por nativo; la relación anónima (p. 217) da hacia 1555 más de mil equinos, tres mil vacas y doce mil ovejas.'
+
+# ══════════════════════════════════════════════════════════════════════
+deuda:
+  - >-
+    Ver el MANUSCRITO de la carta de Ampíes (AGI; Velasco da folios 14-15) para
+    decidir «como Dios» / «como digo». Issue.
+  - >-
+    La obra secundaria de las «cuatrocientas casas» (pendiente de identificar
+    desde el 2026-08-25): mirar a qué pueblo atribuye las casas y qué edición
+    usa.
+  - >-
+    El mismo tomo trae la «Descripción de la laguna de Maracaibo» del capitán
+    Gonzalo de Pina Ludueña (1579, Archivo de Indias) y, en ese tramo del
+    apéndice, «ochocientos indios de boga» con «sus pueblos dentro en el agua»
+    (medido de paso, sin leer): la esfera occidental, sin minar. Merece
+    encargo propio.
+  - >-
+    La cédula del 17-XI-1526 a Ampíes (Torres de Mendoza t. 22 p. 184, citada
+    por Arcaya p. 162): no está en este tomo.

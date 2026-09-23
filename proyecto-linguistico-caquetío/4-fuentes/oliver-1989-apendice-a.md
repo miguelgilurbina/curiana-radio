@@ -9,9 +9,9 @@ capa_texto: no
 acceso: "Libre — la tesis completa (823 pp., incluye este apéndice, pp. 559-594 impresas = pdf 586-621) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: parcial
 prioridad: alta
-cobertura: "Tabla A-9 (49 de ~50 entradas transcritas) + la criba de verbos de la campaña del nominalizador, 2026-09-21: 0 de 49"
-verificado: 2026-08-14
-minado: 2026-09-21
+cobertura: "Tabla A-9 ENTERA leída en imagen y numerada (2026-09-22, tercera campaña M1; antes, 49 dictadas) + Tabla 8 jirajarana entera (p. 592 en imagen) + A-1 identificada (una página) + A-2 transcrita (2026-08-31) + criba de verbos del nominalizador (2026-09-21). Sin transcribir: A-3 a A-7"
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Oliver 1989 Apéndice A", "Appendix A Swadesh"]
 ---
 
@@ -176,6 +176,15 @@ ya venía de Esteves y del `capubana` = 'duende del cerro' del propio lexicón.
 > entrarlo como `reconstruido` se queda corta; habría que reconsiderar. **No lo
 > aplico**: la decisión es del tablero.
 
+> 🔴 **CORREGIDO el 2026-09-22 (tercera campaña, M1): lo de arriba es falso.**
+> La fila 2 de la misma tabla glosa `-bana` como **«surrounding»**, y el cap. 2
+> (DOC p. 150) lo explica por el lokono 'alrededor, extensión, techo'. «A hill
+> in Paraguaná» describe el REFERENTE de Capubana, no el sufijo. Oliver está del
+> lado de 'cubierto / alrededor' —el de van Buurt §6, que llega «vía Oliver»:
+> una sola atestación—, no del de 'cerro'. D9 no cae (sus seis apoyos no
+> incluían a Oliver); cae esta frase. Ver
+> `6-fusion/oliver1989_lexico_restante_2026-09-22.yaml` §3.
+
 ### 2. Y a la vez, quita una de las evidencias del bando contrario
 
 `2-lengua/morfologia.md` argumenta que `-bana` = 'ancho, llano' apoyándose en que
@@ -255,6 +264,49 @@ donde Zavala 2015 glosa `Cumaragua` #93 como «ciruela»: coincide con Arcaya
 [[zavala-reyes-2015]] tenía abierta.
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
+---
+
+## Bitácora — tercera campaña de minería, parcela M1 (2026-09-22)
+
+**Qué se le preguntó.** Toda voz caquetía o de la región con glosa que no
+estuviera ya en el lexicón; las correspondencias fonéticas (C1, C2…); y la fauna
+que nombren las listas. Propuestas en
+`6-fusion/oliver1989_lexico_restante_2026-09-22.yaml` (lengua) y
+`6-fusion/oliver1989_restante_2026-09-22.yaml` (la clave `fauna:`); cifras en
+`6-fusion/medicion_oliver1989_restante_2026-09-22.yaml`
+(`python 6-fusion/scripts/oliver1989_restante.py`).
+
+**Qué dio.**
+
+- **La A-9 entera, leída en imagen** (pdf 620-621, recortes a 400 ppp), con su
+  número, y cruzada con el §2.8 del cap. 2 para saber de dónde saca Oliver cada
+  voz. Tres correcciones al dictado: no faltaba ningún número (la tabla va
+  numerada en orden alfabético); faltaba la fila 48 `taboro`; y las cursivas son
+  cuatro filas (también la 4 `baperón`), tres referentes. La 17 `Capubana` no
+  tiene glosa española: «a hill in Paraguaná, cf. #2 and #16» ocupa las dos
+  columnas.
+- **Época y polity por fila**: la tabla se titula «from the XVIth century», pero
+  la fuente de `dare` es habla viva de Paraguaná, la de Capubana una leyenda que
+  Oliver oyó en Santa Ana, y varias salen de la Relación de Barquisimeto de 1579
+  (medición §a9_vs_lexicon).
+- **Voces que cambian algo**: `busera` (la jagua, ausente del lexicón; Oliver
+  acierta en la A-9 y se equivoca en su n. 213 del cap. 3, que copia al editor
+  de Oviedo); `kama` 'danta' no es SIN_RASTRO (fila 15, Relación de 1579); `auri`
+  'perro' es inferencia desde una lista cuyón, no voz caquetía atestiguada.
+- **Tabla 8**: las filas de la p. 592, los porcentajes (hay que no cuadran:
+  §a8_aritmetica) y las fuentes. **La nota «Tamanaco» junto a 'luna' no existe**
+  (ver la ficha de los vecinos).
+- **La A-1 es una página**: el formulario de Wilbert rellenado a mano, fuente de
+  la columna paraujana de la A-2.
+
+**Qué NO dio.** **Ninguna correspondencia fonética**: el apéndice son tablas;
+las C1-C13 están en el cap. 2, ya minado. Se pusieron a predecir sobre la A-9
+(§c1_c3): C3 no falla en la muestra de Oliver, que es una selección suya.
+
+**Qué queda.** Las tablas A-3 a A-7 sin transcribir; la A-1 sin cotejar contra
+la A-2; y la Relación de Barquisimeto 1579 (Arellano Moreno 1964), que no está
+en el repo y decide la época de varias voces de la A-9.
 
 ## Enlaces
 
