@@ -668,15 +668,17 @@ def test_d_sin_ambito_el_reporte_no_menciona_ambitos():
 def test_d_las_competencias_filtran_por_donde_se_propuso():
     comp = CompetenciaLexica()
     comp.activar("cometa", "una estrella con cola")
-    comp.proponer("cometa", "kashi-iro", "Birokoa", ambito="Tacuato:orilla")
+    # `kashi` se archivó en la tanda final (tf.5): una raíz archivada ya no
+    # compite. El ejemplo pasa a `danu`, su sustituta.
+    comp.proponer("cometa", "danu-iro", "Birokoa", ambito="Tacuato:orilla")
     comp.proponer("cometa", "wara-bana", "Bajari", ambito="Caseto")
     entero = comp.prompt_competencias()
-    assert "kashi-iro" in entero and "wara-bana" in entero
+    assert "danu-iro" in entero and "wara-bana" in entero
     solo_tacuato = comp.prompt_competencias(ambito="Tacuato:orilla")
-    assert "kashi-iro" in solo_tacuato and "wara-bana" not in solo_tacuato
+    assert "danu-iro" in solo_tacuato and "wara-bana" not in solo_tacuato
     assert comp.prompt_competencias(ambito="Moruy") == ""
     # la fijación NO se parte: el soporte suma venga del ámbito que venga
-    assert set(comp.referentes["cometa"]["variantes"]) == {"kashi-iro", "wara-bana"}
+    assert set(comp.referentes["cometa"]["variantes"]) == {"danu-iro", "wara-bana"}
 
 
 # ══════════════════════════════════════════════════════════════════════

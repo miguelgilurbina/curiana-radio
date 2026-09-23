@@ -128,7 +128,11 @@ def test_popoi_es_adverbio_porque_lo_dice_la_fuente():
     assert "Adverbio de lugar" in e["glosa_fuente"]
     assert e["cat"] == "part", (
         "`popoi` es la clase de `yama` 'aquí' y `kana-pa` 'allá'")
-    assert VOCABULARIO_BASE["yama"]["cat"] == "part", (
+    # Tanda final (tf.5): `yama` se archivó —reconstruida desde el wayuu— y
+    # `popoi` ocupa su sitio en la plantilla. El precedente de la clase sigue
+    # en el archivo, con su `cat` intacta.
+    from curiana_lexicon import FUERA_DEL_HABLA
+    assert FUERA_DEL_HABLA["yama"]["cat"] == "part", (
         "el precedente de la clase se movió: revisar `popoi`")
 
 
