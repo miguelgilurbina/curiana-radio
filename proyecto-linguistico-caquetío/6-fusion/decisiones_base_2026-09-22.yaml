@@ -103,7 +103,10 @@ db.2_datihao_y_diao:
       lectura de corpus de paso.
     la_glosa: 'la de Oviedo (namesake, «el que como yo se nombra») frente a la del editor (padrino de cautivo)'
   se_aplica_en: '6-fusion/scripts/reetiquetar_datihao_diao.py, en la tanda de la base (no se mergea sin medir)'
-  estado: APLICADA en la rama tanda/base-2026-09-22 (2026-09-22) y MEDIDA con toda la tanda (6-fusion/medicion_tanda_base_2026-09-23.yaml): [Voces de fuera] gana datihao
+  estado: >-
+    APLICADA en la rama tanda/base-2026-09-22 (2026-09-22) y MEDIDA con toda la
+    tanda (6-fusion/medicion_tanda_base_2026-09-23.yaml): [Voces de fuera] gana
+    datihao
   aplicado_por: [6-fusion/scripts/reetiquetar_datihao_diao.py]
   medido_al_aplicar: >-
     5.507 entradas activas antes y después; cambian sólo datihao.fuente,
