@@ -241,8 +241,12 @@ def test_la_plantilla_tier_1_usa_las_formas_del_canon():
                   "hamaca (hamaca)", "conuco (huerto)", "ta-corie", "wa-buco", "buco-ana"):
         assert vieja not in p, vieja
     for nueva in ("buko (represa)", "korie (armadillo)", "boratio", "kanoa (canoa)",
-                  "hamaka (hamaca)", "konuko (huerto)", "buko-ana"):
+                  "hamaka (hamaca)", "konuko (huerto)"):
         assert nueva in p, nueva
+    # `buko-ana` salió del ejemplo de respuesta ideal en la tanda de la base
+    # (2026-09-23): lo traducía «el lugar de la represa», la glosa de `-ana`
+    # que #109 retiró y d21.6 dejó de enseñar.
+    assert "buko-ana" not in p and "lugar de la represa" not in p
 
 
 # ── -ko y -sha fuera de la gramática (Miguel, 2026-09-14) ─────────────
@@ -283,8 +287,11 @@ def test_los_nombres_de_los_agentes_no_cuentan_como_palabras(monkeypatch):
 # ── lo que la plantilla enseña no cuenta como koiné ───────────────────
 
 def test_las_formas_de_las_plantillas_quedan_fuera_de_lo_emergente():
-    for forma in ("ta-barsure", "wana-ka", "naba-ni", "kaa-ni", "naa-da", "sima-bana", "buko-ana"):
+    for forma in ("ta-barsure", "wana-ka", "naba-ni", "kaa-ni", "naa-da", "sima-bana"):
         assert forma in orch._FORMAS_EXCLUIDAS, forma
+    # la plantilla dejó de enseñar `buko-ana` (tanda de la base): vuelve a
+    # poder acuñarse, que es la consecuencia declarada
+    assert "buko-ana" not in orch._FORMAS_EXCLUIDAS
     assert "taya" in orch._FORMAS_EXCLUIDAS          # vocabulario base
     assert "kuru-bacoa" not in orch._FORMAS_EXCLUIDAS  # una acuñación de agente sí cuenta
 

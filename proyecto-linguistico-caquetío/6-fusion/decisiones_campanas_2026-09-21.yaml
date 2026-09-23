@@ -91,6 +91,12 @@ dc.2_gua:
     del cruce con el taíno contó cuatro lecturas de la sílaba `wa` sin declarar
     una frente a otra.
   se_aplica_en: 'NO aplicado: va a la próxima tanda, en un solo corte con una sola medición'
+  estado: >-
+    APLICADA en la tanda de la base y MEDIDA (6-fusion/medicion_tanda_base_2026-09-23.yaml): la clave pasa a `-wa`,
+    `nombre` «desinencia toponímica (valor no precisado)», evidencia Oliver 1989
+    cap. 2 pp. 142 y 148, sin `deuda`. 54 formas de la base se segmentan
+    distinto (112 usos) y una sola cambia de clase (`baro-ana-gua`). Las dos
+    plantillas dicen «-wa y -ana» como desinencias de valor abierto.
 
 dc.3_nominalizador:
   tipo: decisión de canon (A, B, E, F — sin corte) + corte de serie (enseñar la derivación cero)
@@ -122,6 +128,10 @@ dc.3_nominalizador:
     mueve canon). Y una deuda grande: Angulo Molina, de quien salen los 19
     verbos de acción del glosario, no está en el repo.
   se_aplica_en: '2-lengua/morfologia.md §10 (fila «Nominalización») y §11; #193'
+  estado_de_lo_que_quedaba: >-
+    La derivación cero se ENSEÑA desde la tanda de la base (6-fusion/medicion_tanda_base_2026-09-23.yaml): «NOMBRE: un
+    verbo es también su nombre, sin marca — jusual es sembrar y la siembra» en
+    la breve, y la línea equivalente en la completa.
 
 dc.4_taino_el_episodio_de_la_hija_y_datihao:
   tipo: corrección de Miguel al escriba + hipótesis declarada (SIN decidir la etiqueta)
