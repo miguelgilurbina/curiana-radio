@@ -611,7 +611,7 @@ voces:
         árbol, «plural por duplicación». Lo repite en Baraived (p. 22) y
         Bariquí (p. 88).
     otras_atestaciones:
-      - {obra: alvarado-1921, pagina: 21, dice: 'BARABARA, «Árbol de Coro» (Clavija): la forma reduplicada, sin partir — la partición es de Esteves', estado: analisis-nuestro}
+      - {obra: alvarado-1921, pagina: 21, dice: 'BARABARA, «Árbol de Coro» (Clavija): la forma reduplicada, sin partir — la partición es de Esteves', estado: analisis-nuestro, glosa_compatible: true}
       - {obra: van-buurt-2014, pagina: '§5', dice: '«bara means tree in Caquetío», en el párrafo que cita a Esteves', estado: copia-de-esteves}
     nota: >-
       La nota del lexicón dice «con Esteves 1989 y van Buurt 2014 diciendo lo
@@ -958,9 +958,15 @@ afijos:
 # ── LOS TOPÓNIMOS DEL CANON (A y B) CON UNA PIEZA SÓLO DE ESTEVES ─────────
 # El script los detecta solo (piezas = claves de `morfemas` y tokens de
 # `segmentacion`); aquí va el VEREDICTO, con la regla del lote del
-# 2026-09-22: A = cada pieza en otra fuente; B = una pieza independiente más
-# otra sólo de Esteves pero recurrente, o A con un residuo; C = ninguna pieza
-# independiente, o las dos debilidades a la vez.
+# 2026-09-22: A = cada pieza en otra fuente con glosa compatible; B = una
+# pieza independiente más otra sólo de Esteves pero recurrente, o A con un
+# residuo; C = ninguna pieza independiente, o las dos debilidades a la vez.
+# Para una pieza, «otra fuente» es otra sigla, otra obra con la misma cosa
+# (aunque sea de fuera del área: es la voz, no su filiación) o una forma
+# independiente cuya glosa ya es compatible (`glosa_compatible`: barabara
+# 'árbol' para bara). NO basta una forma que sólo partimos nosotros: -ebo
+# está en Cazebo 'poniente', pero 'camino' es de Esteves. Por eso Bariquí y
+# Bariquire (bara, con barabara) y Guarataro (con Medina) no salen marcados.
 toponimos:
   toponimo-001:
     forma: jurijurebo
@@ -1001,15 +1007,3 @@ toponimos:
     forma: buchuhaco
     propuesta: B
     razon: 'buche se sostiene (AM, Alvarado); «aco: par» es sólo de Esteves y recurre (Buchuhaco, Guachaco, Michaco): B, como estaba.'
-  toponimo-114:
-    forma: bariquí
-    propuesta: B
-    razon: 'bara pasa a reconstruida pero corroborada (barabara, Alvarado); quire es de Esteves y recurre: B, como estaba.'
-  toponimo-147:
-    forma: bariquire
-    propuesta: B
-    razon: 'Como bariquí.'
-  toponimo-143:
-    forma: guarataro
-    propuesta: B
-    razon: 'La razón del canon ya contaba bien: Esteves y Medina Colina, dos testigos de la voz viva.'
