@@ -956,3 +956,132 @@ kirchhoff:
     epoca: contacto
     nuevo: "sí, pero es inferencia sobre los caquetíos llaneros; no para la costa"
     etiqueta_maxima: hipotetico
+
+# ══════════════════════════════════════════════════════════════════════
+# §3. KIDDER II, «THE ARCHEOLOGY OF VENEZUELA» — el noroeste
+#     HSAI 4, pp. 425-429 y 434-437 (pdf 555-563, 568-571)
+#
+# Contrapeso a la falta de rouse-cruxent-1963. Kidder resume a Osgood y
+# Howard 1943 y a Nomland 1933-1935 (ninguno en el repo). No hay una sola
+# fecha absoluta: el volumen es anterior al radiocarbono.
+# ══════════════════════════════════════════════════════════════════════
+kidder_noroeste:
+  autor: "Alfred Kidder II"
+  obra: steward-1948-hsai-4
+  fuentes_que_resume: "Osgood y Howard 1943 (An archeological survey of Venezuela, Yale Univ. Publ. Anthrop. 27); Nomland 1933, 1935 — ninguna en el repo"
+  afirmaciones:
+  - id: kd-01
+    tema: "sitios y conchales del llano costero de Falcón y de Paraguaná; relación con las ABC"
+    pagina_impresa: 426
+    cita: >-
+      «Village sites and shell heaps on the Falcon coastal plain are recorded
+      from Coro and to the west (Nomland, 1933, 1935), and on the Paraguana
+      Peninsula (Osgood and Howard, 1943). The general relationship of the
+      culture of this area to that of Quibor and Carache, as well as to that of
+      Curacao, Aruba, and Bonaire … is obvious, although differences in detail
+      and in frequency of certain traits are apparent.»
+    vault: "la relación Falcón-ABC está en el vault por vía arqueológica moderna (Oliver cap. 4, Haviser, Dijkhoff); esto es su enunciado de 1948"
+    nuevo: false
+    etiqueta_maxima: "reconstruido (arqueología de 1943-1948, sin fechas)"
+  - id: kd-02
+    tema: "entierro secundario en urna cerca de Coro"
+    pagina_impresa: "426 y 436"
+    cita: >-
+      «Secondary urn burials, from near Coro, for example, are in contrast to
+      the primary burials of Carache and central Lara.» · «Primary burials at
+      Carache contrast with secondary urn burials, found on the Falcón coast,
+      the Goajira Peninsula, and at the two Maracaibo sites» (p. 436)
+    vault: >-
+      Toca de frente a creencia-010b («un SEGUNDO ENTIERRO caquetío
+      atestiguado», por Oviedo): la arqueología de 1943 registra el
+      entierro secundario en urna en la costa de Falcón. Es un apoyo
+      material, independiente de la crónica, a que el tratamiento en dos
+      tiempos del muerto sea costero y no sólo de un informante de Oviedo.
+      Ojo: una urna con huesos no es beber los huesos; apoya el «segundo
+      tiempo», no el endocanibalismo.
+    polity: "costera (Coro, Falcón)"
+    epoca: "precontacto probable, sin fecha"
+    nuevo: "como enlace, sí: el vault no cruza el entierro secundario arqueológico con creencia-010b"
+    etiqueta_maxima: "reconstruido (dato arqueológico sin fecha, de segunda mano)"
+  - id: kd-03
+    tema: "Cayerúa (Paraguaná): la única estratigrafía"
+    pagina_impresa: "426, 429 y 434"
+    cita: >-
+      «At the Cayerua site on Paraguana Peninsula, pottery marked by impression
+      of knotless netting showed a marked increase in the upper level of a
+      shallow excavation, with a proportionate decrease in linear painting.»
+      (p. 426) · «Bone artifacts are rare, one bone point and a carved pendant
+      having been found in the Cayerua site. Shell … occurs in the Coro district
+      in the form of beads and pendants, and Cayerua produced beads, a
+      Strombus-shell ax, and Strombus tips.» (p. 429) · «in a total depth of 50
+      cm. (about 20 inches)» (p. 434)
+    vault: >-
+      nodo-025 (cayerua) en 3-mundo/asentamientos.yaml: sitio FAL-143 de
+      Oliver, «Dabajuroide [cf. Howard 1943]», `precontacto: probable`. Esto
+      añade lo que Osgood y Howard vieron al excavar: dos niveles en 50 cm,
+      cambio de la pintura lineal a la impresión de red sin nudos, hacha de
+      Strombus, cuentas, punta de hueso. Sigue sin fecha.
+    polity: "costera (Paraguaná)"
+    epoca: "precontacto probable (sin fecha)"
+    nuevo: "sí, como detalle material del sitio; no cambia su `precontacto: probable`"
+    etiqueta_maxima: "reconstruido"
+  - id: kd-04
+    tema: "cerámica del área de Coro"
+    pagina_impresa: "426-427 y 436"
+    cita: >-
+      «Plain ware is commonly incised at Coro, much less frequently so at other
+      Falcon sites. … Bowls and jars with corrugated necks … are characteristic
+      of this area; hollow rims also occur. The linear decoration of painted
+      ware is strikingly similar in style to that of Quibor and Carache but
+      occurs on double-spouted jars … in the north coastal area» · «The La
+      Maravilla Aspect is set off from the Coro Aspect on account of the
+      preponderance of incised, as contrasted to painted, decoration at the Coro
+      site» (p. 436)
+    nuevo: "los «aspectos» de Osgood y Howard (Coro, La Maravilla, Cayerúa) como unidades de 1943; el vault usa la serie dabajuroide de Oliver"
+    etiqueta_maxima: "reconstruido"
+  que_no_da: >-
+    Ninguna fecha, ninguna secuencia regional para Falcón (Kidder, p. 434:
+    fuera de Cayerúa, la poca profundidad de los depósitos no deja ver
+    cambio), nada de la seriación dabajuroide (el nombre es posterior). No
+    reemplaza a rouse-cruxent-1963: sólo confirma que en 1948 ya se sabía
+    que Falcón, Lara y las ABC eran un mismo horizonte cerámico con
+    variantes.
+
+# ══════════════════════════════════════════════════════════════════════
+# §6. FAUNA (esquema común del preámbulo)
+#
+# Sólo lo que traen los capítulos de Venezuela. Casi todo es de la costa
+# ORIENTAL (Kirchhoff) o de los LLANOS; lo de la Kaketiana es poco y va
+# primero. Casi ningún pasaje describe un SONIDO animal (medido: sondas
+# sound|cry|song|howl|nois|moan|roar|whistl|sing sobre pdf 555-563, 597-602,
+# 605-610 y 617-629 — el único es el «moaning» del tapir herido de la costa
+# oriental, p. 482; el resto son cantos y ruidos de gente).
+# ══════════════════════════════════════════════════════════════════════
+fauna:
+  # ── noroeste (Hernández de Alba) y costa de Falcón (Kidder) ──
+  - {nombre_en_fuente: "deer", especie_probable: null, texto: "deer, tapirs, and other game, killed with the bow and arrow or surrounded with fire, constituted an important portion of the diet of the Jirajara and Caquetio", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "noroeste de Venezuela (sin precisar; el cerco con fuego apunta al interior)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "tapirs", especie_probable: "Tapirus terrestris", texto: "deer, tapirs, and other game … of the Jirajara and Caquetio", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "noroeste — el tapir no es de Paraguaná: apunta a la sierra y al interior (regla 4)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "fish, taken with a drug, barbasco (Lonchocarpus sp.)", especie_probable: null, texto: "Fish, taken with a drug, barbasco (Lonchocarpus sp.), provided the staple food of the Quiriquire", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "laguna de Maracaibo (quiriquires)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "fish and shellfish", especie_probable: null, texto: "the greater ease of procuring fish and shellfish", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "laguna de Maracaibo (palafitos)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "mosquitoes", especie_probable: null, texto: "the numerous and annoying mosquitoes of the hot sections", obra: steward-1948-hsai-4, pagina_impresa: 470, lugar: "orillas de la laguna de Maracaibo", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "dangerous animals", especie_probable: null, texto: "grouped their houses in two's or four's, preferably by their cultivated fields, in order to protect them against dangerous animals", obra: steward-1948-hsai-4, pagina_impresa: 471, lugar: "Nueva Segovia / Barquisimeto (Relación de 1579) — interior", epoca: colonial, sonido: null}
+  - {nombre_en_fuente: "shell trumpets", especie_probable: "probablemente Strombus (Lobatus) gigas — no lo dice la fuente", texto: "Musical instruments reported are horns and shell trumpets.", obra: steward-1948-hsai-4, pagina_impresa: 473, lugar: "noroeste de Venezuela (sin precisar)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "Strombus", especie_probable: "Strombus (Lobatus) sp.", texto: "Cayerua produced beads, a Strombus-shell ax, and Strombus tips", obra: steward-1948-hsai-4, pagina_impresa: 429, lugar: "Cayerúa, Paraguaná (sitio arqueológico)", epoca: precontacto, sonido: null}
+  - {nombre_en_fuente: "shell (beads and pendants)", especie_probable: null, texto: "Shell, lacking at Quibor and Carache, occurs in the Coro district in the form of beads and pendants", obra: steward-1948-hsai-4, pagina_impresa: 429, lugar: "distrito de Coro (arqueológico)", epoca: precontacto, sonido: null}
+  - {nombre_en_fuente: "sharks", especie_probable: null, texto: "The mention of sharks being eaten by the Tocuyo, a tribe far to the west, suggests that they were not eaten within the area under consideration.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "«the Tocuyo, a tribe far to the west» — sin precisar: puede ser la costa del río Tocuyo (Falcón oriental); sin fuente citada", epoca: contacto, sonido: null}
+  # ── costa ORIENTAL (Kirchhoff, Paria-Cabo Codera): NO es la Kaketiana ──
+  - {nombre_en_fuente: "oysters", especie_probable: "Pinctada imbricata (perlera) probable", texto: "Along the coast and on the islands oysters were collected.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental e islas (Margarita, Cubagua)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "shrimp", especie_probable: null, texto: "Both shrimp and fish were dried and ground into powder, which was taken in cassava wine.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "costa oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "sting ray", especie_probable: null, texto: "points of stone, the infectuous bones of some fish, or the prong of the sting ray", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "fish (arreo a nado)", especie_probable: null, texto: "a group of men swam shoreward in a half circle. By making a noise with their hands … they drove great masses of fish to the beach.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "costa oriental", epoca: contacto, sonido: "el ruido es de los pescadores, no del animal: «making a noise with their hands»"}
+  - {nombre_en_fuente: "iguana", especie_probable: "Iguana iguana", texto: "The iguana was eaten in Chiribichi but not in Piritu. … The iguana was sometimes caught alive", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental (Chiribichi)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "tortoises", especie_probable: "Chelonoidis carbonarius probable", texto: "The tortoise was chased out of its hiding place in grassy plains by setting fire to the grass.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental y sus sabanas", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "tapirs (y su gemido)", especie_probable: "Tapirus terrestris", texto: "after killing the first animal the hunters climbed the nearest tree, from which they shot its fellows, attracted by the moaning of the wounded tapir", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental", epoca: contacto, sonido: "«the moaning of the wounded tapir» — el único sonido animal descrito en los capítulos de Venezuela"}
+  - {nombre_en_fuente: "deer, peccaries (saguino), porcupines, anteaters, a kind of skunk (mapurichi), cuchicuchis (araguato), acuris, zapiguas, rabbits, squirrels, three different kinds of rats or mice, lions, jaguars, tortoises, and cachicans", especie_probable: null, texto: "The following animals are said to have been eaten: Tapirs, deer, peccaries (saguino), porcupines, anteaters, a kind of skunk (mapurichi), cuchicuchis (araguato), acuris, zapiguas, rabbits, squirrels, three different kinds of rats or mice, lions, jaguars, tortoises, and cachicans.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental (Paria-Cabo Codera) — lista de caza entera, sin separar por especie; varias voces indígenas (mapurichi, acuri, cachicán, saguino) son del caribe oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "pigeons, turtle doves, quails, partridges, ducks, and certain birds described as being like turkeys and chickens", especie_probable: null, texto: "Birds hunted were pigeons, turtle doves, quails, partridges, ducks, and certain birds described as being like turkeys and chickens.", obra: steward-1948-hsai-4, pagina_impresa: 482, lugar: "costa oriental", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "domesticated ducks, or ducklike birds", especie_probable: "Cairina moschata (lo sugiere Kirchhoff: «possibly being the Muscovy duck»)", texto: "In Curiana at least two kinds of domesticated ducks, or ducklike birds, were known", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "Curiana — la de Niño y Guerra, que Kirchhoff pone en la costa oriental (ver k-03, #33)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "small wild bees", especie_probable: "abejas sin aguijón (Meliponini) probable", texto: "Small wild bees were eaten raw, fried, or boiled.", obra: steward-1948-hsai-4, pagina_impresa: 483, lugar: "costa oriental", epoca: contacto, sonido: null}
+  # ── LLANOS (Kirchhoff, guamos): NO es la Kaketiana ──
+  - {nombre_en_fuente: "manatee", especie_probable: "Trichechus manatus", texto: "Animals living in the rivers and lagoons, especially manatee, may have been more important, especially to the Guamo, than land animals", obra: steward-1948-hsai-4, pagina_impresa: 465, lugar: "llanos (guamos)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "caimans", especie_probable: null, texto: "The Guamo caught caimans by the same method used by the Otomac", obra: steward-1948-hsai-4, pagina_impresa: 465, lugar: "llanos (guamos)", epoca: contacto, sonido: null}
+  - {nombre_en_fuente: "sting ray spine", especie_probable: null, texto: "into which he had stuck a sting ray spine", obra: steward-1948-hsai-4, pagina_impresa: 468, lugar: "llanos (guamontey; cura chamánica)", epoca: contacto, sonido: null}
