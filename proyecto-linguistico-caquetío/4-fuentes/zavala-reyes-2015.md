@@ -455,6 +455,16 @@ decisión del 2026-09-19 de no fusionar `parawa`/`para`.
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Verificado**: la clasificación de la **p. 61** (pdf 5) es la lista de Molina
+2009: «Caribe: Guaiqueríes, Cumanagotos, Palenques…» (y «Chibcha: Jirajaras»).
+Clasificación moderna de segunda mano; se cita como tal para etnia-002.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
+---
+
 ## Bitácora — la sigla (E) (2026-09-23, cc.4)
 
 **Qué se preguntó.** Qué entradas del glosario llevan la sigla E (Juan

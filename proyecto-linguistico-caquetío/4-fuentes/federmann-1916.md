@@ -27,7 +27,7 @@ acceso: >-
   1859: 12.004.554 bytes, sha256
   f6c85158b4378308e4bdbdb1ab02787a514734bdc7167d4e04e7d751961d2cbe.
 estado_minado: parcial
-cobertura: "minado 2026-09-23 (minería 3): la costa (cap. I Paraguaná, II-III Coro, XIII-XIV vuelta por la costa oriental), la lengua (intérpretes, costa frente a interior, voces y nombres en la grafía de 1557), el seretón (cero medido) y la fauna, cotejado con el alemán y 1557 en imagen; del interior sólo caps. VIII y XII y lo que ya se citaba de segunda mano. SIN leer de corrido: caps. VI-VII y IX-XI (sólo sondas). Propuesta: 6-fusion/federmann_1530_costa_2026-09-22.yaml"
+cobertura: "minado 2026-09-23 (minería 3): la costa (cap. I Paraguaná, II-III Coro, XIII-XIV vuelta por la costa oriental), la lengua (intérpretes, costa frente a interior, voces y nombres en la grafía de 1557), el seretón (cero medido) y la fauna, cotejado con el alemán y 1557 en imagen; del interior sólo caps. VIII y XII y lo que ya se citaba de segunda mano. SIN leer de corrido: caps. VI-VII y IX (sólo sondas). 2026-09-23 (cc.5): leídos los pasajes de los guaycaríes de los caps. X-XI (1916 pp. 84-101), cotejados con 1557 [77]-[78] y [83] en imagen. Propuestas: 6-fusion/federmann_1530_costa_2026-09-22.yaml y 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml"
 prioridad: alta
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
@@ -244,3 +244,42 @@ eslabón por dato: `6-fusion/federmann_1530_costa_2026-09-22.yaml`.
 la laguna) sin leer de corrido; los nombres del interior sin cotejar en 1557;
 la carta de Ampíes (Fernández Duro 1885 t. II pp. 207-218) sin clave propia en
 la bibliografía.
+
+---
+
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se preguntó**: el pasaje de los guaycaríes con caquetíos que Miguel
+recordaba, verbatim y con página, en la 1916 y en el alemán.
+
+**Qué se halló** (visto en imagen: 1916 pp. 90 y 94, pdf 100 y 104; 1557
+imágenes 87-88 y 93):
+
+- **Cap. XI, pp. 89-90 = 1557 [77]-[78]**: guaycaríes y caquetíos viven en
+  paz en el mismo territorio, se necesitan, hacen mercado —pescado por frutas y
+  víveres—, «pero cada una habita aldeas distintas». El alemán dice más: los
+  caquetíos viven «enthalb vñ her enhalb» (a los dos lados del río) y las dos
+  naciones «vnthereinander gemischt» (mezcladas) «doch iede in sondern
+  Pueblos». Glosa marginal: «Guaycari kolschw[artz] vischer». Aquí el
+  etnónimo va `Caquecios`.
+- **p. 94 = [83]**: dos guaycaríes que sabían caquetío porque las dos naciones
+  viven mezcladas; **p. 95 = [83]**: la pesquería-mercado de pocas casas;
+  **pp. 92 y 100**: el señor de Itabana con caquetíos sujetos y la alianza de
+  guerra del cacique guaycarí con el caquetío de Caraho.
+- **Desfase 1557**: [77]-[78] = imágenes 87-88 y [83] = 93 (+10, como entre
+  [9] y [48]). Klüpfel: el pasaje es p. 57 y el de la lengua p. 61.
+- La 1916 entiende «beschicket ich den Cacique … derselben Nation» como «mandé
+  el cacique que había conducido, a su aldea»; el alemán parece decir que
+  Federmann mandó llamar al señor de los guaycaríes, que tiene sus pueblos a
+  milla y media del agua. Lectura nuestra, declarada en la propuesta.
+
+**Qué NO se halló**: la «descripción» de los guaycaríes que Federmann promete
+no llega (cero de `negr`/`pintad` fuera del cap. XI; cero de `schwar` en
+Klüpfel fuera del pasaje). Ninguna palabra guaycarí. Y **no dice**
+«supusieron eran Guayqueríes»: los nombra sin duda (p. 84; Klüpfel p. 55). Ese
+«supusieron» de `etnias.yaml` etnia-002 viene de Brito Figueroa.
+
+**La nota (a) de Arcaya, p. 89**, es del editor: no sabe si son los guaiquerís
+de Margarita; «de éstos se cree que eran rama de la familia Guarauna».
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.

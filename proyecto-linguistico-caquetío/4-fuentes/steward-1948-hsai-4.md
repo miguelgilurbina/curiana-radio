@@ -140,6 +140,27 @@ nueva: la **carta de Ampíes** (vive dentro del PDF de
 [[perez-de-tolosa-1546]], sin ficha propia), **Aguado**, **Simón**,
 **Antolínez 1943** y **Salas 1920** no tienen clave.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se preguntó**: los guaiqueríes (dónde, lengua) y la arqueología de
+Margarita.
+
+**Qué se halló**: Hernández de Alba **p. 399** (pdf 523): los guaiqueríes en
+Cumaná, Margarita, Coche, Cubagua y parte de Trinidad, «essentially coastal and
+insular»; **p. 406**: perlas y buceo forzado — y, en la misma página, el
+encierro de 40 días de las novias, que es de los guayquiri del ORINOCO de
+Gumilla: el capítulo mezcla los dos grupos. Kirchhoff **p. 464** (re-leído):
+«Guaikeri» nombre de pueblos pescadores, los de Federmann = guamos del oeste;
+**p. 481**: Margarita y Cubagua en el área de tribus caribes (sin nombrar a los
+guaiqueríes). Kidder II **pp. 424 y 437**: loza de Margarita como la de la
+costa nororiental, con el aspecto Gire-Gire ligado al Orinoco, las Antillas y
+Trinidad.
+
+**Qué NO se halló**: ninguna palabra guaiquerí; ninguna filiación con
+argumento lingüístico.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[steward-1949]] · [[rouse-cruxent-1963]] · [[oliver-1989-cap3]] ·

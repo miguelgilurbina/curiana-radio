@@ -89,6 +89,17 @@ la **cronología absoluta** del Golfete.
 3. Es también la fuente natural para la **cronología** de la ocupación del
    Golfete, que hoy el proyecto toma de terceros.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+Sigue sin poder leerse. La obra previa, **Cruxent y Rouse 1958**, *An
+Archeological Chronology of Venezuela* (Pan American Union, Social Science
+Monographs 6, 2 vols.), sólo llega vía Oliver 1989 pp. 422-427 y Antczak 2015
+p. 18. HathiTrust la cataloga (Record 010570237), pero el catálogo devolvió
+403 a la consulta automática y no se comprobó si está en vista completa;
+archive.org no la tiene. No se bajó nada.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[antczak-2015-las-aves]] · [[02_ecologia]]

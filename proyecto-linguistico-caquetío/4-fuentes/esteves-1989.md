@@ -1591,6 +1591,16 @@ letras de Sacuragua (p. 58) ilegibles aun a 400 dpi.
 
 ⚠️ Las citas de Esteves de la propuesta van recortadas: es obra con copyright.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se midió**: la frase de la p. 35 sobre Charaima —«el cacique Charaima de
+la Isla de Margarita, el abuelo del guayquerí Francisco Fajardo»— contra Oviedo
+y Baños (ed. Ayacucho p. 168, en imagen): Charayma fue cacique del valle de
+Maya, en la provincia de Caracas, y bisabuelo de Fajardo. La pista guayquerí de
+esta nota no aguanta. Toca toponimo-082.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ---
 
 ## Bitácora — la sigla (E) de Zavala, leída en el libro (2026-09-23, cc.4)

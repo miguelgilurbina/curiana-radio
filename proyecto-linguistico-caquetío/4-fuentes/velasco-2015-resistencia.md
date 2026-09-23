@@ -138,3 +138,15 @@ de la etimología popular que Miguel recordaba de Wikipedia.
 | **AGI, Legajo 218, Aud. de Santo Domingo, Caja 1** | la signatura exacta de los primarios de Ampíes y Bastidas |
 
 Índice: [[INDICE_FUENTES]] · propuesta: `6-fusion/velasco_primarios_agi.yaml`
+
+---
+
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se usó**: **p. 33**, la carta de Bastidas (AGI SD 218 f. 2, 8-X-1538):
+Don Alexandro «reside en un pueblo dos leguas desta cabda que se dize
+Todariquiba». **p. 18**: la carta de Ampíes del folio 14 («diez leguas la
+tierra adentro»). **p. 33** también: la «emigración del Piache Manaure hacia
+tierras lejanas», lectura del autor.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.

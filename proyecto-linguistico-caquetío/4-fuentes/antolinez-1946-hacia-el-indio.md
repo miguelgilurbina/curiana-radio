@@ -164,3 +164,15 @@ Es el mismo reparto que con [[gonzalez-batista-nombre-de-coro]] y con
 [[antolinez-1944-manaure]]: se le cree lo que reporta, no lo que deduce.
 
 Índice: [[INDICE_FUENTES]] · propuesta: `6-fusion/antolinez_1946_capo_y_ortografia.yaml`
+
+---
+
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se halló** (impresa = pdf − 1): «Waikerí, saqueadores» (**p. 22**);
+«Pescadores insulares de Oriente (¿waikeri prekaribe?)» y «wara-waikerí
+prekaribe» (**p. 161**); «¿waikeri auténtico prekaribe?» (**p. 162**); los
+waikeri en el ciclo de los pueblos «marginales» con los warao (**p. 225**). Es
+la lectura warao/precaribe, con los signos de interrogación del autor.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.

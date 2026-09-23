@@ -231,3 +231,16 @@ esa frase tiene una **variante** con la lectura del manuscrito de Velasco 2015
   hoy se cita con `obra: perez-de-tolosa-1546` y `documento:`.
 
 Índice: [[INDICE_FUENTES]]
+
+---
+
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Re-leída la carta de Ampíes (p. 212)** para el asiento de Manaure: «un gran
+cacique que está diez leguas la tierra adentro en la provincia de Coro […]
+Naure ó Anaure». Y «desde Paraguachoa hasta la punta de Coquibacoa»: con
+Oviedo t. IV p. 531 y Oliver DOC pp. 261-262, Paraguachoa es del Falcón
+oriental, no Margarita; la «Paragrachoa» de la p. 252 cabe ahí (hipótesis).
+**p. 248**: Manaore residía «en la comarca de la ciudad de Coro».
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.

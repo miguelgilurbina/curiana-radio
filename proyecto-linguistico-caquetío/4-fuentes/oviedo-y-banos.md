@@ -158,6 +158,29 @@ Doña Isabel, aplaca a un cacique hablándole **"en su lengua arbaca"** (arahuac
 4. El resto del libro (la conquista de Caracas, los Belzares, los Welser) **no
    toca a los caquetíos** y no hace falta volver a él para este proyecto.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se preguntó**: dónde se sentaba Manaure; qué dice de los guaiqueríes.
+
+**Qué se halló** (ed. Biblioteca Ayacucho del repo; impresa = pdf − 58, medido
+en seis páginas):
+
+- **pp. 27-28**: Manaure «señor de toda aquella provincia, habitada de la
+  nación caiquetía»; va a ver a Ampíes en hamaca. **No nombra su pueblo.**
+- **p. 168 (visto en imagen)**: Fajardo, hijo de español y de «Doña Isabel,
+  india Cacica de la nación Guaiquerí»; ella es «nieta de un Cacique, llamado
+  Charayma; del valle de Maya en la provincia de Caracas». **p. 169**:
+  Naiguatá, tío de ella. Corrige a Esteves p. 35 (toponimo-082), que hace a
+  Charaima cacique de Margarita y abuelo de Fajardo.
+- **pp. 177, 222, 280-281, 312**: los guaiqueríes de Margarita con Fajardo
+  (capitaneados por Diego Guerra), labrando una piragua, cien con Juan de
+  Salas «como prácticos de la provincia», cincuenta en cuatro piraguas con
+  Losada. Los de Losada también en la ed. Fernández Duro t. II pp. 2-3 y 46-47.
+
+**Qué NO se halló**: nada de guaiqueríes en la costa de Falcón.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[oviedo-y-valdes-1851]] · [[zavala-reyes-2015]] · [[oliver-1989-cap3]] · [[antczak-2017-cariban]] · [[mapa-ecologia]] · [[05_geografia_politica_y_sucesion]]
