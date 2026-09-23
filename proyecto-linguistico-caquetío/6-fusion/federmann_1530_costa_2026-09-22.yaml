@@ -1,0 +1,396 @@
+# ══════════════════════════════════════════════════════════════════════
+# FEDERMANN 1530-1531 — la gente de la costa: Paraguaná y Coro
+# Tercera campaña de minería («las fuentes que faltan»), 2026-09-22.
+#
+# PROPUESTA (regla 5). Nada de aquí entra al canon sin que Miguel lo fusione.
+# No toca 3-mundo/, 2-lengua/ ni curiana_sim/.
+#
+# ⚠️ ESTO NO ES PRECONTACTO (regla 3). Federmann pisa Paraguaná en enero de
+# 1530, tres años después de Ampíes y con la trata de esclavos ya en marcha
+# (él mismo lo dice). Todo lo de aquí es `contacto-temprano` y no se proyecta
+# al s. XIV-XV sin decidirlo.
+#
+# ⚠️ REGLA 4. Los caps. VIII y XII son los caquetíos del INTERIOR
+# (Barquisimeto y el valle del Yaracuy): van en su propia sección, marcados
+# `polity: interior`, y nunca como dato de la costa.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  parcela: "Minería 3 — Federmann (1530-1531): Paraguaná y Coro"
+  fecha: 2026-09-22
+  encargo: 6-fusion/issues-pendientes/encargo-mineria-federmann.md
+  obra: federmann-1916          # clave foránea → 4-fuentes/bibliografia.yaml (regla 8)
+  ficha: 4-fuentes/federmann-1916.md
+
+  # ─────────────────────────────────────────────────────────────────
+  # La cadena de transmisión: CUATRO eslabones, no tres
+  # ─────────────────────────────────────────────────────────────────
+  cadena_de_traduccion:
+    - eslabon: 0
+      que: "diario notarial en castellano, escrito sobre el terreno (perdido)"
+      donde_se_dice: >-
+        Federmann al cerrar el viaje: un notario público lo anotó todo «de una
+        en otra aldea» y él sólo lo tradujo al alemán, «agregando algunas
+        circunstancias» (1916 p. 122; alemán Klüpfel p. 80, 1557 [113]-[114]).
+      consecuencia: >-
+        El alemán YA es una traducción. Las voces que Federmann glosa con
+        «also heissen…» (canoa, hamaca, barbacoa, buhio, mahys) son el
+        vocabulario antillano del escribano castellano, no necesariamente lo
+        que decían los caquetíos (ver `lengua.voces_de_la_esfera`).
+    - eslabon: 1
+      que: "Indianische Historia, Hagenau 1557 (póstuma, la edita el cuñado Kiefhaber)"
+      archivo: fuentes_caquetios/Federmann_1557_Indianische_Historia.pdf
+      como_se_leyo: >-
+        En imagen (pymupdf, recortes a 220-400 ppp), sólo donde una forma
+        decidía algo. Sin paginar: se cita por la página entre corchetes que
+        Klüpfel 1859 marca en su texto ([n]) y por la IMAGEN del PDF (1-based).
+      desfase_medido: >-
+        imagen = [n] + 10 entre [9] y [48] (medido en [9], [13], [14], [19],
+        [46], [47], [48]) e imagen = [n] + 12 en [111]-[112]: NO es constante,
+        entran láminas o blancos entre medias. Se mira la imagen, no se suma.
+    - eslabon: 1b
+      que: "reedición alemana de Klüpfel, Stuttgart 1859, tipo romano"
+      archivo: fuentes_caquetios/Federmann_Kluepfel_1859_Reisen_texto_aleman.txt
+      desfase_medido: "impresa = pdf − 8 (comprobado en p. 15 → pdf 23 y p. 82 → pdf 90)"
+      calidad: >-
+        OCR legible pero con errores justo en los nombres: `Ruynari` por
+        Buynari, `Caquelios`/`Caqnetios` por Caquetios, `Tohtietsch` por
+        Tolmetsch. Toda forma que se propone abajo se miró en 1557.
+    - eslabon: 2
+      que: "traducción francesa de Henri Ternaux-Compans, 1837"
+      aviso: >-
+        🔴 NORMALIZÓ LOS NOMBRES PROPIOS. Nota del traductor francés que Arcaya
+        reproduce (1916 p. 124): Federmann «varía casi a cada página y nosotros
+        los escribimos constantemente lo mismo». Ninguna grafía de la 1916 es
+        la de Federmann hasta cotejarla.
+    - eslabon: 3
+      que: "traducción castellana de Pedro M. Arcaya, Caracas 1916"
+      archivo: fuentes_caquetios/Federmann_1916_Narracion_Primer_Viaje_Arcaya.txt
+      desfase_medido: "impresa = pdf − 10 (comprobado en p. 10 → pdf 20 y p. 124 → pdf 134)"
+      aviso: >-
+        Arcaya lo declara en la p. 2 (no sólo en la nota de la p. 20 que cita
+        la ficha): «Hemos hecho la traducción española siguiéndonos por la
+        versión francesa citada, pues no hemos podido obtener ningún ejemplar
+        del texto alemán». Sus notas identifican lugares con nombres de 1916:
+        eso es Arcaya, no Federmann, y va marcado como tal.
+
+  como_se_cita_cada_dato: >-
+    `eslabon_que_lo_da`: 1557 (imagen verificada) › Klüpfel (texto, sin imagen)
+    › 1916 (sólo la traducción). La página impresa de `pagina_impresa` es
+    SIEMPRE la de la 1916 (la de la clave federmann-1916); la del alemán va en
+    `aleman`.
+
+  que_se_leyo: >-
+    1916 entera por sondas y, de corrido, pp. 1-38 (nota, dedicatoria, caps.
+    I-V), 56-64 (fin del VII y cap. VIII), 107-110 (cap. XII) y 119-126 (fin
+    del XIII, XIV y principio del XV). Alemán Klüpfel de corrido pp. 9-18,
+    34-37, 70-72 y 79-81, y por sondas el resto del tramo de Federmann
+    (pp. 5-82). 1557 en imagen: [9], [13], [14], [19], [46], [47], [48],
+    [111], [112].
+  que_no_se_leyo: >-
+    De corrido NO: caps. VI-VII (Cayones, Xaguas) salvo su final, IX-XI
+    (Cuybas, Guaycaríes, la laguna) y XIII salvo su final; se barrieron sólo
+    con las sondas de fauna, lengua, creencia y etnónimos. Tampoco el
+    apéndice biográfico de Klüpfel (pp. 199 ss.).
+
+  # ─────────────────────────────────────────────────────────────────
+  # LO PRIMERO: qué del encargo (y del repo) resultó falso al medirlo
+  # ─────────────────────────────────────────────────────────────────
+  lo_que_resulto_falso:
+
+  - afirmacion: >-
+      Las citas de segunda mano del interior, con sus páginas (ficha
+      federmann-1916 y 6-fusion/polities_no_costeras_federmann.yaml,
+      prop-polity-001 a 005, vía Brito Figueroa): «23 aldeas… treinta mil
+      hombres… fortificadas… cuatro naciones» en «pp. 109-110» y «veinte mil
+      guerreros… misma nación… confederaciones… cinco y hasta ocho familias»
+      en «pp. 62-63».
+    medido: >-
+      LAS PÁGINAS ESTÁN CAMBIADAS. Las 23 aldeas, los 30.000 hombres y las
+      aldeas fortificadas son de las pp. 62-63 (cap. VIII, Barquisimeto); los
+      20.000 guerreros, «la misma nación», las confederaciones y las cinco a
+      ocho familias por casa son de las pp. 109-110 (cap. XII, Vararida = el
+      valle del Yaracuy según Arcaya p. 107 n.). Las etiquetas de polity de
+      polities_no_costeras_federmann.yaml están bien; las páginas, al revés.
+      El texto de las citas coincide con la 1916 salvo las elisiones (abajo).
+
+  - afirmacion: >-
+      La cita estructural «de la misma nación, no están bajo el dominio de un
+      solo señor […] forman pequeñas confederaciones de dos, tres o cuatro
+      aldeas» (ficha y prop-polity-004).
+    medido: >-
+      El «[…]» funde DOS grupos. Entero (1916 p. 109): tras «un solo señor»
+      viene «Tan numerosos son… podrían resistir un gran número de cristianos.
+      No sucede lo mismo con los demás habitantes del valle en el cual nos
+      encontrábamos; no están todos aliados, pero forman pequeñas
+      confederaciones…». Las confederaciones son de los del valle, por
+      contraste con los de Barquisimeto. La tesis que la cita sostiene sale
+      REFORZADA, no debilitada: el alemán dice además, sin elisión, que los
+      caquetíos de ese valle, «aunque sean de una nación» con los de
+      Barquisimeto, «no son amigos» (Klüpfel p. 70, [97]; 1916 p. 108). Ver
+      `interior`.
+
+  - afirmacion: >-
+      «ya vemos en el texto que Federmann escribe caquetíos» (Arcaya, 1916
+      p. 28 n. a) — y el encargo pide la voz «con su grafía».
+    medido: >-
+      La PRIMERA vez que el original nombra a la nación escribe
+      **`Caquecios`** (1557 [19], imagen 29, verificado en imagen: «der
+      Nation Caquecios gehaissen»). Después, `Caquetios` (1557 [46], imagen
+      56, verificado). Arcaya describe la francesa normalizada, no el alemán.
+
+  - afirmacion: >-
+      «excepto los que viven cerca de Coro, estos indios habitan las mejores
+      tierras» (1916 p. 60).
+    medido: >-
+      El alemán dice lo CONTRARIO: los caquetíos no viven en la sierra en
+      ninguna parte, «gleich als wol umb Coro, als an disen orten» — tanto en
+      torno a Coro como aquí — y sólo habitan la tierra llana y fértil (1557
+      [48], imagen 58, verificado). La sintaxis del alemán es torpe y la
+      lectura es mía: va como `reconstruido`, pero la «excepción» de Coro no
+      está en el original. Ver `geografia_politica.coro_en_el_llano`.
+
+  - afirmacion: >-
+      «la india rescatada por Ampíes» = una hija de Manaure (encargo, punto 2,
+      leyendo la nota de Arcaya).
+    medido: >-
+      Federmann NO lo dice: sólo que la habían vendido en Santo Domingo y que
+      Ampíes la rescató y la devolvió a su tierra. La identificación es de
+      Arcaya (1916 p. 18-19 n. c), que encadena tres cosas: Castellanos (el
+      señor de Hurehurebo, don Fernán García, y su mujer doña Juana García),
+      la carta de Ampíes («una india hija del gran Cacique de Coro», con su
+      marido; Fernández Duro 1885 t. II p. 212) y la suposición de que la
+      aldea de tres casas era Hurehurebo. Va como `hipotetico`.
+
+  - afirmacion: "«cien indios llamados Caquetíos» porteadores, como dato de relación con los españoles"
+    medido: >-
+      Es la cifra de Federmann («bei einem hundert Indios naturales vom land»,
+      1557 [19]). Pero el cargo 39 del interrogatorio de Pérez de Tolosa
+      acusa a Federmann de despoblar «cuatro ó cinco pueblos» caquetíos
+      comarcanos a Coro y llevarse «más de quinientos por fuerza y en
+      cadenas» (Fernández Duro 1885 t. II p. 274; Arcaya lo cita en 1916
+      p. 28 n. b). Y el propio alemán dice que los indios «que sacamos de
+      Coro» se le fugaron casi todos a su tierra (Klüpfel p. 26; la 1916
+      p. 43 omite «de Coro»). Tres datos que no casan: se proponen los tres
+      juntos, sin elegir.
+
+  - afirmacion: "«Vararida o Valle de las Damas» (1916 p. 110) y la etimología de Arcaya (n. b: bara 'casa' + ire 'mujer')"
+    medido: >-
+      En alemán son DOS nombres de dos bocas: «dises thal und Provintz, so
+      die Indios Vararida nennen, El valle delos damas nenneten» — el valle
+      que los indios llaman Vararida, NOSOTROS lo llamamos el valle de las
+      damas (Klüpfel p. 72). «Valle de las Damas» no traduce `Vararida`: la
+      premisa de la etimología de Arcaya es un artefacto de la traducción.
+
+  - afirmacion: "«Federmann escribe una cadena alemán → francés → castellano» (ficha, encargo)"
+    medido: "Son cuatro eslabones; ver `cadena_de_traduccion` (eslabón 0)."
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. PARAGUANÁ — cap. I, pp. 15-22 (enero de 1530)
+# ══════════════════════════════════════════════════════════════════════
+paraguana:
+
+  - id: fed-par-001
+    esfera: ecologia
+    tema: pesca nocturna con fuego en la costa
+    afirmacion: >-
+      En la costa norte de Paraguaná los indios pescan de noche con hogueras
+      en la orilla, «como es su costumbre»; los navegantes ven tres fuegos a
+      medianoche y la noche siguiente esperan que vuelvan «a pescar donde los
+      habíamos visto».
+    cita_1916: "observó tres hogueras que los indios habían encendido para pescar como es su costumbre"
+    pagina_impresa: 16
+    aleman: >-
+      «fewr, wölche die Indios landvolck am gestadt des Möhrs, darbei zu
+      vischen, alls sie pflegen zuthun brenten» y «aulf ihre gewonliche
+      vischereien» (Klüpfel pp. 11-12, OCR corregido)
+    eslabon_que_lo_da: Klüpfel
+    lugar: "costa norte de Paraguaná; Arcaya (p. 17 n. b) propone La Macolla, al oeste del Cabo San Román"
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      ⭐ Es técnica de pesca con fecha y lugar: pesca con luz desde la orilla.
+      Toca ecologia (tesis «tierra pobre / mar rico») y transmision (una
+      costumbre, `gewonliche`). No dice qué se pesca.
+
+  - id: fed-par-002
+    esfera: geografia_politica
+    tema: miedo a la trata, aldea que se hace fuerte
+    afirmacion: >-
+      Al ver el navío, los de la costa se encierran en su aldea creyendo que
+      vienen a raptarlos para venderlos en Santo Domingo, «como ocurre a
+      veces» (alemán: «alls offt … beschehen», como pasa A MENUDO).
+    cita_1916: "se hicieron fuertes en su aldea creyendo que veníamos a raptarlos para venderlos en Santo Domingo como ocurre a veces"
+    pagina_impresa: 17
+    aleman: "«besorgend, alls offt von Sant Dominigo auß beschehen, ain raubschiff were» (Klüpfel p. 12)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      La 1916 atenúa: el alemán dice «a menudo» (`offt`), no «a veces». En
+      1530 la trata desde las Antillas era ya lo esperable en la costa de
+      Paraguaná. Precontacto ≠ esto (regla 3).
+
+  - id: fed-par-003
+    esfera: familia
+    tema: una aldehuela de tres casas; unas dieciséis personas en una
+    afirmacion: >-
+      A cinco leguas del desembarco, una aldehuela «compuesta solamente de tres
+      casas»; en la casa de la india había «como diez y seis indígenas, entre
+      hombres y mujeres». Tiene un jefe («der Principal des Weilers»), que
+      manda dos indios de guía.
+    cita_1916: "una aldehuela compuesta solamente de tres casas […] encontraron como diez y seis indígenas, entre hombres y mujeres. […] El jefe de la aldea ordenó entonces a dos indios que los acompañasen"
+    pagina_impresa: 18-19
+    aleman: >-
+      «ain Weiler von dreien häusern, fünff meil von dem ort da wir angefaren»
+      (Klüpfel p. 12) · «giengen mit ihr in jre behausung, alda sie etwan bei
+      sechszehen Indios mann und frawen funden […] der Principal des Weilers,
+      zwen Indios» (1557 [13], imagen 23, verificado en imagen)
+    eslabon_que_lo_da: 1557
+    lugar: "Paraguaná; sin nombre en Federmann (Arcaya: Hurehurebo/Jurijurebo, ver fed-par-008)"
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      ⭐ Dato de residencia de la COSTA, no del interior: unas dieciséis
+      personas de ambos sexos en UNA casa, y tres casas por aldea. Casa grande
+      multifamiliar, como las «cinco a ocho familias por casa» del Yaracuy
+      (interior, fed-int-006), pero medida aquí en Paraguaná y 14 meses antes.
+      Ojo: «en su casa» puede ser la casa de ella o la vivienda del caserío; el
+      alemán dice `jre behausung` (su vivienda). `Principal` es castellano del
+      escribano: la palabra indígena para ese jefe no está.
+
+  - id: fed-par-004
+    esfera: ecologia
+    tema: agua lejos de las casas
+    afirmacion: "Al amanecer una india sale sola «a buscar agua a alguna distancia» de las casas."
+    cita_1916: "vieron una india que salía a buscar agua a alguna distancia"
+    pagina_impresa: 18
+    aleman: "«gieng ain India, allain umb wasser etwann ferr von den häusern» (Klüpfel p. 12)"
+    eslabon_que_lo_da: Klüpfel
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    cruce: >-
+      Pérez de Tolosa 1546, sobre Paraguaná: «no hay río ninguno en toda ella;
+      beben de jagüeyes» (Fernández Duro 1885 t. II p. 228; obra
+      perez-de-tolosa-1546). Dos testigos independientes del s. XVI.
+
+  - id: fed-par-005
+    esfera: geografia_politica
+    tema: la india rescatada por Ampíes y la amistad de «toda la provincia»
+    afirmacion: >-
+      La india hablaba algo de castellano porque la habían vendido en Santo
+      Domingo; el factor Juan de Ampíes la rescató y la devolvió a su tierra
+      «para ganarse la voluntad de los naturales». Ella dice que la provincia
+      entera, «llamada Paraguaná», es amiga de los cristianos de Coro.
+    cita_1916: "les dijo ella en legua española, que algo hablaba, que antes la habían vendido en Santo Domingo, pero que el factor de S. M., Juan de Ampies […] la había rescatado y devuéltola a su libertad y patria con el objeto de mover los naturales en favor de los españoles; preguntóles por qué la aprisionaban cuando ella y todos los indios de esta Provincia, llamada Paraguaná, eran amigos de los cristianos"
+    pagina_impresa: 18
+    aleman: >-
+      «sagt sie ihnen inn Hispanischer sprach, die sie ein wenig kundte»
+      (Klüpfel p. 12) · «were doch sie und die gantz Provintz so Baragnana
+      heißt, der Christen zu Coro freund» (1557 [13], imagen 23, verificado)
+    eslabon_que_lo_da: 1557
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      Es la política de Ampíes (1527-1528) vista desde abajo: la persona
+      devuelta como mediadora. Que fuera hija de Manaure NO lo dice
+      Federmann: ver fed-coro-004.
+
+  - id: fed-par-006
+    esfera: ecologia
+    tema: lo que les dan de comer
+    afirmacion: >-
+      En la aldehuela los esperan con «pescado excelente y abundante y toda
+      especie de víveres»; en Miraca «encontramos todo lo necesario».
+    cita_1916: "nos proporcionaron pescado excelente y abundante y toda especie de víveres"
+    pagina_impresa: 19-20
+    aleman: "«mit allerley vischen, dern sie vast vil und gutt haben, sampt anderer speiß» (1557 [13], imagen 23, verificado)"
+    eslabon_que_lo_da: 1557
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      El alemán es más preciso que la 1916: «toda clase de peces, de los que
+      tienen muchísimos y buenos» — variedad, no sólo cantidad. Nada de lo
+      demás («anderer speiß») se nombra: ni maíz, ni yuca, ni casabe. Cero de
+      fuente para la dieta vegetal de Paraguaná en este texto.
+
+  - id: fed-par-007
+    esfera: ecologia
+    tema: el camino por la costa
+    afirmacion: >-
+      De la aldehuela a Miraca, «más de seis leguas sin hallar agua, sobre una
+      arena ardiente, a lo largo del mar»; antes, una fuente a dos leguas del
+      desembarco donde duermen.
+    cita_1916: "habiendo caminado más de seis leguas sin hallar agua, sobre una arena ardiente, a lo largo del mar"
+    pagina_impresa: 19-20
+    aleman: "«die tagreiß bei 6 meilen weitt, mit gebrech ahn wasser, ain hais sandig landt, und den merenteil am gestadt des Mors» (1557 [13]-[14], imagen 24, verificado)"
+    eslabon_que_lo_da: 1557
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: >-
+      La «legua» de la 1916 es la Meile alemana (Arcaya p. 10 n. a: 7.420 m).
+      Seis Meilen ≈ 44 km: la cifra es del diario, no se ha medido sobre el
+      mapa. Arcaya (p. 20 n. g-h) explica el rodeo por la costa del este.
+
+  - id: fed-par-008
+    esfera: geografia_politica
+    tema: los lugares de Paraguaná — qué nodos toca
+    lugares:
+      - forma_1557: Paragnana / Baragnana
+        forma_1916: Paraguaná
+        donde: "1557 [13] «Baragnana» (imagen 23) y [14] «Paragnana» (imagen 24), verificados; Klüpfel lee igual"
+        nota: >-
+          La B/P alterna en el propio original, en dos páginas seguidas. La
+          quinta letra se lee `n` en los dos sitios (Klüpfel también); en
+          Fraktur n/u se confunden y un cajista pudo voltear la u, así que
+          `Paraguana` es probable pero no está escrito. Para la mesa de
+          topónimos (campana-toponimos), no se decide aquí.
+        nodo: "región `paraguana` de asentamientos.yaml (no es un nodo)"
+      - forma_1557: Miraca
+        forma_1916: Miraca
+        donde: "1557 [13], imagen 23: «einen Puebles Mi-/raca gehaissen», verificado en imagen"
+        nodo: nodo-031
+        propuesta: >-
+          ⭐ ADELANTA LA ATESTACIÓN DE nodo-031 OCHO AÑOS. Su cadena empieza hoy
+          en la carta de Bastidas (1538). Federmann llega a Miraca en enero de
+          1530 («Puebles»/pueblo, con comida para una tropa de más de cien) y
+          Arcaya añade en 1916 que «conserva el nombre» (p. 20 n. f). Propuesta:
+          sumar federmann-1916 p. 20 (1557 [13]) a su `procedencia` y 1530 al
+          principio de la cadena. `precontacto` sigue `desconocido`: 1530 no
+          alcanza.
+      - forma_1557: "(sin nombre) — ain Weiler von dreien häusern"
+        forma_1916: "una aldehuela … de tres casas"
+        identificacion_de_arcaya: "Hurehurebo, hoy Jurijurebo, fundo al norte de Pueblo Nuevo (p. 18 n. c)"
+        nodo: "NUEVO, candidato — y débil"
+        propuesta: >-
+          No es nodo por Federmann, que no la nombra. Si entra, entra por
+          Castellanos (Hurehurebo y su señor) con Arcaya como identificador, y
+          `hipotetico` en la identificación con la aldea de Federmann.
+          `jurijurebo` ya sale en asentamientos.yaml como forma con `ebo`
+          (nodo-002, nota): comprobar ahí antes de abrir otro.
+      - forma_1557: "(sin nombre) — ain brunnen, bei zwo meilen"
+        identificacion_de_arcaya: "el jagüey u ojo de agua de Macama (p. 19 n. d)"
+        nodo: "no — un punto de agua, no un asentamiento"
+      - forma_1557: "(sin nombre) — el desembarco"
+        identificacion_de_arcaya: "«Probablemente en La Macolla» (p. 17 n. b)"
+        nodo: "no"
+      - forma_1557: Buynari
+        forma_1916: Buynari
+        donde: "1557 [9], imagen 19, verificado (Klüpfel lee mal `Ruynari`)"
+        nodo: nodo-011
+        nota: >-
+          «a siete leguas de Venezuela». El traductor francés cree que es Aruba
+          y no Bonaire (1916 p. 15 n.). Federmann no dice nada de su gente.
+    epoca: contacto-temprano
+
+  - id: fed-par-009
+    esfera: geografia_politica
+    tema: tres días a caballo de Paraguaná a su barco
+    afirmacion: >-
+      El viaje de vuelta al navío lo hace «en un día y una noche» a caballo;
+      a la ida fueron tres jornadas. La tropa llega a Coro por tierra con
+      guías que manda el lugarteniente de Coro.
+    pagina_impresa: 20
+    eslabon_que_lo_da: 1916
+    epoca: contacto-temprano
+    etiqueta: atestiguado
+    nota: "Distancias y tiempos para el modelo del camino Paraguaná–Coro; la cifra es del diario."
