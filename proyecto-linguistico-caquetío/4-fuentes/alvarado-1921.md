@@ -12,9 +12,9 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21)"
-verificado: 2026-09-10
-minado: 2026-09-21
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21) + la entrada POPÓRO (p. 255) leída contra sus tres referencias de Castellanos y BAPÓRON (p. 20) contra Oviedo (2026-09-23, cc.3)"
+verificado: 2026-09-23
+minado: 2026-09-23
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
 ---
 
@@ -302,3 +302,35 @@ antes de contar (regla 6): `caquet` 3, `aruac` 6, `Curiana` 1, `Manaur` 1,
 atribuciones se buscan por «Coro» y «Falcón».
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
+---
+
+## Bitácora: el poporo, leído en sus fuentes (2026-09-23, cc.3)
+
+**Qué se le preguntó.** La entrada POPÓRO (p. 255) sostenía `poporo`
+caquetío-atestiguado y la nota de `macana`. ¿Aguantan su atribución las
+referencias que da?
+
+**Lo que dice, ✅ verificado en imagen (pdf 285):** «POPÓRO. Arma, a manera de
+porra, usada por los antiguos Caquetíos y los Guagíros. Ref. Cast. *Eleg*. I.
+c. 3º; *N. Reino*, I. 46. 65. Cf. BAPÓRON.» La capa de texto lee «Bleg.» y
+«A^. Reino». Son dos obras de Castellanos: la Parte II de las Elegías,
+Elegía I, canto III, y la Parte IV (Historia del Nuevo Reino de Granada),
+t. I pp. 46 y 65. La entrada tiene además dos acepciones más: 'chichón' y
+el calabacito de la cal del Sinú.
+
+**Lo que resultó.** Ninguna de las tres páginas pone el poporo en manos de un
+caquetío. La de las Elegías es el guanebucán Boronata, en el río de la Hacha
+(BAE p. 202). Las del Nuevo Reino son los muiscas, y allí el poporo es «un
+calabazuelo» de la cal. Y el propio Alvarado, s.v. BAPÓRON (p. 20, capa de
+texto), escribe que «Poporo llaman hoy tal calabazo en Maracaibo, y así le
+designan Castellanos y fr. Simón».
+
+**Corrección a esta misma ficha.** Las tablas de arriba (§«Qué ha dado»,
+§adjudicación y el recuento de «solo 3 sostienen la etiqueta») dan `poporo`
+como «única atribución caquetía explícita» que «confirma». Lo primero es
+verdad de lo que Alvarado AFIRMA. Lo segundo no: sus referencias no lo
+sostienen. Las tablas no se reescriben porque son historia; esta bitácora
+las corrige.
+
+Propuesta y citas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo.

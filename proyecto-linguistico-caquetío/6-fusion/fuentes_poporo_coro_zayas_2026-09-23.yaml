@@ -1,0 +1,566 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Tres lecturas de fuente para cerrar la investigación (cc.3, cc.6, cc.7)
+#   El poporo · `coro` no es 'viento' · las voces de Zayas
+#   Campaña del 2026-09-23, rama campana/poporo-coro-zayas
+#
+# Las tres decisiones ya las tomó Miguel (6-fusion/decisiones_cierre_2026-09-23.yaml,
+# rama tanda/base-2026-09-22). Aquí va el DATO que faltaba para aplicarlas: qué
+# dice la fuente, con cita verbatim y página impresa, y la nota que se propone.
+#
+# Minar PROPONE, el humano fusiona (regla 5): nada de esto toca curiana_sim/,
+# 2-lengua/ ni 3-mundo/. Los textos de `nota_propuesta` son para pegarlos en la
+# fusión (skill fusionar-propuesta); los de `cambio_propuesto`, para decidir.
+#
+# CÓMO SE CITA
+#   - Castellanos, partes I-III (castellanos-elegias): `linea` = línea del .txt
+#     del repo; página de la BAE 1857 calculada con
+#     6-fusion/scripts/castellanos_pagina.py (rama campana/mineria3-coro, #207),
+#     corrida el 2026-09-23 sobre las líneas que se citan aquí.
+#   - Castellanos, parte IV (castellanos-nuevo-reino-1886, NUEVA): la ficha
+#     trae el desfase medido.
+#   - «✅ imagen» = cotejado en la imagen de la página (pymupdf). Lo demás sale
+#     de la capa de texto y lleva sus erratas; si una errata importa, la
+#     lectura corregida va aparte en `lectura`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-23'
+  estado: sin-fusionar
+  decisiones: 6-fusion/decisiones_cierre_2026-09-23.yaml §cc.3, §cc.6, §cc.7
+  obras_leidas:
+    - alvarado-1921
+    - castellanos-elegias
+    - castellanos-nuevo-reino-1886      # NUEVA: descargada hoy (archive.org, dominio público)
+    - oviedo-y-valdes-1851
+    - oviedo-y-valdes-1852-1855
+    - oviedo-y-banos
+    - arcaya-1920
+    - jahn-1927
+  fuera_del_repo:
+    - 'DICTER 2.0 (Diccionario de la Ciencia y de la Técnica del Renacimiento, Univ. de Salamanca), s.v. coro 2: https://dicter.usal.es/lema/coro&acepcion=2 (consultado el 2026-09-23)'
+
+  lo_que_resulto_falso_al_medir:
+    - id: falso-1
+      afirmacion_previa: >-
+        «La voz caquetía ATESTIGUADA para el arma es `poporo` (Alvarado 1921
+        p. 255: «usada por los antiguos Caquetíos», ref. Castellanos)» — nota
+        de `macana`; y `poporo` 'maza-porra, arma de combate ceremonial',
+        caquetío-atestiguado.
+      medido: >-
+        Alvarado lo dice, pero las tres páginas de Castellanos que da como
+        referencia no ponen el poporo en manos de un caquetío. La Elegía I,
+        canto III (p. 202) es el poporo que suelta Boronata, «indio
+        guanebucán», en el río de la Hacha. Las pp. 46 y 65 del Nuevo Reino
+        (la «parte 4») son de los muiscas, y en ellas el poporo es el
+        calabacito de la cal para mascar hayo, no un arma. Ninguna fuente del
+        repo atribuye el poporo a los caquetíos, y «ceremonial» no lo dice
+        nadie.
+    - id: falso-2
+      afirmacion_previa: >-
+        «lo de que coro es viento […] era una apreciación de Oviedo» (Miguel,
+        cc.6).
+      medido: >-
+        Es de Castellanos, como decía el lexicón. Oviedo y Valdés no da ninguna
+        etimología de Coro en sus cuatro tomos, y Oviedo y Baños tampoco. Lo
+        que Miguel recordaba bien es lo del latín, y el propio Castellanos lo
+        deja ver: el nombre, dice, lo pusieron los españoles por el río, y
+        «Coro» es viento «en lengua generosa», no en la de los indios.
+    - id: falso-3
+      afirmacion_previa: >-
+        `lectura_en_disputa` de `coro`: «tres lecturas compiten […] y 'viento'
+        (Castellanos 1589)».
+      medido: >-
+        'viento' nunca fue una lectura de la voz indígena, ni siquiera para
+        Castellanos: él no dice que los indios llamaran viento al coro. Dice
+        que el nombre del río «le viene bien» porque coincide con una palabra
+        culta, y esa palabra existía en el castellano de su tiempo: «coro»,
+        el viento del noroeste, del latín cōrus o caurus (DICTER, primera
+        datación 1582). Arcaya 1920 p. 170 ya lo había escrito. Compiten dos
+        lecturas, no tres.
+    - id: falso-4
+      afirmacion_previa: >-
+        Zayas p. 33 (1914) respalda la voz `anaki` 'enemigo' que Goeje 1939
+        p. 10 pone en su taíno.
+      medido: >-
+        Ver §zayas.anaki (sección 3).
+
+# ══════════════════════════════════════════════════════════════════════════
+# 1. EL POPORO (cc.3)
+# ══════════════════════════════════════════════════════════════════════════
+poporo:
+  pregunta: >-
+    ¿Hay algún pasaje que atribuya el poporo (o la macana) a CAQUETÍOS, con
+    página?
+  respuesta_corta: >-
+    El poporo, no: ni en Castellanos (partes I, II, III y los dos tomos de la
+    IV) ni en Oviedo, Jahn o Alvarado fuera de su propia glosa. La macana, sí
+    pero sólo como COSA: en Castellanos (p. 200), un cacique de un pueblo
+    caquetío del INTERIOR pelea con macana en 1530. Es la palabra castellana
+    del cronista para el arma. Dice que el objeto estaba ahí, no cómo lo
+    llamaban los caquetíos.
+
+  la_glosa_de_alvarado:
+    obra: alvarado-1921
+    pagina_impresa: 255
+    verificado_en_imagen: sí
+    texto: >-
+      «POPÓRO. Arma, a manera de porra, usada por los antiguos Caquetíos y los
+      Guagíros. Ref. Cast. Eleg. I. c. 3º; N. Reino, I. 46. 65. Cf. BAPÓRON.
+      ||—Tolondro, lobanillo, chichón, tumor, o cosa así. […] y proviene ella
+      sin duda de la que tiene en el Perú y Bolivia, y tenía en el Sinú, según
+      Castellanos (Hist. de Cartag., c. 3º), es a saber, calabacilla en forma
+      de ampolleta destinada a guardar la llipta (cal o cenizas) con que se
+      mascan las hojas de coca.»
+    lectura: >-
+      La capa de texto dice «Ref. Cast. Bleg. I. c. 3?; — A^. Reino»: la
+      imagen da «Eleg.» y «N. Reino». Son dos referencias, las dos de
+      Castellanos: la Parte II, Elegía I (a Alfínger), canto III, y la
+      Historia del Nuevo Reino de Granada, t. I pp. 46 y 65. Alvarado da
+      TRES acepciones: el arma, el chichón y el calabacito de la cal.
+    la_otra_entrada_de_alvarado:
+      lema: BAPÓRON
+      pagina_impresa: 20
+      verificado_en_imagen: no (capa de texto)
+      texto: >-
+        «BAPÓRON.—"Este es un calabazo en que traen los indios (de Maracaibo)
+        cierta manera de cal, para quitar la hambre, chupándola". (Ov. II.
+        286. 294). […] Poporo llaman hoy tal calabazo en Maracaibo, y así le
+        designan Castellanos y fr. Simón.»
+      valor: >-
+        El propio Alvarado, veinte páginas antes, dice que Castellanos llama
+        poporo al CALABAZO de la cal.
+
+  pasajes:
+    - id: pp-1
+      obra: castellanos-elegias
+      donde: Parte II, Elegía I, canto III (la que Alvarado cita como «Eleg. I. c. 3º»)
+      linea: 52861-52889
+      pagina_impresa: 202
+      quien_lleva_el_poporo: Boronata, «indio guanebucán», en el río de la Hacha (Guajira), c. 1530
+      texto: >-
+        «Salióles al encuentro Boronata, / Indio guanebucán y belicoso: /
+        Tuvieron un recuentro porfiado; / Mas Boronata fué desbaratado. //
+        Dejadas ya las flechas y el poporo / Por el guanebucán feroz, robusto,
+        / Esta gente paupérrima de Coro / Tomaron un poquillo de buen gusto, /
+        Por recoger alli joyuelas de oro»
+      lectura: >-
+        «Esta gente paupérrima de Coro» son los españoles de Alfínger, que
+        salieron de Coro («Ambrosio con tal orden de guerrero», l. 52857) y
+        vienen hambrientos: son ellos quienes recogen el oro. El poporo lo
+        suelta el guanebucán. El verso no decide si es arma o calabacito: se
+        suelta con las flechas al huir, y en las otras apariciones de
+        Castellanos es el calabacito.
+      atribuye_a_caquetios: 'no'
+      hipotesis_del_error: >-
+        Es posible que Alvarado leyera «gente de Coro» como los caquetíos de
+        Coro. Es una hipótesis: Alvarado no explica de dónde saca la
+        atribución, y el verso no la permite.
+    - id: pp-2
+      obra: castellanos-nuevo-reino-1886
+      donde: t. I, canto primero (los muiscas, los xeques y el hayo)
+      pagina_impresa: 46
+      verificado_en_imagen: sí
+      texto: >-
+        «Usan también con él de cierto polvo / ó cal hecha de ciertos
+        caracoles, / que traen en el que llaman poporo, / que es un
+        calabazuelo, donde meten / un palillo, y aquello que se pega /
+        recogen en la boca con el ayo.»
+      atribuye_a_caquetios: 'no'
+      sentido: calabacito de la cal (muisca)
+    - id: pp-3
+      obra: castellanos-nuevo-reino-1886
+      donde: t. I, canto primero (sepulturas de los señores muiscas)
+      pagina_impresa: 65
+      verificado_en_imagen: sí
+      texto: >-
+        «con armas defensivas y ofensivas, / hasta brazales, petos,
+        morriones / del mas alto metal, y de los hombros / pendientes hartas
+        veces de lo mismo / la mochila del ayo y el poporo, / con mucuras de
+        vino y otras cosas»
+      atribuye_a_caquetios: 'no'
+      sentido: >-
+        calabacito de la cal (muisca). Va colgado del hombro con la mochila
+        del hayo y se nombra APARTE de las armas.
+    - id: pp-4
+      obra: castellanos-nuevo-reino-1886
+      donde: t. I, canto cuarto (Juan de Céspedes arenga a los suyos)
+      pagina_impresa: 124
+      verificado_en_imagen: sí
+      texto: '«si quisierdes que larguen los poporos, / abrid los ojos y apretad las manos;»'
+      atribuye_a_caquetios: 'no'
+      sentido: >-
+        figurado; la hueste enemiga es del altiplano (los «fronteros Guechas»
+        dieron aviso, p. 122). Alvarado no cita esta página. Es la única de
+        las ocho apariciones en que «poporo» podría leerse como algo que se
+        empuña.
+    - id: pp-5
+      obra: castellanos-nuevo-reino-1886
+      donde: t. II, GLOSARIO del EDITOR (Paz y Mélia), no de Castellanos
+      pagina_impresa: 385
+      verificado_en_imagen: sí
+      texto: >-
+        «POPORO.—Calabazuelo en que llevan los indios polvo ó cal de ciertos
+        caracoles, de la que toman con un palillo un poco cuando mascan ají.
+        (P. Simón.)— La coca ó hayo. (J. de la Espada.)»
+      atribuye_a_caquetios: 'no'
+      nota: del editor; se cita como tal (la trampa de `datihao`)
+    - id: pp-6
+      obra: castellanos-elegias
+      donde: Parte I (Boriquén), Parte III (Cenú y Popayán)
+      linea: '14287 (p. 55); 98792 (p. 377-378, cabecera dudosa); 118455 (p. 454); 119547 (p. 458)'
+      texto: >-
+        «Rodeado de plumas y poporos,» (areíto de Agüeybaná) · «La mochila
+        de hayo y el poporo;» (Cenú) · «El bayo [hayo] y el poporo
+        preparado,» (Popayán) · «Primero que la gente de Poporo,» (topónimo)
+      atribuye_a_caquetios: 'no'
+      fuente_del_barrido: >-
+        las cuatro líneas las localizó M7 (#207, §castellanos.poporo); aquí se
+        re-midieron con grep popor- sobre el .txt: 5 apariciones en las
+        partes I-III, contando la de Boronata.
+    - id: pp-7
+      obra: oviedo-y-valdes-1852-1855
+      donde: t. II, libro XXV, caps. V y VI (Francisco Martín, el soldado de Alfínger que vivió como indio)
+      pagina_impresa: '286 y 294'
+      verificado_en_imagen: sí
+      texto: >-
+        p. 286: «y la boca llena de hayo, ques çierta hierba para no aver sed,
+        é su baperon: este es un calabaço en que traen los indios çierta
+        manera de cal; para quitar la hambre, chupándola.» · p. 294: «salió
+        con sus armas de indio, que eran el arco y las flechas é dardos é su
+        raporon é hayo: el qual hayo es la hierba para quitar la sed ó no
+        averla, y el baporon es el calabaço de la cal para quitar la hambre»
+      quien: >-
+        los indios PEMENOS del sur de la laguna de Maracaibo, entre quienes
+        vivía Martín («toda aquella tierra es poblada de indios pemenos»,
+        p. 294). No caquetíos.
+      atribuye_a_caquetios: 'no'
+      nota: >-
+        Es la fuente del BAPÓRON de Alvarado. Oviedo mete el calabazo entre
+        «sus armas de indio», pero lo define como el calabazo de la cal.
+    - id: pp-8
+      obra: jahn-1927
+      pagina_impresa: 249
+      verificado_en_imagen: no (capa de texto)
+      texto: >-
+        «Otro de los usos de los Ayomanes, muy generalizado entre todas las
+        antiguas tribus del Occidente y que aún conservan los Kággaba de Santa
+        Marta […] y algunos ancianos guajiros […], era la del Poporo, pequeña
+        calabaza o taparita que llenaban con desmenuzadas hojas de hayo»
+      atribuye_a_caquetios: 'no (ayomanes; «las antiguas tribus del Occidente» sin nombrar a los caquetíos)'
+      epoca: moderno (informantes de San Miguel, c. 1870-1880)
+
+  barrido_de_ceros:
+    medido: >-
+      popor-/bap[oe]ron/raporon sobre todos los PDF y .txt de
+      fuentes_caquetios/ (pdftotext y lectura directa; 6-fusion/scripts no
+      guarda el barrido porque es un grep). Salen: Alvarado, Bachiller y
+      Morales (1, antillano), Castellanos I-III (5), Castellanos IV t. I (3)
+      y t. II (2), Jahn (1), Oviedo t. II (baperon/raporon/baporon, 4), el
+      glosario del editor de Oviedo t. IV (4) y Zavala 2015 (baperon,
+      raporon). No se pudieron extraer con pdftotext cinco PDF (Brinton,
+      Fernandes 2020, Oviedo t. I, Ramos Pérez, Rouse-Cruxent). El t. I de
+      Oviedo se barrió aparte con pymupdf, para `coro`.
+    caqu_en_el_nuevo_reino: 0 en los dos tomos
+    macana_junto_a_caquetios: >-
+      de las 12 líneas con caqu- de Castellanos I-III, sólo una tiene macana a
+      menos de 120 líneas: la del pueblo caquetío de Uriorebuí (§macana).
+
+  macana:
+    pregunta: ¿algún pasaje atribuye la macana a caquetíos?
+    respuesta: >-
+      Sí, la COSA, y en un solo pasaje; la palabra es la del cronista.
+    pasaje:
+      obra: castellanos-elegias
+      donde: Parte II, Elegía I, canto III (vuelta de Federmann, 1530)
+      linea: '52211; 52324; 52344'
+      pagina_impresa: 200
+      texto: >-
+        «Y dieron luego por aquella via / En un pueblo de gente caquetia.»
+        […] «Barrios, y Joan Florín y Alonso Zarco / Cortan aqui y allí
+        macana y arco.» […] «Por le desbaratar lanza y caballo / Con dos
+        terribles golpes de macana;»
+      quien: >-
+        el cacique Uriorebuí y los suyos, en un pueblo caquetío del INTERIOR,
+        sin lugar preciso. Es la polity de tierra adentro, no la costera
+        (regla 4). M7 lo recoge como m7-cast-007.
+      epoca: contacto-temprano (1530, contado en 1589)
+      que_prueba: >-
+        que los caquetíos del interior peleaban con un garrote de madera que
+        el cronista llama macana. NO prueba la voz: en 1589 «macana» ya era
+        castellano de Indias: Las Casas, Apologética cap. LXV p. 177, «Estos
+        vocablos cotaras, macanas, bixa, y maiz, y maguey, fueron vocablos
+        desta isla y no de la Tierra Firme» (verificado en imagen por la
+        campaña del taíno, 6-fusion/taino2_las_casas_apologetica.yaml §c06).
+        Castellanos escribe «macana» 115 veces en las partes I-III, para
+        pueblos de toda la costa.
+      destino: >-
+        3-mundo (guerra y armas de la polity del interior), no el lexicón. Si
+        se proyecta a la costa o al XV, se decide aparte (reglas 3 y 4).
+
+  cambio_propuesto:
+    poporo:
+      hoy: >-
+        VOCABULARIO_BASE, `poporo` {"sig": "maza-porra, arma de combate
+        ceremonial", "fuente": "caquetío-atestiguado", "notas": "Alvarado
+        1921, p.255 s.v. POPORO: la atribuye explícitamente a los antiguos
+        Caquetíos y cita a Castellanos"}
+      opciones:
+        A: >-
+          SALE DEL HABLA y cambia de capa. Pasa a FUERA_DEL_HABLA con
+          `fuente: español-colonial`, como caraota y kukuisa en D10 grupo 1: es
+          una voz de Tierra Firme que el castellano de los cronistas usa para
+          muiscas, guanebucanes, cenúes y pemenos, y ninguna fuente la da como
+          caquetía. La glosa pasa a 'calabacito de la cal para mascar hayo' y
+          la vieja queda en `notas` con su porqué.
+        B: >-
+          Sale del habla con la capa intacta (caquetío-atestiguado), como las
+          archivadas por d19.b. No se recomienda: aquella política archiva lo
+          que era verdad pero redundante, y aquí la etiqueta es FALSA.
+          Archivarla sin corregirla deja una mentira en el canon.
+        C: >-
+          Se queda en el habla degradada a caquetío-hipotético, con glosa
+          'calabacito de la cal', apoyándose en el complejo del hayo del
+          occidente (Jahn p. 249). No se recomienda: no hay dato caquetío de la
+          voz, y el hayo caquetío ya se había juzgado de contacto
+          (issues-pendientes/publicados/issue-hayo.md).
+      recomendacion: A
+      por_que: >-
+        Es lo que Miguel pidió («caso de que no sea caquetía, la
+        levantamos»). La capa `español-colonial` dice la verdad de la voz. Y
+        su uso en la base es mínimo: 2 usos de 2 agentes, según
+        decisiones_campanas_2026-09-21.yaml §abre (cifra de ese día, no
+        re-medida aquí).
+      nota_propuesta: >-
+        RETIRADA DEL HABLA 2026-09-23 (cc.3, decisión de Miguel: «caso de que
+        no sea caquetía, la levantamos»). Hasta esa fecha: `poporo` 'maza-porra,
+        arma de combate ceremonial', caquetío-atestiguado, por Alvarado 1921
+        p. 255: «Arma, a manera de porra, usada por los antiguos Caquetíos y
+        los Guagíros. Ref. Cast. Eleg. I. c. 3º; N. Reino, I. 46. 65». Leídas
+        las tres páginas, ninguna pone el poporo en manos de un caquetío:
+        Castellanos, Elegías, Parte II, Elegía I, canto III (BAE 1857 p. 202),
+        es Boronata, «indio guanebucán», en el río de la Hacha («Dejadas ya
+        las flechas y el poporo / Por el guanebucán feroz, robusto»); Historia
+        del Nuevo Reino de Granada t. I pp. 46 y 65 son los muiscas, y allí es
+        «un calabazuelo» de la cal que se masca con el hayo, colgado del
+        hombro aparte de las armas. En todas las fuentes del repo que lo
+        definen, el poporo es el calabacito de la cal: Castellanos, el
+        glosario de Paz y Mélia (Nuevo Reino t. II p. 385), Oviedo t. II
+        pp. 286 y 294 (baperon, entre los pemenos del sur de la laguna de
+        Maracaibo), Jahn 1927 p. 249 (ayomanes) y el propio Alvarado s.v.
+        BAPÓRON, p. 20. «Ceremonial» no lo dice nadie. Vive en el castellano
+        venezolano como 'chichón' (Alvarado, 2ª acepción; Medina Colina
+        p. 230 en Paraguaná). Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §poporo.
+      glosa_propuesta: calabacito de la cal para mascar hayo (en el castellano venezolano, también 'chichón')
+    macana:
+      hoy_dice: >-
+        «… Etiqueta anterior: `taíno` · Tno. macana; arma arahuaca; análoga al
+        poporo caquetío · […] La voz caquetía ATESTIGUADA para el arma es
+        `poporo` (Alvarado 1921 p. 255: «usada por los antiguos Caquetíos»,
+        ref. Castellanos). Volverla a `taíno` (opción C) queda dentro de la
+        decisión de clase sobre los tainismos»
+      cambio: >-
+        sustituir la frase «La voz caquetía ATESTIGUADA para el arma es
+        `poporo` (…)» por la de abajo, y marcar «análoga al poporo caquetío»
+        (que es historia de la etiqueta) con «[falso: ver 2026-09-23]». La
+        etiqueta `caquetío-reconstruido` y la glosa no se tocan: la decisión
+        de clase de los tainismos sigue abierta.
+      nota_propuesta: >-
+        CORREGIDO 2026-09-23 (cc.3): esta nota decía que «la voz caquetía
+        ATESTIGUADA para el arma es `poporo`». Es falso. Las tres referencias
+        de Alvarado 1921 p. 255 son de un guanebucán (Castellanos, Elegías,
+        BAE p. 202) y de los muiscas (Nuevo Reino t. I pp. 46 y 65, donde el
+        poporo es el calabacito de la cal). El caquetío no tiene voz
+        atestiguada para el garrote. Lo que sí hay es la COSA: Castellanos,
+        Elegías, Parte II, Elegía I, canto III, BAE p. 200, «En un pueblo de
+        gente caquetia» del interior (Federmann, 1530), el cacique Uriorebuí
+        desbarata a un jinete «Con dos terribles golpes de macana». Es la
+        palabra del cronista (castellano de Indias en 1589), no la del
+        caquetío, y es la polity del interior, no la costera. Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §poporo.
+
+  consecuencias_fuera_del_lexicon:
+    - donde: curiana_sim/lexicon_alvarado.py (CANDIDATOS_A.poporo y ADJUDICACION_82.poporo) y minar_alvarado_glosario.py
+      que: >-
+        el veredicto «confirma → caquetío-atestiguado JUSTIFICADO» y «la única
+        voz de todo el glosario con atribución caquetía directa» cuentan lo
+        que Alvarado AFIRMA, no lo que la fuente citada sostiene. Si se
+        regenera, que el veredicto pase a «Alvarado lo afirma; sus
+        referencias no lo sostienen». No los toca esta campaña: son
+        curiana_sim/*.py.
+    - donde: 6-fusion/medina_colina_dictado.yaml §poporo (p. 230), veredicto A
+      que: >-
+        el veredicto A se apoyaba en que «la palabra ya es caquetío-atestiguada
+        en el lexicón (el arma)». Sin eso, 'chichón' es castellano venezolano
+        general (el propio dictado lo anota con el DRAE). Hay que revisar el
+        veredicto.
+    - donde: 4-fuentes/alvarado-1921.md (tablas de las líneas 67, 145 y 175)
+      que: la bitácora nueva de esa ficha lo corrige (no se reescriben las tablas viejas).
+
+  visto_de_paso:
+    - id: vp-baperon
+      que: >-
+        `baperon` y `raporon` son caquetío-ATESTIGUADO en lexicon_zavala.py
+        (Zavala Reyes 2015 #27 y #220, sigla HB), y ese módulo lo importa el
+        motor. En el cuerpo de Oviedo, su fuente primaria, son el calabazo de
+        la cal de los PEMENOS del sur de la laguna de Maracaibo (t. II
+        pp. 286 y 294). El «(Lengua de Venezuela.)» sale del glosario que
+        Amador de los Ríos añadió al t. IV: «Baperon y Baperoni: calabazo, en
+        que los indios de guerra llevaban la cal […] (Lengua de Venezuela.)»,
+        y «Rapürün [Raporon]: Vide Baperon». Es la trampa de `datihao` otra
+        vez: un glosario de editor convertido en voz caquetía. No es de esta
+        parcela; va en el issue como campaña corta.
+      fuente: oviedo-y-valdes-1852-1855, t. II pp. 286, 294 (✅ imagen) y el glosario del t. IV (capa de texto)
+
+# ══════════════════════════════════════════════════════════════════════════
+# 2. `coro` NO ES 'VIENTO' (cc.6)
+# ══════════════════════════════════════════════════════════════════════════
+coro:
+  pregunta: >-
+    ¿Quién da de verdad la lectura 'viento' (Castellanos, Oviedo y Valdés,
+    Oviedo y Baños, otro), con qué palabras y en qué página, y la relaciona
+    con el latín Corus/Caurus?
+
+  respuesta_corta: >-
+    Castellanos, y nadie más entre los cronistas del repo. Pero él no la da
+    como glosa indígena: dice que el nombre lo pusieron los españoles tomando
+    el del río, que «siempre se llamó desta manera», y que ese nombre «le
+    viene bien» porque «Coro» significa viento «en lengua generosa». No
+    escribe «latín». La relación con Corus/Caurus la hizo explícita Arcaya
+    1920 p. 170, y el castellano de 1582 tenía «coro» para el viento del
+    noroeste (DICTER).
+
+  el_pasaje:
+    obra: castellanos-elegias
+    donde: Parte II, Introducción (la fundación de Coro por Ampiés, 1527)
+    linea: 48209-48219
+    pagina_impresa: 185
+    texto_verbatim_del_txt: >-
+      «Púsose por la gente forastera / Al pueblo semejante nombramiento / Dor
+      el rio (pie guia su ribera / Brevecilla distancia del asiento. // Que
+      siempre se llamó d ista manera: / El cual le viene bien , pues Coro
+      viento / Quiere decir en lengua genero>a, / Y ansí es aquella tierra muy
+      ventosa.»
+    lectura: >-
+      «Por el río que guía su ribera / Brevecilla distancia del asiento, /
+      Que siempre se llamó desta manera: / El cual le viene bien, pues Coro
+      viento / Quiere decir en lengua generosa»
+    verificado_en_imagen: 'no: el repo no tiene el PDF de la BAE; la cita y la página coinciden con Arcaya p. 170 (✅ imagen) y con M7'
+    que_dice_y_que_no: >-
+      (1) El nombre lo pone «la gente forastera», los españoles. (2) Lo toman
+      del río, que «siempre se llamó» así, así que el nombre es anterior a
+      ellos. (3) Es la etimología la que «le viene bien», y en «lengua
+      generosa», no en la de los indios. Castellanos no dice en ningún
+      momento que en caquetío coro fuera 'viento'.
+    lengua_generosa: >-
+      «lengua generosa» aparece una sola vez en las partes I-III (grep
+      genero.a). Cuando Castellanos habla de una lengua indígena, la nombra:
+      «En lengua guayqueri» (l. 5824), «De lengua de Cubagua» (l. 53768),
+      «Lengua de caquetíos escelente» (l. 55311). «Generosa» es 'noble': la
+      usa también para caballos, «casta generosa» (l. 48243). La lengua
+      noble es el latín, o su heredero culto.
+
+  el_latin:
+    arcaya:
+      obra: arcaya-1920
+      pagina_impresa: 170
+      verificado_en_imagen: sí
+      texto: >-
+        «De aquí han deducido algunos que Coro significaba viento en la lengua
+        de los indígenas, mas esto es un error, porque Castellanos sólo quiso
+        aludir a la coincidencia de que ese vocablo de los indios fuese
+        idéntico al español "Coro", que entre otras acepciones tiene la ahora
+        desusada de "viento que corre de la parte donde se pone el sol en el
+        solsticio de verano," aunque realmente el viento reinante en Coro es,
+        al contrario, el que sopla del Noreste.»
+      lectura: la capa escribe «Ncreste»; la imagen da «Noreste» con la o mal entintada
+    dicter:
+      referencia: DICTER 2.0, s.v. coro 2 (fuera del repo, consultado el 2026-09-23)
+      texto: >-
+        «coro 2 […] (tomado del lat. cōrus o caurus 'íd.' (DECH)). Familia
+        léxica: cauro. […] 1ª datación del corpus: Loçano, Alberto,
+        Architectura, 1582. Definición: Viento procedente del Noroeste.
+        Sinónimos(s): cauro, gallego, maestral.» — Ejemplo: «entre favonio y
+        septentrión, cauro, al qual muchos llaman coro» (Urrea, Vitruvio,
+        Architectura, 1582, fol. 16r).
+      valor: >-
+        la palabra circulaba en el castellano culto siete años antes de que
+        Castellanos imprimiera la Parte I (1589). Coincide con la cita de
+        Arcaya: el poniente del solsticio de verano es el noroeste.
+    el_viento_real: >-
+      Arcaya lo dice en la misma página: en Coro sopla el NORESTE (el alisio;
+      ver 6-fusion/clima_era2.yaml y `juri`). El coro latino es el noroeste.
+      Castellanos juega con la palabra, no describe el viento de Coro.
+
+  los_ceros:
+    por_obra:
+      - obra: oviedo-y-valdes-1851
+        medido: >-
+          t. I con pymupdf (el PDF está truncado y pdftotext no lo abre): 6
+          «coro», ninguno a menos de 200 caracteres de viento, cauro o latín.
+      - obra: oviedo-y-valdes-1852-1855
+        medido: >-
+          t. II, III y IV: todas las apariciones de «Coro» con viento, cauro,
+          latín, nombre o «llam-» en una ventana de 250 caracteres, leídas a
+          mano. Son la ciudad y la gobernación, sin etimología. El glosario del
+          t. IV (impresas 593-607) no trae la entrada Coro.
+      - obra: oviedo-y-banos
+        medido: >-
+          1 caso de «Coro» junto a «vientos»: los vientos contrarios que
+          impiden a Carvajal «coger a Coro» y lo hacen desembarcar en
+          Paraguaná. Ninguna etimología.
+    conclusion: >-
+      Miguel recordaba a Oviedo, y la etimología no está en ninguno de los
+      dos Oviedos del repo. Una obra de fuera que no se ha leído podría
+      traerla: el cero vale para el repo.
+
+  quien_mas_la_trae: >-
+    Ya en el canon, sin fusionar o citada: toponimo-111 (2-lengua/toponimos.yaml),
+    con veredicto «casi seguro el latín corus/caurus»;
+    6-fusion/toponimia_paraguana_miguel.yaml (lo usa como freno a la
+    hipótesis curi ~ juri); 6-fusion/clima_era2.yaml (como dato de viento,
+    con la nota de Arcaya); M7 (#207) m7-cast-012, que ya proponía lo mismo.
+    González Batista la usa contra Coriana (6-fusion/toponimia_coro_espina.yaml).
+
+  cambio_propuesto:
+    coro:
+      lectura_en_disputa_hoy: >-
+        «tres lecturas compiten y ninguna cierra: 'espina' (González Batista,
+        «El nombre de Coro»), 'avispa o lagartija' (Arcaya 1920 p. 170) y
+        'viento' (Castellanos 1589). Se enseña la que TIENE FUENTE TRABAJADA en
+        el repo, con la disputa declarada»
+      lectura_en_disputa_propuesta: >-
+        dos lecturas compiten y ninguna cierra: 'espina' (González Batista, «El
+        nombre de Coro») y 'avispa o lagartija' (Arcaya 1920 p. 170). Se enseña
+        la que TIENE FUENTE TRABAJADA en el repo, con la disputa declarada
+      nota_a_anadir: >-
+        DESCARTADA 2026-09-23 (cc.6, decisión de Miguel: «hay que sacar que
+        esa definición significa viento»): la lectura 'viento'. Hasta esa fecha
+        figuraba como tercera lectura en disputa, «'viento' (Castellanos
+        1589)». La atribución es correcta, pero Castellanos no la da como voz
+        indígena. Elegías, Parte II, Introducción (BAE 1857 p. 185): «Púsose
+        por la gente forastera / Al pueblo semejante nombramiento / Por el río
+        […] / Que siempre se llamó desta manera: / El cual le viene bien, pues
+        Coro viento / Quiere decir en lengua generosa». El nombre es el del río
+        y es anterior a los españoles. La etimología «le viene bien» y es de
+        la «lengua generosa»: el latín cōrus/caurus, que el castellano culto
+        tenía como «coro», viento del noroeste (DICTER s.v. coro 2, primera
+        datación 1582; Urrea 1582: «cauro, al qual muchos llaman coro»).
+        Arcaya 1920 p. 170 ya lo había escrito: «esto es un error, porque
+        Castellanos sólo quiso aludir a la coincidencia de que ese vocablo de
+        los indios fuese idéntico al español "Coro"», y el viento reinante en
+        Coro es el noreste, no el noroeste. No es de Oviedo: ni Oviedo y Valdés
+        (t. I-IV) ni Oviedo y Baños dan etimología de Coro. La voz caquetía
+        del viento es `juri`. Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §coro.
+      no_se_toca: >-
+        la glosa enseñada ('espina'), la capa (caquetío-hipotético) y la clave.
+        Sólo sale una de las tres lecturas de `lectura_en_disputa`, y queda
+        archivada en `notas`.
+    toponimo_111:
+      donde: 2-lengua/toponimos.yaml (es generado desde lexicon_toponimos.py; se edita el módulo)
+      que: >-
+        en la lectura de Arcaya 1920, el veredicto dice «viento (Castellanos,
+        Miguel). Compiten». Proponer: «viento: DESCARTADA el 2026-09-23 (cc.6),
+        juego culto de Castellanos sobre el latín cōrus, no glosa indígena». La
+        lectura de Castellanos (tipo etimologia-de-cronista) se queda como está:
+        su veredicto ya dice lo correcto.
