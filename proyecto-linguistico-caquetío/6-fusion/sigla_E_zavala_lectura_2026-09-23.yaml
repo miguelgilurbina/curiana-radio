@@ -1,0 +1,1015 @@
+# ─────────────────────────────────────────────────────────────────────────
+# LA SIGLA (E) DE ZAVALA, LEÍDA — voz por voz, lo que dice Esteves 1989
+# Campaña corta de cierre, decisión cc.4 (6-fusion/decisiones_cierre_2026-09-23.yaml)
+#
+# «la sigla es Zavala Esteves, eh, ok, miramos también el canon de eso»
+#                                                    (Miguel, 2026-09-23)
+#
+# Regla 5: esto PROPONE. No toca curiana_sim/, 2-lengua/ ni 3-mundo/.
+# Regla 1: NINGUNA CIFRA en este archivo. Es la LECTURA —qué dice Esteves de
+# cada voz, dónde, y qué otra fuente hay— y de ella el script
+# 6-fusion/scripts/medir_sigla_E_zavala.py DERIVA las etiquetas por opción,
+# cuenta, mide usos y exposición, y escribe
+# 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml (`--check` dice si está
+# al día). Las páginas son citas, no cifras.
+#
+# Copyright: Esteves 1989 es obra moderna. Las citas van recortadas (menos de
+# quince palabras) y el resto parafraseado; la página impresa lleva al texto.
+#
+# CÓMO SE LEYÓ. OCR del repo (fuentes_caquetios/Esteves_1989_..._N.ocr.txt)
+# para llegar a la página, y la página en IMAGEN (pymupdf) donde la lectura
+# decide una etiqueta con consecuencias (`verificado: imagen`). El folio se
+# leyó en el pie: los desfases son +6/+25/+55 (tomos 1-3), +72 en el tomo 4
+# hasta el pdf 9 y +73 desde el pdf 10 (la p. 82, blanca, no se escaneó),
+# +100 en el 5, y +129 en el 6 hasta el pdf 14 y +130 desde el 15 (falta la
+# p. 144). La skill campana-toponimos sólo da los tres primeros.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-23'
+  quien: agente de campaña (Claude), rama campana/sigla-E-zavala
+  estado: sin-fusionar
+  obra_leida: esteves-1989
+  la_regla: >-
+    Zavala Reyes 2015 p. 64 da las siglas de su glosario: «Juan Esteves (E)».
+    Cuando el canon cita «Zavala #N (E)», cita a Esteves copiado por Zavala:
+    no es una fuente más (minar-fuente §8). Y lo que Esteves da es, casi
+    siempre, la ETIMOLOGÍA de un topónimo propuesta por él: su propia ficha
+    (4-fuentes/esteves-1989.md §«Cómo se debe usar») ya decía que una
+    etimología suya sin cita entra como `hipotetico`, sube a `reconstruido`
+    si corrobora algo que ya teníamos, y sólo llega a `atestiguado` si se
+    persigue el documento que cita. El canon aplicaba esa regla a Esteves
+    citado por su nombre y no a Esteves citado por su sigla.
+  de_donde_sale_cada_E: >-
+    Las glosas (E) de Zavala son, frase por frase, las de Esteves 1989 —de las
+    dos partes del libro—: #143 «Guaru: voltúrido, cataneja, ave mayor que el
+    zamuro» es la p. 42 («voltúrido que llamamos cunareja, ave mayor que el
+    zamuro»); #164 Iguí, #112 Dividive, #72 Caujaro y #264 Tuturutos son las
+    glosas entre paréntesis de las pp. 117, 110, 100 y 66 casi palabra por
+    palabra; #111 Dito, #165 Ima, #166 Iro y #268 Uco son las pp. 46, 93, 88
+    y 31. Zavala no lista a Esteves en su bibliografía (pp. 74-76), así que
+    la obra no la dice él: la dice la coincidencia.
+
+# ── LAS CLASES ────────────────────────────────────────────────────────────
+# `clase` dice QUÉ HACE Esteves con la voz en su libro:
+#   etimologia-de-toponimo — la glosa sólo aparece al partir un nombre de
+#       lugar («X quiere decir… Y: glosa»). Es análisis suyo.
+#   dice-en-caquetio — afirma «en lengua caquetía X es Y» o «sabemos que»,
+#       sin decir de dónde. Sigue siendo suyo.
+#   voz-viva — nombra con un sustantivo corriente una planta, un animal, una
+#       materia o un objeto de la península, como base de un topónimo: la
+#       PALABRA existe (un nombre vivo es dato, Miguel 2026-09-07); lo que es
+#       suyo —y de Zavala al copiarlo— es que sea CAQUETÍA.
+#   no-esta — la glosa de Zavala no aparece en la página de Esteves.
+#
+# `otras_atestaciones[].estado`:
+#   independiente-verificada   — otra obra del repo, leída, misma palabra y
+#                                misma cosa, en el área (Coro, Falcón, «Occ.»)
+#   independiente-sigla        — otra sigla de Zavala (AM, HB, PMA, HP, CGB,
+#                                GC, A) que el repo no deja verificar
+#   independiente-fuera-del-area — otra obra, misma palabra y misma cosa, pero
+#                                localizada fuera (Lara, Zulia, Llano, oriente)
+#                                o sin localizar: documenta la VOZ, no que sea
+#                                caquetía (regla 4)
+#   analisis-nuestro           — una forma independiente que la contiene,
+#                                partida por nosotros: sube a reconstruido
+#   forma-sin-glosa            — la forma aparece, sin glosa
+#   otro-referente             — misma forma, otra cosa
+#   copia-de-esteves           — la obra cita a Esteves: no cuenta
+# ─────────────────────────────────────────────────────────────────────────
+
+voces:
+
+  # ═══ SÓLO (E): las que el canon da por atestiguadas ═══════════════════
+
+  juri:
+    zavala: [178]
+    esteves:
+      paginas: [47, 66]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Tres veces y las tres partiendo un topónimo: Judibana («Judi, juri:
+        viento. Bana: sitio alto», p. 47), Jurijurebo («Juri: viento; Ebo:
+        paso…», p. 47) y Tura, que en el censo de 1881 fue «Hato de Jura»
+        («Jura, juri: ventarrón», p. 66). No cita a nadie.
+    otras_atestaciones:
+      - {obra: castellanos-elegias, pagina: null, dice: '«Hurehurebo», ciudad caquetía (1589): la forma, sin glosa', estado: forma-sin-glosa}
+      - {obra: van-buurt-2014, pagina: '§8 Hudishibana', dice: 'juri, judi, hudi = wind, citando «(Cruz Esteves, 1989)»', estado: copia-de-esteves}
+      - {obra: null, pagina: null, dice: '6-fusion/cruce_taino_caquetio_2026-09-22.yaml: sin cognado (taíno no-comparable; lokono wadu-lli y wayuu wawai, sin parecido)', estado: otro-referente}
+    nota: >-
+      La única otra glosa de 'viento' en todo el corpus es «Coro quiere decir
+      viento en lengua generosa», de Castellanos, que Esteves recoge con
+      ironía en la p. 73 y que cc.6 manda retirar como etimología por el
+      latín. Juri 'viento' descansa, entero, en tres etimologías de un
+      cronista de 1989.
+
+  ebo:
+    zavala: [117]
+    esteves:
+      paginas: [35, 38, 39, 47, 105]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Curaidebo «el paso del Curarí… Ebo: camino, paso, senda» (p. 35),
+        Gisebo (p. 38), Guacurebo «por el sufijo ebo» (p. 39), Jurijurebo
+        «paso, ruta, valle estrecho, cañón» (p. 47) y Cumarebo (p. 105).
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 66, dice: '#75 Cazebo (GC) «Poniente» = cazi (GC) «sol» + -ebo: «el camino del sol» es partición NUESTRA (campaña del nominalizador, 2026-09-21)', estado: analisis-nuestro}
+      - {obra: oliver-1989-apendice-a, pagina: 594, dice: 'A-9 #36 guacurebo «quebrada que crece», sin partir (= Zavala #129 HB)', estado: forma-sin-glosa}
+      - {obra: zavala-reyes-2015, pagina: 71, dice: '#261 Turijerebo (AM) «Lugar de descanso», sin partir', estado: forma-sin-glosa}
+      - {obra: castellanos-elegias, pagina: null, dice: '«Hurehurebo» (1589), sin glosa', estado: forma-sin-glosa}
+    nota: >-
+      La FORMA -ebo está en cuatro fuentes que no son Esteves, y en una de
+      ellas (Cazebo, Galeotto Cey, s. XVI) la lectura 'camino' encaja. La
+      GLOSA es de Esteves. Es exactamente lo que el canon llama reconstruido.
+
+  kari:
+    zavala: [66]
+    esteves:
+      paginas: [28]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Sólo en la p. 28, partiendo dos nombres: Cariguariana («Cari: orilla de
+        mar») y Carirubana («Cari: orilla. Bana: sitio alto»).
+    otras_atestaciones:
+      - {obra: van-buurt-2014, pagina: '§9 Cariatavo', dice: '«cari means coast, shore (Cruz Esteves, 1989)»', estado: copia-de-esteves}
+    nota: >-
+      La nota del lexicón ya daba a van Buurt «vía» Esteves: es la misma
+      fuente dos veces. Y es la voz que D9 usó para decir que -bana no es
+      'orilla' («la costa atestiguada es kari»): las dos glosas, bana 'cerro'
+      y cari 'orilla', salen de la MISMA línea de Esteves.
+
+  ure:
+    zavala: [272]
+    esteves:
+      paginas: [11, 18, 22]
+      verificado: ocr
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Abudure (p. 11: «ure… quiere decir: raíz en nuestra primitiva lengua»,
+        y que está en muchos topónimos de Paraguaná) y Babahuro (p. 18, 'el
+        caño de las raíces'). En la p. 22, a propósito de Baraivere, trae el
+        único paralelo que da en todo el libro: el pueblo GUARANÍ «Uretebere»
+        de Cabeza de Vaca, «Ure: raíz; Bere: amargo». En Parte II lo repite
+        en Camurujure (p. 94) y Guaimure (p. 112).
+    otras_atestaciones:
+      - {obra: van-buurt-2014, pagina: '§5', dice: '-ure «which according to Cruz Esteves (1989) means root»', estado: copia-de-esteves}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9: bisure lagartija, chaure búho: -ure sobre animales, ni raíz ni lugar', estado: otro-referente}
+    nota: >-
+      El único apoyo que no es un topónimo es un topónimo guaraní. El
+      conflicto con -are/-ure 'sitio de' (morfema-002) enfrenta, en rigor,
+      a Esteves consigo mismo.
+
+  tuba:
+    zavala: [253]
+    esteves:
+      paginas: [64, 73]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        p. 64: Todariquiba no significaría nada, pero «Tubariquiba» —la forma
+        que él propone en lugar de la de Castellanos— sería 'pedregal':
+        «Tuba: aglomeración. Quiba: pedruzco»; y Tubarao, «Tuba: montón».
+        p. 73 (apéndice): el «cuar» cumanagoto de Caulín «tiene el mismo
+        significado del tuba de los caquetíos».
+    otras_atestaciones: []
+    nota: >-
+      La glosa nace de ENMENDAR un nombre atestiguado (Todariquiba, Castellanos
+      1589) para que dé una etimología.
+
+  rao:
+    zavala: [219]
+    esteves:
+      paginas: [64, 92]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        p. 64, Tubarao: «Rao: arena (r sencilla)». p. 92, Cabarao: «de la
+        parte desinencial rao, sabemos que significa: aglomeración». Esteves
+        se contradice: arena en una página, aglomeración en otra.
+    otras_atestaciones: []
+
+  siwa:
+    zavala: [227]
+    esteves:
+      paginas: [23]
+      verificado: ocr
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Barisigua, p. 23: «Bari-sigua: palo blando; bara: árbol. Sigua:
+        blando». Lo repite sin partir en la Parte II (p. 88).
+    otras_atestaciones: []
+    nota: 'La clave `siwa` tiene además el homónimo siwa-2 «sal de comercio» (lokono): no se toca.'
+
+  naure:
+    zavala: [186]
+    esteves:
+      paginas: [37]
+      verificado: imagen
+      clase: dice-en-caquetio
+      lo_que_dice: >-
+        Chunaure, p. 37: Chunaure es apellido; «en lengua caquetía "ñaure" es
+        planta bejucosa, y "naure", es jojoto».
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 226, dice: 'NÁURA «fruto en cierne del maíz»: es la OTRA acepción (#185 naure «jojoto»), no la del lexicón', estado: otro-referente}
+    nota: >-
+      ⚠️ La entrada `naure` del lexicón lleva la glosa de ÑAURE (#186, 'planta
+      bejucosa'); #185 Naure es 'jojoto', y ésa sí tiene un testigo fuera de
+      Esteves (Alvarado, náura). Corregir la glosa es curación, no esta
+      campaña: queda propuesto en la medición.
+
+  waru:
+    zavala: [143]
+    esteves:
+      paginas: [42]
+      verificado: imagen (esteves_paginas_releidas_2026-09-16.yaml; la p. 42 está escaneada boca abajo)
+      clase: dice-en-caquetio
+      lo_que_dice: >-
+        Guaruguaja, p. 42: «Guar[a], en caquetío, es el voltúrido que llamamos
+        cunareja, ave mayor que el zamuro». La saca del topónimo, que él lee
+        como plural por duplicación (guaraguara).
+    otras_atestaciones: []
+    nota: >-
+      Zavala escribe «Guaru» y «cataneja»: la cabecera impresa vacila
+      (GUARUGUAJA / Guaraguaja) y «cunareja» se leyó mal. La voz del lexicón
+      hereda la forma de la cabecera, no la del cuerpo.
+
+  waranao:
+    zavala: [140]
+    esteves:
+      paginas: [41]
+      verificado: imagen
+      clase: no-esta
+      lo_que_dice: >-
+        La entrada GUARANAO (p. 41) describe la salina de Punta Cardón, la fama
+        de su sal para los ojos (citando a Hill Peña) y la Zona Franca. NO
+        glosa la voz: no dice «salado» ni «ácido». La búsqueda en las dos
+        partes del OCR da la voz sólo en esta página.
+    otras_atestaciones:
+      - {obra: arcaya-1920, pagina: null, dice: 'las salinas «más importantes son las de Guaranao»: el topónimo, sin glosa', estado: forma-sin-glosa}
+    nota: >-
+      «Salado, ácido» parece inferido del referente (una salina), por Zavala o
+      por otra obra de Esteves que no está en el repo. Y es la voz que
+      `prompt_reglas_breve` pone de EJEMPLO de verbo estativo a los 63.
+
+  aka:
+    zavala: [3]
+    esteves:
+      paginas: [83, 105]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Sólo en la Parte II: Acaca, Acarite y Acatuto (p. 83: «Aca: bejuco;
+        uto: quebrada»). En la p. 105 da «aca: par, casal, pareja»: la misma
+        forma con dos glosas.
+    otras_atestaciones: []
+
+  tubarao:
+    zavala: [254]
+    esteves:
+      paginas: [64]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Tubarao, p. 64: «significa arenales. Tuba: montón. Rao: arena».'
+    otras_atestaciones: []
+    nota: 'Es un TOPÓNIMO (lugar cerca de Santa Ana) que el lexicón tiene como voz común.'
+
+  jachos:
+    zavala: [169]
+    esteves:
+      paginas: [33]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: >-
+        Cunacho, p. 33: del cunaro «extraían manteca para untar los "jachos",
+        teas de madera… para encandilar en labores de pesca nocturna». La
+        palabra va ENTRE COMILLAS y Esteves no la da por indígena.
+    otras_atestaciones: []
+    castellano_probable: >-
+      «Jacho» es, con la h aspirada que conserva el habla de la península, el
+      castellano «hacho» 'tea, manojo encendido para alumbrar' (DRAE, fuera
+      del repo: verificar antes de fusionar). Ni Alvarado 1921 ni el dictado
+      de Medina la traen como voz indígena.
+    forzar_B: caquetío-hipotético
+    razon_forzar_B: >-
+      Por la clase le tocaría retroabstraído, pero una voz viva CASTELLANA no
+      es retroabstracción de nada. Lo mínimo es hipotético; si Miguel
+      confirma «hacho», es una reasignación a español como la de caraota
+      (D10), y es decisión aparte.
+
+  saruro:
+    zavala: [224]
+    esteves:
+      paginas: [60, 131]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: >-
+        Sarinao (p. 60): el «Cerro del Saruro» es lindero de tierras comuneras,
+        y saruro es una serpiente no venenosa, la boa. El Saruro (p. 131).
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 273, dice: 'SARÚRA «Boa constrictor», sin localizar', estado: independiente-fuera-del-area}
+
+  wanepe:
+    zavala: [137]
+    esteves:
+      paginas: [39]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Guachunepe, p. 39: viene de guanepe, cesto de fibra para cargar a los recién nacidos.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 152, dice: 'GUANÉPE, el cabestrillo para los niños «en Barcelona y Guayana»', estado: independiente-fuera-del-area}
+
+  kuna:
+    zavala: [95]
+    esteves:
+      paginas: [33, 44]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Cunacho (p. 33): cuna, cunaro, pez lábrido que abunda en el Golfete; Iticuna (p. 44).'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 102, dice: 'CUNA «Promicrops guasa», pez de las costas de Cumaná', estado: independiente-fuera-del-area}
+
+  kunaro:
+    zavala: [96]
+    esteves:
+      paginas: [33]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Cunacho, p. 33, junto a cuna.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 102, dice: 'CUNÁRO «Mesoprion sp., pez del mar Caribe»', estado: independiente-fuera-del-area}
+
+  karapa:
+    zavala: [65]
+    esteves:
+      paginas: [27, 98]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Cararapa (p. 27), «forma epentética de carapa, árbol resinoso»; Carapa (p. 98).'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 60, dice: 'CARAPA «Carapa guianensis», árbol de todo el país', estado: independiente-fuera-del-area}
+
+  karuka:
+    zavala: [67]
+    esteves:
+      paginas: [28, 49]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Caruca (p. 28): hierba áspera para la torta de barro de los techos; Machuruca (p. 49).'
+    otras_atestaciones: []
+
+  kaseto:
+    zavala: [68]
+    esteves:
+      paginas: [30]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Caseto (p. 30): planta herbácea de las malvas espigadas, Malvastrum spicatum.'
+    otras_atestaciones:
+      - {obra: medina-colina-sxx, pagina: 65, dice: 'caseto, planta silvestre de los montes (dictado 2026-09-01)', estado: independiente-fuera-del-area}
+    nota: 'Medina documenta la VOZ viva en Paraguaná; no dice que sea caquetía (por eso cuenta como voz, no como atestación caquetía).'
+
+  kaujaro:
+    zavala: [72]
+    esteves:
+      paginas: [30, 100]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Caujarito (p. 30), diminutivo de caujaro, Cordia; Caujaro (p. 100), la glosa de Zavala palabra por palabra.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 73, dice: 'CAUJÁRO, varios árboles del género Cordia, sin localizar', estado: independiente-fuera-del-area}
+      - {obra: van-buurt-2014, pagina: '§6', dice: '«in Venezuela it is called caujaro» (Cordia dentata)', estado: independiente-fuera-del-area}
+
+  kayude:
+    zavala: [73]
+    esteves:
+      paginas: [30, 100]
+      verificado: imagen (p. 30 en esteves_paginas_releidas_2026-09-16.yaml)
+      clase: voz-viva
+      lo_que_dice: 'Cayude (pp. 30 y 100): árbol anonáceo, turagua.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 75, dice: 'CAYÚDE «Anona palustris»; «cayure» es la forma de Puerto Rico', estado: independiente-fuera-del-area}
+    nota: 'El paralelo taíno (cayure) es material para D11 fase 3, no una atestación caquetía.'
+
+  chipare:
+    zavala: [82]
+    esteves:
+      paginas: [108, 117]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Ipare (p. 117): «aféresis de chipare, matapalo». En Chipare (p. 108) no glosa.'
+    otras_atestaciones:
+      - {obra: arcaya-1920, pagina: null, dice: 'cipare/chipare quizá nuarhuaco, «significando piedra» (conjetura sobre un nombre de tribu)', estado: otro-referente}
+
+  kurari:
+    zavala: [97]
+    esteves:
+      paginas: [33, 35, 106]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Curaidebo (p. 35): «Curarí: árbol maderable, tecoma»; la madera de los jachos (p. 33).'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 105, dice: 'CURARÍ, árbol de la región occidental «(Barquisimeto, Zulia)»', estado: independiente-fuera-del-area}
+
+  dibidibe:
+    zavala: [112]
+    esteves:
+      paginas: [23, 76, 110]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Bibidure (p. 23): dividive, árbol leguminoso tintóreo; Dividive (p. 110), la glosa de Zavala entera.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 132, dice: 'DIVIDÍVE «Caesalpinia coriaria», de todo el país', estado: independiente-fuera-del-area}
+      - {obra: medina-colina-sxx, pagina: null, dice: 'el dividive como materia prima de exportación (mc-mundo-021)', estado: independiente-fuera-del-area}
+
+  wako:
+    zavala: [126]
+    esteves:
+      paginas: [14, 38]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Aguaque (p. 14): viene de guaco, portulácea, pasto codiciado por las cabras.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 142, dice: 'GUACO es una Aristolochia (otra planta)', estado: otro-referente}
+
+  warataro:
+    zavala: [141]
+    esteves:
+      paginas: [41]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Guarataro (p. 41): barro de loza gomoso para budares y ollas; abunda en el lugar.'
+    otras_atestaciones:
+      - {obra: medina-colina-sxx, pagina: null, dice: 'la tierra de grano que se une al barro de loza (dictado 2026-09-07)', estado: independiente-fuera-del-area}
+      - {obra: alvarado-1921, pagina: 156, dice: 'GUARATARO es una gramínea (Eleusine indica)', estado: otro-referente}
+
+  wariana:
+    zavala: [142]
+    esteves:
+      paginas: [28]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Cariguariana (p. 28): guariana, arbusto halófilo, «tabaco pescador».'
+    otras_atestaciones: []
+
+  huaymujo:
+    zavala: [158]
+    esteves:
+      paginas: [43]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Imujo (p. 43): aféresis de huaymujo, pequeño cangrejo.'
+    otras_atestaciones: []
+
+  judereke:
+    zavala: [177]
+    esteves:
+      paginas: [47]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Juderecal (p. 47): colectivo de judereque, árbol ramoso parecido al chiguare.'
+    otras_atestaciones: []
+
+  take:
+    zavala: [236]
+    esteves:
+      paginas: [61, 132]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Tacal y Tacaduto (p. 61): taque, árbol nucífero.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 284, dice: 'TAQUE, nogal «del E. Lara», usado en Apure y Portuguesa', estado: independiente-fuera-del-area}
+
+  tauta:
+    zavala: [244]
+    esteves:
+      paginas: [62]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Tausabana (p. 62): tauta, palomita de hábitos ictiófagos que baja en bandadas a las albuferas.'
+    otras_atestaciones: []
+
+  tiwa:
+    zavala: [246]
+    esteves:
+      paginas: [63, 134]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Tiguadare (p. 63): tigua, árbol rutáceo.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 290, dice: 'TÍGUA «Amyris sylvatica», Carabobo', estado: independiente-fuera-del-area}
+
+  tigi:
+    zavala: [247]
+    esteves:
+      paginas: [63]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Ticuí (p. 63): «Tigüí y no Ticuí» es una palomita que se alimenta de peces.'
+    otras_atestaciones: []
+
+  tijua:
+    zavala: [248]
+    esteves:
+      paginas: [38, 63]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Tijuro (p. 63): «se nos ha informado» que viene de tijua, paloma de canto onomatopéyico, con una copla.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 290, dice: 'TIJÚA, paloma «E. Lara», nombre imitativo del canto, con LA MISMA copla (Montesinos)', estado: independiente-fuera-del-area}
+    nota: 'La copla que Esteves dice haber recogido está impresa en Alvarado 1921: la cadena es Alvarado → Esteves.'
+
+  tuturutos:
+    zavala: [264]
+    esteves:
+      paginas: [66]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Tutubacoa (p. 66): «hemos obtenido dos informaciones»; tuturutos, hierba de savia emética que cuaja el queso.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 303, dice: 'TUTURUTÚ, planta «de Lara y Carabobo» de látex emético', estado: independiente-fuera-del-area}
+      - {obra: medina-colina-sxx, pagina: 288, dice: 'tuturutos (dictado 2026-09-08)', estado: independiente-fuera-del-area}
+
+  karama:
+    zavala: [64]
+    esteves:
+      paginas: [98]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Caramabure (p. 98): raíz de las caramas, «raíz de la ramazón».'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 57, dice: 'CARAMA, palizada que traen las crecientes, «del Bajo Llano»', estado: independiente-fuera-del-area}
+
+  warakaro:
+    zavala: [138]
+    esteves:
+      paginas: [114]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Guaracaro (p. 114): planta anual de grano alimenticio, tapirama silvestre.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 154, dice: 'GUARACÁRO «Dolichos lablab», sin localizar', estado: independiente-fuera-del-area}
+
+  gika:
+    zavala: [150]
+    esteves:
+      paginas: [43]
+      verificado: imagen (lote del 2026-09-22)
+      clase: voz-viva
+      lo_que_dice: 'Güica (p. 43): «otro nombre indígena» del árbol que llaman yabo.'
+    otras_atestaciones: []
+
+  # ═══ SÓLO (E), pero con otra fuente de la misma voz ═══════════════════
+
+  igi:
+    zavala: [164]
+    esteves:
+      paginas: [117]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Iguy (p. 117): «igüí: árbol, matapalo, paují» — la glosa de Zavala entera.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 175, dice: 'IGÜÍ «Bumelia buxifolia… Paují, Malarmo. Coro.»', estado: independiente-verificada}
+    nota: 'Esteves toma el «paují» de Alvarado: la sinonimia es la misma.'
+
+  waka:
+    zavala: [123]
+    esteves:
+      paginas: [111]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Guaca (p. 111), un río del Distrito Silva: «(Guaca: ave, cotorra)».'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 139, dice: 'GUACA, guacamaya, «Us. en Occ.»; en baré guákka', estado: independiente-verificada}
+      - {obra: oliver-1989-apendice-a, pagina: 594, dice: 'A-9 #39 guaro «cotorra» (otra forma)', estado: otro-referente}
+    nota: '«Occ.» es, en la tabla de Alvarado, Zulia, Falcón, Lara y Yaracuy. El baré es arahuaco.'
+
+  kapo:
+    zavala: [59]
+    esteves:
+      paginas: [26]
+      verificado: ocr
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Capuhana (p. 26): «Capó: duende, ente sobrenatural», espíritu protector de los árboles.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 66, dice: '#60 Capu (HB) «Demonio», con la pronunciación «cap» de Galeotto Cey, y #61 Capubana (HB) «Duende del cerro»: la misma voz', estado: independiente-sigla}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9 #16 Capú «spirit, goblin» (leyenda moderna de Santa Ana)', estado: independiente-verificada}
+    nota: '`kapo` y `kapu` son la misma voz con dos claves: fusión pendiente de D5, no de esta campaña.'
+
+  # ═══ SÓLO (E) en su glosa, corroborada por una forma que no es suya ═════
+
+  bara:
+    zavala: [29]
+    esteves:
+      paginas: [19, 22, 88]
+      verificado: ocr
+      clase: dice-en-caquetio
+      lo_que_dice: >-
+        Barabara (p. 19): «Sabemos que Bara, en lengua caquetía, es voz general
+        para… árbol», y a continuación toma de Alvarado que barabara es un
+        árbol, «plural por duplicación». Lo repite en Baraived (p. 22) y
+        Bariquí (p. 88).
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 21, dice: 'BARABARA, «Árbol de Coro» (Clavija): la forma reduplicada, sin partir — la partición es de Esteves', estado: analisis-nuestro}
+      - {obra: van-buurt-2014, pagina: '§5', dice: '«bara means tree in Caquetío», en el párrafo que cita a Esteves', estado: copia-de-esteves}
+    nota: >-
+      La nota del lexicón dice «con Esteves 1989 y van Buurt 2014 diciendo lo
+      mismo»: son uno. La cita de barabara (Zavala #30, A) es otra voz, que el
+      lexicón ya tiene aparte; lo que la hace apoyo es la reduplicación, que
+      es análisis. El lokono balli 'árbol' la acerca a reconstruido.
+
+  # ═══ (E) MÁS OTRA SIGLA: se sostienen sin la doble cuenta ══════════════
+
+  kiba:
+    zavala: [218, 92]
+    esteves:
+      paginas: [24, 45, 57, 64]
+      verificado: ocr
+      clase: dice-en-caquetio
+      lo_que_dice: 'Jadacaquiva (p. 45): «quiba en caquetío es pedruzco»; Buchaquiva (p. 24), Quibarute (p. 57).'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 67, dice: '#92 Cuiva. Kiba (PMA) «Piedra»', estado: independiente-sigla}
+      - {obra: van-buurt-2014, pagina: '§8 Casibari', dice: 'siba o quiba «stone», sin cita', estado: independiente-sigla}
+
+  kumarawa:
+    zavala: [93]
+    esteves:
+      paginas: [33]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Cumaraguas (p. 33): cangrejito de caparazón rosada; «me han informado» que significa espuma rosada.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 67, dice: '#93 (HB)', estado: independiente-sigla}
+      - {obra: alvarado-1921, pagina: 102, dice: 'CUMARAGUA «especie de caracol de las costas de Paraguaná» (la glosa del lexicón)', estado: independiente-verificada}
+
+  para:
+    zavala: [190]
+    esteves:
+      paginas: [56]
+      verificado: imagen
+      clase: dice-en-caquetio
+      lo_que_dice: 'Paraguaná (p. 56): «Está suficientemente averiguado que Para significa agua».'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 69, dice: '#190 (HP) — Aníbal Hill Peña, a quien Esteves cita (p. 41)', estado: independiente-sigla}
+      - {obra: zavala-reyes-2015, pagina: 69, dice: '#191 Paragua (GC) «Mar», Galeotto Cey, s. XVI', estado: independiente-sigla}
+
+  dara:
+    zavala: [102]
+    esteves:
+      paginas: [12, 13]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Adaro (p. 12): dara, ave vocinglera de las sabanas, el alcaraván.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 67, dice: '#102 (HB)', estado: independiente-sigla}
+      - {obra: medina-colina-sxx, pagina: null, dice: 'dara, el ave de los campos (dictado)', estado: independiente-verificada}
+
+  waranaro:
+    zavala: [139]
+    esteves:
+      paginas: [41]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Guaranao (p. 41): «Guaranaro es un pez más pequeño que la lisa» — no la lisa.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 68, dice: '#139 (HB) «Pez lisa»', estado: independiente-sigla}
+      - {obra: oliver-1989-apendice-a, pagina: 594, dice: 'A-9 #38 guaranaro «pez lisa»', estado: independiente-verificada}
+      - {obra: van-buurt-2014, pagina: '§6', dice: 'guaranaro, el pescado salado que llega de Paraguaná', estado: independiente-verificada}
+
+  ako:
+    zavala: [4]
+    esteves:
+      paginas: [24, 39, 51, 105]
+      verificado: ocr
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Buchuhaco (p. 24) «aco: par, casal, pareja»; Guachaco (p. 39) «aco: dos, par»; Michaco (p. 51).'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 65, dice: '#4 (AM): la entrada mezcla «Comida» y «Par»; la acepción «par, dos» es la de Esteves', estado: independiente-sigla}
+    nota: 'La voz se sostiene por AM; la acepción «par, dos» —la que usan los topónimos— es sólo de Esteves.'
+    acepcion_solo_de_esteves: 'par, dos'
+
+  bakoa:
+    zavala: [18]
+    esteves:
+      paginas: [25, 33, 39]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Caibacoa (p. 25), Cumujacoa (p. 33) «Bacoa: lugar», Guaidabacoa (p. 39).'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 65, dice: '#18 (AM)', estado: independiente-sigla}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9 #1 adabacoa, Relación de Barquisimeto 1579: «todos árboles»', estado: independiente-verificada}
+
+  bisure:
+    zavala: [41]
+    esteves:
+      paginas: [90]
+      verificado: imagen (canon, toponimo-179)
+      clase: voz-viva
+      lo_que_dice: 'La Cuesta de los Bisures (p. 90): «bisure: lagarto común».'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 66, dice: '#41 (HB)', estado: independiente-sigla}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9 #8 bisure «lagartija»', estado: independiente-verificada}
+
+  buche:
+    zavala: [45]
+    esteves:
+      paginas: [23, 24]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Bibuche y Buchaquiva (pp. 23-24): buche, melocacto, cardo globoso rastrero.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 66, dice: '#45 (AM)', estado: independiente-sigla}
+      - {obra: alvarado-1921, pagina: 34, dice: 'BUCHE «Melocactus communis… Voz usada en Occ.»', estado: independiente-verificada}
+
+  kakuro:
+    zavala: [54]
+    esteves:
+      paginas: [92]
+      verificado: imagen
+      clase: voz-viva
+      lo_que_dice: 'Cacuro (p. 92): pequeña avispa negra de picadura dolorosa.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 40, dice: 'CACURO «En Coro significa avispero»', estado: independiente-verificada}
+
+  kaketillo:
+    zavala: [63]
+    esteves:
+      paginas: [96]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Caquetillo (p. 96): árbol de buena madera, y «voz afín de caquetío, según Lisandro Alvarado» — Esteves copia a Alvarado.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 56, dice: 'CAQUETILLO «Árbol de construcción del Zulia. ¿Voz afín de caquetío?»', estado: independiente-sigla}
+    nota: 'La sigla A se cuenta como la ha contado siempre el canon; lo que dice (Zulia, con interrogación) es deuda de otra campaña.'
+
+  chaure:
+    zavala: [81]
+    esteves:
+      paginas: [36]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Chaure (p. 36): otro nombre indígena del cegue, lechuza que anida en cuevas de arena.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 67, dice: '#81 (HB)', estado: independiente-sigla}
+      - {obra: alvarado-1921, pagina: 116, dice: 'CHÁURE, lechuza (Strix)', estado: independiente-verificada}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9 #26 chaure «búho»', estado: independiente-verificada}
+
+  dabuda:
+    zavala: [99]
+    esteves:
+      paginas: [11, 37]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Abudure (p. 11): dabuda, el barro de loza de la cerámica local; Dabadubare (p. 37).'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 67, dice: '#99 (HB) y #100 Dabudare (HB) «Sitio de extracción de barro»', estado: independiente-sigla}
+
+  wache:
+    zavala: [125]
+    esteves:
+      paginas: [39]
+      verificado: ocr
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Guachaco (p. 39): «guache: zorro».'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 68, dice: '#125 (AM)', estado: independiente-sigla}
+      - {obra: alvarado-1921, pagina: 145, dice: 'GUACHE es el coatí (Nasua), no el zorro', estado: otro-referente}
+
+  wamacho:
+    zavala: [134]
+    esteves:
+      paginas: [61, 113]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Supí (p. 61): el guamacho, Pereskia; Guamacho (p. 113): árbol cactáceo.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 148, dice: 'GUAMÁCHO, varias Pereskia', estado: independiente-sigla}
+
+  way:
+    zavala: [147]
+    esteves:
+      paginas: [25, 112]
+      verificado: ocr
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Caibacoa (p. 25): «cai es una alteración de guay, árbol parecido a la ceiba».'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 145, dice: 'GUÁI (el OCR lee «GUÁL»): Bombax, ceiba, «voz usada en Coro»', estado: independiente-verificada}
+
+  piritu:
+    zavala: [199]
+    esteves:
+      paginas: [19, 83]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Sólo como topónimo (Píritu, Distrito Zamora).'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 253, dice: 'PÍRITU «Bactris piritu», palmera', estado: independiente-sigla}
+      - {obra: zavala-reyes-2015, pagina: 70, dice: '#199 (AM)', estado: independiente-sigla}
+
+  kiwa:
+    zavala: [214]
+    esteves:
+      paginas: [49, 128]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Maquigua (p. 49): quigua, concha de almeja; Quigua (p. 128): crustáceo.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 70, dice: '#214 (AM)', estado: independiente-sigla}
+      - {obra: alvarado-1921, pagina: 260, dice: 'QUÍGUA «Turbo pica»', estado: independiente-verificada}
+      - {obra: van-buurt-2014, pagina: '§6', dice: 'kiwa, el caracol de Curazao', estado: independiente-verificada}
+
+  sibidiwa:
+    zavala: [226]
+    esteves:
+      paginas: [57, 60]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Sabarigua y Sibidigual (pp. 57, 60): sibidigua, arbusto euforbiáceo.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 277, dice: 'SIBIDÍGUA «Jatropha gossypifolia… Voz us. en Lara y Falcón»', estado: independiente-verificada}
+
+  yabo:
+    zavala: [278]
+    esteves:
+      paginas: [43, 67]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Güica (p. 43) y Yauquiba (p. 67): el yabo, árbol resinoso.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 307, dice: 'YABO «Cercidium viride»', estado: independiente-sigla}
+      - {obra: medina-colina-sxx, pagina: 305, dice: 'yabo, árbol de madera dura (dictado)', estado: independiente-verificada}
+
+  yakure:
+    zavala: [281]
+    esteves:
+      paginas: [67]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Yacure (p. 67): árbol leguminoso de hojas perennes, una acacia.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 72, dice: '#281 (AM)', estado: independiente-sigla}
+      - {obra: alvarado-1921, pagina: 308, dice: 'YACÚRE, Acacia sp.', estado: independiente-sigla}
+
+  lawari:
+    zavala: [182]
+    esteves:
+      paginas: [36, 49]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Laguarí (p. 49): árbol espinoso, una acacia; «también le dicen: laguadri».'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 69, dice: '#182 (A) (PMA); en el texto de Alvarado del repo el lema no aparece (regla 6: sin verificar)', estado: independiente-sigla}
+
+  tukeke:
+    zavala: [257]
+    esteves:
+      paginas: [136]
+      verificado: ocr
+      clase: voz-viva
+      lo_que_dice: 'Tuqueque (p. 136, Parte II): lagarto casero.'
+    otras_atestaciones:
+      - {obra: alvarado-1921, pagina: 300, dice: 'TUQUÉQUE, geco', estado: independiente-sigla}
+    nota: 'Ya es retroabstraída desde el reparto del 2026-09-10: no cambia.'
+
+# ── LOS AFIJOS ────────────────────────────────────────────────────────────
+afijos:
+  '-iro':
+    donde: REGLAS_ZAVALA (se enseña)
+    zavala: [166]
+    esteves:
+      paginas: [88, 104]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Bariro (p. 88): «La desinencia "iro" es diminutivo de voces
+        indígenas»; Coroquidiro (p. 104): «sólo conocemos la desinencia iro,
+        que es diminutivo». Los dos topónimos son de la Parte II (distritos
+        Buchivacoa); dice «voces indígenas», no «caquetío».
+    otras_atestaciones: []
+  '-uco':
+    donde: REGLAS_ZAVALA (se enseña, con -uto como variante)
+    zavala: [268]
+    esteves:
+      paginas: [31, 51, 57, 61, 66, 83, 128]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Coduto (p. 31): «El sufijo uto y uco, indistintamente lo hemos hallado
+        formando voces compuestas» con el valor de quebrada. Es inducción suya
+        desde Matuto (p. 51), Quibarute (p. 57), Tacaduto (p. 61),
+        Urupaguaduco (p. 66), Acatuto (p. 83) y Quebrahuto (p. 128, «vocablo
+        híbrido de español y caquetío»).
+    otras_atestaciones:
+      - {obra: van-buurt-2014, pagina: null, dice: 'cero: ni -uco ni -uto', estado: forma-sin-glosa}
+  '-ima':
+    donde: REGLAS_ZAVALA (se enseña)
+    zavala: [165]
+    esteves:
+      paginas: [93, 105]
+      verificado: imagen
+      clase: dice-en-caquetio
+      lo_que_dice: >-
+        Camachima (p. 93): la desinencia «ima», que significa humedad en
+        caquetío, está en muchos topónimos de los distritos orientales;
+        Curairima (p. 105): «irima: humedad».
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 68, dice: '#165 (PMA); en Arcaya 1920 la desinencia da cero: la obra de Arcaya de la que sale no está en el repo', estado: independiente-sigla}
+      - {obra: van-buurt-2014, pagina: '§10 Onima', dice: '«Caquetío ima, nima means wet, humid (Cruz Esteves, 1989)»', estado: copia-de-esteves}
+    nota: >-
+      `lexicon_toponimos.py` (alaurima) dice «confirmado independientemente por
+      van Buurt §10 vía Onima»: van Buurt cita a Esteves.
+  'dito':
+    donde: AFIJOS_ZAVALA (no se enseña; lo usan los topónimos)
+    zavala: [111]
+    esteves:
+      paginas: [31, 41, 46]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: >-
+        Cocodite (p. 31, «en lengua indígena»), Guanadito (p. 41, «en
+        caquetío») y Jarayadito (p. 46, colectivo «abundancial»).
+    otras_atestaciones: []
+  '-bana':
+    donde: REGLAS_LOCATIVAS (se enseña; D9)
+    zavala: [26]
+    esteves:
+      paginas: [26, 28, 31, 32, 36, 47]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Seis topónimos «Bana: cerro, sitio alto» (Capuhana, Carirubana, Coabana, Cujíbano, Chichibana, Judibana).'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 66, dice: '#61 Capubana (HB) «Duende del cerro»', estado: independiente-sigla}
+      - {obra: null, pagina: null, dice: 'Guadadubana (González Batista), en la evidencia de D9 (REGLAS_LOCATIVAS)', estado: independiente-sigla}
+      - {obra: velasco-2015-resistencia, pagina: null, dice: 'el Cerro de Capú, en la evidencia de D9', estado: independiente-verificada}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9 #2 -bana «surrounding» (análisis de Oliver: otra glosa)', estado: otro-referente}
+  '-bakoa':
+    donde: REGLAS_TOPONIMICAS (se enseña)
+    zavala: [18]
+    esteves:
+      paginas: [25, 33, 39]
+      verificado: imagen
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Ver `bakoa`.'
+    otras_atestaciones:
+      - {obra: zavala-reyes-2015, pagina: 65, dice: '#18 (AM)', estado: independiente-sigla}
+      - {obra: oliver-1989-apendice-a, pagina: 593, dice: 'A-9 #1 adabacoa, Relación de 1579', estado: independiente-verificada}
+
+# ── LOS TOPÓNIMOS DEL CANON (A y B) CON UNA PIEZA SÓLO DE ESTEVES ─────────
+# El script los detecta solo (piezas = claves de `morfemas` y tokens de
+# `segmentacion`); aquí va el VEREDICTO, con la regla del lote del
+# 2026-09-22: A = cada pieza en otra fuente; B = una pieza independiente más
+# otra sólo de Esteves pero recurrente, o A con un residuo; C = ninguna pieza
+# independiente, o las dos debilidades a la vez.
+toponimos:
+  toponimo-001:
+    forma: jurijurebo
+    propuesta: C
+    razon: >-
+      Las dos piezas (juri, ebo) son sólo de Esteves, y la glosa del topónimo
+      también: Zavala #179 (E) «Paso de los vientos» es Esteves p. 47. Lo que
+      no cambia es la ciudad: «Hurehurebo» está en Castellanos (1589) y
+      Esteves reporta cementerio con urnas.
+  toponimo-004:
+    forma: cumarebo
+    propuesta: C
+    razon: >-
+      Zavala #94 (E) «Camino del cacique Cumare» es Esteves p. 105 («el camino
+      del cacique Cumare: paso, senda y cumare, el cacique»). La razón del
+      canon —«segunda atestación independiente de ebo (la otra es
+      jurijurebo)»— cuenta dos veces a Esteves.
+  toponimo-075:
+    forma: judibana
+    propuesta: B
+    razon: >-
+      bana se sostiene sin Esteves (HB, CGB, Velasco); judi/juri no, pero
+      recurre con la misma glosa en tres nombres (Judibana, Jurijurebo, Tura):
+      una pieza independiente más otra sólo de Esteves y recurrente = B.
+  toponimo-148:
+    forma: carirubana
+    propuesta: C
+    razon: >-
+      Ya era B por el residuo -ru-; ahora además cari es sólo de Esteves (dos
+      nombres de la misma página). Las dos debilidades a la vez: C. (La glosa
+      sí es de fuente —p. 28—, contra lo que dice el canon: corrección del
+      lote del 2026-09-22.)
+  toponimo-076:
+    forma: abudure
+    propuesta: B
+    razon: 'dabuda se sostiene (HB); ure es sólo de Esteves pero recurre (Abudure, Babahuro): B, como estaba.'
+  toponimo-086:
+    forma: buchuhaco
+    propuesta: B
+    razon: 'buche se sostiene (AM, Alvarado); «aco: par» es sólo de Esteves y recurre (Buchuhaco, Guachaco, Michaco): B, como estaba.'
+  toponimo-114:
+    forma: bariquí
+    propuesta: B
+    razon: 'bara pasa a reconstruida pero corroborada (barabara, Alvarado); quire es de Esteves y recurre: B, como estaba.'
+  toponimo-147:
+    forma: bariquire
+    propuesta: B
+    razon: 'Como bariquí.'
+  toponimo-143:
+    forma: guarataro
+    propuesta: B
+    razon: 'La razón del canon ya contaba bien: Esteves y Medina Colina, dos testigos de la voz viva.'
