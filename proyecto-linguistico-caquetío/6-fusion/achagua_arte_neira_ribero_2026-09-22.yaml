@@ -498,9 +498,9 @@ gilij_1780_1783:
   como_se_leyo: '`ocr_fuente.py` devolvió 391 de 457 páginas casi vacías (render de página entera a 300 ppp). Se rehízo
     el OCR sobre la IMAGEN incrustada (681×1174 JPX, ampliada 2× en gris, tesseract ita):
     fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt. Es pista: todo lo citado se verificó en imagen'
-  paginacion: 'el desfase NO es constante: pdf 101 = p. 82 y pdf 150 = p. 131 (−19), pero pdf 216-221 = pp. 201-206
-    (−15). El marcador «impresa» del .ocr.txt usa −19 en todo el tomo: vale para localizar, no para citar. Se cita
-    la página impresa leída en la cabecera de la imagen'
+  paginacion: 'el desfase NO es constante (medido en la cabecera de la imagen): −19 en pdf 101 y 150 (pp. 82, 131), −15
+    en pdf 216-221 (pp. 201-206), −13 en pdf 241 (p. 228), −11 en pdf 357 (p. 346) y −21 en pdf 431 (p. 410, las
+    notas). El marcador «impresa» del .ocr.txt usa −19 en todo el tomo: vale para localizar, no para citar'
   ortografia: '«Acciàgua» (con cc italiana y tilde), no «achagua»; la ſ larga sale f (ficha)'
   achagua:
     p: 205
@@ -531,7 +531,33 @@ gilij_1780_1783:
         essere, o stare.» Nunavà io veggo, pinavà tu vedi, navà quegli vede, uanavà noi veggiamo'
       nota: 'la misma arquitectura que el arte achagua: los verbos de estado («neutri») se conjugan como el verbo
         «ser». Tercera hermana con el corte activo/estativo'
-  caquetios: 'PENDIENTE: se escribe al terminar el OCR del tomo'
+  pronombres_achagua:
+    p: '345-346'
+    pdf: '356-357'
+    literal: '«Sorella pur loro, come accennai nel terzo libro della mia storia, sembrami la lingua Acciàgua; delle cui
+      voci non essendomi riuscito di averne molte per confrontarle, pongo solo i pronomi primitivi, affinchè si vegga
+      la similitudine con quelli de'' Maipuri. Nuja io, Gijà tu (1), Pijà quegli, Rujà quella, Guajà noi, Ijà voi, Najà
+      coloro.» Nota (1): la g, a la española'
+    verificado_en_imagen: si
+    contra_el_arte: 'coincide en seis de siete con los pronombres absolutos de Neira (p. 3: Nuya, Jia/Jiya, Ruya,
+      Guaya, Ja, Naya); DIFIERE en la 3sg masculina: Gilij «Pijà», Neira «Ria». No se decide cuál: una letra impresa
+      contra una manuscrita'
+    independencia: 'DUDOSA. Gilij sabía del manuscrito: «Il P. Gio. Ribero compose l''Acciàgua MS.» (Note, p. 410,
+      pdf 431, verificado en imagen). Que su «Pijà» difiera sugiere otra vía, pero no lo prueba: se cuenta como UNA
+      atestación con la de Neira hasta que se sepa de dónde la sacó (minar-fuente §8)'
+  caquetios:
+    que_se_busco: 'caquet-, cachet-, cacchet-, caiquet-; Coro; Curiana/Coriana; Paraguaná; Barquisimeto; guajiro, sin
+      tildes y sobre el OCR entero del tomo'
+    cifras: 'medicion_arte_achagua_2026-09-22.yaml §gilij_tomo_iii (aciertos por patrón, con su pdf, y cuántas páginas
+      salieron casi vacías)'
+    resultado: 'CERO CAQUETÍOS en el tomo III. El único acierto del patrón caquet- es una voz tamanaca (pdf 26,
+      «opicaccetpe»), y de los dos «Coro», uno es otra voz tamanaca («da Tamanachi dicesi Coro», la sarna; pdf 228,
+      leído sólo en OCR) y el otro la ciudad: en el apéndice sobre la lengua «Aitina» (taíno), Gilij dice que las voces
+      antillanas pasaron al castellano sobre todo desde el Nuevo Reino y Tierra Firme, pero que afirmar «che furon
+      pigliate … da quei di Cartagena, da quei di Coro, da quei del fiume della Maddalena» es «cosa se non impossibile,
+      difficilissima» (p. 228, impresa «128» por errata; pdf 241; verificado en imagen)'
+    alcance_del_cero: 'mide este OCR del tomo III, con las páginas casi vacías que da la medición; NO mide los tomos I
+      y IV, que no se leyeron'
 
 de_paso:
   - que: 'CIERRA LA CALIBRACIÓN DE JAHN. «león», la única de las 34 que quedó `no-esta` (el vocabulario no tiene lema

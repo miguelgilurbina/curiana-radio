@@ -197,6 +197,44 @@ def numerales():
     }
 
 
+GILIJ_OCR = os.path.join(RAIZ, "fuentes_caquetios", "Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt")
+# Patrones SIN tildes (el texto se compara sin marcas diacríticas) y con la ſ larga
+# que el OCR lee como f. «Acciàgua» es como Gilij escribe achagua; «Arnuàca» es como
+# el OCR leyó su «Aruàca» (p. 205): por eso la n opcional.
+PATRONES_GILIJ = {
+    "achagua (Acciagua)": r"acc?h?[ij]?agu",
+    "aruaca / lokono (Aruaca)": r"ar[n]?[uv]ac",
+    "maipure": r"maip[uv]r",
+    "caquetio (caquet-, cachet-, cacchet-, caiquet-)": r"ca[iy]?c?[cq]u?h?e[tf]",
+    "Coro": r"\bcoro\b",
+    "Curiana / Coriana": r"c[ou]rian",
+    "Paraguana": r"paraguan",
+    "Barquisimeto": r"barqui[fs]",
+    "guajiro / goajiro": r"g[uo]a[jg]ir",
+}
+
+
+def gilij():
+    if not os.path.exists(GILIJ_OCR):
+        return {"aviso": "no está el OCR del tomo III"}
+    t = open(GILIJ_OCR, encoding="utf-8").read()
+    t = "".join(c for c in unicodedata.normalize("NFD", t) if unicodedata.category(c) != "Mn")
+    paginas = len(re.findall(r"^=== pdf ", t, re.M))
+    cuerpos = re.split(r"^=== pdf \d+[^\n]*\n", t, flags=re.M)[1:]
+    vacias = sum(1 for c in cuerpos if len(c.strip()) < 300)
+    out = {"archivo": os.path.relpath(GILIJ_OCR, RAIZ).replace("\\", "/"), "paginas_ocr": paginas,
+           "paginas_casi_vacias_menos_de_300_caracteres": vacias,
+           "aviso": "OCR = pista. Cada acierto se mira en la imagen antes de citarlo; un cero mide este OCR",
+           "patrones": {}}
+    for rot, pat in PATRONES_GILIJ.items():
+        hits = []
+        for m in re.finditer(pat, t, re.I):
+            pdf = re.findall(r"^=== pdf (\d+)", t[: m.start()], re.M)
+            hits.append(int(pdf[-1]) if pdf else None)
+        out["patrones"][rot] = {"regex": pat, "aciertos": len(hits), "pdf": sorted(set(hits))}
+    return out
+
+
 def medir():
     capa = atestiguadas()
     return {
@@ -215,6 +253,7 @@ def medir():
         "sonda_nominalizadores": sonda_nominalizadores(capa),
         "trampa_kana": trampa_kana(),
         "numerales": numerales(),
+        "gilij_tomo_iii": gilij(),
     }
 
 
@@ -235,6 +274,9 @@ def main():
     print("numerales:", n["similitud_difflib"])
     print("nulo:", n["modelo_nulo"])
     print("am:", n["silaba_am"])
+    g = m["gilij_tomo_iii"]
+    for r, d in g.get("patrones", {}).items():
+        print(f"gilij {r}: {d['aciertos']} (pdf {d['pdf']})")
     if not a.check:
         with open(SALIDA, "w", encoding="utf-8") as fh:
             fh.write("# GENERADO por 6-fusion/scripts/medir_arte_achagua.py — no editar a mano\n")

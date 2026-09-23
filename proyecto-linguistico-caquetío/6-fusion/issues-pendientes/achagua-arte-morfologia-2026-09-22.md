@@ -108,7 +108,15 @@ imagen incrustada y lo citado se verificó en imagen. Detalle en el YAML
   «nuja io, pìa tu … uaja noi» (p. 186) y dos conjugaciones, activa y «passiva, la quale
   serve anche pe' neutri», ésta sacada del verbo «ser» (p. 187). Es la **tercera
   hermana con el corte activo/estativo** y la **primera no wayuu que da `pia`**.
-- **Caquetíos**: ver abajo, en la ficha (§ Gilij) — el cero medido o lo que haya.
+- **Pronombres achagua** (apéndice II, pp. 345-346): «Nuja io, Gijà tu, Pijà quegli,
+  Rujà quella, Guajà noi, Ijà voi, Najà coloro»: seis de siete como en Neira; la 3sg m.
+  difiere («Pijà» / «Ria»). Gilij conocía el manuscrito de Rivero (Note, p. 410): **no
+  cuenta como atestación independiente**.
+- **Caquetíos: cero en el tomo III**, medido sin tildes sobre el OCR entero
+  (`medicion_arte_achagua_2026-09-22.yaml` §gilij_tomo_iii). «Coro» sale una vez como
+  ciudad, de pasada, en el apéndice del taíno (p. 228): Gilij duda de que las voces
+  antillanas del castellano vinieran «da quei di Coro». Es para la campaña del taíno. Los
+  tomos I y IV no se leyeron.
 
 **Opción G — `pia` deja de ser «sólo wayuu»**: anotar en `morfologia.md` §1 que el maipure
 de Gilij da `pìa` «tú». No lo vuelve caquetío ni cambia su capa (sigue reconstruido), pero

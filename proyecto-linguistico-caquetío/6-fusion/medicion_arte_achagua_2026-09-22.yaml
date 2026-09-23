@@ -277,3 +277,135 @@ numerales:
       (juchAMa), lokono (biAMa), wayuu (piAMa) y caquetío (gudAMuen)'
     caquetio_atestiguado_pct: 6.0
     achagua_pct: 9.6
+gilij_tomo_iii:
+  archivo: fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt
+  paginas_ocr: 457
+  paginas_casi_vacias_menos_de_300_caracteres: 26
+  aviso: OCR = pista. Cada acierto se mira en la imagen antes de citarlo; un cero mide este OCR
+  patrones:
+    achagua (Acciagua):
+      regex: acc?h?[ij]?agu
+      aciertos: 4
+      pdf:
+      - 220
+      - 356
+      - 431
+      - 443
+    aruaca / lokono (Aruaca):
+      regex: ar[n]?[uv]ac
+      aciertos: 1
+      pdf:
+      - 220
+    maipure:
+      regex: maip[uv]r
+      aciertos: 134
+      pdf:
+      - 17
+      - 27
+      - 28
+      - 30
+      - 35
+      - 36
+      - 42
+      - 45
+      - 50
+      - 57
+      - 127
+      - 128
+      - 167
+      - 168
+      - 171
+      - 174
+      - 176
+      - 177
+      - 180
+      - 181
+      - 182
+      - 183
+      - 184
+      - 185
+      - 186
+      - 188
+      - 189
+      - 190
+      - 191
+      - 200
+      - 201
+      - 202
+      - 203
+      - 204
+      - 205
+      - 206
+      - 209
+      - 211
+      - 213
+      - 214
+      - 217
+      - 218
+      - 220
+      - 223
+      - 226
+      - 249
+      - 252
+      - 310
+      - 313
+      - 315
+      - 318
+      - 322
+      - 324
+      - 326
+      - 328
+      - 329
+      - 330
+      - 352
+      - 353
+      - 354
+      - 355
+      - 356
+      - 358
+      - 359
+      - 396
+      - 397
+      - 398
+      - 399
+      - 400
+      - 403
+      - 408
+      - 428
+      - 431
+      - 436
+      - 437
+      - 438
+      - 440
+      - 443
+      - 444
+      - 445
+      - 446
+      - 448
+    caquetio (caquet-, cachet-, cacchet-, caiquet-):
+      regex: ca[iy]?c?[cq]u?h?e[tf]
+      aciertos: 1
+      pdf:
+      - 26
+    Coro:
+      regex: \bcoro\b
+      aciertos: 2
+      pdf:
+      - 228
+      - 241
+    Curiana / Coriana:
+      regex: c[ou]rian
+      aciertos: 0
+      pdf: []
+    Paraguana:
+      regex: paraguan
+      aciertos: 0
+      pdf: []
+    Barquisimeto:
+      regex: barqui[fs]
+      aciertos: 0
+      pdf: []
+    guajiro / goajiro:
+      regex: g[uo]a[jg]ir
+      aciertos: 0
+      pdf: []
