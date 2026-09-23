@@ -1,0 +1,1518 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — La fauna de TIERRA de Paraguaná en el siglo XV (campaña FA1)
+#
+# Encargo de Miguel, 2026-09-22 (verbatim, en el preámbulo de la campaña):
+#   «otro agente que busque y mine todas las especies que conviven en La
+#    Península que podamos intuir que lo hacían en esa fecha […] y luego va a
+#    realizar una campaña para describirlos visualmente, y si es posible
+#    encontrar la onomatopeya que hacen, así le damos a los agentes una
+#    descripción y onomatopeya que "escuchar" por así decirlo.»
+# Y su decisión de la base (db.4, rama tanda/base-2026-09-22): los referentes
+#   empiezan por «los animales que no sabemos como se llamaban originalmente,
+#   por ejemplo La Tarantula azul, que si o si tuvo que ser una especie muy
+#   importante ya que es endémica de la Península».
+#
+# Regla 5: esto PROPONE. No toca el lexicón, ni 3-mundo/corpus/, ni el motor.
+# Parcela: tierra (mamíferos, reptiles, anfibios, arácnidos, miriápodos,
+# insectos, caracoles de tierra). Las aves son de FA2; el mar y las orillas
+# (cangrejos de tierra incluidos) de FA3.
+# Cifras de GBIF: 6-fusion/gbif_fauna_tierra_paraguana_2026-09-22.yaml,
+# GENERADO por 6-fusion/scripts/gbif_fauna_tierra_paraguana.py (regla 1: aquí
+# no se copian). Largos y claves: 6-fusion/scripts/verificar_fauna_tierra.py.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-22'
+  estado: sin-fusionar
+  quien: agente FA1 (Claude Opus 5.5), campaña de minería 3
+  rama: campana/fauna-tierra
+  pregunta: >-
+    ¿Qué animales de tierra vivían en Paraguaná (cardonal, médanos del istmo,
+    Cerro Santa Ana, salinas, conucos) en el s. XV, cómo se llaman en cada
+    lengua de la esfera, cómo se ven y cómo suenan — y cuáles no tienen voz
+    caquetía conocida y pueden ser referentes, empezando por la tarántula azul?
+  respuesta_corta: >-
+    La tarántula azul existe, está descrita y es de aquí: Chromatopelma
+    cyaneopubescens (Strand, 1907), localidad tipo «Paraguara» = Paraguaná, En
+    Peligro en el Libro Rojo 2015. Pero NO es endémica de la península en
+    sentido estricto: es endémica de VENEZUELA, y la península es su baluarte
+    (9 de 11 registros verificados; otros en Coro, en el municipio Colina y
+    cerca de Barquisimeto — Sherwood y Gianni-Zurita 2023). Estuvo en el s. XV
+    con seguridad (evolucionó en este monte seco), pero NINGUNA fuente del
+    repo ni de las leídas le da nombre, uso ni creencia: su importancia para
+    los caquetíos es una intuición de Miguel sin evidencia, y el referente no
+    la afirma. El hallazgo mayor de la campaña es otro: Oviedo (t. II, lib.
+    XXV, cap. XXII, pp. 330-331, verificado en imagen) inventaría la fauna de
+    tierra de la provincia de Venezuela hacia 1540 —venados «á manadas»,
+    conejos, osos hormigueros, «armados», «cories», perros mudos «que no
+    ladran», abejas sin aguijón criadas en calabazos, avispas de miel, la
+    langosta `tara` que se come asada— y es la mejor prueba de presencia
+    temprana que tiene el proyecto para esta parcela.
+  lo_que_resulto_falso:
+    - >-
+      «Endémica de la península» (db.4). Colmenares 2015 (Libro Rojo) lo dice;
+      Sherwood y Gianni-Zurita 2023 lo corrigen con registros verificados fuera
+      de ella (Coro, Colina, Lara). Endémica de Venezuela y del monte seco del
+      noroeste; la península es su núcleo y su localidad tipo.
+    - >-
+      «Vive en madrigueras» (fichas divulgativas, y el propio Libro Rojo habla
+      de «madrigueras»). La literatura de campo la da semiarborícola: su
+      refugio es un hueco de árbol, un tronco caído o una grieta de corteza,
+      tapizado de seda (Klaas 2003 vía Sherwood y Gianni-Zurita 2023, p. 37).
+    - >-
+      De paso, y fuera de la parcela: el `korie` 'armadillo' del lexicón
+      (caquetío-atestiguado; Oliver A-9 «vocabulario del s. XVI» y Zavala #90)
+      podría ser una mala lectura de Oviedo t. II p. 330, «Armados *cories*
+      hay», donde `cori` (en cursiva) es el cuy/curí de La Española (t. I lib.
+      XII cap. IV, p. 390) y «armados» son los armadillos. Es una sospecha con
+      forma de cadena de copia, como `datihao`: va al issue, no se afirma.
+  como_se_midio:
+    - 'GBIF: API pública de búsqueda con facetas sobre un polígono de la península y el istmo (6-fusion/scripts/gbif_fauna_tierra_paraguana.py); sin descarga, así que sin DOI: se cita la consulta y cada conjunto de datos'
+    - 'lexicón: curiana_lexicon.VOCABULARIO_BASE y FUERA_DEL_HABLA leídos (sin tocar), glosas con palabras de fauna, todas las capas; y curiana_sim/lexicon_van_buurt.py (VAN_BUURT_S6/S11, propuesta no importada)'
+    - 'fuentes nuevas: Sherwood y Gianni-Zurita 2023 (descargada, CC BY 4.0) y las fichas del Libro Rojo 2015 de la tarántula, el ratón mochilero, el tuqueque de Monte Cano y el murciélago cardonero (copia de archive.org de especiesamenazadas.org: el sitio rechazó la conexión directa)'
+    - 'fuentes del repo releídas para esta pregunta: Oviedo t. II pp. 330-331 (imagen), t. I p. 390 y cap. XXIII-XXIV del lib. XII; Castellanos líneas 48221-48246; Arcaya pp. 42, 57, 144, 264; Alvarado 1921 (entradas de fauna); van Buurt 2014 §6 y §11; Medina Colina (dictado); Esteves p. 51'
+    - 'ceros de la tarántula: 6-fusion/scripts/buscar_tarantula_azul.py (araña, tarántula, arácnido, spider, pollera) sobre 16 textos y 5 PDF del repo'
+  convenciones:
+    presencia_s_xv:
+      segura: 'endémica (evolucionó aquí), o registrada en zooarqueología o en crónica temprana de la provincia'
+      probable: 'nativa, de distribución amplia en el Caribe sur seco, registrada hoy en la península'
+      dudosa: 'nativa de la región pero sin registro en la península, o identificación insegura'
+      excluida: 'introducida después de 1492, con la fecha o el porqué'
+    capa_de_las_evidencias: 'epoca: precontacto | contacto-temprano | colonial | moderno (el censo de hoy NO es el del s. XV — regla 3)'
+    es_hueco: 'true si no hay voz CAQUETÍA en el lexicón (ninguna de las cuatro capas) que nombre al animal; una voz genérica (buio «serpiente») cubre al grupo, no a la especie: se dice en cada caso'
+    descripcion_visual: '≤ 220 caracteres, lo que vería alguien del s. XV, sin referencias modernas'
+    sonido: >-
+      descripción con fuente; la onomatopeya, sólo si una fuente la escribe, y
+      LITERAL. Toda onomatopeya es una transcripción MODERNA, no una palabra
+      caquetía. `silabeo_propuesto` (opcional) es de este agente, con la
+      fonotáctica del caquetío atestiguado (inventario de curiana_fonotactica,
+      CV, y la reduplicación que Gatschet 1885 describe para la onomatopeya en
+      Aruba — 2-lengua/morfologia.md §9), y lleva etiqueta hipotetico.
+    grabaciones: >-
+      Ninguna citada por ID: la API de xeno-canto pide cuenta (v3) y su
+      buscador web devolvió «Access Denied» el 2026-09-22; Macaulay sólo se
+      consulta con JavaScript. Deuda declarada en cada sonido que la necesita.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 1. LA TARÁNTULA AZUL, A FONDO
+# ═════════════════════════════════════════════════════════════════════════
+tarantula_azul:
+  especie: Chromatopelma cyaneopubescens
+  autor_y_anio: '(Strand, 1907) — descrita como Eurypelma cyaneopubescens'
+  descripcion_original: >-
+    Strand, E. 1907. «Aviculariidae und Atypidae des Kgl.
+    Naturalienkabinetts in Stuttgart». Jahreshefte des Vereins für
+    vaterländische Naturkunde in Württemberg 63: 1-100 (citado por Sherwood y
+    Gianni-Zurita 2023, p. 49; no leído: no está en el repo).
+  localidad_tipo: >-
+    «Venezuela, Paraguara [sic]» = Paraguaná (Sherwood y Gianni-Zurita 2023,
+    pp. 36-37). Los sintipos (macho y hembra) se perdieron en los bombardeos
+    de la Segunda Guerra Mundial.
+  historia_del_nombre: >-
+    Eurypelma (Strand 1907) → Delopelma (Petrunkevitch 1939) → Aphonopelma
+    (por la sinonimia de Delopelma) → Chromatopelma, género creado para ella
+    sola por Schmidt 1995 (Sherwood y Gianni-Zurita 2023, p. 37; Colmenares
+    2015). Es un género MONOTÍPICO.
+  distribucion:
+    dato: >-
+      De 11 registros de iNaturalist verificados por los autores, 9 son de la
+      península de Paraguaná (8 del centro y sureste; en los monumentos
+      naturales Cerro Santa Ana y Montecano y fuera de ellos); fuera: Coro
+      (barrio Sur La Paz), el municipio Colina entre Acurigua y El Paso (bosque
+      seco Lara-Falcón) y un juvenil al oeste de Durigua, cerca de
+      Barquisimeto, a más de 200 km al sur. «9 out of 11 records are from the
+      Península de Paraguaná» y la península es «the most important stronghold
+      of this species».
+    fuente: {obra: sherwood-gianni-zurita-2023, pagina: '38-41'}
+    epoca: moderno
+  endemica:
+    veredicto: 'endémica de Venezuela y del monte seco del noroeste; NO endémica estricta de la península'
+    razon: >-
+      Colmenares 2015 (Libro Rojo): «Especie endémica de la península de
+      Paraguaná», con distribución «inferior a los 2.500 km²». Sherwood y
+      Gianni-Zurita 2023 la registran fuera (arriba) y concluyen que «seems not
+      to be endemic to the Paraguaná xeric scrub ecoregion». Para el proyecto
+      basta: es un animal de ESTE monte seco, con la península como su centro.
+    fuentes: [libro-rojo-fauna-venezolana-2015, sherwood-gianni-zurita-2023]
+  habitat: >-
+    Matorral xerófilo y bosque seco. Semiarborícola: se refugia en huecos de
+    árbol, troncos caídos y grietas de corteza que tapiza de seda (Klaas 2003
+    vía Sherwood y Gianni-Zurita 2023, p. 37); el Libro Rojo dice «grietas y
+    agujeros» en vegetación arbustiva y herbácea, «que cubre con seda». Un
+    ejemplar vivía en una silla de madera dentro de una casa del Monumento
+    Natural Montecano (Sherwood y Gianni-Zurita 2023, p. 39): tolera la casa si
+    no se la molesta.
+  aspecto: >-
+    13-15 cm de envergadura total; caparazón verde-azul metálico, patas azul
+    metálico, abdomen anaranjado brillante a marrón claro (Colmenares 2015).
+    Los machos, más pequeños y de patas más largas; cambio de color con la
+    edad (Gabriel y Sherwood 2019, citado en Sherwood y Gianni-Zurita 2023).
+    Pelos urticantes abdominales de tipos III y IV (Colmenares 2015, citando a
+    Bertani y Guadanucci 2013).
+  conducta: >-
+    Depredador activo que se desplaza por el suelo; come sobre todo insectos
+    (Colmenares 2015). Los machos maduran y vagan en busca de hembra entre
+    abril y junio (dos registros: 15-IV-2021 y 17-VI-2008); en mayo de 2005
+    se fotografiaron dos machos peleando a la entrada del refugio de una hembra
+    en un tronco hueco caído (Barrio-Amorós et al. 2008 vía Sherwood y
+    Gianni-Zurita 2023, pp. 39 y 48).
+  estado: 'En Peligro, B1ab(iii,v) — Libro Rojo de la Fauna Venezolana 2015 (Colmenares); amenazas: extracción para el comercio de mascotas y pérdida de hábitat'
+  relacion_humana:
+    veredicto: 'NINGUNA evidencia encontrada — ni nombre indígena, ni uso, ni creencia'
+    lo_que_se_busco: >-
+      6-fusion/scripts/buscar_tarantula_azul.py sobre los seis OCR de Esteves,
+      van Buurt, Castellanos, Gatschet, Pané, el dictado de Medina, el canon de
+      sitios, creencia/ecología/transmisión del corpus y los PDF de Alvarado,
+      Arcaya, Oviedo t. II, Antolínez 1946 y Jahn. Aciertos leídos uno a uno:
+      ninguno habla de la tarántula ni de una araña de Paraguaná. Los únicos
+      con arañas: (a) Castellanos, ed. 1857 p. 283, sepulturas con figuras de
+      oro «Moscas, arañas y otras sabandijas» — de las sepulturas de mogotes,
+      FUERA de la Kaketiana (regla 4); (b) Antolínez 1946 (pdf 205-206) lee
+      «la manta religiosa, tara o cerbatana y las arañas» como símbolos de la
+      cerámica arawak — ensayo interpretativo, sin pieza ni sitio: hipotético;
+      (c) el dictado de Medina: el tuqueque «se alimenta de arañas y moscas»
+      (p. 287). El lexicón no tiene voz caquetía para araña (wayuu `walekerü`).
+      Colmenares 2015 y Sherwood y Gianni-Zurita 2023 no dan nombre local fuera
+      de «tarántula azul de Paraguaná».
+    lectura: >-
+      La importancia que Miguel intuye no está en ninguna fuente. Lo que sí es
+      dato: el animal es llamativo (el único de su color en este monte),
+      conspicuo en su tela, y hoy vive a veces DENTRO de las casas. Eso basta
+      para que una comunidad lo nombre; no prueba que lo reverenciara. El
+      referente describe al animal y no afirma su importancia (db.4).
+  sonido:
+    descripcion: >-
+      Ninguna fuente leída le atribuye sonido: ni estridulación ni siseo en
+      Colmenares 2015 ni en Sherwood y Gianni-Zurita 2023. Lo que se oye cuando
+      está es nada; a lo sumo el roce de las patas en la seda seca.
+    fuente: 'silencio de las dos fuentes (no es prueba de mudez: es lo que dicen)'
+    onomatopeya_fuente: null
+    silabeo_propuesto: null
+  presencia_s_xv: segura
+  por_que: >-
+    Endemismo regional de un género monotípico con localidad tipo en la
+    península: la especie evolucionó en este monte seco, que es constante
+    desde hace ~4000 años en su medio físico (ecologia-002). Ninguna crónica
+    la nombra — tampoco nombran arañas de Coro —, así que la seguridad viene de
+    la biología, no del documento.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 2. EL INVENTARIO — una entrada por especie (o por grupo, dicho)
+# ═════════════════════════════════════════════════════════════════════════
+especies:
+
+  # ── ARÁCNIDOS Y MIRIÁPODOS ───────────────────────────────────────────
+  - id: fa1-001
+    nombre_comun: tarántula azul de Paraguaná
+    cientifico: Chromatopelma cyaneopubescens
+    autor: '(Strand, 1907)'
+    grupo: arácnido
+    habitat: [cardonal, cerro, monte seco]
+    presencia_s_xv: segura
+    por_que: 'ver tarantula_azul: endémica regional con localidad tipo en la península'
+    nombres:
+      caquetio: null
+      papiamento: null
+      wayuu: 'walekerü «araña» (genérico, lexicón)'
+      lokono: null
+      castellano_regional: 'tarántula azul de Paraguaná'
+    es_hueco: true
+    descripcion_visual: >-
+      Araña grande y peluda del tamaño de una mano, patas de un azul que
+      brilla, lomo verde azulado y vientre naranja. Vive en un hueco de árbol
+      o tronco caído forrado de tela blanca.
+    sonido:
+      descripcion: 'no se le conoce sonido; se oye nada, o el roce de sus patas sobre la tela seca'
+      fuente: 'ninguna de las dos fuentes le atribuye sonido (tarantula_azul.sonido)'
+      onomatopeya_fuente: null
+    fuentes: [sherwood-gianni-zurita-2023, libro-rojo-fauna-venezolana-2015]
+
+  - id: fa1-002
+    nombre_comun: ciempiés gigante
+    cientifico: Scolopendra gigantea
+    grupo: miriápodo
+    habitat: [cardonal, hojarasca, piedras]
+    presencia_s_xv: probable
+    por_que: >-
+      Nativo del Caribe sur seco (Aruba, Curazao, norte de Venezuela) y
+      registrado en el polígono de la península (GBIF). Ninguna crónica lo
+      nombra.
+    nombres:
+      caquetio: null
+      papiamento: null
+      wayuu: 'kasipa «ciempiés» (lexicón)'
+      lokono: null
+      castellano_regional: 'ciempiés, cienpiés'
+    es_hueco: true
+    descripcion_visual: >-
+      Bicho largo como un antebrazo, hecho de anillos rojizos y oscuros, con
+      un par de patas amarillas en cada anillo; corre rápido bajo piedras y
+      hojas, y muerde con dos garfios en la cabeza.
+    sonido:
+      descripcion: 'sin sonido propio documentado'
+      fuente: null
+      onomatopeya_fuente: null
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-003
+    nombre_comun: araña plateada del cardonal
+    cientifico: Argiope argentata
+    grupo: arácnido
+    habitat: [cardonal, arbustos]
+    presencia_s_xv: probable
+    por_que: 'nativa de la América tropical seca, registrada en la península (GBIF); tela orbicular muy visible'
+    nombres:
+      caquetio: null
+      wayuu: 'walekerü «araña» (genérico, lexicón)'
+      castellano_regional: 'araña (sin nombre propio hallado)'
+    es_hueco: true
+    descripcion_visual: >-
+      Araña de lomo plateado y lobulado, patas en cruz, quieta en el centro de
+      una tela redonda tendida entre espinas, con bandas blancas en zigzag
+      tejidas en la rueda.
+    sonido: {descripcion: 'ninguno', fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+    notas: >-
+      En la península hay además pholcidos descritos hace poco, uno de ellos
+      bautizado por los caquetíos: Chisosa caquetio (GBIF). Arañas de rincón,
+      sin interés de referente.
+
+  - id: fa1-004
+    nombre_comun: alacrán
+    cientifico: 'Buthidae indet. (especie de la península sin identificar)'
+    grupo: arácnido
+    habitat: [cardonal, piedras, casa]
+    presencia_s_xv: dudosa
+    por_que: >-
+      GBIF no da ningún escorpión en el polígono y ninguna fuente leída
+      nombra uno en Paraguaná. Regla 6: el cero mide GBIF (animal nocturno y
+      poco fotografiado), no la península. Deuda: una lista de escorpiones de
+      Falcón (González-Sponga) que no se consiguió.
+    nombres:
+      caquetio: null
+      castellano_regional: alacrán, escorpión
+    es_hueco: true
+    descripcion_visual: >-
+      Bicho pardo amarillento con dos pinzas delante y la cola enroscada sobre
+      el lomo, terminada en un aguijón; sale de noche de bajo las piedras.
+    sonido: {descripcion: 'ninguno documentado', fuente: null, onomatopeya_fuente: null}
+    fuentes: []
+    deuda: sin-procedencia
+
+  # ── MAMÍFEROS ────────────────────────────────────────────────────────
+  - id: fa1-010
+    nombre_comun: venado matacán
+    cientifico: 'Mazama sp.'
+    grupo: mamífero
+    habitat: [cerro, monte seco, bosque]
+    presencia_s_xv: segura
+    por_que: >-
+      Crónica temprana de la provincia: «venados en grand número, é á
+      manadas» (Oviedo t. II p. 330, c. 1540, informe del obispo Bastidas);
+      «Hay perdices, conejos y venados» en Coro (Castellanos, líneas
+      48230); «muchos benados» (Pérez de Tolosa 1546 vía Arcaya p. 264); el
+      tabú de caza de los de Coro (Simón vía Arcaya p. 42); y el rebaño de
+      matacán «en tiempos pasados» en los bosques de Paraguaná (Esteves p.
+      51). Hoy sólo en el Cerro Santa Ana (monumento-cerro-santa-ana).
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '330 (t. II)', texto: 'venados en grand número, é á manadas', epoca: contacto-temprano}
+      - {obra: castellanos-elegias, pagina: 'línea 48230', texto: 'Hay perdices, conejos y venados', epoca: contacto-temprano}
+      - {obra: arcaya-1920, pagina: '264', texto: 'muchos benados y perdices de las pardillas (Pérez de Tolosa, 1546)', epoca: contacto-temprano}
+      - {obra: esteves-1989, pagina: '51', texto: 'En tiempos pasados había rebaños de este tipo de venado en los bosques de Paraguaná', epoca: moderno}
+    nombres:
+      caquetio: {clave: matakán, capa: caquetío-retroabstraido}
+      castellano_regional: 'matacán, venado matacán'
+    es_hueco: false
+    nota_hueco: 'la voz es retroabstraída (Esteves), no atestiguada: el venado sigue sin palabra caquetía ATESTIGUADA (ecologia-037)'
+    descripcion_visual: >-
+      Venado pequeño, de lomo rojizo y patas finas, que apenas llega a la
+      cintura; cuernos cortos y rectos, sin ramas, en el macho. Se esconde en
+      el monte del cerro y salta al huir.
+    sonido:
+      descripcion: 'sin descripción de su voz en las fuentes leídas'
+      fuente: null
+      onomatopeya_fuente: null
+      deuda: 'grabación de Mazama (bufido de alarma) por ID en Macaulay'
+    fuentes: [oviedo-y-valdes-1852-1855, castellanos-elegias, arcaya-1920, esteves-1989, monumento-cerro-santa-ana]
+    notas: >-
+      Oviedo dice «á manadas», y el matacán (Mazama) es de costumbres
+      solitarias: la manada cuadra mejor con el venado caramerudo (Odocoileus
+      virginianus). Si el s. XV tuvo dos venados, el llano pudo ser del
+      caramerudo y el cerro del matacán. Dudoso: se deja abierto (ecologia-077
+      ya tomó el matacán como «el» venado de la península).
+
+  - id: fa1-011
+    nombre_comun: conejo sabanero
+    cientifico: Sylvilagus floridanus
+    grupo: mamífero
+    habitat: [cardonal, médanos, conucos]
+    presencia_s_xv: segura
+    por_que: >-
+      Nativo, registrado hoy en la península (GBIF) y en TODAS las crónicas de
+      Coro: «conejos tantos ó mas que en nuestra España; pero son estos
+      menores y alebrestados» (Oviedo t. II p. 330); Castellanos (línea
+      48230); Pérez de Tolosa 1546 («mucha caza de conejos grandes y muy
+      buenos»); y la regla de caza: no se les tiraba «estando echados o
+      detenidos, porque decían era matarlos a traición, sino cuando huían»
+      (Simón vía Arcaya p. 42). En 1502 Ojeda se llevó de Coquibacoa «un
+      conejo semejante a los de Castilla» (Navarrete vía Arcaya p. 144).
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '330 (t. II)', texto: 'conejos tantos ó mas que en nuestra España; pero son estos menores y alebrestados', epoca: contacto-temprano}
+      - {obra: arcaya-1920, pagina: '42', texto: 'aun a los conejos y venados no querían en caza tirar, estando echados o detenidos', epoca: contacto-temprano}
+      - {obra: arcaya-1920, pagina: '264', texto: 'mucha caza de conejos grandes y muy buenos como los de España', epoca: contacto-temprano}
+    nombres:
+      caquetio: null
+      papiamento: null
+      wayuu: 'sin entrada en el lexicón'
+      castellano_regional: 'conejo, conejo sabanero'
+    es_hueco: true
+    descripcion_visual: >-
+      Animal pardo grisáceo del tamaño de un gato, orejas largas y derechas,
+      ojos grandes a los lados y una cola corta blanca por debajo que se ve al
+      huir; se agacha inmóvil entre la paja.
+    sonido:
+      descripcion: 'las fuentes no le dan voz; es el animal que calla y se agacha, y huye «alebrestado» (como liebre)'
+      fuente: 'Oviedo t. II p. 330 («alebrestados»)'
+      onomatopeya_fuente: null
+    fuentes: [oviedo-y-valdes-1852-1855, castellanos-elegias, arcaya-1920, gbif-paraguana-2026]
+
+  - id: fa1-012
+    nombre_comun: zorro, zorro perruno
+    cientifico: Cerdocyon thous
+    grupo: mamífero
+    habitat: [cardonal, médanos]
+    presencia_s_xv: segura
+    por_que: 'nativo, registrado en la península (GBIF; ecologia-034) y nombrado en caquetío atestiguado'
+    nombres:
+      caquetio: {clave: chawanko, capa: caquetío-atestiguado}
+      wayuu: 'walirü «zorro» (lexicón)'
+      castellano_regional: zorro
+    es_hueco: false
+    descripcion_visual: >-
+      Perro flaco del monte, gris con las patas y las orejas rojizas y la cola
+      tupida con punta negra; sale al anochecer, solo o en pareja.
+    sonido: {descripcion: 'sin descripción en las fuentes leídas', fuente: null, onomatopeya_fuente: null, deuda: 'grabación por ID'}
+    fuentes: [gbif-paraguana-2026, camacho-2011]
+
+  - id: fa1-013
+    nombre_comun: rabipelado
+    cientifico: Didelphis marsupialis
+    grupo: mamífero
+    habitat: [cerro, monte, cerca de las casas]
+    presencia_s_xv: probable
+    por_que: >-
+      Nativo; en la fauna actual del Cerro Santa Ana («zarigüeya»,
+      monumento-cerro-santa-ana) y de los Médanos (ecologia-034); presente en
+      el registro pleistoceno de Muaco y Taima-Taima, en la costa de Falcón
+      (Urbina 2007, anexo 1, lista de Ochsenius). GBIF no lo da en el polígono.
+    nombres:
+      caquetio: null
+      lokono: 'jawade «zarigüeya» (lexicón)'
+      castellano_regional: 'rabipelado; sucumba en Trujillo (Alvarado, pdf 308)'
+    es_hueco: true
+    nota_hueco: '`wache` se glosa «murciélago, zorro blanco»; si «zorro blanco» fuera la zarigüeya no está dicho en la fuente: no se asigna'
+    descripcion_visual: >-
+      Animal del tamaño de un gato, pelaje gris y áspero, cara blanca de hocico
+      largo y rosado, orejas negras desnudas y una cola larga sin pelo; la
+      hembra lleva las crías en una bolsa del vientre.
+    sonido: {descripcion: 'sin descripción en las fuentes leídas', fuente: null, onomatopeya_fuente: null}
+    fuentes: [monumento-cerro-santa-ana, urbina-jimenez-2007-2011, alvarado-1921]
+
+  - id: fa1-014
+    nombre_comun: marmosa, comadrejita
+    cientifico: 'Marmosa xerophila y Marmosa robinsoni'
+    gbif_nombre: Marmosa xerophila
+    grupo: mamífero
+    habitat: [cardonal, monte seco]
+    presencia_s_xv: probable
+    por_que: 'nativas y registradas en el polígono (GBIF); que M. xerophila sea endemismo del monte seco de la Guajira y Paraguaná es lo que dice su nombre, sin fuente leída: en duda, probable'
+    nombres: {caquetio: null, castellano_regional: 'sin nombre propio hallado'}
+    es_hueco: true
+    descripcion_visual: >-
+      Zarigüeya diminuta, del tamaño de un ratón, pardo rojiza, con un antifaz
+      oscuro alrededor de los ojos grandes y una cola larga que se enrosca en
+      las ramas; sólo de noche.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-015
+    nombre_comun: oso melero
+    cientifico: Tamandua tetradactyla
+    grupo: mamífero
+    habitat: [monte, cerro]
+    presencia_s_xv: probable
+    por_que: '«ossos hormigueros» en la provincia de Venezuela (Oviedo t. II p. 330); hoy en los Médanos (ecologia-034); GBIF no lo da en el polígono'
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '330 (t. II)', texto: 'son ossos hormigueros, tigres muchos, venados…', epoca: contacto-temprano}
+    nombres: {caquetio: null, castellano_regional: 'oso melero, oso hormiguero'}
+    es_hueco: true
+    descripcion_visual: >-
+      Animal amarillento con un chaleco negro sobre los hombros, hocico largo
+      como un tubo y garras grandes en las manos; rompe los nidos de hormigas y
+      se cuelga de las ramas con la cola.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855, camacho-2011]
+
+  - id: fa1-016
+    nombre_comun: mapurite
+    cientifico: Conepatus semistriatus
+    grupo: mamífero
+    habitat: [cardonal, médanos, conucos]
+    presencia_s_xv: probable
+    por_que: 'nativo, registrado en el polígono (GBIF) y en los Médanos (ecologia-034); ninguna crónica lo nombra'
+    nombres:
+      caquetio: null
+      castellano_regional: 'mapurite — del caribe mapurítu (Alvarado, pdf 237)'
+      otros: 'cumanagoto mapuríchi, yabarana mapírichi (Alvarado, pdf 237)'
+    es_hueco: true
+    descripcion_visual: >-
+      Animal negro del tamaño de un gato, con dos listas blancas que le corren
+      de la frente a la cola, cola tupida y hocico largo; camina despacio y no
+      huye: cuando se le acerca, levanta la cola.
+    sonido:
+      descripcion: 'ninguno documentado; se le conoce por el OLOR: «para su defensa posee el animalillo un líquido oleoso» (Alvarado, entrada MAPURITE)'
+      fuente: 'Alvarado 1921, pdf 237'
+      onomatopeya_fuente: null
+    fuentes: [alvarado-1921, gbif-paraguana-2026, camacho-2011]
+
+  - id: fa1-017
+    nombre_comun: cachicamo, armadillo
+    cientifico: Dasypus novemcinctus
+    grupo: mamífero
+    habitat: [cardonal, conucos]
+    presencia_s_xv: probable
+    por_que: >-
+      «Armados» en la lista de la provincia de Venezuela (Oviedo t. II p.
+      330); nombrado en caquetío atestiguado dos veces. GBIF no lo da en el
+      polígono (animal nocturno: el cero mide GBIF).
+    nombres:
+      caquetio: {clave: kachikamo, capa: caquetío-atestiguado, y: 'korie (caquetío-atestiguado) — ver notas'}
+      castellano_regional: cachicamo
+    es_hueco: false
+    descripcion_visual: >-
+      Animal chico cubierto de una concha de placas en bandas, cola larga
+      anillada y hocico puntudo; hoza la tierra de noche y se mete en su cueva
+      a escarbar.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855, alvarado-1921]
+    notas: >-
+      ⚠️ `korie` 'armadillo' (Oliver A-9, Zavala #90): en Oviedo t. II p. 330
+      se lee «Armados *cories* hay, pero son mayores que los desta isla y el
+      pelage tiénenlo mas áspero y de la forma el pelo de las hardas», y
+      `cori` es el cuy/curí de La Española («Del animal llamado cori», t. I
+      lib. XII cap. IV, p. 390: «del tamaño de gazapos medianos… no tienen
+      cola»). Con pelo como de ardilla, los «cories» son roedores, no
+      armadillos. Si la A-9 sacó `corie` 'armadillo' de este renglón, la glosa
+      es una mala lectura. No se afirma: se pide verificar el origen de la A-9
+      (issue).
+
+  - id: fa1-018
+    nombre_comun: murciélago cardonero
+    cientifico: Leptonycteris curasoae
+    autor: 'Miller, 1900'
+    grupo: mamífero
+    habitat: [cuevas, cardonal]
+    presencia_s_xv: segura
+    por_que: >-
+      Polinizador obligado de los cardones y los agaves (Libro Rojo 2015); es
+      el mamífero más registrado de la península en GBIF. Vive en las cuevas
+      del Santuario de Fauna Silvestre (Jacuque, El Pico, Piedra Honda y El
+      Guano) y vuela entre Paraguaná y las islas ABC (Simal et al. 2015 vía
+      Libro Rojo). Sin él no hay fruto de cardón: su presencia la exige el
+      paisaje que describen las crónicas.
+    nombres:
+      caquetio: {clave: wache, capa: caquetío-atestiguado, alcance: 'murciélago en general'}
+      wayuu: 'püsichi «murciélago» (lexicón)'
+      castellano_regional: 'murciélago cardonero'
+    es_hueco: false
+    descripcion_visual: >-
+      Murciélago pardo oscuro de hocico largo y lengua larguísima, orejas
+      chicas; de noche vuela a las flores blancas del cardón y sale con la cara
+      cubierta de polen amarillo.
+    sonido: {descripcion: 'sin descripción en las fuentes leídas', fuente: null, onomatopeya_fuente: null}
+    fuentes: [libro-rojo-fauna-venezolana-2015, gbif-paraguana-2026]
+    notas: >-
+      Una de las cuevas del santuario se llama Jacuque, homónima de la voz
+      caquetía atestiguada `jacuque` 'regar' del lexicón. Coincidencia de
+      forma, sin glosa que la ate: se anota, no se afirma.
+
+  - id: fa1-019
+    nombre_comun: 'murciélagos de cueva (grupo)'
+    cientifico: 'Mormoops megalophylla, Pteronotus davyi, Natalus tumidirostris, Glossophaga longirostris, Molossus molossus'
+    gbif_nombre: Mormoops megalophylla
+    grupo: mamífero
+    habitat: [cuevas]
+    presencia_s_xv: probable
+    por_que: 'nativos, registrados en el polígono (GBIF); colonias de cueva junto al cardonero'
+    nombres:
+      caquetio: {clave: wache, capa: caquetío-atestiguado, alcance: genérico}
+    es_hueco: false
+    descripcion_visual: >-
+      Nubes de murciélagos chicos que salen de la boca de la cueva al caer la
+      tarde, uno tras otro, como humo oscuro; dentro, el techo está vivo y el
+      suelo huele a guano.
+    sonido: {descripcion: 'el aleteo de la salida; los gritos de caza no se oyen', fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-020
+    nombre_comun: vampiro
+    cientifico: Desmodus rotundus
+    grupo: mamífero
+    habitat: [cuevas]
+    presencia_s_xv: probable
+    por_que: 'en el registro pleistoceno de Muaco/Taima-Taima (Urbina 2007, anexo 1); nativo; GBIF no lo da en el polígono'
+    nombres:
+      caquetio: {clave: wache, capa: caquetío-atestiguado, alcance: genérico}
+    es_hueco: false
+    descripcion_visual: >-
+      Murciélago gris pardo, de nariz chata y dientes delanteros como cuchillas;
+      camina a cuatro patas por el suelo y lame la sangre de la herida que abre
+      en el que duerme.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [urbina-jimenez-2007-2011]
+
+  - id: fa1-021
+    nombre_comun: ratón mochilero de Paraguaná
+    cientifico: Heteromys oasicus
+    autor: 'Anderson, 2003'
+    grupo: mamífero
+    habitat: [cerro, bosque siempreverde]
+    presencia_s_xv: segura
+    por_que: 'endémico de la península: sólo en los bosques del Cerro Santa Ana y la fila de Monte Cano (Libro Rojo 2015, Gutiérrez et al.)'
+    nombres: {caquetio: null, castellano_regional: 'ratón mochilero de Paraguaná'}
+    es_hueco: true
+    descripcion_visual: >-
+      Ratón de pelo pardo muy pálido y espinoso, con dos bolsas en las mejillas
+      que abren por fuera, donde carga semillas; sólo en el bosque húmedo del
+      cerro.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [libro-rojo-fauna-venezolana-2015, gbif-paraguana-2026]
+
+  - id: fa1-022
+    nombre_comun: 'ratones de monte (grupo)'
+    cientifico: 'Calomys hummelincki, Rhipidomys venezuelae, Proechimys guairae'
+    gbif_nombre: Calomys hummelincki
+    grupo: mamífero
+    habitat: [cardonal, conucos, monte]
+    presencia_s_xv: probable
+    por_que: 'nativos, registrados en el polígono (GBIF)'
+    nombres:
+      caquetio: null
+      papiamento: 'djaka «rata» (van Buurt 2014 §11, p. 45, nivel C)'
+      wayuu: 'kookooche''erü «ratón, rata» (lexicón)'
+    es_hueco: true
+    descripcion_visual: 'Ratones pardos del monte y del conuco, que roen el maíz guardado.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026, van-buurt-2014]
+    notas: 'La Relación del Tocuyo de 1579 pone «ratones» y «murciélagos» en la dieta de los indios de aquella jurisdicción (Arcaya p. 57) — de los ajaguas, no de la costa (regla 4)'
+
+  - id: fa1-023
+    nombre_comun: perro de los indios, perro mudo
+    cientifico: 'Canis familiaris (linaje americano precolombino)'
+    grupo: mamífero
+    habitat: [casa]
+    presencia_s_xv: probable
+    por_que: >-
+      «Hay perros gosques que crian los indios en sus casas, é son mudos, que
+      no ladran» (Oviedo t. II p. 331, provincia de Venezuela, c. 1540,
+      verificado en imagen). Es el único animal doméstico de la lista.
+      Probable y no segura: el dato es de la provincia, no de la península.
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '331 (t. II)', texto: 'Hay perros gosques que crian los indios en sus casas, é son mudos, que no ladran', epoca: contacto-temprano}
+    nombres:
+      caquetio: null
+      wayuu: 'erü «perro» (lexicón)'
+    es_hueco: true
+    descripcion_visual: >-
+      Perro pequeño de la casa, de pelo corto, que duerme junto al fogón y
+      sigue a la gente al conuco; no ladra.
+    sonido:
+      descripcion: '«son mudos, que no ladran»: el perro de la casa no ladra'
+      fuente: 'Oviedo t. II p. 331'
+      onomatopeya_fuente: null
+    fuentes: [oviedo-y-valdes-1852-1855]
+
+  - id: fa1-024
+    nombre_comun: cunaguaro, ocelote
+    cientifico: Leopardus pardalis
+    grupo: mamífero
+    habitat: [cerro, monte]
+    presencia_s_xv: probable
+    por_que: >-
+      Un registro en el polígono (GBIF). «Tigres muchos» en la provincia
+      (Oviedo t. II p. 330), y la piel de «tigre» como insignia: el guerrero
+      que sube de grado lleva «un pedaço de piel de tigre en la frente»
+      (Oviedo t. II p. 330, retomado por Arcaya). «Tigre» en Oviedo puede ser
+      jaguar u ocelote: para la península, el ocelote.
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '330 (t. II)', texto: 'traer un pedaço de piel de tigre en la frente alrededor', epoca: contacto-temprano}
+    nombres: {caquetio: null, castellano_regional: 'cunaguaro, tigrito (Alvarado)'}
+    es_hueco: true
+    descripcion_visual: >-
+      Gato del monte del doble de un gato de casa, amarillo leonado con manchas
+      negras en cadenas y rosetas, cola anillada; caza de noche y casi nunca se
+      deja ver.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855, gbif-paraguana-2026]
+
+  - id: fa1-025
+    nombre_comun: león pardo, puma
+    cientifico: Puma concolor
+    grupo: mamífero
+    habitat: [monte]
+    presencia_s_xv: dudosa
+    por_que: '«leones pardos… todos bermejos é muy ceñidos» en la provincia (Oviedo t. II p. 331); sin registro en la península'
+    nombres: {caquetio: null}
+    es_hueco: true
+    descripcion_visual: 'Gato grande de un solo color, bermejo, sin melena, largo y ceñido.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855]
+
+  - id: fa1-026
+    nombre_comun: báquiro, pecarí
+    cientifico: Pecari tajacu
+    grupo: mamífero
+    habitat: [monte]
+    presencia_s_xv: dudosa
+    por_que: '«puercos… de dos géneros: los unos tienen el ombligo en el espinaço» (Oviedo t. II p. 330) — la glándula dorsal del pecarí; en la provincia, no en la península'
+    nombres: {caquetio: null}
+    es_hueco: true
+    descripcion_visual: 'Cerdo del monte, gris negruzco con un collar claro, que anda en tropa y huele fuerte.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855]
+
+  - id: fa1-027
+    nombre_comun: mono
+    cientifico: 'Cebus / Alouatta (indet.)'
+    grupo: mamífero
+    habitat: []
+    presencia_s_xv: dudosa
+    por_que: 'sin registro en la península; el lexicón tiene `arata` «mono» atestiguado: la palabra puede venir del alcance de la esfera (la sierra), no del patio (como `kama`, ecologia-034)'
+    nombres: {caquetio: {clave: arata, capa: caquetío-atestiguado}}
+    es_hueco: false
+    descripcion_visual: null
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: []
+
+  # ── REPTILES ─────────────────────────────────────────────────────────
+  - id: fa1-030
+    nombre_comun: iguana
+    cientifico: Iguana iguana
+    grupo: reptil
+    habitat: [cardonal, árboles, orilla]
+    presencia_s_xv: segura
+    por_que: 'nativa, registrada en el polígono (GBIF); fórmula de caza de la iguana en Aruba (Gatschet 1885, recogida por Pinart); nombre caquetío atestiguado'
+    nombres:
+      caquetio: {clave: barbache, capa: caquetío-atestiguado}
+      papiamento: 'yuana, yuwana (van Buurt p. 39, nivel A); washiri «huevo de iguana» (p. 38)'
+      otros: 'taíno higuana, iwana (lexicón)'
+    es_hueco: false
+    descripcion_visual: >-
+      Lagarto verde grisáceo largo como un brazo o más, con una cresta de
+      púas en el lomo, una papada colgante y la cola anillada; se asolea en las
+      ramas y se tira al suelo al ver gente.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [van-buurt-2014, gatschet-1885, gbif-paraguana-2026]
+
+  - id: fa1-031
+    nombre_comun: 'lagartijo azul, bisure (grupo de los corredores)'
+    cientifico: 'Cnemidophorus arenivagus, C. lemniscatus, Ameiva bifrontata'
+    gbif_nombre: Cnemidophorus arenivagus
+    grupo: reptil
+    habitat: [médanos, cardonal, conucos]
+    presencia_s_xv: segura
+    por_que: 'nativos, entre los reptiles más registrados del polígono (GBIF); la «lagartija» tiene voz en el vocabulario caquetío del s. XVI (`bisure`, Oliver A-9), y voces vivas en la península y en las islas'
+    nombres:
+      caquetio: {clave: bisure, capa: caquetío-atestiguado, alcance: 'lagartija'}
+      caquetio_otro: {clave: walamo, capa: caquetío-retroabstraido, alcance: 'el bisure amarillo y gris terroso de Tacuato y Santa Ana (Medina p. 130)'}
+      papiamento: 'kododo (Aruba, Bonaire; van Buurt p. 33); shilib (p. 35, nivel C)'
+    es_hueco: false
+    descripcion_visual: >-
+      Lagartijas delgadas de cola muy larga, a rayas claras y oscuras, con la
+      cola o los costados azules o verdes en el macho; corren a saltos cortos
+      sobre la arena caliente y escarban.
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [medina-colina-sxx, van-buurt-2014, gbif-paraguana-2026]
+
+  - id: fa1-032
+    nombre_comun: lagartijo de monte (anolis)
+    cientifico: Anolis onca
+    grupo: reptil
+    habitat: [cardonal, médanos]
+    presencia_s_xv: probable
+    por_que: 'nativo y el reptil más registrado del polígono (GBIF)'
+    nombres:
+      caquetio: {clave: bisure, capa: caquetío-atestiguado, alcance: 'lagartija (genérico)'}
+      papiamento: 'waltaca (Aruba) para Anolis lineatus; totèki, kaku (Curazao) — van Buurt pp. 37, 46'
+    es_hueco: false
+    descripcion_visual: 'Lagartija parda que sube por los tallos y despliega bajo la garganta un abanico de piel de color.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [van-buurt-2014, gbif-paraguana-2026]
+
+  - id: fa1-033
+    nombre_comun: tuqueque
+    cientifico: 'Thecadactylus rapicauda y Phyllodactylus spp.'
+    gbif_nombre: Thecadactylus rapicauda
+    grupo: reptil
+    habitat: [casa, cardonal]
+    presencia_s_xv: probable
+    por_que: 'nativo; registrado en el polígono (GBIF); el habla paraguanera lo pone en el techo de la casa'
+    nombres:
+      caquetio: {clave: tukeke, capa: caquetío-retroabstraido}
+      papiamento: 'totèki, «related to, or derived from tuqueque, tuteque» (van Buurt p. 37)'
+    es_hueco: false
+    descripcion_visual: >-
+      Lagartija de piel blanda y pálida, ojos grandes sin párpado y dedos
+      anchos que se pegan al techo; de noche caza moscas y arañas junto al
+      fuego.
+    sonido: {descripcion: 'sin descripción en las fuentes leídas', fuente: null, onomatopeya_fuente: null, deuda: 'si la voz tuqueque imita un canto, ninguna fuente leída lo dice'}
+    fuentes: [medina-colina-sxx, van-buurt-2014, gbif-paraguana-2026]
+    notas: 'Medina Colina p. 287: «el lagarto que se alimenta de arañas y moscas; es común en nuestras casas de campo, donde se oculta en el cañizo del techo»'
+
+  - id: fa1-034
+    nombre_comun: tuqueque de Monte Cano
+    cientifico: Lepidoblepharis montecanoensis
+    autor: 'Markezich y Taphorn, 1994'
+    grupo: reptil
+    habitat: [monte seco, quebradas]
+    presencia_s_xv: segura
+    por_que: 'endémico de la península (Monte Cano; Libro Rojo 2015, Molina et al.): uno de los gecos más pequeños del mundo'
+    nombres: {caquetio: {clave: tukeke, capa: caquetío-retroabstraido, alcance: genérico}, castellano_regional: 'tuqueque de Monte Cano'}
+    es_hueco: false
+    descripcion_visual: 'Lagartija pardo tierra más chica que un dedo, cola rojiza; vive bajo piedras y hojarasca en el lecho seco de las quebradas.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [libro-rojo-fauna-venezolana-2015, gbif-paraguana-2026]
+
+  - id: fa1-035
+    nombre_comun: mato
+    cientifico: 'Tupinambis / Salvator (indet.)'
+    grupo: reptil
+    habitat: [monte]
+    presencia_s_xv: dudosa
+    por_que: '«mato real» en la lista de reptiles de Falcón de ecologia-035; sin registro en el polígono (GBIF)'
+    nombres: {caquetio: null, castellano_regional: 'mato — «del cum. mato» (Alvarado, pdf 245)'}
+    es_hueco: true
+    descripcion_visual: 'Lagarto grande, negro con bandas amarillas, de lengua bífida; corre a encuevarse.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [alvarado-1921]
+
+  - id: fa1-036
+    nombre_comun: cascabel
+    cientifico: Crotalus durissus
+    grupo: reptil
+    habitat: [cardonal, cují, piedras]
+    presencia_s_xv: probable
+    por_que: 'nativa, registrada en el polígono (GBIF) y en la lista de Falcón (ecologia-035); es el veneno que el paisaje enseña a temer. Ninguna crónica de Coro la nombra'
+    nombres:
+      caquetio: {clave: buio, capa: caquetío-atestiguado, alcance: 'serpiente en general (y boa, y «diablo»)'}
+      wayuu: 'wüi «culebra» (genérico, lexicón)'
+      castellano_regional: cascabel
+    es_hueco: true
+    nota_hueco: '`buio` nombra a la serpiente en general; la de cascabel, la única que suena, no tiene nombre propio'
+    descripcion_visual: >-
+      Serpiente gruesa, parda con rombos oscuros de borde claro en el lomo,
+      cabeza ancha de triángulo y, en la punta de la cola, anillos secos
+      encajados que levanta al sentirse cerca.
+    sonido:
+      descripcion: 'la cola seca suena al agitarse; el castellano la NOMBRA por ese ruido (cascabel)'
+      fuente: 'el nombre regional; descripción acústica con grabación pendiente'
+      onomatopeya_fuente: null
+      silabeo_propuesto: {forma: 'sisisisi', etiqueta: hipotetico, razon: 'reduplicación de una sílaba sibilante, dentro del inventario atestiguado; no es una palabra caquetía'}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-037
+    nombre_comun: boa, tragavenado
+    cientifico: Boa constrictor
+    grupo: reptil
+    habitat: [cardonal, cerro]
+    presencia_s_xv: segura
+    por_que: 'nativa, registrada en el polígono (GBIF); con dos voces caquetías atestiguadas y carga de creencia (la serpiente emplumada del Capó, Esteves p. 26)'
+    nombres:
+      caquetio: {clave: saruro, capa: caquetío-atestiguado}
+      caquetio_otro: {clave: buio, capa: caquetío-atestiguado}
+      wayuu: 'sarulu «boa» (lexicón)'
+    es_hueco: false
+    descripcion_visual: 'Serpiente muy gruesa y larga, parda con manchas en silla de montar, que no tiene veneno y aprieta a su presa.'
+    sonido: {descripcion: 'sin descripción en las fuentes leídas', fuente: null, onomatopeya_fuente: null}
+    fuentes: [esteves-1989, gbif-paraguana-2026]
+
+  - id: fa1-038
+    nombre_comun: coral
+    cientifico: 'Micrurus (indet.)'
+    grupo: reptil
+    habitat: [hojarasca, conucos]
+    presencia_s_xv: probable
+    por_que: 'en la lista de reptiles de Falcón (ecologia-035); sin registro en el polígono (GBIF): regla 6'
+    nombres: {caquetio: {clave: buio, capa: caquetío-atestiguado, alcance: genérico}, castellano_regional: coral}
+    es_hueco: true
+    descripcion_visual: 'Culebra fina y brillante, anillada de rojo, negro y amarillo claro, que se esconde bajo la hojarasca; muerde poco y mata.'
+    sonido: {descripcion: 'ninguno', fuente: null, onomatopeya_fuente: null}
+    fuentes: []
+    deuda: sin-procedencia
+
+  - id: fa1-039
+    nombre_comun: culebra de Paraguaná
+    cientifico: Thamnodynastes paraguanae
+    autor: 'Bailey y Thomas, 2007'
+    grupo: reptil
+    habitat: [orillas, monte seco]
+    presencia_s_xv: probable
+    por_que: 'nativa con localidad tipo en la península (Bailey y Thomas 2007, Memoria de la Fundación La Salle, según GBIF y el buscador — no leída); de la Guajira, Maracaibo y Paraguaná; registrada en el polígono (GBIF). En duda, probable'
+    nombres: {caquetio: {clave: buio, capa: caquetío-atestiguado, alcance: genérico}}
+    es_hueco: true
+    descripcion_visual: 'Culebra parda, de ojos grandes, con rayas oscuras a lo largo; activa de noche.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+    deuda: 'la descripción original (Bailey y Thomas 2007) no se leyó'
+
+  - id: fa1-040
+    nombre_comun: 'culebras corredoras (grupo)'
+    cientifico: 'Masticophis mentovarius, Mastigodryas pleii, Oxyrhopus petolarius, Tantilla semicincta'
+    gbif_nombre: Masticophis mentovarius
+    grupo: reptil
+    habitat: [cardonal]
+    presencia_s_xv: probable
+    por_que: 'nativas, registradas en el polígono (GBIF)'
+    nombres: {caquetio: {clave: buio, capa: caquetío-atestiguado, alcance: genérico}}
+    es_hueco: false
+    descripcion_visual: 'Culebras largas y rápidas del cardonal, que cruzan el camino como un latigazo.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-041
+    nombre_comun: tapaculo, tortuga de pantano
+    cientifico: Kinosternon scorpioides
+    grupo: reptil
+    habitat: [lagunas, charcas de lluvia]
+    presencia_s_xv: probable
+    por_que: 'nativa, un registro en el polígono (GBIF)'
+    nombres:
+      caquetio: {clave: hikotea, capa: caquetío-reconstruido, alcance: 'tortuga de agua dulce'}
+    es_hueco: false
+    descripcion_visual: 'Tortuguita parda de concha alta y lisa, que cierra la concha por delante y por detrás; aparece en las charcas cuando llueve.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-042
+    nombre_comun: morrocoy
+    cientifico: Chelonoidis carbonarius
+    grupo: reptil
+    habitat: [monte seco]
+    presencia_s_xv: dudosa
+    por_que: 'tortuga de tierra de los bosques secos de Venezuela; sin registro en el polígono (GBIF) y sin fuente para la península'
+    nombres: {caquetio: {clave: hikoteya, capa: caquetío-hipotético}}
+    es_hueco: false
+    descripcion_visual: 'Tortuga de tierra de concha alta y negra con placas amarillas, y patas con escamas rojas.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: []
+
+  # ── ANFIBIOS ─────────────────────────────────────────────────────────
+  - id: fa1-050
+    nombre_comun: sapito lipón
+    cientifico: Pleurodema brachyops
+    grupo: anfibio
+    habitat: [charcas de lluvia, sabana]
+    presencia_s_xv: probable
+    por_que: 'nativo de Aruba y del norte de Suramérica seco (van Buurt p. 30), registrado en el polígono (GBIF); que su nombre arubano sea probablemente caquetío (van Buurt, nivel A) sugiere que se le conocía, sin fecharlo'
+    nombres:
+      caquetio: null
+      papiamento: 'dori, dori maco (van Buurt p. 30, nivel A: «probablemente caquetío», originado en Aruba)'
+      otros: 'maco: nombre de otra rana en taíno (Tejera 1977, vía van Buurt p. 30)'
+      castellano_regional: 'sapito lipón «fat little toad» (van Buurt p. 30)'
+    es_hueco: true
+    nota_hueco: 'sin voz en el lexicón; `dori` es candidata (van Buurt la da como probable caquetía en papiamento), sin fusionar'
+    descripcion_visual: >-
+      Sapito gordo y chato, gris con manchas verdosas y, en los costados de
+      la cadera, dos manchas negras con borde claro que parecen ojos; aparece
+      en los charcos después del aguacero.
+    sonido:
+      descripcion: 'canta en los charcos después de la lluvia; en Aruba su nombre imita el canto'
+      fuente: 'van Buurt 2014, p. 30'
+      onomatopeya_fuente: '«dori is an onomatopea. Thus dori maco is the frog that calls "do-ri"»'
+      silabeo_propuesto: {forma: 'dori', etiqueta: hipotetico, razon: 'la propia onomatopeya ya es CVCV dentro del inventario; no se inventa otra'}
+    fuentes: [van-buurt-2014, gbif-paraguana-2026]
+    notas: 'Rima aruba anotada hacia 1883: «Dori, dori maco, si mi muri, ken ta derami?» (van Buurt p. 30) — capa colonial/moderna del papiamento, no precontacto'
+
+  - id: fa1-051
+    nombre_comun: sapo
+    cientifico: 'Rhinella horribilis (antes R. marina)'
+    gbif_nombre: Rhinella horribilis
+    grupo: anfibio
+    habitat: [conucos, charcas, casa]
+    presencia_s_xv: probable
+    por_que: 'nativo del norte de Suramérica, registrado en el polígono (GBIF)'
+    nombres: {caquetio: null, wayuu: 'eperü''üi «sapo» (lexicón)', otros: 'taataai «rana» (wayuu, lexicón)'}
+    es_hueco: true
+    descripcion_visual: 'Sapo grande y pardo de piel de verrugas, con dos bolsas hinchadas detrás de los ojos; sale de noche a los charcos y bajo la luz del fuego.'
+    sonido: {descripcion: 'canta en coro tras las lluvias', fuente: null, onomatopeya_fuente: null, deuda: 'descripción del canto con fuente y grabación'}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-052
+    nombre_comun: rana silbadora
+    cientifico: Leptodactylus fuscus
+    grupo: anfibio
+    habitat: [charcas, sabana]
+    presencia_s_xv: probable
+    por_que: 'nativa de las tierras bajas de Venezuela (Barrio-Amorós et al. 2019, catálogo), registrada en el polígono (GBIF)'
+    nombres: {caquetio: null}
+    es_hueco: true
+    descripcion_visual: 'Rana parda y esbelta con rayas claras en el lomo, que canta escondida en un hoyo junto al charco.'
+    sonido: {descripcion: 'silba (el nombre regional)', fuente: 'el nombre castellano; sin descripción acústica leída', onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  # ── INSECTOS ─────────────────────────────────────────────────────────
+  - id: fa1-060
+    nombre_comun: langosta
+    cientifico: 'Schistocerca spp. (y el saltamontes gigante Tropidacris collaris)'
+    gbif_nombre: Tropidacris collaris
+    grupo: insecto
+    habitat: [conucos, cardonal]
+    presencia_s_xv: segura
+    por_que: >-
+      «Hay mucha langosta, que los indios llaman tara, y esta no es continua;
+      pero algunos años hay tanta, que cubre el ayre á no se poder ver el
+      cielo… si dá en un mahiçal, lo tala todo… los indios en su vengança las
+      toman y embanastan y se las comen asadas» (Oviedo t. II p. 331, verificado
+      en imagen). Tropidacris y Schistocerca, registradas en el polígono.
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '331 (t. II)', texto: 'Hay mucha langosta, que los indios llaman tara', epoca: contacto-temprano}
+    nombres:
+      caquetio: {clave: tara, capa: caquetío-atestiguado}
+      caquetio_otro: {clave: chebebe, capa: caquetío-retroabstraido, alcance: 'saltamontes (Medina pp. 69-70)'}
+      wayuu: 'kaashapü «langosta» (lexicón)'
+    es_hueco: false
+    descripcion_visual: >-
+      Saltamontes grande de alas pintadas; algunos años llegan en nubes que
+      tapan el cielo y dejan el maizal pelado. Se cogen, se meten en cestas y
+      se comen asados.
+    sonido: {descripcion: 'la nube sobre el maizal (Oviedo no describe el ruido)', fuente: 'Oviedo t. II p. 331', onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855, medina-colina-sxx, gbif-paraguana-2026]
+
+  - id: fa1-061
+    nombre_comun: abeja sin aguijón, abeja criolla
+    cientifico: Melipona favosa
+    grupo: insecto
+    habitat: [troncos secos, casa]
+    presencia_s_xv: segura
+    por_que: >-
+      Crónica temprana y con la mano humana dentro: «Abejas hay muchas por los
+      bosques salvajes… algunas la haçen amarilla é otras la haçen negra…
+      Algunas crian los indios en sus casas en unos calabaços grandes: no pican
+      ni tienen ponçoña, é son mucho menores que las de España é mas
+      vellosas; y los vasillos de los panales… son cada uno tan grande como
+      una bellota» (Oviedo t. II p. 331, verificado en imagen). La abeja sin
+      aguijón más registrada del polígono (GBIF).
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '331 (t. II)', texto: 'Algunas crian los indios en sus casas en unos calabaços grandes: no pican ni tienen ponçoña', epoca: contacto-temprano}
+    nombres:
+      caquetio: {clave: ruba, capa: caquetío-atestiguado, alcance: 'abeja silvestre negra de Coro'}
+      caquetio_otro: 'bayure, wakukero (la amarilla), maba, mebi, memerea — caquetío-retroabstraido (Medina; ecologia-062 a 067)'
+      wayuu: 'mapase «cera de abeja» (lexicón)'
+    es_hueco: false
+    descripcion_visual: >-
+      Abeja peluda y parda, más chica que una mosca grande, que no pica; hace
+      su casa en un palo hueco o en un calabazo colgado en la vivienda, con
+      ollitas de cera del tamaño de una bellota llenas de miel.
+    sonido: {descripcion: 'zumbido (no descrito en la fuente)', fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855, medina-colina-sxx, gbif-paraguana-2026]
+    notas: 'Dos mieles por color de cera (amarilla más dulce, negra) en Oviedo, y dos abejas por color en Medina (wakukero amarilla, ruba negra): la misma distinción a 450 años. Se anota; que sean las mismas especies no está dicho'
+
+  - id: fa1-062
+    nombre_comun: avispas de miel
+    cientifico: 'Brachygastra / Polybia (Vespidae indet.)'
+    grupo: insecto
+    habitat: [cardonal, arbustos]
+    presencia_s_xv: segura
+    por_que: '«Abispas hay muchas é muy malas y ponçoñosas, y… haçen alguna miel y buena, y la comen los indios, assi como la de las abejas» (Oviedo t. II p. 331)'
+    evidencias:
+      - {obra: oviedo-y-valdes-1852-1855, pagina: '331 (t. II)', texto: 'haçen alguna miel y buena, y la comen los indios', epoca: contacto-temprano}
+    nombres:
+      caquetio: {clave: kakuro, capa: caquetío-atestiguado, alcance: 'pequeña avispa negra'}
+      caquetio_otro: 'matejea «la vivienda hecha por las avispas» (caquetío-retroabstraido, Medina p. 181)'
+      wayuu: 'ko''oi «avispa» (lexicón)'
+    es_hueco: false
+    descripcion_visual: 'Avispas negras de cintura fina que cuelgan de las ramas un nido de papel gris; pican fuerte, y dentro guardan miel.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1852-1855, medina-colina-sxx]
+
+  - id: fa1-063
+    nombre_comun: bachaco
+    cientifico: 'Atta sp.'
+    grupo: insecto
+    habitat: [conucos, cardonal]
+    presencia_s_xv: segura
+    por_que: 'nativa; nombrada en caquetío atestiguado; el cachicamo hace su cueva «debajo de un nido de bachacos» (Alvarado, pdf 71)'
+    nombres: {caquetio: {clave: koke, capa: caquetío-atestiguado}, caquetio_otro: {clave: ditero, capa: caquetío-atestiguado, alcance: 'hormiga que daña'}}
+    es_hueco: false
+    descripcion_visual: 'Hormigas rojas grandes de cabeza gruesa que cortan hojas y las llevan en fila hasta un montículo de tierra removida.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [alvarado-1921]
+
+  - id: fa1-064
+    nombre_comun: comején
+    cientifico: 'Neotermes holmgreni y otros termites'
+    gbif_nombre: Neotermes holmgreni
+    grupo: insecto
+    habitat: [madera, cercas, casa]
+    presencia_s_xv: probable
+    por_que: 'nativos, registrados en el polígono (GBIF)'
+    nombres: {caquetio: {clave: komején, capa: caquetío-reconstruido}, wayuu: 'ruluma «comején» (lexicón)'}
+    es_hueco: false
+    descripcion_visual: 'Hormiguitas blancas y blandas que se comen la madera por dentro y la dejan hueca, con caminos de barro sobre los troncos.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-065
+    nombre_comun: chicharra
+    cientifico: 'Cicadidae (Guyalna flavipronotum, registrada)'
+    gbif_nombre: Guyalna flavipronotum
+    grupo: insecto
+    habitat: [cardonal, árboles]
+    presencia_s_xv: probable
+    por_que: 'nativa; un registro de cigarra en el polígono (GBIF)'
+    nombres: {caquetio: null, castellano_regional: 'chicharra'}
+    es_hueco: true
+    descripcion_visual: >-
+      Insecto gordo de alas transparentes con venas, del largo de un dedo,
+      pegado a la corteza del árbol; casi no se ve, pero se oye en el calor
+      de la tarde.
+    sonido:
+      descripcion: 'chirrido fuerte y continuo desde los árboles en las horas de calor'
+      fuente: null
+      nota: 'sin fuente leída para la especie; el nombre castellano deriva de «cigarra» (la influencia onomatopéyica que le atribuyen los diccionarios no se pudo verificar: la RAE devolvió 403)'
+      onomatopeya_fuente: null
+      silabeo_propuesto: {forma: 'siiriri', etiqueta: hipotetico, razon: 'vocal alta sostenida y reduplicación; ninguna fuente'}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-066
+    nombre_comun: zancudo
+    cientifico: 'Anopheles, Aedes (nativos), Psorophora'
+    gbif_nombre: Anopheles punctimacula
+    grupo: insecto
+    habitat: [charcas, casa]
+    presencia_s_xv: probable
+    por_que: 'especies nativas registradas en el polígono (GBIF); OJO: Aedes aegypti es introducido (ver fa1-094)'
+    nombres:
+      caquetio: {clave: jején, capa: caquetío-reconstruido, alcance: 'el mosquito diminuto, no el zancudo'}
+      papiamento: 'ashibi «a small biting insect» (van Buurt p. 29, nivel B)'
+      wayuu: 'ji''rupu «mosquito» (lexicón)'
+    es_hueco: true
+    descripcion_visual: 'Mosquito de patas largas y finas que se posa en la piel de noche y pica; se cría en el agua quieta de los charcos.'
+    sonido: {descripcion: 'zumbido agudo junto al oído (no descrito en fuente leída)', fuente: null, onomatopeya_fuente: null}
+    fuentes: [van-buurt-2014, gbif-paraguana-2026]
+
+  - id: fa1-067
+    nombre_comun: cocuyo
+    cientifico: 'Pyrophorus sp.'
+    grupo: insecto
+    habitat: [monte, conucos]
+    presencia_s_xv: probable
+    por_que: 'Alvarado lo da común en Venezuela, con nombre taíno (cocuyo, cucuyo); sin registro en el polígono (GBIF): regla 6'
+    nombres:
+      caquetio: null
+      otros: '«Voz taina en ambas formas [cocuyo, cucuyo], y cháima en la de cucúi» (Alvarado, pdf 115)'
+    es_hueco: true
+    descripcion_visual: >-
+      Escarabajo pardo alargado con dos manchas en el pecho que de noche se
+      encienden de luz verde, y otra luz bajo el vientre cuando vuela; si se
+      le pone boca arriba, salta con un chasquido.
+    sonido: {descripcion: 'chasquido al saltar (no descrito en fuente leída)', fuente: null, onomatopeya_fuente: null}
+    fuentes: [alvarado-1921]
+
+  - id: fa1-068
+    nombre_comun: mariposa tronadora
+    cientifico: Hamadryas februa
+    grupo: insecto
+    habitat: [troncos, monte]
+    presencia_s_xv: probable
+    por_que: 'nativa, registrada en el polígono (GBIF)'
+    nombres: {caquetio: {clave: tara, capa: caquetío-atestiguado, alcance: 'mariposa, polilla (glosa segunda de tara)'}, wayuu: 'julirü «mariposa» (lexicón)'}
+    es_hueco: false
+    descripcion_visual: 'Mariposa gris moteada como la corteza, que se posa cabeza abajo en los troncos con las alas abiertas y se confunde con ellos.'
+    sonido: {descripcion: 'chasquidos en vuelo (conocidos en el género; sin fuente leída)', fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-069
+    nombre_comun: grillo
+    cientifico: 'Gryllidae indet.'
+    grupo: insecto
+    habitat: [conucos, casa]
+    presencia_s_xv: probable
+    por_que: 'grillos nativos en cualquier monte seco; ninguno identificado en el polígono (GBIF)'
+    nombres: {caquetio: null, papiamento: 'dalakochi, tiracochi, dalacochi (van Buurt §11, p. 45, nivel C)', wayuu: 'ju''i «grillo» (lexicón)'}
+    es_hueco: true
+    descripcion_visual: 'Insecto negro o pardo de patas traseras gruesas, que se esconde en las grietas y canta de noche.'
+    sonido: {descripcion: 'canto nocturno (no descrito en fuente leída)', fuente: null, onomatopeya_fuente: null}
+    fuentes: [van-buurt-2014]
+
+  - id: fa1-070
+    nombre_comun: nigua
+    cientifico: Tunga penetrans
+    grupo: insecto
+    habitat: [suelo arenoso, casa]
+    presencia_s_xv: probable
+    por_que: 'pulga americana; Oviedo la trata entre las cosas de La Española («la passion de la nigua», t. I, pdf 167); el lexicón la tiene'
+    nombres: {caquetio: {clave: niwa, capa: caquetío-reconstruido}}
+    es_hueco: false
+    descripcion_visual: 'Pulguita de la arena que se mete bajo la piel del pie, se hincha como una lenteja blanca y pone allí sus huevos.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [oviedo-y-valdes-1851]
+
+  # ── CARACOLES DE TIERRA ──────────────────────────────────────────────
+  - id: fa1-080
+    nombre_comun: caracol de Paraguaná
+    cientifico: Tudora paraguanensis
+    grupo: molusco
+    habitat: [piedra caliza, monte seco]
+    presencia_s_xv: probable
+    por_que: 'caracol operculado de tierra con nombre de la península y registrado en ella (GBIF); que sea endémico no se leyó en fuente: en duda, probable'
+    nombres: {caquetio: {clave: yagruma, capa: caquetío-atestiguado, alcance: 'caracol, molusco (genérico)'}}
+    es_hueco: false
+    descripcion_visual: 'Caracolito de tierra de concha alta y estriada, con una tapita que cierra la boca; se pega a las piedras en la seca y sale con la lluvia.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+    deuda: 'la descripción original no se leyó; autor y año, en el archivo generado de GBIF'
+
+  - id: fa1-081
+    nombre_comun: caracol de árbol
+    cientifico: Orthalicus maracaibensis
+    grupo: molusco
+    habitat: [árboles, cardonal]
+    presencia_s_xv: probable
+    por_que: 'nativo del noroeste seco de Venezuela, registrado en el polígono (GBIF)'
+    nombres: {caquetio: {clave: yagruma, capa: caquetío-atestiguado, alcance: genérico}}
+    es_hueco: false
+    descripcion_visual: 'Caracol grande de concha cónica pintada con llamas oscuras sobre fondo claro, que duerme pegado a las ramas durante la seca.'
+    sonido: {descripcion: null, fuente: null, onomatopeya_fuente: null}
+    fuentes: [gbif-paraguana-2026]
+
+  # ── EXCLUIDAS: llegaron después de 1492 ──────────────────────────────
+  - id: fa1-090
+    nombre_comun: chivo, cabra
+    cientifico: Capra hircus
+    grupo: mamífero
+    presencia_s_xv: excluida
+    por_que: >-
+      Doméstico del Viejo Mundo. En Coro ya hay «De cabras muchedumbre
+      copiosa: paren á dos y tres» cuando escribe Castellanos (publ. 1589,
+      líneas 48239-48241). Hoy es la primera amenaza del hábitat de los
+      endémicos de la península (Libro Rojo 2015: ratón mochilero, tuqueque
+      de Monte Cano).
+    nombres: {caquetio: null}
+    es_hueco: null
+    fuentes: [castellanos-elegias, libro-rojo-fauna-venezolana-2015]
+
+  - id: fa1-091
+    nombre_comun: vaca, oveja, cerdo
+    cientifico: 'Bos taurus, Ovis aries, Sus scrofa'
+    grupo: mamífero
+    presencia_s_xv: excluida
+    por_que: '«ay algunas bacas y obejas y puercos, aunque de todo este ganado dexó muy robada la tierra Juan de Carvajal» (Pérez de Tolosa, 1546, vía Arcaya p. 264): en Coro antes de 1546'
+    nombres: {caquetio: null}
+    es_hueco: null
+    fuentes: [arcaya-1920]
+    notas: 'los «puercos… como los nuestros» y las «ovejas» de Oviedo t. II p. 330 (c. 1540) pueden ser ya los introducidos: Oviedo mezcla en la lista lo nativo y lo traído'
+
+  - id: fa1-092
+    nombre_comun: caballo y burro
+    cientifico: 'Equus caballus, Equus asinus'
+    grupo: mamífero
+    presencia_s_xv: excluida
+    por_que: '«Hay de caballos casta generosa» en Coro (Castellanos, línea 48243); el burro, doméstico del Viejo Mundo, posterior a la conquista'
+    nombres: {caquetio: null}
+    es_hueco: null
+    fuentes: [castellanos-elegias]
+
+  - id: fa1-093
+    nombre_comun: 'rata y ratón europeos, gato'
+    cientifico: 'Rattus rattus, Mus musculus, Felis catus'
+    gbif_nombre: Rattus rattus
+    grupo: mamífero
+    presencia_s_xv: excluida
+    por_que: 'comensales del Viejo Mundo llegados con los barcos después de 1492; las dos ratas, registradas hoy en el polígono (GBIF). No confundir con los ratones nativos (fa1-022)'
+    nombres: {caquetio: null}
+    es_hueco: null
+    fuentes: [gbif-paraguana-2026]
+
+  - id: fa1-094
+    nombre_comun: 'insectos y arañas introducidos'
+    cientifico: 'Apis mellifera, Aedes aegypti, Periplaneta americana, Latrodectus geometricus'
+    gbif_nombre: Latrodectus geometricus
+    grupo: insecto
+    presencia_s_xv: excluida
+    por_que: >-
+      La abeja de miel es europea (y la africanizada, del s. XX); el Aedes
+      aegypti y la cucaracha americana llegaron de África con la trata; la
+      viuda marrón (registrada en el polígono, GBIF) es cosmopolita de origen
+      africano. El lexicón glosa `surupa` «Blatta orientalis. Cucaracha»: esa
+      especie también es del Viejo Mundo — la voz pudo nombrar antes a una
+      cucaracha nativa (issue).
+    nombres: {caquetio: null}
+    es_hueco: null
+    fuentes: [gbif-paraguana-2026]
+
+# ═════════════════════════════════════════════════════════════════════════
+# 3. CANDIDATOS A REFERENTE — los HUECOS, ordenados
+# ═════════════════════════════════════════════════════════════════════════
+# Criterio: es_hueco, presencia segura o probable, visible, cerca de la vida
+# diaria, con descripción y —si hay— sonido de fuente. Tono del catálogo
+# (curiana_koine.REFERENTES_NOVEDOSOS), pero como HUECO: algo que se ve siempre,
+# no algo nuevo. desc_referente ≤ 180, se_oye ≤ 80. El orden lo abre la
+# decisión de Miguel (db.4): la tarántula azul primero.
+candidatos_referente:
+  - orden: 1
+    especie: fa1-001
+    id_propuesto: tarantula_azul
+    desc_referente: >-
+      la araña grande y peluda de patas azules y vientre naranja que vive en
+      un hueco de árbol forrado de tela blanca, en el monte del cerro
+    se_oye: 'nada: sólo el roce de sus patas sobre la tela seca'
+    por_que: 'decisión de Miguel (db.4); presencia segura; la más llamativa de la parcela; SIN sonido de fuente, y se dice'
+
+  - orden: 2
+    especie: fa1-011
+    id_propuesto: conejo
+    desc_referente: >-
+      el animal pardo de orejas largas y cola blanca que se agacha quieto
+      entre la paja y huye corriendo como liebre; al que no se le tira echado
+    se_oye: 'casi nada: huye callado entre la paja'
+    por_que: 'presencia segura (tres crónicas y GBIF), caza diaria, y la única regla de caza caquetía del repo (Simón vía Arcaya p. 42)'
+
+  - orden: 3
+    especie: fa1-036
+    id_propuesto: cascabel
+    desc_referente: >-
+      la serpiente gruesa de rombos oscuros y cabeza de triángulo que duerme
+      entre los cujíes y, al sentir el paso, levanta la cola y la hace sonar
+    se_oye: 'la cola seca que suena al agitarse, un siseo de semillas'
+    por_que: 'segura; el animal que el paisaje enseña a temer (ecologia-035); el único que SUENA de las serpientes, y `buio` no la distingue'
+
+  - orden: 4
+    especie: fa1-050
+    id_propuesto: sapito_lipon
+    desc_referente: >-
+      el sapito gordo y chato con dos manchas negras como ojos en la cadera,
+      que aparece en los charcos la noche después del aguacero
+    se_oye: 'dos notas en la noche de los charcos: do-ri, do-ri'
+    se_oye_sin_silabas: 'un canto corto de dos notas que se repite en los charcos después de la lluvia'
+    por_que: 'segura; el ÚNICO de la parcela con onomatopeya de fuente (van Buurt p. 30); ver el aviso en el issue: «do-ri» casi le dicta a los agentes el nombre papiamento'
+
+  - orden: 5
+    especie: fa1-023
+    id_propuesto: perro_de_la_casa
+    desc_referente: >-
+      el perro pequeño de pelo corto que duerme junto al fogón y sigue a la
+      gente al conuco, y que nunca ladra
+    se_oye: 'nada: el perro de la casa no ladra'
+    por_que: 'probable (Oviedo t. II p. 331, verificado en imagen); el único animal de la casa; el sonido —su silencio— es de fuente'
+
+  - orden: 6
+    especie: fa1-016
+    id_propuesto: mapurite
+    desc_referente: >-
+      el animal negro con dos listas blancas del lomo a la cola, que camina
+      despacio y no huye, y levanta la cola cuando alguien se acerca
+    se_oye: 'nada; lo que se nota es el olor que deja'
+    por_que: 'segura (GBIF, ecologia-034); visible y reconocible; su señal es el olor (Alvarado, pdf 237), no el sonido'
+
+  - orden: 7
+    especie: fa1-003
+    id_propuesto: arana_plateada
+    desc_referente: >-
+      la araña de lomo plateado que espera quieta en el centro de una tela
+      redonda tendida entre espinas, con bandas blancas en zigzag
+    se_oye: 'nada'
+    por_que: 'probable (GBIF); visible todos los días en el cardonal; sin sonido'
+
+  - orden: 8
+    especie: fa1-065
+    id_propuesto: chicharra
+    desc_referente: >-
+      el bicho de alas transparentes pegado a la corteza, que casi no se ve y
+      llena de chirrido las tardes de calor
+    se_oye: 'un chirrido largo y fuerte desde los árboles, en lo más caliente'
+    por_que: 'probable (un registro GBIF); el sonido de la seca. El se_oye NO tiene fuente leída: degradar si Miguel lo exige'
+
+  - orden: 9
+    especie: fa1-066
+    id_propuesto: zancudo
+    desc_referente: >-
+      el mosquito de patas largas que sale del agua quieta de los charcos y
+      pica de noche
+    se_oye: 'un zumbido agudo junto al oído, en la oscuridad'
+    por_que: 'segura (GBIF, especies nativas); de todas las noches; `jején` nombra al diminuto, no a éste. Sonido sin fuente leída'
+
+  - orden: 10
+    especie: fa1-002
+    id_propuesto: ciempies
+    desc_referente: >-
+      el bicho largo de anillos rojizos y patas amarillas que corre bajo las
+      piedras y muerde con dos garfios
+    se_oye: 'nada; un roce entre la hojarasca'
+    por_que: 'probable (GBIF); se ve poco pero no se olvida; sin sonido'
+
+referentes_descartados:
+  - {especie: fa1-021, razon: 'endémico pero escondido en el bosque del cerro: nadie lo vería a diario'}
+  - {especie: fa1-034, razon: 'endémico, del tamaño de un dedo y bajo las piedras'}
+  - {especie: fa1-024, razon: 'con carga cultural (la piel en la frente), pero casi nunca se ve; bueno para la era 3'}
+  - {especie: fa1-067, razon: 'cocuyo: visual magnífico, pero ya tiene voz de la esfera (taíno cocuyo) y sin registro en la península'}
+  - {especie: fa1-013, razon: 'rabipelado: probable, pero sin rasgo sonoro ni registro GBIF en el polígono'}
+
+# ═════════════════════════════════════════════════════════════════════════
+# 4. PROPUESTAS A 3-mundo/corpus/ecologia.yaml (esquema de ese archivo)
+# ═════════════════════════════════════════════════════════════════════════
+# PROPUESTA, no edición: los ids son provisionales (el siguiente libre es
+# ecologia-085 hoy en main; si otra campaña lo toma antes, se renumeran).
+propuestas_ecologia:
+  - id: ecologia-085-propuesto
+    voz: null
+    contenido: >
+      La tarántula azul (Chromatopelma cyaneopubescens, Strand 1907) es un
+      animal de este monte: su localidad tipo es Paraguaná («Paraguara»), el
+      género tiene una sola especie, y 9 de sus 11 registros verificados están
+      en la península, su baluarte; los demás, en Coro, Colina y Lara. Vive en
+      un hueco de árbol, tronco caído o grieta de corteza que forra de seda; es
+      azul metálico con el abdomen naranja; los machos vagan de abril a junio.
+    fuente: atestiguado
+    referencia: "Sherwood y Gianni-Zurita 2023, Anartia 36, pp. 36-41; Colmenares 2015 (Libro Rojo, En Peligro B1ab(iii,v))"
+    procedencia: {obra: sherwood-gianni-zurita-2023, pagina: '36-41'}
+    dominios: [ecologia, fauna, hueco_lexico]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: matorral
+    lectura: >-
+      Presencia en el s. XV segura por biología (endemismo regional), no por
+      documento: ninguna fuente la nombra ni le da uso o creencia (búsqueda de
+      6-fusion/scripts/buscar_tarantula_azul.py). Es hueco léxico: el lexicón
+      no tiene voz caquetía para araña. «Endémica de la península» se corrige
+      a endémica de Venezuela con núcleo en la península.
+
+  - id: ecologia-086-propuesto
+    contenido: >
+      La fauna de tierra de la provincia de Venezuela hacia 1540, según el
+      informe del obispo Bastidas que Oviedo copia: osos hormigueros, «tigres
+      muchos», «venados en grand número, é á manadas», puercos de monte de dos
+      géneros, «conejos tantos ó mas que en nuestra España; pero… menores y
+      alebrestados», perezas, armados, «cories», ardillas, dantas, «perros
+      gosques que crian los indios en sus casas, é son mudos, que no ladran» y
+      leones pardos.
+    fuente: atestiguado
+    referencia: "Oviedo y Valdés, Historia general y natural, t. II (1852), lib. XXV, cap. XXII, pp. 330-331 (verificado en imagen el 2026-09-22)"
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: '330-331'}
+    dominios: [ecologia, fauna, caza]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: matorral
+    lectura: >-
+      Capa de contacto temprano y de la PROVINCIA, no de la península (regla
+      4): prueba lo que había en la tierra de Coro, no en cada cerro. Corrige a
+      ecologia-033/034 en un punto: la caza de la provincia no era tan pobre
+      como el istmo de hoy («venados á manadas»). El perro mudo es el único
+      animal doméstico precontacto de la lista y NO es el perro europeo.
+
+  - id: ecologia-087-propuesto
+    contenido: >
+      La miel era de abejas sin aguijón, y se criaban en casa: «Algunas crian
+      los indios en sus casas en unos calabaços grandes: no pican ni tienen
+      ponçoña… y los vasillos de los panales… son cada uno tan grande como una
+      bellota»; hay miel de cera amarilla, más dulce, y de cera negra. También
+      comían la miel de ciertas avispas «muy malas y ponçoñosas».
+    fuente: atestiguado
+    referencia: "Oviedo y Valdés, t. II, lib. XXV, cap. XXII, p. 331 (verificado en imagen)"
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: '331'}
+    dominios: [ecologia, fauna, recoleccion, oficios]
+    agentes_relacionados: []
+    palabra_lexicon: ruba
+    locacion: bohios
+    lectura: >-
+      Es la primera técnica de cría animal de la provincia en el corpus, y
+      casa con el racimo de la miel de Medina (ecologia-062 a 067: la abeja
+      amarilla `wakukero`, la negra `ruba`, el panal en tronco seco). Capa de
+      contacto temprano; su proyección al s. XV es lectura (la técnica no
+      depende de nada europeo).
+
+  - id: ecologia-088-propuesto
+    contenido: >
+      La langosta es plaga y es comida: «Hay mucha langosta, que los indios
+      llaman tara, y esta no es continua; pero algunos años hay tanta, que
+      cubre el ayre á no se poder ver el çielo… si dá en un mahiçal, lo tala
+      todo… también los indios en su vengança las toman y embanastan y se las
+      comen asadas».
+    fuente: atestiguado
+    referencia: "Oviedo y Valdés, t. II, lib. XXV, cap. XXII, p. 331 (verificado en imagen); la campaña taíno 2 ya lo midió para la glosa de `tara`"
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: '331'}
+    dominios: [ecologia, fauna, agricultura]
+    agentes_relacionados: []
+    palabra_lexicon: tara
+    locacion: conuco
+    lectura: 'Un año de langosta es un evento del calendario, no un referente: tiene nombre (`tara`) y tiene respuesta (cestas y brasa).'
+
+  - id: ecologia-089-propuesto
+    contenido: >
+      Los endemismos de tierra de la península: el ratón mochilero de
+      Paraguaná (Heteromys oasicus), sólo en los bosques del Cerro Santa Ana y
+      Monte Cano; el tuqueque de Monte Cano (Lepidoblepharis montecanoensis),
+      bajo piedras y hojarasca de las quebradas; y la tarántula azul, con su
+      núcleo aquí. El cerro y Monte Cano son islas de bosque húmedo en
+      el cardonal, y ahí vive lo que no hay en otra parte.
+    fuente: atestiguado
+    referencia: "Libro Rojo de la Fauna Venezolana 2015 (Gutiérrez et al.; Molina et al.); Sherwood y Gianni-Zurita 2023; GBIF (6-fusion/gbif_fauna_tierra_paraguana_2026-09-22.yaml)"
+    procedencia: {obra: libro-rojo-fauna-venezolana-2015, pagina: 'fichas del ratón mochilero y del tuqueque de Monte Cano'}
+    dominios: [ecologia, fauna]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Capa moderna del censo; los endemismos son del medio (evolucionaron aquí) y por eso proyectables al s. XV. Que el cerro sea isla de bosque sostiene capubana_agua_y_microclima.yaml.'
+
+  - id: ecologia-090-propuesto
+    contenido: >
+      El cardón necesita al murciélago: el murciélago cardonero (Leptonycteris
+      curasoae) poliniza de noche las flores de los cardones y los agaves y
+      dispersa sus semillas; vive en colonias de miles en las cuevas de la
+      península (Jacuque, El Pico, Piedra Honda, El Guano) y cruza a las islas
+      ABC.
+    fuente: atestiguado
+    referencia: "Libro Rojo de la Fauna Venezolana 2015, ficha del murciélago cardonero (Vulnerable A2c)"
+    procedencia: {obra: libro-rojo-fauna-venezolana-2015, pagina: 'ficha del murciélago cardonero'}
+    dominios: [ecologia, fauna, flora]
+    agentes_relacionados: []
+    palabra_lexicon: wache
+    locacion: matorral
+    lectura: 'Enlaza el fruto del cardón (dato, tampañá, cachinare) con la noche y la cueva. Proyectable: la relación planta-murciélago es del medio, no de la gente.'
+
+  - id: ecologia-091-propuesto
+    contenido: >
+      Las cabras llegaron pronto y se quedaron: hacia 1589 los campos de Coro
+      estaban «llenos» de ganado y «De cabras muchedumbre copiosa»; en 1546 ya
+      había «algunas bacas y obejas y puercos». Hoy el pastoreo de caprinos es
+      la primera amenaza de los bosques del cerro y de Monte Cano.
+    fuente: atestiguado
+    referencia: "Castellanos, Elegías, líneas 48235-48243; Pérez de Tolosa 1546 vía Arcaya 1920 p. 264; Libro Rojo 2015 (ratón mochilero, tuqueque de Monte Cano)"
+    procedencia: {obra: castellanos-elegias, pagina: 'líneas 48235-48243'}
+    dominios: [ecologia, fauna, biosfera_perdida, metodo]
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: null
+    lectura: 'Fecha la frontera de la regla 3 para la fauna: el chivo no es del s. XV y el monte que hoy se ve está ramoneado por él.'
+
+# ═════════════════════════════════════════════════════════════════════════
+# 5. CEROS VERIFICADOS Y DEUDAS
+# ═════════════════════════════════════════════════════════════════════════
+ceros_verificados:
+  - que: 'relación humana con la tarántula (nombre, uso, creencia)'
+    como: '6-fusion/scripts/buscar_tarantula_azul.py --contexto (raíces: araña con y sin eñe, tarántula, arácnido, arachn, spider, pollera)'
+    resultado: 'cero en Paraguaná; los tres aciertos con arañas son de fuera de la esfera o interpretativos (tarantula_azul.relacion_humana)'
+  - que: 'escorpiones en el polígono'
+    como: 'GBIF, faceta de especies de Arachnida'
+    resultado: 'cero: mide GBIF (bicho nocturno), no la península'
+  - que: 'voz caquetía para conejo, araña, sapo, perro, cascabel'
+    como: 'glosas de VOCABULARIO_BASE y FUERA_DEL_HABLA, las cuatro capas caquetías'
+    resultado: 'cero para las cinco; el perro y el sapo tienen voz wayuu en el lexicón (erü, eperü''üi)'
+  - que: 'grabaciones por ID (xeno-canto, Macaulay)'
+    como: 'API v2 de xeno-canto (retirada), v3 (pide cuenta), buscador web (Access Denied)'
+    resultado: 'no consultable sin cuenta: ninguna onomatopeya sale de una grabación'
+deudas:
+  - 'Barrio-Amorós, Miralles, Rivas y Barros 2008, «Reptiles de la península venezolana de Paraguaná», Reptilia 72: 43-48 — la lista de reptiles de la península; no es de acceso abierto (revista comercial): se anota, no se baja'
+  - 'Marte 2012, «Hábitat y microhábitat de la Chromatopelma cyaneopubescens en los Bosques Secos del segundo piso biótico del Cerro Santa Ana», resumen del III Congreso Venezolano de Diversidad Biológica, p. 93'
+  - 'Anderson 2003 (Heteromys oasicus), en Zenodo 5373417 — abierto; no se bajó por economía'
+  - 'una lista de escorpiones y de insectos de Falcón con especies de la península'
+  - 'grabaciones por ID para el sapo, la rana silbadora, la chicharra, el zancudo y la cascabel (necesitan cuenta en xeno-canto o Macaulay: decide Miguel)'

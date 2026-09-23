@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 83
-  en_repo: 51
-  solo_citadas: 32
+  obras: 86
+  en_repo: 53
+  solo_citadas: 33
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -385,6 +385,24 @@ obras:
   - Pinart 1882
   - The Aruba Language
   en_repo: true
+- id: gbif-paraguana-2026
+  obra: GBIF — ocurrencias de fauna de tierra en el polígono de la península de Paraguaná y el istmo de
+    los Médanos (consulta por API)
+  autor: GBIF.org (Global Biodiversity Information Facility) y los conjuntos de datos que publica
+  anio: 2026
+  publicacion: API pública https://api.gbif.org/v1/occurrence/search con facetas, consultada el 2026-09-22;
+    sin descarga (una descarga pide cuenta), así que sin DOI de descarga
+  genero: datos
+  local:
+  - 6-fusion/gbif_fauna_tierra_paraguana_2026-09-22.yaml (generado por 6-fusion/scripts/gbif_fauna_tierra_paraguana.py)
+  paginas: — (datos)
+  acceso: Libre; cada conjunto de datos tiene su licencia (CC0, CC BY o CC BY-NC), listada en el archivo
+    generado
+  aliases:
+  - GBIF Paraguaná
+  - GBIF 2026
+  - gbif-paraguana
+  en_repo: true
 - id: gilij-1780-1783
   obra: Saggio di Storia Americana, vols. 1, 3 y 4
   autor: Gilij, Filippo Salvatore
@@ -546,6 +564,24 @@ obras:
   - NBAE 13
   - Historiadores de Indias tomo I
   en_repo: true
+- id: libro-rojo-fauna-venezolana-2015
+  obra: Libro Rojo de la Fauna Venezolana, 4.ª edición — fichas en línea
+  autor: Rodríguez, J. P.; García-Rawlins, A.; Rojas-Suárez, F. (eds.); fichas de Colmenares, P.; Gutiérrez,
+    E. E., Ochoa-G., J. y Sánchez-Hernández, J.; Molina, C., Rojas-Runjaic, F. J. M. y Rivas, G. A.; y
+    otros
+  anio: 2015
+  publicacion: Provita y Fundación Empresas Polar, Caracas; fichas en www.especiesamenazadas.org
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea, © Provita. especiesamenazadas.org rechazó la conexión directa el 2026-09-22;
+    se leyeron las copias de archive.org (web.archive.org/web/2024id_/…). Obra con derechos: citas cortas
+    y paráfrasis'
+  aliases:
+  - Libro Rojo 2015
+  - Libro Rojo de la Fauna Venezolana
+  - especiesamenazadas.org
+  - Colmenares 2015
+  en_repo: false
 - id: maria-lionza-culto
   obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
     1972 · Barreto 1987/1989-90 · Clarac de Briceño 1970
@@ -1143,6 +1179,23 @@ obras:
   aliases:
   - Schroeder et al. 2018
   - Taíno PNAS 2018
+  en_repo: true
+- id: sherwood-gianni-zurita-2023
+  obra: 'Leveraging citizen science data to preliminarily infer the distribution and habitat associations
+    of the Venezuelan endemic Chromatopelma cyaneopubescens (Strand, 1907) (Araneae: Theraphosidae)'
+  autor: Sherwood, Danniella; Gianni-Zurita, Rafael
+  anio: 2023
+  publicacion: 'Anartia (Museo de Biología de La Universidad del Zulia) 36: 36-50; DOI 10.5281/zenodo.10429585'
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Sherwood_GianniZurita_2023_Chromatopelma_Anartia.pdf
+  - fuentes_caquetios/Sherwood_GianniZurita_2023_Chromatopelma_Anartia.txt
+  paginas: 15
+  acceso: Libre — CC BY 4.0 (Zenodo)
+  aliases:
+  - Sherwood y Gianni-Zurita 2023
+  - Sherwood & Gianni-Zurita 2023
+  - la tarántula azul en Anartia
   en_repo: true
 - id: steward-1949
   obra: Handbook of South American Indians, Vol. V
