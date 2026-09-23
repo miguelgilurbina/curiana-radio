@@ -1,0 +1,1362 @@
+# GENERADO por 6-fusion/scripts/gbif_fauna_tierra_paraguana.py — no se edita a mano.
+generado_por: 6-fusion/scripts/gbif_fauna_tierra_paraguana.py — no se edita a mano
+consultado: '2026-09-23'
+api: https://api.gbif.org/v1/occurrence/search (facetas, sin descarga)
+poligono_wkt: POLYGON((-70.32 11.60,-70.05 11.55,-69.86 11.52,-69.72 11.42,-69.62 11.47,-69.72 11.62,-69.70
+  11.90,-69.78 12.15,-70.05 12.25,-70.32 12.12,-70.32 11.60))
+aviso: 'Sin DOI de descarga: la API de búsqueda no lo da y una descarga pide cuenta. Se cita la consulta
+  con su fecha y los conjuntos de datos de abajo. Casi todo es ciencia ciudadana (iNaturalist) y colecciones
+  del s. XX-XXI: es censo MODERNO, no del s. XV (regla 3), y un 0 mide GBIF, no la península (regla 6).'
+control_de_ausencias:
+  por_clase:
+    Mammalia:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Squamata:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Testudines:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Amphibia:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Arachnida:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Chilopoda:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Insecta:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+    Gastropoda:
+      organismQuantity_0: 0
+      occurrenceStatus_ABSENT: 0
+  clases_contaminadas: []
+  lectura: 'Las facetas no se pueden filtrar por «distinto de cero», así que se mide antes: si una clase
+    de tierra tuviera filas con organismQuantity 0 u occurrenceStatus ABSENT, sus cifras habría que rehacerlas
+    por registro. En aves (fuera de esta parcela) son 480 filas de NeoMaps 2010.'
+total_ocurrencias_poligono_con_fosiles: 46188
+total_ocurrencias_poligono: 46176
+bases_de_registro_contadas:
+- HUMAN_OBSERVATION
+- OBSERVATION
+- MACHINE_OBSERVATION
+- PRESERVED_SPECIMEN
+- MATERIAL_SAMPLE
+- LIVING_SPECIMEN
+- OCCURRENCE
+- MATERIAL_CITATION
+por_clase:
+  Aves: 41078
+  Gastropoda: 937
+  Insecta: 835
+  Malacostraca: 667
+  Florideophyceae: 475
+  Mammalia: 411
+  Ulvophyceae: 393
+  Bivalvia: 216
+  Magnoliopsida: 200
+  Squamata: 179
+  Phaeophyceae: 159
+  Anthozoa: 53
+  Bryopsida: 48
+  Echinoidea: 44
+  Arachnida: 41
+  Cyanobacteriia: 39
+  Polyplacophora: 38
+  Liliopsida: 32
+  Testudines: 26
+  Jungermanniopsida: 26
+  Amphibia: 18
+  Demospongiae: 18
+  Elasmobranchii: 15
+  Clitellata: 14
+  Bacilli: 12
+  Hydrozoa: 8
+  Campylobacteria: 6
+  Scaphopoda: 6
+  Arthoniomycetes: 5
+  Polypodiopsida: 5
+  Gammaproteobacteria: 4
+  Cephalopoda: 3
+  Lecanoromycetes: 3
+  Asteroidea: 3
+  Compsopogonophyceae: 3
+  Maxillopoda: 2
+  Polychaeta: 2
+  Branchiopoda: 2
+  Ostracoda: 2
+  Chilopoda: 2
+  Crocodylia: 1
+  Marchantiopsida: 1
+  Exobasidiomycetes: 1
+  Eurotiomycetes: 1
+  Dothideomycetes: 1
+  Crinoidea: 1
+  Pucciniomycetes: 1
+  Scyphozoa: 1
+especies_de_tierra:
+  Mammalia:
+  - clave: 2433316
+    nombre: Leptonycteris curasoae
+    autoria: Miller, 1900
+    familia: Phyllostomidae
+    orden: Chiroptera
+    ocurrencias: 74
+  - clave: 5218622
+    nombre: Pteronotus davyi
+    autoria: Gray, 1838
+    familia: Mormoopidae
+    orden: Chiroptera
+    ocurrencias: 61
+  - clave: 2439874
+    nombre: Marmosa xerophila
+    autoria: Handley & Gordon, 1979
+    familia: Didelphidae
+    orden: Didelphimorphia
+    ocurrencias: 47
+  - clave: 2439862
+    nombre: Marmosa robinsoni
+    autoria: Bangs, 1898
+    familia: Didelphidae
+    orden: Didelphimorphia
+    ocurrencias: 44
+  - clave: 2432759
+    nombre: Mormoops megalophylla
+    autoria: '(Peters, 1864) '
+    familia: Mormoopidae
+    orden: Chiroptera
+    ocurrencias: 27
+  - clave: 2433192
+    nombre: Glossophaga longirostris
+    autoria: Miller, 1898
+    familia: Phyllostomidae
+    orden: Chiroptera
+    ocurrencias: 27
+  - clave: 5218725
+    nombre: Molossus molossus
+    autoria: '(Pallas, 1766) '
+    familia: Molossidae
+    orden: Chiroptera
+    ocurrencias: 26
+  - clave: 2436886
+    nombre: Sylvilagus floridanus
+    autoria: '(J.A.Allen, 1890) '
+    familia: Leporidae
+    orden: Lagomorpha
+    ocurrencias: 24
+  - clave: 2432753
+    nombre: Natalus tumidirostris
+    autoria: Miller, 1900
+    familia: Natalidae
+    orden: Chiroptera
+    ocurrencias: 23
+  - clave: 5219821
+    nombre: Rhipidomys venezuelae
+    autoria: Thomas, 1896
+    familia: Cricetidae
+    orden: Rodentia
+    ocurrencias: 11
+  - clave: 2439270
+    nombre: Rattus rattus
+    autoria: '(Linnaeus, 1758) '
+    familia: Muridae
+    orden: Rodentia
+    ocurrencias: 8
+  - clave: 5218619
+    nombre: Pteronotus personatus
+    autoria: '(Wagner, 1843) '
+    familia: Mormoopidae
+    orden: Chiroptera
+    ocurrencias: 6
+  - clave: 5218620
+    nombre: Pteronotus parnellii
+    autoria: '(Gray, 1843) '
+    familia: Mormoopidae
+    orden: Chiroptera
+    ocurrencias: 5
+  - clave: 2439772
+    nombre: Proechimys guairae
+    autoria: Thomas, 1901
+    familia: Echimyidae
+    orden: Rodentia
+    ocurrencias: 3
+  - clave: 4263269
+    nombre: Heteromys oasicus
+    autoria: Anderson, 2003
+    familia: Heteromyidae
+    orden: Rodentia
+    ocurrencias: 3
+  - clave: 7429082
+    nombre: Mus musculus
+    autoria: Linnaeus, 1758
+    familia: Muridae
+    orden: Rodentia
+    ocurrencias: 3
+  - clave: 2434883
+    nombre: Conepatus semistriatus
+    autoria: '(Boddaert, 1785) '
+    familia: Mephitidae
+    orden: Carnivora
+    ocurrencias: 2
+  - clave: 2433224
+    nombre: Lonchophylla robusta
+    autoria: Miller, 1912
+    familia: Phyllostomidae
+    orden: Chiroptera
+    ocurrencias: 1
+  - clave: 2434584
+    nombre: Cerdocyon thous
+    autoria: '(Linnaeus, 1766) '
+    familia: Canidae
+    orden: Carnivora
+    ocurrencias: 1
+  - clave: 2434982
+    nombre: Leopardus pardalis
+    autoria: '(Linnaeus, 1758) '
+    familia: Felidae
+    orden: Carnivora
+    ocurrencias: 1
+  - clave: 2437952
+    nombre: Calomys hummelincki
+    autoria: '(Husson, 1960) '
+    familia: Cricetidae
+    orden: Rodentia
+    ocurrencias: 1
+  - clave: 2439789
+    nombre: Proechimys semispinosus
+    autoria: '(Tomes, 1860) '
+    familia: Echimyidae
+    orden: Rodentia
+    ocurrencias: 1
+  - clave: 2440605
+    nombre: Globicephala macrorhynchus
+    autoria: Gray, 1846
+    familia: Delphinidae
+    orden: Cetacea
+    ocurrencias: 1
+  - clave: 2440718
+    nombre: Balaenoptera physalus
+    autoria: '(Linnaeus, 1758) '
+    familia: Balaenopteridae
+    orden: Cetacea
+    ocurrencias: 1
+  - clave: 4971070
+    nombre: Zarhachis flagellator
+    autoria: Cope, 1868
+    familia: Platanistidae
+    orden: Cetacea
+    ocurrencias: 1
+  Squamata:
+  - clave: 2467544
+    nombre: Anolis onca
+    autoria: '(O''Shaughnessy, 1875) '
+    familia: Dactyloidae
+    orden: null
+    ocurrencias: 78
+  - clave: 5227442
+    nombre: Cnemidophorus arenivagus
+    autoria: Markezich, Cole & Dessauer, 1997
+    familia: Teiidae
+    orden: null
+    ocurrencias: 18
+  - clave: 2459658
+    nombre: Iguana iguana
+    autoria: '(Linnaeus, 1758) '
+    familia: Iguanidae
+    orden: null
+    ocurrencias: 14
+  - clave: 9632667
+    nombre: Cnemidophorus splendidus
+    autoria: '(Markezich, Cole & Dessauer, 1997) '
+    familia: Teiidae
+    orden: null
+    ocurrencias: 13
+  - clave: 2472186
+    nombre: Ameiva bifrontata
+    autoria: Cope, 1862
+    familia: Teiidae
+    orden: null
+    ocurrencias: 12
+  - clave: 2447604
+    nombre: Gonatodes vittatus
+    autoria: '(Lichtenstein & Martens, 1856) '
+    familia: Sphaerodactylidae
+    orden: null
+    ocurrencias: 5
+  - clave: 2452151
+    nombre: Masticophis mentovarius
+    autoria: '(Duméril, Bibron & Duméril, 1854) '
+    familia: Colubridae
+    orden: null
+    ocurrencias: 5
+  - clave: 2456189
+    nombre: Mastigodryas pleii
+    autoria: '(Duméril, Bibron & Duméril, 1854) '
+    familia: Colubridae
+    orden: null
+    ocurrencias: 4
+  - clave: 2445829
+    nombre: Thecadactylus rapicauda
+    autoria: '(Houttuyn, 1782) '
+    familia: Phyllodactylidae
+    orden: null
+    ocurrencias: 3
+  - clave: 2444433
+    nombre: Crotalus durissus
+    autoria: Linnaeus, 1758
+    familia: Viperidae
+    orden: null
+    ocurrencias: 2
+  - clave: 2446454
+    nombre: Lepidoblepharis montecanoensis
+    autoria: Markezich & Taphorn, 1994
+    familia: Sphaerodactylidae
+    orden: null
+    ocurrencias: 2
+  - clave: 2464899
+    nombre: Boa constrictor
+    autoria: Linnaeus, 1758
+    familia: Boidae
+    orden: null
+    ocurrencias: 2
+  - clave: 5227564
+    nombre: Cnemidophorus lemniscatus
+    autoria: '(Linnaeus, 1758) '
+    familia: Teiidae
+    orden: null
+    ocurrencias: 2
+  - clave: 9129157
+    nombre: Anolis auratus
+    autoria: Daudin, 1802
+    familia: Dactyloidae
+    orden: null
+    ocurrencias: 2
+  - clave: 2447609
+    nombre: Gonatodes albogularis
+    autoria: '(Duméril & Bibron, 1836) '
+    familia: Sphaerodactylidae
+    orden: null
+    ocurrencias: 1
+  - clave: 2454989
+    nombre: Oxyrhopus petolarius
+    autoria: '(Linnaeus, 1758) '
+    familia: Colubridae
+    orden: null
+    ocurrencias: 1
+  - clave: 2472164
+    nombre: Ameiva ameiva
+    autoria: '(Linnaeus, 1758) '
+    familia: Teiidae
+    orden: null
+    ocurrencias: 1
+  - clave: 7920239
+    nombre: Thamnodynastes paraguanae
+    autoria: Bailey & Thomas, 2007
+    familia: Colubridae
+    orden: null
+    ocurrencias: 1
+  - clave: 9497500
+    nombre: Tantilla semicincta
+    autoria: '(Duméril, Bibron & Duméril, 1854) '
+    familia: Colubridae
+    orden: null
+    ocurrencias: 1
+  Testudines:
+  - clave: 8841716
+    nombre: Eretmochelys imbricata
+    autoria: '(Linnaeus, 1766) '
+    familia: Cheloniidae
+    orden: null
+    ocurrencias: 25
+  - clave: 2442361
+    nombre: Kinosternon scorpioides
+    autoria: '(Linnaeus, 1766) '
+    familia: Kinosternidae
+    orden: null
+    ocurrencias: 1
+  Amphibia:
+  - clave: 2423470
+    nombre: Pleurodema brachyops
+    autoria: '(Cope, 1869) '
+    familia: Leptodactylidae
+    orden: Anura
+    ocurrencias: 6
+  - clave: 5216933
+    nombre: Rhinella marina
+    autoria: '(Linnaeus, 1758) '
+    familia: Bufonidae
+    orden: Anura
+    ocurrencias: 5
+  - clave: 10892611
+    nombre: Rhinella horribilis
+    autoria: '(Wiegmann, 1833) '
+    familia: Bufonidae
+    orden: Anura
+    ocurrencias: 4
+  - clave: 5216997
+    nombre: Rhinella beebei
+    autoria: '(Gallardo, 1965) '
+    familia: Bufonidae
+    orden: Anura
+    ocurrencias: 1
+  - clave: 5217556
+    nombre: Leptodactylus fuscus
+    autoria: '(Schneider, 1799) '
+    familia: Leptodactylidae
+    orden: Anura
+    ocurrencias: 1
+  - clave: 5217587
+    nombre: Leptodactylus fragilis
+    autoria: '(Brocchi, 1877) '
+    familia: Leptodactylidae
+    orden: Anura
+    ocurrencias: 1
+  Arachnida:
+  - clave: 2154364
+    nombre: Chromatopelma cyaneopubescens
+    autoria: '(Strand, 1907) '
+    familia: Theraphosidae
+    orden: Araneae
+    ocurrencias: 12
+  - clave: 11200396
+    nombre: Anopsicus ana
+    autoria: Huber, 2020
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 4
+  - clave: 2149879
+    nombre: Mesabolivar eberhardi
+    autoria: Huber, 2000
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 4
+  - clave: 11122211
+    nombre: Modisimus repens
+    autoria: Huber, 2020
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 2
+  - clave: 11125430
+    nombre: Galapa spiniphila
+    autoria: Huber, 2020
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 2
+  - clave: 11151913
+    nombre: Metagonia latigo
+    autoria: Huber, 2020
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 2
+  - clave: 11544957
+    nombre: Pisaboa marcuzzii
+    autoria: '(Caporiacco, 1955) '
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 2
+  - clave: 9922865
+    nombre: Chisosa caquetio
+    autoria: Huber, 2019
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 2
+  - clave: 2150156
+    nombre: Modisimus culicinus
+    autoria: '(Simon, 1893) '
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 1
+  - clave: 2150555
+    nombre: Physocyclus globosus
+    autoria: '(Taczanowski, 1874) '
+    familia: Pholcidae
+    orden: Araneae
+    ocurrencias: 1
+  - clave: 2157300
+    nombre: Steatoda quadrimaculata
+    autoria: '(O.Pickard-Cambridge, 1896) '
+    familia: Theridiidae
+    orden: Araneae
+    ocurrencias: 1
+  - clave: 2157944
+    nombre: Latrodectus geometricus
+    autoria: C.L.Koch, 1841
+    familia: Theridiidae
+    orden: Araneae
+    ocurrencias: 1
+  - clave: 2160920
+    nombre: Metepeira compsa
+    autoria: '(Chamberlin, 1916) '
+    familia: Araneidae
+    orden: Araneae
+    ocurrencias: 1
+  - clave: 5170999
+    nombre: Argiope argentata
+    autoria: '(Fabricius, 1775) '
+    familia: Araneidae
+    orden: Araneae
+    ocurrencias: 1
+  - clave: 9247051
+    nombre: Zimiris doriae
+    autoria: Simon, 1882
+    familia: Prodidomidae
+    orden: Araneae
+    ocurrencias: 1
+  Chilopoda:
+  - clave: 5179388
+    nombre: Scolopendra gigantea
+    autoria: Linnaeus, 1758
+    familia: Scolopendridae
+    orden: Scolopendromorpha
+    ocurrencias: 1
+  Insecta:
+  - clave: 1340089
+    nombre: Melipona favosa
+    autoria: '(Fabricius, 1798) '
+    familia: Apidae
+    orden: Hymenoptera
+    ocurrencias: 35
+  - clave: 10594728
+    nombre: Belostoma venezuelae
+    autoria: Lauck, 1962
+    familia: Belostomatidae
+    orden: Hemiptera
+    ocurrencias: 17
+  - clave: 6002577
+    nombre: Hydrovatus caraibus
+    autoria: Sharp, 1882
+    familia: Dytiscidae
+    orden: Coleoptera
+    ocurrencias: 15
+  - clave: 1715314
+    nombre: Tropidacris collaris
+    autoria: '(Stoll, 1813) '
+    familia: Romaleidae
+    orden: Orthoptera
+    ocurrencias: 13
+  - clave: 10434141
+    nombre: Chromoteleia dispar
+    autoria: Chen & Masner, 2018
+    familia: Scelionidae
+    orden: Hymenoptera
+    ocurrencias: 10
+  - clave: 1049602
+    nombre: Hydrocanthus debilis
+    autoria: Sharp, 1882
+    familia: Noteridae
+    orden: Coleoptera
+    ocurrencias: 10
+  - clave: 4990928
+    nombre: Suphisellus nigrinus
+    autoria: '(Aubé, 1838) '
+    familia: Noteridae
+    orden: Coleoptera
+    ocurrencias: 9
+  - clave: 1650353
+    nombre: Anopheles punctimacula
+    autoria: Dyar & Knab, 1906
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 6
+  - clave: 1034227
+    nombre: Tropisternus apicipalpis
+    autoria: '(Chevrolat, 1834) '
+    familia: Hydrophilidae
+    orden: Coleoptera
+    ocurrencias: 4
+  - clave: 1650450
+    nombre: Anopheles pseudopunctipennis
+    autoria: Theobald, 1901
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 3
+  - clave: 1654734
+    nombre: Psorophora ferox
+    autoria: '(Humboldt, 1819) '
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 3
+  - clave: 4990925
+    nombre: Suphisellus curtus
+    autoria: '(Sharp, 1882) '
+    familia: Noteridae
+    orden: Coleoptera
+    ocurrencias: 3
+  - clave: 5873992
+    nombre: Thermonectus succinctus
+    autoria: '(Aubé, 1838) '
+    familia: Dytiscidae
+    orden: Coleoptera
+    ocurrencias: 3
+  - clave: 7818989
+    nombre: Tropisternus ovalis
+    autoria: Laporte de Castelnau, 1840
+    familia: Hydrophilidae
+    orden: Coleoptera
+    ocurrencias: 3
+  - clave: 1034206
+    nombre: Tropisternus lateralis
+    autoria: '(Fabricius, 1775) '
+    familia: Hydrophilidae
+    orden: Coleoptera
+    ocurrencias: 2
+  - clave: 1038308
+    nombre: Laccophilus fasciatus
+    autoria: Aubé, 1838
+    familia: Dytiscidae
+    orden: Coleoptera
+    ocurrencias: 2
+  - clave: 10556134
+    nombre: Tropisternus setiger
+    autoria: '(Germar, 1823) '
+    familia: Hydrophilidae
+    orden: Coleoptera
+    ocurrencias: 2
+  - clave: 11701883
+    nombre: Dione vanillae
+    autoria: '(Linnaeus, 1758) '
+    familia: Nymphalidae
+    orden: Lepidoptera
+    ocurrencias: 2
+  - clave: 1651587
+    nombre: Aedes angustivittatus
+    autoria: Dyar & Knab, 1907
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 2
+  - clave: 1920581
+    nombre: Kricogonia lyside
+    autoria: '(Godart, 1819) '
+    familia: Pieridae
+    orden: Lepidoptera
+    ocurrencias: 2
+  - clave: 8552173
+    nombre: Eratyrus cuspidatus
+    autoria: Stål, 1859
+    familia: Reduviidae
+    orden: Hemiptera
+    ocurrencias: 2
+  - clave: 1039078
+    nombre: Ochthebius lineatus
+    autoria: J.L.LeConte, 1852
+    familia: Hydraenidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 1047302
+    nombre: Disonycha glabrata
+    autoria: '(Fabricius, 1775) '
+    familia: Chrysomelidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 1047598
+    nombre: Charidotella sexpunctata
+    autoria: '(Fabricius, 1781) '
+    familia: Chrysomelidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 1049596
+    nombre: Suphis cimicoides
+    autoria: Aubé, 1836
+    familia: Noteridae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 10600132
+    nombre: Pharneuptychia estoraquensis
+    autoria: Henao-Bañol E.R. & Meneses L.H., 2017
+    familia: Nymphalidae
+    orden: Lepidoptera
+    ocurrencias: 1
+  - clave: 1403002
+    nombre: Aradophagus diazi
+    autoria: Garcia & Masner, 1994
+    familia: Scelionidae
+    orden: Hymenoptera
+    ocurrencias: 1
+  - clave: 1650337
+    nombre: Anopheles neomaculipalpus
+    autoria: Curry, 1931
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 1
+  - clave: 1652200
+    nombre: Aedes euplocamus
+    autoria: Dyar & Knab, 1906
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 1
+  - clave: 1652257
+    nombre: Aedes scapularis
+    autoria: Rondani, 1848
+    familia: Culicidae
+    orden: Diptera
+    ocurrencias: 1
+  - clave: 1707273
+    nombre: Schistocerca pallens
+    autoria: '(Thunberg, 1815) '
+    familia: Acrididae
+    orden: Orthoptera
+    ocurrencias: 1
+  - clave: 1948439
+    nombre: Chioides zilpa
+    autoria: '(Butler, 1874) '
+    familia: Hesperiidae
+    orden: Lepidoptera
+    ocurrencias: 1
+  - clave: 2007330
+    nombre: Neotermes holmgreni
+    autoria: Banks, 1918
+    familia: Kalotermitidae
+    orden: Blattodea
+    ocurrencias: 1
+  - clave: 2050043
+    nombre: Catorhintha guttula
+    autoria: '(Fabricius, 1794) '
+    familia: Coreidae
+    orden: Hemiptera
+    ocurrencias: 1
+  - clave: 4990923
+    nombre: Suphisellus simoni
+    autoria: '(Régimbart, 1889) '
+    familia: Noteridae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 4995958
+    nombre: Euphoria yucateca
+    autoria: Bates, 1889
+    familia: Scarabaeidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 5123971
+    nombre: Eumorpha labruscae
+    autoria: Linnaeus, 1758
+    familia: Sphingidae
+    orden: Lepidoptera
+    ocurrencias: 1
+  - clave: 5128034
+    nombre: Dryas iulia
+    autoria: '(Fabricius, 1775) '
+    familia: Nymphalidae
+    orden: Lepidoptera
+    ocurrencias: 1
+  - clave: 5129481
+    nombre: Hamadryas februa
+    autoria: '(Hübner) '
+    familia: Nymphalidae
+    orden: Lepidoptera
+    ocurrencias: 1
+  - clave: 5133088
+    nombre: Danaus plexippus
+    autoria: '(Linnaeus, 1758) '
+    familia: Nymphalidae
+    orden: Lepidoptera
+    ocurrencias: 1
+  - clave: 7003895
+    nombre: Gyrinus ovatus
+    autoria: Aubé, 1838
+    familia: Gyrinidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 7790339
+    nombre: Naupactus santanae
+    autoria: Bordón, 1997
+    familia: Curculionidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 7895109
+    nombre: Naupactus clavijoi
+    autoria: Bordón, 1997
+    familia: Curculionidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 8074421
+    nombre: Naupactus llanensis
+    autoria: Bordón, 1997
+    familia: Curculionidae
+    orden: Coleoptera
+    ocurrencias: 1
+  - clave: 8372557
+    nombre: Catorhintha selector
+    autoria: Stål, 1860
+    familia: Coreidae
+    orden: Hemiptera
+    ocurrencias: 1
+  - clave: 8624680
+    nombre: Guyalna flavipronotum
+    autoria: '(Sanborn, 2007) '
+    familia: Cicadidae
+    orden: Hemiptera
+    ocurrencias: 1
+  - clave: 9273454
+    nombre: Agonosoma trilineata
+    autoria: '(Fabricius, 1782) '
+    familia: Scutelleridae
+    orden: Hemiptera
+    ocurrencias: 1
+  Gastropoda (familias de tierra):
+  - clave: 10759265
+    nombre: Orthalicus maracaibensis
+    autoria: L.Pfeiffer, 1856
+    familia: Orthalicidae
+    orden: Stylommatophora
+    ocurrencias: 7
+  - clave: 10661920
+    nombre: Bulimulus cacticolus
+    autoria: '(Reeve, 1849) '
+    familia: Bulimulidae
+    orden: Stylommatophora
+    ocurrencias: 1
+  - clave: 9607632
+    nombre: Tudora paraguanensis
+    autoria: Hovestadt, 2016
+    familia: Annulariidae
+    orden: Littorinimorpha
+    ocurrencias: 1
+conjuntos_de_datos:
+- clave: 821cc27a-e3bb-4bc5-ac34-89ada245069d
+  titulo: NMNH Extant Specimen Records (USNM, US)
+  publicador: National Museum of Natural History, Smithsonian Institution
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/hnhrg3
+  ocurrencias_de_tierra: 400
+- clave: aae308f4-9f9c-4cdd-b4ef-c026f48be551
+  titulo: Snow Entomological Museum Collection
+  publicador: University of Kansas Biodiversity Institute
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/fhntpy
+  ocurrencias_de_tierra: 336
+- clave: bb5b30b4-827e-4d5e-a86a-825d65cb6583
+  titulo: Paleobiology Database
+  publicador: Paleobiology Database
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/jfqhiu
+  ocurrencias_de_tierra: 324
+- clave: d2175301-670b-4f99-ad87-f47b190d1e9c
+  titulo: South Caribbean Diversity
+  publicador: Caribbean OBIS Node
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/xeray1
+  ocurrencias_de_tierra: 180
+- clave: 040c5662-da76-4782-a48e-cdea1892d14c
+  titulo: International Barcode of Life project (iBOL)
+  publicador: The International Barcode of Life Consortium
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/inygc6
+  ocurrencias_de_tierra: 130
+- clave: d8cd16ba-bb74-4420-821e-083f2bac17c2
+  titulo: INSDC Sequences
+  publicador: European Nucleotide Archive (EMBL-EBI)
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/sbmztx
+  ocurrencias_de_tierra: 126
+- clave: 4bfac3ea-8763-4f4b-a71a-76a6f5f243d3
+  titulo: Museum of Comparative Zoology, Harvard University
+  publicador: Museum of Comparative Zoology, Harvard University
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/p5rupv
+  ocurrencias_de_tierra: 121
+- clave: e3803a54-b4fd-46d7-ab67-ad8f6871fae5
+  titulo: sarce_rockyshores
+  publicador: Caribbean OBIS Node
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/1rdkla
+  ocurrencias_de_tierra: 118
+- clave: 50c9509d-22c7-4a22-a47d-8c48425ef4a7
+  titulo: iNaturalist Research-grade Observations
+  publicador: iNaturalist.org
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/ab3s5x
+  ocurrencias_de_tierra: 115
+- clave: 84ab7b76-f762-11e1-a439-00145eb45e9a
+  titulo: Triplehorn Insect Collection, The Ohio State University
+  publicador: Museum of Biological Diversity, The Ohio State University
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/efb17f
+  ocurrencias_de_tierra: 103
+- clave: a004778c-d113-479e-a77f-990041283a51
+  titulo: Santa Barbara Museum of Natural History - Invertebrate Zoology
+  publicador: Santa Barbara Museum of Natural History
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/e8txdn
+  ocurrencias_de_tierra: 85
+- clave: a307e4d7-1de2-4adc-95d5-a0a8d5f57236
+  titulo: Natural History Museum Rotterdam - Specimens
+  publicador: Natural History Museum Rotterdam
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/kwqaay
+  ocurrencias_de_tierra: 40
+- clave: 85b1cfb6-f762-11e1-a439-00145eb45e9a
+  titulo: UF Invertebrate Zoology
+  publicador: Florida Museum of Natural History
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/sm6qo6
+  ocurrencias_de_tierra: 40
+- clave: 86b50d88-f762-11e1-a439-00145eb45e9a
+  titulo: Malacology Collection at the Academy of Natural Sciences of Philadelphia
+  publicador: Academy of Natural Sciences
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/xp1dhx
+  ocurrencias_de_tierra: 39
+- clave: ada06364-2436-4f48-ad78-7033f7903fd0
+  titulo: RPSP - Coleção Entomológica Prof. J.M.F. Camargo, FFCLRP/USP
+  publicador: Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto (FFCLRP), Universidade de São
+    Paulo (USP)
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/fkx59c
+  ocurrencias_de_tierra: 35
+- clave: ec0ad39f-3370-4d51-a663-cb27abd2a6bb
+  titulo: LACM Malacology
+  publicador: Natural History Museum of Los Angeles County
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/xxm2eb
+  ocurrencias_de_tierra: 29
+- clave: e4bd9ece-92b4-4f3a-821c-4f5979e52269
+  titulo: Sea turtle tracking in Bonaire 2003-2011
+  publicador: OBIS-SEAMAP
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.82144/1c6f0a7e
+  ocurrencias_de_tierra: 24
+- clave: 88e38292-f762-11e1-a439-00145eb45e9a
+  titulo: Mosquito Occurrence Dataset
+  publicador: Walter Reed Biosystematics Unit, Smithsonian Institution
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/tw2y9b
+  ocurrencias_de_tierra: 23
+- clave: 832a5f06-f762-11e1-a439-00145eb45e9a
+  titulo: UF Florida Museum of Natural History Mammals
+  publicador: Florida Museum of Natural History
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/kccunf
+  ocurrencias_de_tierra: 21
+- clave: 7c5eab2c-627b-4b0b-8157-1c3c05516899
+  titulo: On Venezuelan pholcid spiders (Araneae, Pholcidae)
+  publicador: European Journal of Taxonomy
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/a8r34m
+  ocurrencias_de_tierra: 20
+- clave: ca0d1f8f-4ba5-4187-82ec-ed8a66745b67
+  titulo: Insect Occurrence Data from MIZA
+  publicador: Universidad Central de Venezuela
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/ah3is7
+  ocurrencias_de_tierra: 19
+- clave: 5a6977c1-ece6-44b8-b71d-43cb1d4e0919
+  titulo: DMNS Marine Invertebrate Collection (Arctos)
+  publicador: Denver Museum of Nature & Science
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/lyw1fq
+  ocurrencias_de_tierra: 14
+- clave: dce8feb0-6c89-11de-8225-b8a03c50a862
+  titulo: Australian Museum provider for OZCAM
+  publicador: Australian Museum
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/e7susi
+  ocurrencias_de_tierra: 12
+- clave: 763f9aee-060c-4d71-a538-16c383e53a4d
+  titulo: Illinois Natural History Survey - Mollusk Collection
+  publicador: Illinois Natural History Survey
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/cu4scd
+  ocurrencias_de_tierra: 12
+- clave: 6c032b27-e4fe-4bc9-8f11-6b5f864910ce
+  titulo: Cleveland Museum of Natural History
+  publicador: Museum of Biological Diversity, The Ohio State University
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/bmfgag
+  ocurrencias_de_tierra: 11
+- clave: 3c381293-9b33-477d-84ed-c7da7302f384
+  titulo: Moluscos del Museo de Ciencias Naturales de la Universidad Simón Bolivar
+  publicador: Caribbean OBIS Node
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/mewne6
+  ocurrencias_de_tierra: 10
+- clave: 13e7869e-0c76-473a-a227-53d6e3d6fbf2
+  titulo: University of Michigan Museum of Zoology, Division of Insects
+  publicador: University of Michigan Museum of Zoology
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/tmxd7n
+  ocurrencias_de_tierra: 7
+- clave: 0f6d26c0-c645-4f15-b1c9-fbcb77515545
+  titulo: University of Miami, Voss Marine Invertebrate Collections
+  publicador: Rosenstiel School, University of Miami Voss Marine Invertebrate Collection
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/qmckjq
+  ocurrencias_de_tierra: 7
+- clave: cece4fc2-1fec-4bb5-a335-7252548e3f0b
+  titulo: CAS Herpetology (HERP)
+  publicador: California Academy of Sciences
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/bvoyqy
+  ocurrencias_de_tierra: 5
+- clave: 44bcde48-ac71-46f2-bf73-24fc3c008b6c
+  titulo: CAS Invertebrate Zoology (IZ)
+  publicador: California Academy of Sciences
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/tiac99
+  ocurrencias_de_tierra: 5
+- clave: 2b74f1d8-d1c0-4f88-a869-18507c65cf59
+  titulo: Malacological Collection of the Kaunas Tadas Ivanauskas Museum of Zoology
+  publicador: Kaunas Tadas Ivanauskas Museum of Zoology
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/x38fh3
+  ocurrencias_de_tierra: 4
+- clave: 7a9ad56e-7452-4f24-a1b4-3be3400c9a9d
+  titulo: Royal Ontario Museum - Invertebrate Zoology
+  publicador: Royal Ontario Museum
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.5886/7wlftb
+  ocurrencias_de_tierra: 4
+- clave: 8e479b8f-ac16-4bed-a11a-bc7e27c31663
+  titulo: University of Michigan Museum of Zoology, Division of Reptiles & Amphibians
+  publicador: University of Michigan Museum of Zoology
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/g3bard
+  ocurrencias_de_tierra: 3
+- clave: 7a681cd5-9781-489f-a43b-dfd117967550
+  titulo: The Spider Collection at the Staatliches Museum für Naturkunde Stuttgart
+  publicador: Staatliche Naturwissenschaftliche Sammlungen Bayerns
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/dehmye
+  ocurrencias_de_tierra: 3
+- clave: 14f3151a-e95d-493c-a40d-d9938ef62954
+  titulo: CAS Entomology (ENT)
+  publicador: California Academy of Sciences
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/3ibpmo
+  ocurrencias_de_tierra: 2
+- clave: 1c7d5b43-76a1-44bb-a766-8c77ed6d9f2b
+  titulo: Western Washington University Insect Collection
+  publicador: Western Washington University Insect Collection (WWUC)
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/v5seko
+  ocurrencias_de_tierra: 2
+- clave: 7615e6d1-9ebd-4302-9a7e-4913ca8b2bb4
+  titulo: Colección de Entomología - Curculionidae
+  publicador: Museo de La Plata
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/vitcgf
+  ocurrencias_de_tierra: 2
+- clave: eae731a7-3e82-4295-b0b3-ec72d75a402d
+  titulo: Datos de ocurrencia de triatominos americanos del Laboratorio de Triatominos del CEPAVE (CONICET-UNLP)
+  publicador: Centro de Estudios Parasitológicos y de Vectores (CEPAVE)
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/fbywtn
+  ocurrencias_de_tierra: 2
+- clave: 3ee66eb3-4786-4bda-b7f1-c145b1a57a6b
+  titulo: Delaware Museum of Nature and Science – Mollusks
+  publicador: Delaware Museum of Nature & Science
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/lfwzak
+  ocurrencias_de_tierra: 2
+- clave: 96b54e8c-f762-11e1-a439-00145eb45e9a
+  titulo: Ohio State Acarology Laboratory (OSAL), Ohio State University
+  publicador: Museum of Biological Diversity, The Ohio State University
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/dzwr2y
+  ocurrencias_de_tierra: 1
+- clave: 09435c69-7ec7-46f4-b52f-5131baa10143
+  titulo: Cornell University Insect Collection (CUIC)
+  publicador: Cornell University Insect Collection (CUIC)
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/w9b6ap
+  ocurrencias_de_tierra: 1
+- clave: 0f188bfc-2537-4863-90b7-3b5f856dc87e
+  titulo: Coleoptera World (Luomus) (CW)
+  publicador: Finnish Museum of Natural History - Zoology Unit
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/4fnqq9
+  ocurrencias_de_tierra: 1
+- clave: 0f293407-f050-4c05-bde2-69c49c36ca9a
+  titulo: 'Registros geográficos de escarabajos visitantes florales (Coleoptera: Scarabaeidae "Pleurosticti")
+    presentes en Colombia y países limítrofes, con base en literatura'
+  publicador: Instituto de Investigación de Recursos Biológicos Alexander von Humboldt
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15472/blceaa
+  ocurrencias_de_tierra: 1
+- clave: 14aff274-bf79-4a74-86ce-fb8b115adbf3
+  titulo: Arizona State University Charles W. O'Brien Collection
+  publicador: Arizona State University Biocollections
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/eeqtx0
+  ocurrencias_de_tierra: 1
+- clave: 86760641-4425-4130-9d20-4dd1eaa5c4a4
+  titulo: Florida State Collection of Arthropods
+  publicador: Florida State Collection of Arthropods
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/25xdz4
+  ocurrencias_de_tierra: 1
+- clave: a10bc4ad-ba01-4947-8ecb-470a18811005
+  titulo: Florida State Collection of Arthropods
+  publicador: Museum of Biological Diversity, The Ohio State University
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/xj8ju5
+  ocurrencias_de_tierra: 1
+- clave: 56aa0680-0c60-11dd-84cd-b8a03c50a862
+  titulo: Invertebrates Collection of the Swedish Museum of Natural History
+  publicador: Swedish Museum of Natural History
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/eyda6l
+  ocurrencias_de_tierra: 1
+- clave: 8138eb72-f762-11e1-a439-00145eb45e9a
+  titulo: RBINS DaRWIN
+  publicador: Royal Belgian Institute of Natural Sciences
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/qxy4mc
+  ocurrencias_de_tierra: 1
+- clave: 857bce66-f762-11e1-a439-00145eb45e9a
+  titulo: ZOBODAT (Zoological Botanical Database)
+  publicador: Biologiezentrum Linz Oberoesterreich
+  licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+  doi: 10.15468/ynjblx
+  ocurrencias_de_tierra: 1
+- clave: 98db0c34-403c-448d-9ac7-e8546abd6e63
+  titulo: RBINS Mollusc collection
+  publicador: Royal Belgian Institute of Natural Sciences
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/w6ubjx
+  ocurrencias_de_tierra: 1
+- clave: a79c2b50-6c8a-11de-8226-b8a03c50a862
+  titulo: Queensland Museum provider for OZCAM
+  publicador: Queensland Museum
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/lotsye
+  ocurrencias_de_tierra: 1
+- clave: c1492854-5d15-40e9-9ee7-24a18ac05112
+  titulo: Biodiversitätsdatenbank Salzburg
+  publicador: Haus der Natur Salzburg, Museum für Natur und Technik
+  licencia: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+  doi: 10.15468/3pf855
+  ocurrencias_de_tierra: 1
+- clave: e2980e63-d152-4219-8c1e-0ffdef3ea6aa
+  titulo: Auckland Museum NZ Marine Collection
+  publicador: Auckland War Memorial Museum
+  licencia: http://creativecommons.org/licenses/by/4.0/legalcode
+  doi: 10.15468/plyefd
+  ocurrencias_de_tierra: 1
+inventario_contra_gbif:
+- id: fa1-001
+  cientifico: Chromatopelma cyaneopubescens
+  clave_gbif: 2154364
+  ocurrencias_en_poligono: 12
+- id: fa1-002
+  cientifico: Scolopendra gigantea
+  clave_gbif: 5179388
+  ocurrencias_en_poligono: 1
+- id: fa1-003
+  cientifico: Argiope argentata
+  clave_gbif: 5170999
+  ocurrencias_en_poligono: 1
+- id: fa1-004
+  cientifico: Buthidae indet. (especie de la península sin identificar)
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-010
+  cientifico: Mazama sp.
+  clave_gbif: 2440920
+  ocurrencias_en_poligono: 0
+- id: fa1-011
+  cientifico: Sylvilagus floridanus
+  clave_gbif: 2436886
+  ocurrencias_en_poligono: 24
+- id: fa1-012
+  cientifico: Cerdocyon thous
+  clave_gbif: 2434584
+  ocurrencias_en_poligono: 1
+- id: fa1-013
+  cientifico: Didelphis marsupialis
+  clave_gbif: 2439920
+  ocurrencias_en_poligono: 0
+- id: fa1-014
+  cientifico: Marmosa xerophila
+  clave_gbif: 2439874
+  ocurrencias_en_poligono: 47
+- id: fa1-015
+  cientifico: Tamandua tetradactyla
+  clave_gbif: 2436340
+  ocurrencias_en_poligono: 0
+- id: fa1-016
+  cientifico: Conepatus semistriatus
+  clave_gbif: 2434883
+  ocurrencias_en_poligono: 2
+- id: fa1-017
+  cientifico: Dasypus novemcinctus
+  clave_gbif: 2440779
+  ocurrencias_en_poligono: 0
+- id: fa1-018
+  cientifico: Leptonycteris curasoae
+  clave_gbif: 2433316
+  ocurrencias_en_poligono: 74
+- id: fa1-019
+  cientifico: Mormoops megalophylla
+  clave_gbif: 2432759
+  ocurrencias_en_poligono: 27
+- id: fa1-020
+  cientifico: Desmodus rotundus
+  clave_gbif: 2433298
+  ocurrencias_en_poligono: 0
+- id: fa1-021
+  cientifico: Heteromys oasicus
+  clave_gbif: 4263269
+  ocurrencias_en_poligono: 3
+- id: fa1-022
+  cientifico: Calomys hummelincki
+  clave_gbif: 2437952
+  ocurrencias_en_poligono: 1
+- id: fa1-023
+  cientifico: Canis familiaris (linaje americano precolombino)
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-024
+  cientifico: Leopardus pardalis
+  clave_gbif: 2434982
+  ocurrencias_en_poligono: 1
+- id: fa1-025
+  cientifico: Puma concolor
+  clave_gbif: 2435099
+  ocurrencias_en_poligono: 0
+- id: fa1-026
+  cientifico: Pecari tajacu
+  clave_gbif: 2440995
+  ocurrencias_en_poligono: 0
+- id: fa1-027
+  cientifico: Cebus / Alouatta (indet.)
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-030
+  cientifico: Iguana iguana
+  clave_gbif: 2459658
+  ocurrencias_en_poligono: 14
+- id: fa1-031
+  cientifico: Cnemidophorus arenivagus
+  clave_gbif: 5227442
+  ocurrencias_en_poligono: 18
+- id: fa1-032
+  cientifico: Anolis onca
+  clave_gbif: 2467544
+  ocurrencias_en_poligono: 78
+- id: fa1-033
+  cientifico: Thecadactylus rapicauda
+  clave_gbif: 2445829
+  ocurrencias_en_poligono: 3
+- id: fa1-034
+  cientifico: Lepidoblepharis montecanoensis
+  clave_gbif: 2446454
+  ocurrencias_en_poligono: 2
+- id: fa1-035
+  cientifico: Tupinambis / Salvator (indet.)
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-036
+  cientifico: Crotalus durissus
+  clave_gbif: 2444433
+  ocurrencias_en_poligono: 2
+- id: fa1-037
+  cientifico: Boa constrictor
+  clave_gbif: 2464899
+  ocurrencias_en_poligono: 2
+- id: fa1-038
+  cientifico: Micrurus (indet.)
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-039
+  cientifico: Thamnodynastes paraguanae
+  clave_gbif: 7920239
+  ocurrencias_en_poligono: 1
+- id: fa1-040
+  cientifico: Masticophis mentovarius
+  clave_gbif: 2452151
+  ocurrencias_en_poligono: 5
+- id: fa1-041
+  cientifico: Kinosternon scorpioides
+  clave_gbif: 2442361
+  ocurrencias_en_poligono: 1
+- id: fa1-042
+  cientifico: Chelonoidis carbonarius
+  clave_gbif: 9533689
+  ocurrencias_en_poligono: 0
+- id: fa1-050
+  cientifico: Pleurodema brachyops
+  clave_gbif: 2423470
+  ocurrencias_en_poligono: 6
+- id: fa1-051
+  cientifico: Rhinella horribilis
+  clave_gbif: 10892611
+  ocurrencias_en_poligono: 4
+- id: fa1-052
+  cientifico: Leptodactylus fuscus
+  clave_gbif: 5217556
+  ocurrencias_en_poligono: 1
+- id: fa1-060
+  cientifico: Tropidacris collaris
+  clave_gbif: 1715314
+  ocurrencias_en_poligono: 13
+- id: fa1-061
+  cientifico: Melipona favosa
+  clave_gbif: 1340089
+  ocurrencias_en_poligono: 35
+- id: fa1-062
+  cientifico: Brachygastra / Polybia (Vespidae indet.)
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-063
+  cientifico: Atta sp.
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-064
+  cientifico: Neotermes holmgreni
+  clave_gbif: 2007330
+  ocurrencias_en_poligono: 1
+- id: fa1-065
+  cientifico: Guyalna flavipronotum
+  clave_gbif: 8624680
+  ocurrencias_en_poligono: 1
+- id: fa1-066
+  cientifico: Anopheles punctimacula
+  clave_gbif: 1650353
+  ocurrencias_en_poligono: 6
+- id: fa1-067
+  cientifico: Pyrophorus sp.
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-068
+  cientifico: Hamadryas februa
+  clave_gbif: 5129481
+  ocurrencias_en_poligono: 1
+- id: fa1-069
+  cientifico: Gryllidae indet.
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-070
+  cientifico: Tunga penetrans
+  clave_gbif: 5051118
+  ocurrencias_en_poligono: 0
+- id: fa1-080
+  cientifico: Tudora paraguanensis
+  clave_gbif: 9607632
+  ocurrencias_en_poligono: 1
+- id: fa1-081
+  cientifico: Orthalicus maracaibensis
+  clave_gbif: 10759265
+  ocurrencias_en_poligono: 7
+- id: fa1-090
+  cientifico: Capra hircus
+  clave_gbif: 2441056
+  ocurrencias_en_poligono: 0
+- id: fa1-091
+  cientifico: Bos taurus, Ovis aries, Sus scrofa
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-092
+  cientifico: Equus caballus, Equus asinus
+  clave_gbif: null
+  ocurrencias_en_poligono: null
+- id: fa1-093
+  cientifico: Rattus rattus
+  clave_gbif: 2439270
+  ocurrencias_en_poligono: 8
+- id: fa1-094
+  cientifico: Latrodectus geometricus
+  clave_gbif: 2157944
+  ocurrencias_en_poligono: 1

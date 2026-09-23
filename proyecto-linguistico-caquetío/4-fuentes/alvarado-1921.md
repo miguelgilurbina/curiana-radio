@@ -12,7 +12,7 @@ estado_minado: minado
 prioridad: media
 tareas: [F3]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, entradas_lexicon_corroboradas: 39, cadena_custodia_zavala_A: "24/26"}
-cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21) + las AVES: entradas con glosa de ave, descripción y onomatopeya (campaña de fauna FA2, 2026-09-22)"
+cobertura: "cadena de custodia Zavala (2026-08-03) + los 61 topónimos pendientes del dictado de Miguel (2026-09-10) + barrido de las entradas con glosa verbal, campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21) + entradas sueltas de fauna de tierra (cachicamo, mapurite, mato, cocuyo, sucumba) y la búsqueda de araña/tarántula (FA1, 2026-09-22); sin barrido sistemático de fauna + las AVES: entradas con glosa de ave, descripción y onomatopeya (campaña de fauna FA2, 2026-09-22)"
 verificado: 2026-09-10
 minado: 2026-09-22
 aliases: ["Alvarado 1921", "Glosario de voces indígenas"]
@@ -302,6 +302,22 @@ antes de contar (regla 6): `caquet` 3, `aruac` 6, `Curiana` 1, `Manaur` 1,
 atribuciones se buscan por «Coro» y «Falcón».
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
+## Bitácora — la fauna de tierra (campaña FA1, 2026-09-22)
+
+Pregunta: ¿qué da Alvarado de la fauna de tierra del monte seco, y tiene alguna
+voz para la araña o la tarántula? Entradas leídas (página del PDF; la impresa
+es ≈ pdf − 30, medido en la p. 85): CACHICAMO (pdf 71; y CACHICAMITO, la larva
+de la hormiga-león), COCUYO (pdf 114-115: «Voz taina en ambas formas, y cháima
+en la de cucúi»), MAPURITE (pdf 237: del caribe *mapurítu*; la defensa por
+«un líquido oleoso»), MATO (pdf 245, «del cum. mato»), SUCUMBA 'rabipelado' de
+Trujillo (pdf 308). **Araña, tarántula: cero** como entrada; los tres aciertos
+del texto son una planta «como con tela de araña», un escarabajo y una
+«pollera» de niño (`6-fusion/scripts/buscar_tarantula_azul.py`). No es un
+barrido sistemático de fauna: queda para otra campaña. Lo usa
+`6-fusion/fauna_paraguana_tierra_2026-09-22.yaml`.
+
+---
 
 ## Bitácora 2026-09-22 — las aves: qué se ve y qué se oye (campaña de fauna, FA2)
 
