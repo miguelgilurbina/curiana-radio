@@ -101,12 +101,16 @@ def test_a_no_es_lo_mismo_que_la_compuerta_fonotactica():
 def test_a_la_raiz_decide_antes_que_el_legado():
     """`_familia_de_token` prueba como último recurso `tok.split('-', 1)[1]`.
     Con una raíz ajena ese legado resolvía por el SUFIJO: `pütshi-bana` habría
-    salido caquetío por la clave `bana` 'hígado', que ahí no es la raíz."""
+    salido caquetío por la clave `bana` 'hígado', que ahí no es la raíz.
+
+    El ejemplo era `pütshi-bana` hasta la tanda de la base (2026-09-23): desde
+    db.1 C es una casi-raíz de `pütchi` y se perdona (ver
+    test_tanda_base.py). El caso del legado es el mismo con `lumina-bana`."""
     assert "bana" in VOCABULARIO_BASE
-    assert es_raiz_de_ninguna_parte("pütshi-bana")
-    assert lx._familia_de_token("pütshi-bana") == "desconocida"
+    assert es_raiz_de_ninguna_parte("lumina-bana")
+    assert lx._familia_de_token("lumina-bana") == "desconocida"
     # y la puerta y el clasificador dicen lo MISMO de la misma forma
-    for forma in DE_NINGUNA_PARTE + DEL_CANON + ["pütshi-bana", "ka-to"]:
+    for forma in DE_NINGUNA_PARTE + DEL_CANON + ["pütshi-bana", "lumina-bana", "ka-to"]:
         ajena = es_raiz_de_ninguna_parte(forma)
         assert (lx._familia_de_token(forma) == "desconocida") is ajena, forma
 

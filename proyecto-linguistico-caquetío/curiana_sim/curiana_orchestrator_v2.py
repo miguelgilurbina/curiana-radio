@@ -62,6 +62,7 @@ from curiana_lexicon import (
     prompt_rescate_linguistico,
     PUERTA_DEL_RECUENTO,
     IDENTIDAD_LINGUISTICA,
+    olvidar_raices_onomatopeyicas,
     VOCABULARIO_BASE,
 )
 from curiana_observer import ObserverAgent
@@ -76,6 +77,9 @@ from curiana_koine import (
     CompetenciaLexica,
     REFERENTES_NOVEDOSOS,
     agentes_sin_precarga,
+    estimulo_de_referente,
+    referentes_del_mundo,
+    toca_nombrar,
     emocionar_de,
     fijar_semilla,
     prompt_emocionar,
@@ -83,6 +87,7 @@ from curiana_koine import (
     distancia_idiolectal,
     guardar_koine,
     cargar_koine,
+    semilla_de_precarga_guardada,
 )
 from curiana_cadena import (
     cadena_de_runs,
@@ -653,12 +658,16 @@ MOMENTOS_ESTIMULO = {
 
 def referentes_pendientes_de(state: ComunidadState) -> list[dict]:
     """Los referentes novedosos que a esta comunidad aún no le han puesto
-    delante, en el orden de REFERENTES_NOVEDOSOS. Un run que continúa sigue
+    delante, en el orden de su catálogo. Un run que continúa sigue
     la secuencia donde el día anterior la dejó (state.referentes_introducidos);
     uno nuevo la empieza. Antes cada run la reiniciaba y un día de seis turnos
-    sólo llega al primero: la serie A nombró las mismas cuentas tres días."""
+    sólo llega al primero: la serie A nombró las mismas cuentas tres días.
+
+    El catálogo depende del MUNDO (tanda de la base, 2026-09-23): la era 2 lee
+    `6-fusion/referentes_era2.yaml` y la era 1 sigue con REFERENTES_NOVEDOSOS."""
     vistos = set(state.referentes_introducidos)
-    return [dict(r) for r in REFERENTES_NOVEDOSOS if r["id"] not in vistos]
+    return [dict(r) for r in referentes_del_mundo(state.mundo)
+            if r["id"] not in vistos]
 
 
 def run_turn(
@@ -725,7 +734,14 @@ def run_turn(
     naming_concepto: Optional[str] = None
     if naming_referente and competencia is not None:
         naming_concepto = naming_referente["id"]
-        competencia.activar(naming_concepto, naming_referente["desc"])
+        competencia.activar(naming_concepto, naming_referente["desc"],
+                            animal=bool(naming_referente.get("animal")))
+    # La puerta onomatopéyica (db.6): abierta SÓLO en el turno en que se
+    # nombra a un animal, y sólo para lo que se registra ese turno. Se cierra
+    # al final de run_turn. Sin animal —la era 1, el cometa— queda cerrada.
+    lexico.puerta_onomatopeyica = (
+        naming_concepto if naming_concepto and naming_referente.get("animal")
+        else None)
 
     # 1. Director: ¿hay evento?
     evento = director_select_event(state)
@@ -816,12 +832,10 @@ def run_turn(
     #    MARCOS_FUERA_ERA2) y con ella el referente que hay que nombrar.
     if naming_concepto:
         donde = "LA CURIANA" if state.mundo == "CURIANA" else state.mundo
-        stimulus = (
-            f"[ALGO NUEVO EN {donde}]: {naming_referente['desc']}. "
-            f"Esto no tiene nombre en caquetío todavía. Nómbralo TÚ con morfemas "
-            f"caquetíos y dilo: [forma: componentes = significado]. Reacciona a la "
-            f"cosa nueva y nómbrala."
-        )
+        # NOVEDAD o HUECO, con «[Lo que se oye]» si lo hay (db.4, db.6). Para
+        # un referente sin `tipo` —la era 1— es el molde de siempre, carácter a
+        # carácter (test_tanda_base).
+        stimulus = estimulo_de_referente(naming_referente, donde)
         if verbose:
             print(f"  ✦ NOMBRAMIENTO: {naming_referente['desc'][:60]}")
     elif user_input:
@@ -1082,6 +1096,8 @@ def run_turn(
     if state.mundo == "PARAGUANÁ":
         state.cerrar_evento_del_turno()
     state.avanzar_turno()
+    # La puerta onomatopéyica vale un turno (db.6).
+    lexico.puerta_onomatopeyica = None
 
     return interactions
 
@@ -1480,6 +1496,16 @@ def auto_mode(
         # ella, una disputa abierta moría al amanecer (y con un run = un día,
         # ninguna podía fijarse jamás). Un JSON anterior devuelve una vacía.
         idiolectos, campo, competencia = cargar_koine()
+        # La semilla de la PERSONA es la de la CADENA (db.3, tanda de la base,
+        # 2026-09-23): el dado de la ficha —formas-semilla y aspecto de
+        # respaldo del emocionar— se fija con la semilla con que se sembró el
+        # día 1, y `random.seed()` sigue con la del día (eventos, muestreo,
+        # nombramientos). Antes, a 7 de 63 agentes el `[Tu emocionar]` les
+        # cambiaba de un día a otro. Un JSON anterior no la trae: sigue la del
+        # día, como hasta entonces, y el aviso de abajo lo dice.
+        semilla_de_la_persona = semilla_de_precarga_guardada()
+        if semilla_de_la_persona is not None:
+            fijar_semilla(semilla_de_la_persona)
         # Un agente nuevo en el elenco arranca con su semilla de idiolecto.
         for nm, a in ALL_AGENTS.items():
             idiolectos.setdefault(nm, IdiolectoAgente(nm, emocionar_de(nm, a.get("etnia"))))
@@ -1489,12 +1515,21 @@ def auto_mode(
         # arrancó SIN pre-carga no la va a tener nunca por seguir encadenando:
         # hay que re-correr desde el día 1. Se mide y se avisa.
         sin_precarga = agentes_sin_precarga(idiolectos, ALL_AGENTS)
-        if sin_precarga:
+        if sin_precarga and semilla_de_la_persona is not None:
             print(f"  ⚠ cadena sin pre-carga de idiolectos: {len(sin_precarga)} de "
                   f"{len(ALL_AGENTS)} agentes heredan un idiolecto sin ninguna "
                   f"de sus formas-semilla (viene de un run anterior al "
                   f"2026-09-16). Continuar NO la recupera: hay que re-correr "
                   f"la cadena desde el día 1.")
+        elif sin_precarga:
+            # Sin la semilla de la cadena, las formas se derivan con la del
+            # día y el aviso puede ser falso: medido el 2026-09-21, una cadena
+            # bien sembrada daba 2 de 63 el día 2 y 3 de 63 el día 3.
+            print(f"  ⚠ {len(sin_precarga)} de {len(ALL_AGENTS)} agentes sin sus "
+                  f"formas-semilla — pero la koiné guardada no dice con qué "
+                  f"semilla se sembró (motor anterior al 2026-09-23), así que "
+                  f"el aviso puede ser falso. Ver 6-fusion/issues-pendientes/"
+                  f"semilla-del-dia-mueve-a-la-persona-2026-09-21.md.")
         # El estado guardado apunta al turno siguiente al último corrido, así
         # que un día completo anterior deja al nuevo run en el amanecer.
     else:
@@ -1516,6 +1551,11 @@ def auto_mode(
         campo = CampoLexico()
         # Un run que no continúa empieza la competencia de cero, como siempre.
         competencia = CompetenciaLexica()
+        # El día 1 siembra la cadena: su semilla es la de la persona.
+        semilla_de_la_persona = semilla
+        # Y empieza sin raíces onomatopéyicas admitidas (db.6); al continuar,
+        # `LexicoComunitario.load()` las reconstruye de lo guardado.
+        olvidar_raices_onomatopeyicas()
     if turnos_por_dia is not None:
         state.turnos_por_dia = int(turnos_por_dia)
         if not continuar:
@@ -1597,6 +1637,10 @@ def auto_mode(
                 # no se aplicó.
                 "escena": bool(escena),
                 "capubana_cada": int(capubana_cada) if escena else None,
+                # Con qué semilla se derivó lo de la ficha (db.3): la del día 1
+                # de la cadena. None = koiné de un motor anterior, que usaba
+                # la del día.
+                "semilla_de_la_persona": semilla_de_la_persona,
                 **perfil.como_config(), **_h},
     )
     # Re-crear cliente con run_id para que LangSmith use el proyecto correcto
@@ -1640,7 +1684,11 @@ def auto_mode(
         for t in range(turnos):
             # ¿Toca evento de nombramiento? (cada `cadencia` turnos, si quedan referentes)
             naming_referente = None
-            if referentes_pendientes and t > 0 and t % cadencia_nombramiento == 0:
+            # Era 1: cada `cadencia_nombramiento` turnos, como siempre. Era 2
+            # (tanda de la base): el quinto momento de los días impares, uno
+            # cada dos días (curiana_koine.toca_nombrar).
+            if referentes_pendientes and toca_nombrar(
+                    state.mundo, state.dia, state.turno, t, cadencia_nombramiento):
                 naming_referente = referentes_pendientes.pop(0)
                 state.referentes_introducidos.append(naming_referente["id"])
 

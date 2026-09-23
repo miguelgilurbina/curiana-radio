@@ -1,0 +1,197 @@
+# GENERADO por 6-fusion/scripts/medir_fauna_flora.py --yaml — no se edita a mano.
+medido: '2026-09-22'
+ecologia:
+  hechos: 93
+  de_fauna_flora_pesca_manglar: 58
+  con_palabra_lexicon: 56
+lexicon_caquetio:
+  fauna:
+    total: 63
+    en_ecologia: 36
+    fuera_de_ecologia:
+    - 'korie (atestiguado): armadillo'
+    - 'saruro (atestiguado): boa, serpiente no venenosa'
+    - 'kaiwa (hipotético): caimán, lagarto grande de río'
+    - 'kanawari (hipotético): tiburón, gran pez del mar abierto'
+    - 'kumarawa (atestiguado): caracol de las costas de Paraguaná'
+    - 'komején (reconstruido): comején, termita que se come la madera por dentro'
+    - 'hikotea (reconstruido): hicotea, tortuga de agua dulce comestible (morrocoy en el resto del país)'
+    - 'jaiba (reconstruido): jaiba: cangrejo de mar; también broma o chanza molesta'
+    - 'jején (reconstruido): jején, mosquito diminuto de picada muy molesta'
+    - 'niwa (reconstruido): nigua, pulga que anida bajo la piel y cría en ella (Tunga penetrans); hoy desapa'
+    - 'siwato (reconstruido): siguato: desganado, apático, triste (oriente de la península); pescado que empie'
+    - 'yawasa (reconstruido): yaguaza, ave comestible de aguas cenagosas; hoy extinguida en la península'
+    - 'seretón (retroabstraido): forma parte del folclor y consistía en que se tenía la certeza de que existían
+      h'
+    - 'buio (atestiguado): serpiente, boa, diablo, dios del mal'
+    - 'arata (atestiguado): mono'
+    - 'kakuro (atestiguado): pequeña avispa negra'
+    - 'chawanko (atestiguado): zorro'
+    - 'ditero (atestiguado): insecto, hormiga que daña'
+    - 'wache (atestiguado): murciélago, zorro blanco'
+    - 'wariana (atestiguado): arbusto halófilo, frailejón de la playa. Tabaco pescador'
+    - 'huaymujo (atestiguado): pequeño cangrejo'
+    - 'humohumo (atestiguado): el ave que vuela'
+    - 'kerekere (atestiguado): ave pequeña'
+    - 'kiwa (atestiguado): concha de almeja y otros moluscos. Sitio del estado Lara'
+    - 'turicha (atestiguado): ave cantadora. Flauta'
+    - 'yagruma (atestiguado): caracol, molusco'
+    - 'barbache (atestiguado): iguana'
+  flora:
+    total: 90
+    en_ecologia: 34
+    fuera_de_ecologia:
+    - 'maure (atestiguado): fibra de algodón, hilo para tejer'
+    - 'marawa (hipotético): palma, palmera de cogollo y fibra'
+    - 'kasiripa (hipotético): yuca brava, mandioca para casabe'
+    - 'marisi (hipotético): maíz en mazorca, grano de cosecha'
+    - 'yuri (hipotético): tabaco, hoja sagrada del piache'
+    - 'buriche (atestiguado): licor fermentado, chicha de maíz'
+    - 'amaka (atestiguado): sitio de moler maíz, área de procesamiento'
+    - 'kasá (atestiguado): puche de maíz, atole'
+    - 'chogogo (atestiguado): flamingo rosado (Phoenicopterus ruber)'
+    - 'nagua (reconstruido): nagua, falda de algodón de mujer'
+    - 'macana (reconstruido): macana, garrote de madera dura, arma de combate'
+    - 'karebe (atestiguado): cuchara, cucharón de media tapara con mango de madera'
+    - 'urupagua (atestiguado): arbusto espinoso usado para cercar conucos; y árbol de la serranía coriana de fr'
+    - 'koa (reconstruido): coa: palo de madera aguzado con que se abre el hueco de la siembra y se deposita'
+    - 'magey (reconstruido): maguey: la vara larga de la inflorescencia del cocuy o sisal'
+    - 'arifuke (retroabstraido): harina de maíz a la que se agregaba raspillo [?] de panela y que se servía como '
+    - 'tuturuto (retroabstraido): fue una planta venenosa y sin ninguna utilidad para el paraguanero'
+    - 'barisiwa (retroabstraido): árbol que fue abundante en nuestro medio, hoy muy escaso, de hasta ocho metros
+      d'
+    - 'chiware (retroabstraido): así identificó nuestro pueblo a una planta enredadera que generalmente cubre un '
+    - 'watakare (retroabstraido): árbol común, y cuyos frutos no eran comestibles por el ser humano'
+    - 'isikawa (retroabstraido): árbol de nuestros montes utilizado en la medicina empírica para tratar hernias'
+    - 'totokoro (retroabstraido): así se denominó la madera de los brazos del cardón seco, o sea, al corazón del
+      m'
+    - 'naure (atestiguado): planta bejucosa'
+    - 'arika (atestiguado): árbol de jícara o totumo'
+    - 'barabara (atestiguado): árbol de madera dura y pesada. Olivo'
+    - 'buche (atestiguado): planta xerofita, melocato, cardo globoso, rastrero'
+    - 'kamaroa (atestiguado): árbol lactescente, de hojas parecidas al papayo'
+    - 'kaketillo (atestiguado): árbol. Madera de construcción, resistente a la humedad'
+    - 'karapa (atestiguado): árbol resinoso'
+    - 'kaseto (atestiguado): planta herbácea'
+    - 'kayude (atestiguado): árbol frutal, guanábano silvestre, turagua'
+    - 'kokuy (atestiguado): penca. Planta rizomoza que da un vino agradable'
+    - 'kurari (atestiguado): árbol de roble, tecoma'
+    - 'dakawa (atestiguado): árbol de corteza gris, madera compacta'
+    - 'dibidibe (atestiguado): árbol cuyo fruto es una baya que da tinta'
+    - 'wako (atestiguado): planta herbácea de la familia de las portulacea'
+    - 'way (atestiguado): árbol parecido a la ceiba'
+    - 'harifuche (atestiguado): maíz tostado y miel'
+    - 'igi (atestiguado): árbol, matapalo, paují'
+    - 'isiro (atestiguado): árbol corpulento sapindáceo'
+    - 'jajato (atestiguado): chloris Radiata. Yerba forrajera. Lugar de arena'
+    - 'judereke (atestiguado): árbol ramoso, parecido al chiguare'
+    - 'parawatan (atestiguado): árbol maderable'
+    - 'sibidiwa (atestiguado): arbusto euforbiaceo. Jatrofa Gossy Pifolia'
+    - 'supi (atestiguado): sitio a orilla del mar. Arena. Arboleda supide'
+    - 'take (atestiguado): árbol nucífero'
+    - 'tiwa (atestiguado): árbol rutáceo'
+    - 'turupia (atestiguado): árbol espinoso. Sitio en Cumarebo'
+    - 'tuturutos (atestiguado): hierba de propiedades eméticas. Usado para cuajar quesos'
+    - 'yakure (atestiguado): árbol leguminoso de hojas perennes. Acacia. Sitio de Cabudare'
+    - 'yaro (atestiguado): bejuco. Planta venenosa'
+    - 'aka (atestiguado): bejuco'
+    - 'baperon (atestiguado): calabaza con cal'
+    - 'gika (atestiguado): yabo'
+    - 'ikoroata (atestiguado): caraota'
+    - 'raporon (atestiguado): calabaza con cal'
+canon_de_sitios:
+  datos_de_fauna_flora: 53
+  citan_un_hecho_de_ecologia: 18
+  sin_hecho_de_ecologia:
+  - 'Tacuato/mar_y_pesca: ⭐ La técnica con hora: «Cuna, Cunaro, "promicrops guasa", pez lábrido que abunda en el
+    golfete de Coro y del c'
+  - 'Tacuato/mar_y_pesca: Que esta orilla es de pescadores lo dice el topónimo vecino: «Punta de Matacán es un punto
+    costeño en el Golfe'
+  - 'Tacuato/recoleccion: La concha es dinero: «Entre todos ellos no ay oro, ni plata ni moneda salbo unas conchezuelas
+    de pescados que '
+  - 'Tacuato/recoleccion: Y la almeja tiene nombre caquetío en el mapa: «Quigua: concha de almeja y otros moluscos»
+    (entrada Maquigua).'
+  - 'Tacuato/recoleccion: El conchero es un rasgo del paisaje de esta costa: en Pueblo Viejo (FAL-77) Oliver fotografía
+    «discrete chipi-'
+  - 'Tacuato/tierra: Y el árbol de fruto que da nombre a un hato vecino: «El Taque, hato pecuario al Norte de Tacuato»;
+    «Taque: árb'
+  - 'Tacuato/monte_y_caza: Y una isoglosa que separa este sitio del resto: al lagarto amarillo lo llaman «gualamo»
+    «en las poblaciones de'
+  - 'Tacuato/materiales: Las cuentas de collar valían «almost like a monetary system»: tres tipos —boroyda, mamas
+    y querequetero o quit'
+  - 'El Cayude/recoleccion: El cangrejo pequeño sí tiene voz atestiguada: «Imujo es una aféresis de huaymujo, pequeño
+    cangrejo.»'
+  - 'El Cayude/tierra: El nombre es de árbol frutal: «Cayude: árbol frutal», el guanábano silvestre o turagua. El
+    subgrupo lleva nomb'
+  - 'El Cayude/tierra: Y el conuco se cerca: «Urupagua es un arbusto espinoso, hojas y fruto de sabor amargo»; el
+    lexicón lo glosa co'
+  - 'El Cayude/monte_y_caza: El árbol grande de esta ribera: «Punto costeño de las riberas norteñas del Golfete
+    de Coro... La barisigua es '
+  - 'Moruy/mar_y_pesca: CERO por construcción: Moruy es el único sitio de la era 2 sin zona de pesca en curiana_agents_era2.SITIOS.
+    Su'
+  - 'Moruy/recoleccion: El fruto del cardón se baja con vara: la DATERA es «vara hecha con el maguey (bohordo floral)
+    de la planta de '
+  - 'Moruy/recoleccion: Y de eso se vive cuando no hay otra cosa, dice la copla: «Si no fueran por los datos / y
+    las vainas de cují, /'
+  - 'Moruy/recoleccion: La miel tiene cuatro nombres y un árbol: «Guanibara, voz compuesta con la significación
+    de "árbol de la colmen'
+  - 'Moruy/tierra: El maíz de aquí va a la chicha: «"merejuy", cierta levadura o preparación agria que usaban para
+    acelerar la fe'
+  - 'Moruy/materiales: La palma del cerro da la estera: «El nombre viene de Barubaru (palo delgado), palmera con
+    cuyas hojas fabrican'
+  - 'Moruy/materiales: Y el algodón se tuerce aquí: un informante de Yauquiba «nos habló de la elaboración del "jabón
+    de la tierra", '
+  - 'Caseto/mar_y_pesca: ⭐ Y hay una técnica de pesca que sí cae cerca: «Barbasco es nombre común a varias plantas
+    cuyas propiedades es'
+  - 'Caseto/recoleccion: El nombre del sitio es una planta: «Caseto es una planta herbácea de las malvas espigadas,
+    es el "malvastrum s'
+  - 'Caseto/materiales: La paja del techo tiene nombre: «Caruca es una hierba áspera que se usaba para la preparación
+    de la torta de b'
+  - 'Caseto/materiales: Y la fibra de la hamaca: el chinchorro se tejía «de hilos de cocuy, que es más fuerte y
+    fino que el hilo de co'
+  - 'Carirubana/mar_y_pesca: Y lo que era este lugar antes de la refinería: Carirubana, «lo que hoy es Punto Fijo»,
+    era «playa de pescadore'
+  - 'Carirubana/recoleccion: ⭐ El corubo que da nombre al subgrupo: «Podría ser Curubitos, diminutivo de Corubo,
+    caparazón de moluscos»; y '
+  - 'Carirubana/recoleccion: ⭐ Y el horno de la cal está en el suelo, con antigüedad declarada: «los aborígenes
+    para obtener cal con qué pe'
+  - 'Carirubana/tierra: El conuco de la costa oeste, sin dato propio: lo que hay es el árbol vecino, «Caujarito...
+    diminutivo de Cauja'
+  - 'Carirubana/monte_y_caza: El monte de la punta es cardón, y se lo dice el nombre viejo: Elegüey era el nombre
+    antiguo de Punta Cardón, h'
+  - 'Carirubana/monte_y_caza: Y el alcaraván le da nombre a la punta de al lado: «La voz viene de Dara, ave vocinglera
+    de estas sabanas, con'
+  - 'Carirubana/materiales: La cal de concha da además la que masca el hayo: el lexicón conserva baperon/raporon
+    «calabaza con cal», y el '
+  - 'Capubana/mar_y_pesca: Y el cerro está en la escena de la pesca por el pez: las Escarpaduras de Cunacho llevan
+    el nombre del cunaro d'
+  - 'Capubana/monte_y_caza: ⭐ El bosque del cerro tiene dueño y no se corta: «en el cerro de Capuhana hay un duende
+    llamado [Capó] quien j'
+  - 'laguna de Guaranao/mar_y_pesca: El pez que le da nombre: «Guaranaro es un pez más pequeño que la lisa.»'
+  - 'laguna de Guaranao/mar_y_pesca: «En la laguna de Guaranao hay [...] peces.» Miguel, 2026-09-14. Con fuente
+    desde el 2026-09-16: la laguna tien'
+  - 'laguna de Guaranao/recoleccion: «hay recolección de corubos». Miguel, 2026-09-14. La glosa del corubo sí está
+    atestiguada («caracol, habitácul'
+medina:
+  entradas_fauna_flora: 50
+  en_ecologia: 35
+  fuera:
+  - saruro (fauna, A)
+  - barisigua (flora, B)
+  - buche (flora, A)
+  - cacuro (fauna, A)
+  - caseto (flora, A)
+  - chamaco (fauna, C)
+  - chiguare (flora, B)
+  - chuchube (fauna, A)
+  - dara (fauna, A)
+  - guatacare (flora, B)
+  - isicagua (flora (medicinal), B)
+  - sibidigua (flora (medicinal) / habla (saludo), A)
+  - totocoro (flora / casa (techo), B)
+  - tuturuto (flora, A)
+  - urupagua (flora, A)
+lo_que_llega_al_agente: '[Tu tierra] sale del canon de SITIOS (6-fusion/sitios_era2.yaml), 1-2 líneas por agente
+  y día, con prioridad agua > dominio principal > resto; ecología entra al prompt sólo por las tres restricciones
+  del Director (curiana_mundo.RESTRICCIONES_DEL_DIRECTOR). Un dato de fauna del dominio monte_y_caza de un sitio
+  sin pesca cae en «resto», y sólo lo lee quien vive allí.'
