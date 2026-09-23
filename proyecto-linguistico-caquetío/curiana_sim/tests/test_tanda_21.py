@@ -358,9 +358,16 @@ def test_d21_15_coro_cambia_la_glosa_inventada_por_la_que_tiene_fuente():
     # «Cardón» queda como lo que la propia fuente dice que es: una
     # consecuencia INDIRECTA, no la glosa.
     assert "INDIRECTAMENTE" in coro["notas"]
-    # Lectura en disputa, declarada con sus dos rivales.
+    # Lectura en disputa, declarada con su rival.
     assert "Arcaya" in coro["lectura_en_disputa"]
-    assert "Castellanos" in coro["lectura_en_disputa"]
+    # Hasta el 2026-09-23 la disputa tenía TRES lecturas y la tercera era
+    # 'viento' (Castellanos 1589). cc.6 / tf.6 la DESCARTÓ: es el juego culto
+    # de Castellanos sobre el latín cōrus/caurus, no una glosa indígena
+    # (BAE p. 185; Arcaya 1920 p. 170). Sale de `lectura_en_disputa` y queda
+    # archivada en `notas` con su porqué — archivar no es borrar.
+    assert "Castellanos" not in coro["lectura_en_disputa"]
+    assert "'viento'" not in coro["lectura_en_disputa"]
+    assert "DESCARTADA 2026-09-23" in coro["notas"]
 
 
 def test_d21_15_kadushi_no_se_toca():
