@@ -1,0 +1,1074 @@
+# Generado por 6-fusion/scripts/medir_tanda_base.py — NO editar a mano.
+medicion: tanda-de-la-base-un-corte-una-medicion
+fecha: 2026-09-23
+ref_de_antes: 797bace
+ref_del_run: 114c991
+decide:
+  - 6-fusion/decisiones_base_2026-09-22.yaml
+  - 6-fusion/decisiones_campanas_2026-09-21.yaml §dc.2 §dc.3
+que_se_aplico:
+  - db.1 C — la casi-raíz de largo ≥ 6 se perdona (raíces caquetías vivas)
+  - "db.1 — el agujero de kira: una raíz archivada no avala en la puerta"
+  - "db.2 — datihao pasa a taíno (commit 2f898ec, antes de esta medición)"
+  - db.3.1 — la semilla de la persona es la de la cadena
+  - "db.3.2 — las 8 taíno-reconstruido al archivo; daca es taíno 'yo'"
+  - "db.3.3 — mayani, caney, batey, tabako y siba según su cronista"
+  - "db.4 — el catálogo de la era 2, novedad/hueco, uno cada dos días"
+  - db.6 — la puerta onomatopéyica en la competencia de un animal
+  - "dc.2 C+E — -gua 'región' pasa a -wa, sin glosa"
+  - dc.3 B — la derivación cero se enseña (jusual)
+  - "d21.6, lo que faltaba — el ejemplo ideal ya no glosa buko-ana"
+instrumento:
+  vocabulario_base:
+    antes: 5507
+    hoy: 5500
+  fuera_del_habla:
+    antes: 13
+    hoy: 21
+  formas_de_plantilla:
+    antes: 5981
+    hoy: 5980
+  sufijos:
+    salen:
+      - -gua
+    entran:
+      - -wa
+  formas_de_plantilla_salen:
+    - buko-ana
+    - desinencia
+    - gua
+    - región
+    - usarla
+  formas_de_plantilla_entran:
+    - marca
+    - sembradío
+    - siba-lokono
+    - siembra
+  voces_de_fuera:
+    antes: 43
+    hoy: 42
+    salen:
+      - akcicyaa
+      - wagulo
+    entran:
+      - datihao
+raiz:
+  formas_de_la_base: 2928
+  usos: 106754
+  dc2_desafijador:
+    formas: 54
+    usos: 112
+    detalle:
+      -
+        forma: kali-ubana-gua
+        usos: 13
+        antes: kali
+        hoy: kali+ubana+gua
+      -
+        forma: juri-gua
+        usos: 10
+        antes: juri
+        hoy: juri+gua
+      -
+        forma: paa-bana-gua
+        usos: 9
+        antes: paa
+        hoy: paa+bana+gua
+      -
+        forma: tüshi-gua-da
+        usos: 7
+        antes: tüshi
+        hoy: tüshi+gua
+      -
+        forma: sima-gua
+        usos: 5
+        antes: sima
+        hoy: sima+gua
+      -
+        forma: popoi-gua
+        usos: 4
+        antes: popoi
+        hoy: popoi+gua
+      -
+        forma: masa-bana-gua-ni
+        usos: 3
+        antes: masa
+        hoy: masa+bana+gua
+      -
+        forma: juri-bana-gua
+        usos: 3
+        antes: juri
+        hoy: juri+bana+gua
+      -
+        forma: masa-bana-gua
+        usos: 3
+        antes: masa
+        hoy: masa+bana+gua
+      -
+        forma: chaa-bana-gua
+        usos: 2
+        antes: chaa
+        hoy: chaa+bana+gua
+      -
+        forma: maure-gua
+        usos: 2
+        antes: maure
+        hoy: maure+gua
+      -
+        forma: kana-gua
+        usos: 2
+        antes: kana
+        hoy: kana+gua
+      -
+        forma: wasima-gua
+        usos: 2
+        antes: wasima
+        hoy: wasima+gua
+      -
+        forma: jai-bana-gua
+        usos: 2
+        antes: jai
+        hoy: jai+bana+gua
+      -
+        forma: popoi-bana-gua
+        usos: 2
+        antes: popoi
+        hoy: popoi+bana+gua
+      -
+        forma: awa-gua
+        usos: 2
+        antes: awa
+        hoy: awa+gua
+      -
+        forma: kono-gua
+        usos: 2
+        antes: kono
+        hoy: kono+gua
+      -
+        forma: kati-bacoa-gua
+        usos: 2
+        antes: kati+bacoa
+        hoy: kati+bacoa+gua
+      -
+        forma: patapati-gua
+        usos: 2
+        antes: patapati
+        hoy: patapati+gua
+      -
+        forma: jagey-ucu-ana-gua
+        usos: 1
+        antes: jagey+ucu
+        hoy: jagey+ucu+ana+gua
+      -
+        forma: kapu-gua
+        usos: 1
+        antes: kapu
+        hoy: kapu+gua
+      -
+        forma: kono-bana-gua
+        usos: 1
+        antes: kono
+        hoy: kono+bana+gua
+      -
+        forma: kaa-wa
+        usos: 1
+        antes: kaa+wa
+        hoy: kaa
+      -
+        forma: naba-gua
+        usos: 1
+        antes: naba
+        hoy: naba+gua
+      -
+        forma: wamipa-gua
+        usos: 1
+        antes: wamipa
+        hoy: wamipa+gua
+      -
+        forma: waranao-para-gua-da
+        usos: 1
+        antes: waranao+para
+        hoy: waranao+para+gua
+      -
+        forma: paa-taro-gua
+        usos: 1
+        antes: paa+taro
+        hoy: paa+taro+gua
+      -
+        forma: kono-ni-gua
+        usos: 1
+        antes: kono
+        hoy: kono+ni+gua
+      -
+        forma: masa-wara-bana-gua-ni
+        usos: 1
+        antes: masa+wara
+        hoy: masa+wara+bana+gua
+      -
+        forma: kaa-bakua-gua
+        usos: 1
+        antes: kaa+bakua
+        hoy: kaa+bakua+gua
+      -
+        forma: wana-gua-ubana
+        usos: 1
+        antes: wana
+        hoy: wana+gua
+      -
+        forma: waranao-gua
+        usos: 1
+        antes: waranao
+        hoy: waranao+gua
+      -
+        forma: kapu-bana-gua
+        usos: 1
+        antes: kapu
+        hoy: kapu+bana+gua
+      -
+        forma: suna-rua-ana-gua
+        usos: 1
+        antes: suna+rua
+        hoy: suna+rua+ana+gua
+      -
+        forma: suna-bana-gua
+        usos: 1
+        antes: suna
+        hoy: suna+bana+gua
+      -
+        forma: kono-sima-gua
+        usos: 1
+        antes: kono+sima
+        hoy: kono+sima+gua
+      -
+        forma: kono-gua-ana
+        usos: 1
+        antes: kono
+        hoy: kono+gua
+      -
+        forma: suna-bana-ko-gua-ana
+        usos: 1
+        antes: suna+bana+ko
+        hoy: suna+bana+ko+gua
+      -
+        forma: etamo-gua
+        usos: 1
+        antes: etamo
+        hoy: etamo+gua
+      -
+        forma: masa-gua
+        usos: 1
+        antes: masa
+        hoy: masa+gua
+    control_del_segmentador:
+      desvios: 0
+      verde: true
+    de_ellas_cambian_ninguna_parte:
+      - baro-ana-gua
+    de_ellas_cambian_familia:
+      - baro-ana-gua
+  clasificador_ninguna_parte:
+    formas: 36
+    usos: 1678
+    detalle:
+      - "chacamba: True → False (913 usos)"
+      - "hamaca: True → False (188 usos)"
+      - "humocaro: True → False (179 usos)"
+      - "cudanga: True → False (115 usos)"
+      - "ta-hamaca: True → False (57 usos)"
+      - "jacura-ni: True → False (47 usos)"
+      - "jakuri-ni: True → False (36 usos)"
+      - "uriacoa: True → False (34 usos)"
+      - "jacura-ka: True → False (20 usos)"
+      - "ma-humocaro: True → False (17 usos)"
+      - "jacura-da: True → False (15 usos)"
+      - "catarí: True → False (9 usos)"
+      - "ta-jacura: True → False (6 usos)"
+      - "jaguey-da: True → False (4 usos)"
+      - "jaguey-ka: True → False (4 usos)"
+      - "pütshi-bana: True → False (4 usos)"
+      - "jacura: True → False (3 usos)"
+      - "jaguey-ni: True → False (3 usos)"
+      - "jacura-bana: True → False (3 usos)"
+      - "mazato: True → False (3 usos)"
+      - "ka-uriacoa: True → False (2 usos)"
+      - "hamaki-iro: True → False (2 usos)"
+      - "ta-cudanga: True → False (1 usos)"
+      - "jaguey-ana: True → False (1 usos)"
+      - "caduchi: True → False (1 usos)"
+      - "ma-jacura: True → False (1 usos)"
+      - "jaguey: True → False (1 usos)"
+      - "jaguey-panu: True → False (1 usos)"
+      - "jaguey-mana: True → False (1 usos)"
+      - "ta-humocaro: True → False (1 usos)"
+  familia:
+    formas: 36
+    usos: 1678
+    detalle:
+      - "chacamba: desconocida → caquetío (913 usos)"
+      - "hamaca: desconocida → caquetío (188 usos)"
+      - "humocaro: desconocida → caquetío (179 usos)"
+      - "cudanga: desconocida → caquetío (115 usos)"
+      - "ta-hamaca: desconocida → caquetío (57 usos)"
+      - "jacura-ni: desconocida → caquetío (47 usos)"
+      - "jakuri-ni: desconocida → caquetío (36 usos)"
+      - "uriacoa: desconocida → caquetío (34 usos)"
+      - "jacura-ka: desconocida → caquetío (20 usos)"
+      - "ma-humocaro: desconocida → caquetío (17 usos)"
+      - "jacura-da: desconocida → caquetío (15 usos)"
+      - "catarí: desconocida → caquetío (9 usos)"
+      - "ta-jacura: desconocida → caquetío (6 usos)"
+      - "jaguey-da: desconocida → caquetío (4 usos)"
+      - "jaguey-ka: desconocida → caquetío (4 usos)"
+      - "pütshi-bana: desconocida → caquetío (4 usos)"
+      - "jacura: desconocida → caquetío (3 usos)"
+      - "jaguey-ni: desconocida → caquetío (3 usos)"
+      - "jacura-bana: desconocida → caquetío (3 usos)"
+      - "mazato: desconocida → caquetío (3 usos)"
+      - "ka-uriacoa: desconocida → caquetío (2 usos)"
+      - "hamaki-iro: desconocida → caquetío (2 usos)"
+      - "ta-cudanga: desconocida → caquetío (1 usos)"
+      - "jaguey-ana: desconocida → caquetío (1 usos)"
+      - "caduchi: desconocida → caquetío (1 usos)"
+      - "ma-jacura: desconocida → caquetío (1 usos)"
+      - "jaguey: desconocida → caquetío (1 usos)"
+      - "jaguey-panu: desconocida → caquetío (1 usos)"
+      - "jaguey-mana: desconocida → caquetío (1 usos)"
+      - "ta-humocaro: desconocida → caquetío (1 usos)"
+  puerta_archivo_cierra:
+    que_es: "formas cuya ÚNICA raíz conocida es una ARCHIVADA: el clasificador las sigue leyendo, la puerta ya no las deja registrarse ni competir (el agujero de kira)"
+    formas: 120
+    usos: 4827
+    detalle:
+      - kali (868 usos)
+      - kira-ni (530 usos)
+      - paa-da (449 usos)
+      - wanee (276 usos)
+      - paa-ni (256 usos)
+      - kali-bana (240 usos)
+      - paa-ka (225 usos)
+      - piama (219 usos)
+      - kira-da (168 usos)
+      - kasha (146 usos)
+      - piache (137 usos)
+      - habo (120 usos)
+      - kira-ka (92 usos)
+      - apünüin (87 usos)
+      - ma-kali (76 usos)
+      - kali-sha (54 usos)
+      - paa-bana-da (53 usos)
+      - kali-taro (50 usos)
+      - kali-biji (48 usos)
+      - kali-iro-pabu (47 usos)
+      - pienchi (46 usos)
+      - paa (35 usos)
+      - paa-bana (32 usos)
+      - baro-kali (29 usos)
+      - kira (27 usos)
+      - kali-subo (25 usos)
+      - paa-taro (24 usos)
+      - paa-biji (23 usos)
+      - ma-kali-bana (23 usos)
+      - kira-iro-aima (22 usos)
+  casi_raiz_perdonadas_hoy:
+    formas: 37
+    usos: 1680
+    detalle:
+      - "chacamba → ['chakamba'] (913 usos)"
+      - "hamaca → ['hamaka'] (188 usos)"
+      - "humocaro → ['humokaro'] (179 usos)"
+      - "cudanga → ['kudanga'] (115 usos)"
+      - "ta-hamaca → ['hamaka'] (57 usos)"
+      - "jacura-ni → ['jakura'] (47 usos)"
+      - "jakuri-ni → ['jakura'] (36 usos)"
+      - "uriacoa → ['uriakoa'] (34 usos)"
+      - "jacura-ka → ['jakura'] (20 usos)"
+      - "ma-humocaro → ['humokaro'] (17 usos)"
+      - "jacura-da → ['jakura'] (15 usos)"
+      - "catarí → ['katarí'] (9 usos)"
+      - "ta-jacura → ['jakura'] (6 usos)"
+      - "jaguey-da → ['jagey'] (4 usos)"
+      - "jaguey-ka → ['jagey'] (4 usos)"
+      - "pütshi-bana → ['pütchi'] (4 usos)"
+      - "jacura → ['jakura'] (3 usos)"
+      - "jaguey-ni → ['jagey'] (3 usos)"
+      - "jacura-bana → ['jakura'] (3 usos)"
+      - "mazato → ['masato'] (3 usos)"
+      - "kasi-dipara → ['sipara'] (2 usos)"
+      - "ka-uriacoa → ['uriakoa'] (2 usos)"
+      - "hamaki-iro → ['hamaka'] (2 usos)"
+      - "ta-cudanga → ['kudanga'] (1 usos)"
+      - "jaguey-ana → ['jagey'] (1 usos)"
+      - "caduchi → ['kaduchi'] (1 usos)"
+      - "ma-jacura → ['jakura'] (1 usos)"
+      - "jaguey → ['jagey'] (1 usos)"
+      - "jaguey-panu → ['jagey'] (1 usos)"
+      - "jaguey-mana → ['jagey'] (1 usos)"
+  casi_raiz_por_largo:
+    formas_sin_raiz_conocida: 327
+    usos: 4489
+    largo_3:
+      formas: 157
+      usos: 3330
+      ejemplos:
+        - "chacamba (chacamba → chakamba, 913 usos)"
+        - "ta-corie (corie → korie, 238 usos)"
+        - "hamaca (hamaca → hamaka, 188 usos)"
+        - "humocaro (humocaro → humokaro, 179 usos)"
+        - "canoa (canoa → kanoa, 174 usos)"
+        - "corie (corie → korie, 138 usos)"
+        - "cudanga (cudanga → kudanga, 115 usos)"
+        - "cuté (cuté → kuté, 114 usos)"
+        - "buco (buco → buio, 86 usos)"
+        - "ta-canoa (canoa → kanoa, 77 usos)"
+        - "ta-buco (buco → buio, 60 usos)"
+        - "puri-ka (puri → buri, 58 usos)"
+        - "ta-hamaca (hamaca → hamaka, 57 usos)"
+        - "karu-bana-ni (karu → kapu, 57 usos)"
+    largo_4:
+      formas: 149
+      usos: 3287
+      ejemplos:
+        - "chacamba (chacamba → chakamba, 913 usos)"
+        - "ta-corie (corie → korie, 238 usos)"
+        - "hamaca (hamaca → hamaka, 188 usos)"
+        - "humocaro (humocaro → humokaro, 179 usos)"
+        - "canoa (canoa → kanoa, 174 usos)"
+        - "corie (corie → korie, 138 usos)"
+        - "cudanga (cudanga → kudanga, 115 usos)"
+        - "cuté (cuté → kuté, 114 usos)"
+        - "buco (buco → buio, 86 usos)"
+        - "ta-canoa (canoa → kanoa, 77 usos)"
+        - "ta-buco (buco → buio, 60 usos)"
+        - "puri-ka (puri → buri, 58 usos)"
+        - "ta-hamaca (hamaca → hamaka, 57 usos)"
+        - "karu-bana-ni (karu → kapu, 57 usos)"
+    largo_5:
+      formas: 59
+      usos: 2391
+      ejemplos:
+        - "chacamba (chacamba → chakamba, 913 usos)"
+        - "ta-corie (corie → korie, 238 usos)"
+        - "hamaca (hamaca → hamaka, 188 usos)"
+        - "humocaro (humocaro → humokaro, 179 usos)"
+        - "canoa (canoa → kanoa, 174 usos)"
+        - "corie (corie → korie, 138 usos)"
+        - "cudanga (cudanga → kudanga, 115 usos)"
+        - "ta-canoa (canoa → kanoa, 77 usos)"
+        - "ta-hamaca (hamaca → hamaka, 57 usos)"
+        - "jacura-ni (jacura → jakura, 47 usos)"
+        - "jakuri-ni (jakuri → jakura, 36 usos)"
+        - "uriacoa (uriacoa → uriakoa, 34 usos)"
+        - "jacura-ka (jacura → jakura, 20 usos)"
+        - "uyama-ni (uyama → yama, 19 usos)"
+    largo_6:
+      formas: 35
+      usos: 1677
+      ejemplos:
+        - "chacamba (chacamba → chakamba, 913 usos)"
+        - "hamaca (hamaca → hamaka, 188 usos)"
+        - "humocaro (humocaro → humokaro, 179 usos)"
+        - "cudanga (cudanga → kudanga, 115 usos)"
+        - "ta-hamaca (hamaca → hamaka, 57 usos)"
+        - "jacura-ni (jacura → jakura, 47 usos)"
+        - "jakuri-ni (jakuri → jakura, 36 usos)"
+        - "uriacoa (uriacoa → uriakoa, 34 usos)"
+        - "jacura-ka (jacura → jakura, 20 usos)"
+        - "ma-humocaro (humocaro → humokaro, 17 usos)"
+        - "jacura-da (jacura → jakura, 15 usos)"
+        - "catarí (catarí → katarí, 9 usos)"
+        - "ta-jacura (jacura → jakura, 6 usos)"
+        - "jaguey-da (jaguey → jagey, 4 usos)"
+    largo_7:
+      formas: 12
+      usos: 1266
+      ejemplos:
+        - "chacamba (chacamba → chakamba, 913 usos)"
+        - "humocaro (humocaro → humokaro, 179 usos)"
+        - "cudanga (cudanga → kudanga, 115 usos)"
+        - "uriacoa (uriacoa → uriakoa, 34 usos)"
+        - "ma-humocaro (humocaro → humokaro, 17 usos)"
+        - "ka-uriacoa (uriacoa → uriakoa, 2 usos)"
+        - "ta-cudanga (cudanga → kudanga, 1 usos)"
+        - "caduchi (caduchi → kaduchi, 1 usos)"
+        - "ta-humocaro (humocaro → humokaro, 1 usos)"
+        - "ma-cudanga (cudanga → kudanga, 1 usos)"
+        - "ma-chacamba (chacamba → chakamba, 1 usos)"
+        - "ta-uriacoa (uriacoa → uriakoa, 1 usos)"
+    elegido: 6
+prompt:
+  plantillas:
+    IDENTIDAD_LINGUISTICA:
+      antes: 1252
+      hoy: 1252
+      cambia: false
+    prompt_reglas_completo:
+      antes: 5122
+      hoy: 5152
+      cambia: true
+    prompt_reglas_breve:
+      antes: 1192
+      hoy: 1263
+      cambia: true
+    prompt_afijos_atestiguados:
+      antes: 639
+      hoy: 639
+      cambia: false
+    prompt_afijos_atestiguados_breve:
+      antes: 167
+      hoy: 167
+      cambia: false
+    "prompt_refuerzo[1.0]":
+      antes: 193
+      hoy: 193
+      cambia: false
+    "prompt_refuerzo[3.0]":
+      antes: 175
+      hoy: 175
+      cambia: false
+    "prompt_refuerzo[5.0]":
+      antes: 150
+      hoy: 150
+      cambia: false
+    "prompt_refuerzo[6.5]":
+      antes: 81
+      hoy: 81
+      cambia: false
+    "prompt_rescate[0]":
+      antes: 970
+      hoy: 970
+      cambia: false
+    "prompt_rescate[1]":
+      antes: 772
+      hoy: 772
+      cambia: false
+    "prompt_rescate[2]":
+      antes: 688
+      hoy: 688
+      cambia: false
+  system_prompt_de_los_63:
+    prompts:
+      antes: 63
+      hoy: 63
+    medio:
+      antes: 7462.2
+      hoy: 7541.0
+    mediana:
+      antes: 6513
+      hoy: 6559
+    min:
+      antes: 4874
+      hoy: 4892
+    max:
+      antes: 11420
+      hoy: 11509
+    cambio_medio_pct: 1.06
+  nombramiento_era2:
+    n: 15
+    animales: 12
+    detalle:
+      -
+        id: tarantula_azul
+        tipo: hueco
+        animal: true
+        caracteres: 414
+        lo_que_se_oye: true
+        invita_por_la_voz: false
+      -
+        id: guacharaca
+        tipo: hueco
+        animal: true
+        caracteres: 436
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: delfin
+        tipo: hueco
+        animal: true
+        caracteres: 398
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: cascabel
+        tipo: hueco
+        animal: true
+        caracteres: 465
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: cardenal
+        tipo: hueco
+        animal: true
+        caracteres: 454
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: cardumen
+        tipo: hueco
+        animal: true
+        caracteres: 422
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: cometa
+        tipo: novedad
+        animal: false
+        caracteres: 250
+        lo_que_se_oye: false
+        invita_por_la_voz: false
+      -
+        id: conejo
+        tipo: hueco
+        animal: true
+        caracteres: 411
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: corocoro
+        tipo: hueco
+        animal: true
+        caracteres: 405
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: tortugas_de_mar
+        tipo: hueco
+        animal: true
+        caracteres: 343
+        lo_que_se_oye: false
+        invita_por_la_voz: false
+      -
+        id: eclipse
+        tipo: novedad
+        animal: false
+        caracteres: 259
+        lo_que_se_oye: false
+        invita_por_la_voz: false
+      -
+        id: perro_mudo
+        tipo: hueco
+        animal: true
+        caracteres: 368
+        lo_que_se_oye: true
+        invita_por_la_voz: false
+      -
+        id: gaviota
+        tipo: hueco
+        animal: true
+        caracteres: 428
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+      -
+        id: metal_amarillo
+        tipo: novedad
+        animal: false
+        caracteres: 270
+        lo_que_se_oye: false
+        invita_por_la_voz: false
+      -
+        id: ballena
+        tipo: hueco
+        animal: true
+        caracteres: 415
+        lo_que_se_oye: true
+        invita_por_la_voz: true
+score:
+  con_escena:
+    runs:
+      - ce7cd2a9
+      - 591d12d8
+      - 59aad1c3
+    control:
+      n: 216
+      desvios: 0
+      verde: true
+      detalle: []
+    del_run_a_antes:
+      n: 216
+      cambian: 0
+      a_la_baja: 0
+      al_alza: 0
+      delta_max_abs: 0.0
+      delta_medio_de_las_que_cambian: 0.0
+      score_medio_antes: 7.4486
+      score_medio_hoy: 7.4486
+      caquetias_cambian: 0
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9815
+      aspecto_medio_hoy: 1.9815
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 212
+      respuestas_con_aspecto_al_tope_hoy: 212
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 0
+      por_run:
+        ce7cd2a9:
+          antes: 7.3875
+          hoy: 7.3875
+        591d12d8:
+          antes: 7.4319
+          hoy: 7.4319
+        59aad1c3:
+          antes: 7.5264
+          hoy: 7.5264
+    antes_a_hoy:
+      n: 216
+      cambian: 12
+      a_la_baja: 12
+      al_alza: 0
+      delta_max_abs: 0.4
+      delta_medio_de_las_que_cambian: -0.2
+      score_medio_antes: 7.4486
+      score_medio_hoy: 7.4375
+      caquetias_cambian: 18
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9815
+      aspecto_medio_hoy: 1.9815
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 212
+      respuestas_con_aspecto_al_tope_hoy: 212
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 0
+      por_run:
+        ce7cd2a9:
+          antes: 7.3875
+          hoy: 7.3833
+        591d12d8:
+          antes: 7.4319
+          hoy: 7.4306
+        59aad1c3:
+          antes: 7.5264
+          hoy: 7.4986
+      detalle:
+        -
+          run: ce7cd2a9
+          dia: 1
+          turno: 6
+          agente: Waru
+          antes: 8.9
+          hoy: 8.6
+          delta: -0.3
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 591d12d8
+          dia: 2
+          turno: 6
+          agente: Paugis
+          antes: 8.5
+          hoy: 8.4
+          delta: -0.1
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 1
+          agente: Dichiba
+          antes: 9.0
+          hoy: 8.9
+          delta: -0.1
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 1
+          agente: Wache
+          antes: 8.8
+          hoy: 8.6
+          delta: -0.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 2
+          agente: Jakura
+          antes: 8.1
+          hoy: 8.0
+          delta: -0.1
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 3
+          agente: Dara-bana
+          antes: 8.5
+          hoy: 8.3
+          delta: -0.2
+          aspecto_antes: 1.0
+          aspecto_hoy: 1.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 3
+          agente: Arika
+          antes: 9.0
+          hoy: 8.8
+          delta: -0.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 4
+          agente: Buriche
+          antes: 8.2
+          hoy: 8.0
+          delta: -0.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 4
+          agente: Ucibo
+          antes: 6.1
+          hoy: 5.9
+          delta: -0.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 4
+          agente: Chakamba
+          antes: 5.8
+          hoy: 5.6
+          delta: -0.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 4
+          agente: Chuchubi
+          antes: 7.4
+          hoy: 7.2
+          delta: -0.2
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+        -
+          run: 59aad1c3
+          dia: 3
+          turno: 4
+          agente: Jaiata
+          antes: 8.2
+          hoy: 7.8
+          delta: -0.4
+          aspecto_antes: 2.0
+          aspecto_hoy: 2.0
+          formas_que_dejan_de_contar:
+            - kira-iro-aima
+          formas_que_empiezan_a_contar: []
+    adoptadas:
+      antes:
+        - biro-uco
+        - duna-ima
+        - gudamuen-apo
+        - jachos-ana
+        - kasi-bwara-bana
+        - kasi-pütchi-bana
+        - kasuta-iro-kana
+        - kira-barsure-uco
+        - kira-iro-aima
+        - mütsia-barsure-uco
+        - mütsia-kasi
+        - mütsia-kasi-bwara-bana
+        - mütsia-kasi-uco
+        - nii-uco-bana ta-rua-ni
+        - pütchi-rana
+      hoy:
+        - biro-uco
+        - duna-ima
+        - gudamuen-apo
+        - jachos-ana
+        - kasi-bwara-bana
+        - kasi-pütchi-bana
+        - kasuta-iro-kana
+        - kira-barsure-uco
+        - mütsia-barsure-uco
+        - mütsia-kasi
+        - mütsia-kasi-bwara-bana
+        - mütsia-kasi-uco
+        - nii-uco-bana ta-rua-ni
+        - pütchi-rana
+    rechazos_de_raiz:
+      antes: 20
+      hoy: 22
+    fijadas:
+      antes: []
+      hoy: []
+  control:
+    runs:
+      - 4e3eef64
+      - fafdce5b
+      - 104673f6
+    control:
+      n: 216
+      desvios: 0
+      verde: true
+      detalle: []
+    del_run_a_antes:
+      n: 216
+      cambian: 0
+      a_la_baja: 0
+      al_alza: 0
+      delta_max_abs: 0.0
+      delta_medio_de_las_que_cambian: 0.0
+      score_medio_antes: 7.387
+      score_medio_hoy: 7.387
+      caquetias_cambian: 0
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9537
+      aspecto_medio_hoy: 1.9537
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 206
+      respuestas_con_aspecto_al_tope_hoy: 206
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 0
+      por_run:
+        4e3eef64:
+          antes: 7.5222
+          hoy: 7.5222
+        fafdce5b:
+          antes: 7.6861
+          hoy: 7.6861
+        104673f6:
+          antes: 6.9528
+          hoy: 6.9528
+    antes_a_hoy:
+      n: 216
+      cambian: 0
+      a_la_baja: 0
+      al_alza: 0
+      delta_max_abs: 0.0
+      delta_medio_de_las_que_cambian: 0.0
+      score_medio_antes: 7.387
+      score_medio_hoy: 7.387
+      caquetias_cambian: 0
+      neos_cambian: 0
+      aspecto_medio_antes: 1.9537
+      aspecto_medio_hoy: 1.9537
+      aspecto_tope: 2.0
+      respuestas_con_aspecto_al_tope_antes: 206
+      respuestas_con_aspecto_al_tope_hoy: 206
+      respuestas_sin_aspecto_antes: 0
+      respuestas_sin_aspecto_hoy: 0
+      por_run:
+        4e3eef64:
+          antes: 7.5222
+          hoy: 7.5222
+        fafdce5b:
+          antes: 7.6861
+          hoy: 7.6861
+        104673f6:
+          antes: 6.9528
+          hoy: 6.9528
+      detalle: []
+    adoptadas:
+      antes:
+        - brilu-kara-biro
+        - brilu-kara-biro-iro
+        - duna-kari
+        - duna-kari-ima
+        - jagey-uco
+        - kachi-sulu
+        - kari-barsure-sunu-ana
+        - kasi-kachipo-sunu-ana
+        - korie-sulu
+        - ma-korie-ana
+        - tüshi-naba
+        - tüshi-naba-ni
+        - u-brilu-kara-biro-iro
+        - waranao-ima
+        - yama-ana
+      hoy:
+        - brilu-kara-biro
+        - brilu-kara-biro-iro
+        - duna-kari
+        - duna-kari-ima
+        - jagey-uco
+        - kachi-sulu
+        - kari-barsure-sunu-ana
+        - kasi-kachipo-sunu-ana
+        - korie-sulu
+        - ma-korie-ana
+        - tüshi-naba
+        - tüshi-naba-ni
+        - u-brilu-kara-biro-iro
+        - waranao-ima
+        - yama-ana
+    rechazos_de_raiz:
+      antes: 5
+      hoy: 5
+    fijadas:
+      antes:
+        -
+          run: fafdce5b
+          concepto: cometa
+          forma: kari-barsure-sunu-ana
+        -
+          run: 104673f6
+          concepto: eclipse
+          forma: kasi-kachipo-sunu-ana
+      hoy:
+        -
+          run: fafdce5b
+          concepto: cometa
+          forma: kari-barsure-sunu-ana
+        -
+          run: 104673f6
+          concepto: eclipse
+          forma: kasi-kachipo-sunu-ana
+semilla_de_la_persona:
+  agentes: 63
+  con_la_semilla_del_dia:
+    21_a_22: 7
+    21_a_23: 7
+  quienes:
+    - Buriche
+    - Jakura
+    - Karama
+    - Katiata
+    - Naure
+    - Tabri
+    - Tauta
+    - Tijua
+    - Uria
+    - Wache
+  con_la_semilla_de_la_cadena: 0

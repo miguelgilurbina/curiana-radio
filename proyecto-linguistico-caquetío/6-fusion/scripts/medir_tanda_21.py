@@ -187,7 +187,14 @@ def respuestas_de(id8: list[str]) -> list[dict]:
         "substring(r.run_id::text,1,8) || '{S}' || r.response_text || '{F}' "
         "from agent_responses r join turns t on t.id = r.turn_id "
         "where substring(r.run_id::text,1,8) in ({IDS}) "
-        "order by r.run_id, t.day, t.turn_num, r.created_at"
+        # ⚠️ Por DÍA, no por `run_id`: el id es un UUID y su orden no es el de
+        # la cadena. Hasta el 2026-09-23 decía `order by r.run_id, …` y la
+        # cadena 4e3eef64 → fafdce5b → 104673f6 salía como día 3, 1, 2: el
+        # replay procesaba el día 3 sin el léxico de los dos anteriores y el
+        # control de la tanda de la base salió en rojo (72 y 51 de 216). La
+        # medición del 21 dio verde con el orden viejo porque sus UUID caían en
+        # orden en un brazo y en el otro nada dependía de él.
+        "order by t.day, t.turn_num, r.created_at"
     ).format(S=SEPARADOR, F=FIN_DE_FILA,
              IDS=", ".join(f"'{i}'" for i in id8))
     out = subprocess.run(
