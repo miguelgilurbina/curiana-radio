@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-23**.
 
-**7163 ítems propuestos** en 131 propuestas, más **51 issue(s)/comentario(s) redactados sin publicar**.
+**7175 ítems propuestos** en 136 propuestas, más **55 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -73,8 +73,10 @@ editar_a_mano: no
 | `fauna_paraguana_tierra_2026-09-22.yaml` | ? | 56 |  |
 | `federmann_1530_costa_2026-09-22.yaml` | federmann-1916 | 11 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
+| `fuentes_poporo_coro_zayas_2026-09-23.yaml` | ? | 3 |  |
 | `fuentes_que_faltan_2026-09-22.yaml` | ? | 17 |  |
 | `gbif_fauna_tierra_paraguana_2026-09-22.yaml` | ? | 56 |  |
+| `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
@@ -86,6 +88,7 @@ editar_a_mano: no
 | `medicion_arte_achagua_2026-09-22.yaml` | ? | 33 |  |
 | `medicion_clases_de_raiz_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
+| `medicion_d11_fase3_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_fauna_flora_2026-09-22.yaml` | ? | 0 |  |
 | `medicion_formas_de_plantilla_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
@@ -113,12 +116,14 @@ editar_a_mano: no
 | `perez_de_tolosa_1546_2026-09-23.yaml` | perez-de-tolosa-1546 | 15 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
+| `propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml` | ? | 9 |  |
 | `propuesta_gua_procedencia_2026-09-21.yaml` | oliver-1989-cap2 · zavala-reyes-2015 · van-buurt-2014 · esteves-1989 · alvarado-1921 · jahn-1927 · arcaya-1920 · medina-colina-sxx | 7 |  |
 | `propuesta_macana_etiqueta_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nominalizador_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `referentes_era2.yaml` | ? | 15 |  |
 | `rivero_1883_2026-09-23.yaml` | rivero-1883 | 12 |  |
+| `sigla_E_zavala_lectura_2026-09-23.yaml` | ? | 0 |  |
 | `sistema_de_nombres_era2.yaml` | ? | 8 |  |
 | `sitios_era2.yaml` | varias | 7 |  |
 | `tabla15_c14_oliver.yaml` | oliver-1989-cap4 | 23 |  |
@@ -162,6 +167,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `medicion_lote_esteves_2026-09-22.yaml` — generado por `6-fusion/scripts/medir_lote_esteves_2026-09-22.py`
 - `medicion_oliver1989_restante_2026-09-22.yaml` — generado por `6-fusion/scripts/oliver1989_restante.py`
 - `medicion_politica_atestiguado_manda_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_politica_atestiguado_manda.py`
+- `medicion_sigla_E_zavala_2026-09-23.yaml` — generado por `6-fusion/scripts/medir_sigla_E_zavala.py`
 - `oviedo_restante_2026-09-22.yaml` — generado por `lectura del minador (agente Opus 5.5) sobre la capa de texto de los cuatro PDF, con verificación en IMAGEN de cada forma en cursiva que se propone y de cada descripción de sonido que se marca `imagen`. El tomo I se lee ahora en la copia íntegra descargada hoy (ver `meta.descarga`), que sí renderiza las impresas 155-614.`
 - `pares_atestiguado_reconstruido_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
@@ -198,6 +204,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
+| `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
 | `decisiones-pendientes-2026-09-23.md` | Las decisiones pendientes, juntas — para contestarlas de una sentada |
 | `encargo-mineria-federmann.md` | Encargo de minería — Federmann (1530-1531): Paraguaná y Coro |
@@ -215,6 +222,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `fuentes-que-faltan-2026-09-22.md` | Las fuentes que faltan: siete obras entran, diez siguen fuera — y qué hace falta de Miguel |
 | `golfete-en-paraguana-2026-09-17.md` | «Golfete» en Paraguaná: por dónde entra, a quién le sobra y qué decidir |
 | `gua-procedencia-2026-09-21.md` | `-gua` sí tiene fuente — pero no para lo que enseña |
+| `guaiqueries-manaure-dabajuroide-2026-09-23.md` | El asiento de Manaure, los guaiqueríes y la cronología dabajuroide (cc.5) |
 | `gumilla-cacatia-y-achagua-2026-09-23.md` | Gumilla 1791: los «Cacatia» de los Llanos y lo que aporta al achagua |
 | `habla-llanos-coro-perez-de-tolosa-2026-09-23.md` | «Aunque algo difieren en la habla á los de Coro» — ¿a dónde va este testigo? |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
@@ -225,10 +233,12 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `oliver1989-restante-2026-09-22.md` | Oliver 1989, lo que quedaba a medias: la A-9 entera, los vecinos, los dabajuranos y el mar |
 | `oviedo-restante-2026-09-22.md` | Tercera campaña de minería — M3: Oviedo y Valdés, lo que quedaba de los cuatro tomos |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
+| `poporo-coro-zayas-2026-09-23.md` | El poporo no es caquetío, `coro` no es 'viento' y las voces de Zayas, decididas por la fue |
 | `predicacion-de-nombres-ka-ma-2026-09-20.md` | `juri-ni` no es caquetío: un nombre se predica con `ka-`, no con aspecto |
 | `raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md` | ¿Puede un pueblo inventar una raíz nueva? — lo conservador YA está aplicado |
 | `rivero-caquetios-casanare-2026-09-23.md` | Los caquetíos del Casanare en Rivero: no hay polity nueva, y `tamude` no dice «primos» |
 | `semilla-del-dia-mueve-a-la-persona-2026-09-21.md` | La semilla del DÍA mueve rasgos de la PERSONA |
+| `sigla-E-zavala-canon-2026-09-23.md` | La sigla (E) de Zavala es Esteves: el canon, re-medido |
 | `taino-caquetio-similitudes-2026-09-21.md` | El taíno y el caquetío: qué comparten de verdad |
 | `taino-en-la-esfera-2026-09-21.md` | El taíno en la esfera: primos, no vecinos — y el vector que faltaba |
 | `taino-inventario-y-fuentes-2026-09-21.md` | --- |
