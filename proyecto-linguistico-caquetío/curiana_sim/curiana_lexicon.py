@@ -303,11 +303,11 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "aji":        {"es": "ají, chile (Capsicum spp.)", "fuente": "taíno", "notas": "Tno. ají → español ají; venezolanismo activo", "categoria": "flora"},
     "papaya":     {"es": "papaya, lechosa (Carica papaya)", "fuente": "taíno", "notas": "Tno. papaya → español papaya", "categoria": "flora"},
     "guayaba":    {"es": "guayaba (Psidium guajava)", "fuente": "taíno", "notas": "Tno. guayaba → español guayaba", "categoria": "flora"},
-    "tabako":     {"es": "tabaco (Nicotiana tabacum), pipa ceremonial", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuaco", "categoria": "ritual"},
+    "tabako":     {"es": "cañuto con que se toma el humo, y la ahumada misma (no la hierba)", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuaco · GLOSA CORREGIDA 2026-09-23 (db.3): decía «tabaco (Nicotiana tabacum), pipa ceremonial», la planta primero. Oviedo lo corrige expresamente, t. I lib. V cap. II pp. 130-131: «tomar unas ahumadas, que ellos llaman tabaco», y «á aquel tal instrumento con que toman el humo, ó á las cañuelas que es dicho llaman los indios tabaco, é no á la hierva ó sueño que les toma (como pensaban algunos)»; p. 143, «sus cahobas ó ahumadas […] que assimismo llaman tabacos». Abierto (Zayas 1931, #220): Las Casas llama tabacos a las hojas enrolladas, y la pareja `cohiba`/`tabako` está sin decidir", "categoria": "ritual"},
     "cazabi":     {"es": "cazabe, pan de yuca, torta de mandioca", "fuente": "taíno", "notas": "Tno. cazabi → español cazabe; alimento base arahuaco", "categoria": "alimentacion"},
     "bohio":      {"es": "bohío, casa redonda de varas y palma", "fuente": "taíno", "notas": "Tno. bohío; cognado caquetío probable *kali", "categoria": "arquitectura"},
-    "caney":      {"es": "caney, bohío rectangular del cacique", "fuente": "taíno", "notas": "Tno. caney; vivienda del jefe diferenciada", "categoria": "arquitectura"},
-    "batey":      {"es": "batey, plaza central del poblado, cancha de juego ritual", "fuente": "taíno", "notas": "Tno. batey; espacio ritual comunitario", "categoria": "arquitectura"},
+    "caney":      {"es": "caney, casa redonda de varas con un mástil al centro; casa grande", "fuente": "taíno", "notas": "Tno. caney; vivienda del jefe diferenciada · GLOSA CORREGIDA 2026-09-23 (db.3): decía «bohío rectangular del cacique», y Oviedo dice lo contrario en las dos mitades. Oviedo t. I, lib. VI cap. I, pp. 164-165: «El buhio ó casa de tal manera fecho, llámasse caney», la de postes en círculo con «un poste ó mástel» al medio, «la forma del caney ó casa redonda»; la de los «hombres mas principales é caçiques» es la OTRA, «hechas á dos aguas y luengas». Lo que sí liga el caney a los caciques es un pasaje narrativo, t. I p. 90: los caciques «dentro en un caney ó casa grande» — un lugar de reunión, no la vivienda del cacique. Transcripción en 6-fusion/taino_oviedo_valdes_1851.yaml", "categoria": "arquitectura"},
+    "batey":      {"es": "juego de pelota (y el sitio donde se juega)", "fuente": "taíno", "notas": "Tno. batey; espacio ritual comunitario · GLOSA CORREGIDA 2026-09-23 (db.3): decía «plaza central del poblado, cancha de juego ritual» y ponía el lugar primero. Para Oviedo batey es EL JUEGO: t. I p. 471, «lo jugasen al batey (que es el juego de la pelota de los indios)»; y p. 163, en la plaza «estaba lugar diputado para el juego de la pelota (que ellos llaman batey)», donde la plaza es «plaça». El sitio queda entre paréntesis porque el paréntesis de p. 163 admite las dos lecturas. Transcripción en 6-fusion/taino_oviedo_valdes_1851.yaml", "categoria": "arquitectura"},
     "nagua":      {"es": "nagua, falda de algodón de mujer", "fuente": "caquetío-reconstruido", "notas": "Decisión de Miguel 2026-09-12 (tainismos de Medina): Medina Colina p. 193 s.v. naguas «con esta palabra, producto del pueblo llano, nuestros paraguaneros se refirieron a las enaguas de la mujer; es voz taína» → caquetío-reconstruido como kanoa/hamaca/konuko; etiqueta anterior `taíno` · Tno. nagua → español enagua; Lokono annaka", "categoria": "vestimenta"},
     "piragua":    {"es": "piragua, canoa grande de un palo", "fuente": "taíno", "notas": "Tno. piragua → español piragua", "categoria": "navegacion"},
     "iwana":      {"es": "iguana (Iguana iguana)", "fuente": "taíno", "notas": "Tno. higuana → español iguana; Lokono iwana", "categoria": "fauna"},
@@ -727,10 +727,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "notas": "Lok. sallaban; 'llano/sabana'; cognado Taíno sabana; origen del venezolanismo/americanismo 'sabana'; Brinton 1871",
         "categoria": "geografia"
     },
-    "siba": {
+    "siba-lokono": {
         "es": "piedra, roca",
         "fuente": "lokono",
-        "notas": "Lok. siba; artículo to [NH]; siba-be 'piedras'; cognado con iba/kiba (Carib.); Brinton 1871; Goeje 1928",
+        "notas": "Lok. siba; artículo to [NH]; siba-be 'piedras'; cognado con iba/kiba (Carib.); Brinton 1871; Goeje 1928 · CLAVE CAMBIADA 2026-09-23 (db.3): era `siba` a secas; la voz sin etiqueta pasa a ser la taína, que la atestigua un cronista, y ésta lleva la etiqueta de lengua como `kati-kalinago`",
         "categoria": "geografia"
     },
 
@@ -6104,36 +6104,6 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
 
     # --- Taíno hipotético (arahuaco_comparative.py) ---
-    "abba": {
-        "es": "uno",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "gramatica"
-    },
-    "acoa": {
-        "es": "pie",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "aduri": {
-        "es": "nariz",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "agari": {
-        "es": "cabeza",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "akcicyaa": {
-        "es": "espíritu vital",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "ritual"
-    },
     "cai": {
         "es": "isla",
         "fuente": "taíno",
@@ -6159,10 +6129,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "ritual"
     },
     "daca": {
-        "es": "mano",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
+        "es": "yo",
+        "fuente": "taíno",
+        "notas": "Las Casas, Apologética cap. CLXVII p. 447 (verificado en imagen): «Dios naboría daca […] que quiere decir, en la lengua más comun y más universal desta Isla, “yo soy sirviente y criado de Dios” […] y daca quiere decir yo». Segunda mano independiente: Pané, cap. XXV, la misma frase —en el contexto de Macorix, que es la lengua que Pané sabía—. Bachiller y Morales 1883 p. 270 junta las dos (Pané escribe dacha, Las Casas daca). Transcripciones en 6-fusion/taino2_las_casas_apologetica.yaml (lx.06, conflicto c01) y 6-fusion/taino_pane_c1498.yaml · CAMBIA DE VOZ el 2026-09-23 (db.3): hasta esa fecha esta clave era `daca` 'mano', `taíno-reconstruido`, generada por reconstruir_taino() desde el lokono y homógrafa por accidente de la voz atestiguada. La reconstrucción no se archiva aparte porque la FORMA sigue en el habla, con la glosa que da el cronista; su procedencia era: Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
+        "categoria": "gramatica"
     },
     "higuana": {
         "es": "iguana",
@@ -6171,10 +6141,16 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "fauna"
     },
     "mayani": {
-        "es": "no, negación",
+        "es": "de ningún valor, nada",
         "fuente": "taíno",
-        "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
+        "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno` · GLOSA CORREGIDA 2026-09-23 (db.3): era «no, negación», que es la glosa del cognado lokono `ma`, no la de la voz. Brinton 1871 p. 13: «Mayani, of no value, (\"nihil!,\" Pet. Martyr, p. 9). Ar. ma, no, not» — la voz taína es un juicio de valor y la negación es sólo el morfema lokono con que Brinton la compara. Cronista: Pedro Mártir",
         "categoria": "gramatica"
+    },
+    "siba": {
+        "es": "piedra; las cibas, piedras como de mármol que se llevan colgadas de brazos y cuello",
+        "fuente": "taíno",
+        "notas": "Pané, Relación cap. VI (La Española; texto que llegó por la traducción italiana de Ulloa): «muchas cibas, para que las llevara sujetas a los brazos, pues en aquel país las cibas son piedras que semejan mucho al mármol, y las llevan pendientes de los brazos, y al cuello». Brinton 1871 p. 13 la generaliza a «a stone» y la iguala al lokono `siba`; Bachiller y Morales 1883 p. 210 (vía Irving y Brett) y Goeje 1939 p. 14 (T siba) repiten — copiar no es atestiguar, la mano es una: Pané. forma_fuente: cibas. El lexicón la tenía sólo por el lado lokono (ver `siba-lokono`). Entra el 2026-09-23 (db.3). Transcripciones: 6-fusion/taino_pane_c1498.yaml (pv09) y 6-fusion/taino_lista_maestra_2026-09-22.yaml (lema siba). Para el oyente caquetío: el caquetío atestigua `kiba` «piedra»",
+        "categoria": "geografia"
     },
     "taita": {
         "es": "padre",
@@ -6182,29 +6158,11 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "notas": "Taíno atestiguado: taita; cognado Lok. itti; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "parentesco"
     },
-    "thigisi": {
-        "es": "diente",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
     "tuna": {
         "es": "agua, río",
         "fuente": "taíno",
         "notas": "Taíno atestiguado: tuna; cognado Lok. tuna; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "geografia"
-    },
-    "wacusi": {
-        "es": "ojo",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "wagulo": {
-        "es": "tortuga",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "fauna"
     },
     "yamosa": {
         "es": "dos",
@@ -8473,6 +8431,21 @@ FUERA_DEL_HABLA: dict[str, dict] = {
     "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 4 «escuchar» · manda `jai`", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'escuchar'. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `jai` 'oír, escuchar' (Zavala Reyes 2015, glosario #175 (AM)), que es también `v_raiz` y ya llevaba 167 usos sin que ninguna plantilla se lo enseñara. Segundo archivo más caro por paradigma (`kira-ni`, `kira-da`, `kira-ka`). LA CAPA NO SE TOCA"},
     "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 16 «viento» · manda `juri`", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu) · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `juri` 'viento, ventarrón' (Zavala Reyes 2015 #178 (E), variantes: jura). Es el archivo que menos cuesta de los que tenían uso: `juri` ya ganaba con holgura, ninguna plantilla enseñaba a ninguna de las dos, y la propia glosa de `joutai` declara que viene del wayuu — que es justo lo que D11 retiró. LA CAPA NO SE TOCA"},
     "mülia":      {"sig": "miedo, temor, espanto",                          "cat": "sust",  "fuente": "caquetío-hipotético", "archivada": "2026-09-19 · política atestiguado-manda · par 18 «espanto» · manda `etamo`", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono` · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `etamo` 'feroz, feo, espanto' (Zavala Reyes 2015 #120 (AM)). El archivo más barato de la tanda: hipotética, sin cita, 0 usos en toda la base y 0 exposición en el muestreo del perfil era2. LA CAPA NO SE TOCA: sigue siendo `caquetío-hipotético`"},
+
+    # ── db.3 (2026-09-23): las `taíno-reconstruido`, que eran lokono ──────
+    # «Te doy el si a todos los defectos» (Miguel, 2026-09-22). Las nueve
+    # formas que reconstruir_taino() generó desde el lokono salen del habla:
+    # ocho se archivan aquí y `daca` se queda con la glosa que atestigua Las
+    # Casas ('yo'). LA CAPA NO SE TOCA. Decisión en
+    # 6-fusion/decisiones_base_2026-09-22.yaml §db.3.
+    "abba": {"sig": "uno", "cat": "num", "categoria": "gramatica", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "acoa": {"sig": "pie", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "aduri": {"sig": "nariz", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "agari": {"sig": "cabeza", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "akcicyaa": {"sig": "espíritu vital", "cat": "sust", "categoria": "ritual", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "thigisi": {"sig": "diente", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "wacusi": {"sig": "ojo", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "wagulo": {"sig": "tortuga", "cat": "sust", "categoria": "fauna", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
 }
 
 
@@ -8798,7 +8771,6 @@ SE_QUEDA_CON_SU_GRAFIA = frozenset({
     "cohiba",     # «Taíno atestiguado: cohiba … Brinton 1871»
     "cai",        # «Taíno atestiguado: cai … Brinton 1871» (y `kai` ya es paraujano 'sol')
     "caiman",     # «Taíno atestiguado: caiman … Brinton 1871» (y `kaiman` ya es lokono)
-    "akcicyaa",   # taíno-reconstruido desde Lok. akkicyaha: ortografía del lokono
     "chighe",     # paraujano, Wilbert 1958-59 vía Oliver 1989 Tabla A-2 (dígrafos)
     "keichare",   # ídem
     "utschi",     # ídem
@@ -8807,7 +8779,9 @@ SE_QUEDA_CON_SU_GRAFIA = frozenset({
     "hiñaru",     # kalinago, registro femenino de Breton 1665
     "kalínagu",   # ortografía garífuna del autónimo; la tilde no es castellana
     "achi-kalinago",  # dígrafo ⟨ch⟩ del garífuna/lokono
-    "acoa", "daca", "wacusi",   # taíno-reconstruido desde el lokono (categoría `cuerpo`)
+    # `akcicyaa`, `acoa` y `wacusi` estaban aquí por ser `taíno-reconstruido`
+    # con la ortografía del lokono: se archivaron el 2026-09-23 (db.3).
+    "daca",       # Tno. daca 'yo', Las Casas, Apologética p. 447: grafía de la fuente
     "churuguara", "quibor",     # topónimos modernos (categoría `geografia`)
 })
 

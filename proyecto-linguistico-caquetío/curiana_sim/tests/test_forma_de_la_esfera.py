@@ -121,8 +121,14 @@ def test_el_catalogo_no_pierde_voces_por_accidente():
     # `taíno` —en Oviedo sólo aparece en San Juan— y con eso entra en la esfera.
     # Es la consecuencia declarada de la decisión, no una voz perdida o ganada
     # por accidente.
-    assert len(formas) == 44
+    # 44 → 42 el 2026-09-23 (db.3): las `taíno-reconstruido` se archivaron —eran
+    # lokono con otra grafía— y dos de ellas salían en el bloque: `akcicyaa`
+    # 'espíritu vital' y `wagulo` 'tortuga'. Las otras siete eran de categorías
+    # que no se prestan (cuerpo, gramática). `daca` se queda en el lexicón como
+    # taíno 'yo', que tampoco se presta.
+    assert len(formas) == 42
     assert "datihao" in formas
+    assert not {"akcicyaa", "wagulo"} & formas
     for clave in L.SIN_FORMA_DE_LA_ESFERA:
         assert clave not in formas
 
