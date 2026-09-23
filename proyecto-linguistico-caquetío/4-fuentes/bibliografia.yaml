@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 87
-  en_repo: 58
+  obras: 88
+  en_repo: 59
   solo_citadas: 29
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -225,7 +225,8 @@ obras:
   obra: Población y economía en el pasado indígena venezolano
   autor: Brito Figueroa, Federico
   anio: 1962
-  publicacion: Caracas, 1962
+  publicacion: Caracas, [Ediciones Historia], 1962. 48 pp., con mapa; 22 cm; bibliografía pp. 47-48 (catálogo
+    BNV, koha.bnv.gob.ve, biblionumber 677)
   genero: historiografia
   paginas: — (leída por Miguel en Scribd)
   aliases:
@@ -263,7 +264,7 @@ obras:
   - petrografía Aruba
   en_repo: false
 - id: castellanos-elegias
-  obra: Elegías de varones ilustres de Indias (partes I-II)
+  obra: Elegías de varones ilustres de Indias (partes I-III)
   autor: Castellanos, Juan de
   anio: 1857 [c. 1589]
   publicacion: 'Biblioteca de Autores Españoles (dir. Buenaventura Carlos Aribau), 2ª ed., Madrid, M.
@@ -273,8 +274,8 @@ obras:
   genero: cronica
   local:
   - fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt
-  paginas: '— (texto OCR: partes I y II enteras; la de Coro es la parte II, elegía I, desde la p. 185
-    de la ed. 1857)'
+  paginas: '— (texto OCR de las partes I, II y III de la BAE 1857, t. IV; la Introducción de la Parte
+    II empieza en la p. 181 y la Elegía I en la 186. Línea → página: 6-fusion/scripts/castellanos_pagina.py)'
   acceso: Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental
   aliases:
   - Castellanos
@@ -453,6 +454,23 @@ obras:
   aliases:
   - Goeje 1939
   - de Goeje 1939
+  en_repo: true
+- id: gonzalez-batista-2002-fundacion
+  obra: 'Coro: el problema de la fundación'
+  autor: González Batista, Carlos
+  anio: 2002
+  publicacion: Boletín de la Academia Nacional de la Historia (Caracas), t. 85, n.º 338, 2002, pp. 147-172
+    (sección Miscelánea). Discurso por su designación como socio correspondiente en el Estado Falcón
+  genero: historiografia
+  local:
+  - 'fuentes_caquetios/GonzalezBatista_2002_Coro_problema_fundacion_BolANH338.pdf (+ .txt de pdftotext)
+    — ⚠️ COPIA LOCAL, NO EN GIT: obra con derechos y el repo es público; se vuelve a bajar de la URL de
+    origen'
+  paginas: 26
+  aliases:
+  - González Batista 2002
+  - 'Coro: el problema de la fundación'
+  - El problema de la fundación
   en_repo: true
 - id: gonzalez-batista-nombre-de-coro
   obra: El nombre de Coro
