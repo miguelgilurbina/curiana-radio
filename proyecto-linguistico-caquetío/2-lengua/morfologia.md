@@ -224,7 +224,7 @@ Sin cifras, porque las cifras del corte se miden cuando el corte se aplique:
 |---|---|---|
 | `ka-` · `ma-` | dejan de ser posesivos: **atributivo** y **privativo**, en tabla propia `REGLAS_ATRIBUTIVAS` | d21.5 C · §6 |
 | `-ana` | se enseña **sin glosa**, como `-ubana` y `-uru` | d21.6 B · §8 |
-| `-gua` | `deuda: sin-procedencia` declarada, y **campaña abierta** para buscarle fuente | d21.7 B con A mientras tanto · §7 |
+| `-gua` → **`-wa`** | la campaña halló fuente para la FORMA (Oliver 1989 cap. 2 p. 148) y ninguna para la glosa: se enseña **sin glosa**, con el lema fonémico | d21.7 B → dc.2 C + E (tanda de la base) · §7 |
 | `-kana` | la afirmación «cognado directo con caquetío» baja a **reconstruido desde el wayunaiki** | d21.8 A · §7 |
 | `-naiki` | **se retira** a `REGLAS_RETIRADAS`, con `-ko` y `-sha` | d21.9 A · §7 |
 | `-uto` | se declara **variante** dentro de la regla de `-uco`, para que deje de enseñarse sin reconocerse | d21.14 B · §4 |
@@ -468,7 +468,7 @@ wayunaiki, no en dato caquetío** — lo declaran ellas mismas en un campo
 | `-kana` | plural colectivo | WY `-kana` | reconstruido desde el wayunaiki · `deuda: sin-procedencia` |
 | `-naiki` | 'lengua de, habla de' | WY `-naiki` | **retirado** (d21.9) |
 | `-ana` | formante toponímico, **sin glosa** | ver §8 | atestiguado, sin valor |
-| `-gua` | región, área amplia | topónimos de Falcón y Sucre | reconstruido · `deuda: sin-procedencia` |
+| `-wa` (fuente: `-gua`) | formante toponímico, **sin glosa** (la 'región' se retiró en dc.2) | Oliver 1989 cap. 2 pp. 142, 148 | atestiguado, sin valor |
 | `-bana` | **'cerro, sitio alto'** | ver §8 | **atestiguado** |
 
 ### El alcance de D11 fase 3
@@ -542,6 +542,17 @@ fuente, y era convención.
 > **[aplicado en el corte 13]** — medido: 0 formas cambian de núcleo.
 
 ### `-gua`: sin procedencia, y una campaña abierta (d21.7)
+
+> **Resuelto en la tanda de la base (2026-09-23, dc.2 C + E).** La campaña
+> encontró fuente para la FORMA y ninguna para la glosa: Oliver 1989 cap. 2
+> p. 148 lista «f) -wa [gua-]» entre los sufijos toponímicos caquetíos y nunca
+> le da valor; p. 142 escribe «gua=/wa/». El único `gua` glosado es el
+> sustantivo `wa` 'conuco' (Zavala #122), que dice lo contrario de «región
+> amplia», y leerlos como un morfema sería inferencia nuestra. Así que la
+> regla pasa a **`-wa`**, se enseña **sin glosa** junto a `-ana` y deja de ser
+> deuda. 54 formas de la base se segmentan distinto (112 usos) y una sola
+> cambia de clase. Medido en `6-fusion/medicion_tanda_base_2026-09-23.yaml`.
+> Lo de abajo es cómo estaba antes.
 
 Único apoyo escrito: la frase «Topónimos venezolanos de Falcón y Sucre». **Cero
 clave foránea.** Se enseña en las dos plantillas y se usa **102 veces sobre 37
@@ -907,7 +918,9 @@ Y del lado del nombre, `quiricias` #217: «Sangre, sangrado».
 > de ella no es independiente.
 
 Que la plantilla ENSEÑE la derivación cero («un verbo puede decirse como nombre
-tal cual») es cambio de prompt: **no está aplicado**, va con la próxima tanda.
+tal cual») era cambio de prompt y **se aplicó en la tanda de la base**
+(2026-09-23): «un verbo es también su nombre, sin marca — jusual es sembrar y la
+siembra», en las dos plantillas.
 Y lo emergente **no es evidencia** de lo atestiguado, ni al revés: que los
 agentes nominalicen con `ta-` y que Zavala glose «sembrar, siembra» con una sola
 forma son dos hechos de dos mundos.

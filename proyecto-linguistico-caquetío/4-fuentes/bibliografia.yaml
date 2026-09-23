@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 84
-  en_repo: 52
-  solo_citadas: 32
+  obras: 88
+  en_repo: 59
+  solo_citadas: 29
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -59,6 +59,26 @@ obras:
   - Pedro Mártir
   - Décadas
   en_repo: true
+- id: angulo-molina
+  obra: (obra no identificada) — el compilador «AM» del glosario de Zavala Reyes 2015
+  autor: Angulo Molina (nombre de pila desconocido)
+  anio: s.f.
+  genero: glosario
+  paginas: — (no identificada)
+  acceso: '🔴 NO IDENTIFICADA, verificado el 2026-09-22. Zavala Reyes 2015 nombra a «Angulo Molina (AM)»
+    entre los nueve autores de su glosario (p. 64) y NO lo incluye en sus referencias bibliográficas (pp.
+    74-76): no hay título, año ni editorial. (Página según el encabezado del texto extraído; verificar
+    en imagen antes de citarla.) Tampoco lo trae la entrada de blog que copia el glosario (Folkloreando,
+    2015). Búsquedas web sin resultado: «Angulo Molina» con caquetío, Falcón, Coro, toponimia, glosario,
+    vocabulario, Lara, Yaracuy, Carora; y dos glosas suyas literales («Alcaboa… tierras solas», «Aburí…
+    río lleno de arena») sólo devuelven a Zavala. En el repo: 0 menciones de «Angulo Molina» en los `.txt`
+    de `fuentes_caquetios/` (sólo «Angulo» como apellido de conquistadores, obispos y un autor antillano
+    que cita Bachiller y Morales).'
+  aliases:
+  - AM
+  - Angulo Molina
+  - AM (Zavala)
+  en_repo: false
 - id: antczak-2015-las-aves
   obra: 'Las Aves: arqueología del archipiélago (navegación insular, botuto, tortugas)'
   autor: Antczak, Andrzej T. y Antczak, Maria Magdalena
@@ -196,7 +216,7 @@ obras:
   genero: linguistica-comparativa
   local:
   - fuentes_caquetios/Brinton_1871_texto.txt
-  - fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf (0 bytes)
+  - fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf
   paginas: —
   aliases:
   - Brinton 1871
@@ -337,17 +357,35 @@ obras:
   - Idiomas y etnografía de la región oriental
   en_repo: true
 - id: federmann-1916
-  obra: Narración del primer viaje (ed. 1916)
-  autor: Federmann, Nicolás
+  obra: Narración del primer viaje de Federmann a Venezuela
+  autor: Federmann, Nicolás (trad. y notas de Pedro Manuel Arcaya)
   anio: 1916
+  publicacion: 'Caracas, Lit. y Tip. del Comercio, 1916. Traducción castellana de Arcaya hecha sobre la
+    FRANCESA de Ternaux-Compans (1837), no sobre el alemán — Arcaya lo declara (p. 20: «En el texto francés,
+    no sabemos si también en el original alemán…») —, con notas del traductor francés y de Arcaya. El
+    original es la *Indianische Historia* (Hagenau, Sigmund Bund, 1557)'
+  edicion_del_ejemplar: ejemplar de la University of North Carolina at Chapel Hill digitalizado por archive.org
+    (narraciondelprim00fede); + el original alemán de 1557 (ejemplar de la John Carter Brown Library,
+    indianischehisto00fede) y la reedición alemana de Klüpfel 1859 (nfedermannsundhs00kl)
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Federmann_1916_Narracion_Primer_Viaje_Arcaya.pdf
+  - fuentes_caquetios/Federmann_1916_Narracion_Primer_Viaje_Arcaya.txt
+  - fuentes_caquetios/Federmann_1557_Indianische_Historia.pdf
+  - fuentes_caquetios/Federmann_Kluepfel_1859_Reisen_texto_aleman.pdf
+  - fuentes_caquetios/Federmann_Kluepfel_1859_Reisen_texto_aleman.txt
+  paginas: 135 impresas (154 pp. de PDF; impresa = pdf − 10, medido en 100 páginas)
+  acceso: 'Dominio público. 1916: traductor Pedro Manuel Arcaya (1874-1958), fallecido hace más de 60
+    años (Venezuela: vida + 60) y publicada antes de 1931 (EE. UU.); archive.org no la restringe. 1557
+    y 1859: sin derechos. Descargado el 2026-09-22. 1916: 9.359.616 bytes, sha256 dbe79cd85abf437d58ad54e54b014924962605e696fa24ef3c86d7bfd1ad7ec5.
+    1557: 25.545.486 bytes, sha256 9bf5cfed6ce099de291714c7825baad34db82c263f6ad020705b2db7c423cde8. 1859:
+    12.004.554 bytes, sha256 f6c85158b4378308e4bdbdb1ab02787a514734bdc7167d4e04e7d751961d2cbe.'
   aliases:
   - Federmann
   - Federmann 1916
   - Narración de Federmann
   - Indianische Historia
-  en_repo: false
+  en_repo: true
 - id: fernandes-2020
   obra: A genetic history of the pre-contact Caribbean
   autor: Fernandes, Daniel M.; Sirak, Kendra A. et al.
@@ -445,6 +483,20 @@ obras:
   - El nombre de Coro
   - González Batista El nombre de Coro
   en_repo: false
+- id: granberry-vescelius-2004
+  obra: Languages of the Pre-Columbian Antilles
+  autor: Granberry, Julian y Vescelius, Gary S.
+  anio: 2004
+  publicacion: Tuscaloosa, The University of Alabama Press, 2004
+  genero: linguistica-comparativa
+  paginas: — (no disponible)
+  acceso: '🔴 En copyright (University of Alabama Press, 2004). No se buscó copia de descarga: el encargo
+    manda sólo anotarla. Dónde conseguirla: compra (la editorial la mantiene en catálogo, en papel y en
+    e-book) o préstamo interbibliotecario.'
+  aliases:
+  - Granberry y Vescelius 2004
+  - Granberry & Vescelius 2004
+  en_repo: false
 - id: guerra-curvelo-palabrero
   obra: Pütchipü'üi, Palabrero Wayuu (cuadernillo, serie Patrimonio Cultural Inmaterial)
   autor: Ministerio de Cultura de Colombia — basado en Guerra Curvelo, W., *La disputa y la palabra* (2002)
@@ -462,13 +514,28 @@ obras:
   obra: El Orinoco Ilustrado y Defendido
   autor: Gumilla, Joseph
   anio: 1791
+  publicacion: Historia natural, civil y geográfica de las naciones situadas en las riveras del río Orinoco,
+    nueva impresión, Barcelona, Imprenta de Carlos Gibert y Tutó, 1791, 2 tomos (1ª ed. con el título
+    *El Orinoco ilustrado y defendido*, Madrid, 1741; 2ª, 1745)
+  edicion_del_ejemplar: ejemplar del Getty Research Institute en archive.org (historianaturalc01gumi,
+    historianaturalc02gumi); hay otro de la Smithsonian/BHL (historianaturalc11791gumi, c21791gumi) más
+    pesado
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t1.pdf
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t1.txt
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t2.pdf
+  - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t2.txt
+  paginas: 't. I: 396 pp. de PDF; t. II: 368. El desfase pdf→impresa NO es constante (t. I: − 24, − 32,
+    − 34 por tramos; t. II: − 8, − 10, − 12): leer el número impreso'
+  acceso: 'Dominio público (impreso en 1791; Gumilla †1750). Descargado el 2026-09-22. t. I: 21.893.451
+    bytes, sha256 0481059ecf1d81d0e4b88f33ac029e20084887dc63a6f37dd7325a5a350b4b6d. t. II: 19.819.370
+    bytes, sha256 248d1d54bf1af26f2a5e3a9b4b27f46c3f3d8f6eaa840cb4a86385c0120221b4.'
   aliases:
   - Gumilla 1791
   - Joseph Gumilla
   - El Orinoco Ilustrado
-  en_repo: false
+  en_repo: true
 - id: haviser-1990
   obra: Prehistoric Human Remains on Curaçao
   autor: Haviser, Jay B. Jr.
@@ -1045,14 +1112,28 @@ obras:
   obra: Relaciones y cartas al Rey
   autor: Pérez de Tolosa, Juan (Licenciado)
   anio: 1546
+  publicacion: Publicadas por Cesáreo Fernández Duro en el apéndice documental de Oviedo y Baños, *Historia
+    de la conquista y población de la provincia de Venezuela*, t. II, Madrid, Luis Navarro, 1885 (Biblioteca
+    de los Americanistas), pp. 219-258 (cartas y relación) y 259 ss. (interrogatorio de la pesquisa contra
+    los Welser)
+  edicion_del_ejemplar: t. II de la ed. Fernández Duro 1885, ejemplar de Harvard digitalizado por Google
+    y subido a archive.org (historiadelacon00bagoog), en su versión con capa de texto de archive.org
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.pdf
+  - fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+  paginas: 219-258 impresas del t. II (el apéndice documental entero va de la p. 207 al final; impresa
+    = pdf − 11, medido en 154 páginas, con saltos en las láminas)
+  acceso: 'Dominio público: impreso en Madrid en 1885, editor Cesáreo Fernández Duro (1830-1908); archive.org
+    lo marca NOT_IN_COPYRIGHT. Descargado el 2026-09-22: 19.080.080 bytes, sha256 ed2f57985a064e17bcde0a8657917f0c59c74bcb64a5acbb1227e4b05b3137e6.
+    Hay un segundo ejemplar del mismo tomo (NYPL, historiadelacon00goog) por si una página sale mal en
+    éste. El t. I (sin las cartas) es historiadelacon01goog.'
   aliases:
   - Pérez de Tolosa
   - Pérez de Tolosa 1546
   - Juan Pérez de Tolosa
   - Ldo. Tolosa
-  en_repo: false
+  en_repo: true
 - id: perrin-1992-1995
   obra: El camino de los indios muertos (1992) · Los practicantes del sueño. El chamanismo wayuu (1995)
   autor: Perrin, Michel
@@ -1123,13 +1204,25 @@ obras:
   obra: Historia de las Misiones de los Llanos de Casanare y los ríos Orinoco y Meta
   autor: Rivero, Juan
   anio: 1883
+  publicacion: Bogotá, Imprenta de Silvestre y Compañía, 1883 (ed. de Ramón Guerra Azuola; escrita hacia
+    1736)
+  edicion_del_ejemplar: ejemplar de la University of California digitalizado por Google, en archive.org
+    (historiadelasmi00rivegoog)
   genero: cronica
-  paginas: — (no localizada)
+  local:
+  - fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.pdf
+  - fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.txt
+  paginas: '475 pp. de PDF; impresa ≈ pdf − 21 en el cuerpo (medido: el pasaje de la p. 21 cae en el pdf
+    42), con tramos a − 19: leer el número impreso'
+  acceso: 'Dominio público: impreso en Bogotá en 1883, autor Juan Rivero (1681-1736); archive.org lo marca
+    NOT_IN_COPYRIGHT. Descargado el 2026-09-22: 36.489.039 bytes, sha256 43bcb5c8dfda33b632e96599a4e575eef503b4b1bce231f434f509bfde92ef91.
+    Hay una reedición de 1956 en archive.org (historiadelasmis00rive) que NO se bajó: su aparato editorial
+    de 1956 puede tener derechos.'
   aliases:
   - Rivero 1883
   - Juan Rivero
   - Historia de las Misiones de los Llanos
-  en_repo: false
+  en_repo: true
 - id: rouse-cruxent-1963
   obra: Venezuelan Archaeology
   autor: Rouse, Irving y Cruxent, José María
@@ -1162,17 +1255,59 @@ obras:
   - Schroeder et al. 2018
   - Taíno PNAS 2018
   en_repo: true
+- id: steward-1948-hsai-4
+  obra: 'Handbook of South American Indians, Vol. 4: The Circum-Caribbean Tribes'
+  autor: Steward, Julian H. (ed.); capítulos de Hernández de Alba, Kirchhoff, Kidder II, Rouse y otros
+  anio: 1948
+  publicacion: Smithsonian Institution, Bureau of American Ethnology, Bulletin 143, vol. 4, Washington,
+    U.S. Government Printing Office, 1948
+  edicion_del_ejemplar: ejemplar de Smithsonian Libraries en archive.org (bulletin14341948smit), volumen
+    entero
+  genero: etnologia
+  local:
+  - fuentes_caquetios/Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.pdf
+  - fuentes_caquetios/Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.txt
+  paginas: 'xx + 609; 770 pp. de PDF. El desfase pdf→impresa DERIVA por las láminas: + 124 en la arqueología
+    de Venezuela (pdf 537 = p. 413), + 136 en los capítulos de Venezuela y el comienzo de las Antillas
+    (pdf 605 = p. 469, pdf 631 = p. 495), + 152 y + 158 más adelante. Leer el número impreso'
+  acceso: 'Dominio público: publicación del gobierno federal de EE. UU. (Bureau of American Ethnology,
+    GPO 1948); archive.org la marca «Not in copyright». Los demás ítems «Handbook of South American Indians»
+    de archive.org son de préstamo controlado y NO se usaron. Descargado el 2026-09-22: 53.214.922 bytes,
+    sha256 ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto: `pdftotext -enc UTF-8`,
+    1,58 MB.'
+  aliases:
+  - HSAI 4
+  - Handbook vol. 4
+  - Circum-Caribbean Tribes
+  - Hernández de Alba 1948
+  - Kirchhoff 1948
+  en_repo: true
 - id: steward-1949
   obra: Handbook of South American Indians, Vol. V
   autor: Steward, Julian H. (ed.)
   anio: 1949
+  publicacion: 'Smithsonian Institution, Bureau of American Ethnology, Bulletin 143, vol. 5: *The Comparative
+    Ethnology of South American Indians*, Washington, U.S. Government Printing Office, 1949'
+  edicion_del_ejemplar: 'EXTRACTO del ejemplar de Smithsonian Libraries en archive.org (bulletin14351949smit):
+    portada e índice (pdf 5-14 del original), Partes 3 y 4 de Steward (pp. 655-772) y la bibliografía
+    del volumen (pp. 783-818); el volumen entero (70,6 MB) no se commiteó'
   genero: etnologia
-  paginas: 665-668 (la sección demográfica)
+  local:
+  - fuentes_caquetios/Steward_1949_HSAI_vol5_pp655-772_y_bibliografia.pdf
+  - fuentes_caquetios/Steward_1949_HSAI_vol5_pp655-772_y_bibliografia.txt
+  paginas: '655-668 (Parte 3, «The native population of South America»); 669-772 (Parte 4, «South American
+    cultures: an interpretative summary»). En el EXTRACTO: impresa = pdf + 644 para las pp. 655-772 (pdf
+    11-128) y = pdf + 654 para la bibliografía (pdf 129-164)'
+  acceso: 'Dominio público: publicación del gobierno federal de EE. UU. (Bureau of American Ethnology,
+    GPO 1949); archive.org la marca «Not in copyright». Descargado el 2026-09-22 el volumen entero (70.577.922
+    bytes, sha256 ae2d4e8249754c99cae33a7a846d299d5f5c50ca7035cb2eb36230e3377cde78) y extraídas con pymupdf
+    las páginas que usa el proyecto; el extracto pesa 12.330.426 bytes, sha256 bfbfce950e7abe912264c3276069b2767c552f510c93ef7c8dc5802fdb3aa0b7.
+    El resto del volumen se vuelve a bajar de la URL de arriba si hace falta.'
   aliases:
   - Steward 1949
   - Handbook of South American Indians
   - HSAI
-  en_repo: false
+  en_repo: true
 - id: urbina-jimenez-2007-2011
   obra: 'El Carrizal: cambios en el uso del espacio a través del tiempo (2007) · An Archaeological Survey
     for Coastal Falcón, Venezuela (2011)'
@@ -1265,4 +1400,36 @@ obras:
   - Zavala Reyes et al. 2018
   - Leal et al. 2018
   - Médanos de Coro 2018
+  en_repo: true
+- id: zayas-1931
+  obra: Lexicografía antillana. Diccionario de voces usadas por los aborígenes de las Antillas Mayores
+    y de algunas de las menores y consideraciones acerca de su significado y de su formación
+  autor: Zayas y Alfonso, Alfredo
+  anio: 1931
+  publicacion: '2ª ed., La Habana, Tipos-Molina y Cía., 1931, 2 tomos (1ª ed.: La Habana, El Siglo XX,
+    1914, un tomo)'
+  edicion_del_ejemplar: 'la 2ª ed. de 1931, ejemplar digitalizado por la University of Florida para la
+    Digital Library of the Caribbean (dLOC, AA00089831, vols. 00001 y 00002). NO es la de 1914 que cita
+    Goeje: la paginación no coincide'
+  genero: vocabulario
+  local:
+  - fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t1.txt
+  - fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t2.txt
+  paginas: 't. I: 284 pp. de PDF; t. II: el resto del diccionario (ver el .txt, un salto de página por
+    hoja)'
+  acceso: '🟡 Los PDF pesan 381.832.748 y 441.578.577 bytes (sha256 5b194ccf342cd0ce557aa02ac13f969b3bbea9e25756dacbc9c2404eeea10398
+    y 38eadc8888fc919f05fda17c6b8d68662c6b84370663299c4a7845128e77395f): pasan de 95 MB y NO se commitean;
+    en git van sólo los .txt de su capa de texto (`pdftotext -enc UTF-8`). Para ver una página en imagen,
+    se vuelven a bajar de las URL de `origen_digital`. DERECHOS: dLOC no certifica dominio público — su
+    nota dice que el ítem «may be protected by copyright» y lo sirve por uso legítimo para investigación.
+    La lectura de esta ficha: Zayas murió en 1934; en Cuba (país de origen) el plazo de vida + 50 venció
+    en 1984, antes del 1 de enero de 1996, así que la URAA no lo restauró en EE. UU. → dominio público
+    en origen y en EE. UU. Es una lectura, no un dictamen: se usa para investigación, con cita corta,
+    y la decisión de redistribuir más es de Miguel. La 1ª ed. (1914) está en HathiTrust como «pdus» (sólo
+    EE. UU.) y detrás de una verificación de navegador: no se bajó.'
+  aliases:
+  - Zayas 1914
+  - Zayas 1931
+  - Zayas y Alfonso
+  - Lexicografía antillana
   en_repo: true

@@ -889,6 +889,7 @@ def _competencia_a_dict(comp: "CompetenciaLexica") -> dict:
                 "variantes": {f: float(s) for f, s in ref["variantes"].items()},
                 "fijada": ref.get("fijada"),
                 "fijada_dia": ref.get("fijada_dia"),
+                "animal": bool(ref.get("animal")),
             }
             for cid, ref in comp.referentes.items()
         },
@@ -916,6 +917,8 @@ def _competencia_de_dict(d: Optional[dict]) -> "CompetenciaLexica":
                                   for f, s in (ref.get("variantes") or {}).items()}),
             "fijada": ref.get("fijada"),
             "fijada_dia": ref.get("fijada_dia"),
+            # db.6: un JSON anterior no lo trae y la puerta queda cerrada.
+            "animal": bool(ref.get("animal")),
         }
     comp._forma2concepto = {f: c for f, c in (d.get("forma2concepto") or {}).items()}
     comp._ambitos_de_forma = {f: list(a or ())
@@ -940,8 +943,32 @@ def guardar_koine(idiolectos: dict, campo: "CampoLexico",
     # La competencia léxica: lo que hace que una disputa dure más de un día.
     if competencia is not None:
         datos["competencia"] = _competencia_a_dict(competencia)
+    # La semilla con que se SEMBRÓ la cadena (db.3, tanda de la base,
+    # 2026-09-23). Lo que se deriva de la ficha —las formas-semilla y el
+    # aspecto de respaldo del emocionar— es de la PERSONA, no del día: con la
+    # semilla de cada día, a 7 de 63 agentes el `[Tu emocionar]` les cambiaba
+    # dentro de la misma cadena y `agentes_sin_precarga` avisaba en falso
+    # (issue semilla-del-dia-mueve-a-la-persona-2026-09-21.md, opción A).
+    # Se escribe `SEMILLA_RUN`, que en un run continuado ya es la de la cadena.
+    datos["semilla_de_precarga"] = SEMILLA_RUN
     with open(path, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
+
+
+def semilla_de_precarga_guardada(path: str = KOINE_PATH) -> Optional[int]:
+    """La semilla con que se sembró la cadena guardada, o None.
+
+    None si no hay koiné guardada o si la escribió un motor anterior al
+    2026-09-23, que no la guardaba: ahí el llamador sigue con la del día, como
+    hasta entonces, y lo dice."""
+    import json
+    try:
+        with open(path, encoding="utf-8") as f:
+            datos = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+    valor = datos.get("semilla_de_precarga")
+    return int(valor) if valor is not None else None
 
 
 def cargar_koine(path: str = KOINE_PATH) -> tuple[dict, "CampoLexico",
@@ -1123,6 +1150,111 @@ REFERENTES_NOVEDOSOS: list[dict] = [
 ]
 
 
+# ── ERA 2: el catálogo de la base (db.4 y db.6, tanda de la base, 2026-09-23) ──
+# La lista de arriba es de la ERA 1 y se queda como está (la era está cerrada).
+# La era 2 lee su catálogo de UNA tabla, `6-fusion/referentes_era2.yaml`: quince
+# referentes, uno cada dos días, los animales sin nombre caquetío primero —«las
+# cosas que debemos empezar por nombrar son las de los animales que no sabemos
+# cómo se llamaban originalmente, por ejemplo la Tarántula azul» (Miguel)—.
+# Cada uno trae su `tipo`: NOVEDAD (lo que no habían visto: el cometa) o HUECO
+# (lo que ven siempre y nosotros no sabemos cómo lo llamaban: la guacharaca), y
+# los dos se dicen distinto; `animal: true` abre la puerta onomatopéyica en su
+# competencia (db.6); `se_oye` DESCRIBE el sonido —cuántas veces, grave o
+# agudo, a qué hora— y no lo transcribe, para que la onomatopeya la invente el
+# agente y no la copie.
+import os as _os
+
+RUTA_REFERENTES_ERA2 = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                                     "..", "6-fusion", "referentes_era2.yaml")
+# Uno cada DOS días, en los impares (1, 3, … 29): la base son 30 días.
+NOMBRAR_CADA_DIAS_ERA2 = 2
+# El momento del día en que se presenta. Es el mismo en que caía en la era 1
+# (el quinto turno: `t % 4 == 0` con `t = 4` en un día de seis).
+TURNO_DE_NOMBRAMIENTO = 5
+
+
+def _cargar_referentes_era2(ruta: str = RUTA_REFERENTES_ERA2) -> list[dict]:
+    """Los referentes de la tabla, en su `orden`, con sólo lo que el motor usa.
+
+    [] si la tabla no está: un motor sin el YAML no nombra nada en la era 2,
+    y lo dice `referentes_del_mundo`, en vez de caer al catálogo de la era 1."""
+    try:
+        import yaml
+        with open(ruta, encoding="utf-8") as f:
+            datos = yaml.safe_load(f) or {}
+    except (FileNotFoundError, ImportError):
+        return []
+    salida = []
+    for r in sorted(datos.get("referentes") or [], key=lambda r: r.get("orden", 0)):
+        salida.append({
+            "id": r["id"],
+            "desc": r["desc"],
+            "tipo": r.get("tipo", "novedad"),
+            "animal": bool(r.get("animal", False)),
+            "se_oye": r.get("se_oye"),
+        })
+    return salida
+
+
+REFERENTES_ERA2: list[dict] = _cargar_referentes_era2()
+
+
+def referentes_del_mundo(mundo: Optional[str]) -> list[dict]:
+    """El catálogo que toca: la era 2 el suyo, cualquier otro mundo el de
+    siempre (y la era 1 queda byte a byte)."""
+    return REFERENTES_ERA2 if mundo == "PARAGUANÁ" else REFERENTES_NOVEDOSOS
+
+
+def toca_nombrar(mundo: Optional[str], dia: int, turno_del_dia: int,
+                 t: int, cadencia_era1: int = 4) -> bool:
+    """¿Se presenta un referente en este turno?
+
+    Era 2: en el quinto momento de los días impares. Era 1: la regla de
+    siempre, cada `cadencia_era1` turnos contados dentro del run."""
+    if mundo == "PARAGUANÁ":
+        return (turno_del_dia == TURNO_DE_NOMBRAMIENTO
+                and (int(dia) - 1) % NOMBRAR_CADA_DIAS_ERA2 == 0)
+    return t > 0 and t % cadencia_era1 == 0
+
+
+def _se_oye_suena(se_oye: Optional[str]) -> bool:
+    """¿La descripción dice que hay sonido? «nada: …» no invita a nombrar
+    por la voz, aunque la línea se diga igual."""
+    return bool(se_oye) and not str(se_oye).strip().lower().startswith("nada")
+
+
+def estimulo_de_referente(ref: dict, donde: str) -> str:
+    """El mensaje del turno de nombramiento.
+
+    NOVEDAD (y todo referente de la era 1, que no trae `tipo`): el molde de
+    siempre, carácter a carácter. HUECO: lo que se ve siempre no es «algo
+    nuevo», y decírselo así sería mentirle al agente sobre su mundo. Si hay
+    `se_oye`, una línea «[Lo que se oye]» con el sonido DESCRITO; y si el
+    referente es un animal que suena, el agente puede nombrarlo por su voz
+    (db.6), como el caquetío atestiguado nombra aves por su canto."""
+    desc = ref["desc"]
+    if ref.get("tipo") == "hueco":
+        cabeza = (f"[LO QUE VES SIEMPRE, EN {donde}]: {desc}. Lo ves siempre y "
+                  f"todavía no le has dado nombre en caquetío.")
+    else:
+        cabeza = (f"[ALGO NUEVO EN {donde}]: {desc}. "
+                  f"Esto no tiene nombre en caquetío todavía.")
+    oye = ref.get("se_oye")
+    linea_oye = f"\n[Lo que se oye]: {oye}." if oye else ""
+    if ref.get("animal") and _se_oye_suena(oye):
+        como = "con morfemas caquetíos o por cómo suena"
+    else:
+        como = "con morfemas caquetíos"
+    if ref.get("tipo") == "hueco":
+        cola = (f" Nómbralo TÚ {como} y dilo: [forma: componentes = significado]. "
+                f"Reacciona a lo que ves y nómbralo.")
+    else:
+        cola = (f" Nómbralo TÚ {como} "
+                f"y dilo: [forma: componentes = significado]. Reacciona a la "
+                f"cosa nueva y nómbrala.")
+    return cabeza + linea_oye + cola
+
+
 class CompetenciaLexica:
     """Acumula soporte (frecuencia × prestigio) de las formas rivales que
     compiten por un MISMO concepto nuevo, y fija una como entrada koiné cuando
@@ -1150,9 +1282,12 @@ class CompetenciaLexica:
         except Exception:
             return 0.3
 
-    def activar(self, concepto_id: str, desc: str):
+    def activar(self, concepto_id: str, desc: str, animal: bool = False):
+        """`animal` (db.6, tanda de la base): abre la puerta onomatopéyica en
+        las propuestas para ESTE referente. Por defecto cerrada."""
         self.referentes.setdefault(concepto_id, {
-            "desc": desc, "variantes": Counter(), "fijada": None, "fijada_dia": None})
+            "desc": desc, "variantes": Counter(), "fijada": None, "fijada_dia": None,
+            "animal": bool(animal)})
 
     def proponer(self, concepto_id: str, forma: str, agente: str,
                  ambito: Optional[str] = None):
@@ -1179,14 +1314,26 @@ class CompetenciaLexica:
         está. Morfología caquetía sobre raíz ajena no es una variante rival:
         es otra lengua con nuestros afijos. Misma puerta que el registro
         (`curiana_lexicon.es_raiz_de_ninguna_parte`)."""
-        from curiana_lexicon import es_forma_de_plantilla, es_raiz_de_ninguna_parte
+        from curiana_lexicon import (admitir_raiz_onomatopeyica,
+                                     es_forma_de_plantilla,
+                                     es_raiz_de_ninguna_parte,
+                                     raiz_onomatopeyica_candidata)
         ref = self.referentes.get(concepto_id)
         if ref is None or ref["fijada"] or not forma:
             return
         if self.filtrar_plantilla and es_forma_de_plantilla(forma):
             return
-        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(forma):
-            return
+        # Una raíz ARCHIVADA no avala (el agujero de `kira`, db.1). Y en la
+        # competencia de un ANIMAL, la puerta onomatopéyica admite UNA raíz
+        # nueva con forma caquetía (db.6): es la misma que el registro.
+        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(
+                forma, archivadas_avalan=False):
+            raiz = (raiz_onomatopeyica_candidata(forma, concepto_id)
+                    if ref.get("animal") else None)
+            if raiz is None:
+                return
+            admitir_raiz_onomatopeyica(raiz, referente=concepto_id, forma=forma,
+                                       autor=agente)
         ref["variantes"][forma] += 1.0 + self._prestigio(agente)
         self._forma2concepto[forma.lower()] = concepto_id
         if ambito:

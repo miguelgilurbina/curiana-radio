@@ -1,0 +1,378 @@
+# ══════════════════════════════════════════════════════════════════════
+# GUMILLA 1791 — El Orinoco ilustrado (Historia natural, civil y geográfica…)
+# PROPUESTA (regla 5). Comparanda LEJANA: Orinoco y Llanos, s. XVIII.
+# NADA de esto es caquetío costero (regla 4) ni precontacto (regla 3).
+# Minería 3, parcela «gumilla», 2026-09-23. Prioridad baja, minería económica.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  obra: gumilla-1791
+  fecha: 2026-09-23
+  minero: agente Opus 5.5, campaña minería 3 (encargo 6-fusion/issues-pendientes/encargo-mineria-gumilla.md)
+  texto: >-
+    pdftotext sobre los PDF del repo (la capa de texto es el OCR de archive.org, el mismo que los .txt:
+    las cuentas coinciden en los dos). La s larga ya viene normalizada a `s` en la capa (0 caracteres ſ).
+    Toda forma indígena citada aquí se VERIFICÓ EN IMAGEN (pymupdf, 200-250 ppp): el OCR falla justo en la
+    cursiva (`Aycuha` por `Aycubaverrenais`, `Cof> ró, y Mafacayo` por `Coro, y Maracayo`).
+  pagina: >-
+    `pagina_impresa` es el número impreso leído en la cabecera de ESA página (no un desfase sumado). Desfase
+    medido: t. I −24 (pdf 22-~210), −30/−32 tras las láminas (pdf 211-212, 221-222, 239-240 son grabados o
+    blancos), −34 (pdf ~273-318), −32 (pdf 319-396); t. II −8 (pdf 8-~100), −10 (~114-252), −12 (253-364).
+  ortografia_de_la_obra: >-
+    Castellano del XVIII (`baxar`, `quales`, `dixo`). Las voces indígenas van en cursiva y la h cursiva se
+    confunde con la b (`Jucbamacáje` en la capa). La imprenta tiene erratas propias (`lengna` por lengua, I 112).
+  alcance: >-
+    Minado LO ESENCIAL que pidió el coordinador: (1) caquetíos y costa, (2) voces achaguas con glosa cotejadas
+    con Neira y Ribero 1762, (3) lo que dice de lenguas. Fauna, sólo lo que cuelga de esas búsquedas. NO se
+    barrió la historia natural del t. II (peces, culebras, aves, plantas) ni la etnografía general: queda.
+
+# ─────────────────────────────────────────────────────────────────────
+# 1. CAQUETÍOS Y COSTA
+# ─────────────────────────────────────────────────────────────────────
+caquetios:
+  cero_de_consulta_corregido: >-
+    `caquet` da 0 en los dos tomos, y también `caquit`, `caiquet`, `çaquit`, `[cçk]a.{1,3}[eé]t[ií]`. Pero
+    Gumilla escribe CACATIA: una mención, t. II p. 55 (pdf 63), verificada en imagen («La Nacion *Cacatia*»).
+    El cero de la ficha medía la consulta, no la fuente.
+  menciones:
+    - forma: Cacatia
+      tomo: 2
+      pagina_impresa: 55
+      pdf: 63
+      verificado_en_imagen: sí
+      texto: 'La Nacion Cacatia, Christiana ya, no pasó de mil almas, y por lo que despues diré, hoy no pasa de quinientas.'
+      contexto: >-
+        Lista de naciones «de corto gentío» de las misiones jesuitas del Nuevo Reino (Casanare-Meta-Orinoco),
+        junto a Achagua (< 3.000), Jirara y Betoya (3.000), Saliva (< 4.000) y Cariba (12.000 de guerra).
+        El «por lo que después diré» no vuelve a nombrarla: el capítulo sigue con causas generales
+        (guerra caribe, veneno). No hay una segunda mención en ningún tomo.
+      identificacion: >-
+        INFERIDA, no dicha por Gumilla: son con toda probabilidad los caquetíos de las misiones de Casanare.
+        Rivero 1883 (Historia de las misiones de los Llanos de Casanare, jesuita contemporáneo de Gumilla)
+        escribe «Caquetíos de Pauto» en la lista de pueblos y «los Cacatíos» a la falda de la sierra junto al
+        río Pauto (medido con un grep sobre fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.txt,
+        5 menciones; esa obra es parcela de otro minero y aquí NO se minó).
+      regla_4: >-
+        Son caquetíos de LOS LLANOS (piedemonte de Casanare, s. XVIII), no la polity costera que modela el
+        proyecto. Sirve para el mapa de dispersión del etnónimo, no como dato de la Kaketiana.
+      epoca: colonial
+      etiqueta: 'atestiguado (la mención) / hipotético (la identificación con los caquetíos de Pauto)'
+  costa:
+    - tema: palma de pijiguao
+      tomo: 2
+      pagina_impresa: 247
+      pdf: 259
+      verificado_en_imagen: sí
+      texto: 'Hay entre las Naciones Achagua, Saliva, y otras del Ayrico, y tambien en las Costas de Coro, y Maracayo, una especie de palma, muy singular en su figura, y utilidad. Los Europeos, que usan mucho de su fruto la llaman cachipae, y los Indios jijirri'
+      especie_probable: Bactris gasipaes
+      nota: >-
+        La ÚNICA mención de la costa de Coro que no es historia de la conquista, y el OCR la esconde
+        (`Cof> ró, y Mafacayo`: un grep por `Coro` no la encuentra). Es afirmación de Gumilla sin decir de
+        dónde la saca; «Costas de Coro» en el XVIII es la costa de la provincia entera, no Paraguaná (el
+        corpus da Paraguaná sin ríos y de cardonal, ecologia-007/018/032). `jijirri` no dice de qué lengua es.
+        Para los agentes de flora/ecología, no para el lexicón.
+      epoca: colonial
+    - tema: Utre sale de Coro al Dorado
+      tomo: 1
+      pagina_impresa: 347
+      pdf: 379
+      texto: 'Felipe de Utre con ciento y veinte hombres … salió en su seguimiento desde Coro, Ciudad de la Provincia de Venezuela'
+      nota: 'Historia de la conquista (Hutten, 1541-1546; Carvajal «Gobernador intruso en Coro»). De segunda mano; ninguna noticia de indios de la costa.'
+    - tema: culebra en los bosques de Coro
+      tomo: 2
+      pagina_impresa: 177
+      pdf: 187
+      texto: 'En los bosques de Coro, Provincia de Venezuela, dice Fr. Pedro Simon, que diez y ocho Españoles … se sentaron sobre uno [culebrón], que tuvieron por tronco'
+      nota: 'Cita de Simón, no observación de Gumilla. Una atestación con Simón, no dos (minar-fuente §8).'
+    - tema: Curazao
+      tomo: 1
+      pagina_impresa: 337-339
+      pdf: 369-371
+      texto: 'La Isla de Curazao es totalmente estéril; de modo, que solo el trato mantiene la Opulencia, Fortalezas, Guarniciones'
+      nota: 'Contrabando holandés del XVIII con la Tierra Firme. Nada de indios; «totalmente estéril» es juicio económico, no dato ecológico precontacto.'
+    - tema: Aruacas en la costa de Barlovento
+      tomo: 2
+      pagina_impresa: 55
+      pdf: 63
+      texto: 'mezclada con Indios Aruacas, puebla la Costa marítima de Barlovento, hasta la Cayana'
+      nota: 'Caribes y arawak (lokono) de las Guayanas, no de Coro.'
+  lo_que_no_esta: >-
+    0 menciones de Paraguaná, Curiana/Coriana, Manaure, Aruba, Bonaire, Barquisimeto, Tocuyo, Carora,
+    jirajaras o ayomanes (medido con variantes y sobre los dos textos). Maracaibo sale dos veces como
+    geografía (I 48-49) y una en la palma (II 247). Nada sobre la lengua de la costa.
+
+# ─────────────────────────────────────────────────────────────────────
+# 2. VOCES ACHAGUAS, COTEJADAS CON NEIRA Y RIBERO 1762
+#    (veredicto: coincide / difiere / no-esta, como leer-fuente §4.4)
+# ─────────────────────────────────────────────────────────────────────
+achagua:
+  advertencia: >-
+    Comparanda de los Llanos. Propuesta en YAML; `lexicon_achagua.py` NO se toca (se genera del YAML de Neira).
+    Independencia: Gumilla y el manuscrito de Neira y Ribero salen del MISMO medio misionero (la Provincia
+    jesuita del Nuevo Reino; Juan Rivero es colega citado por Gumilla, II 14). Gumilla no copia el vocabulario
+    —sus voces vienen dentro de anécdotas y etimologías— pero la cadena no es del todo independiente:
+    confirmar una forma aquí es «segunda mano del mismo taller», no dos atestaciones ciegas.
+  voces:
+    - forma: Chavi
+      glosa_gumilla: Tigre
+      tomo: 1
+      pagina_impresa: 112
+      pdf: 136
+      neira: 'chabi / chabí «tigre» (pl. 50 der. «Convertirse en tigre … chabí»; pl. 72 der. «Linage de tigre — Chabiberraenay»)'
+      veredicto: coincide
+    - forma: Chavina
+      glosa_gumilla: Lanza
+      tomo: 1
+      pagina_impresa: 112
+      pdf: 136
+      neira: 'chabina «lanza» (pl. 28; pl. 97 der. «Vibrar la lanza — Nubenubenudau chabina»)'
+      veredicto: coincide
+    - forma: Chavinavi
+      glosa_gumilla: 'Caribe, «oriundo de Tigre» o «hijos de Tigres con Lanzas» (dos etimologías de dos parcialidades)'
+      tomo: 1
+      pagina_impresa: 112
+      pdf: 136
+      neira: 'Caribe — Chabina gerri; pl. = Chabinabi (pl. 46 izq.)'
+      veredicto: coincide
+      nota: 'La forma coincide con el PLURAL de Neira. Las dos etimologías son de los achaguas según Gumilla; la de Neira (chabina «lanza») apoya la segunda.'
+    - forma: Aycubaverrenais
+      glosa_gumilla: 'los que «se fingen hijos de los Troncos»'
+      tomo: 1
+      pagina_impresa: 114
+      pdf: 138
+      verificado_en_imagen: 'sí — el OCR da `Aycuhaverrenais`; la imagen, `Aycubaverrenais`'
+      neira: 'Aicuba «árbol» (pl. 37 der.), «tronco — Aicuba nana» (pl. 96 izq.) + el formante de linaje de «Linage de tigre — Chabiberraenay» (pl. 72 der.)'
+      veredicto: coincide
+      nota: >-
+        No está como entrada, pero se analiza entera con Neira: aycuba-berrenai «linaje del árbol». Es la
+        misma formación que chabi-berraenay «linaje de tigre». Gumilla lo cuenta como mito de origen; Neira
+        lo registra como linaje con nombre de animal. Dos miradas sobre la misma institución: CORROBORA la nota
+        del escriba sobre linajes totémicos (esfera mundo — parentesco, comparanda).
+    - forma: Univerrenais
+      glosa_gumilla: 'los que «idean su estirpe de los rios»'
+      tomo: 1
+      pagina_impresa: 114
+      pdf: 138
+      verificado_en_imagen: sí
+      neira: 'Vni «agua» (pl. 32 izq.), Vnëta «río, arroyo» (pl. 89 der.) + -berraenay «linaje»'
+      veredicto: coincide
+      nota: 'uni-berrenai «linaje del agua». La raíz es la de «agua», no la de «río»: con Gumilla, un tercer testigo de que `uni` es agua (contra el `mena` de Fabo/Jahn).'
+    - forma: Manóa
+      glosa_gumilla: '«no derrama», tercera persona del verbo negativo Manoayúna «no derramo»; «nombre que dan á todas las lagunas»'
+      tomo: 1
+      pagina_impresa: 356
+      pdf: 388
+      verificado_en_imagen: sí
+      neira: 'Mar — Manoa (pl. 74 der.); Piélago — Manoa (83 der.); Costa del mar — Manoa, numacoa (51 izq.). Laguna — Carisa (71 der.). Derramar, ó echar agua — Nunoayu (57 izq.)'
+      veredicto: difiere
+      nota: >-
+        La FORMA coincide; la GLOSA no: para Neira manoa es el MAR y la laguna es carisa. La etimología de
+        Gumilla es morfológicamente posible con Neira (privativo ma- —«Sin Padre — Masaricanayisa», pl. 92—
+        + noa «derramar»), pero es suya, al servicio de su tesis de que la Manoa del Dorado es «Ciudad de
+        la Laguna». Tercer eslabón de la cadena del agua: Fabo «menoa ó mena» = agua, Neira = mar, Gumilla =
+        laguna. Lo estable es «gran masa de agua»; el matiz depende de quién glosa.
+    - forma: Catena Manóa
+      glosa_gumilla: '«Sumersion general de la tierra, ó laguna general» — la tradición achagua del Diluvio'
+      tomo: 2
+      pagina_impresa: 6-7
+      pdf: 14-15
+      verificado_en_imagen: sí
+      neira: 'catena: no está (tierra = cainabe, pl. 58 der.). manoa: ver arriba'
+      veredicto: no-esta
+      nota: 'La mitad `catena` no tiene entrada en Neira. Y es relato «de padres á hijos» leído por un misionero en clave bíblica: creencia, comparanda, epoca colonial.'
+    - forma: Tanasimi
+      glosa_gumilla: 'el Demonio («Los Indios Achaguas le llaman Tanasimi»)'
+      tomo: 2
+      pagina_impresa: 23-24
+      pdf: 31-32
+      neira: 'Demonio, Diablo — tanasimi (pl. 53 izq.)'
+      veredicto: coincide
+      nota: 'Idéntica. Gumilla da en la misma frase los nombres de otras lenguas: Betoyes y Jiraras Memelú, Guajivas Duati, Guaraúnos Jebo.'
+    - forma: Nu saricaná ribarinaú matata
+      glosa_gumilla: 'Mi padre se muere aprisa'
+      tomo: 2
+      pagina_impresa: 18
+      pdf: 26
+      verificado_en_imagen: sí
+      neira: 'Nusaricana «mi padre» (pl. 86 izq.); Morir — Nubarinau (pl. 76 der.); Matata «a espacio», «pasito», «quedito», «poco à poco» (pl. 28 der., 81 izq., 84 izq., 86 der.)'
+      veredicto: difiere
+      nota: >-
+        Tres palabras de cuatro coinciden en forma (nu-saricana «mi padre», ri-barinau «muere» con el ri- de
+        tercera persona). Pero `matata` es en Neira LO CONTRARIO de «aprisa»: «poco a poco». O Gumilla glosó
+        libre, o el sentido es «se va muriendo poco a poco». Se lee la glosa verbatim (preámbulo): no se
+        cuenta como apoyo de «aprisa».
+    - forma: Abacáje
+      glosa_gumilla: 'cinco — «quiere decir los dedos de la mano»'
+      tomo: 2
+      pagina_impresa: 283
+      pdf: 295
+      verificado_en_imagen: 'sí; la letra tras la á puede ser j o s larga cursiva — no se decide a 200 ppp'
+      neira: 'Cinco — Abacase (pl. 48 izq.)'
+      veredicto: coincide
+    - forma: Juchamacáje
+      glosa_gumilla: 'diez — «los dedos de ambas manos»'
+      tomo: 2
+      pagina_impresa: 283
+      pdf: 295
+      verificado_en_imagen: 'sí; la capa dice Jucbamacáje (h cursiva leída b)'
+      neira: 'Diez — Juchamage (pl. 55 der.)'
+      veredicto: coincide
+      nota: 'Gumilla da la forma analítica juchama-caje «dos [manos]»; Neira la contraída. Misma base cinco.'
+    - forma: Abacaytacáy
+      glosa_gumilla: 'veinte — «los dedos de piés y manos»'
+      tomo: 2
+      pagina_impresa: 283
+      pdf: 295
+      neira: 'Veinte — Abacaí tacay (pl. 96 der.)'
+      veredicto: coincide
+    - forma: Juchámatatacáy
+      glosa_gumilla: 'quarenta — «los dedos de dos hombres»'
+      tomo: 2
+      pagina_impresa: 283
+      pdf: 295
+      neira: 'Cuarenta — Juchamata tacay (pl. 51 der.); Quarenta — Juchamatacay (pl. 87 izq.)'
+      veredicto: coincide
+      nota: 'Gumilla glosa lo que Neira sólo permite inferir: tacay = «los dedos de un hombre» = 20. Confirma la base veinte que el escriba dedujo.'
+    - forma: arabata
+      glosa_gumilla: 'Monos amarillos (los achaguas «se desatinan» por ellos)'
+      tomo: 1
+      pagina_impresa: 260-261
+      pdf: 294-295
+      verificado_en_imagen: sí (y otra vez en II 125, pdf 135, «en su lengua les llaman arabata»)
+      neira: 'no hay entrada «Mono» ni «Araguato»; «Mico — Juai» (pl. 75 der.)'
+      veredicto: no-esta
+      nota: 'En II 125 la lengua no se nombra («los Indios … en su lengua»); en I 260 es la voz de los achaguas. Probablemente la misma palabra que el venezolano «araguato».'
+  cuenta: >-
+    No se escribe a mano (regla 1). Se mide sobre esta lista:
+    python -c "import yaml,collections;d=yaml.safe_load(open('6-fusion/gumilla_1791_2026-09-23.yaml',encoding='utf-8'));print(len(d['achagua']['voces']),collections.Counter(v['veredicto'] for v in d['achagua']['voces']))"
+  lo_que_no_es_achagua: >-
+    Voces que Gumilla da SIN decir que son achaguas y que no se cotejan: cuiviví/focará/totelelo (aves, II 30),
+    jijirri (palma, II 247), tíahicay rosaca… (Casanare, II 16), Mirray (arenga, II 57), Tures (asientos
+    guayquiri, II 56), Cuaca Patri… (caribe, II 57).
+
+# ─────────────────────────────────────────────────────────────────────
+# 3. LO QUE DICE DE LENGUAS (referente para la koiné, no dato caquetío)
+# ─────────────────────────────────────────────────────────────────────
+lenguas:
+  - tema: sin lengua general en el Orinoco
+    tomo: 2
+    pagina_impresa: 31
+    pdf: 39
+    texto: 'si en aquel ángulo de la América hubiera, á mas de las lenguas particulares, una general, (como en el Perú … la Inga: y en el Paraguay … la Guarani: y aun en el mismo Nuevo Reyno … mientras fué necesaria y corrió la Muyssea) fuera menor el trabajo'
+    para_la_koine: 'Un misionero que conoce lenguas generales dice que en el Orinoco NO la hay: multilingüismo sin koiné.'
+  - tema: matrices y derivadas; los pronombres como prueba de parentesco
+    tomo: 2
+    pagina_impresa: 32
+    pdf: 40
+    texto: 'las que se derivan de una Capital, siempre mantienen los pronombres primitivos de su matriz, aunque con alguna variedad; y se ha experimentado, que es regla cierta'
+    para_la_koine: 'El criterio de filiación por pronombres, dicho en 1741. Es el mismo que minar-fuente §3 usa (pronombres = filiación; léxico cultural = contacto).'
+  - tema: el achagua presta por comercio
+    tomo: 2
+    pagina_impresa: 32
+    pdf: 40
+    texto: 'de la Achagua, aunque es la mas pronunciable, suave y elegante de todas, todavía no se han descubierto lenguages derivados; porque aunque en la lengua Maypura se hallan muchas palabras Achaguas, son introducidas por el comercio'
+    para_la_koine: >-
+      Lo más útil de la obra para el proyecto: un observador del XVIII DISTINGUE préstamo por comercio de
+      filiación, entre dos lenguas arahuacas (achagua y maipure). Es la regla del préstamo de esfera
+      («el producto de la esfera ES la esfera») vista en campo. Comparanda, no dato de la Kaketiana.
+  - tema: el achagua como lengua de trato entre naciones
+    tomo: 2
+    pagina_impresa: 18
+    pdf: 26
+    texto: 'encontré otra tropa de Chiricoas … llegóse á mí el Capitan, que ya era anciano, y me dixo en lengua achagua'
+    para_la_koine: 'Un capitán chiricoa (guahibo, otra familia) habla achagua con el misionero: el achagua funciona como lengua vehicular. Una anécdota, no un censo.'
+  - tema: el caribe también
+    tomo: 2
+    pagina_impresa: 57
+    pdf: 65
+    texto: 'Respondióme en lengua Cariba … Cuaca Patri, ana rote i Carina acusinimbo … No somos mas, Padre, y los que vivimos somos los que han querido los Caribes'
+    para_la_koine: 'El cacique guayquiri (lengua de la rama caribe según II 32) responde en caribe: la lengua del dominante como lengua de trato.'
+  - tema: clasificación
+    tomo: 2
+    pagina_impresa: 32
+    pdf: 40
+    texto: 'De la lengua Cariva nacen la Guayána, la Paléncu[a?], Guiri, Guayquiri, Mapúy y Cumanagota; de la Saliva se deriva, ó es su corruptela, la A[t?]urí; … las lenguas Otomáca, Aruáca, Guaraúna y otras que hasta hoy parecen estériles'
+    verificado_en_imagen: 'no — de la capa OCR (`Paléncuy`, `Aíurí`); los corchetes marcan la duda'
+    nota: 'Betoya y Jirara «quieren ser matrices». El «aruaca» es la lengua de las Guayanas (lokono), sin parientes conocidos para Gumilla: no ve la familia arahuaca.'
+  - tema: fonética percibida
+    tomo: 2
+    pagina_impresa: 33
+    pdf: 41
+    texto: 'unas son narigales, como las de los Salivas … otras son guturales, como la Situfa … otras son escabrosas, llenas de erres como la Betoya … en cada una de las dichas lenguas falta una letra consonante … la lengua Betoya no ha menester la p: la Situfa no necesita la r'
+  - tema: cómo aprendían los misioneros
+    tomo: 2
+    pagina_impresa: 16
+    pdf: 24
+    texto: 'el Padre Miguel de Ardanáz … recien llegado á dichas Misiones [de Casanare], empeñado con un Intérprete á estudiar y aprender aquella lengua. En el año 1717 … fastidiado de aquel estudio, que en los principios es amargo'
+    nota: 'Intérprete indígena como maestro; y II 37: los misioneros, «penetrado íntimamente el idioma», hallan «una regularidad tan formal como la del arte latino» — de ahí las artes.'
+  - tema: la doctrina se traduce, pero Dios va en castellano
+    tomo: 2
+    pagina_impresa: 7
+    pdf: 15
+    texto: 'en la Doctrina Christiana, que traducimos en sus Idiomas, usamos de la palabra Dios, y de las demás palabras Españolas necesarias'
+  - tema: aves nombradas por lo que «dicen»
+    tomo: 2
+    pagina_impresa: 30
+    pdf: 38
+    verificado_en_imagen: sí
+    texto: 'les ponen el nombre de lo que les parece que pronuncian las aves; v. gr. al pato llaman cuiviví; á la gallina focará; al gallo totelelo &c., queriendo conocer á las aves por su eco'
+    nota: >-
+      No dice qué nación (el capítulo habla de «unos hombres» de sus misiones en general). Es un principio de
+      acuñación ONOMATOPÉYICA atribuido a los indios del Orinoco: interesa al programa de fauna con
+      onomatopeya y a la pregunta de cómo nombra un pueblo lo nuevo. Gallina y gallo son aves europeas:
+      las dos voces son por fuerza posteriores al contacto.
+
+# ─────────────────────────────────────────────────────────────────────
+# 4. FAUNA (esquema común del preámbulo) — sólo lo que colgaba de lo anterior
+# ─────────────────────────────────────────────────────────────────────
+fauna:
+  - nombre_en_fuente: arabata (Monos amarillos)
+    especie_probable: 'Alouatta seniculus — por el ruido al alba y al atardecer; no lo dice la fuente'
+    texto: 'los Achaguas se desatinan por los Monos amarillos, que llaman Arabata: estos por la mañana y á la tarde hacen infaliblemente un ruido intolerable, y con ecos tan baxos, que causan horror'
+    obra: gumilla-1791
+    pagina_impresa: 260-261
+    lugar: 'selvas del Orinoco y sus vertientes (misiones jesuitas)'
+    epoca: colonial
+    sonido: 'por la mañana y á la tarde hacen infaliblemente un ruido intolerable, y con ecos tan baxos, que causan horror'
+  - nombre_en_fuente: Ante / Anta («la gran Bestia»)
+    especie_probable: Tapirus terrestris
+    texto: 'salen los Antes del rio á comer paja tierna: los Achaguas están sentados entre la misma paja, y saben remedar bien el eco del Ante: al tal eco responde la Anta (es lo que llamamos la gran Bestia) y ambos juntos vienen al reclamo del Achagua'
+    obra: gumilla-1791
+    pagina_impresa: 264-265
+    lugar: 'Llanos y ríos del Orinoco; un ante traído «á la Colonia de Guanapalo» (I 266)'
+    epoca: colonial
+    sonido: 'no se describe; sólo que el cazador achagua lo imita («remedar el eco del Ante») y la hembra responde'
+  - nombre_en_fuente: Chavi (Tigre)
+    especie_probable: 'Panthera onca — «tigre» es el jaguar en el castellano de Indias'
+    texto: 'del nombre Chavi, que en su lengua significa Tigre … los Caribes son descendientes legítimos de los Tigres'
+    obra: gumilla-1791
+    pagina_impresa: 112
+    lugar: 'achaguas del Meta-Casanare'
+    epoca: colonial
+    sonido: null
+  - nombre_en_fuente: pato (cuiviví)
+    especie_probable: null
+    texto: 'al pato llaman cuiviví'
+    obra: gumilla-1791
+    pagina_impresa: 30
+    lugar: 'misiones del Orinoco, nación no dicha'
+    epoca: colonial
+    sonido: 'el nombre ES el sonido, según Gumilla: «les ponen el nombre de lo que les parece que pronuncian las aves»'
+  - nombre_en_fuente: gallina (focará) y gallo (totelelo)
+    especie_probable: 'Gallus gallus domesticus — introducida'
+    texto: 'á la gallina focará; al gallo totelelo'
+    obra: gumilla-1791
+    pagina_impresa: 30
+    lugar: 'misiones del Orinoco, nación no dicha'
+    epoca: colonial
+    sonido: 'el nombre como eco del ave (Gumilla)'
+fauna_no_minada: >-
+    El t. II trae capítulos enteros de historia natural (caimanes, culebras, peces, rayas, tortugas, bufeo,
+    aves, curare, palmas) sin barrer aquí. Todo es del Orinoco y de los Llanos; para la fauna de Paraguaná
+    sería comparanda de nombres y costumbres, nunca presencia.
+
+# ─────────────────────────────────────────────────────────────────────
+# 5. CORRECCIONES A LA FICHA
+# ─────────────────────────────────────────────────────────────────────
+correcciones_a_la_ficha:
+  - 'El juicio «las Naciones mas capaces y de mejor índole» (achaguas y sálivas) está en I p. 113 (pdf 137, verificado en imagen), no en «I, p. 127».'
+  - '«caquet da 0» era un cero de consulta: Gumilla escribe Cacatia (II 55).'
