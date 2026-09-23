@@ -877,7 +877,7 @@ def construir():
                 "`antroponimo` salen casi todos de Coll y Toste (M5), cuyo campo lo pone una "
                 "heurística sobre la glosa"),
         },
-        "las_52_del_lexicon": {
+        "las_claves_tainas_del_lexicon": {
             "que_mide": (
                 "para cada clave taína del lexicón, qué clase le toca en la lista maestra. "
                 "`sin-voz-en-la-lista` significa que ninguna de las seis transcripciones "
@@ -918,7 +918,7 @@ def consola(s):
     print("  con variedad o isla declarada:", s["resumen"]["con_variedad_o_isla_declarada"])
     print("  sacadas del taíno por alguna fuente:",
           s["resumen"]["sacadas_del_taino_por_alguna_fuente"])
-    c = s["las_52_del_lexicon"]
+    c = s["las_claves_tainas_del_lexicon"]
     print("\n── las claves taínas del lexicón ──")
     print("  claves:", c["claves"], "· con al menos un cronista:", c["con_al_menos_un_cronista"])
     for k, v in c["por_clase"].items():

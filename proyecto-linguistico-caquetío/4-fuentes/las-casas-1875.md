@@ -202,3 +202,11 @@ va a encontrar, y eso no es un hallazgo sobre la Kaketiana.**
   rendimiento nulo es nulo PARA LA PREGUNTA QUE SE HIZO.** Antes de archivar
   una fuente, mirar qué se le preguntó.
 
+---
+
+## Bitácora: los tabacos (2026-09-23, cc.7)
+
+Historia t. I, lib. I, **cap. XLVI** (capa de texto; el PDF es el ebook de
+Gutenberg y se cita por capítulo): «Estos mosquetes, ó como los llamaremos,
+llaman ellos *tabacos*». Es el pasaje que cita Zayas, y coincide con la
+Apologética p. 181. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.

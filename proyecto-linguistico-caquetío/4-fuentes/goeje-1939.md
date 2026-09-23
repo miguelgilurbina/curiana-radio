@@ -149,3 +149,20 @@ Las formas en cursiva se leen en imagen: el OCR las da en cirílico.
 entero: faltan pp. 35-43, 49-67 (animales, plantas), 70-84, 94-101, 103-118.
 
 **Deuda nueva.** Breton 1665-66 directo, para las 8 sin apoyo.
+
+---
+
+## Bitácora: `anua` era `aura` (2026-09-23, cc.7)
+
+- **p. 14**, ✅ imagen: «vautour T *aura* (ZAYAS, p. 52, Fr., p. 6), A
+  *anuana*». La capa de texto dice «амш», y la transcripción del repo
+  (`6-fusion/taino_goeje_1939.yaml`) leyó `anua`, que no existe. Hay que
+  corregirla, y la lista maestra con ella.
+- **p. 10** (capa de texto): «ennemi T anaki (Zayas, p. 33), Gf akani». Goeje
+  pone junto a `anaki` el kalinago femenino `akani`, y Adam 1879 p. 303 hace
+  la misma comparación.
+- **p. 11** (capa de texto): «couteau en pierre T manaya (Pane ; Zayas, p. 78 ;
+  mot italien?)». Su sospecha se sostiene: el italiano *mannaia* es 'hacha'
+  (Treccani), y la única vía de Pané es la traducción italiana de Ulloa.
+
+Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.

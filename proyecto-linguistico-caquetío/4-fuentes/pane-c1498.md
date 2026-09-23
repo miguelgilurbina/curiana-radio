@@ -154,3 +154,26 @@ Dos atestaciones independientes de verdad (skill §8).
 ## Enlaces
 
 [[oviedo-y-valdes-1851]] · [[angleria-1892]] · [[brinton-1871]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Se le preguntó por el mar. **Caps. IX-X**: el origen del mar de la calabaza de
+Yaya, con los huesos de Yayael vueltos peces. Va como comparanda de la esfera
+(no caquetía) en `6-fusion/fauna_paraguana_mar_2026-09-22.yaml`
+§cosmovision_marina (cm-c2), con la rima con la bebida de los huesos caquetía
+marcada como lectura.
+
+---
+
+## Bitácora: cohoba y la *manaia* (2026-09-23, cc.7)
+
+- cap. XI: «la cohoba es cierto polvo que ellos toman algunas veces para
+  purgarse». Es el POLVO, no el tabaco (lo mismo que ya decía §pv04 de
+  `6-fusion/taino_pane_c1498.yaml`).
+- cap. XI, Caracaracol: la retraducción de Wikisource dice «tomando una hacha
+  de piedra, se la abrieron». Bachiller 1883 p. 192, que lee la versión
+  italiana, dice «tomando una *manaia*». `manaya` sale de ahí, y es
+  probablemente el italiano *mannaia* 'hacha'. Sin el original ni Arrom 1974
+  no se puede decidir más.
+
+Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.

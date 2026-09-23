@@ -410,3 +410,30 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 
 [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[arcaya-1920]] · [[oliver-1989-cap2]] ·
 [[alvarado-1921]] · [[zavala-reyes-2015]] · [[03_creencia_caquetia]]
+
+---
+
+## Bitácora: el baporon, el tabaco de Nicaragua y dos glosarios de editor (2026-09-23, cc.3 y cc.7)
+
+- **t. II pp. 286 y 294** (lib. XXV caps. V-VI), ✅ imagen: el *baperon* /
+  *raporon* / *baporon* de Francisco Martín, «un calabaço en que traen los
+  indios çierta manera de cal», entre los **pemenos** del sur de la laguna de
+  Maracaibo. Es la fuente del BAPÓRON de Alvarado. No son caquetíos.
+- **t. IV p. 96** (lib. XLII cap. XI, Nicaragua), ✅ imagen: la hoja enrollada
+  «á la qual ellos llaman *yapoquete*, y en lengua desta isla de Hayti ó
+  Española se diçe *tabaco*».
+- **Glosario del editor** («Voces americanas empleadas por Oviedo»), ✅ imagen:
+  p. 594, «BAGUA: mar, piélago. (Lengua de Haiti.)», copiado del cuerpo
+  (t. I p. 436); y «BAPERON y BAPERONI: calabazo, en que los indios de guerra
+  llevaban la cal […] (Lengua de Venezuela.)». p. 604, «TABACO: cierto
+  instrumento […] para percibir el humo de la planta llamada *cohiba* ó
+  *cojiba*». Esta es la fuente más antigua de la forma `cohiba`, y es del
+  EDITOR, 1855.
+- De paso, 🔴 **otra vez la trampa de `datihao`**: `baperon` y `raporon` son
+  caquetío-ATESTIGUADO en `lexicon_zavala.py` (Zavala 2015 #27 y #220, sigla
+  HB). La etiqueta «(Lengua de Venezuela)» es del editor, y en el cuerpo la
+  voz es de los pemenos. Va en el issue como campaña corta.
+- Para `coro`: t. II-IV sin ninguna etimología de Coro (cero verificado a mano
+  en cada «Coro» con viento/latín/nombre cerca).
+
+Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo, §coro y §zayas.

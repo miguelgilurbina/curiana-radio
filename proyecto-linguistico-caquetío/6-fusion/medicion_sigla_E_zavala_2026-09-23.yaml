@@ -1,0 +1,3329 @@
+# GENERADO por 6-fusion/scripts/medir_sigla_E_zavala.py — no editar a mano.
+# La sigla (E) de Zavala es Esteves: el canon re-medido (cc.4). La lectura voz por voz
+# es 6-fusion/sigla_E_zavala_lectura_2026-09-23.yaml; las opciones, en el issue
+# 6-fusion/issues-pendientes/sigla-E-zavala-canon-2026-09-23.md.
+meta:
+  generado_por: 6-fusion/scripts/medir_sigla_E_zavala.py
+  editar_a_mano: no — se edita la lectura o el script y se regenera
+  lectura: 6-fusion/sigla_E_zavala_lectura_2026-09-23.yaml
+  decision: cc.4 (6-fusion/decisiones_cierre_2026-09-23.yaml) → opción 1-A del issue toponimos-esteves-lote-2026-09-22.md
+  base: 'Supabase local, sólo SELECT: word_uses (lo que el scorer reconoció; una voz dicha y no reconocida no está
+    ahí)'
+  ensayo_de_muestreo:
+    prompts: 1260
+    semilla: 20260919
+    perfil: 'era2 (atestiguado + reconstruido + retroabstraído: la hipotética NO entra)'
+    de_donde: 'medir_pares_atestiguado_reconstruido.ensayo_de_muestreo(): 63 agentes × 20 sorteos, sin API'
+  tu_tierra:
+    bloques: 126
+    criterio: bloques de [Tu tierra] (sitio × período × momento) que dicen la voz
+  uso_en_la_base_criterio: 'una forma cuenta para una voz si ES la voz, si la lleva como uno de sus segmentos separados
+    por guion, o si la voz es uno de los candidatos de raíz del desafijador (medir_pares_atestiguado_reconstruido.rol_en_la_familia).
+    Residuo: las formas aglutinadas sin guion no cuentan.'
+  el_score_no_se_mueve: 'score_linguistico() no lee la capa: capas_de_score tiene las cuatro (5-experimento/perfiles_de_run.yaml).
+    La capa decide lo que el agente VE (el muestreo del perfil) y lo que siembra la koiné, no lo que puntúa.'
+glosario_zavala:
+  entradas: 288
+  con_sigla_E: 81
+  solo_sigla_E: 58
+  solo_E:
+  - '#3 Aca'
+  - '#23 Baja'
+  - '#26 Bana'
+  - '#29 Bara'
+  - '#58 Capadare'
+  - '#59 Capo'
+  - '#64 Carama'
+  - '#65 Carapa'
+  - '#66 Cari'
+  - '#67 Caruca'
+  - '#68 Caseto'
+  - '#72 Caujaro'
+  - '#73 Cayude'
+  - '#82 Chipare'
+  - '#86 Chunare'
+  - '#94 Cumarebo'
+  - '#95 Cuna'
+  - '#96 Cunaro'
+  - '#97 Curarí'
+  - '#111 Dito'
+  - '#112 Dividive'
+  - '#117 Ebo'
+  - '#123 Guaca'
+  - '#126 Guaco'
+  - '#137 Guanepe'
+  - '#138 Guaracaro'
+  - '#140 Guaranao'
+  - '#141 Guarataro'
+  - '#142 Guariana'
+  - '#143 Guaru'
+  - '#144 Guasare'
+  - '#150 Güica'
+  - '#158 Huaymujo'
+  - '#164 Iguí'
+  - '#166 Iro'
+  - '#169 Jachos'
+  - '#173 Jadicuar'
+  - '#177 Judereque'
+  - '#178 Juri'
+  - '#179 Jurijurebo'
+  - '#185 Naure'
+  - '#186 Ñaure'
+  - '#218 Quiva'
+  - '#219 Rao'
+  - '#224 Saruro'
+  - '#227 Sigua'
+  - '#236 Taque'
+  - '#244 Tauta'
+  - '#246 Tigua'
+  - '#247 Tigüí'
+  - '#248 Tijúa'
+  - '#249 Timaure'
+  - '#253 Tuba'
+  - '#254 Tubarao'
+  - '#255 Tumarure'
+  - '#264 Tuturutos'
+  - '#268 Uco'
+  - '#272 Ure'
+  E_con_otra_sigla:
+  - '#4 Aco (E+AM)'
+  - '#18 Bacoa (AM+E)'
+  - '#41 Bisure (HB+E)'
+  - '#45 Buche (AM+E)'
+  - '#54 Cacuro (E+A)'
+  - '#63 Caquetillo (E+A)'
+  - '#81 Chaure (HB+E)'
+  - '#93 Cumaragua (HB+E)'
+  - '#99 Dabuda (HB+E)'
+  - '#102 Dara (HB+E)'
+  - '#125 Guache (E+AM)'
+  - '#134 Guamacho (A+E)'
+  - '#139 Guaranaro (HB+E)'
+  - '#147 Guay (E+A)'
+  - '#165 Ima (E+PMA)'
+  - '#182 Laguarí (E+A+PMA)'
+  - '#190 Para (E+HP)'
+  - '#199 Píritu (E+A+AM)'
+  - '#214 Quigua (E+AM)'
+  - '#226 Sibidigua (E+A)'
+  - '#257 Tuqueque (E+A+PMA)'
+  - '#278 Yabo (E+A+AM)'
+  - '#281 Yacure (AM+E)'
+el_canon:
+  caquetio_atestiguado_en_VOCABULARIO_BASE: 227
+  entradas_que_citan_una_E:
+    por_capa:
+      VOCABULARIO_BASE · caquetío-atestiguado: 65
+      VOCABULARIO_BASE · caquetío-retroabstraido: 1
+      VOCABULARIO_BASE · caquetío-reconstruido: 1
+      FUERA_DEL_HABLA · caquetío-reconstruido: 2
+    claves:
+    - aka
+    - ako
+    - bakoa
+    - bara
+    - bisure
+    - buche
+    - chaure
+    - chipare
+    - dabuda
+    - dara
+    - dibidibe
+    - ebo
+    - gika
+    - habo
+    - huaymujo
+    - igi
+    - jachos
+    - joutai
+    - judereke
+    - juri
+    - kaketillo
+    - kakuro
+    - kapo
+    - karama
+    - karapa
+    - kari
+    - karuka
+    - kaseto
+    - kaujaro
+    - kayude
+    - kiba
+    - kiwa
+    - kumarawa
+    - kuna
+    - kunaro
+    - kurari
+    - kuru
+    - lawari
+    - naure
+    - para
+    - piritu
+    - rao
+    - saruro
+    - sibidiwa
+    - siwa
+    - take
+    - tauta
+    - tigi
+    - tijua
+    - tiwa
+    - tuba
+    - tubarao
+    - tukeke
+    - tuturutos
+    - ure
+    - wache
+    - waka
+    - wako
+    - wamacho
+    - wanepe
+    - warakaro
+    - waranao
+    - waranaro
+    - warataro
+    - wariana
+    - waru
+    - way
+    - yabo
+    - yakure
+  atestiguadas_solo_E:
+    contando_todas_las_entradas_que_cita_la_nota: 42
+    contando_solo_las_que_dan_su_glosa_(lectura): 43
+    con_las_siglas_escritas_en_la_nota_(criterio_del_lote): 43
+    diferencias:
+      solo_por_su_glosa_pero_la_nota_cita_otra_sigla:
+      - bara
+      la_nota_no_dice_E_o_dice_otra: null
+      la_nota_dice_solo_E_y_no_lo_es: null
+    claves:
+    - aka
+    - bara
+    - chipare
+    - dibidibe
+    - ebo
+    - gika
+    - huaymujo
+    - igi
+    - jachos
+    - judereke
+    - juri
+    - kapo
+    - karama
+    - karapa
+    - kari
+    - karuka
+    - kaseto
+    - kaujaro
+    - kayude
+    - kuna
+    - kunaro
+    - kurari
+    - naure
+    - rao
+    - saruro
+    - siwa
+    - take
+    - tauta
+    - tigi
+    - tijua
+    - tiwa
+    - tuba
+    - tubarao
+    - tuturutos
+    - ure
+    - waka
+    - wako
+    - wanepe
+    - warakaro
+    - waranao
+    - warataro
+    - wariana
+    - waru
+  controles:
+    obras_que_no_estan_en_la_bibliografia: null
+    estados_desconocidos: null
+    clases_desconocidas: null
+    voces_con_E_sin_lectura: null
+    citan_una_entrada_E_ajena_(no_es_su_atestacion):
+    - kuru
+    lecturas_sin_voz_en_el_canon: null
+por_opcion:
+  A:
+    cambian_de_capa: 40
+    a:
+      caquetío-hipotético: 40
+    salen_de_la_capa_atestiguada: 40
+    atestiguadas_del_lexicon_despues: 187
+    pasan_a_hipotetica_(salen_del_perfil_era2):
+    - aka
+    - bara
+    - chipare
+    - dibidibe
+    - ebo
+    - gika
+    - huaymujo
+    - jachos
+    - judereke
+    - juri
+    - karama
+    - karapa
+    - kari
+    - karuka
+    - kaseto
+    - kaujaro
+    - kayude
+    - kuna
+    - kunaro
+    - kurari
+    - naure
+    - rao
+    - saruro
+    - siwa
+    - take
+    - tauta
+    - tigi
+    - tijua
+    - tiwa
+    - tuba
+    - tubarao
+    - tuturutos
+    - ure
+    - wako
+    - wanepe
+    - warakaro
+    - waranao
+    - warataro
+    - wariana
+    - waru
+    apariciones_en_el_muestreo_del_ensayo_que_se_pierden: 2990
+    usos_en_la_base_de_las_que_cambian: 1817
+    usos_en_la_base_de_las_que_pasan_a_hipotetica: 1817
+    cambian_y_alguna_plantilla_la_ensena:
+    - bara
+    - kari
+    - waranao
+    voces:
+      aka: caquetío-hipotético
+      bara: caquetío-hipotético
+      chipare: caquetío-hipotético
+      dibidibe: caquetío-hipotético
+      ebo: caquetío-hipotético
+      gika: caquetío-hipotético
+      huaymujo: caquetío-hipotético
+      jachos: caquetío-hipotético
+      judereke: caquetío-hipotético
+      juri: caquetío-hipotético
+      karama: caquetío-hipotético
+      karapa: caquetío-hipotético
+      kari: caquetío-hipotético
+      karuka: caquetío-hipotético
+      kaseto: caquetío-hipotético
+      kaujaro: caquetío-hipotético
+      kayude: caquetío-hipotético
+      kuna: caquetío-hipotético
+      kunaro: caquetío-hipotético
+      kurari: caquetío-hipotético
+      naure: caquetío-hipotético
+      rao: caquetío-hipotético
+      saruro: caquetío-hipotético
+      siwa: caquetío-hipotético
+      take: caquetío-hipotético
+      tauta: caquetío-hipotético
+      tigi: caquetío-hipotético
+      tijua: caquetío-hipotético
+      tiwa: caquetío-hipotético
+      tuba: caquetío-hipotético
+      tubarao: caquetío-hipotético
+      tuturutos: caquetío-hipotético
+      ure: caquetío-hipotético
+      wako: caquetío-hipotético
+      wanepe: caquetío-hipotético
+      warakaro: caquetío-hipotético
+      waranao: caquetío-hipotético
+      warataro: caquetío-hipotético
+      wariana: caquetío-hipotético
+      waru: caquetío-hipotético
+  B:
+    cambian_de_capa: 40
+    a:
+      caquetío-hipotético: 12
+      caquetío-reconstruido: 2
+      caquetío-retroabstraido: 26
+    salen_de_la_capa_atestiguada: 40
+    atestiguadas_del_lexicon_despues: 187
+    pasan_a_hipotetica_(salen_del_perfil_era2):
+    - aka
+    - jachos
+    - juri
+    - kari
+    - naure
+    - rao
+    - siwa
+    - tuba
+    - tubarao
+    - ure
+    - waranao
+    - waru
+    apariciones_en_el_muestreo_del_ensayo_que_se_pierden: 935
+    usos_en_la_base_de_las_que_cambian: 1817
+    usos_en_la_base_de_las_que_pasan_a_hipotetica: 1557
+    cambian_y_alguna_plantilla_la_ensena:
+    - bara
+    - kari
+    - waranao
+    voces:
+      aka: caquetío-hipotético
+      bara: caquetío-reconstruido
+      chipare: caquetío-retroabstraido
+      dibidibe: caquetío-retroabstraido
+      ebo: caquetío-reconstruido
+      gika: caquetío-retroabstraido
+      huaymujo: caquetío-retroabstraido
+      jachos: caquetío-hipotético
+      judereke: caquetío-retroabstraido
+      juri: caquetío-hipotético
+      karama: caquetío-retroabstraido
+      karapa: caquetío-retroabstraido
+      kari: caquetío-hipotético
+      karuka: caquetío-retroabstraido
+      kaseto: caquetío-retroabstraido
+      kaujaro: caquetío-retroabstraido
+      kayude: caquetío-retroabstraido
+      kuna: caquetío-retroabstraido
+      kunaro: caquetío-retroabstraido
+      kurari: caquetío-retroabstraido
+      naure: caquetío-hipotético
+      rao: caquetío-hipotético
+      saruro: caquetío-retroabstraido
+      siwa: caquetío-hipotético
+      take: caquetío-retroabstraido
+      tauta: caquetío-retroabstraido
+      tigi: caquetío-retroabstraido
+      tijua: caquetío-retroabstraido
+      tiwa: caquetío-retroabstraido
+      tuba: caquetío-hipotético
+      tubarao: caquetío-hipotético
+      tuturutos: caquetío-retroabstraido
+      ure: caquetío-hipotético
+      wako: caquetío-retroabstraido
+      wanepe: caquetío-retroabstraido
+      warakaro: caquetío-retroabstraido
+      waranao: caquetío-hipotético
+      warataro: caquetío-retroabstraido
+      wariana: caquetío-retroabstraido
+      waru: caquetío-hipotético
+  C:
+    cambian_de_capa: 0
+    a: {}
+    salen_de_la_capa_atestiguada: 0
+    atestiguadas_del_lexicon_despues: 227
+    pasan_a_hipotetica_(salen_del_perfil_era2): null
+    apariciones_en_el_muestreo_del_ensayo_que_se_pierden: 0
+    usos_en_la_base_de_las_que_cambian: 0
+    usos_en_la_base_de_las_que_pasan_a_hipotetica: 0
+    cambian_y_alguna_plantilla_la_ensena: null
+    voces: null
+  D:
+    cambian_de_capa: 11
+    a:
+      caquetío-hipotético: 11
+    salen_de_la_capa_atestiguada: 11
+    atestiguadas_del_lexicon_despues: 216
+    pasan_a_hipotetica_(salen_del_perfil_era2):
+    - aka
+    - juri
+    - kari
+    - naure
+    - rao
+    - siwa
+    - tuba
+    - tubarao
+    - ure
+    - waranao
+    - waru
+    apariciones_en_el_muestreo_del_ensayo_que_se_pierden: 860
+    usos_en_la_base_de_las_que_cambian: 1514
+    usos_en_la_base_de_las_que_pasan_a_hipotetica: 1514
+    cambian_y_alguna_plantilla_la_ensena:
+    - kari
+    - waranao
+    voces:
+      aka: caquetío-hipotético
+      juri: caquetío-hipotético
+      kari: caquetío-hipotético
+      naure: caquetío-hipotético
+      rao: caquetío-hipotético
+      siwa: caquetío-hipotético
+      tuba: caquetío-hipotético
+      tubarao: caquetío-hipotético
+      ure: caquetío-hipotético
+      waranao: caquetío-hipotético
+      waru: caquetío-hipotético
+voces:
+- clave: aka
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#3 Aca (E): Bejuco'
+  solo_E: true
+  esteves:
+    paginas:
+    - 83
+    - 105
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Sólo en la Parte II: Acaca, Acarite y Acatuto (p. 83: «Aca: bejuco; uto: quebrada»). En la p.
+      105 da «aca: par, casal, pareja»: la misma forma con dos glosas.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 1
+    suelta: 0
+    compuestos: 1
+    en_la_era_2: 1
+    runs: 1
+    compuestos_mas_usados:
+      aka-ni: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 69
+    prompt_entero_prompts_era2: 74
+    canon_del_mundo: null
+- clave: ako
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#4 Aco (E+AM): Comida. Par, casal, pareja'
+  solo_E: false
+  esteves:
+    paginas:
+    - 24
+    - 39
+    - 51
+    - 105
+    clase: etimologia-de-toponimo
+    verificado: ocr
+    lo_que_dice: 'Buchuhaco (p. 24) «aco: par, casal, pareja»; Guachaco (p. 39) «aco: dos, par»; Michaco (p. 51).'
+  atestaciones_independientes: 1
+  otras:
+  - 'zavala-reyes-2015 p. 65: #4 (AM): la entrada mezcla «Comida» y «Par»; la acepción «par, dos» es la de Esteves
+    [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 57
+    suelta: 54
+    compuestos: 3
+    en_la_era_2: 57
+    runs: 18
+    compuestos_mas_usados:
+      ma-ako: 1
+      ta-ako: 1
+      wa-ako: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 68
+    prompt_entero_prompts_era2: 69
+    canon_del_mundo: null
+  nota: La voz se sostiene por AM; la acepción «par, dos» —la que usan los topónimos— es sólo de Esteves.
+  acepcion_solo_de_esteves: par, dos
+- clave: bakoa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#18 Bacoa (AM+E): Bosque, lugar, paraje, sitio fértil'
+  solo_E: false
+  esteves:
+    paginas:
+    - 25
+    - 33
+    - 39
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Caibacoa (p. 25), Cumujacoa (p. 33) «Bacoa: lugar», Guaidabacoa (p. 39).'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 65: #18 (AM) [independiente-sigla]'
+  - 'oliver-1989-apendice-a p. 593: A-9 #1 adabacoa, Relación de Barquisimeto 1579: «todos árboles» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 4
+    suelta: 2
+    compuestos: 2
+    en_la_era_2: 4
+    runs: 2
+    compuestos_mas_usados:
+      eroa-bakoa: 1
+      saka-bakoa: 1
+  exposicion:
+    plantillas_que_la_ensenan:
+    - prompt_reglas_completo
+    - prompt_reglas_breve
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 83
+    prompt_entero_prompts_era2: 1260
+    canon_del_mundo: null
+- clave: bara
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#29 Bara (E): Palo, árbol'
+  solo_E: true
+  esteves:
+    paginas:
+    - 19
+    - 22
+    - 88
+    clase: dice-en-caquetio
+    verificado: ocr
+    lo_que_dice: 'Barabara (p. 19): «Sabemos que Bara, en lengua caquetía, es voz general para… árbol», y a continuación
+      toma de Alvarado que barabara es un árbol, «plural por duplicación». Lo repite en Baraived (p. 22) y Bariquí
+      (p. 88).'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 21: BARABARA, «Árbol de Coro» (Clavija): la forma reduplicada, sin partir — la partición es
+    de Esteves [analisis-nuestro]'
+  - 'van-buurt-2014 p. §5: «bara means tree in Caquetío», en el párrafo que cita a Esteves [copia-de-esteves]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-reconstruido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 43
+    suelta: 38
+    compuestos: 5
+    en_la_era_2: 19
+    runs: 22
+    compuestos_mas_usados:
+      ka-bara: 2
+      ma-bara: 2
+      wa-bara: 1
+  exposicion:
+    plantillas_que_la_ensenan: &id001
+    - prompt_reglas_completo
+    - prompt_rescate_fuga_esp0
+    - prompt_rescate_fuga_esp3_con_otro
+    - prompt_rescate_fuga_esp3_sin_otro
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 72
+    prompt_entero_prompts_era2: 390
+    canon_del_mundo: null
+  nota: 'La nota del lexicón dice «con Esteves 1989 y van Buurt 2014 diciendo lo mismo»: son uno. La cita de barabara
+    (Zavala #30, A) es otra voz, que el lexicón ya tiene aparte; lo que la hace apoyo es la reduplicación, que es
+    análisis. El lokono balli ''árbol'' la acerca a reconstruido.'
+- clave: bisure
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#41 Bisure (HB+E): Lagartija'
+  solo_E: false
+  esteves:
+    paginas:
+    - 90
+    clase: voz-viva
+    verificado: imagen (canon, toponimo-179)
+    lo_que_dice: 'La Cuesta de los Bisures (p. 90): «bisure: lagarto común».'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 66: #41 (HB) [independiente-sigla]'
+  - 'oliver-1989-apendice-a p. 593: A-9 #8 bisure «lagartija» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 59
+    prompt_entero_prompts_era2: 58
+    canon_del_mundo: null
+- clave: buche
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#45 Buche (AM+E): Planta xerofita, melocato, cardo globoso, rastrero'
+  solo_E: false
+  esteves:
+    paginas:
+    - 23
+    - 24
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Bibuche y Buchaquiva (pp. 23-24): buche, melocacto, cardo globoso rastrero.'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 66: #45 (AM) [independiente-sigla]'
+  - 'alvarado-1921 p. 34: BUCHE «Melocactus communis… Voz usada en Occ.» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 4
+    suelta: 3
+    compuestos: 1
+    en_la_era_2: 4
+    runs: 3
+    compuestos_mas_usados:
+      u-buche: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 85
+    prompt_entero_prompts_era2: 79
+    canon_del_mundo: null
+- clave: chaure
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#81 Chaure (HB+E): Cegue. Lechuza que anida en cuevas de terrenos arenosos'
+  solo_E: false
+  esteves:
+    paginas:
+    - 36
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Chaure (p. 36): otro nombre indígena del cegue, lechuza que anida en cuevas de arena.'
+  atestaciones_independientes: 3
+  otras:
+  - 'zavala-reyes-2015 p. 67: #81 (HB) [independiente-sigla]'
+  - 'alvarado-1921 p. 116: CHÁURE, lechuza (Strix) [independiente-verificada]'
+  - 'oliver-1989-apendice-a p. 593: A-9 #26 chaure «búho» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 65
+    prompt_entero_prompts_era2: 73
+    canon_del_mundo: null
+- clave: chipare
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#82 Chipare (E): Matapalo'
+  solo_E: true
+  esteves:
+    paginas:
+    - 108
+    - 117
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Ipare (p. 117): «aféresis de chipare, matapalo». En Chipare (p. 108) no glosa.'
+  atestaciones_independientes: 0
+  otras:
+  - 'arcaya-1920: cipare/chipare quizá nuarhuaco, «significando piedra» (conjetura sobre un nombre de tribu) [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 70
+    prompt_entero_prompts_era2: 68
+    canon_del_mundo: null
+- clave: dabuda
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#99 Dabuda (HB+E): Barro loza'
+  solo_E: false
+  esteves:
+    paginas:
+    - 11
+    - 37
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Abudure (p. 11): dabuda, el barro de loza de la cerámica local; Dabadubare (p. 37).'
+  atestaciones_independientes: 1
+  otras:
+  - 'zavala-reyes-2015 p. 67: #99 (HB) y #100 Dabudare (HB) «Sitio de extracción de barro» [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 0
+    compuestos: 1
+    en_la_era_2: 1
+    runs: 1
+    compuestos_mas_usados:
+      wa-dabuda: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 6
+    muestreo_prompts_era2: 72
+    prompt_entero_prompts_era2: 71
+    canon_del_mundo:
+      clima_era2.yaml:voz_caquetia: 1
+      sitios_era2.yaml:voz_caquetia: 1
+- clave: dara
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#102 Dara (HB+E): Alcaraván'
+  solo_E: false
+  esteves:
+    paginas:
+    - 12
+    - 13
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Adaro (p. 12): dara, ave vocinglera de las sabanas, el alcaraván.'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 67: #102 (HB) [independiente-sigla]'
+  - 'medina-colina-sxx: dara, el ave de los campos (dictado) [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 5
+    suelta: 2
+    compuestos: 3
+    en_la_era_2: 5
+    runs: 5
+    compuestos_mas_usados:
+      ma-dara: 2
+      ta-dara: 1
+  exposicion:
+    plantillas_que_la_ensenan:
+    - prompt_reglas_completo
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 84
+    prompt_entero_prompts_era2: 385
+    canon_del_mundo: null
+- clave: dibidibe
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#112 Dividive (E): Árbol cuyo fruto es una baya que da tinta'
+  solo_E: true
+  esteves:
+    paginas:
+    - 23
+    - 76
+    - 110
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Bibidure (p. 23): dividive, árbol leguminoso tintóreo; Dividive (p. 110), la glosa de Zavala entera.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 132: DIVIDÍVE «Caesalpinia coriaria», de todo el país [independiente-fuera-del-area]'
+  - 'medina-colina-sxx: el dividive como materia prima de exportación (mc-mundo-021) [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 77
+    prompt_entero_prompts_era2: 76
+    canon_del_mundo: null
+- clave: ebo
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#117 Ebo (E): Camino, paso, senda'
+  solo_E: true
+  esteves:
+    paginas:
+    - 35
+    - 38
+    - 39
+    - 47
+    - 105
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Curaidebo «el paso del Curarí… Ebo: camino, paso, senda» (p. 35), Gisebo (p. 38), Guacurebo «por
+      el sufijo ebo» (p. 39), Jurijurebo «paso, ruta, valle estrecho, cañón» (p. 47) y Cumarebo (p. 105).'
+  atestaciones_independientes: 0
+  otras:
+  - 'zavala-reyes-2015 p. 66: #75 Cazebo (GC) «Poniente» = cazi (GC) «sol» + -ebo: «el camino del sol» es partición
+    NUESTRA (campaña del nominalizador, 2026-09-21) [analisis-nuestro]'
+  - 'oliver-1989-apendice-a p. 594: A-9 #36 guacurebo «quebrada que crece», sin partir (= Zavala #129 HB) [forma-sin-glosa]'
+  - 'zavala-reyes-2015 p. 71: #261 Turijerebo (AM) «Lugar de descanso», sin partir [forma-sin-glosa]'
+  - 'castellanos-elegias: «Hurehurebo» (1589), sin glosa [forma-sin-glosa]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-reconstruido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 12
+    suelta: 8
+    compuestos: 4
+    en_la_era_2: 12
+    runs: 10
+    compuestos_mas_usados:
+      ta-ebo: 2
+      wa-ebo: 1
+      were-ebo: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 80
+    prompt_entero_prompts_era2: 77
+    canon_del_mundo: null
+  nota: La FORMA -ebo está en cuatro fuentes que no son Esteves, y en una de ellas (Cazebo, Galeotto Cey, s. XVI)
+    la lectura 'camino' encaja. La GLOSA es de Esteves. Es exactamente lo que el canon llama reconstruido.
+- clave: gika
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#150 Güica (E): Yabo'
+  solo_E: true
+  esteves:
+    paginas:
+    - 43
+    clase: voz-viva
+    verificado: imagen (lote del 2026-09-22)
+    lo_que_dice: 'Güica (p. 43): «otro nombre indígena» del árbol que llaman yabo.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 11
+    suelta: 0
+    compuestos: 11
+    en_la_era_2: 11
+    runs: 7
+    compuestos_mas_usados:
+      gika-ni: 4
+      ta-gika: 3
+      gika-da: 2
+      gika-ka: 1
+      gika-ubana: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 65
+    prompt_entero_prompts_era2: 76
+    canon_del_mundo: null
+- clave: huaymujo
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#158 Huaymujo (E): Pequeño cangrejo'
+  solo_E: true
+  esteves:
+    paginas:
+    - 43
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Imujo (p. 43): aféresis de huaymujo, pequeño cangrejo.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 75
+    prompt_entero_prompts_era2: 75
+    canon_del_mundo: &id003
+      sitios_era2.yaml:voz_caquetia: 1
+- clave: igi
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#164 Iguí (E): Árbol, matapalo, paují'
+  solo_E: true
+  esteves:
+    paginas:
+    - 117
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Iguy (p. 117): «igüí: árbol, matapalo, paují» — la glosa de Zavala entera.'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 175: IGÜÍ «Bumelia buxifolia… Paují, Malarmo. Coro.» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 19
+    suelta: 18
+    compuestos: 1
+    en_la_era_2: 19
+    runs: 15
+    compuestos_mas_usados:
+      ta-igi: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 69
+    prompt_entero_prompts_era2: 78
+    canon_del_mundo: null
+  nota: 'Esteves toma el «paují» de Alvarado: la sinonimia es la misma.'
+- clave: jachos
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#169 Jachos (E): Teas de madera, para encandilar en las labores de pesca nocturna'
+  solo_E: true
+  esteves:
+    paginas:
+    - 33
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Cunacho, p. 33: del cunaro «extraían manteca para untar los "jachos", teas de madera… para encandilar
+      en labores de pesca nocturna». La palabra va ENTRE COMILLAS y Esteves no la da por indígena.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 43
+    suelta: 28
+    compuestos: 15
+    en_la_era_2: 43
+    runs: 15
+    compuestos_mas_usados:
+      jachos-ana: 12
+      jachos-suka: 1
+      ta-jachos: 1
+      wa-jachos: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 14
+    muestreo_prompts_era2: 75
+    prompt_entero_prompts_era2: 73
+    canon_del_mundo: &id004
+      clima_era2.yaml:voz_caquetia: 2
+      sitios_era2.yaml:voz_caquetia: 1
+      clima_era2.yaml:frases_del_cargador:
+      - viento.anochecer
+      - viento.noche
+  castellano_probable: '«Jacho» es, con la h aspirada que conserva el habla de la península, el castellano «hacho»
+    ''tea, manojo encendido para alumbrar'' (DRAE, fuera del repo: verificar antes de fusionar). Ni Alvarado 1921
+    ni el dictado de Medina la traen como voz indígena.'
+  razon_forzar_B: Por la clase le tocaría retroabstraído, pero una voz viva CASTELLANA no es retroabstracción de
+    nada. Lo mínimo es hipotético; si Miguel confirma «hacho», es una reasignación a español como la de caraota
+    (D10), y es decisión aparte.
+- clave: judereke
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#177 Judereque (E): Árbol ramoso, parecido al chiguare'
+  solo_E: true
+  esteves:
+    paginas:
+    - 47
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Juderecal (p. 47): colectivo de judereque, árbol ramoso parecido al chiguare.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 94
+    prompt_entero_prompts_era2: 75
+    canon_del_mundo: null
+- clave: juri
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#178 Juri (E): Viento, ventarrón'
+  solo_E: true
+  esteves:
+    paginas:
+    - 47
+    - 66
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Tres veces y las tres partiendo un topónimo: Judibana («Judi, juri: viento. Bana: sitio alto»,
+      p. 47), Jurijurebo («Juri: viento; Ebo: paso…», p. 47) y Tura, que en el censo de 1881 fue «Hato de Jura»
+      («Jura, juri: ventarrón», p. 66). No cita a nadie.'
+  atestaciones_independientes: 0
+  otras:
+  - 'castellanos-elegias: «Hurehurebo», ciudad caquetía (1589): la forma, sin glosa [forma-sin-glosa]'
+  - 'van-buurt-2014 p. §8 Hudishibana: juri, judi, hudi = wind, citando «(Cruz Esteves, 1989)» [copia-de-esteves]'
+  - '—: 6-fusion/cruce_taino_caquetio_2026-09-22.yaml: sin cognado (taíno no-comparable; lokono wadu-lli y wayuu
+    wawai, sin parecido) [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 949
+    suelta: 482
+    compuestos: 467
+    en_la_era_2: 927
+    runs: 28
+    compuestos_mas_usados:
+      juri-ni: 157
+      juri-bana: 43
+      juri-ka: 37
+      tüshi-juri: 37
+      juri-da: 33
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 42
+    muestreo_prompts_era2: 74
+    prompt_entero_prompts_era2: 58
+    canon_del_mundo: &id005
+      clima_era2.yaml:voz_caquetia: 5
+      clima_era2.yaml:frases_del_cargador:
+      - viento.periodo
+  nota: La única otra glosa de 'viento' en todo el corpus es «Coro quiere decir viento en lengua generosa», de Castellanos,
+    que Esteves recoge con ironía en la p. 73 y que cc.6 manda retirar como etimología por el latín. Juri 'viento'
+    descansa, entero, en tres etimologías de un cronista de 1989.
+- clave: kaketillo
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#63 Caquetillo (E+A): Árbol. Madera de construcción, resistente a la humedad'
+  solo_E: false
+  esteves:
+    paginas:
+    - 96
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Caquetillo (p. 96): árbol de buena madera, y «voz afín de caquetío, según Lisandro Alvarado» —
+      Esteves copia a Alvarado.'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 56: CAQUETILLO «Árbol de construcción del Zulia. ¿Voz afín de caquetío?» [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 3
+    suelta: 3
+    compuestos: 0
+    en_la_era_2: 3
+    runs: 3
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 67
+    prompt_entero_prompts_era2: 61
+    canon_del_mundo: null
+  nota: La sigla A se cuenta como la ha contado siempre el canon; lo que dice (Zulia, con interrogación) es deuda
+    de otra campaña.
+- clave: kakuro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#54 Cacuro (E+A): Pequeña avispa negra'
+  solo_E: false
+  esteves:
+    paginas:
+    - 92
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Cacuro (p. 92): pequeña avispa negra de picadura dolorosa.'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 40: CACURO «En Coro significa avispero» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 67
+    prompt_entero_prompts_era2: 80
+    canon_del_mundo: null
+- clave: kapo
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#59 Capo (E): Duende, ente sobrenatural'
+  solo_E: true
+  esteves:
+    paginas:
+    - 26
+    clase: etimologia-de-toponimo
+    verificado: ocr
+    lo_que_dice: 'Capuhana (p. 26): «Capó: duende, ente sobrenatural», espíritu protector de los árboles.'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 66: #60 Capu (HB) «Demonio», con la pronunciación «cap» de Galeotto Cey, y #61 Capubana
+    (HB) «Duende del cerro»: la misma voz [independiente-sigla]'
+  - 'oliver-1989-apendice-a p. 593: A-9 #16 Capú «spirit, goblin» (leyenda moderna de Santa Ana) [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 25
+    suelta: 4
+    compuestos: 21
+    en_la_era_2: 19
+    runs: 10
+    compuestos_mas_usados:
+      kapo-bana: 5
+      kapo-ni: 4
+      kapo-bacoa: 2
+      kapo-ubana: 2
+      kapo-ani: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 72
+    prompt_entero_prompts_era2: 66
+    canon_del_mundo: null
+  nota: '`kapo` y `kapu` son la misma voz con dos claves: fusión pendiente de D5, no de esta campaña.'
+- clave: karama
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#64 Carama (E): Ramazón'
+  solo_E: true
+  esteves:
+    paginas:
+    - 98
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Caramabure (p. 98): raíz de las caramas, «raíz de la ramazón».'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 57: CARAMA, palizada que traen las crecientes, «del Bajo Llano» [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 10
+    suelta: 2
+    compuestos: 8
+    en_la_era_2: 9
+    runs: 7
+    compuestos_mas_usados:
+      karama-ni: 4
+      karama-kana: 2
+      karama-ka: 1
+      karama-pabu: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 79
+    prompt_entero_prompts_era2: 82
+    canon_del_mundo: null
+- clave: karapa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#65 Carapa (E): Árbol resinoso'
+  solo_E: true
+  esteves:
+    paginas:
+    - 27
+    - 98
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: Cararapa (p. 27), «forma epentética de carapa, árbol resinoso»; Carapa (p. 98).
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 60: CARAPA «Carapa guianensis», árbol de todo el país [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 71
+    prompt_entero_prompts_era2: 85
+    canon_del_mundo: null
+- clave: kari
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#66 Cari (E): Orilla del mar'
+  solo_E: true
+  esteves:
+    paginas:
+    - 28
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Sólo en la p. 28, partiendo dos nombres: Cariguariana («Cari: orilla de mar») y Carirubana («Cari:
+      orilla. Bana: sitio alto»).'
+  atestaciones_independientes: 0
+  otras:
+  - 'van-buurt-2014 p. §9 Cariatavo: «cari means coast, shore (Cruz Esteves, 1989)» [copia-de-esteves]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 277
+    suelta: 159
+    compuestos: 118
+    en_la_era_2: 251
+    runs: 26
+    compuestos_mas_usados:
+      duna-kari-ima: 29
+      kari-barsure-sunu-ana: 21
+      ma-kari: 18
+      duna-kari: 17
+      kari-uro-bana: 11
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa:
+    - IDENTIDAD_LINGUISTICA
+    - prompt_reglas_completo
+    tu_tierra_bloques_que_la_dicen: 3
+    muestreo_prompts_era2: 83
+    prompt_entero_prompts_era2: 68
+    canon_del_mundo: &id006
+      clima_era2.yaml:voz_caquetia: 1
+      sitios_era2.yaml:voz_caquetia: 3
+  nota: 'La nota del lexicón ya daba a van Buurt «vía» Esteves: es la misma fuente dos veces. Y es la voz que D9
+    usó para decir que -bana no es ''orilla'' («la costa atestiguada es kari»): las dos glosas, bana ''cerro'' y
+    cari ''orilla'', salen de la MISMA línea de Esteves.'
+- clave: karuka
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#67 Caruca (E): Paja, da consistencia al barro que se aplica a paredes y techos'
+  solo_E: true
+  esteves:
+    paginas:
+    - 28
+    - 49
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Caruca (p. 28): hierba áspera para la torta de barro de los techos; Machuruca (p. 49).'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 70
+    prompt_entero_prompts_era2: 63
+    canon_del_mundo: &id007
+      sitios_era2.yaml:voz_caquetia: 1
+- clave: kaseto
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#68 Caseto (E): Planta herbácea'
+  solo_E: true
+  esteves:
+    paginas:
+    - 30
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Caseto (p. 30): planta herbácea de las malvas espigadas, Malvastrum spicatum.'
+  atestaciones_independientes: 0
+  otras:
+  - 'medina-colina-sxx p. 65: caseto, planta silvestre de los montes (dictado 2026-09-01) [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 11
+    suelta: 11
+    compuestos: 0
+    en_la_era_2: 9
+    runs: 9
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 81
+    prompt_entero_prompts_era2: 85
+    canon_del_mundo: &id008
+      sitios_era2.yaml:voz_caquetia: 1
+  nota: Medina documenta la VOZ viva en Paraguaná; no dice que sea caquetía (por eso cuenta como voz, no como atestación
+    caquetía).
+- clave: kaujaro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#72 Caujaro (E): Árbol de madera blanda, fruta mucilaginosa, del género cordia'
+  solo_E: true
+  esteves:
+    paginas:
+    - 30
+    - 100
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: Caujarito (p. 30), diminutivo de caujaro, Cordia; Caujaro (p. 100), la glosa de Zavala palabra
+      por palabra.
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 73: CAUJÁRO, varios árboles del género Cordia, sin localizar [independiente-fuera-del-area]'
+  - 'van-buurt-2014 p. §6: «in Venezuela it is called caujaro» (Cordia dentata) [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 61
+    prompt_entero_prompts_era2: 69
+    canon_del_mundo: &id009
+      sitios_era2.yaml:voz_caquetia: 1
+- clave: kayude
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#73 Cayude (E): Árbol frutal, guanábano silvestre, turagua'
+  solo_E: true
+  esteves:
+    paginas:
+    - 30
+    - 100
+    clase: voz-viva
+    verificado: imagen (p. 30 en esteves_paginas_releidas_2026-09-16.yaml)
+    lo_que_dice: 'Cayude (pp. 30 y 100): árbol anonáceo, turagua.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 75: CAYÚDE «Anona palustris»; «cayure» es la forma de Puerto Rico [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 66
+    prompt_entero_prompts_era2: 65
+    canon_del_mundo: &id010
+      clima_era2.yaml:voz_caquetia: 1
+      sitios_era2.yaml:voz_caquetia: 2
+  nota: El paralelo taíno (cayure) es material para D11 fase 3, no una atestación caquetía.
+- clave: kiba
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#218 Quiva (E): Piedra'
+  - '#92 Cuiva (PMA): Piedra'
+  solo_E: false
+  esteves:
+    paginas:
+    - 24
+    - 45
+    - 57
+    - 64
+    clase: dice-en-caquetio
+    verificado: ocr
+    lo_que_dice: 'Jadacaquiva (p. 45): «quiba en caquetío es pedruzco»; Buchaquiva (p. 24), Quibarute (p. 57).'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 67: #92 Cuiva. Kiba (PMA) «Piedra» [independiente-sigla]'
+  - 'van-buurt-2014 p. §8 Casibari: siba o quiba «stone», sin cita [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 10
+    suelta: 4
+    compuestos: 6
+    en_la_era_2: 9
+    runs: 6
+    compuestos_mas_usados:
+      ta-kiba: 2
+      kiba-amana-iro: 1
+      kiba-kali-aima: 1
+      kiba-kasi: 1
+      susü-kiba: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 4
+    muestreo_prompts_era2: 77
+    prompt_entero_prompts_era2: 71
+    canon_del_mundo:
+      clima_era2.yaml:voz_caquetia: 1
+      sitios_era2.yaml:voz_caquetia: 2
+- clave: kiwa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#214 Quigua (E+AM): Concha de almeja y otros moluscos. Sitio del estado Lara'
+  solo_E: false
+  esteves:
+    paginas:
+    - 49
+    - 128
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Maquigua (p. 49): quigua, concha de almeja; Quigua (p. 128): crustáceo.'
+  atestaciones_independientes: 3
+  otras:
+  - 'zavala-reyes-2015 p. 70: #214 (AM) [independiente-sigla]'
+  - 'alvarado-1921 p. 260: QUÍGUA «Turbo pica» [independiente-verificada]'
+  - 'van-buurt-2014 p. §6: kiwa, el caracol de Curazao [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 4
+    suelta: 2
+    compuestos: 2
+    en_la_era_2: 4
+    runs: 3
+    compuestos_mas_usados:
+      ma-kiwa: 1
+      ta-kiwa: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 6
+    muestreo_prompts_era2: 66
+    prompt_entero_prompts_era2: 69
+    canon_del_mundo:
+      sitios_era2.yaml:voz_caquetia: 3
+- clave: kumarawa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#93 Cumaragua (HB+E): Ciruela, espuma rosada'
+  solo_E: false
+  esteves:
+    paginas:
+    - 33
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Cumaraguas (p. 33): cangrejito de caparazón rosada; «me han informado» que significa espuma rosada.'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 67: #93 (HB) [independiente-sigla]'
+  - 'alvarado-1921 p. 102: CUMARAGUA «especie de caracol de las costas de Paraguaná» (la glosa del lexicón) [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 65
+    prompt_entero_prompts_era2: 66
+    canon_del_mundo: null
+- clave: kuna
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#95 Cuna (E): Pez del golfete de Coro'
+  solo_E: true
+  esteves:
+    paginas:
+    - 33
+    - 44
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Cunacho (p. 33): cuna, cunaro, pez lábrido que abunda en el Golfete; Iticuna (p. 44).'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 102: CUNA «Promicrops guasa», pez de las costas de Cumaná [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 16
+    suelta: 11
+    compuestos: 5
+    en_la_era_2: 14
+    runs: 10
+    compuestos_mas_usados:
+      ishasü-bana-kuna: 1
+      ishasü-kuna-ubana: 1
+      ka-kuna: 1
+      kuna-bana: 1
+      wa-kuna: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 79
+    prompt_entero_prompts_era2: 78
+    canon_del_mundo: null
+- clave: kunaro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#96 Cunaro (E): Pez del golfete de Coro. Promicops Guasa'
+  solo_E: true
+  esteves:
+    paginas:
+    - 33
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: Cunacho, p. 33, junto a cuna.
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 102: CUNÁRO «Mesoprion sp., pez del mar Caribe» [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 21
+    suelta: 19
+    compuestos: 2
+    en_la_era_2: 19
+    runs: 13
+    compuestos_mas_usados:
+      ta-kunaro: 2
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 69
+    prompt_entero_prompts_era2: 70
+    canon_del_mundo: &id011
+      clima_era2.yaml:voz_caquetia: 1
+      sitios_era2.yaml:voz_caquetia: 2
+- clave: kurari
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#97 Curarí (E): Árbol de roble, tecoma'
+  solo_E: true
+  esteves:
+    paginas:
+    - 33
+    - 35
+    - 106
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Curaidebo (p. 35): «Curarí: árbol maderable, tecoma»; la madera de los jachos (p. 33).'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 105: CURARÍ, árbol de la región occidental «(Barquisimeto, Zulia)» [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 80
+    prompt_entero_prompts_era2: 58
+    canon_del_mundo: null
+- clave: lawari
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#182 Laguarí (E+A+PMA): Acacia Espinoza, acacia. Lauadrí'
+  solo_E: false
+  esteves:
+    paginas:
+    - 36
+    - 49
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Laguarí (p. 49): árbol espinoso, una acacia; «también le dicen: laguadri».'
+  atestaciones_independientes: 1
+  otras:
+  - 'zavala-reyes-2015 p. 69: #182 (A) (PMA); en el texto de Alvarado del repo el lema no aparece (regla 6: sin
+    verificar) [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 18
+    suelta: 2
+    compuestos: 16
+    en_la_era_2: 13
+    runs: 12
+    compuestos_mas_usados:
+      lawari-ni: 4
+      lawari-ka: 3
+      lawari-bana: 2
+      lawari-da: 2
+      lawari-bacoa: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 59
+    prompt_entero_prompts_era2: 75
+    canon_del_mundo: null
+- clave: naure
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#186 Ñaure (E): Planta bejucosa'
+  solo_E: true
+  esteves:
+    paginas:
+    - 37
+    clase: dice-en-caquetio
+    verificado: imagen
+    lo_que_dice: 'Chunaure, p. 37: Chunaure es apellido; «en lengua caquetía "ñaure" es planta bejucosa, y "naure",
+      es jojoto».'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 226: NÁURA «fruto en cierne del maíz»: es la OTRA acepción (#185 naure «jojoto»), no la del
+    lexicón [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 1
+    suelta: 0
+    compuestos: 1
+    en_la_era_2: 1
+    runs: 1
+    compuestos_mas_usados:
+      wa-naure: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 75
+    prompt_entero_prompts_era2: 65
+    canon_del_mundo: null
+  nota: '⚠️ La entrada `naure` del lexicón lleva la glosa de ÑAURE (#186, ''planta bejucosa''); #185 Naure es ''jojoto'',
+    y ésa sí tiene un testigo fuera de Esteves (Alvarado, náura). Corregir la glosa es curación, no esta campaña:
+    queda propuesto en la medición.'
+- clave: para
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#190 Para (E+HP): Aguadulce o salada en grandes cantidades'
+  solo_E: false
+  esteves:
+    paginas:
+    - 56
+    clase: dice-en-caquetio
+    verificado: imagen
+    lo_que_dice: 'Paraguaná (p. 56): «Está suficientemente averiguado que Para significa agua».'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 69: #190 (HP) — Aníbal Hill Peña, a quien Esteves cita (p. 41) [independiente-sigla]'
+  - 'zavala-reyes-2015 p. 69: #191 Paragua (GC) «Mar», Galeotto Cey, s. XVI [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 565
+    suelta: 415
+    compuestos: 150
+    en_la_era_2: 446
+    runs: 41
+    compuestos_mas_usados:
+      ta-para: 44
+      ma-para: 35
+      wa-para: 21
+      para-budare-ana: 20
+      u-para: 14
+  exposicion:
+    plantillas_que_la_ensenan:
+    - IDENTIDAD_LINGUISTICA
+    - prompt_reglas_completo
+    - prompt_rescate_fuga_esp0
+    - prompt_rescate_fuga_esp3_con_otro
+    - prompt_rescate_fuga_esp3_sin_otro
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 1260
+    prompt_entero_prompts_era2: 1260
+    canon_del_mundo: null
+- clave: piritu
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#199 Píritu (E+A+AM): Palmera'
+  solo_E: false
+  esteves:
+    paginas:
+    - 19
+    - 83
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: Sólo como topónimo (Píritu, Distrito Zamora).
+  atestaciones_independientes: 2
+  otras:
+  - 'alvarado-1921 p. 253: PÍRITU «Bactris piritu», palmera [independiente-sigla]'
+  - 'zavala-reyes-2015 p. 70: #199 (AM) [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 72
+    prompt_entero_prompts_era2: 74
+    canon_del_mundo: null
+- clave: rao
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#219 Rao (E): Arena'
+  solo_E: true
+  esteves:
+    paginas:
+    - 64
+    - 92
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'p. 64, Tubarao: «Rao: arena (r sencilla)». p. 92, Cabarao: «de la parte desinencial rao, sabemos
+      que significa: aglomeración». Esteves se contradice: arena en una página, aglomeración en otra.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 5
+    suelta: 5
+    compuestos: 0
+    en_la_era_2: 3
+    runs: 4
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 64
+    prompt_entero_prompts_era2: 60
+    canon_del_mundo: &id012
+      clima_era2.yaml:voz_caquetia: 1
+- clave: saruro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#224 Saruro (E): Serpiente no venenosa. Boa constrictora'
+  solo_E: true
+  esteves:
+    paginas:
+    - 60
+    - 131
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Sarinao (p. 60): el «Cerro del Saruro» es lindero de tierras comuneras, y saruro es una serpiente
+      no venenosa, la boa. El Saruro (p. 131).'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 273: SARÚRA «Boa constrictor», sin localizar [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 39
+    suelta: 30
+    compuestos: 9
+    en_la_era_2: 12
+    runs: 14
+    compuestos_mas_usados:
+      kali-saruro: 3
+      ta-saruro: 2
+      ilu-saruro: 1
+      ilu-saruro-ana: 1
+      ilu-saruro-wara: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 73
+    prompt_entero_prompts_era2: 68
+    canon_del_mundo: null
+- clave: sibidiwa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#226 Sibidigua (E+A): Arbusto euforbiaceo. Jatrofa Gossy Pifolia'
+  solo_E: false
+  esteves:
+    paginas:
+    - 57
+    - 60
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Sabarigua y Sibidigual (pp. 57, 60): sibidigua, arbusto euforbiáceo.'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 277: SIBIDÍGUA «Jatropha gossypifolia… Voz us. en Lara y Falcón» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 0
+    compuestos: 1
+    en_la_era_2: 1
+    runs: 1
+    compuestos_mas_usados:
+      ma-sibidiwa: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 58
+    prompt_entero_prompts_era2: 78
+    canon_del_mundo: null
+- clave: siwa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#227 Sigua (E): Blando'
+  solo_E: true
+  esteves:
+    paginas:
+    - 23
+    clase: etimologia-de-toponimo
+    verificado: ocr
+    lo_que_dice: 'Barisigua, p. 23: «Bari-sigua: palo blando; bara: árbol. Sigua: blando». Lo repite sin partir
+      en la Parte II (p. 88).'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 41
+    suelta: 3
+    compuestos: 38
+    en_la_era_2: 40
+    runs: 21
+    compuestos_mas_usados:
+      siwa-ni: 8
+      siwa-da: 5
+      siwa-ka: 5
+      ta-siwa: 3
+      ma-siwa: 2
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 82
+    prompt_entero_prompts_era2: 105
+    canon_del_mundo: null
+  nota: 'La clave `siwa` tiene además el homónimo siwa-2 «sal de comercio» (lokono): no se toca.'
+- clave: take
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#236 Taque (E): Árbol nucífero'
+  solo_E: true
+  esteves:
+    paginas:
+    - 61
+    - 132
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Tacal y Tacaduto (p. 61): taque, árbol nucífero.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 284: TAQUE, nogal «del E. Lara», usado en Apure y Portuguesa [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 6
+    suelta: 6
+    compuestos: 0
+    en_la_era_2: 6
+    runs: 5
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 68
+    prompt_entero_prompts_era2: 74
+    canon_del_mundo: &id013
+      sitios_era2.yaml:voz_caquetia: 2
+- clave: tauta
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#244 Tauta (E): Pequeña paloma de hábitos ictiófagos'
+  solo_E: true
+  esteves:
+    paginas:
+    - 62
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Tausabana (p. 62): tauta, palomita de hábitos ictiófagos que baja en bandadas a las albuferas.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 74
+    prompt_entero_prompts_era2: 58
+    canon_del_mundo: null
+- clave: tigi
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#247 Tigüí (E): Pequeña paloma que se alimenta de peces'
+  solo_E: true
+  esteves:
+    paginas:
+    - 63
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Ticuí (p. 63): «Tigüí y no Ticuí» es una palomita que se alimenta de peces.'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 65
+    prompt_entero_prompts_era2: 64
+    canon_del_mundo: null
+- clave: tijua
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#248 Tijúa (E): Paloma de canto onomatopéyico'
+  solo_E: true
+  esteves:
+    paginas:
+    - 38
+    - 63
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Tijuro (p. 63): «se nos ha informado» que viene de tijua, paloma de canto onomatopéyico, con una
+      copla.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 290: TIJÚA, paloma «E. Lara», nombre imitativo del canto, con LA MISMA copla (Montesinos)
+    [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 73
+    prompt_entero_prompts_era2: 69
+    canon_del_mundo: null
+  nota: 'La copla que Esteves dice haber recogido está impresa en Alvarado 1921: la cadena es Alvarado → Esteves.'
+- clave: tiwa
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#246 Tigua (E): Árbol rutáceo'
+  solo_E: true
+  esteves:
+    paginas:
+    - 63
+    - 134
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Tiguadare (p. 63): tigua, árbol rutáceo.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 290: TÍGUA «Amyris sylvatica», Carabobo [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 65
+    prompt_entero_prompts_era2: 95
+    canon_del_mundo: null
+- clave: tuba
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#253 Tuba (E): Aglomeración, montón'
+  solo_E: true
+  esteves:
+    paginas:
+    - 64
+    - 73
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'p. 64: Todariquiba no significaría nada, pero «Tubariquiba» —la forma que él propone en lugar
+      de la de Castellanos— sería ''pedregal'': «Tuba: aglomeración. Quiba: pedruzco»; y Tubarao, «Tuba: montón».
+      p. 73 (apéndice): el «cuar» cumanagoto de Caulín «tiene el mismo significado del tuba de los caquetíos».'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 62
+    suelta: 10
+    compuestos: 52
+    en_la_era_2: 46
+    runs: 16
+    compuestos_mas_usados:
+      tuba-ni: 24
+      tuba-ka: 10
+      tuba-bana: 3
+      tuba-kana: 3
+      ma-tuba: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 72
+    prompt_entero_prompts_era2: 65
+    canon_del_mundo: null
+  nota: La glosa nace de ENMENDAR un nombre atestiguado (Todariquiba, Castellanos 1589) para que dé una etimología.
+- clave: tubarao
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#254 Tubarao (E): Arenales'
+  solo_E: true
+  esteves:
+    paginas:
+    - 64
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Tubarao, p. 64: «significa arenales. Tuba: montón. Rao: arena».'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 6
+    suelta: 6
+    compuestos: 0
+    en_la_era_2: 6
+    runs: 5
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 71
+    prompt_entero_prompts_era2: 76
+    canon_del_mundo: null
+  nota: Es un TOPÓNIMO (lugar cerca de Santa Ana) que el lexicón tiene como voz común.
+- clave: tuturutos
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#264 Tuturutos (E): Hierba de propiedades eméticas. Usado para cuajar quesos'
+  solo_E: true
+  esteves:
+    paginas:
+    - 66
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Tutubacoa (p. 66): «hemos obtenido dos informaciones»; tuturutos, hierba de savia emética que
+      cuaja el queso.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 303: TUTURUTÚ, planta «de Lara y Carabobo» de látex emético [independiente-fuera-del-area]'
+  - 'medina-colina-sxx p. 288: tuturutos (dictado 2026-09-08) [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 84
+    prompt_entero_prompts_era2: 78
+    canon_del_mundo: null
+- clave: ure
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#272 Ure (E): Raíz'
+  solo_E: true
+  esteves:
+    paginas:
+    - 11
+    - 18
+    - 22
+    clase: etimologia-de-toponimo
+    verificado: ocr
+    lo_que_dice: 'Abudure (p. 11: «ure… quiere decir: raíz en nuestra primitiva lengua», y que está en muchos topónimos
+      de Paraguaná) y Babahuro (p. 18, ''el caño de las raíces''). En la p. 22, a propósito de Baraivere, trae el
+      único paralelo que da en todo el libro: el pueblo GUARANÍ «Uretebere» de Cabeza de Vaca, «Ure: raíz; Bere:
+      amargo». En Parte II lo repite en Camurujure (p. 94) y Guaimure (p. 112).'
+  atestaciones_independientes: 0
+  otras:
+  - 'van-buurt-2014 p. §5: -ure «which according to Cruz Esteves (1989) means root» [copia-de-esteves]'
+  - 'oliver-1989-apendice-a p. 593: A-9: bisure lagartija, chaure búho: -ure sobre animales, ni raíz ni lugar [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 19
+    suelta: 0
+    compuestos: 19
+    en_la_era_2: 18
+    runs: 14
+    compuestos_mas_usados:
+      ure-da: 8
+      ure-ni: 5
+      ure-ka: 3
+      ure-ana: 1
+      ure-kana: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 68
+    prompt_entero_prompts_era2: 82
+    canon_del_mundo: null
+  nota: El único apoyo que no es un topónimo es un topónimo guaraní. El conflicto con -are/-ure 'sitio de' (morfema-002)
+    enfrenta, en rigor, a Esteves consigo mismo.
+- clave: wache
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#125 Guache (E+AM): Murciélago, zorro blanco'
+  solo_E: false
+  esteves:
+    paginas:
+    - 39
+    clase: etimologia-de-toponimo
+    verificado: ocr
+    lo_que_dice: 'Guachaco (p. 39): «guache: zorro».'
+  atestaciones_independientes: 1
+  otras:
+  - 'zavala-reyes-2015 p. 68: #125 (AM) [independiente-sigla]'
+  - 'alvarado-1921 p. 145: GUACHE es el coatí (Nasua), no el zorro [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 2
+    suelta: 0
+    compuestos: 2
+    en_la_era_2: 2
+    runs: 2
+    compuestos_mas_usados:
+      ta-wache: 1
+      wa-wache: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 53
+    prompt_entero_prompts_era2: 73
+    canon_del_mundo: null
+- clave: waka
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#123 Guaca (E): Ave, cotorra'
+  solo_E: true
+  esteves:
+    paginas:
+    - 111
+    clase: etimologia-de-toponimo
+    verificado: imagen
+    lo_que_dice: 'Guaca (p. 111), un río del Distrito Silva: «(Guaca: ave, cotorra)».'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 139: GUACA, guacamaya, «Us. en Occ.»; en baré guákka [independiente-verificada]'
+  - 'oliver-1989-apendice-a p. 594: A-9 #39 guaro «cotorra» (otra forma) [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 3
+    suelta: 2
+    compuestos: 1
+    en_la_era_2: 3
+    runs: 2
+    compuestos_mas_usados:
+      ma-waka: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 71
+    prompt_entero_prompts_era2: 54
+    canon_del_mundo:
+      sitios_era2.yaml:voz_caquetia: 1
+  nota: «Occ.» es, en la tabla de Alvarado, Zulia, Falcón, Lara y Yaracuy. El baré es arahuaco.
+- clave: wako
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#126 Guaco (E): Planta herbácea de la familia de las portulacea'
+  solo_E: true
+  esteves:
+    paginas:
+    - 14
+    - 38
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Aguaque (p. 14): viene de guaco, portulácea, pasto codiciado por las cabras.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 142: GUACO es una Aristolochia (otra planta) [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 32
+    suelta: 29
+    compuestos: 3
+    en_la_era_2: 32
+    runs: 18
+    compuestos_mas_usados:
+      ta-wako: 3
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 74
+    prompt_entero_prompts_era2: 65
+    canon_del_mundo: null
+- clave: wamacho
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#134 Guamacho (A+E): Árbol cactáceo'
+  solo_E: false
+  esteves:
+    paginas:
+    - 61
+    - 113
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Supí (p. 61): el guamacho, Pereskia; Guamacho (p. 113): árbol cactáceo.'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 148: GUAMÁCHO, varias Pereskia [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 67
+    prompt_entero_prompts_era2: 85
+    canon_del_mundo: null
+- clave: wanepe
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#137 Guanepe (E): Cesto para cargar a los niños'
+  solo_E: true
+  esteves:
+    paginas:
+    - 39
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Guachunepe, p. 39: viene de guanepe, cesto de fibra para cargar a los recién nacidos.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 152: GUANÉPE, el cabestrillo para los niños «en Barcelona y Guayana» [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 7
+    suelta: 2
+    compuestos: 5
+    en_la_era_2: 7
+    runs: 7
+    compuestos_mas_usados:
+      ta-wanepe: 5
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 77
+    prompt_entero_prompts_era2: 66
+    canon_del_mundo: null
+- clave: warakaro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#138 Guaracaro (E): Tapirama silvestre'
+  solo_E: true
+  esteves:
+    paginas:
+    - 114
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Guaracaro (p. 114): planta anual de grano alimenticio, tapirama silvestre.'
+  atestaciones_independientes: 0
+  otras:
+  - 'alvarado-1921 p. 154: GUARACÁRO «Dolichos lablab», sin localizar [independiente-fuera-del-area]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 13
+    suelta: 3
+    compuestos: 10
+    en_la_era_2: 13
+    runs: 10
+    compuestos_mas_usados:
+      warakaro-ana: 2
+      warakaro-ni: 2
+      warakaro-bacoa: 1
+      warakaro-bacoa-ana: 1
+      warakaro-bana: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 71
+    prompt_entero_prompts_era2: 71
+    canon_del_mundo: null
+- clave: waranao
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#140 Guaranao (E): Salado, ácido'
+  solo_E: true
+  esteves:
+    paginas:
+    - 41
+    clase: no-esta
+    verificado: imagen
+    lo_que_dice: 'La entrada GUARANAO (p. 41) describe la salina de Punta Cardón, la fama de su sal para los ojos
+      (citando a Hill Peña) y la Zona Franca. NO glosa la voz: no dice «salado» ni «ácido». La búsqueda en las dos
+      partes del OCR da la voz sólo en esta página.'
+  atestaciones_independientes: 0
+  otras:
+  - 'arcaya-1920: las salinas «más importantes son las de Guaranao»: el topónimo, sin glosa [forma-sin-glosa]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 152
+    suelta: 14
+    compuestos: 138
+    en_la_era_2: 151
+    runs: 21
+    compuestos_mas_usados:
+      waranao-ni: 31
+      waranao-ima: 29
+      waranao-ka: 27
+      waranao-da: 18
+      ma-waranao: 5
+  exposicion:
+    plantillas_que_la_ensenan: &id002
+    - prompt_reglas_completo
+    plantillas_donde_sale_sin_glosa:
+    - prompt_reglas_breve
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 141
+    prompt_entero_prompts_era2: 410
+    canon_del_mundo: null
+  nota: «Salado, ácido» parece inferido del referente (una salina), por Zavala o por otra obra de Esteves que no
+    está en el repo. Y es la voz que `prompt_reglas_breve` pone de EJEMPLO de verbo estativo a los 63.
+- clave: waranaro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#139 Guaranaro (HB+E): Pez lisa'
+  solo_E: false
+  esteves:
+    paginas:
+    - 41
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Guaranao (p. 41): «Guaranaro es un pez más pequeño que la lisa» — no la lisa.'
+  atestaciones_independientes: 3
+  otras:
+  - 'zavala-reyes-2015 p. 68: #139 (HB) «Pez lisa» [independiente-sigla]'
+  - 'oliver-1989-apendice-a p. 594: A-9 #38 guaranaro «pez lisa» [independiente-verificada]'
+  - 'van-buurt-2014 p. §6: guaranaro, el pescado salado que llega de Paraguaná [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 8
+    suelta: 8
+    compuestos: 0
+    en_la_era_2: 8
+    runs: 7
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 9
+    muestreo_prompts_era2: 77
+    prompt_entero_prompts_era2: 77
+    canon_del_mundo:
+      clima_era2.yaml:voz_caquetia: 1
+      sitios_era2.yaml:voz_caquetia: 3
+- clave: warataro
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#141 Guarataro (E): Barro de loza, para la fábrica de budares y ollas'
+  solo_E: true
+  esteves:
+    paginas:
+    - 41
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Guarataro (p. 41): barro de loza gomoso para budares y ollas; abunda en el lugar.'
+  atestaciones_independientes: 0
+  otras:
+  - 'medina-colina-sxx: la tierra de grano que se une al barro de loza (dictado 2026-09-07) [independiente-fuera-del-area]'
+  - 'alvarado-1921 p. 156: GUARATARO es una gramínea (Eleusine indica) [otro-referente]'
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 75
+    prompt_entero_prompts_era2: 77
+    canon_del_mundo: &id014
+      sitios_era2.yaml:voz_caquetia: 1
+- clave: wariana
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#142 Guariana (E): Arbusto halófilo, frailejón de la playa. Tabaco pescador'
+  solo_E: true
+  esteves:
+    paginas:
+    - 28
+    clase: voz-viva
+    verificado: imagen
+    lo_que_dice: 'Cariguariana (p. 28): guariana, arbusto halófilo, «tabaco pescador».'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-retroabstraido
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 33
+    suelta: 30
+    compuestos: 3
+    en_la_era_2: 32
+    runs: 19
+    compuestos_mas_usados:
+      ta-wariana: 3
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 67
+    prompt_entero_prompts_era2: 71
+    canon_del_mundo: null
+- clave: waru
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#143 Guaru (E): Volturido, cataneja. Ave mayor que el zamuro'
+  solo_E: true
+  esteves:
+    paginas:
+    - 42
+    clase: dice-en-caquetio
+    verificado: imagen (esteves_paginas_releidas_2026-09-16.yaml; la p. 42 está escaneada boca abajo)
+    lo_que_dice: 'Guaruguaja, p. 42: «Guar[a], en caquetío, es el voltúrido que llamamos cunareja, ave mayor que
+      el zamuro». La saca del topónimo, que él lee como plural por duplicación (guaraguara).'
+  atestaciones_independientes: 0
+  otras: null
+  etiqueta_por_opcion:
+    A: caquetío-hipotético
+    B: caquetío-hipotético
+    C: caquetío-atestiguado
+    D: caquetío-hipotético
+  uso_en_la_base:
+    total: 1
+    suelta: 1
+    compuestos: 0
+    en_la_era_2: 1
+    runs: 1
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 61
+    prompt_entero_prompts_era2: 78
+    canon_del_mundo: null
+  nota: 'Zavala escribe «Guaru» y «cataneja»: la cabecera impresa vacila (GUARUGUAJA / Guaraguaja) y «cunareja»
+    se leyó mal. La voz del lexicón hereda la forma de la cabecera, no la del cuerpo.'
+- clave: way
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#147 Guay (E+A): Árbol parecido a la ceiba'
+  solo_E: false
+  esteves:
+    paginas:
+    - 25
+    - 112
+    clase: etimologia-de-toponimo
+    verificado: ocr
+    lo_que_dice: 'Caibacoa (p. 25): «cai es una alteración de guay, árbol parecido a la ceiba».'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 145: GUÁI (el OCR lee «GUÁL»): Bombax, ceiba, «voz usada en Coro» [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 18
+    suelta: 18
+    compuestos: 0
+    en_la_era_2: 18
+    runs: 13
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 67
+    prompt_entero_prompts_era2: 62
+    canon_del_mundo: null
+- clave: yabo
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#278 Yabo (E+A+AM): Cercidium Virid. Arbol resinoso'
+  solo_E: false
+  esteves:
+    paginas:
+    - 43
+    - 67
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Güica (p. 43) y Yauquiba (p. 67): el yabo, árbol resinoso.'
+  atestaciones_independientes: 2
+  otras:
+  - 'alvarado-1921 p. 307: YABO «Cercidium viride» [independiente-sigla]'
+  - 'medina-colina-sxx p. 305: yabo, árbol de madera dura (dictado) [independiente-verificada]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 73
+    prompt_entero_prompts_era2: 54
+    canon_del_mundo:
+      sitios_era2.yaml:voz_caquetia: 1
+- clave: yakure
+  capa_hoy: caquetío-atestiguado
+  zavala:
+  - '#281 Yacure (AM+E): Árbol leguminoso de hojas perennes. Acacia. Sitio de Cabudare'
+  solo_E: false
+  esteves:
+    paginas:
+    - 67
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Yacure (p. 67): árbol leguminoso de hojas perennes, una acacia.'
+  atestaciones_independientes: 2
+  otras:
+  - 'zavala-reyes-2015 p. 72: #281 (AM) [independiente-sigla]'
+  - 'alvarado-1921 p. 308: YACÚRE, Acacia sp. [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-atestiguado
+    B: caquetío-atestiguado
+    C: caquetío-atestiguado
+    D: caquetío-atestiguado
+  uso_en_la_base:
+    total: 7
+    suelta: 7
+    compuestos: 0
+    en_la_era_2: 7
+    runs: 7
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 83
+    prompt_entero_prompts_era2: 74
+    canon_del_mundo: null
+- clave: tukeke
+  capa_hoy: caquetío-retroabstraido
+  zavala:
+  - '#257 Tuqueque (E+A+PMA): Lagarto casero'
+  solo_E: false
+  esteves:
+    paginas:
+    - 136
+    clase: voz-viva
+    verificado: ocr
+    lo_que_dice: 'Tuqueque (p. 136, Parte II): lagarto casero.'
+  atestaciones_independientes: 1
+  otras:
+  - 'alvarado-1921 p. 300: TUQUÉQUE, geco [independiente-sigla]'
+  etiqueta_por_opcion:
+    A: caquetío-retroabstraido
+    B: caquetío-retroabstraido
+    C: caquetío-retroabstraido
+    D: caquetío-retroabstraido
+  uso_en_la_base:
+    total: 0
+    suelta: 0
+    compuestos: 0
+    en_la_era_2: 0
+    runs: 0
+  exposicion:
+    plantillas_que_la_ensenan: null
+    plantillas_donde_sale_sin_glosa: null
+    tu_tierra_bloques_que_la_dicen: 0
+    muestreo_prompts_era2: 69
+    prompt_entero_prompts_era2: 86
+    canon_del_mundo: null
+  nota: 'Ya es retroabstraída desde el reparto del 2026-09-10: no cambia.'
+afijos:
+  -iro:
+    donde: REGLAS_ZAVALA (se enseña)
+    zavala:
+    - '#166 Iro (E): Desinencia que se usa en diminutivo'
+    esteves:
+      paginas:
+      - 88
+      - 104
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Bariro (p. 88): «La desinencia "iro" es diminutivo de voces indígenas»; Coroquidiro (p. 104):
+        «sólo conocemos la desinencia iro, que es diminutivo». Los dos topónimos son de la Parte II (distritos Buchivacoa);
+        dice «voces indígenas», no «caquetío».'
+    atestaciones_independientes: 0
+    copias_de_esteves: 0
+    otras: null
+    etiqueta_por_opcion:
+      A: caquetío-hipotético
+      B: caquetío-hipotético
+      C: se sostiene
+      D: caquetío-hipotético
+    lo_que_dice_hoy_el_motor: 'Zavala Reyes 2015 #166 (E): ''desinencia que se usa en diminutivo'''
+    en_AFIJOS_ATESTIGUADOS: true
+    linea_que_enseña_al_tier_1: '-iro = diminutivo: RAÍZ + -iro  →  X pequeño · dara + -iro = dara-iro (alcaraván
+      pequeño)'
+    caracteres_de_esa_linea: 94
+    en_la_linea_breve_de_los_63: true
+    uso_en_la_base:
+      usos: 408
+      formas: 77
+      mas_usadas:
+        kuri-bana-iro-pabu: 44
+        kali-biro-duna-iro: 42
+        kali-iro-pabu: 42
+        siwato-iro: 39
+        kasuta-iro-kana: 33
+        lumina-bana-iro: 33
+    si_se_retirara_de_TODAS_LAS_REGLAS:
+      formas_que_cambian_de_lengua: 2
+      usos_que_cambian_de_lengua: 34
+      cambios:
+        desconocida→caquetío: 2
+      ejemplos:
+      - '**lumina-bana-iro'
+      - lumina-bana-iro
+      formas_que_cambian_en_la_puerta_de_raiz: 4
+      ejemplos_puerta:
+      - '**lumina-bana-iro'
+      - kali-bana-iro
+      - kali-bana-iro-kana
+      - lumina-bana-iro
+  -uco:
+    donde: REGLAS_ZAVALA (se enseña, con -uto como variante)
+    zavala:
+    - '#268 Uco (E): sufijo. Quebrada, cauce'
+    esteves:
+      paginas:
+      - 31
+      - 51
+      - 57
+      - 61
+      - 66
+      - 83
+      - 128
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Coduto (p. 31): «El sufijo uto y uco, indistintamente lo hemos hallado formando voces compuestas»
+        con el valor de quebrada. Es inducción suya desde Matuto (p. 51), Quibarute (p. 57), Tacaduto (p. 61), Urupaguaduco
+        (p. 66), Acatuto (p. 83) y Quebrahuto (p. 128, «vocablo híbrido de español y caquetío»).'
+    atestaciones_independientes: 0
+    copias_de_esteves: 0
+    otras:
+    - 'van-buurt-2014: cero: ni -uco ni -uto [forma-sin-glosa]'
+    etiqueta_por_opcion:
+      A: caquetío-hipotético
+      B: caquetío-hipotético
+      C: se sostiene
+      D: caquetío-hipotético
+    lo_que_dice_hoy_el_motor: 'Zavala Reyes 2015 #268 (E): ''sufijo. Quebrada, cauce'''
+    en_AFIJOS_ATESTIGUADOS: true
+    linea_que_enseña_al_tier_1: '-uco = cauce: RAÍZ + -uco / -uto  →  cauce de X'
+    caracteres_de_esa_linea: 52
+    en_la_linea_breve_de_los_63: true
+    uso_en_la_base:
+      usos: 303
+      formas: 61
+      mas_usadas:
+        biro-uco: 44
+        biro-uco-aima: 34
+        suka-uco: 28
+        lumina-bana-uco: 24
+        tüshi-uco: 19
+        jagey-uco: 17
+    si_se_retirara_de_TODAS_LAS_REGLAS:
+      formas_que_cambian_de_lengua: 1
+      usos_que_cambian_de_lengua: 24
+      cambios:
+        desconocida→caquetío: 1
+      ejemplos:
+      - lumina-bana-uco
+      formas_que_cambian_en_la_puerta_de_raiz: 1
+      ejemplos_puerta:
+      - lumina-bana-uco
+  -ima:
+    donde: REGLAS_ZAVALA (se enseña)
+    zavala:
+    - '#165 Ima (E+PMA): Desinencia que significa humedad, quebrada'
+    esteves:
+      paginas:
+      - 93
+      - 105
+      clase: dice-en-caquetio
+      lo_que_dice: 'Camachima (p. 93): la desinencia «ima», que significa humedad en caquetío, está en muchos topónimos
+        de los distritos orientales; Curairima (p. 105): «irima: humedad».'
+    atestaciones_independientes: 1
+    copias_de_esteves: 1
+    otras:
+    - 'zavala-reyes-2015: #165 (PMA); en Arcaya 1920 la desinencia da cero: la obra de Arcaya de la que sale no
+      está en el repo [independiente-sigla]'
+    - 'van-buurt-2014: «Caquetío ima, nima means wet, humid (Cruz Esteves, 1989)» [copia-de-esteves]'
+    etiqueta_por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+    lo_que_dice_hoy_el_motor: 'Zavala Reyes 2015 #165 (E+PMA): ''desinencia que significa humedad, quebrada'''
+    en_AFIJOS_ATESTIGUADOS: true
+    linea_que_enseña_al_tier_1: '-ima = humedad / quebrada: RAÍZ + -ima  →  quebrada o lugar húmedo de X'
+    caracteres_de_esa_linea: 76
+    en_la_linea_breve_de_los_63: true
+    uso_en_la_base:
+      usos: 183
+      formas: 38
+      mas_usadas:
+        siwato-bana-ima: 37
+        duna-kari-ima: 29
+        waranao-ima: 29
+        duna-ima: 25
+        barsure-ima: 15
+        ta-barsure-ima: 7
+  dito:
+    donde: AFIJOS_ZAVALA (no se enseña; lo usan los topónimos)
+    zavala:
+    - '#111 Dito (E): Distintivo de los nombres colectivos de abundancia'
+    esteves:
+      paginas:
+      - 31
+      - 41
+      - 46
+      clase: etimologia-de-toponimo
+      lo_que_dice: Cocodite (p. 31, «en lengua indígena»), Guanadito (p. 41, «en caquetío») y Jarayadito (p. 46,
+        colectivo «abundancial»).
+    atestaciones_independientes: 0
+    copias_de_esteves: 0
+    otras: null
+    etiqueta_por_opcion:
+      A: caquetío-hipotético
+      B: caquetío-hipotético
+      C: se sostiene
+      D: caquetío-hipotético
+    lo_que_dice_hoy_el_motor: null
+    en_AFIJOS_ATESTIGUADOS: false
+    uso_en_la_base:
+      usos: 0
+      formas: 0
+      mas_usadas: null
+  -bana:
+    donde: REGLAS_LOCATIVAS (se enseña; D9)
+    zavala:
+    - '#26 Bana (E): Sitio, cerro alto'
+    esteves:
+      paginas:
+      - 26
+      - 28
+      - 31
+      - 32
+      - 36
+      - 47
+      clase: etimologia-de-toponimo
+      lo_que_dice: 'Seis topónimos «Bana: cerro, sitio alto» (Capuhana, Carirubana, Coabana, Cujíbano, Chichibana,
+        Judibana).'
+    atestaciones_independientes: 3
+    copias_de_esteves: 0
+    otras:
+    - 'zavala-reyes-2015: #61 Capubana (HB) «Duende del cerro» [independiente-sigla]'
+    - '—: Guadadubana (González Batista), en la evidencia de D9 (REGLAS_LOCATIVAS) [independiente-sigla]'
+    - 'velasco-2015-resistencia: el Cerro de Capú, en la evidencia de D9 [independiente-verificada]'
+    - 'oliver-1989-apendice-a: A-9 #2 -bana «surrounding» (análisis de Oliver: otra glosa) [otro-referente]'
+    etiqueta_por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+    lo_que_dice_hoy_el_motor: 'D9 (#38), aprobada 2026-08-30: Zavala Reyes 2015 #26 «Bana (E): Sitio, cerro alto»
+      + capu/capubana #60-61 + Guadadubana (González Batista) + el Cerro de Capú (Velasco 2015) + Judibana. ''Orilla''
+      tuvo cero apoyos: la costa atestiguada es kari. Homónimo de bana ''hígado'' (reconstruido). Hasta el 2026-09-13
+      el motor seguía enseñando ''orilla de'''
+    en_AFIJOS_ATESTIGUADOS: false
+    uso_en_la_base:
+      usos: 2900
+      formas: 303
+      mas_usadas:
+        ta-bana: 259
+        kali-bana: 235
+        tüshi-bana: 157
+        pütchi-bana: 62
+        sima-rua-bana: 58
+        karu-bana-ni: 55
+  -bakoa:
+    donde: REGLAS_TOPONIMICAS (se enseña)
+    zavala:
+    - '#18 Bacoa (AM+E): Bosque, lugar, paraje, sitio fértil'
+    esteves:
+      paginas:
+      - 25
+      - 33
+      - 39
+      clase: etimologia-de-toponimo
+      lo_que_dice: Ver `bakoa`.
+    atestaciones_independientes: 2
+    copias_de_esteves: 0
+    otras:
+    - 'zavala-reyes-2015: #18 (AM) [independiente-sigla]'
+    - 'oliver-1989-apendice-a: A-9 #1 adabacoa, Relación de 1579 [independiente-verificada]'
+    etiqueta_por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+    lo_que_dice_hoy_el_motor: '2-lengua/morfemas.yaml morfema-001: adabacoa, guadabacoa, quibacoas, yacarebacoa
+      (Esteves 1989, en grafía de fuente); Alvarado 1921 -baca ''matorral, espesura'' vía van Buurt 2014 §10. El
+      lema fonémico es `bakoa`, voz caquetía atestiguada del lexicón (Zavala Reyes 2015 #18 AM+E)'
+    en_AFIJOS_ATESTIGUADOS: true
+    linea_que_enseña_al_tier_1: '-bakoa = bosque, arboleda, paraje cubierto de: RAÍZ + -bakoa  →  el bosque / la
+      arboleda de X · kuru + -bakoa = kuru-bakoa (la arboleda, el paraje de árboles)'
+    caracteres_de_esa_linea: 163
+    en_la_linea_breve_de_los_63: true
+    uso_en_la_base:
+      usos: 2
+      formas: 2
+      mas_usadas:
+        eroa-bakoa: 1
+        saka-bakoa: 1
+cadena:
+  politica_manda_la_atestiguada:
+  - par: 1
+    glosa: sol
+    archivada: kali
+    manda: kasi
+    capa_de_la_archivada: caquetío-reconstruido
+    deuda_d11_en_su_nota: false
+    por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+  - par: 3
+    glosa: ofrecer
+    archivada: paa
+    manda: were
+    capa_de_la_archivada: caquetío-reconstruido
+    deuda_d11_en_su_nota: false
+    por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+  - par: 4
+    glosa: escuchar
+    archivada: kira
+    manda: jai
+    capa_de_la_archivada: caquetío-reconstruido
+    deuda_d11_en_su_nota: true
+    por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+  - par: 12
+    glosa: luna
+    archivada: kasha
+    manda: kati
+    capa_de_la_archivada: caquetío-reconstruido
+    deuda_d11_en_su_nota: true
+    por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+  - par: 13
+    glosa: mar
+    archivada: habo
+    manda: para
+    capa_de_la_archivada: caquetío-reconstruido
+    deuda_d11_en_su_nota: false
+    por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+  - par: 16
+    glosa: viento
+    archivada: joutai
+    manda: juri
+    capa_de_la_archivada: caquetío-reconstruido
+    deuda_d11_en_su_nota: true
+    por_opcion:
+      A: se cae (caquetío-hipotético)
+      B: se cae (caquetío-hipotético)
+      C: se sostiene
+      D: se cae (caquetío-hipotético)
+  - par: 18
+    glosa: espanto
+    archivada: mülia
+    manda: etamo
+    capa_de_la_archivada: caquetío-hipotético
+    deuda_d11_en_su_nota: false
+    por_opcion:
+      A: se sostiene
+      B: se sostiene
+      C: se sostiene
+      D: se sostiene
+  plantillas_que_ensenan_una_voz_que_cambia_con_B:
+    bara: *id001
+    waranao: *id002
+  canon_del_mundo_que_copia_la_capa_de_una_voz_que_cambia_con_B:
+    huaymujo: *id003
+    jachos: *id004
+    juri: *id005
+    kari: *id006
+    karuka: *id007
+    kaseto: *id008
+    kaujaro: *id009
+    kayude: *id010
+    kunaro: *id011
+    rao: *id012
+    take: *id013
+    warataro: *id014
+  semillas_de_idiolecto_derivadas:
+    A:
+      agentes: 63
+      con_semilla_escrita: 11
+      control_determinista: true
+      semillas_que_cambian: 52
+      semillas_que_llevaban_alguna_de_estas_voces: 22
+    B:
+      agentes: 63
+      con_semilla_escrita: 11
+      control_determinista: true
+      semillas_que_cambian: 52
+      semillas_que_llevaban_alguna_de_estas_voces: 12
+    D:
+      agentes: 63
+      con_semilla_escrita: 11
+      control_determinista: true
+      semillas_que_cambian: 52
+      semillas_que_llevaban_alguna_de_estas_voces: 12
+  formas_seed_escritas_con_una_voz_que_cambia_con_B:
+    bara: 4
+    kunaro: 1
+    naure: 2
+    saruro: 1
+  reglas_cuyo_ejemplo_o_instruccion_usa_una_voz_que_cambia_con_B:
+    -bana:
+    - kari
+    ka-:
+    - juri
+    -bakoa:
+    - bara
+toponimos:
+  a_y_b_en_el_canon: 26
+  con_una_pieza_solo_de_esteves: 6
+  bajan: 4
+  se_quedan: 2
+  control_sin_veredicto: null
+  control_veredicto_sin_marca: null
+  por_toponimo:
+  - id: toponimo-001
+    forma: jurijurebo
+    nivel_hoy: A
+    procedencia: zavala-reyes-2015
+    piezas_solo_de_esteves:
+    - 'ebo (ebo: sólo Esteves)'
+    - 'juri (juri: sólo Esteves)'
+    propuesta: C
+    razon: 'Las dos piezas (juri, ebo) son sólo de Esteves, y la glosa del topónimo también: Zavala #179 (E) «Paso
+      de los vientos» es Esteves p. 47. Lo que no cambia es la ciudad: «Hurehurebo» está en Castellanos (1589) y
+      Esteves reporta cementerio con urnas.'
+  - id: toponimo-004
+    forma: cumarebo
+    nivel_hoy: A
+    procedencia: zavala-reyes-2015
+    piezas_solo_de_esteves:
+    - 'ebo (ebo: sólo Esteves)'
+    propuesta: C
+    razon: 'Zavala #94 (E) «Camino del cacique Cumare» es Esteves p. 105 («el camino del cacique Cumare: paso, senda
+      y cumare, el cacique»). La razón del canon —«segunda atestación independiente de ebo (la otra es jurijurebo)»—
+      cuenta dos veces a Esteves.'
+  - id: toponimo-075
+    forma: judibana
+    nivel_hoy: A
+    procedencia: esteves-1989
+    piezas_solo_de_esteves:
+    - 'judi (juri: sólo Esteves)'
+    propuesta: B
+    razon: 'bana se sostiene sin Esteves (HB, CGB, Velasco); judi/juri no, pero recurre con la misma glosa en tres
+      nombres (Judibana, Jurijurebo, Tura): una pieza independiente más otra sólo de Esteves y recurrente = B.'
+  - id: toponimo-148
+    forma: carirubana
+    nivel_hoy: B
+    procedencia: esteves-1989
+    piezas_solo_de_esteves:
+    - 'cari (kari: sólo Esteves)'
+    propuesta: C
+    razon: 'Ya era B por el residuo -ru-; ahora además cari es sólo de Esteves (dos nombres de la misma página).
+      Las dos debilidades a la vez: C. (La glosa sí es de fuente —p. 28—, contra lo que dice el canon: corrección
+      del lote del 2026-09-22.)'
+  - id: toponimo-076
+    forma: abudure
+    nivel_hoy: B
+    procedencia: esteves-1989
+    piezas_solo_de_esteves:
+    - 'ure (ure: sólo Esteves)'
+    propuesta: B
+    razon: 'dabuda se sostiene (HB); ure es sólo de Esteves pero recurre (Abudure, Babahuro): B, como estaba.'
+  - id: toponimo-086
+    forma: buchuhaco
+    nivel_hoy: B
+    procedencia: esteves-1989
+    piezas_solo_de_esteves:
+    - 'aco (ako: la acepción «par, dos» es sólo de Esteves)'
+    propuesta: B
+    razon: 'buche se sostiene (AM, Alvarado); «aco: par» es sólo de Esteves y recurre (Buchuhaco, Guachaco, Michaco):
+      B, como estaba.'

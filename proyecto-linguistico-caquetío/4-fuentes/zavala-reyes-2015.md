@@ -10,9 +10,9 @@ paginas: 20
 capa_texto: si
 acceso: "Libre — Academia.edu: https://www.academia.edu/14657955/Palabras_vivas_de_una_lengua_muerta_Legado_arawak_caquetio · ficha SABER-ULA: http://www.saber.ula.ve/handle/123456789/40730. Verificado en el rastreo de 2026-08-14."
 estado_minado: completo-con-reserva  # 2026-08-31, decision #101: el #29 (bara) no se habia levantado; auditoria entrada-por-entrada pendiente
-cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño + las 288 glosas VERBATIM clasificadas por tipo semántico en la campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21)"
+cobertura: "288/288 entradas parseadas (100%); 225 en el habla activa (78%), 63 fuera por diseño + las 288 glosas VERBATIM clasificadas por tipo semántico en la campaña del nominalizador (2026-09-21) + la campaña de `-gua` (2026-09-21) + las entradas con sigla E cotejadas con Esteves 1989 (cc.4, 2026-09-23)"
 prioridad: alta
-minado: 2026-09-21
+minado: 2026-09-23
 tareas: []
 sostiene: {hechos_corpus: 7, entradas_lexicon: 164, citas_recuperadas_82: 62}
 verificado: 2026-08-03
@@ -462,6 +462,26 @@ decisión del 2026-09-19 de no fusionar `parawa`/`para`.
 Clasificación moderna de segunda mano; se cita como tal para etnia-002.
 
 Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
+---
+
+## Bitácora — la sigla (E) (2026-09-23, cc.4)
+
+**Qué se preguntó.** Qué entradas del glosario llevan la sigla E (Juan
+Esteves, p. 64) y cuánto del lexicón atestiguado descansa sólo en ella.
+
+**Qué dio.** Las glosas (E) son las de Esteves 1989, casi palabra por palabra
+(«Guaru… ave mayor que el zamuro» es su p. 42), aunque Zavala no lo pone en la
+bibliografía. Cuando el canon cita «Zavala #N (E)» y «Esteves» cita una sola
+fuente. Dos erratas de transmisión: «Guaru» y «cataneja» por el «guara» y la
+«cunareja» de Esteves; y #140 Guaranao «Salado, ácido» no está en la entrada
+de Esteves (p. 41). Las cifras —entradas con E, sólo E, voces del lexicón—
+están en `6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml`; las opciones, en
+`6-fusion/issues-pendientes/sigla-E-zavala-canon-2026-09-23.md`.
+
+**Qué queda.** La misma pregunta para la sigla A (Alvarado está en el repo y a
+veces localiza la voz fuera del área) y para HP (Hill Peña, a quien Esteves
+cita).
 
 ## Enlaces
 

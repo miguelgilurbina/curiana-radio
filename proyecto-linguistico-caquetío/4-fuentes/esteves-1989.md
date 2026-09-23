@@ -1601,6 +1601,39 @@ esta nota no aguanta. Toca toponimo-082.
 
 Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
 
+---
+
+## Bitácora — la sigla (E) de Zavala, leída en el libro (2026-09-23, cc.4)
+
+**Qué se preguntó.** Para cada voz y afijo del canon que descansa en «Zavala
+(E)»: qué dice Esteves de verdad, en qué página, si lo toma de otro o es
+etimología suya de un topónimo, y qué otra fuente le queda.
+
+**Qué dio.** Las (E) de Zavala son Esteves 1989 frase por frase (Guaru p. 42,
+Iguí p. 117, Dividive p. 110, Caujaro p. 100, Tuturutos p. 66, Ima p. 93, Iro
+p. 88, Uco p. 31). De las voces que el lexicón da por atestiguadas sólo por
+(E), la mayoría son o etimología de un topónimo (`juri`, `kari`, `ure`,
+`tuba`, `rao`, `siwa`) o el nombre vivo de una planta o un animal de la
+península cuya filiación caquetía es de Esteves (`kaseto`, `tauta`,
+`tuturutos`…). Esta ficha ya lo decía: *etimología sin cita → hipotético*; el
+canon lo aplicaba a Esteves por su nombre y no por su sigla. Hallazgos que
+corrigen algo: GUARANAO (p. 41) **no glosa** la voz, así que `waranao` 'salado,
+ácido' no sale de aquí; el único paralelo de `ure` 'raíz' fuera de sus
+topónimos es guaraní (p. 22); `tuba` sale de enmendar Todariquiba a
+«Tubariquiba» (p. 64); `rao` es 'arena' en la p. 64 y 'aglomeración' en la 92;
+`-iro` es «diminutivo de voces indígenas» (pp. 88, 104), no caquetío; `jachos`
+va entre comillas y es, casi seguro, el castellano «hacho».
+
+**Cómo se lee, corregido.** El desfase no es constante en los tomos 4 y 6: +72
+hasta el pdf 9 del tomo 4 y +73 desde el pdf 10 (falta la p. 82, blanca); +129
+hasta el pdf 14 del tomo 6 y +130 desde el 15 (falta la 144). Medido en el pie
+de las páginas vistas.
+
+Lectura: `6-fusion/sigla_E_zavala_lectura_2026-09-23.yaml`. Medición:
+`6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml` (la escribe
+`6-fusion/scripts/medir_sigla_E_zavala.py`). Opciones para Miguel:
+`6-fusion/issues-pendientes/sigla-E-zavala-canon-2026-09-23.md`.
+
 ## Enlaces
 
 [[INDICE_FUENTES]] · [[arcaya-1920]] · [[zavala-reyes-2015]] · [[toponimia]] · [[esfera-de-interaccion]] · [[mapa-ecologia]]

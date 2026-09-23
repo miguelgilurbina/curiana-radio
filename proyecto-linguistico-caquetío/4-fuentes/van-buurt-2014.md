@@ -10,9 +10,9 @@ paginas: 48
 capa_texto: si
 acceso: "Libre — PDF completo: https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21) + los nombres de fauna de tierra y la onomatopeya `dori` (FA1, 2026-09-22)"
+cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21) + los nombres de fauna de tierra y la onomatopeya `dori` (FA1, 2026-09-22) + qué glosas toma de Esteves 1989 (sigla E, cc.4, 2026-09-23)"
 prioridad: alta
-minado: 2026-09-21
+minado: 2026-09-23
 tareas: [F1]
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0, citas_recuperadas_82: 8, reclasificadas_abajo_82: 3}
 propone: {s6_A: 29, s6_B: 53, s6_C: 3, s11_C: 29, toponimos: 180, morfemas: 19}
@@ -337,6 +337,31 @@ corredores *Cnemidophorus*; `waltaca` (p. 37) y `totèki`, `kaku` (p. 46), los
 página = el que abre cada página en el `.txt`. Lo usa
 `6-fusion/fauna_paraguana_tierra_2026-09-22.yaml`.
 
+## Bitácora — lo que van Buurt toma de Esteves (2026-09-23, cc.4)
+
+⚠️ **No es independiente de Esteves 1989 en cuatro glosas, y probablemente en
+una quinta.** Escribe «(Cruz
+Esteves, 1989)» detrás de `-ure` 'root' (§5), `juri/judi/hudi` 'wind'
+(Hudishibana), `cari` 'coast' (Cariatavo) e `ima/nima` 'wet, humid' (Onima), y
+«bara means tree» va en el párrafo de `-ure`. El canon las contaba como
+segunda fuente (la nota de `bara`, la de `kari`, el conflicto de `-ure` en
+`morfemas.yaml`, la razón de *alaurima* en `lexicon_toponimos.py`): son una.
+Lo propio de van Buurt —los nombres papiamentos, `kiwa`, `guaranaro`,
+`caujaro`— sí es suyo. Detalle: `6-fusion/sigla_E_zavala_lectura_2026-09-23.yaml`.
+
 ## Enlaces
 
 [[gatschet-1885]] · [[alvarado-1921]] · [[zavala-reyes-2015]] · [[oliver-1989-cap2]] · [[02_protocolo_habla_paraguanera]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Relectura de §3, §6, §8 y §11 buscando fauna marina (páginas impresas
+medidas por el pie de imprenta del PDF). Dio: el comercio de marisco vivo con
+las islas (p. 17); `kiwa` = *Cittarium pica* y cigua en Cuba (p. 32); `kasha
+kutu`, la cuna tigre (p. 32); `macabí`/`makambí` y el 5,2 % de Tanki Flip
+(p. 33); `palúli` (pp. 34-35); `sawáwa` «un tren de olas» (p. 35);
+`waranawa`, la lisa salada de Paraguaná, `warashi` y `wampanaria`, el abanico
+de mar que servía de cedazo (p. 37); Balashi con la raíz *bala* «mar» (p. 41);
+el 13,7 % de *warashi* en Tanki Flip (p. 43); `guengu`, `karawau`, `djakarou`
+en §11 (p. 45); `bushi` también para los erizos (p. 29). Todo en
+`6-fusion/fauna_paraguana_mar_2026-09-22.yaml`.

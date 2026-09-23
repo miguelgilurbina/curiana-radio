@@ -184,3 +184,11 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 ## Enlaces
 
 [[oviedo-y-valdes-1851]] · [[zavala-reyes-2015]] · [[oliver-1989-cap3]] · [[antczak-2017-cariban]] · [[mapa-ecologia]] · [[05_geografia_politica_y_sucesion]]
+
+---
+
+## Bitácora: sin etimología de Coro (2026-09-23, cc.6)
+
+Barrido de «Coro» junto a viento/latín/cauro: un solo caso, los vientos
+contrarios que impiden a Carvajal «coger a Coro». Oviedo y Baños no trae la
+lectura 'viento'. Es de Castellanos. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §coro.

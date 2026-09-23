@@ -126,3 +126,22 @@ un nombre único.**
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[perea-alonso-1942]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Se le preguntó por el mar en la cosmovisión arahuaca. **p. 18**: el mito de
+Orehu, el espíritu de las aguas, que sale de las olas y le da a Arawanili la
+maraca del piache (lokono de Guayana, s. XIX; Brinton no dice de qué misionero
+lo toma). Va como comparanda —no como dato caquetío— en
+`6-fusion/fauna_paraguana_mar_2026-09-22.yaml` §cosmovision_marina (cm-c1).
+Nada de fauna marina con nombre.
+
+---
+
+## Bitácora: Brinton escribe *cohoba*, no *cohiba* (2026-09-23, cc.7)
+
+p. 12, «Cohóba, the native name of tobacco»; p. 13, «Tabaco, the pipe used in
+smoking the cohoba» (texto del repo y `6-fusion/taino_brinton_1871.yaml`). La
+nota del lexicón que atribuye `cohiba` a Brinton cita mal la forma. ✅
+Verificado en imagen (pdf 20 = p. 12; pdf 21 = p. 13), sobre el PDF que
+repuso #204: la rama de la tanda de la base lo tenía vacío. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.

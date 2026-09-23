@@ -210,3 +210,22 @@ marco de [[esfera-de-interaccion]] escrito en 1559.
   voces con página exacta, 8 pasajes, 9 instituciones y 6 fichas de
   contacto. Antes de dar por agotado a un cronista, mirar **qué obra
   suya** se le preguntó.
+
+---
+
+## Bitácora: manatí, tabacos y cohoba (2026-09-23, cc.7)
+
+Tres pasajes, ✅ vistos en imagen (impresa = pdf − 14 con el pdf contado desde
+1):
+
+- **p. 27** (cap. X): «á la boca de los rios, entre el agua salada y dulce,
+  los que llamaban los indios *manatíes*, la penúltima sílaba luenga». Es la
+  cita de Zayas t. II p. 178, y contradice a Oviedo t. I p. 434, que dice que
+  el nombre lo pusieron los cristianos.
+- **p. 181**: el rollo de hojas, «y estos mosquetes llamaban *tabacos*, la
+  media sílaba luenga». Es el rollo encendido, no la yerba de dentro.
+- **p. 445**: «Estos polvos y estas cerimonias ó actos se llamaban *cohoba*,
+  la media sílaba luenga, en su lenguaje»; y **p. 446**, «Yo los vi algunas
+  veces celebrar su cohoba». La cohoba es el polvo y el rito, no el tabaco.
+
+Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
