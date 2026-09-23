@@ -1020,6 +1020,69 @@ SIG_CURADO: dict[str, dict] = {
 }
 
 
+# ── LA CAPA CURADA (`fuente`), una a una y con su razón ──────────────
+# Hasta el 2026-09-23 toda entrada del vocabulario activo salía
+# `caquetío-atestiguado` por el solo hecho de estar en el glosario. Pero
+# Zavala es una COMPILACIÓN de nueve autores (ver el CAVEAT DE MÉTODO del
+# módulo), y lo que atestigua cada entrada es lo que atestigua su fuente, no
+# el glosario. Esta tabla es la excepción declarada: la capa (o la lengua)
+# que la entrada lleva cuando su fuente, leída, no la sostiene como caquetía
+# atestiguada. `glosa_fuente` y `sig` no se tocan: cambia sólo `fuente`, y
+# la razón viaja en `notas`.
+#
+# La clave es la GRAFÍA DE ZAVALA, como en CLASE_DE_LA_RAIZ y SIG_CURADO.
+# Cada fila: `fuente` (un valor de curiana_lexicon.FUENTES_CANONICAS),
+# `decision` (quién y cuándo) y `por` (qué dice la fuente, con página).
+FUENTE_CURADA: dict[str, dict] = {
+    # ── tf.0 (2026-09-23): los pemenos, no los caquetíos ──
+    # La trampa de `datihao` (db.2) otra vez: la marca «(Lengua de
+    # Venezuela.)» es del glosario que el editor añadió al t. IV de Oviedo, y
+    # en el CUERPO (t. II pp. 286 y 294, verificado en imagen) el calabazo de
+    # la cal es de los PEMENOS del sur de la laguna de Maracaibo. La etiqueta
+    # es `caribe-pemeno`: la lengua de los pemenos, que el canon da como
+    # caribe (3-mundo/etnias.yaml etnia-006, con su aviso: la filiación es
+    # inferencia de Oliver 1989 pp. 226-228 por los topónimos en -goto y
+    # porque «hablan como los bubures»). `normalize_source_language` la
+    # resuelve a `caribe-continental`, que es esfera de contacto («los del
+    # lago»): préstamo medido aparte, sin penalizar. Una etiqueta sin
+    # «caribe» caería en el `return "proto-arahuaco"` por defecto y la
+    # declararía arahuaca, que es justo lo que no se sabe.
+    "baperon": {
+        "fuente": "caribe-pemeno",
+        "decision": "tf.0, 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)",
+        "por": "Oviedo y Valdés t. II lib. XXV caps. V y VI (Francisco Martín, "
+               "el soldado de Alfínger que vivió como indio; verificado en "
+               "imagen). p. 286: «la boca llena de hayo […] é su baperon: este "
+               "es un calabaço en que traen los indios çierta manera de cal; "
+               "para quitar la hambre, chupándola»; p. 294: «toda aquella "
+               "tierra es poblada de indios pemenos». La marca «(Lengua de Venezuela.)» es del "
+               "glosario del editor (t. IV, «Baperon y Baperoni»), no de Oviedo: "
+               "la trampa de `datihao` (db.2). Es la fuente del BAPÓRON de "
+               "Alvarado 1921 p. 20. Pemeno = caribe según el canon "
+               "(3-mundo/etnias.yaml etnia-006, filiación inferida por Oliver "
+               "1989 pp. 226-228). Detalle en "
+               "6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml "
+               "§poporo.pasajes.pp-7 y §visto_de_paso.vp-baperon",
+    },
+    "raporon": {
+        "fuente": "caribe-pemeno",
+        "decision": "tf.0, 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)",
+        "por": "Oviedo y Valdés t. II lib. XXV caps. V y VI, p. 294 (verificado "
+               "en imagen), entre los pemenos del sur de la laguna de Maracaibo: "
+               "«salió con sus armas de indio, que eran el arco y las flechas é "
+               "dardos é su raporon é hayo […] y el baporon es el calabaço de "
+               "la cal para quitar la hambre». Gemela de `baperon` en la misma "
+               "página; el glosario del editor del t. IV la remite allí "
+               "(«Rapürün [Raporon]: Vide Baperon») con la marca «(Lengua de "
+               "Venezuela.)», que no es de Oviedo: la trampa de `datihao` "
+               "(db.2). Pemeno = caribe según el canon (3-mundo/etnias.yaml "
+               "etnia-006). Detalle en "
+               "6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml "
+               "§poporo.pasajes.pp-7 y §visto_de_paso.vp-baperon",
+    },
+}
+
+
 def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     origen = norm(e["lemas"][0])
     forma = e.get("lema_final", origen)      # Fase 2 de D5: lema fonémico
@@ -1045,6 +1108,13 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     if curado:
         nota += ("; GLOSA CURADA (`sig`, no `glosa_fuente`): "
                  + " ".join(str(curado["por"]).split()))
+    # La capa: `caquetío-atestiguado` salvo excepción declarada en FUENTE_CURADA.
+    capa = FUENTE_CURADA.get(origen)
+    fuente = capa["fuente"] if capa else "caquetío-atestiguado"
+    if capa:
+        por = " ".join(str(capa["por"]).split()).replace('"', "'")
+        nota += (f"; CAPA CURADA [{capa['decision']}]: era `caquetío-atestiguado`, "
+                 f"pasa a `{fuente}`. {por}")
     cat, _clase, _por = clase_de(origen, tier)
     pad = " " * max(1, 14 - len(forma))
     # D7: la glosa de la fuente se conserva verbatim y trazable; la
@@ -1056,7 +1126,7 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     if moderna:
         extra += f' "identificacion_moderna": "{moderna.replace(chr(34), chr(39))}",'
     return (f'{indent}"{forma}":{pad}{{"sig": "{sig}", "cat": "{cat}", '
-            f'"fuente": "caquetío-atestiguado",{extra} "notas": "{nota}"}},')
+            f'"fuente": "{fuente}",{extra} "notas": "{nota}"}},')
 
 
 def generar_modulo(tiers: dict, ruta: str):

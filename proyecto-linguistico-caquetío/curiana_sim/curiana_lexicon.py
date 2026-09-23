@@ -9483,6 +9483,16 @@ FUENTES_CANONICAS = frozenset({
     "achagua",   # D11 fase 2 (#121), 2026-09-13: Neira y Ribero 1762 vía lexicon_achagua.py
     "jirajaroide", "proto-arahuaco",
     "caribe-cháima", "caribe-cumanagoto", "español-colonial",
+    # tf.0 (2026-09-23): la lengua de los PEMENOS del sur de la laguna de
+    # Maracaibo, de donde son `baperon` y `raporon` en el cuerpo de Oviedo
+    # (t. II pp. 286 y 294); «(Lengua de Venezuela)» era del editor, como en
+    # `datihao` (db.2). El canon la da como caribe (3-mundo/etnias.yaml
+    # etnia-006, filiación inferida por Oliver 1989 pp. 226-228), y con
+    # «caribe» en el nombre `normalize_source_language` la resuelve a
+    # `caribe-continental`: esfera de contacto, préstamo que no penaliza. Sin
+    # él caería en el `return "proto-arahuaco"` por defecto. Lo aplica el
+    # generador (minar_zavala_glosario.FUENTE_CURADA), no una entrada a mano.
+    "caribe-pemeno",
 })
 
 

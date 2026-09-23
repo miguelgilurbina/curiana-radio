@@ -190,9 +190,17 @@ def test_la_glosa_verbatim_de_la_fuente_sigue_entera():
 
 
 def test_la_capa_epistemica_no_se_movio():
-    for forma in CLASES_DE_RAIZ_ZAVALA:
-        assert GLOSARIO_ZAVALA[forma]["fuente"] == "caquetío-atestiguado", (
-            f"`{forma}` cambió de capa: esto era una corrección de `cat`")
+    """La corrección de `cat` no movió ninguna capa. Desde el 2026-09-23 la
+    capa SÍ se mueve en algunas de estas raíces, pero por otra decisión y por
+    otra puerta: `M.FUENTE_CURADA` (tf.0, los pemenos de `baperon`/`raporon`;
+    cc.4, la sigla (E) de Zavala es Esteves). Lo que este test sigue vigilando
+    es que ninguna capa cambie SIN fila declarada en esa tabla."""
+    for forma, fila in CLASES_DE_RAIZ_ZAVALA.items():
+        curada = M.FUENTE_CURADA.get(fila["forma_zavala"])
+        esperada = curada["fuente"] if curada else "caquetío-atestiguado"
+        assert GLOSARIO_ZAVALA[forma]["fuente"] == esperada, (
+            f"`{forma}` cambió de capa sin fila en FUENTE_CURADA: esto era una "
+            "corrección de `cat`")
 
 
 def test_las_49_siguen_en_el_vocabulario_activo():

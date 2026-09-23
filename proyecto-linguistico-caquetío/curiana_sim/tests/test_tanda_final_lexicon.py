@@ -150,3 +150,36 @@ def test_a_daca_tiene_un_solo_testigo_de_la_frase():
     assert "Todo esto refiere fray Ramón" in e["notas"]
     assert "Goeje 1939 p. 17" in e["notas"] and "Esquivel" in e["notas"]
     assert "sin identificar" in e["notas"]
+
+
+# ══════════════════════════════════════════════════════════════════════
+# B · `baperon` y `raporon` → los pemenos (tf.0, como `datihao` en db.2)
+# ══════════════════════════════════════════════════════════════════════
+
+def test_b_baperon_y_raporon_son_de_los_pemenos_y_los_aplica_el_generador():
+    """El cuerpo de Oviedo (t. II pp. 286 y 294) los pone entre los pemenos
+    del sur de la laguna; «(Lengua de Venezuela)» es del editor. La etiqueta
+    la escribe el generador (`FUENTE_CURADA`), nunca una mano sobre el módulo
+    generado."""
+    import lexicon_zavala as Z
+    import minar_zavala_glosario as M
+
+    assert "caribe-pemeno" in L.FUENTES_CANONICAS
+    for voz in ("baperon", "raporon"):
+        assert M.FUENTE_CURADA[voz]["fuente"] == "caribe-pemeno"
+        assert Z.GLOSARIO_ZAVALA[voz]["fuente"] == "caribe-pemeno"
+        e = VOCABULARIO_BASE[voz]
+        assert e["fuente"] == "caribe-pemeno"
+        assert _sig(voz) == "calabaza con cal", "la glosa no se toca"
+        assert "pemenos" in e["notas"] and "p. 294" in e["notas"]
+        assert "datihao" in e["notas"]
+        # con «caribe» en el nombre la resuelve el motor sin tocarlo: esfera
+        # de contacto (no penaliza, se mide aparte) y NO proto-arahuaco, que
+        # es lo que habría dicho el `return` por defecto de una etiqueta nueva
+        assert normalize_source_language(e["fuente"]) == "caribe-continental"
+        assert normalize_source_language(e["fuente"]) in L.ESFERA_DE_CONTACTO
+    assert normalize_source_language("pemeno") == "proto-arahuaco"
+    r = score_linguistico("taya baperon wana-ka yama", LexicoComunitario())
+    assert r["prestamos_de_esfera"] == ["baperon"]
+    assert "baperon" not in r["palabras_caquetias"]
+    assert r["otro_arahuaco"] == 0
