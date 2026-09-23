@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 88
-  en_repo: 59
-  solo_citadas: 29
+  obras: 94
+  en_repo: 64
+  solo_citadas: 30
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -172,6 +172,23 @@ obras:
   - Erythrina en Venezuela
   - avendano-castillo-2014-erythrina
   en_repo: true
+- id: aves-punteros-web-2026
+  obra: 'Punteros web de la campaña de aves: páginas de Wikipedia que remiten a Birds of the World, xeno-canto
+    y Ferrer-Paris et al. 2014'
+  autor: 'Wikipedia en inglés y en español (colaborativa); fuentes primarias citadas por ellas: Brewer
+    2020 y Burger 2020 (Birds of the World, Cornell Lab of Ornithology), xeno-canto XC220411, Ferrer-Paris
+    et al. 2014, Rojas-Suárez 2014'
+  anio: 2014-2026
+  publicacion: Wikipedia en «Vermilion cardinal», «Venezuelan troupial», «Laughing gull», «Grey plover»;
+    Wikipedia es «Amazona barbadensis»; consultadas el 2026-09-22
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea (Wikipedia). Las primarias: Birds of the World es de pago y NO se abrió; xeno-canto
+    XC220411 no se abrió; Ferrer-Paris et al. 2014, Biological Conservation 173: 133-143, no se abrió'
+  aliases:
+  - punteros web aves
+  - aves-punteros-web-2026
+  en_repo: false
 - id: bachiller-morales-1883
   obra: Cuba primitiva. Origen, lenguas, tradiciones e historia de los indios de las Antillas Mayores
     y las Lucayas
@@ -196,6 +213,21 @@ obras:
   - Ballesteros 1550
   - Obispo Ballesteros
   - Miguel Gerónimo de Ballesteros
+  en_repo: false
+- id: bisbal-1990
+  obra: Inventario preliminar de la fauna del Cerro Santa Ana (Península de Paraguaná, estado Falcón,
+    Venezuela)
+  autor: Bisbal, Francisco J.
+  anio: 1990
+  publicacion: 'Acta Científica Venezolana 41(3): 177-185. Leído POR INTERMEDIARIO: la lista de aves que
+    reproduce Wikipedia es, «Vertebrados terrestres del Cerro Santa Ana (Paraguaná)», consultada el 2026-09-22'
+  genero: inventario
+  paginas: 177-185 (no leídas)
+  acceso: 'El artículo original no se localizó en acceso abierto en esta sesión. Puntero: https://es.wikipedia.org/wiki/Vertebrados_terrestres_del_Cerro_Santa_Ana_(Paraguan%C3%A1)'
+  aliases:
+  - Bisbal 1990
+  - Inventario preliminar de la fauna del Cerro Santa Ana
+  - bisbal-1990
   en_repo: false
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
@@ -252,17 +284,20 @@ obras:
   anio: 2024
   publicacion: Geoarchaeology 39(6), pp. 609-627. doi:10.1002/gea.22017
   genero: arqueometria
+  local:
+  - fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.pdf
+  - fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.txt
   paginas: 19
-  acceso: '🔴 **Acceso abierto CC-BY 4.0** (confirmado en el registro Crossref: licencia `creativecommons.org/licenses/by/4.0/`
-    sobre la versión de registro), pero **Wiley devuelve 403 a la descarga automática**, y también a la
-    lectura del HTML. Verificado el 2026-09-22. URL del PDF: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/gea.22017
-    Lo único que se pudo leer es el **resumen**, vía la API de Crossref. Por la skill `minar-fuente` §3
-    eso NO es minar, y todo lo que esta nota diga de la obra queda degradado a `hipotetico` hasta que
-    alguien la abra de verdad (basta con un navegador).'
+  acceso: 'Acceso abierto CC-BY 4.0. Wiley está detrás de una verificación antibots (Cloudflare) y no
+    se forzó; la versión PUBLICADA se bajó el 2026-09-22 del repositorio de la KU Leuven (Lirias), por
+    su API DSpace: https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content
+    (registro: https://lirias.kuleuven.be/handle/20.500.12942/746055). Licencia CC-BY 4.0 en los metadatos
+    del archivo y en la p. 1 del artículo. El md5 coincide con el del repositorio; tamaño y sha256 los
+    imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.'
   aliases:
   - Casale et al. 2024
   - petrografía Aruba
-  en_repo: false
+  en_repo: true
 - id: castellanos-elegias
   obra: Elegías de varones ilustres de Indias (partes I-III)
   autor: Castellanos, Juan de
@@ -424,6 +459,44 @@ obras:
   - Pinart 1882
   - The Aruba Language
   en_repo: true
+- id: gbif-aves-paraguana-2026
+  obra: Registros de aves de la península de Paraguaná en GBIF (eBird, xeno-canto, iNaturalist y colecciones
+    de museo), consulta del 2026-09-22
+  autor: GBIF.org; Cornell Lab of Ornithology (EOD – eBird Observation Dataset); Xeno-canto Foundation;
+    iNaturalist; MNHN, MCZ, FMNH, UMMZ
+  anio: 1896-2026
+  publicacion: 'API abierta de GBIF, https://api.gbif.org/v1/occurrence/search?classKey=212&decimalLatitude=11.5,12.22&decimalLongitude=-70.32,-69.78
+    — cada dataset con su DOI y su licencia en 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (eBird:
+    doi 10.15468/aomfnb, CC BY 4.0; xeno-canto: doi 10.15468/qv0ksn, CC BY-NC 4.0; iNaturalist: doi 10.15468/ab3s5x,
+    CC BY-NC 4.0)'
+  genero: datos
+  local:
+  - 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (medición, no descarga)
+  paginas: — (datos)
+  acceso: Libre en línea, sin clave. Reproducible con python 6-fusion/scripts/medir_gbif_aves_paraguana.py
+  aliases:
+  - GBIF aves Paraguaná
+  - eBird Paraguaná
+  - gbif-aves-paraguana-2026
+  en_repo: true
+- id: gbif-paraguana-2026
+  obra: GBIF — ocurrencias de fauna de tierra en el polígono de la península de Paraguaná y el istmo de
+    los Médanos (consulta por API)
+  autor: GBIF.org (Global Biodiversity Information Facility) y los conjuntos de datos que publica
+  anio: 2026
+  publicacion: API pública https://api.gbif.org/v1/occurrence/search con facetas, consultada el 2026-09-22;
+    sin descarga (una descarga pide cuenta), así que sin DOI de descarga
+  genero: datos
+  local:
+  - 6-fusion/gbif_fauna_tierra_paraguana_2026-09-22.yaml (generado por 6-fusion/scripts/gbif_fauna_tierra_paraguana.py)
+  paginas: — (datos)
+  acceso: Libre; cada conjunto de datos tiene su licencia (CC0, CC BY o CC BY-NC), listada en el archivo
+    generado
+  aliases:
+  - GBIF Paraguaná
+  - GBIF 2026
+  - gbif-paraguana
+  en_repo: true
 - id: gilij-1780-1783
   obra: Saggio di Storia Americana, vols. 1, 3 y 4
   autor: Gilij, Filippo Salvatore
@@ -582,15 +655,19 @@ obras:
   anio: 2021
   publicacion: Journal of Archaeological Science 135, 105466. doi:10.1016/j.jas.2021.105466
   genero: arqueometria
-  paginas: 17
-  acceso: '🔴 **Acceso abierto CC-BY** según OpenAlex, pero **Elsevier devuelve 403 a la descarga automática**
-    (https://www.sciencedirect.com/science/article/pii/S0305440321001369/pdf). Verificado el 2026-09-22.
-    Con un navegador debería abrirse sin más: es abierto, no de pago. Copia también en el repositorio
-    institucional de Leiden (NEXUS 1492) y en ResearchGate.'
+  local:
+  - fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.pdf
+  - fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.txt
+  paginas: 15
+  acceso: 'Acceso abierto CC-BY 4.0. Elsevier devuelve 403 y Leiden y el CSIC bloquean con un sistema
+    de protección (no se forzó ninguno); la versión PUBLICADA se bajó el 2026-09-22 de la Research Collection
+    de la ETH Zürich, por su API DSpace: https://www.research-collection.ethz.ch/server/api/core/bitstreams/a2e8fcb5-1e72-4301-9aee-1676ff7053c0/content
+    (registro: https://doi.org/10.3929/ethz-b-000504053, dc.rights CC-BY 4.0). La ETH antepone una portada:
+    página impresa = página del PDF − 1. Tamaño y sha256 los imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.'
   aliases:
   - Knaf et al. 2021
   - jade Sr-Nd-Pb
-  en_repo: false
+  en_repo: true
 - id: laguna-guaranao-parque
   obra: Parque metropolitano Laguna de Guaranao — entrada enciclopédica
   autor: Wikipedia en español (colaborativa)
@@ -631,6 +708,24 @@ obras:
   - NBAE 13
   - Historiadores de Indias tomo I
   en_repo: true
+- id: libro-rojo-fauna-venezolana-2015
+  obra: Libro Rojo de la Fauna Venezolana, 4.ª edición — fichas en línea
+  autor: Rodríguez, J. P.; García-Rawlins, A.; Rojas-Suárez, F. (eds.); fichas de Colmenares, P.; Gutiérrez,
+    E. E., Ochoa-G., J. y Sánchez-Hernández, J.; Molina, C., Rojas-Runjaic, F. J. M. y Rivas, G. A.; y
+    otros
+  anio: 2015
+  publicacion: Provita y Fundación Empresas Polar, Caracas; fichas en www.especiesamenazadas.org
+  genero: datos
+  paginas: — (páginas web)
+  acceso: 'Libre en línea, © Provita. especiesamenazadas.org rechazó la conexión directa el 2026-09-22;
+    se leyeron las copias de archive.org (web.archive.org/web/2024id_/…). Obra con derechos: citas cortas
+    y paráfrasis'
+  aliases:
+  - Libro Rojo 2015
+  - Libro Rojo de la Fauna Venezolana
+  - especiesamenazadas.org
+  - Colmenares 2015
+  en_repo: false
 - id: maria-lionza-culto
   obra: Bibliografía del culto de María Lionza — Ferrándiz 1999 · Fernández Quintana 2016 · Pollak-Eltz
     1972 · Barreto 1987/1989-90 · Clarac de Briceño 1970
@@ -1018,13 +1113,19 @@ obras:
     ed. José Amador de los Ríos, cotejada con el códice original
   genero: cronica
   local:
+  - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf
   - fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf
-  paginas: '766 en el PDF · 618 impresas de cuerpo + índice (619-648). Desfase: impresa = pdf − 118'
-  acceso: 'El PDF local está TRUNCADO pero es legible con MuPDF en modo reparación (ver más abajo). La
-    imagen escaneada sólo sobrevive hasta la impresa 154. Los tomos II, III y IV están en el repo desde
-    el 2026-09-22: ver [[oviedo-y-valdes-1852-1855]]. Para la imagen íntegra de ESTE tomo, la misma digitalización
-    lo tiene completo: https://archive.org/details/historiageneral00fernguat (55.449.811 B) — sin descargar
-    todavía'
+  paginas: 'Cuerpo: impresas 1-614 (libros I-XIX); índice general 615-648. Copia íntegra (`_completo`):
+    776 pdf, desfase medido en `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.sondas_medidas.desfase_tomo_I_copia_integra`.
+    Copia truncada: 766 pdf, impresa = pdf − 118 (− 117 hacia la 473)'
+  acceso: 'Dos copias. La íntegra, del ítem de Internet Archive de la Biblioteca Ludwig von Mises (UFM),
+    la misma colección de los tomos II-IV, `_completo.pdf`, se descargó el 2026-09-22 (https://archive.org/details/historiageneral00fernguat,
+    dominio público — NOT IN COPYRIGHT; 55.449.811 B; sha1 e90c436186f5afd875a67078b11a6631875f09be =
+    el del ítem; sha256 02e88f2beffea91494f34e48e8bbe294a8d46626bf8c2d0383accf9c9be2369a; commiteada,
+    < 95 MB): pymupdf la abre sin reparar y renderiza TODAS las páginas. La vieja, de origen no documentado,
+    está truncada (sin imagen desde la impresa 155), tiene otra paginación de PDF y otra capa OCR (lee
+    `dalihao` donde la íntegra lee `datihao`); se conserva porque T1 cita su paginación. Los tomos II-IV:
+    ver [[oviedo-y-valdes-1852-1855]]'
   aliases:
   - Oviedo y Valdés
   - Oviedo 1851
@@ -1153,6 +1254,7 @@ obras:
   local:
   - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.pdf
   - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.txt
+  - fuentes_caquetios/Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.ocr.txt
   paginas: 3ª ed.
   aliases:
   - Pichardo 1862
@@ -1255,6 +1357,23 @@ obras:
   - Schroeder et al. 2018
   - Taíno PNAS 2018
   en_repo: true
+- id: sherwood-gianni-zurita-2023
+  obra: 'Leveraging citizen science data to preliminarily infer the distribution and habitat associations
+    of the Venezuelan endemic Chromatopelma cyaneopubescens (Strand, 1907) (Araneae: Theraphosidae)'
+  autor: Sherwood, Danniella; Gianni-Zurita, Rafael
+  anio: 2023
+  publicacion: 'Anartia (Museo de Biología de La Universidad del Zulia) 36: 36-50; DOI 10.5281/zenodo.10429585'
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Sherwood_GianniZurita_2023_Chromatopelma_Anartia.pdf
+  - fuentes_caquetios/Sherwood_GianniZurita_2023_Chromatopelma_Anartia.txt
+  paginas: 15
+  acceso: Libre — CC BY 4.0 (Zenodo)
+  aliases:
+  - Sherwood y Gianni-Zurita 2023
+  - Sherwood & Gianni-Zurita 2023
+  - la tarántula azul en Anartia
+  en_repo: true
 - id: steward-1948-hsai-4
   obra: 'Handbook of South American Indians, Vol. 4: The Circum-Caribbean Tribes'
   autor: Steward, Julian H. (ed.); capítulos de Hernández de Alba, Kirchhoff, Kidder II, Rouse y otros
@@ -1316,7 +1435,9 @@ obras:
   genero: arqueologia
   local:
   - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf
+  - fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.txt
   - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf
+  - fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt
   acceso: 'El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal
     (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14.'
   aliases:
