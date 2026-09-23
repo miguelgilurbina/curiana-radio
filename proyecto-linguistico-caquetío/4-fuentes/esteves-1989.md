@@ -9,7 +9,8 @@ local: "fuentes_caquetios/Esteves_1989_Toponimos_Paraguana_1..6.pdf"
 capa_texto: ocr  # sin capa propia (medido 2026-08-16); OCR local con ocr_fuente.py desde 2026-09-06 (Esteves_1989_..._N.ocr.txt, pista no cita)
 estado_minado: parcial
 prioridad: alta
-minado: 2026-09-21
+cobertura: "Parte I (Paraguaná, pp. 11-67): TODA leída — lotes 1-7 al canon (2026-09-06/10) y la cola restante propuesta entera, casi toda verificada en imagen (2026-09-23, 6-fusion/toponimos_esteves_lote_2026-09-22.yaml, sin fusionar) + Parte II (pp. 81-144) parseada, glosas extraídas (2026-09-10) pero sólo lo del dictado en el canon + campaña -gua (2026-09-21). Falta: fusionar el lote; la Parte II a la cola; el apéndice pp. 73-80 más allá de Adícora y tuba"
+minado: 2026-09-23
 medido: 2026-08-11
 sostiene: []
 ---
@@ -1474,7 +1475,9 @@ Zavala.
 
 ## Lo que falta
 
-- **136 de 146 páginas.** El barrido completo es el trabajo de #92.
+- ~~**136 de 146 páginas.**~~ Superado: la Parte I está leída entera (lotes
+  1-7 y el lote del 2026-09-22, abajo) y la Parte II parseada. Lo que falta es
+  fusionar y llevar la Parte II a la cola.
 - ✅ ~~Comprobar `jadicuar` ↔ Jadacaquiva~~ — **resuelto y descartado**: es el
   nombre primitivo de **Adícora**.
 - Perseguir a **Martí 1773** y a la petición de 1556, que Esteves cita sin dar
@@ -1522,6 +1525,49 @@ Llevan página impresa y hay que verlas en imagen antes de sacarlas del repo.
 > Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
+
+## Bitácora — la cola de la Parte I, entera (2026-09-22/23, tercera campaña, M6)
+
+**Criterio.** Toda la cola que quedaba en `toponimos_esteves_indice.yaml`,
+porque la campaña propone y no fusiona: cada nombre leído en el cuerpo del
+libro y, salvo los de la p. 45 y las pp. 16-17, **en la imagen** (pymupdf,
+105-400 dpi), no en el OCR. Propuesta en
+`6-fusion/toponimos_esteves_lote_2026-09-22.yaml`; los recuentos, en
+`6-fusion/medicion_lote_esteves_2026-09-22.yaml` (los escribe
+`6-fusion/scripts/medir_lote_esteves_2026-09-22.py`). Opciones para Miguel:
+`6-fusion/issues-pendientes/toponimos-esteves-lote-2026-09-22.md`.
+
+**Qué se halló.**
+
+- **La sigla (E) de Zavala es Esteves.** Muchas voces que el lexicón da por
+  atestiguadas sólo tienen a Zavala con sigla E: para un topónimo de Esteves
+  son la misma fuente, no una segunda. Entre ellas `juri`, `cari`, `ebo`,
+  `ure`, `tuba`, `rao`, `tauta`, `tigi`, `tijua`, `huaymujo` y el afijo
+  `-uco` (Zavala #268 (E)). El lote aplica A sólo con una pieza de otra
+  fuente, y **Alvarado 1921 resultó ser esa otra fuente** para muchos
+  fitónimos: cayude, carapa, taque, tigua, cuna, jiracha, guaraba, guanajo,
+  curarí, camare, cují, quipito.
+- **No hay topónimo perdido tras Tumatey.** Las pp. 48 y 65 son fotografías
+  a página entera y la p. 42 está escaneada boca abajo: la «entrada sin
+  cabecera» de la p. 66 es la cola de TUMATEY.
+- **Glosas que el canon no recogió**: Carirubana (p. 28, el canon la tomó
+  por etimología popular), Acaboa (p. 12, guacoa) y Aguaque (p. 14, guaco).
+- **Un -kiva que es kiba**: Buchaquiva, Quibarute, Tiquiba y Suriquiba —que
+  Esteves glosa «pedruzco» o «piedra» las cuatro veces— confirman lo que dijo
+  el agente del cruce taíno.
+- **Filiaciones que declara Esteves**: cumanagoto (Caradacagua, Manare, Pury),
+  ayamán (Cuara), timote-cuica (Nonocoti), taíno (Tumatey), papiamento
+  (Macama), andina (Jagüe). Van como lectura suya, no como dato (skill §5).
+- **Fauna**: la guacoa, cuyo nombre imita su canto según Alvarado p. 143; la
+  dara «vocinglera»; el chaure, que en Alvarado «pita» de noche y anuncia
+  desgracia; y **curumu 'zamuro'**, que tiene cognado caribe en el motilón de
+  Jahn (p. 348, «kurumáscho»).
+
+**Qué no.** Oboque en Alvarado (Esteves lo cita; el texto del repo da cero);
+el homónimo guajiro de Juroguagua en Jahn (cero con cuatro patrones); tres
+letras de Sacuragua (p. 58) ilegibles aun a 400 dpi.
+
+⚠️ Las citas de Esteves de la propuesta van recortadas: es obra con copyright.
 
 ## Enlaces
 

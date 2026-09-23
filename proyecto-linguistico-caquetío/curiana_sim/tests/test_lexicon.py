@@ -9,6 +9,11 @@ from curiana_lexicon import (
 )
 
 
+
+# Tanda de la base (2026-09-23): `kali` está ARCHIVADA desde el 2026-09-19 y
+# una raíz archivada ya no avala una acuñación (db.1, el agujero de `kira`).
+# Las formas de ejemplo de este archivo acuñan sobre `kasi`, la atestiguada.
+
 def _lexico():
     return LexicoComunitario()
 
@@ -53,7 +58,7 @@ def test_bloquea_ofensores_observados_en_runs():
 
 
 def test_acepta_composiciones_caquetias():
-    for forma in ("sima-bana", "kali-dusha", "kuru-bana", "arima-ana", "wa-buco"):
+    for forma in ("sima-bana", "kasi-dusha", "kuru-bana", "arima-ana", "wa-buco"):
         assert neologismo_valido(forma), forma
 
 
@@ -75,7 +80,7 @@ def test_extraccion_descarta_neologismo_espanol():
 
 # ── ciclo de adopción en LexicoComunitario ────────────────────────────
 
-def _neo(lex, forma="kali-dusha"):
+def _neo(lex, forma="kasi-dusha"):
     neos = extraer_neologismos_del_texto(
         f"[{forma}: kali+dusha = estrella con cola]", "Manaure", dia=3, turno=1)
     lex.registrar_neologismo(neos[0])
@@ -85,19 +90,19 @@ def _neo(lex, forma="kali-dusha"):
 def test_adopcion_requiere_dos_agentes_y_registra_dia():
     lex = _lexico()
     _neo(lex)
-    assert lex.adoptar("kali-dusha", "Shaboro", turno=2, dia=4) is None  # 1er adoptante
-    oficial = lex.adoptar("kali-dusha", "Tawaka", turno=1, dia=5)        # 2do → oficializa
+    assert lex.adoptar("kasi-dusha", "Shaboro", turno=2, dia=4) is None  # 1er adoptante
+    oficial = lex.adoptar("kasi-dusha", "Tawaka", turno=1, dia=5)        # 2do → oficializa
     assert oficial is not None and oficial.estado == "adoptado"
     assert oficial.dia_resolucion == 5      # día de ADOPCIÓN, no de propuesta
     assert oficial.dia == 3
-    assert "kali-dusha" in lex.palabras_activas()
+    assert "kasi-dusha" in lex.palabras_activas()
 
 
 def test_adopcion_repetida_mismo_agente_no_oficializa():
     lex = _lexico()
     _neo(lex)
-    assert lex.adoptar("kali-dusha", "Shaboro", turno=1, dia=4) is None
-    assert lex.adoptar("kali-dusha", "Shaboro", turno=2, dia=4) is None
+    assert lex.adoptar("kasi-dusha", "Shaboro", turno=1, dia=4) is None
+    assert lex.adoptar("kasi-dusha", "Shaboro", turno=2, dia=4) is None
 
 
 # ── word_source_language debe entender morfología ─────────────────────

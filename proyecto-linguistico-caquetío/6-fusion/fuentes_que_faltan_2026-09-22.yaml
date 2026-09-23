@@ -1,0 +1,262 @@
+# Las fuentes que faltan — búsqueda, descarga y encargos de minería
+# Campaña minería 3, parcela F1, 2026-09-22. Rama campana/mineria3-fuentes-que-faltan.
+#
+# Qué es: la tabla de las 13 fichas que estaban en `estado_minado: no-disponible`,
+# más Angulo Molina, Zayas y Alfonso, Granberry y Vescelius y los PDF de 0 bytes
+# de fuentes_caquetios/. Para cada obra: estado tras la búsqueda, dónde está,
+# qué edición, derechos y por qué, tamaño, qué daría, y si hay minero.
+#
+# CAMBIO DE PLAN (coordinador, 2026-09-22, tras el corte por límite de uso):
+# NO se lanzaron mineros. Cada obra conseguida deja su encargo redactado en
+# 6-fusion/issues-pendientes/encargo-mineria-<slug>.md y el coordinador los lanza
+# en la tanda siguiente. Ningún minero se había lanzado antes del corte.
+#
+# Las cifras de tamaño y sha256 se midieron sobre los archivos descargados
+# (hashlib sobre el fichero); los recuentos «medido al descargar» son grep sobre
+# el .txt, sin leer la obra (leer-fuente §6.4).
+
+meta:
+  fecha: 2026-09-22
+  agente: F1 (minería 3, «las fuentes que faltan»)
+  repositorios_consultados:
+    - archive.org (API advancedsearch y metadata)
+    - dLOC / UFDC (servidor de imágenes ufdcimages.uflib.ufl.edu y METS)
+    - HathiTrust (API de catálogo; la lectura, detrás de verificación de navegador — no se forzó)
+    - Persée (el PDF, detrás de captcha — no se forzó)
+    - Europe PMC (estado de acceso abierto)
+    - Biblioteca Digital AECID (rechazó la conexión)
+    - búsqueda web general (Angulo Molina, Nueva Segovia)
+  reglas_de_descarga: >-
+    Sólo dominio público o acceso abierto de repositorios reconocidos; nada
+    detrás de préstamo controlado, captcha o muro de pago; nada > 95 MB en git.
+  resumen:
+    descargadas_y_en_git: [federmann-1916, perez-de-tolosa-1546, rivero-1883, gumilla-1791, steward-1948-hsai-4, steward-1949, brinton-1871]
+    descargada_solo_texto_en_git: [zayas-1931]
+    no_libres_o_no_identificadas: [angulo-molina, nueva-segovia-1579, arcaya-obra-inedita-1995, brett-martinez-aquella-paraguana, moron-guillermo-historia-venezuela, nagele-2020, oliver-2000-guanin, ramos-perez-1978, rouse-cruxent-1963, granberry-vescelius-2004]
+    mineros_lanzados: 0
+    encargos_redactados: [federmann, perez-de-tolosa, rivero, steward-hsai, gumilla, zayas]
+
+obras:
+
+  - obra: federmann-1916
+    titulo: "Narración del primer viaje de Federmann a Venezuela (trad. Arcaya, Caracas 1916) + Indianische Historia (Hagenau 1557) + reed. Klüpfel (Stuttgart 1859)"
+    prioridad_del_encargo: 1
+    estado: descargada
+    donde:
+      - https://archive.org/details/narraciondelprim00fede
+      - https://archive.org/details/indianischehisto00fede
+      - https://archive.org/details/nfedermannsundhs00kl
+    local:
+      - fuentes_caquetios/Federmann_1916_Narracion_Primer_Viaje_Arcaya.pdf (9.359.616 B)
+      - fuentes_caquetios/Federmann_1557_Indianische_Historia.pdf (25.545.486 B)
+      - fuentes_caquetios/Federmann_Kluepfel_1859_Reisen_texto_aleman.pdf (12.004.554 B)
+    derechos: >-
+      Dominio público: 1557 y 1859 sin derechos; 1916 traducida por Arcaya
+      (†1958; Venezuela vida + 60) y publicada antes de 1931 (EE. UU.).
+    hallazgo_al_descargar: >-
+      La de 1916 está traducida de la FRANCESA de Ternaux (1837), no del
+      alemán (Arcaya lo dice, p. 20): las formas se cotejan con 1557/1859.
+      `seretón` y variantes: 0 en la de 1916 (cero de consulta).
+    que_daria: >-
+      Paraguaná y Coro en 1530: aldeas, jefes, Manaure y su gente, cien
+      porteadores caquetíos, intérpretes y lengua, fauna; el seretón; y los
+      caquetíos del interior (caps. VIII y XII) como otra polity.
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-federmann.md, lanzado: false, rama: campana/mineria3-federmann, pr: null}
+
+  - obra: perez-de-tolosa-1546
+    titulo: "Cartas y «Relación de las tierras y provincias de la gobernación de Venezuela», en Oviedo y Baños, ed. Fernández Duro, t. II (Madrid 1885), pp. 219-258"
+    prioridad_del_encargo: 2
+    estado: descargada
+    donde: [https://archive.org/details/historiadelacon00bagoog]
+    local: [fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.pdf (19.080.080 B)]
+    derechos: "Dominio público (Madrid 1885; editor †1908)."
+    hallazgo_al_descargar: >-
+      Los dos pasajes de la ficha salen (pp. 227-228). El de las
+      «cuatrocientas casas» NO sale con una búsqueda simple. Pasaje nuevo:
+      los caquetíos de los llanos «algo difieren en la habla á los de Coro»
+      (p. 234) — variación dialectal entre polities, testigo de 1546.
+    que_daria: >-
+      La costa y Paraguaná en 1546 nodo por nodo, subsistencia, despoblamiento
+      y trata, Manaure; y el apéndice entero (carta de Ampíes, relación
+      anónima de gobernadores, interrogatorio contra los Welser), sin minar.
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-perez-de-tolosa.md, lanzado: false, rama: campana/mineria3-perez-de-tolosa, pr: null}
+
+  - obra: angulo-molina
+    titulo: "(obra no identificada) — el compilador «AM» del glosario de Zavala Reyes 2015"
+    prioridad_del_encargo: 3
+    estado: no-identificada
+    donde: null
+    derechos: desconocidos
+    hallazgo: >-
+      Zavala lo nombra (p. 64) y NO lo pone en su bibliografía (pp. 74-76);
+      tampoco a Esteves, Alvarado, Arellano Moreno ni Hill Peña. Web: cero
+      con nueve combinaciones de búsqueda. Repo: cero en los .txt.
+    pistas:
+      - "Hernández Baño 1984, Los Caquetíos de Falcón (INCUDEF, Coro): Zavala abre su glosario citándolo."
+      - "Escribir a Miguel Enrique Zavala Reyes (vía Boletín Antropológico, ULA)."
+      - "La etimología de Barquisimeto que da AM («río de aguas turbias») coincide con la de la Relación de Nueva Segovia de 1579 («aguas cenicientas»): ¿es ésa una de sus fuentes?"
+    que_daria: "La procedencia de los 19 verbos de acción del glosario — todo el verbo caquetío del proyecto."
+    minero: {encargo: null, lanzado: false, motivo: "no hay obra que minar"}
+
+  - obra: rivero-1883
+    titulo: "Historia de las misiones de los llanos de Casanare y los ríos Orinoco y Meta (Bogotá 1883)"
+    prioridad_del_encargo: 4
+    estado: descargada
+    donde: [https://archive.org/details/historiadelasmi00rivegoog]
+    local: [fuentes_caquetios/Rivero_1883_Historia_Misiones_Casanare.pdf (36.489.039 B)]
+    derechos: "Dominio público (Bogotá 1883; autor †1736)."
+    hallazgo_al_descargar: >-
+      El PDF no tiene capa de texto: el .txt es el OCR del ítem de archive.org
+      paginado. Rivero nombra caquetíos en el Casanare (Pauto, Guaviare) y
+      un misionero que lidia con «la lengua» de Pauto — posible tercera
+      polity caquetía con lengua propia en el XVIII.
+    que_daria: "Los caquetíos de los llanos y su lengua; el continuo achagua de «veinte provincias» bajo un idioma."
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-rivero.md, lanzado: false, rama: campana/mineria3-rivero, pr: null}
+
+  - obra: gumilla-1791
+    titulo: "Historia natural, civil y geográfica de las naciones situadas en las riveras del río Orinoco (Barcelona 1791), 2 t."
+    prioridad_del_encargo: 5
+    estado: descargada
+    donde: [https://archive.org/details/historianaturalc01gumi, https://archive.org/details/historianaturalc02gumi]
+    local:
+      - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t1.pdf (21.893.451 B)
+      - fuentes_caquetios/Gumilla_1791_Historia_Natural_Orinoco_t2.pdf (19.819.370 B)
+    derechos: "Dominio público (1791)."
+    hallazgo_al_descargar: "`caquet` 0 en los dos tomos (cero de consulta); `achagua` 15 + 12."
+    que_daria: "Comparanda achagua, cotejable con Neira y Ribero y Fabo; nada costero."
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-gumilla.md, lanzado: false, rama: campana/mineria3-gumilla, pr: null, nota: "prioridad baja"}
+
+  - obra: steward-1949
+    titulo: "Handbook of South American Indians, vol. 5 (BAE Bulletin 143, 1949) — EXTRACTO pp. 655-772 + bibliografía"
+    prioridad_del_encargo: 6
+    estado: descargada-extracto
+    donde: [https://archive.org/details/bulletin14351949smit]
+    local: [fuentes_caquetios/Steward_1949_HSAI_vol5_pp655-772_y_bibliografia.pdf (12.330.426 B; el volumen entero, 70.577.922 B, no se commiteó)]
+    derechos: "Dominio público: obra del gobierno federal de EE. UU. Los ítems «Handbook…» de archive.org son de préstamo controlado; el de la serie «Bulletin» de Smithsonian Libraries no."
+    hallazgo_al_descargar: "Tabla «Venezuela, north of Orinoco»: 86.300 / 144.000 (p. 663, OCR). La Parte 4 atribuye rasgos a los caquetíos (jefe en hamaca, cenizas bebidas…)."
+    que_daria: "Escala demográfica (hipotético) y el origen de lugares comunes del vault."
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-steward-hsai.md, lanzado: false, rama: campana/mineria3-steward-hsai, pr: null}
+
+  - obra: steward-1948-hsai-4
+    titulo: "Handbook of South American Indians, vol. 4: The Circum-Caribbean Tribes (BAE Bulletin 143, 1948) — FICHA NUEVA"
+    estado: descargada
+    donde: [https://archive.org/details/bulletin14341948smit]
+    local: [fuentes_caquetios/Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.pdf (53.214.922 B)]
+    derechos: "Dominio público: obra del gobierno federal de EE. UU."
+    hallazgo_al_descargar: "El volumen que trata a los caquetíos es éste, no el 5: Hernández de Alba, «Tribes of northwestern Venezuela», pp. 469-474; Kirchhoff pp. 481-493; Kidder, arqueología de Venezuela, pp. 413-438."
+    que_daria: "Qué dice el Handbook de los caquetíos y de qué fuente primaria lo saca."
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-steward-hsai.md, lanzado: false, rama: campana/mineria3-steward-hsai, pr: null}
+
+  - obra: nueva-segovia-1579
+    titulo: "Descripción de la Nueva Segovia (Barquisimeto), relación geográfica de 1579"
+    prioridad_del_encargo: 7
+    estado: no-libre
+    donde:
+      - "Original: AGI, Patronato 294 n. 12 (signatura NO verificada)."
+      - "Jiménez de la Espada 1881 sólo la cataloga (medido en archive.org b24871771_0001)."
+      - "Arellano Moreno, Relaciones geográficas de Venezuela (ANH, 1964) — con derechos."
+      - "Altez y Mora Pacheco (eds.), Relaciones y descripciones sobre Venezuela y la Nueva Granada, siglo XVI (Sindéresis, 2023, ISBN 978-84-19199-73-7) — comprable, 15-40 €; índice sin confirmar."
+      - "Altolaguirre 1908 (AECID, CC BY-NC-SA): servidor caído hoy, y es de 1767-68."
+    derechos: "Las ediciones accesibles tienen derechos; el manuscrito del AGI, si está en PARES, se leería por visión."
+    dato_de_paso: "La relación glosa Barquisimeto como «aguas cenicientas» en lengua caquetía (según la Fundación Polar)."
+    que_daria: "El riego del Turbio y el colapso demográfico de la polity de Barquisimeto (regla 4: no es la costa)."
+    minero: {encargo: null, lanzado: false, motivo: "no conseguida"}
+
+  - obra: zayas-1931
+    titulo: "Lexicografía antillana, 2ª ed. (La Habana 1931), 2 t. — FICHA NUEVA (la de 1914 no se consiguió)"
+    estado: descargada-solo-texto-en-git
+    donde: [https://ufdcimages.uflib.ufl.edu/AA/00/08/98/31/00001/AA00089831_00001.pdf, https://ufdcimages.uflib.ufl.edu/AA/00/08/98/31/00002/AA00089831_00002.pdf]
+    local: [fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t1.txt, fuentes_caquetios/Zayas_1931_Lexicografia_Antillana_2ed_t2.txt]
+    tamano_pdf: "381.832.748 B y 441.578.577 B: NO se commitean (> 95 MB); se quedan sin versionar en el worktree del buscador y se vuelven a bajar de las URL."
+    derechos: >-
+      dLOC no certifica dominio público (lo sirve por uso legítimo). Lectura
+      de la ficha: Zayas †1934; Cuba vida + 50 → libre en 1985, antes de la
+      URAA → dominio público en origen y en EE. UU. Decisión de redistribuir
+      más: Miguel.
+    hallazgo: "La campaña del taíno dijo que dLOC «no sirve el texto»: lo sirve su servidor de imágenes."
+    que_daria: "Las voces taínas que Goeje apoya en Zayas, con la fuente que Zayas declara."
+    minero: {encargo: 6-fusion/issues-pendientes/encargo-mineria-zayas.md, lanzado: false, rama: campana/mineria3-zayas, pr: null, nota: "no prioritaria"}
+
+  - obra: granberry-vescelius-2004
+    titulo: "Languages of the Pre-Columbian Antilles (University of Alabama Press, 2004) — FICHA NUEVA"
+    estado: no-libre
+    derechos: "En copyright. Sólo anotada, como pedía el encargo."
+    donde: "compra (editorial) o préstamo interbibliotecario"
+    que_daria: "La variedad antillana de cada voz taína."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: arcaya-obra-inedita-1995
+    estado: no-libre
+    donde: "CIHPMA-UNEFM, Coro (edición local de 1995); no aparece en archive.org (búsqueda del 2026-09-22)."
+    derechos: "En copyright (edición de 1995)."
+    que_daria: "p. 247: la fórmula de saludo caquetía recogida en Mitare hacia 1905, en dos versiones — la única frase caquetía conocida."
+    para_miguel: "Pedir a la UNEFM/CIHPMA un escaneo de la p. 247 (uso de investigación)."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: brett-martinez-aquella-paraguana
+    estado: no-libre
+    donde: "Iberlibro/AbeBooks (1ª ed. 1971) y Amazon; 2ª ed. 1998 en librerías de viejo venezolanas. No digitalizada (ficha, 2026-08-25; no re-buscada hoy)."
+    derechos: "En copyright."
+    que_daria: "Etimologías y fundación de pueblos de Paraguaná (tradición recibida, no atestación)."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: moron-guillermo-historia-venezuela
+    estado: no-libre
+    donde: >-
+      Las copias de archive.org son de préstamo controlado (A History of
+      Venezuela 1964/65, Historia de Venezuela 1967). Hay una subida de
+      usuario de «Los cronistas y la historia» (1957,
+      moron-guillermo-los-cronistas-y-la-historia) SIN licencia: no se bajó
+      (Morón †2021, en copyright).
+    derechos: "En copyright."
+    que_daria: "Crítica de fuentes de los cronistas y el s. XVI venezolano con aparato académico."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: nagele-2020
+    estado: no-libre
+    donde: "Science 369 (2020), doi:10.1126/science.aba8697; sin versión abierta (verificado por la campaña T8 el 2026-09-22; no re-buscado)."
+    derechos: "Suscripción."
+    que_daria: "Los 93 genomas caribeños de primera mano (hoy llegan vía Fernandes 2020/21)."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: oliver-2000-guanin
+    estado: no-libre
+    donde: "Capítulo en McEwan (ed.), Precolumbian Gold (British Museum Press, 2000); sin depósito abierto (T8, 2026-09-22; no re-buscado)."
+    derechos: "En copyright."
+    que_daria: "La tesis de Oliver sobre el guanín continental y, si la hay, la costa caquetía."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: ramos-perez-1978
+    estado: no-libre
+    hallazgo: >-
+      «Ramos 1978» es un LIBRO: La fundación de Venezuela. Ampíes y Coro, una
+      singularidad histórica (Valladolid-Coro, 1978, 401 pp.). El PDF de
+      Persée era la reseña de Baudot (Caravelle 32, 1979, pp. 221-222); su
+      PDF está detrás de captcha (403) y no se forzó; el HTML se lee.
+    derechos: "Libro en copyright (Ramos †1999)."
+    que_daria: "El Diao, Todariquiba y (con Ramos 1976) el San Bartolomé/Venezuela."
+    minero: {encargo: null, lanzado: false}
+
+  - obra: rouse-cruxent-1963
+    estado: no-libre
+    donde: "archive.org, préstamo controlado (venezuelanarchae0000rous, venezuelanarchae0000irvi); verificado por T8 el 2026-09-22."
+    derechos: "En copyright (Yale UP)."
+    que_daria: "La seriación dabajuroide y la cronología del Golfete. Mitigación parcial nueva: Kidder II en el HSAI 4 (pp. 413-438)."
+    minero: {encargo: null, lanzado: false}
+
+pdfs_de_0_bytes:
+  - archivo: fuentes_caquetios/Brinton_1871_Arawack_Language_Guiana.pdf
+    estado: RELLENADO
+    fuente: https://archive.org/details/arawacklanguageo00brinrich
+    bytes: 2179167
+    sha256: 3495b3174fd100a7442354c2f4de6f87e6e707d402e13d636f5877ed0026d4df
+    derechos: "Dominio público (1871)."
+  - archivo: fuentes_caquetios/Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf
+    estado: sigue-en-0-bytes
+    motivo: "La licencia de Nature permite leer y minar pero no redistribuir; el texto se usa vía Europe PMC (PMC7864882, isOpenAccess Y) y el preprint CC BY-NC-ND ya está en el repo. Decisión de la campaña T8, mantenida."
+  - archivo: fuentes_caquetios/Ramos_Perez_1978_resenia_Persee.pdf
+    estado: sigue-en-0-bytes
+    motivo: "Persée devuelve 403 con captcha al PDF; no se fuerza. Miguel puede bajarlo a mano desde el navegador."
+  - archivo: fuentes_caquetios/Rouse_Cruxent_1963_Venezuelan_Archaeology.pdf
+    estado: sigue-en-0-bytes
+    motivo: "Sin versión legal descargable (préstamo controlado)."

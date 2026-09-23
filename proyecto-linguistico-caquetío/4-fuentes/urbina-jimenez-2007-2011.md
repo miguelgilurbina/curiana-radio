@@ -4,10 +4,11 @@ obra: "El Carrizal: cambios en el uso del espacio a través del tiempo (2007) ·
 autor: "Urbina Jiménez, Eduy María"
 anio: "2007, 2011"
 genero: arqueologia
-local: ["fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf", "fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf"]
+local: ["fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.pdf", "fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.txt", "fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.pdf", "fuentes_caquetios/Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt"]
 capa_texto: si
 acceso: "El survey de 2011 es libre — Academia.edu: https://www.academia.edu/35413060/. El Carrizal (2007) no se verificó acceso en el rastreo. Ver el rastreo documental del 2026-08-14."
-estado_minado: parcial
+estado_minado: minado
+cobertura: "las dos leídas enteras para sitios, cronología, enterramientos, fauna, mar y movimiento (M8, 2026-09-22), en 6-fusion/arqueologia_insular_falcon_2026-09-22.yaml. Lo que queda NO está en los documentos: la lista de los 192 sitios (sólo mapas en imagen) y el Informe ARAAPICO (Arvelo y López 2004)"
 prioridad: alta
 verificado: 2026-09-22
 minado: 2026-09-22
@@ -54,8 +55,12 @@ documentación colonial.
   general con coordenadas UTM.
 - Recolección superficial y solo de material diagnóstico — dicho por la autora,
   que es honesta sobre el límite de su muestreo.
-- Una datación de dabajuroide en **1650 d.C.**; la Loza Criolla, sin dataciones
-  absolutas, se asocia al periodo republicano.
+- ~~Una datación de dabajuroide en 1650 d.C.~~ 🔴 **Error de lectura, corregido
+  el 2026-09-22 (M8)**: El Carrizal no tiene ninguna fecha absoluta propia para
+  la ocupación cerámica. «1650» es el tope del rango RELATIVO de Los Médanos B
+  según Oliver 1989 (p. 94), y Los Médanos ni siquiera está en El Carrizal:
+  sólo Túcua y Urumaco (p. 82). La Loza Criolla, sin dataciones absolutas, se
+  asocia al periodo republicano.
 
 ### ⚠️ La cautela de la regla 4
 
@@ -126,14 +131,52 @@ oportunistas, no sobre un catálogo de materiales. Lo mide
 ## Qué NO dan
 
 - **Ninguno de los dos aporta dataciones radiocarbónicas propias** para la
-  ventana simulada. El de 2007 tiene fechas, pero coloniales (1650 d.C.).
+  ventana simulada. Las únicas fechas de C-14 del de 2007 son las de Muaco y
+  Taima-Taima, del Pleistoceno.
 - El survey de 2011 no publica el listado de los 192 sitios en el texto extraído;
   habría que ver si va en anexo.
 - Nada de lengua. Ni un topónimo glosado.
 
+## ⭐ Tercera campaña de minería, M8 (2026-09-22)
+
+Las dos leídas enteras, con el `.txt` guardado junto al PDF. Páginas: 2007,
+impresa = pdf − 12; 2011, impresa = pdf − 4 (comprobado en varios puntos).
+Todo con página en `6-fusion/arqueologia_insular_falcon_2026-09-22.yaml`.
+
+- **Sitios de El Carrizal** (2007, pp. 37-42): Falco 286, 1.656 m² sobre una
+  duna, con concheros, enterramientos y fogones — pero con cerámica
+  **Tortolitas**, anterior al dabajuroide (p. 86); Falco 270, 7 ha,
+  palimpsesto hasta la Colonia, con un enterramiento (un varón adulto joven,
+  p. 56) y bivalvos; Falco 273, 475 m², a 2 km de la costa. Sin fechas
+  absolutas.
+- **Fauna** (2007, pp. 55-56 y Tabla 7): la concha se identifica como
+  *Strombus gigas* (449 fragmentos en la categoría, sin decir cuántos son de
+  la especie), con una cuenta discoidal y una ficha de concha (verificadas en
+  imagen, Lam 16); 1.089 fragmentos de hueso humano y animal, el animal SIN
+  identificar. Todo de superficie en un palimpsesto: `epoca: indeterminada`.
+  La lista de megafauna del Anexo 1 es pleistocena y se deja fuera.
+- **Movimiento** (2007, pp. 20-21, 95, 115): El Carrizal se repobló el
+  7-IX-1723 con «varias familias de Indios Caquetios venidos de Aruba»
+  («yndios Urubanos»). Colonial, pero es la dirección isla → costa. Y toca a
+  [[martinez-cruzado-2003]], que cita El Carrizal como pueblo caquetío.
+- **Mar**: la concha como desgrasante del estilo Dabajuro (Tablas 1-2 de
+  Cruxent y Rouse, pp. 117-118); en la costa de Falcón, donde hay concheros
+  los muertos se entierran tierra adentro (2011, p. 40). **Creencia: cero.**
+- **Lengua, de paso** (2011, p. 17, n. 7): Oliver, por comunicación personal,
+  glosa *kaketio* como «gente» de trato íntimo y *cacique* como «cabeza de la
+  casa» (Proto-Maipure *ka* + *sikua*). Hipotético: no es fuente de época.
+- **Correcciones a esta ficha**: la «datación de 1650» no existía (ver
+  arriba); y El Carrizal está a la vez en el piedemonte y en la costa marítima
+  (pp. 11 y 32), junto a La Vela.
+- La fig. 17 de 2011 (tipos de sitio) no pinta ningún sitio en Paraguaná; la
+  fig. 19 sí. La lista de los 192 NO está en el documento.
+
 ## Qué falta
 
-1. **Sacar el listado de los 192 sitios** — es lo que #92 quiere. Ver anexos.
+1. **Sacar el listado de los 192 sitios** — es lo que #92 quiere. ⚠️ Medido
+   el 2026-09-22: NO está en el documento (tras la bibliografía sólo hay tres
+   tablas de estilos y 31 figuras en imagen sin rótulos de sitio). Hay que
+   pedírselo a la autora o al IVIC, o ir al Informe ARAAPICO.
 2. **Cruzar con los 21 FAL de [[oliver-1989-cap4]]**: cuántos coinciden y
    cuántos son nuevos.
 3. **Decidir la pertenencia de El Carrizal** a la polity costera antes de usarlo.

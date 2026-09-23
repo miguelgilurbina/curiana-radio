@@ -8,11 +8,12 @@ local: ["fuentes_caquetios/CollYToste_1897_Prehistoria_Puerto_Rico.pdf", "fuente
 capa_texto: no
 descargado: 2026-09-22
 origen_digital: "Internet Archive (prehistoriapepuertoRicocolltoste); el texto es el OCR del propio ítem"
-estado_minado: sin-minar
-cobertura: "medido al descargar, sin leer: ortografía y autoridades citadas"
+estado_minado: parcial
+cobertura: "los dos vocabularios transcritos AUTOMÁTICAMENTE sobre el OCR de archive.org (cap. XII, 721 entradas; cap. X, 304) con autoridad y tipo de apoyo por regla; muestra de 20 cotejada en imagen (M5, 2026-09-23). Sin revisar a mano entrada a entrada"
 prioridad: media
-verificado: 2026-09-22
+verificado: 2026-09-23
 aliases: ["Coll y Toste 1897", "Vocabulario indo-antillano"]
+minado: 2026-09-23
 ---
 
 # Coll y Toste 1897 — *Prehistoria de Puerto Rico*
@@ -77,3 +78,35 @@ Todo. Minarlo entrada por entrada, con dos preguntas concretas:
 
 [[bachiller-morales-1883]] · [[goeje-1939]] · [[pichardo-1862]] ·
 `6-fusion/taino_lista_maestra_2026-09-22.yaml`
+
+## Bitácora 2026-09-23 — tercera campaña, parcela M5
+
+**🔴 Lo primero: no es la edición de 1897.** El escaneo es la **2.ª edición**
+(Isabel Cuchí Coll, Bilbao, Editorial Vasco Americana, s. f., «todos los
+derechos reservados»), con un apéndice fotográfico del Instituto de Cultura
+Puertorriqueña (fundado en 1955); el texto cita obras de 1907. 1897 es el año
+del premio. Las páginas que se citan son las de esa edición (el desfase pdf →
+impresa **no es constante**: +7 hacia la p. 157, +9 en el cap. XII; y la p. 153
+está duplicada en el escaneo). El texto del autor (†1930) es de dominio público;
+el prólogo y el apéndice de la edición, no.
+
+**Qué se preguntó.** ¿Cita por entrada el cronista? ¿Qué hace con las voces que
+otros sacan del taíno?
+
+**Qué ha dado** (`6-fusion/taino3_coll_y_toste_1897.yaml`, emitido por
+`6-fusion/scripts/transcribir_coll_y_toste.py --check`):
+
+- **Sí cita por entrada** en buena parte del cap. XII (el recuento por tipo de
+  apoyo lo da el script: documentada / secundaria / afirmada sin fuente /
+  conjetura / sacada). Cita además documentos de época —el Repartimiento de
+  1514, el Informe de 1582— que el repo no tiene.
+- El **cap. X** es un vocabulario al revés (castellano → boriqueño) que compara
+  cada voz con el caribe insular (`Ci.`), el caribe continental y el aruaca: es
+  la lista de glosas castellanas de una palabra que el cruce necesitaba, y de él
+  salen casi todos los conceptos nuevos de la lista maestra.
+- Saca del indo-antillano voces que circulan como taínas (`achiote`, `aguacate`,
+  `cacao`, `batea`, `coco`, `papagayo`, `tomate`…), diciendo de dónde vienen.
+
+**Qué NO.** Revisión entrada a entrada: la transcripción es automática y la
+muestra de 20 dio 2 errores de segmentación y 1 de clasificación. Ver el issue
+`vocabularios-antillanos-2-2026-09-22.md`.
