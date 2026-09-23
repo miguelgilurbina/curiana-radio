@@ -10,11 +10,11 @@ local: "fuentes_caquetios/Navarrete_1859_Coleccion_Viages_t1_Viages_de_Colon.txt
 paginas: "~550"
 capa_texto: si
 estado_minado: parcial
-cobertura: "la Relación del tercer viaje (pp. ~390-420), preguntada por el guanín y por la lengua en Paria — 2026-09-22, campaña del taíno 2, T7"
+cobertura: "la Relación del tercer viaje (pp. ~390-420), preguntada por el guanín y por la lengua en Paria — 2026-09-22, campaña del taíno 2, T7 + barrido por la COSTA OCCIDENTAL: nada, con control (2026-09-23, minería 3, M2)"
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-09-23
+minado: 2026-09-23
 descargado: 2026-09-22
 origen_digital: "archive.org/details/coleccion-de-los-viajes-y-descubrimiento-i — texto OCR ('Coleccion_de_los_viajes_y_descubrimiento I_djvu.txt'), 1.597.527 bytes, sha256 c84739d9cdef9001a7498b557ef64275fb0e9c15440c93bac6986b6c1ac130a3. Dominio público (Public Domain Mark 1.0 declarado por archive.org). Descargado el 2026-09-22 con la autorización de Miguel de esta campaña"
 aliases: ["Navarrete 1858", "Navarrete t. I", "Viajes de Colón", "Relación del tercer viaje", "Diario del primer viaje"]
@@ -119,6 +119,21 @@ viajes **de Colón**, y Colón no pasó por la Kaketiana. Eso está en
   poco más.
 - La *Relación del tercer viaje* **no usa la palabra `guanín`**: dice «oro
   bajo». La palabra entra al castellano por el Diario y por Las Casas.
+
+## 2026-09-23 — la costa occidental (minería 3, parcela M2)
+
+**Qué se preguntó.** Qué dice de la costa occidental de Tierra Firme
+(Coquibacoa, Coro, Curiana, los Gigantes). Barrido con
+`6-fusion/scripts/medir_cronicas_costa_occidental.py` (ortografía medida
+antes, guiones de fin de línea cosidos).
+
+**Qué dio: nada, y es un cero de la fuente.** `coquibacoa` (todas las grafías),
+`curiana`, `gigante`, `curazao`, `coro`, `paraguan`, `valfermoso`: cero, con
+`isla`, `oro` e `indio` por centenares en el mismo texto. Colón no pasó por esa
+costa; lo único que la roza es su carta del cuarto viaje, que junta Veragua
+«con la que habia descubierto Hojeda y Bastidas, que es la costa de las
+perlas» (p. 434), y las quejas contra Hojeda en La Española. Lo de la
+Kaketiana está en [[navarrete-1829-viages-menores]].
 
 ## Qué falta
 

@@ -5,11 +5,13 @@ autor: "Oliver, José R."
 anio: 1989
 genero: etnohistoria
 local: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf — impresas 213-250 = pdf 240-277 (offset -27)"
-capa_texto: ocr-parcial  # §3.2.4 (pdf 250-257) en fuentes_caquetios/Oliver_1989_cap3_s324_caribes.ocr.txt desde 2026-09-07; el resto sigue sin capa
+capa_texto: ocr  # las tres secciones en fuentes_caquetios/: §3.2.3 Oliver_1989_cap3_s323_chibchas.ocr.txt (pdf 238-249, 2026-09-22), §3.2.4 Oliver_1989_cap3_s324_caribes.ocr.txt (pdf 250-257, 2026-09-07), §3.3 Oliver_1989_cap3_s33_falcon_lara.ocr.txt (pdf 258-281, 2026-09-22)
 acceso: "Libre — la tesis completa (823 pp., incluye esta sección) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
-estado_minado: parcial
+estado_minado: minado
+cobertura: "§3.3 jirajaranos y geografía (2026-08), §3.2.4 caribes (2026-09-07), §3.2.3 chibchas y §3.3.1-§3.3.3 enteros para vecinos, Manaure, comercio y mar (2026-09-22, tercera campaña M1). Fuera de la tesis y sin conseguir: Oramas 1916, Arcaya 1977"
 prioridad: alta
-verificado: 2026-09-07
+verificado: 2026-09-22
+minado: 2026-09-22
 aliases: ["Oliver 1989 §3.3", "los vecinos de los caquetíos", "jirajaranos"]
 ---
 
@@ -101,6 +103,12 @@ clase de comparación que decide filiaciones, y sale negativa.
 Y un cabo suelto que puede rendir: en la entrada de **'luna'** (ayomán `yi-i`,
 cuyón `yio`) Oliver anota **"Tamanaco"** — que es una lengua **caribe**. Si es
 un préstamo caribe dentro del jirajarano, dice algo de la esfera entera.
+
+> 🔴 **FALSO — corregido el 2026-09-22 (tercera campaña, M1).** Mirada en
+> imagen (p. 591, pdf 618), la fila 73 dice «Moon | ------ | (yi-i) | yio |
+> *------» y no lleva ninguna nota. El «Tamanaco» era un artefacto del OCR. El
+> Tamanaco que Oliver sí nombra está en el cap. 2 (DOC p. 144), y es para
+> `capu` 'cielo' y `cachicamo`, no para el jirajarano.
 
 ## El mapa: dónde estaban, y desde cuándo hubo contacto
 
@@ -241,8 +249,9 @@ que su nota ya advertía que **sobre-representa sus atribuciones** porque su
 autoridad léxica era Caulín. Ahora hay clasificación independiente contra la que
 contrastarlas.
 
-Y **Tamanaco** es la lengua anotada junto a 'luna' en la Tabla A-8 del
-vocabulario jirajarano: un préstamo caribe dentro del jirajarano.
+~~Y **Tamanaco** es la lengua anotada junto a 'luna' en la Tabla A-8 del
+vocabulario jirajarano: un préstamo caribe dentro del jirajarano.~~ Falso:
+la Tabla 8 no trae esa nota (verificado en imagen el 2026-09-22).
 
 ### La historia: por qué los caquetíos fueron por donde fueron
 
@@ -339,16 +348,55 @@ varias lenguas sobre un referente.
 
 ## Qué falta
 
-1. **Transcribir la Tabla A-8** a ojo (2 páginas): es el vocabulario jirajarano.
-2. Minar **§3.2.3 (chibchas)** — toca directamente la decisión de `hayo` y
-   `caraota` como préstamos de contacto chibcha.
-3. ~~Minar **§3.2.4 (caribes)**~~ (hecho el 2026-09-07, ver arriba) y **§3.3.3 (chipas de Aroa)**.
-4. **§3.8**, la comparación entre el caquetío costero y el de
-   Barquisimeto-Yaracuy: es el fundamento de la regla 4, que hoy citamos de
-   oídas.
-5. Perseguir **Oramas 1916** (lista mixta jirajara-ayomán) y **Arcaya 1977**.
-6. Cruzar con [[jahn-1927]] cap. V, que trae vocabularios de los últimos
-   hablantes **ayamán y gayón** en apéndices.
+1. ~~**Transcribir la Tabla A-8**~~ — la p. 592 leída en imagen el 2026-09-22
+   (ver la bitácora de abajo); la p. 591 sigue siendo OCR cotejado fila a fila
+   sólo en 'luna'.
+2. ~~Minar **§3.2.3 (chibchas)**~~ (hecho el 2026-09-22).
+3. ~~Minar **§3.2.4 (caribes)**~~ (hecho el 2026-09-07) y ~~**§3.3.3 (chipas de Aroa)**~~ (2026-09-22).
+4. **§3.8** no es de esta sección sino de [[oliver-1989-cap3]], cuya ficha ya
+   trae el contraste costa/Barquisimeto (y lo resume arriba).
+5. Perseguir **Oramas 1916** (lista mixta jirajara-ayomán) y **Arcaya 1977** —
+   fuera de la tesis; sin conseguir.
+6. Cruzar con [[jahn-1927]] cap. V: existe `6-fusion/control_jirajarano_jahn_1927.yaml`;
+   no se revisó en la tercera campaña.
+
+## Bitácora — tercera campaña de minería, parcela M1 (2026-09-22)
+
+**Qué se le preguntó.** Qué grupos, dónde, qué relación con la polity costera;
+qué dice de Manaure, del diao, de la sucesión, la guerra y el comercio; qué
+dice del mar. Y cruzarlo con `3-mundo/etnias.yaml` y `polities-caquetias.md`.
+Se hizo OCR de §3.2.3 (tesis pp. 211-222) y de §3.3 entero (pp. 231-254),
+guardado en `fuentes_caquetios/`. Propuesta en
+`6-fusion/oliver1989_restante_2026-09-22.yaml`; cifras en
+`6-fusion/medicion_oliver1989_restante_2026-09-22.yaml`.
+
+**Qué dio.**
+
+- **Los vecinos con página**, y cuáles faltan en `etnias.yaml` (medición
+  §mundo): coanaos (sal por oro; Esteban Martín les hablaba en caquetío),
+  wanebucanes («excellent sailors and fishermen»), tairo, xiriguanas,
+  haruacanas, jirajaras, ayomanes, gayones, jaguas, camagos.
+- **El jirajara, vecino de la costera**: San Luis a «three leagues from the city
+  of Coro», maíz para Coro en 1527-1530, y la propuesta de Oliver de que las
+  «hijas de caribes» de Manaure eran jirajaras de San Luis (DOC pp. 269-270).
+- **Una contradicción con el canon**: `etnia-003 ciparicoto` es arahuaca en
+  `etnias.yaml`; Oliver dice que su lengua era «clearly different from the
+  Caquetío, and perhaps related to Carib» (p. 251).
+- **Manaure**: sede propuesta antes del pacto en Caçicure / Pueblo Viejo
+  (FAL-77), corazonada de Oliver (tesis p. 277 n. 206); desde 1527, Todariquiba,
+  junto a Coro.
+- **El mar, visto desde tierra adentro**: los ayomanes compraban conchas porque
+  «they know nothing about the sea and never go there» (p. 243).
+
+**Qué NO dio.** Ni una palabra sobre el mar en la creencia de ningún grupo
+(medición §mar: las ventanas donde coinciden mar y creencia son falsos
+positivos). Y nada de lengua de los chibchas del s. XVI: Oliver lo dice, «the
+linguistic data is so scanty».
+
+**Dos ediciones.** La ficha [[oliver-1989-cap3]] cita por el `.DOC`, que es la
+revisión de 2006 («Illustration added for the PDF version only»), y esta por el
+escaneo de 1989. No coinciden en paginación: el funeral del díao está en la
+p. 270 de una y en la 283-284 de la otra.
 
 ## Enlaces
 

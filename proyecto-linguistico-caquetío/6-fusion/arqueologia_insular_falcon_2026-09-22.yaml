@@ -1,0 +1,1036 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — la arqueología de las islas y de Falcón, y la genética que
+# quedó pendiente
+#
+# Tercera campaña de minería, parcela M8 (2026-09-22). Encargo: minar lo
+# pendiente de cuatro obras —urbina-jimenez-2007-2011 (parcial),
+# casale-2024 y knaf-2021 (pendientes: el editor devolvía 403) y
+# moreno-mayar-2018 (sin minar)— con cuatro preguntas: (1) los sitios
+# dabajuroides de Falcón, Paraguaná y las ABC; (2) la dieta y la fauna de
+# los depósitos; (3) el movimiento de gente entre islas, costa y más allá,
+# contra el cuadro de T8 (`taino2_evidencia_material_contacto.yaml`); (4) el
+# MAR en la vida y en la creencia.
+#
+# Regla 5: esto PROPONE. Regla 1: las cifras del lado del REPO (conteos de
+# sondas, recuentos sobre las tablas transcritas, tamaños y sha256) las
+# imprime `python 6-fusion/scripts/medir_arqueologia_insular_falcon.py`; las
+# del lado de las fuentes son citas y llevan obra y página. Regla 3: todo
+# lleva `epoca`, y cuando el contexto no está fechado se dice
+# `indeterminada` (fuera del enum del preámbulo, a propósito: el depósito
+# mezcla desde 13.000 a.p. hasta hoy y cualquier otro valor mentiría).
+#
+# PÁGINAS. Urbina 2007: impresa = pdf − 12 (comprobado en pp. 21, 37, 55,
+# 60, 95). Urbina 2011: impresa = pdf − 4 (pp. 12, 17, 41, 77, 79). Casale
+# 2024: se cita la paginación de la versión en línea (1-19), que es la que
+# lleva el PDF; la del volumen es 609-627 (Crossref), o sea impresa en el
+# vol. = en línea + 608. Knaf 2021: impresa = pdf − 1 (el repositorio de la
+# ETH antepone una portada). Moreno-Mayar 2018: «N of 11» del artículo
+# largo = pdf − 2.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-22'
+  estado: propuesta
+  parcela: M8 — arqueología insular y de Falcón; genética pendiente
+  medido_por: 6-fusion/scripts/medir_arqueologia_insular_falcon.py
+  continua_a: 6-fusion/taino2_evidencia_material_contacto.yaml   # T8, #196
+  obras: [urbina-jimenez-2007-2011, casale-2024, knaf-2021, moreno-mayar-2018]
+
+# ══════════════════════════════════════════════════════════════════
+# 0. LO QUE DEL ENCARGO (Y DE LAS FICHAS) RESULTÓ FALSO AL MEDIRLO
+# ══════════════════════════════════════════════════════════════════
+correcciones:
+
+  - id: corr-01
+    afirmacion: >-
+      «Knaf 2021 (movilidad por isótopos, si es lo que creemos)».
+    lo_medido: >-
+      NO es movilidad de personas. Es la discriminación geoquímica de las
+      FUENTES DE JADE del circuncaribe: elementos traza e isótopos de Sr-Nd-Pb
+      medidos en ROCAS (101 muestras de fuente de Guatemala, Cuba oriental y
+      el norte de la República Dominicana) y aplicados a 19 hachas de jadeíta
+      de un solo yacimiento, Playa Grande (norte de la R. Dominicana). Los
+      isótopos, además, NO separan las fuentes (se solapan): lo que separa son
+      cocientes de elementos traza (p. 13, conclusión). Venezuela, Aruba,
+      Curazao, Bonaire, Paraguaná, Falcón y la Guajira: cero, con control
+      positivo (lo imprime el script). La movilidad HUMANA por isótopos está en
+      otras obras que Knaf cita (Laffoon et al. 2017, estroncio y oxígeno en
+      personas; Laffoon et al. 2014, colgantes de dientes de animal de Puerto
+      Rico): ver `de_paso`.
+    consecuencia: >-
+      La pregunta 3 no se contesta con Knaf. Lo que Knaf sí hace es cerrar la
+      deuda que T8 dejó en `pie-01`: la red del jade conocida por geoquímica
+      va de Guatemala a La Española y no toca la esfera caquetía. Ver `mov-04`.
+
+  - id: corr-02
+    afirmacion: >-
+      Fichas `casale-2024` y `knaf-2021`: «Wiley y Elsevier devolvieron 403 a
+      la descarga automática»; «lo único que se pudo leer es el resumen».
+    lo_medido: >-
+      Las dos tienen copia LEGAL y abierta, con su licencia CC-BY, en
+      repositorios institucionales que sirven el archivo por su API DSpace
+      sin muro ni verificación: Casale en Lirias (KU Leuven), versión
+      publicada, licencia CC-BY 4.0 en los metadatos del archivo y en la p. 1
+      del artículo; Knaf en la Research Collection de la ETH Zürich, versión
+      publicada, CC-BY 4.0. Descargadas y en el repo (ver `descargas`). Lo que
+      NO se hizo: Wiley sigue detrás de una verificación antibots de
+      Cloudflare y no se forzó; Leiden y el CSIC bloquean con un sistema de
+      protección y tampoco se forzaron.
+    consecuencia: >-
+      `cer-02` de T8 deja de estar degradado por «sólo el resumen»: ahora se
+      lee el pasaje, y dice lo mismo que el resumen pero con su razón (ver
+      `mov-02`).
+
+  - id: corr-03
+    afirmacion: >-
+      Ficha `urbina-jimenez-2007-2011`, §1: «Una datación de dabajuroide en
+      1650 d.C.» y «El de 2007 tiene fechas, pero coloniales (1650 d.C.)».
+    lo_medido: >-
+      Falso. El Carrizal NO tiene ninguna fecha absoluta propia para la
+      ocupación cerámica. «1650» es el tope del rango RELATIVO que Oliver 1989
+      da al complejo Los Médanos B (Urbina 2007, p. 94: la fecha más tardía
+      «para nuestro componente prehispánico»), y además Urbina declara que Los
+      Médanos NO está presente en El Carrizal: sólo Túcua y Urumaco (p. 82).
+      Las únicas fechas radiocarbónicas del trabajo son las de Muaco y
+      Taima-Taima, del Pleistoceno.
+    consecuencia: >-
+      El Carrizal no sirve para fechar nada de la ventana: su componente
+      dabajuroide es Túcua-Urumaco (c. 800-1400/1450 por estilo, sin C-14), y
+      el material colonial va aparte, al sur del valle.
+
+  - id: corr-04
+    afirmacion: >-
+      Ficha `urbina-jimenez-2007-2011`, §1: «Piedemonte Costero no es la
+      costa. Son elevaciones interiores».
+    lo_medido: >-
+      Matiz, no error. La autora lo dice de las dos maneras: el área está en
+      el sistema de relieve Piedemonte Costero (p. 32) Y «en la costa
+      marítima del Estado Falcón» (p. 11), junto a La Vela y Muaco. La
+      transecta del Corredor Vinccler corre de norte a sur desde la costa: el
+      sitio Falco 273 está «a 2 km de la costa» (p. 37) y Falco 286, sobre una
+      duna, es «la ocupación cerámica más al norte» (p. 37).
+    consecuencia: >-
+      La cautela de regla 4 de la ficha sigue valiendo para la ETIQUETA
+      (caquetíos del s. XVIII no son del XV), no para la geografía: El
+      Carrizal es costa del Golfete oriental.
+
+  - id: corr-05
+    afirmacion: >-
+      T8, `cer-01`: `obra: urbina-jimenez-2011`.
+    lo_medido: >-
+      Esa clave NO existe en `4-fuentes/bibliografia.yaml`: la obra es
+      `urbina-jimenez-2007-2011` (una ficha para las dos tesis). Regla 8.
+    consecuencia: >-
+      Si `cer-01` se fusiona tal cual, el validador lo rechazará. Se anota en
+      el issue; este documento no toca el de T8.
+
+  - id: corr-06
+    afirmacion: >-
+      «moreno-mayar-2018: la campaña del taíno halló que es de BERINGIA, no
+      del Caribe — confírmalo».
+    lo_medido: >-
+      Confirmado. Es el poblamiento temprano de América (genomas de
+      Alaska a la Patagonia, Lagoa Santa, Spirit Cave, Trail Creek). Del
+      Caribe tiene UNA línea: usa el genoma taíno antiguo de Schroeder et al.
+      2018 y a los yukpa de Venezuela como poblaciones de referencia al
+      modelar a los suramericanos (p. 5 of 11). Nada de caquetíos, de las
+      ABC, de Falcón ni de la época. Cero arahuaco.
+    consecuencia: >-
+      Ficha cerrada como `minado`, sin aportación: no alimenta ninguna esfera.
+
+# ══════════════════════════════════════════════════════════════════
+# 1. EL VEREDICTO
+# ══════════════════════════════════════════════════════════════════
+veredicto: >-
+  Las cuatro obras dan sitios y movimiento, casi nada de fauna y nada de
+  creencia. Casale 2024, leída entera, confirma el cuadro de T8 desde la
+  cerámica: en Aruba casi todo se hacía con arcillas de la isla, el grupo
+  decorado del Urumaco Temprano no se puede adscribir (ni local, ni
+  continental, ni antillano: la receta de la pasta lo impide), cuatro
+  tiestos parecen importados sin que nadie diga de dónde, y todas las flechas
+  de conexión que los autores dibujan van de cada isla a la costa de
+  enfrente, ninguna de isla a isla ni hacia las Antillas. Knaf 2021 no es
+  movilidad humana sino jade, y su red va de Guatemala a La Española sin
+  tocar la esfera. La zooarqueología que se pedía NO está en estas obras:
+  una sola especie nombrada (Strombus gigas en El Carrizal, sin fecha ni
+  recuento por especie), hueso animal sin identificar, conchas genéricas y
+  la concha como desgrasante de la loza. El mar sale como comida, como
+  materia de la cerámica y como camino; como creencia, cero medido.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. PREGUNTA 1 — LOS SITIOS (cronología, tamaño, casas, enterramientos)
+# ══════════════════════════════════════════════════════════════════
+sitios:
+
+  # ───────────────────────── ARUBA (Casale 2024) ─────────────────────────
+  - id: sit-01
+    nombre: Tanki Flip
+    lugar: Aruba, noroeste de la isla, sobre tonalita, junto a un rooi y un tanki (estanque excavado)
+    obra: casale-2024
+    pagina: "p. 3 (lugar) y p. 4 (excavación)"
+    cronologia: >-
+      «around 950–1250 C.E., which is the Early Urumaco period» (p. 4). ⚠️ La
+      Tabla 1 del mismo artículo pone el Urumaco Temprano en 1200-1350 y
+      asigna Tanki Flip a Túcua y a Urumaco Temprano y Tardío: el texto y la
+      tabla no coinciden. No se promedia. Ver `cronologias`.
+    tamano: «a large village with likely more than 100 inhabitants» (p. 4)
+    casas: trece estructuras identificadas como casas; una empalizada grande que cerraba el borde norte, leída también como defensiva (p. 4)
+    enterramientos: gente (re)enterrada dentro del poblado, entre grandes urnas de cerámica (p. 4)
+    epoca: precontacto
+    etiqueta: atestiguado
+    nota: >-
+      Casale resume aquí a Dijkhoff 1997 y a Versteeg y Rostain 1997; los
+      datos de primera mano están en esas dos obras (la primera ya en el repo
+      como ficha, `dijkhoff-1997`). No son una atestación independiente de
+      ellas (skill §8).
+
+  - id: sit-02
+    nombre: Santa Cruz / Ser'i Noka
+    lugar: Aruba, llanura árida central, 300 m al oeste del pueblo de Santa Cruz, junto a un rooi
+    obra: casale-2024
+    pagina: "pp. 4-5"
+    cronologia: >-
+      Período Cerámico «with evidence for earlier and later occupations»;
+      al menos dos fases (p. 5). En la Tabla 1 (p. 3): Túcua, Urumaco
+      Temprano y Tardío, Los Médanos A.
+    tamano: no lo da; destruido casi entero por la construcción desde los años setenta (p. 5)
+    casas: dos plantas de casa completas (campaña de Versteeg, años noventa), con fosas, agujeros de poste, fogones y basureros (p. 5)
+    enterramientos: varios enterramientos, la mayoría en fosa, y un enterramiento en urna (años setenta); «a large number of burials» en los noventa (p. 5)
+    epoca: precontacto
+    etiqueta: atestiguado
+    nota: la excavación de 1922-1923 dio unos 2.700 tiestos (p. 5, citando a Du Ry 1960)
+
+  - id: sit-03
+    nombre: Savaneta
+    lugar: Aruba, sureste, a 1 km del mar, en la confluencia de varios rooien, sobre caliza
+    obra: casale-2024
+    pagina: "p. 5"
+    cronologia: >-
+      Ocupado probablemente durante todo el Período Cerámico (Du Ry 1960);
+      pintura negro sobre rojo, propia de Los Médanos; en la Tabla 1 es el
+      único sitio grande con Los Médanos B (1450-1515) (p. 3).
+    tamano: no lo da; el pueblo actual está construido encima
+    casas: no las da
+    enterramientos: «many burial urns»; más enterramientos colectivos y urnas halladas después en el barrio General Majoor de Bruinewijk (p. 5)
+    epoca: precontacto   # con continuidad hasta 1515 según la Tabla 1
+    etiqueta: atestiguado
+
+  - id: sit-04
+    nombre: sitios menores de Aruba — California-2, Malmok-4, Altovista, Manzanilla-2, Banki Jerome-1
+    lugar: costas de Aruba (norte, noroeste, nordeste y sureste)
+    obra: casale-2024
+    pagina: "p. 5"
+    cronologia: >-
+      Sin fecha propia. La Tabla 4 (pp. 16-17) les da estilos «Dabajuran or
+      Historic» o «Urumaco or Historic» a buena parte de sus tiestos.
+    tamano: >-
+      California-2: 525 m², sobre una duna alargada, a unos 15 m del mar.
+      Malmok-4: unos 20 m de diámetro, en la playa. Altovista: 2.500 m², a
+      550 m de la costa. Manzanilla-2: 30 m de diámetro, a 400 m de la costa.
+      Banki Jerome-1: 100 m de diámetro, a 450 m de la costa.
+    casas: ninguna
+    enterramientos: ninguno
+    funcion: >-
+      California-2 es «special activity site related to marine food
+      exploitation»; los demás, campamentos temporales, sitios de actividad
+      o de extracción (p. 3).
+    epoca: indeterminada
+    etiqueta: atestiguado
+
+  - id: sit-05
+    nombre: Parkietenbos y Tanki Leendert
+    lugar: Aruba
+    obra: casale-2024
+    pagina: "p. 3"
+    cronologia: no la da
+    tamano: «large habitation sites», junto con los tres de arriba (p. 3)
+    casas: no las da
+    enterramientos: no los da
+    epoca: indeterminada
+    etiqueta: atestiguado
+
+  # ───────────────────── FALCÓN (Urbina 2007 y 2011) ─────────────────────
+  - id: sit-06
+    nombre: Falco 286 (Área Arqueológica 2, El Carrizal)
+    lugar: norte del área de El Carrizal, municipio Colina, sobre una duna con vegetación xerófita
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2007, pp. 37-38 y 86"
+    cronologia: >-
+      Sin fecha absoluta. La cerámica del Área 2 es del componente
+      Tortolitas (100 a.C.-800/1200 d.C., relativo), NO dabajuroide: el
+      dabajuroide sólo aparece en las Áreas 3 y 4 (p. 86). Hay además una
+      punta de la tradición El Jobo, que la autora no toma por ocupación
+      paleoindia (p. 85).
+    tamano: 1.656 m² aproximados (p. 37)
+    casas: no
+    enterramientos: >-
+      «concheros y enterramientos humanos asociados a cerámica prehispánica»
+      (p. 37), y fogones o topias (p. 38). Recolección sólo superficial y
+      diagnóstica; nada excavado.
+    epoca: precontacto   # relativa, y anterior al dabajuroide
+    etiqueta: atestiguado
+    aviso: >-
+      ⚠️ Estos concheros y enterramientos NO son caquetíos por la cerámica que
+      los acompaña: son del componente anterior. Quien los use para el s. XV
+      tiene que decirlo.
+
+  - id: sit-07
+    nombre: Falco 270 (Área Arqueológica 4, El Carrizal)
+    lugar: sur del área de El Carrizal; unifica ocho sitios de la prospección (Falco 269, 271-272, 282-285)
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2007, pp. 38-41, 55-56, 86-87"
+    cronologia: >-
+      Palimpsesto: Tortolitas, dabajuroide (Túcua y Urumaco; Los Médanos
+      ausente, p. 82), colonial y republicano. Posible primera fundación del
+      pueblo de El Carrizal en los ss. XVI-XVII, con mayólica temprana junto a
+      cerámica indígena (p. 38, citando a Arvelo y López 2004). Sin fechas
+      absolutas; los pozos no dieron estratos culturales claros (p. 42).
+    tamano: unas 7 ha (p. 39)
+    casas: no
+    enterramientos: >-
+      Un enterramiento aflorado por la erosión en el Área 4, excavado en 31
+      niveles de 2 cm y guardado en el CIAAP, asociado a cerámica indígena y
+      fragmentos de bivalvos (p. 41). Número mínimo de individuos: uno,
+      varón, adulto joven (p. 56). A 8 m del pozo 4, un túmulo de piedra
+      contemporáneo (p. 42).
+    epoca: indeterminada   # el enterramiento no está fechado y el sitio es colonial también
+    etiqueta: atestiguado
+
+  - id: sit-08
+    nombre: Falco 273 (Área Arqueológica 3, El Carrizal)
+    lugar: norte del valle, a 2 km de la costa, junto a Muaco (Fal 104)
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2007, p. 37"
+    cronologia: componentes Tortolitas y dabajuroide por estilo; sin fecha
+    tamano: unos 475 m² (p. 37)
+    casas: no
+    enterramientos: no
+    epoca: precontacto   # relativa
+    etiqueta: atestiguado
+
+  - id: sit-09
+    nombre: la base de 192 sitios agroalfareros de Falcón costero
+    lugar: costa de Falcón y Paraguaná
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2011, pp. 35-36, 40-42 y figs. 17 y 19 (pp. 77 y 79)"
+    cronologia: >-
+      Por identificación cultural: Tortolitan, Dabajuroid, ambas, otra o sin
+      identificar. Los sitios dabajuroides están sobre todo en la llanura por
+      debajo de 80 m; los tortolitanos al pie del piedemonte, de 160 a 400 m
+      (p. 42).
+    tamano: sólo el 35,41 % de los sitios traía su tamaño (p. 36); el texto no lo publica sitio a sitio
+    casas: «household» es uno de los tipos de sitio, sin más detalle (p. 36)
+    enterramientos: >-
+      Patrón: donde hay montículos o concheros en la costa, los enterramientos
+      están más tierra adentro; donde no los hay, los enterramientos están
+      también en la costa (p. 40). Montículos y concheros se concentran en el
+      extremo OCCIDENTAL del estado (p. 40, fig. 17).
+    epoca: indeterminada   # base definida como prehispánica, pero con reocupación colonial en varios sitios (p. 36) y sin fechas propias
+    etiqueta: atestiguado
+    aviso: >-
+      ⚠️ La lista de los 192 NO está en el documento: sólo mapas en imagen
+      (figs. 17-31) sin rótulos de sitio; la fig. 3 reproduce el mapa de
+      Oliver 1989 con sus números FAL. Y la fig. 17 (tipos de sitio) no pinta
+      NINGÚN sitio en Paraguaná, mientras la fig. 19 (identificación
+      cultural) sí los pinta: los de la península no tenían tipo registrado.
+      El texto dice que en Paraguaná la mayoría de los sitios está en la
+      mitad oriental, donde está el agua (p. 41). La portada pide no citar
+      sin permiso del Instituto: se usa como medida, no como autoridad.
+
+  - id: sit-10
+    nombre: Coy-Coy de Uria
+    lugar: cueva en la Sierra de San Luis, Falcón
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2011, p. 21 (citando a Pitevill 1984)"
+    cronologia: >-
+      Un C-14 de 1450 ± 80 a.p. y dos TL de 400 ± 43 y 295 ± 57 a.p.; la
+      cerámica está mezclada con dabajuroide y lleva negro sobre rojo de Los
+      Médanos, de 1200 d.C. en adelante. La autora no resuelve la
+      contradicción. No se promedia.
+    epoca: indeterminada
+    etiqueta: atestiguado
+    nota: sierra, no costa (regla 4)
+
+# ══════════════════════════════════════════════════════════════════
+# 2b. LAS CRONOLOGÍAS NO COINCIDEN — y no se promedian
+# ══════════════════════════════════════════════════════════════════
+cronologias:
+  - esquema: Oliver 1989, tal como lo reproduce Urbina 2007 (Tabla 4, p. 120) y 2011 (p. 20)
+    tucua: 800 – 1100/1200 d.C.
+    urumaco: 1100/1200 – 1400/1450 d.C.
+    los_medanos: 1350 – 1600/1650 d.C. (A, prehistórica; B, histórica)
+  - esquema: Casale et al. 2024, Tabla 1 (p. 3), citando a Dijkhoff 2022, Haviser 1987, Nomland 1933 y Oliver 1997
+    tucua: 850 – 1200 d.C.
+    urumaco_temprano: 1200 – 1350 d.C.
+    urumaco_tardio: 1350 – 1500 d.C.
+    los_medanos_a: 1400 – 1450 d.C.
+    los_medanos_b: 1450 – 1515 d.C.
+  - esquema: Urbina 2007, clases del Informe ARAAPICO (Arvelo y López 2004), p. 65
+    ocupacion_dabajuro: 800 – 1492 d.C.
+lectura: >-
+  Para la ventana simulada (s. XIV-XV) los dos esquemas cambian qué había en
+  las manos de los agentes: con Oliver, la bisagra Urumaco Tardío → Los
+  Médanos A cae hacia 1350-1450; con la Tabla de Casale, Urumaco Tardío dura
+  hasta 1500 y Los Médanos A es un medio siglo (1400-1450). Y Casale fecha
+  Tanki Flip en 950-1250 «Early Urumaco» en el texto mientras su propia tabla
+  pone el Urumaco Temprano en 1200-1350. Son tres fuentes con tres cortes:
+  decidir cuál usa el motor es decisión de Miguel (issue).
+
+# ══════════════════════════════════════════════════════════════════
+# 3. PREGUNTA 2 — LA DIETA Y LA FAUNA DE LOS DEPÓSITOS
+# ══════════════════════════════════════════════════════════════════
+dieta_resumen: >-
+  Estas cuatro obras NO traen zooarqueología: ninguna tabla de fauna,
+  ningún NMI animal, ningún pez, tortuga, ave ni mamífero identificado en un
+  contexto de la ventana. Lo que hay: una especie nombrada (Strombus gigas,
+  El Carrizal), 1.089 fragmentos de hueso humano y animal de los que el
+  animal no se identificó, conchas sin especie en casi todos los sitios de
+  Aruba, y la concha como desgrasante. La lista de fauna del Pleistoceno de
+  Muaco y Taima-Taima (Anexo 1 de Urbina 2007) NO informa del s. XV y va
+  aparte, en `fauna_excluida`. La zooarqueología de la costa caquetía hay
+  que ir a buscarla a otras obras: ver `no_encontrado` y `de_paso`.
+
+fauna:
+  - nombre_en_fuente: Strombus Gigas
+    especie_probable: 'Lobatus gigas (= Strombus gigas), botuto'
+    texto: 'Los restos de concha pudieron ser identificados como Strombus Gigas'
+    obra: urbina-jimenez-2007-2011
+    pagina_impresa: 55   # Urbina 2007
+    lugar: 'El Carrizal (Corredor Vinccler: Falco 270, 273 y 286), municipio Colina, costa de Falcón'
+    epoca: indeterminada
+    sonido: null
+    cantidad: >-
+      La categoría «Concha» suma 449 fragmentos, el 7,66 % de la colección
+      (p. 55 y Tabla 7, p. 123), casi todo acumulaciones de concha no
+      trabajada; sólo 15 fragmentos diagnósticos. El texto NO dice si los 449
+      son Strombus o si la identificación vale para los diagnósticos.
+    artefactos: 'una cuenta discoidal y una ficha de concha (Lam 16, p. 211; verificado en imagen)'
+    nota_epoca: >-
+      Recolección de superficie en un palimpsesto de 13.000 a.p. a hoy; la
+      autora dice que la naturaleza del material no permitió usarlo para
+      fechar (p. 55) y que la concha se reparte igual al norte y al sur
+      (p. 88). No se puede marcar `precontacto`.
+
+  - nombre_en_fuente: fragmentos de bivalvos
+    especie_probable: null
+    texto: 'La cultura material asociada es cerámica indígena y fragmentos de bivalvos'
+    obra: urbina-jimenez-2007-2011
+    pagina_impresa: 41   # Urbina 2007
+    lugar: 'Falco 270, Área 4, pozo de sondeo 1 — el contexto del enterramiento'
+    epoca: indeterminada
+    sonido: null
+
+  - nombre_en_fuente: concheros
+    especie_probable: null
+    texto: 'concentraciones discretas de material, incluidos concheros y enterramientos humanos asociados a cerámica prehispánica'
+    obra: urbina-jimenez-2007-2011
+    pagina_impresa: 37   # Urbina 2007
+    lugar: 'Falco 286, sobre una duna, norte de El Carrizal'
+    epoca: precontacto
+    sonido: null
+    nota_epoca: 'relativa y ANTERIOR al dabajuroide: la cerámica del Área 2 es Tortolitas (p. 86). No es fauna caquetía.'
+
+  - nombre_en_fuente: huesos no humanos
+    especie_probable: null
+    texto: 'Los restos no humanos no fueron identificados, por lo tanto no se pudo establecer el MNI.'
+    obra: urbina-jimenez-2007-2011
+    pagina_impresa: 56   # Urbina 2007
+    lugar: 'El Carrizal (colección ARAAPICO)'
+    epoca: indeterminada
+    sonido: null
+    cantidad: >-
+      1.089 fragmentos de hueso humano y no humano, el 18,57 % de la
+      colección; 427 identificados, todos del lado humano (p. 56, Tabla 7).
+      La categoría incluye «dientes y otolitos» (p. 55): si hay otolitos de
+      pez, no se contaron aparte.
+
+  - nombre_en_fuente: shell mounds
+    especie_probable: null
+    texto: 'the mounds and shell mounds are concentrated in the west end of the map'
+    obra: urbina-jimenez-2007-2011
+    pagina_impresa: 40   # Urbina 2011
+    lugar: 'costa occidental de Falcón (fig. 17, p. 77)'
+    epoca: indeterminada
+    sonido: null
+
+  - nombre_en_fuente: shellfish
+    especie_probable: null
+    texto: 'Temporary settlements along the mangrove areas and lagoons were established for their rich shellfish'
+    obra: casale-2024
+    pagina_impresa: 3
+    lugar: 'islas ABC y archipiélagos del sureste (Las Aves, Los Roques, La Tortuga, Margarita)'
+    epoca: precontacto
+    sonido: null
+    nota_epoca: 'ARCAICO (desde c. 4500 a.p.), no caquetío: son los primeros visitantes desde la costa venezolana'
+
+  - nombre_en_fuente: marine food (California-2)
+    especie_probable: null
+    texto: 'This special activity site related to marine food exploitation is situated on an elongated dune'
+    obra: casale-2024
+    pagina_impresa: 5
+    lugar: 'California-2, extremo norte de Aruba, a unos 15 m del mar'
+    epoca: indeterminada
+    sonido: null
+    nota_epoca: 'sus tiestos son «Dabajuran or Historic» (Tabla 4, pp. 16-17)'
+
+  - nombre_en_fuente: shell, bone (Savaneta)
+    especie_probable: null
+    texto: 'a significant amount of shell, stone, bone, pottery and many burial urns were retrieved'
+    obra: casale-2024
+    pagina_impresa: 5
+    lugar: 'Savaneta, sureste de Aruba'
+    epoca: indeterminada
+    sonido: null
+    nota_epoca: 'Casale cita a Boerstra 1982; el sitio va de Túcua a Los Médanos B (hasta 1515) y el material no está fechado'
+
+  - nombre_en_fuente: coral
+    especie_probable: null
+    texto: 'materials such as shells, coral, pottery and colonial materials were observed'
+    obra: casale-2024
+    pagina_impresa: 5
+    lugar: 'Altovista, nordeste de Aruba (y coral también en Manzanilla-2 y Banki Jerome-1)'
+    epoca: indeterminada
+    sonido: null
+    nota_epoca: 'Altovista trae material colonial en superficie; es la survey de Versteeg y Ruiz 1995 citada por Casale'
+
+  - nombre_en_fuente: shell fragments added as temper
+    especie_probable: null
+    texto: 'the presence of shell fragments added as temper'
+    obra: casale-2024
+    pagina_impresa: 1
+    lugar: 'Grupo petrográfico 3: Tanki Flip, Ser''i Noka y Savaneta (Aruba)'
+    epoca: precontacto
+    sonido: null
+    nota_epoca: 'fechado por ESTILO (relativo): Urumaco Temprano, 1200-1350 d.C. en la Tabla 1 (p. 3)'
+
+fauna_excluida:
+  motivo: >-
+    El Anexo 1 de Urbina 2007 (p. 225) lista, según Ochsenius 1980, la fauna
+    de los sitios de megafauna de Muaco y Taima-Taima (14.000-8.000 a.p.).
+    Hay especies que siguen vivas (Didelphis marsupialis, Desmodus rotundus,
+    Panthera onca) junto a mastodontes, gliptodontes y caballos extintos.
+    Es PLEISTOCENO: no dice qué animales vivían con los caquetíos, y meterlo
+    en `fauna:` con cualquier `epoca` invitaría a proyectarlo. Se deja aquí,
+    señalado, para que ningún agente de fauna lo recoja por error.
+  obra: urbina-jimenez-2007-2011
+  pagina_impresa: 225
+
+# ══════════════════════════════════════════════════════════════════
+# 4. PREGUNTA 3 — EL MOVIMIENTO DE GENTE, CONTRA EL CUADRO DE T8
+# ══════════════════════════════════════════════════════════════════
+movimiento:
+
+  - id: mov-01
+    titulo: "Todas las flechas van de una isla a la costa de enfrente: ninguna de isla a isla, ninguna hacia las Antillas"
+    obra: casale-2024
+    pagina: "p. 2 (fig. 1, verificada en imagen) y p. 3"
+    epoca: precontacto (conexiones establecidas por estilo cerámico, sin fecha propia)
+    etiqueta: atestiguado
+    que_dice: >-
+      La fig. 1 dibuja «the main connection between the islands and the
+      mainland established through stylistic analysis»: Aruba con Falcón (dos
+      flechas, hacia el Golfo y hacia Paraguaná), Curazao con la costa de
+      Falcón, Bonaire y Los Roques con la región de Valencia. El texto (p. 3):
+      Aruba en más contacto con la costa de Falcón por los estilos Los
+      Médanos y Urumaco; Bonaire, Curazao y las figurillas de Los Roques con
+      el río Yaracuy y la región de Valencia (Haviser 1991; Kasztovszky et al.
+      2004; Bohus et al. 2005).
+    contra_t8: >-
+      CONFIRMA `cer-04` («Aruba mira al oeste y al sur») desde una obra
+      posterior y del mismo equipo de Leiden. Y le da forma a la sospecha que
+      T8 anotó de paso (Dijkhoff: el contacto Aruba-Curazao iba «a través del
+      continente»): el mapa de conexiones es un RADIO desde la costa, no un
+      arco de islas. ⚠️ Es un dibujo de conexiones estilísticas, no una ruta
+      medida.
+
+  - id: mov-02
+    titulo: "El grupo decorado no se puede adscribir, y no por falta de lectura: por la receta"
+    obra: casale-2024
+    pagina: "pp. 12-14 (resultados y discusión) y p. 17 (Tabla 4, verificada en imagen)"
+    cita_corta: >-
+      «inhibits an understanding of whether the vessels were imported or locally produced»
+    epoca: precontacto (Urumaco Temprano, por estilo)
+    etiqueta: atestiguado
+    que_dice: >-
+      El grupo 3 es una pasta calcárea de origen de sedimentación MARINA, con
+      grumos y vetas de arcilla (mezcla de arcillas, quizá chamota) y concha
+      añadida como desgrasante; es casi todo decorado y del Urumaco Temprano,
+      y aparece en los tres poblados grandes (Tanki Flip, Ser'i Noka,
+      Savaneta). Los autores proponen dos lecturas: una producción
+      centralizada que surtía a los tres, o conocimiento técnico compartido
+      entre alfareras (o intercambio de arcilla) (p. 13). Los grupos 1 y 2 son
+      locales: tonalita/cuarzo-diorita del noroeste y arcillas mixtas del
+      sureste de la isla.
+    contra_t8: >-
+      T8 (`cer-02`) dejó tres futuros: grupo 3 local con otra receta,
+      continental o antillano. El artículo no elige ninguno: dice que la
+      preparación de la pasta impide saberlo. NINGUNA mención a las Antillas
+      en el cuerpo del artículo: las 13 apariciones de «Antill-» son todas de
+      la bibliografía («Netherlands Antilles», congresos de las Antillas
+      Menores) — lo imprime el script. Y el marco de comparación que los
+      autores piden para el futuro es la costa norte de Venezuela, Curazao,
+      Bonaire y Los Roques (p. 17), no el arco antillano.
+    cambio_de_etiqueta: >-
+      `cer-02` de T8 puede subir de `hipotetico` (sólo resumen) a
+      `atestiguado` en lo que afirma —que el origen del grupo 3 es
+      indeterminable—, porque ahora está leído el pasaje. Lo decide Miguel.
+
+  - id: mov-03
+    titulo: "Cuatro tiestos parecen importados, y nadie dice de dónde"
+    obra: casale-2024
+    pagina: "p. 13 (texto) y pp. 16-17 (Tabla 4, verificada en imagen)"
+    epoca: precontacto   # A.175 Túcua/Urumaco Temprano, TL.5 Urumaco Temprano; A.46 y TL.2 Urumaco
+    etiqueta: atestiguado
+    que_dice: >-
+      Cuatro muestras no casan con ninguna arcilla de la isla y los autores
+      proponen que «were likely imported from outside Aruba or manufactured
+      with clay sources not identified during the clay survey». No proponen
+      origen. Una (TL.5) es roca volcánica, posible basalto o andesita.
+    discrepancia_interna: >-
+      ⚠️ El texto dice que esas cuatro vienen exclusivamente de los tres
+      poblados mayores (Savaneta, Tanki Flip, Ser'i Noka); la Tabla 4 pone dos
+      en Savaneta y Ser'i Noka (A.46, A.175) y DOS en Tanki Leendert (TL.2,
+      TL.5), y ninguna en Tanki Flip. Y los recuentos del texto (grupo 2:
+      siete; grupo 3: catorce) no son los de la tabla, que sí suma los
+      cincuenta tiestos del muestreo. El script lo cuenta desde la
+      transcripción de `casale_tabla4`. No se corrige a los autores: se
+      declara.
+    contra_t8: >-
+      Es el único indicio material de objetos que LLEGAN a Aruba que da la
+      parcela, y va sin dirección. No añade nada al eje antillano.
+
+  - id: mov-04
+    titulo: "La red del jade conocida por geoquímica no toca la esfera caquetía"
+    obra: knaf-2021
+    pagina: "p. 1 (resumen) y p. 13 (discusión y conclusión)"
+    cita_corta: >-
+      «3 celts of exotic origin (16%, Fig. 2), connecting Hispaniola to Guatemala»
+    epoca: >-
+      precontacto: el estrato de la hacha DR-PG-18 tiene C-14 calibrado
+      790-1000 d.C. y otra fecha de 1340-1470 d.C. en la misma unidad; los
+      autores concluyen que las piezas llegaron probablemente entre fines
+      del s. VIII y el XI (p. 13)
+    etiqueta: atestiguado
+    que_dice: >-
+      Las fuentes regionales de jadeíta son Guatemala (norte y sur de la
+      falla del Motagua), Cuba oriental y el norte de la R. Dominicana; de 19
+      hachas de Playa Grande, 16 son dominicanas y 3 guatemaltecas pese a
+      tener una fuente a 25 km. Distancia por rutas indígenas: más de 3.200
+      km (p. 13).
+    contra_t8: >-
+      Cierra la deuda de `pie-01` con un NEGATIVO medido: ni una sola
+      mención de Venezuela, Aruba, Curazao, Bonaire, Falcón, Paraguaná ni la
+      Guajira, con control positivo (Guatemala, Dominican, Cuba). Refuerza lo
+      que Queffelec 2024 decía por tipología: la piedra verde antillana mira
+      a Centroamérica por un camino que no pasa por aquí.
+
+  - id: mov-05
+    titulo: "Aruba → El Carrizal, 1723: una migración COLONIAL de caquetíos de la isla a la costa"
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2007, pp. 20-21, 95 y 115 (Documento N 3)"
+    cita_corta: >-
+      «a los dichos yndios Urubanos que al presente estan fundados en este sitio del Carrisal»
+    epoca: colonial   # 7 de septiembre de 1723
+    etiqueta: atestiguado
+    que_dice: >-
+      La donación de tierras de Taratara y El Carrizal hecha por Pedro y Juan
+      de la Colina y Peredo (Archivo Histórico de Coro, Instrumentos Públicos,
+      ff. 494v-495) es a «varias familias de Indios Caquetios venidos de
+      Aruba» que pedían doctrina. Antes, según la visita del obispo Martí
+      (Fortique 1989), el lugar lo habían dejado indios de nación caquetía que
+      se fueron a poblar Guaibacoa (p. 20).
+    contra_t8: >-
+      Es la dirección contraria a la carta de Ampíes (T8 `eth-01`: la gente
+      de la costa «se pasaba allá», 1525) y dos siglos después: el tránsito
+      costa ↔ islas funcionaba en los dos sentidos también en la Colonia.
+      Regla 3: NO se proyecta al s. XV.
+    aviso: >-
+      ⚠️ Toca a `martinez-cruzado-2003`: esa obra cita El Carrizal como pueblo
+      de caquetíos según Fortique 1989. Si los caquetíos de El Carrizal del
+      XVIII eran ARUBANOS, El Carrizal y Aruba no son dos poblaciones
+      independientes para una comparación genética: una desciende en parte
+      de la otra.
+
+  - id: mov-06
+    titulo: "Un diseño de Ranchería hecho en casa: el pajarito de Los Médanos"
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2007, p. 60 (resumiendo a Oliver 1989)"
+    epoca: precontacto   # Los Médanos, 1350-1600/1650 por estilo
+    etiqueta: atestiguado   # para lo que dice Oliver; Urbina lo resume
+    que_dice: >-
+      El complejo Los Médanos tiene cuencos con diseño ornitomorfo negro
+      sobre rojo que sólo se encuentran en el valle de Ranchería (complejo
+      Portacelli, Colombia): idéntico a Portacelli pero de manufactura local.
+    contra_t8: >-
+      Es el eje OESTE de T8 (Guajira/Ranchería) visto en un motivo: viaja el
+      diseño, no la vasija. Misma lógica que Casale en Aruba.
+    aviso: >-
+      Es Oliver 1989 contado por Urbina, no una observación de Urbina: en El
+      Carrizal Los Médanos no está presente (p. 82). Se cita a Oliver cuando
+      se cite.
+
+  - id: mov-07
+    titulo: "Dentro de Aruba: arcillas compartidas y familia que se visita"
+    obra: casale-2024
+    pagina: "p. 13"
+    epoca: precontacto (fase Urumaco), con continuidad al período histórico
+    etiqueta: hipotetico   # es la interpretación de los autores
+    que_dice: >-
+      Ningún poblado grande tenía una fuente de arcilla preferente; las
+      comunidades usaban las mismas fuentes del noroeste y del sureste. Los
+      autores lo leen como movimiento dentro de la isla: áreas de actividad a
+      kilómetros de los poblados, visitas a parientes, interacción
+      norte-sur. Y añaden (colonial): entre los ss. XVI y XIX Aruba mantuvo
+      una mayoría de población indígena con poca interacción con el resto del
+      Caribe (Kelly 2012).
+
+# ══════════════════════════════════════════════════════════════════
+# 5. PREGUNTA 4 — EL MAR EN LA VIDA Y EN LA CREENCIA
+# ══════════════════════════════════════════════════════════════════
+mar:
+  en_la_vida:
+    - id: mar-01
+      que: la concha y la arcilla del mar hacen la loza decorada
+      texto: 'the raw materials used to manufacture these ceramics most likely originated from marine sedimentation'
+      obra: casale-2024
+      pagina: "p. 12"
+      epoca: precontacto   # Urumaco Temprano, por estilo
+      etiqueta: atestiguado
+      nota: >-
+        La loza DECORADA del Urumaco Temprano de Aruba se hacía con arcilla de
+        sedimentación marina y concha molida añadida; la de diario, con
+        arcillas de tierra adentro. Que la vajilla fina lleve el mar dentro es
+        un dato técnico; leerlo como simbólico sería nuestro, no de la fuente.
+    - id: mar-02
+      que: la concha como desgrasante es rasgo del estilo Dabajuro
+      texto: 'Desgrasante de arena y concha'
+      obra: urbina-jimenez-2007-2011
+      pagina: "Urbina 2007, pp. 117-118 (Tablas 1 y 2, que reproducen a Cruxent y Rouse 1982)"
+      epoca: precontacto   # períodos IV-V de Cruxent y Rouse
+      etiqueta: atestiguado
+      nota: >-
+        La misma tabla anota, del estilo La Mulera (tierra adentro, San
+        Cristóbal), que su desgrasante es de arena porque allí «no se
+        conseguía concha». Es Cruxent y Rouse, no Urbina. Y Du Ry (vía Casale
+        p. 5) describe el estilo Savaneta como templado con concha y cuarzo.
+    - id: mar-03
+      que: sitios hechos para comer del mar
+      texto: 'special activity site related to marine food exploitation'
+      obra: casale-2024
+      pagina: "p. 5"
+      epoca: indeterminada
+      etiqueta: atestiguado
+    - id: mar-04
+      que: concheros en la costa, y los muertos en otra parte
+      obra: urbina-jimenez-2007-2011
+      pagina: "Urbina 2011, p. 40; Urbina 2007, p. 37"
+      epoca: indeterminada
+      etiqueta: atestiguado
+      nota: >-
+        En la costa de Falcón, donde hay montículos o concheros los
+        enterramientos se apartan tierra adentro; donde no, también van en la
+        costa (Urbina 2011). En Falco 286 conchero y enterramientos comparten
+        sitio, pero con cerámica anterior a la caquetía (Urbina 2007).
+    - id: mar-05
+      que: el mar como camino corto
+      texto: 'The island is situated 30 km north of the coast of the Venezuelan Paraguaná peninsula'
+      obra: casale-2024
+      pagina: "p. 2"
+      epoca: n/a — geografía
+      etiqueta: atestiguado
+    - id: mar-06
+      que: la cercanía a la costa explica dónde se vive
+      obra: urbina-jimenez-2007-2011
+      pagina: "Urbina 2007, p. 94"
+      epoca: n/a — es interpretación de la autora
+      etiqueta: hipotetico
+      nota: >-
+        Urbina explica la coincidencia entre el área arqueológica y la
+        geográfica porque la cercanía a la costa da acceso al alimento, al
+        comercio y al control del territorio. Es su lectura, sin dato de
+        fauna que la sostenga.
+  en_la_creencia:
+    resultado: CERO
+    lo_medido: >-
+      Ninguna de las cinco obras (Urbina 2007, Urbina 2011, Casale 2024,
+      Knaf 2021, Moreno-Mayar 2018) dice NADA sobre el mar en la creencia.
+      Se barrieron sondas de creencia en español y en inglés, con raíz corta
+      y sin acentos (cosmo-, belie-, creenc-, ritual, sacred, sagrad-,
+      ceremon-, religi-, myth/mito, ofrend-, offering, deit-/deidad, cemí,
+      zemi, idol-, shaman/chamán, piache, ajuar funerario, grave goods). Lo
+      que sale son: títulos de la bibliografía (Antczak 2006, «Los Ídolos de
+      las Islas Prometidas», en Casale), el jade «sacred» entre cazadores
+      neolíticos del mundo (Knaf, p. 1) y la palabra en contextos que no son
+      marinos. El control del mismo barrido —mar, sea, shell, concha, coast—
+      sale positivo. El script imprime cada acierto con su contexto.
+    lo_que_si_hay_de_la_muerte: >-
+      Los enterramientos: dentro del poblado entre urnas grandes en Tanki
+      Flip, en fosa y en urna en Ser'i Noka, muchas urnas y entierros
+      colectivos en Savaneta (Casale pp. 4-5), un varón adulto joven con
+      bivalvos en El Carrizal (Urbina 2007, pp. 41 y 56), y las «bases
+      convexas de urnas funerarias» del estilo Dabajuro (Cruxent y Rouse vía
+      Urbina 2007, p. 118). Ninguna fuente lo liga al mar.
+    para_la_tesis_de_miguel: >-
+      Estas obras NO refutan que el mar fuera esencial en la cosmovisión
+      caquetía: no hablan de cosmovisión. Dicen que el mar estaba en la
+      comida, en la loza fina y en el camino. Un cero en arqueometría y
+      prospección es un cero de género, no de pueblo: la pregunta hay que
+      llevarla a las crónicas y a la creencia ya minada (Oviedo, Pané, la
+      campaña de corpus de creencia), no a estas cuatro.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LENGUA — lo que salió de paso, y va a otra esfera
+# ══════════════════════════════════════════════════════════════════
+lengua_de_paso:
+  - id: len-01
+    forma: kaketio / kakitho
+    glosa_en_fuente: >-
+      «glosses as ‘people’ but those whom are of a more intimate contact (in
+      contrasts to human beings.)»
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2011, p. 17, nota 7 — comunicación personal de J. Oliver, 2011"
+    etiqueta: hipotetico
+    por_que_degradado: >-
+      Es una glosa de un lingüista del s. XX dada de palabra a una
+      estudiante, sin fuente primaria. Compite con la de Galeoto Cey,
+      «caquetíos, que quiere decir buena gente» (s. XVI, vía Zavala Reyes
+      2018, p. 401), que sí es de época. No se fusiona por encima de Cey.
+  - id: len-02
+    forma: kasike ← Proto-Maipure *ka 'con' + *sikua 'casa'
+    glosa_en_fuente: 'cacique = «head of the house»; kasiku/a-re, el territorio de la cabeza de la casa'
+    obra: urbina-jimenez-2007-2011
+    pagina: "Urbina 2011, p. 17, nota 7 — comunicación personal de J. Oliver"
+    etiqueta: hipotetico
+    nota: >-
+      Si se quisiera usar, es una etimología reconstruida para el maipure,
+      no para el caquetío, y choca con la política de que el reconstruido no
+      compite con lo atestiguado: `cacike` ya está en el lexicón como voz de
+      la esfera. Va al issue como curiosidad, no como propuesta.
+
+# ══════════════════════════════════════════════════════════════════
+# 7. LAS TABLAS TRANSCRITAS (las lee el script: regla 1)
+# ══════════════════════════════════════════════════════════════════
+# Casale et al. 2024, Tabla 4 (pp. 16-17). Transcrita del PDF y VERIFICADA
+# EN IMAGEN fila a fila (render de pymupdf de las dos páginas). Columnas:
+# sitio, código, asociación estilística, decorado, conexión con grupo de
+# arcilla (A/B/''), grupo petrográfico.
+casale_tabla4:
+  declarado_en_el_texto:
+    total_muestras: 50            # «Fifty sherds were selected» (p. 5)
+    grupo_1: 22                   # §3.1 (p. 8)
+    grupo_2: 7                    # §3.2 (p. 8)
+    grupo_3: 14                   # §3.3 (p. 12)
+    grupo_3a: 5                   # «five samples (sub-group 3a)» (p. 12)
+    no_agrupadas: 4               # «four samples that do not group» (p. 6)
+    no_agrupadas_solo_de: [Savaneta, Tanki Flip, Ser'i Noka]   # p. 13
+  filas:
+    - [Tanki Flip, A.75, Urumaco, Undecorated, B, '1']
+    - [Tanki Flip, A.66, Urumaco, Undecorated, B, '1']
+    - [Tanki Flip, A.67, Urumaco, Undecorated, A, '2']
+    - [Tanki Flip, A.79, Early Urumaco, Decorated, '', '3']
+    - [Tanki Flip, A.83, Early Urumaco, Decorated, '', '3']
+    - [Tanki Flip, A.80, Early Urumaco, Decorated, '', '3']
+    - [Tanki Flip, A.78, Early Urumaco, Decorated, '', 3a]
+    - [Savaneta, A.24, Early Urumaco, Undecorated, '', 3a]
+    - [Savaneta, A.46, Urumaco, Undecorated, '', Ungrouped]
+    - [Savaneta, A.18, Urumaco, Undecorated, B, '1']
+    - [Savaneta, A.21, Urumaco, Undecorated, B, '1']
+    - [Savaneta, A.19, Urumaco, Undecorated, B, '1']
+    - [Savaneta, A.30, unknown, Undecorated, B, '1']
+    - [Savaneta, A.51, Urumaco, Decorated, '', 3a]
+    - [Savaneta, A.37, Urumaco, Decorated, '', '3']
+    - [Savaneta, A.7, unknown, Undecorated, '', '3']
+    - [Ser'i Noka, A.116, Urumaco, Undecorated, B, 1b]
+    - [Ser'i Noka, A.153, Urumaco, Undecorated/incision punctuation, B, 1b]
+    - [Ser'i Noka, A.149, Urumaco, Undecorated, B, 1b]
+    - [Ser'i Noka, A.165, Urumaco, Undecorated/incision punctuation, B, '1']
+    - [Ser'i Noka, A.175, Tucua/Early Urumaco, Decorated, '', Ungrouped]
+    - [Ser'i Noka, A.9, Urumaco, Undecorated, A, '2']
+    - [Ser'i Noka, A.38, Urumaco, Undecorated, B, '1']
+    - [Ser'i Noka, A.23, Urumaco, Undecorated, B, '1']
+    - [Ser'i Noka, A.171, Early Urumaco, Decorated, '', '3']
+    - [Ser'i Noka, A.124, Early Urumaco, Decorated, '', '3']
+    - [Ser'i Noka, A.135, Early Urumaco, Decorated, '', '3']
+    - [Ser'i Noka, A.174, Early Urumaco, Decorated, '', 3a]
+    - [Tanki Leendert, TL.6, Urumaco, Undecorated, B, 1a]
+    - [California Westpoint, CW.4, Dabajuran or Historic, Undecorated, A, '2']
+    - [Malmok, MK.1, Urumaco or Historic, Undecorated, B, 1a]
+    - [Manzaia, MA.2, Dabajuran or Historic, Decorated, A, '2']
+    - [Banki Jerome, BJ.3, Urumaco or Historic, Undecorated, B, '1']
+    - [Manzaia, MA.1, Urumaco, Undecorated, B, '1']
+    - [California Westpoint, CW.3, Dabajuran or Historic, Undecorated, A, '2']
+    - [Manzaia, MA.4, Urumaco, Undecorated, A, '2']
+    - [Tanki Leendert, TL.1, Urumaco, Undecorated, B, '1']
+    - [Alta Vista, AV.2, Urumaco or Historic, Undecorated, B, '1']
+    - [Tanki Leendert, TL.3, Urumaco, Undecorated, '', '3']
+    - [Santa Cruz, SC.1, Early Urumaco, Surface extensively weathered, '', 3a]
+    - [Tanki Leendert, TL.2, Urumaco, Decorated, '', Ungrouped]
+    - [Tanki Leendert, TL.4, Early Urumaco, Undecorated, '', '3']
+    - [Malmok, MK.3, Early Urumaco, Undecorated, B, 1c]
+    - [Banki Jerome, BJ.1, Dabajuran or Historic, Undecorated, '', '3']
+    - [Malmok, MK.2, unknown, Undecorated, B, 1c]
+    - [Manzaia, MA.3, Dabajuran or Historic, Decorated, A, '2']
+    - [Tanki Leendert, TL.5, Early Urumaco, Undecorated, '', Ungrouped]
+    - [Bona Vista, BV.1, Dabajuran o Historic, Undecorated, A, '2']
+    - [Santa Cruz, SC.5, Urumaco, Undecorated, B, 1b]
+    - [Santa Cruz, SC.2, Urumaco, Undecorated, B, '1']
+
+# Urbina 2007, Tabla 7 (p. 123): fragmentos por tipo de cultura material.
+# Transcrita del `pdftotext`; el script comprueba que la suma dé el total
+# declarado y que los porcentajes cuadren.
+urbina_2007_tabla7:
+  total_declarado: 5863
+  filas:
+    - [Cerámica hecha a mano, 2102, 35.85]
+    - [Hueso, 1089, 18.57]
+    - [Mayólica, 577, 9.84]
+    - [Vidrio, 468, 7.98]
+    - [Teja, 403, 6.87]
+    - [Concha, 449, 7.66]
+    - [Lítica, 226, 3.85]
+    - [Semiporcelana, 199, 3.39]
+    - [Gres, 117, 2.00]
+    - [Ladrillo, 79, 1.35]
+    - [Metal, 78, 1.33]
+    - [Caolín, 31, 0.53]
+    - [Oliveras, 26, 0.44]
+    - [Porcelana, 8, 0.14]
+    - [Cemento, 8, 0.14]
+    - [Plástico, 3, 0.05]
+
+# ══════════════════════════════════════════════════════════════════
+# 8. LO QUE PROPONGO — y lo decide Miguel (regla 5)
+# ══════════════════════════════════════════════════════════════════
+propuesta:
+
+  - id: prop-01
+    donde: 6-fusion/taino2_evidencia_material_contacto.yaml (T8)
+    que: >-
+      (a) Corregir `cer-01` → `obra: urbina-jimenez-2007-2011`. (b) En
+      `cer-02`, subir la etiqueta a `atestiguado` y cambiar la página a «pp.
+      12-14 (versión en línea)», porque el pasaje ya está leído. (c) En
+      `pie-01`, cerrar la `deuda` con `mov-04` de aquí.
+
+  - id: prop-02
+    donde: 3-mundo/asentamientos.yaml (o geografia_politica.yaml)
+    que: >-
+      Los tres poblados grandes de Aruba (Tanki Flip, Ser'i Noka, Savaneta)
+      como nodos de la esfera con lo que Casale da: casas, empalizada,
+      enterramientos en urna, cronología por estilo — con la discrepancia de
+      fechas declarada. Hoy la esfera nombra las ABC pero no tiene sus
+      aldeas.
+
+  - id: prop-03
+    donde: 3-mundo/corpus/ecologia.yaml
+    que: >-
+      Un hecho nuevo, atestiguado: «la loza decorada del Urumaco Temprano de
+      Aruba se hacía con arcilla de sedimentación marina y concha molida
+      añadida; la loza de diario, con arcillas de la tierra» (Casale 2024,
+      pp. 1 y 12). Dominios: [ceramica, mar]. Es el mar dentro de la casa,
+      sin interpretación simbólica.
+
+  - id: prop-04
+    donde: 3-mundo/corpus/creencia.yaml
+    que: >-
+      NADA. Esta parcela no encontró creencia. Se propone sólo que el issue
+      deje escrito el cero, para que nadie vuelva a buscar cosmovisión marina
+      en arqueometría.
+
+  - id: prop-05
+    donde: decisión de Miguel
+    que: >-
+      Qué esquema cronológico del dabajuroide usa el motor para decidir qué
+      loza hay en la ventana: Oliver 1989 (Los Médanos desde 1350) o la Tabla
+      1 de Casale (Urumaco Tardío hasta 1500, Los Médanos A 1400-1450).
+
+# ══════════════════════════════════════════════════════════════════
+# 9. LO QUE NO SE ENCONTRÓ (las negativas valen — skill §6)
+# ══════════════════════════════════════════════════════════════════
+no_encontrado:
+  - "Ni una tabla de fauna, un NMI animal, un pez, una tortuga, un ave o un mamífero identificados en un contexto de la ventana, en ninguna de las cuatro obras."
+  - "Ni una fecha absoluta propia para la ocupación cerámica de El Carrizal (corr-03)."
+  - "La lista de los 192 sitios de Urbina 2011: no está en el documento (sólo mapas en imagen sin rótulos)."
+  - "Ni una mención del mar en la creencia, el rito o el cosmos (medido; ver `mar.en_la_creencia`)."
+  - "Ni una mención de las Antillas como origen o destino en el cuerpo de Casale 2024; ni una de Venezuela o las ABC en Knaf 2021."
+  - "Ningún dato de movilidad humana por isótopos para la esfera caquetía: Knaf 2021 no lo es."
+  - "Ningún origen propuesto para los cuatro tiestos que Casale cree importados."
+  - "Moreno-Mayar 2018: nada del Caribe salvo el genoma taíno de Schroeder 2018 como referencia."
+
+# ══════════════════════════════════════════════════════════════════
+# 10. DESCARGAS (URL, fecha, licencia, tamaño, sha256 — los imprime el script)
+# ══════════════════════════════════════════════════════════════════
+descargas:
+  - obra: casale-2024
+    archivo: fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.pdf
+    texto: fuentes_caquetios/Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.txt
+    url: https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content
+    ficha_del_repositorio: https://lirias.kuleuven.be/handle/20.500.12942/746055
+    fecha: '2026-09-22'
+    licencia: >-
+      CC-BY 4.0 — en los metadatos del archivo en Lirias («Published
+      version», creativecommons.org/licenses/by/4.0) y en la p. 1 del propio
+      artículo
+    version: publicada (early view, pp. 1-19; en el vol. 39(6), pp. 609-627)
+    md5_del_repositorio: 19eca1f56076bcdd7e90a0cb4cdb6f16   # coincide con el archivo bajado
+  - obra: knaf-2021
+    archivo: fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.pdf
+    texto: fuentes_caquetios/Knaf_et_al_2021_JAS_Jade_Circum_Caribbean_CCBY.txt
+    url: https://www.research-collection.ethz.ch/server/api/core/bitstreams/a2e8fcb5-1e72-4301-9aee-1676ff7053c0/content
+    ficha_del_repositorio: https://doi.org/10.3929/ethz-b-000504053
+    fecha: '2026-09-22'
+    licencia: CC-BY 4.0 (dc.rights.uri del registro de la ETH, y «open access article under the CC BY license» en la p. 1)
+    version: publicada; la ETH antepone una portada al servirla (por eso su tamaño y su md5 no son los del registro)
+  - obra: urbina-jimenez-2007-2011
+    archivo: fuentes_caquetios/Urbina_2007_El_Carrizal_UCV.txt y Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt
+    nota: no es descarga — es el `pdftotext` de los PDF que ya estaban en el repo, guardado al lado (leer-fuente §1)
+
+no_descargado:
+  - obra: casale-2024 vía Wiley
+    motivo: verificación antibots de Cloudflare («Verificación de seguridad en curso»); no se forzó
+  - obra: knaf-2021 vía Elsevier, Leiden, CSIC y Granada
+    motivo: Elsevier 403; Leiden y CSIC bloquean con un sistema de protección; Granada, servicio caído. No se forzó ninguno
+
+# ══════════════════════════════════════════════════════════════════
+# 11. LO QUE VI DE PASO
+# ══════════════════════════════════════════════════════════════════
+de_paso:
+  - >-
+    La zooarqueología que esta parcela buscaba está en obras que el repo no
+    tiene, y dos parecen abiertas: Antczak 1998, tesis doctoral de la UCL
+    sobre la economía de las islas frente a Venezuela a partir de la
+    evidencia NO cerámica (UCL Discovery, eprint 1317899; según su propio
+    resumen, un campamento valencioide de Dos Mosquises, 1400-1500 d.C.,
+    vivía del botuto, con peces, langostas, tortugas y aves como
+    complemento); y Oliver 1995, sobre una casa larga prehistórica en el
+    sitio FAL-7 del valle del Matícora (UCL Discovery, eprint 10178203) —
+    casas de Falcón, pregunta 1. Las dos son de la esfera oriental u
+    occidental, no de la costera: regla 4.
+  - >-
+    Zavala Reyes et al. 2018 (Tabla II, p. 404) SÍ trae malacofauna
+    cuantificada de un contexto caquetío de los ss. XIV-XVIII (Donax
+    striatus, Callista sp., Lobatus gigas…), y T8 la minó para el botuto
+    pero NO la dejó en el esquema `fauna:` del preámbulo. Es la mejor fuente
+    de dieta del Golfete que el repo tiene hoy; merece su entrada.
+  - >-
+    Dijkhoff 1997 (tesis sobre Tanki Flip, en archive.org) y Versteeg y
+    Rostain 1997 (la monografía de Tanki Flip) deberían traer la fauna del
+    poblado mejor excavado de las ABC. T8 bajó la primera y no la minó para
+    fauna.
+  - >-
+    Knaf 2021 cita los trabajos de movilidad humana por isótopos que la
+    pregunta 3 quería: Laffoon et al. 2017 (PLoS One, estroncio y oxígeno,
+    acceso abierto) y Laffoon et al. 2014 (colgantes de dientes de animal de
+    Puerto Rico, J. Anthropol. Archaeol. 35). Si alguno trae muestras de las
+    ABC o de Venezuela, es la pieza que falta.
+  - >-
+    Urbina 2011 (pp. 21-22) recoge una corazonada de Oliver: el complejo
+    Guacoa podría ser de los xaguas, enemigos tradicionales de la polity
+    caquetía de BARQUISIMETO y socios comerciales en la paz. Geografía
+    política de otra polity (regla 4), y es comunicación personal.
+  - >-
+    Casale (p. 3) recoge que en Aruba sólo un 11 % del suelo sirve para
+    agricultura de lluvia, y que los rooien se canalizaron probablemente ya
+    en el Período Cerámico. Es ecología de la isla, sin entrar al corpus.
+  - >-
+    La transecta ARAAPICO sale con tres longitudes: 143 km (Urbina 2007,
+    p. 18), 126 km prospectados en las dos primeras etapas (p. 35) y 203 km
+    (Urbina 2011, pp. 18, 41 y 47). No se promedia.

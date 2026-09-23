@@ -194,7 +194,10 @@ def lengua_de_acunacion(word: str) -> str:
     Corte de serie del 2026-09-20.
     """
     from curiana_lexicon import es_raiz_de_ninguna_parte
-    return "acuñada" if es_raiz_de_ninguna_parte(word) else "caquetío"
+    # La misma puerta que el registro (tanda de la base, 2026-09-23): una
+    # acuñación sobre una raíz ARCHIVADA es invento y se guarda `acuñada`.
+    return ("acuñada" if es_raiz_de_ninguna_parte(word, archivadas_avalan=False)
+            else "caquetío")
 
 
 # ══════════════════════════════════════════════════════════════════════
