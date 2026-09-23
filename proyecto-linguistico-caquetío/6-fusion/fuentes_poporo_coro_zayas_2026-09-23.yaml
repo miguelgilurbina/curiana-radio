@@ -303,12 +303,15 @@ poporo:
       popor-/bap[oe]ron/raporon sobre todos los PDF y .txt de
       fuentes_caquetios/ (pdftotext y lectura directa; 6-fusion/scripts no
       guarda el barrido porque es un grep). Salen: Alvarado, Bachiller y
-      Morales (1, antillano), Castellanos I-III (5), Castellanos IV t. I (3)
-      y t. II (2), Jahn (1), Oviedo t. II (baperon/raporon/baporon, 4), el
-      glosario del editor de Oviedo t. IV (4) y Zavala 2015 (baperon,
-      raporon). No se pudieron extraer con pdftotext cinco PDF (Brinton,
-      Fernandes 2020, Oviedo t. I, Ramos Pérez, Rouse-Cruxent). El t. I de
-      Oviedo se barrió aparte con pymupdf, para `coro`.
+      Morales (1: `poporóco` dentro de una frase caribe que cita de Gumilla;
+      no es la voz), Castellanos I-III (5), Castellanos IV t. I (3) y t. II
+      (2), Jahn (1), Oviedo t. II (baperon/raporon/baporon, 4), el glosario
+      del editor de Oviedo t. IV (4) y Zavala 2015 (baperon, raporon). No se
+      pudieron extraer con pdftotext cinco PDF: Brinton (vacío en la rama de
+      partida; main lo repuso después), Fernandes 2020, Oviedo t. I (el
+      truncado), Ramos Pérez y Rouse-Cruxent. El t. I de Oviedo se barrió
+      aparte, con pymupdf sobre el PDF íntegro, para `coro`, `manat-`,
+      `cohoba` y `bagua`.
     caqu_en_el_nuevo_reino: 0 en los dos tomos
     macana_junto_a_caquetios: >-
       de las 12 líneas con caqu- de Castellanos I-III, sólo una tiene macana a
