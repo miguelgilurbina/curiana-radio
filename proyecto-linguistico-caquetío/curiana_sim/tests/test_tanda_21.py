@@ -76,27 +76,34 @@ def _score(texto: str) -> dict:
 # ══════════════════════════════════════════════════════════════════════
 def test_d21_1_el_aspecto_exige_verbo_debajo():
     """20.165 de 62.347 detecciones entraban sin verbo ninguno."""
-    assert _aspectos("naa-ka") == ["completivo"]
-    assert _aspectos("chaa-ni") == ["continuativo"]
-    # Sustantivo + sufijo de aspecto: tres letras y un guion, cero verbo.
-    assert _aspectos("hamaka-ni") == []
-    assert _aspectos("barsure-da") == []
-    assert _aspectos("baro-ni") == []
+    # Tanda final (2026-09-23, D11 fase 3): el paradigma es `-kuba`/`-ba` y el
+    # presente va sin marca. La invariante de d21.1 —el aspecto exige verbo
+    # debajo— es la misma; cambian los sufijos con que se comprueba.
+    assert _aspectos("naa-kuba") == ["completivo"]
+    assert _aspectos("chaa-ba") == ["prospectivo"]
+    # Sustantivo + sufijo de aspecto: un guion y cero verbo.
+    assert _aspectos("hamaka-ba") == []
+    assert _aspectos("barsure-kuba") == []
+    assert _aspectos("baro-ba") == []
+    # y los sufijos viejos ya no cuentan, sobre verbo o no
+    assert _aspectos("naa-ka") == [] and _aspectos("chaa-ni") == []
 
 
 def test_d21_1_el_compuesto_con_verbo_dentro_sigue_contando():
     """El caso legítimo que el comodín cubría a ciegas: la opción C lo
     conserva y la A lo habría tirado."""
-    assert _aspectos("ta-hamaka-chaa-ni") == ["continuativo"]
-    assert _aspectos("kali-barsure-masa-ka") == ["completivo"]
+    # Tanda final: `-kuba`/`-ba`, `da-` y `kasi` (kali y ta- salieron).
+    assert _aspectos("da-hamaka-chaa-ba") == ["prospectivo"]
+    assert _aspectos("kasi-barsure-masa-kuba") == ["completivo"]
 
 
 def test_d21_1_el_aspecto_apilado_solo_cuenta_una_vez():
     """Consecuencia declarada: en `chaa-ni-da` el segundo sufijo va sobre el
     primero, no sobre un verbo. El apilamiento es gramática emergente (d21.12)
     y se describe en morfologia.md; no se premia en el score."""
-    assert _aspectos("chaa-ni-da") == []
-    assert _aspectos("chaa-ni chaa-da") == ["continuativo", "prospectivo"]
+    # Tanda final: el mismo apilamiento con el paradigma nuevo.
+    assert _aspectos("chaa-kuba-ba") == []
+    assert _aspectos("chaa-kuba chaa-ba") == ["completivo", "prospectivo"]
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -152,11 +159,13 @@ def test_d21_4_etiquetar_no_es_podar():
     toman los mismos tres aspectos. Si esto se rompe, declarar la clase habría
     vaciado diez raíces del paradigma, que es lo contrario de la decisión."""
     assert "v_estativo" in CATS_VERBALES and "v_raiz" in CATS_VERBALES
-    for forma in ("usera", "waranao", "wasima", "apo"):
+    # Tanda final: `waranao` salió de la plantilla (sigla E: no está en
+    # Esteves) y el paradigma es `-kuba`/`-ba`; el estativo sigue tomándolo.
+    for forma in ("usera", "wasima", "apo", "etamo"):
         assert forma in lx._RAICES_VERB, forma
         assert forma in lx.raices_verbales_caquetias(), forma
-        assert _aspectos(f"{forma}-ni") == ["continuativo"], forma
-        assert _aspectos(f"{forma}-ka") == ["completivo"], forma
+        assert _aspectos(f"{forma}-kuba") == ["completivo"], forma
+        assert _aspectos(f"{forma}-ba") == ["prospectivo"], forma
 
 
 def test_d21_4_la_etiqueta_llega_al_prompt():
@@ -244,9 +253,12 @@ def test_d21_8_los_ejemplos_pluralizan_en_caquetio():
     ejemplos = " ".join(REGLAS_NUMERO["-kana"]["ejemplos"])
     assert "wayuu" not in ejemplos.lower()
     assert "piache" not in ejemplos.lower()
-    for raiz in ("barsure", "wanü", "boratio"):
+    # Tanda final (tf.5): `wanü` se archivó —reconstruida desde el wayuu— y
+    # el ejemplo pasa a `wasima`, la atestiguada que la cubre (Zavala #145).
+    for raiz in ("barsure", "wasima", "boratio"):
         assert raiz in ejemplos, raiz
         assert raiz in VOCABULARIO_BASE, raiz
+    assert "wanü" not in ejemplos
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -272,10 +284,11 @@ def test_d21_10_los_dos_pronombres_atestiguados_se_ensenan():
         assert VOCABULARIO_BASE[forma]["fuente"] == "caquetío-atestiguado"
         assert "Zavala" in VOCABULARIO_BASE[forma]["notas"]
     assert "FORMAL" in completo
-    # `pia` no compite con `kudanga`: se reparten registros. El caso barato de
-    # la política d19.b — aquí no se archiva nada.
-    assert "pia (tú)" in completo
-    assert "pia" not in FUERA_DEL_HABLA and "kudanga" not in FUERA_DEL_HABLA
+    # El tú corriente no compite con `kudanga`: se reparten registros. Desde
+    # la tanda final ese tú es `bui` (D11 fase 3); `pia`, reconstruida desde
+    # el wayuu, se archivó, y `kudanga` sigue en el habla.
+    assert "bui (tú)" in completo
+    assert "pia" in FUERA_DEL_HABLA and "kudanga" not in FUERA_DEL_HABLA
 
 
 # ══════════════════════════════════════════════════════════════════════

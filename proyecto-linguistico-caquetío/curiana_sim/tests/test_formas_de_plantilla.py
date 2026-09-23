@@ -46,16 +46,18 @@ from curiana_perfiles import cargar_perfil
 from curiana_state import estado_inicial, estado_inicial_test
 
 # `biro-bana` es el ejemplo LITERAL de la plantilla de identidad desde el corte
-# del 2026-09-19 (antes lo era `kali-bana`) y `naa-ni` el del bloque de
-# morfología; `warawara` está en el vocabulario base; `wana-ni` lo enseña el
+# del 2026-09-19 (antes lo era `kali-bana`) y `naa-kuba` el del bloque de
+# morfología; `warawara` está en el vocabulario base; `da-barsure` lo enseña el
 # refuerzo y `cati` el rescate. `kuru-bacoa` no la enseña nadie.
+# Tanda final (2026-09-23, D11 fase 3): hasta hoy eran `naa-ni` y `wana-ni`,
+# del paradigma y las voces que se reconstruyeron desde el wayuu.
 EJEMPLO_DE_LA_IDENTIDAD = "biro-bana"
 EJEMPLO_RETIRADO = "kali-bana"          # el de antes del 2026-09-19
-DE_PLANTILLA = (EJEMPLO_DE_LA_IDENTIDAD, "naa-ni", "warawara", "wana-ni",
+DE_PLANTILLA = (EJEMPLO_DE_LA_IDENTIDAD, "naa-kuba", "warawara", "da-barsure",
                 "ma-arua", "cati")
 LEGITIMA = "kuru-bacoa"
-RESPUESTA = f"Taya wana-ka arima wara kari. [{LEGITIMA}: kuru+-bacoa = la arboleda]."
-RESPUESTA_COPIA = ("Taya wana-ka arima wara kari. "
+RESPUESTA = f"Dai diki-kuba arima wara para. [{LEGITIMA}: kuru+-bacoa = la arboleda]."
+RESPUESTA_COPIA = ("Dai diki-kuba arima wara para. "
                    "[biro-bana: biro+-bana = cerro de la sal].")
 _CALL_AGENT = orch.call_agent
 
@@ -111,9 +113,10 @@ def test_a_es_una_puerta_y_no_dos():
 
 def test_a_la_puerta_incluye_el_refuerzo_y_el_rescate():
     """Las dos plantillas que `_FORMAS_EXCLUIDAS` no miraba y sí enseñan
-    formas: el refuerzo dice «Taya wana-ni …» y «ta-barsure, wa-duna, ma-arua»,
-    el rescate «katsi→cati, bara→para»."""
-    for forma in ("wana-ni", "wa-duna", "ma-arua", "cati"):
+    formas: el refuerzo dice «Dai diki …» y «da-barsure, wa-duna, ma-arua»
+    (hasta la tanda final, «Taya wana-ni …» y «ta-barsure»), el rescate
+    «katsi→cati, bara→para»."""
+    for forma in ("da-barsure", "wa-duna", "ma-arua", "cati"):
         assert es_forma_de_plantilla(forma), forma
 
 

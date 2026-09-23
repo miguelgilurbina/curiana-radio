@@ -140,24 +140,26 @@ _ASPECTO_SUFIJO = {"completivo": "-kuba", "continuativo": "", "prospectivo": "-b
 # que cada uno arranca. Los idiolectos de los runs ya corridos no se reescriben.
 # D11 fase 3 (tf.2, 2026-09-23): el aspecto de cada forma escrita se muda al
 # paradigma nuevo — `-ka`→`-kuba`, `-da`→`-ba`, y `-ni` desaparece (el presente
-# es el verbo solo). Mismo número de formas por agente; la forma cambia.
+# es el verbo solo). Mismo número de formas por agente; la forma cambia. Y
+# las voces reconstruidas desde el wayuu (tf.5) se mudan a sus sustitutas:
+# `wana` → `diki`, `naba` → `kuburuku`.
 FORMAS_SEED: dict[str, list[str]] = {
     "Manaure":    ["biro", "barsure", "kasi", "kati", "chiriware", "maa-kuba", "naa-kuba"],
-    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "suna", "naba"],
+    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "suna", "kuburuku"],
     "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "were-ba", "raka-ba"],
-    "Watapana":   ["biro", "maure", "kanoa", "para", "arima", "naa-ba", "wana-ba"],
-    "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "wana"],
-    "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-kuba", "wana-kuba"],
+    "Watapana":   ["biro", "maure", "kanoa", "para", "arima", "naa-ba", "diki-ba"],
+    "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "diki"],
+    "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-kuba", "diki-kuba"],
     "Biro-ko":    ["biro", "para", "dali", "sima", "naa-kuba", "were-kuba"],
-    "Tawaka":     ["chiriware", "kabo", "arima", "para", "wana-ba", "naa-ba"],
+    "Tawaka":     ["chiriware", "kabo", "arima", "para", "diki-ba", "naa-ba"],
     "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono", "chaa"],
-    "Chiriware": ["chiriware", "sima", "para", "kabo", "wana-kuba", "naa-kuba"],
-    "Buio-sha":   ["barsure", "boratio", "kati", "suka", "urari", "naba"],
+    "Chiriware": ["chiriware", "sima", "para", "kabo", "diki-kuba", "naa-kuba"],
+    "Buio-sha":   ["barsure", "boratio", "kati", "suka", "urari", "kuburuku"],
     "Korie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono"],  # buco→buko: fusión D5b, tanda 2026-08-30
-    "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-ba", "wana-ba"],
+    "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-ba", "diki-ba"],
     "Kadushi":    ["para", "kanoa", "biro", "kasi", "maure", "naa"],
     "Marokoto-ni":["biro", "para", "kanoa", "arima", "naa-ba"],
-    "Tariwa":     ["arima", "para", "bara", "biro", "kanoa", "wana"],
+    "Tariwa":     ["arima", "para", "bara", "biro", "kanoa", "diki"],
     "Kawa-ni":    ["arima", "para", "bara", "masa", "naa"],
     "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa"],
     "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "were-ba"],
@@ -170,7 +172,7 @@ FORMAS_SEED: dict[str, list[str]] = {
 # sus 60 agentes (medido 2026-09-16) y por eso allí sólo había 21 vectores-
 # semilla distintos de 60.
 # D11 fase 3 (tf.1): los pronombres del núcleo son los de las hermanas.
-_NUCLEO_FALLBACK = ["dai", "bui", "lihi", "tuhu", "naa", "wana", "maa", "ka", "mara"]
+_NUCLEO_FALLBACK = ["dai", "bui", "lihi", "tuhu", "naa", "diki", "maa", "ka", "mara"]
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -664,7 +666,7 @@ def formas_semilla(agente: str, emo: dict) -> list[str]:
         return derivadas
     suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "")
     base = list(_NUCLEO_FALLBACK)
-    base += [f"naa{suf}", f"wana{suf}"]   # verbos base con su aspecto
+    base += [f"naa{suf}", f"diki{suf}"]   # verbos base con su aspecto
     return list(dict.fromkeys(base))
 
 

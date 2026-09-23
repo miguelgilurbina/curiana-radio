@@ -287,12 +287,16 @@ def test_los_nombres_de_los_agentes_no_cuentan_como_palabras(monkeypatch):
 # ── lo que la plantilla enseña no cuenta como koiné ───────────────────
 
 def test_las_formas_de_las_plantillas_quedan_fuera_de_lo_emergente():
-    for forma in ("ta-barsure", "wana-ka", "naba-ni", "kaa-ni", "naa-da", "sima-bana"):
+    # Tanda final (D11 fase 3): el paradigma y las voces de la plantilla son
+    # las de las hermanas; las viejas están en el archivo, y el archivo
+    # también es puerta.
+    for forma in ("da-barsure", "diki-kuba", "kuburuku", "naa-ba", "sima-bana"):
         assert forma in orch._FORMAS_EXCLUIDAS, forma
     # la plantilla dejó de enseñar `buko-ana` (tanda de la base): vuelve a
     # poder acuñarse, que es la consecuencia declarada
     assert "buko-ana" not in orch._FORMAS_EXCLUIDAS
-    assert "taya" in orch._FORMAS_EXCLUIDAS          # vocabulario base
+    assert "dai" in orch._FORMAS_EXCLUIDAS           # vocabulario base
+    assert "taya" in orch._FORMAS_EXCLUIDAS          # archivada: también puerta
     assert "kuru-bacoa" not in orch._FORMAS_EXCLUIDAS  # una acuñación de agente sí cuenta
 
 

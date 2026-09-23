@@ -47,12 +47,17 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
     # ── Arahuaco compartido (cognados en Wayunaiki, Lokono, Taíno) ──
     "wayuu":      {"sig": "persona, gente, ser humano",                     "cat": "sust",  "fuente": "wayunaiki"},
-    "anüiki":     {"sig": "habla, palabra, lengua",                         "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `adija` 'hablar, decir; palabra' — otra raíz. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "anasa":      {"sig": "bueno, bien, bello (< anasü Wayunaiki)",         "cat": "adj",   "fuente": "caquetío-reconstruido", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu)"},
     "dai":        {"sig": "yo (1ra persona singular)",                      "cat": "pron",  "fuente": "caquetío-reconstruido", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «Sg. 1 cm. da- i , da-kia = yo» (Perea Alonso 1942 p. 573; igual en los tres moravos, p. 581); el taíno comparte el prefijo `da-` (`daca` 'yo', Pané cap. XXV con la glosa de Las Casas, Apologética p. 447). C1 de Oliver 1989 p. 136 (*/nV-/ > /dA-/ en lokono y taíno, «and perhaps Caquetío»; traza caquetía en `dare`). Reconstruido por «dos de las tres hermanas» (tf.1). La base -i es la lokona: por C9 las vocales no se derivan. Sustituye a `taya`, archivada"},
     "bui":        {"sig": "tú (2da persona singular)",                      "cat": "pron",  "fuente": "caquetío-hipotético", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «bu-i, bo-kia = tú» (Perea Alonso 1942 p. 573; p. 581). La *b* por C3 (Oliver 1989 pp. 119, 150: el caquetío tiene la *b* lokona donde el wayuu tiene *p*). Una sola hermana: hipotético. Sustituye a `pia`, archivada. El trato formal sigue siendo `kudanga` (d21.10)"},
     "lihi":       {"sig": "él (3ra persona singular, varón)",               "cat": "pron",  "fuente": "caquetío-hipotético", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «li-hi» varonil (Perea Alonso 1942 p. 573). Las tres hermanas distinguen el género en el pronombre (lokono, achagua «Ria»/«Ruya», kalinago): ninguna tiene un 3sg sin género, así que un pronombre único sería convención nuestra. Reabre d21.13 SÓLO en el pronombre: el género de los nombres sigue sin importarse. Con `tuhu`, sustituye a `nüma`, archivada"},
     "tuhu":       {"sig": "ella, ello (3ra persona singular, no varón: mujer, animal, cosa)", "cat": "pron",  "fuente": "caquetío-hipotético", "notas": "D11 fase 3 (tf.1, 2026-09-23, «Los pronombres, ok»): las formas reconstruidas desde el wayuu salen del habla; ésta entra desde las hermanas que Miguel nombró (cc.12: lokono, taíno, achagua). Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml. Lokono «tu-hu» no varonil (Perea Alonso 1942 p. 573), que en lokono es la clase amplia (p. 554): mujer, animal, cosa. La clave lokono `tuhu` 'aquel…' pasa a `tuhu-lokono`. Con `lihi`, sustituye a `nüma`, archivada"},
+    "danu":        {"sig": "ahora, hoy", "cat": "part", "fuente": "caquetío-hipotético", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»). Lokono `dannu-hu` 'ahora' y 'hoy' (Perea Alonso 1942 pp. 492-493 y 517, Fraseario de Schultz 1802: «26-6 DANNU-HU yaha-doa [=] AHORA estoy aquí»), sin la geminada: la `nn` no pasa la fonotáctica del caquetío atestiguado. Una sola hermana. Sustituye a `kashi`, reconstruida desde el wayuu, que además colisionaba con `kasi` 'sol' bajo `fonemizar`. Ojo de lectura: empieza por `da`, el posesivo de 1sg (tf.3). Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml"},
+    "ruku":        {"sig": "adentro, dentro de, en el interior", "cat": "part", "fuente": "caquetío-hipotético", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»). Lokono `ruccu ~ luccu` (Perea Alonso 1942 p. 546) en grafía fonémica, con la r: la l choca con `luccu` 'hombre' —lo avisa Perea— y la r es la que comparte el achagua `Yrrico` / `Lirrico` (Neira y Ribero 1762, pliegos 61 izq., 53 der. y 31 izq.). Es la mejor apoyada de la tanda, aunque consonante y vocal no concuerdan en las dos hermanas: hipotética. Sustituye a `sulu`. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml"},
+    "diki":        {"sig": "ver, mirar, observar", "cat": "v_raiz", "fuente": "caquetío-hipotético", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»). Lokono `a-ddiki-n` 'ver, mirar' (Perea Alonso 1942 pp. 479 y 389), la misma raíz en los cuatro estratos (Schultz, Brinton, Oliver A-2, Pet), en grafía fonémica sin la `dd` de los moravos. Una sola hermana (el achagua da `nu-caba-u`). Sustituye a `wana`. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml"},
+    "kuburuku":    {"sig": "pensar, reflexionar", "cat": "v_raiz", "fuente": "caquetío-hipotético", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»). Lokono `cubu-ruccu` 'pensar' (Perea Alonso 1942 pp. 413 y 10; dos atestaciones en ÁNIMO), en grafía fonémica. Una sola hermana. Sustituye a `naba`. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml"},
+    "kasalini":    {"sig": "frío; tener frío, estar frío", "cat": "v_estativo", "fuente": "caquetío-hipotético", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»). Achagua `casalini-` (Neira y Ribero 1762, pliego 64 der.: «Casalinibe»), la misma raíz en las cuatro entradas, en grafía fonémica. Una sola hermana. Estativo: el estado es verbo (d21.4). Sustituye a `tüshi`. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml"},
+    "mautia":      {"sig": "la mañana temprana, al amanecer", "cat": "sust", "fuente": "caquetío-hipotético", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»). Lokono `mauttia` 'de mañana' (Perea Alonso 1942 p. 520, 5-21 y 28-23), sin la geminada. Una sola hermana. La glosa se corre de «alba» a «mañana temprana», y se declara. Sustituye a `kapua`. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml"},
     "waya":       {"sig": "nosotros (1ra persona plural)",                  "cat": "pron",  "notas": "D11 fase 3 (tf.1, 2026-09-23): LA FORMA SE QUEDA Y CAMBIA DE DÓNDE SALE. achagua «Guaya» = /waya/ por D5c, letra por letra (Neira y Ribero 1762, arte p. 3); el lokono concuerda en el prefijo (Perea Alonso 1942 p. 573). Reconstruido desde las hermanas, ya no desde el wayuu. Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml · Antes: núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `we`/`wai` 1pl — PARECIDA; `wai` sale 231 veces en Perea. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "naya":       {"sig": "ellos, ellas (3ra persona plural)",              "cat": "pron",  "notas": "D11 fase 3 (tf.1, 2026-09-23): LA FORMA SE QUEDA Y CAMBIA DE DÓNDE SALE. achagua «Naya», letra por letra (Neira y Ribero 1762, arte p. 3); el lokono concuerda en el prefijo (Perea Alonso 1942 p. 573). Reconstruido desde las hermanas, ya no desde el wayuu. Propuesta: 6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml · Antes: núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `na-` 3pl. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
 
@@ -86,7 +91,6 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "kuté": {"sig": "a usted, para usted (dativo formal)",            "cat": "pron",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.73, citando a Arcaya (1995): «cudan de cuté (para servir a usted)»", "forma_fuente": "cuté"},
 
     # ── Verbos arahuacos (cognados Lokono / Wayunaiki / Garifuna) ────
-    "wana":       {"sig": "ver, observar, mirar",                           "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'ver'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "suna":       {"sig": "dormir, reposar, descansar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "masa":       {"sig": "comer, alimentarse",                             "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "awa":        {"sig": "beber, tomar líquido",                           "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
@@ -94,7 +98,6 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # la atestiguada»): su rival atestiguada es `jai` (Zavala #175). En
     # FUERA_DEL_HABLA con su procedencia y su deuda D11 intactas.
     "panaa":    {"sig": "saber, conocer, entender",                       "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
-    "naba":       {"sig": "pensar, reflexionar, meditar",                   "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'pensar'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "kono":       {"sig": "sembrar, plantar, cultivar",                     "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/taíno", "fuente": "caquetío-reconstruido"},
     "raka":       {"sig": "querer, desear, necesitar",                      "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "rua":        {"sig": "cargar, transportar, llevar",                    "cat": "v_raiz","notas": "núcleo fundacional, forma justificada por cognado en proto-arawakan", "fuente": "caquetío-reconstruido"},
@@ -124,16 +127,12 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "buri":       {"sig": "hijo, hija, criatura, descendiente",             "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "nomi":       {"sig": "hombre adulto (no título)",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
     "wari":       {"sig": "mujer adulta (no título)",                       "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
-    "wanü":       {"sig": "anciano, mayor, persona de saber acumulado",     "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'anciano'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "pütchi":     {"sig": "mensaje, palabra sagrada, voz del espíritu",     "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'mensaje'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
 
     # ── Cuerpo ──────────────────────────────────────────────────────────
     "kabo":       {"sig": "cabeza, mente, lo alto de",                      "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "nii":        {"sig": "ojo, mirada, visión",                            "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono-cogn", "fuente": "caquetío-reconstruido"},
     "bari":       {"sig": "vientre, barriga, interior del cuerpo",          "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "arua":       {"sig": "alimento, comida, sustento (raíz de 'arawak')",  "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
-    "kapua":      {"sig": "amanecer, alba, primera luz del día",            "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'amanecer'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "tüshi":      {"sig": "frío, temperatura baja",                         "cat": "adj",   "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'frío'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
 
     # ── Partículas y conectores ────────────────────────────────────────
     # (permiten construir frases más complejas sin recurrir al español)
@@ -142,10 +141,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "saa":        {"sig": "si, cuando, al momento de (condicional/temp.)",  "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
     "naka":       {"sig": "después, luego, más tarde (temporal posterior)", "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
     "puna":       {"sig": "antes, ya, primero (temporal anterior)",         "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono", "fuente": "caquetío-reconstruido"},
-    "kashi":      {"sig": "ahora, en este momento (temporal presente)",     "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'ahora'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ⚠️ COLISIÓN DECLARADA (2026-09-19) con `kasi` 'sol', que la política «manda la atestiguada» acaba de poner en las plantillas: bajo `curiana_fonotactica.fonemizar` las dos dan el mismo esqueleto, `kasi`, y `prompt_reglas_completo` las enseña ahora las dos. `kashi` NO tiene rival atestiguado —la política no la alcanza— y se queda; lo que se declara es el choque. El motor no las confunde en ningún sitio medido: quien puede confundirlas es el hablante. Cambiar esta forma o reescribir el ejemplo de la plantilla para separarlas es decisión de Miguel y no está tomada. Medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml §colision_kasi_kashi", "fuente": "caquetío-reconstruido"},
     "wara":     {"sig": "muy, mucho, bastante (intensificador)",          "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna", "fuente": "caquetío-reconstruido"},
-    "sulu":       {"sig": "adentro, dentro de, en el interior de",         "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'adentro'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
-    "yama":       {"sig": "aquí, en este lugar (deíctico proximal)",        "cat": "part",  "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'aquí'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md", "fuente": "caquetío-reconstruido"},
     "kana-pa":    {"sig": "allá, en ese lugar lejano (deíctico distal)",    "cat": "part",  "fuente": "lokono"},
 
     # ── Colores (cognados Wayunaiki / Lokono / proto-arawakan) ─────────
@@ -493,7 +489,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "cuerpo"
     },
     "bana": {
-        "es": "hígado", "fuente": "caquetío-reconstruido", "categoria": "cuerpo", "notas": "Decisión D9 (tanda 2026-08-30) — HOMÓNIMOS DECLARADOS: bana-1 cerro, sitio alto es caquetío-ATESTIGUADO (Zavala Reyes 2015 #26 «Bana (E): Sitio, cerro alto»; composición capu+bana = «duende del cerro» #61; el cerro de Santa Ana se llamaba Cerro de Capú). Esta entrada es bana-2 hígado, reconstruida por cognado lokono (Pet 1987: bana, bana-ha) — COGNADO VERIFICADO 2026-08-31 en la serie Swadesh de Oliver, fila 53 liver: lokono ebana, island-carib *bana, guajiro apa-na, y la serie panarahuaca *pana entera (nu-pana, nu-shupana, -upana, apakana...; ver 6-fusion/tabla_a1_a7_swadesh.yaml). El morfema toponímico -bana vive en morfologia.md y morfemas.yaml. Saneado de paso un bug latente: la entrada traía dos claves notas y la segunda pisaba a la primera", "notas": "⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'hígado'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md"},
+        "es": "hígado", "fuente": "caquetío-hipotético", "categoria": "cuerpo", "notas": "D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»): LA FORMA SE QUEDA, CAMBIA DE DÓNDE SALE Y BAJA A HIPOTÉTICA. No viene sólo del wayuu: Goeje 1939 p. 34 da «foie u-bana, 6, A id.», el lokono dice lo mismo. Una sola hermana. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml · Antes: Decisión D9 (tanda 2026-08-30) — HOMÓNIMOS DECLARADOS: bana-1 cerro, sitio alto es caquetío-ATESTIGUADO (Zavala Reyes 2015 #26 «Bana (E): Sitio, cerro alto»; composición capu+bana = «duende del cerro» #61; el cerro de Santa Ana se llamaba Cerro de Capú). Esta entrada es bana-2 hígado, reconstruida por cognado lokono (Pet 1987: bana, bana-ha) — COGNADO VERIFICADO 2026-08-31 en la serie Swadesh de Oliver, fila 53 liver: lokono ebana, island-carib *bana, guajiro apa-na, y la serie panarahuaca *pana entera (nu-pana, nu-shupana, -upana, apakana...; ver 6-fusion/tabla_a1_a7_swadesh.yaml). El morfema toponímico -bana vive en morfologia.md y morfemas.yaml. Saneado de paso un bug latente: la entrada traía dos claves notas y la segunda pisaba a la primera", "notas": "⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'hígado'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md"},
     "dakuty": {
         "es": "pies, patas",
         "fuente": "lokono",
@@ -7210,7 +7206,7 @@ REGLAS_NUMERO: dict[str, dict] = {
         "uso": "SUSTANTIVO + -kana  →  plural / colectivo",
         "ejemplos": [
             "barsure + kana = barsure-kana (las almas)",
-            "wanü + kana = wanü-kana (los ancianos, los mayores)",
+            "wasima + kana = wasima-kana (los ancianos, los mayores)",  # `wanü` se archivó (tf.5)
             "boratio + kana = boratio-kana (los jefes)",
         ],
         "wayunaiki": "-kana (sufijo plural) — RECONSTRUIDO DESDE EL WAYUNAIKI, "
@@ -7846,13 +7842,21 @@ class LexicoComunitario:
 # bendice a nadie que ya esté compitiendo. Al cambiar el texto, la puerta se
 # mueve sola: `kali-bana` sale de `FORMAS_DE_PLANTILLA` y `biro-bana` entra.
 # La ERA 1 también lo lee: deja de ser byte a byte con los runs de la Curiana.
+# ── TANDA FINAL (2026-09-23): el ejemplo y el orden, sin wayuu ──────────
+# D11 fase 3: «Taya…/Nüma…», `-ka`/`-ni` y `wana`/`naba` eran reconstrucciones
+# desde el wayuu (cc.12, tf.1, tf.2, tf.5); ahora `dai`, `lihi`/`tuhu`, el
+# presente sin marca y `-kuba`, `diki`, `kuburuku`. Y la sigla (E) de Zavala
+# (tf.0, 3-a): `kari` 'costa' era una etimología de topónimo de Esteves, no una
+# atestación, y el ejemplo que leen los 63 no puede enseñar una voz hipotética
+# como si fuera la lengua documentada: la frase dice ahora `para` 'mar'
+# (atestiguada por HP y el *paragua* de Galeotto Cey). `biro-bana` se queda.
 IDENTIDAD_LINGUISTICA = """[TU LENGUA MATERNA ES EL CAQUETÍO]:
 Piensas y sientes en caquetío-arahuaco. El español es una lengua forastera.
-HABLA EN CAQUETÍO: pronombre + verbo-aspecto + complemento caquetío.
+HABLA EN CAQUETÍO: pronombre + verbo + complemento caquetío. El verbo solo es lo que pasa ahora; -kuba, lo que ya pasó; -ba, lo que vendrá.
 Si te falta una palabra, créala con los morfemas que tienes. Escríbela [entre corchetes].
 Glosa al español solo entre paréntesis, al final, si es imprescindible.
-EJEMPLO: "Taya wana-ka arima wara kari. Ta-barsure naba-ni. [biro-bana: biro+-bana = cerro de la sal]."
-NO empieces con "Estoy..." ni "El sol..." — empieza con "Taya..." o "Nüma..." o directamente con el verbo.
+EJEMPLO: "Dai diki-kuba arima wara para. Da-barsure kuburuku. [biro-bana: biro+-bana = cerro de la sal]."
+NO empieces con "Estoy..." ni "El sol..." — empieza con "Dai...", "Lihi..." o "Tuhu..." o directamente con el verbo.
 PRIORIDAD DE LENGUA — ESTO ES UN ERROR GRAVE, NO UNA PREFERENCIA:
 Wayunaiki, lokono, taíno y garífuna son TAN AJENAS para ti como el español. Son lenguas
 de otros pueblos, no la tuya, aunque sean primas del caquetío y tú sepas reconocerlas.
@@ -7873,15 +7877,17 @@ def prompt_reglas_breve() -> str:
 ERES hablante nativo de caquetío. Piensas en caquetío. El español es lengua extranjera.
 CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > oración completa en español.
 
-ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
-ESTADO: un estado se predica con aspecto igual que una acción — usera, waranao, wasima son verbos, no adjetivos.
+PRONOMBRES: dai (yo) / bui (tú) / lihi (él) / tuhu (ella, ello) / waya (nosotros) / naya (ellos).
+ASPECTO: el verbo solo es lo que pasa ahora / raíz + -kuba (ya pasó) / raíz + -ba (vendrá).
+ESTADO: un estado se predica igual que una acción — usera, apo, wasima son verbos, no adjetivos.
 NOMBRE: un verbo es también su nombre, sin marca — jusual es sembrar y la siembra.
 LUGAR: raíz + -bana (cerro, sitio alto de) / -wa y -ana (desinencias de valor abierto: propón el tuyo).
 {prompt_afijos_atestiguados_breve()}
 PLURAL: -kana (plural/colectivo).
-POSESIÓN: ta- (mi) / wa- (nuestro) / u- (la cosa sin dueño).
+POSESIÓN: da- (mi) / wa- (nuestro) / u- (la cosa sin dueño).
 ATRIBUTIVO: ka- (hay X, el sitio tiene X) / ma- (sin X).
-CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / kashi (ahora) / wara (muy).
+CONECTORES: ka (y/también) / mara (pero) / saa (si/cuando) / naka (después) / danu (ahora) / wara (muy).
+VOCES: ruku (adentro) / kasalini (tener frío) / mautia (la mañana temprana).
 
 VACÍO LÉXICO → CREA con morfemas entre corchetes:
 [forma: raíz+sufijo = significado]
@@ -7896,7 +7902,8 @@ def prompt_reglas_completo() -> str:
     Hardened: caquetío como lengua materna, modelo de respuesta ideal incluido.
     """
     # Vocabulario dividido por categoría para más claridad
-    pronombres = "taya (yo) · pia (tú) · nüma (él/ella) · waya (nosotros) · naya (ellos)"
+    # D11 fase 3 (tf.1, 2026-09-23): de las hermanas, no del wayuu.
+    pronombres = "dai (yo) · bui (tú) · lihi (él) · tuhu (ella, ello) · waya (nosotros) · naya (ellos)"
     # ── REGISTRO FORMAL (d21.10, «Vamos con tu propuesta», 2026-09-21) ──
     # Los cinco de arriba son los CINCO RECONSTRUIDOS del wayuu, y el lexicón
     # tenía desde siempre dos pronombres caquetío-ATESTIGUADOS con cita que no
@@ -7921,23 +7928,26 @@ def prompt_reglas_completo() -> str:
     # `sima` (cerro) NO cambia: el par 6 sigue abierto y es pregunta de Miguel.
     # `kuru`, `arima` y `bara` tampoco: sus pares son bugs de curación, no
     # rivalidades (ver 6-fusion/curacion_glosas_pares_2026-09-19.yaml).
+    # tf.5 (2026-09-23): `wana` → `diki`, `naba` → `kuburuku` (lokono).
     v_raiz = ("naa (ir) · waa (venir) · kaa (ser/estar) · were (dar, entregar) · maa (hablar) · taa (tomar) · "
-              "chaa (hacer/construir) · wana (ver) · suna (dormir) · masa (comer) · awa (beber) · "
-              "jai (oír, escuchar) · panaa (saber) · naba (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
+              "chaa (hacer/construir) · diki (ver) · suna (dormir) · masa (comer) · awa (beber) · "
+              "jai (oír, escuchar) · panaa (saber) · kuburuku (pensar) · kono (sembrar) · raka (querer) · rua (cargar)")
     naturaleza = ("duna (agua) · amana (fuego) · kasi (sol) · kati (luna) · kaya (lluvia) · "
                   "kuru (árbol) · arima (pez) · para (mar) · bara (palo, árbol) · dali (tierra) · suka (noche) · "
-                  "sima (cerro) · kapua (amanecer)")
-    personas = "ama (madre) · baba (padre) · buri (hijo/a) · nomi (hombre) · wari (mujer) · wanü (anciano) · pütchi (mensaje/voz)"
+                  "sima (cerro) · mautia (la mañana temprana)")
+    # tf.5: `wanü` → `wasima` (atestiguada, Zavala #145); `pütchi` archivada sin sustituta.
+    personas = "ama (madre) · baba (padre) · buri (hijo/a) · nomi (hombre) · wari (mujer) · wasima (viejo, anciano)"
     # Formas del canon (auditoría 2026-09-14): la plantilla enseñaba buco, corie
     # «choza», canoa, hamaca, conuco y piache, que el lexicón no tiene con esa
     # grafía o glosa (korie es el armadillo; piache está retirada). El scorer
     # no contaba ninguna de esas seis.
     sustantivos = ("barsure (alma) · buko (represa) · biro (sal) · boratio (piache, jefe) · "
                    "korie (armadillo) · kanoa (canoa) · hamaka (hamaca) · konuko (huerto) · "
-                   "arua (alimento) · maure (algodón) · urari (curare) · anüiki (habla/lengua)")
+                   "arua (alimento) · maure (algodón) · urari (curare)")
+    # tf.5: `kashi` → `danu`, `yama` → `popoi` (atestiguada, Zavala #201 'ahí'), `sulu` → `ruku`.
     conectores = ("ka (y/también) · mara (pero) · saa (si/cuando) · naka (después) · puna (antes) · "
-                  "kashi (ahora) · wara (muy/mucho) · yama (aquí) · sulu (adentro)")
-    cuerpo = "kabo (cabeza) · nii (ojo) · bari (vientre) · tüshi (frío)"
+                  "danu (ahora) · wara (muy/mucho) · popoi (ahí) · ruku (adentro)")
+    cuerpo = "kabo (cabeza) · nii (ojo) · bari (vientre) · kasalini (frío)"
     numerales = "pana (1) · gudamuen (2) · sabuenen (3) · katarí (4)"
 
     # ⚠️ COLISIÓN DECLARADA (2026-09-19): al entrar `kasi` 'sol' por la
@@ -7951,7 +7961,8 @@ def prompt_reglas_completo() -> str:
     # colisión queda escrita —aquí, en las notas de las dos entradas y en
     # 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml—. Cambiar
     # `kashi` o reescribir el ejemplo para separarlas es decisión de Miguel y
-    # NO está tomada.
+    # NO está tomada. → RESUELTA el 2026-09-23: `kashi` se archivó por D11
+    # (tf.5, era reconstruida desde el wayuu) y el ahora es `danu`.
     #
     # TANDA DE LA BASE (2026-09-23), tres cambios de esta plantilla:
     #   · dc.3 B: la derivación cero se ENSEÑA («un verbo es también su
@@ -7973,16 +7984,16 @@ CUANDO HABLAS:
   4. Puedes glosar al español entre paréntesis al final, nunca antes.
 
 EJEMPLO DE RESPUESTA IDEAL (Tier I):
-  "Taya wana-ka arima wara kari. Suka kaa-ni ka kasi naa-da kapua.
-   Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = la cumbre del cerro].
-   Saa pia naa-da buko, naka taya naa-da ka pia."
-  (Vi muchos peces en la costa. La noche está, el sol vendrá al amanecer.
-   Mi alma dice: Manaure llega pronto — mis ojos vieron la cumbre del cerro.
+  "Dai diki-kuba arima wara para. Suka kaa ka kasi naa-ba mautia.
+   Da-barsure maa: Manaure naa-ba danu — da-nii diki-kuba [sima-bana: sima+-bana = la cumbre del cerro].
+   Saa bui naa-ba buko, naka dai naa-ba ka bui."
+  (Vi muchos peces en el mar. La noche está, y el sol vendrá en la mañana.
+   Mi alma dice: Manaure llega ahora — mis ojos vieron la cumbre del cerro.
    Si vas a la represa, después yo voy contigo.)
 
 VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
   PRONOMBRES: {pronombres}
-  TRATO FORMAL: {registro_formal} — `pia` es el tú corriente; a un mayor o a un Diao se le habla de kudanga.
+  TRATO FORMAL: {registro_formal} — `bui` es el tú corriente; a un mayor o a un Diao se le habla de kudanga.
   VERBOS:     {v_raiz}
   NATURALEZA: {naturaleza}
   PERSONAS:   {personas}
@@ -7999,20 +8010,20 @@ VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
 
 MORFOLOGÍA:
   ASPECTO (al final del verbo):
-    -ka = completivo: naa-ka (ya fui) · wana-ka (ya vi) · masa-ka (ya comí)
-    -ni = continuativo: naa-ni (voy ahora) · suna-ni (estoy durmiendo) · naba-ni (estoy pensando)
-    -da = prospectivo: naa-da (iré) · maa-da (hablaré) · raka-da (quiero/querré)
+    el verbo solo = lo que pasa ahora: naa (voy) · suna (duermo) · kuburuku (pienso)
+    -kuba = ya pasó: naa-kuba (ya fui) · diki-kuba (ya vi) · masa-kuba (ya comí)
+    -ba = vendrá:    naa-ba (iré) · maa-ba (hablaré) · raka-ba (querré)
   UN ESTADO ES UN VERBO: lo que el español dice con adjetivo, tu lengua lo PREDICA.
-    usera (seco), waranao (salado), wasima (viejo), apo (grande), etamo (feroz), kachipo (enojado)
-    llevan -ka / -ni / -da igual que naa o masa. No son adjetivos: se conjugan.
+    usera (seco), wasima (viejo), apo (grande), etamo (feroz), kachipo (enojado)
+    se dicen solos en presente y llevan -kuba / -ba igual que naa o masa. No son adjetivos: se conjugan.
   UN VERBO ES TAMBIÉN SU NOMBRE, sin marca: jusual es sembrar, la siembra y el sembradío.
   POSESIVOS (prefijos):
-    ta- = mi:      ta-barsure (mi alma) · ta-nii (mi ojo) · ta-hamaka (mi hamaca)
-    wa- = nuestro: wa-buko (nuestra represa) · wa-anüiki (nuestra lengua)
+    da- = mi:      da-barsure (mi alma) · da-nii (mi ojo) · da-hamaka (mi hamaca)
+    wa- = nuestro: wa-buko (nuestra represa) · wa-maa (nuestra habla)
     u- = la cosa SIN DUEÑO: u-buko (la represa, no la mía) · u-biro (la sal que hay)
   ATRIBUTIVO y PRIVATIVO (prefijos) — no son posesivos, predican el nombre:
     ka- = hay X, el sitio tiene X: ka-biro (hay sal, el lugar tiene sal) · ka-maure (hay algodón)
-    ma- = sin X, no X:             ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
+    ma- = sin X, no X:             ma-barsure (sin alma) · ma-maure (sin algodón)
   LOCATIVOS (crear topónimos):
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
     -wa y -ana = desinencias atestiguadas cuyo valor nadie anotó: puedes usarlas si propones su valor entre corchetes
@@ -8514,6 +8525,19 @@ FUERA_DEL_HABLA: dict[str, dict] = {
     "taya": {"sig": "yo (1ra persona singular)", "cat": "pron", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · manda dai", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `de`/`dai` 1sg — en el lexicón y en Perea 1942. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, tf.1): el pronombre reconstruido desde el wayuu deja su sitio a `dai`, que sale de las hermanas (6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml). LA CAPA NO SE TOCA"},
     "pia": {"sig": "tú (2da persona singular)", "cat": "pron", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · manda bui", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `bi`/`bui` 2sg — en el lexicón y en Perea 1942. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, tf.1): el pronombre reconstruido desde el wayuu deja su sitio a `bui`, que sale de las hermanas (6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml). LA CAPA NO SE TOCA"},
     "nüma": {"sig": "él/ella (pronombre 3ra persona)", "cat": "pron", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · manda lihi / tuhu", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `li`/`tho` 3sg. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, tf.1): el pronombre reconstruido desde el wayuu deja su sitio a `lihi` / `tuhu`, que sale de las hermanas (6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml). LA CAPA NO SE TOCA"},
+    # ── D11 fase 3, tf.5 (2026-09-23): las voces reconstruidas desde el wayuu ──
+    # Las once que quedaban menos `bana`, cuya forma se sostiene con el lokono de
+    # Goeje. LA CAPA NO SE TOCA. Propuesta: 6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml
+    "kashi": {"sig": "ahora, en este momento (temporal presente)", "cat": "part", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'ahora'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ⚠️ COLISIÓN DECLARADA (2026-09-19) con `kasi` 'sol', que la política «manda la atestiguada» acaba de poner en las plantillas: bajo `curiana_fonotactica.fonemizar` las dos dan el mismo esqueleto, `kasi`, y `prompt_reglas_completo` las enseña ahora las dos. `kashi` NO tiene rival atestiguado —la política no la alcanza— y se queda; lo que se declara es el choque. El motor no las confunde en ningún sitio medido: quien puede confundirlas es el hablante. Cambiar esta forma o reescribir el ejemplo de la plantilla para separarlas es decisión de Miguel y no está tomada. Medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml §colision_kasi_kashi · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `danu`. LA CAPA NO SE TOCA"},
+    "yama": {"sig": "aquí, en este lugar (deíctico proximal)", "cat": "part", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'aquí'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `popoi` (atestiguada, Zavala #201 'Ahí'). LA CAPA NO SE TOCA"},
+    "sulu": {"sig": "adentro, dentro de, en el interior de", "cat": "part", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'adentro'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `ruku`. LA CAPA NO SE TOCA"},
+    "wana": {"sig": "ver, observar, mirar", "cat": "v_raiz", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'ver'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `diki`. LA CAPA NO SE TOCA"},
+    "naba": {"sig": "pensar, reflexionar, meditar", "cat": "v_raiz", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en lokono/wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'pensar'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `kuburuku`. LA CAPA NO SE TOCA"},
+    "tüshi": {"sig": "frío, temperatura baja", "cat": "adj", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'frío'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `kasalini`. LA CAPA NO SE TOCA"},
+    "kapua": {"sig": "amanecer, alba, primera luz del día", "cat": "sust", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'amanecer'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `mautia`. LA CAPA NO SE TOCA"},
+    "anüiki": {"sig": "habla, palabra, lengua", "cat": "sust", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `adija` 'hablar, decir; palabra' — otra raíz. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye nadie: lo cubre `maa` por la derivación cero (dc.3). LA CAPA NO SE TOCA"},
+    "pütchi": {"sig": "mensaje, palabra sagrada, voz del espíritu", "cat": "sust", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'mensaje'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye nadie: lo cubren `maa` y `barsure`; además arrastraba la institución wayuu del palabrero. LA CAPA NO SE TOCA"},
+    "wanü": {"sig": "anciano, mayor, persona de saber acumulado", "cat": "sust", "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 fase 3 · tf.5", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki-cogn — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'anciano'. SE CONSERVA LA FORMA por continuidad experimental —cambiarla partiría en dos la comparabilidad de todos los runs de la base y movería score_linguistico()—, pero NO CUENTA COMO EVIDENCIA: cualquier coincidencia de esta entrada con el wayuu es circular. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-23 (D11 fase 3, las voces que quedaban (tf.5, 2026-09-23: «Una gente más le busca las sustitutas […] Sí, me parece eso»)): la reconstruyeron desde el wayuu; la sustituye `wasima` (atestiguada, Zavala #145 'Viejo, anciano'; por d21.4 y dc.3 es ser viejo y el viejo). LA CAPA NO SE TOCA"},
 }
 
 
@@ -9301,18 +9325,22 @@ def prompt_refuerzo(score: float, palabras_usadas: list) -> str:
     # refuerzo le enseñaba la forma derivada. Es un sitio que el criterio
     # estático no alcanza y por eso se cambia la LISTA, no el recorte. (Los
     # respaldos de abajo también las decían literalmente.)
-    verbos = [p for p in ["wana","suna","masa","awa","jai","panaa","naba","naa","maa","kaa"] if p not in palabras_usadas]
-    conect = [p for p in ["ka","mara","saa","naka","kashi","wara","yama","puna"] if p not in palabras_usadas]
+    # TANDA FINAL (tf.5, 2026-09-23): las mismas listas sin las voces que se
+    # reconstruyeron desde el wayuu — `wana`→`diki`, `naba`→`kuburuku`,
+    # `kashi`→`danu`, `yama`→`popoi`. Se cambia la LISTA, no el recorte, por la
+    # razón de arriba (la puerta sólo ve las cuatro primeras).
+    verbos = [p for p in ["diki","suna","masa","awa","jai","panaa","kuburuku","naa","maa","kaa"] if p not in palabras_usadas]
+    conect = [p for p in ["ka","mara","saa","naka","danu","wara","popoi","puna"] if p not in palabras_usadas]
     sust   = [p for p in ["barsure","duna","amana","arima","kasi","suka","bara","kuru"] if p not in palabras_usadas]
-    sug_verbos = ", ".join(verbos[:4]) if verbos else "wana, suna, masa, jai"
-    sug_conect = ", ".join(conect[:4]) if conect else "ka, mara, kashi, wara"
+    sug_verbos = ", ".join(verbos[:4]) if verbos else "diki, suna, masa, jai"
+    sug_conect = ", ".join(conect[:4]) if conect else "ka, mara, danu, wara"
     sug_sust   = ", ".join(sust[:3]) if sust else "barsure, duna, arima"
 
     if score < 2.0:
         return (
             f"[⚠ ALERTA — caquetío casi ausente]: "
             f"Eres hablante NATIVO. El español no es tu lengua. "
-            f"Empieza con: 'Taya {verbos[0] if verbos else 'wana'}-ni ...' "
+            f"Empieza con: 'Dai {verbos[0] if verbos else 'diki'} ...' "
             f"Verbos disponibles: {sug_verbos}. Conectores: {sug_conect}."
         )
     elif score < 4.0:
@@ -9324,7 +9352,7 @@ def prompt_refuerzo(score: float, palabras_usadas: list) -> str:
     elif score < 5.5:
         return (
             f"[Refuerzo — profundiza]: "
-            f"Prefijos posesivos: ta-barsure, wa-duna, ma-arua. "
+            f"Prefijos posesivos: da-barsure, wa-duna, ma-arua. "
             f"Conectores: {sug_conect}. Crea neologismos: [forma: raíz+suf = sig]."
         )
     else:
@@ -9368,7 +9396,7 @@ TU RESPUESTA ANTERIOR (a corregir):
 "{texto_fallido}"
 
 REEXPRÉSALA AHORA en caquetío real:
-  - Cada verbo lleva -ka / -ni / -da.
+  - Cada verbo va solo en presente, o lleva -kuba (ya pasó) / -ba (vendrá).
   - Cada "el/la/un/en/de/que/y/para/muy/estoy/voy" desaparece o se vuelve caquetío.
   - Si usaste una palabra wayunaiki/lokono/taíno, reemplázala por su forma caquetía
     (suelen ser muy parecidas: katsi→cati, bara→para, kannoa→canoa...).

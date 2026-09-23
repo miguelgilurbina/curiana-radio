@@ -68,8 +68,12 @@ CAPA_AL_ARCHIVAR = {
 
 # Reconstruidas del núcleo SIN rival atestiguado: la política no las toca.
 # Si alguna apareciera archivada, la política se habría comido el núcleo.
-NUCLEO_INTACTO = ("taya", "pia", "nüma", "waya", "naya",
-                  "naa", "waa", "kaa", "maa", "chaa", "wana", "suna",
+# Tanda final (2026-09-23): `taya`, `pia`, `nüma` y `wana` salieron del habla,
+# pero NO por esta política —no tenían rival atestiguado—, sino por D11 fase 3
+# (cc.12: nada reconstruido desde el wayuu). Lo que este test fija sigue
+# valiendo: la política d19.b no los alcanzaba. Salen de la lista con su nota.
+NUCLEO_INTACTO = ("waya", "naya",
+                  "naa", "waa", "kaa", "maa", "chaa", "suna",
                   "kuru", "arima", "bara", "sima", "duna", "amana", "dali")
 
 
@@ -242,9 +246,12 @@ def test_d_el_scorer_cuenta_la_que_manda_y_no_la_archivada(
     """El scorer NO se tocó —`score_linguistico`, `pct_*` y `capas_de_score`
     son los mismos—: lo que cambió es el lexicón del que lee."""
     lex = LexicoComunitario()
-    assert manda in set(score_linguistico(f"taya {manda} yama", lex)["palabras_caquetias"])
+    # Tanda final: el marco era «taya … yama», y las dos voces se archivaron
+    # (D11 fase 3). Con vecinos que ya no son arahuacos, `para` se leía como la
+    # preposición castellana. El marco pasa a `dai` … `popoi`.
+    assert manda in set(score_linguistico(f"dai {manda} popoi", lex)["palabras_caquetias"])
     assert archivada not in set(
-        score_linguistico(f"taya {archivada} yama", lex)["palabras_arahuacas"])
+        score_linguistico(f"dai {archivada} popoi", lex)["palabras_arahuacas"])
 
 
 def test_d_no_queda_hueco_funcional_el_paradigma_se_muda_de_raiz():
@@ -307,23 +314,13 @@ def test_e_sima_sigue_viva_porque_es_pregunta_de_miguel():
     assert "sima-bana" in lx.formas_en_texto(completo)
 
 
-def test_e_la_colision_kasi_kashi_esta_declarada_donde_se_lee():
-    """`kasi` 'sol' y `kashi` 'ahora' dan el MISMO esqueleto fonémico bajo la
-    `fonemizar` del proyecto, y desde esta tanda las dos están en
-    `prompt_reglas_completo`. El motor no las confunde —son dos claves
-    distintas y todo lookup es exacto—, pero la colisión existe y tiene que
-    estar escrita donde alguien la lea."""
-    from curiana_fonotactica import fonemizar
-
-    assert fonemizar("kasi") == fonemizar("kashi"), (
-        "si dejaran de colisionar, esta declaración sobra")
+def test_e_la_colision_kasi_kashi_quedo_resuelta():
+    """Tanda final (2026-09-23): `kashi` 'ahora' era reconstruida desde el
+    wayuu y se archivó (tf.5); el ahora es `danu`. La colisión que el test de
+    abajo declaraba ya no está en la plantilla: se comprueba que no vuelva."""
     completo = lx.prompt_reglas_completo()
     tokens = lx.formas_en_texto(completo)
-    assert "kasi" in tokens and "kashi" in tokens, (
-        "la plantilla enseña las dos: es lo que hay que tener declarado")
-    # el motor las distingue: mismo esqueleto, claves distintas
-    assert lx._familia_de_token("kasi") == lx._familia_de_token("kashi") == "caquetío"
-    lex = LexicoComunitario()
-    dichas = set(score_linguistico("taya kasi wana-ka ka kashi naa-da",
-                                   lex)["palabras_caquetias"])
-    assert {"kasi", "kashi"} <= dichas, "el scorer cuenta las dos por separado"
+    assert "kasi" in tokens and "kashi" not in tokens and "danu" in tokens
+    assert "kashi" in FUERA_DEL_HABLA
+
+
