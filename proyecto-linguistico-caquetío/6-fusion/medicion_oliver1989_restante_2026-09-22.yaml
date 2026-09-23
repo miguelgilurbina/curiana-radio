@@ -6,6 +6,16 @@ meta:
 a9_vs_lexicon:
   filas: 50
   numeracion_completa_1_a_50: true
+  fuente_relacion_de_barquisimeto_1579:
+    n: 7
+    filas:
+    - 1
+    - 6
+    - 7
+    - 14
+    - 15
+    - 16
+    - 23
   cursivas:
     n: 4
     filas:
@@ -626,3 +636,20 @@ voces_cap4:
   - lexicon_toponimos.NIVEL_B:guarataro
   warataro:
   - VOCABULARIO_BASE:warataro
+mundo:
+  vecinos_con_pagina: 11
+  vecinos_sin_entrada_en_etnias_yaml:
+    n: 10
+    grupos:
+    - coanao
+    - wanebucán
+    - tairo / tairona
+    - xiriguana
+    - arhuaco / haruacana
+    - jirajara
+    - ayomán
+    - gayón
+    - xagua
+    - camagos
+  sitios_nombrados_en_el_cap4: 11
+  tabla8_filas_nuevas_p592: 16

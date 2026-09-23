@@ -206,9 +206,12 @@ def medir_a9(idx):
         p = e.get("epoca")
         if p:
             por_epoca[p] = por_epoca.get(p, 0) + 1
+    de_la_relacion = [e["num"] for e in filas
+                      if "Relación de Barquisimeto" in str(e.get("fuente_en_oliver") or "")]
     return {
         "filas": len(filas),
         "numeracion_completa_1_a_50": [e["num"] for e in filas] == list(range(1, 51)),
+        "fuente_relacion_de_barquisimeto_1579": {"n": len(de_la_relacion), "filas": de_la_relacion},
         "cursivas": {"n": len(cursivas), "filas": cursivas},
         "estado": dict(sorted(cuenta.items())),
         "con_fuente_nombrada_por_oliver": {"n": len(con_fuente), "filas": con_fuente},
@@ -398,6 +401,17 @@ def medir_antillas():
     return {k: len(re.findall(v, t)) for k, v in dianas.items()}
 
 
+def medir_mundo():
+    m = cargar(MUNDO_YAML)
+    vec = m["vecinos"]
+    faltan = [v["grupo"] for v in vec if str(v.get("en_etnias_yaml", "")).startswith("NO")]
+    a8 = cargar(LEXICO_YAML)["tabla_a8_complemento"]["filas_que_faltaban"]
+    return {"vecinos_con_pagina": len(vec),
+            "vecinos_sin_entrada_en_etnias_yaml": {"n": len(faltan), "grupos": faltan},
+            "sitios_nombrados_en_el_cap4": len(m["arqueologia"]["sitios_nombrados_en_el_texto"]),
+            "tabla8_filas_nuevas_p592": len(a8)}
+
+
 def medir_voces_cap4(idx):
     out = {}
     for f in ("tucua", "zazare", "sasare", "guarataro", "warataro"):
@@ -426,6 +440,7 @@ def main():
         "ortografia": medir_ortografia(),
         "antillas": medir_antillas(),
         "voces_cap4": medir_voces_cap4(idx),
+        "mundo": medir_mundo(),
     }
     a9 = med["a9_vs_lexicon"]
     print(f"A-9: {a9['filas']} filas · cursivas {a9['cursivas']['n']} · estado {a9['estado']}")
@@ -438,6 +453,8 @@ def main():
     for k, v in med["mar"].items():
         print(f"mar · {k}: {v['menciones_del_mar']} menciones, {v['ventanas_con_creencia']} ventanas con creencia")
     print(f"antillas (cap. 4): {med['antillas']}")
+    print(f"mundo: {med['mundo']}")
+    print(f"A-9 con fuente en la Relación de Barquisimeto 1579: {a9['fuente_relacion_de_barquisimeto_1579']}")
     if args.check:
         return 0
     with open(SALIDA, "w", encoding="utf-8") as f:

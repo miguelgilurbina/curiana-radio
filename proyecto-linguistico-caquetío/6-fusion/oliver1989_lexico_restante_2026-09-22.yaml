@@ -658,7 +658,8 @@ correspondencias:
 # 5. LA TABLA 8 (A-8), LO QUE FALTABA — leído en imagen
 # ══════════════════════════════════════════════════════════════════════════
 # 6-fusion/tabla_a8_jirajarano.yaml transcribió 33 filas por OCR y se paró en
-# 'cold' (94). La p. 592 trae 16 filas más, los porcentajes y las fuentes.
+# 'cold' (94). La p. 592 trae más filas (cuántas: medición §mundo), los
+# porcentajes y las fuentes.
 # NO es vocabulario caquetío y NO entra al lexicón (lo dice su propia cabecera).
 tabla_a8_complemento:
   pagina: 592
@@ -683,7 +684,7 @@ tabla_a8_complemento:
     - "Jirajara-Ayoman: 20/26 = 76.9%  (22/26 = 84.6%)"
     - "Jirajara-Cuyon : 19/24 = 79.2%  (21/24 = 97.5%)"
     - "Ayoman-Cuyon   : 29/32 = 87.8%  (30/32 = 93.8%)"
-  aritmetica: "dos de los seis porcentajes impresos no cuadran con su fracción; el script lo mide (medición §a8_aritmetica)"
+  aritmetica: "hay porcentajes impresos que no cuadran con su fracción; cuántos y cuáles, en la medición §a8_aritmetica"
   fuentes_de_la_tabla: ["Alfredo Jahn (1927)", "C. Loukotka (1968)", "L. Oramas (1916)"]
   arbol: "PROTO-JIRAJARA → JIRAJARA | (AYOMAN, CUYON)"
   sin_tamanaco: >-

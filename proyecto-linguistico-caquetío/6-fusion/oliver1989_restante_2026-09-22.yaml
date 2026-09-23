@@ -73,7 +73,7 @@ vecinos:
     polity_caquetia: occidental
     tipo_de_contacto: mercado
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '211-213', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
     epoca: contacto-temprano
 
   - grupo: tairo / tairona
@@ -83,7 +83,7 @@ vecinos:
     polity_caquetia: occidental
     tipo_de_contacto: ninguno
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '211-213', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: xiriguana
     variantes: [yrriguanas, jiriguana]
@@ -93,7 +93,7 @@ vecinos:
     polity_caquetia: occidental
     tipo_de_contacto: ninguno
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '215-216', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: arhuaco / haruacana
     variantes: [aruaco, aruacana, aruago, haroacana, haraocana]
@@ -104,7 +104,7 @@ vecinos:
     tipo_de_contacto: guerra
     contacto_nota: 'con los españoles (mataron a Alfinger y a Monsarrate); con los caquetíos, ninguno documentado'
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '218-220', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: jirajara
     variantes: [girara, jirara, xidehara, piracoras (Pérez de Tolosa, «in all probability a mistranscription»)]
@@ -142,7 +142,7 @@ vecinos:
     tipo_de_contacto: mercado
     contacto_nota: 'comercio «down-the-line» de azabache y concha; la concha, «perhaps via Yaracuy»'
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '237-243', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: gayón
     variantes: [coyón, cuyón, cayones]
@@ -152,7 +152,7 @@ vecinos:
     polity_caquetia: barquisimeto
     tipo_de_contacto: ninguno
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '244', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: xagua
     variantes: [axagua, jagua]
@@ -165,7 +165,7 @@ vecinos:
     polity_caquetia: barquisimeto
     tipo_de_contacto: mercado
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '245-247', edicion: tesis}
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: camagos
     donde: sierras al norte de Barquisimeto, junto a gayones, jaguas y jirajaras
@@ -173,7 +173,7 @@ vecinos:
     procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '244', edicion: tesis, via: 'Relación de Nueva Segovia 1579 (Arellano 1964: 182)'}
     polity_caquetia: barquisimeto
     tipo_de_contacto: ninguno
-    en_etnias_yaml: NO
+    en_etnias_yaml: 'NO'
 
   - grupo: chipa
     variantes: [cyparicotes, chiparicotos]
