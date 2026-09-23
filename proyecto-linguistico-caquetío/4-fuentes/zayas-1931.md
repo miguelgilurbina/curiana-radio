@@ -111,3 +111,28 @@ diccionario entero. Sólo dos entradas se verificaron en imagen.
 ## Enlaces
 
 [[goeje-1939]] · [[bachiller-morales-1883]] · [[pichardo-1862]]
+
+---
+
+## Bitácora: sus siete voces, llevadas a la fuente primaria (2026-09-23, cc.7)
+
+Miguel pidió decidir, «en base a lo que decía el texto», si las voces que
+Zayas trae son taínas. Se fue a los pasajes que Zayas cita, o que debió
+citar. Cuatro correcciones a lo que dejó la parcela de Zayas (#220):
+
+- **Bagua** (t. I p. 72). Zayas cita sólo el apéndice de la Academia, pero la
+  voz está en el **cuerpo** de Oviedo, t. I p. 436 (✅ imagen): «Llaman los
+  indios de aquesta Isla Española á la mar *bagua*». Es taína, y la `lectura`
+  de `taino_zayas_1931.yaml` («la voz sigue sin cronista») hay que
+  corregirla: el cero era del OCR, que se come la cursiva.
+- **Aura** (t. I p. 60). Es la voz que Goeje p. 14 cita (✅ imagen: «vautour T
+  *aura* (ZAYAS, p. 52…)»). `anua` era un error de la transcripción de Goeje
+  del repo, no de Goeje.
+- **Manatí** (t. II p. 178). La cita de Las Casas es fiel: Apologética p. 27
+  (✅ imagen).
+- **Tabaco / Cohoba** (t. II p. 254; t. I «Cohoba»). La afirmación de Zayas de
+  que la planta se llamaba «Cojoba o Cojiba» no tiene cronista: viene del
+  glosario del editor de Oviedo (1855) y de Pichardo (1862). Los pasajes que
+  él mismo cita son del rollo (tabaco) y del polvo y el rito (cohoba).
+
+Detalle y etiquetas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.

@@ -251,6 +251,24 @@ y la p. 436 llama a Túcua «FAL-69», que es Corralito.
 caquetíos); las Tablas 16-17 de frecuencias; los Apéndices C (figuras) y D
 (histogramas; sólo se miró el perfil D-77 de Corralito).
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se preguntó**: la cronología dabajuroide y dónde cae Margarita.
+
+**Qué se halló**: la clasificación de pp. 422-423 (OCR del repo) y, vistas en
+imagen, **p. 424** (sólo las sub-tradiciones Dabajurana, Bachaquerana y
+Tierrana se correlacionan con polities caquetías; la Mirindayana con ninguna
+arahuaca) y **p. 427** (la sub-tradición Campomana, «in the opposite end of the
+coast»: Punta Arenas en Cumaná, Guaraguao en Barcelona, **Playa Guacuco en el
+valle de La Asunción de Margarita**, filiación tentativa por Cruxent y Rouse
+1958: 57-59). Que la tradición dabajuroide llegue a Margarita contradice la
+ecuación «dabajuroide = caquetío» de ecologia-013. Tesis: impresa = pdf − 27
+(p. 402 = pdf 429, la Fig. 74).
+
+**Qué NO se halló**: fechas absolutas de Margarita.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[oliver-1989-cap3]] · [[zavala-reyes-2018]] ·

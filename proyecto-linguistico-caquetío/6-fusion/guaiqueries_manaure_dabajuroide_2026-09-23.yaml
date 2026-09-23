@@ -1,0 +1,811 @@
+# ══════════════════════════════════════════════════════════════════════
+# EL ASIENTO DE MANAURE, LOS GUAIQUERÍES Y LA CRONOLOGÍA DABAJUROIDE
+# Campaña corta cc.5 (decisiones_cierre_2026-09-23.yaml), 2026-09-23.
+#
+# PROPUESTA (regla 5). Nada de aquí entra al canon sin que Miguel lo fusione.
+# No toca 3-mundo/, 2-lengua/ ni curiana_sim/.
+#
+# Tres preguntas, tres veredictos. Cada dato lleva obra (clave foránea a
+# 4-fuentes/bibliografia.yaml), página impresa, `epoca` y etiqueta epistémica
+# (atestiguado · reconstruido · hipotetico · canon-simulacion). En duda, se
+# degrada.
+#
+# ⚠️ REGLA 3. Casi todo lo que se sabe del asiento de Manaure y de los
+# guaiqueríes es de 1525-1570: `contacto-temprano` o `colonial`. Lo único que
+# llega al s. XIV-XV es la arqueología de la pregunta 3.
+# ⚠️ REGLA 4. Los guaycaríes de Federmann están en los LLANOS (Cojedes), con
+# la polity caquetía de los llanos; los guaiqueríes de Margarita, en la costa
+# ORIENTAL. Ninguno de los dos está documentado en la costa de Falcón.
+#
+# Las cifras de la pregunta 3 (qué fases y qué fechas caen en la ventana) no
+# se escriben a mano: las mide
+#     python 6-fusion/scripts/medir_cronologia_dabajuroide.py
+# leyendo este YAML (§pregunta_3.fases) y 6-fusion/tabla15_c14_oliver.yaml.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  campana: "cc.5 — asiento de Manaure, guaiqueríes y cronología dabajuroide"
+  fecha: 2026-09-23
+  encargo: >-
+    Miguel, 2026-09-23 (decisiones_cierre_2026-09-23.yaml cc.5): «donde se
+    sentaba Manaure donde ubicar los guaqueríes […] la cronología de
+    [dab]ajuroide […] los guayqueríes también estaban en la isla de Margarita
+    […] son parte de la esfera de contacto […] Ferman identificó […] que había
+    un poblado de guayquerías con caquetíos».
+  issue: 6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md
+  script: 6-fusion/scripts/medir_cronologia_dabajuroide.py
+  ventana_simulada: [1300, 1500]
+
+  cierra_de_la_lista_consolidada:   # PR #222, 6-fusion/decisiones_pendientes_2026-09-23.yaml §ya_decididas
+    - de: '#203 M8 D1 (¿qué cronología del dabajuroide?)'
+      con: pregunta_3.veredicto
+    - de: '#207 M7 D-d y #213 M1 §1.5 (¿dónde vivía Manaure?)'
+      con: pregunta_1.veredicto
+    - de: '#214 HSAI (d) (los guaycaríes del elenco: ¿costa o fuente llanera?)'
+      con: pregunta_2.veredicto
+  toca_sin_cerrar:
+    - 'dp.2.03 (campo `epoca` en etnias.yaml): las dos fichas que se proponen aquí lo necesitan'
+    - 'dp.2.04 (vecinos que faltan en etnias.yaml): se suma el guaiquerí de Margarita a esa tanda'
+    - 'vistos_de_paso: «Paragrachoa» (p. 252 de Pérez de Tolosa) — aquí hay dos apoyos para leerla como Paraguachoa, en el Falcón oriental (§pregunta_2.trampa_paraguachoa)'
+
+  lo_que_resulto_falso_al_medirlo:
+    - que: >-
+        etnias.yaml etnia-002 dice que «el propio texto dice que los
+        expedicionarios "supusieron eran Guayqueríes"» y por eso lo baja a
+        `hipotetico`.
+      medido: >-
+        Federmann no lo supone: los NOMBRA sin duda, «otro pueblo que llaman
+        Guaycaríes» (1916 p. 84), «die Guaycaries gehaissen» (Klüpfel p. 55, OCR «Guaycarins»).
+        Ninguna aparición de `supus-`/`supon-` en la edición de 1916 toca a los
+        guaycaríes (la más cercana, «Supusimos», es sobre los cristianos de
+        Gaboto, p. 85). El «supusieron» es de Brito Figueroa, la historiografía por la
+        que llegó la cita (Scribd, 2026-08-25). Lo conjetural no es el nombre:
+        es la IDENTIDAD guaycarí de Federmann = guaiquerí de Margarita.
+    - que: >-
+        toponimo-082 (charaima), vía Esteves p. 35: «el cacique Charaima de la
+        Isla de Margarita, el abuelo del guayquerí Francisco Fajardo».
+      medido: >-
+        Oviedo y Baños (ed. Ayacucho p. 168, verificado en imagen): Fajardo es
+        hijo de un español y de «Doña Isabel, india Cacica de la nación
+        Guaiquerí; era Doña Isabel nieta de un Cacique, llamado Charayma; del
+        valle de Maya en la provincia de Caracas». Charayma es BISABUELO de
+        Fajardo y cacique de la costa de CARACAS, no de Margarita. El único hilo
+        que ataba un topónimo de Paraguaná a los guaiqueríes se corta.
+    - que: >-
+        ecologia-013: la cerámica dabajuroide está «correlacionada con una
+        única unidad étnica y lingüística: el caquetío».
+      medido: >-
+        Oliver 1989 p. 424 (verificado en imagen) sólo correlaciona las
+        sub-tradiciones Dabajurana, Bachaquerana y Tierrana con las polities
+        caquetías de la costa y de Barquisimeto-Yaracuy. La TRADICIÓN
+        dabajuroide incluye además la sub-tradición Campomana del extremo
+        opuesto de la costa —Cumaná, Barcelona y Margarita (p. 427)—, tierra de
+        cumanagotos y guaiqueríes en el s. XVI. «Dabajuroide» no es sinónimo de
+        «caquetío»; «dabajurano», en la costa de Falcón, sí lo es para Oliver.
+    - que: >-
+        La premisa del encargo: un «poblado de guaiqueríes con caquetíos» en
+        Federmann.
+      medido: >-
+        No hay UN poblado mixto. El alemán dice que las dos naciones viven
+        «vnthereinander gemischt» —mezcladas en el territorio— «doch iede in
+        sondern Pueblos oder flecken» —pero cada una en sus propios pueblos—
+        (1557 [77]-[78]). Lo que hay de común es una pesquería guaycarí de
+        pocas casas donde se juntan muchos indios a comprar pescado (1557 [83];
+        1916 p. 95). Y es en los llanos (el Cojedes), no en la costa ni en
+        Margarita.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. DÓNDE SE SENTABA MANAURE
+# ══════════════════════════════════════════════════════════════════════
+pregunta_1:
+  pregunta: ¿Dónde tenía su asiento el gran cacique de Coro, y en qué época lo dicen las fuentes?
+
+  veredicto: >-
+    Ninguna fuente dice dónde se sentaba Manaure ANTES de 1527, y ninguna lo
+    pone en Paraguaná. El único documento anterior al pacto (Ampíes, c. 1526)
+    lo pone «diez leguas la tierra adentro en la provincia de Coro» —de oídas,
+    por sus emisarios—; después de 1527 los documentos lo sitúan en Coro o en
+    Todariquiba, a una o dos leguas de Coro, que en 1538 es el pueblo de su
+    hijo Don Alexandre. La sede de Caçicure / Pueblo Viejo (junto a Mitare) es
+    una corazonada declarada de Oliver. El canon de la era 2 (su casa en Moruy,
+    al pie del Capubana) es una decisión creativa del 2026-09-14 sin fuente: no
+    hay que CAMBIARLA —ninguna fuente dice nada del s. XV—, hay que DECLARARLA,
+    y corregir lo que nodo-001 y geografia_politica-003 dan por dato.
+
+  datos:
+
+    - id: mau-01
+      afirmacion: Antes del pacto, Ampíes sabe de un gran cacique que vive diez leguas tierra adentro en la provincia de Coro.
+      cita: >-
+        «esto principalmente me enviaba á decir un gran cacique que está diez
+        leguas la tierra adentro en la provincia de Coro, y el dicho cacique se
+        llama Naure ó Anaure, el cual por ser tan gran señor se hace adorar como
+        Dios»
+      obra: perez-de-tolosa-1546
+      documento: "Carta de Juan de Ampíes al Rey, desde Santo Domingo (c. 1525-1526; apéndice de Fernández Duro 1885, t. II)"
+      pagina_impresa: 212
+      verificado_en_imagen: 'sí, por la campaña de Pérez de Tolosa (ptol-22); aquí leído en el .txt'
+      epoca: contacto-temprano
+      etiqueta: atestiguado   # lo que escribe Ampíes; la ubicación es de oídas
+      nota: >-
+        Ampíes no había estado allí: lo sabe por D. Juan Baracoica y otro
+        emisario. «Tierra adentro» se dice desde la costa que miran las islas;
+        con la legua de 4,5-6 km que usa Oliver (DOC p. 259), son unos 45-60 km
+        (cálculo nuestro). No es la orilla ni la península: Paraguaná no es
+        «tierra adentro» de nada. Oliver traduce igual: «resides 10 leagues
+        inland in the Province of Coro» (DOC p. 258, citando CoDoIn 1868:
+        30-31 y fechándola en 1525). Velasco 2015 (p. 18) lee el manuscrito
+        (AGI, folio 14) y trae «como digo» donde el impreso dice «como Dios»:
+        eso es dp.2.07, no se decide aquí.
+
+    - id: mau-02
+      afirmacion: El pacto de 1527 incluye que Manaure se reasiente junto a Coro, en Todariquiba.
+      cita: >-
+        «Manaure agreed to ally himself with Ampíes […] and to resettle near
+        what is today Coro (a village called Todariquiba) if Ampíes could
+        guarantee protection from the constant raiding "pirates"»
+      obra: oliver-1989-cap3
+      pagina_impresa: 'DOC p. 251 (tesis p. 259)'
+      via: 'Oliver cita Ramos Pérez 1978, Arcaya 1977 y su Ms. 1987a; el documento que lo diga no está en el repo'
+      epoca: contacto-temprano
+      etiqueta: reconstruido   # lectura historiográfica de Oliver, sin el documento
+      nota: >-
+        Es la base de nodo-001 y de geografia_politica-003. Que Todariquiba sea
+        un REASENTAMIENTO dice también que no era el asiento anterior.
+
+    - id: mau-03
+      afirmacion: En 1531 Coro se presenta a caquetíos lejanos como tierra de Manaure.
+      cita_1916: "debían anunciarles que éramos cristianos que habitábamos el territorio del cacique Manuaury (Manaure)"
+      aleman: "«das wir die Christen weren so in Coro, in des Cacique oder herren Manuaury gehaissen, lande wonetten» (1557 [112])"
+      obra: federmann-1916
+      pagina_impresa: 120
+      verificado_en_imagen: 'sí (campaña Federmann, fed-coro-001)'
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: Coro es «su tierra»; Federmann no nombra su pueblo ni lo vio.
+
+    - id: mau-04
+      afirmacion: En 1538 Todariquiba es el pueblo de Don Alexandre, hijo de Manaure, a dos leguas de Coro (o a una, según la carta rectificada).
+      cita: >-
+        «Don Alexandro Cacique principal de la Provincia q reside en un pueblo
+        dos leguas desta cabda que se dize Todariquiba»
+      obra: velasco-2015-resistencia
+      pagina_impresa: 33
+      via: 'Carta del obispo Rodrigo de Bastidas, AGI Santo Domingo leg. 218, f. 2, 8-X-1538 (transcripción de Velasco; también en 6-fusion/velasco_primarios_agi.yaml)'
+      epoca: colonial
+      etiqueta: atestiguado
+      nota: >-
+        La misma carta en Oliver (DOC p. 259, vía Armado Maldonado 1973):
+        «Todariquiva, the village of Don Alexandre [son of Manaure], principal
+        of this city». González Batista 2002 (p. 161 n. 47-48, vía M7) dice que
+        Bastidas rectifica en otra carta la distancia a UNA legua: la «1 legua»
+        de nodo-001 es ésa, y las dos distancias son del mismo testigo.
+
+    - id: mau-05
+      afirmacion: Manaure y su hijo dejaron juntos Todariquiba por los abusos del teniente de Alfinger.
+      cita: >-
+        «both Manaure and his son Alexandre, when they left Todariquiba
+        --because of the abuses of Alfinger's lieutenant Santillana-- they left
+        together»
+      obra: oliver-1989-cap3
+      pagina_impresa: 'DOC p. 268'
+      via: 'juicios de residencia (Ponce y Vaccari 1977) y Naveros y Vázquez de Acuña, vía Oliver'
+      epoca: contacto-temprano
+      etiqueta: reconstruido
+      nota: Es la única frase del repo que pone a Manaure MISMO residiendo en Todariquiba, y es de 1527-1531.
+
+    - id: mau-06
+      afirmacion: Un testigo que vivió en Coro desde 1545 pone a Manaure en el pueblo de Coro, en una casa grandísima que luego fue iglesia; la probanza de 1680 le da allí «su corte».
+      cita_corta: '«…estaba en dicho pueblo de Coro, en una casa grandísima…» (Cey)'
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '163-164'
+      via: 'Galeotto Cey, Viaje y descripción de las Indias 1539-1553 (Caracas 1995) p. 56; probanza de 1680, AHC Fondo Arcaya t. VII — vía M7 (m7-gb02-002)'
+      epoca: colonial
+      etiqueta: 'atestiguado (lo que dicen Cey y los testigos); reconstruido (que fuera así en 1527)'
+      nota: 'González Batista lee Todariquiba como refugio temporal de 1529. Obra con derechos, sin commitear: se cita de la propuesta de M7.'
+
+    - id: mau-07
+      afirmacion: En 1548 Pérez de Tolosa dice que Manaure residía «en la comarca» de Coro y que se fue por los malos tratos.
+      cita: >-
+        «en la comarca de la ciudad de Coro residía un cacique llamado Manaore,
+        el mayor principal que en la gente caquetia se hallaba, y andando el
+        tiempo, por malos tratamientos, se ausentó do murió»
+      obra: perez-de-tolosa-1546
+      documento: 'tercera carta, Coro 8-VII-1548'
+      pagina_impresa: 248
+      verificado_en_imagen: 'sí (ptol-20)'
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+
+    - id: mau-08
+      afirmacion: Castellanos da a Manaure mando sobre caciques y sobre toda la comarca, y lo llama «rey de Coro»; no nombra su pueblo.
+      cita: >-
+        «Al indio que Mauaure se llamaba, / El cual sobre caciques tuvo mando /
+        Y toda la comarca subyectaba» (p. 185) · «Del cacique Manaure, rey de
+        Coro» (p. 199)
+      obra: castellanos-elegias
+      pagina_impresa: '185 y 199 (castellanos_pagina.py, líneas 48353 y 52133)'
+      epoca: colonial   # 1589, contando 1527-1531
+      etiqueta: atestiguado
+      nota: >-
+        En la p. 185 Todariquibo es una de las «ciudades de grandísimo momento»
+        que había «doce leguas en torno del asiento» —el asiento es Coro, el de
+        Ampíes—, no la casa de Manaure. Arcaya 1920 (p. 113) cita la estrofa
+        como «p. 183»: la OCR imprime «183» junto a ella, y el script de M7 mide
+        la confusión 3↔5 de esa OCR.
+
+    - id: mau-09
+      afirmacion: Oliver propone, como corazonada, que la sede propia de Manaure era el territorio de Caçicure, con su centro en Pueblo Viejo (FAL-77), al NE de Mitare.
+      cita: >-
+        «I would venture to suggest that Manaure's immediate and most direct
+        authority as a great diao was the territory (cacicazgo?) of Caçicure,
+        with its seat of power being in the so-called (by the Spanish) Pueblo
+        Viejo» · n. 114: «a Pueblo Viejo inscribed in the anonymous map of
+        1534-5 which I have a strong hunch that it could be the archaeological
+        site of Pueblo Viejo (FAL-77) just N.E. of the village of Mitare»
+      obra: oliver-1989-cap3
+      pagina_impresa: 'DOC pp. 265-266 y n. 114 (tesis p. 277 n. 206, según M1)'
+      epoca: 'contacto-temprano (el mapa de 1534-5); el término Caçicure «was not in use early in the XVIth century» (DOC p. 262)'
+      etiqueta: hipotetico
+      nota: >-
+        Choca con mau-01: Pueblo Viejo está junto a la costa (sus concheros son
+        de chipichipi) y Ampíes dice «tierra adentro». El nombre Caçicure es del
+        s. XVIII en los documentos que Oliver cita (Martí 1774, DOC pp.
+        255-256): el cacique de Caçicure reclamaba Santa Ana y Moruy, y los
+        indios de Paraguaná se le resistieron.
+
+    - id: mau-10
+      afirmacion: La historiografía del s. XX habla de un «gran señor de Paraguaná».
+      cita: >-
+        «sometidos a la autoridad absoluta del gran señor de Paraguaná»
+      obra: moron-2012-petroglifos
+      via: 'Julio C. Salas → Antolínez 1944 → Morón 2012 (tres eslabones; Salas no está en el repo)'
+      epoca: moderno
+      etiqueta: hipotetico
+      nota: >-
+        Es el «Salas: la cabecera está en Paraguaná» de la opción (a) de P1
+        (estructura_social_era2.yaml). Sin documento colonial debajo que se
+        haya visto. Oliver (DOC p. 265) sí sostiene que los dos subgrupos de
+        Paraguaná, Amuay y Guaranao, estaban integrados bajo el jefe mayor, que
+        «at the time of Contact» era Manaure: autoridad sobre la península, no
+        residencia en ella.
+
+    - id: mau-11
+      afirmacion: Tras 1531 Manaure huye hacia los llanos con mucha gente de muchos pueblos; la tradición del s. XVIII lo sigue en Barinas.
+      cita: >-
+        «se alzó y despobló toda la dicha tierra y llevó consigo todo el oro
+        […] él y todos los suyos, que fueron mucha gente é de muchos pueblos»
+      obra: perez-de-tolosa-1546
+      documento: 'Interrogatorio de 1545, pregunta 21'
+      pagina_impresa: 266
+      epoca: contacto-temprano
+      etiqueta: atestiguado
+      nota: Arcaya 1920 pp. 199-200 recoge la tradición (las calzadas de Barinas, la laguna de Curanaca) como leyenda.
+
+  el_canon_hoy:
+    - donde: '3-mundo/asentamientos.yaml nodo-001 (todariquiba)'
+      dice: '«Poblado real donde residió Manaure y donde se reasentó tras el pacto de 1527»; «Aprox. 1 legua (4,5-6 km) de la actual Coro»; precontacto: desconocido'
+      contra_las_fuentes: >-
+        Correcto en la época (colonial) y en `precontacto: desconocido`. Le
+        falta: que el reasentamiento es lectura de Oliver (mau-02), que en 1538
+        es el pueblo de Don Alexandre (mau-04), que la distancia es una o DOS
+        leguas según la carta de Bastidas (mau-04), y que Cey pone a Manaure en
+        Coro (mau-06).
+    - donde: '3-mundo/corpus/geografia_politica.yaml geografia_politica-003'
+      dice: '«"Todariquiba" fue el poblado real […] donde residió Manaure», fuente: atestiguado'
+      contra_las_fuentes: 'La residencia de Manaure allí es reconstruida (mau-02, mau-05), no atestiguada; lo atestiguado es el pueblo y Don Alexandre.'
+    - donde: '6-fusion/elenco_era2.yaml (Manaure, ubicacion_default: Moruy) y decisiones_tanda_2026-09-14.yaml manaure_y_corubos'
+      dice: '«Su casa queda en Moruy, al pie del Capubana» — etiqueta canon-simulacion, decisión creativa'
+      contra_las_fuentes: >-
+        Ninguna fuente pone a Manaure en Paraguaná; la más cercana al contacto
+        lo pone «tierra adentro» (mau-01). Pero ninguna dice nada del s. XV:
+        la casa de Moruy no contradice un dato precontacto porque no lo hay. Lo
+        que falta es que el elenco lo diga con su etiqueta y su deuda.
+    - donde: 'curiana_sim/curiana_polities.py (costera) y 3-mundo/polities-caquetias.md'
+      dice: 'la polity costera «Falcón llano, Paraguaná, el Golfete…»; Todariquiba nombrada en el docstring'
+      contra_las_fuentes: 'Nada que corregir: no asigna asiento a Manaure.'
+
+  opciones_para_miguel:
+    A: >-
+      DECLARAR y no cambiar. En nodo-001 y geografia_politica-003: la
+      residencia de Manaure en Todariquiba pasa a `reconstruido` (1527-1531,
+      Oliver), con Don Alexandre en 1538 (Bastidas, atestiguado), «una o dos
+      leguas», y la lectura de Cey/González Batista (Coro) como alternativa. En
+      el elenco, la casa de Moruy lleva `etiqueta: canon-simulacion` y `deuda:
+      sin-procedencia`, con la nota de que la única fuente anterior al pacto dice
+      «tierra adentro». Nada cambia en el motor.
+    B: 'A, y además mover la casa de Manaure en la era 2 fuera de Paraguaná (Todariquiba o Pueblo Viejo) y dejar el Capubana como asiento ritual —la opción (c) de P1—. Rehace el elenco, la escena y el primer día.'
+    C: 'Mover el asiento a Caçicure / Pueblo Viejo siguiendo a Oliver. No recomendada: es corazonada suya y choca con Ampíes.'
+    D: 'No tocar nada.'
+  recomendacion: >-
+    A. Las fuentes no dan un asiento del s. XV que oponer a la decisión
+    creativa, así que no hay razón documental para mover a Manaure; sí la hay
+    para que el canon deje de llamar «dato» a la residencia en Todariquiba y
+    para que la de Moruy lleve su etiqueta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LOS GUAIQUERÍES
+# ══════════════════════════════════════════════════════════════════════
+pregunta_2:
+  pregunta: ¿Dónde estaban, qué eran, y qué dice Federmann de su poblado con caquetíos?
+
+  veredicto: >-
+    Son DOS grupos con el mismo nombre, y ninguno está documentado en la
+    costa de Falcón. (1) Los guaycaríes de Federmann (enero-febrero de 1531)
+    son pescadores de río de los LLANOS, en el Cojedes: viven mezclados en el
+    mismo territorio con caquetíos de la polity de los llanos, cada nación en
+    sus propios pueblos, con un mercado de pescado por frutas y víveres, y dos
+    de ellos hablan caquetío. (2) Los guaiqueríes de Margarita, Coche, Cubagua
+    y la costa de Cumaná son pescadores y canoeros del ORIENTE, documentados
+    desde 1550 como aliados de los españoles. Que (1) y (2) sean el mismo
+    pueblo lo discuten las propias fuentes (Arcaya lo ignora; Oliver lo cree
+    probable; Kirchhoff hace de los de Federmann guamos y del nombre un
+    genérico de pueblos pescadores). La lengua: ninguna palabra guaiquerí en el
+    repo; caribe según Oliver (con McCorkle 1952) y el área de Kirchhoff,
+    warao según Arcaya y Antolínez, y ninguna fuente del repo la hace
+    arahuaca. Etiqueta de familia: `desconocida`. Para la esfera (regla 4):
+    son el modelo documentado de una nación pescadora en simbiosis con
+    caquetíos —en los llanos—, no un vecino de la Kaketiana en el s. XV.
+
+  el_pasaje_de_federmann:   # lo que Miguel recordaba
+    lugar: 'río Coaheri (el Cojedes; Arcaya: cerca de El Baúl, notas b-e pp. 90-95; Oliver: la juntura Sarare-Cojedes, DOC p. 281); tierra de Itabana'
+    fecha: 'enero-febrero de 1531 (Federmann deja Tohibara el 23-I-1531, 1916 p. 86)'
+    polity: llanos
+    epoca: contacto-temprano
+    textos:
+      - id: gua-fed-01
+        tema: el territorio mezclado, las aldeas aparte, el mercado
+        cita_1916: >-
+          «Habiendo percibido del otro lado del río cerca de seiscientos indios
+          Guaycaríes, que son gentes completamente negras, cuya descripción
+          daré más adelante, mandé el cacique que había conducido, a su aldea,
+          alejada una legua y media de allí, porque al borde del agua no tienen
+          sino ranchos de pesquería. Allí hacen mercado con los Caquetíos, que
+          cambian frutas y otros víveres por pescado, porque es la pesca su
+          única industria y hanse adueñado del río. Viven estas dos naciones en
+          paz en el mismo territorio porque se necesitan mutuamente, pero cada
+          una habita aldeas distintas.»
+        pagina_1916: '89-90 (cap. XI, «Nación de los Guaycaríes»; la p. 89 es la de cabecera de capítulo, sin número impreso: pdf 99)'
+        aleman_1557: >-
+          «vnd enthalb bei sechs hundert Indios Guaycaries / welchs ein
+          kolschwartz volck als hernach dern art auch wirt volgen / fande /
+          beschicket ich den Cacique oder herrē / derselben Nation / welcher bei
+          anderhalb meil vom wasser seine flecken hat / vnd allein ihre
+          vischheüser bei disem wasser haben / vñ auch daselbst jre merckt
+          halten / dañ die Nation Caquecios / so enthalb vñ her enhalb wohnen /
+          kauffen ihnen solche visch / vmb frucht vnd essende speiß ab / dañ die
+          Nation Guaycaries / allein dem vischen obligen / vñ das wasser
+          herrschen / vnnd also vnthereinander gemischt / wonen / dise zwo
+          Nation wonen fridlich / doch iede in sondern [78] Pueblos oder flecken
+          für sich selbst / vnnd darumb das aine Nation der andern bedarff»
+        pagina_1557: '[77]-[78] = imágenes 87-88 del PDF (desfase +10, medido aquí); Klüpfel 1859 p. 57'
+        glosa_marginal_1557: '«Guaycari kolschw[artz] vischer» (imagen 87)'
+        verificado_en_imagen: 'sí: 1916 p. 90 (pdf 100) y 1557 imágenes 87-88'
+        lo_que_la_1916_pierde: >-
+          Tres cosas del alemán que la traducción francesa (y con ella Arcaya)
+          aplana: (1) los caquetíos viven «enthalb vñ her enhalb» —a UNO Y OTRO
+          LADO del río—; (2) las dos naciones viven «vnthereinander gemischt»,
+          MEZCLADAS, antes de decir que cada una tiene sus pueblos; la 1916 lo
+          deja en «en el mismo territorio»; (3) la glosa marginal: «pescadores
+          negros como el carbón». La grafía del etnónimo caquetío aquí es
+          `Caquecios`. Y (4), lectura nuestra del alemán que la 1916 no sigue:
+          «beschicket ich den Cacique […] derselben Nation / welcher bei
+          anderhalb meil vom wasser seine flecken hat» es «mandé llamar al
+          señor de esa misma nación [los guaycaríes], que tiene sus pueblos a
+          milla y media del agua»; la 1916 lo hace «mandé el cacique que había
+          conducido, a su aldea». Si el alemán manda, los pueblos a legua y
+          media del río son GUAYCARÍES y en la orilla sólo están sus casas de
+          pesca: «iede in sondern Pueblos». El que llega armado «por causa de
+          los leones y tigres» y dice que el pescado es suyo es ese señor
+          guaycarí («die visch weren seiner vntherthonen», Klüpfel p. 57).
+        etiqueta: atestiguado
+
+      - id: gua-fed-02
+        tema: dos guaycaríes que hablan caquetío, porque viven mezclados
+        cita_1916: >-
+          «Pasé la noche en una aldea de los Guaycaríes y al siguiente día,
+          acompañado de dos indígenas que hablaban también el idioma de los
+          Caquetíos, me dirigí con dos ginetes hacia una montaña que estaba
+          todavía como a una legua, porque estas dos naciones habitan, como
+          dije, el mismo territorio.»
+        pagina_1916: 94
+        aleman_1557: >-
+          «Blib dise nach inn einem Pueblo oder flecken / der Nation Guaycaries
+          gehörig / vnd morgens frů ritt ich selb drit an das gesagt gebirge
+          […] vnd giengen zwen Indios Guaycaries mit vns / die auch der
+          Caquetios sprach kundten / dann dise zwo Nation vndereinander / wie ich
+          gesagt habe / wonen.»
+        pagina_1557: '[83] = imagen 93 (Klüpfel p. 61)'
+        verificado_en_imagen: 'sí: 1916 p. 94 (pdf 104) y 1557 imagen 93'
+        nota: 'La 1916 añade «dos indígenas» donde el alemán dice «zwen Indios Guaycaries»: son guaycaríes los que saben caquetío. Ya en fed-len-003 (lengua), sin la página de 1557.'
+        etiqueta: atestiguado
+
+      - id: gua-fed-03
+        tema: la pesquería-mercado
+        cita_1916: >-
+          «un establecimiento de pesquería de los Guaycaríes, compuesto
+          solamente de algunas casas. Tan considerable era el número de indios
+          que allí se habían congregado, provenientes de diversas aldeas, a
+          comprar pescado, que vacilé en arriesgarme a entrar donde estaban.»
+        pagina_1916: 95
+        aleman_1557: '«ein vischerei der Guaycaries / von ettlichen wenig heüsern / doch darbei ein grosse Suma Indios / so visch alda zůkauffen von mehr ortten dahin kamen» ([83], imagen 93)'
+        verificado_en_imagen: 'sí (1557 imagen 93)'
+        etiqueta: atestiguado
+        nota: 'Esto es lo más parecido a un «poblado con caquetíos»: un lugar de mercado de la nación pescadora al que acude gente de muchas aldeas.'
+
+      - id: gua-fed-04
+        tema: la autoridad y la guerra compartidas
+        cita_1916: >-
+          «este cacique [de Itabana] era también señor de la mayor parte de las
+          aldeas por donde había yo cruzado y le está sujeta una gran parte de la
+          nación Caquetia» (p. 92) · «el cacique de la aldea de Caraho, de la
+          nación Caquetía, que era su jefe, había convenido con el de los
+          Guaycaríes […] en reunir sus fuerzas para sorprender y atacar los
+          cristianos» (p. 100)
+        pagina_1916: '92 y 100'
+        verificado_en_imagen: 'no (texto de la 1916)'
+        etiqueta: atestiguado
+        nota: >-
+          Oliver (DOC p. 291) lo lee como «military leadership between Caquetío
+          and Guaycarí was a matter of collaboration». Kirchhoff (HSAI p. 464)
+          dice que los caquetíos «seem to have been their overlords»: el
+          campo de la 1916 sostiene alianza y un señor de Itabana con caquetíos
+          sujetos, no un señorío caquetío sobre los guaycaríes (ya lo anotó la
+          campaña HSAI, k-01).
+
+    lo_que_no_trae: >-
+      La «descripción» de los guaycaríes que Federmann promete («cuya
+      descripción daré más adelante»; «als hernach dern art auch wirt volgen»)
+      no llega: cero de `negr`/`pintad` en la 1916 fuera del cap. XI y cero de
+      `schwar` en Klüpfel fuera de ese pasaje. Ninguna palabra guaycarí.
+
+  identidad:   # ¿los de Federmann son los de Margarita?
+    autores:
+      - id: gua-id-01
+        quien: Arcaya 1916 (nota a, p. 89)
+        dice: >-
+          «Se ignora si estos Guaycaríes o Guayquerís del continente tenían
+          alguna afinidad o si se trataba de una mera coincidencia de nombre, con
+          los Guaiquerís de la isla de Margarita. De éstos se cree que eran rama
+          de la familia Guarauna del Orinoco.»
+        obra: federmann-1916
+        pagina_impresa: 89
+        nota: nota del EDITOR (Arcaya), no de Federmann
+        etiqueta: hipotetico
+      - id: gua-id-02
+        quien: Oliver 1989
+        dice: >-
+          «nomadic, specialized fishermen designated as Guaicarí who are
+          probable the same Guayquerí (cf. Mc Corkle 1952, Alexander n.d.:551)
+          and who probably were related to the Carib-speaking Guayquerí of
+          Margarita Island»
+        obra: oliver-1989-cap3
+        pagina_impresa: 'DOC p. 281'
+        etiqueta: hipotetico
+      - id: gua-id-03
+        quien: Kirchhoff 1948
+        dice: >-
+          «Some sources called the Guamo, both in the east and the west, Guaikeri
+          (Guayquiri, Gaiqueri, Guaycari) […] (The name Guaikeri occurs also
+          outside of our region as a designation of tribes that live exclusively
+          or largely by fishing.)» · «The westermost Guamo (Federmann's Guaycari)»
+        obra: steward-1948-hsai-4
+        pagina_impresa: 464
+        etiqueta: hipotetico
+        nota: Los guamos del oeste en el Portuguesa, Pao, Cojedes, Guanare, Guanaparo y Acarigua; emparentados en lengua con el taparita y el otomaco (misma página).
+    lectura: >-
+      Tres autores, tres respuestas; ninguna con dato lingüístico. Lo que sí
+      está en las fuentes es el nombre compartido y el oficio compartido
+      (pescadores). Kirchhoff da la salida más prudente: «guaiquerí» nombra un
+      modo de vida antes que un pueblo. No se funden.
+
+  margarita:
+    - id: gua-mar-01
+      afirmacion: Los guaiqueríes ocupaban la tierra de Cumaná, las islas de Margarita, Coche y Cubagua y parte de Trinidad; eran costeros e insulares.
+      cita: '«The Guaiqueri (Guayqueri, Guayquiri, Guajqueri, Guajkeri) occupied the country around Cumana, the islands of Margarita, Coche, and Cubagua, and part of Trinidad. They were essentially coastal and insular.»'
+      obra: steward-1948-hsai-4
+      pagina_impresa: 399
+      autor_del_capitulo: Hernández de Alba, «The Achagua and their neighbors»
+      epoca: colonial
+      etiqueta: atestiguado
+      nota: >-
+        ⚠️ El mismo capítulo mezcla a estos guaiqueríes con los guayquiries
+        del Orinoco de Gumilla (el encierro de 40 días de las novias y la
+        solidaridad en la caza, los dos en la p. 406): son otros (ver gua-len-05).
+    - id: gua-mar-02
+      afirmacion: Pescaban perlas y las comerciaban; los conquistadores los forzaron a bucear en Cubagua y Margarita.
+      cita: '«The Guaiqueri fished for pearls and traded them to other tribes. On the Islands of Cubagua and Margarita, the conquistadors forced them to dive for pearls.»'
+      obra: steward-1948-hsai-4
+      pagina_impresa: 406
+      epoca: 'precontacto según el autor (la pesca y el comercio de perlas), colonial (el buceo forzado); sin cita primaria en la frase'
+      etiqueta: reconstruido
+    - id: gua-mar-03
+      afirmacion: Fajardo, natural de Margarita, era hijo de un español y de una cacica guaiquerí, Doña Isabel, nieta de Charayma, cacique del valle de Maya en la costa de Caracas; Naiguatá, el mayor señor de esa costa, era tío de ella.
+      cita: >-
+        «Doña Isabel, india Cacica de la nación Guaiquerí; era Doña Isabel
+        nieta de un Cacique, llamado Charayma; del valle de Maya en la provincia
+        de Caracas» (p. 168) · «Naiguatá, el más poderoso señor, que habitaba
+        aquellas costas, tío de Doña Isabel su madre, porque era hijo de un
+        hermano de su abuelo Charayma» (p. 169)
+      obra: oviedo-y-banos
+      edicion: 'Biblioteca Ayacucho (el PDF del repo; impresa = pdf − 58)'
+      pagina_impresa: '168-169'
+      verificado_en_imagen: 'sí, p. 168'
+      epoca: colonial   # la genealogía que Oviedo y Baños cuenta en 1723 de gente de 1500-1550
+      etiqueta: atestiguado
+      nota: >-
+        Parentesco documentado entre la élite guaiquerí de Margarita y los
+        caciques de la costa de CARACAS: el guaiquerí en red con la costa
+        central, no con la occidental. Corrige toponimo-082 (Esteves p. 35).
+    - id: gua-mar-04
+      afirmacion: Los guaiqueríes de Margarita van con Fajardo, con Losada y con Juan de Salas como aliados, en piraguas y como «prácticos de la provincia»; dos de ellos le labran una piragua a un fugitivo de Aguirre.
+      citas:
+        - '«así Guaiqueríes, que trajo de la Margarita, como Píritus […] los Guaiqueríes de la Margarita, capitaneados de Diego Guerra, indio valiente» (p. 177)'
+        - '«dos indios, naturales de la Margarita, de los que llaman Guaiqueríes, disponiendo con ellos le labrasen una piragua» (p. 222)'
+        - '«traer consigo cien indios Guaiqueríes, de los que habían entrado con Fajardo, considerando que como prácticos de la provincia podrían servir» (p. 280)'
+        - '«cuatro piraguas cargadas de bastimentos […] y cincuenta indios Guaiqueríes, que sirvieron con gran valor y lealtad» (p. 312)'
+      obra: oviedo-y-banos
+      edicion: 'Biblioteca Ayacucho; los pasajes de Losada también en la ed. Fernández Duro 1885 t. II pp. 2-3 y 46-47'
+      pagina_impresa: '177, 222, 280-281, 312'
+      verificado_en_imagen: 'no (capa de texto de la ed. Ayacucho)'
+      epoca: colonial   # 1555-1567
+      etiqueta: atestiguado
+    - id: gua-mar-05
+      afirmacion: Castellanos pone a Juan de Salas —vecino de Margarita— hablando «en lengua guayqueri» a los caribes que asaltan su carabela en Puerto Rico, y dice que ellos la entienden bien.
+      cita: '«Hablóles Joan de Salas blandamente / En lengua guayqueri que bien entienden»'
+      obra: castellanos-elegias
+      pagina_impresa: '24 (Parte I, Elegía II, canto I; la cabecera OCR dice «21», que no cabe: va entre la 22 y la 25; castellanos_pagina.py no cubre este tramo)'
+      epoca: colonial   # «año de tres quinientos y cincuenta», en Guayama
+      etiqueta: atestiguado
+      nota: >-
+        Único dato del repo sobre la LENGUA guaiquerí en boca de un testigo: la
+        entendían unos caribes de las islas. No dice si por parentesco o por
+        trato (las islas hacían esclavos en esa costa). Sin palabras.
+    - id: gua-mar-06
+      afirmacion: En la arqueología de Margarita, el complejo Playa Guacuco (valle de La Asunción) es de la sub-tradición Campomana, que Oliver pone DENTRO de la tradición dabajuroide, ca. 1000-1500 d.C.; su filiación es tentativa.
+      cita: '«Playa Guacuco complex is known from Margarita island''s valley of Asunción --although the small sample makes its affiliation tentative (Cruxent and Rouse 1958: 57-59)»'
+      obra: oliver-1989-cap4
+      pagina_impresa: '423 (fechas) y 427 (lugar)'
+      verificado_en_imagen: 'sí, p. 427'
+      epoca: precontacto
+      etiqueta: hipotetico   # muestra pequeña, filiación tentativa; y loza no es gente
+      nota: >-
+        Antczak y Antczak 2015 (p. 18) dicen lo mismo con la misma fuente
+        (Cruxent y Rouse 1958): una sola atestación, no dos (minar-fuente §8).
+        Y Kidder II (HSAI pp. 424 y 437, de 1948) ve en Margarita loza como la
+        de la costa nororiental con rasgos del Orinoco, las Antillas y Trinidad
+        (el aspecto Gire-Gire). Dos lecturas; no se promedian. Ninguna fuente
+        ata Playa Guacuco a los guaiqueríes.
+
+  lengua_y_filiacion:
+    fuentes:
+      - {id: gua-len-01, familia: caribe, quien: 'Oliver 1989', obra: oliver-1989-cap3, pagina_impresa: 'DOC p. 281', dice: '«the Carib-speaking Guayquerí of Margarita Island»', apoyo: 'cita a McCorkle 1952 y Alexander n.d.; no están en el repo', etiqueta: hipotetico}
+      - {id: gua-len-02, familia: caribe, quien: 'Kirchhoff 1948', obra: steward-1948-hsai-4, pagina_impresa: 481, dice: 'Margarita, Cubagua y Trinidad entran en un área cultural cuyas tribus «belong to the Cariban family», salvo Aruacay', apoyo: 'no nombra a los guaiqueríes', etiqueta: hipotetico}
+      - {id: gua-len-03, familia: caribe, quien: 'Zavala Reyes 2015 vía Molina 2009', obra: zavala-reyes-2015, pagina_impresa: 61, dice: '«Caribe: Guaiqueríes, Cumanagotos, Palenques…»', apoyo: 'lista moderna de segunda mano; la misma lista pone a los jirajaras como chibchas', etiqueta: hipotetico}
+      - {id: gua-len-04, familia: 'trato con caribes', quien: 'Castellanos 1589', obra: castellanos-elegias, pagina_impresa: 24, dice: 'los caribes de las islas «bien entienden» la lengua guayqueri (gua-mar-05)', apoyo: 'testigo; no distingue parentesco de bilingüismo', etiqueta: atestiguado}
+      - {id: gua-len-05, familia: caribe, quien: 'Gumilla 1791', obra: gumilla-1791, pagina_impresa: 't. II p. 32', dice: '«De la lengua Cariva nacen la Guayána, la Paléncua, Guiri, Guayquiri, Mapúy y Cumanagota»', apoyo: 'son los guayquiri del ORINOCO en el s. XVIII (los guamos de Kirchhoff), no los de Margarita; de la capa OCR, sin ver en imagen', etiqueta: hipotetico}
+      - {id: gua-len-06, familia: warao, quien: 'Arcaya 1916', obra: federmann-1916, pagina_impresa: 89, dice: '«se cree que eran rama de la familia Guarauna del Orinoco»', apoyo: 'nota del editor, sin fuente', etiqueta: hipotetico}
+      - {id: gua-len-07, familia: 'warao / precaribe', quien: 'Antolínez 1946', obra: antolinez-1946-hacia-el-indio, pagina_impresa: '22, 161-162, 225', dice: '«Waikerí, saqueadores» (p. 22); «Pescadores insulares de Oriente (¿waikeri prekaribe?)» y «wara-waikerí prekaribe» (p. 161); «¿waikeri auténtico prekaribe?» (p. 162)', apoyo: 'con signos de interrogación del propio autor; la glosa del etnónimo no dice de qué lengua', etiqueta: hipotetico}
+    arahuaca: >-
+      Cero en el repo, medido: ninguna de las obras que nombran a los
+      guaiqueríes con cualquiera de sus grafías (gua[iy]qu-, guaycar-,
+      guaicar-, guaiker-, waiker-; doce textos y cuatro PDF con capa) los hace
+      arahuacos. Si alguien lo sostiene, está fuera del repo.
+    palabras: 'Cero palabras guaiqueríes en el repo (la única voz es el etnónimo que glosa Antolínez).'
+    etiqueta_propuesta: 'familia_linguistica: desconocida (en duda, degradar); la lectura caribe es la mayoritaria y se anota en aviso_familia'
+
+  en_la_costa_occidental:
+    medido: >-
+      Cero. Ninguna fuente del repo pone guaiqueríes en Falcón, Paraguaná o
+      las ABC. Los dos hilos que lo sugerían se cortan: la Charaima de Esteves
+      (gua-mar-03) y la «orilla de la Curiana» de la era 1, que es
+      canon-simulación (ver abajo).
+    y_oliver_si_da_pescadores_en_la_costa: >-
+      Oliver (cap. 4 pp. 434-435, vía M1): la costa de Falcón la ocupaban
+      «Meso-Indian hunters, gatherers, and fishermen until very late», que
+      sobrevivieron «until, and probably well after» la llegada de los
+      dabajuranos. Un pueblo pescador en la misma costa, sin nombre y sin
+      lengua conocida: hipotético. No son los guaiqueríes.
+
+  trampa_paraguachoa:
+    que: >-
+      Paraguachoa pasa hoy por nombre guaiquerí de Margarita. En las fuentes
+      del repo NO lo es: es un lugar de la costa de Falcón.
+    datos:
+      - {obra: perez-de-tolosa-1546, documento: 'Carta de Ampíes', pagina_impresa: 212, cita: '«la costa de Tierra-firme […] ques desde Paraguachoa hasta la punta de Coquibacoa y otros puertos que están en medio dellas, que son Sauca, y Paraguana é otros»'}
+      - {obra: oviedo-y-valdes-1852-1855, pagina_impresa: 't. IV p. 531 (lib. L cap. XX)', cita: '«las sierras de Paraguachoa, que son en la provincia de Venezuela» — y a continuación llegan al puerto de Coro'}
+      - {obra: oliver-1989-cap3, pagina_impresa: 'DOC pp. 261-262', cita: '«Paraguacho or Paraguachoa (1977:197), recorded in an anonymous map on Eastern Falcón» · el territorio caquetío «extended from the site of Paraguachoa, in eastern Falcón, to Coro and Paraguaná»'}
+    consecuencia: >-
+      El límite oriental de la costa caquetía en los documentos de 1525-1538
+      es Paraguachoa, en el Falcón oriental. Margarita queda fuera. Y la
+      «Paragrachoa» donde se esclavizó a caquetíos (Pérez de Tolosa p. 252,
+      vistos de paso de #222) cabe aquí mejor que en Paraguaná.
+    etiqueta: 'atestiguado (el lugar en Falcón); hipotetico (Paragrachoa = Paraguachoa)'
+
+  en_el_canon_y_en_los_eventos:
+    etnia_002_hoy: 'etnias.yaml etnia-002 guayqueri: hipotetico, familia caribe, «riberas del Cojedes; y su asiento habitual es Margarita», polity llanos, vecindad, procedencia federmann-1916 p. 90 vía Brito Figueroa'
+    lo_que_corrige_la_fuente:
+      - 'La cita puede ir a la primaria (1916 p. 90 + 1557 [77]-[78], verificados); el «supusieron» se quita (falso al medirlo).'
+      - 'El contacto con los caquetíos de los llanos está ATESTIGUADO por testigo ocular; lo hipotético es la identidad con los de Margarita y la familia.'
+      - '`tipo_de_contacto`: «vecindad» se queda corto: hay territorio mezclado, mercado, alianza de guerra y bilingüismo (dos guaycaríes hablan caquetío). El vocabulario cerrado no tiene «simbiosis»: mercado o vecindad, con la nota.'
+      - 'Hacen falta DOS fichas: la de Federmann (llanos) y la de Margarita (costa oriental). La segunda no toca ninguna polity caquetía, y `compilar_etnias.py` no tiene valor para eso (POLITIES: costera, barquisimeto, yaracuy, llanos, occidental): es decisión de Miguel.'
+    la_era_1:
+      que_tenia: >-
+        Cuatro guaycaríes y un mestizo en el elenco (Tariwa, Kawa-ni, Piru-sha,
+        Tari-ko, Wata-ni), semi-residentes en la orilla de la Curiana, que
+        cambian pescado por SAL (curiana_agents.py; CULTURA_CAQUETIA.md), y el
+        evento pesca_mala («Los Guaycarí culpan al calor»).
+      contra_las_fuentes: >-
+        Canon-simulación sin fuente costera (ya lo dijo la campaña HSAI, k-01).
+        La única relación caquetío-guaycarí documentada es de los llanos y es
+        pescado por FRUTAS Y VÍVERES, no por sal. El modelo de la era 1 (una
+        nación pescadora junto a una agricultora, con mercado y bilingüismo)
+        tiene fuente; el lugar (la costa del Golfete) y la mercancía (la sal),
+        no.
+    la_era_2:
+      que_tiene: >-
+        Los guaycaríes fuera de escena (decisión 2026-09-14); REESCRITURAS_ERA2
+        («Unos culpan al calor; otros, al mal ritual») y MARCOS_FUERA_ERA2 en
+        curiana_eventos.py; el Director de Paraguaná: «Aquí no viven
+        guaycaríes, jirajaras ni gayones, y no hay dos pueblos repartiéndose la
+        misma orilla: esta tierra es de una sola gente».
+      contra_las_fuentes: >-
+        Lo que dicen las fuentes CONFIRMA la era 2: ningún guaiquerí en
+        Paraguaná, en ninguna época. Nada que reescribir en los eventos. El
+        único matiz es la segunda mitad de la frase del Director: los
+        pescadores mesoindios que Oliver cree supervivientes en la costa
+        (arriba) son hipótesis, no dato, así que no obligan a cambiarla.
+    si_entran_a_la_esfera:
+      como: >-
+        cc.5 los quiere «como parte de la esfera de contacto». Lo que las
+        fuentes permiten: (a) un vecino LEJANO, conocido de nombre en la costa
+        oriental, sin contacto documentado con la Kaketiana antes de 1500; (b)
+        el MODELO documentado (Federmann) de cómo convive una nación caquetía
+        con una pescadora: territorio mezclado, pueblos aparte, mercado,
+        bilingüismo de los pescadores. Ninguna de las dos es un evento de la
+        era 2 con fuente.
+
+  opciones_para_miguel:
+    A: >-
+      Sólo corregir etnia-002 con la primaria: cita de la 1916 p. 90 y del
+      alemán [77]-[78], sin el «supusieron»; etiqueta `atestiguado` para el
+      contacto en los llanos con aviso de que la identidad con Margarita y la
+      familia son hipótesis; familia `desconocida`; `donde`: el Cojedes /
+      Sarare, tierra de Itabana, 1531.
+    B: >-
+      A + una ficha nueva «guaiquerí de Margarita» (Cumaná, Margarita, Coche,
+      Cubagua, Trinidad; colonial; familia `desconocida` con la lectura caribe
+      en `aviso_familia`; contacto con la costera: ninguno). Pide abrir en
+      compilar_etnias.py un valor de polity para «ninguna» (o `fuera`): el
+      vecino de la esfera que no toca a ninguna polity caquetía.
+    C: 'A + B + llevarlos al motor (un evento o una voz de fuera). No recomendada: no hay contacto documentado con la costa occidental ni en el s. XVI ni antes.'
+    D: 'No tocar etnias.yaml; dejar esto en 6-fusion/.'
+    E: >-
+      Independiente de las demás: corregir toponimo-082 (charaima) con Oviedo
+      y Baños p. 168 —Charayma, cacique del valle de Maya (Caracas),
+      bisabuelo de Fajardo—, y anotar en la nota de Esteves que el hilo a los
+      guaiqueríes no aguanta.
+  recomendacion: >-
+    A + B + E. A y E son curaciones con primaria verificada; B es lo que cc.5
+    pide (los guaiqueríes en la esfera, no en la costa) y sólo toca el
+    registro y su validador, no el prompt. Conviene hacerlo en la misma tanda
+    que dp.2.03 (el campo `epoca`), porque las dos fichas lo necesitan.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LA CRONOLOGÍA DABAJUROIDE
+# ══════════════════════════════════════════════════════════════════════
+pregunta_3:
+  pregunta: ¿Qué fases y fechas da la arqueología, de qué sitios, y cómo encajan con el s. XIV-XV?
+
+  veredicto: >-
+    Las dos tablas que hay (Oliver 1989 para la costa de Falcón; Casale 2024
+    para Aruba) coinciden en lo que importa: en la ventana conviven el
+    Urumaco Tardío y Los Médanos A. Difieren en los cortes —Oliver cierra el
+    Urumaco hacia 1400/1450 y abre Los Médanos en 1350; Casale alarga el
+    Urumaco Tardío hasta 1500 y hace de Los Médanos A medio siglo
+    (1400-1450), con Los Médanos B hasta 1515— y no se promedian. Para los dos
+    nodos de la era 2 el dato fechado es el Urumaco Tardío de Santa Ana
+    (FAL-154, fecha terminal cal. 1415, loza «still lavishly decorated»); un
+    Los Médanos A local en Cayerúa y Moruy es posible y Oliver no lo asegura.
+    Hacia el oeste, en Borojó, lo contemporáneo es Bachaquerano y empobrecido;
+    en el extremo oriental —Margarita incluida— la sub-tradición Campomana
+    (ca. 1000-1500), también dabajuroide para Oliver. Recomendación para #203
+    M8 D1: C (las dos lozas coexisten), con el matiz regional.
+
+  medido_2026-09-23:   # python 6-fusion/scripts/medir_cronologia_dabajuroide.py
+    tabla_15_en_la_ventana: >-
+      12 de las 23 dataciones de la Tabla 15 tocan 1300-1500 con su rango:
+      2 de Paraguaná (las dos de Santa Ana; sólo IVIC-14 tiene la fecha
+      central dentro), 2 de las islas y 8 de tierra firme de Falcón.
+    donde_divergen_los_esquemas: >-
+      Hasta 1450 los dos esquemas ponen en la costa Urumaco y, desde 1350
+      (Oliver) o 1400 (Casale), también Los Médanos. De 1450 a 1500 se
+      separan: con Oliver sólo queda Los Médanos; con Casale siguen el
+      Urumaco Tardío y Los Médanos B. La segunda mitad del s. XV es donde la
+      letra de #203 D1 cambia lo que hay en las manos.
+    y_ningun_c14_de_los_medanos_a_en_paraguana: >-
+      Las fechas de la ventana en Paraguaná son del Urumaco Tardío de Santa
+      Ana; el Los Médanos A de Cayerúa y Moruy no tiene ninguna.
+  fases:   # lee el script; desde/hasta en años d.C.; «a/b» se guarda como [a, b]
+    # ── Oliver 1989, cap. 4 pp. 422-423 (clasificación verbatim; OCR del repo, p. 424 y 427 vistas en imagen)
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Dabajurana, complejo: Túcua, desde: 800, hasta: [1100, 1200], region: 'costa de Falcón, Paraguaná, ABC', obra: oliver-1989-cap4, pagina: 422}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Dabajurana, complejo: Urumaco, desde: [1100, 1200], hasta: [1400, 1450], region: 'costa de Falcón, Paraguaná, ABC', obra: oliver-1989-cap4, pagina: 422, nota: 'Early y Late Urumaco (p. 424); Late Urumaco = estilo Savaneta de du Ry en las Antillas'}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Dabajurana, complejo: Los Médanos, desde: 1350, hasta: [1600, 1650], region: 'costa de Falcón, Paraguaná, ABC', obra: oliver-1989-cap4, pagina: 422, nota: 'A prehistórica, B histórica (así lo resume Urbina 2007 Tabla 4, vía M8)'}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Bachaquerana, complejo: Bachaquero, desde: 1300, hasta: 1600, region: 'cuenca de Maracaibo', obra: oliver-1989-cap4, pagina: 423}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Bachaquerana, complejo: Las Minas, desde: 1300, hasta: 1500, region: 'Maracaibo oriental (Cachirí)', obra: oliver-1989-cap4, pagina: 423}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Bachaquerana, complejo: Supidebo/Antúnez, desde: 1300, hasta: 1450, region: 'Falcón occidental (Borojó)', obra: oliver-1989-cap4, pagina: 423, nota: 'expansión tardía y «regresiva» (pp. 427, 483); estilo empobrecido frente al Urumaco Tardío de Santa Ana (p. 473)'}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Campomana, complejo: 'Guaraguao / Punta Arenas / Playa Guacuco', desde: 1000, hasta: 1500, region: 'costa oriental: Barcelona, Cumaná, Margarita', obra: oliver-1989-cap4, pagina: '423, 427', nota: 'Playa Guacuco (Margarita), filiación tentativa (Cruxent y Rouse 1958: 57-59)'}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Campomana, complejo: Campoma, desde: 1100, hasta: 1300, region: 'costa oriental', obra: oliver-1989-cap4, pagina: 423, nota: 'n. 294: quizá Ocumaroide'}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Capachoana, complejo: Capacho, desde: 1000, hasta: [1250, 1300], region: 'Andes (Táchira)', obra: oliver-1989-cap4, pagina: 423, nota: 'sin fechas absolutas; Oliver es el menos seguro de esta'}
+    - {esquema: oliver-1989, tradicion: Dabajuroide, subtradicion: Capachoana, complejo: La Mulera, desde: [1250, 1300], hasta: 1500, region: 'Andes (Táchira)', obra: oliver-1989-cap4, pagina: 423}
+    - {esquema: oliver-1989, tradicion: Tierroide, subtradicion: Tierrana, complejo: 'Tierra de los Indios / San Pablo', desde: 1000, hasta: 1530, region: 'Barquisimeto-Quíbor, Yaracuy', obra: oliver-1989-cap4, pagina: 423, nota: '«ca. A.D. 1000 to Post-Contact»: el 1530 es sólo el tope que usa el script para «post-contacto»'}
+    # ── Casale et al. 2024, Tabla 1 (p. 3): Aruba (cita a Dijkhoff 2022, Haviser 1987, Nomland 1933, Oliver 1997)
+    - {esquema: casale-2024, tradicion: Dabajuroide, subtradicion: 'Early Dabajuran period (850-1350)', complejo: Túcua, desde: 850, hasta: 1200, region: Aruba, obra: casale-2024, pagina: 3}
+    - {esquema: casale-2024, tradicion: Dabajuroide, subtradicion: 'Early Dabajuran period (850-1350)', complejo: Urumaco Temprano, desde: 1200, hasta: 1350, region: Aruba, obra: casale-2024, pagina: 3, nota: 'el texto (p. 4) fecha Tanki Flip en 950-1250 «Early Urumaco»: tabla y texto no coinciden'}
+    - {esquema: casale-2024, tradicion: Dabajuroide, subtradicion: Urumaco, complejo: Urumaco Tardío, desde: 1350, hasta: 1500, region: Aruba, obra: casale-2024, pagina: 3}
+    - {esquema: casale-2024, tradicion: Dabajuroide, subtradicion: 'Late Dabajuran period (1350-1515)', complejo: Los Médanos A, desde: 1400, hasta: 1450, region: Aruba, obra: casale-2024, pagina: 3, nota: 'el texto (p. 5) da «Los Médanos phases in Venezuela (1400–1600/1650 C.E.)»'}
+    - {esquema: casale-2024, tradicion: Dabajuroide, subtradicion: 'Late Dabajuran period (1350-1515)', complejo: Los Médanos B, desde: 1450, hasta: 1515, region: Aruba, obra: casale-2024, pagina: 3, nota: 'sólo Savaneta; el tope de 1515 es de las islas y el artículo no dice por qué'}
+    # ── Arvelo y López 2004 (informe ARAAPICO), vía Urbina 2007 p. 65
+    - {esquema: arvelo-lopez-2004, tradicion: Dabajuroide, subtradicion: null, complejo: 'Ocupación Tortolitan', desde: -100, hasta: 800, region: 'El Carrizal, Falcón', obra: urbina-jimenez-2007-2011, pagina: 65, nota: 'anterior al dabajuroide; no caquetía'}
+    - {esquema: arvelo-lopez-2004, tradicion: Dabajuroide, subtradicion: null, complejo: 'Ocupación Dabajuro', desde: 800, hasta: 1492, region: 'El Carrizal, Falcón', obra: urbina-jimenez-2007-2011, pagina: 65, nota: 'un bloque sin fases; 1492 es la fecha de corte del informe, no de la loza'}
+
+  hitos_de_la_expansion:
+    - {que: 'la tradición Macro-Dabajuroide da origen a la Tierroide y la Dabajuroide', cuando: '700-800 d.C.', obra: antczak-2017-cariban, pagina: 157, via: 'Oliver 1989', etiqueta: reconstruido}
+    - {que: 'los dabajuroides pasan del Yaracuy a la costa y a Aruba, Bonaire y Curazao', cuando: 'hacia 900 d.C.', obra: antczak-2017-cariban, pagina: 157, etiqueta: reconstruido}
+    - {que: 'llegada a Aruba desde el Falcón costero; tres aldeas ocupadas de 900/1000 a 1500 con «la misma» loza', cuando: '900/1000-1500', obra: dijkhoff-1997, pagina: '§3.5', etiqueta: reconstruido}
+    - {que: 'expansión del Early Urumaco «fairly rapid, perhaps a matter of two to three generations»; «By A.D. 1200 most of the region delimited above had been settled»', cuando: '1100-1200', obra: oliver-1989-cap4, pagina: 452, etiqueta: reconstruido}
+    - {que: 'los dabajuranos han aprendido a navegar y colonizado las Antillas Neerlandesas', cuando: '1100-1200', obra: oliver-1989-cap4, pagina: 483, etiqueta: reconstruido}
+    - {que: '«by at least A.D. 1300 the Dabajuran peoples had sailed as far as the west coast of the Guajira»', cuando: '1300', obra: oliver-1989-cap4, pagina: 483, etiqueta: reconstruido}
+    - {que: 'disputa arahuaco (dabajuroide) / caribe (valencioide) por Las Aves y Los Roques', cuando: '1200-Contacto', obra: antczak-2017-cariban, pagina: 157, etiqueta: reconstruido}
+    - {que: 'la costa no estaba vacía: mesoindios pescadores y recolectores sobreviven hasta la llegada dabajurana «and probably well after»', cuando: 'antes de 800 y después', obra: oliver-1989-cap4, pagina: '434-435', via: M1, etiqueta: hipotetico}
+
+  dataciones:
+    tabla_15: >-
+      Las 23 de Oliver (Tabla 15, recalibradas con OxCal v3.10) están en
+      6-fusion/tabla15_c14_oliver.yaml; cuáles tocan la ventana y de qué
+      región lo mide el script. Las del continente y Paraguaná son las de
+      Túcua, Corralito, Supidebo, Antúnez, FAL-100, La Luz, Píritu y Santa
+      Ana; las de las islas, Knip (Curazao), Tanki Flip y Savaneta (Aruba).
+    otras:
+      - {sitio: 'La Maternidad Sur (FAL-101), Coro', lab: IVIC-626, fecha: '500 ± 60 BP = A.D. 1450', obra: oliver-1989-cap4, via: 'Tamers 1970 p. 512 (en nodo-014)', nota: 'carbón de superficie en dunas; IVIC-625, A.D. 1750, a pocos metros', etiqueta: atestiguado}
+      - {sitio: 'Santa Ana «El Cerro» (FAL-154), Paraguaná', lab: IVIC-14, fecha: 'cal. A.D. 1299-[1415]-1451', obra: oliver-1989-cap4, pagina: 473, via: 'la obtuvo Zucchi (com. pers. a Oliver)', nota: '«a terminal date» del Urumaco Tardío, «still lavishly decorated»', etiqueta: atestiguado}
+      - {sitio: 'De Savaan (C-021), Curazao', fecha: 'urna primaria 600 ± 20 a.p.; dos entierros directos 1500 ± 200 a.p. (hueso)', obra: haviser-1990, etiqueta: atestiguado, nota: 'Fernandes 2020 da al contexto 1160-1500 d.C.; no se concilian (ficha haviser-1990)'}
+      - {sitio: 'Coy-Coy de Uria, Sierra de San Luis', fecha: 'C14 1450 ± 80 a.p.; TL 400 ± 43 y 295 ± 57 a.p.', obra: urbina-jimenez-2007-2011, pagina: 'Urbina 2011 p. 21, citando a Pitevill 1984', etiqueta: atestiguado, nota: 'loza mezclada con dabajuroide y negro sobre rojo de Los Médanos; contradicción sin resolver; sierra, no costa'}
+    paraguana_en_la_ventana:
+      - {sitio: 'Santa Ana «El Cerro» (FAL-154)', que: 'Urumaco Tardío fechado, fecha terminal cal. 1415', obra: oliver-1989-cap4, pagina: 473, etiqueta: atestiguado}
+      - {sitio: 'Cayerúa (FAL-143) y Moruy (FAL-149)', que: 'quizá un Los Médanos A local (bordes huecos, más engobe rojo, sin el ave negro sobre rojo); «do not allow me to be absolutely certain»', obra: oliver-1989-cap4, pagina: '471-472', via: M1, etiqueta: hipotetico}
+
+  autores_que_pide_el_encargo:
+    rouse_cruxent_1963: 'NO está: 0 bytes en el repo y préstamo controlado en archive.org (ficha rouse-cruxent-1963). No se leyó.'
+    cruxent_rouse_1958: >-
+      «An Archeological Chronology of Venezuela» (Pan American Union, 2 vols.)
+      sólo llega vía Oliver pp. 422-427 y Antczak 2015 p. 18. HathiTrust lo
+      cataloga (Record 010570237), pero el catálogo devolvió 403 y no se
+      comprobó si está en vista completa; archive.org no lo tiene. No se bajó.
+    arvelo: 'Sólo vía Urbina 2007 p. 65 (Arvelo y López 2004, ARAAPICO) y Oliver p. 423 (Arvelo y Wagner 1986). No hay obra de Arvelo en el repo.'
+    zucchi: 'Sólo vía Oliver p. 473 (IVIC-14, com. pers.) y Antczak 2015 p. 18 (Zucchi 1985, arauquinoide). No hay obra de Zucchi en el repo.'
+
+  opciones_para_miguel:   # = #203 M8 D1
+    A: 'Oliver 1989 (Urumaco 1100/1200-1400/1450; Los Médanos 1350-1600/1650).'
+    B: 'Casale 2024, Tabla 1 (Urumaco Tardío 1350-1500; Los Médanos A 1400-1450; B 1450-1515).'
+    C: 'No fijar ninguna: en la ventana conviven Urumaco Tardío y Los Médanos A, y el motor no necesita un corte.'
+    C_regional: >-
+      C, dicho por lugar: en Paraguaná el Urumaco Tardío está fechado (Santa
+      Ana) y Los Médanos A es posible (Cayerúa, Moruy); en Coro conviven los
+      dos (FAL-100, FAL-101); en las islas, lo mismo según Casale.
+  recomendacion: >-
+    C_regional. Es la C que ya recomendaba M8, con lo que la arqueología dice
+    de los dos nodos de la era 2. Y una curación que no depende de la letra:
+    ecologia-013 debe citar a Oliver pp. 422-424 en vez del Atlas web y decir
+    «dabajurana» donde dice «dabajuroide = caquetío» (falso al medirlo, §meta).
+
+# ══════════════════════════════════════════════════════════════════════
+# FAUNA (esquema común de la minería 3)
+# ══════════════════════════════════════════════════════════════════════
+fauna: []
+fauna_nota: >-
+  Los únicos animales de los pasajes leídos —el pescado de los guaycaríes y
+  los «leones y tigres» por los que el cacique guaycarí venía armado
+  (Federmann 1916 pp. 90-95)—
+  ya están en 6-fusion/federmann_1530_costa_2026-09-22.yaml §fauna. Las aves
+  y tortugas del naufragio de Oviedo t. IV pp. 529-531 son de la campaña de
+  Oviedo (#206).

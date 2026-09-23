@@ -308,6 +308,25 @@ cerámica antillana. Propuesta completa en
 - Cadena de citas a verificar: Ballesteros [1550] en Bécker 1950, Martí 1969,
   Ponce y Vaccari 1977, [[ramos-perez-1978]] — todos llegan **vía Oliver**.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se preguntó**: el asiento de Manaure, los guaycaríes, Paraguachoa.
+
+**Qué se halló (DOC, capa de texto)**: p. 251 (el reasentamiento en
+Todariquiba en 1527, lectura de Oliver sobre Ramos Pérez y Arcaya); p. 258
+(Ampíes, «10 leagues inland»); p. 259 (Bastidas 1538: «Todariquiva, the
+village of Don Alexandre»; «about 1 or so leagues»); pp. 255-256 (Caçicure en
+Martí, s. XVIII); pp. 261-262 (Paraguachoa en el Falcón ORIENTAL, límite este
+del territorio caquetío); pp. 265-266 y n. 114 (la corazonada de Caçicure /
+Pueblo Viejo como sede de Manaure); p. 268 (Manaure y Alexandre dejan juntos
+Todariquiba); pp. 281-282 y 291 (los guaycaríes de Federmann, «probable the
+same Guayquerí […] related to the Carib-speaking Guayquerí of Margarita
+Island»; aldeas monoétnicas en simbiosis; la n. 129).
+
+**Qué NO se halló**: ningún asiento de Manaure anterior a 1527 con documento.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[01_familia_caquetia]] · [[05_geografia_politica_y_sucesion]]

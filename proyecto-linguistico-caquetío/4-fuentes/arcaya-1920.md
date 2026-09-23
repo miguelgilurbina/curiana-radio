@@ -165,6 +165,17 @@ que ya estaba en el canon como descartado por no tener glosa en ninguna fuente.
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se usó**: **p. 93** (la lista de Castellanos, «Elegías, pág. 185»);
+**p. 113** (la estrofa de Manaure, citada «pág. 183»); **p. 166** (el encuentro
+bajo el cují es tradición «aunque sobre esto no hay documentos»); **pp.
+199-200** (la huida de Manaure tras Alfinger y la tradición de los llanos);
+**p. 230** (la protesta de Bastidas: «el pueblo de todariqueva» entre los
+pueblos caquetíos de Coro). Ninguna da el pueblo de Manaure antes de 1527.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[03_creencia_caquetia]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]
@@ -317,3 +328,15 @@ restituyendo los acentos; el texto sin ellos es reproducible con `pdftotext
 -enc UTF-8`. Añádase a la receta de esta obra, junto al «pypdf devuelve vacío».
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
+---
+
+## Bitácora: «Coro viento» (2026-09-23, cc.6)
+
+**p. 170**, ✅ imagen: «De aquí han deducido algunos que Coro significaba
+viento en la lengua de los indígenas, mas esto es un error, porque
+Castellanos sólo quiso aludir a la coincidencia de que ese vocablo de los
+indios fuese idéntico al español "Coro", que entre otras acepciones tiene la
+ahora desusada de "viento que corre de la parte donde se pone el sol en el
+solsticio de verano"». Es la refutación que el canon ya citaba; ahora con
+el castellano de 1582 (DICTER) detrás. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §coro.

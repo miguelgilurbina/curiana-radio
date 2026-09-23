@@ -10,7 +10,7 @@ paginas: "— (texto OCR de las partes I, II y III de la BAE 1857, t. IV; la Int
 acceso: "Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental"
 capa_texto: si
 estado_minado: parcial  # 2026-09-22: lo de Coro leído entero (Parte II, Introducción + Elegía I cantos I-II y III hasta Upar); el resto, por búsqueda
-cobertura: "Parte II pp. 181-204 leídas enteras (Coro, Manaure, Ampiés, islas, Maracaibo, Federmann); resto de la Parte II y Partes I y III barridas por grafías medidas y contexto leído en cada acierto. Falta la Parte IV (Nuevo Reino), que no está en el archivo"
+cobertura: "Parte II pp. 181-204 leídas enteras (Coro, Manaure, Ampiés, islas, Maracaibo, Federmann); resto de la Parte II y Partes I y III barridas por grafías medidas y contexto leído en cada acierto. Falta la Parte IV (Nuevo Reino), que no está en el archivo; tiene ficha propia desde el 2026-09-23, castellanos-nuevo-reino-1886 + poporo, macana junto a caquetíos y «Coro viento» releídos (2026-09-23, cc.3 y cc.6)"
 minado: 2026-09-22
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
@@ -240,6 +240,53 @@ sus glosas de lengua («Coro viento») son etimologías de cronista y así se
 etiquetan. La rima deforma nombres (`Todariquibo` por la asonancia con
 `Hurehurebo`) — otra razón para permutar vocales al buscar.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se halló**: **p. 185** (script de M7): Manaure «sobre caciques tuvo
+mando / Y toda la comarca subyectaba»; Todariquibo entre las ciudades «doce
+leguas en torno del asiento» (de Coro), no como su casa. **p. 199**: «cacique
+Manaure, rey de Coro». **Parte I, Elegía II, canto I, p. 24** (la cabecera OCR
+dice «21»; va entre la 22 y la 25; fuera de los tramos del script): Juan de
+Salas habla a los caribes de un asalto en Guayama (Puerto Rico, 1550) «en
+lengua guayqueri que bien entienden». **p. 213**: un «guayqueri» de guía en la
+entrada de Espira por los llanos.
+
+**Qué NO se halló**: el pueblo de Manaure; guaiqueríes en Falcón.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
-[[esteves-1989]] · [[velasco-2015-resistencia]] · [[gonzalez-batista-nombre-de-coro]] · [[arcaya-1920]] · [[alvarado-1921]] · [[brito-figueroa-poblacion-economia]] · [[01-rastreo-fuentes]] · [[toponimia]] · [[INDICE_FUENTES]]
+[[esteves-1989]] · [[velasco-2015-resistencia]] · [[gonzalez-batista-nombre-de-coro]] · [[arcaya-1920]] · [[alvarado-1921]] · [[brito-figueroa-poblacion-economia]] · [[01-rastreo-fuentes]] · [[toponimia]] · [[INDICE_FUENTES]] · [[castellanos-nuevo-reino-1886]]
+
+---
+
+## Bitácora: el poporo, la macana y el viento (2026-09-23, cc.3 y cc.6)
+
+Páginas de la BAE sacadas con `6-fusion/scripts/castellanos_pagina.py`
+(#207).
+
+- **Poporo** (`grep popor-`: 5 líneas en las partes I-III). Ninguna es de un
+  caquetío. La que cita Alvarado («*Eleg*. I. c. 3º») es la de las líneas
+  52883-52884 (p. 202): «Dejadas ya las flechas y el poporo / Por el
+  guanebucán feroz, robusto». La «gente paupérrima de Coro» del verso
+  siguiente son los españoles de Alfínger. La Parte IV, que el repo no tenía,
+  tiene ficha propia desde hoy: [[castellanos-nuevo-reino-1886]].
+- **Macana junto a caquetíos**: una sola vez, líneas 52211-52344 (p. 200). En
+  un «pueblo de gente caquetia» del interior (Federmann, 1530), el cacique
+  Uriorebuí desbarata a un jinete «Con dos terribles golpes de macana». Es la
+  palabra del cronista para el arma, no la voz caquetía. «Macana» sale 115
+  veces en las partes I-III.
+- **Coro = viento** (líneas 48209-48219, p. 185), leído con los ocho versos:
+  el nombre lo pone «la gente forastera» tomándolo del río, «Que siempre se
+  llamó desta manera», y «le viene bien» porque «Coro viento / Quiere decir
+  en lengua generosa». Castellanos no dice que sea voz indígena. «Lengua
+  generosa» sale una sola vez; cuando se refiere a una lengua de indios la
+  nombra («En lengua guayqueri», l. 5824; «De lengua de Cubagua», l. 53768;
+  «Lengua de caquetíos», l. 55311). La lengua noble es el latín
+  *cōrus/caurus*, que el castellano de 1582 tenía como «coro», viento del
+  noroeste (DICTER s.v. coro 2). Así la corrección de §«Estatus epistémico»
+  es más fuerte de lo que decía: ni siquiera es una etimología indígena de
+  cronista, sino un juego culto sobre un hidrónimo.
+
+Propuesta: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo y §coro.

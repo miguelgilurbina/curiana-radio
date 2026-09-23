@@ -89,6 +89,17 @@ Nada para las preguntas de la esfera. Si algún día se quiere el origen de los
 cuatro tiestos importados, la obra lo deja para análisis químicos futuros en
 la costa venezolana, Curazao, Bonaire y Los Roques (p. 17).
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Re-leída la Tabla 1 (p. 3)**: Early Dabajuran 850-1350 (Túcua 850-1200,
+Urumaco Temprano 1200-1350), Urumaco Tardío 1350-1500, Late Dabajuran
+1350-1515 (Los Médanos A 1400-1450, B 1450-1515). El texto de la p. 5 da «Los
+Médanos phases in Venezuela (1400–1600/1650 C.E.)» y el de la p. 4, Tanki Flip
+950-1250: tres cortes en el mismo artículo. El tope de 1515 es de Aruba y el
+artículo no dice por qué.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[dijkhoff-1997]] · [[fernandes-2020]] · [[urbina-jimenez-2007-2011]] ·

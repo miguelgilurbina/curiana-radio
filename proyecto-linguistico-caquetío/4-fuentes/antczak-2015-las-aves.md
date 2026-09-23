@@ -46,6 +46,16 @@ página web (Atlas del Arte Precolombino), no sobre la monografía prevista.
   sigue sin fuente: no sabemos qué comían en Todariquiba, lo inferimos.
 - Ver también [[antczak-2017-cariban]], del mismo equipo, **sin minar**.
 
+## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
+
+**Qué se halló** (impresa = pdf − 1): **p. 18** — cerámica «Dabajuroid-related»
+en Guaraguao, Punta Arenas y **Playa Guacuco** (Margarita), «a subseries
+distinct to the Dabajuran», con la misma fuente que Oliver (Cruxent y Rouse
+1958): una sola atestación, no dos. Y la fusión social ocasional de
+dabajuroides y valencioides en la costa centro-occidental.
+
+Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
 ## Enlaces
 
 [[rouse-cruxent-1963]] · [[antczak-2017-cariban]] · [[02_ecologia_golfete]]

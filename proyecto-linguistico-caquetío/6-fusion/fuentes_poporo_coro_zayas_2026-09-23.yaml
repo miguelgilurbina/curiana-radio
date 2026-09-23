@@ -1,0 +1,1037 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Tres lecturas de fuente para cerrar la investigación (cc.3, cc.6, cc.7)
+#   El poporo · `coro` no es 'viento' · las voces de Zayas
+#   Campaña del 2026-09-23, rama campana/poporo-coro-zayas
+#
+# Las tres decisiones ya las tomó Miguel (6-fusion/decisiones_cierre_2026-09-23.yaml,
+# rama tanda/base-2026-09-22). Aquí va el DATO que faltaba para aplicarlas: qué
+# dice la fuente, con cita verbatim y página impresa, y la nota que se propone.
+#
+# Minar PROPONE, el humano fusiona (regla 5): nada de esto toca curiana_sim/,
+# 2-lengua/ ni 3-mundo/. Los textos de `nota_propuesta` son para pegarlos en la
+# fusión (skill fusionar-propuesta); los de `cambio_propuesto`, para decidir.
+#
+# CÓMO SE CITA
+#   - Castellanos, partes I-III (castellanos-elegias): `linea` = línea del .txt
+#     del repo; página de la BAE 1857 calculada con
+#     6-fusion/scripts/castellanos_pagina.py (#207), corrida el 2026-09-23
+#     sobre las líneas que se citan aquí.
+#   - Castellanos, parte IV (castellanos-nuevo-reino-1886, NUEVA): la ficha
+#     trae el desfase medido.
+#   - «✅ imagen» = cotejado en la imagen de la página (pymupdf). Lo demás sale
+#     de la capa de texto y lleva sus erratas; si una errata importa, la
+#     lectura corregida va aparte en `lectura`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-23'
+  estado: sin-fusionar
+  decisiones: 6-fusion/decisiones_cierre_2026-09-23.yaml §cc.3, §cc.6, §cc.7
+  obras_leidas:
+    - alvarado-1921
+    - castellanos-elegias
+    - castellanos-nuevo-reino-1886      # NUEVA: descargada hoy (archive.org, dominio público)
+    - oviedo-y-valdes-1851
+    - oviedo-y-valdes-1852-1855
+    - oviedo-y-banos
+    - arcaya-1920
+    - jahn-1927
+    - las-casas-apologetica
+    - las-casas-1875
+    - pane-c1498
+    - goeje-1939
+    - bachiller-morales-1883
+    - adam-1879
+    - brinton-1871
+    - zayas-1931                        # la ficha y los .txt entraron con #220
+  copia_de_trabajo: >-
+    Oviedo t. I se leyó en el PDF ÍNTEGRO que bajó M3 (#206,
+    fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf),
+    porque el viejo está truncado desde la impresa 155.
+  integrado_con_main: >-
+    La rama salió de tanda/base-2026-09-22 y mientras se trabajaba entraron en
+    main #201-#225 (incluidos #206, #207, #219 y #220). Se integró main en la
+    rama y se revisaron contra la lista maestra ya consolidada las propuestas
+    que la tocan (§zayas).
+  medido_para_la_macana: >-
+    las 12 líneas con caqu- se barrieron con una ventana de 80 líneas antes y
+    120 después.
+  fuera_del_repo:
+    - 'DICTER 2.0 (Diccionario de la Ciencia y de la Técnica del Renacimiento, Univ. de Salamanca), s.v. coro 2: https://dicter.usal.es/lema/coro&acepcion=2 (consultado el 2026-09-23)'
+    - 'Vocabolario Treccani, s.v. mannaia: https://www.treccani.it/vocabolario/mannaia/ (consultado el 2026-09-23)'
+
+  lo_que_resulto_falso_al_medir:
+    - id: falso-1
+      afirmacion_previa: >-
+        «La voz caquetía ATESTIGUADA para el arma es `poporo` (Alvarado 1921
+        p. 255: «usada por los antiguos Caquetíos», ref. Castellanos)» — nota
+        de `macana`; y `poporo` 'maza-porra, arma de combate ceremonial',
+        caquetío-atestiguado.
+      medido: >-
+        Alvarado lo dice, pero las tres páginas de Castellanos que da como
+        referencia no ponen el poporo en manos de un caquetío. La Elegía I,
+        canto III (p. 202) es el poporo que suelta Boronata, «indio
+        guanebucán», en el río de la Hacha. Las pp. 46 y 65 del Nuevo Reino
+        (la «parte 4») son de los muiscas, y en ellas el poporo es el
+        calabacito de la cal para mascar hayo, no un arma. Ninguna fuente del
+        repo atribuye el poporo a los caquetíos, y «ceremonial» no lo dice
+        nadie.
+    - id: falso-2
+      afirmacion_previa: >-
+        «lo de que coro es viento […] era una apreciación de Oviedo» (Miguel,
+        cc.6).
+      medido: >-
+        Es de Castellanos, como decía el lexicón. Oviedo y Valdés no da ninguna
+        etimología de Coro en sus cuatro tomos, y Oviedo y Baños tampoco. Lo
+        que Miguel recordaba bien es lo del latín, y el propio Castellanos lo
+        deja ver: el nombre, dice, lo pusieron los españoles por el río, y
+        «Coro» es viento «en lengua generosa», no en la de los indios.
+    - id: falso-3
+      afirmacion_previa: >-
+        `lectura_en_disputa` de `coro`: «tres lecturas compiten […] y 'viento'
+        (Castellanos 1589)».
+      medido: >-
+        'viento' nunca fue una lectura de la voz indígena, ni siquiera para
+        Castellanos: él no dice que los indios llamaran viento al coro. Dice
+        que el nombre del río «le viene bien» porque coincide con una palabra
+        culta, y esa palabra existía en el castellano de su tiempo: «coro»,
+        el viento del noroeste, del latín cōrus o caurus (DICTER, primera
+        datación 1582). Arcaya 1920 p. 170 ya lo había escrito. Compiten dos
+        lecturas, no tres.
+    - id: falso-4
+      afirmacion_previa: >-
+        «`bagua` 'mar' es del glosario de la Academia, no de Oviedo […] la voz
+        sigue sin cronista aunque dos obras la traigan» (#220, issue §C y
+        taino_zayas_1931.yaml §Bagua; decisión cc.7: «bagua (glosario de la
+        Academia, la trampa de datihao)»).
+      medido: >-
+        Está en el CUERPO de Oviedo, t. I, lib. XIII, cap. IX, p. 436
+        (✅ imagen): «Llaman los indios de aquesta Isla Española á la mar
+        bagua (no digo baygua, porque baygua es aquel barbasco […] sino bagua
+        es el nombre de la mar en esta isla)». El glosario del editor
+        (t. IV p. 594) la copia de ahí. Es la trampa de las cursivas: la capa
+        OCR da «tagua», «Ikuj-ijua» e «Imijiut», y un grep no la encuentra.
+        Zayas sólo citó el apéndice; no dijo que el cuerpo no la trajera.
+    - id: falso-5
+      afirmacion_previa: >-
+        «anua (Goeje p. 14 cita a Zayas y en Zayas no está)» (cc.7);
+        `anua` 'vautour' en taino_goeje_1939.yaml y en la lista maestra.
+      medido: >-
+        Goeje p. 14 (✅ imagen) escribe «vautour T aura (ZAYAS, p. 52, Fr.,
+        p. 6), A anuana». `anua` no existe: es `aura` mal leída en la
+        transcripción del repo (la capa da «амш»). Y `aura` SÍ está en Zayas
+        (t. I p. 60 de 1931), aunque sin cronista.
+    - id: falso-6
+      afirmacion_previa: >-
+        `cohiba` 'tabaco': «Taíno atestiguado: cohiba; cognado Lok. iuli;
+        Brinton 1871» (curiana_lexicon.py).
+      medido: >-
+        Brinton p. 12 escribe «Cohóba, the native name of tobacco» (✅
+        imagen), no cohiba. Ningún cronista del XVI
+        del repo escribe cohiba. La forma sale del glosario del editor de
+        Oviedo (t. IV p. 604, 1855: «la planta llamada cohiba ó cojiba») y
+        de Pichardo 1862, sin cita. En el cuerpo de los cronistas, la
+        cohoba es el POLVO y el RITO (Pané, Las Casas), la ahumada (Oviedo)
+        y un ÁRBOL de vainas (Oviedo p. 347). Nunca es la planta del tabaco.
+
+# ══════════════════════════════════════════════════════════════════════════
+# 1. EL POPORO (cc.3)
+# ══════════════════════════════════════════════════════════════════════════
+poporo:
+  pregunta: >-
+    ¿Hay algún pasaje que atribuya el poporo (o la macana) a CAQUETÍOS, con
+    página?
+  respuesta_corta: >-
+    El poporo, no: ni en Castellanos (partes I, II, III y los dos tomos de la
+    IV) ni en Oviedo, Jahn o Alvarado fuera de su propia glosa. La macana, sí
+    pero sólo como COSA: en Castellanos (p. 200), un cacique de un pueblo
+    caquetío del INTERIOR pelea con macana en 1530. Es la palabra castellana
+    del cronista para el arma. Dice que el objeto estaba ahí, no cómo lo
+    llamaban los caquetíos.
+
+  la_glosa_de_alvarado:
+    obra: alvarado-1921
+    pagina_impresa: 255
+    verificado_en_imagen: sí
+    texto: >-
+      «POPÓRO. Arma, a manera de porra, usada por los antiguos Caquetíos y los
+      Guagíros. Ref. Cast. Eleg. I. c. 3º; N. Reino, I. 46. 65. Cf. BAPÓRON.
+      ||—Tolondro, lobanillo, chichón, tumor, o cosa así. […] y proviene ella
+      sin duda de la que tiene en el Perú y Bolivia, y tenía en el Sinú, según
+      Castellanos (Hist. de Cartag., c. 3º), es a saber, calabacilla en forma
+      de ampolleta destinada a guardar la llipta (cal o cenizas) con que se
+      mascan las hojas de coca.»
+    lectura: >-
+      La capa de texto dice «Ref. Cast. Bleg. I. c. 3?; — A^. Reino»: la
+      imagen da «Eleg.» y «N. Reino». Son dos referencias, las dos de
+      Castellanos: la Parte II, Elegía I (a Alfínger), canto III, y la
+      Historia del Nuevo Reino de Granada, t. I pp. 46 y 65. Alvarado da
+      TRES acepciones: el arma, el chichón y el calabacito de la cal.
+    la_otra_entrada_de_alvarado:
+      lema: BAPÓRON
+      pagina_impresa: 20
+      verificado_en_imagen: no (capa de texto)
+      texto: >-
+        «BAPÓRON.—"Este es un calabazo en que traen los indios (de Maracaibo)
+        cierta manera de cal, para quitar la hambre, chupándola". (Ov. II.
+        286. 294). […] Poporo llaman hoy tal calabazo en Maracaibo, y así le
+        designan Castellanos y fr. Simón.»
+      valor: >-
+        El propio Alvarado, veinte páginas antes, dice que Castellanos llama
+        poporo al CALABAZO de la cal.
+
+  pasajes:
+    - id: pp-1
+      obra: castellanos-elegias
+      donde: Parte II, Elegía I, canto III (la que Alvarado cita como «Eleg. I. c. 3º»)
+      linea: 52861-52889
+      pagina_impresa: 202
+      quien_lleva_el_poporo: Boronata, «indio guanebucán», en el río de la Hacha (Guajira), c. 1530
+      texto: >-
+        «Salióles al encuentro Boronata, / Indio guanebucán y belicoso: /
+        Tuvieron un recuentro porfiado; / Mas Boronata fué desbaratado. //
+        Dejadas ya las flechas y el poporo / Por el guanebucán feroz, robusto,
+        / Esta gente paupérrima de Coro / Tomaron un poquillo de buen gusto, /
+        Por recoger alli joyuelas de oro»
+      lectura: >-
+        «Esta gente paupérrima de Coro» son los españoles de Alfínger, que
+        salieron de Coro («Ambrosio con tal orden de guerrero», l. 52857) y
+        vienen hambrientos: son ellos quienes recogen el oro. El poporo lo
+        suelta el guanebucán. El verso no decide si es arma o calabacito: se
+        suelta con las flechas al huir, y en las otras apariciones de
+        Castellanos es el calabacito.
+      atribuye_a_caquetios: 'no'
+      hipotesis_del_error: >-
+        Es posible que Alvarado leyera «gente de Coro» como los caquetíos de
+        Coro. Es una hipótesis: Alvarado no explica de dónde saca la
+        atribución, y el verso no la permite.
+    - id: pp-2
+      obra: castellanos-nuevo-reino-1886
+      donde: t. I, canto primero (los muiscas, los xeques y el hayo)
+      pagina_impresa: 46
+      verificado_en_imagen: sí
+      texto: >-
+        «Usan también con él de cierto polvo / ó cal hecha de ciertos
+        caracoles, / que traen en el que llaman poporo, / que es un
+        calabazuelo, donde meten / un palillo, y aquello que se pega /
+        recogen en la boca con el ayo.»
+      atribuye_a_caquetios: 'no'
+      sentido: calabacito de la cal (muisca)
+    - id: pp-3
+      obra: castellanos-nuevo-reino-1886
+      donde: t. I, canto primero (sepulturas de los señores muiscas)
+      pagina_impresa: 65
+      verificado_en_imagen: sí
+      texto: >-
+        «con armas defensivas y ofensivas, / hasta brazales, petos,
+        morriones / del mas alto metal, y de los hombros / pendientes hartas
+        veces de lo mismo / la mochila del ayo y el poporo, / con mucuras de
+        vino y otras cosas»
+      atribuye_a_caquetios: 'no'
+      sentido: >-
+        calabacito de la cal (muisca). Va colgado del hombro con la mochila
+        del hayo y se nombra APARTE de las armas.
+    - id: pp-4
+      obra: castellanos-nuevo-reino-1886
+      donde: t. I, canto cuarto (Juan de Céspedes arenga a los suyos)
+      pagina_impresa: 124
+      verificado_en_imagen: sí
+      texto: '«si quisierdes que larguen los poporos, / abrid los ojos y apretad las manos;»'
+      atribuye_a_caquetios: 'no'
+      sentido: >-
+        figurado; la hueste enemiga es del altiplano (los «fronteros Guechas»
+        dieron aviso, p. 122). Alvarado no cita esta página. Es la única de
+        las ocho apariciones en que «poporo» podría leerse como algo que se
+        empuña.
+    - id: pp-5
+      obra: castellanos-nuevo-reino-1886
+      donde: t. II, GLOSARIO del EDITOR (Paz y Mélia), no de Castellanos
+      pagina_impresa: 385
+      verificado_en_imagen: sí
+      texto: >-
+        «POPORO.—Calabazuelo en que llevan los indios polvo ó cal de ciertos
+        caracoles, de la que toman con un palillo un poco cuando mascan ají.
+        (P. Simón.)— La coca ó hayo. (J. de la Espada.)»
+      atribuye_a_caquetios: 'no'
+      nota: del editor; se cita como tal (la trampa de `datihao`)
+    - id: pp-6
+      obra: castellanos-elegias
+      donde: Parte I (Boriquén), Parte III (Cenú y Popayán)
+      linea: '14287 (p. 55); 98792 (p. 377-378, cabecera dudosa); 118455 (p. 454); 119547 (p. 458)'
+      texto: >-
+        «Rodeado de plumas y poporos,» (areíto de Agüeybaná) · «La mochila
+        de hayo y el poporo;» (Cenú) · «El bayo [hayo] y el poporo
+        preparado,» (Popayán) · «Primero que la gente de Poporo,» (topónimo)
+      atribuye_a_caquetios: 'no'
+      fuente_del_barrido: >-
+        las cuatro líneas las localizó M7 (#207, §castellanos.poporo); aquí se
+        re-midieron con grep popor- sobre el .txt: 5 apariciones en las
+        partes I-III, contando la de Boronata.
+    - id: pp-7
+      obra: oviedo-y-valdes-1852-1855
+      donde: t. II, libro XXV, caps. V y VI (Francisco Martín, el soldado de Alfínger que vivió como indio)
+      pagina_impresa: '286 y 294'
+      verificado_en_imagen: sí
+      texto: >-
+        p. 286: «y la boca llena de hayo, ques çierta hierba para no aver sed,
+        é su baperon: este es un calabaço en que traen los indios çierta
+        manera de cal; para quitar la hambre, chupándola.» · p. 294: «salió
+        con sus armas de indio, que eran el arco y las flechas é dardos é su
+        raporon é hayo: el qual hayo es la hierba para quitar la sed ó no
+        averla, y el baporon es el calabaço de la cal para quitar la hambre»
+      quien: >-
+        los indios PEMENOS del sur de la laguna de Maracaibo, entre quienes
+        vivía Martín («toda aquella tierra es poblada de indios pemenos»,
+        p. 294). No caquetíos.
+      atribuye_a_caquetios: 'no'
+      nota: >-
+        Es la fuente del BAPÓRON de Alvarado. Oviedo mete el calabazo entre
+        «sus armas de indio», pero lo define como el calabazo de la cal.
+    - id: pp-8
+      obra: jahn-1927
+      pagina_impresa: 249
+      verificado_en_imagen: no (capa de texto)
+      texto: >-
+        «Otro de los usos de los Ayomanes, muy generalizado entre todas las
+        antiguas tribus del Occidente y que aún conservan los Kággaba de Santa
+        Marta […] y algunos ancianos guajiros […], era la del Poporo, pequeña
+        calabaza o taparita que llenaban con desmenuzadas hojas de hayo»
+      atribuye_a_caquetios: 'no (ayomanes; «las antiguas tribus del Occidente» sin nombrar a los caquetíos)'
+      epoca: moderno (informantes de San Miguel, c. 1870-1880)
+
+  barrido_de_ceros:
+    medido: >-
+      popor-/bap[oe]ron/raporon sobre todos los PDF y .txt de
+      fuentes_caquetios/ (pdftotext y lectura directa; 6-fusion/scripts no
+      guarda el barrido porque es un grep). Salen: Alvarado, Bachiller y
+      Morales (1: `poporóco` dentro de una frase caribe que cita de Gumilla;
+      no es la voz), Castellanos I-III (5), Castellanos IV t. I (3) y t. II
+      (2), Jahn (1), Oviedo t. II (baperon/raporon/baporon, 4), el glosario
+      del editor de Oviedo t. IV (4) y Zavala 2015 (baperon, raporon). No se
+      pudieron extraer con pdftotext cinco PDF: Brinton (vacío en la rama de
+      partida; main lo repuso después), Fernandes 2020, Oviedo t. I (el
+      truncado), Ramos Pérez y Rouse-Cruxent. El t. I de Oviedo se barrió
+      aparte, con pymupdf sobre el PDF íntegro, para `coro`, `manat-`,
+      `cohoba` y `bagua`.
+    caqu_en_el_nuevo_reino: 0 en los dos tomos
+    macana_junto_a_caquetios: >-
+      de las 12 líneas con caqu- de Castellanos I-III, sólo una tiene macana a
+      menos de 120 líneas: la del pueblo caquetío de Uriorebuí (§macana).
+
+  macana:
+    pregunta: ¿algún pasaje atribuye la macana a caquetíos?
+    respuesta: >-
+      Sí, la COSA, y en un solo pasaje; la palabra es la del cronista.
+    pasaje:
+      obra: castellanos-elegias
+      donde: Parte II, Elegía I, canto III (vuelta de Federmann, 1530)
+      linea: '52211; 52324; 52344'
+      pagina_impresa: 200
+      texto: >-
+        «Y dieron luego por aquella via / En un pueblo de gente caquetia.»
+        […] «Barrios, y Joan Florín y Alonso Zarco / Cortan aqui y allí
+        macana y arco.» […] «Por le desbaratar lanza y caballo / Con dos
+        terribles golpes de macana;»
+      quien: >-
+        el cacique Uriorebuí y los suyos, en un pueblo caquetío del INTERIOR,
+        sin lugar preciso. Es la polity de tierra adentro, no la costera
+        (regla 4). M7 lo recoge como m7-cast-007.
+      epoca: contacto-temprano (1530, contado en 1589)
+      que_prueba: >-
+        que los caquetíos del interior peleaban con un garrote de madera que
+        el cronista llama macana. NO prueba la voz: en 1589 «macana» ya era
+        castellano de Indias: Las Casas, Apologética cap. LXV p. 177, «Estos
+        vocablos cotaras, macanas, bixa, y maiz, y maguey, fueron vocablos
+        desta isla y no de la Tierra Firme» (verificado en imagen por la
+        campaña del taíno, 6-fusion/taino2_las_casas_apologetica.yaml §c06).
+        Castellanos escribe «macana» 115 veces en las partes I-III, para
+        pueblos de toda la costa.
+      destino: >-
+        3-mundo (guerra y armas de la polity del interior), no el lexicón. Si
+        se proyecta a la costa o al XV, se decide aparte (reglas 3 y 4).
+
+  cambio_propuesto:
+    poporo:
+      hoy: >-
+        VOCABULARIO_BASE, `poporo` {"sig": "maza-porra, arma de combate
+        ceremonial", "fuente": "caquetío-atestiguado", "notas": "Alvarado
+        1921, p.255 s.v. POPORO: la atribuye explícitamente a los antiguos
+        Caquetíos y cita a Castellanos"}
+      opciones:
+        A: >-
+          SALE DEL HABLA y cambia de capa. Pasa a FUERA_DEL_HABLA con
+          `fuente: español-colonial`, como caraota y kukuisa en D10 grupo 1: es
+          una voz de Tierra Firme que el castellano de los cronistas usa para
+          muiscas, guanebucanes, cenúes y pemenos, y ninguna fuente la da como
+          caquetía. La glosa pasa a 'calabacito de la cal para mascar hayo' y
+          la vieja queda en `notas` con su porqué.
+        B: >-
+          Sale del habla con la capa intacta (caquetío-atestiguado), como las
+          archivadas por d19.b. No se recomienda: aquella política archiva lo
+          que era verdad pero redundante, y aquí la etiqueta es FALSA.
+          Archivarla sin corregirla deja una mentira en el canon.
+        C: >-
+          Se queda en el habla degradada a caquetío-hipotético, con glosa
+          'calabacito de la cal', apoyándose en el complejo del hayo del
+          occidente (Jahn p. 249). No se recomienda: no hay dato caquetío de la
+          voz, y el hayo caquetío ya se había juzgado de contacto
+          (issues-pendientes/publicados/issue-hayo.md).
+      recomendacion: A
+      por_que: >-
+        Es lo que Miguel pidió («caso de que no sea caquetía, la
+        levantamos»). La capa `español-colonial` dice la verdad de la voz. Y
+        su uso en la base es mínimo: 2 usos de 2 agentes, según
+        decisiones_campanas_2026-09-21.yaml §abre (cifra de ese día, no
+        re-medida aquí).
+      nota_propuesta: >-
+        RETIRADA DEL HABLA 2026-09-23 (cc.3, decisión de Miguel: «caso de que
+        no sea caquetía, la levantamos»). Hasta esa fecha: `poporo` 'maza-porra,
+        arma de combate ceremonial', caquetío-atestiguado, por Alvarado 1921
+        p. 255: «Arma, a manera de porra, usada por los antiguos Caquetíos y
+        los Guagíros. Ref. Cast. Eleg. I. c. 3º; N. Reino, I. 46. 65». Leídas
+        las tres páginas, ninguna pone el poporo en manos de un caquetío:
+        Castellanos, Elegías, Parte II, Elegía I, canto III (BAE 1857 p. 202),
+        es Boronata, «indio guanebucán», en el río de la Hacha («Dejadas ya
+        las flechas y el poporo / Por el guanebucán feroz, robusto»); Historia
+        del Nuevo Reino de Granada t. I pp. 46 y 65 son los muiscas, y allí es
+        «un calabazuelo» de la cal que se masca con el hayo, colgado del
+        hombro aparte de las armas. En todas las fuentes del repo que lo
+        definen, el poporo es el calabacito de la cal: Castellanos, el
+        glosario de Paz y Mélia (Nuevo Reino t. II p. 385), Oviedo t. II
+        pp. 286 y 294 (baperon, entre los pemenos del sur de la laguna de
+        Maracaibo), Jahn 1927 p. 249 (ayomanes) y el propio Alvarado s.v.
+        BAPÓRON, p. 20. «Ceremonial» no lo dice nadie. Vive en el castellano
+        venezolano como 'chichón' (Alvarado, 2ª acepción; Medina Colina
+        p. 230 en Paraguaná). Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §poporo.
+      glosa_propuesta: calabacito de la cal para mascar hayo (en el castellano venezolano, también 'chichón')
+    macana:
+      hoy_dice: >-
+        «… Etiqueta anterior: `taíno` · Tno. macana; arma arahuaca; análoga al
+        poporo caquetío · […] La voz caquetía ATESTIGUADA para el arma es
+        `poporo` (Alvarado 1921 p. 255: «usada por los antiguos Caquetíos»,
+        ref. Castellanos). Volverla a `taíno` (opción C) queda dentro de la
+        decisión de clase sobre los tainismos»
+      cambio: >-
+        sustituir la frase «La voz caquetía ATESTIGUADA para el arma es
+        `poporo` (…)» por la de abajo, y marcar «análoga al poporo caquetío»
+        (que es historia de la etiqueta) con «[falso: ver 2026-09-23]». La
+        etiqueta `caquetío-reconstruido` y la glosa no se tocan: la decisión
+        de clase de los tainismos sigue abierta.
+      nota_propuesta: >-
+        CORREGIDO 2026-09-23 (cc.3): esta nota decía que «la voz caquetía
+        ATESTIGUADA para el arma es `poporo`». Es falso. Las tres referencias
+        de Alvarado 1921 p. 255 son de un guanebucán (Castellanos, Elegías,
+        BAE p. 202) y de los muiscas (Nuevo Reino t. I pp. 46 y 65, donde el
+        poporo es el calabacito de la cal). El caquetío no tiene voz
+        atestiguada para el garrote. Lo que sí hay es la COSA: Castellanos,
+        Elegías, Parte II, Elegía I, canto III, BAE p. 200, «En un pueblo de
+        gente caquetia» del interior (Federmann, 1530), el cacique Uriorebuí
+        desbarata a un jinete «Con dos terribles golpes de macana». Es la
+        palabra del cronista (castellano de Indias en 1589), no la del
+        caquetío, y es la polity del interior, no la costera. Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §poporo.
+
+  consecuencias_fuera_del_lexicon:
+    - donde: curiana_sim/lexicon_alvarado.py (CANDIDATOS_A.poporo y ADJUDICACION_82.poporo) y minar_alvarado_glosario.py
+      que: >-
+        el veredicto «confirma → caquetío-atestiguado JUSTIFICADO» y «la única
+        voz de todo el glosario con atribución caquetía directa» cuentan lo
+        que Alvarado AFIRMA, no lo que la fuente citada sostiene. Si se
+        regenera, que el veredicto pase a «Alvarado lo afirma; sus
+        referencias no lo sostienen». No los toca esta campaña: son
+        curiana_sim/*.py.
+    - donde: 6-fusion/medina_colina_dictado.yaml §poporo (p. 230), veredicto A
+      que: >-
+        el veredicto A se apoyaba en que «la palabra ya es caquetío-atestiguada
+        en el lexicón (el arma)». Sin eso, 'chichón' es castellano venezolano
+        general (el propio dictado lo anota con el DRAE). Hay que revisar el
+        veredicto.
+    - donde: 4-fuentes/alvarado-1921.md (tablas de las líneas 67, 145 y 175)
+      que: la bitácora nueva de esa ficha lo corrige (no se reescriben las tablas viejas).
+
+  visto_de_paso:
+    - id: vp-baperon
+      que: >-
+        `baperon` y `raporon` son caquetío-ATESTIGUADO en lexicon_zavala.py
+        (Zavala Reyes 2015 #27 y #220, sigla HB), y ese módulo lo importa el
+        motor. En el cuerpo de Oviedo, su fuente primaria, son el calabazo de
+        la cal de los PEMENOS del sur de la laguna de Maracaibo (t. II
+        pp. 286 y 294). El «(Lengua de Venezuela.)» sale del glosario que
+        Amador de los Ríos añadió al t. IV: «Baperon y Baperoni: calabazo, en
+        que los indios de guerra llevaban la cal […] (Lengua de Venezuela.)»,
+        y «Rapürün [Raporon]: Vide Baperon». Es la trampa de `datihao` otra
+        vez: un glosario de editor convertido en voz caquetía. No es de esta
+        parcela; va en el issue como campaña corta.
+      fuente: oviedo-y-valdes-1852-1855, t. II pp. 286, 294 (✅ imagen) y el glosario del t. IV (capa de texto)
+
+# ══════════════════════════════════════════════════════════════════════════
+# 2. `coro` NO ES 'VIENTO' (cc.6)
+# ══════════════════════════════════════════════════════════════════════════
+coro:
+  pregunta: >-
+    ¿Quién da de verdad la lectura 'viento' (Castellanos, Oviedo y Valdés,
+    Oviedo y Baños, otro), con qué palabras y en qué página, y la relaciona
+    con el latín Corus/Caurus?
+
+  respuesta_corta: >-
+    Castellanos, y nadie más entre los cronistas del repo. Pero él no la da
+    como glosa indígena: dice que el nombre lo pusieron los españoles tomando
+    el del río, que «siempre se llamó desta manera», y que ese nombre «le
+    viene bien» porque «Coro» significa viento «en lengua generosa». No
+    escribe «latín». La relación con Corus/Caurus la hizo explícita Arcaya
+    1920 p. 170, y el castellano de 1582 tenía «coro» para el viento del
+    noroeste (DICTER).
+
+  el_pasaje:
+    obra: castellanos-elegias
+    donde: Parte II, Introducción (la fundación de Coro por Ampiés, 1527)
+    linea: 48209-48219
+    pagina_impresa: 185
+    texto_verbatim_del_txt: >-
+      «Púsose por la gente forastera / Al pueblo semejante nombramiento / Dor
+      el rio (pie guia su ribera / Brevecilla distancia del asiento. // Que
+      siempre se llamó d ista manera: / El cual le viene bien , pues Coro
+      viento / Quiere decir en lengua genero>a, / Y ansí es aquella tierra muy
+      ventosa.»
+    lectura: >-
+      «Por el río que guía su ribera / Brevecilla distancia del asiento, /
+      Que siempre se llamó desta manera: / El cual le viene bien, pues Coro
+      viento / Quiere decir en lengua generosa»
+    verificado_en_imagen: 'no: el repo no tiene el PDF de la BAE; la cita y la página coinciden con Arcaya p. 170 (✅ imagen) y con M7'
+    que_dice_y_que_no: >-
+      (1) El nombre lo pone «la gente forastera», los españoles. (2) Lo toman
+      del río, que «siempre se llamó» así, así que el nombre es anterior a
+      ellos. (3) Es la etimología la que «le viene bien», y en «lengua
+      generosa», no en la de los indios. Castellanos no dice en ningún
+      momento que en caquetío coro fuera 'viento'.
+    lengua_generosa: >-
+      «lengua generosa» aparece una sola vez en las partes I-III (grep
+      genero.a). Cuando Castellanos habla de una lengua indígena, la nombra:
+      «En lengua guayqueri» (l. 5824), «De lengua de Cubagua» (l. 53768),
+      «Lengua de caquetíos escelente» (l. 55311). «Generosa» es 'noble': la
+      usa también para caballos, «casta generosa» (l. 48243). La lengua
+      noble es el latín, o su heredero culto.
+
+  el_latin:
+    arcaya:
+      obra: arcaya-1920
+      pagina_impresa: 170
+      verificado_en_imagen: sí
+      texto: >-
+        «De aquí han deducido algunos que Coro significaba viento en la lengua
+        de los indígenas, mas esto es un error, porque Castellanos sólo quiso
+        aludir a la coincidencia de que ese vocablo de los indios fuese
+        idéntico al español "Coro", que entre otras acepciones tiene la ahora
+        desusada de "viento que corre de la parte donde se pone el sol en el
+        solsticio de verano," aunque realmente el viento reinante en Coro es,
+        al contrario, el que sopla del Noreste.»
+      lectura: la capa escribe «Ncreste»; la imagen da «Noreste» con la o mal entintada
+    dicter:
+      referencia: DICTER 2.0, s.v. coro 2 (fuera del repo, consultado el 2026-09-23)
+      texto: >-
+        «coro 2 […] (tomado del lat. cōrus o caurus 'íd.' (DECH)). Familia
+        léxica: cauro. […] 1ª datación del corpus: Loçano, Alberto,
+        Architectura, 1582. Definición: Viento procedente del Noroeste.
+        Sinónimos(s): cauro, gallego, maestral.» — Ejemplo: «entre favonio y
+        septentrión, cauro, al qual muchos llaman coro» (Urrea, Vitruvio,
+        Architectura, 1582, fol. 16r).
+      valor: >-
+        la palabra circulaba en el castellano culto siete años antes de que
+        Castellanos imprimiera la Parte I (1589). Coincide con la cita de
+        Arcaya: el poniente del solsticio de verano es el noroeste.
+    el_viento_real: >-
+      Arcaya lo dice en la misma página: en Coro sopla el NORESTE (el alisio;
+      ver 6-fusion/clima_era2.yaml y `juri`). El coro latino es el noroeste.
+      Castellanos juega con la palabra, no describe el viento de Coro.
+
+  los_ceros:
+    por_obra:
+      - obra: oviedo-y-valdes-1851
+        medido: >-
+          t. I con pymupdf (el PDF está truncado y pdftotext no lo abre): 6
+          «coro», ninguno a menos de 200 caracteres de viento, cauro o latín.
+      - obra: oviedo-y-valdes-1852-1855
+        medido: >-
+          t. II, III y IV: todas las apariciones de «Coro» con viento, cauro,
+          latín, nombre o «llam-» en una ventana de 250 caracteres, leídas a
+          mano. Son la ciudad y la gobernación, sin etimología. El glosario del
+          t. IV (impresas 593-607) no trae la entrada Coro.
+      - obra: oviedo-y-banos
+        medido: >-
+          1 caso de «Coro» junto a «vientos»: los vientos contrarios que
+          impiden a Carvajal «coger a Coro» y lo hacen desembarcar en
+          Paraguaná. Ninguna etimología.
+    conclusion: >-
+      Miguel recordaba a Oviedo, y la etimología no está en ninguno de los
+      dos Oviedos del repo. Una obra de fuera que no se ha leído podría
+      traerla: el cero vale para el repo.
+
+  quien_mas_la_trae: >-
+    Ya en el canon, sin fusionar o citada: toponimo-111 (2-lengua/toponimos.yaml),
+    con veredicto «casi seguro el latín corus/caurus»;
+    6-fusion/toponimia_paraguana_miguel.yaml (lo usa como freno a la
+    hipótesis curi ~ juri); 6-fusion/clima_era2.yaml (como dato de viento,
+    con la nota de Arcaya); M7 (#207) m7-cast-012, que ya proponía lo mismo.
+    González Batista la usa contra Coriana (6-fusion/toponimia_coro_espina.yaml).
+
+  cambio_propuesto:
+    coro:
+      lectura_en_disputa_hoy: >-
+        «tres lecturas compiten y ninguna cierra: 'espina' (González Batista,
+        «El nombre de Coro»), 'avispa o lagartija' (Arcaya 1920 p. 170) y
+        'viento' (Castellanos 1589). Se enseña la que TIENE FUENTE TRABAJADA en
+        el repo, con la disputa declarada»
+      lectura_en_disputa_propuesta: >-
+        dos lecturas compiten y ninguna cierra: 'espina' (González Batista, «El
+        nombre de Coro») y 'avispa o lagartija' (Arcaya 1920 p. 170). Se enseña
+        la que TIENE FUENTE TRABAJADA en el repo, con la disputa declarada
+      nota_a_anadir: >-
+        DESCARTADA 2026-09-23 (cc.6, decisión de Miguel: «hay que sacar que
+        esa definición significa viento»): la lectura 'viento'. Hasta esa fecha
+        figuraba como tercera lectura en disputa, «'viento' (Castellanos
+        1589)». La atribución es correcta, pero Castellanos no la da como voz
+        indígena. Elegías, Parte II, Introducción (BAE 1857 p. 185): «Púsose
+        por la gente forastera / Al pueblo semejante nombramiento / Por el río
+        […] / Que siempre se llamó desta manera: / El cual le viene bien, pues
+        Coro viento / Quiere decir en lengua generosa». El nombre es el del río
+        y es anterior a los españoles. La etimología «le viene bien» y es de
+        la «lengua generosa»: el latín cōrus/caurus, que el castellano culto
+        tenía como «coro», viento del noroeste (DICTER s.v. coro 2, primera
+        datación 1582; Urrea 1582: «cauro, al qual muchos llaman coro»).
+        Arcaya 1920 p. 170 ya lo había escrito: «esto es un error, porque
+        Castellanos sólo quiso aludir a la coincidencia de que ese vocablo de
+        los indios fuese idéntico al español "Coro"», y el viento reinante en
+        Coro es el noreste, no el noroeste. No es de Oviedo: ni Oviedo y Valdés
+        (t. I-IV) ni Oviedo y Baños dan etimología de Coro. La voz caquetía
+        del viento es `juri`. Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §coro.
+      no_se_toca: >-
+        la glosa enseñada ('espina'), la capa (caquetío-hipotético) y la clave.
+        Sólo sale una de las tres lecturas de `lectura_en_disputa`, y queda
+        archivada en `notas`.
+    toponimo_111:
+      donde: 2-lengua/toponimos.yaml (es generado desde lexicon_toponimos.py; se edita el módulo)
+      que: >-
+        en la lectura de Arcaya 1920, el veredicto dice «viento (Castellanos,
+        Miguel). Compiten». Proponer: «viento: DESCARTADA el 2026-09-23 (cc.6),
+        juego culto de Castellanos sobre el latín cōrus, no glosa indígena». La
+        lectura de Castellanos (tipo etimologia-de-cronista) se queda como está:
+        su veredicto ya dice lo correcto.
+
+# ══════════════════════════════════════════════════════════════════════════
+# 3. LAS VOCES DE ZAYAS (cc.7)
+# ══════════════════════════════════════════════════════════════════════════
+# «decir si son taíno o no. Este, definirlo. En base a lo que decía el texto.»
+# Zayas es intermediario: aquí se va al texto que él cita (o que debió citar)
+# y se decide con la fuente primaria. La transcripción de Zayas es la de #220
+# (6-fusion/taino_zayas_1931.yaml); sus .txt se leyeron desde esa rama.
+# Etiquetas posibles (las del encargo): taíno / taíno dudoso / caribe insular /
+# del editor / no atestiguada.
+zayas:
+
+  manati:
+    etiqueta_recomendada: taíno
+    en_el_lexicon: 'manati {"es": "manatí (Trichechus manatus), vaca marina", "fuente": "taíno", "notas": "Tno. manatí; animal del Golfete de Coro"}'
+    los_dos_pasajes:
+      - obra: las-casas-apologetica
+        donde: cap. X (la naturaleza de La Española), NBAE 13 p. 27
+        verificado_en_imagen: sí
+        texto: >-
+          «Hay en esta mar, en especial por estas islas, á la boca de los ríos,
+          entre el agua salada y dulce, los que llamaban los indios manatíes,
+          la penúltima sílaba luenga; estos se mantienen de yerba, la que nace
+          en el agua dulce junto á las riberas.»
+        que_dice: >-
+          ATRIBUYE la voz a los indios y anota el acento, con la misma fórmula
+          que usa en esa página para voces que oyó: «axí, la última sílaba
+          aguda», «cazabi, la penúltima luenga».
+        cadena: 'la cita de Zayas (t. II p. 178) coincide con el pasaje, salvo la ortografía'
+      - obra: oviedo-y-valdes-1851
+        donde: t. I, lib. XIII, cap. IX («Del manatí»), p. 434
+        verificado_en_imagen: sí
+        texto: >-
+          «Tiene solas dos manos ó braços çerca de la cabeça, cortos, é por
+          esso los chripstianos le llamaron manatí, puesto que el chronista
+          Pedro Mártir diçe que tomó el nombre del lago Guaniabo, lo qual es
+          falso; é assi como en esta Isla Española le quitaron su nombre é le
+          dieron este, assi en la Tierra-Firme […] los nombran diverssamente,
+          segund la diferençia de los lenguajes de las provinçias»
+        que_dice: >-
+          que el nombre es castellano, por las MANOS, y que en La Española el
+          animal tenía otro nombre, que Oviedo no da.
+    como_se_decide: >-
+      Son dos testigos de primera mano que se contradicen, y no pesan igual.
+      Oviedo no trae el nombre indio que dice que se perdió. Su razón es una
+      etimología castellana («por esso», por las manos): la misma clase de
+      dato que 'Coro viento', la etimología del cronista. Las Casas declara el
+      uso de los indios, con el acento anotado. Hay además un apoyo de fuera
+      de La Española: Goeje 1939 p. 14 recoge el kalinago `manatui` y el tupí
+      del Pará `manati`. La voz existía en lenguas indígenas lejos de los
+      españoles de Santo Domingo; como el kalinago es de c. 1665, no se usa
+      como prueba de que sea precontacto, sólo como indicio. Queda taíno, con
+      el conflicto declarado. Si Miguel quiere pesar a Oviedo igual que a Las
+      Casas, la etiqueta es «taíno dudoso».
+    cambio_propuesto:
+      etiqueta: taíno (no cambia)
+      nota_propuesta: >-
+        Las Casas, Apologética cap. X, NBAE 13 p. 27 (verificado en imagen):
+        «á la boca de los ríos, entre el agua salada y dulce, los que llamaban
+        los indios manatíes, la penúltima sílaba luenga». En contra, Oviedo
+        t. I lib. XIII cap. IX p. 434 (verificado en imagen): «por esso [por
+        las dos manos] los chripstianos le llamaron manatí […] en esta Isla
+        Española le quitaron su nombre é le dieron este». Se sigue a Las Casas
+        porque da el uso con el acento, y Oviedo da una etimología castellana
+        sin el nombre indio. Kalinago `manatui` y tupí `manati` en Goeje 1939
+        p. 14. «Animal del Golfete de Coro»: sin procedencia en esta nota. La
+        fauna del Golfete es de la campaña FA3 (#208); en Oviedo t. II los
+        manatíes son del Orinoco y Paria. Detalle en
+        6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §zayas.manati.
+
+  cohiba_tabako:
+    pregunta: qué nombra cada una según Las Casas y Oviedo
+    respuesta_corta: >-
+      Ninguna de las dos nombra la PLANTA del tabaco en un cronista. «Tabaco»
+      es el rollo de hojas encendido que se fuma, el cañuto con que se toma
+      el humo y la ahumada misma. «Cohoba» (no cohiba) es el polvo que se
+      aspira por la nariz y el rito de tomarlo; para Oviedo, también un árbol
+      de vainas. La forma `cohiba` y el sentido 'tabaco, la planta' no salen
+      de ningún cronista del repo: los dan el glosario del editor de Oviedo
+      (1855) y Pichardo (1862), sin cita.
+    tabaco:
+      - obra: las-casas-apologetica
+        pagina_impresa: 181
+        verificado_en_imagen: sí
+        texto: >-
+          «hacian de unas hojas de árbol secas un rollete como se hace un
+          mosquete de papel, y metian dentro una poca de aquella yerba y
+          encendian el mosquete por una parte, y por la otra sorbian ó atraian
+          el humo […] y estos mosquetes llamaban tabacos, la media sílaba
+          luenga.»
+        nombra: el ROLLO encendido que se fuma, no la yerba que va dentro
+      - obra: las-casas-1875
+        donde: Historia de las Indias, t. I, lib. I, cap. XLVI (se cita por capítulo; el PDF es el ebook de Gutenberg, sin paginación estable)
+        verificado_en_imagen: no (capa de texto)
+        texto: '«Estos mosquetes, ó como los llamaremos, llaman ellos tabacos.»'
+        nombra: ídem; es el pasaje que cita Zayas
+      - obra: oviedo-y-valdes-1851
+        pagina_impresa: '130-131 y 143'
+        verificado_en_imagen: 'p. 143 sí (hoy); pp. 130-131 las verificó db.3 (la nota actual de `tabako`)'
+        texto: >-
+          pp. 130-131: «á aquel tal instrumento con que toman el humo, ó á las
+          cañuelas que es dicho llaman los indios tabaco, é no á la hierva ó
+          sueño que les toma (como pensaban algunos)» · p. 143: «haciendo sus
+          cahobas ó ahumadas, que los indios toman, que assimismo llaman
+          tabacos, como atrás se dixo en el capítulo II.»
+        nombra: el INSTRUMENTO y la AHUMADA; «é no á la hierva», dicho expresamente
+      - obra: oviedo-y-valdes-1852-1855
+        donde: t. IV, lib. XLII, cap. XI (Nicaragua), p. 96
+        verificado_en_imagen: sí
+        texto: >-
+          «É cada uno de los indios que he dicho tenia una destas hojas
+          rebollada, á la qual ellos llaman yapoquete, y en lengua desta isla
+          de Hayti ó Española se diçe tabaco.»
+        nombra: >-
+          el ROLLO de hoja, como en Las Casas. Oviedo coincide aquí con Las
+          Casas, y con su propio t. I en que no es la planta.
+    cohoba:
+      - obra: pane-c1498
+        donde: cap. XI (retraducción de Wikisource)
+        texto: «la cohoba es cierto polvo que ellos toman algunas veces para purgarse y para otros efectos»
+        nombra: el POLVO (y cap. XIX, el rito «muchas veces al año le hace la cohoba»)
+      - obra: las-casas-apologetica
+        pagina_impresa: '445-446'
+        verificado_en_imagen: 'p. 445 sí'
+        texto: >-
+          p. 445: «Estos polvos y estas cerimonias ó actos se llamaban cohoba,
+          la media sílaba luenga, en su lenguaje» · p. 446: «tomada su cohoba
+          (que es sorber por las narices aquellos polvos, como está dicho)»
+        nombra: el POLVO y la CEREMONIA; Las Casas dice haberla visto («Yo los vi algunas veces celebrar su cohoba», p. 446)
+      - obra: oviedo-y-valdes-1851
+        pagina_impresa: 347
+        donde: t. I, lib. IX, cap. XIII
+        verificado_en_imagen: sí
+        texto: >-
+          «Del árbol que en estas partes se tiene por tharay, porque le
+          paresçe mucho en la hoja; pero llámanle en esta Isla Española
+          cohoba.» […] «É aqueste cohoba lleva unas arvejas que las vaynas son
+          de un palmo é mas é menos luengas»
+        nombra: un ÁRBOL de vainas (el tabaco es una hierba, no un árbol)
+      - obra: oviedo-y-valdes-1851
+        pagina_impresa: 143
+        texto: '«sus cahobas ó ahumadas» (ver arriba)'
+        nombra: la AHUMADA
+    de_donde_sale_cohiba:
+      - obra: oviedo-y-valdes-1852-1855
+        donde: t. IV, glosario del EDITOR (Amador de los Ríos, 1855), p. 604
+        verificado_en_imagen: sí
+        texto: >-
+          «TABACO: cierto instrumento de madera ó caña, hecho á manera de Y
+          griega mayúscula, […] para percibir el humo de la planta llamada
+          cohiba ó cojiba, que lleva hoy por excelencia el nombre de aquel
+          instrumento. […] (Lengua de Cuba y de Haiti.)»
+        valor: del editor, sin cita; la trampa de `datihao`
+      - obra: pichardo-1862
+        texto: >-
+          «Cojibá ó Cohiba.— Voz ind.— Este era el verdadero nombre que los
+          Naturales daban a la planta que hoi impropiamente llamamos Tabaco»
+          (capa de texto)
+        valor: lexicógrafo del XIX, sin cita
+      - obra: zayas-1931
+        texto: '«Tabaco.—Los indios cultivaron la planta llamada hoy tabaco, pero le dieron el nombre de Cojoba o Cojiba» (t. II p. 254, capa de texto)'
+        valor: >-
+          sin cronista para la glosa. Los pasajes que cita después (Las Casas
+          y los mosquetes) son del ROLLO, no de la planta.
+      - obra: brinton-1871
+        verificado_en_imagen: sí
+        texto: '«Cohóba, the native name of tobacco» (p. 12) · «Tabaco, the pipe used in smoking the cohoba» (p. 13)'
+        valor: >-
+          Brinton escribe cohoba, NO cohiba. La nota del lexicón que atribuye
+          `cohiba` a Brinton cita mal la forma. Su glosa 'tobacco' tampoco la
+          sostiene Pané, como ya anotaba taino_pane_c1498.yaml §pv04.
+    la_planta: >-
+      Ningún cronista del repo da el nombre taíno de la PLANTA del tabaco. Las
+      Casas la llama «yerba» y Oviedo, «la hierva». El único nombre indígena
+      de la hoja que sale es de Nicaragua: `yapoquete`, Oviedo t. IV p. 96.
+    etiquetas_recomendadas:
+      tabako: 'taíno (confirmado por tres pasajes de dos cronistas; la glosa se completa)'
+      cohiba: >-
+        forma y glosa DEL EDITOR (1855) y de lexicógrafos del XIX; no
+        atestiguada en el XVI. La voz atestiguada es `cohoba`, taíno, con otra
+        glosa.
+    cambio_propuesto:
+      tabako:
+        glosa_hoy: cañuto con que se toma el humo, y la ahumada misma (no la hierba)
+        glosa_propuesta: el rollo de hojas encendido que se fuma, el cañuto con que se toma el humo, y la ahumada misma (no la hierba)
+        nota_a_anadir: >-
+          CERRADO 2026-09-23 (cc.7) lo que quedaba abierto por Zayas: Las Casas,
+          Apologética p. 181 (verificado en imagen), «estos mosquetes llamaban
+          tabacos, la media sílaba luenga», y Historia t. I lib. I cap. XLVI,
+          «Estos mosquetes […] llaman ellos tabacos». Es el rollo de hojas
+          encendido. Oviedo lo dice igual en t. IV p. 96 (Nicaragua;
+          verificado en imagen): la hoja enrollada «en lengua desta isla de
+          Hayti ó Española se diçe tabaco». Ningún cronista llama tabaco a la
+          planta, y ninguno la llama cohiba.
+      cohiba:
+        opciones:
+          A: >-
+            Cambia de voz. `cohiba` 'tabaco' pasa a FUERA_DEL_HABLA con toda su
+            historia en `notas` (capa taíno intacta, como las archivadas por
+            d19.b, y el aviso de que la FORMA y la glosa son del editor de
+            1855 y de Pichardo). Entra `cohoba`, taíno, con la glosa de la
+            fuente: 'polvo que se aspira por la nariz en el rito, y el rito
+            mismo' (Pané cap. XI; Las Casas, Apologética pp. 445-446; Oviedo
+            t. I p. 143 «cahobas ó ahumadas»; el árbol de Oviedo p. 347 va en
+            notas). Como `cohiba` hoy, `cohoba` va en SE_QUEDA_CON_SU_GRAFIA:
+            la ⟨c⟩ es de la fuente.
+          B: >-
+            Misma clave `cohiba`, con glosa y nota corregidas: 'polvo que se
+            aspira en el rito'. Es más barata, pero enseña una forma que ningún
+            cronista escribió.
+          C: >-
+            Sólo se corrige la nota (Brinton escribe cohoba, la forma es del
+            editor) y se deja la glosa 'tabaco'. No se recomienda: sigue
+            enseñando lo que las fuentes niegan.
+        recomendacion: A
+        por_que: >-
+          «La atestiguada manda» (d19.b): hay una forma atestiguada (`cohoba`)
+          y una del editor (`cohiba`) para lo mismo. Y la glosa 'tabaco' es la
+          que las fuentes niegan.
+        nota_propuesta_para_cohiba_archivada: >-
+          ARCHIVADA 2026-09-23 (cc.7). Hasta esa fecha: `cohiba` 'tabaco',
+          «Taíno atestiguado: cohiba; cognado Lok. iuli; Brinton 1871». Brinton
+          escribe «Cohóba, the native name of tobacco» (p. 12), no cohiba.
+          Ningún cronista del XVI del repo escribe cohiba ni llama así a la
+          planta. La forma sale del glosario del editor de Oviedo (t. IV
+          p. 604, 1855: «la planta llamada cohiba ó cojiba»), de Pichardo 1862
+          y de Zayas 1931 (t. II p. 254), todos sin cita. En los cronistas la
+          voz es `cohoba`: el polvo que se aspira y el rito (Pané cap. XI; Las
+          Casas, Apologética pp. 445-446), la ahumada (Oviedo t. I p. 143) y
+          un árbol de vainas (Oviedo t. I p. 347). Sustituida por `cohoba`.
+          Detalle en 6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml
+          §zayas.cohiba_tabako.
+      consecuencia: >-
+        la lista maestra (la consolidada de main) agrupa cohiba/cohoba en el
+        lema `kohiba`, en clase i por «Pané» vía Bachiller p. 256, que sólo
+        dice «según los cronistas de Indias». El lema debería ser `kohoba`
+        (la forma de los cronistas) y la glosa, la del polvo y el rito. Y el
+        comentario de SE_QUEDA_CON_SU_GRAFIA («Taíno atestiguado: cohiba …
+        Brinton 1871») cambia con la fusión.
+
+  bagua:
+    etiqueta_recomendada: taíno
+    respuesta: >-
+      Sale del CUERPO de Oviedo. El glosario de la Academia la copia de ahí.
+      No es la trampa de `datihao`: aquí el editor tenía fuente, y la trampa
+      estaba en la cursiva que el OCR se come.
+    pasaje:
+      obra: oviedo-y-valdes-1851
+      donde: t. I, lib. XIII, cap. IX (el capítulo del manatí), p. 436
+      verificado_en_imagen: sí
+      texto: >-
+        «Llaman los indios de aquesta Isla Española á la mar bagua (no digo
+        baygua, porque baygua es aquel barbasco, con que toman mucho pescado,
+        segund tengo dicho, sino bagua es el nombre de la mar en esta isla).»
+      capa_ocr: '«á la mar tagua ''no digo Ikuj- ijua, porque baygua es aquel barbasen […] sino Imijiut es el nombre de la mar en e-la isla» (el PDF íntegro de #206)'
+      por_que_no_se_vio: >-
+        las tres apariciones de la voz van en cursiva y el OCR las destroza.
+        Un grep de «bagua» en el t. I sólo encuentra «Cu-bagua». Lo pusieron
+        sobre la pista Bachiller 1883 y Coll y Toste 1897, que citan este
+        pasaje por su libro y capítulo.
+    el_glosario:
+      obra: oviedo-y-valdes-1852-1855
+      donde: t. IV, glosario del editor, p. 594
+      verificado_en_imagen: sí
+      texto: '«BAGUA: mar, piélago. (Lengua de Haiti.)»'
+    zayas:
+      texto: '«En el Apéndice agregado a la obra de Oviedo, por la Academia de la Historia de España, se da a este vocablo la significación de mar, en lengua de Haití.»'
+      pagina_impresa: 't. I p. 72 (capa de texto)'
+      lectura: >-
+        Zayas cita el apéndice y no dice nada del cuerpo. La conclusión de
+        #220 («la voz sigue sin cronista») era un cero de la consulta: Zayas
+        no la buscó en el cuerpo, y el OCR tampoco la dejaba encontrar.
+    tambien: >-
+      Las Casas llama al dios de La Española «Yocahu Vagua Maorocoti» (vía
+      Bachiller 1883 y Coll y Toste 1897, que leen la segunda palabra como
+      bagua). No se verificó en la Apologética. Es una pista, no una segunda
+      atestación.
+    cambio_propuesto:
+      lexicon: >-
+        ninguno obligado: `bagua` no es clave del lexicón (sí de
+        arahuaco_comparative.py, "TN": "bagua"). Si se quiere en el habla de
+        la esfera, entra como `bagua` 'mar', taíno, con esta cita. Lo decide
+        Miguel.
+      lista_maestra: >-
+        en la lista consolidada que ya está en main, `bakua` está en clase i
+        por Oviedo, pero de SEGUNDA mano (Coll y Toste p. 190, «Oviedo (lib.
+        XIII, cap. IX) dice»). Falta la página primaria: oviedo-valdes-1851
+        p. 436, variedad «La Española». La entrada Bagua de
+        taino_zayas_1931.yaml (#220) debe corregir su `lectura` («la voz sigue
+        sin cronista»).
+      cruce_taino_caquetio: >-
+        el par `paragua ~ bagua` 'mar' del cruce del 2026-09-22 citaba sólo a
+        Brinton del lado taíno. Ahora tiene cronista. Si el cruce cuenta
+        conceptos comparables con cronista por los dos lados, 'mar' puede
+        entrar. No se re-midió aquí.
+
+  anaki:
+    etiqueta_recomendada: no atestiguada (en taíno); su único pariente es caribe insular
+    cadena: >-
+      Goeje 1939 p. 10 (capa de texto): «ennemi T anaki (Zayas, p. 33), Gf akani» → Zayas
+      1931 t. I p. 39 (✅ imagen, por #220): «Anaquí.—Enemigo, en el dialecto
+      Eyerí de la isla de Boriquén», sin cronista → la etiqueta «Eyerí» es la
+      de la lista de Rafinesque. Adam 1879 pp. 303-304 (capa de texto) la
+      pone en una lista de 41 voces «du taino, ou ancienne langue de Cuba»,
+      sin cita, y la compara con el habla de las mujeres kalinago:
+      «Ennemi, anaki» ~ «F. n-acani».
+    lectura: >-
+      Ningún cronista la trae. Sólo tiene pariente en el kalinago de las
+      mujeres (`akani`, con metátesis), y eso lo dicen Adam y Goeje. En duda,
+      degradar: no es taíno atestiguado. Tampoco se puede llamar caribe
+      insular, porque la forma kalinago es otra.
+    cambio_propuesto:
+      lexicon: ninguno (no es clave)
+      lista_maestra: 'queda como la dejó #220: `sacada` del taíno, con la nota de que su pariente es el kalinago femenino `akani`'
+
+  anua:
+    etiqueta_recomendada: 'no existe como voz: es `aura`, y `aura` es no atestiguada'
+    pasaje_goeje:
+      obra: goeje-1939
+      pagina_impresa: 14
+      verificado_en_imagen: sí
+      texto: «vautour T aura (ZAYAS, p. 52, Fr., p. 6), A anuana»
+      capa_ocr: «vautour T амш (Zayas, p. 52, Fr. , p. 6), A anuana»
+    lectura: >-
+      La transcripción del repo (taino_goeje_1939.yaml) leyó `anua`, quizá
+      contaminada por el lokono `anuana` de la misma línea. Goeje escribe
+      aura. Zayas la trae (t. I p. 60 en la 2.ª ed.; p. 52 en la 1.ª, la que
+      cita Goeje) sin cronista, y recoge que D'Orbigny la cree de la Guayana.
+      En Oviedo t. I no hay `aura` como ave (sólo ruido del OCR).
+    cambio_propuesto:
+      lexicon: ninguno (no es clave)
+      lista_maestra: >-
+        `anua` sale: la forma no existe. Si se quiere la voz, entra `aura`
+        'zamuro, Cathartes aura' como ii-solo-secundaria (Goeje, Zayas), sin
+        cronista, con el aviso de D'Orbigny. Corregir también la entrada de
+        taino_goeje_1939.yaml.
+
+  manaya:
+    etiqueta_recomendada: 'no atestiguada (probable italiano del traductor de Pané)'
+    cadena: >-
+      Pané escribió en castellano hacia 1498. El original se perdió, y el texto
+      sobrevive en la traducción ITALIANA de Ulloa (1571). Bachiller 1883
+      p. 192 (✅ imagen), que dice trabajar sobre «su versión en italiano»:
+      «y tomando una manaia lo abrieron y saltó una tortuga hembra y viva».
+      La retraducción de Wikisource (el texto de Pané del repo, cap. XI)
+      vierte ahí «tomando una hacha de piedra, se la abrieron». Zayas 1931
+      t. II p. 180 («con una manaya le fué abierta a Caracaracoel la
+      espalda») y Goeje 1939 p. 11 («couteau en pierre T manaya (Pane ;
+      Zayas, p. 78 ; mot italien?)») vienen de ahí.
+    el_italiano: >-
+      «mannaia» es palabra italiana corriente: «Specie di grossa scure con
+      manico lungo, che anticamente serviva anche da arma», del latín tardío
+      manuaria (Vocabolario Treccani, fuera del repo). La sospecha de Goeje
+      tiene fundamento: el traductor pudo poner la palabra italiana para el
+      hacha que el original nombraba en castellano o en taíno. Sin el
+      original, y sin la edición crítica de Arrom (que el repo no tiene), no
+      se puede saber.
+    lectura: >-
+      La cadena no llega a un texto castellano ni taíno, y la forma es una
+      palabra italiana corriente. En duda, degradar: no atestiguada. La
+      glosa 'cuchillo de piedra' es de Goeje y Zayas; el italiano dice
+      'hacha'.
+    cambio_propuesto:
+      lexicon: ninguno (no es clave)
+      lista_maestra: >-
+        en la lista consolidada de main, `manaia` está en clase i por «Pané,
+        Pedro Mártir». Mártir entra por Coll y Toste p. 241, que lo cita para
+        la COSA («todo lo cortan con ciertas piedras de río durísimas»), no
+        para la voz (Zayas lo separa igual: cronistas_citados_para_la_cosa).
+        Pané sólo llega por la traducción italiana. Propuesta: baja a
+        iii-conjetura-moderna.
+
+  resumen_para_cc7:
+    - {voz: manati,  etiqueta: taíno,             cambia_el_lexicon: 'sólo la nota (con las dos citas y el conflicto)'}
+    - {voz: tabako,  etiqueta: taíno,             cambia_el_lexicon: 'glosa ampliada (el rollo) y nota que cierra lo abierto'}
+    - {voz: cohiba,  etiqueta: del editor (1855) / XIX, cambia_el_lexicon: 'A: se archiva y entra `cohoba` taíno, polvo y rito'}
+    - {voz: bagua,   etiqueta: taíno,             cambia_el_lexicon: 'nada obligado; la lista maestra gana la página primaria (Oviedo t. I p. 436)'}
+    - {voz: anaki,   etiqueta: no atestiguada,    cambia_el_lexicon: 'nada; pariente kalinago femenino akani'}
+    - {voz: anua,    etiqueta: 'no existe (es aura, no atestiguada)', cambia_el_lexicon: 'nada; corregir la transcripción de Goeje y la lista'}
+    - {voz: manaya,  etiqueta: no atestiguada,    cambia_el_lexicon: 'nada; baja a iii en la lista'}
+
+# ══════════════════════════════════════════════════════════════════════════
+# FAUNA (esquema común de la tercera campaña)
+# ══════════════════════════════════════════════════════════════════════════
+fauna:
+  - nombre_en_fuente: manatíes
+    especie_probable: Trichechus manatus
+    texto: >-
+      «á la boca de los rios, entre el agua salada y dulce, los que llamaban
+      los indios manatíes […]; estos se mantienen de yerba, la que nace en el
+      agua dulce junto á las riberas. Son tan grandes como grandes terneras,
+      sin pies, sino con sus aletas con que nadan»
+    obra: las-casas-apologetica
+    pagina_impresa: 27
+    lugar: La Española y «estas islas»
+    epoca: contacto-temprano
+    sonido: null
+  - nombre_en_fuente: manatí
+    especie_probable: Trichechus manatus
+    texto: >-
+      «En Tierra-Firme matan los ballesteros estos animales […] desde una
+      barca ó canoa […] dánles con una saeta con un harpon» · «é assi como en
+      esta Isla Española le quitaron su nombre é le dieron este, assi en la
+      Tierra-Firme […] los nombran diverssamente»
+    obra: oviedo-y-valdes-1851
+    pagina_impresa: '433-434'
+    lugar: La Española y Tierra Firme (sin precisar)
+    epoca: contacto-temprano
+    sonido: null
+    ya_en: M3 (#206) lo recoge igual
+  - nombre_en_fuente: aura
+    especie_probable: Cathartes aura
+    texto: «Ave de rapiña, y especie única de la familia de los buitres, en las Antillas. Cathartes Aura Lin.» (Zayas, vía #220)
+    obra: zayas-1931
+    pagina_impresa: 't. I p. 60'
+    lugar: Antillas
+    epoca: moderno
+    sonido: null
