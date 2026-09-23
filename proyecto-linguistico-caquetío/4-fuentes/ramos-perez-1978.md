@@ -10,7 +10,7 @@ capa_texto: archivo-vacio
 estado_minado: no-disponible
 prioridad: baja
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-07-29
+verificado: 2026-09-22
 aliases: ["Ramos Pérez 1978", "Ramos 1978"]
 ---
 
@@ -43,6 +43,31 @@ se llama así por un poblado del Golfete") descansa en una obra que **no tenemos
 - Prioridad baja para el motor, **alta para el jardín** ([[PLAN_MAESTRO]] §3):
   si una página pública va a afirmar el origen del nombre "Venezuela", la cadena
   de citas tiene que aguantar.
+
+## 2026-09-22 — qué es de verdad «Ramos 1978» (campaña minería 3, F1)
+
+**Ramos 1978 no es una reseña: es un libro.** La bibliografía de
+[[zavala-reyes-2015]] (p. 76) lo da así: Demetrio Ramos Pérez, *La fundación
+de Venezuela. Ampíes y Coro, una singularidad histórica*, Valladolid, 1978.
+La reseña de Persée es **de ese libro**, no de Ramos: Georges Baudot,
+*Caravelle. Cahiers du monde hispanique et luso-brésilien* 32 (1979),
+pp. 221-222 (`persee.fr/doc/carav_0008-0152_1979_num_32_1_2189_t1_0221_0000_1`),
+que da los datos del volumen: Valladolid-Coro, Seminario de Historia de
+América de la Universidad de Valladolid, 1978, 401 pp. y XI láminas.
+
+- **El libro** está en copyright (Ramos Pérez †1999): no se buscó descarga.
+  Es el que cita Zavala en su p. 60 («el Diao…») y probablemente el que Oliver
+  usa para Todariquiba. Vía: compra de segunda mano o préstamo.
+- **La reseña**: la página de Persée se lee en HTML, pero el PDF
+  (`/docAsPDF/…`) devolvió **403 con captcha**: no se forzó. El PDF de 0 bytes
+  del repo **sigue en 0 bytes**. Si se quiere la reseña, Miguel la baja a
+  mano desde el navegador; lo que dice ya está resumido aquí (dos páginas, sin
+  datos que no estén en el libro).
+- **Ramos 1976** (el argumento de San Bartolomé) sigue sin identificar.
+
+Por coherencia con el resto de la bibliografía, esta ficha debería pasar a
+describir el **libro** (con la reseña como nota): es decisión de quien fusione,
+porque el id `ramos-perez-1978` ya puede estar citado.
 
 ## Enlaces
 
