@@ -330,6 +330,28 @@ propio Oviedo duda.
 
 ⚠️ `sostiene` no se toca a mano; lo mide `medir_sostiene.py`.
 
+## Bitácora — la fauna de tierra (campaña FA1, 2026-09-22)
+
+Pregunta: ¿qué animales de tierra da Oviedo para la provincia de Venezuela?
+Leído en **imagen** el t. II, lib. XXV, cap. XXII, pp. 330-331 (pdf 344-345),
+porque el texto a dos columnas sale mezclado. Da la lista de fauna de la
+provincia (informe del obispo Bastidas): osos hormigueros, «tigres muchos»,
+venados «á manadas», puercos de dos géneros (uno el pecarí), conejos
+«menores y alebrestados», perezas, «Armados *cories*», «hardas», dantas,
+**«perros gosques que crian los indios en sus casas, é son mudos, que no
+ladran»**, leones pardos; y en insectos, **abejas sin aguijón criadas «en unos
+calabaços grandes»**, avispas de miel que se comen, y la langosta `tara`. La
+piel de «tigre» en la frente como insignia de grado está en la p. 330.
+
+⚠️ «Armados *cories*»: `cori` es en Oviedo el cuy de La Española (t. I, lib.
+XII, cap. IV, p. 390), no el armadillo. Si la Tabla A-9 de Oliver sacó `corie`
+'armadillo' de este renglón, es una mala lectura — issue
+`6-fusion/issues-pendientes/fauna-paraguana-tierra-2026-09-22.md`.
+
+Lo usa `6-fusion/fauna_paraguana_tierra_2026-09-22.yaml` (especies y
+`propuestas_ecologia`). La `cobertura` del frontmatter no se tocó para no chocar
+con la campaña de Oviedo que corre en paralelo: el cap. XXII ya estaba leído.
+
 ## Enlaces
 
 [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[arcaya-1920]] · [[oliver-1989-cap2]] ·

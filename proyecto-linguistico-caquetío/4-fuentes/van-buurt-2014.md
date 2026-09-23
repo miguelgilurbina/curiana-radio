@@ -10,7 +10,7 @@ paginas: 48
 capa_texto: si
 acceso: "Libre — PDF completo: https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21)"
+cobertura: "§6 88/88 entradas, §11 29/29, §7 180 topónimos, §8-10 15 etimologías, 19 morfemas; propuesta en curiana_sim/lexicon_van_buurt.py, sin tocar el lexicón activo + la campaña de `-gua` (2026-09-21) + los nombres de fauna de tierra y la onomatopeya `dori` (FA1, 2026-09-22)"
 prioridad: alta
 minado: 2026-09-21
 tareas: [F1]
@@ -321,6 +321,21 @@ Ningún `-gua` sufijal glosado en ninguna de sus secciones.
 > Medición entera: `6-fusion/propuesta_gua_procedencia_2026-09-21.yaml`
 > (la escribe `6-fusion/scripts/medir_gua_procedencia.py`). Opciones para
 > Miguel: `6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md`.
+
+## Bitácora — la fauna de tierra (campaña FA1, 2026-09-22)
+
+Pregunta: ¿qué nombres papiamentos da van Buurt para la fauna de tierra, y
+alguno imita el sonido del animal? Releídas las entradas de §6 y §11 de
+animales de tierra: `dori, dori maco` (p. 30, nivel A) — el sapito lipón,
+*Pleurodema brachyops*, y **la única onomatopeya documentada de la parcela**:
+«dori is an onomatopea. Thus dori maco is the frog that calls "do-ri"», con la
+rima arubana anotada hacia 1883; `kododo` (p. 33) y `shilib` (p. 35), los
+corredores *Cnemidophorus*; `waltaca` (p. 37) y `totèki`, `kaku` (p. 46), los
+*Anolis*, y `totèki` emparentado con `tuqueque`; `yuana` (p. 39) y `washiri`
+«huevo de iguana» (p. 38); `ashibi` (p. 29), el insecto que pica; `wimpiri`
+(p. 38); `dalakochi` «grillo» y `djaka` «rata» (p. 45, nivel C). Números de
+página = el que abre cada página en el `.txt`. Lo usa
+`6-fusion/fauna_paraguana_tierra_2026-09-22.yaml`.
 
 ## Enlaces
 
