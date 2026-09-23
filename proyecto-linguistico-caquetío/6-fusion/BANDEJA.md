@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-23**.
 
-**7078 ítems propuestos** en 129 propuestas, más **49 issue(s)/comentario(s) redactados sin publicar**.
+**7163 ítems propuestos** en 131 propuestas, más **51 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -46,13 +46,11 @@ editar_a_mano: no
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
 | `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
-| `decisiones_base_2026-09-22.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
-  in "<unicode string>", line 106, column 139:
-     ... cion_tanda_base_2026-09-23.yaml): [Voces de fuera] gana datihao
-                                         ^ |
+| `decisiones_base_2026-09-22.yaml` | ? | 0 |  |
 | `decisiones_campanas_2026-09-21.yaml` | ? | 0 |  |
 | `decisiones_cierre_2026-09-23.yaml` | ? | 0 |  |
 | `decisiones_colisiones_d5_2026-08-31.yaml` | ? | 3 |  |
+| `decisiones_pendientes_2026-09-23.yaml` | ? | 32 |  |
 | `decisiones_tanda_2026-08-30.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-01.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-08.yaml` | ? | 0 |  |
@@ -71,6 +69,7 @@ editar_a_mano: no
 | `esteves_parte2_falcon.yaml` | esteves-1989 | 16 |  |
 | `estructura_social_era2.yaml` | varias | 17 |  |
 | `fauna_paraguana_aves_2026-09-22.yaml` | ? | 51 |  |
+| `fauna_paraguana_mar_2026-09-22.yaml` | ? | 53 |  |
 | `fauna_paraguana_tierra_2026-09-22.yaml` | ? | 56 |  |
 | `federmann_1530_costa_2026-09-22.yaml` | federmann-1916 | 11 |  |
 | `frase_saludo_mitare.yaml` | ? | 2 |  |
@@ -156,6 +155,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `achagua_fabo_1911.yaml` — generado por `6-fusion/scripts/minar_fabo_1911_achagua.py`
 - `achagua_neira_ribero_1762.yaml` — generado por `lectura en imagen por el escriba (agente Opus 5). Primera pasada 2026-09-12 (40 pliegos); segunda pasada 2026-09-12, que cierra el vocabulario entero (los 31 pliegos que faltaban), mina la lista de verbos del arte y vuelve sobre las 14 dudas`
 - `control_jirajarano_jahn_1927.yaml` — generado por `6-fusion/scripts/_extraer_control_jirajarano.py`
+- `fauna_mar_caja_obis_gbif_2026-09-22.yaml` — generado por `6-fusion/scripts/caja_marina_obis_gbif.py`
 - `lokono_perea_1942.yaml` — generado por `curiana_sim/minar_perea.py`
 - `lokono_verbos_perea_1942.yaml` — generado por `6-fusion/scripts/minar_perea_verbos.py`
 - `medicion_ejemplo_identidad_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_ejemplo_identidad.py`
@@ -199,6 +199,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
+| `decisiones-pendientes-2026-09-23.md` | Las decisiones pendientes, juntas — para contestarlas de una sentada |
 | `encargo-mineria-federmann.md` | Encargo de minería — Federmann (1530-1531): Paraguaná y Coro |
 | `encargo-mineria-gumilla.md` | Encargo de minería — Gumilla 1791: comparanda achagua (prioridad baja) |
 | `encargo-mineria-perez-de-tolosa.md` | Encargo de minería — Pérez de Tolosa 1546: la costa caquetía veinte años después |
@@ -207,6 +208,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `encargo-mineria-zayas.md` | Encargo de minería — Zayas y Alfonso 1931: las voces taínas que Goeje apoya en Zayas |
 | `existir-en-el-mundo-escena-por-lugar-2026-09-17.md` | Existir en el mundo: la escena por lugar |
 | `fauna-paraguana-aves-2026-09-22.md` | FA2 — Las aves de Paraguaná: qué se ve, qué se oye y cuáles no tienen nombre |
+| `fauna-paraguana-mar-2026-09-22.md` | El mar de Paraguaná en el s. XV: lo que se comía está en los conchales, lo que sonaba está |
 | `fauna-paraguana-tierra-2026-09-22.md` | FA1 — La fauna de tierra de Paraguaná en el s. XV, y la tarántula azul primero |
 | `federmann-costa-2026-09-23.md` | Federmann en la costa (1530-1531): seis cosas que decide Miguel |
 | `frontera-entre-nodos-2026-09-17.md` | La frontera entre nodos: el motor no tiene ninguna |
