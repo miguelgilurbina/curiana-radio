@@ -110,6 +110,23 @@ def ensamblar(datos: dict, med: dict) -> list[str]:
         c["largo"] = {"desc_referente": len(c.get("desc_referente") or ""),
                       "se_oye": len(c.get("se_oye") or "")}
 
+    # Regla 8: toda `obra` es una clave de 4-fuentes/bibliografia.yaml.
+    bib = yaml.safe_load((RAIZ / "4-fuentes" / "bibliografia.yaml").read_text(encoding="utf-8"))
+    obras = bib["obras"] if isinstance(bib, dict) and "obras" in bib else bib
+    ids = {o["id"] for o in obras}
+
+    def _obras(x):
+        if isinstance(x, dict):
+            for k, v in x.items():
+                if k == "obra" and v is not None:
+                    yield v
+                yield from _obras(v)
+        elif isinstance(x, list):
+            for v in x:
+                yield from _obras(v)
+    for o in sorted(set(_obras(datos)) - ids):
+        errores.append(f"obra sin clave en bibliografia.yaml: {o}")
+
     esp = datos["especies"]
     sil = [e["sonido"]["silabeo_propuesto"]["fonotactica"] for e in esp
            if e.get("sonido") and (e["sonido"].get("silabeo_propuesto") or {}).get("fonotactica")]

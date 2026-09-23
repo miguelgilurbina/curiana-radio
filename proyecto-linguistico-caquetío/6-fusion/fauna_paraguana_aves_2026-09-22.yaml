@@ -12,12 +12,13 @@ meta:
     visualmente, y si es posible encontrar la onomatopeya que hacen» (Miguel, 2026-09-22).
   para_que: Los referentes del experimento (REFERENTES_NOVEDOSOS) empiezan por los animales sin nombre
     caquetío conocido. Cada ave llega al agente con algo que VER (descripcion_visual) y algo que OÍR (sonido).
-  respuesta_corta: 'El cardonal, el cerro, la salina y la costa de la península tienen hoy unas doscientas
-    treinta especies de aves con registro (GBIF, `meta.medido`). De las que un hablante del s. XV veía
-    u oía a diario, las del monte y las de la orilla, una parte grande YA tiene voz caquetía atestiguada
-    —y casi siempre es un nombre que imita el canto: dara, wakoa, chuchubi, warawara, chogogo, tijua—.
-    Los huecos de verdad son pocos y concretos: el cardenal, el turpial, la guacharaca, el pitirre, el
-    carpintero, el colibrí, el alcatraz, la gaviota, el corocoro y el chirito. Esos son los candidatos.'
+  respuesta_corta: 'El cardonal, el cerro, la salina y la costa de la península tienen hoy más de doscientas
+    especies de aves con registro (la cifra exacta, en `meta.medido.gbif_especies_en_la_caja`). De las
+    que un hablante del s. XV veía u oía a diario, las del monte y las de la orilla, una parte grande
+    YA tiene voz caquetía atestiguada —y casi siempre es un nombre que imita el canto: dara, wakoa, chuchubi,
+    warawara, chogogo, tijua—. Los huecos de verdad son pocos y concretos: el cardenal, el turpial, la
+    guacharaca, el pitirre, el carpintero, el colibrí, el alcatraz, la gaviota, el corocoro y el chirito.
+    Esos son los candidatos.'
   como_se_midio:
   - GBIF por la caja de la península (6-fusion/scripts/medir_gbif_aves_paraguana.py → 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml),
     con las AUSENCIAS de PANGAEA restadas.
