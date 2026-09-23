@@ -8,12 +8,12 @@ publicacion: "Manuscrito. Terminado el 14 de septiembre de 1762; la copia de la 
 local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf (102 pliegos a 2787×1949 px, sin capa de texto) + fuentes_caquetios/neira_ribero_1762/001-102.jpg — ⚠️ SOLO EN ONEDRIVE, no en git (.gitignore, por D8 #37 — cerrada el 2026-09-12 con la opción intermedia: son 200 MB)"
 paginas: 102
 capa_texto: no
-estado_minado: minada-parcial
-cobertura: "medida, no escrita a mano: `6-fusion/achagua_neira_ribero_1762.yaml` → `meta.cobertura` (pliegos leídos, huecos, letras, entradas del vocabulario y del arte, dudas y cuántas se resolvieron, resultado de la calibración) y `meta.censo_de_terminaciones` (la `-are`/`-re`). Las cifras las emite `6-fusion/scripts/ensamblar_achagua_neira_ribero.py`; si se vuelve a minar, se regeneran con ese script (`--check` mide sin escribir)"
+estado_minado: minado
+cobertura: "LEÍDA ENTERA la copia: vocabulario (pliegos 28-98) y arte (pliegos 7-28 izq.). El vocabulario y el arte de las pp. 33-42, medidos en `6-fusion/achagua_neira_ribero_1762.yaml` → `meta.cobertura` y `meta.censo_de_terminaciones` (los emite `6-fusion/scripts/ensamblar_achagua_neira_ribero.py`). El arte de las pp. 1-32 (declinaciones, conjugaciones, pasiva, géneros, pretéritos, sintaxis, posesión), en `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml` (2026-09-22/23), con cifras en `6-fusion/medicion_arte_achagua_2026-09-22.yaml`. Quedan PREGUNTAS, no páginas: censo de tainismos del lado castellano, censo de préstamos marcados por el autor, y una segunda lectura independiente del arte"
 prioridad: alta
 tareas: [D11-fase-2]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-21
+verificado: 2026-09-23
 descargado: 2026-09-12
 origen_digital: "Real Biblioteca Digital (Patrimonio Nacional), manifiesto IIIF II-2910; también en la Library of Congress (2021667801). Dominio público"
 aliases: ["Neira y Ribero 1762", "Neyra y Ribero", "Arte achagua", "Arte y vocabulario achagua", "Neira 1762"]
@@ -518,6 +518,70 @@ Lo que sigue sin minar y pagaría, por orden de rendimiento:
 ⚠️ `sostiene` no se toca a mano (lo mide `medir_sostiene.py`), y esta consulta
 no llevó nada al lexicón ni al corpus: sigue siendo comparanda achagua y la
 decisión es de D11 (#39) y de Miguel.
+
+## El arte, pp. 1-32 (2026-09-22/23)
+
+**Agente de la tercera campaña de minería (parcela M4), por D11.** Lectura por
+visión de los pliegos 7 der.-23 izq. Datos, página por página y con la
+comparación contra `2-lengua/morfologia.md`:
+`6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml`; cifras:
+`6-fusion/medicion_arte_achagua_2026-09-22.yaml` (script
+`6-fusion/scripts/medir_arte_achagua.py`); opciones para Miguel:
+`6-fusion/issues-pendientes/achagua-arte-morfologia-2026-09-22.md`. Propuesta,
+no canon (regla 5); comparanda de los Llanos (regla 4).
+
+### Cómo se lee el arte
+
+- **Tiene paginación propia** (esquina superior): pliego N izq. = p. 2(N-7),
+  der. = p. 2(N-7)+1; comprobado en 7 der. = p. 1, 12 izq. = p. 10, 23 der. = p. 33.
+  Se cita «p. X (pliego N lado)».
+- **Desde el pliego 10 la página izquierda pasa del lomo**: el recorte por
+  mitades corta el final de las líneas. Se recorta con solape (x 3-56 % y
+  46-99 %).
+- **Clave nueva**: la S larga MAYÚSCULA (ſ) se parece a la J. En las listas de
+  sufijos de las pp. 12 y 16 la 2sg sale «Ji» y es «Si»: lo prueban los ejemplos
+  en minúscula de la misma página (`Nacabauʃi`). Va también a
+  `meta.clave_de_lectura` del YAML nuevo.
+- El autor **declara que imita a Nebrija** (p. 1): la rejilla de casos y tiempos
+  es suya; lo que la rejilla no pedía y anota igual es lo que más vale.
+
+### Qué se le preguntó, y qué contestó
+
+1. **Personas**: dos juegos, dichos por el autor (p. 12): prefijos `Nu- Ji- Ri-
+   Ru- Gua- Y- Na-` para «los demás verbos», sufijos `-na -si -ni -no -bi -y
+   -na` para los compuestos de «ser» y, los mismos, para el objeto (p. 16:
+   `Nacabauna` «me miran»). 1sg `nu-`, 1pl `gua-`.
+2. **Tiempo/aspecto**: paradigma latino (`-nimi-`, `-su`, `-bita`, `-ca`
+   infinitivo, `-cata` gerundio) y un testimonio de uso: «el pres.te de
+   Indicativo es el q.e hace el gasto» (p. 28). `-ca` y `-ni` existen con otro
+   valor que en el proyecto.
+3. **Posesión**: el no-poseído es un sufijo `-si` que cae al poseer; cuatro
+   clases de nombre y una quinta con adjetivo posesivo (p. 32-33).
+4. **`ca-`/`ma-`**: par mínimo `masacorreyisa`/`casacorreyisa` (p. 18-19), y el
+   nombre predicado conjugado (`Cabarruani vyuna` «estoi rico», p. 25;
+   `Cagicunacana` «yo pecador», p. 27). El «hay» impersonal no es `ca-`.
+5. **Nominalización**: `-erri` agente, `-nicay` paciente, `-can(s)i`/`-si`
+   acción y abstracto (pp. 4-6, 11, 13).
+6. **Plural**: lo inanimado y lo irracional no llevan plural (p. 6).
+7. **Numerales**: el arte no tiene capítulo (cero verificado en las 32 páginas).
+
+### De paso
+
+- **«León» está en el arte** (`Nerrianarre`, p. 19): cierra la única `no-esta`
+  de la calibración de Jahn (`mirrianare`). El YAML del vocabulario no se tocó:
+  queda para quien fusione.
+- El locativo distingue líquido (`yaco`) de no líquido (`naco`) (pp. 29-30), y
+  hay una segunda nota dialectal del autor: «el au lo hacen en Casanare ao» (p. 21).
+
+### Qué NO
+
+- Ningún dato caquetío: las sondas sobre la capa atestiguada dan cero para
+  `ka-`/`ma-` con glosa atributiva y para las formas de los nominalizadores
+  achagua (medición citada arriba).
+- No hay segunda lectura independiente del arte: un lector, con zoom sobre cada
+  línea citada. Las dudas de lectura, en `dudas` del YAML.
+- No se tocó `lexicon_achagua.py`, su YAML, `curiana_lexicon.py`, `2-lengua/` ni
+  el corpus.
 
 ## Enlaces
 
