@@ -161,9 +161,14 @@ def test_la_via_arahuaca_sigue_abierta():
         assert _reconoce(tok), f"`{tok}` debería seguir contando"
 
 
-def test_juri_a_secas_sigue_siendo_caquetio_atestiguado():
+def test_juri_a_secas_sigue_siendo_caquetio():
     e = VOCABULARIO_BASE["juri"]
-    assert e["fuente"] == "caquetío-atestiguado"
+    # Era `caquetío-atestiguado` hasta el 2026-09-23: la (E) de Zavala #178 es
+    # Esteves 1989, que saca 'viento' de partir tres topónimos (cc.4 / tf.0,
+    # opción B → hipotética). Lo que este test vigila no se mueve: `juri` a
+    # secas sigue siendo CAQUETÍO (la capa no es la lengua) y sigue contando.
+    assert e["fuente"] == "caquetío-hipotético"
+    assert lx.capa_epistemica(e["fuente"]) is not None
     assert _reconoce("juri")
     assert lx._familia_de_token("juri-ni") == "caquetío", (
         "la raíz SÍ es caquetía: lo que está mal es el molde, no la lengua")

@@ -37,7 +37,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "maure":      {"sig": "fibra de algodón, hilo para tejer",              "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, nota al pie (3): «Maure: fibra de algodón con la que tejían las hamacas»; Alvarado 1921, p.216 s.v. MÁURE (Carvajal 168 y Castellanos la registran como faja o tejido; en Coro vivía en 1921 como pieza de dril)", "notas": "REPARTO 2026-09-10: a ATESTIGUADO. Cuatro apoyos y uno de ellos local: Zavala nota al pie (3), Alvarado 1921 p.216, Carvajal 168 y Castellanos; y Alvarado la registra VIVA EN CORO en 1921. No es voz suelta del área: está anclada en el sitio."},
     "urari":      {"sig": "veneno/medicina vegetal (curare)",               "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015 (AM); artículo de comercio", "categoria": "comercio"},
     "korie": {"sig": "armadillo",              "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "RESUELTO 2026-08-24 (#46). Glosa anterior: 'choza, habitacion, espacio propio', que su propia nota admitia sin fuente localizada (ausente de Alvarado 1921 y de van Buurt 2014). Tres fuentes dicen armadillo: Zavala Reyes 2015 #90 (HB); el CANON del proyecto (genealogia.yaml da 'corie (armadillo)' como totem del linaje Paugis, y la ficha de Buio-sha lo usa como elogio); y Oliver 1989, Apendice A, Tabla A-9 «Selected Caquetio Vocabulary from the XVIth Century», pp. impresas 593-594, leida sobre la imagen por Miguel el 2026-08-24: 'corie | korie | armadillo | armadillo'. La agente Korie-ko conserva su nombre: lo que cambia es que significa — REPARTO 2026-09-10: a ATESTIGUADO. Su nota ya declaraba el marcador 3-0 al resolver #46: Zavala #90 (HB), el canon del propio proyecto (genealogia.yaml, tótem del linaje Paugis) y Oliver 1989 Apéndice A.", "forma_fuente": "corie"},
-    "saruro":     {"sig": "boa, serpiente no venenosa",                 "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "RESUELTO 2026-08-24 (#47). Glosa anterior: 'arbol saruro', cuyo unico rastro era una lista de Notion citada en DISENO_KOINE §8 — y alli se usa para confirmar la terminacion -aro/-uro, NO para sostener la glosa. A favor: Zavala Reyes 2015 #224 (E) 'Serpiente no venenosa. Boa constrictora'. AVISO: MARCADOR 1-0, no 3-0 — comprobado que `saruro` NO aparece en la Tabla A-9 de Oliver, asi que no hay tercera fuente; se decide con menos respaldo que #45 y #46 y conviene saberlo. Apoyo lateral: la A-9 da tres palabras en -ure sobre seres vivos (bisure lagartija, chaure buho, maure tejido), asi que la terminacion es compatible con un animal. La agente Saruro-sha conserva su nombre", "notas": "REPARTO 2026-09-10: a ATESTIGUADO, pero CON LA RESERVA QUE SU NOTA YA TRAÍA: marcador 1-0, no 3-0 — `saruro` NO está en la Tabla A-9 de Oliver, así que el único apoyo es Zavala #224 (E). Una sola fuente citada es el listón normal de la capa atestiguada (la mayoría del lexicón es Zavala-solo), y lo que la distingue de chiriware y tukeke es que NO se ha medido como voz panvenezolana. Si apareciera que lo es, baja a retroabstraído."},
+    "saruro":     {"sig": "boa, serpiente no venenosa",                 "cat": "sust",  "fuente": "caquetío-retroabstraido", "notas": "RESUELTO 2026-08-24 (#47). Glosa anterior: 'arbol saruro', cuyo unico rastro era una lista de Notion citada en DISENO_KOINE §8 — y alli se usa para confirmar la terminacion -aro/-uro, NO para sostener la glosa. A favor: Zavala Reyes 2015 #224 (E) 'Serpiente no venenosa. Boa constrictora'. AVISO: MARCADOR 1-0, no 3-0 — comprobado que `saruro` NO aparece en la Tabla A-9 de Oliver, asi que no hay tercera fuente; se decide con menos respaldo que #45 y #46 y conviene saberlo. Apoyo lateral: la A-9 da tres palabras en -ure sobre seres vivos (bisure lagartija, chaure buho, maure tejido), asi que la terminacion es compatible con un animal. La agente Saruro-sha conserva su nombre", "notas": "REPARTO 2026-09-10: a ATESTIGUADO, pero CON LA RESERVA QUE SU NOTA YA TRAÍA: marcador 1-0, no 3-0 — `saruro` NO está en la Tabla A-9 de Oliver, así que el único apoyo es Zavala #224 (E). Una sola fuente citada es el listón normal de la capa atestiguada (la mayoría del lexicón es Zavala-solo), y lo que la distingue de chiriware y tukeke es que NO se ha medido como voz panvenezolana. Si apareciera que lo es, baja a retroabstraído. · CAPA CAMBIADA 2026-09-23 (cc.4 / tf.0, opción B: la sigla (E) de Zavala es Esteves 1989): era `caquetío-atestiguado`, pasa a `caquetío-retroabstraido`. Su único apoyo, Zavala #224 (E), es Esteves, y Esteves nombra una voz VIVA de la península —Sarinao (p. 60, OCR): el «Cerro del Saruro», lindero de tierras comuneras, y saruro la boa; El Saruro (p. 131)—: la palabra existe, lo que es suyo es que sea caquetía. La otra atestación es Alvarado 1921 p. 273, SARÚRA «Boa constrictor», sin localizar: documenta la VOZ, no que sea caquetía (regla 4). Llega a la capa que esta nota ya anunciaba, por otro camino: no porque se midiera panvenezolana, sino porque su única fuente es Esteves. Medido en 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml"},
     "tukeke": {"sig": "lagartija pequeña, gecko",                       "cat": "sust",  "fuente": "caquetío-retroabstraido", "notas": "Zavala Reyes 2015, glosario #257 (E+A+PMA): «Lagarto casero»; Alvarado 1921, p.300 s.v. TUQUEQUE (geco: Thecadactylus rapicaudus / Gonatodes albogularis); van Buurt 2014 §6 s.v. waltaca deriva el papiamento totèki de «tuqueque, tuteque, an Amerindian word used for geckos in Venezuela» [atribución débil: voz venezolana corriente, ninguna fuente la localiza en Coro] — REPARTO 2026-09-10: a RETROABSTRAÍDO por la misma razón que su nota ya declaraba — «voz venezolana corriente, ninguna fuente la localiza en Coro». Tres fuentes dan la palabra (Zavala #257 E+A+PMA, Alvarado p.300 con dos especies de geco, van Buurt vía el papiamento totèki): lo que falta no es documentación, es la atribución al caquetío. ⭐ Y es una de las tres que Jahn nombra al describir la costumbre de poner a la gente nombres del reino animal («picure, venado, tuqueque»).", "forma_fuente": "tuqueque"},
     "coro":       {"sig": "espina",                                          "cat": "sust",  "fuente": "caquetío-hipotético", "lectura_en_disputa": "dos lecturas compiten y ninguna cierra: 'espina' (González Batista, «El nombre de Coro») y 'avispa o lagartija' (Arcaya 1920 p. 170). Se enseña la que TIENE FUENTE TRABAJADA en el repo, con la disputa declarada", "notas": "F8 (2026-09-12): etiqueta vieja `caquetío-hipotético/topónimo` · D10 (2026-08-03), grupo 3 — BAJA DE TIER, no cambia de lengua. La glosa «cardón grande, cactus columnar» que esta entrada llevaba hasta el 2026-09-21 NO salía de ninguna fuente localizada, y su propia nota lo declaraba: Zavala Reyes 2015 sección D dice que su #181 es Koro = «Cotorra» (entrada aparte en el lexicón, con su cita), no cardón; en Alvarado 1921 la palabra coro aparece 55 veces y siempre como TOPÓNIMO; van Buurt 2014 solo la menciona como la ciudad · d21.15 (2026-09-21, decisión de Miguel): la curación NO es quitar la glosa sino CAMBIAR LA INVENTADA POR LA QUE SÍ TIENE FUENTE. González Batista, «El nombre de Coro» (4-fuentes/gonzalez-batista-nombre-de-coro.md, trabajada en 6-fusion/toponimia_coro_espina.yaml y ya registrada como lectura en 2-lengua/toponimos.yaml §Coriana, con el veredicto de Miguel del 2026-08-25: «PLAUSIBLE, la línea más prometedora del autor, abierta») da `coro` 'espina' → Coriana 'tierra de las espinas, o la tierra del espinar, de vegetación espinosa, e INDIRECTAMENTE tierra de cardones', con `paragua` + `na` como paralelo. O sea que «cardón» no era la glosa: era la CONSECUENCIA INDIRECTA que la propia fuente declara, y se enseñaba como si fuera el dato. Reparos anotados y no escondidos: la lectura depende de `na` = 'tierra', que ninguna fuente impresa da (Zavala #184: 'como, semejante'), y el ejemplo `corocoro` del autor se refutó con Alvarado 1921 (onomatopeya del canto del ave); la tesis aguanta por `tococoro`/`totocoro` vivos en la arquitectura coriana, por el 'fruto del cardón' de Zavala y por el cardonal de Coro en los linderos. La entrada NO se borra y el canon NO se toca: coro da nombre a la ciudad de Coro y aparece en todo el sitio público. `kadushi` se queda como la atestiguación insular del cactus (van Buurt 2014, islas A/B/C, var. *cadushi* en Aruba; Gatschet 1885 sobre material de Pinart, Aruba 1882, «kaduski»), con el matiz de que van Buurt advierte que su lista es de «words LIKELY to be of Caquetío origin» y «has a subjective element» · DESCARTADA 2026-09-23 (cc.6, decisión de Miguel: «hay que sacar que esa definición significa viento»): la lectura 'viento'. Hasta esa fecha figuraba como tercera lectura en disputa, «'viento' (Castellanos 1589)». La atribución es correcta, pero Castellanos no la da como voz indígena. Elegías, Parte II, Introducción (BAE 1857 p. 185): «Púsose por la gente forastera / Al pueblo semejante nombramiento / Por el río […] / Que siempre se llamó desta manera: / El cual le viene bien, pues Coro viento / Quiere decir en lengua generosa». El nombre es el del río y es anterior a los españoles. La etimología «le viene bien» y es de la «lengua generosa»: el latín cōrus/caurus, que el castellano culto tenía como «coro», viento del noroeste (DICTER s.v. coro 2, primera datación 1582; Urrea 1582: «cauro, al qual muchos llaman coro»). Arcaya 1920 p. 170 ya lo había escrito: «esto es un error, porque Castellanos sólo quiso aludir a la coincidencia de que ese vocablo de los indios fuese idéntico al español \"Coro\"», y el viento reinante en Coro es el noreste, no el noroeste. No es de Oviedo: ni Oviedo y Valdés (t. I-IV) ni Oviedo y Baños dan etimología de Coro. La voz caquetía del viento es `juri`. Detalle en 6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §coro"},
     "caraota":    {"sig": "frijol negro, legumbre",                         "cat": "sust",  "fuente": "español-colonial", "notas": "D10 (2026-08-03), grupo 1 — REASIGNADA A ESPAÑOL. Alvarado 1921 p.58 s.v. CARAOTA la describe como el nombre corriente panvenezolano de las judías (Phaseolus, Canavalia, Pachyrrhizus), sin declararle origen indígena. Y Zavala Reyes 2015 sección D la cierra: su glosario #162 glosa el caquetío «icoroata» como 'caraota' — caraota es la GLOSA española, icoroata la voz caquetía"},
@@ -114,7 +114,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # una de las deudas declaradas de la tanda.
     "dali":     {"sig": "tierra, suelo, polvo",                           "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en garifuna/proto-arawakan", "fuente": "caquetío-reconstruido"},
     "suka":       {"sig": "noche, oscuridad",                               "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/proto-arawakan", "fuente": "caquetío-reconstruido"},
-    "bara":       {"sig": "palo, árbol",                         "cat": "sust",  "notas": "Decisión #101 (tanda 2026-08-30) — GLOSA CORREGIDA a la de las fuentes: Zavala Reyes 2015 #29 (E): «Palo, árbol», con Esteves 1989 y van Buurt 2014 diciendo lo mismo, y la prueba interna de barabara (Zavala Reyes 2015 #30: «Árbol de madera dura y pesada. Olivo») — la reduplicada de la misma raíz ya estaba atestiguada como árbol. Lectura descartada por D7: río, corriente fluvial (venía de cognado proto-arawakan/topónimo, sin cita) — queda registrada aquí, no se pierde · d21.16 (2026-09-21), punto 4 — CONVIVENCIA DECLARADA con `kuru` 'árbol, madera, tronco' (reconstruida). No es un bug de curación ni un par de la política «manda la atestiguada»: es variación real y las dos se quedan. `bara` es el PALO CORTADO —y `barabara`, su reduplicada atestiguada, la madera dura (Zavala #30)—; `kuru`, el árbol vivo", "fuente": "caquetío-atestiguado", "forma_fuente": "Bara"},
+    "bara":       {"sig": "palo, árbol",                         "cat": "sust",  "notas": "Decisión #101 (tanda 2026-08-30) — GLOSA CORREGIDA a la de las fuentes: Zavala Reyes 2015 #29 (E): «Palo, árbol», con Esteves 1989 y van Buurt 2014 diciendo lo mismo, y la prueba interna de barabara (Zavala Reyes 2015 #30: «Árbol de madera dura y pesada. Olivo») — la reduplicada de la misma raíz ya estaba atestiguada como árbol. Lectura descartada por D7: río, corriente fluvial (venía de cognado proto-arawakan/topónimo, sin cita) — queda registrada aquí, no se pierde · d21.16 (2026-09-21), punto 4 — CONVIVENCIA DECLARADA con `kuru` 'árbol, madera, tronco' (reconstruida). No es un bug de curación ni un par de la política «manda la atestiguada»: es variación real y las dos se quedan. `bara` es el PALO CORTADO —y `barabara`, su reduplicada atestiguada, la madera dura (Zavala #30)—; `kuru`, el árbol vivo · CAPA CAMBIADA 2026-09-23 (cc.4 / tf.0, opción B: la sigla (E) de Zavala es Esteves 1989): era `caquetío-atestiguado`, pasa a `caquetío-reconstruido`. Zavala #29 (E) es Esteves, y Esteves lo afirma sin decir de dónde —Barabara (p. 19, OCR): «Sabemos que Bara, en lengua caquetía, es voz general para… árbol»; lo repite en Baraived (p. 22) y Bariquí (p. 88)—. «Con Esteves 1989 y van Buurt 2014 diciendo lo mismo» cuenta dos veces a Esteves: van Buurt §5 («bara means tree in Caquetío») va en el párrafo que cita a Esteves. Lo que la sube de hipotética a reconstruida es que corrobora una forma de otra fuente: BARABARA, «Árbol de Coro», Alvarado 1921 p. 21, reduplicada y sin partir (la partición es de Esteves); el lokono balli 'árbol' la acerca. La convivencia con `kuru` (d21.16) no cambia: su motivo era la sinonimia, no la capa. Medido en 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml", "fuente": "caquetío-reconstruido", "forma_fuente": "Bara"},
     "sima":       {"sig": "cerro, elevación del terreno",                   "cat": "sust",  "notas": "núcleo fundacional, forma justificada por cognado en lokono/topónimo (Barquisimeto) · d21.16 (2026-09-21), punto 5 — CONVIVENCIA DECLARADA con `turumako` 'cerro de cima plana, meseta' (atestiguada, Zavala #262 AM). Las dos se quedan y las dos se dicen: por el criterio de la política d19.b NO son par —«cerro, montaña, elevación» contra «cerro, meseta» es solapamiento parcial, no glosa idéntica— y Miguel: «me parece bien que convivan sima y turumako […] al final no pasa nada si hay símiles, en todo lenguaje hay símiles». Se afinan las dos glosas para que dejen de emparejar: aquí la elevación a secas, allí la cima plana. Y el argumento morfológico que cierra la tercera banda de aquel issue: `-bana` es un SUFIJO locativo, no un sustantivo; compone (`kali-bana`, `biro-bana`) pero no nombra, así que «cerro ya se dice con -bana» no se sostiene. El par 6 («sima») deja de estar abierto por esta vía: no se archiva ninguna", "fuente": "caquetío-reconstruido"},
 
     # ── Personas y parentesco ──────────────────────────────────────────
@@ -171,7 +171,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "shukua":     {"sig": "remo, pala para impulsar la canoa",              "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/garifuna`"},
 
     # ── Intercambio y comercio (raíces y cognados arahuacos) ─────────
-    "siwa":       {"sig": "blando",                                        "cat": "v_raiz","fuente": "caquetío-atestiguado", "forma_fuente": "sigua", "notas": "Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS: siwa-1 blando, caquetío-ATESTIGUADO (Zavala Reyes 2015 #227 «Sigua» (E); su homógrafo con el español era de la grafía y se disolvió con ella) y siwa-2 sal de comercio (< proto-arawakan *siwa, la entrada anterior de esta clave, capa lokono). La atestación directa gana la etiqueta — precedente de para (2026-07-20)"},
+    "siwa":       {"sig": "blando",                                        "cat": "v_raiz","fuente": "caquetío-hipotético", "forma_fuente": "sigua", "notas": "Decisión colisiones D5 (2026-08-31) — HOMÓNIMOS DECLARADOS: siwa-1 blando, caquetío-ATESTIGUADO (Zavala Reyes 2015 #227 «Sigua» (E); su homógrafo con el español era de la grafía y se disolvió con ella) y siwa-2 sal de comercio (< proto-arawakan *siwa, la entrada anterior de esta clave, capa lokono). La atestación directa gana la etiqueta — precedente de para (2026-07-20) · CAPA CAMBIADA 2026-09-23 (cc.4 / tf.0, opción B: la sigla (E) de Zavala es Esteves 1989): era `caquetío-atestiguado`, pasa a `caquetío-hipotético`. Zavala #227 (E) es Esteves, y Esteves la saca de partir un topónimo, sin otra obra que la corrobore: Barisigua (p. 23, OCR), «Bari-sigua: palo blando; bara: árbol. Sigua: blando»; lo repite sin partir en la Parte II (p. 88). El homónimo siwa-2 no se toca. Medido en 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml"},
     "tüma":       {"sig": "perla, cuenta brillante del mar",                "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `lokono/proto-arawakan`"},
     "karükera":   {"sig": "oro, metal amarillo (caona-cogn)",               "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `taíno/lokono`"},
     "paratü":     {"sig": "trueque, intercambio de bienes (raíz paa-)",     "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "F8 (2026-09-12): acuñación para la simulación sin cita, etiquetada `proto-arawakan`"},
@@ -246,8 +246,8 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "dare":       {"sig": "diente; hijo (extensión metafórica)",            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #103 (HB): «Diente»; Oliver 1989 la confirma en Paraguaná — 🔴 DEUDA DECLARADA 2026-09-10 (regla 8): la glosa dice 'diente; HIJO (extensión metafórica)' pero las dos fuentes citadas dan solo DIENTE. El 'hijo' entró sin procedencia y no se ha localizado quién lo sostiene. Importa porque de él dependería leer `catire` como 'hijo de la luna' y `capadare` como algo distinto de 'diente de'. Mientras no aparezca la fuente, para componer vale 'diente'.", "deuda": "sin-procedencia (la acepción 'hijo')"},
     "sawaka":     {"sig": "inframundo, reino de los muertos",               "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "van Buurt 2014 §6 «words likely to be of Caquetío origin» (el autor advierte que la lista «has a subjective element»), isla C: «the underworld, the realm of the dead, the beyond»; en papiamento antiguo la expresión baha na sawaka = descender al inframundo, morir; paralelos en taíno y lokono"},
     "paro":       {"sig": "río, cauce simple",                              "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #195 (AM): «Río»"},
-    "kari": {"sig": "orilla del mar, costa",                         "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #66 (E): «Orilla del mar»; Cruz Esteves 1989 vía van Buurt 2014 §9 (topónimo Cariatávo), cari/kari = costa, orilla", "forma_fuente": "cari"},
-    "rao":        {"sig": "arena, arenal costero",                         "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #219 (E): «Arena»"},
+    "kari": {"sig": "orilla del mar, costa",                         "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "Zavala Reyes 2015, glosario #66 (E): «Orilla del mar»; Cruz Esteves 1989 vía van Buurt 2014 §9 (topónimo Cariatávo), cari/kari = costa, orilla · CAPA CAMBIADA 2026-09-23 (cc.4 / tf.0, opción B: la sigla (E) de Zavala es Esteves 1989): era `caquetío-atestiguado`, pasa a `caquetío-hipotético`. Las dos citas de arriba son UNA: la (E) de Zavala es Esteves, y van Buurt §9 escribe «cari means coast, shore (Cruz Esteves, 1989)». Esteves la da sólo en la p. 28 (verificado en imagen), partiendo dos topónimos: Cariguariana («Cari: orilla de mar») y Carirubana («Cari: orilla. Bana: sitio alto»). Consecuencia declarada: `-bana` 'cerro' y `kari` 'orilla' salen de la MISMA línea de Esteves, y la instrucción de `-bana` («para la orilla del mar usa kari») y el ejemplo de IDENTIDAD_LINGUISTICA enseñan desde hoy una voz hipotética (issue sigla-E-zavala-canon-2026-09-23.md §3-§4; los ejemplos son de la 3-a). Medido en 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml", "forma_fuente": "cari"},
+    "rao":        {"sig": "arena, arenal costero",                         "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "Zavala Reyes 2015, glosario #219 (E): «Arena» · CAPA CAMBIADA 2026-09-23 (cc.4 / tf.0, opción B: la sigla (E) de Zavala es Esteves 1989): era `caquetío-atestiguado`, pasa a `caquetío-hipotético`. Zavala #219 (E) es Esteves, que la saca de partir topónimos y se contradice (verificado en imagen): p. 64, Tubarao, «Rao: arena (r sencilla)»; p. 92, Cabarao, la desinencia rao «significa: aglomeración». Ninguna otra obra la da. Medido en 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml"},
     "barici":     {"sig": "agua turbia, tierras coloradas rojizas",         "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #34 (HB): «Agua turbia». Referencia cruzada D5b (tanda 2026-08-30): NO fusionar con bariki (#35 «Barique», arcilla roja) — son entradas distintas de la fuente que solo colisionan al normalizar c/k. Posible raíz común bar- (agua turbia ~ tierra colorada): pregunta etimológica abierta, no duplicado"},
     "pariri":     {"sig": "pantano, ciénaga",                              "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #194 (AM): «Pantano, ciénaga»"},
     "tarika": {"sig": "laguna, espejo de agua interior",               "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #242 (AM): «Laguna»", "forma_fuente": "tarica"},
@@ -298,7 +298,7 @@ VOCABULARIO_BASE: dict[str, dict] = {
     # y en todas las fuentes el poporo es el calabacito de la cal. Está en
     # FUERA_DEL_HABLA como `español-colonial`, con su procedencia entera.
     "ture":       {"sig": "asiento pequeño de madera",                    "cat": "sust",  "fuente": "caribe-cháima", "glosa_fuente": "Asiento pequeño de forma particular. Us. en Cumaná y Margarita. Es lo mismo que el butaque de Occidente. Voz cháima, que Tauste traduce: asiento pequeño de madera [Alvarado 1921 p.301 s.v. TURE]", "notas": "D10 (2026-08-03), grupo 1 — REASIGNADA A CARIBE CONTINENTAL Y GLOSA CORREGIDA. Alvarado 1921 p.301 la da como voz cháima (Tauste), usada en Cumaná y Margarita, y con la glosa de asiento, no de vasija. Doble error: lengua y referente. Lectura que se descarta: Zavala Reyes 2015 glosario #259 (AM) «Vasija, utensilio», fuerza F — queda registrada aquí por D7, no se pierde"},
-    "wanepe": {"sig": "cesto para cargar niños",                       "cat": "sust",  "fuente": "caquetío-atestiguado", "glosa_fuente": "Así llaman en Barcelona y Guayana una especie de cabestrillo o charpa en que las madres indígenas llevan sus niños de pecho cuando viajan [Alvarado 1921 p.152 s.v. GUANEPE]", "notas": "D10 (2026-08-03), grupo 2 — LA GLOSA SE CONSERVA: Alvarado 1921 p.152 la CONFIRMA palabra por palabra, y Zavala Reyes 2015 glosario #137 (E) la respalda («Cesto para cargar a los niños», fuerza F). Lo que Alvarado desmiente no es el significado sino la GEOGRAFÍA: la localiza en Barcelona y Guayana, oriente caribe, no en Coro. La reserva es geográfica, no semántica, y por eso la entrada no cambia de etiqueta: queda anotada", "forma_fuente": "guanepe"},
+    "wanepe": {"sig": "cesto para cargar niños",                       "cat": "sust",  "fuente": "caquetío-retroabstraido", "glosa_fuente": "Así llaman en Barcelona y Guayana una especie de cabestrillo o charpa en que las madres indígenas llevan sus niños de pecho cuando viajan [Alvarado 1921 p.152 s.v. GUANEPE]", "notas": "D10 (2026-08-03), grupo 2 — LA GLOSA SE CONSERVA: Alvarado 1921 p.152 la CONFIRMA palabra por palabra, y Zavala Reyes 2015 glosario #137 (E) la respalda («Cesto para cargar a los niños», fuerza F). Lo que Alvarado desmiente no es el significado sino la GEOGRAFÍA: la localiza en Barcelona y Guayana, oriente caribe, no en Coro. La reserva es geográfica, no semántica, y por eso la entrada no cambia de etiqueta: queda anotada · CAPA CAMBIADA 2026-09-23 (cc.4 / tf.0, opción B: la sigla (E) de Zavala es Esteves 1989): era `caquetío-atestiguado`, pasa a `caquetío-retroabstraido`. El único apoyo caquetío, Zavala #137 (E), es Esteves, y Esteves nombra una voz VIVA de la península: Guachunepe (p. 39, OCR), de guanepe, el cesto para cargar a los recién nacidos. La palabra existe; lo que es suyo es que sea caquetía. Alvarado 1921 p. 152 documenta la VOZ en Barcelona y Guayana, fuera del área (regla 4): la reserva geográfica de arriba era ya la mitad de esto. Medido en 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml", "forma_fuente": "guanepe"},
     "na":         {"sig": "como, semejante a (partícula comparativa)",     "cat": "part",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #184 (HP): «Partícula equivalente a como o semejante»"},
 
     # ── Expansión taíno (préstamos arahuacos del área caribeña) ──────
@@ -7230,23 +7230,21 @@ REGLAS_NUMERO: dict[str, dict] = {
 # Ocho desinencias que el glosario documenta explícitamente como afijos de la
 # lengua ("desinencia que significa...", "sufijo...") y que no estaban en las
 # reglas del proyecto. Valen más que un sustantivo: amplían lo que los agentes
-# pueden CONSTRUIR. Notablemente, aportan un DIMINUTIVO (-iro) y dos marcas de
-# ABUNDANCIA (-aima, dito), categorías que el sistema no tenía.
+# pueden CONSTRUIR. Notablemente, aportan dos marcas de ABUNDANCIA (-aima,
+# dito), categoría que el sistema no tenía.
+#
+# ⚠️ Desde el 2026-09-23 (cc.4 / tf.0, respuesta 4-a del issue
+# 6-fusion/issues-pendientes/sigla-E-zavala-canon-2026-09-23.md) aquí quedan
+# sólo los que tienen fuente además de Esteves. `-iro` y `-uco` (con `-uto`)
+# llevan sólo la sigla (E) de Zavala, que es Esteves 1989, y Esteves no los
+# da como caquetíos: pasan a REGLAS_ESTEVES, abajo, con su rótulo verdadero.
+# `-ima` SE QUEDA: además de la (E) lleva la sigla PMA (Arcaya); la
+# «confirmación independiente» de van Buurt §10 vía Onima es Esteves otra vez
+# («Cruz Esteves, 1989») y no cuenta.
 #
 # Los ejemplos vienen del propio glosario (topónimos donde el afijo es visible),
 # no inventados: es la evidencia de que el afijo era productivo.
 REGLAS_ZAVALA: dict[str, dict] = {
-    "-iro": {
-        "nombre": "diminutivo",
-        "desc": "Versión pequeña de X. La única marca de diminutivo atestiguada.",
-        "uso": "RAÍZ + -iro  →  X pequeño",
-        "ejemplos": ["dara + -iro = dara-iro (alcaraván pequeño)"],
-        "atestiguado": "Zavala Reyes 2015 #166 (E): 'desinencia que se usa en diminutivo'",
-        "instruccion_agente": (
-            "Para decir que algo es pequeño o cría, añade -iro: 'canoa-iro' "
-            "es una canoa pequeña."
-        ),
-    },
     "-aima": {
         "nombre": "abundancia",
         "desc": "Lugar o estado donde X abunda.",
@@ -7266,13 +7264,80 @@ REGLAS_ZAVALA: dict[str, dict] = {
         "uso": "RAÍZ + -ima  →  quebrada o lugar húmedo de X",
         "ejemplos": ["alaurima (río blanco o claro)"],
         "atestiguado": "Zavala Reyes 2015 #165 (E+PMA): 'desinencia que significa humedad, quebrada'",
+        # cc.4 (2026-09-23): se sostiene por la sigla PMA, no por la (E).
+        "nota_sigla_E": "Se sostiene por la sigla PMA (Arcaya; la obra de la que sale "
+                        "no está en el repo: Arcaya 1920 da cero). La (E) es Esteves "
+                        "1989 (Camachima p. 93, Curairima p. 105) y la «confirmación» "
+                        "de van Buurt 2014 §10 vía Onima cita a Esteves: una sola "
+                        "fuente contada dos veces. 6-fusion/medicion_sigla_E_zavala_"
+                        "2026-09-23.yaml §afijos.-ima",
+    },
+    "-ubana": {
+        "nombre": "desinencia (valor no precisado)",
+        "desc": "Desinencia de la lengua; la fuente no precisa su valor semántico.",
+        "uso": "RAÍZ + -ubana",
+        "ejemplos": [],
+        "atestiguado": "Zavala Reyes 2015 #265 (AM): 'desinencia de esta lengua'",
+    },
+    "-uru": {
+        "nombre": "desinencia (valor no precisado)",
+        "desc": "Desinencia de la lengua; la fuente no precisa su valor semántico.",
+        "uso": "RAÍZ + -uru",
+        "ejemplos": [],
+        "atestiguado": "Zavala Reyes 2015 #274 (AM): 'desinencia de esta lengua'",
+    },
+}
+
+
+# ── Lo que Esteves 1989 lee en los topónimos (cc.4 / tf.0, 4-a) ─────
+# Hasta el 2026-09-23 estos dos vivían en REGLAS_ZAVALA y se enseñaban bajo el
+# rótulo «sufijos que las fuentes recogen en boca caquetía». Su única fuente es
+# la sigla (E) de Zavala, que es Esteves 1989, y Esteves no dice eso:
+#   · `-iro`: «diminutivo de voces indígenas» —indígenas, no caquetías—, en dos
+#     topónimos de la Parte II (Bariro p. 88, Coroquidiro p. 104).
+#   · `-uco`/`-uto`: inducción suya, «lo hemos hallado formando voces
+#     compuestas» (Coduto p. 31), desde Matuto, Quibarute, Tacaduto,
+#     Urupaguaduco, Acatuto y Quebrahuto (pp. 51-128).
+# Capa: `caquetío-hipotético` (opción B, medición §afijos).
+#
+# 4-a, y no b ni c: SE SIGUEN ENSEÑANDO con el rótulo verdadero y SIGUEN en
+# `TODAS_LAS_REGLAS`. Sacarlos del desafijador (c) reabre el agujero de
+# *lumina*: `lumina-bana-iro` y `lumina-bana-uco` —la forma que FIJÓ el cometa
+# en el brazo de control de la serie C— dejarían de ser «desconocida» y
+# volverían a contar como caquetías, porque `bana` 'hígado' quedaría en el
+# núcleo como raíz conocida (medido: issue §5, medición
+# §afijos.-iro.si_se_retirara_de_TODAS_LAS_REGLAS). Y el diminutivo es justo un
+# hueco sin atestación: lo reconstruido/hipotético es para los blind spots
+# (d19.c). El desafijador y el score no se mueven; el prompt cambia en el
+# rótulo (`prompt_afijos_atestiguados()` y su versión breve).
+REGLAS_ESTEVES: dict[str, dict] = {
+    "-iro": {
+        "nombre": "diminutivo",
+        "desc": "Versión pequeña de X. No hay diminutivo caquetío atestiguado: éste "
+                "es el que Esteves lee en topónimos.",
+        "uso": "RAÍZ + -iro  →  X pequeño",
+        "ejemplos": ["dara + -iro = dara-iro (alcaraván pequeño)"],
+        "capa": "caquetío-hipotético",
+        "esteves": "Zavala Reyes 2015 #166 (E): 'desinencia que se usa en diminutivo' = "
+                   "Esteves 1989: Bariro (p. 88), «La desinencia \"iro\" es diminutivo "
+                   "de voces indígenas»; Coroquidiro (p. 104). Ninguna otra fuente",
+        "instruccion_agente": (
+            "Para decir que algo es pequeño o cría, añade -iro: 'canoa-iro' "
+            "es una canoa pequeña."
+        ),
     },
     "-uco": {
         "nombre": "cauce",
         "desc": "Quebrada, cauce por donde corre el agua.",
         "uso": "RAÍZ + -uco / -uto  →  cauce de X",
         "ejemplos": ["variante -uto documentada en la misma entrada"],
-        "atestiguado": "Zavala Reyes 2015 #268 (E): 'sufijo. Quebrada, cauce'",
+        "capa": "caquetío-hipotético",
+        "esteves": "Zavala Reyes 2015 #268 (E): 'sufijo. Quebrada, cauce' = Esteves "
+                   "1989, Coduto (p. 31): «El sufijo uto y uco, indistintamente lo "
+                   "hemos hallado formando voces compuestas», inducción suya desde "
+                   "Matuto (p. 51), Quibarute (p. 57), Tacaduto (p. 61), Urupaguaduco "
+                   "(p. 66), Acatuto (p. 83) y Quebrahuto (p. 128). van Buurt 2014: "
+                   "cero. Ninguna otra fuente",
         # d21.14 B («Vale, B..», 2026-09-21): `-uto` se DECLARA como variante
         # de `-uco` dentro de su propia regla. Hasta hoy vivía sólo dentro del
         # campo `uso`, que `prompt_afijos_atestiguados()` renderiza entero: se
@@ -7289,20 +7354,6 @@ REGLAS_ZAVALA: dict[str, dict] = {
                           "misma entrada. `-uto` NO es clave de TODAS_LAS_REGLAS: se "
                           "enseña y el desafijador no lo reconoce. Deuda declarada en "
                           "d21.14 (2026-09-21), no cerrada",
-    },
-    "-ubana": {
-        "nombre": "desinencia (valor no precisado)",
-        "desc": "Desinencia de la lengua; la fuente no precisa su valor semántico.",
-        "uso": "RAÍZ + -ubana",
-        "ejemplos": [],
-        "atestiguado": "Zavala Reyes 2015 #265 (AM): 'desinencia de esta lengua'",
-    },
-    "-uru": {
-        "nombre": "desinencia (valor no precisado)",
-        "desc": "Desinencia de la lengua; la fuente no precisa su valor semántico.",
-        "uso": "RAÍZ + -uru",
-        "ejemplos": [],
-        "atestiguado": "Zavala Reyes 2015 #274 (AM): 'desinencia de esta lengua'",
     },
 }
 
@@ -7369,6 +7420,9 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 # 6-fusion/medicion_tanda_21_2026-09-21.yaml §claves_de_todas_las_reglas.
 #   · dc.2 E (tanda de la base, 2026-09-23) migró `-gua` → `-wa`, medido en
 #     6-fusion/medicion_tanda_base_2026-09-23.yaml §desafijador.
+#   · cc.4 / tf.0 4-a (2026-09-23) reagrupó `-iro` y `-uco` en
+#     REGLAS_ESTEVES — mismas claves, justo detrás de REGLAS_ZAVALA, donde
+#     estaban: `_SUFIJOS_CAQ` no cambia y `nucleo_de_token()` tampoco.
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
@@ -7377,12 +7431,15 @@ TODAS_LAS_REGLAS = {
     **REGLAS_ATRIBUTIVAS,
     **REGLAS_NUMERO,
     **REGLAS_ZAVALA,
+    **REGLAS_ESTEVES,
     **REGLAS_TOPONIMICAS,
 }
 
 # Los afijos que las fuentes ATESTIGUAN y que el motor tiene que enseñar
 # enteros (Miguel, 2026-09-14). Dos de ellos (-ubana, -uru) están atestiguados
 # como desinencias sin valor precisado: se enseñan como lo que son.
+# `-iro` y `-uco` salieron de aquí el 2026-09-23 (4-a): se enseñan igual, pero
+# en su propio grupo y con su rótulo — ver REGLAS_ESTEVES.
 AFIJOS_ATESTIGUADOS: dict[str, dict] = {**REGLAS_ZAVALA, **REGLAS_TOPONIMICAS}
 
 
@@ -7395,8 +7452,23 @@ def _linea_afijo(afijo: str, regla: dict) -> str:
     return f"{afijo} = {regla['nombre']}: {uso}{ejemplo}"
 
 
+# El rótulo de los sufijos de REGLAS_ESTEVES en el prompt (4-a, 2026-09-23):
+# lo que son, sin decir «atestiguado». Una constante para que el tier I y la
+# línea breve digan lo mismo. Sin el nombre del autor a propósito: el agente
+# no necesita la bibliografía, y un apellido en el prompt es una palabra más
+# que puede acabar dicha (y entra en FORMAS_DE_PLANTILLA, que se construye
+# leyendo las plantillas).
+ROTULO_ESTEVES = "LEÍDOS EN TOPÓNIMOS"
+ROTULO_ESTEVES_GLOSA = ("sufijos deducidos de nombres de lugar; nadie los oyó "
+                        "en boca caquetía")
+
+
 def prompt_afijos_atestiguados() -> str:
-    """Bloque de derivación con TODOS los afijos atestiguados, para el Tier I."""
+    """Bloque de derivación con TODOS los afijos atestiguados, para el Tier I.
+
+    Desde el 2026-09-23 (4-a) lleva debajo un segundo grupo, con su rótulo:
+    los de REGLAS_ESTEVES, que se siguen enseñando sin llamarse atestiguados.
+    """
     con_valor = [(a, r) for a, r in AFIJOS_ATESTIGUADOS.items()
                  if "no precisado" not in r.get("nombre", "")]
     sin_valor = [a for a, r in AFIJOS_ATESTIGUADOS.items()
@@ -7409,16 +7481,25 @@ def prompt_afijos_atestiguados() -> str:
             f"    {' y '.join(sin_valor)} = desinencias atestiguadas cuyo valor nadie "
             f"anotó: puedes usarlas si propones su valor entre corchetes."
         )
+    if REGLAS_ESTEVES:
+        lineas.append(f"  {ROTULO_ESTEVES} ({ROTULO_ESTEVES_GLOSA}):")
+        for afijo, regla in REGLAS_ESTEVES.items():
+            lineas.append(f"    {_linea_afijo(afijo, regla)}")
     return "\n".join(lineas)
 
 
 def prompt_afijos_atestiguados_breve() -> str:
-    """Una línea con los mismos afijos, para el Tier II."""
-    partes = []
-    for afijo, regla in AFIJOS_ATESTIGUADOS.items():
+    """Una línea con los mismos afijos, para el Tier II; los de REGLAS_ESTEVES
+    van aparte, con su rótulo (4-a, 2026-09-23)."""
+    def _parte(afijo, regla):
         nombre = regla["nombre"]
-        partes.append(f"{afijo} ({'valor abierto' if 'no precisado' in nombre else nombre.split(',')[0]})")
-    return "DERIVACIÓN: raíz + " + " / ".join(partes) + "."
+        return f"{afijo} ({'valor abierto' if 'no precisado' in nombre else nombre.split(',')[0]})"
+    partes = [_parte(a, r) for a, r in AFIJOS_ATESTIGUADOS.items()]
+    linea = "DERIVACIÓN: raíz + " + " / ".join(partes) + "."
+    if REGLAS_ESTEVES:
+        linea += (f" {ROTULO_ESTEVES.capitalize()}: "
+                  + " / ".join(_parte(a, r) for a, r in REGLAS_ESTEVES.items()) + ".")
+    return linea
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -8483,12 +8564,16 @@ FUERA_DEL_HABLA: dict[str, dict] = {
     # toca y su procedencia se conserva entera: el archivo es un eje distinto
     # de la etiqueta. Medido en
     # `6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml`.
+    # ⚠️ Desde el 2026-09-23 son SEIS pares de la política, no siete: la (E)
+    # de Zavala es Esteves y `juri` pasó a hipotética (cc.4, 1-B), así que el
+    # par 16 «viento» ya no tiene atestiguada que mande. `joutai` sigue aquí,
+    # con el motivo cambiado (2-a): la archiva D11 (cc.12), porque es wayuu.
     "kali":       {"sig": "sol",                                            "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 1 «sol» · manda `kasi`", "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna — sin obra citada · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada», decisión de Miguel): el caquetío atestigua `kasi` 'sol' (Zavala Reyes 2015, glosario #76 (GC): «Sol», forma_fuente cazi, fusionada por D5a). Es el archivo más grande de la tanda por uso. Su desequilibrio NO era del muestreador —para 'sol' el muestreo es neutro, 60 contra 63 de 1.260— sino de las plantillas: `IDENTIDAD_LINGUISTICA` la enseñaba en su ejemplo hasta el corte del 2026-09-19 (#172) y `prompt_reglas_completo` la enseñaba en NATURALEZA, en el ejemplo de respuesta ideal y en la lista de sustantivos del refuerzo. LA CAPA NO SE TOCA: sigue siendo `caquetío-reconstruido`. El compuesto `kali-bana` y el molde `kali-…-bana` quedan cerrados por esta puerta, que es MÁS que el corte del 09-18 (aquél sólo cerraba la forma exacta)"},
     "kasha":      {"sig": "luna",                                           "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 12 «luna» · manda `kati`", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. lokono `kathi` 'luna' — PARECIDA; esta entrada ya declaraba apoyo lokono además del wayuu. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `kati` 'luna' (Zavala Reyes 2015, glosario #71 (CGB), forma_fuente cati, fusionada por D5), con cognados proto-arahuaco *kati, WY kachi, LK katsi. Y el lokono `kathi` que ESTA nota citaba como apoyo es justamente el cognado de `kati`: la atestiguada era además la mejor reconstrucción bajo D11. El párrafo «SE CONSERVA LA FORMA por continuidad experimental» de la re-etiqueta de D11 queda superado por esta decisión, que sí acepta el corte de serie. LA CAPA NO SE TOCA"},
     "habo":       {"sig": "mar, océano, aguas grandes",                     "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 13 «mar» · manda `para`", "notas": "núcleo fundacional, forma justificada por cognado en lokono/garifuna · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `para` 'mar, agua extensa' (Zavala Reyes 2015 #190 (E+HP); reflejo del proto-arahuaco *para atestiguado en cuatro lenguas). El uso real iba por delante de la decisión: `para` ya ganaba en toda la base y en la serie C limpia. LA CAPA NO SE TOCA. ⚠️ `haborü` 'marejada' (habo+rü, hipotética) sigue en el habla con la raíz archivada: deuda declarada de la tanda"},
     "paa":        {"sig": "dar, ofrecer, transferir",                       "cat": "v_raiz","fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 3 «ofrecer» · manda `were`", "notas": "núcleo fundacional, forma justificada por cognado en proto-arahuaco · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `were` 'dar, entregar, ofrecer' (Zavala Reyes 2015, glosario #149 (AM): «Dar, entregar», forma_fuente güere). ES EL ARCHIVO MÁS CARO DE LA TANDA y se declara como tal: `paa` es raíz verbal del núcleo con todo su paradigma de aspecto vivo en la base (`paa-da`, `paa-ni`, `paa-ka` y medio centenar de formas más). NO HAY HUECO FUNCIONAL: `were` es también `v_raiz` y atestiguada, entra en `_RAICES_VERB` y toma los mismos tres aspectos, así que el paradigma no se rompe — se muda de raíz. Lo que sí cuesta es la comparabilidad: las formas `paa-*` de los runs ya corridos dejan de contar como arahuacas al re-puntuar, y eso es exactamente lo que un corte de serie declara. Coste medido en 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml. LA CAPA NO SE TOCA"},
     "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 4 «escuchar» · manda `jai`", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'escuchar'. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `jai` 'oír, escuchar' (Zavala Reyes 2015, glosario #175 (AM)), que es también `v_raiz` y ya llevaba 167 usos sin que ninguna plantilla se lo enseñara. Segundo archivo más caro por paradigma (`kira-ni`, `kira-da`, `kira-ka`). LA CAPA NO SE TOCA"},
-    "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 16 «viento» · manda `juri`", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu) · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `juri` 'viento, ventarrón' (Zavala Reyes 2015 #178 (E), variantes: jura). Es el archivo que menos cuesta de los que tenían uso: `juri` ya ganaba con holgura, ninguna plantilla enseñaba a ninguna de las dos, y la propia glosa de `joutai` declara que viene del wayuu — que es justo lo que D11 retiró. LA CAPA NO SE TOCA"},
+    "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-23 · D11 / cc.12 · derivada del wayuu (sigla E, 2-a) — hasta ese día: 2026-09-19 · política atestiguado-manda · par 16 «viento» · manda `juri`", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu) · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `juri` 'viento, ventarrón' (Zavala Reyes 2015 #178 (E), variantes: jura). Es el archivo que menos cuesta de los que tenían uso: `juri` ya ganaba con holgura, ninguna plantilla enseñaba a ninguna de las dos, y la propia glosa de `joutai` declara que viene del wayuu — que es justo lo que D11 retiró. LA CAPA NO SE TOCA · MOTIVO DEL ARCHIVO CAMBIADO 2026-09-23 (cc.4 / tf.0, respuesta 2-a del issue sigla-E-zavala-canon-2026-09-23.md): `joutai` SIGUE ARCHIVADA, pero ya no la manda una atestiguada. La (E) de Zavala #178 es Esteves 1989 y `juri` pasó a `caquetío-hipotético` (1-B): el par 16 «viento» dejó de ser un caso de la política. Lo que la archiva ahora es que es wayuu —su glosa lo declara— y cc.12 manda no reconstruir desde el wayuu (D11 fase 3). 'Viento' se queda con una sola voz, hipotética; otra, si hace falta, es trabajo de D11 desde el lokono, el taíno o el achagua"},
     "mülia":      {"sig": "miedo, temor, espanto",                          "cat": "sust",  "fuente": "caquetío-hipotético", "archivada": "2026-09-19 · política atestiguado-manda · par 18 «espanto» · manda `etamo`", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono` · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `etamo` 'feroz, feo, espanto' (Zavala Reyes 2015 #120 (AM)). El archivo más barato de la tanda: hipotética, sin cita, 0 usos en toda la base y 0 exposición en el muestreo del perfil era2. LA CAPA NO SE TOCA: sigue siendo `caquetío-hipotético`"},
 
     # ── db.3 (2026-09-23): las `taíno-reconstruido`, que eran lokono ──────

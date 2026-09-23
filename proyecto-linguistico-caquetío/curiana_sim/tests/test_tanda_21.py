@@ -326,7 +326,11 @@ def test_d21_14_la_clave_es_el_lema_fonemico():
 
 
 def test_d21_14_uto_esta_declarado_como_variante():
-    uco = lx.REGLAS_ZAVALA["-uco"]
+    # `-uco` vivía en REGLAS_ZAVALA; desde el 2026-09-23 (cc.4 / tf.0, 4-a)
+    # está en REGLAS_ESTEVES —su única fuente es la (E) de Zavala, que es
+    # Esteves— con las mismas claves, la misma variante y el mismo residuo.
+    assert "-uco" not in lx.REGLAS_ZAVALA
+    uco = lx.REGLAS_ESTEVES["-uco"]
     assert uco["variantes"] == ["-uto"]
     assert "no es clave" in uco["variantes_nota"].lower()
     # Residuo declarado: se sigue enseñando y sigue sin reconocerse.
