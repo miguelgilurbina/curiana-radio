@@ -1,0 +1,1113 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — La Coro colonial en tres fuentes que llevaban semanas «en curso»
+#   Castellanos (Elegías, 1589/1857) · Brito Figueroa (1962) · González Batista
+#   Tercera campaña de minería, parcela M7 (2026-09-22), rama campana/mineria3-coro
+#
+# Minar PROPONE, el humano fusiona (regla 5). Nada de esto está en el canon.
+# Todo hecho lleva `epoca` y, cuando toca el mundo simulado (s. XIV-XV), un
+# `proyectable_al_xv` que dice si se puede subir al precontacto y por qué no
+# (regla 3). Etiqueta epistémica por hecho (regla 2): en duda, se degrada.
+#
+# CÓMO SE CITA CASTELLANOS. `linea` = línea del .txt del repo
+#   (fuentes_caquetios/Castellanos_1857_Elegias_partes_I-II_texto.txt);
+#   `pagina_impresa` = página de la BAE 1857, t. IV, calculada por
+#   6-fusion/scripts/castellanos_pagina.py (que se comprueba solo: números
+#   limpios, signaturas de pliego, índice). Concordancia con la ed. ANH 1987
+#   que cita González Batista, medida en tres puntos de su artículo de 2002:
+#   BAE 185 ≈ ANH 175, BAE 184-185 ≈ ANH 174-175, BAE 189 ≈ ANH 180.
+#   El .txt es OCR de Google Books: los versos van VERBATIM con sus erratas y,
+#   si una errata importa, la lectura corregida va aparte en `lectura`.
+#   Nada de Castellanos está verificado en imagen (el repo no tiene el PDF).
+#
+# CÓMO SE CITA GONZÁLEZ BATISTA 2002. Obra moderna con derechos: citas de
+#   menos de 15 palabras y paráfrasis. Los documentos que él transcribe
+#   (probanza de 1680, Díez de la Calle 1646, Ballesteros 1550) van con su
+#   cadena: documento → González Batista → este repo (`via`).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  fecha: '2026-09-22'
+  parcela: M7
+  estado: sin-fusionar
+  obras:
+    - castellanos-elegias
+    - gonzalez-batista-2002-fundacion        # NUEVA: descargada hoy (HEVILA/UNAM, acceso abierto)
+    - gonzalez-batista-nombre-de-coro
+    - brito-figueroa-poblacion-economia
+  script_de_paginas: 6-fusion/scripts/castellanos_pagina.py
+  lo_que_resulto_falso_al_medir:
+    - id: falso-1
+      afirmacion_previa: >-
+        «La única cabecera limpia de la elegía de Coro es la línea 47693:
+        PARTE II, INTRODUCCION. 185» (ficha castellanos-elegias).
+      medido: >-
+        Ese «185» es un 183 mal leído (el OCR confunde 3↔5: «157» por 137 en la
+        línea 36012, «195» por 193 en la 50404). La página 185 empieza en la
+        línea 48095. Por suerte las citas del canon que dicen «p. 185» (la
+        lista de las once ciudades, Coro = viento, doña Juana) caen de verdad
+        en la 185; lo que estaba mal paginado era todo lo de antes: las islas
+        de los Gigantes son la p. 183, no la 185.
+    - id: falso-2
+      afirmacion_previa: '«Parte I (líneas 761-46824) y Parte II (46845-fin). Las partes III-IV NO están.»'
+      medido: >-
+        El archivo trae la Parte III entera (desde la línea 94924: Historia de
+        Cartagena, Popayán/Benalcázar, Antioquia, Chocó) y su índice al final
+        (146650-147483). Falta sólo la IV (Historia del Nuevo Reino de Granada,
+        ed. Paz y Meliá 1886). La conclusión del yaml castellanos_1589 de que
+        la muerte por perros del señor de Hurehurebo «queda en la parte III-IV
+        (no cubiertas)» era medio falsa: la III está, y la muerte no aparece
+        en ella (grep «perro»: 157 líneas en todo el archivo, ninguna con un
+        señor caquetío).
+    - id: falso-3
+      afirmacion_previa: >-
+        `poporo` 'maza-porra, arma de combate ceremonial', caquetío-atestiguado:
+        «Alvarado 1921, p.255 […] la atribuye explícitamente a los antiguos
+        Caquetíos y cita a Castellanos» (curiana_lexicon.py).
+      medido: >-
+        Alvarado sí dice «usada por los antiguos Caquetíos y los Guagiros» y
+        remite a «Cast. Eleg. I. c. 3º». Pero ese pasaje (línea 52883, p. 202)
+        es el poporo de BORONATA, «indio guanebucán», en el río de la Hacha
+        (Guajira), no de un caquetío; y en las otras tres apariciones del
+        archivo el poporo es el calabacito de la cal que se masca con el hayo
+        (Parte III, Cenú y Popayán). Castellanos no sostiene un poporo
+        caquetío. «Ceremonial» no lo dice nadie. Ver §castellanos.poporo.
+    - id: falso-4
+      afirmacion_previa: >-
+        El Coriana de Castellanos es «Curiana» (tabla de grafías de la ficha:
+        «Curiana → Coriana: 1»); y el canon (toponimo-111) sitúa el «Coria-na»
+        de Oliver en Punta Espada–Chichibacoa.
+      medido: >-
+        El único «Coriana» del archivo (línea 69383, p. 264) es una aldea de
+        LA RAMADA, «entre la mar y sierras de Herrera y el río de la Hacha»,
+        en una lista de pueblos guanebucanes junto a «Paraguanll» [Paraguanil].
+        Es la fuente del «Coria-na / Paragua-nil» de Oliver (cap. 3, p. 207,
+        que cita a Castellanos en la ed. Parra 1930, p. 383) y está a unos
+        250 km al oeste de Punta Espada. No es Coro.
+
+# ══════════════════════════════════════════════════════════════════════════
+# 1. CASTELLANOS — Elegías de varones ilustres de Indias (BAE 1857, t. IV)
+# ══════════════════════════════════════════════════════════════════════════
+castellanos:
+  lectura:
+    leido_entero: >-
+      Parte II: la Introducción (líneas 47056-48480, pp. 181-186) y la Elegía I
+      a micer Ambrosio [Alfinger], cantos I y II enteros y el III hasta el
+      valle de Upar (48483-53240, pp. 186-204). Es todo lo que toca a Coro,
+      Paraguaná, las islas, Manaure y Maracaibo.
+    leido_por_busqueda: >-
+      El resto de la Parte II (Elegía I canto IV; Elegías II a Espira y III a
+      Utre, que salen de Coro hacia Barquisimeto y los llanos; la Relación
+      del Cabo de la Vela; la Historia de Santa Marta), la Parte I y la Parte
+      III: barrido con las grafías medidas abajo y leído el contexto de cada
+      acierto.
+    ortografia_medida: >-
+      caquet- 6 (y el OCR «caquetfo», «caquelio», «Caquclios»); Manaure 2 +
+      el OCR «Mauaure» 2 (líneas 48353, 48363 — la ficha contaba 2 y eran 4);
+      Coriana 1 (en Santa Marta); Paraguan- 5 (1 Paraguaná, 3 el cacique
+      Paraguani de Trinidad, 1 Paraguanll de La Ramada); piach- 2 (ninguno en
+      Venezuela); popor- 5; Todariquibo 1; Hurehurebo/Hurehurcbo 2;
+      Curazao 2 (Curaçao 0); Aruba 6; Buinare 1 (Bonaire 0); Alfinger 1 (el
+      poema dice «micer Ambrosio»); Federmann = «Fedrimán» y «Nicolao
+      Fedrimán» (Federm- 0: el cero de la ficha era de grafía).
+
+  por_esfera:
+
+    geografia_politica:
+      - id: m7-cast-001
+        afirmacion: >-
+          Manaure es jefe de caciques y tiene sujeta toda la comarca; es el
+          «indio» que el señor de Hurehurebo (bautizado Fernán García) atrae al
+          bando cristiano.
+        cita: >-
+          «Estos trajeron al cristiano bando / Al indio que Mauaure se llamaba ,
+          / El cual sobre caciques tuvo inando / Y toda la comarca subyectaba ;
+          […] Fue Mauaure varón de gran momento, / De claro y de sagaz
+          entendimiento.»
+        lectura: Manaure · mando
+        obra: castellanos-elegias
+        linea: 48351-48365
+        pagina_impresa: 185
+        epoca: contacto-temprano   # 1527-1529, contado en 1589
+        etiqueta: atestiguado
+        proyectable_al_xv: >-
+          con reserva: que hubiera un jefe de caciques en Coro en 1527 es dato;
+          que la jerarquía existiera igual un siglo antes es proyección. El
+          canon ya lo proyecta (geografia_politica, Manaure); esto sólo añade
+          la fuente en verso.
+      - id: m7-cast-002
+        afirmacion: >-
+          Manaure se hacía llevar en andas con chapas de oro, las gentes
+          «temblaban dél», proveía a sanos y enfermos, nadie le pidió que no le
+          diera, y «poco a poco» se hizo tributario de los españoles.
+        cita: >-
+          «Temblaban dél las gentes alteradas ; / Hacíase llevar en mías andas /
+          Con chapas de oro bien aderezadas, […] A sanos y ¿ subvectos á
+          dolencia / Siempre les proveyó lo necesario: […] 8e hizo poco á poco
+          tributario ; […] Ninguno le pidió que no le diese;»
+        lectura: '«en unas andas»; «A sanos y a subyectos a dolencia»; «Se hizo»'
+        obra: castellanos-elegias
+        linea: 48384-48414
+        pagina_impresa: 186
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        proyectable_al_xv: >-
+          las andas y el oro son insignia de rango: con reserva. «Tributario» es
+          de los españoles: colonial, no se proyecta.
+        destino: 3-mundo/corpus/geografia_politica.yaml (Manaure) y estructura_social_era2.yaml
+      - id: m7-cast-003
+        afirmacion: >-
+          Manaure fue bautizado «don Martín», y con él mujer, hijas, hijos y
+          «todos los vasallos que tenía por granjas y cortijos»; se admiraba de
+          ver caballos «tan bien mandados».
+        cita: >-
+          «Llamóse don Martin, y después desto / Baptizó de su casa todo el
+          resto. // Denjásde la mujer, bijas y bijos, / Se baptizaron todos los
+          vasallos / Que tenia por granjas y cortijos ;»
+        obra: castellanos-elegias
+        linea: 48428-48440
+        pagina_impresa: 186
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        proyectable_al_xv: 'no: el bautismo es colonial. Lo que sirve es que Manaure tenía «vasallos» repartidos en «granjas».'
+        nota: >-
+          El nombre cristiano de Manaure no estaba en el repo (grep «don Martín»
+          + Manaure en 6-fusion y 3-mundo: 0). No confundir con Esteban
+          MARTÍN, el intérprete.
+      - id: m7-cast-004
+        afirmacion: >-
+          Once «ciudades de grandísimo momento» en doce leguas alrededor del
+          asiento de Coro, «con otros que callamos», y gente numerosa hasta
+          Paraguaná, «promontorio» de San Román, «antiguo diversorio de
+          cristianos» donde no faltaban amistades con los indios.
+        cita: >-
+          «Doce leguas en torno del asiento / Habia población engrandecida, /
+          Ciudades de grandísimo momento, […] Con otros que callamos de
+          presente. // De cuya población nos es notorio / Tener crecido número
+          de gente, / Hasta Paraguaná que es promontorio, / O punta señalada y
+          eminente / De San Román, antiguo diversorio / De cristianos en
+          aquellas edades. / Sin faltar en los indios amistades.»
+        obra: castellanos-elegias
+        linea: 48248-48273
+        pagina_impresa: 185
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        ya_en_el_canon: 'la lista de nombres sí (toponimos 001, 004, 008, 094-101); la frase sobre Paraguaná no'
+        proyectable_al_xv: ver §escala_del_mundo
+      - id: m7-cast-005
+        afirmacion: >-
+          Tras la paz de Ampiés «aquellas circunstantes poblaciones» vinieron a
+          la paz «hasta catorce leguas más adentro», de grado y no por guerra.
+        cita: '«Yinieron á la paz y servidumbre / Hasta catorce leguas mas adentro, / Mas de su voluntad que por recuentro.»'
+        obra: castellanos-elegias
+        linea: 48464-48468
+        pagina_impresa: 186
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        proyectable_al_xv: 'con reserva: mide el radio de la red de Manaure en 1528 (≈ 14 leguas tierra adentro), no el de 1400.'
+      - id: m7-cast-006
+        afirmacion: >-
+          El nombre de Manaure como salvoconducto tierra adentro (Federmann,
+          1530, camino de los llanos): un jefe «tuerto» se da «palmadas en la
+          boca» al oírlo y les perdona la vida; les da comida y hospedaje ocho
+          días. El guía que habla por ellos es «el indio caquetío».
+        cita: >-
+          «Somos también carísimos hermanos / Del cacique Manaure, rey de Coro.»
+          / El indio, viendo que en Manaure toca , / Dióse ciertas palmadas en
+          la boca.»
+        obra: castellanos-elegias
+        linea: 52100-52172
+        pagina_impresa: '199-200'
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        ya_en_el_canon: 'sí la escena (castellanos_1589_toponimos.yaml §4); nuevo: el GESTO (palmadas en la boca) y que el guía era caquetío'
+        polity: interior (valle de Barquisimeto → llanos) — regla 4
+      - id: m7-cast-007
+        afirmacion: >-
+          Un pueblo caquetío del interior (1530, vuelta de Federmann): su
+          cacique, Uriorebuí, toma «ciertos polvos» y bebe «cierto brebaje»
+          para encenderse antes de la pelea, reclama su hamaca, llama a los
+          suyos «¡Aquí, tigres!» y pelea con macana.
+        cita: >-
+          «Ciertos polvos tomaba por momentos, / Y ansimísmo bebió^cierto
+          brebaje ; […] Dadme sin mas tardar una hamaca, […] «¡Aquí, tigres,
+          aquí, gente nosciva, […] El Uriorebuí: «¡ Aquí, vasallos !»»
+        lectura: Uriorebuí / Oriorebuí (dos grafías del OCR, líneas 52307 y 52333)
+        obra: castellanos-elegias
+        linea: 52211-52350
+        pagina_impresa: 200
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        polity: interior, sin lugar preciso — NO es la costera (regla 4)
+        proyectable_al_xv: >-
+          no a la costa. Los «polvos» son la única pista de rapé que da el poema
+          para un caquetío; qué polvo era (yopo, tabaco) no lo dice.
+      - id: m7-cast-008
+        afirmacion: >-
+          «Sarasaragua», pueblo de gente caquetía de donde salieron los guías
+          que llevaron a Federmann de vuelta a la costa (abril de 1531).
+        cita: '«Guiábalos ya gente caquelía / Del pueblo que se diz Sarasaragua;»'
+        obra: castellanos-elegias
+        linea: 52535-52537
+        pagina_impresa: 201
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        destino: >-
+          campana-toponimos (topónimo NUEVO: grep en 2-lengua/toponimos.yaml,
+          lexicon_toponimos.py y 6-fusion: 0) y la campaña de `-gua`
+          (propuesta_gua_procedencia_2026-09-21.yaml): un caquetío -gua con
+          fecha, interior, sin glosa.
+      - id: m7-cast-009
+        afirmacion: >-
+          Cerca de Coquibacoa (Guajira), un ejército armado con armas de
+          náufragos castellanos era «guanebucán y caquetía».
+        cita: '«Y toda la mas gente que venia / Era guanebucan y caquetia.»'
+        obra: castellanos-elegias
+        linea: 51119-51124
+        pagina_impresa: 196
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        polity: occidental (Guajira) — la esfera occidental de Oliver, no la costera
+        valor: >-
+          segunda voz, independiente de Esteban Martín 1534 (Oliver p. 199), de
+          caquetíos conviviendo con guanebucanes en la Guajira.
+      - id: m7-cast-010
+        afirmacion: >-
+          Nombres de principales del interior que da el guía caquetío:
+          Catimayagua, Categue, «Geeoagúa» y Badurajara; y cerca de Maracaibo
+          los caciques Juruara y Arayara, que dejan de servir y matan seis
+          cristianos.
+        cita: '«Pero conozco ser Catimayagua / Con otró principal dicho Categue, / Y son los otros dos que veis de cara / Geeoagúa y Badurajara.»'
+        obra: castellanos-elegias
+        linea: '52078-52082 (p. 199); 50013-50015 (p. 192)'
+        pagina_impresa: '199; 192'
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        destino: 6-fusion/antroponimos_caquetios.yaml — con la reserva de que la etnia de cada uno no la dice el verso
+        nota: 'Juruara es también el nombre de la provincia de los bubures (3-mundo/etnias.yaml): cacique y provincia homónimos.'
+
+    parentesco:
+      - id: m7-cast-011
+        afirmacion: >-
+          La casa del señor de Hurehurebo en 1525: él, sus hijos, su mujer y
+          «una su hermana», rehenes en casa de Ampiés; bautizados Fernán García,
+          doña Juana (la mujer) y doña Mencía (la hermana); con ellos otra
+          cautiva, doña Teresa. Fernán García y doña Juana se casan por la
+          Iglesia con Ampiés de padrino, y Ampiés los devuelve «a sus vasallos».
+          Teresa y «el príncipe Fernando y su princesa» son los «terceros» de
+          la paz.
+        obra: castellanos-elegias
+        linea: 48164-48193; 48340-48350
+        pagina_impresa: 185
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        ya_en_el_canon: 'sí (castellanos_1589_toponimos.yaml §3). Precisión: Castellanos NO dice que doña Juana sea hija de Manaure; eso es Arcaya 1920 p. 167.'
+        proyectable_al_xv: 'la composición de la casa (hermana dentro del grupo retenido) con reserva; los nombres, no.'
+
+    lengua_toponimos:
+      - id: m7-cast-012
+        afirmacion: >-
+          Coro tomó el nombre del RÍO, que «siempre se llamó desta manera»; el
+          nombre «le viene bien» porque «Coro» es viento «en lengua generosa»
+          y la tierra es ventosa.
+        cita: >-
+          «Púsose por la gente forastera / Al pueblo semejante nombramiento /
+          Dor el rio (pie guia su ribera / Brevecilla distancia del asiento. //
+          Que siempre se llamó d ista manera: / El cual le viene bien , pues
+          Coro viento / Quiere decir en lengua genero>a, / Y ansí es aquella
+          tierra muy ventosa.»
+        lectura: «Por el río que guía su ribera»; «desta manera»; «generosa»
+        obra: castellanos-elegias
+        linea: 48209-48219
+        pagina_impresa: 185
+        epoca: contacto-temprano
+        etiqueta: atestiguado   # que el río se llamaba Coro; la etimología, no
+        convergencia: >-
+          Ballesteros 1550 (vía Arcaya 1920 p. 170, ficha ballesteros-1550):
+          «pasa un río que se llama Coro, de que tomó su nombre la ciudad».
+          Dos testigos independientes, 1550 y 1589, de que Coro era el nombre
+          del RÍO antes que de la ciudad. González Batista 2002 p. 160 lo
+          sostiene y lo explica por la acequia.
+        sobre_coro_viento: >-
+          El canon (toponimo-111, lectura de Castellanos) ya dice «casi seguro
+          el latín corus/caurus». Se añaden dos apoyos medidos hoy: (1) la
+          sintaxis del verso — el nombre es el del río, que «siempre» se llamó
+          así, y «le viene bien»: coincidencia afortunada en otra lengua, no
+          motivo del nombre; (2) el castellano culto de su tiempo tenía «coro»
+          'viento del noroeste' (DICTER, Universidad de Salamanca, s.v. coro 2:
+          del lat. cōrus o caurus; 1.ª datación Lozano, Architectura, 1582;
+          Urrea, Vitruvio, 1582: «cauro, al qual muchos llaman coro»).
+          Castellanos publica la Parte I en 1589: la palabra estaba en el aire.
+        propuesta: >-
+          que la lectura «viento (Castellanos 1589)» deje de contarse como una
+          de las TRES que compiten por `coro` en el lexicón (lectura_en_disputa,
+          d21.15): es un juego culto sobre un hidrónimo, no una glosa indígena.
+          Compiten dos: 'espina' (González Batista) y 'avispa o lagartija'
+          (Arcaya). Decide Miguel.
+      - id: m7-cast-013
+        afirmacion: >-
+          El único «Coriana» de las Elegías es una aldea costera de La Ramada
+          (entre la Sierra Nevada de Santa Marta y el río de la Hacha), en la
+          lista de pueblos de guanebucanes y tairos, con «Paraguanll».
+        cita: >-
+          «De pueblos do la mar está cercana, / Algunos será justo que declare:
+          / Dos Guaymaros, Debuya, Coriana, / Tapi, Paraguanll, Biriburare, /
+          Caborder, Macoir, Proceliana, / Maracarote, Ormio, Caraubare,»
+        lectura: 'Paraguanll = «Paragua-nil» en Oliver (que lee la ed. Parra 1930)'
+        obra: castellanos-elegias
+        linea: 69376-69390
+        pagina_impresa: 264
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        conflicto_con_el_canon: >-
+          toponimo-111 (curiana) dice en `observacion` y en una `lectura` que
+          Oliver lee «Coria-na» «entre los nombres de aldea wanebucán de Punta
+          Espada-Chichibacoa». Oliver (cap. 3 pp. 206-207) cita la lista a
+          Castellanos y la sitúa él mismo en La Ramada; sólo su explicación
+          (el nexo comercial con caquetíos) habla de Punta Espada. Las aldeas
+          están en La Ramada. Curación: corregir el lugar.
+        valor: >-
+          un Coriana y un Paragua- a 400 km de Coro, en tierra guanebucana: los
+          formantes de la Kaketiana llegan hasta la Sierra Nevada. Es dato de
+          esfera (regla 4, reverso), no prueba de que Coriana = Coro.
+      - id: m7-cast-014
+        afirmacion: >-
+          Paraguani es también el nombre de un cacique de Trinidad (Sedeño,
+          c. 1530), que trae flechas con dientes de tiburón y púas de raya.
+        obra: castellanos-elegias
+        linea: '24564 (p. 93); 25174-25181 (p. 96); 25553 (p. 97)'
+        pagina_impresa: '93, 96, 97'
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        valor: 'comparanda para paragua ''mar'' (Zavala #191) como formante de nombres propios fuera de la Kaketiana; nada más.'
+      - id: m7-cast-015
+        afirmacion: >-
+          Grafías de 1589 que el canon ya usa, con su página correcta:
+          Todariquibo, Zacerida, Carao, Tamadoré, Capatarida, Carona,
+          Guaybacoa, Cumarebo, Miraca, Hurraqui, Hurehurebo (p. 185); Buinare
+          por Bonaire (p. 184).
+        obra: castellanos-elegias
+        linea: '48253-48260; 48028'
+        pagina_impresa: '185; 184'
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        nota: '«Buinare» (Bonaire) no está en el canon de topónimos (grep: 0). Las islas quedan fuera de los topónimos de Esteves.'
+
+    lengua_lexico:
+      - id: m7-cast-016
+        afirmacion: >-
+          «Datos» = el fruto de los cardones, sustento de los indios de
+          Maracaibo en su sazón: unos redondos y otros alargados, blancos o
+          colorados, de semillas menudas como las del higo, de árbol del alto
+          de un manzano, con ramas «rollizos con esquinas, cubiertos de
+          espesísimas espinas».
+        cita: >-
+          «Si do soo datos, frac lo do cardones, / De que hay cuantidad
+          inntunerable, / Que cogen en sus tiempos y salones, / Y tienen por
+          susteuto razonable, […] Unos redondos, otros perlongados, / Blancos
+          unos y otros colorados.»
+        lectura: '«Si no son datos, fruto de cardones, / De que hay cuantidad innumerable, / Que cogen en sus tiempos y sazones, / Y tienen por sustento razonable»'
+        obra: castellanos-elegias
+        linea: 49179-49207
+        pagina_impresa: 189
+        lugar: Maracaibo (el pueblo de indios donde Alfinger asentó, 1529)
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        en_el_lexicon: >-
+          `dato` 'fruto del cardón', caquetío-atestiguado por Zavala 2015 #105
+          (lexicon_zavala.py). Alvarado 1921 p. 131-132 s.v. DATO ya remitía a
+          «Cast. 2. Eleg. I. c. 1º» y a la Descripción de la laguna de
+          Maracaibo de 1579. Lo que se añade: la página, el verso y el LUGAR
+          (Maracaibo, esfera occidental, no Coro). No es una atestación nueva
+          independiente de Alvarado; sí es la más antigua con fecha.
+      - id: m7-cast-017
+        afirmacion: >-
+          Voces indígenas que el poema usa en la región de Coro y vecinas, sin
+          atribuirlas a ninguna lengua: maure (tejido, p. 183), pampanilla
+          (p. 183), hamaca (pp. 183, 188, 200), canoa y canohuela (pp. 182,
+          184, 190), piragua (p. 203), buhío (pp. 186, 200), barbacoa (p. 181),
+          ají (pp. 187-188), maíz, yuca, batata (p. 202), jagüey 'aguada'
+          (pp. 192, 194), hobo, cimiruco, mamón (p. 185), cardón y tuna
+          (p. 193), iguana (p. 181), hutía (p. 184), macana (p. 200), poporo
+          (p. 202), cacique, gandul.
+        obra: castellanos-elegias
+        epoca: contacto-temprano
+        etiqueta: atestiguado   # que el castellano de 1589 las usaba allí; su lengua de origen, no
+        aviso: >-
+          Es el vocabulario de la koiné de Indias (casi todo taíno) en boca de
+          un soldado: dice qué palabras corrían por Coro hacia 1530-1540, no
+          que fueran caquetías. «Pampanilla» y «gandul» son castellanas.
+          «Cimiruco» (semeruco, Malpighia) y «hobo» (jobo, Spondias) son las
+          dos que el lexicón no tiene como caquetías.
+      - id: m7-cast-018
+        afirmacion: >-
+          Los naturales de Curazao y Aruba, gente de gran estatura, hablan
+          caquetío; Castellanos estuvo en las islas «por el año de cuarenta»
+          y trató a los herederos de Ampiés.
+        cita: '«Tienen para la guerra gentil lirio, / Y su lenguaje es el Uc caquctio.» // «Haciendo yo por estas islas via, / Ser& por el año de cuarenta.»'
+        lectura: «gentil brío», «el de caquetío»
+        obra: castellanos-elegias
+        linea: '47828-47830 (p. 183); 47956-47958 (p. 184)'
+        pagina_impresa: '183-184'
+        epoca: colonial   # 1540, testigo presencial
+        etiqueta: atestiguado
+        ya_en_el_canon: 'por Arcaya pp. 148-153 (taino_en_la_esfera col-07). Nuevo: el testimonio es de VISTA (1540) y la página es la 183, no la 185.'
+        errata_del_poeta: 'dice que las islas están «hasta tres leguas» de la costa; Curazao está a más de diez'
+      - id: m7-cast-019
+        afirmacion: >-
+          Los caquetíos, «en el lenguaje todos elegantes», se extienden «por
+          tierras muy distantes»; tres españoles (Limpias, Esteban Martín,
+          Aceros) salieron «lenguas excelentes»; Joan de la Puente, «lengua de
+          caquetíos excelente» (Elegía II); Joan Calahuyare, «caquetío», con
+          armas de cristianos, salva a Diego de Montes de los giraharas.
+        obra: castellanos-elegias
+        linea: '48316-48326 (p. 185); 55309-55311 (p. 211); 58537-58560 (p. 223)'
+        pagina_impresa: '185; 211; 223'
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        destino: 3-mundo/corpus/transmision.yaml (intérpretes) y antroponimos (Calahuyare)
+        nota: >-
+          «isleño» en Castellanos es el español baquiano de las Antillas (líneas
+          48828, 49877, 55313), no el indio de Curazao: «gente que llamábamos
+          isleña» no son caquetíos de las islas.
+
+    economia_comercio:
+      - id: m7-cast-020
+        afirmacion: >-
+          Maracaibo en 1529: un pueblo de pescadores que no sembraba y vivía
+          de rescates; hacían ferias y mercado trocando sal y pescado, y los
+          labradores de tierra adentro traían maíz «a rescatar con estos
+          pescadores», porque la tierra es tan seca que «el cielo pocas veces
+          da rocío».
+        cita: >-
+          «AID DO se cogia ni sembraba, / Mas era de rescates el sustento, / Y
+          celebraban ferias y mercado / A trueco de la sal y del pescado.»
+        lectura: «Allí no se cogía ni sembraba»
+        obra: castellanos-elegias
+        linea: '49216-49222 (p. 189); 49322-49333 (p. 189)'
+        pagina_impresa: 189
+        lugar: Maracaibo — esfera OCCIDENTAL
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        convergencia: 'Pérez de Tolosa 1546 sobre los onotos (Oliver cap. 3 n. 37, p. 204): mismo trato pescado-sal por maíz. Independientes.'
+        proyectable_al_xv: >-
+          con reserva, y sólo como PATRÓN: la especialización pescador/salinero
+          contra labrador ya estaba hecha cuando llegaron los alemanes, así que
+          no la inventó la colonia. Es la tesis «tierra pobre, mar rico» vista
+          en otra polity; subirla a la costera es una decisión, no un dato.
+      - id: m7-cast-021
+        afirmacion: >-
+          Coro es «tierra de fructíferos cardones» que ocupan gran parte de
+          ella, con hobos, cimirucos y mamones, «abundantísima de toda caza»
+          (perdices, conejos, venados) y «grande pesquería de pescados».
+        cita: >-
+          «Es tierra de fructíferos cardones / Con que gran parle della se
+          embaraza; […] Hay bobos , cimirucos y mamones ; / Abundantísima de
+          toda caza: / Hay perdices, conejos y cenados, / Y grande pesquería de
+          pescados.»
+        lectura: «gran parte della se embaraza»; «hobos»; «venados»
+        obra: castellanos-elegias
+        linea: 48221-48232
+        pagina_impresa: 185
+        lugar: Coro
+        epoca: contacto-temprano   # la fauna y la flora; las uvas, granadas y melones que siguen son potencial europeo
+        etiqueta: atestiguado
+        proyectable_al_xv: 'sí, con la reserva de siempre (fauna moderna ≠ s. XV): cardonal, frutales nativos y pesca son del medio, no de la colonia.'
+        valor: 'es el pasaje primario más cercano a «Coro era un bosque tupido de cardones» (ver §gonzalez_batista_nombre_de_coro).'
+      - id: m7-cast-022
+        afirmacion: >-
+          Trato temprano con los españoles de las islas: rescataban con cuentas
+          y hachas oro, «ropa» —que eran hamacas, maures y mantellinas— y
+          «muchachos y muchachas»; los esclavos salían «muy baratos».
+        cita: '«Rescatando con cuentas y con hachas / Oro, ropa, muchachos y muchachas. // La ropa que decimos son hamacas […] Maures y mantellinas,»'
+        obra: castellanos-elegias
+        linea: 47672-47690
+        pagina_impresa: 183
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        proyectable_al_xv: 'no el trato con españoles; sí, con reserva, que hamaca y maure eran bienes de intercambio.'
+      - id: m7-cast-023
+        afirmacion: >-
+          La saca de esclavos desde Coro (1529): tras el asalto nocturno a un
+          valle de la sierra, los cautivos se marcan con hierro y «gran número
+          de indios» se vende «por las islas en públicos pregones»; con el
+          dinero se compran caballos, ropa, armas y munición.
+        cita: '«Allí los señalaron con el hierro […] Gran número de indios ya vendido / Por las islas en públicos pregones, / Trajeron del dinero procedido / Caballos, ropas, armas, municiones :»'
+        obra: castellanos-elegias
+        linea: 49106-49129
+        pagina_impresa: 188
+        epoca: colonial
+        etiqueta: atestiguado
+        proyectable_al_xv: 'no.'
+        nota: 'la etnia de los asaltados no se dice («el misero vecino» de un valle tras la sierra).'
+      - id: m7-cast-024
+        afirmacion: >-
+          En la salina de Tapé (La Ramada), la laguna se llena del mar, en
+          verano se le cierra la boca, cuaja sal y los peces de «castas
+          diferentes» quedan ahogados y salados solos; todos los indios de la
+          comarca van allí cada verano, con su capitán o su jeque, a coger
+          «para comer, ya para trueque»; los abren, les sacan las tripas y los
+          secan al sol.
+        obra: castellanos-elegias
+        linea: 66145-66179
+        pagina_impresa: 252
+        lugar: La Ramada (costa guanebucana, Colombia)
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        proyectable_al_xv: >-
+          como patrón de salina costera con pesca estacional, con reserva: las
+          salinas de Paraguaná (sitios_era2) funcionan igual por geografía, pero
+          esto NO es un dato de Paraguaná.
+
+    navegacion_y_mar:
+      - id: m7-cast-025
+        afirmacion: >-
+          Canoas de un tronco, sin herramienta de hierro, labradas con hachuelas
+          de piedra y fuego; hay canoa «como lanzadera» para una persona, que se
+          carga al hombro, y el guerrero la gobierna con un pie fuera mientras
+          flecha; en el lago de Maracaibo, dos personas por canoa pequeña. Los
+          de las islas son «soltísimos» en el agua.
+        obra: castellanos-elegias
+        linea: '47282-47346 (p. 182); 47511-47537 (p. 182); 47843-47847 (p. 184); 49436-49448 (p. 189)'
+        pagina_impresa: '182; 184; 189'
+        lugar: lago de Maracaibo y costa de Venezuela (genérico); islas
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        proyectable_al_xv: 'sí la técnica (monóxila, hacha de piedra y fuego); con reserva el tamaño.'
+      - id: m7-cast-026
+        afirmacion: >-
+          Cruzar de las islas a tierra firme en «canohuela» era arriesgado:
+          «del mar cuando mayor bonanza se debe tener menos confianza».
+        obra: castellanos-elegias
+        linea: 47921-47930
+        pagina_impresa: 184
+        epoca: colonial   # habla de un lego español hacia 1540
+        etiqueta: atestiguado
+        nota: 'el cruce isla-continente en canoa pequeña, visto por un testigo de 1540; converge con el «Puerto de los Indios Curaçao» (asentamientos nodo-002).'
+
+    creencia:
+      - id: m7-cast-027
+        afirmacion: >-
+          CERO de creencia caquetía costera en todo el tramo leído entero: ni
+          piache, ni mohán, ni ídolo, ni rito en Coro, Paraguaná o las islas.
+          Los «templos» de las islas (p. 184) son iglesias de bautizados. Lo que
+          hay es de los VECINOS: el ídolo de oro de Boronata llevado en hamaca
+          por diez o doce gandules (guanebucán, río de la Hacha, p. 202); una
+          sepultura antigua con una olla de oro en la barranca del mismo río
+          (p. 203); y una «casa prepotente» con más de mil figuras de madera
+          en hilera, «antecesores de los guanebucanes y señores» (Santa Marta,
+          línea 78239, p. 298 — el pasaje que Oliver, cap. 3 n. 41, no
+          encontró).
+        medicion: >-
+          grep en 47056-55152: demonio 0, diablo 0, piache 0, mohán 0, cemí 0,
+          hechicero 0; «ídolo» 1 (Boronata). En todo el archivo: piach- 2
+          (ambas fuera de Venezuela), mohan- 3 (Santa Marta).
+        epoca: contacto-temprano
+        etiqueta: atestiguado   # el cero, medido
+        consecuencia: >-
+          El «Piache de Todariquiba» que Velasco 2015 cita como v. 98 sigue sin
+          aparecer, ahora con el archivo entero barrido (Parte III incluida).
+
+    etnias_vecinos:
+      - id: m7-cast-028
+        afirmacion: >-
+          Naciones de la gobernación de Venezuela según Castellanos:
+          caquetíos, guanaos, coyones, aratomos, cocinas, timotos, girabaras
+          [jirajaras] «de bravas condiciones», cuicas, guahiguas, itotos,
+          guamonteses y enotos. Y, de todos, «mayormente la gente caquetía»
+          mantenía paz entera, «por ser en sus costumbres más sincera, con
+          cierta presunción de hidalguía».
+        obra: castellanos-elegias
+        linea: '47708-47714; 47747-47760'
+        pagina_impresa: 183
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        destino: 3-mundo/etnias.yaml (hoy no tiene cocina, guanebucán, jirajara, coyón ni guano)
+      - id: m7-cast-029
+        afirmacion: >-
+          Los cocinas de las sabanas del Cabo de la Vela: altos, enjutos,
+          veloces, desnudos, cazadores y pescadores certeros, sin caudillo al
+          que obedezcan; Castellanos repite de oídas que comen excremento y
+          muelen «cardillos» de las hierbas. En la costa del Cabo de la Vela,
+          «de cardones y de espinas, estéril y de secos arenales», hay
+          jagüeyes raros y guardados.
+        obra: castellanos-elegias
+        linea: '50029-50106 (p. 192); 65555-65567 (p. 250)'
+        pagina_impresa: '192; 250'
+        epoca: contacto-temprano
+        etiqueta: atestiguado   # lo de «comer excremento» es calumnia de oídas: hipotético en el mejor caso
+        polity: Guajira (vecinos de la esfera occidental)
+      - id: m7-cast-030
+        afirmacion: >-
+          Los guanebucanes (río de la Hacha, La Ramada): «gente brava», que
+          cuando dos señores competían «seguían al que más se lo pagaba»;
+          también llamados «del Calabazuelo» porque cubrían el sexo con oro o
+          con un calabacito; nunca pelearon con los tairos, aunque de casta
+          distinta.
+        obra: castellanos-elegias
+        linea: '52922-52933 (p. 202); 69464-69499 (p. 265)'
+        pagina_impresa: '202; 265'
+        epoca: contacto-temprano
+        etiqueta: atestiguado
+        polity: occidental / fuera de la Kaketiana
+
+  poporo:
+    pregunta: ¿Castellanos sostiene un poporo caquetío (arma)?
+    apariciones:
+      - {linea: 14287, pagina_impresa: 55, lugar: 'Boriquén (Puerto Rico), 1511, areíto de Agüeybaná', texto: '«Rodeado de plumas y poporos,»', sentido: 'no decidible (adorno de baile, sonajero o calabazo)'}
+      - {linea: 52883, pagina_impresa: 202, lugar: 'río de la Hacha (Guajira), Boronata, «indio guanebucán»', texto: '«Dejadas ya las flechas y el poporo / Por el guanebucán feroz, robusto,»', sentido: 'objeto que se suelta al huir, junto a las flechas: arma o calabacito de cal; el verso no decide'}
+      - {linea: 98792, pagina_impresa: 'dudosa (377-378: cabecera OCR «378» sobre página impar)', lugar: 'Cenú (Parte III, Historia de Cartagena)', texto: '«La mochila de hayo y el poporo;»', sentido: 'calabacito de la cal para mascar coca: va con el hayo'}
+      - {linea: 118455, pagina_impresa: 454, lugar: 'Popayán (Parte III, Benalcázar)', texto: '«El bayo y el poporo preparado,»', sentido: 'ídem [«hayo»]'}
+      - {linea: 119547, pagina_impresa: 458, lugar: 'Popayán', texto: '«Primero que la gente de Poporo ,»', sentido: 'topónimo'}
+    alvarado: >-
+      Alvarado 1921 s.v. POPORO (p. 255 según el lexicón): «Arma, a manera de
+      porra, usada por los antiguos Caquetíos y los Guagiros. Ref. Cast. Eleg.
+      I. c. 3º; — Id. N. Reino, I. 46. 65.» La referencia a la Elegía I canto
+      3 es el pasaje de Boronata (guanebucán). La del Nuevo Reino es la Parte
+      IV, que el repo no tiene.
+    veredicto: >-
+      Castellanos no pone el poporo en manos de un caquetío en ninguna de las
+      partes que el repo tiene. La atribución caquetía es de Alvarado y puede
+      venir de la Parte IV; hasta verla, el apoyo de Castellanos para
+      `poporo` caquetío-atestiguado no se sostiene, y «ceremonial» no tiene
+      fuente. Opciones en el issue.
+    como_cerrarlo: >-
+      bajar la Historia del Nuevo Reino de Granada (Castellanos, ed. Paz y
+      Meliá, Madrid 1886-1887, 2 t., dominio público; archive.org) y leer t. I
+      pp. 46 y 65.
+
+  fauna:
+    - nombre_en_fuente: conejos
+      especie_probable: null
+      nota_minador: 'el único lagomorfo de la región es Sylvilagus floridanus; la fuente no lo permite afirmar'
+      texto: '«A se holgar las lardes y mañanas, / Y i caza de conejos y de iguanas.»'
+      obra: castellanos-elegias
+      pagina_impresa: 181
+      lugar: una de las dos islas del lago de Maracaibo («habitadas de aves solamente» la otra)
+      epoca: contacto-temprano
+      sonido: null
+    - nombre_en_fuente: iguanas
+      especie_probable: null
+      texto: 'ídem (línea 47148)'
+      obra: castellanos-elegias
+      pagina_impresa: 181
+      lugar: isla del lago de Maracaibo
+      epoca: contacto-temprano
+      sonido: null
+    - nombre_en_fuente: ánades («nadadoras aves»)
+      especie_probable: null
+      texto: >-
+        caza con calabazos secos flotando en lagunas: el cazador mete la
+        cabeza en medio calabazo, se sumerge hasta el cuello y las agarra de
+        las patas; «Las anades enlrellos churcheando / Aquello que les es
+        mantenimiento.»
+      obra: castellanos-elegias
+      pagina_impresa: 183
+      lugar: «estanques o lagunas» de la gobernación de Venezuela (sin lugar preciso)
+      epoca: contacto-temprano
+      sonido: 'null («churcheando» es OCR dudoso; no se usa como sonido sin verlo en imagen)'
+    - nombre_en_fuente: aves, conejos, pescados
+      especie_probable: null
+      texto: '«En el agua se mueven diestramente, […] Puntería de tiros escelente / En aves, en conejos, en pescados;»'
+      obra: castellanos-elegias
+      pagina_impresa: 184
+      lugar: Curazao y Aruba
+      epoca: colonial
+      sonido: null
+    - nombre_en_fuente: hutía
+      especie_probable: null
+      nota_minador: 'en las ABC no hay hutía nativa conocida; puede ser el nombre antillano aplicado a otro roedor, o licencia del poeta'
+      texto: '«Nunca yerran conejo ni hulia,» [hutía] — los niños se entrenan flechando una bola verde que ruedan por la plaza'
+      obra: castellanos-elegias
+      pagina_impresa: 184
+      lugar: Curazao y Aruba
+      epoca: colonial
+      sonido: null
+    - nombre_en_fuente: perdices, conejos y venados; pescados
+      especie_probable: null
+      texto: '«Hay perdices, conejos y cenados, / Y grande pesquería de pescados.»'
+      obra: castellanos-elegias
+      pagina_impresa: 185
+      lugar: Coro
+      epoca: contacto-temprano
+      sonido: null
+    - nombre_en_fuente: venado (cuero)
+      especie_probable: null
+      texto: '«La vaina con que cubren el espada. / De cuero de venado con su pelo :»'
+      obra: castellanos-elegias
+      pagina_impresa: 186
+      lugar: Coro, 1529 (lo visten los españoles viejos)
+      epoca: colonial
+      sonido: null
+    - nombre_en_fuente: culebra / serpiente
+      especie_probable: null
+      nota_minador: 'mide «poco menos que treinta pies» y «de cabeza no menor que de vaca»: exageración; una boa (Boa constrictor) o una anaconda no se deciden por el verso'
+      texto: '«Ya ramos de la mas cercana planta / Con golpes de la cola derribaba;»'
+      obra: castellanos-elegias
+      pagina_impresa: 187
+      lugar: el otro lado de la sierra al sur de Coro, junto a un río con arboleda
+      epoca: contacto-temprano
+      sonido: '«La bestia se movió de do yacía, / Con silbos que la selva se hundía.» (línea 48794-48796)'
+    - nombre_en_fuente: conejos y venados; pesquería
+      especie_probable: null
+      texto: '«Y caza de conejos y venados / Que mataba con perros quien tenia ,»'
+      obra: castellanos-elegias
+      pagina_impresa: 189
+      lugar: 'Maracaibo (no Coro: corrige la ficha, que ponía esta línea en Coro)'
+      epoca: colonial
+      sonido: null
+    - nombre_en_fuente: tigres
+      especie_probable: null
+      nota_minador: '«tigre» en el castellano de Indias es el jaguar (Panthera onca); la fuente no da el binomio'
+      texto: >-
+        «La plaga de los tigres fué terrible»; uno pesca en la orilla del lago
+        poniendo su excremento de cebo y sacando los peces con la zarpa («En
+        anzuelo de uñas lo cogía»); nada tras un español en el lago; su cuero
+        resiste la lanza («Porque del duro cuero resurtía»).
+      obra: castellanos-elegias
+      pagina_impresa: '191-192'
+      lugar: orilla del lago de Maracaibo
+      epoca: contacto-temprano
+      sonido: null
+    - nombre_en_fuente: cardón (fruto «datos»), tuna
+      especie_probable: null
+      texto: '«Mucho cardón hallaron , mucha luna» [tuna]; comer la fruta de cardones refresca y tiñe la orina «como sangre fina»'
+      obra: castellanos-elegias
+      pagina_impresa: 193
+      lugar: sabanas entre el Cabo de la Vela y los llanos (Guajira)
+      epoca: contacto-temprano
+      sonido: null
+      nota: 'es flora; va aquí por la observación del efecto (la orina roja), que es del medio y útil para el agente'
+    - nombre_en_fuente: conejos y venados
+      especie_probable: null
+      texto: '«Hay copia de conejos y venados, / E ya gran muchedumbre de ganados.»'
+      obra: castellanos-elegias
+      pagina_impresa: 250
+      lugar: Cabo de la Vela
+      epoca: colonial
+      sonido: null
+    - nombre_en_fuente: «pejes» de castas diferentes
+      especie_probable: null
+      texto: 'infinidad de peces ahogados que quedan salados en la salina de Tapé cuando se cierra la boca en verano'
+      obra: castellanos-elegias
+      pagina_impresa: 252
+      lugar: salina de Tapé, La Ramada
+      epoca: contacto-temprano
+      sonido: null
+    - nombre_en_fuente: tiburones, raya (armas)
+      especie_probable: null
+      texto: '«Porque con dientes van de tiburones / Puyas (fe raya, vivos pedernales» — flechas del cacique Paraguani'
+      obra: castellanos-elegias
+      pagina_impresa: 96
+      lugar: Trinidad (FUERA de la Kaketiana; comparanda del uso del mar en armas)
+      epoca: contacto-temprano
+      sonido: null
+    - nombre_en_fuente: cabras, caballos, ganado mayor
+      especie_probable: null
+      texto: '«De cabras muchedumbre copiosa : / Paren á dos y tres» (Coro, p. 185); en las islas, ganado «de tal grandeza» que dañaba a los indios (p. 184)'
+      obra: castellanos-elegias
+      pagina_impresa: '184-185'
+      lugar: Coro; Curazao y Aruba
+      epoca: colonial
+      sonido: null
+      aviso: 'fauna INTRODUCIDA hacia 1540: no pertenece al mundo del s. XV (fauna moderna ≠ s. XV).'
+
+# ══════════════════════════════════════════════════════════════════════════
+# 2. GONZÁLEZ BATISTA 2002 — «Coro: el problema de la fundación»
+#    Bol. Acad. Nac. Historia (Caracas) 85 (338): 147-172. NUEVA en el repo.
+# ══════════════════════════════════════════════════════════════════════════
+gonzalez_batista_2002:
+  que_es: >-
+    Discurso de incorporación como socio correspondiente en Falcón. Trata la
+    FECHA y el LUGAR de la fundación de Coro, no el nombre: espina 0, cardón 0,
+    viento 0, Paragua- 0, tococoro 0 (medido sobre el .txt). Pero trae la
+    etnohistoria de Coro mejor documentada del repo: probanza de 1680, Cey,
+    Ballesteros, Díez de la Calle, la primera acta municipal (1529).
+  hechos:
+    - id: m7-gb02-001
+      afirmacion: >-
+        «Coriana» es la forma que usan los documentos para la provincia o el
+        territorio: la capitulación de Enciso (dic. 1526) exceptúa «al
+        cacique de Coro y Coriana», encomendados a Ampiés; Oviedo y Baños
+        (1723) funda Santa Ana de Coro «por ser en la provincia de Coriana»; y
+        el Memorial de Díez de la Calle (1646) dice de Coro «que los Yndios
+        diçen coriana».
+      cita_corta: '«…ciudad de coro que los Yndios diçen coriana de Veneçuela»'
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '157 (Enciso); 150 (Oviedo y Baños); 166 (Díez de la Calle)'
+      via: >-
+        Enciso: declaración de Honorato Vicente, 1533, citada por Ramos 1978
+        p. 252; Díez de la Calle: Biblioteca Nacional de Madrid, ms. 3010,
+        f. 54v. Verificado en imagen, p. 166.
+      epoca: colonial   # 1526-1646
+      etiqueta: atestiguado
+      destino: 2-lengua/toponimos.yaml toponimo-111 (lecturas, eje referente) y D2 (#33)
+      valor: >-
+        Primera fuente del repo que dice QUIÉN decía «Coriana»: los indios, en
+        1646. Y «Coro y Coriana» en la misma cláusula de 1526 separa el
+        pueblo del cacique de la provincia, como Arcaya p. 169.
+    - id: m7-gb02-002
+      afirmacion: >-
+        Manaure residía en el pueblo de Coro, no en Todariquiba: Cey (en Coro
+        desde 1545, con servidumbre caquetía) escribe que el señor del llano,
+        Manaure, estaba en el pueblo de Coro en una casa grandísima que luego
+        fue iglesia; y en la probanza de 1680 los vecinos declaran por
+        tradición que tenía allí «su corte».
+      cita_corta: '«…estaba en dicho pueblo de Coro, en una casa grandísima…» (Cey)'
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '163-164'
+      via: 'Galeotto Cey, Viaje y descripción de las Indias 1539-1553, Caracas 1995, p. 56; probanza del procurador del cabildo, 1680, copia en AHC, Fondo Arcaya, t. VII'
+      epoca: colonial   # 1545 y 1680
+      etiqueta: atestiguado   # lo que dicen Cey y los testigos; que fuera así en 1527, reconstruido
+      conflicto_con_el_canon: >-
+        3-mundo/asentamientos.yaml nodo-001 (todariquiba): «Poblado real donde
+        residió Manaure […] el mejor candidato a lo que la simulación llama
+        la Curiana». González Batista lo discute de frente: Todariquiba era
+        un refugio a una legua, ocupado de forma temporal cuando llegaron los
+        alemanes (1529). No se resuelve aquí: son dos lecturas de documentos
+        coloniales.
+    - id: m7-gb02-003
+      afirmacion: >-
+        Todariquiba estaba a una legua de Coro (a dos, según una primera carta
+        de Bastidas de 1538 que él mismo rectifica), era en 1538 «pueblo del
+        cacique D. Alexandre» y estaba casi despoblado; debió desaparecer a
+        mediados del XVI. González Batista la sitúa, con Mons. Pineda, tras la
+        fila de Buena Vista, hacia Caujarao.
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '161 (n. 47-48)'
+      epoca: colonial
+      etiqueta: 'atestiguado (distancias, D. Alexandre); hipotético (Caujarao: opinión del autor)'
+      destino: asentamientos.yaml nodo-001 — «La ubicación de Todariquiba» (hueco abierto)
+    - id: m7-gb02-004
+      afirmacion: >-
+        Otro poblado indígena junto al puerto de Coro: «Norupara».
+      cita_corta: '«cabe el puerto de esta ciudad que se llama Norupara»'
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '162 (n. 49)'
+      via: 'ANH, Descubrimiento y conquista de Venezuela, t. II, Caracas 1988, p. 309'
+      epoca: colonial
+      etiqueta: atestiguado
+      destino: 'campana-toponimos: topónimo NUEVO (grep en toponimos.yaml, lexicon_toponimos.py, asentamientos.yaml y 6-fusion: 0)'
+    - id: m7-gb02-005
+      afirmacion: >-
+        En la probanza de 1680 los testigos llaman al señor «managuarire»
+        (el cura rector Pérez Ortiz), «managuanare» (Gervasio del Barrio, 75
+        años) y «managuanaré» (el capitán Esteban de Quero, que dice haber
+        estado «en el solar donde tenía su palacio»). González Batista afirma
+        que son dictados de honor «correctamente caquetíos», sin dar prueba.
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '163-164'
+      via: 'probanza de 1680, AHC, Fondo Arcaya, t. VII, pp. 5-21'
+      epoca: colonial   # 1680, por tradición
+      etiqueta: atestiguado   # las formas, en boca de testigos de 1680; su valor caquetío, hipotético
+      destino: >-
+        3-mundo/corpus/geografia_politica.yaml geografia_politica-008 hoy cita
+        «González, PLINCODE p. 23, vía Zavala». Esto da el DOCUMENTO debajo:
+        una probanza de 1680, siglo y medio después. Sube la cadena y a la vez
+        la data: son formas coloniales tardías, no de 1527.
+    - id: m7-gb02-006
+      afirmacion: >-
+        La presa («buco») y la acequia de dos leguas del río Coro llegaban al
+        pueblo; el río daba nombre también a la vega. Ballesteros (1550): en
+        tiempos en que la comarca de Coro tenía «catorce o quince mil indios»
+        la reparaban en tres o cuatro días; en 1550 sólo nombra «seis pueblos
+        de indios de esta nación caquetíos, comarcanos a la ciudad de Coro».
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '160-161 (n. 46-47)'
+      via: 'Ballesteros 1550, en Maldonado, Seis primeros obispos…, AGN 1973, pp. 110 y 129'
+      epoca: colonial
+      etiqueta: atestiguado
+      ya_en_el_canon: >-
+        sí, por otra vía (geografia_politica-004/005: Oliver citando a Bécker
+        1950). Esta es una SEGUNDA TRANSCRIPCIÓN del mismo documento
+        (Maldonado 1973), no una segunda atestación: confirma la lectura de
+        las cifras, no las cifras.
+    - id: m7-gb02-007
+      afirmacion: >-
+        «Mil ánimas poco más o menos» en todos los pueblos caquetíos «para
+        entonces».
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '161 (n. 47)'
+      via: 'Nectario María, Los orígenes de Maracaibo, 1959, p. 84 (y AGI Justicia 5)'
+      epoca: colonial   # 1529 o 1538: la nota no fija la fecha
+      etiqueta: atestiguado
+      aviso: >-
+        la nota no deja claro si el «entonces» es abril de 1529 o 1538, ni si
+        «todos los pueblos» son los de la comarca o los del cacicazgo. No se
+        usa como cifra hasta ver a Nectario María.
+    - id: m7-gb02-008
+      afirmacion: >-
+        Palo de brasil abundante en todo el territorio caquetío, sobre todo en
+        el piedemonte serrano de Coro, y en Aruba: la expedición de 1527 iba a
+        cortarlo; Ampiés contrató 4.500 quintales (30-VII-1527); los caribes
+        de la sierra y parte de los caquetíos lo impidieron.
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '157-158; 160 (n. 44)'
+      via: 'Ramos 1978 pp. 278-361'
+      epoca: colonial
+      etiqueta: atestiguado
+      destino: 3-mundo/corpus/ecologia.yaml (el árbol) — la explotación es colonial
+    - id: m7-gb02-009
+      afirmacion: >-
+        La cruz de la fundación de Coro es de madera de cují (comprobado al
+        restaurarla en 1987) y la tradición pone el encuentro Ampiés-Manaure y
+        la primera misa bajo un cují grande; para sacar maderos rectos de ese
+        largo hace falta un cují «de singulares dimensiones».
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '149 (n. 3)'
+      epoca: 'colonial (la cruz); moderno (la restauración)'
+      etiqueta: atestiguado
+      destino: 'ecologia: cujíes grandes en la vega de Coro'
+    - id: m7-gb02-010
+      afirmacion: >-
+        Primera acta municipal de Coro, localizada por el autor en Sevilla
+        (1992): Alfinger nombra alcaldes el 28-II-1529 «en la costa del puerto
+        que se dize de Coro».
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '170-171'
+      via: 'AGI, Santo Domingo 202, f. 42'
+      epoca: colonial
+      etiqueta: atestiguado
+      valor: 'el «puerto de Coro» con nombre en 1529: para el Golfete.'
+    - id: m7-gb02-011
+      afirmacion: >-
+        Castellanos trató en 1540 a la hija y al yerno de Ampiés (Bejarano y
+        doña María), y en el Nuevo Reino a Fernán Gallego, que vino en la
+        expedición de 1528: su relato de la fundación es oral y de primera
+        mano familiar.
+      obra: gonzalez-batista-2002-fundacion
+      pagina_impresa: '162'
+      epoca: colonial
+      etiqueta: atestiguado
+      valor: >-
+        convergente con lo que dice el propio poema (líneas 47956-47969,
+        p. 184; 48296, p. 185). Sube el peso de Castellanos como testigo de
+        lo de Coro.
+  sobre_el_autor: >-
+    El mismo González Batista de «El nombre de Coro». Aquí trabaja como
+    historiador de archivo (AGI, AHC, BNM) y no hace lingüística; lo que dice
+    de lengua (que «managuarire» es «correctamente caquetío») va sin prueba y
+    se trata como lo trató Miguel el 2026-08-25: con cautela, afirmación por
+    afirmación.
+
+# ══════════════════════════════════════════════════════════════════════════
+# 3. GONZÁLEZ BATISTA — «El nombre de Coro»: verificar lo que Miguel recordaba
+# ══════════════════════════════════════════════════════════════════════════
+gonzalez_batista_nombre_de_coro:
+  recuerdo_de_miguel: >-
+    «curiana era realmente Coriana y venía de espina y era porque Coro era un
+    bosque tupido de cardones» (d21.15, 2026-09-21).
+  veredicto_por_partes:
+    - parte: «Coriana, y no Curiana»
+      es_de_aqui: sí
+      donde: 'transcripción de las capturas de Miguel (6-fusion/toponimia_coro_espina.yaml §familia_coro)'
+      pagina: 'no recuperable: las capturas no la traían y la obra no está en el repo'
+    - parte: coro = 'espina' → Coriana 'tierra de las espinas'
+      es_de_aqui: sí
+      pagina: ídem, no recuperable
+    - parte: «bosque tupido de cardones»
+      es_de_aqui: 'NO literalmente, en lo que el repo transcribió'
+      lo_que_si_dice: >-
+        «de vegetación espinosa, e indirectamente, tierra de cardones»; y la
+        nota del repo añade que el cardonal de Coro «figuraba entre los
+        linderos» y el testimonio de 1533 sobre la fruta de los cardones
+        grandes, ambos por vía del autor.
+      fuente_primaria_mas_cercana: >-
+        Castellanos 1589, p. 185 (líneas 48221-48223): Coro «es tierra de
+        fructíferos cardones / Con que gran parte della se embaraza». Es la
+        imagen del bosque de cardones con fecha del XVI; puede ser la que
+        González Batista tenía delante (cita a Castellanos, ed. ANH 1987,
+        p. 175, que es esa misma página).
+  lo_que_no_se_pudo:
+    - >-
+      Conseguir el texto: no está en archive.org (búsqueda por autor: 0), ni
+      en HEVILA/Biblat (sí está su artículo de 2002, que no trata el nombre),
+      ni en Google Books con vista. La copia que Miguel vio estaba en Scribd,
+      que el repo no acepta como acceso abierto legítimo (sesión 07, rastreo
+      documental, 2026-08-14). Año, editorial y páginas siguen sin saberse.
+    - >-
+      Datarla: sólo sabemos que es posterior a 2000 (cita a Fernández Heres
+      2000) y que su autor escribe de «nuestro libro» Tierras de Falcón/
+      Paraguaná (1999).
+  lo_que_si_se_suma:
+    - 'm7-gb02-001: la forma Coriana en 1526, 1646 («que los Yndios diçen») y 1723, con cadena documental.'
+    - 'm7-cast-012: dos testigos (1550 y 1589) de que Coro era el nombre del río, y la lectura «viento» deja de ser indígena.'
+    - 'm7-cast-013: el único Coriana de Castellanos es de La Ramada.'
+
+# ══════════════════════════════════════════════════════════════════════════
+# 4. BRITO FIGUEROA 1962 — Población y economía en el pasado indígena venezolano
+# ══════════════════════════════════════════════════════════════════════════
+brito_figueroa:
+  ficha_corregida:
+    editorial: '[Ediciones Historia] (entre corchetes en el catálogo: la da el catalogador)'
+    paginas: '48 pp., con mapa; 22 cm; bibliografía en pp. 47-48'
+    materias_bnv: 'Indígenas de Venezuela — condiciones económicas — época colonial (1556-1810); Región Nororiental — vida social y costumbres'
+    fuente_del_dato: 'Catálogo de la Biblioteca Nacional de Venezuela, koha.bnv.gob.ve, biblionumber 677 (consultado 2026-09-22); cinco ejemplares en la red de la BNV'
+  estado: >-
+    NO se pudo minar hoy. No hay texto en el repo (capa_texto: no); no está en
+    archive.org (búsqueda por autor: tres ítems, ninguno éste), ni en HEVILA;
+    el autor murió en 2000 y la obra tiene derechos. Lo que el repo tiene de
+    ella es lo que Miguel leyó en Scribd el 2026-08-25 (polities_no_costeras_
+    federmann.yaml): Barquisimeto, Yaracuy, llanos, Caracas — nada de la costa
+    de Coro.
+  aviso: >-
+    Las materias del catálogo dicen «Región Nororiental». Con 48 páginas para
+    toda Venezuela, es improbable que traiga la demografía de Coro con el
+    detalle que la pregunta pide; lo que sí da es su aparato de notas.
+  la_pregunta_contestada_con_lo_que_si_hay: ver §escala_del_mundo
+
+# ══════════════════════════════════════════════════════════════════════════
+# 5. LA ESCALA DEL MUNDO — lo que las fuentes dicen del tamaño de la Kaketiana
+#    costera, para los 63 agentes en dos nodos (pregunta de la parcela).
+#    Ninguna cifra es de este minador: todas son de la fuente que se nombra.
+# ══════════════════════════════════════════════════════════════════════════
+escala_del_mundo:
+  - que: asentamientos alrededor de Coro
+    dato: 'once «ciudades de grandísimo momento» con nombre, en doce leguas, «con otros que callamos»; y gente numerosa hasta Paraguaná'
+    fuente: 'castellanos-elegias p. 185 (m7-cast-004)'
+    epoca: contacto-temprano (1525-1529, escrito en 1589)
+    proyectable_al_xv: >-
+      como MÍNIMO, con reserva: en 1527 la costa ya llevaba dos décadas de
+      armadas de salteo (González Batista 2002 p. 162; cédula de 1526 que las
+      prohíbe en la jurisdicción de Ampiés, p. 156). La red de 1400 no pudo
+      ser menor por causa europea; pudo ser mayor.
+  - que: radio de la red de Manaure
+    dato: 'pueblos que vinieron a la paz «hasta catorce leguas más adentro»; su nombre vale de salvoconducto camino de los llanos'
+    fuente: 'castellanos-elegias pp. 186, 199 (m7-cast-005, 006)'
+    epoca: contacto-temprano
+    proyectable_al_xv: con reserva
+  - que: población de la comarca de Coro
+    dato: '«catorce o quince mil indios» en tiempos de más gente; «cuatro o cinco mil» para reparar la acequia; en 1550, seis pueblos caquetíos'
+    fuente: 'ballesteros-1550 (ya en el corpus: geografia_politica-004/005, vía Oliver); segunda transcripción en gonzalez-batista-2002-fundacion pp. 160-161'
+    epoca: colonial (retrospectiva de 1550)
+    proyectable_al_xv: 'con reserva: es la memoria de 1550 de la comarca antes del derrumbe, el mejor techo que hay.'
+    nota: 'Oliver infiere de ahí más de 30 poblados suponiendo 150-200 personas por poblado: eso es un SUPUESTO suyo, no un dato (ya declarado en asentamientos.yaml).'
+  - que: población caquetía hacia 1529-1538
+    dato: '«mil ánimas poco más o menos» en todos los pueblos caquetíos'
+    fuente: 'gonzalez-batista-2002-fundacion p. 161 n. 47, vía Nectario María 1959 p. 84 (m7-gb02-007)'
+    epoca: colonial
+    proyectable_al_xv: 'no: es la población después del contacto, y la fecha y el ámbito de la cifra no están claros.'
+  - que: saca de esclavos
+    dato: 'cautivos de la sierra marcados con hierro y vendidos «por las islas en públicos pregones» (1529); caquetíos y bubures de Juruara herrados en Maracaibo y enviados a Santo Domingo'
+    fuente: 'castellanos-elegias p. 188 (m7-cast-023); oliver-1989-cap3 p. 201 (ya en taino_en_la_esfera)'
+    epoca: colonial
+    proyectable_al_xv: 'no.'
+  - que: encomienda
+    dato: 'en 1526 «el cacique de Coro y Coriana» quedan «encomendados» a Ampiés (exceptuados de la capitulación de Enciso); Manaure se hace «poco a poco tributario»; en 1680 la tradición dice que a Manaure «de todas partes le venían a pagar sus tributos»'
+    fuente: 'gonzalez-batista-2002-fundacion pp. 157, 164; castellanos-elegias p. 186'
+    epoca: colonial
+    proyectable_al_xv: >-
+      no la encomienda. El tributo A MANAURE de la tradición de 1680 podría
+      ser institución prehispánica, pero es memoria de siglo y medio después:
+      hipotético.
+  - que: economía indígena (sal, pesca, trueque)
+    dato: 'Coro: «grande pesquería de pescados», cardón de sustento; Maracaibo: pescadores-salineros que truecan con labradores de maíz; La Ramada: salina con pesca estacional «para comer, ya para trueque»; islas: arqueros certeros en aves, conejos y peces'
+    fuente: 'castellanos-elegias pp. 184, 185, 189, 252'
+    epoca: contacto-temprano
+    proyectable_al_xv: 'como patrón, con reserva (m7-cast-020); Coro, sí (medio físico).'
+escala_del_mundo_para_los_63: >-
+  Lo que dicen las fuentes, sin hacer cuentas nuevas: la comarca costera de
+  Coro tenía al menos once asentamientos con nombre en doce leguas, más los
+  de Paraguaná, y una población que en su mejor memoria se contaba por
+  miles. Dos nodos de 63 personas son una muestra de esa red, no la red; y
+  ninguna fuente minada hoy dice cuánta gente vivía en UN poblado. El único
+  número por poblado del repo es el supuesto de Oliver (150-200), que no es
+  dato.
