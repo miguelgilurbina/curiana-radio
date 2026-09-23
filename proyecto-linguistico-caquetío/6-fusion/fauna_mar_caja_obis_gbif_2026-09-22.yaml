@@ -1,0 +1,2714 @@
+# GENERADO por 6-fusion/scripts/caja_marina_obis_gbif.py — no editar a mano.
+meta:
+  que_es: Registros de ocurrencia de OBIS y GBIF en las dos aguas de la era 2, filtrados a la parcela
+    del mar (sin aves, sin fauna de tierra).
+  generado_por: 6-fusion/scripts/caja_marina_obis_gbif.py
+  consultado: '2026-09-22'
+  cajas_lon_lat:
+    paraguana_dos_aguas:
+    - -70.4
+    - 11.35
+    - -69.5
+    - 12.3
+    golfete_de_coro:
+    - -69.95
+    - 11.4
+    - -69.55
+    - 11.75
+    costa_oeste:
+    - -70.35
+    - 11.55
+    - -70.05
+    - 11.95
+  licencia: 'OBIS y GBIF: CC0 o CC-BY según el conjunto de datos; se cita la API y la fecha'
+  regla_3: 'un registro moderno NO es presencia en el s. XV: dice qué hay (o se vio) hoy'
+  regla_6: un cero de OBIS/GBIF mide el muestreo, no la fauna
+obis:
+  paraguana_dos_aguas:
+    url: https://api.obis.org/v3/checklist?geometry=POLYGON%28%28-70.4+11.35%2C-69.5+11.35%2C-69.5+12.3%2C-70.4+12.3%2C-70.4+11.35%29%29&size=5000
+    taxones_totales_obis: 980
+    especies_de_la_parcela: 518
+    por_grupo_n:
+      almejas, ostras, mejillones: 31
+      cangrejos, camarones, langostas: 187
+      caracoles: 75
+      corales y anémonas: 24
+      erizos: 10
+      esponjas: 9
+      estrellas de mar: 8
+      gorgonias (abanicos de mar): 13
+      medusas: 2
+      peces óseos: 143
+      pepinos de mar: 1
+      pulpos y calamares: 1
+      quitones: 3
+      reptiles (tortugas marinas): 2
+      tiburones y rayas: 9
+    por_grupo:
+      almejas, ostras, mejillones:
+      - especie: Agriopoma arestum
+        familia: Veneridae
+        registros: 29
+      - especie: Argopecten lineolaris
+        familia: Pectinidae
+        registros: 25
+      - especie: Fulvia laevigata
+        familia: Cardiidae
+        registros: 13
+      - especie: Cyclinella tenuis
+        familia: Veneridae
+        registros: 9
+      - especie: Amusium papyraceum
+        familia: Pectinidae
+        registros: 9
+      - especie: Amygdalum sagittatum
+        familia: Mytilidae
+        registros: 8
+      - especie: Euvola ziczac
+        familia: Pectinidae
+        registros: 7
+      - especie: Argopecten nucleus
+        familia: Pectinidae
+        registros: 5
+      - especie: Arcinella arcinella
+        familia: Chamidae
+        registros: 5
+      - especie: Anadara notabilis
+        familia: Arcidae
+        registros: 4
+      - especie: Arca zebra
+        familia: Arcidae
+        registros: 3
+      - especie: Trachycardium isocardia
+        familia: Cardiidae
+        registros: 3
+      - especie: Modiolus squamosus
+        familia: Modiolidae
+        registros: 2
+      - especie: Lirophora paphia
+        familia: Veneridae
+        registros: 2
+      - especie: Jasypitar fulminatus
+        familia: Veneridae
+        registros: 2
+      - especie: Perna perna
+        familia: Mytilidae
+        registros: 1
+      - especie: Chama sinuosa
+        familia: Chamidae
+        registros: 1
+      - especie: Propeamussium dalli
+        familia: Propeamussiidae
+        registros: 1
+      - especie: Similipecten nanus
+        familia: Propeamussiidae
+        registros: 1
+      - especie: Chione cancellata
+        familia: Veneridae
+        registros: 1
+      - especie: Musculus lateralis
+        familia: Mytilidae
+        registros: 1
+      - especie: Crassostrea rhizophorae
+        familia: Ostreidae
+        registros: 1
+      - especie: Eurytellina lineata
+        familia: Tellinidae
+        registros: 1
+      - especie: Choristodon robustus
+        familia: Veneridae
+        registros: 1
+      - especie: Sheldonella bisulcata
+        familia: Noetiidae
+        registros: 1
+      - especie: Carditamera gracilis
+        familia: Carditidae
+        registros: 1
+      - especie: Leiosolenus aristatus
+        familia: Modiolidae
+        registros: 1
+      - especie: Adrana gloriosa
+        familia: Nuculanidae
+        registros: 1
+      - especie: Chioneryx pygmaea
+        familia: Veneridae
+        registros: 1
+      - especie: Leukoma granulata
+        familia: Veneridae
+        registros: 1
+      - especie: Megapitaria maculata
+        familia: Veneridae
+        registros: 1
+      cangrejos, camarones, langostas:
+      - especie: Hyale pygmaea
+        familia: Hyalidae
+        registros: 155
+      - especie: Apohyale media
+        familia: Hyalidae
+        registros: 86
+      - especie: Elasmopus pectenicrus
+        familia: Maeridae
+        registros: 58
+      - especie: Ampelisca paria
+        familia: Ampeliscidae
+        registros: 58
+      - especie: Achelous spinicarpus
+        familia: Portunidae
+        registros: 53
+      - especie: Heterophoxus oculatus
+        familia: Phoxocephalidae
+        registros: 40
+      - especie: Leiolambrus nitidus
+        familia: Parthenopidae
+        registros: 33
+      - especie: Achelous forceps
+        familia: Portunidae
+        registros: 29
+      - especie: Amphiatlantica marcuzzi
+        familia: Talitridae
+        registros: 27
+      - especie: Iliacantha liodactylus
+        familia: Leucosiidae
+        registros: 26
+      - especie: Elasmopus rapax
+        familia: Maeridae
+        registros: 25
+      - especie: Anasimus latus
+        familia: Inachoididae
+        registros: 23
+      - especie: Omalacantha bicornuta
+        familia: Mithracidae
+        registros: 21
+      - especie: Rimapenaeus similis
+        familia: Penaeidae
+        registros: 20
+      - especie: Raninoides louisianensis
+        familia: Raninidae
+        registros: 18
+      - especie: Raninoides laevis
+        familia: Raninidae
+        registros: 18
+      - especie: Penaeus (Farfantepenaeus) brasiliensis
+        familia: Penaeidae
+        registros: 16
+      - especie: Quadrimaera quadrimana
+        familia: Maeridae
+        registros: 15
+      - especie: Speocarcinus meloi
+        familia: Pseudorhombilidae
+        registros: 15
+      - especie: Callinectes danae
+        familia: Portunidae
+        registros: 14
+      - especie: Quadrimaera pacifica
+        familia: Maeridae
+        registros: 13
+      - especie: Ampithoe longimana
+        familia: Ampithoidae
+        registros: 12
+      - especie: Callinectes bocourti
+        familia: Portunidae
+        registros: 11
+      - especie: Platylambrus granulatus
+        familia: Parthenopidae
+        registros: 11
+      - especie: Elasmopus spinidactylus
+        familia: Maeridae
+        registros: 11
+      - especie: Ocypode quadrata
+        familia: Ocypodidae
+        registros: 10
+      - especie: Penaeus (Farfantepenaeus) notialis
+        familia: Penaeidae
+        registros: 10
+      - especie: Callinectes sapidus
+        familia: Portunidae
+        registros: 9
+      - especie: Ampithoe ramondi
+        familia: Ampithoidae
+        registros: 8
+      - especie: Stenorhynchus seticornis
+        familia: Inachoididae
+        registros: 8
+      - especie: Achelous spinimanus
+        familia: Portunidae
+        registros: 8
+      - especie: Idunella carinata
+        familia: Liljeborgiidae
+        registros: 8
+      - especie: Sunamphitoe femorata
+        familia: Ampithoidae
+        registros: 8
+      - especie: Arenaeus cribrarius
+        familia: Portunidae
+        registros: 7
+      - especie: Callinectes ornatus
+        familia: Portunidae
+        registros: 7
+      - especie: Calappa cinerea
+        familia: Calappidae
+        registros: 7
+      - especie: Charybdis (Charybdis) hellerii
+        familia: Portunidae
+        registros: 6
+      - especie: Hepatus pudibundus
+        familia: Aethridae
+        registros: 6
+      - especie: Dardanus fucosus
+        familia: Diogenidae
+        registros: 6
+      - especie: Dardanus venosus
+        familia: Diogenidae
+        registros: 6
+      - especie: Sicyonia burkenroadi
+        familia: Sicyoniidae
+        registros: 6
+      - especie: Xiphopenaeus kroyeri
+        familia: Penaeidae
+        registros: 6
+      - especie: Grapsus grapsus
+        familia: Grapsidae
+        registros: 6
+      - especie: Chasmocarcinus typicus
+        familia: Chasmocarcinidae
+        registros: 6
+      - especie: Synopia ultramarina
+        familia: Synopiidae
+        registros: 5
+      - especie: Petrochirus diogenes
+        familia: Diogenidae
+        registros: 5
+      - especie: Sicyonia typica
+        familia: Sicyoniidae
+        registros: 5
+      - especie: Nasageneia yucatanensis
+        familia: Pontogeneiidae
+        registros: 5
+      - especie: Ebalia cariosa
+        familia: Leucosiidae
+        registros: 5
+      - especie: Batrachonotus fragosus
+        familia: Inachoididae
+        registros: 5
+      - especie: Eudevenopus metagracilis
+        familia: Platyischnopidae
+        registros: 5
+      - especie: Penaeus (Litopenaeus) schmitti
+        familia: Penaeidae
+        registros: 5
+      - especie: Leucothoe spinicarpa
+        familia: Leucothoidae
+        registros: 4
+      - especie: Grandidierella bonnieroides
+        familia: Aoridae
+        registros: 4
+      - especie: Calappa sulcata
+        familia: Calappidae
+        registros: 4
+      - especie: Elasmopus balkomanus
+        familia: Maeridae
+        registros: 4
+      - especie: Cardisoma guanhumi
+        familia: Gecarcinidae
+        registros: 4
+      - especie: Nancyplax vossi
+        familia: Euryplacidae
+        registros: 4
+      - especie: Phtisica marina
+        familia: Caprellidae
+        registros: 3
+      - especie: Photis longicaudata
+        familia: Photidae
+        registros: 3
+      - especie: Ericthonius punctatus
+        familia: Ischyroceridae
+        registros: 3
+      - especie: Elasmopus pocillimanus
+        familia: Maeridae
+        registros: 3
+      - especie: Stenothoe gallensis
+        familia: Stenothoidae
+        registros: 3
+      - especie: Plagusia depressa
+        familia: Plagusiidae
+        registros: 3
+      - especie: Alpheus floridanus
+        familia: Alpheidae
+        registros: 3
+      - especie: Ampelisca holmesi
+        familia: Ampeliscidae
+        registros: 3
+      - especie: Nototropis minikoi
+        familia: Atylidae
+        registros: 3
+      - especie: Paramicrodeutopus myersi
+        familia: Aoridae
+        registros: 3
+      - especie: Ampithoe marcuzzii
+        familia: Ampithoidae
+        registros: 3
+      - especie: Podocerus kleidus
+        familia: Podoceridae
+        registros: 3
+      - especie: Microprotopus shoemakeri
+        familia: Microprotopidae
+        registros: 3
+      - especie: Photis macromana
+        familia: Photidae
+        registros: 3
+      - especie: Callinectes exasperatus
+        familia: Portunidae
+        registros: 3
+      - especie: Callinectes larvatus
+        familia: Portunidae
+        registros: 3
+      - especie: Collodes inermis
+        familia: Inachoididae
+        registros: 3
+      - especie: Minuca rapax
+        familia: Ocypodidae
+        registros: 3
+      - especie: Penaeus (Farfantepenaeus) duorarum
+        familia: Penaeidae
+        registros: 3
+      - especie: Ericthonius brasiliensis
+        familia: Ischyroceridae
+        registros: 2
+      - especie: Apocorophium acutum
+        familia: Corophiidae
+        registros: 2
+      - especie: Lysianopsis alba
+        familia: Lysianassidae
+        registros: 2
+      - especie: Porcellana sigsbeiana
+        familia: Porcellanidae
+        registros: 2
+      - especie: Polyonyx gibbesi
+        familia: Porcellanidae
+        registros: 2
+      - especie: Mithrax hispidus
+        familia: Mithracidae
+        registros: 2
+      - especie: Squilla empusa
+        familia: Squillidae
+        registros: 2
+      - especie: Thor manningi
+        familia: Thoridae
+        registros: 2
+      - especie: Ligia platycephala
+        familia: Ligiidae
+        registros: 2
+      - especie: Hepatus gronovii
+        familia: Aethridae
+        registros: 2
+      - especie: Paguristes paraguanensis
+        familia: Diogenidae
+        registros: 2
+      - especie: Sicyonia stimpsoni
+        familia: Sicyoniidae
+        registros: 2
+      - especie: Nephropsis aculeata
+        familia: Nephropidae
+        registros: 2
+      - especie: Panulirus argus
+        familia: Palinuridae
+        registros: 2
+      - especie: Munidopsis robusta
+        familia: Munidopsidae
+        registros: 2
+      - especie: Audulla chelifera
+        familia: Photidae
+        registros: 2
+      - especie: Gibberosus myersi
+        familia: Megaluropidae
+        registros: 2
+      - especie: Alpheus packardii
+        familia: Alpheidae
+        registros: 2
+      - especie: Porcellana sayana
+        familia: Porcellanidae
+        registros: 2
+      - especie: Ethusa americana
+        familia: Ethusidae
+        registros: 2
+      - especie: Mithraculus coryphe
+        familia: Mithracidae
+        registros: 2
+      - especie: Nemausa acuticornis
+        familia: Mithracidae
+        registros: 2
+      - especie: Platylambrus serratus
+        familia: Parthenopidae
+        registros: 2
+      - especie: Eriphia gonagra
+        familia: Eriphiidae
+        registros: 2
+      - especie: Panopeus occidentalis
+        familia: Panopeidae
+        registros: 2
+      - especie: Speocarcinus carolinensis
+        familia: Pseudorhombilidae
+        registros: 2
+      - especie: Goniopsis cruentata
+        familia: Grapsidae
+        registros: 2
+      - especie: Ampelisca cristoides
+        familia: Ampeliscidae
+        registros: 2
+      - especie: Elasmopus bampo
+        familia: Maeridae
+        registros: 2
+      - especie: Melita persona
+        familia: Melitidae
+        registros: 2
+      - especie: Gammaropsis arawakia
+        familia: Photidae
+        registros: 2
+      - especie: Achelous gibbesii
+        familia: Portunidae
+        registros: 2
+      - especie: Alpheus platycheirus
+        familia: Alpheidae
+        registros: 2
+      - especie: Williamstimpsonia denticulata
+        familia: Xanthidae
+        registros: 2
+      - especie: Leptuca cumulanta
+        familia: Ocypodidae
+        registros: 2
+      - especie: Uca maracoani
+        familia: Ocypodidae
+        registros: 2
+      - especie: Iridonida irrasa
+        familia: Munididae
+        registros: 2
+      - especie: Faxonia robusta
+        familia: Solenoceridae
+        registros: 2
+      - especie: Penaeus (Farfantepenaeus) subtilis
+        familia: Penaeidae
+        registros: 2
+      - especie: Domecia acanthophora
+        familia: Domeciidae
+        registros: 1
+      - especie: Pachygrapsus transversus
+        familia: Grapsidae
+        registros: 1
+      - especie: Percnon gibbesi
+        familia: Percnidae
+        registros: 1
+      - especie: Leander tenuicornis
+        familia: Palaemonidae
+        registros: 1
+      - especie: Calappa flammea
+        familia: Calappidae
+        registros: 1
+      - especie: Aristaeomorpha foliacea
+        familia: Aristeidae
+        registros: 1
+      - especie: Alpheus heterochaelis
+        familia: Alpheidae
+        registros: 1
+      - especie: Pagurus longicarpus
+        familia: Paguridae
+        registros: 1
+      - especie: Myropsis quinquespinosa
+        familia: Leucosiidae
+        registros: 1
+      - especie: Apolochus neapolitanus
+        familia: Amphilochidae
+        registros: 1
+      - especie: Latreutes parvulus
+        familia: Hippolytidae
+        registros: 1
+      - especie: Cataleptodius floridanus
+        familia: Xanthidae
+        registros: 1
+      - especie: Geograpsus lividus
+        familia: Grapsidae
+        registros: 1
+      - especie: Pachygrapsus gracilis
+        familia: Grapsidae
+        registros: 1
+      - especie: Rocinela signata
+        familia: Aegidae
+        registros: 1
+      - especie: Acanthacaris caeca
+        familia: Nephropidae
+        registros: 1
+      - especie: Pagurus brevidactylus
+        familia: Paguridae
+        registros: 1
+      - especie: Clibanarius antillensis
+        familia: Diogenidae
+        registros: 1
+      - especie: Clibanarius sclopetarius
+        familia: Diogenidae
+        registros: 1
+      - especie: Coenobita clypeatus
+        familia: Coenobitidae
+        registros: 1
+      - especie: Paguristes grayi
+        familia: Diogenidae
+        registros: 1
+      - especie: Solenocera atlantidis
+        familia: Solenoceridae
+        registros: 1
+      - especie: Scyllarus chacei
+        familia: Scyllaridae
+        registros: 1
+      - especie: Elasmopus elieri
+        familia: Maeridae
+        registros: 1
+      - especie: Lysiosquilla scabricauda
+        familia: Lysiosquillidae
+        registros: 1
+      - especie: Ampelisca burkei
+        familia: Ampeliscidae
+        registros: 1
+      - especie: Ampelisca lobata
+        familia: Ampeliscidae
+        registros: 1
+      - especie: Tryphosella apalachicola
+        familia: Tryphosidae
+        registros: 1
+      - especie: Metharpinia floridana
+        familia: Phoxocephalidae
+        registros: 1
+      - especie: Bemlos unicornis
+        familia: Aoridae
+        registros: 1
+      - especie: Stenopus scutellatus
+        familia: Stenopodidae
+        registros: 1
+      - especie: Alpheus armillatus
+        familia: Alpheidae
+        registros: 1
+      - especie: Exhippolysmata oplophoroides
+        familia: Lysmatidae
+        registros: 1
+      - especie: Hippolyte obliquimanus
+        familia: Hippolytidae
+        registros: 1
+      - especie: Processa fimbriata
+        familia: Processidae
+        registros: 1
+      - especie: Hypoconcha parasitica
+        familia: Dromiidae
+        registros: 1
+      - especie: Epialtus bituberculatus
+        familia: Epialtidae
+        registros: 1
+      - especie: Collodes armatus
+        familia: Inachoididae
+        registros: 1
+      - especie: Macrocoeloma concavum
+        familia: Epialtidae
+        registros: 1
+      - especie: Mithraculus forceps
+        familia: Mithracidae
+        registros: 1
+      - especie: Mithraculus sculptus
+        familia: Mithracidae
+        registros: 1
+      - especie: Chorinus heros
+        familia: Epialtidae
+        registros: 1
+      - especie: Pitho lherminieri
+        familia: Mithracidae
+        registros: 1
+      - especie: Eurypanopeus abbreviatus
+        familia: Panopeidae
+        registros: 1
+      - especie: Eurytium limosum
+        familia: Panopeidae
+        registros: 1
+      - especie: Pilumnus dasypodus
+        familia: Pilumnidae
+        registros: 1
+      - especie: Pseudorhombila quadridentata
+        familia: Pseudorhombilidae
+        registros: 1
+      - especie: Dissodactylus crinitichelis
+        familia: Pinnotheridae
+        registros: 1
+      - especie: Ucides cordatus
+        familia: Ocypodidae
+        registros: 1
+      - especie: Aratus pisonii
+        familia: Sesarmidae
+        registros: 1
+      - especie: Bemlos spinicarpus
+        familia: Aoridae
+        registros: 1
+      - especie: Hepatus scaber
+        familia: Aethridae
+        registros: 1
+      - especie: Persephona lichtensteinii
+        familia: Leucosiidae
+        registros: 1
+      - especie: Macrocoeloma nodipes
+        familia: Epialtidae
+        registros: 1
+      - especie: Agolambrus agonus
+        familia: Parthenopidae
+        registros: 1
+      - especie: Prionoplax atlantica
+        familia: Pseudorhombilidae
+        registros: 1
+      - especie: Marcusiaxius lemoscastroi
+        familia: Micheleidae
+        registros: 1
+      - especie: Neomegamphopus heardi
+        familia: Neomegamphopidae
+        registros: 1
+      - especie: Ameroculodes edwardsi
+        familia: Oedicerotidae
+        registros: 1
+      - especie: Deflexilodes intermedius
+        familia: Oedicerotidae
+        registros: 1
+      - especie: Latigammaropsis atlantica
+        familia: Photidae
+        registros: 1
+      - especie: Achelous floridanus
+        familia: Portunidae
+        registros: 1
+      - especie: Achelous tumidulus
+        familia: Portunidae
+        registros: 1
+      - especie: Cycloachelous granulatus
+        familia: Portunidae
+        registros: 1
+      - especie: Hourstonius petulans
+        familia: Amphilochidae
+        registros: 1
+      - especie: Neomegamphopus kalanii
+        familia: Neomegamphopidae
+        registros: 1
+      - especie: Belzebub faxoni
+        familia: Luciferidae
+        registros: 1
+      - especie: Hypoconcha arcuata
+        familia: Dromiidae
+        registros: 1
+      - especie: Iridonida simplex
+        familia: Munididae
+        registros: 1
+      - especie: Palaemonella americana
+        familia: Palaemonidae
+        registros: 1
+      - especie: Diuplax sigsbei
+        familia: Goneplacidae
+        registros: 1
+      caracoles:
+      - especie: Tectarius antonii
+        familia: Littorinidae
+        registros: 31
+      - especie: Echinolittorina interrupta
+        familia: Littorinidae
+        registros: 30
+      - especie: Polystira albida
+        familia: Turridae
+        registros: 22
+      - especie: Nerita versicolor
+        familia: Neritidae
+        registros: 20
+      - especie: Plicopurpura patula
+        familia: Muricidae
+        registros: 19
+      - especie: Oliva scripta
+        familia: Olividae
+        registros: 19
+      - especie: Muracypraea mus
+        familia: Cypraeidae
+        registros: 19
+      - especie: Fissurella barbadensis
+        familia: Fissurellidae
+        registros: 18
+      - especie: Fissurella nodosa
+        familia: Fissurellidae
+        registros: 18
+      - especie: Fissurella nimbosa
+        familia: Fissurellidae
+        registros: 18
+      - especie: Nerita tessellata
+        familia: Neritidae
+        registros: 14
+      - especie: Vokesimurex cabritii
+        familia: Muricidae
+        registros: 12
+      - especie: Echinolittorina angustior
+        familia: Littorinidae
+        registros: 10
+      - especie: Distorsio clathrata
+        familia: Personidae
+        registros: 10
+      - especie: Eburna glabrata
+        familia: Ancillariidae
+        registros: 9
+      - especie: Nerita peloronta
+        familia: Neritidae
+        registros: 7
+      - especie: Turritella exoleta
+        familia: Turritellidae
+        registros: 7
+      - especie: Echinolittorina ziczac
+        familia: Littorinidae
+        registros: 7
+      - especie: Conus spurius
+        familia: Conidae
+        registros: 7
+      - especie: Voluta musica
+        familia: Volutidae
+        registros: 6
+      - especie: Conasprella puncticulata
+        familia: Conidae
+        registros: 6
+      - especie: Ficus ficus
+        familia: Ficidae
+        registros: 5
+      - especie: Vokesimurex chrysostoma
+        familia: Muricidae
+        registros: 5
+      - especie: Strombus pugilis
+        familia: Strombidae
+        registros: 5
+      - especie: Aristofusus helenae
+        familia: Fasciolariidae
+        registros: 4
+      - especie: Architectonica nobilis
+        familia: Architectonicidae
+        registros: 3
+      - especie: Nerita plicata
+        familia: Neritidae
+        registros: 3
+      - especie: Conus hieroglyphus
+        familia: Conidae
+        registros: 3
+      - especie: Chicoreus brevifrons
+        familia: Muricidae
+        registros: 3
+      - especie: Bulla striata
+        familia: Bullidae
+        registros: 2
+      - especie: Stramonita haemastoma
+        familia: Muricidae
+        registros: 2
+      - especie: Stramonita floridana
+        familia: Muricidae
+        registros: 2
+      - especie: Littoraria nebulosa
+        familia: Littorinidae
+        registros: 2
+      - especie: Polygona infundibulum
+        familia: Fasciolariidae
+        registros: 2
+      - especie: Melongena melongena
+        familia: Melongenidae
+        registros: 2
+      - especie: Prunum prunum
+        familia: Marginellidae
+        registros: 2
+      - especie: Marsupina bufo
+        familia: Bursidae
+        registros: 2
+      - especie: Monoplex krebsii
+        familia: Cymatiidae
+        registros: 2
+      - especie: Phyllonotus globosus
+        familia: Muricidae
+        registros: 2
+      - especie: Lithopoma brevispina
+        familia: Turbinidae
+        registros: 2
+      - especie: Siphonaria naufragum
+        familia: Siphonariidae
+        registros: 2
+      - especie: Phrontis vibex
+        familia: Nassariidae
+        registros: 2
+      - especie: Bursatella leachii
+        familia: Aplysiidae
+        registros: 1
+      - especie: Tonna galea
+        familia: Tonnidae
+        registros: 1
+      - especie: Crucibulum striatum
+        familia: Calyptraeidae
+        registros: 1
+      - especie: Diodora cayenensis
+        familia: Fissurellidae
+        registros: 1
+      - especie: Parvanachis obesa
+        familia: Columbellidae
+        registros: 1
+      - especie: Columbella mercatoria
+        familia: Columbellidae
+        registros: 1
+      - especie: Conus ermineus
+        familia: Conidae
+        registros: 1
+      - especie: Trivirostra oryza
+        familia: Triviidae
+        registros: 1
+      - especie: Cerithium atratum
+        familia: Cerithiidae
+        registros: 1
+      - especie: Lithopoma phoebium
+        familia: Turbinidae
+        registros: 1
+      - especie: Calliostoma pulchrum
+        familia: Calliostomatidae
+        registros: 1
+      - especie: Cerithium eburneum
+        familia: Cerithiidae
+        registros: 1
+      - especie: Supplanaxis nucleus
+        familia: Planaxidae
+        registros: 1
+      - especie: Echinolittorina tuberculata
+        familia: Littorinidae
+        registros: 1
+      - especie: Polinices hepaticus
+        familia: Naticidae
+        registros: 1
+      - especie: Sinum maculatum
+        familia: Naticidae
+        registros: 1
+      - especie: Cassis madagascariensis
+        familia: Cassidae
+        registros: 1
+      - especie: Phyllonotus pomum
+        familia: Muricidae
+        registros: 1
+      - especie: Costoanachis floridana
+        familia: Columbellidae
+        registros: 1
+      - especie: Fasciolaria tulipa
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Leucozonia nassa
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Leucozonia ocellata
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Turbinella angulata
+        familia: Turbinellidae
+        registros: 1
+      - especie: Oliva reticularis
+        familia: Olividae
+        registros: 1
+      - especie: Pyrgocythara cinctella
+        familia: Mangeliidae
+        registros: 1
+      - especie: Volva volva
+        familia: Ovulidae
+        registros: 1
+      - especie: Fasciolaria hollisteri
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Prunum marginatum
+        familia: Marginellidae
+        registros: 1
+      - especie: Phyllonotus margaritensis
+        familia: Muricidae
+        registros: 1
+      - especie: Cinctura lilium
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Lyonsifusus ansatus
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Neoterebra angelli
+        familia: Terebridae
+        registros: 1
+      - especie: Volutella muricata
+        familia: Vasidae
+        registros: 1
+      corales y anémonas:
+      - especie: Ricordea florida
+        familia: Ricordeidae
+        registros: 10
+      - especie: Porites porites
+        familia: Poritidae
+        registros: 8
+      - especie: Siderastrea radians
+        familia: Rhizangiidae
+        registros: 8
+      - especie: Siderastrea siderea
+        familia: Rhizangiidae
+        registros: 7
+      - especie: Favia fragum
+        familia: Faviidae
+        registros: 5
+      - especie: Rhodactis osculifera
+        familia: Discosomidae
+        registros: 5
+      - especie: Pseudodiploria strigosa
+        familia: Faviidae
+        registros: 5
+      - especie: Cladocora debilis
+        familia: Cladocoridae
+        registros: 4
+      - especie: Leptoseris cailleti
+        familia: Agariciidae
+        registros: 4
+      - especie: Discosoma neglecta
+        familia: Discosomidae
+        registros: 4
+      - especie: Hydrozoanthus tunicans
+        familia: Hydrozoanthidae
+        registros: 3
+      - especie: Porites astreoides
+        familia: Poritidae
+        registros: 3
+      - especie: Madracis asperula
+        familia: Pocilloporidae
+        registros: 2
+      - especie: Astrangia poculata
+        familia: Astrangiidae
+        registros: 2
+      - especie: Telmatactis rufa
+        familia: Andvakiidae
+        registros: 2
+      - especie: Corynactis parvula
+        familia: Corallimorphidae
+        registros: 2
+      - especie: Eguchipsammia strigosa
+        familia: Dendrophylliidae
+        registros: 2
+      - especie: Agaricia agaricites
+        familia: Agariciidae
+        registros: 2
+      - especie: Pseudodiploria clivosa
+        familia: Faviidae
+        registros: 2
+      - especie: Anomocora elongata
+        familia: Caryophylliidae
+        registros: 2
+      - especie: Stichopathes occidentalis
+        familia: Antipathidae
+        registros: 1
+      - especie: Astrangia solitaria
+        familia: Astrangiidae
+        registros: 1
+      - especie: Colpophyllia natans
+        familia: Faviidae
+        registros: 1
+      - especie: Isarachnanthus nocturnus
+        familia: Arachnactidae
+        registros: 1
+      erizos:
+      - especie: Eucidaris tribuloides
+        familia: Cidaridae
+        registros: 20
+      - especie: Echinometra lucunter
+        familia: Echinometridae
+        registros: 18
+      - especie: Echinometra viridis
+        familia: Echinometridae
+        registros: 18
+      - especie: Clypeaster subdepressus
+        familia: Clypeasteridae
+        registros: 5
+      - especie: Brissopsis elongata
+        familia: Brissidae
+        registros: 3
+      - especie: Lytechinus variegatus
+        familia: Toxopneustidae
+        registros: 2
+      - especie: Schizaster floridiensis
+        familia: Schizasteridae
+        registros: 2
+      - especie: Stylocidaris affinis
+        familia: Cidaridae
+        registros: 1
+      - especie: Diadema antillarum
+        familia: Diadematidae
+        registros: 1
+      - especie: Astropyga magnifica
+        familia: Diadematidae
+        registros: 1
+      esponjas:
+      - especie: Cliona varians
+        familia: Clionaidae
+        registros: 5
+      - especie: Placospongia melobesioides
+        familia: Placospongiidae
+        registros: 4
+      - especie: Chondrilla nucula
+        familia: Chondrillidae
+        registros: 3
+      - especie: Aaptos pernucleata
+        familia: Suberitidae
+        registros: 3
+      - especie: Dysidea robusta
+        familia: Dysideidae
+        registros: 1
+      - especie: Niphates erecta
+        familia: Niphatidae
+        registros: 1
+      - especie: Stelletta kallitetilla
+        familia: Ancorinidae
+        registros: 1
+      - especie: Cervicornia cuspidifera
+        familia: Clionaidae
+        registros: 1
+      - especie: Cinachyrella alloclada
+        familia: Tetillidae
+        registros: 1
+      estrellas de mar:
+      - especie: Astropecten articulatus
+        familia: Astropectinidae
+        registros: 64
+      - especie: Luidia clathrata
+        familia: Luidiidae
+        registros: 9
+      - especie: Luidia senegalensis
+        familia: Luidiidae
+        registros: 3
+      - especie: Astropecten americanus
+        familia: Astropectinidae
+        registros: 1
+      - especie: Astropecten acutiradiatus
+        familia: Astropectinidae
+        registros: 1
+      - especie: Astropecten duplicatus
+        familia: Astropectinidae
+        registros: 1
+      - especie: Astropecten marginatus
+        familia: Astropectinidae
+        registros: 1
+      - especie: Asterinides pilosa
+        familia: Asterinidae
+        registros: 1
+      gorgonias (abanicos de mar):
+      - especie: Sclerobelemnon theseus
+        familia: Kophobelemnidae
+        registros: 13
+      - especie: Diodogorgia nodulifera
+        familia: Spongiodermidae
+        registros: 8
+      - especie: Renilla muelleri
+        familia: Renillidae
+        registros: 8
+      - especie: Virgularia presbytes
+        familia: Virgulariidae
+        registros: 6
+      - especie: Leptogorgia cardinalis
+        familia: Gorgoniidae
+        registros: 2
+      - especie: Bellonella rubistella
+        familia: Alcyoniidae
+        registros: 2
+      - especie: Heterogorgia uatumani
+        familia: Acanthogorgiidae
+        registros: 2
+      - especie: Carijoa riisei
+        familia: Carijoidae
+        registros: 2
+      - especie: Scleracis guadalupensis
+        familia: Scleracidae
+        registros: 2
+      - especie: Leptogorgia setacea
+        familia: Gorgoniidae
+        registros: 1
+      - especie: Leptogorgia barbadensis
+        familia: Gorgoniidae
+        registros: 1
+      - especie: Stylatula antillarum
+        familia: Virgulariidae
+        registros: 1
+      - especie: Gorgonia ventalina
+        familia: Gorgoniidae
+        registros: 1
+      medusas:
+      - especie: Lychnorhiza lucerna
+        familia: Lychnorhizidae
+        registros: 1
+      - especie: Stomolophus meleagris
+        familia: Stomolophidae
+        registros: 1
+      peces óseos:
+      - especie: Citharichthys spilopterus
+        familia: Paralichthyidae
+        registros: 18
+      - especie: Symphurus tessellatus
+        familia: Cynoglossidae
+        registros: 13
+      - especie: Porichthys plectrodon
+        familia: Batrachoididae
+        registros: 8
+      - especie: Gymnothorax ocellatus
+        familia: Muraenidae
+        registros: 8
+      - especie: Chlorophthalmus agassizi
+        familia: Chlorophthalmidae
+        registros: 6
+      - especie: Pterois volitans
+        familia: Scorpaenidae
+        registros: 6
+      - especie: Bollmannia boqueronensis
+        familia: Gobiidae
+        registros: 5
+      - especie: Parasudis truculenta
+        familia: Chlorophthalmidae
+        registros: 4
+      - especie: Bothus ocellatus
+        familia: Bothidae
+        registros: 4
+      - especie: Diplectrum bivittatum
+        familia: Serranidae
+        registros: 4
+      - especie: Prionotus punctatus
+        familia: Triglidae
+        registros: 4
+      - especie: Pomatomus saltatrix
+        familia: Pomatomidae
+        registros: 3
+      - especie: Opisthonema oglinum
+        familia: Dorosomatidae
+        registros: 3
+      - especie: Merluccius albidus
+        familia: Merlucciidae
+        registros: 3
+      - especie: Laemonema goodebeanorum
+        familia: Moridae
+        registros: 3
+      - especie: Symphurus diomedeanus
+        familia: Cynoglossidae
+        registros: 3
+      - especie: Hoplostethus occidentalis
+        familia: Trachichthyidae
+        registros: 3
+      - especie: Peristedion greyae
+        familia: Peristediidae
+        registros: 3
+      - especie: Scorpaena plumieri
+        familia: Scorpaenidae
+        registros: 3
+      - especie: Argentina brucei
+        familia: Argentinidae
+        registros: 3
+      - especie: Coelorinchus caelorhincus
+        familia: Macrouridae
+        registros: 3
+      - especie: Chauliodus sloani
+        familia: Stomiidae
+        registros: 2
+      - especie: Malacocephalus occidentalis
+        familia: Macrouridae
+        registros: 2
+      - especie: Polyipnus asteroides
+        familia: Sternoptychidae
+        registros: 2
+      - especie: Hymenocephalus italicus
+        familia: Macrouridae
+        registros: 2
+      - especie: Halieutichthys aculeatus
+        familia: Ogcocephalidae
+        registros: 2
+      - especie: Archosargus rhomboidalis
+        familia: Sparidae
+        registros: 2
+      - especie: Mugil curema
+        familia: Mugilidae
+        registros: 2
+      - especie: Chloroscombrus chrysurus
+        familia: Carangidae
+        registros: 2
+      - especie: Lutjanus griseus
+        familia: Lutjanidae
+        registros: 2
+      - especie: Pristipomoides aquilonaris
+        familia: Lutjanidae
+        registros: 2
+      - especie: Micropogonias furnieri
+        familia: Sciaenidae
+        registros: 2
+      - especie: Lepophidium brevibarbe
+        familia: Ophidiidae
+        registros: 2
+      - especie: Syacium gunteri
+        familia: Paralichthyidae
+        registros: 2
+      - especie: Ogcocephalus nasutus
+        familia: Ogcocephalidae
+        registros: 2
+      - especie: Ancylopsetta cycloidea
+        familia: Paralichthyidae
+        registros: 2
+      - especie: Stellifer microps
+        familia: Sciaenidae
+        registros: 2
+      - especie: Stellifer rastrifer
+        familia: Sciaenidae
+        registros: 2
+      - especie: Stellifer venezuelae
+        familia: Sciaenidae
+        registros: 2
+      - especie: Lonchopisthus higmani
+        familia: Opistognathidae
+        registros: 2
+      - especie: Thalassophryne maculosa
+        familia: Batrachoididae
+        registros: 2
+      - especie: Orthopristis rubra
+        familia: Haemulidae
+        registros: 2
+      - especie: Sardinella aurita
+        familia: Dorosomatidae
+        registros: 1
+      - especie: Nezumia aequalis
+        familia: Macrouridae
+        registros: 1
+      - especie: Neoscopelus macrolepidotus
+        familia: Neoscopelidae
+        registros: 1
+      - especie: Decapterus punctatus
+        familia: Carangidae
+        registros: 1
+      - especie: Lobotes surinamensis
+        familia: Lobotidae
+        registros: 1
+      - especie: Rachycentron canadum
+        familia: Rachycentridae
+        registros: 1
+      - especie: Katsuwonus pelamis
+        familia: Scombridae
+        registros: 1
+      - especie: Pagrus pagrus
+        familia: Sparidae
+        registros: 1
+      - especie: Trichiurus lepturus
+        familia: Trichiuridae
+        registros: 1
+      - especie: Polymetme corythaeola
+        familia: Phosichthyidae
+        registros: 1
+      - especie: Zenion hololepis
+        familia: Zeniontidae
+        registros: 1
+      - especie: Elops saurus
+        familia: Elopidae
+        registros: 1
+      - especie: Engraulis eurystole
+        familia: Engraulidae
+        registros: 1
+      - especie: Bagre marinus
+        familia: Ariidae
+        registros: 1
+      - especie: Argentina striata
+        familia: Argentinidae
+        registros: 1
+      - especie: Saurida brasiliensis
+        familia: Synodontidae
+        registros: 1
+      - especie: Synodus foetens
+        familia: Synodontidae
+        registros: 1
+      - especie: Synodus poeyi
+        familia: Synodontidae
+        registros: 1
+      - especie: Antennarius striatus
+        familia: Antennariidae
+        registros: 1
+      - especie: Haemulon aurolineatum
+        familia: Haemulidae
+        registros: 1
+      - especie: Syacium micrurum
+        familia: Paralichthyidae
+        registros: 1
+      - especie: Acanthostracion quadricornis
+        familia: Ostraciidae
+        registros: 1
+      - especie: Sphoeroides spengleri
+        familia: Tetraodontidae
+        registros: 1
+      - especie: Sphoeroides testudineus
+        familia: Tetraodontidae
+        registros: 1
+      - especie: Urophycis floridana
+        familia: Phycidae
+        registros: 1
+      - especie: Strongylura marina
+        familia: Belonidae
+        registros: 1
+      - especie: Hemiramphus brasiliensis
+        familia: Hemiramphidae
+        registros: 1
+      - especie: Menticirrhus americanus
+        familia: Sciaenidae
+        registros: 1
+      - especie: Engyophrys senta
+        familia: Bothidae
+        registros: 1
+      - especie: Myripristis jacobus
+        familia: Holocentridae
+        registros: 1
+      - especie: Upeneus parvus
+        familia: Mullidae
+        registros: 1
+      - especie: Peristedion truncatum
+        familia: Peristediidae
+        registros: 1
+      - especie: Scorpaena calcarata
+        familia: Scorpaenidae
+        registros: 1
+      - especie: Prionotus stearnsi
+        familia: Triglidae
+        registros: 1
+      - especie: Hemicaranx amblyrhynchus
+        familia: Carangidae
+        registros: 1
+      - especie: Oligoplites saurus
+        familia: Carangidae
+        registros: 1
+      - especie: Trachurus lathami
+        familia: Carangidae
+        registros: 1
+      - especie: Chaetodipterus faber
+        familia: Ephippidae
+        registros: 1
+      - especie: Epigonus pectinifer
+        familia: Epigonidae
+        registros: 1
+      - especie: Eucinostomus gula
+        familia: Gerreidae
+        registros: 1
+      - especie: Lutjanus buccanella
+        familia: Lutjanidae
+        registros: 1
+      - especie: Lutjanus synagris
+        familia: Lutjanidae
+        registros: 1
+      - especie: Lutjanus vivanus
+        familia: Lutjanidae
+        registros: 1
+      - especie: Sphyraena guachancho
+        familia: Sphyraenidae
+        registros: 1
+      - especie: Albula vulpes
+        familia: Albulidae
+        registros: 1
+      - especie: Sargocentron bullisi
+        familia: Holocentridae
+        registros: 1
+      - especie: Urophycis cirrata
+        familia: Phycidae
+        registros: 1
+      - especie: Apogon aurolineatus
+        familia: Apogonidae
+        registros: 1
+      - especie: Serranus atrobranchus
+        familia: Serranidae
+        registros: 1
+      - especie: Symphurus pelicanus
+        familia: Cynoglossidae
+        registros: 1
+      - especie: Albula nemoptera
+        familia: Albulidae
+        registros: 1
+      - especie: Anchoa lyolepis
+        familia: Engraulidae
+        registros: 1
+      - especie: Anchoa spinifer
+        familia: Engraulidae
+        registros: 1
+      - especie: Bagre bagre
+        familia: Ariidae
+        registros: 1
+      - especie: Porichthys porosissimus
+        familia: Batrachoididae
+        registros: 1
+      - especie: Microgobius signatus
+        familia: Gobiidae
+        registros: 1
+      - especie: Haemulon boschmae
+        familia: Haemulidae
+        registros: 1
+      - especie: Haemulon flavolineatum
+        familia: Haemulidae
+        registros: 1
+      - especie: Haemulon parra
+        familia: Haemulidae
+        registros: 1
+      - especie: Haemulon steindachneri
+        familia: Haemulidae
+        registros: 1
+      - especie: Haemulon striatum
+        familia: Haemulidae
+        registros: 1
+      - especie: Paralichthys tropicus
+        familia: Paralichthyidae
+        registros: 1
+      - especie: Bairdiella ronchus
+        familia: Sciaenidae
+        registros: 1
+      - especie: Cynoscion acoupa
+        familia: Sciaenidae
+        registros: 1
+      - especie: Cynoscion jamaicensis
+        familia: Sciaenidae
+        registros: 1
+      - especie: Cynoscion leiarchus
+        familia: Sciaenidae
+        registros: 1
+      - especie: Cynoscion microlepidotus
+        familia: Sciaenidae
+        registros: 1
+      - especie: Cynoscion similis
+        familia: Sciaenidae
+        registros: 1
+      - especie: Cynoscion virescens
+        familia: Sciaenidae
+        registros: 1
+      - especie: Larimus breviceps
+        familia: Sciaenidae
+        registros: 1
+      - especie: Neomerinthe beanorum
+        familia: Scorpaenidae
+        registros: 1
+      - especie: Prionotus beanii
+        familia: Triglidae
+        registros: 1
+      - especie: Oligoplites palometa
+        familia: Carangidae
+        registros: 1
+      - especie: Diapterus rhombeus
+        familia: Gerreidae
+        registros: 1
+      - especie: Bembrops quadrisella
+        familia: Bembropidae
+        registros: 1
+      - especie: Pellona harroweri
+        familia: Pristigasteridae
+        registros: 1
+      - especie: Harengula clupeola
+        familia: Dorosomatidae
+        registros: 1
+      - especie: Atherinella blackburni
+        familia: Atherinopsidae
+        registros: 1
+      - especie: Atherinella brasiliensis
+        familia: Atherinopsidae
+        registros: 1
+      - especie: Bollmannia litura
+        familia: Gobiidae
+        registros: 1
+      - especie: Cathorops spixii
+        familia: Ariidae
+        registros: 1
+      - especie: Centropomus ensiferus
+        familia: Centropomidae
+        registros: 1
+      - especie: Centropomus undecimalis
+        familia: Centropomidae
+        registros: 1
+      - especie: Cetengraulis edentulus
+        familia: Engraulidae
+        registros: 1
+      - especie: Conodon nobilis
+        familia: Haemulidae
+        registros: 1
+      - especie: Emblemaria pandionis
+        familia: Chaenopsidae
+        registros: 1
+      - especie: Genyatremus luteus
+        familia: Haemulidae
+        registros: 1
+      - especie: Hollardia hollardi
+        familia: Triacanthodidae
+        registros: 1
+      - especie: Lonchopisthus micrognathus
+        familia: Opistognathidae
+        registros: 1
+      - especie: Macrodon ancylodon
+        familia: Sciaenidae
+        registros: 1
+      - especie: Nebris microps
+        familia: Sciaenidae
+        registros: 1
+      - especie: Notarius grandicassis
+        familia: Ariidae
+        registros: 1
+      - especie: Paralonchurus brasiliensis
+        familia: Sciaenidae
+        registros: 1
+      - especie: Sciades herzbergii
+        familia: Ariidae
+        registros: 1
+      - especie: Serraniculus pumilio
+        familia: Serranidae
+        registros: 1
+      - especie: Diplodus argenteus
+        familia: Sparidae
+        registros: 1
+      - especie: Caranx bartholomaei
+        familia: Carangidae
+        registros: 1
+      - especie: Ancylopsetta quadrocellata
+        familia: Paralichthyidae
+        registros: 1
+      - especie: Pareques iwamotoi
+        familia: Sciaenidae
+        registros: 1
+      - especie: Synodus bondi
+        familia: Synodontidae
+        registros: 1
+      - especie: Stellifer punctatissimus
+        familia: Sciaenidae
+        registros: 1
+      pepinos de mar:
+      - especie: Thyone pawsoni
+        familia: Phyllophoridae
+        registros: 1
+      pulpos y calamares:
+      - especie: Muusoctopus januarii
+        familia: Enteroctopodidae
+        registros: 1
+      quitones:
+      - especie: Acanthopleura granulata
+        familia: Chitonidae
+        registros: 19
+      - especie: Chiton squamosus
+        familia: Chitonidae
+        registros: 18
+      - especie: Chiton marmoratus
+        familia: Chitonidae
+        registros: 1
+      reptiles (tortugas marinas):
+      - especie: Eretmochelys imbricata
+        familia: Cheloniidae
+        registros: 36
+      - especie: Dermochelys coriacea
+        familia: Dermochelyidae
+        registros: 1
+      tiburones y rayas:
+      - especie: Narcine brasiliensis
+        familia: Narcinidae
+        registros: 7
+      - especie: Mustelus norrisi
+        familia: Triakidae
+        registros: 2
+      - especie: Etmopterus virens
+        familia: Etmopteridae
+        registros: 2
+      - especie: Squalus cubensis
+        familia: Squalidae
+        registros: 1
+      - especie: Scyliorhinus haeckelii
+        familia: Scyliorhinidae
+        registros: 1
+      - especie: Narcine bancroftii
+        familia: Narcinidae
+        registros: 1
+      - especie: Diplobatis picta
+        familia: Narcinidae
+        registros: 1
+      - especie: Hypanus guttatus
+        familia: Dasyatidae
+        registros: 1
+      - especie: Pseudobatos percellens
+        familia: Rhinobatidae
+        registros: 1
+  golfete_de_coro:
+    url: https://api.obis.org/v3/checklist?geometry=POLYGON%28%28-69.95+11.4%2C-69.55+11.4%2C-69.55+11.75%2C-69.95+11.75%2C-69.95+11.4%29%29&size=5000
+    taxones_totales_obis: 58
+    especies_de_la_parcela: 30
+    por_grupo_n:
+      cangrejos, camarones, langostas: 19
+      caracoles: 3
+      erizos: 2
+      estrellas de mar: 2
+      medusas: 1
+      peces óseos: 3
+    por_grupo:
+      cangrejos, camarones, langostas:
+      - especie: Amphiatlantica marcuzzi
+        familia: Talitridae
+        registros: 25
+      - especie: Callinectes danae
+        familia: Portunidae
+        registros: 8
+      - especie: Callinectes bocourti
+        familia: Portunidae
+        registros: 7
+      - especie: Callinectes sapidus
+        familia: Portunidae
+        registros: 6
+      - especie: Arenaeus cribrarius
+        familia: Portunidae
+        registros: 5
+      - especie: Ocypode quadrata
+        familia: Ocypodidae
+        registros: 3
+      - especie: Paguristes paraguanensis
+        familia: Diogenidae
+        registros: 2
+      - especie: Callinectes exasperatus
+        familia: Portunidae
+        registros: 2
+      - especie: Leptuca cumulanta
+        familia: Ocypodidae
+        registros: 2
+      - especie: Penaeus (Litopenaeus) schmitti
+        familia: Penaeidae
+        registros: 2
+      - especie: Callinectes ornatus
+        familia: Portunidae
+        registros: 1
+      - especie: Hepatus pudibundus
+        familia: Aethridae
+        registros: 1
+      - especie: Xiphopenaeus kroyeri
+        familia: Penaeidae
+        registros: 1
+      - especie: Exhippolysmata oplophoroides
+        familia: Lysmatidae
+        registros: 1
+      - especie: Epialtus bituberculatus
+        familia: Epialtidae
+        registros: 1
+      - especie: Cardisoma guanhumi
+        familia: Gecarcinidae
+        registros: 1
+      - especie: Marcusiaxius lemoscastroi
+        familia: Micheleidae
+        registros: 1
+      - especie: Minuca rapax
+        familia: Ocypodidae
+        registros: 1
+      - especie: Penaeus (Farfantepenaeus) notialis
+        familia: Penaeidae
+        registros: 1
+      caracoles:
+      - especie: Marsupina bufo
+        familia: Bursidae
+        registros: 1
+      - especie: Lithopoma brevispina
+        familia: Turbinidae
+        registros: 1
+      - especie: Cinctura lilium
+        familia: Fasciolariidae
+        registros: 1
+      erizos:
+      - especie: Astropyga magnifica
+        familia: Diadematidae
+        registros: 1
+      - especie: Brissopsis elongata
+        familia: Brissidae
+        registros: 1
+      estrellas de mar:
+      - especie: Luidia clathrata
+        familia: Luidiidae
+        registros: 1
+      - especie: Astropecten duplicatus
+        familia: Astropectinidae
+        registros: 1
+      medusas:
+      - especie: Lychnorhiza lucerna
+        familia: Lychnorhizidae
+        registros: 1
+      peces óseos:
+      - especie: Sphoeroides spengleri
+        familia: Tetraodontidae
+        registros: 1
+      - especie: Scorpaena calcarata
+        familia: Scorpaenidae
+        registros: 1
+      - especie: Lutjanus griseus
+        familia: Lutjanidae
+        registros: 1
+  costa_oeste:
+    url: https://api.obis.org/v3/checklist?geometry=POLYGON%28%28-70.35+11.55%2C-70.05+11.55%2C-70.05+11.95%2C-70.35+11.95%2C-70.35+11.55%29%29&size=5000
+    taxones_totales_obis: 214
+    especies_de_la_parcela: 143
+    por_grupo_n:
+      almejas, ostras, mejillones: 19
+      cangrejos, camarones, langostas: 67
+      caracoles: 39
+      corales y anémonas: 2
+      erizos: 1
+      estrellas de mar: 2
+      gorgonias (abanicos de mar): 1
+      peces óseos: 11
+      reptiles (tortugas marinas): 1
+    por_grupo:
+      almejas, ostras, mejillones:
+      - especie: Agriopoma arestum
+        familia: Veneridae
+        registros: 3
+      - especie: Modiolus squamosus
+        familia: Modiolidae
+        registros: 2
+      - especie: Trachycardium isocardia
+        familia: Cardiidae
+        registros: 2
+      - especie: Fulvia laevigata
+        familia: Cardiidae
+        registros: 2
+      - especie: Perna perna
+        familia: Mytilidae
+        registros: 1
+      - especie: Cyclinella tenuis
+        familia: Veneridae
+        registros: 1
+      - especie: Chama sinuosa
+        familia: Chamidae
+        registros: 1
+      - especie: Euvola ziczac
+        familia: Pectinidae
+        registros: 1
+      - especie: Chione cancellata
+        familia: Veneridae
+        registros: 1
+      - especie: Musculus lateralis
+        familia: Mytilidae
+        registros: 1
+      - especie: Argopecten lineolaris
+        familia: Pectinidae
+        registros: 1
+      - especie: Crassostrea rhizophorae
+        familia: Ostreidae
+        registros: 1
+      - especie: Eurytellina lineata
+        familia: Tellinidae
+        registros: 1
+      - especie: Choristodon robustus
+        familia: Veneridae
+        registros: 1
+      - especie: Arcinella arcinella
+        familia: Chamidae
+        registros: 1
+      - especie: Carditamera gracilis
+        familia: Carditidae
+        registros: 1
+      - especie: Leiosolenus aristatus
+        familia: Modiolidae
+        registros: 1
+      - especie: Leukoma granulata
+        familia: Veneridae
+        registros: 1
+      - especie: Megapitaria maculata
+        familia: Veneridae
+        registros: 1
+      cangrejos, camarones, langostas:
+      - especie: Hyale pygmaea
+        familia: Hyalidae
+        registros: 18
+      - especie: Apohyale media
+        familia: Hyalidae
+        registros: 7
+      - especie: Charybdis (Charybdis) hellerii
+        familia: Portunidae
+        registros: 6
+      - especie: Ampithoe ramondi
+        familia: Ampithoidae
+        registros: 4
+      - especie: Grandidierella bonnieroides
+        familia: Aoridae
+        registros: 4
+      - especie: Idunella carinata
+        familia: Liljeborgiidae
+        registros: 4
+      - especie: Penaeus (Farfantepenaeus) brasiliensis
+        familia: Penaeidae
+        registros: 4
+      - especie: Photis longicaudata
+        familia: Photidae
+        registros: 3
+      - especie: Ericthonius punctatus
+        familia: Ischyroceridae
+        registros: 3
+      - especie: Stenothoe gallensis
+        familia: Stenothoidae
+        registros: 3
+      - especie: Callinectes ornatus
+        familia: Portunidae
+        registros: 3
+      - especie: Ampelisca holmesi
+        familia: Ampeliscidae
+        registros: 3
+      - especie: Nasageneia yucatanensis
+        familia: Pontogeneiidae
+        registros: 3
+      - especie: Paramicrodeutopus myersi
+        familia: Aoridae
+        registros: 3
+      - especie: Podocerus kleidus
+        familia: Podoceridae
+        registros: 3
+      - especie: Microprotopus shoemakeri
+        familia: Microprotopidae
+        registros: 3
+      - especie: Leiolambrus nitidus
+        familia: Parthenopidae
+        registros: 3
+      - especie: Eudevenopus metagracilis
+        familia: Platyischnopidae
+        registros: 3
+      - especie: Ericthonius brasiliensis
+        familia: Ischyroceridae
+        registros: 2
+      - especie: Elasmopus pectenicrus
+        familia: Maeridae
+        registros: 2
+      - especie: Apocorophium acutum
+        familia: Corophiidae
+        registros: 2
+      - especie: Hepatus pudibundus
+        familia: Aethridae
+        registros: 2
+      - especie: Dardanus fucosus
+        familia: Diogenidae
+        registros: 2
+      - especie: Nototropis minikoi
+        familia: Atylidae
+        registros: 2
+      - especie: Anasimus latus
+        familia: Inachoididae
+        registros: 2
+      - especie: Platylambrus serratus
+        familia: Parthenopidae
+        registros: 2
+      - especie: Grapsus grapsus
+        familia: Grapsidae
+        registros: 2
+      - especie: Ampelisca cristoides
+        familia: Ampeliscidae
+        registros: 2
+      - especie: Ampelisca paria
+        familia: Ampeliscidae
+        registros: 2
+      - especie: Heterophoxus oculatus
+        familia: Phoxocephalidae
+        registros: 2
+      - especie: Speocarcinus meloi
+        familia: Pseudorhombilidae
+        registros: 2
+      - especie: Achelous spinicarpus
+        familia: Portunidae
+        registros: 2
+      - especie: Penaeus (Farfantepenaeus) notialis
+        familia: Penaeidae
+        registros: 2
+      - especie: Leucothoe spinicarpa
+        familia: Leucothoidae
+        registros: 1
+      - especie: Callinectes danae
+        familia: Portunidae
+        registros: 1
+      - especie: Callinectes sapidus
+        familia: Portunidae
+        registros: 1
+      - especie: Lysianopsis alba
+        familia: Lysianassidae
+        registros: 1
+      - especie: Arenaeus cribrarius
+        familia: Portunidae
+        registros: 1
+      - especie: Calappa flammea
+        familia: Calappidae
+        registros: 1
+      - especie: Hepatus gronovii
+        familia: Aethridae
+        registros: 1
+      - especie: Dardanus venosus
+        familia: Diogenidae
+        registros: 1
+      - especie: Rimapenaeus similis
+        familia: Penaeidae
+        registros: 1
+      - especie: Sicyonia stimpsoni
+        familia: Sicyoniidae
+        registros: 1
+      - especie: Sicyonia typica
+        familia: Sicyoniidae
+        registros: 1
+      - especie: Callinectes bocourti
+        familia: Portunidae
+        registros: 1
+      - especie: Ampelisca burkei
+        familia: Ampeliscidae
+        registros: 1
+      - especie: Tryphosella apalachicola
+        familia: Tryphosidae
+        registros: 1
+      - especie: Photis macromana
+        familia: Photidae
+        registros: 1
+      - especie: Raninoides louisianensis
+        familia: Raninidae
+        registros: 1
+      - especie: Ebalia cariosa
+        familia: Leucosiidae
+        registros: 1
+      - especie: Platylambrus granulatus
+        familia: Parthenopidae
+        registros: 1
+      - especie: Goniopsis cruentata
+        familia: Grapsidae
+        registros: 1
+      - especie: Raninoides laevis
+        familia: Raninidae
+        registros: 1
+      - especie: Calappa cinerea
+        familia: Calappidae
+        registros: 1
+      - especie: Chasmocarcinus typicus
+        familia: Chasmocarcinidae
+        registros: 1
+      - especie: Collodes inermis
+        familia: Inachoididae
+        registros: 1
+      - especie: Achelous spinimanus
+        familia: Portunidae
+        registros: 1
+      - especie: Elasmopus spinidactylus
+        familia: Maeridae
+        registros: 1
+      - especie: Neomegamphopus heardi
+        familia: Neomegamphopidae
+        registros: 1
+      - especie: Ameroculodes edwardsi
+        familia: Oedicerotidae
+        registros: 1
+      - especie: Deflexilodes intermedius
+        familia: Oedicerotidae
+        registros: 1
+      - especie: Achelous gibbesii
+        familia: Portunidae
+        registros: 1
+      - especie: Neomegamphopus kalanii
+        familia: Neomegamphopidae
+        registros: 1
+      - especie: Amphiatlantica marcuzzi
+        familia: Talitridae
+        registros: 1
+      - especie: Achelous forceps
+        familia: Portunidae
+        registros: 1
+      - especie: Penaeus (Litopenaeus) schmitti
+        familia: Penaeidae
+        registros: 1
+      - especie: Penaeus (Farfantepenaeus) subtilis
+        familia: Penaeidae
+        registros: 1
+      caracoles:
+      - especie: Muracypraea mus
+        familia: Cypraeidae
+        registros: 17
+      - especie: Voluta musica
+        familia: Volutidae
+        registros: 6
+      - especie: Eburna glabrata
+        familia: Ancillariidae
+        registros: 6
+      - especie: Conasprella puncticulata
+        familia: Conidae
+        registros: 6
+      - especie: Aristofusus helenae
+        familia: Fasciolariidae
+        registros: 4
+      - especie: Strombus pugilis
+        familia: Strombidae
+        registros: 3
+      - especie: Bulla striata
+        familia: Bullidae
+        registros: 2
+      - especie: Stramonita haemastoma
+        familia: Muricidae
+        registros: 2
+      - especie: Stramonita floridana
+        familia: Muricidae
+        registros: 2
+      - especie: Vokesimurex cabritii
+        familia: Muricidae
+        registros: 2
+      - especie: Oliva scripta
+        familia: Olividae
+        registros: 2
+      - especie: Siphonaria naufragum
+        familia: Siphonariidae
+        registros: 2
+      - especie: Phrontis vibex
+        familia: Nassariidae
+        registros: 2
+      - especie: Bursatella leachii
+        familia: Aplysiidae
+        registros: 1
+      - especie: Crucibulum striatum
+        familia: Calyptraeidae
+        registros: 1
+      - especie: Diodora cayenensis
+        familia: Fissurellidae
+        registros: 1
+      - especie: Parvanachis obesa
+        familia: Columbellidae
+        registros: 1
+      - especie: Ficus ficus
+        familia: Ficidae
+        registros: 1
+      - especie: Conus ermineus
+        familia: Conidae
+        registros: 1
+      - especie: Nerita plicata
+        familia: Neritidae
+        registros: 1
+      - especie: Cerithium atratum
+        familia: Cerithiidae
+        registros: 1
+      - especie: Vokesimurex chrysostoma
+        familia: Muricidae
+        registros: 1
+      - especie: Lithopoma phoebium
+        familia: Turbinidae
+        registros: 1
+      - especie: Nerita tessellata
+        familia: Neritidae
+        registros: 1
+      - especie: Nerita versicolor
+        familia: Neritidae
+        registros: 1
+      - especie: Supplanaxis nucleus
+        familia: Planaxidae
+        registros: 1
+      - especie: Littoraria nebulosa
+        familia: Littorinidae
+        registros: 1
+      - especie: Sinum maculatum
+        familia: Naticidae
+        registros: 1
+      - especie: Distorsio clathrata
+        familia: Personidae
+        registros: 1
+      - especie: Costoanachis floridana
+        familia: Columbellidae
+        registros: 1
+      - especie: Melongena melongena
+        familia: Melongenidae
+        registros: 1
+      - especie: Oliva reticularis
+        familia: Olividae
+        registros: 1
+      - especie: Conus spurius
+        familia: Conidae
+        registros: 1
+      - especie: Pyrgocythara cinctella
+        familia: Mangeliidae
+        registros: 1
+      - especie: Volva volva
+        familia: Ovulidae
+        registros: 1
+      - especie: Fasciolaria hollisteri
+        familia: Fasciolariidae
+        registros: 1
+      - especie: Monoplex krebsii
+        familia: Cymatiidae
+        registros: 1
+      - especie: Phyllonotus globosus
+        familia: Muricidae
+        registros: 1
+      - especie: Lyonsifusus ansatus
+        familia: Fasciolariidae
+        registros: 1
+      corales y anémonas:
+      - especie: Anomocora elongata
+        familia: Caryophylliidae
+        registros: 2
+      - especie: Cladocora debilis
+        familia: Cladocoridae
+        registros: 1
+      erizos:
+      - especie: Lytechinus variegatus
+        familia: Toxopneustidae
+        registros: 1
+      estrellas de mar:
+      - especie: Astropecten articulatus
+        familia: Astropectinidae
+        registros: 4
+      - especie: Luidia senegalensis
+        familia: Luidiidae
+        registros: 3
+      gorgonias (abanicos de mar):
+      - especie: Virgularia presbytes
+        familia: Virgulariidae
+        registros: 2
+      peces óseos:
+      - especie: Pomatomus saltatrix
+        familia: Pomatomidae
+        registros: 2
+      - especie: Opisthonema oglinum
+        familia: Dorosomatidae
+        registros: 2
+      - especie: Citharichthys spilopterus
+        familia: Paralichthyidae
+        registros: 2
+      - especie: Rachycentron canadum
+        familia: Rachycentridae
+        registros: 1
+      - especie: Engraulis eurystole
+        familia: Engraulidae
+        registros: 1
+      - especie: Hemiramphus brasiliensis
+        familia: Hemiramphidae
+        registros: 1
+      - especie: Mugil curema
+        familia: Mugilidae
+        registros: 1
+      - especie: Gymnothorax ocellatus
+        familia: Muraenidae
+        registros: 1
+      - especie: Anchoa lyolepis
+        familia: Engraulidae
+        registros: 1
+      - especie: Lepophidium brevibarbe
+        familia: Ophidiidae
+        registros: 1
+      - especie: Microgobius signatus
+        familia: Gobiidae
+        registros: 1
+      reptiles (tortugas marinas):
+      - especie: Eretmochelys imbricata
+        familia: Cheloniidae
+        registros: 20
+clave:
+  Chelonia mydas:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Eretmochelys imbricata:
+    obis_registros:
+      paraguana_dos_aguas: 36
+      golfete_de_coro: 0
+      costa_oeste: 20
+    gbif_registros_caja: 36
+    gbif_primer_anio: 2008
+    gbif_ultimo_anio: 2010
+  Caretta caretta:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Dermochelys coriacea:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2014
+    gbif_ultimo_anio: 2014
+  Lepidochelys olivacea:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Tursiops truncatus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Sotalia guianensis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Stenella frontalis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Stenella attenuata:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Delphinus delphis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Megaptera novaeangliae:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Balaenoptera edeni:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Physeter macrocephalus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Trichechus manatus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Neomonachus tropicalis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Pristis pectinata:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Pristis pristis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Epinephelus itajara:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Rhomboplites aurorubens:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Mugil curema:
+    obis_registros:
+      paraguana_dos_aguas: 2
+      golfete_de_coro: 0
+      costa_oeste: 1
+    gbif_registros_caja: 2
+    gbif_primer_anio: 1965
+    gbif_ultimo_anio: 2012
+  Mugil incilis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Mugil liza:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Chaetodipterus faber:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Orthopristis rubra:
+    obis_registros:
+      paraguana_dos_aguas: 2
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 4
+    gbif_primer_anio: 1965
+    gbif_ultimo_anio: 2012
+  Orthopristis ruber:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 4
+    gbif_primer_anio: 1965
+    gbif_ultimo_anio: 2012
+  Bagre marinus:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Centropomus undecimalis:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 2
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Conodon nobilis:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Bairdiella ronchus:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Porichthys plectrodon:
+    obis_registros:
+      paraguana_dos_aguas: 8
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 1958
+    gbif_ultimo_anio: 1958
+  Gorgonia ventalina:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Gorgonia flabellum:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Peprilus paru:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Paranthias furcifer:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Mycteroperca tigris:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Chelonoidis carbonarius:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Micropogonias furnieri:
+    obis_registros:
+      paraguana_dos_aguas: 2
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 2
+    gbif_primer_anio: 1965
+    gbif_ultimo_anio: 2012
+  Cynoscion jamaicensis:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Sardinella aurita:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Albula vulpes:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Elops saurus:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Megalops atlanticus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Rhincodon typus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Ginglymostoma cirratum:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Hypanus americanus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Aetobatus narinari:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Mobula birostris:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Aliger gigas:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Lobatus gigas:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Cittarium pica:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Crassostrea rhizophorae:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 1
+    gbif_registros_caja: 2
+    gbif_primer_anio: 1957
+    gbif_ultimo_anio: 1991
+  Pinctada imbricata:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Arca zebra:
+    obis_registros:
+      paraguana_dos_aguas: 3
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Donax striatus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Tivela mactroides:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Melongena melongena:
+    obis_registros:
+      paraguana_dos_aguas: 2
+      golfete_de_coro: 0
+      costa_oeste: 1
+    gbif_registros_caja: 9
+    gbif_primer_anio: 1987
+    gbif_ultimo_anio: 2012
+  Brachidontes exustus:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Callinectes sapidus:
+    obis_registros:
+      paraguana_dos_aguas: 9
+      golfete_de_coro: 6
+      costa_oeste: 1
+    gbif_registros_caja: 12
+    gbif_primer_anio: 2012
+    gbif_ultimo_anio: 2012
+  Cardisoma guanhumi:
+    obis_registros:
+      paraguana_dos_aguas: 4
+      golfete_de_coro: 1
+      costa_oeste: 0
+    gbif_registros_caja: 4
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Panulirus argus:
+    obis_registros:
+      paraguana_dos_aguas: 2
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 2
+    gbif_primer_anio: 2013
+    gbif_ultimo_anio: 2013
+  Octopus vulgaris:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Octopus insularis:
+    obis_registros:
+      paraguana_dos_aguas: 0
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Diadema antillarum:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 0
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Echinometra lucunter:
+    obis_registros:
+      paraguana_dos_aguas: 18
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 18
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
+  Grapsus grapsus:
+    obis_registros:
+      paraguana_dos_aguas: 6
+      golfete_de_coro: 0
+      costa_oeste: 2
+    gbif_registros_caja: 7
+    gbif_primer_anio: 2022
+    gbif_ultimo_anio: 2022
+  Coenobita clypeatus:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: 2022
+    gbif_ultimo_anio: 2022
+  Alpheus heterochaelis:
+    obis_registros:
+      paraguana_dos_aguas: 1
+      golfete_de_coro: 0
+      costa_oeste: 0
+    gbif_registros_caja: 1
+    gbif_primer_anio: null
+    gbif_ultimo_anio: null
