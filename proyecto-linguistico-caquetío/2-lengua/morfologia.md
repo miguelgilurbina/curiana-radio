@@ -4,10 +4,26 @@ ambito: afijos y reglas de formación de palabras
 fuente_de_verdad: curiana_sim/curiana_lexicon.py (TODAS_LAS_REGLAS, REGLAS_ZAVALA, REGLAS_TOPONIMICAS)
 propuestas: [lexicon_van_buurt.py, lexicon_gatschet.py, lexicon_toponimos.py]
 medido: 2026-09-20 (6-fusion/scripts/auditar_morfologia.py)
-decidido: 2026-09-21 (6-fusion/decisiones_tanda_2026-09-21.yaml)
+decidido: 2026-09-21 (6-fusion/decisiones_tanda_2026-09-21.yaml); 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)
 ---
 
 # La morfología
+
+> ⚠️ **La tanda final (2026-09-23) cambió el núcleo — D11 fase 3.** Lo que
+> abajo figura como «reconstruido desde el wayuu» y deuda de D11 ya no se
+> enseña: los pronombres son `dai`, `bui`, `lihi`/`tuhu`, `waya`, `naya` (de
+> lokono, taíno y achagua); el aspecto es el verbo solo para el presente,
+> `-kuba` para lo que ya pasó y `-ba` para lo que vendrá (hipotéticos: el
+> taíno no atestigua ninguna marca); el posesivo de 1sg es `da-`. `-ka`, `-ni`,
+> `-da` y `ta-` siguen en el desafijador (`REGLAS_EN_DESUSO`) porque la base
+> entera está dicha con ellos. `-iro` y `-uco` pasaron a «leídos en
+> topónimos» (`REGLAS_ESTEVES`): su única fuente era Esteves por la sigla (E)
+> de Zavala. Las formas, sus citas y su coste están en
+> `6-fusion/propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml`,
+> `6-fusion/propuesta_d11_voces_wayuu_2026-09-23.yaml` y
+> `6-fusion/medicion_tanda_final_2026-09-23.yaml`; la bitácora lo cuenta en el
+> punto 15 del «Cambio de instrumento». Las tablas de abajo son la foto de la
+> auditoría del 2026-09-20 y se regeneran con `6-fusion/scripts/tabla_morfemas.py`.
 
 > Lo que un agente puede **construir**, no sólo nombrar. Cada morfema va aquí
 > con **su evidencia y su estado** — porque el proyecto mezcló durante mucho
