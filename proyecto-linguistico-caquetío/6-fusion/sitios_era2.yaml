@@ -12,6 +12,14 @@
 # ni 2-lengua/toponimos.yaml. Nada de aquí es canon hasta que Miguel lo fusione.
 # Compañero: 6-fusion/clima_era2.yaml (el mismo mundo, por período del año).
 # Mide: 6-fusion/scripts/verificar_sitios_era2.py
+#
+# 2026-09-23 — la sigla (E) de Zavala es Esteves (tf.0, 1-B y 3-a): cada
+# `voz_caquetia` copia la capa de su voz en el lexicón, y las que dependían
+# sólo de la (E) llevan ahora su etiqueta de la opción B
+# (6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml, `etiqueta_por_opcion.B`):
+# kari → hipotético; kunaro, kayude, take, huaymujo, karuka, kaseto,
+# kaujaro y warataro → retroabstraído. `jachos` deja de ser voz caquetía
+# (6-a: es «hacho», castellano; DLE) y pasa a `voz_castellana`.
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-14'
@@ -91,7 +99,10 @@ meta:
     # atestiguado-moderno y el corpus recibió los hechos de la campaña (p4).
     testimonios_miguel: 3
     lineas_con_deuda: 17
-    voces_caquetias_citadas: 74
+    # 2026-09-23 (sigla E): 74 → 72. `jachos` deja de ser voz caquetía (es
+    # «hacho», castellano: 6-a) y `joutai`, archivada el 2026-09-19, cede su
+    # línea a `juri` (2-a).
+    voces_caquetias_citadas: 72
     hechos_del_corpus_citados: 47
     obras_citadas: 11
 
@@ -246,7 +257,7 @@ sitios:
           capa: 's. XX; Esteves no fecha la técnica ni cita fuente'
           procedencia: {obra: esteves-1989, pagina: '33 (entrada Cunacho)'}
           estacion: 'todo el año — anochecer y noche'
-          voz_caquetia: {clave: jachos, capa: caquetío-atestiguado}
+          voz_castellana: jachos   # «hacho»: leño resinoso para alumbrar (DLE, hacho¹, 2.ª acep.), con la h aspirada; no es voz caquetía (sigla E, 6-a, 2026-09-23)
         - dato: >-
             Lo que hay en el agua: pargo, corvina, mero, róbalo, lisa, sardina,
             cazón y bagre marino en las aguas someras y los manglares del Golfete;
@@ -256,7 +267,7 @@ sitios:
           procedencia: {obra: antczak-2015-las-aves, pagina: 'vía ecologia-015'}
           apoyo_en_repo: [ecologia-015, ecologia-036, hueco-lex-004]
           estacion: 'todo el año'
-          voz_caquetia: {clave: kunaro, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kunaro, capa: caquetío-retroabstraido}
         - dato: >-
             Que esta orilla es de pescadores lo dice el topónimo vecino: «Punta de
             Matacán es un punto costeño en el Golfete de Coro, al Este de Punta
@@ -265,7 +276,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '51'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kari, capa: caquetío-hipotético}
         - dato: >-
             Y el juicio del cronista sobre esta costa: los caquetíos «tenían
             pueblos medianos y mucha caza, pesca y ropa de hamacas».
@@ -319,7 +330,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '61'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: take, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: take, capa: caquetío-retroabstraido}
         - dato: >-
             El istmo empieza aquí: Cararapa es un «sitio en el Istmo de Médanos, a
             diez kilómetros al Este de la población de Tacuato». El médano es el
@@ -435,7 +446,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '100'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kayude, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kayude, capa: caquetío-retroabstraido}
           regla_4: 'es Cumarebo, otra comarca de la esfera: vale para la glosa del árbol, no para decir que aquí hay manantial'
       mar_y_pesca:
         - dato: >-
@@ -446,7 +457,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '31'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kari, capa: caquetío-hipotético}
         - dato: >-
             El pez de esta orilla con nombre caquetío: «Guaranaro es un pez más
             pequeño que la lisa.»
@@ -484,7 +495,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '43'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: huaymujo, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: huaymujo, capa: caquetío-retroabstraido}
       tierra:
         - dato: >-
             El nombre es de árbol frutal: «Cayude: árbol frutal», el guanábano
@@ -493,7 +504,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '30'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kayude, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kayude, capa: caquetío-retroabstraido}
         - dato: >-
             Y el conuco se cerca: «Urupagua es un arbusto espinoso, hojas y fruto
             de sabor amargo»; el lexicón lo glosa como el «arbusto espinoso usado
@@ -576,7 +587,7 @@ sitios:
           procedencia: {obra: esteves-1989, pagina: '61'}
           apoyo_en_repo: [hueco-lex-006]
           estacion: 'lluvias'
-          voz_caquetia: {clave: take, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: take, capa: caquetío-retroabstraido}
         - dato: >-
             Y la razón de que la casa esté aquí: «There the settlements are
             concentrated around the Santa Ana (extinct) volcano, which provides the
@@ -730,7 +741,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '41'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: warataro, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: warataro, capa: caquetío-retroabstraido}
         - dato: >-
             El oficio sigue vivo: Moruy es de las comunidades «con más apego a las
             costumbres de sus antepasados»; «La gente ha conservado su artesanía
@@ -830,7 +841,7 @@ sitios:
           capa: 's. XIX-XX (45 casas y 303 vecinos en el censo de 1881; toponimo-088)'
           procedencia: {obra: esteves-1989, pagina: '30'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kaseto, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kaseto, capa: caquetío-retroabstraido}
         - dato: >-
             Y el fruto del monte seco: «Pitajaya es otro nombre indígena de nuestro
             susucure, cardo seudo-parásito que da una fruta de piel y pulpa roja»;
@@ -927,7 +938,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '28'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: karuka, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: karuka, capa: caquetío-retroabstraido}
         - dato: >-
             Y la fibra de la hamaca: el chinchorro se tejía «de hilos de cocuy, que
             es más fuerte y fino que el hilo de cocuiza»; también de algodón, «pero
@@ -984,7 +995,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: medina-colina-sxx, pagina: 'aclaratorias al lector (preliminares, sin página dictada)'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kari, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kari, capa: caquetío-hipotético}
           regla_3: 'que en 1926 fuera playa de pescadores no prueba que lo fuera en el s. XV; lo constante es la playa'
       recoleccion:
         - dato: >-
@@ -1035,7 +1046,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: esteves-1989, pagina: '30'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kaujaro, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kaujaro, capa: caquetío-retroabstraido}
       monte_y_caza:
         - dato: >-
             El monte de la punta es cardón, y se lo dice el nombre viejo: Elegüey
@@ -1175,7 +1186,7 @@ sitios:
           capa: 's. XX; es etimología de Esteves, sin cita'
           procedencia: {obra: esteves-1989, pagina: '33'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kunaro, capa: caquetío-atestiguado}
+          voz_caquetia: {clave: kunaro, capa: caquetío-retroabstraido}
       recoleccion:
         - dato: >-
             El único recurso que el gazeteer adscribe explícitamente al cerro: «la

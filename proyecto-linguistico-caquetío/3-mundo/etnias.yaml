@@ -15,6 +15,9 @@
 # ESQUEMA (lo valida `curiana_sim/compilar_etnias.py`):
 #   cerrados  etiqueta · familia_linguistica · polity_caquetia ·
 #             tipo_de_contacto · intensidad
+#             (polity_caquetia admite además `ninguna` desde tf.7 B,
+#             2026-09-23: el vecino de la esfera que no toca ninguna polity;
+#             exige `tipo_de_contacto: ninguno`)
 #   matiz     aviso_familia · polity_nota · contacto_nota · intensidad_nota
 #   fuente    procedencia{obra, pagina, via} — obra y via son claves foráneas
 #             contra 4-fuentes/bibliografia.yaml — o `deuda: sin-procedencia`
@@ -71,35 +74,72 @@ etnias:
       coincidencia puede ser eso y nada más. Lo que la haría dato es una
       fuente que gloce el etnónimo, no la homografía.
 
+  # tf.7 A (Miguel, 2026-09-23): corregida con Federmann directo — la 1916 y el
+  # alemán de 1557, vistos en imagen. Era `guayqueri`, `hipotetico`, familia
+  # caribe y cita vía Brito Figueroa. Propuesta y citas completas:
+  # 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_2.
   - id: etnia-002
-    nombre: guayqueri
-    variantes: [guaiquerí, guayquerí]
-    etiqueta: hipotetico
-    familia_linguistica: caribe
+    nombre: guaycarí de los llanos
+    variantes: [Guaycaríes, Guaycaries, guayquerí, guaiquerí]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
     aviso_familia: >-
-      Zavala Reyes 2015 (p. 61) los clasifica como CARIBE. Así que este
-      contacto es arahuaco↔caribe, la frontera clásica del área.
-    donde: riberas del Cojedes; y su asiento habitual es Margarita y el litoral
+      Ninguna palabra guaycarí en el repo, y Federmann no da ninguna: la
+      «descripción» que promete («als hernach dern art auch wirt volgen») no
+      llega. Las filiaciones que circulan son de OTROS: caribe si son los
+      guaiqueríes de Margarita (Oliver DOC p. 281, con McCorkle 1952; Zavala
+      Reyes 2015 p. 61 vía Molina, lista moderna de segunda mano), guamos
+      emparentados con el taparita y el otomaco para Kirchhoff (HSAI p. 464),
+      «rama de la familia Guarauna» para Arcaya (nota a, 1916 p. 89, sin
+      fuente). Ninguna fuente del repo los hace arahuacos. En duda, degradar:
+      `desconocida`.
+    donde: >-
+      el río Coaheri —el Cojedes; Arcaya lo pone cerca de El Baúl (notas b-e,
+      pp. 90-95) y Oliver en la juntura Sarare-Cojedes (DOC p. 281)—, en tierra
+      de Itabana; enero-febrero de 1531 (contacto temprano, regla 3)
     polity_caquetia: llanos
-    polity_nota: NO la costera
+    polity_nota: >-
+      la polity de los llanos, NO la costera: ninguna fuente del repo pone
+      guaycaríes ni guaiqueríes en Falcón, Paraguaná o las ABC
     tipo_de_contacto: vecindad
-    contacto_nota: vecindad con mercado, sin mezcla residencial
+    contacto_nota: >-
+      «vecindad» se queda corta y el vocabulario cerrado no tiene más: el
+      alemán dice que las dos naciones viven «vnthereinander gemischt»
+      —mezcladas en el territorio, con caquetíos «enthalb vñ her enhalb», a los
+      dos lados del río— «doch iede in sondern Pueblos oder flecken», cada una
+      en sus propios pueblos (1557 [77]-[78]). Hay mercado de pescado por
+      frutas y víveres en las casas de pesca guaycaríes, donde acude gente de
+      muchas aldeas (1916 p. 95 = 1557 [83]); dos guaycaríes «die auch der
+      Caquetios sprach kundten» (1916 p. 94 = 1557 [83]); y una alianza de
+      guerra entre el señor guaycarí y el cacique caquetío de Caraho (1916 p.
+      100). No es un poblado mixto.
     intensidad: media
     intensidad_nota: >-
-      Mismo territorio y dependencia económica mutua, pero aldeas separadas.
-      Contraste deliberado con etnia-001.
+      Mismo territorio y dependencia económica mutua, pero pueblos separados:
+      contraste deliberado con etnia-001, donde la población está mezclada
+      dentro del mismo caserío.
     cita: >-
-      "hacen mercado con los caquetíos y cambian frutas y otros víveres por
-      pescado […] Viven estas dos naciones en paz en el mismo territorio porque
-      se necesitan mutuamente, pero cada uno habita aldeas distintas."
+      «Allí hacen mercado con los Caquetíos, que cambian frutas y otros víveres
+      por pescado, porque es la pesca su única industria y hanse adueñado del
+      río. Viven estas dos naciones en paz en el mismo territorio porque se
+      necesitan mutuamente, pero cada una habita aldeas distintas.»
+    cita_1557: >-
+      «vnnd also vnthereinander gemischt / wonen / dise zwo Nation wonen
+      fridlich / doch iede in sondern Pueblos oder flecken für sich selbst /
+      vnnd darumb das aine Nation der andern bedarff» ([77]-[78] = imágenes
+      87-88 del PDF; glosa marginal «Guaycari kolschw[artz] vischer»)
     aviso: >-
-      El propio texto dice que los expedicionarios "supusieron eran
-      Guayqueríes". Atribución conjetural, y geográficamente rara: los
-      guayqueríes se documentan en Margarita, no en el Cojedes. Por eso la
-      etiqueta es `hipotetico` (en duda, degradar): el contacto caquetío↔otro
-      pueblo en el Cojedes está atestiguado; que ese pueblo sea guayquerí, no.
-    procedencia: {obra: federmann-1916, pagina: "90", via: brito-figueroa-poblacion-economia}
-    ver_tambien: [6-fusion/polities_no_costeras_federmann.yaml#prop-polity-012]
+      Federmann los NOMBRA sin duda —«otro pueblo que llaman Guaycaríes» (1916
+      p. 84), «die Guaycaries gehaissen» (Klüpfel p. 55)—: el «supusieron eran
+      Guayqueríes» que traía esta ficha era de Brito Figueroa, la vía por la
+      que llegó la cita, y se quita (medido el 2026-09-23). Lo ATESTIGUADO es
+      el contacto con los caquetíos de los llanos, por testigo ocular. Lo
+      HIPOTÉTICO es la identidad con los guaiqueríes de Margarita (etnia-009):
+      Arcaya no lo sabe (nota a, p. 89), Oliver lo cree probable (DOC p. 281)
+      y Kirchhoff hace del nombre un genérico de pueblos pescadores (HSAI p.
+      464). No se funden.
+    procedencia: {obra: federmann-1916, pagina: "89-90 (y 94-95, 100); 1557 [77]-[78], [83]"}
+    ver_tambien: [6-fusion/polities_no_costeras_federmann.yaml#prop-polity-012, 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml (§pregunta_2)]
 
   - id: etnia-003
     nombre: ciparicoto
@@ -267,3 +307,63 @@ etnias:
     procedencia: null
     deuda: sin-procedencia
     ver_tambien: [6-fusion/oliver_324_caribes.yaml (§5), geografia_politica-013]
+
+  # ── El vecino de la esfera que no toca ninguna polity (tf.7 B, 2026-09-23) ──
+  # cc.5: los guaiqueríes «son parte de la esfera de contacto». Las fuentes lo
+  # permiten sólo como vecino LEJANO de la costa oriental, sin contacto
+  # documentado con la Kaketiana; por eso `polity_caquetia: ninguna`, el valor
+  # que compilar_etnias.py abrió para esto. No entran al motor (la C del issue
+  # quedó descartada: ningún contacto con la costa occidental).
+  - id: etnia-009
+    nombre: guaiquerí de Margarita
+    variantes: [guaiqueri, guayqueri, guayquiri, guajqueri, guajkeri, waikerí]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      Ninguna palabra guaiquerí en el repo. La lectura mayoritaria es CARIBE
+      —Oliver, «the Carib-speaking Guayquerí of Margarita Island» (DOC p. 281,
+      con McCorkle 1952, que no está en el repo); el área cultural caribe de
+      Kirchhoff (HSAI p. 481, que no los nombra); Zavala Reyes 2015 p. 61 vía
+      Molina—, y Castellanos pone a Juan de Salas hablando «en lengua
+      guayqueri que bien entienden» a los caribes de las islas (p. 24), sin
+      decir si por parentesco o por trato. Arcaya los cree «rama de la familia
+      Guarauna» (nota a, Federmann 1916 p. 89) y Antolínez duda, con signos de
+      interrogación, entre warao y «prekaribe» (1946 pp. 161-162). Ninguna
+      fuente del repo los hace arahuacos. En duda, degradar: `desconocida`.
+    donde: >-
+      la tierra de Cumaná, las islas de Margarita, Coche y Cubagua y parte de
+      Trinidad: la costa ORIENTAL (HSAI p. 399); colonial, desde 1550 en las
+      crónicas del repo (regla 3: nada de esto es del s. XV)
+    polity_caquetia: ninguna
+    polity_nota: >-
+      vecino de la ESFERA (cc.5), no de una polity: ninguna fuente del repo
+      pone guaiqueríes en Falcón, Paraguaná ni las ABC. El único hilo que los
+      ataba a Paraguaná —el «cacique Charaima de la Isla de Margarita» de
+      Esteves p. 35— no aguanta: Charayma era cacique del valle de Maya, en la
+      provincia de Caracas (Oviedo y Baños p. 168; toponimo-082). Y Paraguachoa,
+      que hoy pasa por nombre guaiquerí de Margarita, es en Ampíes, Oviedo y
+      Oliver un lugar del Falcón oriental
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      ninguno documentado con los caquetíos, ni antes de 1500 ni después. Su
+      red documentada es la costa CENTRAL: Doña Isabel, cacica guaiquerí y
+      madre de Francisco Fajardo, era nieta de Charayma, del valle de Maya, y
+      sobrina de Naiguatá, «el más poderoso señor» de esa costa (Oviedo y
+      Baños pp. 168-169). Desde 1555 van como aliados de Fajardo, Losada y
+      Juan de Salas, en piraguas y como «prácticos de la provincia» (pp. 177,
+      222, 280-281, 312)
+    intensidad: ninguna
+    cita: >-
+      «The Guaiqueri (Guayqueri, Guayquiri, Guajqueri, Guajkeri) occupied the
+      country around Cumana, the islands of Margarita, Coche, and Cubagua, and
+      part of Trinidad. They were essentially coastal and insular.»
+    aviso: >-
+      Que sean los mismos que los guaycaríes de Federmann (etnia-002) es
+      hipótesis y no se funde. Y la arqueología no los ata: el complejo Playa
+      Guacuco de Margarita es de la sub-tradición Campomana, dabajuroide para
+      Oliver (cap. 4 pp. 423, 427), con filiación tentativa por muestra pequeña
+      (Cruxent y Rouse 1958 vía Oliver), y ninguna fuente lo atribuye a los
+      guaiqueríes. El mismo capítulo del HSAI mezcla a estos guaiqueríes con
+      los guayquiri del Orinoco de Gumilla (p. 406): son otros.
+    procedencia: {obra: steward-1948-hsai-4, pagina: "399 (Hernández de Alba, «The Achagua and their neighbors»)"}
+    ver_tambien: [6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml (§pregunta_2)]

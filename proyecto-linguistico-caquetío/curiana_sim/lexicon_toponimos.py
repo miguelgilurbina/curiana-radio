@@ -18,7 +18,10 @@ Documento de método y resultados:
 
 Escala de veredicto:
     A — segmentación confirmada: todos los morfemas ya atestiguados y la glosa
-        se reconstruye con ellos.  (`jurijurebo` es el caso tipo.)
+        se reconstruye con ellos.  (`jurijurebo` fue el caso tipo hasta el
+        2026-09-23: sus dos piezas resultaron ser sólo de Esteves, vía la (E)
+        de Zavala, y bajó a C. «Atestiguado» quiere decir por OTRA fuente que
+        la que propone la segmentación.)
     B — un morfema nuevo despejado, con recurrencia ≥2 y glosa consistente.
     C — segmentación plausible sin recurrencia. Se registra, no se promueve.
     D — descartada, con la razón.
@@ -121,58 +124,10 @@ NIVEL_A = {
         ],
     },
 
-    "jurijurebo": {
-        "mapa_vivo": "OSM 2026: «Jurujurebo», poblado, 12.049 -69.940 — al norte de "
-                     "Pueblo Nuevo y cerca de El Vínculo, donde Esteves lo sitúa "
-                     "(p. 47); u por i en la segunda sílaba.",
-        "clase": "topónimo",
-        "fuente": "zavala-reyes-2015",
-        "glosa_fuente": "Paso de los vientos",
-        "segmentacion": "juri~juri + ebo",
-        "morfemas": {
-            "juri": "viento, ventarrón  [lexicón, caquetío-atestiguado, Zavala #178]",
-            "ebo": "camino, paso, senda  [lexicón, caquetío-atestiguado, Zavala #117]",
-        },
-        "glosa_reconstruida": "viento(-viento) + paso = 'paso de los vientos'",
-        "razon": "los dos morfemas ya estaban en el lexicón y la traducción "
-                 "cierra sin residuo. La reduplicación juri~juri explica el "
-                 "PLURAL de la glosa ('los vientos', no 'el viento'); la "
-                 "segunda copia pierde la vocal final por haplología "
-                 "(juri-jur-ebo).",
-        "observacion": "Estaba archivado en TOPONIMOS_ZAVALA como 'glosa "
-                       "incierta' y fuera del habla. Es el caso que originó "
-                       "toda la tarea F11. Formas atestiguadas (2026-09-07): "
-                       "Hurihurebo (Bastidas 1538, AGI, «pueblo de la Provincia "
-                       "de Paraguaná»), Hurehurebo (Castellanos 1589, II-1, «Señor "
-                       "de la ciudad Hurehurebo» y en la lista de las once "
-                       "ciudades), Jurijurebo (Zavala, Esteves p. 47: «lugar al "
-                       "norte de Pueblo Nuevo, cercano a El Vínculo; todavía hay "
-                       "vestigios de su cementerio»).",
-        # La tercera voz: lecturas que conviven sin pisar la glosa impresa ni
-        # la segmentación (esquema en 2-lengua/datos-de-lengua.md).
-        "lecturas": [
-            {"tipo": "etimologia-analitica",
-             "lectura": "hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de "
-                        "muchos arenales' (reduplicación + sufijo -bo)",
-             "quien": "González Batista", "fecha": "2026-08-25", "eje": "significado",
-             "procedencia": dict(obra="gonzalez-batista-nombre-de-coro"),
-             "veredicto": "descartada como lectura principal (2026-08-25): Zavala "
-                          "#178-179 tiene glosa impresa y juri~juri + ebo cierra sin "
-                          "residuo; el propio autor la da como conjetura («si hure "
-                          "fuera como creemos»). Se conserva por D7. Detalle: "
-                          "6-fusion/toponimia_coro_espina.yaml §veredicto-jurijurebo"},
-            {"tipo": "testimonio-residente",
-             "lectura": "Jurijurebo está en Judibana (Paraguaná); judi y juri son la "
-                        "misma palabra deformada, y el viento es el rasgo dominante "
-                        "del sitio: el topónimo moderno y el antiguo comparten raíz "
-                        "y referente",
-             "quien": "Miguel Gil Urbina, residente en Judibana", "fecha": "2026-08-25",
-             "eje": "referente",
-             "apoyo": "converge con la ubicación que dan las fuentes divulgativas "
-                      "(esteves-1989) y con la tradición local de Judibana "
-                      "(velasco-2015-resistencia §judibana_tradicion)"},
-        ],
-    },
+    # Talón (2026-09-23): jurijurebo bajó a NIVEL_C con su id toponimo-001
+    # (tf.0, la sigla E de Zavala, 5-a). El talón gasta su turno del contador
+    # para que los originales de detrás no corran su id (migrar_toponimos.py).
+    "jurijurebo": {"reubicado": "NIVEL_C (toponimo-001), 2026-09-23, sigla E 5-a"},
     "yacarebacoa": {
         "clase": "topónimo",
         "fuente": "zavala-reyes-2015",
@@ -210,21 +165,9 @@ NIVEL_A = {
                        "como `kiba`, homónimos declarados; el sentido piedra "
                        "lleva el sig activo.)",
     },
-    "cumarebo": {
-        "clase": "topónimo",
-        "fuente": "zavala-reyes-2015",
-        "glosa_fuente": "Camino del cacique Cumare",
-        "segmentacion": "Cumare + ebo",
-        "morfemas": {
-            "Cumare": "antropónimo — la propia fuente lo identifica como el "
-                      "nombre del cacique",
-            "ebo": "camino, paso, senda  [lexicón, caquetío-atestiguado]",
-        },
-        "glosa_reconstruida": "Cumare + camino = 'camino de Cumare'",
-        "razon": "la glosa NOMBRA su propia clave: Zavala dice de quién es el "
-                 "camino. El único morfema léxico es `ebo`, y encaja. Segunda "
-                 "atestación independiente de `ebo` (la otra es `jurijurebo`).",
-    },
+    # Talón (2026-09-23): cumarebo bajó a NIVEL_C con su id toponimo-004
+    # (tf.0, la sigla E de Zavala, 5-a).
+    "cumarebo": {"reubicado": "NIVEL_C (toponimo-004), 2026-09-23, sigla E 5-a"},
     "guacaubana": {
         "clase": "topónimo",
         "fuente": "zavala-reyes-2015",
@@ -261,25 +204,72 @@ NIVEL_A = {
                  "la del listado toponímico es corroboración interna, y no "
                  "estaba registrada.",
     },
-    # ── La campaña de Esteves 1989, lote 1 (2026-09-06) — ver NIVEL_B ──
+    # ── Lote 4 (2026-09-07): los del mapa de Miguel que «no estaban» en
+    # Esteves — estaban, con otra grafía. Un nombre que sigue vivo es dato.
+    "yauquiba": {
+        "id": "toponimo-105",
+        "clase": "topónimo", "fuente": "esteves-1989", "pagina": 67,
+        "glosa_fuente": "Yabu-quiba: la piedra del yabo, árbol resinoso",
+        "segmentacion": "yabu + quiba",
+        "morfemas": {
+            "yabo": "cercidium, árbol resinoso  [lexicón caquetío-atestiguado, "
+                    "Zavala — la misma glosa que da Esteves]",
+            "kiba": "piedra  [lexicón caquetío-atestiguado, Zavala #92/#218]",
+        },
+        "glosa_reconstruida": "yabo + piedra = 'la piedra del yabo'",
+        "razon": "Esteves segmenta y glosa, y los dos morfemas ya estaban "
+                 "atestiguados por Zavala con las mismas glosas: cierra sin "
+                 "residuo. Séptima forma de la familia -quiba de Paraguaná.",
+        "observacion": "Población del municipio Moruy; 1881: 26 casas, 199 "
+                       "vecinos. ⭐ La cabecera de Esteves dice Yauquiba, pero su "
+                       "propia segmentación dice Yabu-quiba — y el mapa vivo "
+                       "(fotos de Miguel, 2026-09-01: YABUQUIVA) conserva la b "
+                       "del étimo que el libro perdió en la cabecera. El nombre "
+                       "en uso es más fiel que el gazeteer.",
+        "lecturas": [
+            {"tipo": "testimonio-residente",
+             "lectura": "vivo en el mapa actual como Yabuquiva, sector del "
+                        "Capubana; con Jadacaquiva hace crecer la familia "
+                        "-quiva/-quiba de la península",
+             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
+             "eje": "referente"},
+        ],
+    },
+}
+
+# ───────────────────────────────────────────────────────────────────────────
+# NIVEL B — morfema nuevo despejado, recurrencia ≥2
+# ───────────────────────────────────────────────────────────────────────────
+
+NIVEL_B = {
+    # ── Bajó de NIVEL_A el 2026-09-23 (tf.0, la sigla E de Zavala, 5-a):
+    # id explícito, no gasta turno. Entró en la campaña de Esteves,
+    # lote 1 (2026-09-06). ──
     "judibana": {
         "id": "toponimo-075",
         "clase": "topónimo", "fuente": "esteves-1989", "pagina": 47,
         "glosa_fuente": "Judi, jurí: viento. Bana: sitio alto",
         "segmentacion": "judi + bana",
         "morfemas": {
-            "judi": "viento  [= juri, lexicón caquetío-atestiguado, Zavala #178; "
-                    "la variante judi la da Esteves]",
+            "judi": "viento  [= juri, Zavala #178 (E) = Esteves p. 47: sin otra "
+                    "fuente, caquetío-hipotético desde la sigla E (1-B); la "
+                    "variante judi la da Esteves]",
             "bana": "cerro, sitio alto  [lexicón caquetío-atestiguado, Zavala "
-                    "#26; D9 resuelta 2026-08-31]",
+                    "#26; D9 resuelta 2026-08-31; se sostiene sin Esteves: HB, "
+                    "CGB, Velasco]",
         },
         "glosa_reconstruida": "viento + sitio alto = 'el cerro del viento'",
-        "razon": "Esteves da la segmentación y las dos glosas, y los dos "
-                 "morfemas ya estaban atestiguados por otra fuente (Zavala): la "
-                 "ecuación cierra sin residuo. Sexta atestación de bana 'cerro' "
-                 "en Esteves y la que trae la variante judi de juri (r~d), la "
-                 "misma raíz de jurijurebo (toponimo-001) y del hudi de "
-                 "Hudishibana (Aruba).",
+        "razon": "Esteves da la segmentación y las dos glosas. Era A porque los "
+                 "dos morfemas parecían atestiguados por otra fuente (Zavala), "
+                 "pero la (E) de Zavala ES Esteves (cc.4): `bana` se sostiene "
+                 "sin él (HB, CGB, Velasco) y `judi`/`juri` no, aunque recurre "
+                 "con la misma glosa en tres nombres —Judibana, Jurijurebo, "
+                 "Tura—. Una pieza independiente más otra sólo de Esteves y "
+                 "recurrente = B (2026-09-23, tf.0, sigla E 5-a). Sexta "
+                 "atestación de bana 'cerro' en Esteves y la que trae la "
+                 "variante judi de juri (r~d), la misma raíz de jurijurebo "
+                 "(toponimo-001) y del hudi de Hudishibana (Aruba), que van "
+                 "Buurt toma de Esteves.",
         "observacion": "«Antiguamente era un fundo pecuario de la aldea de "
                        "Guanadito, hoy es una moderna ciudad del municipio Los "
                        "Taques.» Es el pueblo donde se crió Miguel: el único "
@@ -321,44 +311,6 @@ NIVEL_A = {
                           "(castellanos_1589_toponimos.yaml §3)"},
         ],
     },
-    # ── Lote 4 (2026-09-07): los del mapa de Miguel que «no estaban» en
-    # Esteves — estaban, con otra grafía. Un nombre que sigue vivo es dato.
-    "yauquiba": {
-        "id": "toponimo-105",
-        "clase": "topónimo", "fuente": "esteves-1989", "pagina": 67,
-        "glosa_fuente": "Yabu-quiba: la piedra del yabo, árbol resinoso",
-        "segmentacion": "yabu + quiba",
-        "morfemas": {
-            "yabo": "cercidium, árbol resinoso  [lexicón caquetío-atestiguado, "
-                    "Zavala — la misma glosa que da Esteves]",
-            "kiba": "piedra  [lexicón caquetío-atestiguado, Zavala #92/#218]",
-        },
-        "glosa_reconstruida": "yabo + piedra = 'la piedra del yabo'",
-        "razon": "Esteves segmenta y glosa, y los dos morfemas ya estaban "
-                 "atestiguados por Zavala con las mismas glosas: cierra sin "
-                 "residuo. Séptima forma de la familia -quiba de Paraguaná.",
-        "observacion": "Población del municipio Moruy; 1881: 26 casas, 199 "
-                       "vecinos. ⭐ La cabecera de Esteves dice Yauquiba, pero su "
-                       "propia segmentación dice Yabu-quiba — y el mapa vivo "
-                       "(fotos de Miguel, 2026-09-01: YABUQUIVA) conserva la b "
-                       "del étimo que el libro perdió en la cabecera. El nombre "
-                       "en uso es más fiel que el gazeteer.",
-        "lecturas": [
-            {"tipo": "testimonio-residente",
-             "lectura": "vivo en el mapa actual como Yabuquiva, sector del "
-                        "Capubana; con Jadacaquiva hace crecer la familia "
-                        "-quiva/-quiba de la península",
-             "quien": "Miguel Gil Urbina (fotos del mapa)", "fecha": "2026-09-01",
-             "eje": "referente"},
-        ],
-    },
-}
-
-# ───────────────────────────────────────────────────────────────────────────
-# NIVEL B — morfema nuevo despejado, recurrencia ≥2
-# ───────────────────────────────────────────────────────────────────────────
-
-NIVEL_B = {
     # ── Lote 6 (2026-09-10), del dictado de Miguel ──
     "bariquire": {
         "id": "toponimo-147",
@@ -388,40 +340,6 @@ NIVEL_B = {
                        "⚠️ No confundir con Bariquisimeto, que tiene entrada "
                        "propia y otra glosa ('río de aguas turbias').",
     },
-    "carirubana": {
-        "id": "toponimo-148",
-        "clase": "topónimo",
-        "fuente": "esteves-1989",
-        "segmentacion": "cari + (ru) + bana",
-        "morfemas": {
-            "cari": "orilla del mar, costa  [lexicón, caquetío-atestiguado]",
-            "bana": "cerro, sitio alto  [lexicón, caquetío-atestiguado; D9]",
-            "ru": "SIN DESPEJAR — ni la fuente ni el canon lo explican",
-        },
-        "glosa_reconstruida": "orilla + cerro = 'la orilla del cerro'",
-        "razon": "Las dos piezas grandes estaban atestiguadas y la suma da el "
-                 "referente. Es B y no A porque queda un residuo sin explicar "
-                 "—la `-ru-` de en medio— y porque la glosa no viene de una "
-                 "fuente impresa del canon sino de etimología popular recogida "
-                 "en el barrido (va en lecturas, no en glosa_fuente).",
-        "observacion": "Municipio de Punto Fijo, uno de los nombres vivos más "
-                       "grandes de la península. La etimología popular coincide "
-                       "EXACTA con la glosa que D9 tuvo que reconstruir para "
-                       "`bana`, y por un canal que no es ninguno de sus seis "
-                       "apoyos.",
-        "lecturas": [
-            {"tipo": "etimologia-popular",
-             "lectura": "«Carirubana significa orilla del peñón, la orilla del "
-                        "cerro, en donde CARI es orilla y BANA sitio alto»",
-             "quien": "divulgación local", "fecha": "2026-09-10",
-             "eje": "significado",
-             "veredicto": "⭐ vale como CORROBORACIÓN independiente de la glosa "
-                          "de `bana`, no como fuente de la entrada: las dos "
-                          "piezas ya estaban en el lexicón antes de leerla. "
-                          "Registro: 6-fusion/barrido_toponimos_web_2026-09-10.yaml"},
-        ],
-    },
-
     # ── Lote 7 (2026-09-07): el barrido del mapa vivo (OSM) contra Esteves.
     # Criterio: nombres vivos de Paraguaná que el cruce aproximado de
     # barrer_mapa.py emparejó con una entrada de Esteves, más los que no
@@ -880,6 +798,141 @@ MORFEMAS_DESPEJADOS = {
 # ───────────────────────────────────────────────────────────────────────────
 
 NIVEL_C = {
+    # ══════════════════════════════════════════════════════════════════
+    # Bajados de nivel el 2026-09-23 (tf.0: la sigla (E) de Zavala es
+    # Esteves 1989, opción 5-a de 6-fusion/issues-pendientes/
+    # sigla-E-zavala-canon-2026-09-23.md; medido en
+    # 6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml §toponimos).
+    # Jurijurebo y Cumarebo eran A y conservan su id: en NIVEL_A queda un
+    # talón `reubicado` que gasta su turno del contador. Carirubana era B.
+    # ══════════════════════════════════════════════════════════════════
+    "jurijurebo": {
+        "id": "toponimo-001",
+        "mapa_vivo": "OSM 2026: «Jurujurebo», poblado, 12.049 -69.940 — al norte de "
+                     "Pueblo Nuevo y cerca de El Vínculo, donde Esteves lo sitúa "
+                     "(p. 47); u por i en la segunda sílaba.",
+        "clase": "topónimo",
+        "fuente": "zavala-reyes-2015",
+        "glosa_fuente": "Paso de los vientos",
+        "segmentacion": "juri~juri + ebo",
+        "morfemas": {
+            "juri": "viento, ventarrón  [lexicón; Zavala #178 (E) = Esteves p. "
+                    "47, sin otra fuente: caquetío-hipotético desde la sigla E "
+                    "(1-B)]",
+            "ebo": "camino, paso, senda  [lexicón; Zavala #117 (E) = Esteves; "
+                   "caquetío-reconstruido desde la sigla E (1-B): la forma está "
+                   "fuera de él —Cazebo 'poniente' de Galeotto Cey, Guacurebo— "
+                   "y la glosa encaja]",
+        },
+        "glosa_reconstruida": "viento(-viento) + paso = 'paso de los vientos'",
+        "razon": "Era A, el caso tipo de la escala: los dos morfemas estaban en "
+                 "el lexicón y la traducción cierra sin residuo —la "
+                 "reduplicación juri~juri explica el PLURAL de la glosa ('los "
+                 "vientos', no 'el viento'); la segunda copia pierde la vocal "
+                 "final por haplología (juri-jur-ebo)—. Baja a C el 2026-09-23 "
+                 "(tf.0, sigla E 5-a) porque las dos piezas son sólo de "
+                 "Esteves, y la glosa del topónimo también: Zavala #179 (E) "
+                 "«Paso de los vientos» es Esteves p. 47. La ecuación cierra, "
+                 "pero con las etimologías del mismo autor que la propone. Lo "
+                 "que no se toca es la ciudad: «Hurehurebo» está en Castellanos "
+                 "(1589) y Esteves reporta cementerio con urnas.",
+        "observacion": "Estaba archivado en TOPONIMOS_ZAVALA como 'glosa "
+                       "incierta' y fuera del habla. Es el caso que originó "
+                       "toda la tarea F11. Formas atestiguadas (2026-09-07): "
+                       "Hurihurebo (Bastidas 1538, AGI, «pueblo de la Provincia "
+                       "de Paraguaná»), Hurehurebo (Castellanos 1589, II-1, «Señor "
+                       "de la ciudad Hurehurebo» y en la lista de las once "
+                       "ciudades), Jurijurebo (Zavala, Esteves p. 47: «lugar al "
+                       "norte de Pueblo Nuevo, cercano a El Vínculo; todavía hay "
+                       "vestigios de su cementerio»).",
+        # La tercera voz: lecturas que conviven sin pisar la glosa impresa ni
+        # la segmentación (esquema en 2-lengua/datos-de-lengua.md).
+        "lecturas": [
+            {"tipo": "etimologia-analitica",
+             "lectura": "hure 'arena' -> hurehure 'arenal' -> hurehurebo 'lugar de "
+                        "muchos arenales' (reduplicación + sufijo -bo)",
+             "quien": "González Batista", "fecha": "2026-08-25", "eje": "significado",
+             "procedencia": dict(obra="gonzalez-batista-nombre-de-coro"),
+             "veredicto": "descartada como lectura principal (2026-08-25): Zavala "
+                          "#178-179 tiene glosa impresa y juri~juri + ebo cierra sin "
+                          "residuo; el propio autor la da como conjetura («si hure "
+                          "fuera como creemos»). Se conserva por D7. Detalle: "
+                          "6-fusion/toponimia_coro_espina.yaml §veredicto-jurijurebo"},
+            {"tipo": "testimonio-residente",
+             "lectura": "Jurijurebo está en Judibana (Paraguaná); judi y juri son la "
+                        "misma palabra deformada, y el viento es el rasgo dominante "
+                        "del sitio: el topónimo moderno y el antiguo comparten raíz "
+                        "y referente",
+             "quien": "Miguel Gil Urbina, residente en Judibana", "fecha": "2026-08-25",
+             "eje": "referente",
+             "apoyo": "converge con la ubicación que dan las fuentes divulgativas "
+                      "(esteves-1989) y con la tradición local de Judibana "
+                      "(velasco-2015-resistencia §judibana_tradicion)"},
+        ],
+    },
+    "cumarebo": {
+        "id": "toponimo-004",
+        "clase": "topónimo",
+        "fuente": "zavala-reyes-2015",
+        "glosa_fuente": "Camino del cacique Cumare",
+        "segmentacion": "Cumare + ebo",
+        "morfemas": {
+            "Cumare": "antropónimo — la propia fuente lo identifica como el "
+                      "nombre del cacique",
+            "ebo": "camino, paso, senda  [lexicón; Zavala #117 (E) = Esteves; "
+                   "caquetío-reconstruido desde la sigla E (1-B)]",
+        },
+        "glosa_reconstruida": "Cumare + camino = 'camino de Cumare'",
+        "razon": "la glosa NOMBRA su propia clave: dice de quién es el camino, "
+                 "y el único morfema léxico, `ebo`, encaja. Era A con la razón "
+                 "de ser la «segunda atestación independiente de `ebo` (la otra "
+                 "es `jurijurebo`)», y no lo es: Zavala #94 (E) «Camino del "
+                 "cacique Cumare» es Esteves p. 105 («el camino del cacique "
+                 "Cumare: paso, senda y cumare, el cacique»), y las dos "
+                 "atestaciones de `ebo` son de Esteves. Baja a C el 2026-09-23 "
+                 "(tf.0, sigla E 5-a). El pueblo y su puerto no se tocan: "
+                 "Cumarebo está en la carta de Bastidas de 1538 (nodo-002).",
+    },
+    "carirubana": {
+        "id": "toponimo-148",
+        "clase": "topónimo",
+        "fuente": "esteves-1989",
+        "segmentacion": "cari + (ru) + bana",
+        "morfemas": {
+            "cari": "orilla del mar, costa  [lexicón; Zavala #66 (E) = Esteves "
+                    "p. 28, sin otra fuente: caquetío-hipotético desde la "
+                    "sigla E (1-B)]",
+            "bana": "cerro, sitio alto  [lexicón, caquetío-atestiguado; D9]",
+            "ru": "SIN DESPEJAR — ni la fuente ni el canon lo explican",
+        },
+        "glosa_reconstruida": "orilla + cerro = 'la orilla del cerro'",
+        "razon": "La suma de las dos piezas grandes da el referente. Era B por "
+                 "el residuo sin explicar —la `-ru-` de en medio—, y baja a C "
+                 "el 2026-09-23 (tf.0, sigla E 5-a) porque además `cari` es "
+                 "sólo de Esteves: la (E) de Zavala es él, y parte con ella dos "
+                 "nombres de la misma página (Cariguariana y Carirubana, p. "
+                 "28). Las dos debilidades a la vez: C. Ojo: la glosa SÍ es de "
+                 "fuente —«Cari: orilla. Bana: sitio alto», Esteves p. 28—, "
+                 "contra lo que decía esta razón (corrección del lote del "
+                 "2026-09-22); la etimología popular de lecturas la repite.",
+        "observacion": "Municipio de Punto Fijo, uno de los nombres vivos más "
+                       "grandes de la península. La etimología popular coincide "
+                       "EXACTA con la glosa que D9 tuvo que reconstruir para "
+                       "`bana`, y por un canal que no es ninguno de sus seis "
+                       "apoyos.",
+        "lecturas": [
+            {"tipo": "etimologia-popular",
+             "lectura": "«Carirubana significa orilla del peñón, la orilla del "
+                        "cerro, en donde CARI es orilla y BANA sitio alto»",
+             "quien": "divulgación local", "fecha": "2026-09-10",
+             "eje": "significado",
+             "veredicto": "⭐ vale como CORROBORACIÓN independiente de la glosa "
+                          "de `bana`, no como fuente de la entrada: las dos "
+                          "piezas ya estaban en el lexicón antes de leerla. "
+                          "Registro: 6-fusion/barrido_toponimos_web_2026-09-10.yaml"},
+        ],
+    },
+
     # ── Fleco del lote 6 (2026-09-11) ──
     "curarí": {
         "id": "toponimo-180",
@@ -1488,10 +1541,12 @@ NIVEL_C = {
     },
     "alaurima": {
         "glosa_fuente": "Río blanco o claro", "segmentacion": "alaur- + -ima",
-        "razon": "`-ima` 'humedad, quebrada' (AFIJOS_ZAVALA #165, confirmado "
-                 "independientemente por van Buurt §10 vía Onima) alinea con "
+        "razon": "`-ima` 'humedad, quebrada' (AFIJOS_ZAVALA #165) alinea con "
                  "'río'. `alaur-` = 'blanco/claro' no recurre en ningún otro "
-                 "topónimo del corpus: conjetura.",
+                 "topónimo del corpus: conjetura. (Hasta el 2026-09-23 decía "
+                 "«confirmado independientemente por van Buurt §10 vía "
+                 "Onima»: no lo está, van Buurt cita ahí a Esteves 1989 — "
+                 "sigla E, cc.4.)",
     },
     "capadare": {
         "glosa_fuente": "Diente de tigre", "segmentacion": "capa- + dare",
@@ -2419,10 +2474,21 @@ DESCARTES = {
                     "jamaica": 46, "jayana": 46, "guacujúa": 38, "tequeguacare": 62,
                     "sisibauco": 60, "guarama": 41},
         "formas": [
+            # tf.7 E (Miguel, 2026-09-23): la última cláusula se corrige con
+            # Oviedo y Baños (ed. Ayacucho p. 168, verificado en imagen por la
+            # campaña cc.5). Esteves hacía de Charaima un cacique de Margarita
+            # y abuelo de Fajardo; era del valle de Maya, en la provincia de
+            # Caracas, y su bisabuelo. El único hilo que ataba un topónimo de
+            # Paraguaná a los guaiqueríes se corta (etnia-009).
             "charaima (población entre Adícora y Baraived; censo 1881: 79 casas, "
             "527 habitantes; nombre primitivo Charaide en su Título de "
-            "Composición; Esteves no sabe qué relación guarda con el cacique "
-            "Charaima de Margarita, abuelo del guayquerí Francisco Fajardo)",
+            "Composición; Esteves no sabe qué relación guarda con «el cacique "
+            "Charaima de la Isla de Margarita, el abuelo del guayquerí Francisco "
+            "Fajardo», pero ese cacique no era de Margarita: Oviedo y Baños "
+            "(p. 168) da a Charayma como cacique del valle de Maya, en la "
+            "provincia de Caracas, y bisabuelo de Fajardo —su nieta Doña Isabel, "
+            "cacica guaiquerí, fue la madre—, así que el hilo a los guaiqueríes "
+            "no aguanta)",
             "jacuque (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde "
             "«no se puede confirmar históricamente» Federmann desembarcó los "
             "caballos de Santo Domingo en 1530; etimología popular: jaca "
@@ -2598,13 +2664,24 @@ CORROBORACIONES_LEXICON = {
     "bacoa": {"glosa_lexicon": "bosque, lugar, paraje, sitio fértil",
               "toponimos": ["adabacoa", "guadabacoa", "quibacoas",
                             "yacarebacoa"], "independencia": "alta"},
+    # ebo y juri eran «alta» hasta el 2026-09-23: la glosa del glosario
+    # (Zavala #117 y #178, las dos (E)) y la de los topónimos (#94 y #179,
+    # también (E)) son Esteves 1989, que sacó la palabra DEL topónimo. Es el
+    # mismo caso que los de van Buurt de abajo (tf.0, la sigla E; 5-a).
     "ebo": {"glosa_lexicon": "camino, paso, senda",
-            "toponimos": ["cumarebo", "jurijurebo"], "independencia": "alta",
+            "toponimos": ["cumarebo", "jurijurebo"],
+            "independencia": "NULA — la (E) de Zavala es Esteves: la glosa de "
+                             "la palabra y la de los dos topónimos son suyas "
+                             "(pp. 47 y 105)",
             "nota": "dos contraejemplos con glosa divergente: guacurebo, "
-                    "turijerebo"},
+                    "turijerebo. Fuera de Esteves la forma sí está —Cazebo "
+                    "'poniente' de Galeotto Cey, Guacurebo en la Tabla A-9—, "
+                    "sin glosa que corrobore 'camino'"},
     "juri": {"glosa_lexicon": "viento, ventarrón", "toponimos": ["jurijurebo"],
-             "independencia": "alta",
-             "nota": "y eco insular en Hudishibana 'windy plain' (van Buurt)"},
+             "independencia": "NULA — la (E) de Zavala es Esteves: la glosa "
+                              "sale de partir Jurijurebo y Judibana (p. 47)",
+             "nota": "y el eco insular en Hudishibana 'windy plain' tampoco "
+                     "cuenta: van Buurt lo da citando a «(Cruz Esteves, 1989)»"},
     "kiba": {"glosa_lexicon": "piedra", "toponimos": ["quibacoas"],
              "independencia": "alta",
              "nota": "grafías fuente quiva/quiba/cuiva (colisiones D5 2026-08-31: "

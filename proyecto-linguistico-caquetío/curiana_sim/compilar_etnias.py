@@ -31,6 +31,9 @@ que es exactamente el error que Oliver denuncia.
    dos, un vecino de la Curiana es fanfiction que pasa por dato.
 3. `etiqueta: canon-simulacion` exige `deuda: sin-procedencia`: lo inventado
    se declara inventado (regla 8: el hueco se admite, callarlo no).
+4. `polity_caquetia: ninguna` (desde tf.7 B, 2026-09-23) es el vecino de la
+   ESFERA que no toca a ninguna polity caquetía —los guaiqueríes de
+   Margarita—, y exige `tipo_de_contacto: ninguno`.
 
 Y la de siempre: `procedencia.obra` es clave foránea contra la bibliografía, y
 `ver_tambien` solo puede apuntar a hechos del corpus o archivos que existan.
@@ -73,6 +76,15 @@ FAMILIAS = ("arahuaca", "caribe", "guahibo", "chibcha", "jirajara", "desconocida
 # decisión de Miguel. Un test comprueba que las dos listas coinciden.
 POLITIES = ("costera", "barquisimeto", "yaracuy", "llanos", "occidental")
 POLITY_SIMULADA = "costera"
+# El vecino de la ESFERA que no toca ninguna polity caquetía (tf.7 B,
+# 2026-09-23: los guaiqueríes de Margarita, «parte de la esfera de contacto»
+# según cc.5, sin contacto documentado con ninguna de las cinco). No es una
+# polity —`curiana_polities.py` no la tiene, y POLITIES sigue siendo su espejo
+# exacto—: es el valor que dice «ninguna». Por eso exige `tipo_de_contacto:
+# ninguno`; si no, sería la puerta para registrar un contacto sin decir con
+# qué polity, que es justo lo que la regla 4 prohíbe.
+POLITY_NINGUNA = "ninguna"
+VALORES_POLITY = POLITIES + (POLITY_NINGUNA,)
 CONTACTOS = ("corresidencia", "vecindad", "mercado", "guerra", "visita", "ninguno")
 INTENSIDADES = ("maxima", "alta", "media", "baja", "ninguna", "desconocida")
 
@@ -198,7 +210,7 @@ def validar_estructura(etnias: list) -> list:
 def validar_vocabularios(etnias: list) -> list:
     """Cada campo cerrado, con su lista cerrada. Sin esto no se puede agrupar."""
     cerrados = (("etiqueta", ETIQUETAS), ("familia_linguistica", FAMILIAS),
-                ("polity_caquetia", POLITIES), ("tipo_de_contacto", CONTACTOS),
+                ("polity_caquetia", VALORES_POLITY), ("tipo_de_contacto", CONTACTOS),
                 ("intensidad", INTENSIDADES))
     problemas = []
     for etnia in etnias:
@@ -239,6 +251,9 @@ def validar_polity(etnias: list) -> list:
        viene de una fuente lo dice (regla 8).
     3. Y al revés: `deuda: sin-procedencia` junto a una `procedencia.obra` es
        contradicción — o cita o debe, no las dos.
+    4. `polity_caquetia: ninguna` (tf.7 B) exige `tipo_de_contacto: ninguno`:
+       el vecino de la esfera que no toca a ninguna polity no puede declarar
+       un contacto con los caquetíos, porque ese contacto sería con ALGUNA.
     """
     problemas = []
     for etnia in etnias:
@@ -272,6 +287,13 @@ def validar_polity(etnias: list) -> list:
                 "sin-procedencia-ni-deuda", donde,
                 "no cita obra ni declara `deuda: sin-procedencia` (regla 8: "
                 "el hueco se admite, callarlo no)"))
+
+        if polity == POLITY_NINGUNA and etnia.get("tipo_de_contacto") != "ninguno":
+            problemas.append(_error(
+                "ninguna-con-contacto", donde,
+                f"`polity_caquetia: {POLITY_NINGUNA}` con `tipo_de_contacto: "
+                f"{etnia.get('tipo_de_contacto')}`: un contacto con los "
+                "caquetíos es con alguna polity, y hay que decir cuál (regla 4)"))
     return problemas
 
 
@@ -365,9 +387,10 @@ def informe(etnias, meta, problemas) -> None:
 
     print("  por polity caquetía (regla 4):")
     por_polity = Counter(e.get("polity_caquetia") for e in etnias)
-    for valor in POLITIES:
+    for valor in VALORES_POLITY:
         if por_polity.get(valor):
-            marca = "  ← la simulada" if valor == POLITY_SIMULADA else ""
+            marca = ("  ← la simulada" if valor == POLITY_SIMULADA else
+                     "  ← vecinos de la esfera sin polity" if valor == POLITY_NINGUNA else "")
             print(f"    {valor:14} {por_polity[valor]}{marca}")
 
     print("\n  por familia lingüística:")
