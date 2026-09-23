@@ -409,18 +409,22 @@ def test_e_ninguna_plantilla_ensena_ya_la_forma_retirada():
                if "biro-bana" in lx.formas_en_texto(t)) == 1
 
 
-def test_e_la_forma_retirada_vuelve_a_poder_acunarse():
-    """Consecuencia declarada del corte: al salir de la puerta, `kali-bana`
-    deja de estar vetada y se registra como cualquier acuñación.
+def test_e_la_forma_retirada_cae_por_su_raiz_archivada():
+    """Hasta la tanda de la base, `kali-bana` volvía a poder acuñarse al salir
+    de la puerta de la plantilla (consecuencia declarada del corte del
+    2026-09-19). Ahora cae, y por OTRA puerta: `kali` está ARCHIVADA desde la
+    política «manda la atestiguada» del mismo día, y desde db.1 (2026-09-23)
+    una raíz archivada no avala una acuñación — el agujero de `kira`. Es lo que
+    la nota de archivo de `kali` ya prometía («el molde `kali-…-bana` queda
+    cerrado») y el código no hacía.
 
-    No es un descuido: vetarla por haber sido ejemplo histórico sería una
-    decisión de Miguel, y no está tomada. El test fija la conducta de HOY para
-    que el día que se decida, se vea cambiar.
+    Se cuenta en `rechazos_de_raiz`, no en `rechazos_de_plantilla`: no la veta
+    haber sido ejemplo, la veta su raíz.
     """
     lexico = LexicoComunitario()
-    assert lexico.registrar_neologismo(_neo(EJEMPLO_RETIRADO)) is True
-    assert [n.forma for n in lexico._neologismos] == [EJEMPLO_RETIRADO]
+    assert lexico.registrar_neologismo(_neo(EJEMPLO_RETIRADO)) is False
     assert lexico.rechazos_de_plantilla == []
+    assert [r[0] for r in lexico.rechazos_de_raiz] == [EJEMPLO_RETIRADO]
 
 
 def test_e_el_ejemplo_es_morfologicamente_correcto_y_del_mundo():

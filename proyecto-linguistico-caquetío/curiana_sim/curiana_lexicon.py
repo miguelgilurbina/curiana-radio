@@ -236,11 +236,11 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "buiamati":   {"sig": "dos lunas (unidad de tiempo ~60 días)",          "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #47 (GC): «dos lunas. Medición de tiempo»"},
     "kasebo": {"sig": "poniente, oeste",                                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #75 (GC): «Poniente»", "forma_fuente": "cazebo"},
     "kasikure": {"sig": "levante, este",                                  "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #77 (GC): «Parte del levante»", "forma_fuente": "cazicure"},
-    "diao":       {"sig": "señor principal, jefe mayor",                    "cat": "título","fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.67 (\"señor principal, jefe mayor\"); Oliver 1989 cap.3 p.251 llama a Manaure \"the main diao or great cacique\" — corregido de \"segundo orden\" (sin cita) a la glosa atestiguada"},
+    "diao":       {"sig": "señor principal, jefe mayor",                    "cat": "título","fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.67 (\'señor principal, jefe mayor\'); Oliver 1989 cap.3 p.251 llama a Manaure \'the main diao or great cacique\' — corregido de \'segundo orden\' (sin cita) a la glosa atestiguada · Cita primaria (campaña del taíno 2, T6, 2026-09-22; db.2): Oviedo y Valdés, Historia general, t. II (1852) impresa 299, Libro XXV: «en algunas partes desta gobernación de Venezuela el señor principal, que tiene muchos indios y le son subjetos otros caciques, llámanle diao», con sus exequias, «otra manera de obsequias de la que se dixo de suso». Alcance que Oviedo declara: la gobernación de Venezuela, no sólo Coro (regla 4). No cuelga de `datihao` (taíno): otra raíz en Oliver, /d-ia(o)/"},
     "apopo":      {"sig": "jefe de parcialidad pequeña",                    "cat": "título","fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.65"},
-    "boratio":    {"sig": "piache, cacique, jefe, sacerdote, médico",       "cat": "título","fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.66; cf. Jahn 1927 p.213 n.29 (\"adivino o sacerdote\", vía Oviedo)"},
-    "waitiao": {"sig": "amigo ritual, aliado de alianza",                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Oliver 1989, cap. 2, p.147, sobre Oviedo y Valdés: mismo lexema que datihao sobre la raíz de parentesco /-atti-/, con distinto prefijo de persona; el pacto de guaitiao (intercambio de nombres entre aliados) lo describe Oviedo para el área circuncaribe", "forma_fuente": "guaitiao"},
-    "datihao":    {"sig": "padrino de cautivo, el que presta su nombre al esclavo", "cat": "sust", "fuente": "caquetío-atestiguado", "notas": "Oliver 1989, cap. 2, p.147, sobre Oviedo y Valdés: forma atestiguada «daitiao», cognada del taíno daitia-o y del lokono da-tti / da-iti, sobre la raíz de parentesco /-atti-/, que en lokono cubre tío, padre e hija según el prefijo posesivo [pendiente: la forma del lexicón es datihao y la de Oliver daitiao — ¿metátesis de copia o dos formas?]"},
+    "boratio":    {"sig": "piache, cacique, jefe, sacerdote, médico",       "cat": "título","fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, p.66; cf. Jahn 1927 p.213 n.29 (\'adivino o sacerdote\', vía Oviedo) · Cita primaria (campaña del taíno 2, T6, 2026-09-22; db.2): Oviedo y Valdés, Historia general, t. II (1852) pp. 298-299, `boratio` con UNA t: «afirman los boratios que le ven y hablan muchas veces [al diablo]… Estos boratios son como sacerdotes suyos», de los indios de la gobernación de Venezuela. La doble t de `borattio` es de la cadena Jahn/Arcaya. El glosario del editor (t. IV impresa 595) la da como «(Lengua de Venezuela)»"},
+    "waitiao": {"sig": "amigo ritual, aliado de alianza",                "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Oliver 1989, cap. 2, p.147, sobre Oviedo y Valdés: mismo lexema que datihao sobre la raíz de parentesco /-atti-/, con distinto prefijo de persona; el pacto de guaitiao (intercambio de nombres entre aliados) lo describe Oviedo para el área circuncaribe · ⚠ Nota (2026-09-22, db.5, Miguel: «si no está confirmado que no está en Oviedo y no sabemos si es taína, mantengámosla no más pero con ese foot note»): la cita a Oviedo NO está verificada. Medido: `guaitiao`/`guatiao`/`waitiao` dan 0 en la capa de texto de los cuatro tomos de Oviedo (ed. Amador de los Ríos) — pero allí las voces indígenas van en cursiva y el OCR falla justo en ellas, así que el cero no es una ausencia probada —; 0 en la Apologética de Las Casas; la lista maestra taína la trae sólo de Brinton 1871 p. 12 y Goeje 1939 p. 9, sin cronista. Es el caso de `datihao`, que resultó ser de San Juan: si aparece en Oviedo en un pasaje de las islas, se re-etiqueta", "forma_fuente": "guaitiao"},
+    "datihao":    {"sig": "padrino de cautivo, el que presta su nombre al esclavo", "cat": "sust", "fuente": "taíno", "notas": "Decisión de Miguel 2026-09-22 (db.2, «dale con el punto 2»): re-etiquetada de `caquetío-atestiguado` a `taíno`. En el CUERPO de los cuatro tomos de Oviedo y Valdés (ed. Amador de los Ríos, 1851-1855) aparece UNA vez: t. I p. 473, en San Juan, en boca de Agüeybana — «á mi dalihao (que quiere deçir mi señor, ó el que, como yo, se nombra)» [la capa de texto da `dalihao`; la l/t no está verificada en imagen]. La marca «(Lengua de Venezuela)» es del GLOSARIO DEL EDITOR (t. IV impresa 598), y de ahí sale también esta `sig` («el que presta su nombre al esclavo»): no es la glosa de Oviedo, que dice «mi señor, ó el que, como yo, se nombra». Oliver, Jahn y Arcaya heredaron la etiqueta del editor. Campaña del taíno 2, T6 (#195). Etiqueta anterior: `caquetío-atestiguado` · Oliver 1989, cap. 2, p.147, sobre Oviedo y Valdés: forma atestiguada «daitiao», cognada del taíno daitia-o y del lokono da-tti / da-iti, sobre la raíz de parentesco /-atti-/, que en lokono cubre tío, padre e hija según el prefijo posesivo [pendiente: la forma del lexicón es datihao y la de Oliver daitiao — ¿metátesis de copia o dos formas?]"},
     "uriakoa": {"sig": "Uriacoa: antropónimo (apellido de un cacique del s. XVI)", "cat": "sust", "fuente": "caquetío-atestiguado", "notas": "Oliver 1989 cap.3 pp.255-256: 'the Crown recognized Don Sancho Uriacoa as the Caquetío paramount chief'; le sucedió su hijo Don Luis Caguallo. CORREGIDO 2026-07-20: figuraba como 'título del cacique mayor de Curiana/Coro', una inferencia sin fuente a partir de un NOMBRE PROPIO — el mismo error que tenía 'diao'. El título atestiguado del jefe mayor es diao (Zavala Reyes 2015 #106); apopo es el de parcialidad pequeña (#12)", "forma_fuente": "uriacoa"},
     "tata":       {"sig": "padre, papá",                                   "cat": "sust",  "fuente": "caquetío-hipotético", "notas": "D10 (2026-08-03), grupo 3 — BAJA DE TIER, no cambia de lengua. van Buurt 2014 la trae en su §11, «words with less certain links to Caquetío» (islas A/B/C, 'father'), NO en su §6 de voces probablemente caquetías: la propia fuente la coloca en la lista de menor confianza. Zavala Reyes 2015 glosario #243 (AM) «Padre, papá» la marca con fuerza D porque tata es panhispánico infantil, y Alvarado 1921 p.71 solo la registra en 'tata-cuá' (indígenas de Mérida). Ninguna la reasigna a otra lengua; lo que ninguna sostiene es la certeza"},
     "dare":       {"sig": "diente; hijo (extensión metafórica)",            "cat": "sust",  "fuente": "caquetío-atestiguado", "notas": "Zavala Reyes 2015, glosario #103 (HB): «Diente»; Oliver 1989 la confirma en Paraguaná — 🔴 DEUDA DECLARADA 2026-09-10 (regla 8): la glosa dice 'diente; HIJO (extensión metafórica)' pero las dos fuentes citadas dan solo DIENTE. El 'hijo' entró sin procedencia y no se ha localizado quién lo sostiene. Importa porque de él dependería leer `catire` como 'hijo de la luna' y `capadare` como algo distinto de 'diente de'. Mientras no aparezca la fuente, para componer vale 'diente'.", "deuda": "sin-procedencia (la acepción 'hijo')"},
@@ -303,11 +303,11 @@ VOCABULARIO_BASE: dict[str, dict] = {
     "aji":        {"es": "ají, chile (Capsicum spp.)", "fuente": "taíno", "notas": "Tno. ají → español ají; venezolanismo activo", "categoria": "flora"},
     "papaya":     {"es": "papaya, lechosa (Carica papaya)", "fuente": "taíno", "notas": "Tno. papaya → español papaya", "categoria": "flora"},
     "guayaba":    {"es": "guayaba (Psidium guajava)", "fuente": "taíno", "notas": "Tno. guayaba → español guayaba", "categoria": "flora"},
-    "tabako":     {"es": "tabaco (Nicotiana tabacum), pipa ceremonial", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuaco", "categoria": "ritual"},
+    "tabako":     {"es": "cañuto con que se toma el humo, y la ahumada misma (no la hierba)", "fuente": "taíno", "notas": "Tno. tabaco; ritual chamánico arahuaco · GLOSA CORREGIDA 2026-09-23 (db.3): decía «tabaco (Nicotiana tabacum), pipa ceremonial», la planta primero. Oviedo lo corrige expresamente, t. I lib. V cap. II pp. 130-131: «tomar unas ahumadas, que ellos llaman tabaco», y «á aquel tal instrumento con que toman el humo, ó á las cañuelas que es dicho llaman los indios tabaco, é no á la hierva ó sueño que les toma (como pensaban algunos)»; p. 143, «sus cahobas ó ahumadas […] que assimismo llaman tabacos». Abierto (Zayas 1931, #220): Las Casas llama tabacos a las hojas enrolladas, y la pareja `cohiba`/`tabako` está sin decidir", "categoria": "ritual"},
     "cazabi":     {"es": "cazabe, pan de yuca, torta de mandioca", "fuente": "taíno", "notas": "Tno. cazabi → español cazabe; alimento base arahuaco", "categoria": "alimentacion"},
     "bohio":      {"es": "bohío, casa redonda de varas y palma", "fuente": "taíno", "notas": "Tno. bohío; cognado caquetío probable *kali", "categoria": "arquitectura"},
-    "caney":      {"es": "caney, bohío rectangular del cacique", "fuente": "taíno", "notas": "Tno. caney; vivienda del jefe diferenciada", "categoria": "arquitectura"},
-    "batey":      {"es": "batey, plaza central del poblado, cancha de juego ritual", "fuente": "taíno", "notas": "Tno. batey; espacio ritual comunitario", "categoria": "arquitectura"},
+    "caney":      {"es": "caney, casa redonda de varas con un mástil al centro; casa grande", "fuente": "taíno", "notas": "Tno. caney; vivienda del jefe diferenciada · GLOSA CORREGIDA 2026-09-23 (db.3): decía «bohío rectangular del cacique», y Oviedo dice lo contrario en las dos mitades. Oviedo t. I, lib. VI cap. I, pp. 164-165: «El buhio ó casa de tal manera fecho, llámasse caney», la de postes en círculo con «un poste ó mástel» al medio, «la forma del caney ó casa redonda»; la de los «hombres mas principales é caçiques» es la OTRA, «hechas á dos aguas y luengas». Lo que sí liga el caney a los caciques es un pasaje narrativo, t. I p. 90: los caciques «dentro en un caney ó casa grande» — un lugar de reunión, no la vivienda del cacique. Transcripción en 6-fusion/taino_oviedo_valdes_1851.yaml", "categoria": "arquitectura"},
+    "batey":      {"es": "juego de pelota (y el sitio donde se juega)", "fuente": "taíno", "notas": "Tno. batey; espacio ritual comunitario · GLOSA CORREGIDA 2026-09-23 (db.3): decía «plaza central del poblado, cancha de juego ritual» y ponía el lugar primero. Para Oviedo batey es EL JUEGO: t. I p. 471, «lo jugasen al batey (que es el juego de la pelota de los indios)»; y p. 163, en la plaza «estaba lugar diputado para el juego de la pelota (que ellos llaman batey)», donde la plaza es «plaça». El sitio queda entre paréntesis porque el paréntesis de p. 163 admite las dos lecturas. Transcripción en 6-fusion/taino_oviedo_valdes_1851.yaml", "categoria": "arquitectura"},
     "nagua":      {"es": "nagua, falda de algodón de mujer", "fuente": "caquetío-reconstruido", "notas": "Decisión de Miguel 2026-09-12 (tainismos de Medina): Medina Colina p. 193 s.v. naguas «con esta palabra, producto del pueblo llano, nuestros paraguaneros se refirieron a las enaguas de la mujer; es voz taína» → caquetío-reconstruido como kanoa/hamaca/konuko; etiqueta anterior `taíno` · Tno. nagua → español enagua; Lokono annaka", "categoria": "vestimenta"},
     "piragua":    {"es": "piragua, canoa grande de un palo", "fuente": "taíno", "notas": "Tno. piragua → español piragua", "categoria": "navegacion"},
     "iwana":      {"es": "iguana (Iguana iguana)", "fuente": "taíno", "notas": "Tno. higuana → español iguana; Lokono iwana", "categoria": "fauna"},
@@ -727,10 +727,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "notas": "Lok. sallaban; 'llano/sabana'; cognado Taíno sabana; origen del venezolanismo/americanismo 'sabana'; Brinton 1871",
         "categoria": "geografia"
     },
-    "siba": {
+    "siba-lokono": {
         "es": "piedra, roca",
         "fuente": "lokono",
-        "notas": "Lok. siba; artículo to [NH]; siba-be 'piedras'; cognado con iba/kiba (Carib.); Brinton 1871; Goeje 1928",
+        "notas": "Lok. siba; artículo to [NH]; siba-be 'piedras'; cognado con iba/kiba (Carib.); Brinton 1871; Goeje 1928 · CLAVE CAMBIADA 2026-09-23 (db.3): era `siba` a secas; la voz sin etiqueta pasa a ser la taína, que la atestigua un cronista, y ésta lleva la etiqueta de lengua como `kati-kalinago`",
         "categoria": "geografia"
     },
 
@@ -6104,36 +6104,6 @@ VOCABULARIO_BASE: dict[str, dict] = {
 
 
     # --- Taíno hipotético (arahuaco_comparative.py) ---
-    "abba": {
-        "es": "uno",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "gramatica"
-    },
-    "acoa": {
-        "es": "pie",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "aduri": {
-        "es": "nariz",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "agari": {
-        "es": "cabeza",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "akcicyaa": {
-        "es": "espíritu vital",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "ritual"
-    },
     "cai": {
         "es": "isla",
         "fuente": "taíno",
@@ -6159,10 +6129,10 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "ritual"
     },
     "daca": {
-        "es": "mano",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
+        "es": "yo",
+        "fuente": "taíno",
+        "notas": "Las Casas, Apologética cap. CLXVII p. 447 (verificado en imagen): «Dios naboría daca […] que quiere decir, en la lengua más comun y más universal desta Isla, “yo soy sirviente y criado de Dios” […] y daca quiere decir yo». Segunda mano independiente: Pané, cap. XXV, la misma frase —en el contexto de Macorix, que es la lengua que Pané sabía—. Bachiller y Morales 1883 p. 270 junta las dos (Pané escribe dacha, Las Casas daca). Transcripciones en 6-fusion/taino2_las_casas_apologetica.yaml (lx.06, conflicto c01) y 6-fusion/taino_pane_c1498.yaml · CAMBIA DE VOZ el 2026-09-23 (db.3): hasta esa fecha esta clave era `daca` 'mano', `taíno-reconstruido`, generada por reconstruir_taino() desde el lokono y homógrafa por accidente de la voz atestiguada. La reconstrucción no se archiva aparte porque la FORMA sigue en el habla, con la glosa que da el cronista; su procedencia era: Reconstrucción hipotética Taíno desde Lok. daka; método comparativo arahuacano; Reconstrucción desde Lok. daka (mano); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
+        "categoria": "gramatica"
     },
     "higuana": {
         "es": "iguana",
@@ -6171,10 +6141,16 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "categoria": "fauna"
     },
     "mayani": {
-        "es": "no, negación",
+        "es": "de ningún valor, nada",
         "fuente": "taíno",
-        "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
+        "notas": "Taíno atestiguado: mayani; cognado Lok. ma; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno` · GLOSA CORREGIDA 2026-09-23 (db.3): era «no, negación», que es la glosa del cognado lokono `ma`, no la de la voz. Brinton 1871 p. 13: «Mayani, of no value, (\"nihil!,\" Pet. Martyr, p. 9). Ar. ma, no, not» — la voz taína es un juicio de valor y la negación es sólo el morfema lokono con que Brinton la compara. Cronista: Pedro Mártir",
         "categoria": "gramatica"
+    },
+    "siba": {
+        "es": "piedra; las cibas, piedras como de mármol que se llevan colgadas de brazos y cuello",
+        "fuente": "taíno",
+        "notas": "Pané, Relación cap. VI (La Española; texto que llegó por la traducción italiana de Ulloa): «muchas cibas, para que las llevara sujetas a los brazos, pues en aquel país las cibas son piedras que semejan mucho al mármol, y las llevan pendientes de los brazos, y al cuello». Brinton 1871 p. 13 la generaliza a «a stone» y la iguala al lokono `siba`; Bachiller y Morales 1883 p. 210 (vía Irving y Brett) y Goeje 1939 p. 14 (T siba) repiten — copiar no es atestiguar, la mano es una: Pané. forma_fuente: cibas. El lexicón la tenía sólo por el lado lokono (ver `siba-lokono`). Entra el 2026-09-23 (db.3). Transcripciones: 6-fusion/taino_pane_c1498.yaml (pv09) y 6-fusion/taino_lista_maestra_2026-09-22.yaml (lema siba). Para el oyente caquetío: el caquetío atestigua `kiba` «piedra»",
+        "categoria": "geografia"
     },
     "taita": {
         "es": "padre",
@@ -6182,29 +6158,11 @@ VOCABULARIO_BASE: dict[str, dict] = {
         "notas": "Taíno atestiguado: taita; cognado Lok. itti; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "parentesco"
     },
-    "thigisi": {
-        "es": "diente",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
     "tuna": {
         "es": "agua, río",
         "fuente": "taíno",
         "notas": "Taíno atestiguado: tuna; cognado Lok. tuna; Brinton 1871 · F8 (2026-09-12): grafía de `fuente` unificada, `taino` → `taíno`",
         "categoria": "geografia"
-    },
-    "wacusi": {
-        "es": "ojo",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "cuerpo"
-    },
-    "wagulo": {
-        "es": "tortuga",
-        "fuente": "taíno-reconstruido",
-        "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces",
-        "categoria": "fauna"
     },
     "yamosa": {
         "es": "dos",
@@ -6971,29 +6929,34 @@ REGLAS_LOCATIVAS: dict[str, dict] = {
             "anotó: puedes usarla si propones tú su valor entre corchetes."
         ),
     },
-    "-gua": {
-        "nombre": "región / área asociativa",
-        "desc": "Zona más amplia asociada con X. Menos específico que -ana.",
-        "uso": "RAÍZ + -gua  →  región, área amplia",
-        # d21.14 B: `Corogua` era un derivado que el lexicón no tiene. Los tres
-        # ejemplos van ahora con formas que el lexicón SÍ tiene (`maure`,
-        # `para`) o con el topónimo entero, que no se presenta como derivación.
-        "ejemplos": [
-            "maure + gua = maure-gua (la tierra del algodón, la región)",
-            "para + gua + na = Paraguaná (segmentación abierta)",
-            "Araya (región salina)",
-        ],
-        "evidencia": "Topónimos venezolanos de Falcón y Sucre",
-        "deuda": "sin-procedencia (d21.7, «Si me parece, B», 2026-09-21): cero clave "
-                 "foránea a 4-fuentes/bibliografia.yaml. Se sigue enseñando mientras "
-                 "se le busca fuente en 2-lengua/toponimos.yaml (109 topónimos en "
-                 "canon) y en el gazeteer de Esteves ya minado — campaña aparte. "
-                 "Apoyo que ya existe en el canon: `paragua` se lee como `para` "
-                 "'mar' + `-gua`, y por eso el 2026-09-19 se decidió NO fusionar "
-                 "`parawa`/`para`: fusionarlas habría borrado este morfema",
+    # ⚠️ dc.2 C + E («Pensaba que ya habíamos resuelto esta. Sigamos tu
+    # recomendación», 2026-09-21; aplicada en la tanda de la base). Era `-gua`
+    # 'región / área amplia', con `deuda: sin-procedencia` (d21.7). La campaña
+    # halló fuente para la FORMA y ninguna para la glosa: Oliver 1989 cap. 2
+    # p. 148 la lista entre los sufijos toponímicos caquetíos («f) -wa [gua-]»)
+    # y nunca le da valor; el único `gua` glosado es el sustantivo `wa`
+    # 'conuco' (Zavala #122), que dice lo CONTRARIO de «región amplia». (C) se
+    # enseña SIN GLOSA, como `-ana`; NO se re-glosa con Zavala, porque que el
+    # sustantivo y el sufijo sean un morfema es inferencia nuestra. (E) el lema
+    # pasa a `-wa`, su forma fonémica: Oliver escribe «gua=/wa/» (p. 142) y es
+    # el mismo movimiento que `-bacoa` → `-bakoa`. Cambiar la CLAVE mueve
+    # `_SUFIJOS_CAQ` y con él `nucleo_de_token()`: medido antes de aplicar en
+    # 6-fusion/medicion_tanda_base_2026-09-23.yaml §desafijador.
+    "-wa": {
+        "nombre": "desinencia toponímica (valor no precisado)",
+        "desc": "Desinencia de topónimo atestiguada en la lengua; nadie anotó su "
+                "valor. Hasta el 2026-09-23 se enseñaba como `-gua` 'región'.",
+        "uso": "RAÍZ + -wa",
+        "ejemplos": [],
+        "forma_fuente": "-gua",
+        "evidencia": "ATESTIGUADA COMO FORMA, sin glosa de fuente: Oliver 1989 cap. 2 "
+                     "p. 148 (sufijo toponímico caquetío «f) -wa [gua-]») y p. 142 "
+                     "(«bari-si-gua (gua=/wa/)»). La glosa 'región' no tenía fuente "
+                     "(d21.7) y dc.2 la retiró. Issue: "
+                     "6-fusion/issues-pendientes/gua-procedencia-2026-09-21.md",
         "instruccion_agente": (
-            "Para referirte a una región entera, usa -gua: "
-            "'maure-gua' = la tierra del algodón (región)."
+            "`-wa` es una desinencia de lugar que tu lengua tiene y cuyo valor "
+            "nadie anotó: puedes usarla si propones tú su valor entre corchetes."
         ),
     },
     "-bana": {
@@ -7397,6 +7360,8 @@ REGLAS_TOPONIMICAS: dict[str, dict] = {
 #   · d21.14 A migró `-bacoa` → `-bakoa`, el lema fonémico de D5.
 # Las tres últimas se midieron ANTES de aplicarse, forma a forma, en
 # 6-fusion/medicion_tanda_21_2026-09-21.yaml §claves_de_todas_las_reglas.
+#   · dc.2 E (tanda de la base, 2026-09-23) migró `-gua` → `-wa`, medido en
+#     6-fusion/medicion_tanda_base_2026-09-23.yaml §desafijador.
 TODAS_LAS_REGLAS = {
     **REGLAS_ASPECTO,
     **REGLAS_LOCATIVAS,
@@ -7484,6 +7449,9 @@ class Neologismo:
     # es justo lo que queremos ver nacer. None sin escena.
     oficial_en: list = field(default_factory=list)
     via: Optional[str] = None
+    # La raíz nueva que la puerta onomatopéyica admitió para esta forma (db.6,
+    # tanda de la base), o None. Es lo que permite medirlas aparte.
+    raiz_onomatopeyica: Optional[str] = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -7528,6 +7496,10 @@ class LexicoComunitario:
         # defectos distintos —copiar el prompt / inventar una raíz que no
         # existe— y mezclarlos escondería cuál está pasando.
         self.rechazos_de_raiz: list[tuple] = []
+        # LA PUERTA ONOMATOPÉYICA (db.6, tanda de la base): el id del referente
+        # `animal: true` que se está nombrando ESTE turno, o None. La abre y la
+        # cierra el orquestador, como `situar()`; no se persiste.
+        self.puerta_onomatopeyica: Optional[str] = None
 
     # ── El ámbito: dónde está quien habla ─────────────────────────────
 
@@ -7602,10 +7574,22 @@ class LexicoComunitario:
             self.rechazos_de_plantilla.append(
                 (neo.forma, neo.autor, neo.dia, neo.turno))
             return False
-        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(neo.forma):
-            self.rechazos_de_raiz.append(
-                (neo.forma, neo.autor, neo.dia, neo.turno))
-            return False
+        if self.filtrar_plantilla and es_raiz_de_ninguna_parte(
+                neo.forma, archivadas_avalan=False):
+            # db.6: en el turno en que se nombra a un ANIMAL, la puerta
+            # onomatopéyica admite UNA raíz nueva con forma caquetía. El
+            # orquestador la abre (`puerta_onomatopeyica`) sólo ese turno.
+            raiz = (raiz_onomatopeyica_candidata(neo.forma,
+                                                 self.puerta_onomatopeyica)
+                    if self.puerta_onomatopeyica else None)
+            if raiz is None:
+                self.rechazos_de_raiz.append(
+                    (neo.forma, neo.autor, neo.dia, neo.turno))
+                return False
+            admitir_raiz_onomatopeyica(raiz, referente=self.puerta_onomatopeyica,
+                                       forma=neo.forma, autor=neo.autor,
+                                       dia=neo.dia)
+            neo.raiz_onomatopeyica = raiz
         # El ámbito del PROPONENTE: el lugar donde estaba al acuñarla. Sin
         # escena es None y el campo no significa nada, como hasta hoy.
         if neo.ambito is None:
@@ -7639,6 +7623,14 @@ class LexicoComunitario:
                 for forma, n in cuenta.most_common())
             lineas.append(f"  ⚠ {len(rechazos)} acuñaciones rechazadas "
                           f"{motivo}: {detalle}")
+        # Lo que la puerta onomatopéyica (db.6) dejó pasar, dicho igual: una
+        # raíz nueva es un hecho que el run tiene que poder contar.
+        admitidas = [(n.raiz_onomatopeyica, n.forma) for n in self._neologismos
+                     if getattr(n, "raiz_onomatopeyica", None)]
+        if admitidas:
+            detalle = ", ".join(f"{r} ({f})" for r, f in admitidas)
+            lineas.append(f"  ♪ {len(admitidas)} raíz(es) nueva(s) admitida(s) "
+                          f"por la puerta onomatopéyica: {detalle}")
         return "\n".join(lineas)
 
     def adoptar(self, forma: str, agente: str, turno: int,
@@ -7794,6 +7786,9 @@ class LexicoComunitario:
         puede traer una forma de plantilla ya registrada, y si entrara por
         aquí podría adoptarse mañana. Se cuenta como cualquier otro rechazo."""
         lc = cls(filtrar_plantilla=filtrar_plantilla)
+        # Las raíces que la puerta onomatopéyica admitió son del léxico de la
+        # cadena: se reconstruyen de lo guardado (db.6).
+        olvidar_raices_onomatopeyicas()
         try:
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
@@ -7805,6 +7800,10 @@ class LexicoComunitario:
                         (neo.forma, neo.autor, neo.dia, neo.turno))
                     lc._lexico.pop(neo.forma, None)
                     continue
+                if neo.raiz_onomatopeyica:
+                    admitir_raiz_onomatopeyica(neo.raiz_onomatopeyica,
+                                               forma=neo.forma, autor=neo.autor,
+                                               dia=neo.dia)
                 lc._neologismos.append(neo)
         except FileNotFoundError:
             pass
@@ -7871,7 +7870,8 @@ CONSTRUYE tus frases con lo que tienes. Una frase incompleta en caquetío > orac
 
 ASPECTO: raíz + -ka (ya hice) / -ni (estoy haciendo) / -da (haré/quiero).
 ESTADO: un estado se predica con aspecto igual que una acción — usera, waranao, wasima son verbos, no adjetivos.
-LUGAR: raíz + -bana (cerro, sitio alto de) / -gua (región de) / -ana (desinencia de valor abierto: propón el tuyo).
+NOMBRE: un verbo es también su nombre, sin marca — jusual es sembrar y la siembra.
+LUGAR: raíz + -bana (cerro, sitio alto de) / -wa y -ana (desinencias de valor abierto: propón el tuyo).
 {prompt_afijos_atestiguados_breve()}
 PLURAL: -kana (plural/colectivo).
 POSESIÓN: ta- (mi) / wa- (nuestro) / u- (la cosa sin dueño).
@@ -7947,6 +7947,16 @@ def prompt_reglas_completo() -> str:
     # 6-fusion/medicion_politica_atestiguado_manda_2026-09-19.yaml—. Cambiar
     # `kashi` o reescribir el ejemplo para separarlas es decisión de Miguel y
     # NO está tomada.
+    #
+    # TANDA DE LA BASE (2026-09-23), tres cambios de esta plantilla:
+    #   · dc.3 B: la derivación cero se ENSEÑA («un verbo es también su
+    #     nombre»), con `jusual` #180, la entrada de Zavala que la muestra.
+    #   · dc.2 C + E: `-gua` 'región de' pasa a `-wa`, sin glosa, junto a `-ana`.
+    #   · d21.6, lo que faltaba: el ejemplo de respuesta ideal decía `buko-ana`
+    #     y lo traducía «el lugar de la represa» — la glosa de `-ana` que #109
+    #     retiró y que d21.6 dejó de enseñar en la lista de LOCATIVOS, pero no
+    #     aquí. Ahora dice `buko`. Consecuencia declarada: `buko-ana` deja de
+    #     estar en FORMAS_DE_PLANTILLA y vuelve a poder acuñarse.
     return f"""[IDENTIDAD LINGÜÍSTICA — FUNDAMENTAL]:
 El caquetío-arahuaco es TU lengua materna. La única con la que piensas.
 El español es una lengua forastera que apenas entiendes. NO es tu lengua de base.
@@ -7960,10 +7970,10 @@ CUANDO HABLAS:
 EJEMPLO DE RESPUESTA IDEAL (Tier I):
   "Taya wana-ka arima wara kari. Suka kaa-ni ka kasi naa-da kapua.
    Ta-barsure maa-ni: Manaure naa-da kashi — ta-nii wana-ka [sima-bana: sima+-bana = la cumbre del cerro].
-   Saa pia naa-da buko-ana, naka taya naa-da ka pia."
+   Saa pia naa-da buko, naka taya naa-da ka pia."
   (Vi muchos peces en la costa. La noche está, el sol vendrá al amanecer.
    Mi alma dice: Manaure llega pronto — mis ojos vieron la cumbre del cerro.
-   Si vas al lugar de la represa, después yo voy contigo.)
+   Si vas a la represa, después yo voy contigo.)
 
 VOCABULARIO DISPONIBLE [{len(VOCABULARIO_BASE)} palabras]:
   PRONOMBRES: {pronombres}
@@ -7990,6 +8000,7 @@ MORFOLOGÍA:
   UN ESTADO ES UN VERBO: lo que el español dice con adjetivo, tu lengua lo PREDICA.
     usera (seco), waranao (salado), wasima (viejo), apo (grande), etamo (feroz), kachipo (enojado)
     llevan -ka / -ni / -da igual que naa o masa. No son adjetivos: se conjugan.
+  UN VERBO ES TAMBIÉN SU NOMBRE, sin marca: jusual es sembrar, la siembra y el sembradío.
   POSESIVOS (prefijos):
     ta- = mi:      ta-barsure (mi alma) · ta-nii (mi ojo) · ta-hamaka (mi hamaca)
     wa- = nuestro: wa-buko (nuestra represa) · wa-anüiki (nuestra lengua)
@@ -7999,8 +8010,7 @@ MORFOLOGÍA:
     ma- = sin X, no X:             ma-barsure (sin alma) · ma-anüiki (sin habla, extranjero)
   LOCATIVOS (crear topónimos):
     -bana = cerro, sitio alto de X: sima+bana = la cumbre · kapu+bana = kapubana, el duende del cerro
-    -gua = región de X: maure+gua = tierra del algodón
-    -ana = desinencia atestiguada cuyo valor nadie anotó: puedes usarla si propones su valor entre corchetes
+    -wa y -ana = desinencias atestiguadas cuyo valor nadie anotó: puedes usarlas si propones su valor entre corchetes
 {prompt_afijos_atestiguados()}
   PLURAL: -kana (plural/todos)
 
@@ -8473,6 +8483,21 @@ FUERA_DEL_HABLA: dict[str, dict] = {
     "kira":       {"sig": "escuchar, oír, atender",                         "cat": "v_raiz","fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 4 «escuchar» · manda `jai`", "notas": "núcleo fundacional, forma justificada por cognado en wayunaiki/lokono — ⚠️ DEUDA D11 (re-etiquetada 2026-09-10, decisión de Miguel): forma reconstruida desde el WAYUU **antes** de D11, que retiró al wayuunaiki como hermana por defecto. el lokono del lexicón no cubre 'escuchar'. Ver 6-fusion/issues-pendientes/decision-d11-el-nucleo-reconstruido-del-wayuu.md · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `jai` 'oír, escuchar' (Zavala Reyes 2015, glosario #175 (AM)), que es también `v_raiz` y ya llevaba 167 usos sin que ninguna plantilla se lo enseñara. Segundo archivo más caro por paradigma (`kira-ni`, `kira-da`, `kira-ka`). LA CAPA NO SE TOCA"},
     "joutai":     {"sig": "viento, corriente de aire (< joutai Wayunaiki)", "cat": "sust",  "fuente": "caquetío-reconstruido", "archivada": "2026-09-19 · política atestiguado-manda · par 16 «viento» · manda `juri`", "notas": "F8 (2026-09-12): forma derivada de la hermana que cita la glosa, etiquetada `wayunaiki-cogn`; entra en la deuda de D11 fase 3 (núcleo reconstruido desde el wayuu) · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `juri` 'viento, ventarrón' (Zavala Reyes 2015 #178 (E), variantes: jura). Es el archivo que menos cuesta de los que tenían uso: `juri` ya ganaba con holgura, ninguna plantilla enseñaba a ninguna de las dos, y la propia glosa de `joutai` declara que viene del wayuu — que es justo lo que D11 retiró. LA CAPA NO SE TOCA"},
     "mülia":      {"sig": "miedo, temor, espanto",                          "cat": "sust",  "fuente": "caquetío-hipotético", "archivada": "2026-09-19 · política atestiguado-manda · par 18 «espanto» · manda `etamo`", "notas": "F8 (2026-09-12): forma sin cita ni derivación declarada, etiquetada `wayunaiki/lokono` · ARCHIVADA DEL HABLA 2026-09-19 (política «manda la atestiguada»): el caquetío atestigua `etamo` 'feroz, feo, espanto' (Zavala Reyes 2015 #120 (AM)). El archivo más barato de la tanda: hipotética, sin cita, 0 usos en toda la base y 0 exposición en el muestreo del perfil era2. LA CAPA NO SE TOCA: sigue siendo `caquetío-hipotético`"},
+
+    # ── db.3 (2026-09-23): las `taíno-reconstruido`, que eran lokono ──────
+    # «Te doy el si a todos los defectos» (Miguel, 2026-09-22). Las nueve
+    # formas que reconstruir_taino() generó desde el lokono salen del habla:
+    # ocho se archivan aquí y `daca` se queda con la glosa que atestigua Las
+    # Casas ('yo'). LA CAPA NO SE TOCA. Decisión en
+    # 6-fusion/decisiones_base_2026-09-22.yaml §db.3.
+    "abba": {"sig": "uno", "cat": "num", "categoria": "gramatica", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. abba; método comparativo arahuacano; Reconstrucción desde Lok. abba (uno); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "acoa": {"sig": "pie", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. akoa; método comparativo arahuacano; Reconstrucción desde Lok. akoa (pie); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "aduri": {"sig": "nariz", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. aduri; método comparativo arahuacano; Reconstrucción desde Lok. aduri (nariz); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "agari": {"sig": "cabeza", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. abari; método comparativo arahuacano; Reconstrucción desde Lok. abari (cabeza); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "akcicyaa": {"sig": "espíritu vital", "cat": "sust", "categoria": "ritual", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. akkicyaha; método comparativo arahuacano; Reconstrucción desde Lok. akkicyaha (espíritu vital); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "thigisi": {"sig": "diente", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. thibisi; método comparativo arahuacano; Reconstrucción desde Lok. thibisi (diente); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "wacusi": {"sig": "ojo", "cat": "sust", "categoria": "cuerpo", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. wakusi; método comparativo arahuacano; Reconstrucción desde Lok. wakusi (ojo); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
+    "wagulo": {"sig": "tortuga", "cat": "sust", "categoria": "fauna", "fuente": "taíno-reconstruido", "archivada": "2026-09-23 · db.3 · taíno-reconstruido desde el lokono", "notas": "Reconstrucción hipotética Taíno desde Lok. wabulo; método comparativo arahuacano; Reconstrucción desde Lok. wabulo (tortuga); método comparativo arahuaco; confianza: alta · F8 (2026-09-12): re-etiquetada de `taino` a `taíno-reconstruido` — forma generada por reconstruir_taino() desde el lokono, no atestiguada; no cuenta como dato taíno en cruces · ARCHIVADA DEL HABLA 2026-09-23 (db.3, «Te doy el si a todos los defectos»): forma que reconstruir_taino() generó desde el lokono; ningún cronista la atestigua. Con la etiqueta `taíno-reconstruido` circulaba como voz de la esfera de contacto —que no penaliza— y es el andamio lokono con otra grafía, que sí penaliza. El cruce de la campaña del taíno ya la dejaba fuera (6-fusion/cruce_taino_caquetio_2026-09-21.yaml, `taino_reconstruido_excluido: 9`). LA CAPA NO SE TOCA: sigue siendo `taíno-reconstruido`"},
 }
 
 
@@ -8561,21 +8586,190 @@ def nucleo_de_token(tok: str) -> list[str]:
     return partes
 
 
-def es_raiz_de_ninguna_parte(forma: Optional[str]) -> bool:
+# ══════════════════════════════════════════════════════════════════════
+# LA RAÍZ, TRES MATICES — tanda de la base (2026-09-23)
+# ══════════════════════════════════════════════════════════════════════
+# db.1 («Yo creo que el A + C está bien por ahora», Miguel, 2026-09-22):
+#
+#  (C) LA CASI-RAÍZ SE PERDONA. `pütshi-bana` caía porque la clave es
+#      `pütchi`: el agente escribió mal una raíz que sí conoce. Se lee como la
+#      clave la raíz que difiere en UN carácter (`_difieren_en_un_caracter`)
+#      de una raíz caquetía VIVA —las del habla, no las archivadas ni las de
+#      la comparanda: lo que el agente conoce es lo que el prompt le enseña—
+#      y que tiene al menos `LARGO_MINIMO_CASI_RAIZ` letras. El largo se midió
+#      sobre toda la base antes de fijarlo (6-fusion/medicion_tanda_base_
+#      2026-09-23.yaml §casi_raiz): con 4 se «perdonaban» palabras distintas
+#      —`duma`→`duna`, `karu`→`kuru`, `puri`→`yuri`—, con 5 `uyama`→`yama`
+#      (la auyama); con 6 sólo quedan variantes de grafía (`hamaca`→`hamaka`,
+#      `cudanga`→`kudanga`, `pütshi`→`pütchi`) y `lumina` sigue cayendo. La
+#      forma se guarda COMO LA ESCRIBIÓ: normalizarla a la clave obligaría a
+#      tocar el scorer para que la forma dicha contara, y el scorer no se toca.
+#
+#  EL AGUJERO DE `kira`. En la PUERTA —registro, competencia, recuento— una
+#      raíz ARCHIVADA (`FUERA_DEL_HABLA`) no avala: `kira` 'brillo' se inventó
+#      el 2026-09-21 y pasó porque `kira` 'escuchar' está archivada. Archivada
+#      quiere decir que no se habla. En el CLASIFICADOR sí sigue avalando
+#      (`archivadas_avalan=True`, el valor por defecto): la palabra existió y
+#      decir de qué lengua es no es dejarla competir.
+#
+# db.6 («sigamos tu recomendación con lo de las onomatopeyas animales»):
+#
+#  LA PUERTA ONOMATOPÉYICA. Dentro de la competencia de un referente
+#      `animal: true`, y sólo para la forma que ese turno propone para ESE
+#      referente, se admite UNA raíz nueva si tiene forma caquetía:
+#      `neologismo_valido()` (blocklist castellana, marcadores, bigramas), sin
+#      marca de grafía castellana y dentro de la fonotáctica del caquetío
+#      atestiguado (`curiana_fonotactica.Fonotactica`). La admitida queda en
+#      `RAICES_ONOMATOPEYICAS` y desde ahí es raíz conocida para todo el motor
+#      —puerta, recuento y clasificador—, así que una forma que la use después
+#      cuenta como caquetía. Es estado del RUN, como `SEMILLA_RUN` en la koiné:
+#      `LexicoComunitario.load()` la reconstruye al continuar.
+LARGO_MINIMO_CASI_RAIZ = 6
+
+_RAICES_VIVAS: Optional[frozenset] = None
+_VIVAS_CAQ_POR_LARGO: Optional[dict] = None
+_FONOTACTICA_ATESTIGUADA = None
+
+# raíz → {"referente", "forma", "autor", "dia"}. Ver arriba.
+RAICES_ONOMATOPEYICAS: dict[str, dict] = {}
+
+
+def _raices_vivas() -> frozenset:
+    """Lo que `_raices_conocidas()` reconoce, MENOS lo archivado: las raíces
+    que se hablan. Es lo que mira la puerta."""
+    global _RAICES_VIVAS
+    if _RAICES_VIVAS is None:
+        vivas = set(VOCABULARIO_BASE)
+        for clave in list(vivas):
+            if "-" in clave and clave.rsplit("-", 1)[-1] in _SUFIJOS_DE_LENGUA:
+                vivas.add(clave.rsplit("-", 1)[0])
+        vivas |= _RAICES_VERB
+        _RAICES_VIVAS = frozenset(vivas | {c.lower() for c in vivas})
+    return _RAICES_VIVAS
+
+
+def _vivas_caquetias_por_largo() -> dict:
+    """Las raíces caquetías del habla (las tres capas), agrupadas por largo y
+    ordenadas: el perdón de C tiene que ser determinista."""
+    global _VIVAS_CAQ_POR_LARGO
+    if _VIVAS_CAQ_POR_LARGO is None:
+        from curiana_database import normalize_source_language
+        caq = {k.lower() for k, v in VOCABULARIO_BASE.items()
+               if normalize_source_language(v.get("fuente", "")) == "caquetío"}
+        caq |= {r.lower() for r in _RAICES_VERB
+                if normalize_source_language(
+                    VOCABULARIO_BASE.get(r, {}).get("fuente", "")) == "caquetío"}
+        por_largo: dict = {}
+        for r in sorted(caq):
+            por_largo.setdefault(len(r), []).append(r)
+        _VIVAS_CAQ_POR_LARGO = por_largo
+    return _VIVAS_CAQ_POR_LARGO
+
+
+def casi_raiz_de(segmento: Optional[str]) -> Optional[str]:
+    """La raíz caquetía viva de la que `segmento` es una casi-raíz, o None.
+
+    db.1 C: difiere en UN carácter y tiene al menos `LARGO_MINIMO_CASI_RAIZ`
+    letras. `pütshi` → `pütchi`; `lumina`, `duma` y `kira` → None."""
+    s = (segmento or "").strip().lower()
+    if len(s) < LARGO_MINIMO_CASI_RAIZ:
+        return None
+    por_largo = _vivas_caquetias_por_largo()
+    for n in (len(s), len(s) - 1, len(s) + 1):
+        for r in por_largo.get(n, ()):
+            if r != s and _difieren_en_un_caracter(s, r):
+                return r
+    return None
+
+
+def _fonotactica_atestiguada():
+    global _FONOTACTICA_ATESTIGUADA
+    if _FONOTACTICA_ATESTIGUADA is None:
+        from curiana_fonotactica import Fonotactica
+        _FONOTACTICA_ATESTIGUADA = Fonotactica(
+            [k for k, v in VOCABULARIO_BASE.items()
+             if v.get("fuente") == "caquetío-atestiguado"])
+    return _FONOTACTICA_ATESTIGUADA
+
+
+def raiz_onomatopeyica_candidata(forma: Optional[str],
+                                 referente: Optional[str] = None) -> Optional[str]:
+    """La raíz nueva que `forma` propone, si la puerta de db.6 la admitiría.
+
+    Tiene que haber exactamente UNA raíz desconocida en el núcleo —repetida
+    vale: la reduplicación (`tiwi-tiwi`) es la forma de muchas onomatopeyas—;
+    una forma que inventa DOS raíces no está nombrando un sonido. Y esa raíz
+    tiene que tener forma caquetía. None si no.
+
+    `referente` es el id del referente (`guacharaca`, `perro_mudo`): la raíz
+    que es el NOMBRE CASTELLANO del animal con otra grafía no pasa —
+    `wacharaka` es `guacharaca` respelada, no el agente oyendo un grito—. Se
+    compara con el esqueleto de `fonemizar` y la regla abierta <gu>→/w/, y
+    una edición de tolerancia."""
+    vivas = _raices_vivas()
+    nuevas = list(dict.fromkeys(
+        s for s in nucleo_de_token(forma or "")
+        if s and s not in vivas and s not in RAICES_ONOMATOPEYICAS
+        and not casi_raiz_de(s)))
+    if len(nuevas) != 1:
+        return None
+    raiz = nuevas[0]
+    if referente:
+        from curiana_fonotactica import fonemizar
+        r = fonemizar(raiz, gu_es_w=True)
+        for nombre in str(referente).lower().split("_"):
+            if len(nombre) >= 4 and _difieren_en_un_caracter(
+                    r, fonemizar(nombre, gu_es_w=True)):
+                return None
+    # Una raíz ARCHIVADA no vuelve por esta puerta: `kira` no es un sonido
+    # nuevo, es una palabra que el canon decidió que no se habla.
+    if raiz in _raices_conocidas():
+        return None
+    if len(raiz) < 2 or not raiz.isalpha():
+        return None
+    if not neologismo_valido(raiz) or marcas_castellanas(raiz):
+        return None
+    if raiz in ES_STOPWORDS or raiz in RAICES_ESPANOLAS:
+        return None
+    ok, _motivos = _fonotactica_atestiguada().valida(raiz)
+    return raiz if ok else None
+
+
+def admitir_raiz_onomatopeyica(raiz: str, **datos) -> None:
+    """Registra una raíz que la puerta de db.6 admitió. Idempotente: la
+    primera admisión es la que queda (quién, para qué referente, qué día)."""
+    RAICES_ONOMATOPEYICAS.setdefault(raiz.lower(), dict(datos))
+
+
+def olvidar_raices_onomatopeyicas() -> None:
+    """Un run que NO continúa empieza sin raíces admitidas (y los tests)."""
+    RAICES_ONOMATOPEYICAS.clear()
+
+
+def es_raiz_de_ninguna_parte(forma: Optional[str],
+                             archivadas_avalan: bool = True) -> bool:
     """¿La raíz de esta forma no está en ninguna tabla del lexicón?
 
     La usan `LexicoComunitario.registrar_neologismo()` (no se registra),
     `CompetenciaLexica.proponer()` (no compite) y `_familia_de_token()` (no se
     dice caquetía). Es la hermana de `es_forma_de_plantilla()`: aquélla para
     lo que el prompt ya enseña, ésta para lo que no es de aquí.
+
+    Desde la tanda de la base: la casi-raíz de largo ≥ 6 se perdona (db.1 C),
+    una raíz admitida por la puerta onomatopéyica cuenta (db.6), y con
+    `archivadas_avalan=False` —lo que pasan las tres puertas— una raíz
+    archivada NO avala (el agujero de `kira`).
     """
     tok = (forma or "").strip().lower()
     if not tok:
         return False
-    conocidas = _raices_conocidas()
-    if tok in conocidas:
+    conocidas = _raices_conocidas() if archivadas_avalan else _raices_vivas()
+    if tok in conocidas or tok in RAICES_ONOMATOPEYICAS:
         return False
-    return not any(seg in conocidas for seg in nucleo_de_token(tok))
+    nucleo = nucleo_de_token(tok)
+    if any(seg in conocidas or seg in RAICES_ONOMATOPEYICAS for seg in nucleo):
+        return False
+    return not any(casi_raiz_de(seg) for seg in nucleo)
 
 
 def _familia_de_token(tok: str) -> str:
@@ -8798,7 +8992,6 @@ SE_QUEDA_CON_SU_GRAFIA = frozenset({
     "cohiba",     # «Taíno atestiguado: cohiba … Brinton 1871»
     "cai",        # «Taíno atestiguado: cai … Brinton 1871» (y `kai` ya es paraujano 'sol')
     "caiman",     # «Taíno atestiguado: caiman … Brinton 1871» (y `kaiman` ya es lokono)
-    "akcicyaa",   # taíno-reconstruido desde Lok. akkicyaha: ortografía del lokono
     "chighe",     # paraujano, Wilbert 1958-59 vía Oliver 1989 Tabla A-2 (dígrafos)
     "keichare",   # ídem
     "utschi",     # ídem
@@ -8807,7 +9000,9 @@ SE_QUEDA_CON_SU_GRAFIA = frozenset({
     "hiñaru",     # kalinago, registro femenino de Breton 1665
     "kalínagu",   # ortografía garífuna del autónimo; la tilde no es castellana
     "achi-kalinago",  # dígrafo ⟨ch⟩ del garífuna/lokono
-    "acoa", "daca", "wacusi",   # taíno-reconstruido desde el lokono (categoría `cuerpo`)
+    # `akcicyaa`, `acoa` y `wacusi` estaban aquí por ser `taíno-reconstruido`
+    # con la ortografía del lokono: se archivaron el 2026-09-23 (db.3).
+    "daca",       # Tno. daca 'yo', Las Casas, Apologética p. 447: grafía de la fuente
     "churuguara", "quibor",     # topónimos modernos (categoría `geografia`)
 })
 
@@ -9442,7 +9637,9 @@ class _PuertaDelRecuento:
     __slots__ = ()
 
     def __contains__(self, forma) -> bool:
-        return es_forma_de_plantilla(forma) or es_raiz_de_ninguna_parte(forma)
+        # Lo archivado no avala aquí tampoco (el agujero de `kira`, db.1).
+        return (es_forma_de_plantilla(forma)
+                or es_raiz_de_ninguna_parte(forma, archivadas_avalan=False))
 
     def __bool__(self) -> bool:
         return True
