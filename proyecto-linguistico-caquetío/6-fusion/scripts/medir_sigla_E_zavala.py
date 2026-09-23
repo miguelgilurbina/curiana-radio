@@ -628,6 +628,8 @@ def medir(sin_base: bool = False) -> dict:
                                              "hipotética NO entra)",
                                    "de_donde": "medir_pares_atestiguado_reconstruido.ensayo_de_muestreo(): "
                                                "63 agentes × 20 sorteos, sin API"},
+            "tu_tierra": {"bloques": exp_tierra["bloques"],
+                          "criterio": "bloques de [Tu tierra] (sitio × período × momento) que dicen la voz"},
             "uso_en_la_base_criterio": "una forma cuenta para una voz si ES la voz, si la lleva como uno de "
                                        "sus segmentos separados por guion, o si la voz es uno de los "
                                        "candidatos de raíz del desafijador "
