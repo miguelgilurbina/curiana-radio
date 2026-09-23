@@ -26,12 +26,13 @@ acceso: >-
   9bf5cfed6ce099de291714c7825baad34db82c263f6ad020705b2db7c423cde8.
   1859: 12.004.554 bytes, sha256
   f6c85158b4378308e4bdbdb1ab02787a514734bdc7167d4e04e7d751961d2cbe.
-estado_minado: sin-minar
-cobertura: "nada minado todavía; texto extraído y estructura medida al descargar (ver bitácora 2026-09-22)"
+estado_minado: parcial
+cobertura: "minado 2026-09-23 (minería 3): la costa (cap. I Paraguaná, II-III Coro, XIII-XIV vuelta por la costa oriental), la lengua (intérpretes, costa frente a interior, voces y nombres en la grafía de 1557), el seretón (cero medido) y la fauna, cotejado con el alemán y 1557 en imagen; del interior sólo caps. VIII y XII y lo que ya se citaba de segunda mano. SIN leer de corrido: caps. VI-VII y IX-XI (sólo sondas). Propuesta: 6-fusion/federmann_1530_costa_2026-09-22.yaml"
 prioridad: alta
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-09-22
+minado: 2026-09-23
 aliases: ["Federmann", "Federmann 1916", "Narración de Federmann", "Indianische Historia"]
 ---
 
@@ -101,6 +102,11 @@ Las citas de arriba vinieron de segunda mano y **no se han cotejado todavía**
 con el texto: la página que dan («pp. 62-63», «pp. 109-110») es de la obra
 secundaria, no necesariamente de la de 1916.
 
+> ⚠️ **Cotejadas el 2026-09-23** (bitácora al pie): el texto coincide, pero
+> **las páginas están cambiadas** — Barquisimeto (23 aldeas, 30.000 hombres,
+> fortificadas) es pp. 62-63; el Yaracuy/Vararida (20.000 guerreros, «misma
+> nación», confederaciones, cinco a ocho familias) es pp. 109-110.
+
 Índice: [[INDICE_FUENTES]]
 
 ---
@@ -166,3 +172,75 @@ no de fuente, hasta que se lea el alemán y se busque el concepto (regla 6).
 Coro de 1530 (pueblos, casas, jefes, Manaure y su gente, lengua e intérpretes,
 comida, fauna), el seretón, y los caps. VIII y XII marcados como la otra
 polity.
+
+---
+
+## 2026-09-23 — minada la costa, cotejada con el alemán (minería 3)
+
+**Qué se preguntó**: qué dice Federmann de la gente de la costa —Paraguaná y
+Coro— en 1530-1531; la lengua y los intérpretes; el seretón; la fauna; y, con
+`polity: interior`, los caps. VIII y XII. Propuesta entera, con página y
+eslabón por dato: `6-fusion/federmann_1530_costa_2026-09-22.yaml`.
+
+**Cómo se lee esta obra (añádase a leer-fuente §5):**
+
+- La cadena tiene **cuatro** eslabones: un diario notarial castellano perdido
+  (Federmann dice que sólo lo tradujo, p. 122) → alemán 1557 → francés de
+  Ternaux 1837, que **normalizó los nombres propios** (nota en p. 124) →
+  Arcaya 1916, que tradujo del francés (lo dice en la **p. 2**, no sólo en la
+  nota de la p. 20).
+- 1557 no tiene paginación: se cita por la página `[n]` que Klüpfel 1859 marca
+  en su texto. Imagen del PDF (1-based) = `[n]` + 10 entre [9] y [48], y
+  + 12 en [111]-[112]: el desfase **deriva**.
+- Klüpfel: impresa = pdf − 8. Su OCR falla en los nombres (`Ruynari`,
+  `Caquelios`, `Tohtietsch`); toda forma que decide algo se miró en 1557.
+- Voces que la 1916 pone y el alemán no: «botuto» (alemán: `hörner`, cuernos).
+  Nombres que la 1916 junta y el alemán separa: «Vararida» es el nombre
+  indígena y «el valle de las damas» el que le pusieron los españoles.
+
+**Qué se halló (lo que más pesa):**
+
+- **La lengua de la costa y la del interior.** Federmann no creía que los
+  caquetíos de Barquisimeto, a 73 Meilen y tras cuatro lenguas ajenas,
+  hablaran como los de Coro; la buena noticia le pareció increíble (1557 [46]).
+  Y en los hechos, un caquetío de Coro sirve de `Tolmetsch` en Barquisimeto y
+  los mismos intérpretes sirven en el valle del Yaracuy. Junto a Pérez de
+  Tolosa 1546 («aunque algo difieren en la habla á los de Coro», t. II
+  p. 234): una lengua de la costa a los llanos, con variación.
+- **Paraguaná en enero de 1530**: pesca nocturna con fuego desde la orilla;
+  una aldehuela de tres casas con unas dieciséis personas en una; agua lejos;
+  «toda clase de peces»; miedo a la trata (el alemán dice «a menudo»);
+  **Miraca en 1530**, ocho años antes que la carta de Bastidas que abre hoy la
+  cadena de nodo-031.
+- **Manaure** sale una sola vez, como `Manuaury` (1557 [112]): los cristianos
+  «viven en Coro, en la tierra del cacique Manuaury», dicho a caquetíos de la
+  costa del Yaracuy.
+- **El etnónimo**: la primera mención del original es `Caquecios` (1557
+  [19]); luego `Caquetios`.
+- La 1916 **invierte** un pasaje: «excepto los que viven cerca de Coro»; el
+  alemán dice «tanto en torno a Coro como aquí» (1557 [48]).
+- **Interior**: las páginas de las citas de segunda mano estaban cambiadas
+  (arriba); y la frase más limpia para la regla 4 es otra: los caquetíos del
+  valle, «aunque de una nación» con los de Barquisimeto, «no son amigos»
+  (Klüpfel p. 70).
+
+**Qué NO se halló (ceros medidos):**
+
+- **El seretón**: cero de la forma (con permutación c/s/z, e/a, r/rr) y cero
+  del concepto de transformación, en la 1916 y en el alemán. Lo que hay son
+  los **enanos** ayamanes de la sierra (`Zwergen`) y una enana que Federmann
+  dejó en Coro (1557 [35]): la raíz probable del «enano de los Welser» del
+  barrido web, no del hombre que se vuelve animal.
+- Ninguna **palabra** caquetía: las voces que Federmann glosa («Canoa, also
+  heissen der Indios schiff», Hamaca, Barbacoa, Buhio, Mahys, Macana) son del
+  escribano castellano; ninguna es caquetío atestiguado.
+- De la **dieta vegetal** y los **animales** de la costa, nada salvo peces.
+- De las **costumbres de los de Coro**, nada: promete tratarlas «más abajo» y
+  no lo hace.
+- Que la india de Paraguaná fuera **hija de Manaure** no lo dice Federmann:
+  es una cadena de Arcaya (Castellanos + carta de Ampíes).
+
+**Qué falta:** caps. VI-VII (Cayones, Xaguas) y IX-XI (Cuybas, Guaycaríes,
+la laguna) sin leer de corrido; los nombres del interior sin cotejar en 1557;
+la carta de Ampíes (Fernández Duro 1885 t. II pp. 207-218) sin clave propia en
+la bibliografía.
