@@ -381,6 +381,31 @@ def aciertos(obra, diana):
             for m in patron(diana).finditer(obra["unido"])]
 
 
+# Cuál Curiana es cuál. Por defecto, la del TRAMO; y el contexto manda cuando
+# nombra algo que sólo es de una de las dos. Las reglas se declaran aquí, no
+# se deciden acierto por acierto.
+_CURIANA_POR_TRAMO = {
+    "Sección 1.ª: Hojeda-La Cosa-Vespucio 1499": "oriental",
+    "Sección 1.ª: Niño y Guerra 1499-1500 (Curiana, Cauchieto)": "oriental",
+    "Sección 1.ª: Hojeda 1502 (Valfermoso, Curazao, Coquibacoa, Santa Cruz)": "occidental",
+    "Documentos de la Sección 1.ª (núms. I-XLVI)": "oriental",
+    "Índices y erratas": "índice",
+}
+_CURIANA_OCCIDENTAL = re.compile(r"valfer|jamaica|saltea|salteo|por el en curiana|cutian|\bcoro\b")
+_CURIANA_ORIENTAL = re.compile(r"farall|frailes|cumana|golfo de las perlas")
+
+
+def cual_curiana(tramo, contexto):
+    ctx = normalizar(contexto)
+    if tramo == "Índices y erratas":
+        return "índice"
+    if _CURIANA_OCCIDENTAL.search(ctx):
+        return "occidental"
+    if _CURIANA_ORIENTAL.search(ctx):
+        return "oriental"
+    return _CURIANA_POR_TRAMO.get(tramo, "sin decidir")
+
+
 def limpio(texto):
     """Un tramo del texto crudo para mostrarlo: guiones de fin de línea
     cosidos y espacios colapsados."""
@@ -422,10 +447,14 @@ def medir(solo=None):
         cur = []
         for m in aciertos(obra, LUGARES["curiana"]):
             s, e = max(0, m.start() - 90), min(len(obra["crudo"]), m.end() + 90)
+            t = tramo_de(obra["tramos"], m.start())
+            ctx = limpio(obra["crudo"][s:e])
             cur.append({"folio": folio_de(obra["paginas"], m.start(), ficha["paginacion"]),
-                        "tramo": tramo_de(obra["tramos"], m.start()),
-                        "contexto": limpio(obra["crudo"][s:e])})
+                        "tramo": t, "cual": cual_curiana(t, ctx), "contexto": ctx})
         r["curiana"] = cur
+        r["curiana_resumen"] = {}
+        for c in cur:
+            r["curiana_resumen"][c["cual"]] = r["curiana_resumen"].get(c["cual"], 0) + 1
         res[clave] = r
     return res
 
@@ -483,9 +512,10 @@ def informe(res):
                 fol = ", ".join(str(x["folio"]) for x in lst)
                 print(f"      {forma!r:<22} ×{len(lst)}   folio(s): {fol}")
         if r["curiana"]:
-            print("   ── las Curianas, acierto por acierto")
+            print("   ── las Curianas, acierto por acierto — resumen: "
+                  + " · ".join(f"{k} {v}" for k, v in r["curiana_resumen"].items()))
             for c in r["curiana"]:
-                print(f"      folio {c['folio']} · {c['tramo']}")
+                print(f"      [{c['cual']}] folio {c['folio']} · {c['tramo']}")
                 print(f"         …{c['contexto']}…")
 
 
