@@ -99,7 +99,12 @@ def test_db3_batey_es_el_juego():
 
 def test_db3_tabako_es_el_canuto_no_la_hierba():
     sig = _sig("tabako")
-    assert sig.startswith("cañuto") and "no la hierba" in sig
+    # db.3 la dejó en «cañuto con que se toma el humo…». El 2026-09-23 (cc.7 /
+    # tf.6) la glosa se AMPLIÓ con lo que Zayas dejaba abierto: Las Casas
+    # (Apologética p. 181) llama tabacos a los ROLLOS de hoja encendidos, y
+    # Oviedo t. IV p. 96 igual. El cañuto sigue; entra primero el rollo.
+    assert sig.startswith("el rollo de hojas")
+    assert "cañuto" in sig and "no la hierba" in sig
     assert "Nicotiana" not in sig
 
 
@@ -114,7 +119,9 @@ def test_db3_voces_de_fuera_pierde_las_dos_que_salian():
     assert not {"akcicyaa", "wagulo"} & formas
     glosas = {f: g for _p, f, g, _fam in L.voces_de_fuera_posibles()}
     assert glosas["batey"].startswith("juego de pelota")
-    assert glosas["tabako"].startswith("cañuto")
+    # «cañuto» hasta el 2026-09-23: cc.7 / tf.6 amplió la glosa y el bloque
+    # enseña ahora su primera parte, el rollo de hojas (Las Casas p. 181).
+    assert glosas["tabako"].startswith("el rollo de hojas")
 
 
 # ══════════════════════════════════════════════════════════════════════

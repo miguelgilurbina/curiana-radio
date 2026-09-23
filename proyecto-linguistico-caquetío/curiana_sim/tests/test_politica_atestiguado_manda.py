@@ -58,6 +58,16 @@ POLITICA = [
 ARCHIVADAS = [d for _n, _g, _a, d in POLITICA]
 MANDAN = [a for _n, _g, a, _d in POLITICA]
 
+# El par 16 «viento» DEJÓ DE SER un caso de la política el 2026-09-23 (cc.4 /
+# tf.0, respuestas 1-B y 2-a del issue sigla-E-zavala-canon-2026-09-23.md):
+# la (E) de Zavala #178 es Esteves 1989 y `juri` pasó a hipotética, así que ya
+# no hay atestiguada que mande. `joutai` SIGUE archivada —no vuelve: es wayuu
+# y cc.12 manda no reconstruir desde el wayuu—, con el motivo reescrito. Se
+# queda en POLITICA porque todo lo que los tests (b)-(d) exigen de una
+# archivada le sigue valiendo; lo que cambia se dice aquí.
+YA_NO_MANDA_POR_ATESTIGUADA = {"juri": "caquetío-hipotético"}
+MOTIVO_REESCRITO = {"joutai": "2026-09-23 · D11 / cc.12"}
+
 # La capa con la que cada archivada entró al archivo. Archivar NO la cambia.
 CAPA_AL_ARCHIVAR = {
     "kali": "caquetío-reconstruido", "paa": "caquetío-reconstruido",
@@ -100,6 +110,12 @@ def test_a_la_archivada_sale_del_habla_y_conserva_su_procedencia(
         "la procedencia se conserva entera — regla 8")
     assert "ARCHIVADA DEL HABLA" in e["notas"], (
         "el archivo se declara en la propia entrada, con su porqué")
+    if archivada in MOTIVO_REESCRITO:
+        # el motivo nuevo delante, y el del 2026-09-19 conservado detrás
+        assert e["archivada"].startswith(MOTIVO_REESCRITO[archivada])
+        assert "2026-09-19 · política atestiguado-manda" in e["archivada"]
+        assert "MOTIVO DEL ARCHIVO CAMBIADO 2026-09-23" in e["notas"]
+        return
     assert e.get("archivada", "").startswith("2026-09-19"), (
         "la marca de archivo lleva su fecha y su par")
 
@@ -116,6 +132,11 @@ def test_a_la_que_manda_es_atestiguada_y_con_cita(par, glosa, manda, archivada):
     """Regla 8: «atestiguado» es la etiqueta MÁS la cita, no la etiqueta."""
     assert manda in VOCABULARIO_BASE, f"`{manda}` tiene que estar en el habla"
     e = VOCABULARIO_BASE[manda]
+    if manda in YA_NO_MANDA_POR_ATESTIGUADA:
+        # par 16: la capa es la que decidió la sigla E, y sigue citando
+        assert e["fuente"] == YA_NO_MANDA_POR_ATESTIGUADA[manda]
+        assert "Esteves" in e["notas"]
+        return
     assert e["fuente"] == "caquetío-atestiguado", (
         f"`{manda}` manda por atestiguada: su capa tiene que decirlo")
     assert str(e.get("notas") or "").strip(), (

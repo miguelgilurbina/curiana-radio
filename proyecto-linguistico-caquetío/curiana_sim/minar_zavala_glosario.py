@@ -1020,6 +1020,495 @@ SIG_CURADO: dict[str, dict] = {
 }
 
 
+# ── LA CAPA CURADA (`fuente`), una a una y con su razón ──────────────
+# Hasta el 2026-09-23 toda entrada del vocabulario activo salía
+# `caquetío-atestiguado` por el solo hecho de estar en el glosario. Pero
+# Zavala es una COMPILACIÓN de nueve autores (ver el CAVEAT DE MÉTODO del
+# módulo), y lo que atestigua cada entrada es lo que atestigua su fuente, no
+# el glosario. Esta tabla es la excepción declarada: la capa (o la lengua)
+# que la entrada lleva cuando su fuente, leída, no la sostiene como caquetía
+# atestiguada. `glosa_fuente` y `sig` no se tocan: cambia sólo `fuente`, y
+# la razón viaja en `notas`.
+#
+# La clave es la GRAFÍA DE ZAVALA, como en CLASE_DE_LA_RAIZ y SIG_CURADO.
+# Cada fila: `fuente` (un valor de curiana_lexicon.FUENTES_CANONICAS),
+# `decision` (quién y cuándo) y `por` (qué dice la fuente, con página); y
+# `num`, opcional, cuando dos entradas del glosario dan la misma grafía y la
+# fila es sólo de una (el caso de `naure`).
+#
+# cc.4 (2026-09-23), opción B del issue
+# 6-fusion/issues-pendientes/sigla-E-zavala-canon-2026-09-23.md, aceptada con
+# el paquete (tf.0, «Vale, vale, vale, vale, vale, vamos.»).
+DECISION_SIGLA_E = ("cc.4 / tf.0, 2026-09-23: la sigla (E) de Zavala es Esteves "
+                    "1989, opción B (6-fusion/medicion_sigla_E_zavala_2026-09-23.yaml)")
+
+
+FUENTE_CURADA: dict[str, dict] = {
+    # ── tf.0 (2026-09-23): los pemenos, no los caquetíos ──
+    # La trampa de `datihao` (db.2) otra vez: la marca «(Lengua de
+    # Venezuela.)» es del glosario que el editor añadió al t. IV de Oviedo, y
+    # en el CUERPO (t. II pp. 286 y 294, verificado en imagen) el calabazo de
+    # la cal es de los PEMENOS del sur de la laguna de Maracaibo. La etiqueta
+    # es `caribe-pemeno`: la lengua de los pemenos, que el canon da como
+    # caribe (3-mundo/etnias.yaml etnia-006, con su aviso: la filiación es
+    # inferencia de Oliver 1989 pp. 226-228 por los topónimos en -goto y
+    # porque «hablan como los bubures»). `normalize_source_language` la
+    # resuelve a `caribe-continental`, que es esfera de contacto («los del
+    # lago»): préstamo medido aparte, sin penalizar. Una etiqueta sin
+    # «caribe» caería en el `return "proto-arahuaco"` por defecto y la
+    # declararía arahuaca, que es justo lo que no se sabe.
+    "baperon": {
+        "fuente": "caribe-pemeno",
+        "decision": "tf.0, 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)",
+        "por": "Oviedo y Valdés t. II lib. XXV caps. V y VI (Francisco Martín, "
+               "el soldado de Alfínger que vivió como indio; verificado en "
+               "imagen). p. 286: «la boca llena de hayo […] é su baperon: este "
+               "es un calabaço en que traen los indios çierta manera de cal; "
+               "para quitar la hambre, chupándola»; p. 294: «toda aquella "
+               "tierra es poblada de indios pemenos». La marca «(Lengua de Venezuela.)» es del "
+               "glosario del editor (t. IV, «Baperon y Baperoni»), no de Oviedo: "
+               "la trampa de `datihao` (db.2). Es la fuente del BAPÓRON de "
+               "Alvarado 1921 p. 20. Pemeno = caribe según el canon "
+               "(3-mundo/etnias.yaml etnia-006, filiación inferida por Oliver "
+               "1989 pp. 226-228). Detalle en "
+               "6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml "
+               "§poporo.pasajes.pp-7 y §visto_de_paso.vp-baperon",
+    },
+    "raporon": {
+        "fuente": "caribe-pemeno",
+        "decision": "tf.0, 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)",
+        "por": "Oviedo y Valdés t. II lib. XXV caps. V y VI, p. 294 (verificado "
+               "en imagen), entre los pemenos del sur de la laguna de Maracaibo: "
+               "«salió con sus armas de indio, que eran el arco y las flechas é "
+               "dardos é su raporon é hayo […] y el baporon es el calabaço de "
+               "la cal para quitar la hambre». Gemela de `baperon` en la misma "
+               "página; el glosario del editor del t. IV la remite allí "
+               "(«Rapürün [Raporon]: Vide Baperon») con la marca «(Lengua de "
+               "Venezuela.)», que no es de Oviedo: la trampa de `datihao` "
+               "(db.2). Pemeno = caribe según el canon (3-mundo/etnias.yaml "
+               "etnia-006). Detalle en "
+               "6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml "
+               "§poporo.pasajes.pp-7 y §visto_de_paso.vp-baperon",
+    },
+
+    # ── cc.4 (2026-09-23): la sigla (E) de Zavala es Esteves 1989 ──
+    # Zavala Reyes 2015 p. 64: «Juan Esteves (E)». Una voz cuya ÚNICA sigla
+    # es (E) cita a Esteves copiado por Zavala, no a una fuente más
+    # (minar-fuente §8), y la ficha de Esteves ya decía cómo se usa: una
+    # etimología suya sin cita es hipotética, sube a reconstruida si corrobora
+    # algo que ya teníamos, y sólo es atestiguada si se persigue el documento.
+    # Opción B: la capa según lo que Esteves HACE con cada voz —etimología de
+    # topónimo, «en caquetío X es Y» o glosa que no está → hipotética; nombre
+    # vivo de la península → retroabstraída (precedente chiriware y tukeke,
+    # 2026-09-10); etimología que corrobora otra fuente → reconstruida—. Son 40
+    # voces: estas 34 viven en este módulo y las otras seis (`bara`, `kari`,
+    # `rao`, `saruro`, `siwa`, `wanepe`) en el núcleo de curiana_lexicon.py.
+    # `jachos` NO sigue la B: la 6-a, verificada en el DLE, la reasigna a
+    # español como `caraota` en D10. La lectura voz por voz, con página, es
+    # 6-fusion/sigla_E_zavala_lectura_2026-09-23.yaml; `por` copia su
+    # `esteves.lo_que_dice`.
+    "aca": {   # → `aka`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#3 Aca (E): Bejuco» la (E) es Esteves 1989, y es su única "
+               "fuente: es la etimología de un topónimo, análisis suyo, y ninguna "
+               "otra obra la corrobora: hipotética, la regla que la ficha de "
+               "Esteves ya tenía. Esteves pp. 83, 105 (verificado: imagen): Sólo "
+               "en la Parte II: Acaca, Acarite y Acatuto (p. 83: «Aca: bejuco; "
+               "uto: quebrada»). En la p. 105 da «aca: par, casal, pareja»: la "
+               "misma forma con dos glosas.",
+    },
+    "chipare": {   # → `chipare`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#82 Chipare (E): Matapalo» la (E) es Esteves 1989, y es "
+               "su única fuente: Esteves nombra una voz VIVA de la península: la "
+               "palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves pp. 108, 117 (verificado: "
+               "ocr): Ipare (p. 117): «aféresis de chipare, matapalo». En Chipare "
+               "(p. 108) no glosa.",
+    },
+    "dividive": {   # → `dibidibe`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#112 Dividive (E): Árbol cuyo fruto es una baya que da "
+               "tinta» la (E) es Esteves 1989, y es su única fuente: Esteves "
+               "nombra una voz VIVA de la península: la palabra existe (un nombre "
+               "vivo es dato); lo que es suyo, y de Zavala al copiarlo, es que sea "
+               "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
+               "Esteves pp. 23, 76, 110 (verificado: ocr): Bibidure (p. 23): "
+               "dividive, árbol leguminoso tintóreo; Dividive (p. 110), la glosa "
+               "de Zavala entera.",
+    },
+    "ebo": {   # → `ebo`
+        "fuente": "caquetío-reconstruido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#117 Ebo (E): Camino, paso, senda» la (E) es Esteves "
+               "1989, y es su única fuente: es etimología suya, pero corrobora una "
+               "forma que trae otra fuente y que partimos nosotros: reconstruida. "
+               "Esteves pp. 35, 38, 39, 47, 105 (verificado: imagen): Curaidebo "
+               "«el paso del Curarí… Ebo: camino, paso, senda» (p. 35), Gisebo (p. "
+               "38), Guacurebo «por el sufijo ebo» (p. 39), Jurijurebo «paso, "
+               "ruta, valle estrecho, cañón» (p. 47) y Cumarebo (p. 105). "
+               "Corrobora: zavala-reyes-2015 p. 66: #75 Cazebo (GC) «Poniente» = "
+               "cazi (GC) «sol» + -ebo: «el camino del sol» es partición NUESTRA "
+               "(campaña del nominalizador, 2026-09-21)",
+    },
+    "guica": {   # → `gika`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#150 Güica (E): Yabo» la (E) es Esteves 1989, y es su "
+               "única fuente: Esteves nombra una voz VIVA de la península: la "
+               "palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves p. 43 (verificado: imagen "
+               "(lote del 2026-09-22)): Güica (p. 43): «otro nombre indígena» del "
+               "árbol que llaman yabo.",
+    },
+    "huaymujo": {   # → `huaymujo`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#158 Huaymujo (E): Pequeño cangrejo» la (E) es Esteves "
+               "1989, y es su única fuente: Esteves nombra una voz VIVA de la "
+               "península: la palabra existe (un nombre vivo es dato); lo que es "
+               "suyo, y de Zavala al copiarlo, es que sea caquetía. "
+               "Retroabstraída, como chiriware y tukeke (2026-09-10). Esteves p. "
+               "43 (verificado: ocr): Imujo (p. 43): aféresis de huaymujo, pequeño "
+               "cangrejo.",
+    },
+    "jachos": {   # → `jachos`
+        "fuente": "español-colonial",
+        "decision": DECISION_SIGLA_E,
+        "por": "6-a: «jacho» es el castellano «hacho» con la h aspirada. DLE "
+               "(dle.rae.es, consultado el 2026-09-23), s.v. hacho¹, de hacha¹ "
+               "'vela': 'manojo de paja o esparto encendido para alumbrar' y 'leño "
+               "resinoso […] usado para alumbrar'. Reasignada a español como "
+               "`caraota` en D10. Esteves p. 33 (verificado: imagen): Cunacho, p. "
+               "33: del cunaro «extraían manteca para untar los 'jachos', teas de "
+               "madera… para encandilar en labores de pesca nocturna». La palabra "
+               "va ENTRE COMILLAS y Esteves no la da por indígena. Con 1-B habría "
+               "quedado hipotética; la 6-a, verificada, la saca del caquetío",
+    },
+    "judereque": {   # → `judereke`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#177 Judereque (E): Árbol ramoso, parecido al chiguare» "
+               "la (E) es Esteves 1989, y es su única fuente: Esteves nombra una "
+               "voz VIVA de la península: la palabra existe (un nombre vivo es "
+               "dato); lo que es suyo, y de Zavala al copiarlo, es que sea "
+               "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
+               "Esteves p. 47 (verificado: imagen): Juderecal (p. 47): colectivo "
+               "de judereque, árbol ramoso parecido al chiguare.",
+    },
+    "juri": {   # → `juri`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#178 Juri (E): Viento, ventarrón» la (E) es Esteves 1989, "
+               "y es su única fuente: es la etimología de un topónimo, análisis "
+               "suyo, y ninguna otra obra la corrobora: hipotética, la regla que "
+               "la ficha de Esteves ya tenía. Esteves pp. 47, 66 (verificado: "
+               "imagen): Tres veces y las tres partiendo un topónimo: Judibana "
+               "(«Judi, juri: viento. Bana: sitio alto», p. 47), Jurijurebo "
+               "(«Juri: viento; Ebo: paso…», p. 47) y Tura, que en el censo de "
+               "1881 fue «Hato de Jura» («Jura, juri: ventarrón», p. 66). No cita "
+               "a nadie.",
+    },
+    "carama": {   # → `karama`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#64 Carama (E): Ramazón» la (E) es Esteves 1989, y es su "
+               "única fuente: Esteves nombra una voz VIVA de la península: la "
+               "palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves p. 98 (verificado: ocr): "
+               "Caramabure (p. 98): raíz de las caramas, «raíz de la ramazón».",
+    },
+    "carapa": {   # → `karapa`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#65 Carapa (E): Árbol resinoso» la (E) es Esteves 1989, y "
+               "es su única fuente: Esteves nombra una voz VIVA de la península: "
+               "la palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves pp. 27, 98 (verificado: "
+               "ocr): Cararapa (p. 27), «forma epentética de carapa, árbol "
+               "resinoso»; Carapa (p. 98).",
+    },
+    "caruca": {   # → `karuka`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#67 Caruca (E): Paja, da consistencia al barro que se "
+               "aplica a paredes y techos» la (E) es Esteves 1989, y es su única "
+               "fuente: Esteves nombra una voz VIVA de la península: la palabra "
+               "existe (un nombre vivo es dato); lo que es suyo, y de Zavala al "
+               "copiarlo, es que sea caquetía. Retroabstraída, como chiriware y "
+               "tukeke (2026-09-10). Esteves pp. 28, 49 (verificado: imagen): "
+               "Caruca (p. 28): hierba áspera para la torta de barro de los "
+               "techos; Machuruca (p. 49).",
+    },
+    "caseto": {   # → `kaseto`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#68 Caseto (E): Planta herbácea» la (E) es Esteves 1989, "
+               "y es su única fuente: Esteves nombra una voz VIVA de la península: "
+               "la palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves p. 30 (verificado: ocr): "
+               "Caseto (p. 30): planta herbácea de las malvas espigadas, "
+               "Malvastrum spicatum.",
+    },
+    "caujaro": {   # → `kaujaro`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#72 Caujaro (E): Árbol de madera blanda, fruta "
+               "mucilaginosa, del género cordia» la (E) es Esteves 1989, y es su "
+               "única fuente: Esteves nombra una voz VIVA de la península: la "
+               "palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves pp. 30, 100 (verificado: "
+               "ocr): Caujarito (p. 30), diminutivo de caujaro, Cordia; Caujaro "
+               "(p. 100), la glosa de Zavala palabra por palabra.",
+    },
+    "cayude": {   # → `kayude`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#73 Cayude (E): Árbol frutal, guanábano silvestre, "
+               "turagua» la (E) es Esteves 1989, y es su única fuente: Esteves "
+               "nombra una voz VIVA de la península: la palabra existe (un nombre "
+               "vivo es dato); lo que es suyo, y de Zavala al copiarlo, es que sea "
+               "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
+               "Esteves pp. 30, 100 (verificado: imagen (p. 30 en "
+               "esteves_paginas_releidas_2026-09-16.yaml)): Cayude (pp. 30 y 100): "
+               "árbol anonáceo, turagua.",
+    },
+    "cuna": {   # → `kuna`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#95 Cuna (E): Pez del golfete de Coro» la (E) es Esteves "
+               "1989, y es su única fuente: Esteves nombra una voz VIVA de la "
+               "península: la palabra existe (un nombre vivo es dato); lo que es "
+               "suyo, y de Zavala al copiarlo, es que sea caquetía. "
+               "Retroabstraída, como chiriware y tukeke (2026-09-10). Esteves pp. "
+               "33, 44 (verificado: imagen): Cunacho (p. 33): cuna, cunaro, pez "
+               "lábrido que abunda en el Golfete; Iticuna (p. 44).",
+    },
+    "cunaro": {   # → `kunaro`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#96 Cunaro (E): Pez del golfete de Coro. Promicops Guasa» "
+               "la (E) es Esteves 1989, y es su única fuente: Esteves nombra una "
+               "voz VIVA de la península: la palabra existe (un nombre vivo es "
+               "dato); lo que es suyo, y de Zavala al copiarlo, es que sea "
+               "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
+               "Esteves p. 33 (verificado: imagen): Cunacho, p. 33, junto a cuna.",
+    },
+    "curari": {   # → `kurari`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#97 Curarí (E): Árbol de roble, tecoma» la (E) es Esteves "
+               "1989, y es su única fuente: Esteves nombra una voz VIVA de la "
+               "península: la palabra existe (un nombre vivo es dato); lo que es "
+               "suyo, y de Zavala al copiarlo, es que sea caquetía. "
+               "Retroabstraída, como chiriware y tukeke (2026-09-10). Esteves pp. "
+               "33, 35, 106 (verificado: imagen): Curaidebo (p. 35): «Curarí: "
+               "árbol maderable, tecoma»; la madera de los jachos (p. 33).",
+    },
+    # ⚠️ DOS entradas del glosario dan la misma grafía normalizada: #185 Naure
+    # 'jojoto' y #186 Ñaure 'planta bejucosa'. El módulo generado las emite
+    # las dos con la clave `naure` y el dict se queda con la ÚLTIMA (#186),
+    # que es la que la medición cuenta. `num` restringe la fila a esa: #185
+    # tiene además un testigo fuera de Esteves (Alvarado 1921 p. 226, náura)
+    # y su capa no es lo que decidió la 1-B. La colisión es curación de glosas
+    # pendiente (issue de la sigla E, §9), no de esta tabla.
+    "naure": {   # → `naure`
+        "num": 186,
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#186 Ñaure (E): Planta bejucosa» la (E) es Esteves 1989, "
+               "y es su única fuente: es un «en caquetío X es Y» que no dice de "
+               "dónde sale, y ninguna otra obra lo corrobora: hipotética, la regla "
+               "que la ficha de Esteves ya tenía. Esteves p. 37 (verificado: "
+               "imagen): Chunaure, p. 37: Chunaure es apellido; «en lengua "
+               "caquetía 'ñaure' es planta bejucosa, y 'naure', es jojoto».",
+    },
+    "taque": {   # → `take`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#236 Taque (E): Árbol nucífero» la (E) es Esteves 1989, y "
+               "es su única fuente: Esteves nombra una voz VIVA de la península: "
+               "la palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves pp. 61, 132 (verificado: "
+               "ocr): Tacal y Tacaduto (p. 61): taque, árbol nucífero.",
+    },
+    "tauta": {   # → `tauta`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#244 Tauta (E): Pequeña paloma de hábitos ictiófagos» la "
+               "(E) es Esteves 1989, y es su única fuente: Esteves nombra una voz "
+               "VIVA de la península: la palabra existe (un nombre vivo es dato); "
+               "lo que es suyo, y de Zavala al copiarlo, es que sea caquetía. "
+               "Retroabstraída, como chiriware y tukeke (2026-09-10). Esteves p. "
+               "62 (verificado: ocr): Tausabana (p. 62): tauta, palomita de "
+               "hábitos ictiófagos que baja en bandadas a las albuferas.",
+    },
+    "tigui": {   # → `tigi`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#247 Tigüí (E): Pequeña paloma que se alimenta de peces» "
+               "la (E) es Esteves 1989, y es su única fuente: Esteves nombra una "
+               "voz VIVA de la península: la palabra existe (un nombre vivo es "
+               "dato); lo que es suyo, y de Zavala al copiarlo, es que sea "
+               "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
+               "Esteves p. 63 (verificado: ocr): Ticuí (p. 63): «Tigüí y no Ticuí» "
+               "es una palomita que se alimenta de peces.",
+    },
+    "tijua": {   # → `tijua`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#248 Tijúa (E): Paloma de canto onomatopéyico» la (E) es "
+               "Esteves 1989, y es su única fuente: Esteves nombra una voz VIVA de "
+               "la península: la palabra existe (un nombre vivo es dato); lo que "
+               "es suyo, y de Zavala al copiarlo, es que sea caquetía. "
+               "Retroabstraída, como chiriware y tukeke (2026-09-10). Esteves pp. "
+               "38, 63 (verificado: ocr): Tijuro (p. 63): «se nos ha informado» "
+               "que viene de tijua, paloma de canto onomatopéyico, con una copla.",
+    },
+    "tigua": {   # → `tiwa`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#246 Tigua (E): Árbol rutáceo» la (E) es Esteves 1989, y "
+               "es su única fuente: Esteves nombra una voz VIVA de la península: "
+               "la palabra existe (un nombre vivo es dato); lo que es suyo, y de "
+               "Zavala al copiarlo, es que sea caquetía. Retroabstraída, como "
+               "chiriware y tukeke (2026-09-10). Esteves pp. 63, 134 (verificado: "
+               "ocr): Tiguadare (p. 63): tigua, árbol rutáceo.",
+    },
+    "tuba": {   # → `tuba`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#253 Tuba (E): Aglomeración, montón» la (E) es Esteves "
+               "1989, y es su única fuente: es la etimología de un topónimo, "
+               "análisis suyo, y ninguna otra obra la corrobora: hipotética, la "
+               "regla que la ficha de Esteves ya tenía. Esteves pp. 64, 73 "
+               "(verificado: imagen): p. 64: Todariquiba no significaría nada, "
+               "pero «Tubariquiba» —la forma que él propone en lugar de la de "
+               "Castellanos— sería 'pedregal': «Tuba: aglomeración. Quiba: "
+               "pedruzco»; y Tubarao, «Tuba: montón». p. 73 (apéndice): el «cuar» "
+               "cumanagoto de Caulín «tiene el mismo significado del tuba de los "
+               "caquetíos».",
+    },
+    "tubarao": {   # → `tubarao`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#254 Tubarao (E): Arenales» la (E) es Esteves 1989, y es "
+               "su única fuente: es la etimología de un topónimo, análisis suyo, y "
+               "ninguna otra obra la corrobora: hipotética, la regla que la ficha "
+               "de Esteves ya tenía. Esteves p. 64 (verificado: imagen): Tubarao, "
+               "p. 64: «significa arenales. Tuba: montón. Rao: arena».",
+    },
+    "tuturutos": {   # → `tuturutos`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#264 Tuturutos (E): Hierba de propiedades eméticas. Usado "
+               "para cuajar quesos» la (E) es Esteves 1989, y es su única fuente: "
+               "Esteves nombra una voz VIVA de la península: la palabra existe (un "
+               "nombre vivo es dato); lo que es suyo, y de Zavala al copiarlo, es "
+               "que sea caquetía. Retroabstraída, como chiriware y tukeke "
+               "(2026-09-10). Esteves p. 66 (verificado: imagen): Tutubacoa (p. "
+               "66): «hemos obtenido dos informaciones»; tuturutos, hierba de "
+               "savia emética que cuaja el queso.",
+    },
+    "ure": {   # → `ure`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#272 Ure (E): Raíz» la (E) es Esteves 1989, y es su única "
+               "fuente: es la etimología de un topónimo, análisis suyo, y ninguna "
+               "otra obra la corrobora: hipotética, la regla que la ficha de "
+               "Esteves ya tenía. Esteves pp. 11, 18, 22 (verificado: ocr): "
+               "Abudure (p. 11: «ure… quiere decir: raíz en nuestra primitiva "
+               "lengua», y que está en muchos topónimos de Paraguaná) y Babahuro "
+               "(p. 18, 'el caño de las raíces'). En la p. 22, a propósito de "
+               "Baraivere, trae el único paralelo que da en todo el libro: el "
+               "pueblo GUARANÍ «Uretebere» de Cabeza de Vaca, «Ure: raíz; Bere: "
+               "amargo». En Parte II lo repite en Camurujure (p. 94) y Guaimure "
+               "(p. 112).",
+    },
+    "guaco": {   # → `wako`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#126 Guaco (E): Planta herbácea de la familia de las "
+               "portulacea» la (E) es Esteves 1989, y es su única fuente: Esteves "
+               "nombra una voz VIVA de la península: la palabra existe (un nombre "
+               "vivo es dato); lo que es suyo, y de Zavala al copiarlo, es que sea "
+               "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
+               "Esteves pp. 14, 38 (verificado: ocr): Aguaque (p. 14): viene de "
+               "guaco, portulácea, pasto codiciado por las cabras.",
+    },
+    "guaracaro": {   # → `warakaro`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#138 Guaracaro (E): Tapirama silvestre» la (E) es Esteves "
+               "1989, y es su única fuente: Esteves nombra una voz VIVA de la "
+               "península: la palabra existe (un nombre vivo es dato); lo que es "
+               "suyo, y de Zavala al copiarlo, es que sea caquetía. "
+               "Retroabstraída, como chiriware y tukeke (2026-09-10). Esteves p. "
+               "114 (verificado: ocr): Guaracaro (p. 114): planta anual de grano "
+               "alimenticio, tapirama silvestre.",
+    },
+    "guaranao": {   # → `waranao`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#140 Guaranao (E): Salado, ácido» la (E) es Esteves 1989, "
+               "y es su única fuente: la glosa de Zavala NO está en la página de "
+               "Esteves que la origina, y ninguna otra obra la da: hipotética. "
+               "Esteves p. 41 (verificado: imagen): La entrada GUARANAO (p. 41) "
+               "describe la salina de Punta Cardón, la fama de su sal para los "
+               "ojos (citando a Hill Peña) y la Zona Franca. NO glosa la voz: no "
+               "dice «salado» ni «ácido». La búsqueda en las dos partes del OCR da "
+               "la voz sólo en esta página.",
+    },
+    "guarataro": {   # → `warataro`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#141 Guarataro (E): Barro de loza, para la fábrica de "
+               "budares y ollas» la (E) es Esteves 1989, y es su única fuente: "
+               "Esteves nombra una voz VIVA de la península: la palabra existe (un "
+               "nombre vivo es dato); lo que es suyo, y de Zavala al copiarlo, es "
+               "que sea caquetía. Retroabstraída, como chiriware y tukeke "
+               "(2026-09-10). Esteves p. 41 (verificado: imagen): Guarataro (p. "
+               "41): barro de loza gomoso para budares y ollas; abunda en el "
+               "lugar.",
+    },
+    "guariana": {   # → `wariana`
+        "fuente": "caquetío-retroabstraido",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#142 Guariana (E): Arbusto halófilo, frailejón de la "
+               "playa. Tabaco pescador» la (E) es Esteves 1989, y es su única "
+               "fuente: Esteves nombra una voz VIVA de la península: la palabra "
+               "existe (un nombre vivo es dato); lo que es suyo, y de Zavala al "
+               "copiarlo, es que sea caquetía. Retroabstraída, como chiriware y "
+               "tukeke (2026-09-10). Esteves p. 28 (verificado: imagen): "
+               "Cariguariana (p. 28): guariana, arbusto halófilo, «tabaco "
+               "pescador».",
+    },
+    "guaru": {   # → `waru`
+        "fuente": "caquetío-hipotético",
+        "decision": DECISION_SIGLA_E,
+        "por": "1-B. En «#143 Guaru (E): Volturido, cataneja. Ave mayor que el "
+               "zamuro» la (E) es Esteves 1989, y es su única fuente: es un «en "
+               "caquetío X es Y» que no dice de dónde sale, y ninguna otra obra lo "
+               "corrobora: hipotética, la regla que la ficha de Esteves ya tenía. "
+               "Esteves p. 42 (verificado: imagen "
+               "(esteves_paginas_releidas_2026-09-16.yaml; la p. 42 está escaneada "
+               "boca abajo)): Guaruguaja, p. 42: «Guar[a], en caquetío, es el "
+               "voltúrido que llamamos cunareja, ave mayor que el zamuro». La saca "
+               "del topónimo, que él lee como plural por duplicación (guaraguara).",
+    },
+}
+
+
 def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     origen = norm(e["lemas"][0])
     forma = e.get("lema_final", origen)      # Fase 2 de D5: lema fonémico
@@ -1045,6 +1534,15 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     if curado:
         nota += ("; GLOSA CURADA (`sig`, no `glosa_fuente`): "
                  + " ".join(str(curado["por"]).split()))
+    # La capa: `caquetío-atestiguado` salvo excepción declarada en FUENTE_CURADA.
+    capa = FUENTE_CURADA.get(origen)
+    if capa and capa.get("num") not in (None, e["num"]):
+        capa = None                     # la fila es de la otra entrada homógrafa
+    fuente = capa["fuente"] if capa else "caquetío-atestiguado"
+    if capa:
+        por = " ".join(str(capa["por"]).split()).replace('"', "'")
+        nota += (f"; CAPA CURADA [{capa['decision']}]: era `caquetío-atestiguado`, "
+                 f"pasa a `{fuente}`. {por}")
     cat, _clase, _por = clase_de(origen, tier)
     pad = " " * max(1, 14 - len(forma))
     # D7: la glosa de la fuente se conserva verbatim y trazable; la
@@ -1056,7 +1554,7 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
     if moderna:
         extra += f' "identificacion_moderna": "{moderna.replace(chr(34), chr(39))}",'
     return (f'{indent}"{forma}":{pad}{{"sig": "{sig}", "cat": "{cat}", '
-            f'"fuente": "caquetío-atestiguado",{extra} "notas": "{nota}"}},')
+            f'"fuente": "{fuente}",{extra} "notas": "{nota}"}},')
 
 
 def generar_modulo(tiers: dict, ruta: str):

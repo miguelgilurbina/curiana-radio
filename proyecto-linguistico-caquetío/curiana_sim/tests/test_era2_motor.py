@@ -436,6 +436,9 @@ def test_tu_tierra_cabe_en_320_en_las_126_combinaciones_y_no_ensena_lo_escondido
     combos = combinaciones()
     assert len(combos) == 126 and PRESUPUESTO == 320
     hip = {k for k, e in VOCABULARIO_BASE.items() if e.get("fuente") == "caquetío-hipotético"}
+    # La excepción temporal de `kari` (2026-09-23) se quitó al integrar la
+    # tanda final: el canon del mundo ya copia la capa hipotética y el
+    # bloque no dice «Lo decís kari.».
     for agente, dia in (("Tebekoa", 1), ("Kasebo", 7), ("Manaure", 33)):
         for s, p, m in combos:
             b = bloque_tu_tierra(s, p, m, agente=agente, dia=dia, capas=capas)

@@ -126,8 +126,16 @@ def test_el_catalogo_no_pierde_voces_por_accidente():
     # 'espíritu vital' y `wagulo` 'tortuga'. Las otras siete eran de categorías
     # que no se prestan (cuerpo, gramática). `daca` se queda en el lexicón como
     # taíno 'yo', que tampoco se presta.
-    assert len(formas) == 42
+    # 42 → 44 el 2026-09-23 (tf.0): `baperon` y `raporon` 'calabaza con cal'
+    # pasaron de caquetío-atestiguado a `caribe-pemeno` —en el cuerpo de
+    # Oviedo (t. II pp. 286 y 294) son de los pemenos de la laguna, y «(Lengua
+    # de Venezuela)» es del editor, como en `datihao`—, y el caribe continental
+    # es esfera. El mismo día `cohiba` se archivó y entró `cohoba` (tf.6):
+    # una sale y otra entra, el total no se mueve por eso.
+    assert len(formas) == 44
     assert "datihao" in formas
+    assert {"baperon", "raporon", "cohoba"} <= formas
+    assert "cohiba" not in formas
     assert not {"akcicyaa", "wagulo"} & formas
     for clave in L.SIN_FORMA_DE_LA_ESFERA:
         assert clave not in formas

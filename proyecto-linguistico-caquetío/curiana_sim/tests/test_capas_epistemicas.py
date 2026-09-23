@@ -73,7 +73,11 @@ def test_toda_capa_del_lexicon_la_ve_algun_perfil():
     ("maure", "caquetío-atestiguado"),
     ("korie", "caquetío-atestiguado"),
     ("curiana", "caquetío-atestiguado"),
-    ("saruro", "caquetío-atestiguado"),
+    # `saruro` se quedó arriba el 2026-09-10 «con la reserva que su nota ya
+    # traía»: un solo apoyo, Zavala #224 (E). El 2026-09-23 (cc.4 / tf.0,
+    # opción B) la (E) resultó ser Esteves 1989, que nombra una voz viva de la
+    # península, y baja a retroabstraída — la capa que su nota ya anunciaba.
+    ("saruro", "caquetío-retroabstraido"),
 ])
 def test_el_reparto_de_las_seis_se_mantiene(clave, capa_esperada):
     """Fija el fallo de Miguel del 2026-09-10, una por una."""
