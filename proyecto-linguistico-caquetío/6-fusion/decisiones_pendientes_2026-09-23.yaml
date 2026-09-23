@@ -1,0 +1,1226 @@
+# ─────────────────────────────────────────────────────────────────────────
+# LAS DECISIONES PENDIENTES, JUNTAS (2026-09-23)
+#
+# Encargo de Miguel (cc.8 de decisiones_cierre_2026-09-23.yaml):
+#   «Hay que juntarlas, sí o sí. Eh, recomiendo un agente que junte todos.
+#   Eh, para a, a, a que el trabajo sea más sencillo.»
+# Y la orden que lo enmarca:
+#   «prioricemos específicamente eh, poder ya cerrar todo el tema investigativo
+#   para que nos enfoquemos solamente en la parte creativa de lo que es la
+#   simulación»
+#
+# Esto NO decide nada ni aplica nada: junta, ordena y recomienda. Cada opción
+# lleva la letra con la que la escribió su agente de origen. Lo que ya estaba
+# decidido (cc.*, db.*, dc.*) no se vuelve a preguntar: va en `ya_decididas`,
+# con dónde se decidió.
+#
+# Resumen legible: 6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md
+# ─────────────────────────────────────────────────────────────────────────
+
+meta:
+  fecha: '2026-09-23'
+  recopilado_por: agente recopilador (encargo cc.8)
+  fuentes:
+    prs_mineria_3: 'cuerpos de los PRs #203-#220 y sus borradores en 6-fusion/issues-pendientes/, leídos de cada rama (campana/mineria3-*, campana/fauna-*)'
+    informes_de_agente: 'último mensaje de las transcripciones tasks/*.output de la tercera minería (15 con texto; #209, #210 y #214 no dejaron informe allí: se leyeron su cuerpo de PR y sus archivos)'
+    otras_campanas_con_letras_sin_decidir: >-
+      Las dos campañas del taíno (#188-#192 del 2026-09-21 y #194-#199 del
+      2026-09-22) dejaron opciones con letra que dc.*, db.* y cc.* sólo
+      decidieron en parte, y la tercera minería las cita (T10 en #219, dc.4 en
+      #212, T8 en #203). Entran aquí para que la lista sea la de TODAS las
+      opciones sin decidir; su `de` lo dice.
+    ya_decidido_contra: >-
+      decisiones_cierre_2026-09-23.yaml (cc.*) y decisiones_base_2026-09-22.yaml
+      (db.*), en la rama tanda/base-2026-09-22; decisiones_campanas_2026-09-21.yaml
+      (dc.*) y decisiones_tanda_*.yaml, en main.
+  reglas_de_lectura:
+    - 'Las letras son las del agente de origen. Cuando dos agentes preguntan lo mismo, la entrada es una sola y guarda las letras de cada uno bajo su nombre.'
+    - '`recomendacion.origen` es la del agente que la escribió; `recomendacion.recopilador` es la mía, y sólo aparece cuando difiere o cuando algo posterior cambia el cuadro.'
+    - 'Las cifras de `evidencia` están copiadas de su fuente (el archivo que se cita), no recalculadas.'
+    - 'GRUPO 1 = cambia lo que el prompt enseña o una etiqueta/glosa del lexicón que llega al prompt: va a la última tanda antes de la corrida base (cc.12). GRUPO 2 = canon del mundo (3-mundo/, geografía, topónimos, polities, corpus). GRUPO 3 = sólo documentación, `notas`, `procedencia`, fichas o deuda: no mueve el prompt ni el score.'
+    - '`toca` dice si llega al prompt. `notas` y `procedencia` del lexicón no llegan (verificado en db.5 y dc.1: la huella de los prompts no cambia).'
+
+# ═════════════════════════════════════════════════════════════════════════
+# GRUPO 1 — CAMBIAN EL PROMPT O UNA ETIQUETA/GLOSA DEL LEXICÓN QUE LLEGA A ÉL
+#           (la última tanda antes de la corrida base; de más a menos importante)
+# ═════════════════════════════════════════════════════════════════════════
+grupo_1_prompt_y_lexicon:
+
+  - id: dp.1.01
+    tema: D11 fase 3 — los pronombres personales
+    de:
+      - '6-fusion/issues-pendientes/decision-d11-fase3-nucleo-lokono-achagua.md §2, §6 (main, 2026-09-13)'
+      - '#215 (campana/mineria3-achagua-llanos) 6-fusion/issues-pendientes/achagua-arte-morfologia-2026-09-22.md §1, §4 D, §5 G'
+      - '#197 (T11) taino2-prueba-linguistica-2026-09-22.md §7 G'
+    pregunta: ¿Qué formas sustituyen a `taya`, `pia`, `nüma` (y se confirman `waya`, `naya`), ahora que la fase 3 es obligatoria y nada puede venir del wayuu?
+    opciones:
+      D11_forma_propuesta: '1sg `daya` (hipotético) · 2sg `bia` (hipotético, ⚠️ ya es clave lokono) · 3sg `ria` / `ruya` (hipotéticos, ⚠️ claves achagua) · 1pl `waya` (se queda, reconstruido) · 3pl `naya` (se queda, reconstruido) · 2pl `ja` opcional'
+      D11_fina_2: '¿Partir `nüma` en `ria` (m.) / `ruya` (no m.)? Las dos hermanas lo hacen, pero obliga al agente a elegir género'
+      achagua_D: 'Importar el juego sufijado de persona (achagua y lokono parten la persona en dos juegos). No recomendada por su agente'
+      achagua_G: '`pia` deja de ser «sólo wayuu»: el maipure de Gilij da `pìa` «tú»; no cambia su capa (sigue reconstruido)'
+    evidencia:
+      - 'cc.12, Miguel: «los pronombres y aspectos siguen reconstruidos desde el Wayu. Esto, no podemos seguir teniendo reconstrucciones desde el Wayu, tendría que ser desde el Locono. O el Taíno […] o el Achagua también»'
+      - 'D11 §2: 1pl lokono `wa-` = achagua `Guaya` /waya/ y 3pl lokono `na-` = achagua `Naya` concuerdan; 1sg (d / n), 2sg (b / j) y 3sg no m. (t / r) no concuerdan'
+      - 'Gilij 1782 t. III p. 186 (#215 §5): «nuja io, pìa tu … uaja noi» — «la primera no wayuu que da `pia`»'
+      - 'Neira y Ribero 1762 p. 12 (#215 §1): «Dos juegos» de persona, prefijos para los verbos activos y sufijos para los de estado y el objeto'
+      - 'D11 §4: `taya` sale en 3 de 6 constructores de prompt, incluido `_IDENTIDAD_LINGUISTICA`, «que reciben todos»; y «`taya` es la forma más usada del corpus»'
+      - '#197 §7 G: `díao` (Coro) ~ `tiao` (Apure) es un contraste /d-/ ~ /t-/ dentro del caquetío, «y `/d-/` es el pilar de la tesis lokonoide» (Arcaya p. 48, Carvajal p. 317)'
+    recomendacion:
+      origen: 'D11: las formas de la propuesta (su opción B); `da-`/`daya` apoyado en la traza de *dare*. #215: A + B + E + G; D no.'
+      recopilador: >-
+        Difiere en la 2sg: con `pìa` en el maipure (#215 G), `pia` se puede
+        re-justificar desde una hermana del norte que NO es wayuu, y así se evita
+        `bia`, que colisiona con la clave lokono 'in' (trampa 2 de D11). Para la
+        1sg, `daya` tiene ahora un apoyo que D11 no tenía: el taíno `daca` 'yo'
+        (Las Casas, Apologética p. 447, ya en el lexicón por db.3) comparte la
+        `d-` con el lokono; pero db.2 pasó `datihao` al taíno, así que de las
+        dos trazas CAQUETÍAS de `d-` que D11 citaba (*dare*, *datihao*) queda
+        *dare*; y #197 G anota el contraste `díao` (Coro) ~ `tiao` (Apure). No
+        partir `nüma` en la base (obliga a elegir género y dobla las
+        colisiones); dejar escrito que las dos hermanas lo parten.
+    toca: prompt del motor (seis constructores cableados, `_NUCLEO_FALLBACK`, `FORMAS_SEED`) + canon del lexicón + `es_arahuaco()` del score
+    depende_de:
+      - 'las dos trampas del instrumento de D11 §5: el núcleo está cableado en seis sitios (un perfil no lo cambia) y `bia`/`ria`/`ruya` son claves de otra lengua (renombrar la comparanda antes de sembrar)'
+      - dp.1.02
+      - dp.1.03
+
+  - id: dp.1.02
+    tema: D11 fase 3 — los posesivos
+    de:
+      - 'decision-d11-fase3-nucleo-lokono-achagua.md §2, §6 («Tres decisiones finas dentro de B»)'
+    pregunta: ¿El posesivo de 1sg pasa de `ta-` a `da-`, y con qué etiqueta?
+    opciones:
+      D11_forma_propuesta: 'pos. 1sg `da-` (reconstruido) · pos. 1pl `wa-` (se queda) · pos. 3pl `na-` (nuevo, reconstruido) · pos. 2sg/3sg `bi-` / `ri-`, `ru-` (hipotéticos)'
+      D11_fina_1: '¿`da-` reconstruido (por *dare*) o hipotético (Oliver da la correspondencia para «PERHAPS Caquetío», p. 136, y duda de *datihao*, n. 42)?'
+    evidencia:
+      - 'D11 §2: pos. 1sg lokono `da-`, achagua `Nu-`; «**sí** (C1)» de traza caquetía'
+      - 'D11 §4: `ta-` está en 5 constructores de prompt y en la tupla de `es_arahuaco`; «3.840» usos llevan prefijo posesivo (ANALISIS_BASE_2026-08-06)'
+      - 'D11 §7: «`CLAUDE.md` declara los posesivos `pi-` y `nü-`, pero `REGLAS_POSESIVAS` no los tiene»'
+    recomendacion:
+      origen: '`da-` reconstruido; si la duda de Oliver pesa, se degrada.'
+      recopilador: >-
+        `da-` reconstruido, con la nota de que su segundo testigo caquetío
+        (`datihao`) es hoy taíno (db.2): el taíno lo comparte, así que la
+        concordancia lokono-taíno sube y la traza propiamente caquetía baja.
+        `bi-`/`ri-`/`ru-` no hacen falta en la base si `pi-`/`nü-` tampoco están
+        en el motor.
+    toca: prompt del motor + `es_arahuaco()` del score (la tupla de prefijos pasa a la unión de los dos núcleos, D11 §5)
+    depende_de: [dp.1.01]
+
+  - id: dp.1.03
+    tema: D11 fase 3 — el aspecto (`-ka` / `-ni` / `-da`)
+    de:
+      - 'decision-d11-fase3-nucleo-lokono-achagua.md §2, §3, §6 C'
+      - '#215 achagua-arte-morfologia-2026-09-22.md §1 fila 2'
+    pregunta: ¿Con qué se reemplazan las tres marcas de aspecto que vienen del wayuu?
+    opciones:
+      D11_C: 'perfil pleno: completivo `-bi`, continuativo `-bo`, prospectivo `-pa` — las tres hipotéticas; «dos chocan con claves o con morfemas vivos» y obligan a tocar el mapa de aspecto del score'
+      D11_B_aspecto: 'dejar `-ka`/`-ni`/`-da` declarados como canon-simulación, como `-ana` (era la recomendación de D11 antes de cc.12)'
+    evidencia:
+      - 'D11 §3 punto 4 (Lo corto): «El aspecto (`-ka`/`-ni`/`-da`) no se puede re-derivar con lo que hay. Ninguna de las tres marcas tiene concordancia sistemática.»'
+      - '#215 §1: en achagua `-ca` es infinitivo y `-ni` es 3sg.m; el autor: «el pres.te de Indicativo es el q.e hace el gasto» (Neira y Ribero p. 28), como Perea del lokono (p. 606)'
+      - 'D11 §4: «18.752 de 54.936 usos llevan sufijo de aspecto» (ANALISIS_BASE_2026-08-06); los tres aspectos son regla propia en `REGLAS_ASPECTO` y 2 de 10 puntos del mapa de aspecto del score'
+    recomendacion:
+      origen: 'D11 recomendaba no tocar el aspecto (B); #215 dice que `-ka`/`-ni`/`-da` «no apoyados» y que la convergencia «aspecto, no tiempo» gana una segunda voz.'
+      recopilador: >-
+        B choca con cc.12 («no podemos seguir teniendo reconstrucciones desde el
+        Wayu»), así que en rigor queda C o algo que ningún agente escribió con
+        letra: las dos hermanas del norte dicen que casi todo se dice en
+        presente sin marca (Neira p. 28, Perea p. 606). Si Miguel no quiere
+        `-bi`/`-bo`/`-pa` (hipotéticas y con colisiones), la salida con fuente
+        es enseñar el verbo sin marca de aspecto obligatoria y dejar las marcas
+        como hueco declarado. Es la decisión más cara de la tanda (score y
+        koiné): medirla sola.
+    toca: prompt del motor + `REGLAS_ASPECTO` + `_aspectos_morfologicos` del score + `FORMAS_SEED` de la koiné
+    depende_de: [dp.1.01]
+
+  - id: dp.1.04
+    tema: la clase de los tainismos en `[Voces de fuera]`
+    de:
+      - '#192 (T5) taino-en-la-esfera-2026-09-21.md §6'
+      - 'dc.1 (decisiones_campanas_2026-09-21.yaml): «C queda DENTRO de la decisión de clase sobre los tainismos» (macana)'
+      - '#194 (T9) taino2-apologetica-2026-09-22.md D3 (macana)'
+      - '#196 (T8) taino2-evidencia-material-2026-09-22.md §6: «La auditoría de las 25 voces taínas que la campaña 1 dejó abierta (su opción B) sigue abierta»'
+    pregunta: ¿Qué voces taínas deja de enseñar `[Voces de fuera]` — las que sólo llegaron a Venezuela en boca del español (`cacike`, `naboria`), o ninguna?
+    opciones:
+      T5_A: 'No tocar nada'
+      T5_B: 'Partir la etiqueta taína por VECTOR: siguen las que tienen atestación indígena independiente en el área; salen de `[Voces de fuera]` las que sólo llegaron por el español de La Española. Sin tocar el scorer. Exige auditar las voces una a una'
+      T5_C: 'Dejar sólo las voces de PRODUCTO y sacar las de institución y ritual (`cacike`, `nitaino`, `naboria`, `batey`, `areito`, `dujo`, `maboya`, `akcicyaa`)'
+      T5_D: 'Dejar el motor quieto y arreglar sólo el MUNDO (entrar `etnia-009`); la decisión del prompt, después de la auditoría de B'
+      T9_D3_macana: '(A) re-etiquetar `macana` como préstamo de la esfera con Las Casas p. 177 · (B) llevar la cita al issue de macana y decidir las tres piezas juntas · (C) no tocar'
+    evidencia:
+      - 'T5 §6: el taíno es «25 de las 43» voces que `[Voces de fuera]` puede mostrarle a un tier 1, y entre ellas «`cacike` y `naboria` — las dos que Oliver nombra expresamente como traídas por el español desde La Española»'
+      - '#202: «`[Voces de fuera]` 43 → 42» tras la tanda de la base (db.3 sacó `akcicyaa` y `wagulo`)'
+      - 'Las Casas, Apologética cap. LXV p. 177 (T9 D3): «Estos vocablos cotaras, macanas, bixa, y maiz, y maguey, fueron vocablos desta isla y no de la Tierra Firme»'
+      - 'dc.1: «en la base, `macana` 45 usos de 32 agentes; `poporo`, 2 usos de 2»'
+      - 'T5 §6: la decisión del 2026-09-17 («el producto de la esfera ES la esfera») no se toca: `cazabi`, `maisi`, `yuca`, `batata`, `papaya` son productos'
+    recomendacion:
+      origen: 'T5: D ahora, B como campaña siguiente. T9: (B) para macana.'
+      recopilador: >-
+        Con la base a punto de ser la vara nueva, «D ahora y B después» significa
+        correr los 30 días enseñando `cacike` y `naboria`, que la propia campaña
+        identificó como anacronismos. Recomiendo B RECORTADA antes de la base:
+        sacar sólo las dos que la campaña ya identificó sin auditoría nueva
+        (`cacike` y `naboria`, que Oliver nombra como traídas por el español);
+        la auditoría del resto, después. `kunuku` NO: con el criterio de B se
+        queda, porque tiene atestación en las islas (van Buurt; T3 la llama «la
+        única entrada taína bien citada»). `macana` entra en la auditoría (T9 B).
+    toca: prompt del motor (`[Voces de fuera]`); no el scorer
+    depende_de: []
+
+  - id: dp.1.05
+    tema: '`kumarawa` (cumaragua): la glosa'
+    de:
+      - '#208 (FA3) fauna-paraguana-mar-2026-09-22.md §0.3 y §4 (b)'
+      - '#216 (M6) toponimos-esteves-lote-2026-09-22.md §2'
+      - '#213 (M1) oliver1989_lexico_restante_2026-09-22.yaml, A-9 fila 25'
+      - 'dc.3 `de_paso_sin_decidir` J (decisiones_campanas_2026-09-21.yaml)'
+    pregunta: ¿Se reabre la glosa de `kumarawa` ('caracol de las costas de Paraguaná', D10) con los testigos nuevos?
+    opciones:
+      FA3_A: 'Abrir de nuevo D10 con el testigo de Esteves p. 33 (cangrejo rosado de las salinas)'
+      FA3_B: 'Anotarlo en `notas` y dejar la glosa'
+      FA3_C: 'Nada'
+      dc3_J: 'Curar `cumaragua`: Arcaya p. 75 escribe «viruela», Zavala leyó «ciruela»'
+    evidencia:
+      - 'Esteves p. 33, s.v. CUMARAGUAS (FA3): «Cumaragua es el nombre que dan a un pequeño cangrejo de caparazón rosada», con la significación «espuma rosada»'
+      - 'M6 §2: «cumaragua en Arcaya es «viruela», no «ciruela» (p. 75, vista en imagen). La nota de `kumarawa` lo cita mal. Una voz para la viruela es dato de contacto (regla 3).»'
+      - 'Oliver A-9 fila 25 (M1): `cumaragua` | `kumarawa` | «viruela» — «colonial por construcción»; `fuente_en_oliver: null`'
+      - 'Lexicón hoy: glosa de Alvarado 1921 p. 102; la nota cita a Arcaya como «mene y cumaragua nombre de la ciruela»'
+    recomendacion:
+      origen: 'FA3: A. M6: corregir la cita de la nota en la primera tanda de topónimos.'
+      recopilador: >-
+        A, y en el mismo gesto la J de dc.3: son la misma voz y los tres agentes
+        que la tocaron se enteraron por separado. Hay cuatro lecturas
+        (caracol, cangrejo/espuma rosada, viruela, ciruela) y una de ellas
+        (ciruela) es una mala lectura de otra (viruela). Mientras se decide,
+        corregir la cita de Arcaya en `notas` no mueve nada.
+    toca: canon del lexicón (glosa de una voz caquetío-atestiguada, llega al prompt si cambia); la corrección de `notas`, no
+    depende_de: []
+
+  - id: dp.1.06
+    tema: '`korie` ''armadillo'': ¿una mala lectura de Oviedo?'
+    de:
+      - '#211 (FA1) fauna-paraguana-tierra-2026-09-22.md §C'
+      - '#213 (M1) oliver1989_lexico_restante_2026-09-22.yaml, A-9 fila 24'
+    pregunta: ¿Se verifica de dónde sale `korie` 'armadillo' antes de seguir enseñándolo como caquetío atestiguado?
+    opciones:
+      FA1_C1: 'Campaña corta de verificación: leer en imagen de dónde saca Oliver cada voz de la Tabla A-9 y qué es la sigla HB de Zavala #90'
+      FA1_C2: 'Dejarlo como está, con una nota que cite Oviedo t. II p. 330'
+    evidencia:
+      - 'Oviedo t. II p. 330 (FA1, verificado en imagen): «Armados *cories* hay, pero son mayores que los desta isla y el pelage tiénenlo mas áspero»; en Oviedo `cori` es el cuy (t. I p. 390)'
+      - 'M1 leyó la A-9 entera en imagen: fila 24 `corie` | `korie` | armadillo, `fuente_en_oliver: null`'
+      - '4-fuentes/zavala-reyes-2015.md: «HB = Adrián Hernández Baño»'
+    recomendacion:
+      origen: 'C1: «Es barata y el precedente de `datihao` dice que vale.»'
+      recopilador: >-
+        La mitad de C1 ya la hizo #213: Oliver no da fuente para `corie`. Queda
+        la otra mitad, que es Hernández Baño (la sigla HB), la misma obra que
+        #204 propone conseguir para Angulo Molina (dp.3.02): un solo encargo
+        resuelve las dos. Hasta entonces, C2 (la nota).
+    toca: 'canon del lexicón: si cambia la etiqueta, llega al prompt (`korie` es además nombre de agente, Korie-ko, y db.4 lo cita como animal con voz, «NO es hueco»); la nota de C2, no'
+    depende_de: [dp.3.02]
+
+  - id: dp.1.07
+    tema: '`poporo`: qué hacer después de leer la Parte IV'
+    de:
+      - '#207 (M7) coro-colonial-2026-09-22.md §2 D-a'
+    pregunta: Leída la Parte IV de Castellanos (cc.3 ya lo ordenó), ¿`poporo` se queda atestiguado con la nota corregida o baja?
+    opciones:
+      A: 'Se queda atestiguado y se corrigen las `notas` (el verso que cita Alvarado es guanebucán) y se quita «ceremonial», que no tiene fuente'
+      B: 'Se degrada a `caquetío-reconstruido` o pasa a voz de la esfera (guanebucán/Guajira) hasta que haya un caquetío con poporo'
+      C: 'Antes, bajar la Parte IV y leer las pp. 46 y 65 del t. I (YA DECIDIDA: cc.3)'
+    evidencia:
+      - 'M7 §0.3: «Castellanos no pone el poporo en manos de ningún caquetío»; el pasaje que cita Alvarado es el de Boronata, «indio guanebucán» (p. 202)'
+      - 'Lexicón hoy: «maza-porra, arma de combate ceremonial», caquetío-atestiguado, nota «Alvarado 1921, p.255»'
+    recomendacion:
+      origen: 'C y luego A o B según salga; «Mientras tanto, quitar «ceremonial» cuesta poco.»'
+    toca: 'canon del lexicón: glosa y etiqueta de una voz caquetío-atestiguada, que llegan al prompt'
+    depende_de: ['la lectura de la Parte IV que ordenó cc.3 (en curso)']
+    ya_decidida_en: 'cc.3 decidió la C; A o B se eligen con el resultado'
+
+  - id: dp.1.08
+    tema: la Tabla A-9 de Oliver, verificada — `busera`, `kama`, `auri` y cinco notas
+    de:
+      - '#213 (M1) oliver1989-restante-2026-09-22.md §1.1 y §4 A, D'
+      - '#192 (T4) taino-caquetio-similitudes-2026-09-21.md §6 K (`auri`)'
+    pregunta: ¿Se toma la A-9 leída en imagen como tabla de referencia y se aplican sus notas al lexicón?
+    opciones:
+      M1_A: 'Tomar la A-9 verificada como tabla de referencia y aplicar: `busera` nueva (caquetío-atestiguado), `kama` sube con Barquisimeto declarado, `auri` no sube, notas en `warataro`, `kumarawa`, `dare`, `baperón`/`raporón`, `capu`/`kapubana`'
+      M1_D: 'Nada al canon todavía: pedir antes Arellano Moreno 1964 (la Relación de Barquisimeto de 1579), que decide época y polity de varias voces'
+      T4_K: '`auri` ''perro'' sigue etiquetada `achagua` aunque «Oliver p. 151 la declara la voz caquetía para ''perro''»'
+    evidencia:
+      - '`busera` (M1 §1.1): Oviedo t. II p. 300 la llama busera (la jagua, tinte negro-azulado); «Una atestación (Oviedo), no dos: Oliver bebe de él»'
+      - '`kama` (M1 §1.1): la fila está en la A-9 (15) y el cap. 2 da la fuente, la Relación de Barquisimeto de 1579; huesos de tapir en Túcua (cap. 4, p. 439)'
+      - '`auri`: M1 — «Oliver lo halló en una lista CUYÓN y lo infiere prestado del caquetío de Barquisimeto (cap. 2, p. 151)»; T4 K lee la misma página como declaración de voz caquetía. Las dos lecturas de p. 151 chocan'
+      - 'Regla 4 (M1): la fuente de varias voces de la A-9 es la Relación de Barquisimeto de 1579, polity de Barquisimeto, no la costera'
+    recomendacion:
+      origen: 'M1: «A + B ahora, D en paralelo, C no.»'
+      recopilador: >-
+        A, pero `kama` con la polity de Barquisimeto a la vista y sin subir a
+        la capa que llega a la muestra costera hasta tener la Relación
+        (dp.3.01). `auri`: gana la lectura de M1, que es la más reciente y la
+        hizo sobre la Tabla 8 en imagen; que T4 K se cierre con esa lectura.
+    toca: 'canon del lexicón (una entrada nueva y un cambio de etiqueta, que llegan al prompt); las notas, no'
+    depende_de: [dp.3.01]
+
+  - id: dp.1.09
+    tema: '`ka-` «hay X»: ¿valor con fuente o extensión del proyecto?'
+    de:
+      - '#215 (M4) achagua-arte-morfologia-2026-09-22.md §4 C'
+    pregunta: ¿La glosa de `ka-` se queda en «tiene X / que tiene X» y el «hay X» impersonal se marca como extensión del proyecto?
+    opciones:
+      C: 'Revisar la glosa de `ka-`: «tiene X / que tiene X» con apoyo de las tres hermanas; «hay X» impersonal, extensión del proyecto'
+      F: 'Nada de esto ahora'
+    evidencia:
+      - 'Neira y Ribero (#215 §2): `Ca-barruani vyu-na` «estoi rico»; para el «hay» impersonal el achagua usa otras piezas: «Hay mucho calor = Amo ayusamí»; «No hay = Quenia»'
+    recomendacion:
+      origen: '«C como pregunta abierta en el tablero» — toca el ejemplo `ka-juri` del prompt y la decisión d21.5 C'
+    toca: prompt del motor (el ejemplo `ka-juri`) + regla d21.5 C
+    depende_de: []
+
+  - id: dp.1.10
+    tema: el kalinago del lexicón — las 8 voces sin apoyo en Goeje y la glosa de `hiñaru`
+    de:
+      - '#219 (M5) vocabularios-antillanos-2-2026-09-22.md, Opciones B'
+    pregunta: ¿Se curan las 8 voces «kalinago» que Goeje no da y la glosa de `hiñaru` ('persona' → 'mujer')?
+    opciones:
+      B: 'Las 8 a `deuda: sin-procedencia` (o buscarles Breton 1665 directo) y `hiñaru` → ''mujer''. «Si alguna está entre las candidatas de `[Voces de fuera]`, el prompt cambia: se mide antes.»'
+    evidencia:
+      - 'M5: «De las 23 voces kalinago del lexicón, Goeje sostiene 11, emparienta 4 y no da 8 —y esas 8 son casi todas la voz taína o lokono del concepto con la etiqueta cambiada—»'
+      - 'Las 8: `kasabi`, `yuka`, `hamaka`, `ikoa`, `kasaku`, `pira`, `baruwa`, `amourou`'
+      - '`hiñaru`: Goeje la da como ''mujer'' (habla de mujeres), no ''persona'''
+    recomendacion:
+      origen: 'B después de medir `[Voces de fuera]`'
+      recopilador: 'Igual. Medirlo en la misma tanda que dp.1.04, que mueve el mismo bloque.'
+    toca: canon del lexicón; el prompt sólo si alguna es candidata de `[Voces de fuera]`
+    depende_de: [dp.1.04]
+
+  - id: dp.1.11
+    tema: la tanda de etiqueta taína que quedó sin aplicar (lo que db.3 no cubrió)
+    de:
+      - '#198 (T10) taino2-vocabularios-2026-09-22.md, Opciones A/B'
+      - '#219 (M5) vocabularios-antillanos-2-2026-09-22.md, Opción C (`piragua`)'
+      - '#189 (T2) taino-lascasas-pane-brinton-2026-09-21.md D-T2.3 (`taita`)'
+      - '#194 (T9) taino2-apologetica-2026-09-22.md D2 (`yamosa`)'
+      - '#190 (T3) taino-inventario-y-fuentes-2026-09-21.md C4 (`abba` / `hequeti`)'
+    pregunta: ¿Se aplican las re-etiquetas taínas que quedaron fuera de db.3 (`taita`, `piragua`, `maboya`, `bejique`, `yamosa`, `guabina`, `abba`)?
+    opciones:
+      T10_A: 'La tanda de etiqueta (8): `taita` fuera del taíno; `piragua` y `maboya` a `kalinago`; `bejique` con la duda; `cohiba`/`tabako` glosas; `daca` ''yo''; `yamosa` → `yamocá`; `guabina` con la cita de Las Casas'
+      T10_B: 'Sólo lo que tiene tres apoyos: `taita`, `cohiba`/`tabako`, `daca`'
+      M5_C: 'Corregir la etiqueta de T10 sobre `piragua` antes de la tanda A: tiene dos apoyos, no tres'
+      T2_3_taita: '(a) `deuda: sin-procedencia-colonial` y dejarla · (b) degradarla · (c) archivarla'
+      T9_D2_yamosa: '(A) `yamosa` → `yamocá` con NBAE 13 p. 538 · (B) dejarla y anotar · (C) archivarla'
+      T3_C4: '`abba` ''uno'' cede ante `hequeti` (la atestiguada manda, aplicada al taíno)'
+    evidencia:
+      - 'T10: «`piragua` y `maboya` no están entre las 43 candidatas de `[Voces de fuera]`, así que el motor no se entera»'
+      - 'M5: en la imagen de Bachiller p. 389, «Bote, *Piraguas*, **B.**» — Borinquen, no eyeri; «Quedan dos apoyos, no tres»'
+      - 'T2: el único apoyo de `taita` es Brinton p. 13, que cita a «Richardo, diccionario provincial cubano del siglo XIX»'
+      - 'T9 D2: Brinton lee `yamosa`, NBAE 13 p. 538 (verificado en imagen) lee `yamocá`'
+    recomendacion:
+      origen: 'T10: C primero, luego A. M5: C ya. T2.3: (a). T9 D2: (B).'
+      recopilador: >-
+        Ya decidido y aplicado de este paquete: `daca` 'yo' y la glosa de
+        `tabako` (db.3); `cohiba`/`tabako` lo cierra el agente de Zayas (cc.7).
+        Lo que queda casi no llega al prompt (T10 lo midió para `piragua` y
+        `maboya`). Con la orden de cerrar lo investigativo: T2.3 (a) y T9 D2
+        (B) — anotar sin mover —, `piragua` y `maboya` a `kalinago` con M5 C
+        dicho, y lo demás al archivo de deuda.
+    toca: 'canon del lexicón (etiquetas de voces de la esfera). Al prompt, sólo si alguna es candidata de `[Voces de fuera]`: T10 midió que `piragua` y `maboya` no lo son; las demás, a medir'
+    depende_de: ['cc.7 (cohiba/tabako, en curso)']
+
+  - id: dp.1.12
+    tema: los formantes toponímicos `-oa`, `-kiva`, `-bo` que Oliver declara y el canon no tiene
+    de:
+      - '#192 (T4) taino-caquetio-similitudes-2026-09-21.md §6 J'
+    pregunta: ¿Entran `-oa`, `-kiva/-quiva` y `-bo` a las reglas del lexicón como formantes caquetíos?
+    opciones:
+      J: 'Declararlos (cita: Oliver cap. 2 p. 148) — con la reserva de que `-kiva` puede ser el lexema `kiba` ''piedra'' en composición'
+    evidencia:
+      - 'T4 J: Oliver cap. 2 p. 148 lista `-bana`, `-coa/-koa`, `-oa`, `-kiva`, `(e)-bo`, `-wa [gua-]`; «`-oa`, `-kiva` y `-bo` no están en ninguna parte» del canon'
+      - 'T4 J: la glosa de fuente de `jadacaquiva` dice «Quiba en caquetío es pedruzco»'
+    recomendacion:
+      origen: '«sale barato: la cita está y las formas también» — mirarlo con la hipótesis de `kiba` delante'
+      recopilador: 'Después de la base: un sufijo nuevo en `TODAS_LAS_REGLAS` mueve `nucleo_de_token()` como `-bakoa` y `-wa` (dc.2), y hay que medirlo.'
+    toca: 'canon del lexicón (`TODAS_LAS_REGLAS` → `_SUFIJOS_CAQ`): mueve el reconocimiento de núcleos del score; al prompt, si la regla se enseña'
+    depende_de: []
+
+  - id: dp.1.13
+    tema: voces taínas nuevas (registro, `eracra` y las de núcleo)
+    de:
+      - '#194 (T9) taino2-apologetica-2026-09-22.md D4'
+      - '#188 (T1) taino-oviedo-2026-09-21.md B (`eracra`)'
+      - '#189 (T2) taino-lascasas-pane-brinton-2026-09-21.md D-T2.6'
+    pregunta: ¿Entran al lexicón voces taínas nuevas con cita?
+    opciones:
+      T9_A: 'Ninguna de las 17'
+      T9_B: 'Sólo las tres de registro (`Guaoxerí`, `Baharí`, `Matunherí`)'
+      T9_C: 'Todas, con `fuente: taíno` y cita'
+      T1_B1: '`eracra` (la casa «en la lengua de Hayti», Oviedo t. I p. 163) entra como `taíno` cuando esté verificada en imagen'
+      T1_B2: 'Entra ya, con la verificación pendiente anotada'
+      T1_B3: 'Se queda en 6-fusion/ hasta la copia buena'
+      T2_6: 'candidatas sin letra: `nacan` ''medio, centro'', `turey` ''cielo'', `goeiz`/`opia`, `operito` ''muerto'''
+    evidencia:
+      - 'T9 D4: las tres de registro son «una escala de tratamiento de tres grados, atestiguada»; el caquetío tiene la categoría viva con `kudanga`/`kuté` (d21.10)'
+      - '#206 (M3): el t. I de Oviedo está ahora entero en el repo («se acabó el límite de la impresa 154»), así que la p. 163 de `eracra` ya se puede ver'
+    recomendacion:
+      origen: 'T9: B. T1: B1.'
+      recopilador: 'Con la orden de cerrar: ninguna antes de la base (T9 A); B y B1 quedan para la era 3, donde la esfera se abre.'
+    toca: canon del lexicón; puede llegar al prompt si alguna entra como candidata de `[Voces de fuera]`
+    depende_de: [dp.1.04]
+
+# ═════════════════════════════════════════════════════════════════════════
+# GRUPO 2 — CANON DEL MUNDO (3-mundo/, geografía, topónimos, polities, corpus)
+# ═════════════════════════════════════════════════════════════════════════
+grupo_2_mundo:
+
+  - id: dp.2.01
+    tema: el contacto precolombino con las Antillas Mayores — ¿qué capa?
+    de:
+      - 'dc.4 `etiqueta_propuesta_pendiente_de_miguel` (decisiones_campanas_2026-09-21.yaml)'
+      - '#199 (T7) taino2-etnohistoria-contacto-2026-09-22.md §6'
+      - '#212 (M2) cronicas-contacto-costa-occidental-2026-09-22.md §3 (Metales)'
+      - '#203 (M8) arqueologia-insular-falcon-2026-09-22.md §3'
+      - '#196 (T8) taino2-evidencia-material-2026-09-22.md'
+    pregunta: ¿La tercera afirmación de dc.4 («contacto precolombino con las Antillas Mayores») sube, se queda o se parte?
+    opciones:
+      T7_A: 'Sube a `reconstruido`'
+      T7_B: 'Se queda en `hipotético`, con el expediente escrito (las citas clasificadas y las negativas medidas)'
+      T7_C: 'Se parte: C1 «el guanín circulaba entre Tierra Firme y las Antillas Mayores antes de 1492» (reconstruido); C2 «la esfera caquetía participaba en ese circuito» (hipotético)'
+      T7_D: 'Baja (descartada por su propio agente)'
+      T7_E: 'Se cambia por una afirmación más fuerte: «el contacto, si lo hubo, fue por CADENA de tramos cortos, no por travesía» — hipótesis con predicciones y falsable'
+    evidencia:
+      - 'dc.4: costa ↔ ABC con parentesco = atestiguado; costa/islas ↔ La Española 1513-1526 = atestiguado, colonial; contacto precolombino con las Antillas Mayores = hipotético, «Miguel decide si sube»'
+      - 'M2 (Navarrete pp. 518-519): la cédula de 1501 — los españoles sacaban guanines «de las islas de la Paria é de Caquibacoa» y «los han traído é traen á vender á los dichos indios de la dicha isla Española»: «todo guanín antillano posterior a 1499 deja de servir como prueba de contacto precolombino»'
+      - 'M8 (Casale 2024, fig. 1): une cada isla con la costa y «ninguna isla con otra ni con las Antillas»'
+      - 'T8: «Sí hubo contacto, y no fue con el taíno»: el vecino con ADN es de las Antillas Menores'
+    recomendacion:
+      origen: 'T7: «C + E»; «Si prefieres una sola afirmación y ninguna reformulación, entonces B».'
+      recopilador: 'C + E. Lo que trajo la tercera minería (cédula de 1501, Casale) va en la misma dirección que E: tramos cortos, sin travesía documentada.'
+    toca: canon del mundo (corpus y `6-fusion/taino_en_la_esfera_2026-09-21.yaml`); no el prompt
+    depende_de: []
+
+  - id: dp.2.02
+    tema: la polity de los llanos — misma lengua con variación, y los caquetíos del Casanare
+    de:
+      - '#210 (Federmann) federmann-costa-2026-09-23.md §3'
+      - '#209 (Pérez de Tolosa) habla-llanos-coro-perez-de-tolosa-2026-09-23.md'
+      - '#217 (Rivero) rivero-caquetios-casanare-2026-09-23.md §2 Decisión A'
+      - '#218 (Gumilla) gumilla-cacatia-y-achagua-2026-09-23.md pregunta 1'
+      - '#207 (M7) coro-colonial-2026-09-22.md §3 (cruce)'
+    pregunta: ¿Cómo entra al canon de polities que la costa y los llanos hablaban la misma lengua con variación, y que había caquetíos en el Casanare?
+    opciones:
+      Federmann_A: 'Al corpus (geografía política y lengua) como hecho atestiguado, contacto-temprano, con las dos citas, sin decir cómo era la lengua'
+      Federmann_B: 'Como nota en `3-mundo/polities-caquetias.md`'
+      Federmann_C: 'Esperar a Gumilla y Rivero (ya entregados: #217, #218)'
+      Tolosa_A: 'Sólo al canon de polities: rasgo de lengua y de economía a `llanos`, con cita (p. 234, de segunda mano); el motor no se toca'
+      Tolosa_B: 'A + nota de diseño en `DISENO_KOINE.md` (una segunda polity llegaría con su variedad)'
+      Tolosa_C: 'Modelar variedades en `curiana_social` (no recomendada)'
+      Rivero_a: 'No tocar `curiana_polities.py`; anotar que el «hasta Casanare… Barraguán» de `llanos` descansa en Rivero vía Jahn y es colonial'
+      Rivero_b: 'Añadir a `llanos` una nota con cita directa a `rivero-1883` (pp. 29, 54, 144, 151, 201, 392), sin continuidad política probada'
+      Rivero_c: 'Abrir una sexta polity `casanare`'
+      Gumilla_A: 'Anotar «Cacatia» en la ficha y en el mapa de dispersión del etnónimo (colonial, polity de los Llanos)'
+      Gumilla_B: 'Buscar voces de esos caquetíos de Casanare'
+      Gumilla_C: 'Nada'
+    evidencia:
+      - 'Pérez de Tolosa 1546, en Oviedo y Baños ed. Fernández Duro t. II p. 234 (verificado en imagen): «son los indios de nación Caquetios, aunque algo difieren en la habla á los de Coro»'
+      - 'Federmann 1557 [46]-[49]: un caquetío de Coro sirve de intérprete en Barquisimeto'
+      - 'Rivero 1883 p. 151: «la lengua *Caquetá* de su pueblo de Pauto» (la impresión, en cursiva); p. 54: «Cacatíos de nación»'
+      - 'Gumilla 1791 t. II p. 55 (verificado en imagen): «Nacion Cacatia, Christiana ya»'
+    recomendacion:
+      origen: 'Federmann: A. Tolosa: A (y B cuando se diseñe el contacto entre polities). Rivero: (b). Gumilla: A.'
+      recopilador: 'Las cuatro recomendaciones son compatibles y se aplican juntas: un solo hecho con cuatro testigos. Ninguna toca el motor.'
+    toca: canon del mundo (`3-mundo/polities-caquetias.md`, corpus de geografía política); `curiana_polities.py` sólo como nota
+    depende_de: []
+
+  - id: dp.2.03
+    tema: el campo `epoca` en `3-mundo/etnias.yaml`
+    de:
+      - '#192 (T5) taino-en-la-esfera-2026-09-21.md §5 («Un problema de esquema»)'
+      - '#196 (T8) taino2-evidencia-material-2026-09-22.md opción D'
+    pregunta: ¿`etnias.yaml` gana un campo `epoca` obligatorio para los vecinos de la polity costera?
+    opciones:
+      T8_D: 'Resolver primero el campo `epoca` (vocabulario cerrado: `precontacto` · `contacto-temprano` · `colonial` · `varias`), exigido cuando `polity_caquetia: costera`'
+    evidencia:
+      - 'T5: «`etnias.yaml` no tiene campo `epoca`, y el 9.º guardián no lo valida»; «Toca `curiana_sim/compilar_etnias.py`, así que es decisión tuya»'
+    recomendacion:
+      origen: 'T8: «B ahora mismo, C en cuanto exista `epoca`»'
+      recopilador: 'Sí, antes de dp.2.04: sin él, cada vecino nuevo entra sin época.'
+    toca: canon del mundo + `curiana_sim/compilar_etnias.py` (validador, no prompt)
+    depende_de: []
+
+  - id: dp.2.04
+    tema: los vecinos que faltan en `etnias.yaml`
+    de:
+      - '#213 (M1) oliver1989-restante-2026-09-22.md §1.4 y §4 B'
+      - '#192 (T5) taino-en-la-esfera-2026-09-21.md §6 D (`etnia-009`)'
+      - '#196 (T8) taino2-evidencia-material-2026-09-22.md opciones B, C'
+    pregunta: ¿Entran los vecinos con página de Oliver, el taíno (`etnia-009`) y los arahuacos de las Antillas Menores (`etnia-010`)?
+    opciones:
+      M1_B: '`etnias.yaml`: los grupos que faltan (coanao, wanebucán, tairo, xiriguana, haruacana, jirajara, ayomán, gayón, xagua, camagos), con el jirajara como vecino de la costera (`hipotetico` por la boda) y `etnia-003` degradada a familia `desconocida`'
+      T5_D: 'Entrar `etnia-009` (taíno, contacto ninguno) y los dos hechos de `geografia_politica`'
+      T8_A: 'No tocar nada y guardar el hallazgo en 6-fusion/'
+      T8_B: 'Sólo la corrección a la campaña 1 (`gen-03` y el aviso de `arq-01`)'
+      T8_C: 'B + `etnia-010` «arahuacos de las Antillas Menores», atestiguado, contacto poblacional hacia las ABC'
+    evidencia:
+      - 'M1: el jirajara de la Sierra de San Luis está «three leagues from the city of Coro» y abastecía de maíz a Coro entre 1527 y 1530'
+      - 'M1: `etnia-003` ciparicoto es arahuaca en el canon; Oliver, «clearly different from the Caquetío, and perhaps related to Carib» (p. 251)'
+    recomendacion:
+      origen: 'M1: A + B ahora. T5: D. T8: B ahora, C cuando exista `epoca`.'
+      recopilador: 'Igual, en ese orden: `epoca` primero (dp.2.03).'
+    toca: canon del mundo (`3-mundo/etnias.yaml`)
+    depende_de: [dp.2.03]
+
+  - id: dp.2.05
+    tema: las Curianas (oriental, occidental y la de La Ramada)
+    de:
+      - '#212 (M2) cronicas-contacto-costa-occidental-2026-09-22.md §2 y §6 A'
+      - '#207 (M7) coro-colonial-2026-09-22.md §0.4 y D-f.1'
+      - '#214 (HSAI) hsai_caquetios_2026-09-23.yaml §0 (Kirchhoff pone la Curiana en la costa oriental, k-03, #33)'
+    pregunta: ¿Se registra en el canon que hay tres Curianas distintas y se corrige toponimo-111?
+    opciones:
+      M2_A: 'Registrar la separación de las Curianas (oriental / occidental, más la tercera de #207) donde el canon la necesita. Toca #33'
+      M7_D_f_1: 'toponimo-111: el «Coria-na» de Oliver está en La Ramada, no en Punta Espada'
+    evidencia:
+      - 'M2: la Curiana de Niño y Guerra está «pasado Cumaná y Manacapana» (Anglería vol. 1 p. 303, verificado en imagen); la occidental es «una tierra de riego que los indios llamaban Curiana y él nombró Valfermoso» (Navarrete p. 32)'
+      - 'M7: el único «Coriana» de Castellanos es una aldea de La Ramada, junto a «Paraguanil» (p. 264)'
+    recomendacion:
+      origen: 'M2: C (verificar) primero, luego A. M7: la curación de toponimo-111.'
+    toca: 'canon del mundo (topónimos, #33)'
+    depende_de: ['la opción C de dp.2.06 (verificar Navarrete en imagen)']
+
+  - id: dp.2.06
+    tema: los hechos de contacto temprano de las crónicas (1499-1502)
+    de:
+      - '#212 (M2) cronicas-contacto-costa-occidental-2026-09-22.md §6 B-E'
+    pregunta: ¿Qué entra al corpus de lo que las crónicas dicen de la costa occidental en 1499-1502?
+    opciones:
+      B: 'Al corpus, con `epoca: contacto-temprano`: el rescate en guanines (m2.m1), la cédula de 1501 (m2.m2) y el palafito de «veinte» casas (m2.c1, que corrige `geografia_politica-006` y nodo-008)'
+      C: 'Verificar en imagen las pp. 32, 86-89, 518 y 544 de Navarrete: «riego» y las grafías de Coquibacoa'
+      D: 'Isabel, intérprete indígena de 1502, como hecho de contacto y como corrección de t7.l4'
+      E: 'La isla de las hierbas, en espera hasta cotejar la arqueología de las ABC'
+    evidencia:
+      - 'M2: «veinte grandes casas, con corta diferencia» (Lettera, Navarrete p. 219); el canon dice 40'
+      - 'M2: la instrucción de Hojeda del 20 de mayo de 1502 pone a Isabel «costa á costa hablando á los indios» (doc. XX, pp. 107-108)'
+    recomendacion:
+      origen: '«C primero, luego A + B; D como nota; E en espera.»'
+    toca: canon del mundo (corpus, `geografia_politica-006`, nodo-008)
+    depende_de: []
+
+  - id: dp.2.07
+    tema: '`creencia-013` — la cita de Ampíes, y «como Dios» o «como digo»'
+    de:
+      - '#209 (Pérez de Tolosa) ampies-como-dios-o-como-digo-2026-09-23.md'
+      - '#214 (HSAI) cuerpo del PR, «Para Miguel» (a)'
+    pregunta: ¿Qué cita primaria lleva `creencia-013` (Manaure y los temporales), y qué lectura de la carta de Ampíes vale?
+    opciones:
+      Tolosa_A: 'Citar las dos lecturas y no decidir: Fernández Duro p. 212 y el folio 14 vía Velasco, con la variante en `notas`; nada se apoya en «como Dios»'
+      Tolosa_B: 'Ver el manuscrito: pedir la imagen del folio 14 al AGI (PARES) o a Velasco'
+      Tolosa_C: 'Seguir a Velasco («como digo») porque leyó el manuscrito (no recomendada sin ver la imagen)'
+      HSAI_a: 'Poner la referencia de `creencia-013`: Ampíes, en Oviedo y Baños 1885 t. II p. 212, y Aguado vía Arcaya p. 115; crear una ficha para la carta de Ampíes'
+    evidencia:
+      - 'Fernández Duro 1885 t. II p. 212 (verificado en imagen): «se hace adorar como Dios, dando á entender á los indios que él da los temporales»'
+      - 'Velasco 2015, «Folio 14»: «se haze adorar como digo dando a entender a los indios q el da los temporales»'
+      - 'Arcaya 1920 p. 161 «se salta la frase»'
+    recomendacion:
+      origen: 'Tolosa: A ahora, B cuando se pueda. HSAI: (a).'
+      recopilador: 'Tolosa A + HSAI a son el mismo gesto. B se puede hacer sin comprar nada (PARES).'
+    toca: canon del mundo (corpus `creencia-013`; fichas de 4-fuentes/)
+    depende_de: []
+
+  - id: dp.2.08
+    tema: el lote de Esteves — cómo entra
+    de:
+      - '#216 (M6) toponimos-esteves-lote-2026-09-22.md §5 pregunta 2'
+    pregunta: ¿Cómo entra al canon la cola de Esteves leída entera?
+    opciones:
+      A: 'Por tandas: primero las 28 A y B más las correcciones del §2; después las C; después los descartes'
+      B: 'Todo de una vez'
+      C: 'Sólo las correcciones; el lote se queda en 6-fusion/'
+    evidencia:
+      - 'M6: «A 14 · B 14 · C 55 · descartado 46», «82 de las 83 vistas en la imagen»'
+      - 'Correcciones del §2: Carirubana, Acaboa y Aguaque tienen glosa en Esteves; el topónimo «perdido» entre Tumatey y Tutubacoa no existe'
+    recomendacion:
+      origen: '2-A'
+    toca: 'canon de topónimos (`2-lengua/toponimos.yaml`). Su agente dice que las A y B «son las que el motor puede usar»; no comprobé que ninguna llegue hoy al prompt: en los `curiana_*.py` sólo `curiana_lexicon.py` nombra los topónimos, y en comentarios'
+    depende_de: ['la re-medición del canon con la regla (E) = Esteves que ya ordenó cc.4']
+
+  - id: dp.2.09
+    tema: el mapa vivo — cuatro identificaciones y la forma viva en el canon
+    de:
+      - '#216 (M6) toponimos-esteves-lote-2026-09-22.md §3, §5 preguntas 3 y 4'
+    pregunta: ¿Qué se hace con las cuatro identificaciones Esteves ↔ OSM y con la forma viva de cada topónimo?
+    opciones:
+      P3_A: 'Cada una como lectura `hipotesis` en su entrada del canon (toponimo-132 Cumairebo/Curaidebo, 138 La Miraba/Niraba, 135 Tabe/Jabe, 176 Coduto)'
+      P3_B: 'Fusionar las que Miguel reconozca sobre el terreno'
+      P3_C: 'Dejarlas en la propuesta'
+      P4_campo: 'El canon guarda la forma viva con su coordenada en un campo propio y `barrer_mapa.py` lo lee (cambio de `curiana_sim/`)'
+      P4_nada: 'Dejar el informe del mapa como está y leerlo con la advertencia'
+    evidencia:
+      - 'M6: «`barrer_mapa.py --lote` sigue diciendo que Paraguaná tiene 8 nombres «nuevos»: los ocho están en el canon desde el lote 7»'
+    recomendacion:
+      origen: 'P3: A. P4: el campo propio.'
+      recopilador: 'P3 A. P3 B es la única que pide a Miguel algo que sólo él sabe: si reconoce los sitios.'
+    toca: canon del mundo (topónimos); P4 toca `curiana_sim/barrer_mapa.py`, no el motor
+    depende_de: [dp.2.08]
+
+  - id: dp.2.10
+    tema: la cola nueva de topónimos que traen otras parcelas
+    de:
+      - '#207 (M7) coro-colonial-2026-09-22.md §2 D-e'
+      - '#188 (T1) taino-oviedo-2026-09-21.md E'
+      - '#216 (M6) toponimos-esteves-lote-2026-09-22.md §7 (cola nueva)'
+    pregunta: ¿Entran a la cola de `campana-toponimos` Sarasaragua, Norupara, Buinare y la atestación de 1548 de Paraguaná?
+    opciones:
+      M7_D_e: 'Sarasaragua (Castellanos p. 201, un `-gua` caquetío con fecha), Norupara (González Batista 2002 p. 162), Buinare (Bonaire, 1589) → cola'
+      T1_E1: '`Paraguana` (Oviedo t. I p. 205) a la campaña de topónimos; `comoho` a `ecologia.yaml`; `hado` congelado hasta verificar'
+      T1_E2: 'Todo congelado hasta tener la copia con imagen (ya la hay: #206)'
+    evidencia:
+      - 'Oviedo t. I p. 205 (T1): «que los indios llaman á aquella provinçia Paraguana», atestación de 1548'
+      - 'M6 §7: «Norupara (cero en el texto de Castellanos del repo)»; Sarasaragua es de la ruta de Federmann, «no de Paraguaná»'
+      - '#206 (M3): `comoho` «no tiene dos atestaciones independientes»'
+    recomendacion:
+      origen: 'M7: a la cola. T1: E1.'
+      recopilador: 'E1 con la reserva de M3 sobre `comoho` (una sola cadena, el obispo Bastidas).'
+    toca: canon del mundo (topónimos, ecología)
+    depende_de: []
+
+  - id: dp.2.11
+    tema: Miraca en 1530 (nodo-031)
+    de:
+      - '#210 (Federmann) federmann-costa-2026-09-23.md §2'
+      - '#206 (M3) oviedo-restante-2026-09-22.md §0.4 y §C (Miraca, t. IV p. 533)'
+    pregunta: ¿Se suma Federmann 1530 al principio de la cadena de nodo-031?
+    opciones:
+      A: 'Sumar federmann-1916 p. 20 a `procedencia` y 1530 al principio de la cadena; `precontacto` sigue `desconocido`'
+      B: 'Dejarlo en la propuesta hasta que se revise nodo-031 entero'
+    evidencia:
+      - 'Federmann llega a «einen Puebles Miraca» en enero de 1530 (1557 [13], verificado en imagen); la cadena de nodo-031 empieza hoy en Bastidas 1538'
+      - 'M3: Miraca, «segunda atestación independiente» en Oviedo t. IV p. 533'
+    recomendacion:
+      origen: 'Federmann: A.'
+      recopilador: 'A, con la de Oviedo t. IV p. 533 en el mismo gesto.'
+    toca: canon del mundo (`asentamientos.yaml`)
+    depende_de: []
+
+  - id: dp.2.12
+    tema: Coro, nombre de río
+    de:
+      - '#207 (M7) coro-colonial-2026-09-22.md §2 D-c'
+    pregunta: ¿Se añade a toponimo-111 que Coro nombró primero un río?
+    opciones:
+      si: 'Añadir como `glosa-fuente` de referente a toponimo-111'
+      no: 'Dejarlo en la propuesta'
+    evidencia:
+      - 'Ballesteros 1550 y Castellanos 1589, independientes: la ciudad tomó el nombre del río Coro, «que siempre se llamó desta manera»'
+    recomendacion:
+      origen: 'Sí.'
+    toca: canon del mundo (topónimos)
+    depende_de: []
+
+  - id: dp.2.13
+    tema: las propuestas a `ecologia.yaml` de las tres parcelas de fauna
+    de:
+      - '#211 (FA1) fauna-paraguana-tierra-2026-09-22.md D'
+      - '#208 (FA3) fauna_paraguana_mar_2026-09-22.yaml `propuestas_ecologia` (sin letra)'
+      - '#205 (FA2) fauna_paraguana_aves_2026-09-22.yaml `propuestas_ecologia` (sin letra)'
+      - '#208 (FA3) fauna-paraguana-mar-2026-09-22.md §4 (c) (el cunaro en ecologia-015)'
+    pregunta: ¿Se fusionan a `ecologia.yaml` las propuestas de las tres parcelas de fauna?
+    opciones:
+      FA1_D1: 'Fusionarlas (las siete de tierra: tarántula, la fauna de la provincia en Oviedo, la miel de abejas sin aguijón en calabazos, la langosta `tara`, los endemismos del cerro, el cardón y su murciélago, las cabras)'
+      FA1_D2: 'Sólo las de Oviedo y la tarántula'
+      FA1_D3: 'Ninguna todavía'
+      FA3_c: '(A) dejar la identificación del cunaro en disputa en el lexicón y en ecologia-015 · (B) fijar el mero guasa · (C) nada'
+    evidencia:
+      - 'Oviedo t. II pp. 330-331 (FA1, verificado en imagen): perros «mudos, que no ladran», abejas criadas en calabazos, la langosta `tara` comida asada'
+      - 'FA1: la tarántula azul es «Endémica de Venezuela, no de la península» (Sherwood y Gianni-Zurita 2023, pp. 38-41)'
+    recomendacion:
+      origen: 'FA1: D1. FA3 (c): A.'
+      recopilador: 'D1 para las tres parcelas: son hechos de fuente con su capa, y db.4 pedía un hecho de ecología con fuente para la tarántula antes de escribir su referente.'
+    toca: canon del mundo (`3-mundo/corpus/ecologia.yaml`); `[Tu tierra]` sólo si algún hecho entra a la escena
+    depende_de: []
+
+  - id: dp.2.14
+    tema: las aldeas de Aruba en `asentamientos.yaml`
+    de:
+      - '#203 (M8) arqueologia-insular-falcon-2026-09-22.md D2'
+    pregunta: ¿Entran Tanki Flip, Ser'i Noka y Savaneta a `asentamientos.yaml`?
+    opciones:
+      A: 'Sí, las tres grandes, con lo que da Casale y las discrepancias declaradas'
+      B: 'Todavía no: esperar a Dijkhoff 1997 y Versteeg y Rostain 1997, que son la fuente primaria'
+    evidencia:
+      - 'M8: Tanki Flip «más de 100 personas, trece casas, empalizada, enterramientos entre urnas»'
+    recomendacion:
+      origen: 'B.'
+    toca: canon del mundo (`asentamientos.yaml`)
+    depende_de: []
+
+  - id: dp.2.15
+    tema: '`parentesco-021` (`tamude` ← `mude` «primo»)'
+    de:
+      - '#217 (Rivero) rivero-caquetios-casanare-2026-09-23.md §3 Decisión B'
+    pregunta: ¿Se parte `parentesco-021` en lo que Rivero atestigua y lo que infiere Jahn?
+    opciones:
+      a: 'Partir la entrada: el etnónimo y la voz *mude* quedan atestiguados (Rivero pp. 29 y 420); la etimología y el «como primos» pasan a una entrada `hipotetico` que cita a Jahn'
+      b: 'Bajar la entrada entera a `hipotetico`'
+      c: 'Dejarla como está'
+    evidencia:
+      - 'Rivero pp. 419-420: el saludo al huésped, «saludasen á los *primos*, que así se llaman en tales casos aunque nunca lo sean»; Rivero no une *Tamudes* con *mude*'
+    recomendacion:
+      origen: '(a).'
+    toca: canon del mundo (corpus de parentesco)
+    depende_de: []
+
+  - id: dp.2.16
+    tema: '`parentesco-012` («daitiao» cognado del taíno)'
+    de:
+      - '#197 (T11) taino2-prueba-linguistica-2026-09-22.md §7 J'
+    pregunta: ¿`parentesco-012` lleva la reserva de que el test no confirma el cognado y que la afirmación tiene una sola fuente?
+    opciones:
+      J: 'Si se queda, que se quede con la reserva (la misma decisión que la E de T11, en el corpus en vez de en el lexicón)'
+    evidencia:
+      - 'T11: el test da letra C para `daitiao` («no lo confirma»); db.2 pasó `datihao` al taíno'
+    recomendacion:
+      origen: 'J (no la da como opcional).'
+    toca: canon del mundo (corpus de parentesco)
+    depende_de: []
+
+  - id: dp.2.17
+    tema: la costa oriental de Federmann (Xaragua, Martinico, Atycares)
+    de:
+      - '#210 (Federmann) federmann-costa-2026-09-23.md §5'
+    pregunta: ¿La costa caquetía «aliada» entre el Yaracuy y Coro es la Kaketiana o otra polity?
+    opciones:
+      A: 'Es de la esfera: candidatos a nodo con `atestacion: colonial` y región nueva `falcon-oriental`'
+      B: 'Es otra polity costera: `polity: costa-oriental`, fuera del mapa de la era 2'
+    evidencia:
+      - 'Federmann: 65-80 Meilen de costa caquetía «aliada» desde la boca del Yaracuy hasta Coro'
+    recomendacion:
+      origen: 'B «por ahora».'
+    toca: canon del mundo (polities, nodos)
+    depende_de: []
+
+# ═════════════════════════════════════════════════════════════════════════
+# GRUPO 3 — SÓLO DOCUMENTACIÓN, NOTAS, PROCEDENCIA, FICHAS O DEUDA
+#           (no mueven el prompt ni el score)
+# ═════════════════════════════════════════════════════════════════════════
+grupo_3_documentacion_y_deuda:
+
+  - id: dp.3.01
+    tema: la Relación de Nueva Segovia (Barquisimeto) 1579 — cómo conseguirla
+    de:
+      - '#204 (F1) fuentes-que-faltan-2026-09-22.md B'
+      - '#213 (M1) oliver1989-restante-2026-09-22.md §4 D'
+    pregunta: ¿Por qué vía se consigue la Relación de 1579, ahora que se sabe qué trae el libro de Sindéresis?
+    opciones:
+      B1: 'Comprar *Relaciones y descripciones sobre Venezuela y la Nueva Granada, siglo XVI* (Sindéresis 2023), «después de confirmar el índice»'
+      B2: 'Arellano Moreno 1964 en préstamo'
+      B3: 'Buscar el manuscrito del AGI en PARES y transcribirlo por visión'
+    evidencia:
+      - 'Índice del libro de Sindéresis (muestra de la editorial, leída hoy): diecisiete documentos sobre Venezuela, 1520-1600; NINGUNO es la Relación de Nueva Segovia de 1579. El libro se presenta como manuscritos inéditos, y la de 1579 ya la publicó Arellano Moreno en 1964'
+      - 'El mismo libro sí trae, como doc. 3, la «Relación de la gobernación de Venezuela y provincia de Maracaibo hecha por el licenciado Tolosa. Coro, 8 de julio de 1548» (p. 97): otra transcripción del texto que #209 leyó en Fernández Duro'
+      - 'M1: la Relación de 1579 es la fuente de varias voces de la A-9 (`kama` entre ellas); #214: también del dato axagua del Handbook'
+    recomendacion:
+      origen: '«B1, si el índice la trae; si no, B3.»'
+      recopilador: 'El índice no la trae: B1 cae. B2 (comprar o pedir Arellano Moreno 1964) o B3. Detalle en `datos_cc11`.'
+    toca: sólo fuentes (decide la época y la polity de voces de dp.1.08)
+    ya_decidida_en: 'cc.11 pidió la referencia para comprarla («no es prioritario»); la vía no estaba elegida'
+    depende_de: []
+
+  - id: dp.3.02
+    tema: Angulo Molina — de dónde sale el verbo caquetío
+    de:
+      - '#204 (F1) fuentes-que-faltan-2026-09-22.md A'
+      - 'dc.3 `de_paso_sin_decidir`: «Angulo Molina, de quien salen los 19 verbos de acción del glosario, no está en el repo»'
+    pregunta: Además de escribirle a Zavala (ya decidido), ¿se busca Hernández Baño 1984?
+    opciones:
+      A1: 'Escribirle a Miguel Enrique Zavala Reyes y preguntar de qué obra sacó a AM (YA DECIDIDA: cc.11)'
+      A2: 'Conseguir Hernández Baño 1984, *Los Caquetíos de Falcón* (INCUDEF, Coro), por donde probablemente le llegó la lista a Zavala'
+      A3: 'Dejarlo como está: los diecinueve verbos siguen citando a Zavala con la reserva «de segunda mano»'
+    evidencia:
+      - 'F1: «Zavala no lo pone en su bibliografía, y tampoco a Esteves, Alvarado, Arellano Moreno ni Hill Peña»'
+      - 'F1: «Hernández Baño 1984 […] Zavala abre su glosario citándolo»; y HB es la sigla de la única fuente de `korie` (dp.1.06)'
+    recomendacion:
+      origen: 'A1.'
+      recopilador: 'A1 (ya en marcha) + A2 en paralelo: Hernández Baño resuelve también `korie`.'
+    toca: sólo fuentes
+    ya_decidida_en: 'cc.11 (A1); la vía de contacto está en `datos_cc11`'
+    depende_de: []
+
+  - id: dp.3.03
+    tema: la procedencia de las voces taínas del lexicón
+    de:
+      - '#188 (T1) taino-oviedo-2026-09-21.md A'
+      - '#189 (T2) taino-lascasas-pane-brinton-2026-09-21.md D-T2.1'
+      - '#190 (T3) taino-inventario-y-fuentes-2026-09-21.md A y B'
+      - '#198 (T10) taino2-vocabularios-2026-09-22.md C'
+    pregunta: ¿Se cuelgan las citas a las voces taínas que hoy no citan a nadie, y cuáles?
+    opciones:
+      T1_A1: 'Sólo las verificadas en imagen · A2: las 30, marcando las de OCR · A3: nada hasta la copia con imagen'
+      T2_1: '(a) las 36 · (b) sólo las 25 primarias · (c) nada hasta que cierren las otras parcelas'
+      T3_A: 'A1 declarar `deuda: sin-procedencia` en las 42 sin fuente · A2 A1 + la cita de Alvarado 1921 a las 14 citables · A3 A2 + archivar las que no se dijeron nunca (mueve `FORMAS_DE_PLANTILLA`)'
+      T3_B: 'B1 borrar «Brinton 1871» de `casabe`, `cohiba`, `higuana`, `tuna` · B2 B1 + glosas (aplicado en db.3 salvo `areito`) · B3 esperar'
+      T10_C: 'Usar la lista maestra como fuente de `procedencia.obra` para las 41 claves que ya tienen cronista'
+    evidencia:
+      - 'T10: «las 41 citas» y «hoy esas 41 no citan a nadie»'
+      - '#206 (M3): el t. I de Oviedo está entero en el repo, así que T1 A2 ya se puede verificar página a página'
+    recomendacion:
+      origen: 'T1: A1. T2: (b). T3: A2 y B2. T10: C primero.'
+      recopilador: 'T10 C engloba las otras: una sola pasada con la lista maestra (que ya separa primaria y secundaria). T3 A3 NO: es la única que movería el prompt.'
+    toca: canon del lexicón, sólo `procedencia` y `notas` (T3 A3 sí movería el prompt)
+    depende_de: []
+
+  - id: dp.3.04
+    tema: el test cognado/préstamo y los sets de `cognados.yaml`
+    de:
+      - '#197 (T11) taino2-prueba-linguistica-2026-09-22.md §7 A-C'
+      - '#192 (T4) taino-caquetio-similitudes-2026-09-21.md §6 G'
+    pregunta: ¿El test de T11 se aplica a `cognados.yaml` y se retiran los 8 sets malos?
+    opciones:
+      T11_A: 'El test se queda como instrumento de campaña en 6-fusion/'
+      T11_B: 'Se aplica a `cognados.yaml` entero y cada set recibe su letra'
+      T11_C: 'Al motor como capa del score (descartada por su agente)'
+      T4_G: 'Los 8 sets malos (4 «el lado caquetío no es caquetío», 2 etnónimos circulares, 2 «misma palabra dos veces»): retirarlos o darles cita'
+    evidencia:
+      - 'T11: el control del test «decide poco»: 0 de 10 casos conocidos'
+    recomendacion:
+      origen: 'T11: (A). T4: sin recomendación entre las dos salidas de G.'
+      recopilador: 'T11 A; T4 G: retirarlos (no dicen nada y hoy inflan el recuento).'
+    toca: datos de lengua (`2-lengua/cognados.yaml`), no el motor
+    depende_de: []
+
+  - id: dp.3.05
+    tema: '`díao` (Coro) ~ `tiao` (Apure) y el encargo de Carvajal p. 317'
+    de:
+      - '#197 (T11) taino2-prueba-linguistica-2026-09-22.md §7 G y H'
+    pregunta: ¿Se anota el contraste /d-/ ~ /t-/ dentro del caquetío y se pide Carvajal p. 317?
+    opciones:
+      G: 'Anotarlo como pregunta abierta sobre C1 y D11, con Arcaya p. 48 y Carvajal p. 317, sin tocar nada'
+      H: 'Además, pedir la p. 317 de Carvajal (Oviedo t. II ya está en el repo desde T6)'
+    evidencia:
+      - 'T11: «`/d-/` es el pilar de la tesis lokonoide»'
+    recomendacion:
+      origen: 'G + H: «(H) es lo único que mueve la aguja».'
+      recopilador: 'G ya, porque pesa en dp.1.01/dp.1.02; H sin prisa.'
+    toca: sólo documentación (`2-lengua/morfologia.md`)
+    depende_de: []
+
+  - id: dp.3.06
+    tema: el achagua en `morfologia.md`, la cita de `ka-`/`ma-`, la calibración de «león» y el maipure
+    de:
+      - '#215 (M4) achagua-arte-morfologia-2026-09-22.md §4 A, B, E, G, H'
+    pregunta: ¿Se escribe el achagua como tercera comparanda en la morfología, sin tocar el motor?
+    opciones:
+      A: 'Escribirlo en `2-lengua/morfologia.md` §5, §6, §7, §10 y §11'
+      B: 'Dar a `ka-`/`ma-` la cita del achagua en `REGLAS_ATRIBUTIVAS` («Cambia texto del módulo, no el prompt ni el score; medir antes»)'
+      E: 'Pasar «león» de `no-esta` a `difiere` (arte p. 19) en el YAML del vocabulario y regenerar su módulo'
+      G: 'Anotar en `morfologia.md` §1 que el maipure de Gilij da `pìa` «tú»'
+      H: 'Minar el cap. X de Gilij (gramática maipure, pp. 185-190), campaña corta aparte'
+    evidencia:
+      - '#215: «León», la única `no-esta` de las 34, está en el arte: `Nerrianarre` (p. 19)'
+    recomendacion:
+      origen: 'A + B + E + G; H como campaña corta.'
+      recopilador: 'A + E + G ya (documentación). B y H, después de la base. G alimenta dp.1.01.'
+    toca: documentación; B toca texto de un módulo del motor, no el prompt
+    depende_de: []
+
+  - id: dp.3.07
+    tema: Gumilla — las voces achaguas y el préstamo por comercio
+    de:
+      - '#218 (Gumilla) gumilla-cacatia-y-achagua-2026-09-23.md preguntas 2 y 3'
+    pregunta: ¿Entran las 14 voces achaguas de Gumilla como notas de Neira, y el pasaje del préstamo por comercio al método?
+    opciones:
+      P2_A: 'Añadirlas como `notas` de las entradas de Neira que corroboran, y *Aycubaverrenais*/*Univerrenais* como apoyo a los linajes con nombre (se corrige el YAML de Neira y se regenera)'
+      P2_B: 'Nada al canon: quedan en 6-fusion/ como calibración'
+      P3_A: 'Citar Gumilla II 32 en `2-lengua/metodo-comparativo.md` como antecedente'
+      P3_B: 'Dejarlo en la propuesta'
+    evidencia:
+      - 'Gumilla: «Diez de catorce coinciden con Neira y Ribero»; «Gumilla y Neira salen del mismo medio jesuita: no son dos atestaciones ciegas»'
+    recomendacion:
+      origen: 'P2: A. P3: A.'
+    toca: documentación (`notas` del vocabulario achagua; `metodo-comparativo.md`)
+    depende_de: []
+
+  - id: dp.3.08
+    tema: las citas kalinago de Goeje
+    de:
+      - '#219 (M5) vocabularios-antillanos-2-2026-09-22.md A'
+    pregunta: '¿Se ponen `procedencia.obra` = `goeje-1939` y el registro (hombres/mujeres) a las 11 voces con apoyo?'
+    opciones:
+      A: 'Citas y registro en `notas`; fundir `kalinagu`/`kalínagu`'
+    evidencia:
+      - 'M5: `kati` ''luna'', `marisi`, `hiñaru` son de mujeres; `barana`, `Kalinago`, de hombres'
+    recomendacion:
+      origen: 'A «ya».'
+    toca: canon del lexicón, sólo `procedencia` y `notas`
+    depende_de: []
+
+  - id: dp.3.09
+    tema: re-correr el cruce taíno ↔ caquetío
+    de:
+      - '#219 (M5) D'
+      - '#198 (T10) D'
+      - '#192 (T4) §6 D'
+    pregunta: ¿Se re-corre `cruce_taino_caquetio.py` con la lista maestra nueva?
+    opciones:
+      M5_D: 'Sólo después de quitar los seis artefactos (`árbol`, `insecto`, `pez`, `ave`, `río`, `pantano`)'
+    evidencia:
+      - 'M5: conceptos comparables «12 → 30», «pero al leerlos, de los 18 nuevos sólo 12 son pares de concepto y 11 de ellos descansan en una sola obra sin cronista (Coll y Toste, cap. X)»'
+    recomendacion:
+      origen: '«D no antes de limpiar los artefactos.»'
+      recopilador: 'Con la orden de cerrar: no re-correrlo ahora. La pregunta que contestaría (dp.2.01) ya tiene respuesta recomendada sin él.'
+    toca: sólo instrumento de campaña
+    depende_de: []
+
+  - id: dp.3.10
+    tema: '`togogo`, la corrección de Esteves Parte II y `tokoko`'
+    de:
+      - '#205 (FA2) fauna-paraguana-aves-2026-09-22.md F2.4, F2.5, F2.6'
+    pregunta: ¿Se anotan `togogo` como variante de tierra firme de `chogogo` y la procedencia de `tokoko`?
+    opciones:
+      F2_4: '(A) registrar `togogo` como variante de tierra firme de `chogogo` en `notas`, con las dos citas · (B) sólo al corpus de ecología · (C) nada hasta una tercera fuente'
+      F2_5: '(A) corregir la `lectura` del conflicto en `esteves_parte2_falcon.yaml` · (B) dejarla y anotar'
+      F2_6: '(A) dar a `tokoko` `procedencia` Alvarado p. 292 como comparanda caribe/arahuaca, sin subirla de capa · (B) dejarla'
+    evidencia:
+      - 'Alvarado 1921 p. 292 («¿Es el TOGOGO de Coro?») y Esteves 1989 p. 134 («Togogo: ave ansérida»), verificados en imagen'
+      - '#219 (M5): Goeje da `chogogo` (Bonaire) como voz caribe (sigla K)'
+    recomendacion:
+      origen: 'F2.4 A, F2.5 A, F2.6 A.'
+      recopilador: 'Las tres A, y la nota de `chogogo` que diga lo de Goeje (M5 §7).'
+    toca: canon del lexicón, sólo `notas`/`procedencia`; un YAML de 6-fusion/
+    depende_de: []
+
+  - id: dp.3.11
+    tema: prop-polity en 6-fusion/ — páginas de Federmann y procedencia de Brito
+    de:
+      - '#210 (Federmann) federmann-costa-2026-09-23.md §1'
+      - '#214 (HSAI) cuerpo del PR (b)'
+    pregunta: ¿Se corrigen las propuestas de polity que citan mal a Federmann y a Steward?
+    opciones:
+      Federmann_A: 'Corregir las páginas en `polities_no_costeras_federmann.yaml` (Barquisimeto pp. 62-63, Yaracuy pp. 109-110) y cambiar la `via` por la lectura directa'
+      Federmann_B: 'Dejar ese archivo y que valga `federmann_1530_costa` como versión cotejada'
+      HSAI_b: 'Cambiar la procedencia de `prop-polity-016` a Brito Figueroa'
+    evidencia:
+      - 'HSAI: las «tres áreas demográficas» con «riego sistemático» «no aparecen en Steward. Son de Brito Figueroa»'
+    recomendacion:
+      origen: 'Federmann: A. HSAI: (b).'
+    toca: sólo propuestas de 6-fusion/
+    depende_de: []
+
+  - id: dp.3.12
+    tema: el seretón en Federmann
+    de:
+      - '#210 (Federmann) federmann-costa-2026-09-23.md §4'
+    pregunta: ¿Se registra que Federmann aporta el enano, no el nombre ni la transformación?
+    opciones:
+      A: 'Registrarlo en `ceret_on_hipotesis_miguel.yaml`; el seretón de Medina sigue en el corpus por su propio mérito'
+      B: 'Seguir buscando en Castellanos y en Oviedo y Baños antes de escribir nada'
+    evidencia:
+      - 'Federmann: «Cero de la palabra y cero del hombre que se transforma, en castellano y en alemán»; sí una enana que dejó en Coro (1557 [35], verificado)'
+    recomendacion:
+      origen: 'A.'
+    toca: sólo 6-fusion/
+    depende_de: []
+
+  - id: dp.3.13
+    tema: '`Oyama` (¿ñame o auyama?)'
+    de:
+      - '#210 (Federmann) federmann-costa-2026-09-23.md §6'
+    pregunta: ¿Se anota `Oyama` como candidata para las voces de la esfera?
+    opciones:
+      A: 'Anotarla con las dos lecturas, sin decidir'
+      B: 'Descartarla'
+    evidencia:
+      - 'Federmann 1557 [24] (verificado): «Mahis / Juca / Batata / Oyama» en una aldea ayamán; la 1916 traduce «ñames»'
+    recomendacion:
+      origen: 'A.'
+    toca: sólo 6-fusion/
+    depende_de: []
+
+  - id: dp.3.14
+    tema: el dato axagua del Handbook
+    de:
+      - '#214 (HSAI) cuerpo del PR (c)'
+    pregunta: ¿Se marca como no caquetío el sol, la luna y el sacrificio de una niña que el Handbook atribuye a los caquetíos?
+    opciones:
+      c: 'Marcarlo como no caquetío en las fichas, para que no entre por el Handbook'
+    evidencia:
+      - 'HSAI: la Relación de Nueva Segovia 1579 «lo dice de los axaguas, no de los caquetíos (Arcaya p. 102)»; en `3-mundo/` no está (medido hoy: 0)'
+    recomendacion:
+      origen: '(c).'
+    toca: sólo fichas
+    depende_de: []
+
+  - id: dp.3.15
+    tema: '`areíto` sin cita de forma'
+    de:
+      - '#194 (T9) taino2-apologetica-2026-09-22.md D5'
+    pregunta: ¿Qué cita lleva `areito`?
+    opciones:
+      A: 'Dejarla con `deuda: sin-procedencia`'
+      B: 'Buscar su cita en Oviedo'
+      C: 'Citar la descripción de Las Casas pp. 537-538 para la glosa y dejar la forma sin cita, diciéndolo'
+    evidencia:
+      - 'T9: «La forma no aparece en 725 páginas» de la Apologética'
+      - 'T1 (#188): `areito` está entre las verificadas en imagen en Oviedo t. I'
+    recomendacion:
+      origen: '«(B) y, mientras tanto, (C).»'
+      recopilador: 'B ya está hecha a medias: T1 la tiene verificada en Oviedo t. I; entra con dp.3.03.'
+    toca: canon del lexicón, sólo `procedencia`
+    depende_de: [dp.3.03]
+
+  - id: dp.3.16
+    tema: el nombre «taíno» y Pedro Mártir
+    de:
+      - '#189 (T2) taino-lascasas-pane-brinton-2026-09-21.md D-T2.4 y D-T2.5'
+    pregunta: ¿Se anota que «taíno» es el truncamiento de un título, y se verifican las 12 citas de Mártir?
+    opciones:
+      T2_4: '(a) abrir sesión para verificar las 12 voces de Brinton contra Anglería 1892 · (b) backlog'
+      T2_5: '(a) anotarlo en las notas de fuente y en el glosario · (b) además en la web · (c) nada'
+    evidencia:
+      - 'Brinton p. 13: «taíno» es el truncamiento de `nitayno`, que Rafinesque «ascendió a nombre de pueblo en 1836»'
+    recomendacion:
+      origen: 'T2.4 (a). T2.5 (a), y (b) cuando toque esa página.'
+      recopilador: 'T2.5 (a). T2.4 (b): Anglería ya lo leyeron T7 y M2 para otra pregunta, y con la orden de cerrar no compensa.'
+    toca: sólo documentación
+    depende_de: []
+
+  - id: dp.3.17
+    tema: '`-bana` y D9, `-gua` y `bara-wa`'
+    de:
+      - '#192 (T4) taino-caquetio-similitudes-2026-09-21.md §6 H e I'
+    pregunta: ¿Se dejan escritas en `morfologia.md` las dos notas de T4?
+    opciones:
+      H: 'Escribir en §8 que el paralelo taíno de Oliver empuja hacia ''cubierto / extensión'' y no refuerza ''cerro'''
+      I: 'Añadir `bara-wa` / `bagua` a la campaña de `-gua` como pista, con la reserva de que el `gua-` taíno es prefijo'
+    evidencia:
+      - '#213 (M1): Oliver glosa `-bana` «surrounding» (A-9 fila 2)'
+      - '#220 (Zayas): «`bagua` ''mar'' es del glosario de la Academia, no de Oviedo»'
+    recomendacion:
+      origen: 'Sin letra de preferencia; las dos «impiden que alguien lo cite al revés».'
+      recopilador: 'H sí. I no: dc.2 ya cerró `-gua` (C + E) y `bagua` resultó del glosario del editor.'
+    toca: sólo documentación
+    depende_de: []
+
+  - id: dp.3.18
+    tema: curaciones de cita baratas de Coro
+    de:
+      - '#207 (M7) coro-colonial-2026-09-22.md D-f.2 y D-f.3'
+    pregunta: ¿Se aplican las dos curaciones de cita?
+    opciones:
+      D_f_2: '`geografia_politica-008` (*managuanare*): el documento es la probanza de 1680 (AHC, Fondo Arcaya, t. VII); las formas son de 1680'
+      D_f_3: '`matakán`: la cita «que mataba con perros» es de Maracaibo (p. 189), no de Coro'
+    evidencia:
+      - 'M7: «Curaciones baratas (no cambian el scorer)»'
+    recomendacion:
+      origen: 'Aplicarlas.'
+    toca: canon, sólo citas y `notas`
+    depende_de: []
+
+  - id: dp.3.19
+    tema: arreglos a los YAML de la campaña del taíno (T5 y T8)
+    de:
+      - '#203 (M8) arqueologia-insular-falcon-2026-09-22.md D3'
+      - '#196 (T8) taino2-evidencia-material-2026-09-22.md B'
+    pregunta: ¿Se corrigen en 6-fusion/ las propuestas de T5 y T8 que la tercera minería dejó mal?
+    opciones:
+      M8_D3_A: 'Corregir el YAML de T8 (clave de Urbina, subir `cer-02`, cerrar la deuda de `pie-01`) en el mismo PR de fusión'
+      M8_D3_B: 'Dejar T8 y que esta propuesta lo sustituya'
+      T8_B: 'Arreglar el `gen-03` y el aviso de `arq-01` de `taino_en_la_esfera_2026-09-21.yaml`'
+    evidencia:
+      - 'M8: «T8 cita la clave `urbina-jimenez-2011`, que no está en la bibliografía»'
+    recomendacion:
+      origen: 'M8: A. T8: B.'
+    toca: sólo 6-fusion/
+    depende_de: []
+
+  - id: dp.3.20
+    tema: la fauna de verdad de los conchales
+    de:
+      - '#203 (M8) arqueologia-insular-falcon-2026-09-22.md D4'
+    pregunta: ¿Quién pasa la Tabla II de Zavala Reyes 2018 al esquema `fauna:`?
+    opciones:
+      A: 'Un agente de fauna, ahora, con Zavala 2018 primero'
+      B: 'Una parcela nueva de zooarqueología en la próxima campaña'
+    evidencia:
+      - '#208 (FA3) ya la usó: «Médanos de Coro (s. XIV-XVIII, Zavala Reyes et al. 2018 p. 405): *Donax striatus* 42,4 %, *Callista* 27,0 %…», y corrigió la página (405, no 404)'
+    recomendacion:
+      origen: 'A.'
+      recopilador: 'Probablemente ya cubierta por #208. Quedarían Dijkhoff 1997, Versteeg y Rostain 1997 y Antczak 1998, que no hacen falta para la base.'
+    toca: sólo 6-fusion/
+    depende_de: []
+
+  - id: dp.3.21
+    tema: Oviedo t. I — el PDF truncado y las formas sin imagen de T1
+    de:
+      - '#206 (M3) oviedo-restante-2026-09-22.md §D'
+    pregunta: ¿Se retira el PDF truncado del t. I y se verifican las formas `ocr-sin-imagen` de T1?
+    opciones:
+      retirar: 'Retirar el PDF truncado (lo citan las propuestas de T1 por su paginación de PDF)'
+      verificar: 'Verificar en la copia íntegra las formas `ocr-sin-imagen` de T1, página a página'
+    evidencia:
+      - 'M3: «El PDF truncado del t. I no se borra (lo citan las propuestas de T1 por su paginación de PDF). Retirarlo es decisión de Miguel.»'
+    recomendacion:
+      origen: 'Sin letra; declara las dos como pendientes.'
+      recopilador: 'No retirarlo mientras T1 lo cite; la verificación entra con dp.3.03.'
+    toca: sólo fuentes
+    depende_de: [dp.3.03]
+
+  - id: dp.3.22
+    tema: cuentas en xeno-canto o Macaulay
+    de:
+      - '#211 (FA1) fauna-paraguana-tierra-2026-09-22.md E'
+    pregunta: ¿Abre Miguel una cuenta para citar grabaciones por ID?
+    opciones:
+      E: '«decide Miguel, y la abre él» (crear cuentas no lo hace un agente)'
+    evidencia:
+      - 'FA1: «no se cita ninguna grabación por ID»; FA2 sí citó 39 de xeno-canto hechas en la península, vía Wikipedia'
+    recomendacion:
+      origen: 'Sin recomendación.'
+      recopilador: 'No hace falta: db.6 decidió que el sonido se describe, no se transcribe.'
+    toca: nada del repo
+    depende_de: []
+
+  - id: dp.3.23
+    tema: '`taino_hipotetico.json`'
+    de:
+      - '#190 (T3) taino-inventario-y-fuentes-2026-09-21.md C3'
+    pregunta: ¿Se borra o se mueve a 6-fusion/ el `taino_hipotetico.json`, que no lo lee nadie?
+    opciones:
+      C3: 'Borrarlo, o moverlo a 6-fusion/ con su fecha como propuesta muerta'
+    evidencia:
+      - 'T3: «que no lo lee nadie»; db.3 ya aplicó la C2 (las `taíno-reconstruido` al archivo)'
+    recomendacion:
+      origen: 'C2 + C3.'
+      recopilador: 'Moverlo, no borrarlo (archivar no es borrar).'
+    toca: sólo datos sueltos
+    depende_de: []
+
+  - id: dp.3.24
+    tema: dos preguntas de paso de dc.3 (el prefijo `ja-` y `cazebo`)
+    de:
+      - 'dc.3 `de_paso_sin_decidir` H e I (decisiones_campanas_2026-09-21.yaml)'
+    pregunta: ¿Se abren estas dos preguntas o se archivan?
+    opciones:
+      H: 'Campaña del prefijo `ja-` («7 de 13 lemas en J- son verbos, p = 7,4e-05»)'
+      I: '`cazebo` = `cazi` + `ebo`, a la mesa de `-ebo`'
+    evidencia:
+      - 'dc.3: «de_paso_sin_decidir»'
+    recomendacion:
+      recopilador: 'Archivarlas como preguntas para la era 3: ninguna cierra algo que la base necesite.'
+    toca: sólo documentación
+    depende_de: []
+
+  - id: dp.3.25
+    tema: compras y préstamos que siguen pendientes
+    de:
+      - '#204 (F1) fuentes-que-faltan-2026-09-22.md C y E'
+      - '#190 (T3) taino-inventario-y-fuentes-2026-09-21.md D3 y D4'
+    pregunta: ¿Se compra o pide algo más?
+    opciones:
+      C: 'Pedir al CIHPMA-UNEFM un escaneo de Arcaya, *Obra inédita y dispersa* (1995), p. 247 (la única frase caquetía conocida)'
+      E: 'Rouse & Cruxent 1963, Ramos Pérez 1978, Brett Martínez, Morón, Nägele 2020, Oliver 2000, Granberry y Vescelius 2004'
+      T3_D3: 'Comprar Granberry y Vescelius 2004 (separaría qué taíno es cada voz)'
+      T3_D4: 'Arrom, para `cemi`, `maboya`, `bejique`, `areito` (Zayas ya entró por cc.7)'
+    evidencia:
+      - 'T3 D: D1 (Goeje, Bachiller) y D2 (Anglería) ya se hicieron en la campaña del taíno 2'
+    recomendacion:
+      origen: 'F1: C. T3: D3 después.'
+      recopilador: 'Sólo C (una página, la frase caquetía). Lo demás no cambia nada que la base necesite.'
+    toca: sólo fuentes
+    depende_de: []
+
+# ═════════════════════════════════════════════════════════════════════════
+# YA DECIDIDAS — opciones con letra que resultaron decididas (no se preguntan)
+# ═════════════════════════════════════════════════════════════════════════
+ya_decididas:
+  - {de: '#205 FA2 F2.1 (qué referentes de aves)', ya_decidida_en: 'cc.1 y db.4: catálogo `referentes_era2.yaml` aprobado (guacharaca, cardenal, corocoro, gaviota; pitirre, colibrí, carpintero, turpial, alcatraz en reserva)'}
+  - {de: '#205 FA2 F2.2 (¿la onomatopeya va escrita en `se_oye`?)', ya_decidida_en: 'db.6: el sonido se describe y no se transcribe (= B)'}
+  - {de: '#205 FA2 F2.3 (acuñación onomatopéyica y la puerta de raíces)', ya_decidida_en: 'db.6: puerta estrecha para los referentes `animal: true`'}
+  - {de: '#211 FA1 A (el `se_oye` del sapito con «do-ri» o sin)', ya_decidida_en: 'db.6 (describir sin sílabas = A2); además el sapito no está en el catálogo aprobado'}
+  - {de: '#211 FA1 B (qué referentes de tierra)', ya_decidida_en: 'cc.1 y db.4 (tarántula, cascabel, conejo, perro mudo; mapurite y chicharra en reserva)'}
+  - {de: '#208 FA3 (a) (qué referentes de mar)', ya_decidida_en: 'cc.1 y db.4 (delfín, cardumen, tortugas de mar, ballena; concha perlífera en reserva)'}
+  - {de: '#208 FA3 (d) (la cosmovisión marina)', ya_decidida_en: 'cc.10: «al final; hoy es intuición, no dato»'}
+  - {de: '#213 M1 C (el mar en la creencia como hecho hipotético)', ya_decidida_en: 'cc.10'}
+  - {de: '#206 M3 §B (`waitiao`: a/b/c)', ya_decidida_en: 'db.5: se queda caquetío-atestiguado con la nota (aplicada con anotar_waitiao.py)'}
+  - {de: '#206 M3 §B y #195 T6 (a)/(b)/(c) (`datihao`)', ya_decidida_en: 'db.2: `datihao` → `taíno`; `diao` carga la voz caquetía'}
+  - {de: '#197 T11 D/E/F (`datihao`)', ya_decidida_en: 'db.2'}
+  - {de: '#197 T11 I (la cita de `creencia-001` / `boratio`)', ya_decidida_en: 'db.2 lectura_operativa: «`creencia-001` cita la fuente primaria de `boratio`»'}
+  - {de: '#188 T1 C (`datihao` en `creencia-001`)', ya_decidida_en: 'db.2'}
+  - {de: '#188 T1 D (glosas de `caney`, `batey`, `tabako`)', ya_decidida_en: 'db.3 (cinco glosas según su cronista). `piragua` y `huracan` siguen en dp.1.11'}
+  - {de: '#194 T9 D1, #192 T4 F, #189 T2 D-T2.2 (`daca`)', ya_decidida_en: 'db.3: `daca` ''yo'' (Las Casas), la reconstrucción ''mano'' en `notas`'}
+  - {de: '#194 T9 D6 (`caney` «rectangular»)', ya_decidida_en: 'db.3'}
+  - {de: '#192 T4 E (`siba`)', ya_decidida_en: 'db.3: `siba` taíno además de lokono; la lokono pasa a `siba-lokono`'}
+  - {de: '#190 T3 C2 (`taíno-reconstruido` fuera de la esfera)', ya_decidida_en: 'db.3: las 8 al archivo (la novena, `daca`, se queda con su glosa atestiguada)'}
+  - {de: '#190 T3 B2 (`mayani`, `caney`, `batey`)', ya_decidida_en: 'db.3. Queda `areito`: dp.3.15'}
+  - {de: '#207 M7 D-a C (leer la Parte IV antes de decidir `poporo`)', ya_decidida_en: 'cc.3. Lo que sigue (A o B) está en dp.1.07'}
+  - {de: '#207 M7 D-b («Coro = viento»)', ya_decidida_en: 'cc.6: sale de las lecturas de `coro` (= A)'}
+  - {de: '#216 M6 pregunta 1 (¿cuenta Zavala (E) como segunda fuente?)', ya_decidida_en: 'cc.4: se re-mide el canon (= 1-A)'}
+  - {de: '#220 Zayas A, B, C (manatí, `cohiba`/`tabako`, `bagua`) y #208 FA3 §0.4 (manatí)', ya_decidida_en: 'cc.7: un agente decide, leyendo el pasaje, si son taínas'}
+  - {de: '#204 F1 D (los PDF de Zayas)', ya_decidida_en: 'cc.7 (1): sólo el texto; los PDF a la Papelera'}
+  - {de: '#204 F1 A (Angulo Molina)', ya_decidida_en: 'cc.11 (A1: escribirle a Zavala). La alternativa A2 queda en dp.3.02'}
+  - {de: '#203 M8 D1 (cronología del dabajuroide)', ya_decidida_en: 'cc.5: campaña (asiento de Manaure, guaiqueríes, cronología dabajuroide). La letra se elige al cerrarla', parcial: true, opciones_que_esperan: 'A Oliver 1989 · B Casale 2024 Tabla 1 · C no fijar ninguna y dar las dos lozas como coexistentes (recomendada)'}
+  - {de: '#207 M7 D-d y #213 M1 §1.5 (¿dónde vivía Manaure?)', ya_decidida_en: 'cc.5', parcial: true, opciones_que_esperan: 'A declarar el conflicto en nodo-001 sin cambiar el candidato (recomendada) · B cambiar el candidato a Coro · C no tocar'}
+  - {de: '#214 HSAI (d) (los guaycaríes del elenco: costa o fuente llanera)', ya_decidida_en: 'cc.5: «los guaiqueríes entran como parte de la ESFERA de contacto (regla 4), no como caquetíos»', parcial: true}
+  - {de: '#202 (aprobar el catálogo de referentes)', ya_decidida_en: 'cc.1'}
+  - {de: 'D11 fase 3: A re-derivar en el canon o B perfil `nucleo-d11`', ya_decidida_en: 'cc.12: obligatoria y antes de la corrida base, así que entra al canon de la base («la corrida base espera a una última tanda —D11 fase 3 […]—»). Las formas siguen abiertas: dp.1.01-dp.1.03', parcial: true}
+  - {de: 'D11 fase 3: los numerales', ya_decidida_en: 'decisiones_tanda_2026-09-13 `numerales` (aplicada)'}
+  - {de: '#190 T3 D1, D2 (Goeje, Bachiller, Anglería)', superada_por: 'la campaña del taíno 2 los bajó y los minó (#194-#199)'}
+
+# ═════════════════════════════════════════════════════════════════════════
+# VISTOS DE PASO SIN OPCIÓN — no son decisiones; se listan para que no se pierdan
+# ═════════════════════════════════════════════════════════════════════════
+vistos_de_paso_sin_opcion:
+  - '`surupa` «Blatta orientalis. Cucaracha» (caquetío atestiguado): esa cucaracha es del Viejo Mundo; revisar la glosa (#211)'
+  - '`duna` (núcleo, ''agua''): la nota atribuye `tuna` al lokono; Goeje la da a los kalina (sigla K); `duna` es garífuna (#219 §3)'
+  - '`samuro` del lexicón es «punta hacia el mar», no el zamuro: homógrafo (#205)'
+  - '`baba` ''caño'' (Esteves, Babahuro) choca con `baba` ''padre'' (reconstruido) si entra (#216)'
+  - '`chaure`: lechuza de campanario (Alvarado p. 116) o mochuelo de hoyo (Zavala #81) (#205)'
+  - '`tigi` y `tauta`, «palomitas que comen peces»: son otra ave; si fueran la gaviotica, la seca larga ya tendría nombre caquetío (#205, #216)'
+  - 'el perro mudo, único animal doméstico precontacto documentado para la provincia, no está en el corpus (#211)'
+  - '`manatí`, `kanawari`, `tüma`: aparecen como nombres pero son acuñaciones hipotéticas sin cita (#208)'
+  - 'la casa gobernante de Coro decía venir del Chiguará (Métraux y Kirchhoff, HSAI 4 p. 353), sin fuente en el repo (#214)'
+  - '`çabana`: una cedilla perdida puede estar dando /k/ a una /s/ (#213 §1.1)'
+  - 'la «isla de las aves» del naufragio de 1534 y el pueblo de «Paragrachoa» (p. 252) quedan sin identificar (#206, #209)'
+
+# ═════════════════════════════════════════════════════════════════════════
+# LOS DOS DATOS DE cc.11 («no es prioritario»)
+# ═════════════════════════════════════════════════════════════════════════
+datos_cc11:
+  nueva_segovia_1579:
+    el_libro_que_localizo_el_buscador:
+      titulo: 'Relaciones y descripciones sobre Venezuela y la Nueva Granada, siglo XVI'
+      editores: 'Rogelio Altez y Katherinne Mora Pacheco'
+      editorial: 'Editorial Sindéresis, Madrid (Colección Historia de América Latina)'
+      año: '2023 (mayo), 1.ª edición, rústica'
+      paginas: 526
+      isbn: '978-84-19199-73-7'
+      precio: 'entre 15 € y 40 € según formato (digital o papel), en la página de la editorial'
+      donde_comprarlo:
+        - 'https://editorialsinderesis.com/producto/relaciones-y-descripciones-sobre-venezuela-y-la-nueva-granada-siglo-xvi/'
+        - 'https://www.amazon.es/dp/8419199737'
+        - 'https://www.librerialamistral.es/es/libro/relaciones-y-descripciones-sobre-venezuela-y-la-nueva-granada-siglo-xvi_MXF0280002'
+      aviso_no_trae_la_relacion: >-
+        El índice (muestra de la editorial:
+        https://editorialsinderesis.com/wp-content/uploads/texto-relaciones-y-descripciones-sobre-venezuela-y-la-nueva-granada-del-siglo-xvi.pdf)
+        tiene diecisiete documentos sobre Venezuela, 1520-1600, y ninguno es la
+        Relación de Nueva Segovia (Barquisimeto) de 1579. El libro reúne
+        manuscritos inéditos, y la de 1579 ya estaba publicada. Comprarlo NO
+        consigue la Relación. Lo que sí trae y le sirve al proyecto: la
+        «Relación de la gobernación de Venezuela y provincia de Maracaibo hecha
+        por el licenciado Tolosa. Coro, 8 de julio de 1548» (p. 97), otra
+        transcripción, desde el archivo, del texto que #209 leyó en Fernández
+        Duro.
+    donde_si_esta:
+      referencia: 'Antonio Arellano Moreno (recopilación, estudio preliminar y notas), Relaciones geográficas de Venezuela, Caracas, Academia Nacional de la Historia, 1964 (colección Fuentes para la Historia Colonial de Venezuela), 578 pp.'
+      como_conseguirlo: 'de segunda mano (el único anuncio que salió en la búsqueda, en AbeBooks, ya no está disponible; no se buscó más) o en préstamo de biblioteca; HathiTrust lo cataloga (Record 001448214), sin acceso libre comprobado; la vía B3 (el manuscrito del AGI por PARES) sigue abierta'
+      nota: 'Zavala Reyes 2015 cita a Arellano Moreno con la sigla AAM (4-fuentes/zavala-reyes-2015.md)'
+  zavala_reyes_contacto_profesional:
+    obra: 'Miguel Enrique Zavala Reyes, «Palabras vivas de una lengua muerta: legado arawak-caquetío», Boletín Antropológico (Universidad de Los Andes, Mérida) vol. 33, n.º 89, enero-junio 2015, pp. 58-76'
+    via_recomendada: >-
+      Escribir a la redacción del Boletín Antropológico (Museo Arqueológico
+      «Gonzalo Rincón Gutiérrez», Universidad de Los Andes, Mérida), que lo
+      publicó, y pedir que reenvíe la consulta al autor. El artículo está en
+      el repositorio de la ULA (http://www.saber.ula.ve/handle/123456789/40730)
+      y en Redalyc.
+    alternativa: 'su perfil académico público en Academia.edu, que lo presenta en el Centro de Antropología del IVIC: https://oarval.academia.edu/MiguelZavalaReyes'
+    que_preguntarle: 'de qué obra sacó a «AM» (Angulo Molina), la fuente de los 19 verbos de acción del glosario; y, si se puede, qué obra de Hernández Baño está detrás de la sigla HB (la única fuente de `korie`, dp.1.06)'
