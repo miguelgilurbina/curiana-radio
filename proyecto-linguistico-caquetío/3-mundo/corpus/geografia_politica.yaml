@@ -39,22 +39,30 @@
 
 - id: geografia_politica-003
   contenido: >
-    "Todariquiba" fue el poblado real, cercano a la actual Coro (aprox. 1 legua), donde residió
-    Manaure y donde se reasentó tras el pacto de 1527 con Juan de Ampíes; su hijo/sucesor Don
-    Alexandre también residió ahí. Aparece citado en la carta de 1538 del obispo Rodrigo de
-    Bastidas a Carlos V (junto a Guaibacoa, Cumarebo, Tomodore, Caujarao, Zazárida, Capatárida) y
-    en registros administrativos posteriores del período Welser. Su ubicación exacta sigue en
-    debate: no se ha hallado un sitio arqueológico de tamaño correspondiente en la periferia de
-    Coro; Oliver sospecha que quedó bajo la expansión urbana moderna o más allá de las 4.5-6 km
-    sugeridas por las crónicas.
-  fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, p. 251 (pacto de 1527); pp. 261-262 (recurrencia en registros Welser, Ponce y Vaccari 1977: 94, 179-80, 238-40, 451); carta de Rodrigo de Bastidas 1538"
+    Manaure residió en "Todariquiba", junto a Coro, entre el pacto de 1527 con Juan de Ampíes y
+    su salida hacia 1531: el pacto lo REASIENTA allí (Oliver), y Manaure y su hijo Don Alexandre
+    dejan juntos Todariquiba por los abusos del teniente de Alfinger. Lo atestiguado es el pueblo:
+    en 1538 es el de Don Alexandre, «cacique principal de la Provincia», a «dos leguas» de Coro
+    según la carta del obispo Rodrigo de Bastidas (a una legua según otra carta suya), junto a
+    Guaibacoa, Cumarebo, Tomodore, Caujarao, Zazárida y Capatárida, y recurre en los registros del
+    período Welser. La residencia de Manaure allí es lectura historiográfica sin el documento a la
+    vista, y hay una alternativa de testigo: Galeotto Cey, en Coro desde 1545, lo pone en el pueblo
+    de Coro, en una «casa grandísima». Ninguna fuente dice dónde se sentaba antes de 1527; la única
+    anterior al pacto (Ampíes, c. 1526) lo pone «diez leguas la tierra adentro en la provincia de
+    Coro». La ubicación de Todariquiba sigue en debate: no se ha hallado sitio arqueológico de
+    tamaño correspondiente en la periferia de Coro.
+  fuente: reconstruido
+  referencia: "Oliver 1989, cap. 3, DOC p. 251 (pacto de 1527 y reasentamiento, vía Ramos Pérez 1978, Arcaya 1977 y Oliver Ms. 1987a), p. 259 (carta de Bastidas 1538 vía Armado Maldonado 1973), pp. 261-262 (registros Welser, Ponce y Vaccari 1977: 94, 179-80, 238-40, 451), p. 268 (la salida de Manaure y Don Alexandre, juicios de residencia); Velasco 2015 p. 33 (carta de Bastidas, AGI Santo Domingo leg. 218, f. 2, 8-X-1538: «dos leguas»); González Batista 2002 p. 161 n. 47-48 (la otra carta: una legua) y pp. 163-164 (Galeotto Cey, Viaje y descripción de las Indias, p. 56); Ampíes c. 1526 en Pérez de Tolosa / Fernández Duro 1885 t. II p. 212. Re-etiquetado de atestiguado a reconstruido el 2026-09-23 (tf.7, Manaure A): aquí «reconstruido» es lectura historiográfica de Oliver sin el documento, no método comparativo. Datos: 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_1 (mau-01 … mau-06)"
+  procedencia: {obra: oliver-1989-cap3}
   dominios: [politica, geografia]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
     Es, con la mejor evidencia disponible, el asentamiento real más cercano a lo que "la Curiana"
-    de la simulación pretende reconstruir — el poblado de Manaure junto a Coro. Su ubicación abierta
-    (Oliver 1989) da licencia para que la simulación no necesite fijar coordenadas exactas.
+    de la era 1 pretendía reconstruir — el poblado donde Manaure vivió entre 1527 y 1531, junto a
+    Coro. Es época de contacto (regla 3): no dice dónde vivía el señor en el s. XV. La era 2 pone su
+    casa en Moruy, al pie del Capubana, y eso es canon-simulación sin procedencia (elenco_era2.yaml,
+    casa del Manaure): ninguna fuente lo pone en Paraguaná, y ninguna dice nada del s. XV que lo
+    contradiga. Su ubicación abierta (Oliver 1989) da licencia para no fijar coordenadas.
 
 - id: geografia_politica-004
   contenido: >

@@ -665,6 +665,11 @@ Esto **no lo cierra** —Esteves mismo dice que no sabe si hay relación— pero
 el primer rastro documental de los guayquerí que toca el proyecto, y viene con
 nombres perseguibles: cacique Charaima de Margarita, Francisco Fajardo.
 
+> ⚠️ **No aguanta** (2026-09-23, aplicado en toponimo-082 por tf.7 E): Oviedo
+> y Baños (p. 168) da a Charayma como cacique del **valle de Maya, en la
+> provincia de Caracas**, y **bisabuelo** de Fajardo, no abuelo ni de
+> Margarita. Ver la bitácora del 2026-09-23 al final de esta nota.
+
 ### pp. 36-37 — `bana` quinta vez, `naure` glosado y el estrato taíno
 
 #### `bana` = 'cerro' — quinta atestación

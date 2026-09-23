@@ -75,17 +75,43 @@ nodos:
     atestacion: colonial
     precontacto: desconocido
     rol: >
-      Poblado real donde residió Manaure y donde se reasentó tras el pacto de
-      1527 con Juan de Ampíes; su hijo/sucesor Don Alexandre también residió
-      ahí. Es el mejor candidato a lo que la simulación llama "la Curiana".
+      Pueblo atestiguado en 1538: el de Don Alexandre, hijo de Manaure y
+      «cacique principal de la Provincia» (carta del obispo Bastidas). Que
+      MANAURE residiera aquí es reconstruido, no atestiguado (ver
+      `residencia_de_manaure`). Es el mejor candidato a lo que la era 1
+      llamaba "la Curiana".
+    residencia_de_manaure:
+      etiqueta: reconstruido
+      epoca: '1527-1531 (contacto temprano; regla 3: no dice nada del s. XV)'
+      que: >-
+        El pacto de 1527 con Ampíes lo REASIENTA junto a Coro, en Todariquiba
+        (Oliver DOC p. 251, vía Ramos Pérez 1978 y Arcaya 1977, sin el
+        documento en el repo), y Manaure y Don Alexandre dejan juntos
+        Todariquiba por los abusos del teniente de Alfinger (DOC p. 268, vía
+        los juicios de residencia). Que sea un REASENTAMIENTO dice también que
+        no era su asiento anterior.
+      alternativa: >-
+        Galeotto Cey, en Coro desde 1545, pone a Manaure en el pueblo de CORO,
+        en una «casa grandísima» que luego fue iglesia, y la probanza de 1680
+        le da allí «su corte» (González Batista 2002 pp. 163-164, vía M7).
+      antes_de_1527: >-
+        Ninguna fuente. La única anterior al pacto —Ampíes, c. 1526, de oídas—
+        lo pone «diez leguas la tierra adentro en la provincia de Coro»
+        (Fernández Duro 1885 t. II p. 212). Ninguna lo pone en Paraguaná.
+      procedencia: {obra: oliver-1989-cap3, pagina: 'DOC pp. 251, 268'}
+      decision: 'tf.7, Manaure A (Miguel, 2026-09-23): de atestiguado a reconstruido'
     ubicacion: >
-      Aprox. 1 legua (4,5-6 km) de la actual Coro. LA UBICACIÓN EXACTA SIGUE EN
-      DEBATE: no se ha hallado sitio arqueológico del tamaño correspondiente en
-      la periferia de Coro. Oliver sospecha que quedó bajo la expansión urbana
-      moderna, o más allá de la distancia que sugieren las crónicas.
+      A «dos leguas» de la actual Coro según la carta de Bastidas del 8-X-1538
+      (Velasco 2015 p. 33) y a una según otra carta suya que la rectifica
+      (González Batista 2002 p. 161 n. 47-48): las dos distancias son del mismo
+      testigo; con la legua de 4,5-6 km de Oliver, 4,5-12 km. LA UBICACIÓN
+      EXACTA SIGUE EN DEBATE: no se ha hallado sitio arqueológico del tamaño
+      correspondiente en la periferia de Coro. Oliver sospecha que quedó bajo
+      la expansión urbana moderna, o más allá de la distancia que sugieren las
+      crónicas.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "pp. 251 (pacto de 1527), 261-262 (registros Welser, Ponce y Vaccari 1977)"
+      detalle: "pp. 251 (pacto de 1527), 259 (carta de Bastidas 1538: Todariquiba, el pueblo de Don Alexandre), 261-262 (registros Welser, Ponce y Vaccari 1977), 268 (la salida de Manaure y Don Alexandre); la carta de Bastidas transcrita en velasco-2015-resistencia p. 33"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
     nota: >
@@ -346,6 +372,12 @@ nodos:
   # de 1350 a 1650 y lo cruza. Por eso una afiliación Urumaco sostiene
   # `probable` por sí sola y "Dabajuroide" a secas (800-1600) no sostiene
   # nada.
+  # (2026-09-23, tf.7 «Cronología C» regional: la regla se sostiene con los
+  # dos esquemas —con Casale 2024 el Urumaco Tardío llega a 1500, también
+  # antes del contacto—, pero el corte entre Urumaco Tardío y Los Médanos A
+  # NO se fija: conviven en la ventana. Qué está fechado y qué es posible,
+  # lugar por lugar y con su fuente, en `cronologia_dabajurana` al final de
+  # este archivo.)
   #
   # Coro y el Golfete
 
@@ -776,3 +808,99 @@ huecos:
       7 formas jirajaroides y 4 de solapamiento caribe: no alcanza para modelar
       un nodo bilingüe.
     donde: "3-mundo/esfera-de-interaccion.md §6"
+
+# ══════════════════════════════════════════════════════════════════════
+# LA LOZA DE LA VENTANA — la cronología dabajurana, lugar por lugar
+# ══════════════════════════════════════════════════════════════════════
+#
+# Decisión de Miguel del 2026-09-23 (decisiones_tanda_final_2026-09-23.yaml
+# tf.7, «Cronología C», en la versión regional que recomendaba la campaña
+# cc.5; cierra #203 M8 D1). Cada fase y cada lugar cita obra y página:
+# `obra` es clave foránea a 4-fuentes/bibliografia.yaml y `nodos` a este
+# registro, y compilar_asentamientos.py lo comprueba.
+#
+# Sólo va la sub-tradición DABAJURANA, que es la de la costa. La tabla entera
+# (Bachaquerana, Campomana —la de Margarita—, Capachoana, Tierroide, Arvelo y
+# López 2004) y su medición contra la ventana —qué complejos se solapan, qué
+# C-14 de la Tabla 15 caen dentro— viven en
+# 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_3.fases y
+# las mide 6-fusion/scripts/medir_cronologia_dabajuroide.py (regla 1: los
+# conteos no se escriben aquí).
+
+cronologia_dabajurana:
+  decision: >-
+    C regional: no se fija un corte entre esquemas. En la ventana simulada
+    conviven dos lozas dabajuranas —el Urumaco Tardío y Los Médanos A— y se
+    dice lugar por lugar qué está fechado y qué es sólo posible. Oliver 1989
+    (costa de Falcón) y Casale 2024 (Aruba) no se promedian.
+  ventana: [1300, 1500]
+  que_no_es: >-
+    «Dabajuroide» no es sinónimo de «caquetío»: la tradición incluye la
+    sub-tradición Campomana de Cumaná, Barcelona y Margarita (Oliver cap. 4 p.
+    427). Lo que Oliver correlaciona con las polities caquetías son la
+    Dabajurana, la Bachaquerana y la Tierrana (p. 424). Ver ecologia-013.
+
+  fases:   # desde / hasta en años d.C.; «a/b» es el rango que da la fuente
+    - {esquema: oliver-1989, complejo: Túcua, desde: 800, hasta: '1100/1200', region: 'costa de Falcón, Paraguaná, ABC', obra: oliver-1989-cap4, pagina: '422'}
+    - {esquema: oliver-1989, complejo: 'Urumaco (Temprano y Tardío)', desde: '1100/1200', hasta: '1400/1450', region: 'costa de Falcón, Paraguaná, ABC', obra: oliver-1989-cap4, pagina: '422, 424', nota: 'Late Urumaco = estilo Savaneta de du Ry en las Antillas'}
+    - {esquema: oliver-1989, complejo: 'Los Médanos (A prehistórico, B histórico)', desde: 1350, hasta: '1600/1650', region: 'costa de Falcón, Paraguaná, ABC', obra: oliver-1989-cap4, pagina: '422'}
+    - {esquema: casale-2024, complejo: Túcua, desde: 850, hasta: 1200, region: Aruba, obra: casale-2024, pagina: '3 (Tabla 1)'}
+    - {esquema: casale-2024, complejo: Urumaco Temprano, desde: 1200, hasta: 1350, region: Aruba, obra: casale-2024, pagina: '3 (Tabla 1)', nota: 'el texto (p. 4) fecha Tanki Flip en 950-1250 «Early Urumaco»: tabla y texto no coinciden'}
+    - {esquema: casale-2024, complejo: Urumaco Tardío, desde: 1350, hasta: 1500, region: Aruba, obra: casale-2024, pagina: '3 (Tabla 1)'}
+    - {esquema: casale-2024, complejo: Los Médanos A, desde: 1400, hasta: 1450, region: Aruba, obra: casale-2024, pagina: '3 (Tabla 1)', nota: 'el texto (p. 5) da «Los Médanos phases in Venezuela (1400–1600/1650 C.E.)»'}
+    - {esquema: casale-2024, complejo: Los Médanos B, desde: 1450, hasta: 1515, region: Aruba, obra: casale-2024, pagina: '3 (Tabla 1)', nota: 'sólo Savaneta; el tope de 1515 es de las islas y el artículo no dice por qué'}
+
+  donde_divergen: >-
+    Hasta 1450 los dos esquemas ponen en la costa el Urumaco y, desde 1350
+    (Oliver) o 1400 (Casale), también Los Médanos. De 1450 a 1500 se separan:
+    con Oliver sólo queda Los Médanos; con Casale siguen el Urumaco Tardío y
+    Los Médanos B. La segunda mitad del s. XV es donde elegir esquema cambiaría
+    lo que hay en las manos, y por eso no se elige.
+
+  por_lugar:
+    - lugar: Paraguaná — lo fechado
+      nodos: [nodo-024]
+      que: >-
+        Urumaco Tardío en Santa Ana «El Cerro» (FAL-154), con fecha terminal
+        IVIC-14 cal. A.D. 1299-[1415]-1451 (la obtuvo Zucchi, com. pers. a
+        Oliver) y loza «still lavishly decorated», frente al estilo empobrecido
+        contemporáneo de Supidebo-Antúnez en Borojó.
+      etiqueta: atestiguado
+      obra: oliver-1989-cap4
+      pagina: '473'
+    - lugar: Paraguaná — lo posible
+      nodos: [nodo-025, nodo-027]
+      que: >-
+        Un Los Médanos A local en Cayerúa (FAL-143) y Moruy (FAL-149): bordes
+        huecos, más engobe rojo, sin el ave negro sobre rojo. Oliver: «do not
+        allow me to be absolutely certain». Sin ninguna fecha. Moruy es de
+        GUARANAO y Cayerúa de AMUAY: uno en cada nodo de la era 2 (#122).
+      etiqueta: hipotetico
+      obra: oliver-1989-cap4
+      pagina: '471-472'
+    - lugar: Coro y el Golfete
+      nodos: [nodo-014, nodo-015]
+      que: >-
+        Los dos, en los mismos sitios: La Maternidad (FAL-101) y José Gregorio
+        Hernández (FAL-100) tienen componentes Urumaco Y Los Médanos, con
+        fechas propias dentro de la ventana (IVIC-626, A.D. 1450, vía Tamers
+        1970; ISGS-1253 e ISGS-1423 en la Tabla 15).
+      etiqueta: atestiguado
+      obra: oliver-1989-cap4
+      pagina: 'Apéndice E (FAL-100, FAL-101) y Tabla 15'
+    - lugar: las islas
+      nodos: [nodo-010]
+      que: >-
+        Según Casale et al. 2024, cuya tabla es de Aruba: Urumaco Tardío
+        1350-1500 junto a Los Médanos A (1400-1450) y B (1450-1515, sólo
+        Savaneta). Que valga igual para Curazao y Bonaire es extensión, no
+        dato.
+      etiqueta: atestiguado
+      obra: casale-2024
+      pagina: '3 (Tabla 1)'
+
+  lo_que_no_se_leyo: >-
+    Rouse y Cruxent 1963 (0 bytes en el repo; préstamo controlado en
+    archive.org), Cruxent y Rouse 1958 (sólo vía Oliver pp. 422-427 y Antczak
+    2015 p. 18), Arvelo y Zucchi (sólo citados por otros). Si alguno entra,
+    esta tabla se re-mide.

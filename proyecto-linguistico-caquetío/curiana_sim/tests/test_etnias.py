@@ -64,6 +64,34 @@ def test_una_polity_no_costera_con_fuente_no_necesita_decision():
     assert not p
 
 
+# ── el vecino de la esfera sin polity (tf.7 B, 2026-09-23) ────────────
+
+def test_ninguna_es_un_valor_legal_de_polity():
+    """Los guaiqueríes de Margarita: parte de la esfera (cc.5), sin contacto
+    documentado con ninguna polity caquetía. El valor es `ninguna`, como
+    proponía el issue guaiqueries-manaure-dabajuroide-2026-09-23 §2-B."""
+    e = _etnia(polity_caquetia="ninguna", tipo_de_contacto="ninguno",
+               intensidad="ninguna")
+    assert not CE.validar_vocabularios([e])
+    assert not CE.validar_polity([e])
+
+
+def test_ninguna_con_contacto_es_error():
+    """`ninguna` no es la puerta para registrar un contacto sin decir con qué
+    polity: eso es la regla 4 incumplida por otro camino."""
+    p = CE.validar_polity([_etnia(polity_caquetia="ninguna",
+                                  tipo_de_contacto="mercado")])
+    assert any(x["codigo"] == "ninguna-con-contacto" for x in p)
+
+
+def test_ninguna_no_es_una_polity_del_motor():
+    """`ninguna` vive sólo en el validador: el espejo con curiana_polities.py
+    (test de abajo) no cambia."""
+    assert CE.POLITY_NINGUNA not in CE.POLITIES
+    assert CE.POLITY_NINGUNA not in CP.POLITIES
+    assert set(CE.VALORES_POLITY) == set(CE.POLITIES) | {CE.POLITY_NINGUNA}
+
+
 # ── vocabularios cerrados ─────────────────────────────────────────────
 
 def test_los_campos_cerrados_rechazan_valores_nuevos():

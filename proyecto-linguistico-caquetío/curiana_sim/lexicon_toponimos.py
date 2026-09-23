@@ -2419,10 +2419,21 @@ DESCARTES = {
                     "jamaica": 46, "jayana": 46, "guacujúa": 38, "tequeguacare": 62,
                     "sisibauco": 60, "guarama": 41},
         "formas": [
+            # tf.7 E (Miguel, 2026-09-23): la última cláusula se corrige con
+            # Oviedo y Baños (ed. Ayacucho p. 168, verificado en imagen por la
+            # campaña cc.5). Esteves hacía de Charaima un cacique de Margarita
+            # y abuelo de Fajardo; era del valle de Maya, en la provincia de
+            # Caracas, y su bisabuelo. El único hilo que ataba un topónimo de
+            # Paraguaná a los guaiqueríes se corta (etnia-009).
             "charaima (población entre Adícora y Baraived; censo 1881: 79 casas, "
             "527 habitantes; nombre primitivo Charaide en su Título de "
-            "Composición; Esteves no sabe qué relación guarda con el cacique "
-            "Charaima de Margarita, abuelo del guayquerí Francisco Fajardo)",
+            "Composición; Esteves no sabe qué relación guarda con «el cacique "
+            "Charaima de la Isla de Margarita, el abuelo del guayquerí Francisco "
+            "Fajardo», pero ese cacique no era de Margarita: Oviedo y Baños "
+            "(p. 168) da a Charayma como cacique del valle de Maya, en la "
+            "provincia de Caracas, y bisabuelo de Fajardo —su nieta Doña Isabel, "
+            "cacica guaiquerí, fue la madre—, así que el hilo a los guaiqueríes "
+            "no aguanta)",
             "jacuque (sabanas y hatos en Jadacaquiva; Punta de Jacuque, por donde "
             "«no se puede confirmar históricamente» Federmann desembarcó los "
             "caballos de Santo Domingo en 1530; etimología popular: jaca "

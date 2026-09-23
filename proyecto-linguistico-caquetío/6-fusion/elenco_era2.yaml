@@ -246,6 +246,19 @@ casas:
       avunculocal (keegan-1989): el sobrino-heredero vive con el tío materno.
     alternativa: 'ninguna: P1 quedó resuelta el 2026-09-14 con la opción a y se descartó la b (el cerro sin clan).'
     etiqueta: canon-simulacion
+    deuda: sin-procedencia
+    nota_asiento_2026-09-23: >-
+      tf.7, Manaure A (Miguel, 2026-09-23): se DECLARA, no se cambia. Que la
+      casa del Manaure esté en Moruy, al pie del Capubana, es la decisión
+      creativa del 2026-09-14 y no tiene fuente: ninguna pone a Manaure en
+      Paraguaná. La única anterior al pacto de 1527 —Ampíes, c. 1526, de
+      oídas— lo pone «diez leguas la tierra adentro en la provincia de Coro»
+      (Pérez de Tolosa / Fernández Duro 1885 t. II p. 212), y después de 1527
+      los documentos lo sitúan en Todariquiba (reconstruido, 1527-1531:
+      nodo-001, geografia_politica-003) o en el pueblo de Coro (Cey, vía
+      González Batista 2002). Ninguna dice nada del s. XV, así que la casa de
+      Moruy no contradice un dato precontacto: no lo hay. Datos en
+      6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_1.
     aporte_al_cerro: 'el Manaure mismo, el boratio mayor, la ayunante, el merejuy y la chicha'
     apopo: 'no aplica — el jefe de esta casa es el Manaure (of-01), diao paramount, no apopo'
 

@@ -17,7 +17,10 @@ medido: 2026-07-29
 ## La respuesta en una frase
 
 La Curiana de la simulación reconstruye **Todariquiba**, el poblado donde residió
-Manaure tras el pacto de 1527; Manaure es **el diao principal** (no el único) de
+Manaure tras el pacto de 1527 (⚠️ 2026-09-23, tf.7 A: esa residencia es
+**reconstruida** —lectura de Oliver, 1527-1531—, no atestiguada; lo atestiguado
+es el pueblo de Don Alexandre en 1538, y Cey pone a Manaure en Coro:
+`geografia_politica-003`); Manaure es **el diao principal** (no el único) de
 un sistema de tres niveles —*apopo* / *diao* / paramountcy— y su mundo real era
 de **14-15 mil personas en 30+ poblados**, no de sesenta.
 
