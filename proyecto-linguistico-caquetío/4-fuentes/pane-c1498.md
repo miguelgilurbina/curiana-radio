@@ -154,3 +154,11 @@ Dos atestaciones independientes de verdad (skill §8).
 ## Enlaces
 
 [[oviedo-y-valdes-1851]] · [[angleria-1892]] · [[brinton-1871]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Se le preguntó por el mar. **Caps. IX-X**: el origen del mar de la calabaza de
+Yaya, con los huesos de Yayael vueltos peces. Va como comparanda de la esfera
+(no caquetía) en `6-fusion/fauna_paraguana_mar_2026-09-22.yaml`
+§cosmovision_marina (cm-c2), con la rima con la bebida de los huesos caquetía
+marcada como lectura.

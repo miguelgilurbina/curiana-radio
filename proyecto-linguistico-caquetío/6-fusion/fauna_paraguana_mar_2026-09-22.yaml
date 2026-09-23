@@ -120,16 +120,15 @@ meta:
     Tacuato: se dice de dónde viene cada nombre.
   medido:
     # Lo escribe 6-fusion/scripts/medir_fauna_mar.py --conteos. No editar a mano.
-    especies: 46
-    por_grupo: {cetaceos: 5, crustaceos: 8, equinodermos_y_cnidarios: 3, moluscos: 11, otros_mamiferos: 2,
-      peces: 15, tiburones_y_rayas: 4, tortugas: 5}
-    por_presencia: {dudosa: 4, excluida: 2, probable: 25, segura: 15}
-    es_hueco: 32
-    con_nombre_caquetio: 11
-    con_sonido_documentado: 14
+    especies: 53
+    por_grupo: {cetaceos: 4, crustaceos: 7, equinodermos_y_cnidarios: 3, moluscos: 11, otros_mamiferos: 2, peces: 17, tiburones_y_rayas: 4, tortugas: 5}
+    por_presencia: {dudosa: 6, excluida: 2, probable: 31, segura: 14}
+    es_hueco: 43
+    con_nombre_caquetio: 15
+    con_sonido_documentado: 15
     candidatos_referente: 10
     propuestas_ecologia: 8
-    obras_citadas: 27
+    obras_citadas: 22
   ceros_verificados:
     - que: 'delfín, ballena, manatí o foca en la toponimia y el léxico de Paraguaná'
       raices: [delf, tonin, toñin, soplon, ballen, manat, lobo marin, foca]
@@ -1264,6 +1263,11 @@ cosmovision_marina:
       dato: 'El caquetío atestiguado tiene palabras propias para el mar y su borde: `para` «agua dulce o salada en grandes cantidades» y `parawa` «mar», `kari` «orilla del mar», `samuro` «punta hacia el mar», `supi` «sitio a orilla del mar, arena».'
       etiqueta: atestiguado
       procedencia: {obra: zavala-reyes-2015, pagina: '#66, #190, #191, #223, #230'}
+    - id: cm-s1b
+      dato: 'En las islas el mar también está en el léxico que sobrevive: el topónimo arubeño Balashi «contains the root bala meaning the sea», y el papiamento viejo tenía sawáwa, «un tren de olas grandes».'
+      etiqueta: reconstruido
+      capa: 'la atribución caquetía es de van Buurt; papiamento, s. XIX-XX'
+      procedencia: {obra: van-buurt-2014, pagina: '35, 41'}
     - id: cm-s2
       dato: 'La tierra misma se llama con el mar: Paraguaná. «Está suficientemente averiguado que Para significa agua», y «Conuco en medio del mar es la más repetida de las significaciones que le dan al topónimo».'
       etiqueta: atestiguado

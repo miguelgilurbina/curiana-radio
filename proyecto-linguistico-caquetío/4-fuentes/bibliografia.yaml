@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 83
-  en_repo: 51
-  solo_citadas: 32
+  obras: 91
+  en_repo: 54
+  solo_citadas: 37
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
@@ -177,6 +177,20 @@ obras:
   - Obispo Ballesteros
   - Miguel Gerónimo de Ballesteros
   en_repo: false
+- id: barrios-garrido-2018
+  obra: 'Socio-economic drivers affecting marine turtle conservation status: causes and consequences'
+  autor: Barrios-Garrido, Héctor A.
+  anio: 2018
+  publicacion: Tesis doctoral, James Cook University (Townsville). doi:10.25903/5be0fecec8548
+  genero: etnografia
+  paginas: 328
+  acceso: 'Libre en ResearchOnline@JCU: https://researchonline.jcu.edu.au/56047/1/JCU_56047-barrios-garrido-2018-thesis.pdf
+    · leída en línea el 2026-09-22 (6.925.088 bytes; sha256 fdb3309d0583dd7476792456582a321f1bc5506b5a8a2f88f03a40bbb6a8933b).
+    NO se guardó en el repo: © 2018 del autor; se cita corto y se parafrasea'
+  aliases:
+  - Barrios-Garrido 2018
+  - tesis de Barrios-Garrido
+  en_repo: false
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
   autor: Brett Martínez, Alí
@@ -296,6 +310,20 @@ obras:
   - Historia del Almirante
   - Colón 1892
   en_repo: true
+- id: cook-forrest-2005
+  obra: Sounds Produced by Nesting Leatherback Sea Turtles (Dermochelys coriacea)
+  autor: Cook, Sarah L. y Forrest, T. G.
+  anio: 2005
+  publicacion: Herpetological Review, vol. 36, nº 4, pp. 387-390
+  genero: ciencia-natural
+  paginas: 4
+  acceso: 'Leído en línea el 2026-09-22 en la biblioteca de seaturtle.org: http://seaturtle.org/library/CookSL_2005_HerpetolRev.pdf.
+    NO se guardó en el repo: el PDF declara que se ofrece «subject to the copyright policy of the journal»;
+    se cita corto y se parafrasea'
+  aliases:
+  - Cook y Forrest 2005
+  - sonidos de la tortuga laúd
+  en_repo: false
 - id: dijkhoff-1997
   obra: 'Tanki Flip / Henriquez: an Early Urumaco Site in Aruba'
   autor: Dijkhoff, Raymundo A. C. F.
@@ -369,6 +397,34 @@ obras:
   - Fernandes et al. 2021
   - genética Caribe precontacto
   en_repo: true
+- id: fishbase-sealifebase
+  obra: FishBase y SeaLifeBase — fichas de especie (descripción, biología, nombres comunes)
+  autor: Froese, R. y Pauly, D. (eds.) — FishBase; Palomares, M. L. D. y Pauly, D. (eds.) — SeaLifeBase
+  anio: '2026'
+  publicacion: www.fishbase.se y www.sealifebase.se, versiones en línea consultadas el 2026-09-22. Licencia
+    CC BY-NC 4.0
+  genero: datos
+  paginas: — (una ficha por especie; la URL va en cada entrada del YAML que la usa)
+  acceso: Libre en línea. Se leyeron las secciones «Morphology», «Biology» y la lista de nombres comunes
+    de 80 especies
+  aliases:
+  - FishBase
+  - SeaLifeBase
+  en_repo: false
+- id: fishsounds
+  obra: FishSounds — inventario mundial de los sonidos de los peces
+  autor: Looby, A.; Vela, S.; Cox, K.; Riera, A.; Davies, H. L.; Spriel, B.; Murchy, K.; Bravo, S.; Rountree,
+    R.; Juanes, F.; Reynolds, L. K. y Martin, C. W.
+  anio: '2026'
+  publicacion: FishSounds, http://www.fishsounds.net, versión 2026-Apr, consultada el 2026-09-22. Licencia
+    CC BY-NC 4.0
+  genero: datos
+  paginas: — (una página por especie; la URL va en cada entrada del YAML que la usa)
+  acceso: Libre en línea
+  aliases:
+  - FishSounds
+  - Looby et al. 2026
+  en_repo: false
 - id: gatschet-1885
   obra: The Aruba Language and the Papiamento Jargon
   autor: Gatschet, Albert S. (material recogido por Alphonse L. Pinart, 1882)
@@ -787,6 +843,24 @@ obras:
   - Nueva Segovia 1579
   - Arévalo y Ruiz de la Parra
   en_repo: false
+- id: obis-gbif-caja-marina
+  obra: OBIS y GBIF — registros de ocurrencia en la caja marina de Paraguaná (las dos aguas de la era
+    2)
+  autor: Ocean Biodiversity Information System (IOC-UNESCO) y Global Biodiversity Information Facility
+    (conjuntos de datos de múltiples publicadores)
+  anio: '2026'
+  publicacion: Consultados vía API (https://api.obis.org/v3/checklist y https://api.gbif.org/v1/occurrence/search)
+    el 2026-09-22. Licencias CC0 o CC-BY según el conjunto de datos
+  genero: datos
+  local:
+  - 6-fusion/fauna_mar_caja_obis_gbif_2026-09-22.yaml (generado por 6-fusion/scripts/caja_marina_obis_gbif.py)
+  paginas: '— (datos: tres cajas lon/lat, declaradas en el archivo)'
+  acceso: Libre. Se regenera con `python 6-fusion/scripts/caja_marina_obis_gbif.py` (usa red)
+  aliases:
+  - OBIS
+  - GBIF
+  - caja marina
+  en_repo: true
 - id: oliver-1989-apendice-a
   obra: 'Appendix A: Swadesh''s 100 Word List vocabularies for Arawakan Languages (en *The Archaeological,
     Linguistic and Ethnohistorical Evidence for the Expansion of Arawakan into Northwestern Venezuela*)'
@@ -1112,6 +1186,38 @@ obras:
   - Juan Rivero
   - Historia de las Misiones de los Llanos
   en_repo: false
+- id: romero-mayayo-agudo-1991
+  obra: Los cetáceos recientes de Venezuela
+  autor: Romero, Aldemaro; Mayayo, Ana y Agudo, Ignacio
+  anio: 1991
+  publicacion: Memoria de la Sociedad de Ciencias Naturales La Salle, tomo LI, nº 135-136, pp. 169-180
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Romero_Mayayo_Agudo_1991_Cetaceos_Venezuela.pdf
+  paginas: 12
+  acceso: 'Libre — publicaciones del decano, Southern Illinois University Edwardsville: https://www.siue.edu/artsandsciences/pdf/deanspublications/260.LosCetaceosRecientesVenezuela.pdf
+    · descargado el 2026-09-22 (33.860.799 bytes; sha256 164edf177101a83adb8eec2a75fa6a1960ddc111da976f31d6230658963847c4)'
+  aliases:
+  - Romero et al. 1991
+  - Los cetáceos recientes de Venezuela
+  en_repo: true
+- id: rondon-medicci-2013
+  obra: Registro de las áreas de desove de las tortugas marinas en la Península de Paraguaná, estado Falcón
+  autor: Rondón-Médicci, María de los Ángeles
+  anio: 2013
+  publicacion: Ciencia (Facultad Experimental de Ciencias, Universidad del Zulia), vol. 21, nº 3, pp.
+    113-121
+  genero: ciencia-natural
+  local:
+  - fuentes_caquetios/Tortugas_desove_Paraguana_Ciencia_LUZ.pdf
+  paginas: 9
+  acceso: 'Libre — revista de acceso abierto de LUZ: https://www.produccioncientificaluz.org/index.php/ciencia/article/download/18736/18720
+    · descargado el 2026-09-22 (1.168.460 bytes; sha256 4a4640f5da72df3bca10c354a8b1f7274d42af8cba8e25078e9228580904ecb2).
+    Texto: fuentes_caquetios/Tortugas_desove_Paraguana_Ciencia_LUZ.txt (pdftotext)'
+  aliases:
+  - Rondón-Médicci 2013
+  - tortugas de Paraguaná
+  en_repo: true
 - id: rouse-cruxent-1963
   obra: Venezuelan Archaeology
   autor: Rouse, Irving y Cruxent, José María
@@ -1215,6 +1321,22 @@ obras:
   - Historia de una Resistencia
   - Reinaldo Velasco
   en_repo: true
+- id: wikipedia-es-fauna-marina
+  obra: Wikipedia en español — artículos de especie de la fauna marina del Caribe sur
+  autor: Wikipedia en español (colaborativa)
+  anio: '2026'
+  publicacion: es.wikipedia.org, consultada vía la API de MediaWiki (extractos en texto plano) el 2026-09-22.
+    Licencia CC BY-SA 4.0
+  genero: datos
+  paginas: — (una página por especie; la URL va en cada entrada del YAML que la usa)
+  acceso: Libre en línea. Se leyeron los artículos en español de Chelonia mydas, Eretmochelys imbricata,
+    Caretta caretta, Dermochelys coriacea, Lepidochelys olivacea, Tursiops truncatus, Sotalia guianensis,
+    Balaenoptera edeni, Megaptera novaeangliae, Trichechus manatus y Haemulidae, y en inglés Haemulidae
+    y Alpheidae (para el sonido); los de invertebrados en español quedaron sin leer (la API cortó por
+    exceso de consultas)
+  aliases:
+  - Wikipedia es (fauna marina)
+  en_repo: false
 - id: zavala-reyes-2015
   obra: 'Palabras vivas de una lengua muerta: legado arawak-caquetío'
   autor: Zavala Reyes, Miguel Enrique

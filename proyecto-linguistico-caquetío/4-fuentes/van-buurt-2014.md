@@ -325,3 +325,16 @@ Ningún `-gua` sufijal glosado en ninguna de sus secciones.
 ## Enlaces
 
 [[gatschet-1885]] · [[alvarado-1921]] · [[zavala-reyes-2015]] · [[oliver-1989-cap2]] · [[02_protocolo_habla_paraguanera]]
+
+## Bitácora 2026-09-22 — fauna del mar (FA3)
+
+Relectura de §3, §6, §8 y §11 buscando fauna marina (páginas impresas
+medidas por el pie de imprenta del PDF). Dio: el comercio de marisco vivo con
+las islas (p. 17); `kiwa` = *Cittarium pica* y cigua en Cuba (p. 32); `kasha
+kutu`, la cuna tigre (p. 32); `macabí`/`makambí` y el 5,2 % de Tanki Flip
+(p. 33); `palúli` (pp. 34-35); `sawáwa` «un tren de olas» (p. 35);
+`waranawa`, la lisa salada de Paraguaná, `warashi` y `wampanaria`, el abanico
+de mar que servía de cedazo (p. 37); Balashi con la raíz *bala* «mar» (p. 41);
+el 13,7 % de *warashi* en Tanki Flip (p. 43); `guengu`, `karawau`, `djakarou`
+en §11 (p. 45); `bushi` también para los erizos (p. 29). Todo en
+`6-fusion/fauna_paraguana_mar_2026-09-22.yaml`.
