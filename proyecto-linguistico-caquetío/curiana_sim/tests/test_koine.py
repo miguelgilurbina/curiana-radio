@@ -31,6 +31,11 @@ SERIE_ABLACION_BDC = [
 ]
 
 
+
+# Tanda de la base (2026-09-23): `kali` está ARCHIVADA desde el 2026-09-19 y
+# una raíz archivada ya no avala una acuñación (db.1, el agujero de `kira`).
+# Las formas de ejemplo de este archivo acuñan sobre `kasi`, la atestiguada.
+
 def _idios(nombres):
     return {nm: IdiolectoAgente(nm, emocionar_de(nm)) for nm in nombres}
 
@@ -124,7 +129,7 @@ def test_excluir_deja_solo_formas_emergentes():
     b = IdiolectoAgente("B", peso_semilla=0)
     for _ in range(5):
         # comparten TODO el vocabulario base, difieren solo en neologismos
-        a.registrar(list(base) + ["kali-dusha", "sima-bana", "buco-rua"])
+        a.registrar(list(base) + ["kasi-dusha", "sima-bana", "buco-rua"])
         b.registrar(list(base) + ["suka-wana", "habo-kata", "dali-nu"])
     idios = {"A": a, "B": b}
     d_total = distancia_idiolectal(idios, ventana=True)
@@ -152,22 +157,22 @@ def test_ventana_expira_formas_viejas():
 def test_competencia_fija_la_variante_dominante():
     comp = CompetenciaLexica(soporte_minimo=2.0)
     comp.activar("cometa", "estrella con cola")
-    comp.proponer("cometa", "kali-dusha", "Manaure")
+    comp.proponer("cometa", "kasi-dusha", "Manaure")
     comp.proponer("cometa", "suka-wana", "Tariwa")
     for _ in range(4):
-        comp.registrar_uso("kali-dusha", "Shaboro")
+        comp.registrar_uso("kasi-dusha", "Shaboro")
     fijadas = comp.evaluar_fijacion(dia=5)
-    assert ("cometa", "kali-dusha") in fijadas
-    assert comp.diccionario_koine()["cometa"]["forma"] == "kali-dusha"
+    assert ("cometa", "kasi-dusha") in fijadas
+    assert comp.diccionario_koine()["cometa"]["forma"] == "kasi-dusha"
 
 
 def test_competencia_no_fija_sin_rivales():
     """Con una sola variante no hay competencia que resolver."""
     comp = CompetenciaLexica(soporte_minimo=1.0)
     comp.activar("eclipse", "el sol se oscurece")
-    comp.proponer("eclipse", "kali-suka", "Manaure")
+    comp.proponer("eclipse", "kasi-suka", "Manaure")
     for _ in range(10):
-        comp.registrar_uso("kali-suka", "Shaboro")
+        comp.registrar_uso("kasi-suka", "Shaboro")
     assert comp.evaluar_fijacion(dia=3) == []
 
 
@@ -197,9 +202,9 @@ def test_una_competencia_abierta_sobrevive_a_guardar_y_cargar(tmp_path):
     hay que poder SEGUIR sumando soporte a las mismas rivales."""
     comp = CompetenciaLexica(soporte_minimo=99.0)      # que no fije: sigue abierta
     comp.activar("cuentas_vidrio", "unas cuentas brillantes y duras")
-    comp.proponer("cuentas_vidrio", "kali-uco-aima", "Chirwa", ambito="Tacuato")
-    comp.proponer("cuentas_vidrio", "ucibo-kali-duruco", "Arika", ambito="Carirubana")
-    comp.registrar_uso("kali-uco-aima", "Patapati")
+    comp.proponer("cuentas_vidrio", "kasi-uco-aima", "Chirwa", ambito="Tacuato")
+    comp.proponer("cuentas_vidrio", "ucibo-kasi-duruco", "Arika", ambito="Carirubana")
+    comp.registrar_uso("kasi-uco-aima", "Patapati")
     soportes = dict(comp.referentes["cuentas_vidrio"]["variantes"])
 
     ruta = str(tmp_path / "koine.json")
@@ -211,28 +216,28 @@ def test_una_competencia_abierta_sobrevive_a_guardar_y_cargar(tmp_path):
     assert vuelta.referentes["cuentas_vidrio"]["desc"].startswith("unas cuentas")
     assert vuelta.umbral == comp.umbral and vuelta.soporte_min == comp.soporte_min
     # el ámbito de cada proponente, que es lo que V3 filtra
-    assert vuelta.ambitos_de_forma("kali-uco-aima") == ["Tacuato"]
-    assert vuelta.ambitos_de_forma("ucibo-kali-duruco") == ["Carirubana"]
-    assert "kali-uco-aima" in vuelta.prompt_competencias(ambito="Tacuato")
-    assert "kali-uco-aima" not in vuelta.prompt_competencias(ambito="Carirubana")
+    assert vuelta.ambitos_de_forma("kasi-uco-aima") == ["Tacuato"]
+    assert vuelta.ambitos_de_forma("ucibo-kasi-duruco") == ["Carirubana"]
+    assert "kasi-uco-aima" in vuelta.prompt_competencias(ambito="Tacuato")
+    assert "kasi-uco-aima" not in vuelta.prompt_competencias(ambito="Carirubana")
     # y el día siguiente puede seguir sumando soporte a la misma rival
-    vuelta.registrar_uso("kali-uco-aima", "Birokoa")
-    assert (vuelta.referentes["cuentas_vidrio"]["variantes"]["kali-uco-aima"]
-            > soportes["kali-uco-aima"])
+    vuelta.registrar_uso("kasi-uco-aima", "Birokoa")
+    assert (vuelta.referentes["cuentas_vidrio"]["variantes"]["kasi-uco-aima"]
+            > soportes["kasi-uco-aima"])
 
 
 def test_una_competencia_ya_fijada_sigue_fijada_al_cargar(tmp_path):
     comp = CompetenciaLexica(soporte_minimo=2.0)
     comp.activar("cometa", "estrella con cola")
-    comp.proponer("cometa", "kali-dusha", "Manaure")
+    comp.proponer("cometa", "kasi-dusha", "Manaure")
     comp.proponer("cometa", "suka-wana", "Tariwa")
     for _ in range(4):
-        comp.registrar_uso("kali-dusha", "Shaboro")
+        comp.registrar_uso("kasi-dusha", "Shaboro")
     assert comp.evaluar_fijacion(dia=2)
     ruta = str(tmp_path / "koine.json")
     guardar_koine({}, CampoLexico(), comp, path=ruta)
     _i, _c, vuelta = cargar_koine(path=ruta)
-    assert vuelta.diccionario_koine()["cometa"]["forma"] == "kali-dusha"
+    assert vuelta.diccionario_koine()["cometa"]["forma"] == "kasi-dusha"
     assert vuelta.diccionario_koine()["cometa"]["dia"] == 2
     assert vuelta.activas() == {}
     assert vuelta.evaluar_fijacion(dia=3) == []        # no se re-fija

@@ -50,6 +50,11 @@ class _Cliente:
     pass
 
 
+
+# Tanda de la base (2026-09-23): `kali` está ARCHIVADA desde el 2026-09-19 y
+# una raíz archivada ya no avala una acuñación (db.1, el agujero de `kira`).
+# Las formas de ejemplo de este archivo acuñan sobre `kasi`, la atestiguada.
+
 def _raices_del_canon(n: int) -> list[str]:
     """`n` raíces DEL LEXICÓN, distintas, que no enseñe ninguna plantilla y
     que pasen la compuerta fonotáctica.
@@ -652,10 +657,10 @@ def test_d_sin_ambito_el_reporte_no_menciona_ambitos():
     """La era 1: el diccionario de cierre es el de siempre."""
     lex = LexicoComunitario()
     lex.registrar_neologismo(Neologismo(
-        turno=1, dia=1, autor="Shaboro", forma="kali-ni", componentes="kali + -ni",
+        turno=1, dia=1, autor="Shaboro", forma="kasi-ni", componentes="kasi + -ni",
         significado="x", contexto="", regla_aplicada="-ni"))
-    lex.adoptar("kali-ni", "Tawaka", turno=2)
-    neo = lex.adoptar("kali-ni", "Manaure", turno=2, dia=1)
+    lex.adoptar("kasi-ni", "Tawaka", turno=2)
+    neo = lex.adoptar("kasi-ni", "Manaure", turno=2, dia=1)
     assert neo.via is None and neo.oficial_en == []
     assert "ámbito" not in lex.reporte_linguistico()
 
