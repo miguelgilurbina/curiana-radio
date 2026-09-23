@@ -1485,3 +1485,515 @@ fauna:
     verificacion: ocr-limpio
     solo_comparacion: true
     por_que: "el `cori` es el término de comparación de los `coríes` de Venezuela (t. II p. 330)"
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. VOCES DE TIERRA FIRME, DE LA COSTA DE VENEZUELA Y DE SUS ISLAS
+#    Esquema de `taino_oviedo_valdes_1851.yaml`. `atribucion` es lo que
+#    Oviedo declara, no lo que nosotros suponemos. Ninguna de estas es
+#    caquetía declarada; varias son de la provinçia de Veneçuela, que en
+#    1548 es la gobernación de los Welser entera (regla 4).
+# ══════════════════════════════════════════════════════════════════════
+voces_de_tierra_firme:
+
+  # ── 2.a Provinçia de Veneçuela (los capítulos que Oviedo añadió al t. I
+  #        con la información del obispo Bastidas; ver `correcciones` §5)
+  - forma_fuente: dactos
+    forma_en_el_cuerpo: dacto
+    glosa_fuente: >-
+      Título del cap. XXVII: «De unos cardos altos é derechos mayores que lanças
+      de armas (é aun como picas luengas), quadrados y espinosos, á los quales
+      llaman los chripstianos çirios, porque paresçen çirios ó hachas de çera …
+      los quales llaman los indios de Veneçuela dactos». Cuerpo: «el muy
+      reverendo señor obispo de Sanct Johan, que primero lo fué de Veneçuela …
+      diçe que allá es muy buena fructa la que llevan ó produçen, la qual llanan
+      [sic] dacto, é críanse çerca de la costa … é dan una fructa en seys meses
+      del año, é comiençan por abril ó mayo, é es del grandor de una mançana
+      mediana este fructo, é toda la corteça cubierta de espinas … é lo de
+      dentro es de comer é quassi como pitahaya»
+    tomo: I
+    libro: VIII
+    capitulo: XXVII
+    pagina_impresa: [311, 312]
+    atribucion: "«los indios de Veneçuela» (título); informante declarado: el obispo Rodrigo de Bastidas"
+    campo: [planta, ecologia]
+    verificacion: imagen
+    en_el_lexicon: "sí — `dato` 'fruto del cardón' (lexicon_zavala.py, Zavala #105 HB), SIN cita de Oviedo"
+    aporta: >-
+      🟢 Primera fuente primaria de `dato` en el tomo I, con OTRA grafía
+      (`dactos`/`dacto`, con -ct-), con estación de fruto (abril-mayo, seis
+      meses) y con «críanse çerca de la costa». T6 halló `datos` en el t. II
+      p. 331 (el mismo informante). La impresa dice `llanan` por `llaman`: errata
+      de la edición, no del OCR.
+
+  - forma_fuente: mamon
+    glosa_fuente: >-
+      «En la provinçia de Veneçuela, en la Tierra-Firme, hay muchos árboles tan
+      grandes como gentiles laureles … Esta manera de árbol llaman allí los
+      indios mamon. La fructa dél es tamaña como una nuez … tiene una carnosidad
+      algo agra y no de mal sabor. El cuesco es tan grande como una avellana, y
+      de muchos cuescos destos, tostados é molidos, haçen pan los indios para
+      comer en tiempo de hambre»
+    tomo: I
+    libro: VIII
+    capitulo: XLIII
+    pagina_impresa: 327
+    atribucion: "«llaman allí los indios» — provinçia de Veneçuela"
+    campo: [planta, alimentacion]
+    verificacion: imagen
+    en_el_lexicon: "no como voz (sólo en listas de topónimos de flora de `barrer_mapa.py`)"
+    aporta: "el PAN DE HAMBRE de semilla de mamón tostada: dato de subsistencia en años sin maíz"
+
+  - forma_fuente: çimirucos
+    glosa_fuente: >-
+      «En la Tierra-Firme, en la provinçia é gobernaçión de Veneçuela, hay unos
+      árboles pequeños, de ocho ó diez palmos de alto … Llámanse çimirucos:
+      tienen la hoja como çiruelo: la fructa que produçen, es como çereças … é
+      sabe un poco á membrillos. Cójese esta fructa dos veçes en el año»
+    tomo: I
+    libro: VIII
+    capitulo: XLIV
+    pagina_impresa: 328
+    atribucion: "provinçia de Veneçuela (sin decir «los indios»)"
+    campo: [planta, ecologia]
+    verificacion: imagen
+    en_el_lexicon: "no"
+    aporta: >-
+      Segundo pasaje del semeruco (T6: `çemyrucos`, t. II p. 331), con otra
+      grafía (`çimiruco`) y con DOS cosechas al año. ⚠️ No es independiente del
+      de T6: mismo informante (ver `correcciones` §5).
+
+  - forma_fuente: comoho
+    glosa_fuente: >-
+      «Esta fructa y aun el cardo en que nasçe, se llama comoho en la provinçia
+      de Veneçuela … é en aquella borra los indios haçen vino desta fructa … este
+      comoho es mas sabroso mucho que las tunas … é menores que las desta isla …
+      Y el vino ques dicho, es tinto, de la color de vino tinto de uvas»
+    tomo: I
+    libro: VIII
+    capitulo: XXVIII
+    pagina_impresa: [314, 315]
+    atribucion: "provinçia de Veneçuela"
+    campo: [planta, bebida]
+    verificacion: ocr-limpio
+    ya_en: "T1 (pp. 313-314) y T6 (t. II p. 331). Lo NUEVO aquí es el VINO: «los indios haçen vino desta fructa», tinto"
+    en_el_lexicon: "sí — `komoho` 'higo' (lexicon_zavala.py, Zavala #88 HB)"
+
+  - forma_fuente: "encienso (árboles de la goma)"
+    glosa_fuente: >-
+      «En la provinçia de Veneçuela en la Tierra-Firme hay çiertos árboles que
+      echan çierta goma de sí … que paresçe natural ençienso, é assi huele como
+      ençienso, quemándolo. E acostumbran los indios en aquella tierra, quando
+      algún señor ó indio prinçipal se muere, que queman deste ençienso ó goma
+      por derrame, é le meten en la sepoltura en una esportilla alguna cantidad
+      deste ençienso»
+    tomo: I
+    libro: VI
+    capitulo: XVI
+    pagina_impresa: [203, 204]
+    atribucion: "«los indios en aquella tierra» — provinçia de Veneçuela"
+    campo: [planta, creencia]
+    verificacion: ocr-limpio
+    en_el_lexicon: "no hay voz: Oviedo no da el nombre indígena. Va a `hallazgos_de_mundo`"
+
+  # ── 2.b Cubagua, Margarita y la costa de Cumaná-Araya (la orilla oriental)
+  - forma_fuente: [thenocas, coçixas]
+    glosa_fuente: >-
+      «Alli en aquella provinçia de Cubagua é por aquella costa de Tierra-Firme
+      llaman á las perlas thenocas é tambien las diçen coçixas, é otros nombres
+      tambien les dan por las muchas y diferençiadas lenguas de aquella costa é
+      islas»
+    tomo: I
+    libro: XIX
+    capitulo: I
+    pagina_impresa: 591
+    atribucion: "Cubagua y «aquella costa de Tierra-Firme» (Cumaná, Araya); Oviedo avisa de que son varias lenguas"
+    campo: [objeto, mar]
+    verificacion: imagen
+    forma_ocr_cruda: "Ihenocas · corixas"
+    en_el_lexicon: "no"
+    ojo: "el OCR da `Ihenocas` y `corixas`: las dos voces habrían entrado mal sin la imagen íntegra"
+
+  - forma_fuente: yaguaraha
+    glosa_fuente: >-
+      «los colorados tienen la simiente muy menuda, como de mostaça, é llaman los
+      indios á esta fructa yaguaraha»
+    tomo: I
+    libro: XIX
+    capitulo: II
+    pagina_impresa: 591
+    tambien_en: "t. I lib. VIII cap. XXXIX, p. 326 (casi las mismas palabras; T1 la tenía de ahí, sólo por OCR)"
+    atribucion: "«los indios» de Cubagua"
+    campo: planta
+    verificacion: imagen
+    en_el_lexicon: "no"
+    aporta: "✅ levanta la marca `ocr-sin-imagen` de T1: la forma impresa es `yaguaraha`"
+
+  - forma_fuente: agoreros
+    glosa_fuente: >-
+      p. 591: «El otro género de fructa en cardones … es de fuera verde é
+      quieren paresçer dátiles … é quando se comen … sale ó sube á las narices un
+      olor de almizcle ó mas suave. A esta fructa llaman los indios agoreros».
+      p. 384: «Cerca de Araya hay una gente que llaman los agoreros en la
+      Tierra-Firme, á causa de çierta fructa que se llama assi mismo agoreros»
+    tomo: I
+    libro: [XIX, XI]
+    capitulo: [II, XI]
+    pagina_impresa: [591, 384]
+    tambien_en: "t. I lib. VI cap. XXII, p. 208, y lib. VIII cap. XXXIX, p. 326"
+    atribucion: "«los indios» de Cubagua (la fruta); el nombre de la GENTE lo ponen los españoles por la fruta"
+    campo: [planta, etnonimo]
+    verificacion: imagen
+    en_el_lexicon: "no"
+    ojo: >-
+      Homógrafo del castellano «agoreros» y en cursiva: el editor la trata como
+      voz indígena. Una gente nombrada por los españoles por su fruta, como los
+      «magueyes» por su planta (abajo).
+
+  - forma_fuente: chacopati
+    glosa_fuente: >-
+      p. 385: «Esta gente que los chripstianos llaman magueyes por la causa ya
+      dicha, se llaman en su lengua chacopati». p. 208: «E aquesta gente magueyes
+      llaman los naturales de aquella tierra chacopati»
+    tomo: I
+    libro: [XI, VI]
+    capitulo: [XI, XXII]
+    pagina_impresa: [385, 208]
+    atribucion: "autodenominación («se llaman en su lengua») de una gente cerca de Araya"
+    campo: etnonimo
+    verificacion: ocr-limpio
+    en_el_lexicon: "no"
+
+  - forma_fuente: uchibican
+    forma_ocr_cruda: "uehibican (p. 208) · uchibkan (p. 385)"
+    glosa_fuente: >-
+      p. 208: «el qual cambio, assi como en castellano se diçe trocar, é en la
+      lengua desta Isla Española se diçe serra, en lengua destos magueyes ó
+      chacopati el trocar quiere deçir uchibican». p. 385: «Mas en aquella lengua
+      de los magueyes, alias chacopati, serra ó trocar quiere deçir uchibican»
+    tomo: I
+    libro: [VI, XI]
+    capitulo: [XXII, XI]
+    pagina_impresa: [208, 385]
+    atribucion: "«lengua destos magueyes ó chacopati» — DECLARADA, cerca de Araya"
+    campo: [intercambio, verbo]
+    verificacion: imagen
+    en_el_lexicon: "no"
+    ojo: >-
+      🔴 La única vez en los cuatro tomos que Oviedo pone EN PARALELO una voz de
+      Tierra Firme y una de La Española para lo mismo: castellano `trocar` =
+      taíno `serra` = chacopati `uchibican`. Las dos formas son distintas: no es
+      préstamo. Y los dos pasajes son del mismo Oviedo («casi con las mismas
+      palabras», nota del editor en la p. 385): UNA atestación, no dos.
+
+  - forma_fuente: serra
+    glosa_fuente: "«en la lengua desta Isla Española se diçe serra» (p. 208); «haçer serra, que quiere deçir … trocar» (p. 385)"
+    tomo: I
+    libro: [VI, XI]
+    capitulo: [XXII, XI]
+    pagina_impresa: [208, 385]
+    atribucion: "«la lengua desta Isla Española» — DECLARADA"
+    campo: [intercambio, verbo]
+    verificacion: imagen
+    en_el_lexicon: "no"
+    seccion_de_la_esfera: "es TAÍNO (comparanda de la esfera de contacto), no de Tierra Firme; va aquí por el par"
+
+  - forma_fuente: maguey
+    glosa_fuente: >-
+      «é çerca destos están otras gentes que se diçen los magueyes, á causa que
+      una hierva, como cardones (mas sin espinas), se llama assi maguey, de que
+      allí hay mucha abundançia della: la qual paresçe mucho á la cabuya … Aquella
+      gente … despencan esta hierva, é la cabeça ó çepa della cuéçenla é háçese
+      un manjar asaz bueno … É de las hojas sacan el çumo por sudor de fuego, á
+      manera de destilallo, é de aquello beben aquella gente, é nunca beben agua»
+    tomo: I
+    libro: XI
+    capitulo: XI
+    pagina_impresa: [384, 385]
+    atribucion: "no-declarada en cuanto a lengua; la planta es de la costa de Araya"
+    campo: [planta, alimentacion]
+    verificacion: ocr-limpio
+    en_el_lexicon: "sí — `magey` (vía Medina, caquetío-reconstruido, «vara del cocuy»), SIN cita de Oviedo"
+    aporta: "la atestación del XVI del maguey en una costa seca del Caribe venezolano, con su uso como COMIDA y como BEBIDA sin agua"
+
+  - forma_fuente: [macao, cutipris, chuare, pauxi]
+    glosa_fuente: >-
+      «En la isla de Cubagua y en la Margarita hay una fructa que llaman macao,
+      que quiere paresçer á las castañas en el sabor … é cuéçenlo é muélenlo en
+      piedras, é háçese un pan que sabe á bellotas»; «Otra fructa hay en la isla
+      Margarita que se llama cutipris que sabe á uvas moscateles»; «Hay otra
+      fructa en la isla de la Margarita que se llama chuare, que es como higos
+      pequeños de Castilla: é otra hay que se diçe pauxi que es de diversos
+      tamaños, é son como çiruelas»
+    tomo: I
+    libro: VIII
+    capitulo: [XL, XLI, XLII]
+    pagina_impresa: 327
+    atribucion: "Cubagua y Margarita, sin decir de quién es la voz"
+    campo: planta
+    verificacion: "imagen (macao, cutipris, chuare); ocr-limpio (pauxi)"
+    en_el_lexicon: "no"
+
+  - forma_fuente: tatara
+    glosa_fuente: "(ver `fauna:`) el pez pequeño de picadura dolorosa de la mar de Cubagua"
+    tomo: I
+    libro: [XIX, VI]
+    capitulo: [II, XXIV]
+    pagina_impresa: [592, 209]
+    atribucion: no-declarada
+    campo: animal
+    verificacion: imagen
+    en_el_lexicon: "no"
+
+  - forma_fuente: maperiti
+    glosa_fuente: "«al qual llaman en la costa de Cumaná y Araya y por allí maperiti, y en otras partes le dan otro nombre» (la mofeta)"
+    tomo: II
+    libro: XXIV
+    capitulo: XIII
+    pagina_impresa: 260
+    atribucion: "la costa de Cumaná y Araya — DECLARADA"
+    campo: animal
+    verificacion: ocr-limpio
+    en_el_lexicon: "no"
+    ojo: "viva hoy como `mapurite` en el castellano de Venezuela"
+
+  - forma_fuente: bivana
+    glosa_fuente: "«En aquella costa de las perlas que llaman Paria, llaman los indios en su lengua á este animal bivana»"
+    tomo: I
+    libro: XII
+    capitulo: XXIX
+    pagina_impresa: 417
+    atribucion: "«los indios en su lengua» — costa de Paria, DECLARADA"
+    campo: animal
+    verificacion: ocr-limpio
+    en_el_lexicon: "no"
+
+  - forma_fuente: baquira
+    variantes: "baquiras (t. I p. 593; t. II p. 354) · váquiras (t. II p. 221) · baquira (t. I p. 409)"
+    glosa_fuente: >-
+      t. I p. 409: «en Castilla del Oro, en la provinçia de Cueva, los llaman
+      chuche, é los indios en otras provinçias lo llaman baquira»; t. II p. 354:
+      «dos puercos salvajes, que los indios llaman baquiras» (Santa Marta)
+    tomo: [I, II]
+    pagina_impresa: [409, 593, 354, 221, 250]
+    atribucion: >-
+      «los indios» de Santa Marta (1514, cursiva) y «de otras provinçias» de
+      Tierra Firme; en Cubagua «las baquiras de la Tierra-Firme»; en el Huyapari
+      «que llaman váquiras». Cueva, en cambio, dice `chuche`
+    campo: animal
+    verificacion: "imagen (t. I p. 593; t. II p. 354); ocr-limpio (el resto)"
+    en_el_lexicon: "no comprobado como voz; `báquiro` vive en el castellano de Venezuela"
+    ojo: "voz AREAL de la costa de Tierra Firme en 1514-1548 (Santa Marta → Paria). Compartida no es descartada (minar-fuente §3)"
+
+  - forma_fuente: coches
+    glosa_fuente: "«é hay mucha carne de coches, que son çiervos, ó de baquiras»"
+    tomo: II
+    libro: XXIV
+    capitulo: XI
+    pagina_impresa: 250
+    atribucion: no-declarada
+    campo: animal
+    verificacion: ocr-limpio
+    en_el_lexicon: "no"
+
+  # ── 2.c El nombre de La Española en boca de los indios de Tierra Firme
+  - forma_fuente: Hayti
+    glosa_fuente: >-
+      «é los indios replicaban diçiendo "Hayti, Hayti", dando á entender que
+      yban de aquesta Isla Española, que en lengua de los indios se llama Haytí:
+      é los nuestros respondian "Castilla, Castilla"»
+    tomo: I
+    libro: XIX
+    capitulo: IV
+    pagina_impresa: 598
+    atribucion: "los indios de la costa de Maracapana (1520), hablando a los navíos de Gonçalo de Ocampo"
+    campo: toponimo
+    verificacion: imagen
+    ojo: >-
+      Los indios de Tierra Firme llaman a La Española por su nombre indígena y la
+      identifican como el origen de los navíos. ⚠️ Es 1520, tras veinte años de
+      armadas de rescate y de esclavos desde Santo Domingo (el propio capítulo lo
+      dice): prueba conocimiento COLONIAL del nombre, no contacto precolombino
+      (regla 3).
+
+  # ── 2.d Paraguaná, 1534 (t. IV, el naufragio de Sanabria)
+  - forma_fuente: Miraca
+    glosa_fuente: >-
+      «é llegaron á su pueblo, el qual se diçe Miraca, dos leguas la tierra
+      adentro»; «doçe leguas de aquí está la çibdad de Coro»
+    tomo: IV
+    libro: L
+    capitulo: "XX, §§XII-XIII"
+    pagina_impresa: [533, 534]
+    atribucion: "el pueblo del indio y su hija que bajaban a pescar; costa de Paraguaná"
+    campo: toponimo
+    verificacion: ocr-limpio
+    en_el_lexicon: "Miraca está en el canon de topónimos (hay que comprobar su ficha)"
+    aporta: >-
+      🟢 SEGUNDA atestación independiente de Miraca en Oviedo: T6 la tiene del
+      t. II p. 296 («el primero pueblo de Paraguana … treçe leguas» de Coro, por
+      el relato de los Welser); aquí llega por otro informante (Sanabria, 1534),
+      con otra distancia (dos leguas de la costa, doce de Coro) y habitada por
+      españoles con un capitán. Va a la campaña de topónimos.
+
+  - forma_fuente: "Capitan (en boca de un paraguanero)"
+    glosa_fuente: >-
+      «é por señas, sin se entender, les preguntaban si sabian de algunos
+      chripstianos; y entre otras palabras dixo el indio: — "Capitan". E luego
+      Chripstóbal de Sanabria dixo: — "Aquella palabra de Castilla es". Y el
+      indio mostró una hacha é un cuchillo … Preguntáronles por señas si avia
+      agua, é la muger dixo que sí, é mucha, por las mesmas señas; mas su habla
+      no la entendían»
+    tomo: IV
+    libro: L
+    capitulo: "XX, §XII"
+    pagina_impresa: 533
+    atribucion: "un indio de Miraca, Paraguaná, junio de 1534"
+    campo: [contacto, lengua]
+    verificacion: imagen
+    en_el_lexicon: "no — y no debe: es castellano"
+    ojo: >-
+      La única vez que Oviedo pone una palabra en boca de un paraguanero, y es
+      CASTELLANA: seis años después de Coro el hombre sabe «Capitán» y enseña
+      hacha y cuchillo de hierro. Es dato de CONTACTO (colonial), y declara lo
+      que no se pudo: «su habla no la entendían».
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. VOCES TAÍNAS QUE T1 NO RECOGIÓ — salieron en los libros de historia
+#    natural. Comparanda de la esfera de contacto, NO caquetío.
+# ══════════════════════════════════════════════════════════════════════
+voces_tainas_nuevas:
+  - forma_fuente: bagua
+    glosa_fuente: >-
+      «Llaman los indios de aquesta Isla Española á la mar bagua (no digo
+      baygua, porque baygua es aquel barbasco, con que toman mucho pescado,
+      segund tengo dicho, sino bagua es el nombre de la mar en esta isla)»
+    tomo: I
+    libro: XIII
+    capitulo: IX
+    pagina_impresa: 436
+    atribucion: "«los indios de aquesta Isla Española» — DECLARADA"
+    campo: [mar, cosmos]
+    verificacion: imagen
+    en_el_lexicon: "no como voz; sólo como comparanda TN en `arahuaco_comparative.py` («mar»), SIN cita"
+    aporta: "la cita primaria de `bagua` 'mar', y el propio Oviedo previene contra la confusión con `baygua`"
+
+  - forma_fuente: baygua
+    glosa_fuente: >-
+      «usan de çierta hierva que se diçe baygua, en lugar de belesa ó barbasco:
+      la qual desmenuzada en el agua … embeuéçense los pescados … é los toman á
+      manos … Esta baygua es como bexuco»
+    tomo: I
+    libro: XIII
+    capitulo: [I, IX]
+    pagina_impresa: [424, 436]
+    atribucion: "contexto de La Española («los indios»)"
+    campo: [planta, pesca]
+    verificacion: ocr-limpio
+    en_el_lexicon: "no"
+
+  - forma_fuente: manicato
+    glosa_fuente: "«díçele en su lengua que sea manicato, que quiere deçir esforçado é de buen coraçón»"
+    tomo: I
+    libro: XIII
+    capitulo: IX
+    pagina_impresa: 435
+    atribucion: "los pescadores de Jamáyca y Cuba, hablándole a la rémora"
+    campo: [adjetivo, rito]
+    verificacion: imagen
+    en_el_lexicon: "no"
+
+  - forma_fuente: hicoteas
+    glosa_fuente: "«á estas pequeñas llaman los indios hicoteas»"
+    tomo: I
+    libro: XIII
+    capitulo: VIII
+    pagina_impresa: 433
+    atribucion: "«los indios» de La Española"
+    campo: animal
+    verificacion: ocr-limpio
+    en_el_lexicon: "sí — `hikotea` (vía Medina, caquetío-reconstruido), SIN cita de Oviedo"
+
+  - forma_fuente: guaraguaos
+    glosa_fuente: >-
+      «otros que llaman acá guaraguaos, que son como milanos» (p. 592); y
+      «guaraguaos … son de la condiçión é offiçio de los milanos … el plumaje
+      destos guaraguaos es como el del borní, salvo que estos tienen los ojos
+      colorados» (p. 442)
+    tomo: I
+    libro: [XIX, XIV]
+    capitulo: [II, II]
+    pagina_impresa: [592, 442]
+    atribucion: "«acá» = La Española"
+    campo: animal
+    verificacion: "imagen (p. 592); ocr-limpio (p. 442)"
+    en_el_lexicon: "no"
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. `guaitiao` / `guatiao` — punto 4 del encargo
+# ══════════════════════════════════════════════════════════════════════
+guaitiao:
+  la_pregunta: >-
+    `waitiao` está en el lexicón como `caquetío-atestiguado` con esta nota:
+    «el pacto de guaitiao (intercambio de nombres entre aliados) lo describe
+    Oviedo para el área circuncaribe». Ayer se midió 0 en la capa de texto de los
+    cuatro tomos, con la reserva de la cursiva. ¿Aparece la palabra en la página?
+  respuesta_en_una_frase: >-
+    **No.** Oviedo DESCRIBE el intercambio de nombres —tres veces, las tres en
+    San Juan— y en ninguna usa la palabra; la única voz que da para esa
+    institución es `datihao`.
+  medido:
+    capa_de_texto: >-
+      0 en los cuatro tomos con la familia entera de sondas (`g\w?[uún][aáo]?[iy]?[tlíif1][iíl1]?[aá]o`,
+      `\w*tiao\w*`, `\w*liao\w*`, `\w*tihao\w*`, `\w*lihao\w*`) sobre la capa del
+      t. I NUEVO (otra OCR, la de la copia íntegra) además de la vieja; y la lista
+      de TODAS las palabras terminadas en -iao/-iáo de los cuatro tomos no trae
+      ninguna candidata (son `Nicolao`, `Callao`, `Talao`, `bacallaos`…). Lo
+      reproduce `6-fusion/scripts/medir_oviedo_restante.py`.
+    en_la_imagen:
+      - pasaje: "t. I lib. XVI cap. II, p. 467 — Agüeybana toma el nombre de Johan Ponçe"
+        verbatim: >-
+          «Y al mesmo caçique Agueybana le puso nombre Johan Ponçe, como se
+          llamaba el mesmo capitan que digo; porque es de costumbre de los indios
+          en estas islas, que quando toman nueva amistad, toman el nombre proprio
+          del capitan ó persona, con quien contraen la paz ó amiçiçia»
+        verificacion: imagen
+        la_palabra: ausente
+      - pasaje: "t. I lib. XVI, p. 469 — Sotomayor da su nombre al caçique heredero"
+        verbatim: "«y púsole su nombre é llamábanle don Chripstóbal»"
+        verificacion: ocr-limpio
+        la_palabra: ausente
+      - pasaje: "t. I lib. XVI, p. 472 — un capitán indio herido pide el nombre de Diego de Salaçar"
+        verbatim: >-
+          «el capitan ó caçique le dixo que le rogaba que le diesse su nombre é
+          que con su voluntad oviesse por bien que le llamassen Salaçar como á él,
+          é que queria ser su amigo perpétuo … É assi luego sus indios le
+          comencaron á llamar Salaçar»
+        verificacion: imagen
+        la_palabra: ausente
+      - pasaje: "t. I lib. XVI cap. V, p. 473 — el `datihao` de Agüeybana"
+        verbatim: >-
+          «entonçes dixo el caçique: "Adelante, adelante, á mi datihao (que
+          quiere deçir mi señor, ó el que, como yo, se nombra), dexa ese
+          bellaco."»
+        verificacion: imagen
+        forma: "🔴 `datihao` — con t, en cursiva, leída con zoom. NO `dalihao` (que era el OCR de la copia truncada)"
+    y_fuera_de_san_juan: >-
+      El episodio de la guerra de Higüey (Esquivel y Cotubanamá), donde Las
+      Casas pone el `guatiao`, Oviedo lo despacha en una línea (t. I p. 89: «en
+      breve tiempo la allanó») y no nombra a Cotubanamá ni a Esquivel en ese
+      contexto. En Tierra Firme, Venezuela y los tomos II-IV, ningún pasaje de
+      intercambio de nombres (barrido de «su nombre / el nombre» cerca de
+      «amistad / amigo / paz» con «indio / caçique»: los aciertos son todos de
+      San Juan o irrelevantes).
+  consecuencias:
+    - >-
+      La nota de `waitiao` dice dos cosas que la fuente no sostiene: que Oviedo
+      use `guaitiao` (no lo usa) y que lo describa «para el área circuncaribe»
+      (lo dice «de los indios en estas islas», y lo cuenta sólo en San Juan).
+      `waitiao` queda SIN atestación en Oviedo; si su apoyo es Las Casas (como
+      dice `cognado-009`: «se hicieron guaitiaos», Las Casas 1929 II:291), esa
+      es la cita, y es antillana.
+    - >-
+      `datihao` queda con su forma confirmada en la página (p. 473) y confirmada
+      su orilla: San Juan. Se sostiene lo que T6 propuso sobre la etiqueta.
+  propuesta_para_miguel: "ver el issue `oviedo-restante-2026-09-22.md` §B (opciones con letras)"
