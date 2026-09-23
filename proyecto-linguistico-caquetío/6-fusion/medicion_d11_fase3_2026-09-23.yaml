@@ -14,6 +14,7 @@ meta:
   base:
     word_uses: 105792
     agent_responses: 3811
+    simulation_runs: 51
     formas_distintas: 2805
   fonotactica:
     formas_base: 227
@@ -376,6 +377,10 @@ formas_actuales:
       afijo_suelto_reclasifica: null
       fonotactica_en_compuesto:
         ubiro: pasa
+aspecto_del_canon_en_la_base:
+  formas_con_alguno_de_los_tres: 538
+  usos: 34213
+  suma_de_los_tres_por_separado: 34350
 formas_candidatas:
   dai:
     casillas:

@@ -131,7 +131,8 @@ def cargar_base():
     for rid, run, texto in _psql("select id, run_id, coalesce(response_text,'') from agent_responses"):
         respuestas.append((rid.strip("\n"), run, texto))
     total = _psql("select count(*) from word_uses")[0][0]
-    return usos, respuestas, int(total)
+    runs = _psql("select count(*) from simulation_runs")[0][0]
+    return usos, respuestas, (int(total), int(runs))
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -212,9 +213,9 @@ def medir(sim: Path, con_base: bool, rotulo: str) -> dict:
             segmentos_de_nombre[s].add(n)
     fono, paso = CF.medir()
 
-    usos, respuestas, total = ({}, [], 0)
+    usos, respuestas, (total, total_runs) = ({}, [], (0, 0))
     if con_base:
-        usos, respuestas, total = cargar_base()
+        usos, respuestas, (total, total_runs) = cargar_base()
 
     token_con_guion = re.compile(rf"[{L}]+(?:-[{L}]+)+", re.I)
 
@@ -296,6 +297,7 @@ def medir(sim: Path, con_base: bool, rotulo: str) -> dict:
             "todas_las_reglas": len(CL.TODAS_LAS_REGLAS),
             "elenco": {"era1": len(AG1.ALL_AGENTS), "era2": len(AG2.ALL_AGENTS)},
             "base": ({"word_uses": total, "agent_responses": len(respuestas),
+                      "simulation_runs": total_runs,
                       "formas_distintas": len(usos)} if con_base else "no medida"),
             "fonotactica": {"formas_base": len(fono.base), "gu_es_w": False,
                             "nota": "el filtro del módulo tal cual (medir()); los esqueletos de colisión sí usan gu→w (D5c)"},
@@ -307,6 +309,17 @@ def medir(sim: Path, con_base: bool, rotulo: str) -> dict:
     for f in PRONOMBRES_ACTUALES + AFIJOS_ACTUALES:
         actuales[f] = {"uso": uso(f), "colisiones": colisiones(f)}
     out["formas_actuales"] = actuales
+    if con_base:
+        # formas que llevan AL MENOS UNO de los tres aspectos del canon (una
+        # forma apilada, `chaa-ni-da`, cuenta una vez)
+        tres = {"ka", "ni", "da"}
+        con_asp = [w for w in usos if len(segmentos(w)) > 1 and tres & set(segmentos(w)[1:])]
+        out["aspecto_del_canon_en_la_base"] = {
+            "formas_con_alguno_de_los_tres": len(con_asp),
+            "usos": sum(usos[w][0] for w in con_asp),
+            "suma_de_los_tres_por_separado": sum(
+                usos_de_afijo(usos, a)["usos"] for a in ("-ka", "-ni", "-da")),
+        }
 
     candidatas = {}
     for casilla, ops in OPCIONES.items():
@@ -498,7 +511,9 @@ def main(argv=None) -> int:
         prop = yaml.safe_load((R / "6-fusion" / "propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml")
                               .read_text(encoding="utf-8"))
         faltan = []
-        for c in prop.get("casillas", []):
+        for c in prop.get("casillas", []) + prop.get("fuera_del_encargo", []):
+            if "opciones" not in c or c["id"] not in OPCIONES:
+                continue
             for op in c.get("opciones", []):
                 formas = op.get("formas") or []
                 medidas = OPCIONES.get(c["id"], {}).get(op["letra"])
