@@ -402,7 +402,16 @@ evidencia:
       literatura ni siquiera la plantea. Las fuentes de jadeíta conocidas son
       el valle del Motagua (Guatemala), el oriente de Cuba y el norte de la
       República Dominicana.
-    deuda: >-
+    deuda_cerrada: >-
+      ✅ Cerrada el 2026-09-24 (dp.3.19, M8 D3 A de #222: «Ok a todo»,
+      Miguel). Knaf et al. 2021 ya está en el repo y leído (M8, #203:
+      6-fusion/arqueologia_insular_falcon_2026-09-22.yaml `mov-04`, knaf-2021
+      pp. 1 y 13): la red del jade conocida por geoquímica va de Guatemala a La
+      Española («3 celts of exotic origin … connecting Hispaniola to
+      Guatemala») y no toca la esfera caquetía — cero de Venezuela, Aruba,
+      Curazao, Bonaire, Falcón, Paraguaná y la Guajira, con control positivo.
+      Negativo medido, que confirma lo que Queffelec daba por tipología.
+    deuda_antes: >-
       La pieza que cerraría esto del todo —Knaf et al. 2021, la discriminación
       Sr-Nd-Pb del jade circumcaribeño, CC-BY— está localizada y NO se pudo
       descargar (Elsevier devuelve 403 a la descarga automática). Ver
@@ -412,7 +421,7 @@ evidencia:
   - id: cer-01
     clase: cerámica
     titulo: "🔴 Cero antillano en el registro arqueológico del Golfete — medido hoy"
-    obra: urbina-jimenez-2011
+    obra: urbina-jimenez-2007-2011   # era `urbina-jimenez-2011`, clave que no existe en la bibliografía (M8 corr-05); corregida por dp.3.19, 2026-09-24
     pagina: "toda la memoria (base de datos de 192 yacimientos)"
     epoca: precontacto agroalfarero
     etiqueta: atestiguado   # el cero está medido
@@ -441,9 +450,9 @@ evidencia:
     clase: cerámica
     titulo: "La cerámica de Aruba es local, y su tercer grupo no se sabe de dónde es"
     obra: casale-2024
-    pagina: "Geoarchaeology 39(6):609-627 — resumen"
+    pagina: "pp. 12-14 (versión en línea) y p. 17 (Tabla 4, verificada en imagen) — era «Geoarchaeology 39(6):609-627 — resumen»"
     epoca: precolonial; el grupo 3 es del Urumaco Temprano
-    etiqueta: hipotetico   # EN DUDA DEGRADAR: sólo se leyó el resumen, no el pasaje
+    etiqueta: atestiguado   # sube el 2026-09-24 (dp.3.19, M8 D3 A): el pasaje ya está leído (M8 mov-02); era `hipotetico` por haber leído sólo el resumen
     que_prueba: >-
       Análisis petrográfico de cerámica de nueve yacimientos de Aruba contra
       fuentes de arcilla de la isla: tres composiciones mineralógicas; dos
@@ -452,7 +461,19 @@ evidencia:
       mayoritariamente DECORADO y del Urumaco Temprano, tiene matriz calcárea
       con pellets, vetas de arcilla y desgrasante de concha, y su origen
       queda incierto.
-    aviso: >-
+    leido_despues: >-
+      ✅ 2026-09-24 (dp.3.19, M8 D3 A de #222). M8 (#203) bajó la copia
+      CC-BY de Lirias (KU Leuven) y leyó el pasaje
+      (6-fusion/arqueologia_insular_falcon_2026-09-22.yaml `mov-02`): el
+      grupo 3 es pasta calcárea de sedimentación MARINA con concha añadida, y
+      la propia receta «inhibits an understanding of whether the vessels were
+      imported or locally produced» (pp. 12-14). Los autores no eligen entre
+      local, continental o antillano; ninguna mención a las Antillas en el
+      cuerpo del artículo, y el marco que piden es la costa norte de
+      Venezuela, Curazao, Bonaire y Los Roques (p. 17). Lo que la etiqueta
+      atestigua ahora es eso: que el origen del grupo 3 es INDETERMINABLE con
+      este método, no que sea importado.
+    aviso_antes: >-
       ⚠️ **Sólo se leyó el resumen** (Crossref), no el pasaje: Wiley devuelve
       403 a la descarga automática aunque el artículo es CC-BY. Por la skill
       §3 esto NO cuenta como minado y la etiqueta baja. Queda como la pieza
@@ -878,6 +899,7 @@ propuesta:
       Es la misma campaña. Dejar en `6-fusion/` dos documentos que se
       contradicen sin decirlo es lo que la regla 1 evita para las cifras y
       debería evitarse también para los veredictos.
+    aplicada: '2026-09-24 — dp.3.19 (T8 B) de #222, «Ok a todo» (6-fusion/decisiones_222_documentacion_2026-09-24.yaml)'
 
   - id: prop-02
     donde: 3-mundo/etnias.yaml
