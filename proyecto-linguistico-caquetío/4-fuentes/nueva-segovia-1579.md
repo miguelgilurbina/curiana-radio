@@ -122,8 +122,13 @@ vías, y las dos son de Miguel:
    - **Préstamo**: con el OCLC 66463298, por préstamo interbibliotecario
      desde su biblioteca; lo tienen, entre otras, Wisconsin-Madison y la
      biblioteca de la Universidad de Gante (`lib.ugent.be`,
-     rug01:002198645). En Caracas, la Biblioteca de la Academia Nacional de
-     la Historia, que lo editó.
+     rug01:002198645). En Venezuela, la **Biblioteca Nacional** tiene cuatro
+     ejemplares prestables (Colección Bibliográfica Contemporánea,
+     **911.87 R382**, biblionumber 31828 en `koha.bnv.gob.ve`, leído el
+     2026-09-24), y hay uno en cada Biblioteca Pública Central de Caracas,
+     Anzoátegui, Carabobo, Monagas, Táchira y **Yaracuy**, y dos en la del
+     Archivo General de la Nación (911.87 A679). Y la Biblioteca de la
+     Academia Nacional de la Historia, que lo editó.
    - **Segunda mano**: el único anuncio que salió (AbeBooks, Librería
      Cocheras-Coliseo, 31677057923) sigue **no disponible** el 2026-09-24.
      Una alerta de búsqueda en IberLibro/AbeBooks por el título es la vía.
