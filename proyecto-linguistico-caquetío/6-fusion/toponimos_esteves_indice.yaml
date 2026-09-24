@@ -22,8 +22,8 @@ meta:
   estado: cola-de-trabajo   # lote 2026-09-22 (cola entera PROPUESTA en toponimos_esteves_lote_2026-09-22.yaml, sin fusionar) · lote 7 (2026-09-07, el mapa vivo OSM contra Esteves: 18 nombres) · lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 187   # = ya_en_canon + por_procesar, recontado el 2026-09-23 (decía 186)
-  ya_en_canon: 60
-  por_procesar: 127
+  ya_en_canon: 88
+  por_procesar: 99
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -90,67 +90,76 @@ ya_registrados:
 
 # Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
 # lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
+  - {forma: Barabara, canon: toponimo-181, lote: 2026-09-22-tanda-1}
+  - {forma: Barisigua, canon: toponimo-182, lote: 2026-09-22-tanda-1}
+  - {forma: Buchaquiba, canon: toponimo-183, lote: 2026-09-22-tanda-1}
+  - {forma: Cayude, canon: toponimo-184, lote: 2026-09-22-tanda-1}
+  - {forma: Chaure, canon: toponimo-185, lote: 2026-09-22-tanda-1}
+  - {forma: Chuchube, canon: toponimo-186, lote: 2026-09-22-tanda-1}
+  - {forma: Cucuy, canon: toponimo-187, lote: 2026-09-22-tanda-1}
+  - {forma: Guachaco, canon: toponimo-188, lote: 2026-09-22-tanda-1}
+  - {forma: Isiro, canon: toponimo-189, lote: 2026-09-22-tanda-1}
+  - {forma: Laguarí, canon: toponimo-190, lote: 2026-09-22-tanda-1}
+  - {forma: Saruro, canon: toponimo-191, lote: 2026-09-22-tanda-1}
+  - {forma: Taque, canon: toponimo-192, lote: 2026-09-22-tanda-1}
+  - {forma: Urupagua, canon: toponimo-193, lote: 2026-09-22-tanda-1}
+  - {forma: Yacure, canon: toponimo-194, lote: 2026-09-22-tanda-1}
+  - {forma: Adaro, canon: toponimo-195, lote: 2026-09-22-tanda-1}
+  - {forma: Caibacoa, canon: toponimo-196, lote: 2026-09-22-tanda-1}
+  - {forma: Camare, canon: toponimo-197, lote: 2026-09-22-tanda-1}
+  - {forma: Cararapa, canon: toponimo-198, lote: 2026-09-22-tanda-1}
+  - {forma: Cubiano, canon: toponimo-199, lote: 2026-09-22-tanda-1}
+  - {forma: Cunacho, canon: toponimo-200, lote: 2026-09-22-tanda-1}
+  - {forma: Curaidebo, canon: toponimo-201, lote: 2026-09-22-tanda-1}
+  - {forma: Chirache, canon: toponimo-202, lote: 2026-09-22-tanda-1}
+  - {forma: Guanadito, canon: toponimo-203, lote: 2026-09-22-tanda-1}
+  - {forma: Guaranao, canon: toponimo-204, lote: 2026-09-22-tanda-1}
+  - {forma: Hayo, canon: toponimo-205, lote: 2026-09-22-tanda-1}
+  - {forma: Quibarute, canon: toponimo-206, lote: 2026-09-22-tanda-1}
+  - {forma: Tacaduto, canon: toponimo-207, lote: 2026-09-22-tanda-1}
+  - {forma: Urupaguaduco, canon: toponimo-208, lote: 2026-09-22-tanda-1}
+
 por_procesar:
-  - {forma: Adaro, propuesta: lote-2026-09-22}
   - {forma: Antuní, propuesta: lote-2026-09-22}
   - {forma: Arajó, propuesta: lote-2026-09-22}
   - {forma: Asubure, propuesta: lote-2026-09-22}
   - {forma: Avotuca, propuesta: lote-2026-09-22}
   - {forma: Babahuro, propuesta: lote-2026-09-22}
   - {forma: Bajarigua, propuesta: lote-2026-09-22}
-  - {forma: Barabara, propuesta: lote-2026-09-22}
   - {forma: Barbasco, propuesta: lote-2026-09-22}
-  - {forma: Barisigua, propuesta: lote-2026-09-22}
   - {forma: Bibidure, propuesta: lote-2026-09-22}
   - {forma: Biniche, propuesta: lote-2026-09-22}
   - {forma: Bucuruy, propuesta: lote-2026-09-22}
-  - {forma: Buchaquiba, propuesta: lote-2026-09-22}
   - {forma: Buenevara, propuesta: lote-2026-09-22}
   - {forma: Buenibativa, propuesta: lote-2026-09-22}
-  - {forma: Caibacoa, propuesta: lote-2026-09-22}
-  - {forma: Camare, propuesta: lote-2026-09-22}
   - {forma: Camoruco, propuesta: lote-2026-09-22}
   - {forma: Camunare, propuesta: lote-2026-09-22}
   - {forma: Capacheruda, propuesta: lote-2026-09-22}
   - {forma: Caradacagua, propuesta: lote-2026-09-22}
   - {forma: Carajaima, propuesta: lote-2026-09-22}
-  - {forma: Cararapa, propuesta: lote-2026-09-22}
   - {forma: Cariguariana, propuesta: lote-2026-09-22}
   - {forma: Caujarito, propuesta: lote-2026-09-22}
-  - {forma: Cayude, propuesta: lote-2026-09-22}
   - {forma: Cimiro, propuesta: lote-2026-09-22}
   - {forma: Coduto, propuesta: lote-2026-09-22}
   - {forma: Cuara, propuesta: lote-2026-09-22}
-  - {forma: Cubiano, propuesta: lote-2026-09-22}
   - {forma: Cucurubano, propuesta: lote-2026-09-22}
-  - {forma: Cucuy, propuesta: lote-2026-09-22}
   - {forma: Cude, propuesta: lote-2026-09-22}
   - {forma: Cujicana, propuesta: lote-2026-09-22}
   - {forma: Cumaraguas, propuesta: lote-2026-09-22}
-  - {forma: Cunacho, propuesta: lote-2026-09-22}
-  - {forma: Curaidebo, propuesta: lote-2026-09-22}
   - {forma: Cuzubitos, propuesta: lote-2026-09-22}
-  - {forma: Chaure, propuesta: lote-2026-09-22}
   - {forma: Chichibana, propuesta: lote-2026-09-22}
-  - {forma: Chirache, propuesta: lote-2026-09-22}
-  - {forma: Chuchube, propuesta: lote-2026-09-22}
   - {forma: Chujaro, propuesta: lote-2026-09-22}
   - {forma: Chunaure, propuesta: lote-2026-09-22}
   - {forma: Dibaragua, propuesta: lote-2026-09-22}
   - {forma: Duraguaco, propuesta: lote-2026-09-22}
   - {forma: Garrapata, propuesta: lote-2026-09-22}
   - {forma: Gisebo, propuesta: lote-2026-09-22}
-  - {forma: Guachaco, propuesta: lote-2026-09-22}
   - {forma: Guachunepe, propuesta: lote-2026-09-22}
-  - {forma: Guanadito, propuesta: lote-2026-09-22}
-  - {forma: Guaranao, propuesta: lote-2026-09-22}
   - {forma: Guaricure, propuesta: lote-2026-09-22}
   - {forma: Guaruguaja, propuesta: lote-2026-09-22}
   - {forma: Güica, propuesta: lote-2026-09-22}
   - {forma: Güima, propuesta: lote-2026-09-22}
-  - {forma: Hayo, propuesta: lote-2026-09-22}
   - {forma: Imujo, propuesta: lote-2026-09-22}
-  - {forma: Isiro, propuesta: lote-2026-09-22}
   - {forma: Isito, propuesta: lote-2026-09-22}
   - {forma: Iticuna, propuesta: lote-2026-09-22}
   - {forma: Jabe, propuesta: lote-2026-09-22}
@@ -158,7 +167,6 @@ por_procesar:
   - {forma: Jariaca, propuesta: lote-2026-09-22}
   - {forma: Juderecal, propuesta: lote-2026-09-22}
   - {forma: Juroguagua, propuesta: lote-2026-09-22}
-  - {forma: Laguarí, propuesta: lote-2026-09-22}
   - {forma: Macama, propuesta: lote-2026-09-22}
   - {forma: Manadí, propuesta: lote-2026-09-22}
   - {forma: Manare, propuesta: lote-2026-09-22}
@@ -180,7 +188,6 @@ por_procesar:
   - {forma: Pipiacoa, propuesta: lote-2026-09-22}
   - {forma: Pipiribana, propuesta: lote-2026-09-22}
   - {forma: Pury, propuesta: lote-2026-09-22}
-  - {forma: Quibarute, propuesta: lote-2026-09-22}
   - {forma: Quitaire, propuesta: lote-2026-09-22}
   - {forma: Quipital, propuesta: lote-2026-09-22}
   - {forma: Quipayú, propuesta: lote-2026-09-22}
@@ -191,14 +198,11 @@ por_procesar:
   - {forma: Sanquinche, propuesta: lote-2026-09-22}
   - {forma: Sarabón, propuesta: lote-2026-09-22}
   - {forma: Sarinao, propuesta: lote-2026-09-22}
-  - {forma: Saruro, propuesta: lote-2026-09-22}
   - {forma: Sicaname, propuesta: lote-2026-09-22}
   - {forma: Siraba, propuesta: lote-2026-09-22}
   - {forma: Supideo, propuesta: lote-2026-09-22}
   - {forma: Suriquiva, propuesta: lote-2026-09-22}
   - {forma: Tacal, propuesta: lote-2026-09-22}
-  - {forma: Tacaduto, propuesta: lote-2026-09-22}
-  - {forma: Taque, propuesta: lote-2026-09-22}
   - {forma: Tacuato, propuesta: lote-2026-09-22}
   - {forma: Tausabana, propuesta: lote-2026-09-22}
   - {forma: Ticuí, propuesta: lote-2026-09-22}
@@ -212,9 +216,6 @@ por_procesar:
   - {forma: Tumatey, propuesta: lote-2026-09-22}
   - {forma: Tura, propuesta: lote-2026-09-22}
   - {forma: Tutubacoa, propuesta: lote-2026-09-22}
-  - {forma: Urupagua, propuesta: lote-2026-09-22}
-  - {forma: Urupaguaduco, propuesta: lote-2026-09-22}
-  - {forma: Yacure, propuesta: lote-2026-09-22}
   - {forma: Yaguarima, propuesta: lote-2026-09-22}
   - {forma: Yaima, propuesta: lote-2026-09-22}
   - {forma: Yarí, propuesta: lote-2026-09-22}
