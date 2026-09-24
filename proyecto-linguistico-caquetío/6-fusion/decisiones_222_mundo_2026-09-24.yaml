@@ -147,8 +147,18 @@ decisiones:
       (oriental / occidental / La Ramada) donde el canon la necesita, y curar
       toponimo-111: el «Coria-na» de Oliver está en La Ramada, no en Punta
       Espada.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: 'APLICADA (2026-09-24) con Navarrete desde la capa de texto; la imagen NECESITA A MIGUEL (la misma pregunta que dp.2.06 C)'
+    aplicado_por:
+      - 'curiana_sim/lexicon_toponimos.py → 2-lengua/toponimos.yaml: toponimo-111 corrige la observación (la Coriana de Oliver está en La Ramada, Castellanos p. 264, no en Punta Espada) y el veredicto de la lectura de Oliver, y gana una lectura `glosa-fuente` de referente con las Curianas (oriental: Navarrete t. III p. 13 n. 4 y Anglería vol. 1 p. 303; de Coro: p. 32 n. 3 y Valfermoso, p. 32)'
+      - '6-fusion/taino_en_la_esfera_2026-09-21.yaml: eth-00 acotado (la red Curiana ↔ Cauchieto es la oriental)'
+      - '4-fuentes/angleria-1892.md: bitácora'
+    verificado: 'Navarrete t. III pp. 13 n. 4 y 32 n. 3 en la capa de texto (folio en el flujo); Anglería vol. 1 p. 303 en el texto (vista en imagen por M2); Castellanos p. 264 en el texto de 1857'
+    lectura_del_escriba: >-
+      «A, después de verificar Navarrete en imagen»: la imagen que pedía M2
+      (C) era para «riego» y las grafías de Coquibacoa, no para las dos notas
+      de las Curianas, que el OCR lee limpias. Se aplicó A desde el texto y la
+      verificación en imagen queda pendiente con dp.2.06 C. No se tocó #33 en
+      GitHub (no se publica nada).
 
   dp.2.06:
     tema: los hechos de contacto temprano de las crónicas (1499-1502)
@@ -292,8 +302,9 @@ decisiones:
       Una lectura `glosa-fuente` de referente en toponimo-111: la ciudad tomó
       el nombre del río Coro (Ballesteros 1550 y Castellanos 1589,
       independientes).
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - 'curiana_sim/lexicon_toponimos.py → 2-lengua/toponimos.yaml: lectura `glosa-fuente`, eje referente, en toponimo-111 — Ballesteros 1550 vía Arcaya p. 170 (verificado en el PDF, pdf 178) con Castellanos 1589 p. 185 como segundo testigo independiente'
 
   dp.2.13:
     tema: las propuestas a ecologia.yaml de las tres parcelas de fauna

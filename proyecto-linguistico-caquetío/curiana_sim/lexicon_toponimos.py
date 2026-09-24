@@ -1756,9 +1756,18 @@ NIVEL_C = {
                  "'lugar de' el 2026-09-07. C: forma segura, significado abierto.",
         "observacion": "D2 (#33), territorio o asentamiento: Arcaya da las dos "
                        "cosas. Y hay un segundo Coriana: Oliver (cap. 3 p. 207) "
-                       "lee «Coria-na» entre los nombres de aldea wanebucán de "
-                       "Punta Espada-Chichibacoa (Guajira), «suspiciously "
-                       "Caquetío».",
+                       "lee «Coria-na» entre los nombres de aldea wanebucán, "
+                       "«suspiciously Caquetío». CORREGIDO el 2026-09-24 (M7 "
+                       "D-f.1, dp.2.05 de #222): esa Coriana NO está en Punta "
+                       "Espada-Chichibacoa, como decía esta nota, sino en LA "
+                       "RAMADA —la costa guanebucana entre la Sierra Nevada y "
+                       "el río de la Hacha—, en la lista de pueblos junto al mar "
+                       "de Castellanos: «Dos Guaymaros, Debuya, Coriana, / Tapi, "
+                       "Paraguanil, Biriburare» (Elegías, p. 264; de ahí sale la "
+                       "de Oliver). Con la Curiana oriental de Navarrete (lectura "
+                       "de abajo) son TRES Curianas en tres costas: la del "
+                       "rescate de perlas (Cumaná y Cariaco), la de Coro y la de "
+                       "La Ramada.",
         "lecturas": [
             {"tipo": "etimologia-analitica",
              "lectura": "coro 'espina' → Coriana 'tierra de las espinas, o la "
@@ -1837,7 +1846,56 @@ NIVEL_C = {
                           "la raíz coria- es léxica (formación común, 'tierra o "
                           "lugar de X') o el nombre viajó con los comerciantes: en "
                           "los dos casos toca D2. Está también en la lista viva de "
-                          "-ana (#109)."},
+                          "-ana (#109). ⚠️ El sitio es La Ramada (Castellanos p. "
+                          "264), no Punta Espada: ver la observación (dp.2.05 de "
+                          "#222, 2026-09-24)."},
+            # dp.2.05 de #222 (A, «Ok a todo», 2026-09-24): la separación de las
+            # Curianas, donde el canon la necesita. De M2 (#212) y T7 (#199).
+            {"tipo": "glosa-fuente",
+             "lectura": "hay más de una Curiana. La oriental: «Ambos llaman tierra "
+                        "de Curiana, que es el rescate de las perlas, á la costa "
+                        "que está enfrente de la Margarita, y comprende la costa "
+                        "de Cumaná y golfo de Cariaco» (p. 13 n. 4), la de Niño y "
+                        "Guerra, que Anglería pone dejadas atrás «las regiones "
+                        "Cumana y Manacapana» (vol. 1 p. 303); y la de Coro: la "
+                        "que Pedro Simón da como la provincia donde se fundó la "
+                        "ciudad, «Esta Curiana es distinta de la que hemos "
+                        "hablado en la nota 4 de la pag. 13» (p. 32 n. 3), con "
+                        "la «tierra… que los indios llamaban Curiana» y Hojeda "
+                        "nombró Valfermoso en 1502 (p. 32)",
+             "quien": "Navarrete 1829", "fecha": "2026-09-22", "eje": "referente",
+             "procedencia": dict(obra="navarrete-1829-viages-menores", pagina="13, 32"),
+             "apoyo": "Anglería 1892 vol. 1 p. 303 (vista en imagen por M2); la "
+                      "capitulación de Hojeda, «desde el paraje de los Frailes… "
+                      "fasta el Farallón, tierra que se llama Curiana» (Navarrete "
+                      "p. 86)",
+             "veredicto": "resuelve el REFERENTE, no el significado: la red "
+                          "Curiana ↔ Cauchieto de Anglería (vol. 1 pp. 303-310), "
+                          "que la primera campaña del taíno usó como «la forma de "
+                          "la red», es la ORIENTAL, a 400-800 km de Coro. Que "
+                          "Valfermoso sea Coro es inferencia de Navarrete y su "
+                          "propio itinerario la tensa (M2 §2). Toca D2 (#33). "
+                          "Navarrete leído en la capa de texto, con el folio en "
+                          "el flujo; la imagen queda para Miguel (dp.2.06 C)."},
+            # dp.2.12 de #222 («Sí», 2026-09-24): Coro nombró primero un río.
+            {"tipo": "glosa-fuente",
+             "lectura": "Coro era el nombre del RÍO antes que el de la ciudad: «A "
+                        "media legua de la ciudad de Coro pasa un río que se "
+                        "llama Coro, de que tomó su nombre la ciudad»",
+             "quien": "Ballesteros 1550 (vía Arcaya 1920) y Castellanos 1589",
+             "fecha": "2026-09-22", "eje": "referente",
+             "procedencia": dict(obra="arcaya-1920", pagina=170),
+             "apoyo": "Castellanos, independiente: «Púsose por la gente forastera "
+                      "/ Al pueblo semejante nombramiento / Por el río que guía "
+                      "su ribera / … Que siempre se llamó desta manera» (Elegías, "
+                      "p. 185); la acequia y el «buco» del mismo río "
+                      "(geografia_politica-004). González Batista 2002 p. 160 lo "
+                      "sostiene",
+             "veredicto": "dos testigos independientes, de 1550 y 1589 (M7, #207, "
+                          "m7-cast-012): el topónimo nombra primero un río. No "
+                          "decide el significado; sí deja el «Coro viento» de "
+                          "Castellanos como juego del poeta sobre un nombre que "
+                          "«le viene bien»."},
         ],
     },
     # Rehabilitado el 2026-09-07 (propuesta del 2026-08-25,

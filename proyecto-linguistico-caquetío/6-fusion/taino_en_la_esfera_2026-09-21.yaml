@@ -399,6 +399,13 @@ inventario:
   etnohistorica_precontacto:
 
     - id: eth-00
+      # 🔴 ACOTADO el 2026-09-24 (dp.2.05 de #222, con M2 #212 y T7 #199): la
+      # Curiana de Niño y Guerra es la ORIENTAL —«la costa que está enfrente
+      # de la Margarita, y comprende la costa de Cumaná y golfo de Cariaco»
+      # (Navarrete 1829 t. III p. 13 n. 4)—, no la de Coro. La red Curiana ↔
+      # Cauchieto de abajo es una red de la costa oriental de Venezuela: la
+      # conclusión «continental y de eje este-oeste» se sostiene, pero no es
+      # la red de la Kaketiana. Ver toponimo-111 (lecturas).
       afirmacion: >-
         🔴 NINGÚN cronista del repo describe tráfico precolombino entre la
         costa caquetía o las islas ABC y las Antillas Mayores. El único relato

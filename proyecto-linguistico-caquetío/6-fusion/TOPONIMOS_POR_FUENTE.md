@@ -16,7 +16,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-24**. Marcas: ★ canon · ≡ Esteves · ◆ mapa de Miguel · ⌂ nodo.
 
-**545 formas distintas** en **915 menciones** de **18 fuentes**. En el canon: 307. En el registro de nodos: 19. Sin canon ni nodo (la cola pura): 233.
+**545 formas distintas** en **917 menciones** de **19 fuentes**. En el canon: 307. En el registro de nodos: 19. Sin canon ni nodo (la cola pura): 233.
 
 > ⚠️ obra sin ficha en bibliografia.yaml: proyecto
 
@@ -29,7 +29,7 @@ editar_a_mano: no
 | `castellanos-elegias` | las 'ciudades de grandísimo momento' en torno a Coro (II, Elegía 1, 1589) | 20 | 17 | 15 | 8 | 8 |
 | `velasco-2015-resistencia` | los pueblos de la carta de Bastidas al rey (AGI, 1538) — primarios | 5 | 5 | 2 | 2 | 2 |
 | `gonzalez-batista-nombre-de-coro` | lecturas etimológicas del autor — con cautela declarada; cada una se juzga contra Zavala | 14 | 12 | 7 | 5 | 2 |
-| `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 27 | 24 | 18 | 1 | 1 |
+| `arcaya-1920` | Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi- | 28 | 24 | 18 | 1 | 1 |
 | `moron-2012-petroglifos` | La Cuiba y las estaciones de arte rupestre de Falcón | 26 | 23 | 2 | 2 | 2 |
 | `oliver-1989-cap3` | los asientos de los dos clanes de Paraguaná según Delmonte 1883 | 9 | 8 | 6 | 4 | 4 |
 | `medina-colina-sxx` | lo que el dictado toca: voces que son topónimo en Esteves, lo mandado a la cola, y los pueblos del autor (s. XX) | 27 | 24 | 11 | 9 | 3 |
@@ -38,10 +38,11 @@ editar_a_mano: no
 | `testimonio-miguel` (sin ficha) | Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia, por diseño | 48 | 38 | 28 | 25 | 8 |
 | `proyecto` (sin ficha) | lecturas analíticas del propio proyecto registradas en el canon (segmentaciones propias, con su veredicto o su issue) | 6 | 6 | 6 | 5 | 1 |
 | `sin-procedencia` (sin ficha) | entradas del canon cuya fuente no se pudo declarar ni inferir — deuda | 6 | 6 | 6 | 0 | 0 |
-| `alvarado-1921` |  | 2 | 2 | 2 | 0 | 0 |
-| `osm-kaketiana` |  | 7 | 7 | 7 | 3 | 0 |
-| `oviedo-y-valdes-1851` |  | 1 | 1 | 1 | 1 | 0 |
 | `jahn-1927` |  | 1 | 1 | 1 | 0 | 0 |
+| `oviedo-y-valdes-1851` |  | 1 | 1 | 1 | 1 | 0 |
+| `osm-kaketiana` |  | 7 | 7 | 7 | 3 | 0 |
+| `alvarado-1921` |  | 2 | 2 | 2 | 0 | 0 |
+| `navarrete-1829-viages-menores` |  | 1 | 1 | 1 | 0 | 0 |
 
 ## Los cruces que importan
 
@@ -50,7 +51,7 @@ editar_a_mano: no
 - **Castellanos 1589 ∩ Bastidas 1538 (2)**: miraca, todariquiba.
 - **Bastidas 1538 ∩ Esteves (2)**: miraca, todariquiba.
 - **Medina Colina ∩ Esteves (9)**: Adícora, carirubana, chuchube, guachaco, guarataro, guatacare, moruy, saruro, tacuato; en el canon (11): cabudare, capadare, carirubana, chuchube, guachaco, guarataro, guatacare, moruy, saruro, tacuato, todarahuato.
-- **En tres fuentes o más (18)**: Adícora (3), Guaidabacoa (3), Santa Ana (3), carirubana (3), cayeruba (3), curiana (5), dabudare (3), guacurebo (3), guadabacoa (4), jadacaquiva (3), judibana (3), jurijurebo (4), miraca (3), moruy (4), paraguaná (5), quiquiba (3), supí (4), todariquiba (4).
+- **En tres fuentes o más (18)**: Adícora (3), Guaidabacoa (3), Santa Ana (3), carirubana (3), cayeruba (3), curiana (6), dabudare (3), guacurebo (3), guadabacoa (4), jadacaquiva (3), judibana (3), jurijurebo (4), miraca (3), moruy (4), paraguaná (5), quiquiba (3), supí (4), todariquiba (4).
 
 ## Por fuente
 
@@ -126,7 +127,7 @@ lecturas etimológicas del autor — con cautela declarada; cada una se juzga co
 | Guadadubana ~ Guadedubana, Guadubabana | lectura | Guadadubana / Guadedubana / Guadubabana = 'el alto o cerro de las cañas' (guaduba 'caña') | morfema bana = 'cerro o altura' |  |
 | Guaibacoa | lectura | Guaibacoa = 'el valle (bacoa) de las ceibas (guay)' | morfema bacoa = 'valle' | ≡ ⌂ nodo-003 |
 
-### `arcaya-1920` — 24 formas, 27 menciones
+### `arcaya-1920` — 24 formas, 28 menciones
 
 Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi-.
 
@@ -135,6 +136,7 @@ Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi-.
 | curiana | canon | «Coro o Curiana se denominaba el pueblo que allí tenían fundado los indios, y Curiana la costa vecina» (Arcay… | toponimo-111 · nivel C · topónimo · fuente procedencia | ★ toponimo-111 · nivel C |
 | curiana | lectura:etimologia-de-cronista | la serie Coro-/Curi- («la antigua Coriana, Coroquide, Corobore, Coroquidiro, Ocorote, Corocoro, Cocorote») re… | toponimo-111 · Arcaya 1920 · 2026-08-25 · formante productivo sin glosa acordada: avispa o lagartija … | ★ toponimo-111 · nivel C |
 | curiana | lectura:glosa-fuente | el mismo nombre nombra el pueblo y la costa: «Coro o Curiana se denominaba el pueblo que allí tenían fundado … | toponimo-111 · Arcaya 1920 · 2026-08-25 · es la pregunta de D2 (#33), con dos casos desde el 2026-08-… | ★ toponimo-111 · nivel C |
+| curiana | lectura:glosa-fuente | Coro era el nombre del RÍO antes que el de la ciudad: «A media legua de la ciudad de Coro pasa un río que se … | toponimo-111 · Ballesteros 1550 (vía Arcaya 1920) y Castellanos 1589 · 2026-09-22 · dos testigos independientes, de 1550 y 1589 (M7, #207, m7-c… | ★ toponimo-111 · nivel C |
 | quiquiba | canon | «tomaron por las costas de la Goagira, región que llamaron de Coquibacoa, o de Quiquibacoa, por el nombre ind… | toponimo-034 · nivel C · topónimo · fuente procedencia | ★ toponimo-034 · nivel C |
 | siburua | canon | uno de los tres riachuelos que FORMAN el río de Coro, con Meachiche y San Antonio; y en la lista de sitios do… | toponimo-165 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-165 · nivel descartado |
 | caidie | canon | río, afluente del Jacura junto con el Capadare; en el gazetteer vivo, CAIDI, poblado del municipio San Franci… | toponimo-166 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-166 · nivel descartado |
@@ -319,14 +321,21 @@ entradas del canon cuya fuente no se pudo declarar ni inferir — deuda.
 | la macolla | canon | OSM 2026, lugar 12.090 -70.204 y Punta Macolla 12.083 -70.217: macolla es castellano, 'conjunto de vástagos d… | toponimo-141 · nivel descartado · topónimo · fuente deuda | ★ toponimo-141 · nivel descartado |
 | buchal | canon | OSM 2026, poblado, 11.960 -69.842: colectivo castellano -al sobre buche 'melocacto' [caquetío-atestiguado]; c… | toponimo-142 · nivel descartado · topónimo · fuente deuda | ★ toponimo-142 · nivel descartado |
 
-### `alvarado-1921` — 2 formas, 2 menciones
+### `jahn-1927` — 1 formas, 1 menciones
 
 .
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
-| curarí | canon | árbol de la región occidental, propio para la construcción civil | toponimo-180 · nivel C · topónimo · fuente procedencia | ★ toponimo-180 · nivel C |
-| araguan | canon | árbol indeterminado de Lara y Falcón | toponimo-152 · nivel C · topónimo · fuente procedencia | ★ toponimo-152 · nivel C |
+| curarí | lectura:glosa-fuente | «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi` | toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira… | ★ toponimo-180 · nivel C |
+
+### `oviedo-y-valdes-1851` — 1 formas, 1 menciones
+
+.
+
+| Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
+|---|---|---|---|---|
+| paraguaná | canon | Rodeada del mar | toponimo-018 · nivel C · topónimo · fuente procedencia | ★ toponimo-018 · nivel C ≡ |
 
 ### `osm-kaketiana` — 7 formas, 7 menciones
 
@@ -342,21 +351,22 @@ entradas del canon cuya fuente no se pudo declarar ni inferir — deuda.
 | pilancón | canon | poblado, 11.833 -69.927; suena castellano (-ón) pero no restituye a ninguna palabra conocida | toponimo-137 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-137 · nivel descartado |
 | la miraba | canon | poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y sin fuente; no es Miraca | toponimo-138 · nivel descartado · topónimo · fuente procedencia | ★ toponimo-138 · nivel descartado ≡ |
 
-### `oviedo-y-valdes-1851` — 1 formas, 1 menciones
+### `alvarado-1921` — 2 formas, 2 menciones
 
 .
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
-| paraguaná | canon | Rodeada del mar | toponimo-018 · nivel C · topónimo · fuente procedencia | ★ toponimo-018 · nivel C ≡ |
+| curarí | canon | árbol de la región occidental, propio para la construcción civil | toponimo-180 · nivel C · topónimo · fuente procedencia | ★ toponimo-180 · nivel C |
+| araguan | canon | árbol indeterminado de Lara y Falcón | toponimo-152 · nivel C · topónimo · fuente procedencia | ★ toponimo-152 · nivel C |
 
-### `jahn-1927` — 1 formas, 1 menciones
+### `navarrete-1829-viages-menores` — 1 formas, 1 menciones
 
 .
 
 | Forma | Tipo | Lo que dice la fuente | Ref. | Cruces |
 |---|---|---|---|---|
-| curarí | lectura:glosa-fuente | «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi` | toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira… | ★ toponimo-180 · nivel C |
+| curiana | lectura:glosa-fuente | hay más de una Curiana. La oriental: «Ambos llaman tierra de Curiana, que es el rescate de las perlas, á la c… | toponimo-111 · Navarrete 1829 · 2026-09-22 · resuelve el REFERENTE, no el significado: la red Curiana ↔ … | ★ toponimo-111 · nivel C |
 
 ## Índice de formas (todas, con sus fuentes)
 
@@ -560,7 +570,7 @@ Una línea por forma; las variantes e identificaciones declaradas van juntas.
 | Curaçao, Curazao |  | van-buurt-2014 |  |  |  |  |
 | curaidebo | Curaidebo, Curaridebo | esteves-1989, gonzalez-batista-nombre-de-coro | toponimo-201 · nivel B | ≡ |  |  |
 | curarí |  | alvarado-1921, jahn-1927 | toponimo-180 · nivel C |  |  |  |
-| curiana | Coriana, Curiana, Coro | arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3 | toponimo-111 · nivel C |  |  |  |
+| curiana | Coriana, Curiana, Coro | arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3, navarrete-1829-viages-menores | toponimo-111 · nivel C |  |  |  |
 | Curuburi | Corobori | van-buurt-2014 |  |  |  |  |
 | Curuburu |  | van-buurt-2014 |  |  |  |  |
 | cururupare |  | esteves-1989 | toponimo-158 · nivel descartado | ≡ |  |  |

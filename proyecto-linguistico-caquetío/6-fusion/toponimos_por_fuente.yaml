@@ -9,9 +9,9 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 915
+    menciones: 917
     formas_distintas: 545
-    fuentes: 18
+    fuentes: 19
     por_fuente:
       zavala-reyes-2015:
         menciones: 58
@@ -29,7 +29,7 @@ meta:
         menciones: 14
         formas: 12
       arcaya-1920:
-        menciones: 27
+        menciones: 28
         formas: 24
       moron-2012-petroglifos:
         menciones: 26
@@ -55,16 +55,19 @@ meta:
       sin-procedencia:
         menciones: 6
         formas: 6
-      alvarado-1921:
-        menciones: 2
-        formas: 2
-      osm-kaketiana:
-        menciones: 7
-        formas: 7
+      jahn-1927:
+        menciones: 1
+        formas: 1
       oviedo-y-valdes-1851:
         menciones: 1
         formas: 1
-      jahn-1927:
+      osm-kaketiana:
+        menciones: 7
+        formas: 7
+      alvarado-1921:
+        menciones: 2
+        formas: 2
+      navarrete-1829-viages-menores:
         menciones: 1
         formas: 1
     en_canon: 307
@@ -138,7 +141,7 @@ meta:
       - Santa Ana (3)
       - carirubana (3)
       - cayeruba (3)
-      - curiana (5)
+      - curiana (6)
       - dabudare (3)
       - guacurebo (3)
       - guadabacoa (4)
@@ -2636,7 +2639,7 @@ por_fuente:
 - obra: arcaya-1920
   en_bibliografia: true
   descripcion: Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi-
-  menciones: 27
+  menciones: 28
   formas: 24
   toponimos:
   - forma: curiana
@@ -2657,6 +2660,13 @@ por_fuente:
     dato: 'el mismo nombre nombra el pueblo y la costa: «Coro o Curiana se denominaba el pueblo que allí tenían
       fundado …'
     ref: toponimo-111 · Arcaya 1920 · 2026-08-25 · es la pregunta de D2 (#33), con dos casos desde el 2026-08-…
+  - forma: curiana
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'Coro era el nombre del RÍO antes que el de la ciudad: «A media legua de la ciudad de Coro pasa un río
+      que se …'
+    ref: 'toponimo-111 · Ballesteros 1550 (vía Arcaya 1920) y Castellanos 1589 · 2026-09-22 · dos testigos independientes,
+      de 1550 y 1589 (M7, #207, m7-c…'
   - forma: quiquiba
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -4758,22 +4768,28 @@ por_fuente:
     dato: 'OSM 2026, poblado, 11.960 -69.842: colectivo castellano -al sobre buche ''melocacto'' [caquetío-atestiguado];
       c…'
     ref: toponimo-142 · nivel descartado · topónimo · fuente deuda
-- obra: alvarado-1921
+- obra: jahn-1927
   en_bibliografia: true
   descripcion: ''
-  menciones: 2
-  formas: 2
+  menciones: 1
+  formas: 1
   toponimos:
   - forma: curarí
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
+    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
+- obra: oviedo-y-valdes-1851
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: paraguaná
     tipo: canon
     donde: 2-lengua/toponimos.yaml
-    dato: árbol de la región occidental, propio para la construcción civil
-    ref: toponimo-180 · nivel C · topónimo · fuente procedencia
-  - forma: araguan
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: árbol indeterminado de Lara y Falcón
-    ref: toponimo-152 · nivel C · topónimo · fuente procedencia
+    dato: Rodeada del mar
+    ref: toponimo-018 · nivel C · topónimo · fuente procedencia
 - obra: osm-kaketiana
   en_bibliografia: true
   descripcion: ''
@@ -4818,28 +4834,35 @@ por_fuente:
     dato: poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y sin fuente; no es
       Miraca
     ref: toponimo-138 · nivel descartado · topónimo · fuente procedencia
-- obra: oviedo-y-valdes-1851
+- obra: alvarado-1921
   en_bibliografia: true
   descripcion: ''
-  menciones: 1
-  formas: 1
-  toponimos:
-  - forma: paraguaná
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: Rodeada del mar
-    ref: toponimo-018 · nivel C · topónimo · fuente procedencia
-- obra: jahn-1927
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 1
-  formas: 1
+  menciones: 2
+  formas: 2
   toponimos:
   - forma: curarí
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: árbol de la región occidental, propio para la construcción civil
+    ref: toponimo-180 · nivel C · topónimo · fuente procedencia
+  - forma: araguan
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: árbol indeterminado de Lara y Falcón
+    ref: toponimo-152 · nivel C · topónimo · fuente procedencia
+- obra: navarrete-1829-viages-menores
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: curiana
     tipo: lectura:glosa-fuente
     donde: 2-lengua/toponimos.yaml §lecturas
-    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
-    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
+    dato: 'hay más de una Curiana. La oriental: «Ambos llaman tierra de Curiana, que es el rescate de las perlas,
+      á la c…'
+    ref: 'toponimo-111 · Navarrete 1829 · 2026-09-22 · resuelve el REFERENTE, no el significado: la red Curiana
+      ↔ …'
 indice_de_formas:
 - forma: abudure
   variantes:
@@ -7288,6 +7311,7 @@ indice_de_formas:
   - castellanos-elegias
   - testimonio-miguel
   - oliver-1989-cap3
+  - navarrete-1829-viages-menores
   cruces:
     en_canon: toponimo-111 · nivel C
     en_esteves: false
@@ -7307,6 +7331,10 @@ indice_de_formas:
     dos casos desde el 2026-08-…
   - oliver-1989-cap3 · lectura:hipotesis · toponimo-111 · Oliver 1989 · 2026-09-07 · si Coria-na se repite donde
     no hay nada que llamar Coro, la…
+  - 'navarrete-1829-viages-menores · lectura:glosa-fuente · toponimo-111 · Navarrete 1829 · 2026-09-22 · resuelve
+    el REFERENTE, no el significado: la red Curiana ↔ …'
+  - 'arcaya-1920 · lectura:glosa-fuente · toponimo-111 · Ballesteros 1550 (vía Arcaya 1920) y Castellanos 1589 ·
+    2026-09-22 · dos testigos independientes, de 1550 y 1589 (M7, #207, m7-c…'
   - gonzalez-batista-nombre-de-coro · lectura
   - arcaya-1920 · lectura · p. 169
   - arcaya-1920 · serie · p. 170
