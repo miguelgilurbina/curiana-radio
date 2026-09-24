@@ -143,3 +143,14 @@ Casanare sale de aquí (y de Gilij), y la polity `llanos` de
 - La etnografía achagua (pp. 102-118) por esferas.
 
 Índice: [[INDICE_FUENTES]]
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Control achagua:** el diluvio *Catana*, «con aguacero muy grande» (p. 113); la
+*chaca*, en que el piache inciensa con humo de tabaco el pescado al abrir las
+pesquerías (p. 105, **vista en imagen**: `6-fusion/rivero_1883_2026-09-23.yaml`
+la tenía sin verificar), y los agoreros que adivinan la temporada por los
+primeros peces flechados en los ríos (p. 104). El panteón de p. 113 no trae dios
+del agua ni del mar. Rito de pesca, sí; de río.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

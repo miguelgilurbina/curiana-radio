@@ -290,3 +290,16 @@ Páginas de la BAE sacadas con `6-fusion/scripts/castellanos_pagina.py`
   cronista, sino un juego culto sobre un hidrónimo.
 
 Propuesta: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo y §coro.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barridas las partes I-II; leídas una a una las ventanas creencia × mar con un nombre de la costa occidental cerca, y releído el tramo de Coro (Parte II, Elegía I). Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `castellanos`: 78 ventanas creencia × mar (16 con un nombre de la costa occidental cerca), 80 creencia × cielo de control.
+
+**Se halló:** De los isleños de Curazao y Aruba, «su lenguaje es el de caquetío» y «En el agua se mueven diestramente […] Puntería de tiros escelente / En aves, en conejos, en pescados» (p. 184, ya cristianizados: «tienen templos»). De Coro, «grande pesquería de pescados» (p. 185) y del lago, ferias «A trueco de la sal y del pescado». Destreza y comercio, no creencia. La única regla ritual con pescado del tramo occidental es de SANTA MARTA (tairona): en sus ayunos «Carne no comerán de ningún arte, / Sino pescado» — chibcha, fuera de la esfera.
+
+**No se halló:** Ningún rito, ser u ofrenda del mar entre los caquetíos. Las «cornetas» y «trompetas» del tramo son de guerra o de los españoles.

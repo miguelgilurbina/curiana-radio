@@ -150,3 +150,16 @@ tierra adentro»). **p. 33** también: la «emigración del Piache Manaure hacia
 tierras lejanas», lectura del autor.
 
 Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `velasco2015`: 2 ventanas creencia × mar (2 con un nombre de la costa occidental cerca), 4 creencia × cielo de control.
+
+**Se halló:** Cita la lectura de Acasio del monolito de Siraba: la rana arriba «parece ser expresión de una deidad» y «su contrafigura simbólica de la Tortuga» (Orión) — interpretación del s. XXI, con la tortuga sin decir si es de mar o de tierra.
+
+**No se halló:** Nada más.

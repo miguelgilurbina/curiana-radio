@@ -61,3 +61,12 @@ un programa aparte: [[PROGRAMA_WAYUU]].
 ## Enlaces
 
 [[PROGRAMA_WAYUU]] · [[amodio-perez-2006]] · [[04_transmision_saber]]
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se preguntó** por Pulowi, las tortugas y el mar. **Se halló:** Juyá, el padre de
+la lluvia que fecunda la tierra (pp. 26-27, pdf 14, imagen): es la procedencia
+del repo para el Juyá que `CULTURA_CAQUETIA` §1 cita de blogs. **No se halló:**
+Pulowi 0, tortugas 0; el mar son tres menciones de paisaje.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

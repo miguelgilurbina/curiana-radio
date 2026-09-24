@@ -123,3 +123,13 @@ vocabulario español-boriqueño del cap. X (el único básico) NO es tradición
 oral: es análisis del autor. Detalle: `6-fusion/taino_tradicion_viva_2026-09-24.yaml`.
 
 **✅ Aplicado el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): la tradición viva cuenta como dato taíno con su propia etiqueta (T1; entra en los cruces cuando se vuelva a correr T11, después de la corrida base) y la pareja taína está anotada en `jagey`, `bajareke`, `wako`, `warawara` y `kiwa` (T4). `kiba` se fundió en `siba` en la lista maestra (T3).
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se halló (visto en imagen):** Coll es quien junta el nombre del dios con el
+mar: «Bagua, que en el habla indo-antillana equivale a la mar» y «Yucajú Bagua
+Maorocotí equivale a Yuca Blanca, grande y poderosa, como el mar y la montaña»
+(pp. 106-107). Es interpretación del s. XIX (el «-hú» 'blanco' lo toma de
+Rafinesque), no dato taíno.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

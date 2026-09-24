@@ -330,3 +330,16 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 ## Enlaces
 
 [[oliver-1989-cap2]] · [[01_familia_caquetia]] · [[05_geografia_politica_y_sucesion]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barridos el DOC y la §3.3; leídas las ventanas. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `oliver_cap3_doc`: 2 ventanas creencia × mar (2 con un nombre de la costa occidental cerca), 3 creencia × cielo de control; `oliver_cap3_s33`: 1 ventanas creencia × mar (1 con un nombre de la costa occidental cerca), 0 creencia × cielo de control.
+
+**Se halló:** Confirma el cero de oliver1989_restante §mar. Lo único ritual con instrumentos de viento es de los GIRARA de los Llanos (Mercado 1685: «fututos» en la casa de los hombres, donde se recuerdan los agravios de los abuelos): regla 4.
+
+**No se halló:** Cero.
