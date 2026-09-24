@@ -286,8 +286,15 @@ decisiones:
       parentesco-021 se queda con lo que Rivero atestigua (el etnónimo y la
       voz *mude*, pp. 29 y 420); la etimología y el «como primos» pasan a una
       entrada nueva `hipotetico` que cita a Jahn.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/parentesco.yaml: parentesco-021 queda con lo que Rivero atestigua (Tamudes, p. 29; mude, pp. 419-420), `procedencia: rivero-1883`'
+      - '3-mundo/corpus/parentesco.yaml: parentesco-040 (nueva, hipotético): la unión de las dos cosas y el «como primos», de Jahn 1927 p. 213 (verificado en el texto, pdf 267) y Oliver, con las otras dos lecturas de la forma (Neira «Nude», Antolínez «tamudi»)'
+    aparecio: >-
+      parentesco-022 (la analogía achagua de linajes) se justifica con «los
+      'primos' declarados del caquetío, ver parentesco-021»: ese «primos» es
+      ahora la hipótesis de parentesco-040. No se tocó -022 (no es de esta
+      decisión); queda anotado en -021.
 
   dp.2.16:
     tema: parentesco-012 («daitiao» cognado del taíno)
@@ -295,8 +302,9 @@ decisiones:
     lectura_operativa: >-
       parentesco-012 lleva escrita la reserva: el test (T11) no confirma el
       cognado (letra C) y la afirmación tiene una sola fuente.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/parentesco.yaml: parentesco-012 lleva `aviso` con la reserva (letra C del test de T11, una sola fuente, la duda escrita de Oliver n. 42, y que db.2 pasó `datihao` al taíno); la etiqueta no cambia'
 
   dp.2.17:
     tema: la costa oriental de Federmann (Xaragua, Martinico, Atycares)
