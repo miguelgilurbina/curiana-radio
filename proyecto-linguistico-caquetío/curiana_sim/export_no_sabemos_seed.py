@@ -52,6 +52,7 @@ VAULT = "proyecto-linguistico-caquetío"
 
 sys.path.insert(0, AQUI)
 import curiana_lexicon as L                                   # noqa: E402
+from export_fichas_seed import siglas_zavala                  # noqa: E402
 
 
 def _forzar_utf8() -> None:
@@ -145,7 +146,7 @@ def p_hermana():
         ],
         "barras": {"titulo": "Similitud media con el caquetío atestiguado (0 a 1)",
                    "filas": barras},
-        "lo_que_falta": ("Más conceptos compartidos. Con dos docenas de palabras, un "
+        "lo_que_falta": (f"Más conceptos compartidos. Con {mas} palabras comparables, un "
                          "empate no distingue entre las dos candidatas."),
         "estado": "abierta",
         "fuentes": [fuente(rel, dato(doc, "meta", "instrumento"), doc)],
@@ -177,14 +178,17 @@ def p_angulo_molina():
         if "AM" in siglas:
             con_am += 1
             solo_am += siglas == {"AM"}
+    compiladores = siglas_zavala()
+    if not compiladores:
+        raise Falta("no se leyeron las siglas de 4-fuentes/zavala-reyes-2015.md")
     return {
         "slug": "angulo-molina",
         "pregunta": "¿Quién fue Angulo Molina?",
         "planteamiento": (
             "El glosario de Zavala Reyes (2015) es la fuente central del caquetío atestiguado, "
-            "y lo compila a partir de nueve autores que nombra por sus siglas. El que más "
-            "aporta es «AM», Angulo Molina. Zavala no da su obra: ni título, ni año, ni "
-            "editorial, y no se ha encontrado en ninguna otra parte."),
+            f"y lo compila a partir de {len(compiladores)} autores que nombra por sus siglas. "
+            "El que más aporta es «AM», Angulo Molina. Zavala no da su obra: ni título, ni "
+            "año, ni editorial, y no se ha encontrado en ninguna otra parte."),
         "medido": [
             f"En el glosario, AM aporta {am_glosario} entradas; el siguiente compilador, {segundo}.",
             f"Los {verbos.get('AM', 0)} verbos de acción del glosario son suyos: todo el verbo "
