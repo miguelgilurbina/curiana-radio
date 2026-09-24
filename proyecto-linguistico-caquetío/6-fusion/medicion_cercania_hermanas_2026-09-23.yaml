@@ -1,0 +1,500 @@
+# MEDICIÓN — ¿qué hermana está más cerca del caquetío atestiguado? (2026-09-23)
+# GENERADO por 6-fusion/scripts/medir_cercania_hermanas.py — no se edita a mano (regla 1).
+meta:
+  medido: '2026-09-23'
+  script: 6-fusion/scripts/medir_cercania_hermanas.py
+  instrumento: 'el cómputo A de D11 (computo_d11.py, 2026-08-31): 24 atestiguadas de concepto directo, fonemización
+    D5, similitud = 1 − Levenshtein/longitud máxima, mejor variante'
+  umbral_de_parecido: 0.5
+  fuentes_de_las_columnas:
+    guajiro/paraujano/lokono/ic_oliver/maipure: Oliver 1989, Tabla A-2 (tabla_a2_transcripcion.yaml)
+    kal_mujeres/kal_hombres: Goeje 1939 (sigue a Breton), leído en imagen; Adam 1879 pp. 278 y 281
+    achagua: Neira y Ribero 1762 (achagua_neira_ribero_1762.yaml)
+    taino: taino_lista_maestra_2026-09-22.yaml, sólo con cronista
+por_lengua:
+  guajiro:
+    conceptos_con_forma: 24
+    se_parece_(>=0.50): 8
+    media_de_similitud: 0.306
+  paraujano:
+    conceptos_con_forma: 21
+    se_parece_(>=0.50): 2
+    media_de_similitud: 0.236
+  lokono:
+    conceptos_con_forma: 24
+    se_parece_(>=0.50): 8
+    media_de_similitud: 0.361
+  ic_oliver:
+    conceptos_con_forma: 13
+    se_parece_(>=0.50): 5
+    media_de_similitud: 0.362
+  maipure:
+    conceptos_con_forma: 19
+    se_parece_(>=0.50): 5
+    media_de_similitud: 0.285
+  achagua:
+    conceptos_con_forma: 23
+    se_parece_(>=0.50): 4
+    media_de_similitud: 0.283
+  taino:
+    conceptos_con_forma: 7
+    se_parece_(>=0.50): 2
+    media_de_similitud: 0.404
+  kal_mujeres:
+    conceptos_con_forma: 20
+    se_parece_(>=0.50): 8
+    media_de_similitud: 0.42
+  kal_hombres:
+    conceptos_con_forma: 20
+    se_parece_(>=0.50): 2
+    media_de_similitud: 0.221
+cara_a_cara:
+  kal_mujeres_contra_kal_hombres:
+    kal_mujeres: 10
+    kal_hombres: 0
+    empate: 10
+    sin_dato_en_alguna: 4
+    gana_kal_mujeres:
+    - cati
+    - cazi
+    - quiva
+    - cuiva
+    - iero
+    - ateri
+    - dare
+    - jai
+    - quiricias
+    - apana
+    gana_kal_hombres: []
+  kal_mujeres_contra_lokono:
+    kal_mujeres: 7
+    lokono: 6
+    empate: 7
+    sin_dato_en_alguna: 4
+    gana_kal_mujeres:
+    - cazi
+    - rao
+    - jajato
+    - ateri
+    - ebo
+    - jai
+    - cudanga
+    gana_lokono:
+    - iero
+    - dare
+    - darubana
+    - pana
+    - quiricias
+    - bara
+  kal_mujeres_contra_achagua:
+    kal_mujeres: 11
+    achagua: 5
+    empate: 3
+    sin_dato_en_alguna: 5
+    gana_kal_mujeres:
+    - cati
+    - cazi
+    - rao
+    - jajato
+    - ateri
+    - dare
+    - ebo
+    - buiamati
+    - para
+    - cudanga
+    - apana
+    gana_achagua:
+    - iero
+    - darubana
+    - gudamuen
+    - quiricias
+    - bara
+  kal_mujeres_contra_guajiro:
+    kal_mujeres: 13
+    guajiro: 5
+    empate: 2
+    sin_dato_en_alguna: 4
+    gana_kal_mujeres:
+    - cati
+    - cazi
+    - quiva
+    - cuiva
+    - rao
+    - ateri
+    - dare
+    - ebo
+    - buiamati
+    - jai
+    - para
+    - cudanga
+    - apana
+    gana_guajiro:
+    - iero
+    - darubana
+    - pana
+    - quiricias
+    - bara
+  lokono_contra_guajiro:
+    lokono: 12
+    guajiro: 8
+    empate: 4
+    sin_dato_en_alguna: 0
+    gana_lokono:
+    - cati
+    - quiva
+    - cuiva
+    - iero
+    - dare
+    - ebo
+    - buiamati
+    - jai
+    - apo
+    - para
+    - bara
+    - apana
+    gana_guajiro:
+    - cazi
+    - rao
+    - jajato
+    - darubana
+    - ure
+    - quidi
+    - bana
+    - cudanga
+filas:
+- caquetio: cati
+  glosa: luna
+  concepto: moon
+  fonemizada: kati
+  similitud:
+    guajiro: 0.6
+    paraujano: 0.25
+    lokono: 1.0
+    ic_oliver: 0.75
+    maipure: 0.5
+    achagua: 0.4
+    taino: 0.0
+    kal_mujeres: 1.0
+    kal_hombres: 0.0
+- caquetio: cazi
+  glosa: sol
+  concepto: sun
+  fonemizada: kasi
+  similitud:
+    guajiro: 0.75
+    paraujano: 0.75
+    lokono: 0.33
+    ic_oliver: null
+    maipure: 0.25
+    achagua: 0.25
+    taino: null
+    kal_mujeres: 1.0
+    kal_hombres: 0.0
+- caquetio: quiva
+  glosa: piedra
+  concepto: stone
+  fonemizada: kiba
+  similitud:
+    guajiro: 0.5
+    paraujano: 0.25
+    lokono: 0.75
+    ic_oliver: null
+    maipure: 0.75
+    achagua: 0.75
+    taino: 1.0
+    kal_mujeres: 0.75
+    kal_hombres: 0.25
+- caquetio: cuiva
+  glosa: piedra
+  concepto: stone
+  fonemizada: kuiba
+  similitud:
+    guajiro: 0.4
+    paraujano: 0.2
+    lokono: 0.6
+    ic_oliver: null
+    maipure: 0.6
+    achagua: 0.6
+    taino: 0.8
+    kal_mujeres: 0.6
+    kal_hombres: 0.2
+- caquetio: rao
+  glosa: arena
+  concepto: sand
+  fonemizada: rao
+  similitud:
+    guajiro: 0.2
+    paraujano: 0.33
+    lokono: 0.17
+    ic_oliver: null
+    maipure: 0.2
+    achagua: 0.2
+    taino: null
+    kal_mujeres: 0.4
+    kal_hombres: 0.4
+- caquetio: jajato
+  glosa: lugar de arena
+  concepto: sand
+  fonemizada: jajato
+  similitud:
+    guajiro: 0.5
+    paraujano: 0.17
+    lokono: 0.17
+    ic_oliver: null
+    maipure: 0.17
+    achagua: 0.17
+    taino: null
+    kal_mujeres: 0.5
+    kal_hombres: 0.5
+- caquetio: iero
+  glosa: mujer
+  concepto: woman
+  fonemizada: iero
+  similitud:
+    guajiro: 0.5
+    paraujano: 0.5
+    lokono: 0.6
+    ic_oliver: 0.4
+    maipure: null
+    achagua: 0.4
+    taino: null
+    kal_mujeres: 0.33
+    kal_hombres: 0.25
+- caquetio: ateri
+  glosa: hombre
+  concepto: man
+  fonemizada: ateri
+  similitud:
+    guajiro: 0.33
+    paraujano: 0.14
+    lokono: 0.33
+    ic_oliver: 0.6
+    maipure: 0.27
+    achagua: 0.31
+    taino: null
+    kal_mujeres: 0.6
+    kal_hombres: 0.33
+- caquetio: dare
+  glosa: diente
+  concepto: tooth
+  fonemizada: dare
+  similitud:
+    guajiro: 0.25
+    paraujano: 0.25
+    lokono: 0.75
+    ic_oliver: 0.5
+    maipure: 0.25
+    achagua: 0.25
+    taino: null
+    kal_mujeres: 0.5
+    kal_hombres: 0.25
+- caquetio: ebo
+  glosa: camino
+  concepto: path
+  fonemizada: ebo
+  similitud:
+    guajiro: 0.0
+    paraujano: 0.25
+    lokono: 0.29
+    ic_oliver: null
+    maipure: 0.2
+    achagua: 0.14
+    taino: null
+    kal_mujeres: 0.33
+    kal_hombres: 0.33
+- caquetio: darubana
+  glosa: camino (comp.)
+  concepto: path
+  fonemizada: darubana
+  similitud:
+    guajiro: 0.5
+    paraujano: 0.12
+    lokono: 0.38
+    ic_oliver: null
+    maipure: 0.12
+    achagua: 0.5
+    taino: null
+    kal_mujeres: 0.12
+    kal_hombres: 0.12
+- caquetio: pana
+  glosa: uno
+  concepto: one
+  fonemizada: pana
+  similitud:
+    guajiro: 0.5
+    paraujano: 0.4
+    lokono: 0.5
+    ic_oliver: 0.6
+    maipure: 0.43
+    achagua: null
+    taino: 0.0
+    kal_mujeres: 0.25
+    kal_hombres: 0.25
+- caquetio: gudamuen
+  glosa: dos
+  concepto: two
+  fonemizada: gudamuen
+  similitud:
+    guajiro: 0.25
+    paraujano: 0.25
+    lokono: 0.25
+    ic_oliver: 0.25
+    maipure: 0.12
+    achagua: 0.33
+    taino: 0.25
+    kal_mujeres: 0.25
+    kal_hombres: 0.25
+- caquetio: buiamati
+  glosa: dos lunas
+  concepto: two
+  fonemizada: buiamati
+  similitud:
+    guajiro: 0.5
+    paraujano: 0.38
+    lokono: 0.62
+    ic_oliver: 0.62
+    maipure: 0.25
+    achagua: 0.56
+    taino: 0.38
+    kal_mujeres: 0.62
+    kal_hombres: 0.62
+- caquetio: ure
+  glosa: raíz
+  concepto: root
+  fonemizada: ure
+  similitud:
+    guajiro: 0.29
+    paraujano: null
+    lokono: 0.2
+    ic_oliver: 0.0
+    maipure: null
+    achagua: 0.17
+    taino: null
+    kal_mujeres: null
+    kal_hombres: null
+- caquetio: jai
+  glosa: oír
+  concepto: hear
+  fonemizada: jai
+  similitud:
+    guajiro: 0.0
+    paraujano: null
+    lokono: 0.14
+    ic_oliver: 0.2
+    maipure: null
+    achagua: 0.17
+    taino: null
+    kal_mujeres: 0.17
+    kal_hombres: 0.0
+- caquetio: quiricias
+  glosa: sangre
+  concepto: blood
+  fonemizada: kirisias
+  similitud:
+    guajiro: 0.38
+    paraujano: null
+    lokono: 0.38
+    ic_oliver: 0.25
+    maipure: null
+    achagua: 0.38
+    taino: null
+    kal_mujeres: 0.25
+    kal_hombres: 0.12
+- caquetio: apo
+  glosa: grande
+  concepto: big
+  fonemizada: apo
+  similitud:
+    guajiro: 0.0
+    paraujano: 0.0
+    lokono: 0.25
+    ic_oliver: 0.2
+    maipure: null
+    achagua: 0.12
+    taino: null
+    kal_mujeres: null
+    kal_hombres: null
+- caquetio: quidi
+  glosa: cerro
+  concepto: mountain
+  fonemizada: kidi
+  similitud:
+    guajiro: 0.25
+    paraujano: 0.17
+    lokono: 0.0
+    ic_oliver: null
+    maipure: 0.0
+    achagua: 0.33
+    taino: null
+    kal_mujeres: null
+    kal_hombres: null
+- caquetio: bana
+  glosa: cerro (morfema)
+  concepto: mountain
+  fonemizada: bana
+  similitud:
+    guajiro: 0.33
+    paraujano: 0.0
+    lokono: 0.0
+    ic_oliver: null
+    maipure: 0.5
+    achagua: 0.18
+    taino: null
+    kal_mujeres: null
+    kal_hombres: null
+- caquetio: para
+  glosa: mar/agua grande
+  concepto: water
+  fonemizada: para
+  similitud:
+    guajiro: 0.0
+    paraujano: 0.29
+    lokono: 0.25
+    ic_oliver: null
+    maipure: 0.0
+    achagua: 0.0
+    taino: null
+    kal_mujeres: 0.25
+    kal_hombres: 0.25
+- caquetio: bara
+  glosa: árbol
+  concepto: tree
+  fonemizada: bara
+  similitud:
+    guajiro: 0.17
+    paraujano: 0.0
+    lokono: 0.5
+    ic_oliver: null
+    maipure: 0.5
+    achagua: 0.17
+    taino: null
+    kal_mujeres: 0.0
+    kal_hombres: 0.0
+- caquetio: cudanga
+  glosa: usted (2ª)
+  concepto: thou
+  fonemizada: kudanga
+  similitud:
+    guajiro: 0.14
+    paraujano: 0.14
+    lokono: 0.0
+    ic_oliver: 0.14
+    maipure: 0.14
+    achagua: 0.14
+    taino: null
+    kal_mujeres: 0.29
+    kal_hombres: 0.29
+- caquetio: apana
+  glosa: una luna
+  concepto: moon
+  fonemizada: apana
+  similitud:
+    guajiro: 0.0
+    paraujano: 0.12
+    lokono: 0.2
+    ic_oliver: 0.2
+    maipure: 0.17
+    achagua: 0.0
+    taino: 0.4
+    kal_mujeres: 0.2
+    kal_hombres: 0.0
