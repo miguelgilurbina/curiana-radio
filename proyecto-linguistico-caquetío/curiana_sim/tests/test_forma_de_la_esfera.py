@@ -102,7 +102,10 @@ def test_las_gemelas_si_se_ensenan_y_el_bloque_las_escribe():
     """El bloque decía «maíz = planta de maíz» y ahora dice «maisi = …»."""
     import random
     formas = {f for _p, f, _g, _fam in L.voces_de_fuera_posibles()}
-    assert {"maisi", "cazabi", "cacike", "bohio"} <= formas
+    # `cacike` dejó de enseñarse el 2026-09-24 (dp.1.04: llegó en boca del
+    # español); las gemelas que siguen se enseñan por su forma indígena.
+    assert {"maisi", "cazabi", "bohio"} <= formas
+    assert "cacike" not in formas
 
     random.seed(20260918)
     bloque = L.prompt_voces_de_fuera(n=60)
@@ -132,7 +135,11 @@ def test_el_catalogo_no_pierde_voces_por_accidente():
     # de Venezuela)» es del editor, como en `datihao`—, y el caribe continental
     # es esfera. El mismo día `cohiba` se archivó y entró `cohoba` (tf.6):
     # una sale y otra entra, el total no se mueve por eso.
-    assert len(formas) == 44
+    # 44 → 42 el 2026-09-24 (dp.1.04 de #222, «Ok a todo»): `cacike` y
+    # `naboria`, las que Oliver nombra como traídas por el español desde La
+    # Española, dejan de enseñarse (LLEGARON_CON_EL_ESPANOL). El scorer no se toca.
+    assert len(formas) == 42
+    assert not {"cacike", "naboria"} & formas
     assert "datihao" in formas
     assert {"baperon", "raporon", "cohoba"} <= formas
     assert "cohiba" not in formas

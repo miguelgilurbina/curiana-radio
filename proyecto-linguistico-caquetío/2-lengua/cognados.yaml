@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/migrar_cognados.py
   cognados: 51
-  con_procedencia: 16
-  sin_procedencia: 35
+  con_procedencia: 17
+  sin_procedencia: 34
   lenguas_nucleo:
   - CAIC
   - CQ
@@ -528,7 +528,7 @@ cognados:
   formas:
     PA: '*iuli'
     LK: iuli
-    TN: cohiba
+    TN: tabako
   fuente: reconstruido
   procedencia: null
   deuda: sin-procedencia
@@ -554,9 +554,9 @@ cognados:
     obra: perea-alonso-1942
     pagina: 651
     ancla: barba-coa = cañizo
-  deuda: 'la procedencia cubre el lado LOKONO: Perea 1942 p. 651 «barba-coa = cañizo, como parrillas, donde
-    se pone habitualmente a secar o ahumar algo», dado como ejemplo de -coa «estado, permanencia». El lado
-    taíno sigue sin cita (añadido 2026-09-12; antes: sin-procedencia)'
+  deuda: 'la procedencia cubre el lado LOKONO: Perea 1942 p. 651 «barba-coa = cañizo, como parrillas,
+    donde se pone habitualmente a secar o ahumar algo», dado como ejemplo de -coa «estado, permanencia».
+    El lado taíno sigue sin cita (añadido 2026-09-12; antes: sin-procedencia)'
   clave_origen: barbacoa
 - id: cognado-034
   glosa: persona arahuaca, gente propia

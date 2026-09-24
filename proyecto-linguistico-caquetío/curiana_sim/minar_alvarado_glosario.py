@@ -152,8 +152,11 @@ INDETERMINADO = re.compile(r"indeterminad[oa]|no bien determinad|"
 VEREDICTOS_CURADOS: dict[str, tuple[str, str]] = {
     # ── A — atestación colonial o atribución caquetía explícita ──
     "poporo": ("A", "Alvarado la atribuye EXPLÍCITAMENTE a los antiguos Caquetíos "
-                    "(y a los Guajiros), citando a Castellanos. Es la única voz de todo "
-                    "el glosario con atribución caquetía directa."),
+                    "(y a los Guajiros), citando a Castellanos. ⚠️ CORREGIDO el "
+                    "2026-09-23 (cc.3 / tf.6): leído Castellanos, el poporo es del "
+                    "guanebucán Boronata (Elegías p. 202), no de ningún caquetío; la "
+                    "voz salió del habla como español colonial de Tierra Firme. "
+                    "Alvarado atribuye; su fuente no lo sostiene."),
     "mene": ("A", "Atestación colonial de primera (Oviedo II.301) + localización en Coro "
                   "y Maracaibo (Codazzi). Campo semántico local e intraducible."),
     "maure": ("A", "Atestada por Carvajal y Castellanos como faja/tejido, y viva en Coro "
@@ -319,10 +322,11 @@ warawara watapana""".split()
 
 # forma_lexicon → (veredicto, forma_en_alvarado_o_None, razón)
 ADJUDICACION_82: dict[str, tuple[str, str | None, str]] = {
-    "poporo": ("confirma", "POPORO",
-               "Alvarado la atribuye a los antiguos Caquetíos y cita a Castellanos. "
-               "La glosa del lexicón ('maza-porra, arma de combate') coincide. "
-               "→ `caquetío-atestiguado` queda JUSTIFICADO, con cita."),
+    "poporo": ("reclasifica", "POPORO",
+               "Alvarado la atribuye a los antiguos Caquetíos y cita a Castellanos, "
+               "pero el pasaje de Castellanos es del guanebucán Boronata (Elegías p. "
+               "202): cc.3 / tf.6 (2026-09-23) la sacó del habla como "
+               "`español-colonial`. Hasta ese día este veredicto decía «confirma»."),
     "mene": ("confirma", "MÉNE",
              "Oviedo II.301 ('betún a manera de brea') + Codazzi localiza los "
              "yacimientos en Coro y Maracaibo. Glosa del lexicón compatible."),
@@ -656,7 +660,12 @@ def cadena_de_custodia(entradas: list[dict]) -> dict:
         m = re.search(r"\(([^)]*)\)", notas)
         if not m or "A" not in m.group(1).split("+"):
             continue
-        clave = _VARIANTES_ZAVALA_ALVARADO.get(norm(w), norm(w))
+        # Desde D5 fase 2 (2026-08-31) la clave es el lema FONÉMICO (`kachipo`)
+        # y Alvarado escribe en grafía colonial (`cachipo`): se busca por
+        # `forma_fuente` cuando la hay. Sin esto la cadena cayó de 24/26 a 13/27
+        # rastreadas sin que nadie lo viera (medido el 2026-09-24).
+        ff = norm(d.get("forma_fuente") or w)
+        clave = _VARIANTES_ZAVALA_ALVARADO.get(ff, _VARIANTES_ZAVALA_ALVARADO.get(norm(w), ff))
         e = idx.get(clave)
         (trazadas if e else perdidas).append(
             {"forma": w, "glosa_lexicon": d.get("sig", ""),

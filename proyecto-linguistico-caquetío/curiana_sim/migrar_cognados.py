@@ -124,19 +124,37 @@ def construir():
         registros.append(reg)
 
     # ── Los 37 del set curado: sin procedencia, y se dice ──────────────
+    # Salvo la procedencia que se les encontró DESPUÉS y está declarada en
+    # PROCEDENCIA_CURADA: antes se escribía a mano en el YAML generado y la
+    # regeneración la borraba (medido el 2026-09-24 con `barbacoa`).
     for clave, e in A.COGNADOS.items():
         n += 1
+        curada = PROCEDENCIA_CURADA.get(clave, {})
         registros.append({
             "id": f"cognado-{n:03d}",
             "glosa": e.get("es") or clave,
             "formas": _formas(e),
             "fuente": "reconstruido",
-            "procedencia": None,
-            "deuda": "sin-procedencia",
+            "procedencia": curada.get("procedencia"),
+            "deuda": curada.get("deuda", "sin-procedencia"),
             "clave_origen": clave,
         })
 
     return registros
+
+
+# La procedencia que un set curado ganó después de la migración. Se declara
+# aquí, no en `2-lengua/cognados.yaml`, que es generado.
+PROCEDENCIA_CURADA: dict[str, dict] = {
+    "barbacoa": {
+        "procedencia": {"obra": "perea-alonso-1942", "pagina": 651,
+                        "ancla": "barba-coa = cañizo"},
+        "deuda": ("la procedencia cubre el lado LOKONO: Perea 1942 p. 651 «barba-coa = "
+                  "cañizo, como parrillas, donde se pone habitualmente a secar o ahumar "
+                  "algo», dado como ejemplo de -coa «estado, permanencia». El lado taíno "
+                  "sigue sin cita (añadido 2026-09-12; antes: sin-procedencia)"),
+    },
+}
 
 
 def separar_no_cognados(registros):
