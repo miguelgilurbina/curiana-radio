@@ -77,6 +77,25 @@ export function nodoColor(nodo: string | null | undefined): string {
   return (nodo && NODOS[nodo]?.color) || "#6D8A9E";
 }
 
+// ── Capas epistémicas (la marca de la casa) ───────────────────────────
+// Cómo sabemos cada palabra: el mismo código en todos los niveles del sitio
+// (índice, ficha, wiki, archivo). El color va en tokens CSS (--capa-*,
+// globals.css) para que se resuelva también en el registro oscuro del
+// laboratorio; el glifo (lleno → vacío = de lo documentado a lo conjeturado)
+// hace que la etiqueta no dependa sólo del color. El orden es de confianza.
+export const CAPAS_EPISTEMICAS = [
+  { key: "atestiguado", label: "atestiguada", plural: "atestiguadas", color: "var(--capa-atestiguado)" },
+  { key: "reconstruido", label: "reconstruida", plural: "reconstruidas", color: "var(--capa-reconstruido)" },
+  { key: "retroabstraido", label: "retroabstraída", plural: "retroabstraídas", color: "var(--capa-retroabstraido)" },
+  { key: "hipotetico", label: "hipotética", plural: "hipotéticas", color: "var(--capa-hipotetico)" },
+] as const;
+
+export type CapaEpistemica = (typeof CAPAS_EPISTEMICAS)[number]["key"];
+
+export const CAPA: Record<CapaEpistemica, (typeof CAPAS_EPISTEMICAS)[number]> = Object.fromEntries(
+  CAPAS_EPISTEMICAS.map((c) => [c.key, c])
+) as Record<CapaEpistemica, (typeof CAPAS_EPISTEMICAS)[number]>;
+
 // ── Semánticos (feedback) ─────────────────────────────────────────────
 export const SEMANTIC = {
   success: "#2E7D4F",

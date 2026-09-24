@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import type { CapaEpistemica } from "@/lib/sim-theme";
+import { CapaGlifo } from "@/components/simulador/capa";
 
 // Componentes MDX para la prosa larga del wiki de fuentes: notas del vault
 // tal como se escriben ahí — muchas tablas (bibliografía), citas en bloque
@@ -13,8 +15,40 @@ import remarkGfm from "remark-gfm";
 
 const externo = (href: string) => /^https?:\/\//.test(href);
 
-function A({ href, children }: { href?: string; children?: ReactNode }) {
+const CAPAS_VALIDAS = new Set<string>(["atestiguado", "reconstruido", "retroabstraido", "hipotetico"]);
+
+/** Una voz del diccionario nombrada en el wiki (lib/fichas.ts enlazarVoces la
+ *  convierte en enlace con título «voz:capa» o «retirada:capa»): se pinta con
+ *  el glifo de su capa, y tachada si el proyecto la retiró. */
+function Voz({ href, titulo, children }: { href: string; titulo: string; children?: ReactNode }) {
+  const [tipo, capa] = titulo.split(":");
+  const retirada = tipo === "retirada";
+  return (
+    <Link
+      href={href}
+      className={`sim-display font-semibold underline decoration-(--sim-rule) underline-offset-2 transition-colors hover:text-(--sim-fuego) hover:decoration-(--sim-fuego) ${
+        retirada ? "text-(--sim-ink-soft) line-through" : "text-(--sim-ink)"
+      }`}
+    >
+      {CAPAS_VALIDAS.has(capa) && (
+        <span className="mr-1">
+          <CapaGlifo capa={capa as CapaEpistemica} size={9} />
+        </span>
+      )}
+      {children}
+    </Link>
+  );
+}
+
+function A({ href, title, children }: { href?: string; title?: string; children?: ReactNode }) {
   if (!href) return <span>{children}</span>;
+  if (title && /^(voz|retirada):/.test(title)) {
+    return (
+      <Voz href={href} titulo={title}>
+        {children}
+      </Voz>
+    );
+  }
   if (externo(href)) {
     return (
       <a
@@ -112,8 +146,10 @@ export const wikiMdxComponents = {
 };
 
 export function WikiProse({ source }: { source: string }) {
+  // break-words: el vault escribe rutas y claves largas sin espacios que en
+  // el móvil ensanchaban la página; las tablas siguen con su propio scroll.
   return (
-    <div>
+    <div className="break-words">
       <MDXRemote
         source={source}
         components={wikiMdxComponents}
