@@ -30,6 +30,7 @@ meta:
   verificado_en_imagen:
     - 'Adam 1879 pp. 288-290: la tabla ENTERA de 79 voces arahuacas contra el kalinago (transcrita en 6-fusion/adam_1879_arrouague_caraibe.yaml)'
     - 'Goeje 1939 pp. 32, 34, 40, 41, 56, 71, 78, 94, 101, 105, 110 (esta campaña) y las de #234'
+    - 'Goeje 1939 pp. 35-116: el habla de mujeres entera que faltaba (6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml)'
   no_verificado_en_imagen: >-
     Perea 1942 (las formas lokonas vienen de 6-fusion/lokono_perea_1942.yaml,
     con página y ejemplo del Fraseario); Neira y Ribero (transcripción por
@@ -70,7 +71,8 @@ decision_n1_la_etiqueta:
         = `caquetío-hipotético`, y sólo llega por plantilla. Es el criterio (a)
         de D11 fase 3, aplicado al léxico, contando el kalinago de mujeres si
         D1 (#234) es A.
-      reconstruidas_si_d1_es_A: [ani, aeke, ati, dunku, aita, isi, akusi, kibe, ada, uni, unia]
+      reconstruidas_si_d1_es_A: [ani, aeke, ati, dunku, aita, isi, akusi, kibe, ada, uni, unia, butu]
+      y_ademas_fuera_de_las_36: [diki, marisi]
       reconstruidas_si_d1_es_B: [uni, unia]
     - letra: B
       que: >-
@@ -248,7 +250,7 @@ grupos:
           - letra: A
             formas: [ati]
             etiqueta: 'reconstruido si D1 = A'
-            derivacion: 'lokono «Atti-n, boire» → mujeres «ata-ca» (Adam p. 289, imagen); Perea M-A-TTI-N ''no bebió'' (p. 250). La raíz lokona'
+            derivacion: 'lokono «Atti-n, boire» → mujeres «ata-ca» (Adam p. 289, imagen); Perea M-A-TTI-N ''no bebió'' (p. 250); y Goeje p. 107 (imagen): «boire f ata … A ata, ato». La raíz lokona'
             coste_medido:
               plantillas_a_tocar: 2
               apariciones_en_plantillas: 4
@@ -256,14 +258,14 @@ grupos:
           - letra: B
             formas: [ata]
             etiqueta: 'reconstruido si D1 = A'
-            derivacion: la de las mujeres kalinago
-            aviso: '`ata` es clave ACHAGUA del lexicón (''Rallo'')'
+            derivacion: 'la forma EXACTA de las dos hermanas (Goeje p. 107: f ata, A ata)'
+            aviso: '`ata` es clave ACHAGUA (''Rallo''); medido: vecina de ama, ana, aka, tata'
             coste_medido:
               plantillas_a_tocar: 2
               apariciones_en_plantillas: 4
               colisiones_de_la_nueva: {ata: 1}
         recomendacion: A
-        por_que: sin choque
+        por_que: 'B es la forma exacta de las dos, pero choca con cuatro voces de tres letras; A sólo con kati'
       - voz: suna
         glosa: dormir, reposar
         hoy: 'reconstruido; nota «lokono/proto» — el lokono dice adum-/adunku'
@@ -440,6 +442,42 @@ grupos:
         recomendacion: A
         por_que: dos hermanas nombradas
 
+      - voz: taa
+        glosa: tomar, coger, recibir
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [butu]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: >-
+              Goeje p. 74 (imagen, sigla fhA): «cueillir (a)bula-ka, abutu …
+              travailler abutu, cueillir … A abuti … prendre A abutu» — el
+              kalinago (los dos registros) y el lokono, la misma raíz; sin el
+              prefijo a- del infinitivo, como diki. Hallada en la transcripción
+              del habla de mujeres del 2026-09-24
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {butu: 0}
+          - letra: B
+            formas: [nika]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono A-NNICA-N ''tomaron'' (Perea p. 470), una hermana'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {nika: 0}
+          - letra: C
+            formas: [taa]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {taa: 0}
+        recomendacion: A
+        por_que: 'dos hermanas y sin ningún choque medido'
+
   - grupo: 3. Una hermana — hipotética (sólo llega por plantilla)
     voces:
       - voz: naa
@@ -495,28 +533,6 @@ grupos:
               colisiones_de_la_nueva: {waa: 0}
         recomendacion: A
         por_que: 'B no pasa la fonotáctica; A depende de D1 (si D1 = B, C)'
-      - voz: taa
-        glosa: tomar, coger, recibir
-        hoy: 'reconstruido; sin pareja'
-        opciones:
-          - letra: A
-            formas: [nika]
-            etiqueta: caquetío-hipotético
-            derivacion: 'lokono A-NNICA-N ''tomaron'' (Perea p. 470)'
-            coste_medido:
-              plantillas_a_tocar: 1
-              apariciones_en_plantillas: 1
-              colisiones_de_la_nueva: {nika: 0}
-          - letra: B
-            formas: [taa]
-            etiqueta: caquetío-hipotético
-            derivacion: se queda y se degrada
-            coste_medido:
-              plantillas_a_tocar: 0
-              apariciones_en_plantillas: 0
-              colisiones_de_la_nueva: {taa: 0}
-        recomendacion: A
-        por_que: tiene cita
       - voz: raka
         glosa: querer, desear
         hoy: 'reconstruido; sin pareja; y Raka-bi es un nombre del elenco'
@@ -884,3 +900,22 @@ lo_que_cambia_si_se_aplica_todo:
   tests: 'la medición cuenta las apariciones en tests por voz (kuru, wara, naa y sima son las que más)'
   uso_historico: 'SIN MEDIR (Docker apagado): `medir_nucleo_fundacional.py` con la base lo da'
   la_serie: 'otro corte de serie antes de la base, medido como la tanda final (control, prompt, pre-vuelo)'
+
+lo_que_cambia_la_transcripcion_del_habla_de_mujeres:
+  fuente: '6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml (302 entradas, en imagen)'
+  suben_a_dos_hermanas:
+    - voz: diki
+      que: 'ver (tf.5, hoy hipotética): lokono a-ddiki-n = mujeres «arika», A adika (Goeje p. 100, imagen; d = r). Reconstruida si D1 = A y N1 = A'
+    - voz: marisi
+      que: 'maíz en mazorca (hoy hipotética, y por eso fuera de la muestra era2): «maïs … f mariši, A mariši» (Goeje p. 65, imagen): la MISMA forma en las dos. Reconstruida si D1 = A y N1 = A'
+    - voz: taa → butu
+      que: 'ver arriba: pasó del grupo 3 al 2'
+  apoyos_nuevos_para_lo_ya_propuesto:
+    - 'kudu ''cargar'': Goeje p. 98 «pesant A kudu»'
+    - 'hiti ''querer'': Goeje p. 109 «vouloir, disposé à A ahite(-ka)»'
+    - 'isi ''cabeza'': Goeje p. 105 «graine, tête A isi»'
+    - 'ani ''hacer'': es la forma de los HOMBRES y del lokono (p. 94, sigla 1 am 139, de origen arahuaco); las mujeres dicen ateka (p. 109). Sigue siendo de dos hermanas'
+    - 'wara ''muy'': el kalinago tiene una raíz uar- de ''fuerza'' (p. 114: «puissant f uarigo», 6 uwara ''puissance''); no es el mismo significado, y kibe sigue siendo la recomendada'
+  lo_que_no_sirve:
+    - 'amar: mujeres inši / lokono ansi (p. 95) — dos hermanas, pero el grupo ns no pasa la fonotáctica atestiguada; alaain se archiva sin sustituta, como proponía #234'
+    - 'rojo: mujeres pona / lokono bonaro (p. 77) — dos hermanas, pero pona queda a una letra de puna y de pana; kule sigue siendo la recomendada (#234)'

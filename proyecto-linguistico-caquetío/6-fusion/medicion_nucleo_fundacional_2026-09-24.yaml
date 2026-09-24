@@ -4,8 +4,7 @@
 meta:
   medido: '2026-09-24'
   script: 6-fusion/scripts/medir_nucleo_fundacional.py (con medir_d11_voces_wayuu.medir)
-  motor_medido: 'ac7fe33 inventario(núcleo fundacional): primera pasada contra las hermanas — casi nada tiene pareja,
-    y duna/wari/baba so'
+  motor_medido: '7abe31d campaña(núcleo fundacional): las 36 voces rehechas desde lokono + kalinago de mujeres'
   vocabulario_base: 5496
   fuera_del_habla: 36
   todas_las_reglas: 22
@@ -1284,9 +1283,31 @@ candidatas:
     - lokono
     - decir (y 4 acepción/es más)
     al_entrar: 'ya está en el lexicón: no entra nada nuevo'
-  nika:
+  butu:
     opciones:
     - taa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: butu
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  nika:
+    opciones:
+    - taa.B
     colisiones:
       clave_exacta: []
       archivada: []
@@ -1311,7 +1332,7 @@ candidatas:
       base: no medida
   taa:
     opciones:
-    - taa.B
+    - taa.C
     colisiones:
       clave_exacta:
       - - taa
@@ -3014,6 +3035,20 @@ coste_por_opcion:
   taa:
     A:
       formas:
+      - butu
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        butu: 0
+      fonotactica_de_la_nueva:
+        butu: pasa
+    B:
+      formas:
       - nika
       se_queda_la_forma: false
       usos_de_la_voz_vieja_que_dejan_de_contar: null
@@ -3026,7 +3061,7 @@ coste_por_opcion:
         nika: 0
       fonotactica_de_la_nueva:
         nika: pasa
-    B:
+    C:
       formas:
       - taa
       se_queda_la_forma: true

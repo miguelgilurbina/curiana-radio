@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-24**.
 
-**7336 ítems propuestos** en 147 propuestas, más **58 issue(s)/comentario(s) redactados sin publicar**.
+**7638 ítems propuestos** en 148 propuestas, más **58 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -85,6 +85,7 @@ editar_a_mano: no
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `kalinago_goeje_1939.yaml` | ? | 859 |  |
 | `kalinago_mujeres_2026-09-23.yaml` | ? | 4 |  |
+| `kalinago_mujeres_goeje_2026-09-24.yaml` | ? | 302 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |

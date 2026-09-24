@@ -46,7 +46,7 @@ OPCIONES = {
     "waa":   {"A": ["sile"], "B": ["andi"], "C": ["waa"]},
     "kaa":   {"A": ["kaa"]},
     "maa":   {"A": ["maa"], "B": ["dia"]},
-    "taa":   {"A": ["nika"], "B": ["taa"]},
+    "taa":   {"A": ["butu"], "B": ["nika"], "C": ["taa"]},
     "chaa":  {"A": ["ani"], "B": ["chaa"]},
     "suna":  {"A": ["dunku"], "B": ["dumki"]},
     "masa":  {"A": ["aeke"], "B": ["aika"]},
@@ -84,7 +84,7 @@ OPCIONES = {
 RECOMENDADA = {v: "A" for v in OPCIONES}
 SE_QUEDA = {(v, l) for v, ops in OPCIONES.items() for l, fs in ops.items() if fs == [v]}
 CAT_CANDIDATA = {
-    "kunu": "v_raiz", "andi": "v_raiz", "sile": "v_raiz", "dia": "v_raiz", "nika": "v_raiz",
+    "kunu": "v_raiz", "butu": "v_raiz", "andi": "v_raiz", "sile": "v_raiz", "dia": "v_raiz", "nika": "v_raiz",
     "ani": "v_raiz", "dunku": "v_raiz", "dumki": "v_raiz", "aeke": "v_raiz", "aika": "v_raiz",
     "ati": "v_raiz", "ata": "v_raiz", "aita": "v_raiz", "diti": "v_raiz", "abuna": "v_raiz",
     "hiti": "v_raiz", "kudu": "v_raiz", "uni": "sust", "hiki": "sust", "hikihi": "sust", "unia": "sust", "oya": "sust",

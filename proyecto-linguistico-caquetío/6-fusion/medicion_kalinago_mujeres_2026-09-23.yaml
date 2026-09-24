@@ -4,10 +4,11 @@
 prueba:
   conceptos_leidos: 14
   con_forma_de_hombres_y_de_mujeres_distintas:
-    n: 8
+    n: 9
     veredictos:
       con-las-mujeres: 7
       ambiguo: 1
+      con-los-hombres: 1
     fuerza_de_los_que_van_con_las_mujeres:
       fuerte: 3
       moderada: 3
@@ -21,15 +22,15 @@ prueba:
     - ateri
     - iero
     - kiba
+    - maure
   con_una_sola_forma_kalinago:
-    n: 6
+    n: 5
     veredictos:
-      con-el-caribe: 2
+      con-el-caribe: 1
       de-la-esfera: 3
       arahuaco-comun: 1
     cuales:
       kachikamo: con-el-caribe
-      maure: con-el-caribe
       chogogo: de-la-esfera
       kerekere: de-la-esfera
       wakoa: de-la-esfera

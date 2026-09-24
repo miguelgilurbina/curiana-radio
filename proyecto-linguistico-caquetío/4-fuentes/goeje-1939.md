@@ -198,3 +198,27 @@ nada enfrente.
 
 **Deuda.** Siguen sin transcribir entrada a entrada pp. 35-43, 49-67, 70-84,
 94-101 y 103-118; esta campaña las leyó por concepto, no entera.
+
+## Bitácora: el habla de mujeres, transcrita entera (2026-09-24)
+
+**Qué se preguntó** (Miguel): «¿no tenemos más palabras del kalinago
+femenino?». Faltaban las páginas que M5 no transcribió (35-43, 49-67, 70-84,
+94-101, 103-118).
+
+**Cómo.** Se localizaron en la capa de texto las siglas con «f» del margen
+(el margen está a la izquierda en las impares y más adentro en las pares) y se
+leyó en IMAGEN cada bloque junto con la entrada anterior, porque «id.» remite a
+la glosa de arriba y a veces a la última línea de la página previa (pp. 34→35,
+41→42, 64→65).
+
+**Qué ha dado.** 302 entradas de mujeres, 137 con la forma lokona al lado:
+`6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml`. Para el núcleo caquetío,
+las que suben a dos hermanas: 'coger' *abutu* (p. 74, las dos y el lokono),
+'ver' *arika* ~ lokono *adika* (p. 100), 'maíz' *mariši* en las dos (p. 65),
+'vergüenza' *aburi* ~ *haburi* (p. 74), 'beber' *ata* en las dos (p. 107).
+Y una corrección a la prueba del 23: 'algodón' tiene forma de mujeres,
+*(u)amulu* (p. 65), y el caquetío `maure` va con la de hombres (*mauru*).
+
+**Qué NO ha dado.** Formas de mujeres dentro de líneas con otra sigla
+(`1 am`, `—`) pueden faltar: se leyó por la sigla del margen. Las pp. 117-118
+son préstamos europeos y el vocabulario guayano, sin habla de mujeres.

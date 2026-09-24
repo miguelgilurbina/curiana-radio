@@ -25,8 +25,8 @@ garífuna / proto-arahuaco», sin página. Al buscarlas en las hermanas:
 | grupo | hoy → propuesta |
 |---|---|
 | **la atestiguada ya lo dice** | `kono`→`jusual`, `sima`→`kidi`, `nomi`→`ateri`, `wari`→`iero`, `arua`→`ako`, `buri`→`dare` |
-| **dos hermanas, misma forma** | `chaa`→`ani` 'hacer', `masa`→`aeke` 'comer', `awa`→`ati` 'beber', `suna`→`dunku` 'dormir', `panaa`→`aita` 'saber', `kabo`→`isi` 'cabeza', `nii`→`akusi` 'ojo', `wara`→`kibe` 'muy', `kuru`→`ada` 'árbol', `duna`→`uni` 'agua', `kaya`→`unia` 'lluvia' |
-| **una hermana** | `naa`→`kunu` 'ir', `waa`→`sile` 'venir', `taa`→`nika` 'tomar', `raka`→`hiti` 'querer', `rua`→`kudu` 'llevar', `amana`→`hikihi` 'fuego', `arima`→`hime` 'pez', `dali`→`wunabu` 'tierra', `baba`→`iti` 'padre', `ka`→`badia` 'y', `mara`→`ika` 'pero', `saa`→`bena` 'cuando', `naka`→`kia` 'después' |
+| **dos hermanas, misma forma** | `chaa`→`ani` 'hacer', `masa`→`aeke` 'comer', `awa`→`ati` 'beber', `suna`→`dunku` 'dormir', `panaa`→`aita` 'saber', `kabo`→`isi` 'cabeza', `nii`→`akusi` 'ojo', `wara`→`kibe` 'muy', `kuru`→`ada` 'árbol', `duna`→`uni` 'agua', `kaya`→`unia` 'lluvia', `taa`→`butu` 'tomar' |
+| **una hermana** | `naa`→`kunu` 'ir', `waa`→`sile` 'venir', `raka`→`hiti` 'querer', `rua`→`kudu` 'llevar', `amana`→`hikihi` 'fuego', `arima`→`hime` 'pez', `dali`→`wunabu` 'tierra', `baba`→`iti` 'padre', `ka`→`badia` 'y', `mara`→`ika` 'pero', `saa`→`bena` 'cuando', `naka`→`kia` 'después' |
 | **se quedan, degradadas o con cita** | `kaa`, `maa` (achagua), `suka` (lokono), `ama`, `bari`, `puna` |
 
 ## Lo que hay que decidir
@@ -34,8 +34,14 @@ garífuna / proto-arahuaco», sin página. Al buscarlas en las hermanas:
 **N1 · La etiqueta, y quién la ve.** El perfil `era2` esconde la capa
 hipotética. Recomendado: **dos hermanas = reconstruida**, y sale en la
 muestra; **una hermana = hipotética**, y llega solo por plantilla. Con D1 = A
-(el kalinago cuenta como hermana) quedan reconstruidas 11. Si D1 es B, solo
-`uni` y `unia`.
+(el kalinago cuenta como hermana) quedan reconstruidas 12, y además suben
+`diki` 'ver' y `marisi` 'maíz', que hoy son hipotéticas. Si D1 es B, solo `uni`
+y `unia`.
+
+**Lo que añadió la transcripción del habla de mujeres** (302 entradas, Goeje
+pp. 35-116): `butu` 'tomar' (mujeres *abutu*, lokono *abutu*), la segunda
+hermana de `diki` (*arika*) y de `marisi` (*mariši* en las dos), y apoyos para
+`kudu`, `hiti` e `isi`.
 
 **N2 · Las 36, voz por voz.** Cada una tiene sus opciones en el YAML. Se puede
 aceptar todo lo recomendado de una vez.

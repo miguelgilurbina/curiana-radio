@@ -179,11 +179,17 @@ prueba_de_la_base_compartida:
       por_que: la forma entera; Goeje la da de origen kalina
     - caquetio: maure
       glosa: algodón, hilo
+      kalinago_mujeres: '(u)amulu'
       kalinago_hombres: 'manhulu (kalina mauru, tupí amaniu)'
-      pagina: 'Goeje p. 64 (hKTu)'
-      veredicto: con-el-caribe
+      pagina: 'Goeje p. 64 (hKTu) y p. 65 (f 2 am 58, imagen)'
+      veredicto: con-los-hombres
       fuerza: fuerte
-      por_que: 'maure = kalina mauru; sólo hay forma de hombres'
+      por_que: >-
+        maure = kalina mauru. CORREGIDO el 2026-09-24: la primera lectura decía
+        «sólo hay forma de hombres»; al transcribir el habla de mujeres apareció
+        la suya, (u)amulu (p. 65, «id.» de la última línea de p. 64). Con las dos
+        delante, el caquetío va con la de los HOMBRES. Es el algodón, una cosa
+        que circula por la esfera
     - caquetio: chogogo
       glosa: flamenco
       kalinago_comun: 'tuguku (kalina tokoko); «dialecte de Bonaire chogogo»'
@@ -230,11 +236,12 @@ prueba_de_la_base_compartida:
   lectura: >-
     Sí hay una base compartida, y es la que Miguel intuyó. En los conceptos
     donde el kalinago tiene una palabra de hombres y otra de mujeres, el
-    caquetío va con las MUJERES en todos los que deciden, y con los hombres en
-    ninguno (cifras: medición §prueba). Son las palabras más básicas —sol,
-    luna, mar, diente, hombre, mujer, piedra— y son las de la capa arahuaca.
-    Lo caribe aparece en otro sitio: en fauna y cosas que circulan
-    (armadillo, algodón, flamenco), que es la esfera. Y la mayoría de lo
+    caquetío va con las MUJERES en casi todos los que deciden y con los
+    hombres en uno, el algodón (cifras: medición §prueba). Las que van con las
+    mujeres son las palabras más básicas —sol, luna, mar, diente, hombre,
+    mujer, piedra— y son las de la capa arahuaca. Lo caribe aparece en otro
+    sitio: en fauna y cosas que circulan (armadillo, algodón, flamenco), que
+    es la esfera. Y la mayoría de lo
     atestiguado caquetío (topónimos, flora xerófila, fauna del Golfete) no
     tiene nada enfrente, porque es de aquí.
   lo_que_no_dice: >-
@@ -641,7 +648,13 @@ las_ocho_voces_del_wayuu:
     `alaain` 'amor' y `japü` 'vergüenza' llevan la misma marca wayuu pero son
     hipotéticas: el perfil era2 no las muestrea y ninguna plantilla las
     enseña (medición §voces.la_lista). Propuesta: archivarlas en el mismo
-    corte, sin sustituta — no llegan a los agentes.
+    corte. ACTUALIZADO el 2026-09-24 con la transcripción del habla de
+    mujeres (6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml): `japü` tiene
+    sustituta de dos hermanas, `aburi` 'tener vergüenza' (Goeje p. 74, imagen:
+    «avoir honte f aburi … A (h)aburi»), que pasa la fonotáctica y sólo es
+    vecina de `buri` (que el núcleo archiva). `alaain` no: 'amar' es f inši /
+    A ansi (p. 95), dos hermanas, pero el grupo ns no pasa la fonotáctica
+    atestiguada; se archiva sin sustituta.
 
 # ══════════════════════════════════════════════════════════════════════
 # 4. EL MUNDO — el habla de las mujeres como hecho kalinago

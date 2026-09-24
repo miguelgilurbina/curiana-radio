@@ -126,7 +126,7 @@ KAL_MUJERES = {
  "root": "---",
  "hear": "akambo",      # p. 79, fA
  "blood": "ita",        # p. 32, f 1 am 1
- "big": "---",
+ "big": "uairi",          # p. 114 (imagen): «grand f uairi … A wadi»
  "mountain": "---",
  "water": "tona",       # p. 55, común (K tuna); Adam p. 288 «C. tonê»
  "tree": "huehue",      # p. 63, común (K)
@@ -141,6 +141,7 @@ KAL_HOMBRES = dict(KAL_MUJERES, **{
  "tooth": "ie",         # p. 33, hK
  "hear": "akugnuku",    # p. 84 (capa de texto), sin sigla
  "blood": "moena",      # p. 32, hK
+ "big": "ubuto",         # p. 74 (imagen): «grand, gros, puissant h, f ubuto, K poto» (hfK)
  "thou": "amanle",      # Adam p. 278, de hombres (galibi)
 })
 # Neira y Ribero 1762. Ortografía del copista (su §ortografia_del_copista):

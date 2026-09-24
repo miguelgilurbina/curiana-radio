@@ -41,19 +41,19 @@ por_lengua:
     se_parece_(>=0.50): 2
     media_de_similitud: 0.404
   kal_mujeres:
-    conceptos_con_forma: 20
+    conceptos_con_forma: 21
     se_parece_(>=0.50): 8
-    media_de_similitud: 0.42
+    media_de_similitud: 0.41
   kal_hombres:
-    conceptos_con_forma: 20
+    conceptos_con_forma: 21
     se_parece_(>=0.50): 2
-    media_de_similitud: 0.221
+    media_de_similitud: 0.22
 cara_a_cara:
   kal_mujeres_contra_kal_hombres:
     kal_mujeres: 10
     kal_hombres: 0
-    empate: 10
-    sin_dato_en_alguna: 4
+    empate: 11
+    sin_dato_en_alguna: 3
     gana_kal_mujeres:
     - cati
     - cazi
@@ -68,9 +68,9 @@ cara_a_cara:
     gana_kal_hombres: []
   kal_mujeres_contra_lokono:
     kal_mujeres: 7
-    lokono: 6
+    lokono: 7
     empate: 7
-    sin_dato_en_alguna: 4
+    sin_dato_en_alguna: 3
     gana_kal_mujeres:
     - cazi
     - rao
@@ -85,12 +85,13 @@ cara_a_cara:
     - darubana
     - pana
     - quiricias
+    - apo
     - bara
   kal_mujeres_contra_achagua:
-    kal_mujeres: 11
+    kal_mujeres: 12
     achagua: 5
     empate: 3
-    sin_dato_en_alguna: 5
+    sin_dato_en_alguna: 4
     gana_kal_mujeres:
     - cati
     - cazi
@@ -100,6 +101,7 @@ cara_a_cara:
     - dare
     - ebo
     - buiamati
+    - apo
     - para
     - cudanga
     - apana
@@ -110,10 +112,10 @@ cara_a_cara:
     - quiricias
     - bara
   kal_mujeres_contra_guajiro:
-    kal_mujeres: 13
+    kal_mujeres: 14
     guajiro: 5
     empate: 2
-    sin_dato_en_alguna: 4
+    sin_dato_en_alguna: 3
     gana_kal_mujeres:
     - cati
     - cazi
@@ -125,6 +127,7 @@ cara_a_cara:
     - ebo
     - buiamati
     - jai
+    - apo
     - para
     - cudanga
     - apana
@@ -412,8 +415,8 @@ filas:
     maipure: null
     achagua: 0.12
     taino: null
-    kal_mujeres: null
-    kal_hombres: null
+    kal_mujeres: 0.2
+    kal_hombres: 0.2
 - caquetio: quidi
   glosa: cerro
   concepto: mountain
