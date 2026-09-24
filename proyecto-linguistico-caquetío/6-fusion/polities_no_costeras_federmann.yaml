@@ -18,6 +18,16 @@ meta:
   estado: sin-fusionar
   aviso_polity: "NO es la polity costera simulada"
   procedencia_incompleta: true
+  corregido_2026-09-24: >-
+    dp.3.11 de #222 («Ok a todo», Miguel, 2026-09-24; registro en
+    6-fusion/decisiones_222_documentacion_2026-09-24.yaml). prop-polity-001 a
+    005 citaban a Federmann con las páginas cruzadas (Barquisimeto en 109-110
+    y el valle de Vararida/Yaracuy en 62-63) y «vía» Brito Figueroa: ahora
+    llevan la página buena y la lectura directa de la 1916, cotejada con el
+    alemán en 6-fusion/federmann_1530_costa_2026-09-22.yaml (fed-int-001,
+    002, 005 y 006). prop-polity-016 deja de atribuirse a Steward: la
+    partición en tres áreas es de Brito Figueroa (hsai_caquetios v5-04). La
+    página vieja queda en `antes` de cada procedencia.
 
 hechos:
 
@@ -31,7 +41,7 @@ hechos:
       "Paré cerca de quince días en sus aldeas; son en número de veinte y tres y
       todas situadas a la margen del río, a distancia de una legua o media legua
       una de otra... estas aldeas podrían reunir en medio día treinta mil hombre."
-    procedencia: {obra: federmann-1916, pagina: "109-110", via: brito-figueroa-poblacion-economia}
+    procedencia: {obra: federmann-1916, pagina: "62", via: lectura-directa, cotejo: "fed-int-001 en 6-fusion/federmann_1530_costa_2026-09-22.yaml (la 1916 cotejada con el alemán: 1557 y Klüpfel)", antes: "p. 109-110 vía brito-figueroa-poblacion-economia; corregida por dp.3.11 A, 2026-09-24"}
 
   - id: prop-polity-002
     polity: barquisimeto-turbio
@@ -44,7 +54,7 @@ hechos:
       indios, porque son enemigos de las cuatro naciones vecinas... Tales
       circunstancias los han movido a fundar sus aldeas lo más cercanas posible
       las unas a las otras, a fin de poder reunirse más fácilmente."
-    procedencia: {obra: federmann-1916, pagina: "109-110", via: brito-figueroa-poblacion-economia}
+    procedencia: {obra: federmann-1916, pagina: "62-63", via: lectura-directa, cotejo: "fed-int-002 en 6-fusion/federmann_1530_costa_2026-09-22.yaml (la 1916 cotejada con el alemán: 1557 y Klüpfel)", antes: "p. 109-110 vía brito-figueroa-poblacion-economia; corregida por dp.3.11 A, 2026-09-24"}
 
   - id: prop-polity-003
     polity: yaracuy
@@ -55,7 +65,7 @@ hechos:
       "Tuvimos ocasión de observar todo este trayecto la grandeza de las aldeas de
       esta nación, así como la fuerza de la población... creo que les sería fácil
       reunir en un día hasta veinte mil guerreros."
-    procedencia: {obra: federmann-1916, pagina: "62-63", via: brito-figueroa-poblacion-economia}
+    procedencia: {obra: federmann-1916, pagina: "109", via: lectura-directa, cotejo: "fed-int-005 en 6-fusion/federmann_1530_costa_2026-09-22.yaml (la 1916 cotejada con el alemán: 1557 y Klüpfel)", antes: "p. 62-63 vía brito-figueroa-poblacion-economia; corregida por dp.3.11 A, 2026-09-24"}
 
   # ⭐ La cita estructural: sostiene la regla 4 y el modelo de curiana_polities
   - id: prop-polity-004
@@ -74,7 +84,7 @@ hechos:
       modelo de curiana_polities.py. Aunque el pasaje es del Yaracuy, la
       afirmación es sobre la organización caquetía en general — evaluar si se
       cita como sostén del modelo, marcando su procedencia no costera.
-    procedencia: {obra: federmann-1916, pagina: "62-63", via: brito-figueroa-poblacion-economia}
+    procedencia: {obra: federmann-1916, pagina: "109", via: lectura-directa, cotejo: "fed-int-005 en 6-fusion/federmann_1530_costa_2026-09-22.yaml (la 1916 cotejada con el alemán: 1557 y Klüpfel)", antes: "p. 62-63 vía brito-figueroa-poblacion-economia; corregida por dp.3.11 A, 2026-09-24"}
 
   - id: prop-polity-005
     polity: yaracuy
@@ -90,7 +100,7 @@ hechos:
       Morfología de asentamiento + composición del hogar. 5-8 familias por casa
       es dato de residencia postmarital y toca directamente mapa-familia. NO
       importar a la polity costera sin decisión.
-    procedencia: {obra: federmann-1916, pagina: "62-63", via: brito-figueroa-poblacion-economia}
+    procedencia: {obra: federmann-1916, pagina: "110", via: lectura-directa, cotejo: "fed-int-006 en 6-fusion/federmann_1530_costa_2026-09-22.yaml (la 1916 cotejada con el alemán: 1557 y Klüpfel)", antes: "p. 62-63 vía brito-figueroa-poblacion-economia; corregida por dp.3.11 A, 2026-09-24"}
 
   - id: prop-polity-006
     polity: barquisimeto-turbio
@@ -287,4 +297,4 @@ hechos:
       Encaja con el buco de [[ballesteros-1550]]: el riego indígena del río de
       Coro es el caso costero del patrón general. Da marco al Golfete dentro de
       la distribución del poblamiento — sin importar ninguna cifra.
-    procedencia: {obra: steward-1949, pagina: "665-668", via: brito-figueroa-poblacion-economia}
+    procedencia: {obra: brito-figueroa-poblacion-economia, pagina: null, deuda: sin-pagina, via: lectura-propia-del-autor, antes: "steward-1949 pp. 665-668 vía brito-figueroa-poblacion-economia. La partición en tres áreas NO está en Steward (6-fusion/hsai_caquetios_2026-09-23.yaml v5-04): es de Brito Figueroa, que discute a Steward en ese pasaje. Corregida por dp.3.11 HSAI (b), 2026-09-24"}
