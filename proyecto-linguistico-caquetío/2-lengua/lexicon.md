@@ -2,23 +2,26 @@
 tipo: nota-viva
 ambito: estado del lexicón activo
 fuente_de_verdad: curiana_sim/curiana_lexicon.py
-total: 1413
-familia_caquetia: 304
-sin_cita: 3
-medido: 2026-08-04
+total: 5490
+familia_caquetia: 380
+sin_cita: 0
+medido: 2026-09-24
 ---
 
 # El lexicón
 
 > El lexicón activo es `VOCABULARIO_BASE` en `curiana_sim/curiana_lexicon.py`.
-> **Esta nota lo describe; no lo define.** Todas las cifras se midieron el
-> 2026-08-04 corriendo el propio módulo, no copiándolas de la documentación
-> anterior (que decía 1416 y 1414 en sitios distintos).
+> **Esta nota lo describe; no lo define.** Las cifras de los bloques
+> generados las mide y las escribe `curiana_sim/tabla_lexicon.py` con las mismas
+> funciones que el tablero, y `generar_tablero.py` lo llama en cada cierre: hasta
+> el 2026-09-24 eran una foto del 2026-08-04 escrita a mano («1413 entradas»)
+> que la wiki pública seguía publicando.
 
 ## El tamaño real
 
-**1413 entradas.** No 1416 ni 1414: esos números están en `CLAUDE.md` y en
-[[INDICE]] y quedaron atrás.
+<!-- GENERADO por curiana_sim/tabla_lexicon.py: tamano -->
+**5.490 entradas activas** en `VOCABULARIO_BASE`, y **77** archivadas en `FUERA_DEL_HABLA` (fuera del habla, con su capa intacta).
+<!-- /GENERADO -->
 
 ```bash
 cd curiana_sim && python -c "import curiana_lexicon as L; print(len(L.VOCABULARIO_BASE))"
@@ -26,36 +29,37 @@ cd curiana_sim && python -c "import curiana_lexicon as L; print(len(L.VOCABULARI
 
 ## Desglose por lengua
 
-El campo `fuente` tiene **25 valores crudos distintos**;
+El campo `fuente` tiene muchos valores crudos distintos;
 `normalize_source_language()` (en `curiana_database.py`) los colapsa a estas
 categorías:
 
+<!-- GENERADO por curiana_sim/tabla_lexicon.py: lenguas -->
 | Categoría normalizada | Entradas | % |
 |---|---:|---:|
-| **wayunaiki** | **781** | 55,3 % |
-| **caquetío** (todas las capas) | **304** | 21,5 % |
-| **lokono** | **227** | 16,1 % |
-| taíno | 57 | 4,0 % |
-| kalinago | 19 | 1,3 % |
-| proto-arahuaco | 8 | 0,6 % |
-| jirajaroide-contacto | 7 | 0,5 % |
-| caribe-continental | 4 | 0,3 % |
-| kalinago-caribe-overlay | 4 | 0,3 % |
-| español-colonial | 2 | 0,1 % |
+| proto-arahuaco | 3.572 | 65,1 % |
+| wayunaiki | 769 | 14,0 % |
+| lokono | 636 | 11,6 % |
+| **caquetío** | 380 | 6,9 % |
+| paraujano | 47 | 0,9 % |
+| taíno | 45 | 0,8 % |
+| kalinago | 25 | 0,5 % |
+| jirajaroide-contacto | 7 | 0,1 % |
+| caribe-continental | 6 | 0,1 % |
+| español-colonial | 3 | 0,1 % |
 
-> **Cuatro de cada cinco palabras del lexicón no son caquetío.** Son comparanda:
-> están ahí para reconstruir, no para hablar. `score_linguistico()` las trata
-> como tan ajenas como el español — una fuga a wayunaiki penaliza igual que un
-> artículo castellano (ver [[mapa-motor]] §scoring).
+> **93,1 % del lexicón no es caquetío**: son comparanda, están ahí para reconstruir y medir, no para hablar.
+<!-- /GENERADO -->
+
+> `score_linguistico()` trata las comparanda como tan ajenas como el español —
+> una fuga a wayunaiki penaliza igual que un artículo castellano (ver
+> [[mapa-motor]] §scoring)—, salvo la esfera de contacto, que se mide aparte.
 >
-> El reparto wayunaiki : lokono de **3,4 a 1** es el objeto de la decisión de
-> fondo D11 → [[metodo-comparativo]] §el desbalance.
+> El desbalance wayunaiki : lokono fue el objeto de la decisión de fondo D11 →
+> [[metodo-comparativo]] §el desbalance.
 
 ## Las capas epistémicas del caquetío
 
-> ⚠️ **La tabla de abajo es una foto vieja escrita a mano** (regla 1: las
-> cifras de hoy están en `TABLERO.md` y en cada medición de `6-fusion/`). Y
-> la fila de `caquetío-reconstruido` ya no describe el núcleo: desde la
+> ⚠️ **El núcleo ya no es lo que era**: desde la
 > **tanda de las hermanas (2026-09-24)** el «núcleo fundacional» se rehízo
 > desde el lokono y el habla de mujeres kalinago —dos hermanas con la misma
 > forma = reconstruida, una = hipotética—, sus voces viejas (que citaban
@@ -64,39 +68,64 @@ categorías:
 > `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`; cifras:
 > `6-fusion/medicion_tanda_hermanas_2026-09-24.yaml`.
 
-De las 304 entradas de familia caquetía:
+<!-- GENERADO por curiana_sim/tabla_lexicon.py: capas -->
+De las **380** entradas de familia caquetía:
 
-| Etiqueta | n | Qué significa |
-|---|---:|---|
-| `caquetío-atestiguado` | **226** | Dato histórico real, citable a una obra concreta. Es lo único que no se discute. |
-| `caquetío-reconstruido` | **68** | El **núcleo fundacional**: pronombres, numerales, verbos básicos que `prompt_reglas_completo()` presenta a los agentes desde el día 1. No siempre atestiguado — pero es la lengua de la simulación, no un préstamo. |
-| `caquetío` (sin sufijo) | **8** | Etiquetado antiguo, sin capa declarada. Deuda de normalización. |
-| `caquetío-hipotético` + `…/topónimo` | **2** | Marcadas como conjetura explícita. |
+| Etiqueta | n |
+|---|---:|
+| `caquetío-atestiguado` | 185 |
+| `caquetío-hipotético` | 76 |
+| `caquetío-retroabstraido` | 75 |
+| `caquetío-reconstruido` | 44 |
 
-**3 entradas de familia caquetía siguen sin `notas`** (sin cita). Eran 82 en
-julio de 2026.
+**0 sin `notas`** (sin cita).
+<!-- /GENERADO -->
+
+(Las entradas sin `notas` eran 82 en julio de 2026.)
 
 ## Quién sostiene el "atestiguado"
 
-Este es el dato más importante de la nota. De las **226** entradas
-`caquetío-atestiguado`, cuántas citan a cada obra en su campo `notas`:
+Este es el dato más importante de la nota.
 
-| Obra | Entradas que la citan | |
-|---|---:|---|
-| [[zavala-reyes-2015]] | **215** | 95 % |
-| [[alvarado-1921]] | 8 | ▍ |
-| [[arcaya-1920]] | 8 | ▍ |
-| [[van-buurt-2014]] | 7 | ▏ |
-| [[oviedo-y-valdes-1851]] (vía terceros) | 6 | ▏ |
-| [[oliver-1989-cap2]] | 5 | ▏ |
-| [[gatschet-1885]] | 3 | ▏ |
-| [[jahn-1927]] | 1 | |
-| Galeotto Cey (vía terceros) | 1 | |
-| [[brinton-1871]] | 1 | |
-| *sin `notas`* | 2 | |
+<!-- GENERADO por curiana_sim/tabla_lexicon.py: sostiene -->
+De las **185** entradas `caquetío-atestiguado`, cuántas citan a cada obra en su campo `notas` (una entrada puede citar varias; los patrones salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, como en el tablero):
 
-> **El caquetío atestiguado del proyecto es, en un 95 %, el glosario de Zavala
-> Reyes 2015.** Las demás obras figuran como fuentes del proyecto y aportan una
+| Obra | Entradas que la citan |
+|---|---:|
+| [[zavala-reyes-2015]] | 174 |
+| [[zavala-reyes-2018]] | 174 |
+| [[arcaya-1920]] | 12 |
+| [[arcaya-obra-inedita-1995]] | 12 |
+| [[oliver-1989-apendice-a]] | 12 |
+| [[oliver-1989-cap2]] | 12 |
+| [[oliver-1989-cap3-vecinos]] | 12 |
+| [[oliver-1989-cap3]] | 12 |
+| [[oliver-1989-cap4]] | 12 |
+| [[oliver-2000-guanin]] | 12 |
+| [[alvarado-1921]] | 11 |
+| [[van-buurt-2014]] | 7 |
+| [[coll-y-toste-1897]] | 6 |
+| [[brinton-1871]] | 5 |
+| [[gatschet-1885]] | 4 |
+| [[goeje-1939]] | 3 |
+| [[oviedo-y-valdes-1851]] | 3 |
+| [[angulo-molina]] | 2 |
+| [[oviedo-y-valdes-1852-1855]] | 2 |
+| [[medina-colina-sxx]] | 2 |
+| [[las-casas-1875]] | 2 |
+| [[las-casas-apologetica]] | 2 |
+| [[castellanos-elegias]] | 2 |
+| [[castellanos-nuevo-reino-1886]] | 2 |
+| [[jahn-1927]] | 1 |
+| [[gonzalez-batista-2002-fundacion]] | 1 |
+| [[gonzalez-batista-nombre-de-coro]] | 1 |
+| [[ballesteros-1550]] | 1 |
+| [[pane-c1498]] | 1 |
+| *sin obra reconocida en `notas`* | 0 |
+<!-- /GENERADO -->
+
+> **El caquetío atestiguado del proyecto es, casi entero, el glosario de Zavala
+> Reyes 2015** (la tabla de arriba lo mide). Las demás obras figuran como fuentes del proyecto y aportan una
 > decena de entradas entre todas. No es un defecto de curación: es lo que hay
 > publicado. Pero significa que **un error sistemático de Zavala sería un error
 > sistemático del proyecto**, y que ampliar la base documental (F9: Oviedo t. II

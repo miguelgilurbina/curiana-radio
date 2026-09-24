@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-24 13:04**.
+<!--GENERADO--> Generado el **2026-09-24 14:52**.
 
 ## ¿Vamos bien?
 
@@ -21,7 +21,7 @@ editar_a_mano: no
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
 | Hechos del corpus **con referencia** | **210 / 210** | — | 🟢 |
-| Tests del motor | **1101 en verde** | 0 rojos | 🟢 |
+| Tests del motor | ⚠️ no medido | — | ⚠️ |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
 | Decisiones esperando a Miguel | **9 abiertas** | 12 resueltas | 🟡 |
 
@@ -36,7 +36,7 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**5488 entradas activas** en `VOCABULARIO_BASE`.
+**5490 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
@@ -45,10 +45,10 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | proto-arahuaco | 3572 | 65.1% |
 | wayunaiki | 769 | 14.0% |
 | lokono | 636 | 11.6% |
-| caquetío | 379 | 6.9% |
+| caquetío | 380 | 6.9% |
 | paraujano | 47 | 0.9% |
-| taíno | 46 | 0.8% |
-| kalinago | 23 | 0.4% |
+| taíno | 45 | 0.8% |
+| kalinago | 25 | 0.5% |
 | jirajaroide-contacto | 7 | 0.1% |
 | caribe-continental | 6 | 0.1% |
 | español-colonial | 3 | 0.1% |
@@ -60,13 +60,13 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | achagua | 3569 |
 | wayunaiki | 769 |
 | lokono | 636 |
-| caquetío-atestiguado | 184 |
+| caquetío-atestiguado | 185 |
+| caquetío-hipotético | 76 |
 | caquetío-retroabstraido | 75 |
-| caquetío-hipotético | 75 |
 | paraujano | 47 |
-| taíno | 46 |
-| caquetío-reconstruido | 45 |
-| kalinago | 23 |
+| taíno | 45 |
+| caquetío-reconstruido | 44 |
+| kalinago | 25 |
 | jirajaroide | 7 |
 | español-colonial | 3 |
 | proto-arahuaco | 3 |
@@ -80,13 +80,13 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
 | Capa | n | Qué significa |
 |---|---|---|
-| `caquetío-atestiguado` | 184 | dato histórico citable a fuente concreta |
-| `caquetío-reconstruido` | 45 | vocabulario de trabajo del proyecto |
-| `caquetío-hipotético` | 75 | baja de tier por D10 — la lengua no se discute, la confianza sí |
+| `caquetío-atestiguado` | 185 | dato histórico citable a fuente concreta |
+| `caquetío-reconstruido` | 44 | vocabulario de trabajo del proyecto |
+| `caquetío-hipotético` | 76 | baja de tier por D10 — la lengua no se discute, la confianza sí |
 | `caquetío` a secas / topónimo | 75 | sin capa declarada en el campo `fuente` |
-| **total familia caquetía** | **379** |  |
+| **total familia caquetía** | **380** |  |
 
-Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **76** entrada(s) en `FUERA_DEL_HABLA` (`piache`, `wanee`, `piama`, `apünüin`, `pienchi`, `jarai`, `kali`, `kasha`, `habo`, `paa`, `kira`, `joutai`, `mülia`, `abba`, `acoa`, `aduri`, `agari`, `akcicyaa`, `thigisi`, `wacusi`, `wagulo`, `taya`, `pia`, `nüma`, `kashi`, `yama`, `sulu`, `wana`, `naba`, `tüshi`, `kapua`, `anüiki`, `pütchi`, `wanü`, `poporo`, `cohiba`, `kono`, `sima`, `nomi`, `wari`, `arua`, `buri`, `chaa`, `masa`, `awa`, `suna`, `panaa`, `kabo`, `nii`, `wara`, `kuru`, `duna`, `kaya`, `taa`, `naa`, `waa`, `raka`, `rua`, `amana`, `arima`, `dali`, `baba`, `ka`, `mara`, `saa`, `naka`, `anasa`, `mütsia`, `kasuta`, `sünatü`, `outa`, `kataa`, `talata`, `jashichi`, `alaain`, `japü`).
+Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **77** entrada(s) en `FUERA_DEL_HABLA` (`piache`, `wanee`, `piama`, `apünüin`, `pienchi`, `jarai`, `kali`, `kasha`, `habo`, `paa`, `kira`, `joutai`, `mülia`, `abba`, `acoa`, `aduri`, `agari`, `akcicyaa`, `thigisi`, `wacusi`, `wagulo`, `taya`, `pia`, `nüma`, `kashi`, `yama`, `sulu`, `wana`, `naba`, `tüshi`, `kapua`, `anüiki`, `pütchi`, `wanü`, `poporo`, `cohiba`, `kono`, `sima`, `nomi`, `wari`, `arua`, `buri`, `chaa`, `masa`, `awa`, `suna`, `panaa`, `kabo`, `nii`, `wara`, `kuru`, `duna`, `kaya`, `taa`, `naa`, `waa`, `raka`, `rua`, `amana`, `arima`, `dali`, `baba`, `ka`, `mara`, `saa`, `naka`, `anasa`, `mütsia`, `kasuta`, `sünatü`, `outa`, `kataa`, `talata`, `jashichi`, `alaain`, `japü`, `ana`).
 
 ### Censo de citas — la deuda de F1
 
@@ -94,22 +94,22 @@ Entradas de familia caquetía **sin nada en `notas`**: **0** (eran 82 el 2026-07
 
 ### Quién sostiene el «atestiguado»
 
-Cuántas de las 379 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
+Cuántas de las 380 entradas de familia caquetía **con `notas`** citan a cada obra. Los patrones de búsqueda salen del `autor` y los `aliases` de cada nota de `4-fuentes/`, así que una obra nueva aparece sola aquí.
 
 | Obra | Entradas que la citan | % de las citadas |
 |---|---|---|
-| [[zavala-reyes-2015]] | 217 | 57% |
-| [[zavala-reyes-2018]] | 217 | 57% |
+| [[zavala-reyes-2015]] | 221 | 58% |
+| [[zavala-reyes-2018]] | 221 | 58% |
 | [[medina-colina-sxx]] | 62 | 16% |
 | [[goeje-1939]] | 31 | 8% |
 | [[perea-alonso-1942]] | 29 | 8% |
 | [[alvarado-1921]] | 21 | 6% |
-| [[oliver-1989-apendice-a]] | 18 | 5% |
-| [[oliver-1989-cap2]] | 18 | 5% |
-| [[oliver-1989-cap3-vecinos]] | 18 | 5% |
-| [[oliver-1989-cap3]] | 18 | 5% |
-| [[oliver-1989-cap4]] | 18 | 5% |
-| [[oliver-2000-guanin]] | 18 | 5% |
+| [[oliver-1989-apendice-a]] | 20 | 5% |
+| [[oliver-1989-cap2]] | 20 | 5% |
+| [[oliver-1989-cap3-vecinos]] | 20 | 5% |
+| [[oliver-1989-cap3]] | 20 | 5% |
+| [[oliver-1989-cap4]] | 20 | 5% |
+| [[oliver-2000-guanin]] | 20 | 5% |
 | [[adam-1879]] | 15 | 4% |
 | [[van-buurt-2014]] | 14 | 4% |
 | [[arcaya-1920]] | 13 | 3% |
@@ -125,6 +125,7 @@ Cuántas de las 379 entradas de familia caquetía **con `notas`** citan a cada o
 | [[oviedo-y-valdes-1851]] | 4 | 1% |
 | [[angulo-molina]] | 3 | 1% |
 | [[pane-c1498]] | 3 | 1% |
+| [[oviedo-y-valdes-1852-1855]] | 2 | 1% |
 | [[jahn-1927]] | 2 | 1% |
 | [[gonzalez-batista-2002-fundacion]] | 2 | 1% |
 | [[gonzalez-batista-nombre-de-coro]] | 2 | 1% |
@@ -133,7 +134,7 @@ Cuántas de las 379 entradas de familia caquetía **con `notas`** citan a cada o
 | [[federmann-1916]] | 1 | 0% |
 | [[monumento-cerro-santa-ana]] | 1 | 0% |
 
-Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **38**.
+Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **37**.
 
 ---
 
@@ -163,12 +164,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
-| [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 217 | 7 |
+| [[zavala-reyes-2015]] | completo-con-reserva | alta | si | 164 | 221 | 7 |
 | [[brinton-1871]] | minado | hecha | si | 84 | 9 | 0 |
 | [[jahn-1927]] | minado | media | si | 4 | 2 | 16 |
 | [[gatschet-1885]] | minado | alta | si | 4 | 6 | 0 |
-| [[oliver-1989-cap3]] | minado | media | si | 2 | 18 | 15 |
-| [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 18 | 2 |
+| [[oliver-1989-cap3]] | minado | media | si | 2 | 20 | 15 |
+| [[oliver-1989-cap2]] | minado | alta | parcial | 2 | 20 | 2 |
 | [[arcaya-1920]] | minado | media | si | 1 | 13 | 13 |
 | [[ballesteros-1550]] | segunda-mano | alta | no | 1 | 1 | 0 |
 | [[camacho-2011]] | minado | hecha | si | 0 | 0 | 16 |
@@ -240,13 +241,13 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[neira-ribero-1762]] | minado | alta | no | 0 | 10 | 0 |
 | [[nueva-segovia-1579]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[obis-gbif-caja-marina]] | minado | media | datos | 0 | 0 | 0 |
-| [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 18 | 0 |
-| [[oliver-1989-cap3-vecinos]] | minado | alta | ocr | 0 | 18 | 0 |
-| [[oliver-1989-cap4]] | parcial | alta | ocr | 0 | 18 | 0 |
-| [[oliver-2000-guanin]] | no-disponible | media | no-disponible | 0 | 18 | 0 |
+| [[oliver-1989-apendice-a]] | parcial | alta | no | 0 | 20 | 0 |
+| [[oliver-1989-cap3-vecinos]] | minado | alta | ocr | 0 | 20 | 0 |
+| [[oliver-1989-cap4]] | parcial | alta | ocr | 0 | 20 | 0 |
+| [[oliver-2000-guanin]] | no-disponible | media | no-disponible | 0 | 20 | 0 |
 | [[osm-kaketiana]] | en-curso | media | datos | 0 | 0 | 0 |
 | [[oviedo-y-valdes-1851]] | minada-parcial | alta | si | 0 | 4 | 0 |
-| [[oviedo-y-valdes-1852-1855]] | minada-parcial | alta | si | 0 | 0 | 0 |
+| [[oviedo-y-valdes-1852-1855]] | minada-parcial | alta | si | 0 | 2 | 0 |
 | [[pane-c1498]] | minado | alta | si | 0 | 3 | 0 |
 | [[perea-alonso-1942]] | minado | alta | si | 0 | 29 | 0 |
 | [[perez-de-tolosa-1546]] | minado | alta | si | 0 | 0 | 0 |
@@ -265,7 +266,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[urbina-jimenez-2007-2011]] | minado | alta | si | 0 | 0 | 0 |
 | [[velasco-2015-resistencia]] | minado | alta | si | 0 | 0 | 0 |
 | [[wikipedia-es-fauna-marina]] | parcial | baja | web | 0 | 0 | 0 |
-| [[zavala-reyes-2018]] | minado | alta | si | 0 | 217 | 0 |
+| [[zavala-reyes-2018]] | minado | alta | si | 0 | 221 | 0 |
 | [[zayas-1931]] | parcial | media | si | 0 | 0 | 0 |
 
 </details>
@@ -349,8 +350,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1532 en 824 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 1101 passed, 0 failed | 🟢 |
+| Wikilinks | 1551 en 830 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | no corridos (`--sin-tests`) o fallo al correrlos | ⚪ |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**

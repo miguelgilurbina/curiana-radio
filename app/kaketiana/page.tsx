@@ -63,12 +63,14 @@ export default function KaketianaPage() {
             Kaketiana <span className="font-sans text-base italic text-(--sim-ink-soft)">— el lugar de la gente</span>
           </p>
           <p className="mt-2 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
-            De <em>kaketio</em> &lsquo;ser viviente, gente&rsquo; (Oliver 1989, Tabla A-9) y{" "}
-            <em>-ana</em> &lsquo;lugar de&rsquo; (atestiguado en <em>Paraguaná</em> y{" "}
-            <em>Curiana</em>). <strong className="text-(--sim-ink)">La palabra no está documentada:</strong>{" "}
-            la formamos con las piezas que sí lo están. Es la misma regla que gobierna
-            todo lo demás de este sitio — lo atestiguado se distingue de lo reconstruido,
-            siempre.
+            De <em>kaketio</em>, el nombre del pueblo (Oliver 1989 lo lee &lsquo;ser
+            viviente, gente&rsquo; desde el lokono), y <em>-ana</em>, un final que sí está
+            documentado —en <em>Paraguaná</em> y en <em>Curiana</em>— pero cuyo valor nadie
+            anotó: &lsquo;lugar de&rsquo; es lectura nuestra.{" "}
+            <strong className="text-(--sim-ink)">La palabra no está documentada:</strong>{" "}
+            la formamos con piezas que sí lo están, y el sentido lo ponemos nosotros. Es la
+            misma regla que gobierna todo lo demás de este sitio — lo atestiguado se
+            distingue de lo reconstruido, siempre.
           </p>
         </section>
 
