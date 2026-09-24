@@ -160,3 +160,28 @@ def test_t4_la_pareja_taina_esta_anotada_sin_tocar_capa(forma):
     e = VOCABULARIO_BASE[forma]
     assert "T4 de la tanda de las hermanas" in e["notas"], forma
     assert e["fuente"].startswith("caquetío-"), forma
+
+
+def test_ningun_diccionario_del_lexicon_repite_una_clave():
+    """Una clave repetida en un literal se pisa en silencio al importar: la
+    segunda `notas` de `bana` se comió la nueva (2026-09-23) y otras cinco
+    entradas llevaban igual (maure, saruro, curiana, ma, ana; fundidas el
+    2026-09-24)."""
+    import ast
+    import collections
+    import os
+    src = open(os.path.join(os.path.dirname(L.__file__), "curiana_lexicon.py"),
+               encoding="utf-8").read()
+    for node in ast.walk(ast.parse(src)):
+        if isinstance(node, ast.Dict):
+            c = collections.Counter(k.value for k in node.keys if isinstance(k, ast.Constant))
+            assert not [k for k, n in c.items() if n > 1], (node.lineno, c.most_common(2))
+
+
+def test_ana_disenio_era_la_ultima_derivada_del_wayuu():
+    """cc.12 aplicado: `ana` 'diseño' salía del wayuu (Captain & Captain 2005)
+    sin marca de deuda. Archivada con su capa; el sufijo `-ana` no se toca."""
+    assert "ana" not in VOCABULARIO_BASE
+    assert FUERA_DEL_HABLA["ana"]["fuente"] == "caquetío-reconstruido"
+    assert "cc.12" in FUERA_DEL_HABLA["ana"]["archivada"]
+    assert "-ana" in L.TODAS_LAS_REGLAS
