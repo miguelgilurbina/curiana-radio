@@ -190,8 +190,21 @@ decisiones:
       Dios») y lleva la referencia de HSAI a (Ampíes en Oviedo y Baños 1885 t.
       II p. 212 y Aguado vía Arcaya p. 115), con ficha para la carta de
       Ampíes. B (mirar el folio 14 en PARES) sólo lo puede hacer Miguel.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: 'APLICADA en Tolosa A + HSAI a (2026-09-24); B NECESITA A MIGUEL'
+    aplicado_por:
+      - '3-mundo/corpus/creencia.yaml: creencia-013 cita la carta (Fernández Duro t. II p. 212, vista en imagen), el folio 14 vía Velasco p. 18 y Aguado vía Arcaya p. 115; `procedencia: ampies-1526-carta`; la variante «como Dios / como digo» va en `aviso`, sin decidir'
+      - '4-fuentes/ampies-1526-carta.md: la ficha de la carta (creada en el commit de dp.2.01), con la tabla de las lecturas'
+    aparecio: >-
+      Arcaya sí copia la frase de Ampíes, entera, en la p. 115 (junto a
+      Aguado); la que salta es la de la p. 161. Y Velasco p. 18 fecha la carta
+      «(1513-1521)» donde Arcaya la supone de 1525-1526: declarado en la
+      ficha, sin promediar. Aguado no tiene clave en la bibliografía (no está
+      en el repo): se cita vía Arcaya en la referencia.
+    necesita_a_miguel: >-
+      B — ver el folio 14 de la carta en PARES (AGI; la signatura del traslado
+      la da Velasco 2015 p. 18) y decir si dice «como Dios» o «como digo». Es
+      lo único que decide entre las dos lecturas; mientras tanto el canon no
+      se apoya en «como Dios».
 
   dp.2.08:
     tema: el lote de Esteves — cómo entra

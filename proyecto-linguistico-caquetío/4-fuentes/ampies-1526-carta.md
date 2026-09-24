@@ -59,6 +59,11 @@ ABC y tenía parientes allí.
 | Fernández Duro 1885, t. II p. 212 | «se hace adorar **como Dios**» | vista en imagen (2026-09-23 y 2026-09-24) |
 | Velasco 2015, «Folio 14» | «se haze adorar **como digo**» | dice leer el manuscrito del AGI; no se ha visto la imagen |
 | Arcaya 1920 p. 161 | se salta la frase con puntos suspensivos | copia de Fernández Duro |
+| Arcaya 1920 p. 115 | «se hace adorar como Dios, dando a entender a los indios que él da los temporales» | la misma copia, entera, junto a Aguado (medido el 2026-09-24) |
+
+⚠️ **La fecha.** Arcaya la supone de «fines de 1525 o principios de 1526»
+(p. 160). Velasco 2015 (p. 18) la etiqueta «Carta de Ampíes al Rey
+(1513-1521)», con la signatura del traslado. No se promedia: se declara.
 
 Son una sola carta (minar-fuente §8). Mientras nadie vea el folio 14, el canon
 **no se apoya en «como Dios»**: `creencia-013` cita las dos lecturas y no
