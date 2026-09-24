@@ -229,3 +229,17 @@ Tres pasajes, ✅ vistos en imagen (impresa = pdf − 14 con el pdf contado desd
   veces celebrar su cohoba». La cohoba es el polvo y el rito, no el tabaco.
 
 Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se preguntó** por el mar en la creencia de las Antillas. **Se halló:** «Yocahu
+Vagua Maoro-coti; no sé lo que por este nombre quisieron significar» (cap. CXX,
+p. 321, imagen): la capa de texto lee «Yagua» y la imagen «Vagua» (corrige a
+`taino2_las_casas_apologetica` lx.13); los cemíes dan «el agua, y el viento y el
+Sol» (p. 322); huracán = «tempestades ó tormentas» (pp. 94-95); en Paria y
+Cumaná el remero de proa canta y los demás reman a su voz, con caracoles y
+almejas por cascabeles (pp. 638-640, imagen p. 639). **No se halló** ningún culto
+del mar antillano, y no por hueco del cronista: del Perú escribe que los
+pescadores «tenían por dios á la mar» (pp. 334-335).
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

@@ -1,0 +1,1212 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — La cosmovisión MARINA de los caquetíos de la costa
+# Campaña cc.10 (la última del cierre), 2026-09-24.
+#
+# El encargo, en palabras de Miguel:
+#   cc.10 (6-fusion/decisiones_cierre_2026-09-23.yaml): «esa campaña de
+#   Cosmovisión Marina tenemos que dejarla a lo último, efectivamente no hay
+#   nada eh, que tengamos establecido […] es una intuición nuestra por los
+#   momentos». Y hoy: «que no quede ninguna tarea pendiente».
+#   El origen de la intuición (FA3, 2026-09-22): «el aspecto marino era
+#   esencial en la cosmovisión caquetía».
+#
+# La pregunta: ¿qué dicen las fuentes del proyecto sobre el MAR en la vida
+# simbólica, ritual y cosmológica de los caquetíos de la costa (Paraguaná,
+# Golfete de Coro, islas ABC), y qué es DATO, qué INFERENCIA y qué INTUICIÓN?
+#
+# Regla 5: esto PROPONE. No toca 3-mundo/corpus/, curiana_sim/ ni el lexicón.
+# Regla 1: las cifras de `meta.medido` las escribe
+#     python 6-fusion/scripts/medir_cosmovision_marina.py --conteos
+# y el mismo script, sin bandera, valida este archivo (ids únicos, etiquetas,
+# toda `obra` en 4-fuentes/bibliografia.yaml, y que `meta.medido` coincida).
+# Regla 3: cada hecho dice su ÉPOCA; casi todo es crónica del XVI.
+# Regla 4: cada hecho dice su POLITY o su lugar; lo que no es de la costa
+#   caquetía va a `comparanda` con su lengua y su lugar, nunca al canon
+#   caquetío sin decirlo.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-09-24'
+  estado: sin-fusionar
+  quien: 'minador de la campaña cc.10 (Claude Opus 5.5), con tres auxiliares: kalinago (Breton), arqueología, y taíno/lokono/wayuu/achagua'
+  rama: campana/cosmovision-marina-2026-09-24
+  parte_de: tanda/hermanas-2026-09-24 (c83937b)
+  pregunta: >-
+    ¿Qué dicen las fuentes del proyecto sobre el MAR en la vida simbólica,
+    ritual y cosmológica de los caquetíos de la costa (Paraguaná, Golfete de
+    Coro, islas ABC), y qué es dato, qué inferencia y qué intuición?
+  punto_de_partida: >-
+    FA3 (6-fusion/fauna_paraguana_mar_2026-09-22.yaml §cosmovision_marina)
+    dejó ocho hechos sostenidos del mar en la VIDA (cm-s1 a cm-s8: léxico,
+    nombre, despensa, moneda, adivinación de la pesca, camino, cerro-marca,
+    pesca con teas), tres intuiciones sin fuente (cm-n1 el dueño del mar, cm-n2
+    el mar esencial en la cosmovisión, cm-n3 la guarura ritual), tres
+    comparandas (cm-c1 Orehu lokono, cm-c2 Yaya taíno, cm-c3 Pulowi wayuu) y
+    tres caminos de prueba: (1) Oviedo t. II releído en contexto ritual, (2)
+    los ajuares dabajuroides, (3) los petroglifos. M8 (arqueologia_insular_falcon
+    §en_la_creencia) midió CERO de creencia en Urbina, Casale, Knaf y
+    Moreno-Mayar; oliver1989_restante §mar, CERO en Oliver. Esta campaña
+    recorre los tres caminos, añade la crónica que faltaba (Aguado), mina
+    Breton por primera vez y cierra con las ventanas leídas.
+  respuesta_corta: >-
+    El mar es esencial en la VIDA de la costa y lo dicen las fuentes; en la
+    CREENCIA caquetía no aparece nunca. Donde las crónicas ponen lo sagrado de
+    esta gente, lo ponen en el cielo (el Manaure «da los temporales»; al
+    boratio se le pregunta «si lloverá») y en el maíz (ayunos, funerales y
+    ajuar son de mazamorra y maçato). El único acto ritual atestiguado que
+    toca el mar es la adivinación doméstica con tabaco antes de salir a pescar,
+    que es la misma para caminar, sembrar, cazar o saber si la mujer lo
+    quiere. La arqueología da mar en DOS urnas de Curazao (un diente de
+    tiburón en cada una, s. XIII-XIV) y ninguna imagen marina caquetía. Los
+    vecinos sí ponen el mar en su creencia, cada uno a su manera: el kalinago
+    en las estrellas que dan viento y se zambullen en el mar; el taíno en el
+    origen del mar (Yaya), en la mujer del fondo del mar que da las joyas
+    sagradas y en el pez al que se le habla; el lokono en la mujer del agua
+    que da la maraca (Brett vía Brinton); el wayuu, sólo de segunda mano
+    (Pulowi). Ninguno tiene un «dueño del mar» al que se pide permiso, y que
+    el ser supremo taíno lleve el mar en el nombre es etimología de 1897.
+    La intuición queda como intuición, con el cero medido y una hipótesis más
+    fina: lo sagrado caquetío que conocemos es del cielo y de la tierra de
+    labranza; el mar es lo cotidiano, lo que se trueca y lo que se cruza.
+  como_se_midio: >-
+    (1) COOCURRENCIA creencia × mar en 35 textos del repo, con creencia × cielo
+    de control positivo (6-fusion/scripts/medir_cosmovision_marina.py; la
+    ortografía del s. XVI normalizada: sin diacríticos, ç → c, palabras
+    partidas a fin de línea unidas). (2) LECTURA de cada ventana en las obras
+    de la costa, y de las que tienen un nombre de la costa occidental a ±2000
+    caracteres en las obras de toda América (Castellanos, Anglería, Navarrete,
+    el Handbook). (3) Relectura de los capítulos rituales de Oviedo (t. II lib.
+    XXV caps. IX y XXII) y del lib. I cap. I de Aguado. (4) Breton leído por la
+    capa de texto de cada página y ~40 páginas en imagen. (5) La arqueología de
+    ~20 obras con sondas en cuatro lenguas y control positivo. (6) El cruce de
+    las glosas caquetías atestiguadas de mar y de creencia. (7) Los 63 system
+    prompts de la era 2, frase a frase.
+  lectura_de_las_ventanas: >-
+    Ninguna ventana creencia × mar de las obras de la costa es creencia
+    caquetía del mar. Son de españoles (tormentas, navíos, Aguirre, «pescado o
+    demonio» de un soldado en un río), de la conquista de Caracas (caracoles y
+    fotutos de guerra), de otras gentes (Chicora, Santa Marta, el Orinoco, los
+    girara, el lago de Valencia), o del s. XX sin dato (Antolínez). Lo que sí
+    toca la costa está en los hechos de abajo, cada uno con su página.
+  # ── lo escribe `python 6-fusion/scripts/medir_cosmovision_marina.py --conteos`;
+  #    no se edita a mano (regla 1). «ventanas_*» son ventanas fundidas de ±300
+  #    caracteres alrededor de un término de creencia. ──
+  medido:
+    por_obra:
+      oviedo_t2_lib25:
+        obra: oviedo-y-valdes-1852-1855
+        caracteres: 271079
+        terminos_mar: 39
+        terminos_creencia: 104
+        terminos_cielo: 9
+        ventanas_creencia_x_mar: 8
+        ventanas_creencia_x_mar_costa_occidental: 3
+        ventanas_creencia_x_cielo_control: 1
+      aguado_t1:
+        obra: aguado-1581
+        caracteres: 1153079
+        terminos_mar: 254
+        terminos_creencia: 184
+        terminos_cielo: 49
+        ventanas_creencia_x_mar: 12
+        ventanas_creencia_x_mar_costa_occidental: 5
+        ventanas_creencia_x_cielo_control: 8
+      fd_t2_documentos:
+        obra: perez-de-tolosa-1546
+        caracteres: 747890
+        terminos_mar: 176
+        terminos_creencia: 159
+        terminos_cielo: 41
+        ventanas_creencia_x_mar: 11
+        ventanas_creencia_x_mar_costa_occidental: 9
+        ventanas_creencia_x_cielo_control: 6
+      oviedo_banos:
+        obra: oviedo-y-banos
+        caracteres: 1185698
+        terminos_mar: 178
+        terminos_creencia: 309
+        terminos_cielo: 101
+        ventanas_creencia_x_mar: 13
+        ventanas_creencia_x_mar_costa_occidental: 13
+        ventanas_creencia_x_cielo_control: 14
+      castellanos:
+        obra: castellanos-elegias
+        caracteres: 3222143
+        terminos_mar: 909
+        terminos_creencia: 997
+        terminos_cielo: 516
+        ventanas_creencia_x_mar: 78
+        ventanas_creencia_x_mar_costa_occidental: 16
+        ventanas_creencia_x_cielo_control: 80
+      federmann1916:
+        obra: federmann-1916
+        caracteres: 191427
+        terminos_mar: 81
+        terminos_creencia: 35
+        terminos_cielo: 10
+        ventanas_creencia_x_mar: 3
+        ventanas_creencia_x_mar_costa_occidental: 3
+        ventanas_creencia_x_cielo_control: 0
+      federmann1859:
+        obra: federmann-1916
+        caracteres: 450758
+        terminos_mar: 100
+        terminos_creencia: 191
+        terminos_cielo: 55
+        ventanas_creencia_x_mar: 11
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 13
+      angleria_v1:
+        obra: angleria-1892
+        caracteres: 396542
+        terminos_mar: 332
+        terminos_creencia: 132
+        terminos_cielo: 103
+        ventanas_creencia_x_mar: 25
+        ventanas_creencia_x_mar_costa_occidental: 1
+        ventanas_creencia_x_cielo_control: 16
+      angleria_v4:
+        obra: angleria-1892
+        caracteres: 416885
+        terminos_mar: 259
+        terminos_creencia: 339
+        terminos_cielo: 112
+        ventanas_creencia_x_mar: 32
+        ventanas_creencia_x_mar_costa_occidental: 1
+        ventanas_creencia_x_cielo_control: 31
+      navarrete1829:
+        obra: navarrete-1829-viages-menores
+        caracteres: 1731319
+        terminos_mar: 889
+        terminos_creencia: 308
+        terminos_cielo: 112
+        ventanas_creencia_x_mar: 54
+        ventanas_creencia_x_mar_costa_occidental: 7
+        ventanas_creencia_x_cielo_control: 7
+      arcaya:
+        obra: arcaya-1920
+        caracteres: 463160
+        terminos_mar: 83
+        terminos_creencia: 230
+        terminos_cielo: 37
+        ventanas_creencia_x_mar: 6
+        ventanas_creencia_x_mar_costa_occidental: 6
+        ventanas_creencia_x_cielo_control: 8
+      jahn:
+        obra: jahn-1927
+        caracteres: 634306
+        terminos_mar: 122
+        terminos_creencia: 221
+        terminos_cielo: 73
+        ventanas_creencia_x_mar: 9
+        ventanas_creencia_x_mar_costa_occidental: 9
+        ventanas_creencia_x_cielo_control: 6
+      steward1948:
+        obra: steward-1948-hsai-4
+        caracteres: 1583109
+        terminos_mar: 727
+        terminos_creencia: 2026
+        terminos_cielo: 278
+        ventanas_creencia_x_mar: 96
+        ventanas_creencia_x_mar_costa_occidental: 21
+        ventanas_creencia_x_cielo_control: 73
+      oliver_cap2:
+        obra: oliver-1989-cap2
+        caracteres: 264110
+        terminos_mar: 29
+        terminos_creencia: 27
+        terminos_cielo: 15
+        ventanas_creencia_x_mar: 0
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 1
+      oliver_cap3_doc:
+        obra: oliver-1989-cap3
+        caracteres: 308942
+        terminos_mar: 64
+        terminos_creencia: 98
+        terminos_cielo: 26
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 3
+      oliver_cap3_s33:
+        obra: oliver-1989-cap3
+        caracteres: 53494
+        terminos_mar: 18
+        terminos_creencia: 7
+        terminos_cielo: 5
+        ventanas_creencia_x_mar: 1
+        ventanas_creencia_x_mar_costa_occidental: 1
+        ventanas_creencia_x_cielo_control: 0
+      oliver_cap4:
+        obra: oliver-1989-cap4
+        caracteres: 151743
+        terminos_mar: 30
+        terminos_creencia: 14
+        terminos_cielo: 1
+        ventanas_creencia_x_mar: 0
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 0
+      antolinez1946:
+        obra: antolinez-1946-hacia-el-indio
+        caracteres: 612731
+        terminos_mar: 87
+        terminos_creencia: 1354
+        terminos_cielo: 183
+        ventanas_creencia_x_mar: 37
+        ventanas_creencia_x_mar_costa_occidental: 18
+        ventanas_creencia_x_cielo_control: 71
+      alvarado1921:
+        obra: alvarado-1921
+        caracteres: 653771
+        terminos_mar: 168
+        terminos_creencia: 97
+        terminos_cielo: 68
+        ventanas_creencia_x_mar: 8
+        ventanas_creencia_x_mar_costa_occidental: 8
+        ventanas_creencia_x_cielo_control: 6
+      zavala2015:
+        obra: zavala-reyes-2015
+        caracteres: 38595
+        terminos_mar: 17
+        terminos_creencia: 23
+        terminos_cielo: 4
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 0
+      esteves_1:
+        obra: esteves-1989
+        caracteres: 24391
+        terminos_mar: 10
+        terminos_creencia: 3
+        terminos_cielo: 1
+        ventanas_creencia_x_mar: 1
+        ventanas_creencia_x_mar_costa_occidental: 1
+        ventanas_creencia_x_cielo_control: 0
+      esteves_2:
+        obra: esteves-1989
+        caracteres: 37669
+        terminos_mar: 19
+        terminos_creencia: 21
+        terminos_cielo: 0
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 0
+      esteves_3:
+        obra: esteves-1989
+        caracteres: 18620
+        terminos_mar: 9
+        terminos_creencia: 4
+        terminos_cielo: 0
+        ventanas_creencia_x_mar: 1
+        ventanas_creencia_x_mar_costa_occidental: 1
+        ventanas_creencia_x_cielo_control: 0
+      esteves_4:
+        obra: esteves-1989
+        caracteres: 31581
+        terminos_mar: 11
+        terminos_creencia: 5
+        terminos_cielo: 3
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 0
+      esteves_5:
+        obra: esteves-1989
+        caracteres: 26034
+        terminos_mar: 3
+        terminos_creencia: 5
+        terminos_cielo: 0
+        ventanas_creencia_x_mar: 0
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 0
+      esteves_6:
+        obra: esteves-1989
+        caracteres: 29137
+        terminos_mar: 6
+        terminos_creencia: 3
+        terminos_cielo: 0
+        ventanas_creencia_x_mar: 0
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 0
+      medina_dictado:
+        obra: medina-colina-sxx
+        caracteres: 291327
+        terminos_mar: 101
+        terminos_creencia: 48
+        terminos_cielo: 14
+        ventanas_creencia_x_mar: 3
+        ventanas_creencia_x_mar_costa_occidental: 3
+        ventanas_creencia_x_cielo_control: 1
+      velasco2015:
+        obra: velasco-2015-resistencia
+        caracteres: 99707
+        terminos_mar: 5
+        terminos_creencia: 112
+        terminos_cielo: 9
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 4
+      van_buurt2014:
+        obra: van-buurt-2014
+        caracteres: 89230
+        terminos_mar: 56
+        terminos_creencia: 13
+        terminos_cielo: 7
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 1
+      gatschet1885:
+        obra: gatschet-1885
+        caracteres: 18362
+        terminos_mar: 7
+        terminos_creencia: 7
+        terminos_cielo: 2
+        ventanas_creencia_x_mar: 0
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 1
+      zavala2018:
+        obra: zavala-reyes-2018
+        caracteres: 51443
+        terminos_mar: 23
+        terminos_creencia: 4
+        terminos_cielo: 2
+        ventanas_creencia_x_mar: 0
+        ventanas_creencia_x_mar_costa_occidental: 0
+        ventanas_creencia_x_cielo_control: 0
+      urbina2007:
+        obra: urbina-jimenez-2007-2011
+        caracteres: 206159
+        terminos_mar: 57
+        terminos_creencia: 35
+        terminos_cielo: 28
+        ventanas_creencia_x_mar: 7
+        ventanas_creencia_x_mar_costa_occidental: 3
+        ventanas_creencia_x_cielo_control: 0
+      urbina2011:
+        obra: urbina-jimenez-2007-2011
+        caracteres: 127993
+        terminos_mar: 28
+        terminos_creencia: 11
+        terminos_cielo: 4
+        ventanas_creencia_x_mar: 5
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 0
+      antczak2017:
+        obra: antczak-2017-cariban
+        caracteres: 165124
+        terminos_mar: 27
+        terminos_creencia: 19
+        terminos_cielo: 5
+        ventanas_creencia_x_mar: 3
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 0
+      moron2012:
+        obra: moron-2012-petroglifos
+        caracteres: 36581
+        terminos_mar: 6
+        terminos_creencia: 50
+        terminos_cielo: 7
+        ventanas_creencia_x_mar: 2
+        ventanas_creencia_x_mar_costa_occidental: 2
+        ventanas_creencia_x_cielo_control: 1
+    total:
+      textos_barridos: 35
+      obras_distintas: 26
+      ventanas_creencia_x_mar: 438
+      ventanas_creencia_x_mar_costa_occidental: 147
+      ventanas_creencia_x_cielo_control: 352
+
+# ══════════════════════════════════════════════════════════════════
+# 1. HECHOS CANDIDATOS — para 3-mundo/corpus/ (creencia, ecología,
+#    parentesco), con su etiqueta, su época y su polity. Sólo lo que
+#    toca la costa caquetía o las ABC. Lo del vecino va a §comparanda.
+# ══════════════════════════════════════════════════════════════════
+hechos_candidatos:
+
+  - id: cm24-01
+    contenido: >-
+      La comida del rito caquetío es de MAÍZ, no del mar. El boratio, antes de
+      curar, manda ayunar a toda la casa: «que no coman sino magamorra rala de
+      mahiz que ellos llaman caça, y no mas de una vez cada dia». Antes de la
+      guerra o de «sacrificar», la casa entera ayuna y sólo come «una
+      magamorra». Y en los dos funerales, el del señor y el del díao, los
+      huesos molidos se beben en `maçato`, brebaje de maíz. Ninguno de los ritos
+      que Oviedo describe usa pescado, concha ni agua de mar.
+    fuente: atestiguado
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: 't. II, impresas 297 (funeral de los çaquitios), 299 (el ayuno de la cura), 300 (el díao), 329 (el ayuno de la guerra)'}
+    epoca: 'contacto (Oviedo escribe 1535-1548; el cap. XXII, de boca del obispo Bastidas)'
+    polity: 'los çaquitios de la gobernación (p. 297); el díao «en algunas partes desta gobernaçión» (p. 299); el ayuno, «los indios en aquella tierra» (p. 328). Costa y más allá: regla 4, no es exclusivo de la costa'
+    dominios: [creencia, alimentacion, rito]
+    restringido: false
+    implicacion_simulacion: >-
+      Un rito, un ayuno o un funeral se hace con mazamorra y con maçato; el
+      pescado es comida de todos los días. Si un agente ofrenda pescado o
+      concha en un rito, eso no lo enseña el canon: es emergencia y se mide.
+    lectura: >-
+      Es un dato negativo con forma positiva: dice qué comida es la del rito.
+      No prueba que el mar no tuviera rito; prueba que los tres que conocemos
+      son de tierra de labranza.
+
+  - id: cm24-02
+    contenido: >-
+      El poder sagrado del gran señor caquetío es del CIELO, no del mar, y lo
+      dicen dos testigos independientes. Ampíes, antes de 1527: «el cual por
+      ser tan gran señor se hace adorar como Dios, dando á entender á los
+      indios que él da los temporales», y vive «diez leguas la tierra adentro
+      en la provincia de Coro». Aguado, h. 1581: los había hecho creer «que el
+      era el avctor y hazedor […] de las llubias, granizos, truenos y
+      relampagos y eladas y secas; y como del caer estas cosas a sus tiempos
+      dependen los buenos temporales y frutificaçion de la tierra», y lo
+      llevaban «cargado en los hombros, en vn genero de lecho que comunmente
+      llaman hamaca». La escena de Aguado ocurre en el «ancon» que el cabo de
+      San Román «haze alli la mar», y aun así el poder que describe es de
+      lluvia y cosecha.
+    fuente: atestiguado
+    procedencia: [{obra: perez-de-tolosa-1546, pagina: '212 (carta de Juan de Ampíes al rey, en el apéndice de Fernández Duro 1885 t. II)'}, {obra: aguado-1581, pagina: 'lib. I cap. I (ed. Bécker 1918 t. I)'}]
+    epoca: 'contacto (c. 1526-1527)'
+    polity: 'costera (Coro, Paraguaná: el señor que Ampíes llama «Naure ó Anaure»)'
+    dominios: [creencia, poder, clima]
+    restringido: true
+    implicacion_simulacion: >-
+      Es la fuente primaria que le faltaba a creencia-013 («crónicas del
+      contacto sobre Manaure», sin obra ni página; hda-13 lo pedía). Propuesta:
+      su `procedencia` pasa a estas dos citas. Para el mundo: lo que el Manaure
+      gobierna es el tiempo y la cosecha; el mar no está en su dominio.
+    lectura: >-
+      Aguado no le da nombre; es el mismo señor por la escena (Ampíes, el cabo
+      de San Román, el trato). Es la otra cara del hallazgo: donde la fuente
+      pone lo sagrado del jefe, pone cielo y tierra de labranza.
+
+  - id: cm24-03
+    contenido: >-
+      La pesca se adivina con tabaco, como cualquier otra faena, y cada uno es
+      su propio adivino: «para ver si caminarán ó yrán á pescar ó sembrarán, y
+      para saber si matarán caça ó si su muger los quiere bien, cada uno es
+      boratio»: envuelven la hoja alrededor de la mazorca, encienden un cabo,
+      soplan, y si lo quemado queda «á manera de hoz encorvado» saldrá bien, y
+      si «derecho», mal. Es el único acto ritual atestiguado que toca el mar, y
+      no lo distingue: la pesca va en la misma lista que caminar, sembrar,
+      cazar y el amor.
+    fuente: atestiguado
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: 't. II, impresa 298'}
+    epoca: contacto
+    polity: '«los indios de Veneçuela» (Oviedo generaliza para la gobernación; regla 4)'
+    dominios: [creencia, pesca, adivinacion]
+    restringido: false
+    implicacion_simulacion: >-
+      Es lo que el prompt de Jachos puede decir en vez del «dueño del agua»
+      sin fuente (decisión b del issue): un pescador que lee el tabaco antes de
+      botar la canoa. Refina cm-s5 de FA3, que ya lo citaba vía Arcaya.
+    lectura: >-
+      Lo que el boratio de pueblo adivina, en la misma página, es otra cosa:
+      «si lloverá ó si el año será seco ó abundante, ó si deben yr á la guerra»
+      y si los cristianos son buenos. Lo grave se le pregunta al boratio, y es
+      cielo y guerra; el mar queda en la adivinación de cada uno.
+
+  - id: cm24-04
+    contenido: >-
+      El espíritu que ven los boratios se pinta «en sus joyas y en madera de
+      relieve y en todas las cosas y partes que mas estiman». La fuente no dice
+      qué forma tiene: ni pez ni concha ni ninguna otra.
+    fuente: atestiguado
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: 't. II, impresa 298'}
+    epoca: contacto
+    polity: 'la gobernación (regla 4)'
+    dominios: [creencia, arte]
+    restringido: true
+    implicacion_simulacion: >-
+      Si la arqueología da la forma (batracio y ave en la loza dabajurana,
+      oliver1989_restante §mar), es otra fuente; este dato sólo dice DÓNDE se
+      pinta el espíritu: en lo que más se estima.
+
+  - id: cm24-05
+    contenido: >-
+      La concha del mar vale lejos del mar. Los ayamanes del interior «no se
+      adornan sino con pequeñas piedras negras y brillantes que ensartan como
+      cuentas de rosario; y también de conchas marítimas que compran a otras
+      naciones y que son raras en este pueblo tan lejano del mar que no lo
+      conocen ni a sus orillas se han aproximado nunca». Y en la costa, la
+      concha es moneda: «se servían como de monedas de ciertas conchas
+      marinas» (Arcaya, sobre la carta de un alemán), y todavía en el Coro
+      colonial «unas conchezuelas de pescados que tratan entre sí a valor de un
+      real cada una».
+    fuente: atestiguado
+    procedencia: [{obra: federmann-1916, pagina: 45}, {obra: arcaya-1920, pagina: '120, 264'}]
+    epoca: 'contacto (Federmann 1530); colonial (la carta de Coro de la p. 264)'
+    polity: 'la concha sale de la costa; el que la luce en la p. 45 es AYAMÁN (regla 4)'
+    dominios: [comercio, prestigio, ecologia]
+    restringido: false
+    implicacion_simulacion: >-
+      El mar llega a la casa del interior como valor: cuenta, adorno, pago. Es
+      lo más «simbólico» que las fuentes le dan al mar con seguridad, y es
+      valor, no culto.
+    lectura: >-
+      Oliver (DOC p. 271, cuentas de concha «as small as a pinhead», «almost
+      like a monetary system») y cm-s4 de FA3 ya lo tenían; lo nuevo es el
+      testigo del interior que dice que la concha viene de un mar que no
+      conocen.
+
+  - id: cm24-06
+    contenido: >-
+      El mar une parientes y se cruza para visitarlos. Ampíes: los indios de la
+      costa, «desde Paraguachoa hasta la punta de Coquibacoa» —Paraguaná entre
+      ellos—, «muchas veces se pasaban allá [a Curazao, Aruba y Bonaire] á
+      holgar» con los isleños, y le enviaron «un cacique que se dice D. Juan
+      Baracoica, que está en las islas y es su pariente y deudo»; y el mensaje
+      «principalmente» lo mandaba Anaure. Oliver lo da por la arqueología:
+      «there is no doubt that the
+      inhabitants of Curaçao had strong kinship ties to the Caquetío of
+      Paraguaná».
+    fuente: atestiguado
+    procedencia: [{obra: perez-de-tolosa-1546, pagina: '212 (carta de Ampíes)'}, {obra: oliver-1989-cap4, pagina: 476}]
+    epoca: 'contacto (Ampíes, antes de 1527); precontacto (la arqueología de Oliver)'
+    polity: 'costera y las ABC'
+    dominios: [parentesco, geografia_politica, navegacion]
+    restringido: false
+    implicacion_simulacion: >-
+      El otro lado del mar es familia, y se va de visita. Para la creencia no
+      dice nada; para la vida, dice que cruzar es ir a ver a los suyos.
+
+  - id: cm24-07
+    contenido: >-
+      La tierra de los muertos, en la única voz que se atribuye al caquetío,
+      está ABAJO, no mar adentro: «sawaka (C) - the underworld, the realm of
+      the dead, the beyond. In old Papiamentu the expression baha na sawaka
+      existed, meaning 'to descend to the underworld' or 'to die'». Van Buurt
+      la parte con el lokono: «Waka means underground».
+    fuente: reconstruido
+    procedencia: {obra: van-buurt-2014, pagina: 35}
+    epoca: 'papiamento antiguo (s. XIX-XX); la atribución caquetía es de van Buurt, que avisa que su lista «has a subjective element»'
+    polity: 'las ABC (Curazao)'
+    dominios: [creencia, muerte, lengua]
+    restringido: false
+    implicacion_simulacion: >-
+      Si un agente dice adónde van los muertos, lo que el léxico sostiene es
+      «bajar», no «cruzar el mar». El lexicón tiene `sawaka` como
+      caquetío-atestiguado; aquí se etiqueta reconstruido porque es una voz de
+      papiamento atribuida, y en duda se degrada (regla 2). La etiqueta del
+      lexicón no se toca: se anota para quien fusione.
+
+  - id: cm24-08
+    contenido: >-
+      El mar da nombre a la tierra y a la gente de la esfera, que es donde más
+      pesa: la provincia se llamaba Paraguaná en boca de los indios en 1540
+      («que los indios llaman á aquella provinçia Paraguana»), con `para` 'mar,
+      agua en grandes cantidades' (Zavala #190-191); y los guajiros llaman a
+      los paraujanos «Parauja, voz derivada de Pará, mar», de «pararuañú»,
+      «indios o gentes de la orilla del mar o pescadores».
+    fuente: reconstruido
+    procedencia: [{obra: oviedo-y-valdes-1851, pagina: 205}, {obra: zavala-reyes-2015, pagina: '#190, #191'}, {obra: jahn-1927, pagina: 191}]
+    epoca: 'contacto (el nombre, 1540); s. XX (la etimología paraujana de Jahn)'
+    polity: 'costera (Paraguaná); paraujanos de Sinamaica (vecinos, regla 4)'
+    dominios: [lengua, geografia, identidad]
+    restringido: false
+    implicacion_simulacion: >-
+      El nombre es dato; que el nombre sea una cosmología, no. Queda como el
+      hecho de identidad más fuerte que el mar tiene en la esfera. La glosa
+      «rodeada de mar» sigue en #109 (el -ná): no se mueve aquí.
+    lectura: >-
+      La etiqueta es `reconstruido` porque la etimología (para = mar dentro del
+      topónimo) es análisis, aunque el nombre y la voz estén atestiguados.
+
+  - id: cm24-09
+    contenido: >-
+      La marca desde el mar es el cerro sagrado: el «m. alto» de Juan de la
+      Cosa es el cerro de Santa Ana, Matividiro orienta a los pescadores de
+      pargo, y el bosque con dueño del cerro (Capó) se ve desde la canoa. Es lo
+      único que une un lugar con dueño y la navegación, y lo que tiene dueño
+      es el BOSQUE del cerro, no el mar.
+    fuente: hipotetico
+    procedencia: [{obra: arcaya-1920, pagina: 134}, {obra: esteves-1989, pagina: '26 (Capuhana), 51 (Matividiro)'}]
+    epoca: 'contacto (el mapa, c. 1500); s. XX (Capó, Esteves)'
+    polity: costera (Paraguaná)
+    dominios: [creencia, navegacion, geografia]
+    restringido: false
+    implicacion_simulacion: >-
+      Es cm-s7 de FA3, con la etiqueta que le corresponde: que el cerro sagrado
+      y la aguja de marear sean UNA sola idea sagrada es lectura; el dueño
+      atestiguado (s. XX) es del bosque (creencia-021, hipotético). Ya está en
+      sitios_era2 («centro espiritual es también la aguja de marear»); no pide
+      nada nuevo.
+
+# ══════════════════════════════════════════════════════════════════
+# 2. ARQUEOLOGÍA — el mar en la tumba, en la loza y en la piedra
+#    (los caminos 2 y 3 de cm-n2 y el de cm-n3 que dejó FA3)
+#    Un objeto marino en una tumba es DATO DE AJUAR, no prueba de
+#    creencia en el mar.
+# ══════════════════════════════════════════════════════════════════
+arqueologia:
+
+  - id: cm24-a01
+    contenido: >-
+      En Curazao, hacia los s. XIII-XIV, las dos urnas dabajuroides de De
+      Savaan llevaban entre los huesos un diente de tiburón cada una: la
+      primaria, «a (2.2 cm. long) sharks tooth», 14 discos de concha, calcita y
+      una punta de sílex, y alrededor huesos de pez, coral y una lapa; la
+      secundaria, un diente de 9 mm, fragmentos de ostra perlera (Pinctada), un
+      fragmento de Strombus y huesos de pez. El excavador lo dice con
+      condicional: «could have been / may have been grave goods». En San
+      Hironimo, junto a los pies de un adulto, un plastrón de tortuga marina
+      molido y quemado, en una fosa rellena de tierra de conchero.
+    fuente: atestiguado
+    procedencia: {obra: haviser-1990, pagina: '230-232 (vistas en imagen); fecha C-14 600±20 a.p. en la p. 224 y «±660» en la p. 234'}
+    epoca: 'precontacto (s. XIII-XIV sin calibrar); San Hironimo, dabajuroide tardío, quizá protohistórico'
+    polity: 'las ABC dabajuroides (Curazao)'
+    dominios: [muerte, ajuar, mar]
+    restringido: false
+    implicacion_simulacion: >-
+      Es lo más cerca que las fuentes llegan de «el mar en la tumba caquetía».
+      Para el mundo: un muerto puede ir con un diente de tiburón y cuentas de
+      concha. Que eso signifique algo del mar en la creencia es lectura.
+    lectura: >-
+      Pequeño, insular y con condicional. La ficha haviser-1990 decía «nada de
+      ajuares con procedencia»: vale para los entierros directos de 1980, no
+      para las urnas (corregido en su bitácora).
+
+  - id: cm24-a02
+    contenido: >-
+      En la costa de Falcón, lo que la arqueología pone junto a la urna
+      secundaria es el cuenco tetrápodo biomorfo para BEBER, «associated with
+      the several secondary burial vessels» (Túcua) y «more frequently found in
+      and around secondary burial urns» (Corralito), que Oliver liga al masato
+      del funeral. Ninguna concha, cuenta, diente ni Strombus se menciona con
+      esos entierros. La concha de Coro existe —cuentas y colgantes; en Cayerúa
+      (Paraguaná), cuentas, un hacha de Strombus y «Strombus tips»— pero ninguna
+      fuente la pone dentro de una urna.
+    fuente: atestiguado
+    procedencia: [{obra: oliver-1989-cap4, pagina: '442 (imagen), 449'}, {obra: steward-1948-hsai-4, pagina: '429 (Kidder II, imagen)'}]
+    epoca: 'precontacto (Urumaco; el cuenco tetrápodo más antiguo fechado, Corralito, 1278-[1336]-1393 d.C. cal.)'
+    polity: costera (Túcua, Corralito, Coro, Cayerúa)
+    dominios: [muerte, ajuar, alimentacion]
+    restringido: false
+    implicacion_simulacion: >-
+      Refuerza creencia-010/010b (beber los huesos, segundo entierro) con
+      arqueología: el ajuar del continente es la bebida, de maíz. Casa con
+      cm24-01.
+
+  - id: cm24-a03
+    contenido: >-
+      La tumba más «marina» de las ABC es de ANTES de los caquetíos: en Malmok
+      (Aruba, 500-800 d.C., precerámico) muchas tumbas llevan conchas
+      dispuestas y «about 10% of the individuals were buried on or below a
+      large sea-turtle carapace». Con los dabajuroides el ajuar arubeño pasa a
+      «dishes, manos and metates, shell beads and other items», y las urnas
+      «sólo tienen huesos».
+    fuente: atestiguado
+    procedencia: {obra: dijkhoff-1997, pagina: '§3.4.2.2 (pdf 46) y §3.9.3 (pdf 86-88), vistas en imagen'}
+    epoca: 'precerámico (Malmok) frente a cerámico dabajuroide'
+    polity: 'Aruba: los PREDECESORES en la misma isla, no la polity (regla 4 en el eje del tiempo)'
+    dominios: [muerte, ajuar]
+    restringido: false
+    implicacion_simulacion: >-
+      Nada: la tortuga en la tumba es un rasgo precerámico. Se escribe para que
+      nadie lo importe a los caquetíos por estar en la misma isla.
+
+  - id: cm24-a04
+    contenido: >-
+      La iconografía dabajuroide mira al cielo y a la tierra: batracio, ave,
+      murciélago, cara humana, sol. En la loza de las islas el único motivo
+      nombrado es un «sol» radial; en la costa de Falcón y Paraguaná los
+      petroglifos son «geométricos y abstractos». El único pez pintado de la
+      esfera es una figura de las pictografías de Arikok (Aruba), sin fecha,
+      quizá precerámica, que el autor no nombra y lee el minador.
+    fuente: atestiguado
+    procedencia: [{obra: oliver-1989-cap4, pagina: '451 (batracio), 473-474 (ave)'}, {obra: antczak-2015-las-aves, pagina: 15}, {obra: moron-2012-petroglifos, pagina: '172-173'}, {obra: dijkhoff-1997, pagina: '§3.7 (pdf 59-60, Fig. 19)'}]
+    epoca: precontacto (la loza); sin fecha (los petroglifos y pictografías)
+    polity: 'costera y ABC'
+    dominios: [arte, creencia]
+    restringido: false
+    implicacion_simulacion: >-
+      Si un agente pinta o talla, el canon le da ranas, aves, murciélagos y el
+      sol; un pez o una tortuga serían emergencia.
+
+  - id: cm24-a05
+    contenido: >-
+      No hay bocina de botuto en ningún sitio dabajuroide de las fuentes. En Las
+      Aves, 397 botutos dabajuroides tienen la espira agujereada «which
+      facilitated the extraction of the animal», y los ápices machacados son
+      martillos: un botuto con la punta rota no es una bocina. La bocina de
+      caracol está en la costa del s. XX (la guarura de Medina; Alvarado:
+      «Táñenlo a modo de trompa los carreteros») y como señal kalinago al
+      desembarcar (Breton); la «trompeta sagrada» llamada botuto es del
+      Orinoco. La única frase que la pone en un funeral caquetío es del
+      Handbook y no cita fuente.
+    fuente: atestiguado
+    procedencia: [{obra: antczak-2015-las-aves, pagina: '9 (imagen)'}, {obra: alvarado-1921, pagina: 32}, {obra: steward-1948-hsai-4, pagina: 473}]
+    epoca: 'precontacto y contacto (Las Aves, C-14 690±80 a 420±80 a.p.); s. XX (Alvarado, Medina)'
+    polity: 'Las Aves (visitadas desde las ABC); la costa en el s. XX'
+    dominios: [musica, creencia, tecnica]
+    restringido: false
+    implicacion_simulacion: >-
+      cm-n3 de FA3 se cierra en negativo y se afina: lo que subiría la bocina
+      es un ápice cortado Y pulido como embocadura, fuera de contexto
+      alimentario. La guarura puede sonar en el mundo como señal (mc-mundo-023),
+      no como rito.
+
+# ══════════════════════════════════════════════════════════════════
+# 3. COMPARANDA — el mar en la creencia de los VECINOS (regla 4)
+#    Nada de esto es caquetío ni se proyecta. Cada hecho dice lengua,
+#    época y lugar. Etiqueta `atestiguado` = lo dice su fuente para SU
+#    pueblo; no dice nada del caquetío.
+# ══════════════════════════════════════════════════════════════════
+comparanda:
+
+  taino:
+    nota: >-
+      Esfera de contacto; la campaña del taíno concluyó «ni vecino ni pariente
+      medible». Contacto (Pané c. 1494-1498; Anglería 1516; Oviedo 1535-1547;
+      Las Casas c. 1550), La Española y Cuba. Pané se cita por capítulo (la
+      retraducción de Wikisource no tiene páginas).
+    hechos:
+      - id: cm24-c-t01
+        contenido: >-
+          El mar es uno de los saberes de origen: Pané enumera de dónde
+          vinieron, el origen del sol y la luna, «cómo se hizo el mar» y adónde
+          van los muertos. Y el mito: Yaya MATA a su hijo, guarda los huesos en
+          una calabaza, los huesos se vuelven peces y SE COMEN, la calabaza cae
+          y de ella «tuvo origen el mar» (cm-c2 de FA3, verificado y
+          precisado). En la versión de Anglería salen de la calabaza «ballenas
+          y grandes cetáceos», y las islas son las cumbres que el mar no
+          alcanzó; y quien sabe recitarlo es estimado.
+        fuente: atestiguado
+        procedencia: [{obra: pane-c1498, pagina: 'proemio y caps. VIII-X'}, {obra: angleria-1892, pagina: 'vol. 1 pp. 345-346 (imagen)'}]
+      - id: cm24-c-t02
+        contenido: >-
+          El ser supremo se llama «Yocahu Vagua Maorocoti» (Pané, proemio) y
+          «Yocahu Vagua Maoro-coti» (Las Casas), y NINGÚN cronista lo glosa: Las
+          Casas escribe «no sé lo que por este nombre quisieron significar».
+          `bagua` = 'mar' está en Oviedo, en un capítulo de peces, sin relación
+          con el dios. Quien junta los dos es Coll y Toste en 1897: «Yuca
+          Blanca, grande y poderosa, como el mar y la montaña».
+        fuente: atestiguado
+        procedencia: [{obra: pane-c1498, pagina: proemio}, {obra: las-casas-apologetica, pagina: 'cap. CXX, p. 321 (imagen)'}, {obra: oviedo-y-valdes-1851, pagina: '436 (imagen)'}, {obra: coll-y-toste-1897, pagina: '106-107 (imagen)'}]
+        lectura: 'El nombre es dato; que diga «mar» es interpretación del s. XIX. Y la A-2 de Las Casas en el repo lee «Yagua» por error de la capa de texto (taino2_las_casas_apologetica lx.13): la imagen dice «Vagua».'
+      - id: cm24-c-t03
+        contenido: >-
+          La mujer del mar da las insignias del poder: Guahayona deja «en el
+          mar una mujer», Guabonito, que lo cura y le da guanines y cibas
+          (Pané); en Anglería, «una mujer que vió hermosa en el fondo del mar»
+          le da cibas y guaninos, y «estas joyas las tienen por sagradas los
+          Reyes hasta el día de hoy». El mar es también el camino del mito:
+          Matininó, la isla de las mujeres.
+        fuente: atestiguado
+        procedencia: [{obra: pane-c1498, pagina: 'caps. II-VI'}, {obra: angleria-1892, pagina: 'vol. 1 pp. 342-343 (imagen)'}]
+      - id: cm24-c-t04
+        contenido: >-
+          Al pez con que se pesca se le habla: el reverso se cría en agua de
+          mar, y cuando se ve una tortuga o un manatí el indio lo halaga y «díçele
+          en su lengua que sea manicato, que quiere deçir esforçado», y
+          «tienen ellos creydo por muy cierto que el pexe reverso entiende muy
+          bien el sermon humano». El nombre `guaicano` es de Anglería (Cuba,
+          1494), que dice que lo alimentan con la presa.
+        fuente: atestiguado
+        procedencia: [{obra: oviedo-y-valdes-1851, pagina: '435-436 (imagen)'}, {obra: angleria-1892, pagina: 'vol. 1 p. 187 (imagen)'}]
+        lectura: 'Jamaica y Cuba; en La Española «se cree». Es el trato ritual con el mar más concreto de toda la comparanda.'
+      - id: cm24-c-t05
+        contenido: >-
+          Los cemíes del agua son de lluvia, viento y crecidas, no del mar: la
+          tormenta es Guabancex, cemí mujer que «hace correr el viento y el
+          agua», y es de un cacique (Aumatex); `huracán` es en las tres
+          primarias la tormenta, no un ser. En los días solemnes se lleva al
+          cemí «peces, carne, pan», y el behique manda el mal «a la montaña, o
+          al mar, o donde quieras». Atabey «madre de las aguas» no está en
+          ninguna fuente del XVI del repo: la propone Brinton en 1871 por
+          etimología lokono.
+        fuente: atestiguado
+        procedencia: [{obra: pane-c1498, pagina: 'caps. XI, XV, XVI, XXIII'}, {obra: las-casas-apologetica, pagina: 'pp. 94-95, 321-322'}, {obra: oviedo-y-valdes-1851, pagina: '167-168'}, {obra: brinton-1871, pagina: '18 (imagen)'}]
+    ceros: >-
+      Ningún cemí del mar; «madre de las aguas» 0 en las primarias; «huracán»
+      0 en Pané; el manatí criado (Matum) no está en ninguna primaria del repo
+      (sólo Bachiller y Morales, de segunda mano; la Déc. III de Anglería no
+      está). Y el cero antillano no es un hueco del cronista: Las Casas SÍ
+      escribe, del Perú, que los pescadores «tenían por dios á la mar» (pp.
+      334-335); de las Antillas no escribe nada parecido.
+
+  lokono:
+    nota: 'Lengua del andamio de la reconstrucción; s. XIX, Guayana.'
+    hechos:
+      - id: cm24-c-l01
+        contenido: >-
+          Orehu, «the spirit of the waters», sale de las olas y da a Arawanili
+          la maraca y el semeci; los arahuacos vivían «in an island to the
+          north»; los negros de la colonia la llaman «watra-mamma» (cm-c1 de
+          FA3, verificado). La fuente de Brinton está en su nota 49: Brett,
+          Indian Tribes of Guiana (1868), misionero anglicano. Unir Orehu con
+          Atabey y Yauhahu con Yocahu es interpretación de Brinton.
+        fuente: atestiguado
+        procedencia: {obra: brinton-1871, pagina: '18 y nota 49 (imagen)'}
+        lectura: 'Brett 1868 vía Brinton: tercera mano del mito, no está en el repo. Corrige la bitácora de brinton-1871, que decía que Brinton no nombraba al misionero.'
+    ceros: >-
+      Orehu, Yauhahu y semeci: 0 en Goeje 1939 y en Perea 1942. El `bara`
+      'mar' de Perea sale de la traducción morava de los Hechos de los
+      Apóstoles (1802): léxico, y la cosmología es bíblica.
+
+  kalinago:
+    nota: >-
+      Breton vivió entre los kalinago de Dominica y Guadalupe (1635-1654) y es
+      la fuente de todo el caribe insular antiguo; Adam 1879 y Goeje 1939 lo
+      leen a él. Esfera de contacto, capa colonial, s. XVII. Primera minería de
+      Breton en el repo (estaba `pendiente`). Desfases: 1665 pdf − 22; 1666
+      pdf − 8; Grammaire pdf 27 = p. 21.
+    hechos:
+      - id: cm24-c-k01
+        contenido: >-
+          'Mar' en las dos hablas: «la mer, balànna, f bálaoüa» (de hombres y de
+          mujeres). La de mujeres es la fuente primaria del `balaua` que el
+          proyecto ya empareja con el caquetío `parawa`; no es exclusiva (en dos
+          frases marcadas «f.» las mujeres dicen `balánna`, pp. 58 y 394).
+        fuente: atestiguado
+        procedencia: {obra: breton-1665, pagina: '1666 p. 242 (imagen); 1665 p. 67'}
+        lectura: 'Sube la cita (página impresa vista), no la cuenta: Goeje (p. 55) lee a Breton, así que no es una segunda atestación independiente.'
+      - id: cm24-c-k02
+        contenido: >-
+          Tabú al navegar: el Can Mayor y el Menor «causent les ouragans ès
+          Isles, les Sauvages se donnent bien de garde de se jetter en mer quand
+          ils la voyent lever».
+        fuente: atestiguado
+        procedencia: {obra: breton-1665, pagina: '1665 p. 348 (imagen)'}
+        lectura: 'El tabú marino mejor atestiguado de todo el material: es de estrellas y viento, no de un dueño del mar.'
+      - id: cm24-c-k03
+        contenido: >-
+          El mar en el cielo: el garzón celeste (`chaoüâcou`), cuando se pone,
+          «se plonge en la mer pour sortir & paroistre de l'autre costé»; la
+          Osa Mayor es «le canot du crabier»; hay estrellas que dan viento
+          (`baccámon`, `achínnao`) y una que dice el estado del mar (`oulíao`,
+          de mujeres `couloúmon`: «la mer est rude au bord, & calme en haute
+          mer»).
+        fuente: atestiguado
+        procedencia: {obra: breton-1665, pagina: '1665 pp. 165, 65, 14, 69, 421, 186; 1666 pp. 83, 94, 269 (imagen)'}
+        lectura: 'La única cosmología marina firme del material comparado es ASTRONÓMICA: el mar es por donde pasan las estrellas bajo el horizonte.'
+      - id: cm24-c-k04
+        contenido: >-
+          Tabú de comida: no comen manatí porque los hijos tendrían «de petits
+          yeux & ronds» (ni loro, ni aguja, ni anguila, por semejanza); la
+          tortuga se come y se trueca. Breton cree que no es «par motif de
+          religion (au reserve des boyez)».
+        fuente: atestiguado
+        procedencia: {obra: breton-1665, pagina: '1665 p. 275 (imagen); tortuga, pp. 195 y 291'}
+      - id: cm24-c-k05
+        contenido: >-
+          El lambi (botuto) es bocina de aviso al desembarcar: «Les Sauvages
+          portent toujours des lambis dans leur piraugues pour corner &
+          advertir ceux du carbet où ils descendent». El `calloucouli` (el
+          caracolí) es metal en medias lunas, la joya más cara («pour un
+          calloucouli vous auriez d'eux un esclave»), sin nada del mar.
+        fuente: atestiguado
+        procedencia: {obra: breton-1665, pagina: '1665 pp. 407, 467-468, 106 (imagen)'}
+      - id: cm24-c-k06
+        contenido: >-
+          Los antepasados vinieron de tierra firme a conquistar las islas, y las
+          cabezas de los enemigos se guardaban «dans les antres des rochers qui
+          sont sur le bord de la mer, affin que les peres les fissent voir à
+          leur enfans»: la cueva de la orilla como lugar de memoria. No hay mito
+          de origen del mar, de los peces ni de las islas; Breton dice que no
+          conocen «la création».
+        fuente: atestiguado
+        procedencia: {obra: breton-1665, pagina: '1665 pp. 229-230, 424 (imagen)'}
+      - id: cm24-c-k07
+        contenido: >-
+          La «teogonía karibe» que Antolínez 1946 atribuye a «Champlain, Laborde
+          y Souvestre» («Curumón, las olas; Sabácu, las tempestades; Achinaón…
+          la lluvia») no está en Breton como teogonía: `couloúmon` es una
+          constelación que anuncia el estado del mar, Achinaón un pez y una
+          constelación de VIENTO, Savacou sale 0 con s (el `chaoüácou` es
+          probablemente la misma figura: lectura), y Lúcuo y Cualina, 0.
+        fuente: hipotetico
+        procedencia: [{obra: antolinez-1946-hacia-el-indio, pagina: 'impresa 231'}, {obra: breton-1665, pagina: '1665 pp. 186, 421, 442; 1666 p. 83'}]
+        lectura: 'La teogonía ordenada es de La Borde 1674, vía Antolínez: tercera mano, fuera del repo. No se usa.'
+      - id: cm24-c-k08
+        contenido: >-
+          Goeje, en la sección «Religion, magie» del caribe de las islas, da
+          «esprit qui cause les naufrages Umeku, Umoku», con el kalina de
+          Penard «Semuye» y la sigla «K?» (duda del origen caribe). En Breton,
+          el `oumêcou` es sólo un espíritu maligno sin lugar.
+        fuente: reconstruido
+        procedencia: {obra: goeje-1939, pagina: '38 (imagen)'}
+        lectura: 'Goeje no dice de quién toma la glosa marina; que los oumêcou sean del mar lo dicen La Borde y Rochefort, que no están en el repo. Es un espíritu que hunde canoas, no un dueño al que se pide permiso.'
+    ceros: >-
+      En Breton: ningún espíritu o dueño del mar (el `oumêcou` es un espíritu
+      maligno sin lugar, 1665 p. 424); ninguna ofrenda, canto ni conjuro al
+      mar (las ofrendas del boyé son en la casa, de noche); ninguna relación
+      del alma con el mar; el único tabú de NOMBRAR sobre el agua es de un río
+      (el Coyoüini, que trae lluvia, 1665 p. 468). Ocho falsos ceros de grafía
+      resueltos antes de contar (zemi → chemijn, oumekou → oumêcou, Couroumon
+      → couloúmon, caracoli → calloucouli, Savacou → chaoüácou, écume →
+      escume, «Galibi» y «ancestres» partidos).
+    para_el_lexicon: >-
+      La nota de `barana` («Garifuna barana … cognado de CQ para, LK bara»)
+      contradice a Goeje p. 55, que da `barana` como forma de HOMBRES y la filia
+      con el kalina/tupí `parana`; la del lado arahuaco es la de mujeres,
+      `balaua`/`barawa`. No se toca aquí: va al issue (e).
+
+  wayuu:
+    nota: 'Vecino; D11: no es hermana por defecto. Todo es moderno (s. XX-XXI) y el ganado es posterior a 1500.'
+    hechos:
+      - id: cm24-c-w01
+        contenido: >-
+          Las tortugas marinas como «ganado» de Pulowi y el cerro donde ella
+          las cura: en el repo descansa en UNA tesis, que lo cita de terceros
+          (Robles 2008, Villate 2010, Guerra Curvelo 2011, que no es el
+          Cuadernillo del repo). Lo único de primera mano ahí es un pescador
+          que llama a las tortugas «gift from Maleiwa». Pulowi sale 0 veces en
+          Jahn y 0 en el Cuadernillo.
+        fuente: reconstruido
+        procedencia: {obra: barrios-garrido-2018, pagina: '187-188, 194-195'}
+        lectura: 'cm-c3 de FA3 baja de «atestiguado» a esto: la frase del entrevistado es primaria moderna; la dueña del ganado marino es cita de cita.'
+      - id: cm24-c-w02
+        contenido: >-
+          Jepirá, en Jahn, es el Cabo de la Vela por donde el alma PASA hacia
+          «espléndidas sabanas con mucho ganado»; no un mar de los muertos. Y
+          `palá` 'mar', `pará` en paraujano.
+        fuente: atestiguado
+        procedencia: {obra: jahn-1927, pagina: '184 (imagen), 363 (imagen), 191'}
+        lectura: 'creencia-009 cita «Jahn 1927:229», que es la página del PDF (la impresa es 184), no tiene `procedencia`, y su «tierras, ganado o pesca» no está en Jahn.'
+    ceros: >-
+      Pulowi, 0 en las primarias del repo; tortugas, 0 en Jahn y en el
+      Cuadernillo; el mar del Cuadernillo es paisaje. En CULTURA_CAQUETIA §1,
+      Pulowi y Juyá citan tres blogs; Juyá tiene procedencia en el repo
+      (Cuadernillo pp. 26-27; Jahn p. 362) y Pulowi no; y el canon llama al
+      wayuu «la lengua hermana», contra D11.
+
+  achagua:
+    nota: 'CONTROL: la hermana de los Llanos. Colonial (Rivero 1736; Gumilla 1741; el vocabulario de Neira y Ribero), Meta y Casanare.'
+    hechos:
+      - id: cm24-c-a01
+        contenido: >-
+          El achagua tiene palabra para 'mar', `manoa`, y es la de la laguna
+          («Manóa quiere decir, no derrama, nombre que dan á todas las
+          lagunas»); su diluvio es «Catena Manóa», «laguna general», hecho de
+          «aguacero muy grande»; se dicen nacidos de los troncos o de los ríos
+          (Univerrenais). Y SÍ tienen rito de pesca, de río: la chaca, en que el
+          piache inciensa con humo de tabaco el pescado al abrir las
+          pesquerías, y los agoreros adivinan la temporada por los primeros
+          peces flechados.
+        fuente: atestiguado
+        procedencia: [{obra: gumilla-1791, pagina: 't. I pp. 114, 356; t. II pp. 6-7 (imagen)'}, {obra: rivero-1883, pagina: '104-105 (imagen), 113'}, {obra: neira-ribero-1762, pagina: 'vocabulario, s.v. Mar'}]
+        lectura: 'El control da lo esperado para un pueblo de tierra adentro: agua de río, laguna y lluvia. Y enseña algo: donde hay un rito de pesca atestiguado en una hermana, lo hace el piache con tabaco, que es lo que el caquetío tiene (cm24-03) en versión doméstica.'
+    ceros: 'Ningún ser ni rito del MAR en Rivero, Gumilla, Fabo ni Neira.'
+
+  fuera_del_encargo:
+    - id: cm24-c-x01
+      contenido: >-
+        En Paria y Cumaná el remero de proa canta y los demás reman a su voz;
+        en las fiestas llevan caracoles y almejas que suenan como cascabeles en
+        las pantorrillas. Las Casas estuvo allí.
+      fuente: atestiguado
+      procedencia: {obra: las-casas-apologetica, pagina: '638-640 (imagen p. 639)'}
+      lectura: 'Costa oriental, probablemente de habla caribe: la única práctica marina con voz de toda esta minería, y está al este de la Kaketiana.'
+
+  rimas_que_son_lectura:
+    - 'Huesos que se comen (los peces de Yaya) y huesos que se beben (el funeral caquetío, creencia-010): la rima más vieja, y sigue siendo lectura.'
+    - 'La mujer del agua que da las insignias: Guabonito (taíno) y Orehu (lokono). Del caquetío sólo sabemos que el mar daba la moneda de conchas (cm24-05).'
+    - 'Tabaco antes de pescar: el caquetío pregunta al tabaco si «yrán á pescar» (cm24-03); el piache achagua inciensa el pescado con tabaco (cm24-c-a01); el taíno le habla al reverso (cm24-c-t04). Tres vecinos ritualizan el arranque de la pesca, y el caquetío es el único cuyo acto es doméstico y no distingue el mar.'
+    - 'El poder sobre la tormenta pertenece a un jefe: Guabancex es de un cacique; el Manaure «da los temporales» (cm24-02).'
+    - 'El tronco *para* es el de los pueblos de costa e isla (caq. para/parawa, taí. bagua, lk. bara, wy. palá, paraujano pará, kalinago f. bálaoüa); la hermana de los Llanos dice manoa, que es laguna. Léxico, no cosmología.'
+
+# ══════════════════════════════════════════════════════════════════
+# 4. LO QUE DICEN AUTORES DEL s. XX SIN DATO DETRÁS (para no volver a
+#    tomarlo por fuente)
+# ══════════════════════════════════════════════════════════════════
+interpretaciones_sin_dato:
+  - id: cm24-i01
+    que: 'Una religión de los pescadores de la costa de Coro y Paraguaná'
+    contenido: >-
+      Antolínez sitúa «costa de Coro, Paraguaná» en una zona de «economía
+      parasitaria costera», de pescadores PRE-arahuacos, que «desarrolló
+      conductas religiosas primordiales propias de la condición social zoísta de
+      las culturas protomorfas».
+    fuente: hipotetico
+    procedencia: {obra: antolinez-1946-hacia-el-indio, pagina: 'impresa 160'}
+    por_que_no_sirve: 'Teoría de los ciclos culturales (Kulturkreis), sin un solo dato de la costa; y habla de pre-arahuacos, no de caquetíos. Es el único autor del repo que propone una religión costera, y no la describe.'
+  - id: cm24-i02
+    que: 'La bocina de caracol en el funeral caquetío'
+    contenido: >-
+      «Musical instruments reported are horns and shell trumpets. These
+      accompanied songs, such as those eulogizing the deceased at funerals, and
+      were played during attacks in battle.»
+    fuente: hipotetico
+    procedencia: {obra: steward-1948-hsai-4, pagina: 473}
+    por_que_no_sirve: 'Hernández de Alba 1948, para el noroeste en general y sin fuente; hda-20 (hsai_caquetios) ya no la localizó en las primarias. El canto fúnebre SÍ es de Oviedo p. 297; las bocinas, no.'
+  - id: cm24-i03
+    que: 'Curumón, espíritu de las olas'
+    contenido: 'La «teogonía karibe» de Antolínez (impresa 231), de La Borde vía Souvestre.'
+    fuente: hipotetico
+    procedencia: {obra: antolinez-1946-hacia-el-indio, pagina: 'impresa 231'}
+    por_que_no_sirve: 'Ver cm24-c-k07: en Breton, couloúmon es una constelación que anuncia el estado del mar, no un espíritu. Kalinago, no caquetío.'
+  - id: cm24-i04
+    que: 'La tortuga como contrafigura de la rana en el monolito de Siraba'
+    contenido: >-
+      Velasco cita la lectura de Acasio del monolito de Siraba: la rana de
+      arriba «aparenta ser expresión de una deidad», asociada a las Pléyades, y
+      «en oposición con su contrafigura simbólica de la Tortuga», Orión, en la
+      «cosmovisión arawaka/taína».
+    fuente: hipotetico
+    procedencia: {obra: velasco-2015-resistencia, pagina: 'pdf 51-52'}
+    por_que_no_sirve: 'Lectura del s. XXI desde la astronomía taína, sin decir si la tortuga es de mar o de tierra. Acasio 2023 no está en el repo (ficha propuesta). Es el único «animal del mar» que alguien pone en la piedra del Capubana, y es interpretación.'
+  - id: cm24-i05
+    que: 'La dueña del agua'
+    contenido: >-
+      La Yara / María Lionza que Antolínez liga al agua (y a la «Mae d'Agua»
+      amazónica, a Yemanyá) es de ríos, lagunas y la montaña de Sorte, en el
+      Yaracuy.
+    fuente: hipotetico
+    procedencia: {obra: antolinez-1946-hacia-el-indio, pagina: 'pdf 304-306'}
+    por_que_no_sirve: 'Agua dulce, Yaracuy (regla 4) y capas posteriores (creencia-017/018). No es un dueño del MAR.'
+  - id: cm24-i06
+    que: 'El «dios del mar» de las crónicas'
+    contenido: >-
+      El único «Creen que hay dioses en el mar» de las crónicas del repo es de
+      CHICORA, en las Carolinas, donde además tiran una estatua «de cabeza al
+      mar».
+    fuente: atestiguado
+    procedencia: {obra: angleria-1892, pagina: 'vol. 4 pp. 105, 107'}
+    por_que_no_sirve: 'Fuera de la esfera. Se escribe porque es lo que sale al buscar «dioses» y «mar» juntos.'
+
+# ══════════════════════════════════════════════════════════════════
+# 5. LO QUE NO HAY — ceros verificados (con dos grafías o más, con
+#    control positivo y leyendo las ventanas, no sólo contándolas)
+# ══════════════════════════════════════════════════════════════════
+lo_que_no_hay:
+  control_positivo: >-
+    El mismo barrido encuentra creencia × CIELO en las mismas obras (la
+    columna de control de `meta.medido`), y la lectura lo confirma: el poder
+    del Manaure (lluvia, granizo, trueno, heladas, secas), el boratio al que
+    se pregunta «si lloverá», el sol y la luna de los axaguas. Donde las
+    fuentes ponen lo sagrado, lo ponen en el cielo y en la cosecha: el cero
+    del mar no es un cero del método.
+  ceros:
+    - id: cm24-z01
+      que: 'un dueño, espíritu, madre o ser del MAR caquetío'
+      sondas: 'dueño, madre, espíritu, diablo, demonio, duende, encanto, sirena, alma, dios × mar, pescado, perla, concha, tortuga, tiburón, ola, playa, marea (es); devil, spirit, god, deity, sacred × sea, fish, shell, turtle (en); Teufel, Geist, Gott × Meer, Fisch (de)'
+      donde: 'los textos de `meta.medido` (Aguado incluido); leídas las ventanas con un nombre de la costa occidental cerca, y todas en las obras de la costa'
+      resultado: 'CERO. Las voces caquetías de creencia (barsure, boratio, kana, kapu, kapo, kapubana, buio, sawaka) y las del mar (para, parawa, samuro, supi; kari, hipotética) no comparten ni una glosa.'
+    - id: cm24-z02
+      que: 'un mito caquetío del origen del mar, de los peces, de las islas o de los antepasados llegados por mar'
+      resultado: 'CERO. El único mito del origen del mar del repo es taíno (Yaya, Pané caps. IX-X; cm-c2). El de los antepasados llegados por mar es kalinago (Breton pp. 229-230).'
+    - id: cm24-z03
+      que: 'una ofrenda, un canto, un conjuro o un rito de pesca o de navegación caquetío'
+      resultado: 'CERO, salvo la adivinación doméstica con tabaco antes de salir a pescar, que es de todas las faenas (cm24-03). El ayuno y el sacrificio son antes de la guerra (p. 329), no antes del mar.'
+    - id: cm24-z04
+      que: 'un tabú caquetío de comida marina, de día de pesca o de nombre en el mar'
+      resultado: 'CERO. El «día prohibido» que dice el prompt de Jachos no tiene fuente (decisión b). El tabú de comida marina de la esfera es kalinago (el manatí); el de navegar, kalinago (el Can Mayor).'
+    - id: cm24-z05
+      que: 'el alma o el muerto que va al mar'
+      resultado: 'CERO caquetío. La única voz atribuida dice ABAJO (sawaka, cm24-07). Jepira, el país de los muertos wayuu en el Cabo de la Vela, es wayuu (creencia-009, reconstruido).'
+    - id: cm24-z06
+      que: 'el mar en el poder del Manaure'
+      resultado: 'CERO. Lluvia, granizo, trueno, relámpago, heladas, secas, cosecha (cm24-02); vive tierra adentro.'
+    - id: cm24-z07
+      que: 'un objeto marino DENTRO de una urna de la costa de Falcón; una imagen marina en la loza o la piedra caquetía; una bocina de botuto dabajuroide'
+      resultado: 'CERO en lo que hay en el repo (cm24-a02, a04, a05). En las ABC, dientes de tiburón y concha en dos urnas de Curazao (cm24-a01).'
+    - id: cm24-z08
+      que: 'sirenas, encantos o seres del mar en la tradición paraguanera del s. XX'
+      resultado: 'CERO en Esteves (seis partes) y en el dictado de Medina. Las leyendas de Esteves son de tierra (la cueva de Jague, las ánimas de músicos, el Capó del cerro).'
+  lo_que_no_esta_en_el_repo: >-
+    Lo que podría cambiar algún cero, y no está: Simón, Noticias historiales
+    (copia a Aguado; dominio público, sin bajar); el tomo II de Aguado (sin
+    bajar; es Caracas y el centro); Arellano Moreno, Relaciones geográficas
+    (con derechos); Versteeg y Rostain 1997 (Tanki Flip) y Serrand 1999 (qué se
+    hacía con cada parte del botuto); Haviser 1987; Osgood y Howard 1943 y
+    Nomland 1933-1935 (Cayerúa y Coro de primera mano); Wagenaar Hummelinck y
+    Dubelaar (las pictografías de las ABC); Morón 2015, Acasio 2023, Caguao y
+    Morón 2024 (los petroglifos del cerro); Antczak y Antczak 2008 («Between
+    food and symbol», valencioide); los vols. 2-3 de Anglería (la Déc. III,
+    con el manatí criado); Brett 1868 (el mito de Orehu); Perrin 1992 y Paz
+    Reverol 2018 (Pulowi). De la crónica del XVI sobre la costa sólo falta
+    Simón, que copia a Aguado.
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LO QUE ESTÁ ESCRITO SIN FUENTE, Y DÓNDE
+# ══════════════════════════════════════════════════════════════════
+la_intuicion_escrita:
+  - donde: 'curiana_sim/curiana_agents_era2.py (GENERADO desde 6-fusion/elenco_era2.yaml), system_prompt de Jachos, tier 1, boratio de pueblo de GUARANAO'
+    texto: '«Nunca botas la canoa sin pedir permiso al dueño del agua. Viste ahogarse a un tío por salir un día prohibido.»'
+    alcance: >-
+      Es la ÚNICA frase de los 63 prompts de la era 2 que enseña un ser del
+      agua (medido: frases del system_prompt con un término del agua y uno de
+      creencia; las otras dos son «Hablas en señales del mar», que es estilo,
+      y el miedo de Tigi al agua honda, que es un sueño). El motor lo ENSEÑA:
+      si un run habla del dueño del agua, no es emergencia (Miguel,
+      2026-09-23: «lo que emerge es el producto»). Decisión (b).
+  - donde: '3-mundo/CULTURA_CAQUETIA.md §1 «Espíritus dueños y el mundo poblado»'
+    texto: '«[reconstruido] Para la mente arahuaca, los lugares y los recursos tienen dueños espirituales: el mar, los bancos de peces, el manglar, la sal, los animales de caza. Por eso el pescador pide permiso antes de botar la canoa»'
+    alcance: >-
+      `reconstruido` exige comparanda citada (creencia.yaml, cabecera) y el
+      párrafo no cita ninguna. Lo que la comparanda del repo da para el mar
+      está en §3; del «pide permiso» no hay nada, ni caquetío ni vecino.
+      Decisión (a).
+  - donde: '3-mundo/CULTURA_CAQUETIA.md §4 «Un día típico»'
+    texto: '«los pescadores revisan redes y piden permiso al mar en voz baja»'
+    alcance: 'La sección entera se declara «composición etnográfica plausible, no un documento». Se cambia con (a) si (a) se cambia.'
+  - donde: '5-experimento/disenos/02_motor_ambiental.md'
+    texto: '«Shaboro sueña que "el dueño del mar se llevó los peces"»'
+    alcance: 'Ejemplo de diseño del motor ambiental, no canon. Se anota para que nadie lo lea como dato.'
+  - donde: 'curiana_sim/curiana_agents.py (ERA 1), Bagre-ko'
+    texto: '«pides permiso antes» / «el dueño espiritual de las aguas»'
+    alcance: 'Era 1: no corre en la serie de la era 2. Se anota.'
+
+# ══════════════════════════════════════════════════════════════════
+# 7. LO QUE RESULTÓ FALSO AL MEDIRLO (en el repo, no en la fuente)
+# ══════════════════════════════════════════════════════════════════
+correcciones:
+  - que: 'cm-s3 de FA3 (fauna_paraguana_mar) cita «viciosos de comida de carne y pescado» como de «esta gente» de la costa'
+    realidad: 'Pérez de Tolosa lo dice de los caquetíos de los LLANOS («aunque algo difieren en la habla á los de Coro»), Fernández Duro 1885 t. II p. 234; Arcaya p. 46 lo dice claro: «los Caquetíos de los Llanos». Las otras dos citas de cm-s3 sí son de la costa.'
+  - que: 'haviser-1990: «Nada de ajuares con procedencia»'
+    realidad: 'Vale para los dos entierros directos de 1980; las dos urnas de De Savaan traen objetos entre los huesos (cm24-a01). Corregido en su bitácora.'
+  - que: 'cm-n3 de FA3: «un botuto con la punta cortada (bocina) en un sitio dabajuroide» subiría la bocina'
+    realidad: 'En Las Aves la espira agujereada es para sacar la carne (cm24-a05). El criterio es: ápice cortado y pulido como embocadura, fuera de contexto alimentario.'
+  - que: 'La «teogonía» kalinago con un espíritu de las olas (Antolínez)'
+    realidad: 'No está en Breton (cm24-c-k07).'
+  - que: 'rouse-cruxent-1963'
+    realidad: 'El PDF pesa 0 bytes: sigue no-disponible.'
+  - que: 'cm-c3 de FA3 (Pulowi y las tortugas) como «atestiguado»'
+    realidad: 'En el repo descansa en una tesis que lo cita de terceros; Pulowi sale 0 veces en Jahn y en el Cuadernillo (cm24-c-w01). Es `reconstruido` como mucho.'
+  - que: 'creencia-009 cita «Jahn 1927:229» para Jepira'
+    realidad: 'Es la página del PDF; la impresa es 184. No tiene `procedencia`, y la «pesca» del más allá no está en Jahn (cm24-c-w02).'
+  - que: 'taino2_las_casas_apologetica.yaml lx.13: «Yocahu Yagua Maorocotí»'
+    realidad: 'La imagen de la p. 321 dice «Vagua»: error de la capa de texto (cm24-c-t02).'
+  - que: '4-fuentes/brinton-1871.md: Brinton «no dice de qué misionero lo toma» (Orehu)'
+    realidad: 'Lo dice en la nota 49 de la p. 18: Brett, Indian Tribes of Guiana, 1868 (cm24-c-l01).'
+  - que: 'transmision-018 y angleria-1892.md: el areíto en «vol. 4, p. 236»'
+    realidad: 'Es la página del PDF; la impresa es 228.'
+  - que: 'lexicón: `huracan` «espíritu del viento destructor… ser sobrenatural arahuaco» y `cobo` «trompeta ritual»'
+    realidad: 'Sin procedencia. Oviedo, Las Casas y Anglería glosan huracán como tormenta; la tormenta de Pané es el cemí Guabancex. Pané dice «el cobo es el caracol de mar»; no hay trompeta de caracol taína en el repo (los caracoles de Anglería y de Paria son sonajas).'
+  - que: 'CULTURA_CAQUETIA.md §1: Pulowi y Juyá, y «la lengua hermana más documentada»'
+    realidad: 'Citan tres blogs; Juyá tiene procedencia en el repo (Guerra Curvelo, Cuadernillo pp. 26-27; Jahn p. 362) y Pulowi ninguna primaria; y llamar hermana al wayuu va contra D11.'
+  - que: 'lexicón: la nota de `barana` («cognado de CQ para, LK bara»)'
+    realidad: 'Goeje p. 55 la da como forma de HOMBRES, caribe/tupí (parana); la del lado arahuaco es la de mujeres, bálaoüa/balaua (cm24-c-k01).'
+  - que: 'oliver-1989-cap4: desfase constante pdf − 27'
+    realidad: 'En el Apéndice C es − 26 (pdf 647 = p. 621).'
+
+# ══════════════════════════════════════════════════════════════════
+# 8. VEREDICTO — dato, inferencia, intuición (regla 2)
+# ══════════════════════════════════════════════════════════════════
+veredicto:
+  dato:
+    que: 'el mar en la VIDA de la costa, y dónde está lo sagrado'
+    ids: [cm24-01, cm24-02, cm24-03, cm24-04, cm24-05, cm24-06, cm24-a01, cm24-a02, cm24-a04, cm24-a05]
+    con_lo_de_FA3: [cm-s1, cm-s2, cm-s3 (sólo sus dos citas costeras), cm-s4, cm-s5, cm-s6, cm-s8]
+    en_una_frase: >-
+      El mar es despensa, moneda, camino y parentesco, con fuente; lo sagrado
+      que las fuentes le ven a esta gente es del cielo y del maíz.
+  inferencia:
+    que: 'lo que se sostiene por análisis o por comparanda etiquetada'
+    ids: [cm24-07, cm24-08, cm24-09]
+    comparanda: 'la de §3, que dice cómo el mar entra en la creencia de los vecinos y NO se proyecta'
+  intuicion:
+    que: 'lo que no tiene fuente'
+    items:
+      - 'un dueño del mar al que el pescador pide permiso (cm-n1): escrito en CULTURA_CAQUETIA §1 y §4 y en el prompt de Jachos; decisiones (a) y (b)'
+      - 'que el mar fuera ESENCIAL en la cosmovisión (cm-n2): sin fuente, y las fuentes apuntan a otro lado'
+      - 'la guarura ritual (cm-n3): sin fuente; la bocina es señal (s. XX, y kalinago)'
+  hipotesis_que_queda: >-
+    Lo sagrado caquetío que conocemos es del cielo y de la tierra de labranza;
+    el mar es lo cotidiano, lo que se trueca y lo que se cruza para ver a los
+    parientes. Se sostendría o caería con arqueología de las ABC que no está
+    en el repo (lo_que_no_hay.lo_que_no_esta_en_el_repo), no con más crónica:
+    la de la costa está barrida entera y Simón copia a Aguado.
+  para_la_simulacion: >-
+    Nada que sembrar. El canon no da un ser del mar, así que un agente que lo
+    invente está emergiendo, y eso se mide —siempre que el motor deje de
+    enseñarlo (decisión b)—. Lo que sí puede entrar, porque es dato: el
+    pescador que lee el tabaco antes de botar la canoa (cm24-03), el funeral
+    con maçato y el cuenco de beber (cm24-01, cm24-a02), el diente de tiburón
+    con el muerto en las islas (cm24-a01), la concha como valor (cm24-05).

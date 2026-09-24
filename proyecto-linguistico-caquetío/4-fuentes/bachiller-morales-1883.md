@@ -144,3 +144,12 @@ hembra y viva». Bachiller dice que trabaja sobre la «versión en italiano» de
 Pané. De paso, cita a Oviedo para `bagua` 'mar' («no digo baygua…»), que fue
 la pista para encontrarla en el cuerpo de Oviedo t. I p. 436. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml`
 §zayas.manaya y §zayas.bagua.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se halló:** «Bagua. En la Española el mar» (p. 209, citando a Oviedo) y
+«Yocahu-bagua (vagua) Maorocoti» (p. 350), sin glosar el nombre con el mar; el
+manatí manso Matum (pp. 319, 323), de segunda mano (la fuente es la Déc. III de
+Anglería, que no está en el repo); Atabey glosada «madre de Dios», no del agua.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

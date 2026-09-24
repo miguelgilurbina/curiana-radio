@@ -59,3 +59,18 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 ## Enlaces
 
 [[rouse-cruxent-1963]] · [[antczak-2017-cariban]] · [[02_ecologia_golfete]]
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Se preguntó** si hay en Las Aves depósitos rituales o bocinas de botuto
+dabajuroides. **Se halló:** 397 botutos (NMI) de AG/A con agujeros circulares
+en la espira «which facilitated the extraction of the animal» y ápices
+machacados usados como martillo (p. 9, imagen): un botuto perforado en la
+punta NO es por sí una bocina. Trabajo en concha escaso; tortugas sin cabeza;
+el único motivo nombrado en la loza dabajuroide de las islas es un «sol»
+radial (p. 15). Lo «ritual» de las islas (los depósitos de Dos Mosquises, Los
+Roques como «sacred landscape») es VALENCIOIDE (pp. 29-30): regla 4.
+
+**No se halló:** ningún entierro ni depósito ritual dabajuroide en Las Aves.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.

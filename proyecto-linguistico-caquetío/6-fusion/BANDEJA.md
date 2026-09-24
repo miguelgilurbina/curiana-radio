@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-24**.
 
-**7643 ítems propuestos** en 152 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
+**7657 ítems propuestos** en 153 propuestas, más **57 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -42,6 +42,7 @@ editar_a_mano: no
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml` | ? | 7 |  |
+| `cosmovision_marina_2026-09-24.yaml` | ? | 14 |  |
 | `cronicas_contacto_costa_occidental_2026-09-22.yaml` | ? | 20 |  |
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
@@ -219,6 +220,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `arqueologia-insular-falcon-2026-09-22.md` | La arqueología de las islas y de Falcón: sitios, fauna, movimiento y mar (M8) |
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
+| `cosmovision-marina-2026-09-24.md` | El mar caquetío: economía, moneda, camino, parientes y nombre, con fuente; creencia, ningu |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
 | `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
 | `d11-voces-wayuu-2026-09-23.md` | D11 · las voces wayuu que quedan en el habla — qué pasa con cada una |

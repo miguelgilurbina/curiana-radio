@@ -283,3 +283,16 @@ Klüpfel fuera del pasaje). Ninguna palabra guaycarí. Y **no dice**
 de Margarita; «de éstos se cree que eran rama de la familia Guarauna».
 
 Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barridas la traducción de 1916 y la edición alemana de 1859 (que trae además a Staden: sus ventanas son tupinambá y no cuentan). Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `federmann1916`: 3 ventanas creencia × mar (3 con un nombre de la costa occidental cerca), 0 creencia × cielo de control; `federmann1859`: 11 ventanas creencia × mar (0 con un nombre de la costa occidental cerca), 13 creencia × cielo de control.
+
+**Se halló:** El dato más fino del barrido: los AYAMANES del interior «no se adornan sino con pequeñas piedras negras y brillantes […] y también de conchas marítimas que compran a otras naciones y que son raras en este pueblo tan lejano del mar que no lo conocen ni a sus orillas se han aproximado nunca» (p. 45). La concha vale lejos del mar: es un bien de prestigio que la costa exporta (regla 4: ayamán; la costa es el origen). El «botuto» de guerra de la p. 35 es del interior y es palabra de Arcaya, el traductor.
+
+**No se halló:** Cero creencia del mar en la costa (cap. I Paraguaná, II-III Coro).

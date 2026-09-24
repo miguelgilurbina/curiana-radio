@@ -356,3 +356,16 @@ contaba como taíno, igual que las otras tres voces de esa sección.
 Propuesta: `6-fusion/taino_tradicion_viva_2026-09-24.yaml` §komoho y §la_fuga.
 
 **✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): `komoho` tiene a Oviedo como segunda fuente y la glosa 'fruto del cardón de las tunas (higo de tuna)' (T2, por `SIG_CURADO` del minador de Zavala); Paraguaná toma la p. 205 como procedencia del NOMBRE (T2b, toponimo-018; la glosa sigue en #109); y la lista maestra taína ya no lee la sección de Venezuela (T3).
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se halló (comparanda taína, lib. XIII cap. IX, visto en imagen):** «Llaman los
+indios de aquesta Isla Española á la mar *bagua*» (p. 436), en un capítulo de
+peces, sin relación con Yocahu (`yocah` = 0 en el tomo); el reverso, criado en
+agua de mar, al que se le dice «que sea *manicato*» y que «entiende muy bien el
+sermon humano» (pp. 435-436), sin nombre indígena en Oviedo; huracán =
+«tormenta ó tempestad muy excesiva» (lib. VI cap. III, pp. 167-168). **No se
+halló** el manatí criado (Matum): Oviedo sólo discute la etimología de Mártir (p.
+434).
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

@@ -103,3 +103,11 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 ## Enlaces
 
 [[antczak-2015-las-aves]] · [[02_ecologia]]
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Se intentó** leer la obra para los ajuares y la iconografía dabajuroide: el
+PDF del repo pesa **0 bytes** (en el worktree y en la copia principal). Sigue
+`no-disponible`.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.
