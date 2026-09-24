@@ -1,0 +1,214 @@
+{
+  "generado": "2026-09-24",
+  "n": 5,
+  "preguntas": [
+    {
+      "slug": "la-hermana-mas-cercana",
+      "pregunta": "¿A qué lengua hermana se parece más el caquetío?",
+      "planteamiento": "El caquetío es arahuaco, pero no dejó gramática: se reconstruye mirando a sus hermanas. Cuál de ellas es la más cercana decide de dónde sale cada voz reconstruida. Se tomaron las voces atestiguadas de concepto directo y se compararon, forma contra forma, con la misma idea en cada hermana.",
+      "medido": [
+        "Cara a cara, el habla de mujeres kalinago gana en 7 conceptos, el lokono en 7 y empatan en 7.",
+        "El taíno sólo tiene forma para 7 de los 24 conceptos: su media no se puede comparar con la de las demás.",
+        "«Se parece» quiere decir una similitud de 0,5 o más."
+      ],
+      "barras": {
+        "titulo": "Similitud media con el caquetío atestiguado (0 a 1)",
+        "filas": [
+          {
+            "etiqueta": "kalinago, habla de mujeres",
+            "valor": 0.41,
+            "detalle": "8 de 21 conceptos se parecen",
+            "n": 21
+          },
+          {
+            "etiqueta": "taíno",
+            "valor": 0.404,
+            "detalle": "2 de 7 conceptos se parecen",
+            "n": 7
+          },
+          {
+            "etiqueta": "caribe insular (columna de Oliver)",
+            "valor": 0.362,
+            "detalle": "5 de 13 conceptos se parecen",
+            "n": 13
+          },
+          {
+            "etiqueta": "lokono",
+            "valor": 0.361,
+            "detalle": "8 de 24 conceptos se parecen",
+            "n": 24
+          },
+          {
+            "etiqueta": "wayuu (guajiro)",
+            "valor": 0.306,
+            "detalle": "8 de 24 conceptos se parecen",
+            "n": 24
+          },
+          {
+            "etiqueta": "maipure",
+            "valor": 0.285,
+            "detalle": "5 de 19 conceptos se parecen",
+            "n": 19
+          },
+          {
+            "etiqueta": "achagua",
+            "valor": 0.283,
+            "detalle": "4 de 23 conceptos se parecen",
+            "n": 23
+          },
+          {
+            "etiqueta": "paraujano",
+            "valor": 0.236,
+            "detalle": "2 de 21 conceptos se parecen",
+            "n": 21
+          },
+          {
+            "etiqueta": "kalinago, habla de hombres",
+            "valor": 0.22,
+            "detalle": "2 de 21 conceptos se parecen",
+            "n": 21
+          }
+        ]
+      },
+      "lo_que_falta": "Más conceptos compartidos. Con dos docenas de palabras, un empate no distingue entre las dos candidatas.",
+      "estado": "abierta",
+      "fuentes": [
+        {
+          "ruta": "proyecto-linguistico-caquetío/6-fusion/medicion_cercania_hermanas_2026-09-23.yaml",
+          "que": "el cómputo A de D11 (computo_d11.py, 2026-08-31): 24 atestiguadas de concepto directo, fonemización D5, similitud = 1 − Levenshtein/longitud máxima, mejor variante",
+          "fecha": "2026-09-23"
+        }
+      ],
+      "enlaces": [
+        {
+          "href": "/kaketiana/lexicon?capa=reconstruido",
+          "texto": "Las voces reconstruidas"
+        },
+        {
+          "href": "/kaketiana/lengua/metodo-comparativo",
+          "texto": "El método comparativo"
+        }
+      ]
+    },
+    {
+      "slug": "angulo-molina",
+      "pregunta": "¿Quién fue Angulo Molina?",
+      "planteamiento": "El glosario de Zavala Reyes (2015) es la fuente central del caquetío atestiguado, y lo compila a partir de nueve autores que nombra por sus siglas. El que más aporta es «AM», Angulo Molina. Zavala no da su obra: ni título, ni año, ni editorial, y no se ha encontrado en ninguna otra parte.",
+      "medido": [
+        "En el glosario, AM aporta 135 entradas; el siguiente compilador, 81.",
+        "Los 19 verbos de acción del glosario son suyos: todo el verbo caquetío que se conoce es una sola lista de un autor que no sabemos quién es.",
+        "Hoy, 81 de las 184 voces atestiguadas del lexicón llegan por él, y 68 sólo por él."
+      ],
+      "lo_que_falta": "Encontrar la obra. La pista más fuerte es Hernández Baño, Los Caquetíos de Falcón (Coro, 1984), que no está en el repositorio.",
+      "estado": "abierta",
+      "fuentes": [
+        {
+          "ruta": "proyecto-linguistico-caquetío/6-fusion/propuesta_nominalizador_2026-09-21.yaml",
+          "que": "la independencia de la fuente: entradas y verbos por compilador",
+          "fecha": "2026-09-21"
+        },
+        {
+          "ruta": "proyecto-linguistico-caquetío/curiana_sim/curiana_lexicon.py",
+          "que": "las voces atestiguadas con la sigla AM, contadas al exportar",
+          "fecha": "2026-09-24"
+        },
+        {
+          "ruta": "proyecto-linguistico-caquetío/4-fuentes/angulo-molina.md",
+          "que": "qué se sabe y dónde buscar",
+          "fecha": null
+        }
+      ],
+      "enlaces": [
+        {
+          "href": "/kaketiana/bibliografia#angulo-molina",
+          "texto": "Angulo Molina en la bibliografía"
+        },
+        {
+          "href": "/kaketiana/lexicon?capa=atestiguado",
+          "texto": "Las voces atestiguadas"
+        }
+      ]
+    },
+    {
+      "slug": "que-quiere-decir-ana",
+      "pregunta": "¿Qué quiere decir -ana, la terminación de Curiana y Paraguaná?",
+      "planteamiento": "La lectura de siempre es «lugar de». Para comprobarla se contaron los topónimos en -ana del inventario de Esteves (1989), la fuente que más nombres de lugar de Paraguaná analiza.",
+      "medido": [
+        "Esteves tiene 13 nombres en -ana. Glosados como «lugar de»: 0.",
+        "7 son en realidad -bana, «cerro, sitio alto»; 2 llevan -ana dentro de la raíz; 4 —Paraguaná entre ellos— no tienen glosa.",
+        "Cuando Esteves quiere decir «lugar de», usa -bacoa."
+      ],
+      "lo_que_falta": "Una fuente que glose -ana. Hasta entonces el proyecto la usa como terminación sin significado declarado, y no le inventa uno.",
+      "estado": "abierta",
+      "fuentes": [
+        {
+          "ruta": "proyecto-linguistico-caquetío/6-fusion/censo_ana_esteves_109.yaml",
+          "que": "#109 — ¿cuántos topónimos en -ana/-aná tiene Esteves, y cuántos glosa como 'lugar de'?",
+          "fecha": "2026-09-07"
+        }
+      ],
+      "enlaces": [
+        {
+          "href": "/kaketiana/lengua/toponimia",
+          "texto": "La toponimia como fuente"
+        },
+        {
+          "href": "/kaketiana/bibliografia#esteves-1989",
+          "texto": "Esteves 1989"
+        }
+      ]
+    },
+    {
+      "slug": "puede-un-pueblo-inventar-una-raiz",
+      "pregunta": "¿Puede un pueblo inventar una raíz nueva?",
+      "planteamiento": "En la simulación, los agentes acuñan palabras cuando les falta una. Casi todas combinan raíces y afijos que ya existen. Pero algunas traen una raíz que no sale de ninguna parte del lexicón, y a veces de otra lengua. Hoy el instrumento las deja fuera. Las lenguas reales, en cambio, sí inventan raíces.",
+      "medido": [
+        "En toda la base, 131 de 644 palabras inventadas por los agentes llevan una raíz que no está en el lexicón.",
+        "En la cadena de control, 11 de 32, y 5 de ellas llegaron a adoptarse.",
+        "Una llegó a fijarse como la palabra de la comunidad para «cometa»: lumina-bana-uco, sobre el latín lumina, el día 2."
+      ],
+      "lo_que_falta": "Decidir dónde está la frontera entre una raíz nueva legítima y una palabra ajena disfrazada. Es una decisión abierta del proyecto.",
+      "estado": "abierta",
+      "fuentes": [
+        {
+          "ruta": "proyecto-linguistico-caquetío/6-fusion/medicion_raices_de_ninguna_parte_2026-09-20.yaml",
+          "que": "núcleo = el token sin los afijos que TODAS_LAS_REGLAS declara caquetíos, quitados por los bordes; raíz de ninguna parte = ningún segmento del núcleo es voz de VOCABULARIO_BASE, FUERA_DEL_HABLA ni _RAICES_VERB",
+          "fecha": "2026-09-20"
+        },
+        {
+          "ruta": "proyecto-linguistico-caquetío/6-fusion/issues-pendientes/raiz-inventada-puede-un-pueblo-inventar-una-raiz-2026-09-20.md",
+          "que": "la pregunta y sus opciones",
+          "fecha": "2026-09-20"
+        }
+      ],
+      "enlaces": [
+        {
+          "href": "/kaketiana/experimento",
+          "texto": "El experimento"
+        }
+      ]
+    },
+    {
+      "slug": "por-que-convergen",
+      "pregunta": "Cuando dos pueblos se juntan, ¿hablan igual porque ven lo mismo o porque se copian?",
+      "planteamiento": "La simulación pone a dos comunidades vecinas de Paraguaná, Guaranao y Amuay, a vivir sus días por separado y a encontrarse en el cerro. Si terminan nombrando las cosas nuevas con las mismas palabras, puede ser porque vieron lo mismo o porque una palabra viaja con quien la lleva.",
+      "medido": [],
+      "lo_que_falta": "La corrida base: la primera serie con el motor ya cerrado. Ella dirá quién dijo primero cada palabra, en qué lugar, y si cruzó de un pueblo al otro antes o después del encuentro.",
+      "estado": "espera-la-corrida-base",
+      "fuentes": [
+        {
+          "ruta": "proyecto-linguistico-caquetío/5-experimento/BITACORA_RUNS.md",
+          "que": "la bitácora de las corridas",
+          "fecha": null
+        }
+      ],
+      "enlaces": [
+        {
+          "href": "/kaketiana/experimento#escena",
+          "texto": "El mapa de la escena"
+        }
+      ]
+    }
+  ],
+  "faltan": []
+}
