@@ -167,6 +167,33 @@ komoho:
     cronista. p. 315 (pdf 434) por capa de texto: «este comoho es mas
     sabroso mucho que las tunas».
 
+paraguana:
+  pedido: 'Miguel, 2026-09-24: «Que interesante que mencionen Paraguaná como palabra Taina no?» … «Vale, me parece»'
+  que: >-
+    Ninguna fuente llama taína a «Paraguaná»: lo hizo la lista maestra (§la_fuga).
+    Lo que Oviedo dice es otra cosa, y vale más: el nombre ya era el de la
+    gente del lugar en 1540. Historia general, lib. VI cap. XIX, p. 205
+    (VERIFICADO EN IMAGEN, pdf 324 de
+    fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf):
+    «En el camino que hay desde la cibdad de Coro, yendo al cabo de Sanct
+    Roman, que los indios llaman á aquella provinçia Paraguana, es un cabo que
+    sale á la mar veynte y çinco leguas ó mas». Oviedo toma juramento a dos
+    testigos ante la Audiencia de Santo Domingo el 13 de julio de 1540 (p.
+    206) y el capítulo trata de un espejismo en el istmo: el nombre llega de
+    paso, que es lo que lo hace fiable.
+  lo_que_cambia: >-
+    toponimo-018 (paraguaná) está en el canon con `procedencia: null` y `deuda:
+    sin-procedencia`. Oviedo p. 205 le da procedencia a la FORMA (así se
+    llamaba, y en boca de los indios, en 1540); NO a la glosa, que sigue en
+    #109 (el -ná). Propuesta: procedencia oviedo-y-valdes-1851 p. 205 para el
+    nombre, con la lectura «los indios llaman á aquella provinçia Paraguana».
+  la_conexion: >-
+    El primer segmento del nombre es para / parawa 'mar' (Zavala #190-191),
+    la misma palabra que el caquetío comparte con el habla de MUJERES kalinago
+    (balaua, barawa: kalinago_mujeres_2026-09-23.yaml §prueba). Es parentesco
+    arahuaco de familia, no un préstamo taíno.
+  como_se_aplica: 'por migrar_toponimos.py sobre lexicon_toponimos.py: 2-lengua/toponimos.yaml no se edita a mano'
+
 # ══════════════════════════════════════════════════════════════════════
 # 5. LAS DECISIONES
 # ══════════════════════════════════════════════════════════════════════
@@ -187,6 +214,9 @@ decisiones:
   - id: T2
     pregunta: '¿komoho suma a Oviedo como segunda atestación, con la glosa precisada?'
     recomendacion: 'sí (p. 313 ya vista en imagen)'
+  - id: T2b
+    pregunta: '¿toponimo-018 (paraguaná) toma a Oviedo p. 205 como procedencia del nombre?'
+    recomendacion: 'sí (verificado en imagen); la glosa sigue en #109'
   - id: T3
     pregunta: '¿se arregla la lista maestra (fuera las cuatro de Venezuela; kiba dentro de siba)?'
     recomendacion: sí

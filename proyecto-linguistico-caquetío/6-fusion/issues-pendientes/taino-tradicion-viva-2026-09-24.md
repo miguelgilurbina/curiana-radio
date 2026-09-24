@@ -59,6 +59,10 @@ tradición viva. Hay que volver a correrla.
   Recomendado: **sí**.
 - **T2:** ¿`komoho` suma a Oviedo y precisa la glosa como 'fruto del cardón
   de las tunas (higo de tuna)'? Recomendado: **sí**.
+- **T2b:** ¿*Paraguaná* toma a Oviedo (p. 205, visto en imagen) como fuente
+  del nombre? Hoy figura sin fuente. Oviedo dice que «los indios llaman á
+  aquella provinçia Paraguana», con testigos de 1540. La glosa sigue abierta
+  en #109. Recomendado: **sí**.
 - **T3:** ¿se arregla la lista maestra? Recomendado: **sí**.
 - **T4:** ¿se anota la pareja taína en las ocho voces caquetías? Es solo
   una nota. Recomendado: **sí**.
