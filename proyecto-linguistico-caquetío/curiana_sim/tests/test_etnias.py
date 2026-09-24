@@ -32,15 +32,37 @@ def test_la_costera_sin_fuente_ni_decision_es_error():
 
 
 def test_la_costera_con_fuente_pasa():
-    p = CE.validar_polity([_etnia(polity_caquetia="costera")])
+    p = CE.validar_polity([_etnia(polity_caquetia="costera", epoca="precontacto")])
     assert not [x for x in p if x["nivel"] == "error"]
 
 
 def test_la_costera_como_canon_simulacion_pasa_si_declara_la_deuda():
     p = CE.validar_polity([_etnia(polity_caquetia="costera", procedencia=None,
-                                  etiqueta="canon-simulacion",
+                                  etiqueta="canon-simulacion", epoca="precontacto",
                                   deuda="sin-procedencia")])
     assert not [x for x in p if x["nivel"] == "error"]
+
+
+# ── la época del contacto (dp.2.03 de #222, 2026-09-24) ───────────────
+
+def test_la_costera_sin_epoca_es_error():
+    """Con fuente y polity costera, una ficha sin época diría que el vecino
+    es del siglo que se simula aunque la fuente sea de 1513 (regla 3). Es el
+    problema de esquema que levantaron T5 y T8, las dos campañas del taíno."""
+    p = CE.validar_polity([_etnia(polity_caquetia="costera")])
+    assert any(x["codigo"] == "costera-sin-epoca" for x in p)
+
+
+def test_la_epoca_es_un_vocabulario_cerrado():
+    p = CE.validar_vocabularios([_etnia(epoca="siglo XV")])
+    assert any(x["codigo"] == "epoca-ilegal" for x in p)
+    for valor in CE.EPOCAS:
+        assert not CE.validar_vocabularios([_etnia(epoca=valor)])
+
+
+def test_fuera_de_la_costera_la_epoca_no_se_exige():
+    p = CE.validar_polity([_etnia(polity_caquetia="llanos")])
+    assert not [x for x in p if x["codigo"] == "costera-sin-epoca"]
 
 
 def test_canon_simulacion_sin_deuda_es_error():

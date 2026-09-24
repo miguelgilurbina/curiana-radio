@@ -80,8 +80,12 @@ decisiones:
       `epoca` con vocabulario cerrado (precontacto · contacto-temprano ·
       colonial · varias), exigido cuando `polity_caquetia: costera`, validado
       por curiana_sim/compilar_etnias.py (el 9.º guardián; no es motor).
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - 'curiana_sim/compilar_etnias.py: EPOCAS, `epoca` en los vocabularios cerrados (matiz en `epoca_nota`) y el error `costera-sin-epoca`'
+      - 'curiana_sim/tests/test_etnias.py: tres tests nuevos (costera sin época, vocabulario cerrado, fuera de la costera no se exige)'
+      - '3-mundo/etnias.yaml: el esquema de la cabecera, y `epoca: precontacto` en etnia-008 (la única costera al aplicar: la ficción del elenco en la ventana simulada)'
+    no_se_hizo: 'no se rellenó `epoca` en las fichas no costeras: la decisión la exige sólo para la costera, y fecharlas es leer cada fuente otra vez'
 
   dp.2.04:
     tema: los vecinos que faltan en etnias.yaml

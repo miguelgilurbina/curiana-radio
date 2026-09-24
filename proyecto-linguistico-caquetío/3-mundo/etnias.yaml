@@ -18,7 +18,12 @@
 #             (polity_caquetia admite además `ninguna` desde tf.7 B,
 #             2026-09-23: el vecino de la esfera que no toca ninguna polity;
 #             exige `tipo_de_contacto: ninguno`)
+#             · epoca (desde dp.2.03 de #222, 2026-09-24: precontacto ·
+#             contacto-temprano · colonial · varias — de CUÁNDO es el
+#             contacto que la ficha afirma; obligatoria con
+#             `polity_caquetia: costera`, regla 3)
 #   matiz     aviso_familia · polity_nota · contacto_nota · intensidad_nota
+#             · epoca_nota
 #   fuente    procedencia{obra, pagina, via} — obra y via son claves foráneas
 #             contra 4-fuentes/bibliografia.yaml — o `deuda: sin-procedencia`
 #   cruces    ver_tambien: lista de hechos del corpus o archivos del repo
@@ -304,6 +309,10 @@ etnias:
     contacto_nota: comercio y, en la memoria de Chiriware, un raid
     intensidad: baja
     intensidad_nota: episódica
+    epoca: precontacto
+    epoca_nota: >-
+      Es la ficción del elenco dentro de la ventana simulada (s. XIV-XV), no
+      un contacto documentado: la época dice DÓNDE la pone la simulación.
     procedencia: null
     deuda: sin-procedencia
     ver_tambien: [6-fusion/oliver_324_caribes.yaml (§5), geografia_politica-013]
