@@ -101,7 +101,7 @@ export default function DiccionarioVivo({
                 type="button"
                 onClick={() => elegir(c.key)}
                 aria-pressed={activa}
-                className="group h-full w-full rounded-md border px-3.5 py-3 text-left transition-colors"
+                className="group flex h-full w-full flex-col justify-start rounded-md border px-3.5 py-3 text-left transition-colors"
                 style={{
                   borderColor: activa ? c.color : "var(--sim-rule)",
                   background: activa ? "var(--sim-paper-deep)" : "transparent",

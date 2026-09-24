@@ -146,8 +146,10 @@ export const wikiMdxComponents = {
 };
 
 export function WikiProse({ source }: { source: string }) {
+  // break-words: el vault escribe rutas y claves largas sin espacios que en
+  // el móvil ensanchaban la página; las tablas siguen con su propio scroll.
   return (
-    <div>
+    <div className="break-words">
       <MDXRemote
         source={source}
         components={wikiMdxComponents}

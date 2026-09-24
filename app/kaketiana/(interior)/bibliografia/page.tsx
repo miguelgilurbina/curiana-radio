@@ -123,7 +123,9 @@ export default function BibliografiaPage() {
         </p>
       </header>
 
-      <ul className="mt-8">
+      {/* wrap-anywhere: las notas de acceso traen URL y sha256 sin espacios,
+          que en el móvil empujaban la página a lo ancho */}
+      <ul className="mt-8 wrap-anywhere">
         {obras.map((o) => (
           <Obra
             key={o.slug}

@@ -19,9 +19,10 @@ export interface TimelineEpoca {
 const ANEXOS = [
   { href: "/kaketiana", label: "Kaketiana" },
   { href: "/kaketiana/personajes", label: "Personajes" },
-  { href: "/kaketiana/lexicon", label: "Léxico" },
+  { href: "/kaketiana/lexicon", label: "Diccionario" },
   { href: "/kaketiana/neologisms", label: "Neologismos" },
   { href: "/kaketiana/bibliografia", label: "Bibliografía" },
+  { href: "/kaketiana/no-sabemos", label: "Lo que no sabemos" },
 ];
 
 function useEpocaActiva(epocas: TimelineEpoca[], enabled: boolean): string | null {

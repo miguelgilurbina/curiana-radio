@@ -85,17 +85,24 @@ export default function KaketianaPage() {
             <ul className="mt-4 grid grid-cols-1 gap-x-8 sm:grid-cols-2">
               {CAPAS_EPISTEMICAS.map((c) => (
                 <li key={c.key} className="border-t border-(--sim-rule)">
-                  <Link href={`/kaketiana/lexicon?capa=${c.key}`} className="group flex items-baseline gap-2.5 py-3">
-                    <span className="self-center">
-                      <CapaGlifo capa={c.key} size={12} />
+                  <Link href={`/kaketiana/lexicon?capa=${c.key}`} className="group block py-3">
+                    <span className="flex items-baseline gap-2.5">
+                      <span className="self-center">
+                        <CapaGlifo capa={c.key} size={12} />
+                      </span>
+                      <span className="font-sans text-sm font-semibold" style={{ color: c.color }}>
+                        {c.plural}
+                      </span>
+                      <span className="sim-mono text-xs tabular-nums text-(--sim-ink-faint)">
+                        {fichas.por_capa[c.key] ?? 0}
+                      </span>
                     </span>
-                    <span className="font-sans text-sm font-semibold" style={{ color: c.color }}>
-                      {c.plural}
-                    </span>
-                    <span className="sim-mono text-xs tabular-nums text-(--sim-ink-faint)">{fichas.por_capa[c.key] ?? 0}</span>
-                    <span className="ml-auto min-w-0 font-sans text-xs text-(--sim-ink-soft) group-hover:text-(--sim-ink)">
-                      {fichas.capas[c.key]?.incierto}
-                    </span>
+                    {fichas.capas[c.key] && (
+                      <span className="mt-0.5 block pl-[1.4rem] font-sans text-xs text-(--sim-ink-soft) group-hover:text-(--sim-ink)">
+                        Lo incierto: {fichas.capas[c.key].incierto.charAt(0).toLowerCase()}
+                        {fichas.capas[c.key].incierto.slice(1)}
+                      </span>
+                    )}
                   </Link>
                 </li>
               ))}
