@@ -342,3 +342,15 @@ en imagen:
   Oviedo es también un ÁRBOL, no la planta del tabaco.
 
 Detalle y propuestas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
+
+## Bitácora: `comoho` es caquetío, y el lexicón no lo sabía (2026-09-24)
+
+**p. 313 (imagen)**: el cap. XXVIII del lib. VIII se titula «De los cardos de
+las tunas é su fructa, la qual en la provinçia de Veneçuela en la
+Tierra-Firme se llama comoho», y en el cuerpo Oviedo llama «higos» a esos
+frutos. La transcripción de la campaña del taíno (`6-fusion/taino_oviedo_valdes_1851.yaml`
+§costa_de_venezuela) lo tenía, pero marcó «en_el_lexicon: no» porque buscó
+con c: el lexicón guarda `komoho` 'higo', caquetío atestiguado (Zavala #88).
+Con Oviedo pasa a dos fuentes independientes. Y la lista maestra taína lo
+contaba como taíno, igual que las otras tres voces de esa sección.
+Propuesta: `6-fusion/taino_tradicion_viva_2026-09-24.yaml` §komoho y §la_fuga.

@@ -166,3 +166,59 @@ entero: faltan pp. 35-43, 49-67 (animales, plantas), 70-84, 94-101, 103-118.
   (Treccani), y la única vía de Pané es la traducción italiana de Ulloa.
 
 Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
+
+---
+
+## Bitácora: el habla de mujeres contra el caquetío (2026-09-23)
+
+**Qué se preguntó.** Voz a voz, las atestiguadas caquetías que un vocabulario
+antillano puede tener: ¿con qué registro kalinago se parecen, el de mujeres (f)
+o el de hombres (h)?
+
+**Qué ha dado** (`6-fusion/kalinago_mujeres_2026-09-23.yaml`
+§prueba_de_la_base_compartida; cifras en la medición):
+
+- Donde el kalinago tiene dos palabras, el caquetío va con la de **mujeres**:
+  sol `kaši` (p. 54), luna `kati` (p. 54), mar `balaua`/`barawa` (p. 55),
+  diente `ari` (p. 33), hombre `eyeri` (pp. 39-40), mujer `inharu` (p. 40),
+  piedra `šiba` (p. 57). Con la de hombres, ninguna.
+- Lo caribe sale en fauna y cosas: armadillo `kašikamon` (K, p. 59), algodón
+  `manhulu`/K `mauru` (p. 64).
+- **'Sol' sólo lo comparte el kalinago de mujeres**: el lokono dice `hadali`,
+  el achagua `erri`.
+- Para las ocho voces que seguían saliendo del wayuu: vivir f `kakê` = A
+  `kake` (p. 79), morir fh `hila`/f `hilaro` (p. 86), negro `uli` (p. 53) y A
+  `uelehi` (p. 86), blanco f `alu` y A `arira, hallira` (p. 53), alegrarse A
+  `ahali-kibi` (p. 86), enojo f `iam` y A `k-aiima` (p. 116). Todo verificado
+  en imagen.
+
+**Qué NO ha dado.** 'Bueno' ni 'rojo' de mujeres: el kalinago da la forma
+caribe (`iropon`) o nada legible. Sesenta atestiguadas caquetías no tienen
+nada enfrente.
+
+**Deuda.** Siguen sin transcribir entrada a entrada pp. 35-43, 49-67, 70-84,
+94-101 y 103-118; esta campaña las leyó por concepto, no entera.
+
+## Bitácora: el habla de mujeres, transcrita entera (2026-09-24)
+
+**Qué se preguntó** (Miguel): «¿no tenemos más palabras del kalinago
+femenino?». Faltaban las páginas que M5 no transcribió (35-43, 49-67, 70-84,
+94-101, 103-118).
+
+**Cómo.** Se localizaron en la capa de texto las siglas con «f» del margen
+(el margen está a la izquierda en las impares y más adentro en las pares) y se
+leyó en IMAGEN cada bloque junto con la entrada anterior, porque «id.» remite a
+la glosa de arriba y a veces a la última línea de la página previa (pp. 34→35,
+41→42, 64→65).
+
+**Qué ha dado.** 302 entradas de mujeres, 137 con la forma lokona al lado:
+`6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml`. Para el núcleo caquetío,
+las que suben a dos hermanas: 'coger' *abutu* (p. 74, las dos y el lokono),
+'ver' *arika* ~ lokono *adika* (p. 100), 'maíz' *mariši* en las dos (p. 65),
+'vergüenza' *aburi* ~ *haburi* (p. 74), 'beber' *ata* en las dos (p. 107).
+Y una corrección a la prueba del 23: 'algodón' tiene forma de mujeres,
+*(u)amulu* (p. 65), y el caquetío `maure` va con la de hombres (*mauru*).
+
+**Qué NO ha dado.** Formas de mujeres dentro de líneas con otra sigla
+(`1 am`, `—`) pueden faltar: se leyó por la sigla del margen. Las pp. 117-118
+son préstamos europeos y el vocabulario guayano, sin habla de mujeres.

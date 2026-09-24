@@ -13,15 +13,16 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-23**.
+<!--GENERADO--> Generado el **2026-09-24**.
 
-**7189 ítems propuestos** en 140 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
+**7643 ítems propuestos** en 150 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `achagua_arte_neira_ribero_2026-09-22.yaml` | neira-ribero-1762 | 7 |  |
+| `adam_1879_arrouague_caraibe.yaml` | ? | 79 |  |
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
 | `antroponimos_caquetios.yaml` | varias | 48 |  |
 | `arqueologia_insular_falcon_2026-09-22.yaml` | ? | 10 |  |
@@ -80,13 +81,17 @@ editar_a_mano: no
 | `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
+| `inventario_nucleo_fundacional_2026-09-23.yaml` | ? | 36 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `kalinago_goeje_1939.yaml` | ? | 859 |  |
+| `kalinago_mujeres_2026-09-23.yaml` | ? | 4 |  |
+| `kalinago_mujeres_goeje_2026-09-24.yaml` | ? | 302 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_arte_achagua_2026-09-22.yaml` | ? | 33 |  |
+| `medicion_cercania_hermanas_2026-09-23.yaml` | ? | 24 |  |
 | `medicion_clases_de_raiz_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medicion_d11_fase3_2026-09-23.yaml` | ? | 0 |  |
@@ -96,11 +101,14 @@ editar_a_mano: no
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_gbif_aves_paraguana_2026-09-22.yaml` | ? | 230 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
+| `medicion_kalinago_mujeres_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
 | `medicion_nominalizacion_emergente_2026-09-21.yaml` | ? | 92 |  |
 | `medicion_nominalizador_2026-09-21.yaml` | ? | 82 |  |
+| `medicion_nucleo_fundacional_2026-09-24.yaml` | ? | 0 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
+| `medicion_taino_tradicion_viva_2026-09-24.yaml` | ? | 0 |  |
 | `medicion_tanda_21_2026-09-21.yaml` | ? | 13 |  |
 | `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
@@ -108,6 +116,7 @@ editar_a_mano: no
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
+| `nucleo_fundacional_hermanas_2026-09-24.yaml` | ? | 4 |  |
 | `oliver1989_lexico_restante_2026-09-22.yaml` | oliver-1989-apendice-a | 50 |  |
 | `oliver1989_restante_2026-09-22.yaml` | ? | 38 |  |
 | `oliver_324_caribes.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
@@ -150,6 +159,7 @@ editar_a_mano: no
 | `taino_las_casas_1875.yaml` | las-casas-1875 | 26 |  |
 | `taino_lista_maestra_2026-09-22.yaml` | ? | 1039 |  |
 | `taino_pane_c1498.yaml` | pane-c1498 | 24 |  |
+| `taino_tradicion_viva_2026-09-24.yaml` | ? | 5 |  |
 | `taino_zayas_1931.yaml` | ? | 39 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
@@ -230,11 +240,13 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `guaiqueries-manaure-dabajuroide-2026-09-23.md` | El asiento de Manaure, los guaiqueríes y la cronología dabajuroide (cc.5) |
 | `gumilla-cacatia-y-achagua-2026-09-23.md` | Gumilla 1791: los «Cacatia» de los Llanos y lo que aporta al achagua |
 | `habla-llanos-coro-perez-de-tolosa-2026-09-23.md` | «Aunque algo difieren en la habla á los de Coro» — ¿a dónde va este testigo? |
+| `kalinago-mujeres-2026-09-23.md` | El habla de las mujeres kalinago: la cuarta hermana |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `nominalizador-retroabstraccion-2026-09-21.md` | El nominalizador que no está: se buscó así, en esto, y no hay |
+| `nucleo-fundacional-hermanas-2026-09-24.md` | El núcleo fundacional, rehecho desde las hermanas |
 | `oliver1989-restante-2026-09-22.md` | Oliver 1989, lo que quedaba a medias: la A-9 entera, los vecinos, los dabajuranos y el mar |
 | `oviedo-restante-2026-09-22.md` | Tercera campaña de minería — M3: Oviedo y Valdés, lo que quedaba de los cuatro tomos |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
@@ -249,6 +261,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `taino-inventario-y-fuentes-2026-09-21.md` | --- |
 | `taino-lascasas-pane-brinton-2026-09-21.md` | --- |
 | `taino-oviedo-2026-09-21.md` | Campaña del taíno — T1: Oviedo y Valdés 1851, vol. I |
+| `taino-tradicion-viva-2026-09-24.md` | El taíno de tradición viva |
 | `taino2-apologetica-2026-09-22.md` | La *Apologética* de Las Casas: 24 entradas del lexicón reciben cita, 3 entran en conflicto |
 | `taino2-etnohistoria-contacto-2026-09-22.md` | Lo que sabían unos de otros en 1492-1500 — y qué hace eso con la hipótesis |
 | `taino2-evidencia-material-2026-09-22.md` | Sí hubo contacto, y no fue con el taíno: los caquetíos de Curazao llevan dos tercios de sa |

@@ -1,0 +1,715 @@
+# ══════════════════════════════════════════════════════════════════════
+# PROPUESTA — el habla de las mujeres kalinago: la cuarta hermana
+#
+# Miguel, 2026-09-23, antes de la corrida base:
+#   «kalinago ya tenemos todo? No sería interesante ver si podemos tener más
+#   info sobre todo del lado de mujeres? Tomando en cuenta que comparten Kati y
+#   Kazi?»
+#   «la idea es que nuestro core sea potente para no tener que hacer más
+#   campañas y poder correr el experimento con la mayor cantidad de info
+#   posible de las lenguas hermanas. Es que si usan las mismas palabras para el
+#   Sol y la Luna podrían compartir más conceptos, obvio no todos pero debe
+#   haber una base que compartan. Dale tú mismo esa campaña y lo comentamos»
+#
+# Regla 5: PROPONE. No toca curiana_sim/, 2-lengua/, 3-mundo/ ni CLAUDE.md.
+# Regla 1: toda cifra sale de 6-fusion/medicion_kalinago_mujeres_2026-09-23.yaml,
+#   que emite 6-fusion/scripts/medir_kalinago_mujeres.py (`--check` verifica que
+#   las de aquí son las de allí).
+# Regla 2: una etiqueta por forma; en duda, degradar.
+# Regla 3: el kalinago de Breton es del s. XVII y de las Antillas Menores. Nada
+#   de aquí es dato caquetío: es FORMA de una hermana, y lo que se diga del
+#   habla de las mujeres es un hecho kalinago, no caquetío.
+# Borrador legible: issues-pendientes/kalinago-mujeres-2026-09-23.md
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  recogido: '2026-09-23'
+  rama: campana/kalinago-mujeres
+  estado: sin-fusionar — propuesta con decisiones para Miguel
+  escriba: el coordinador de la sesión, en serie (Miguel pidió que no fuera en paralelo)
+  obras: adam-1879 · goeje-1939 · perea-alonso-1942 · neira-ribero-1762 · oliver-1989-apendice-a · taino_lista_maestra
+  como_se_leyo: >-
+    Goeje 1939 con `pdftotext -layout` para localizar y la IMAGEN de la página
+    para leer: el OCR rompe la cursiva (las formas) y corre la columna de
+    siglas. Adam 1879 por su capa de texto, que es buena (francés de 1879, de
+    dominio público). Página impresa en los dos.
+  verificado_en_imagen:
+    - 'Goeje 1939 pp. 33, 39-40, 53, 54-55 (M5), 57, 59, 64, 79, 86, 116'
+  como_leer_a_goeje: >-
+    Margen izquierdo: `h` habla de hombres, `f` habla de mujeres; `K` origen
+    kalina (caribe continental), `A` arahuaco (= lokono), `am` su vocabulario
+    comparado arahuaco-maipure, `—` sin origen hallado. En el cuerpo, `A` es la
+    forma lokona y `K` la kalina (M5, `kalinago_goeje_1939.yaml` §meta).
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE RESULTÓ FALSO AL MEDIRLO
+# ══════════════════════════════════════════════════════════════════════
+falso_al_medirlo:
+  - dicho: '(el escriba, al proponer la campaña) «Adam cuenta unos 400 pares; usamos 2»'
+    medido: >-
+      Adam CUENTA unos 400 pares (p. 276) pero no los da: los 400 están en el
+      Dictionaire françois-caraïbe de Breton (1666), que no está en el repo. Lo
+      que Adam sí publica son dos tablas de cotejo: 160 voces galibi (caribe)
+      contra el kalinago (110 caen en el habla de hombres, 9 en la de mujeres)
+      y 79 voces arahuacas (lokono) contra el kalinago (60 caen en la de
+      mujeres, 5 en la de hombres) — pp. 282-290. Esas cifras son de Adam.
+  - dicho: '(CLAUDE.md, tf.5) «las voces wayuu que quedaban eran 11»'
+    medido: >-
+      Quedaban OCHO más en el núcleo reconstruido, las que llegan a los
+      agentes: `anasa` 'bueno', `mütsia` 'negro', `kasuta` 'blanco', `sünatü`
+      'rojo', `outa` 'muerte', `kataa` 'vida', `talata` 'alegría' y `jashichi`
+      'rabia'. Sus propias glosas lo dicen («< anasü Wayunaiki»). La campaña de
+      tf.5 buscó la cadena «DEUDA D11» y sus notas dicen «entra en la deuda de
+      D11 fase 3»: la búsqueda distinguía mayúsculas. Ver medición §voces.la_lista.
+  - dicho: '(Adam p. 304) el taíno `kachi` ''sol'' como tercer testigo del par sol/luna'
+    medido: >-
+      No es independiente. Goeje (p. 5, parafraseado) avisa de que Adam tomó su
+      taíno del vocabulario de Rafinesque-Martius, que mete palabras de un
+      diccionario caribe: el `kachi` taíno de Adam puede ser el `kaši` de
+      Breton de vuelta. Tampoco lo trae ningún cronista en la lista maestra
+      taína. No se cuenta.
+  - dicho: '(la nota de `hadalli` en el lexicón) «cognado de cazi caquetío»'
+    medido: >-
+      Para 'sol' el lokono dice `hadali` (Oliver 1989 Tabla A-2) y el achagua
+      `erri` (Neira, pl. 34 der., «acayu erri, alto esta el sol»). El caquetío
+      `kasi` sólo tiene pareja formal en el habla de MUJERES kalinago: `kaši`
+      (Goeje p. 54, sigla f 1 am 62). La nota de `hadalli` afirma un cognado
+      que la forma no enseña; se deja anotado, no se toca aquí.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. LA PRUEBA DE LA BASE COMPARTIDA — lo que Miguel preguntó
+# ══════════════════════════════════════════════════════════════════════
+prueba_de_la_base_compartida:
+  pregunta: >-
+    Si el caquetío y el kalinago dicen igual «sol» y «luna», ¿comparten más? Y
+    si comparten, ¿es con las mujeres (la capa arahuaca) o con los hombres (la
+    caribe)?
+  metodo: >-
+    Se buscó en Goeje, por su glosa francesa, cada voz caquetía ATESTIGUADA
+    que tiene un concepto que un vocabulario antillano pueda tener (la lista
+    de búsqueda está en `sin_equivalente_en_goeje` y en `conceptos`). El
+    CONTROL es el habla de los hombres: donde el kalinago tiene dos palabras
+    para lo mismo, una de hombres y otra de mujeres, el caquetío podría
+    parecerse a cualquiera de las dos. Si la base compartida fuera parecido
+    por azar, iría con las dos por igual.
+  criterio_de_parecido: >-
+    Del escriba, leído voz a voz y escrito en `por_que`: al menos dos
+    consonantes en el mismo orden, con las correspondencias que las propias
+    fuentes muestran (p~b, r~l, s~š; el lokono d = kalinago r/l, Adam pp.
+    288-289: adiki/arika 'ver', ada/ara 'árbol'). `fuerte` = la forma casi
+    entera; `moderada` = la raíz; `débil` = coincide menos que la raíz.
+  conceptos:
+    - caquetio: kasi
+      glosa: sol
+      kalinago_mujeres: kaši
+      kalinago_hombres: hueyu
+      lokono: hadali (otra raíz)
+      pagina: 'Goeje p. 54 (f 1 am 62 / hK)'
+      veredicto: con-las-mujeres
+      fuerza: fuerte
+      por_que: 'la forma entera; y es la ÚNICA hermana que la tiene: ni el lokono (hadali) ni el achagua (erri)'
+    - caquetio: kati
+      glosa: luna
+      kalinago_mujeres: kati
+      kalinago_hombres: nonum
+      lokono: kathi
+      pagina: 'Goeje p. 54'
+      veredicto: con-las-mujeres
+      fuerza: fuerte
+      por_que: la forma entera, igual que el lokono
+    - caquetio: parawa
+      glosa: mar
+      kalinago_mujeres: 'balaua (Dominica moderna: barawa)'
+      kalinago_hombres: 'balana (de origen kalina/tupí: parana)'
+      lokono: bara
+      pagina: 'Goeje p. 55 (f 1 am 70 / hKTu)'
+      veredicto: con-las-mujeres
+      fuerza: fuerte
+      por_que: 'parawa = barawa letra por letra salvo p~b; la de hombres termina en -na'
+    - caquetio: para
+      glosa: mar, agua extensa
+      kalinago_mujeres: balaua
+      kalinago_hombres: balana
+      lokono: bara
+      pagina: 'Goeje p. 55'
+      veredicto: ambiguo
+      fuerza: '—'
+      por_que: 'para se parece a la raíz de las dos (bala-) y al lokono bara; no decide'
+    - caquetio: dare
+      glosa: diente
+      kalinago_mujeres: ari
+      kalinago_hombres: 'ie (kalina ye)'
+      lokono: ari
+      pagina: 'Goeje p. 33 (f 1 am 19 / hK)'
+      veredicto: con-las-mujeres
+      fuerza: moderada
+      por_que: '-are ~ ari; la de hombres no comparte consonante. La d- inicial queda sin explicar aquí'
+    - caquetio: ateri
+      glosa: hombre, varón
+      kalinago_mujeres: eyeri
+      kalinago_hombres: 'uekeli (kalina wokere)'
+      lokono: '—'
+      pagina: 'Goeje pp. 39-40 (f 1 am 30 / hK)'
+      veredicto: con-las-mujeres
+      fuerza: moderada
+      por_que: '-eri en las dos; la de hombres es otra raíz (w-k-l)'
+    - caquetio: iero
+      glosa: mujer
+      kalinago_mujeres: inharu
+      kalinago_hombres: 'uele (kalina wori)'
+      lokono: hiaro
+      pagina: 'Goeje p. 40 (f 1 am 32 / hK)'
+      veredicto: con-las-mujeres
+      fuerza: moderada
+      por_que: 'iero ~ (h)iaro: vocal + r + o; la de hombres es otra raíz'
+    - caquetio: kiba
+      glosa: piedra
+      kalinago_mujeres: šiba
+      kalinago_hombres: 'tebu (roca; sigla K, la común)'
+      lokono: siba
+      pagina: 'Goeje p. 57 (f 1 am 75 / K)'
+      veredicto: con-las-mujeres
+      fuerza: debil
+      por_que: '-iba igual; la inicial k frente a š/s no tiene correspondencia medida'
+    - caquetio: kachikamo
+      glosa: armadillo
+      kalinago_comun: 'kašikamon (sigla K: origen kalina)'
+      pagina: 'Goeje p. 59'
+      veredicto: con-el-caribe
+      fuerza: fuerte
+      por_que: la forma entera; Goeje la da de origen kalina
+    - caquetio: maure
+      glosa: algodón, hilo
+      kalinago_mujeres: '(u)amulu'
+      kalinago_hombres: 'manhulu (kalina mauru, tupí amaniu)'
+      pagina: 'Goeje p. 64 (hKTu) y p. 65 (f 2 am 58, imagen)'
+      veredicto: con-los-hombres
+      fuerza: fuerte
+      por_que: >-
+        maure = kalina mauru. CORREGIDO el 2026-09-24: la primera lectura decía
+        «sólo hay forma de hombres»; al transcribir el habla de mujeres apareció
+        la suya, (u)amulu (p. 65, «id.» de la última línea de p. 64). Con las dos
+        delante, el caquetío va con la de los HOMBRES. Es el algodón, una cosa
+        que circula por la esfera
+    - caquetio: chogogo
+      glosa: flamenco
+      kalinago_comun: 'tuguku (kalina tokoko); «dialecte de Bonaire chogogo»'
+      pagina: 'Goeje p. 60'
+      veredicto: de-la-esfera
+      fuerza: fuerte
+      por_que: 'la voz caquetía ES la de Bonaire que Goeje cita (M5); el kalinago tiene la kalina'
+    - caquetio: kerekere
+      glosa: ave pequeña
+      kalinago_comun: '(ti)erere; kalina kerekeru; lokono kirekire'
+      pagina: 'Goeje p. 59'
+      veredicto: de-la-esfera
+      fuerza: fuerte
+      por_que: 'la tienen el kalina y el lokono a la vez: voz de la esfera (y onomatopéyica)'
+    - caquetio: wakoa
+      glosa: paloma
+      kalinago_comun: 'uakukua (sigla K); kalina akokowa; lokono wakukua'
+      pagina: 'Goeje p. 59'
+      veredicto: de-la-esfera
+      fuerza: moderada
+      por_que: 'la tienen el kalina y el lokono: voz de la esfera, imitativa del arrullo'
+    - caquetio: buiamati
+      glosa: dos lunas
+      kalinago_comun: 'biama ''dos'' (en los dos registros)'
+      lokono: biama
+      pagina: 'Adam p. 281 (galibi oco / arrouague biama / caraïbe biama); Goeje p. 30'
+      veredicto: arahuaco-comun
+      fuerza: moderada
+      por_que: >-
+        la palabra caquetía para 'dos lunas' lleva dentro el 'dos' arahuaco
+        (bia-ma), que es también el del kalinago; el caribe dice oco. OJO: el
+        caquetío atestiguado para 'dos' suelto es `gudamuen`, que no se parece
+        a nada de esto
+  sin_equivalente_en_goeje: [koke, buio, arata, arika, bisure, barbache, cege, chaure, wache,
+    waka, koro, ruba, surupa, kumarawa, yagruma, warawara, kiricias, baharuko, wasima, barsure,
+    buriche, masato, boratio, waitiao, jai, were, bariki, yaro, piritu, kana, kapu, paro, wike,
+    tarika, pariri, kidi, kabana, darubana, ebo, supi, dabuda, chirwa, karebe, wairon, urari,
+    tara, korie, pana, gudamuen, sabuenen, katarí, ako, usera, etamo, humokaro, despopo, bakoa,
+    komoho, ikoroata, kiwawa]
+  no_se_pudo_buscar: >-
+    kasá, sawaka, hayo, mene, biro, dara, kiwa, bagre, waranaro, apo, bajarí,
+    jakura, chuchubi, paugis: Goeje no trae el concepto o su glosa francesa no
+    aparece en las páginas legibles. No cuentan ni a favor ni en contra.
+  lectura: >-
+    Sí hay una base compartida, y es la que Miguel intuyó. En los conceptos
+    donde el kalinago tiene una palabra de hombres y otra de mujeres, el
+    caquetío va con las MUJERES en casi todos los que deciden y con los
+    hombres en uno, el algodón (cifras: medición §prueba). Las que van con las
+    mujeres son las palabras más básicas —sol, luna, mar, diente, hombre,
+    mujer, piedra— y son las de la capa arahuaca. Lo caribe aparece en otro
+    sitio: en fauna y cosas que circulan (armadillo, algodón, flamenco), que
+    es la esfera. Y la mayoría de lo
+    atestiguado caquetío (topónimos, flora xerófila, fauna del Golfete) no
+    tiene nada enfrente, porque es de aquí.
+  lo_que_no_dice: >-
+    (1) No dice que caquetíos y kalinago estuvieran en contacto: el parecido es
+    de FAMILIA (arahuaca), el lokono suele tener la misma forma. (2) Con 'sol'
+    sí dice algo más: ahí sólo el kalinago de mujeres tiene la forma
+    caquetía, y por eso esa capa no es redundante con el lokono. (3) La
+    muestra es pequeña y el juicio de parecido es del escriba; está escrito
+    voz a voz para que se pueda discutir.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. LOS PRONOMBRES Y LA GRAMÁTICA DE LAS MUJERES
+# ══════════════════════════════════════════════════════════════════════
+pronombres_y_gramatica:
+  lo_que_dice_adam:
+    prefijos: >-
+      p. 277: de los prefijos personales kalinago, tres son sólo de hombres
+      (i-, a-, k-), tres sólo de mujeres (n-, b-, oua-) y los demás comunes
+      (t-, h-, nh-; l- aparece en los dos). Adam demuestra (pp. 279-280) que los
+      de mujeres y los comunes son los del arrouague (lokono: da-, bo-, li-,
+      tu-, wa-, hu-, na-) y los de hombres los del galibi.
+    pronombres_libres: >-
+      pp. 278-279: de mujeres noukoya 'yo' y boukoya 'tú'; comunes likia 'él',
+      tokoya 'ella', ouakia 'nosotros', hokoya 'vosotros', nhamkia 'ellos'; de
+      hombres ao y amanle, del galibi.
+    negacion: 'p. 277: los hombres niegan con el sufijo -pa (galibi); las mujeres con el PREFIJO ma-, m- (arrouague)'
+    futuro: 'p. 300: «L''indice du futur caraïbe est -ba» (n-aronc-ou-ba ''dormiré''), tomado del arrouague'
+    atributivo: 'pp. 300-301: la partícula ka- (k-açae-ti-na ''tengo una olla''), como el lokono k-aeke-de ''tengo ropa'''
+    quien_ensena: >-
+      p. 301 (parafraseado): Adam explica que ganara la gramática de las
+      mujeres porque ellas criaban solas a los niños de los dos sexos hasta los
+      nueve o diez años. Es su explicación; el hecho viene de los misioneros.
+  goeje_lo_confirma: 'p. 24: I sing. n(u)- «f»; II b(u)-; III masc. l(i)-, fém. t(u)-; I plur. w(a)-; III nh(a)- — todos de origen am.'
+  la_tabla_con_la_cuarta_hermana:
+    - casilla: yo
+      caquetio: dai
+      lokono: da-
+      taino: daca
+      achagua: nu-
+      kalinago_mujeres: n(u)-
+      lectura: 'dos contra dos. `dai` se queda (tf.1: lokono + taíno), pero el kalinago NO lo apoya: va con el achagua'
+    - casilla: tú
+      caquetio: bui
+      lokono: bu-
+      achagua: 'j- (jia)'
+      kalinago_mujeres: b(u)-
+      lectura: 'lokono + kalinago de mujeres, igual forma'
+    - casilla: él
+      caquetio: lihi
+      lokono: li-hi
+      achagua: 'ri- (ria)'
+      kalinago_mujeres: 'l(i)- (común), likia'
+      lectura: 'lokono + kalinago, igual forma'
+    - casilla: ella, ello
+      caquetio: tuhu
+      lokono: tu-hu
+      achagua: 'ru- (ruya)'
+      kalinago_mujeres: 't(u)- (común), tokoya'
+      lectura: 'lokono + kalinago, igual forma'
+    - casilla: nosotros
+      caquetio: waya
+      kalinago_mujeres: 'oua- / w(a)-, ouakia'
+      lectura: las cuatro
+    - casilla: ellos
+      caquetio: naya
+      kalinago_mujeres: 'nh(a)-, nhamkia'
+      lectura: las cuatro
+  decision_d1:
+    pregunta: '¿cuenta el kalinago (su habla de mujeres, que es la capa arahuaca) como hermana para el criterio (a) de D11?'
+    opciones:
+      - letra: A
+        que: >-
+          SÍ, como cuarta hermana. `bui`, `lihi` y `tuhu` pasan de hipotéticos a
+          RECONSTRUIDOS (dos hermanas con la misma forma: lokono y kalinago).
+          `dai` sigue reconstruido y se escribe en su nota que el kalinago va
+          con el achagua. Las formas no cambian: sólo la etiqueta y la cita.
+        coste: >-
+          el perfil `era2` muestrea la capa reconstruida: las tres pasan a
+          poder salir también en la muestra de vocabulario, además de en la
+          plantilla (que ya las enseña). Es un cambio del prompt: va en el
+          corte, medido.
+      - letra: B
+        que: 'NO: se cita como apoyo en las notas y las etiquetas se quedan como están'
+        coste: '0 en el prompt'
+    recomendacion: A
+    por_que: >-
+      el criterio de Miguel era «desde el lokono, el taíno o el achagua» para
+      sacar el wayuu del núcleo; el kalinago de mujeres es arahuaco por
+      demostración (Adam pp. 279-280, Goeje p. 24) y cumple el fin. Pero
+      amplía la lista que Miguel nombró: por eso es pregunta y no aplicación.
+  el_aspecto_no_cambia: >-
+    -kuba (Goeje p. 26: «Parfait … 2 -kuba») y -ba (Adam p. 300; Goeje p. 26)
+    ganan un testigo más, pero el aspecto sigue HIPOTÉTICO por la regla de las
+    formas cortas sin paradigma (D11 fase 3). Sólo se anota en las notas.
+  apoyos_que_se_anotan_sin_cambiar_nada:
+    - 'ma- privativo: la negación de las mujeres kalinago es ma- (Adam p. 277)'
+    - 'ka- atributivo: Adam pp. 300-301'
+    - '-ba futuro y -kuba perfecto: Adam p. 300, Goeje p. 26'
+  lo_que_no_se_propone: >-
+    el causativo -keta (Adam p. 301, lokono -kitti): gramática nueva sin
+    ningún dato caquetío. Se deja escrito por si Miguel lo quiere; no entra.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LAS OCHO VOCES QUE SEGUÍAN SALIENDO DEL WAYUU
+# ══════════════════════════════════════════════════════════════════════
+las_ocho_voces_del_wayuu:
+  metodo: >-
+    el de D11 fase 3 y tf.5: la forma de una hermana TAL CUAL, en grafía
+    fonémica; dos hermanas con la misma forma (o con una correspondencia
+    regular medida) = la mejor apoyada, pero todo léxico nuevo entra
+    HIPOTÉTICO (en duda, degradar). Las cuatro hermanas: lokono, taíno,
+    achagua y —si D1 es A— el kalinago de mujeres. La clase: los colores y
+    'bueno' como ESTADO (v_estativo, como apo y usera, d21.4); morir, vivir y
+    alegrarse como verbo que es también su nombre (dc.3).
+  voces:
+    - voz: anasa
+      glosa: bueno, bien, bello
+      hoy: 'reconstruido desde el wayuu anasü'
+      opciones:
+        - letra: A
+          formas: [saika]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            achagua «Saica» (Neira, pl. 43d-44i: «Saicauní, Bueno está»,
+            «Saicay, Buena casa» y otras del mismo pliego); en el lokono la
+            segmentación de Perea aísla SA en la palabra que traduce BIEN (p.
+            499, «Ú-SA-NÚ-wai … has hecho BIEN»). Dos hermanas en la raíz, la
+            forma de una.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 122
+            usos_como_nucleo_de_otra_forma: 53
+            respuestas_que_la_dicen: 220
+            formas_de_la_base_a_raiz_de_ninguna_parte: 3
+            colisiones_de_la_nueva: {saika: 0}
+        - letra: B
+          formas: [saino]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            taíno «taíno/saino» 'bueno' (Chanca, 1494; lista maestra, clase
+            i); la misma raíz sa-. Un solo cronista.
+          aviso: '`saíno` es en Venezuela el pecarí de collar: homógrafo con el castellano del país'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 122
+            usos_como_nucleo_de_otra_forma: 53
+            respuestas_que_la_dicen: 220
+            formas_de_la_base_a_raiz_de_ninguna_parte: 3
+            colisiones_de_la_nueva: {saino: 0}
+      recomendacion: A
+      por_que: 'dos hermanas en la raíz, muchas atestaciones, y sin choque con el castellano venezolano'
+    - voz: mütsia
+      glosa: negro, oscuro
+      hoy: 'reconstruido desde el wayuu mütsiisü'
+      opciones:
+        - letra: A
+          formas: [wele]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            lokono «uele-hi» 'être noir' (Goeje p. 86, columna A) y kalinago
+            «uli» 'noir', moderno wiri (Goeje p. 53, sigla 1 am 133: origen
+            arahuaco). La forma lokona en grafía fonémica.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 111
+            usos_como_nucleo_de_otra_forma: 122
+            respuestas_que_la_dicen: 301
+            formas_de_la_base_a_raiz_de_ninguna_parte: 5
+            colisiones_de_la_nueva: {wele: 0}
+        - letra: B
+          formas: [uli]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            el kalinago tal cual (Goeje p. 53, sigla 1 am 133: origen
+            arahuaco), con el lokono uele- detrás por la misma raíz
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 111
+            usos_como_nucleo_de_otra_forma: 122
+            respuestas_que_la_dicen: 301
+            formas_de_la_base_a_raiz_de_ninguna_parte: 5
+            colisiones_de_la_nueva: {uli: 0}
+      recomendacion: B
+      por_que: >-
+        medido: `wele` queda a UNA letra de `were` 'dar' (atestiguado, verbo del
+        núcleo) — el caso kasi/kashi otra vez, y aquí evitable. `uli` no choca
+        con nada; la raíz de las dos hermanas es la misma
+    - voz: kasuta
+      glosa: blanco, claro, luminoso
+      hoy: 'reconstruido desde el wayuu kasüttaa'
+      opciones:
+        - letra: A
+          formas: [halira]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            lokono «arira, hallira» 'blanc' (Goeje p. 53, columna A) y el
+            kalinago de MUJERES «alu» (misma línea, sigla f 1 am 132 E; los
+            hombres dicen tamone, caribe). La forma lokona en grafía fonémica.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 225
+            usos_como_nucleo_de_otra_forma: 133
+            respuestas_que_la_dicen: 445
+            formas_de_la_base_a_raiz_de_ninguna_parte: 18
+            colisiones_de_la_nueva: {halira: 0}
+        - letra: B
+          formas: [kasare]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            achagua «Casareyi» 'Blanco' (Neira, pl. 42 izq.), sin el -yi
+            adjetival. Es el pariente arahuaco del kasüttaa wayuu: la voz de
+            hoy cambia poco y cambia de dónde sale.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 225
+            usos_como_nucleo_de_otra_forma: 133
+            respuestas_que_la_dicen: 445
+            formas_de_la_base_a_raiz_de_ninguna_parte: 18
+            colisiones_de_la_nueva: {kasare: 0}
+      recomendacion: A
+      por_que: 'dos hermanas (lokono y kalinago de mujeres) contra una'
+    - voz: sünatü
+      glosa: rojo, color de la sangre
+      hoy: 'reconstruido desde el wayuu ishasü; ü fuera del inventario'
+      opciones:
+        - letra: A
+          formas: [kule]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            lokono «CULE-RU Bara = el Mar BERMEJO» (Perea p. 108) y achagua
+            «Quirrayi, Colorado» (Neira, pl. 49 izq.): l ~ r, el par que C8
+            declara indecidible. La forma lokona.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 46
+            usos_como_nucleo_de_otra_forma: 1
+            respuestas_que_la_dicen: 65
+            formas_de_la_base_a_raiz_de_ninguna_parte: 1
+            colisiones_de_la_nueva: {kule: 1}
+        - letra: B
+          formas: []
+          etiqueta: '—'
+          derivacion: >-
+            archivar sin sustituta: el caquetío ATESTIGUADO ya tiene `bariki`
+            'tierra colorada, pigmento encarnado' y `barici` 'tierras
+            coloradas'. El rojo se diría por el pigmento, sin inventar nada.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 46
+            usos_como_nucleo_de_otra_forma: 1
+            respuestas_que_la_dicen: 65
+            formas_de_la_base_a_raiz_de_ninguna_parte: 1
+            colisiones_de_la_nueva: {}
+      recomendacion: A
+      por_que: 'bariki es un nombre, no el color; B deja al agente sin adjetivo'
+    - voz: outa
+      glosa: muerte, fin de la vida
+      hoy: 'reconstruido desde el wayuu outaa'
+      opciones:
+        - letra: A
+          formas: [huda]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            lokono «huda» MORIR (Perea p. 390, siete atestaciones) y kalinago «hila» 'muerto', «hilaro» 'mourir' (Goeje
+            p. 86, sigla fhA: arahuaco, en los dos registros). Lokono d =
+            kalinago l es la correspondencia regular (Adam pp. 288-289). Verbo
+            y nombre: 'morir, muerte'.
+          aviso: '`huda` es hoy una clave LOKONO del lexicón: hay que renombrarla antes (precedente kuba-lokono, tuhu-lokono)'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 1
+            usos_como_nucleo_de_otra_forma: 0
+            respuestas_que_la_dicen: 14
+            formas_de_la_base_a_raiz_de_ninguna_parte: 1
+            colisiones_de_la_nueva: {huda: 1}
+        - letra: B
+          formas: [hila]
+          etiqueta: caquetío-hipotético
+          derivacion: 'el kalinago tal cual (Goeje p. 86)'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 1
+            usos_como_nucleo_de_otra_forma: 0
+            respuestas_que_la_dicen: 14
+            formas_de_la_base_a_raiz_de_ninguna_parte: 1
+            colisiones_de_la_nueva: {hila: 0}
+      recomendacion: A
+      por_que: 'dos hermanas con correspondencia regular; siete atestaciones lokonas'
+    - voz: kataa
+      glosa: vida, aliento vital
+      hoy: 'reconstruido desde el wayuu kataa'
+      opciones:
+        - letra: A
+          formas: [kake]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            kalinago de MUJERES «kakê» 'vif, vivre' y lokono «kake, koke» (Goeje
+            p. 79, sigla fA; verificado en imagen); Adam p. 290: lokono
+            «Kaku-n, vivre» → kalinago de mujeres «kake-keili, il vit encore».
+            Dos hermanas, la MISMA forma. Verbo y nombre: 'vivir, vida'.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 1
+            usos_como_nucleo_de_otra_forma: 0
+            respuestas_que_la_dicen: 6
+            formas_de_la_base_a_raiz_de_ninguna_parte: 1
+            colisiones_de_la_nueva: {kake: 1}
+        - letra: B
+          formas: [kaku]
+          etiqueta: caquetío-hipotético
+          derivacion: 'el lokono de Adam (p. 290)'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 1
+            usos_como_nucleo_de_otra_forma: 0
+            respuestas_que_la_dicen: 6
+            formas_de_la_base_a_raiz_de_ninguna_parte: 1
+            colisiones_de_la_nueva: {kaku: 1}
+      recomendacion: A
+      por_que: 'la mejor apoyada de las ocho: misma forma en dos hermanas. Curiosidad: el garífuna dice kata (misma línea de Goeje) — el kataa wayuu era pariente'
+    - voz: talata
+      glosa: alegría, contento, gozo
+      hoy: 'reconstruido desde el wayuu talataa'
+      opciones:
+        - letra: A
+          formas: [halikebe]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            lokono «halli-kebbe» ALEGRAR, GOZAR, DICHOSO (Perea pp. 231, 336,
+            112; cinco atestaciones), el mismo «ahali-kibi» de Goeje (p. 86,
+            columna A) y el «hallikebe-de, je me réjouis» de Adam (p. 298). Una
+            hermana, tres fuentes.
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 17
+            usos_como_nucleo_de_otra_forma: 6
+            respuestas_que_la_dicen: 53
+            formas_de_la_base_a_raiz_de_ninguna_parte: 4
+            colisiones_de_la_nueva: {halikebe: 0}
+        - letra: B
+          formas: [ulabu]
+          etiqueta: caquetío-hipotético
+          derivacion: 'kalinago «(a)ulabu» ''se réjouir'' (Goeje p. 86, sigla fhA)'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 17
+            usos_como_nucleo_de_otra_forma: 6
+            respuestas_que_la_dicen: 53
+            formas_de_la_base_a_raiz_de_ninguna_parte: 4
+            colisiones_de_la_nueva: {ulabu: 0}
+      recomendacion: A
+      por_que: 'tres fuentes independientes del lokono; la kalinago no comparte forma con ella'
+    - voz: jashichi
+      glosa: rabia, ira, enojo
+      hoy: 'reconstruido desde el wayuu jashichi'
+      opciones:
+        - letra: A
+          formas: [iama]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            kalinago de MUJERES «iam, ian» 'fâcherie' y lokono «k-aiima»
+            'fâché' (Goeje p. 116, sigla fA, verificado en imagen); lokono
+            «A-IMA-TTU-NNUA» IRA (Perea p. 56). La raíz de las dos es ima/iam;
+            `ima` y `aima` no se pueden usar porque son sufijos del motor
+            (-ima, -aima, REGLAS_ZAVALA). `iama` es composición nuestra.
+          aviso: 'con el atributivo, «ka-iama» ''tiene enojo = está enojado'' sale igual que el lokono k-aiima'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 7
+            usos_como_nucleo_de_otra_forma: 3
+            respuestas_que_la_dicen: 36
+            formas_de_la_base_a_raiz_de_ninguna_parte: 4
+            colisiones_de_la_nueva: {iama: 0}
+        - letra: B
+          formas: [kain]
+          etiqueta: caquetío-hipotético
+          derivacion: 'kalinago de mujeres «kain» ''fâché'', «kain-kua» ''combattre'' (Goeje p. 116)'
+          aviso: 'se lee como el Caín bíblico'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 7
+            usos_como_nucleo_de_otra_forma: 3
+            respuestas_que_la_dicen: 36
+            formas_de_la_base_a_raiz_de_ninguna_parte: 4
+            colisiones_de_la_nueva: {kain: 0}
+        - letra: C
+          formas: [aiima]
+          etiqueta: caquetío-hipotético
+          derivacion: >-
+            el lokono TAL CUAL: «k-aiima» 'fâché' sin el atributivo (Goeje p.
+            116, columna A), la misma raíz que Perea segmenta en A-IMA-TTU-NNUA
+            IRA (p. 56) y que el kalinago de mujeres dice iam. Dos hermanas en la
+            raíz, la forma de una, sin composición nuestra
+          aviso: 'con el atributivo, «ka-aiima» ''tiene enojo = está enojado'' es el lokono k-aiima'
+          coste_medido:
+            usos_de_la_voz_vieja_que_dejan_de_contar: 7
+            usos_como_nucleo_de_otra_forma: 3
+            respuestas_que_la_dicen: 36
+            formas_de_la_base_a_raiz_de_ninguna_parte: 4
+            colisiones_de_la_nueva: {aiima: 0}
+      recomendacion: C
+      por_que: >-
+        medido: `iama` queda a una letra de `ama` 'madre' y de `kama`, y además
+        es composición nuestra; `aiima` es forma de hermana tal cual y su única
+        vecina es `arima` 'pez'
+  coste_de_la_recomendacion_entera:
+    voces_que_cambian: 8
+    usos_sueltos_que_dejan_de_contar: 530
+    usos_como_nucleo_de_otra_forma: 318
+    respuestas_distintas_con_alguna: 942
+    agent_responses_en_la_base: 3811
+    plantillas_que_hay_que_tocar: 0
+    tests_que_las_nombran: 7
+    lectura: >-
+      son voces VIVAS: una de cada cuatro respuestas de la base dice alguna
+      (sobre todo `kasuta`, `mütsia` y `anasa`), aunque ninguna plantilla las
+      enseña — llegan por la muestra de vocabulario. En la corrida base se
+      dirán las nuevas desde el día 1; la base vieja no se reescribe
+  las_dos_hipoteticas_con_la_misma_etiqueta: >-
+    `alaain` 'amor' y `japü` 'vergüenza' llevan la misma marca wayuu pero son
+    hipotéticas: el perfil era2 no las muestrea y ninguna plantilla las
+    enseña (medición §voces.la_lista). Propuesta: archivarlas en el mismo
+    corte. ACTUALIZADO el 2026-09-24 con la transcripción del habla de
+    mujeres (6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml): `japü` tiene
+    sustituta de dos hermanas, `aburi` 'tener vergüenza' (Goeje p. 74, imagen:
+    «avoir honte f aburi … A (h)aburi»), que pasa la fonotáctica y sólo es
+    vecina de `buri` (que el núcleo archiva). `alaain` no: 'amar' es f inši /
+    A ansi (p. 95), dos hermanas, pero el grupo ns no pasa la fonotáctica
+    atestiguada; se archiva sin sustituta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. EL MUNDO — el habla de las mujeres como hecho kalinago
+# ══════════════════════════════════════════════════════════════════════
+mundo:
+  propuesta_para_3-mundo/corpus/transmision.yaml:
+    id: transmision-035
+    contenido: >-
+      Entre los kalinago de las Antillas Menores (s. XVII) había dos maneras de
+      hablar: las mujeres usaban entre ellas unas cuatrocientas palabras y
+      unos prefijos que los hombres entendían pero no decían, y esa habla de
+      mujeres era la arahuaca. Adam atribuye que la gramática de las mujeres
+      pesara más a que eran ellas quienes criaban a los niños de los dos sexos
+      hasta los nueve o diez años.
+    fuente: atestiguado
+    procedencia: {obra: adam-1879}
+    referencia: 'Adam 1879 pp. 275-277 y 301 (que cita a Labat y a Breton)'
+    dominios: [transmision, genero, comparanda_kalinago]
+    restringido: false
+    matiz_obligatorio: >-
+      El relato de la conquista (los caribes mataron a los hombres y tomaron a
+      las mujeres) es el de los informantes de Breton y hoy está discutido:
+      ver parentesco-032 y la nota de 4-fuentes/adam-1879.md. Lo que se
+      documenta es el doble registro, no la conquista.
+    implicacion_simulacion: >-
+      Ninguna directa: es un hecho kalinago y NO se proyecta a las caquetías
+      (no hay dato de un habla de mujeres caquetía). Sirve de comparanda si
+      alguna vez se pregunta por qué la gramática arahuaca es la de las madres.
+  lo_que_no_se_propone: >-
+    un habla de mujeres caquetía, o que las agentes mujeres hablen distinto.
+    Sería importar un rasgo sin dato (reglas 3 y 4).
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. BRETON — la fuente de los 400 pares
+# ══════════════════════════════════════════════════════════════════════
+breton:
+  que_hay: >-
+    Internet Archive tiene los tres libros de Breton digitalizados por la John
+    Carter Brown Library (dominio público, s. XVII): Dictionaire caraibe-
+    françois (1665, PDF 63,5 MB), Dictionaire françois-caraibe (1666, 54,4
+    MB — es el que marca hombres/mujeres palabra a palabra, según Adam p. 276)
+    y Grammaire caraibe (1667, 23,1 MB). Medido en la API de metadatos de
+    archive.org, sin descargar.
+  descargado: 'no — hace falta el permiso de Miguel'
+  si_cambia_el_nucleo: >-
+    Probablemente no. Goeje ya leyó a Breton, y lo que decide el núcleo
+    (pronombres, las ocho voces) está en Goeje, Adam, Perea y Neira. Breton
+    daría más formas de mujeres para voces nuevas y confirmaría las de aquí.
+    Recomendación: bajarlo y archivarlo para después de la corrida, no antes.
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. LO QUE NO CAMBIA
+# ══════════════════════════════════════════════════════════════════════
+lo_que_no_cambia:
+  - 'ninguna voz atestiguada caquetía: la prueba sólo las compara'
+  - 'el aspecto (-kuba, -ba) sigue hipotético'
+  - '`dai` se queda (tf.1)'
+  - 'el scorer (`capas_de_score` fijo)'

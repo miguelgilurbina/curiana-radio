@@ -1,0 +1,229 @@
+# ══════════════════════════════════════════════════════════════════════
+# PROPUESTA — el taíno de TRADICIÓN VIVA, y lo que comparte con el caquetío
+#
+# Miguel, 2026-09-24:
+#   «Y del Taíno no podremos conseguir más?»
+#   «Pero si tenemos mil y tantas voces. Esas otras de donde vienen? Recuerda
+#   que los cronistas no son la fuente principal.. es como el Caquetio. La
+#   tradición Oral prela por encima.»  —  y después: «Dale».
+#
+# Regla 5: PROPONE. No toca curiana_sim/, la lista maestra ni el corpus.
+# Regla 1: las cifras salen de 6-fusion/medicion_taino_tradicion_viva_2026-09-24.yaml
+#   (6-fusion/scripts/medir_taino_tradicion_viva.py).
+# Regla 3: la tradición viva que registran Coll y Toste, Pichardo o Bachiller
+#   es del s. XIX, en Puerto Rico y Cuba. Es dato de LENGUA (qué palabras
+#   sobrevivieron), no de cómo vivía nadie en el XV.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  recogido: '2026-09-24'
+  rama: campana/kalinago-mujeres
+  estado: sin-fusionar — propuesta con decisiones para Miguel
+  escriba: el coordinador de la sesión, en serie
+  obras: coll-y-toste-1897 · oviedo-y-valdes-1851 · brinton-1871 · goeje-1939 · zavala-reyes-2015 · van-buurt-2014
+  la_correccion_que_la_abre: >-
+    El escriba había dicho que del taíno «sólo cuentan» las voces con cronista
+    (366 de 1.039). Miguel lo corrigió: con el caquetío ya se decidió que un
+    nombre vivo es dato (la capa retroabstraída: Medina, matacán), y con el
+    taíno debe valer lo mismo. Esta propuesta aplica esa corrección.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. DE DÓNDE VIENEN LAS 1.039 (medición §procedencia)
+# ══════════════════════════════════════════════════════════════════════
+la_procedencia:
+  lectura: >-
+    La mayor parte de las voces sin cronista viene de Coll y Toste (Puerto
+    Rico, 1897), y su transcripción ya declara el tipo de apoyo de cada una:
+    «afirmada sin fuente» (la da por indígena sin decir de dónde: sobre todo
+    topónimos y nombres de plantas y animales en uso en la isla), «secundaria»
+    (Pichardo, Bachiller: los diccionarios del habla viva cubana), «conjetura
+    del autor» (analiza o reconstruye) y «sacada por el autor». La tradición
+    viva es lo afirmado y lo secundario; lo conjeturado no. Y la clase iii
+    («conjetura moderna») es casi entera la lista de Rafinesque vía Rochefort,
+    que Goeje (p. 5) da por contaminada de un diccionario caribe: eso sigue
+    sin ser dato.
+  el_capitulo_X: >-
+    El «vocabulario español-boriqueño» de Coll y Toste (cap. X) es lo único que
+    trae vocabulario BÁSICO (ni 'agua', toca 'estar', roco 'conocer', teketa
+    'mucho', guá 'él'). No es tradición oral: es análisis del autor sobre
+    topónimos y crónicas, y alguna voz caribe (bibí 'madre' es la kalina de
+    Goeje p. 41, sigla K). Por eso NO se propone para el núcleo.
+  por_que_el_basico_no_sobrevive: >-
+    Cuando un pueblo deja su lengua por otra, lo que queda en la memoria son
+    los NOMBRES de lo que sigue ahí —plantas, animales, lugares, cosas—; los
+    verbos, los pronombres y las partículas se van primero. Le pasó igual al
+    caquetío: lo que conserva Paraguaná (Zavala, Medina) son nombres. Por eso
+    la tradición viva taína sirve para comparar nombres y para la esfera, no
+    para rellenar el núcleo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. EL CRUCE NOMBRE CONTRA NOMBRE (medición §el_cruce)
+# ══════════════════════════════════════════════════════════════════════
+el_cruce:
+  metodo: >-
+    El caquetío atestiguado y el retroabstraído (la tradición viva de
+    Paraguaná) contra todo el taíno que no es conjetura, ni Rafinesque, ni una
+    voz de Venezuela colada (ver §la_fuga). La forma (similitud ≥ 0,75, D5)
+    sólo abre la candidatura; decide la GLOSA, leída a mano. La inmensa
+    mayoría de las candidatas se parece por azar y significa otra cosa
+    (yagruma 'caracol' ~ yagruma 'árbol'; wasima 'viejo' ~ guásima 'árbol').
+  parejas_con_el_mismo_significado:
+    - caquetio: 'kiba ''piedra'' (Zavala #218 «Quiva», #92 «Cuiva»)'
+      taino: 'siba, Ciba ''piedra'' (Pané; Las Casas vía Coll y Toste p. 209)'
+      clase: i-primaria-del-XVI
+      lectura: 'k ~ s'
+    - caquetio: 'kabana ''sabana'' (Zavala #51)'
+      taino: 'sabana ''llanura sin árboles'' (Oviedo p. 146; Brinton p. 13)'
+      clase: i-primaria-del-XVI
+      lectura: 'k ~ s. La sabana entró al castellano con s; el caquetío la tiene con k'
+    - caquetio: 'waitiao ''amigo ritual'' (Oliver p. 147 sobre Oviedo)'
+      taino: 'guaitiao, guatiao ''amigo'' (Herrera vía Coll y Toste p. 219; Brinton p. 12)'
+      clase: i-primaria-del-XVI
+      lectura: 'la pareja que T11 ya estudió (diao/daitiao)'
+    - caquetio: 'jagey ''estancar, represar, crear charco'' (Zavala #174)'
+      taino: 'jagüey ''depósito de agua dulce'' (Coll y Toste p. 232); T xagueye ''citerne naturelle'' (Goeje p. 57)'
+      clase: ii-solo-secundaria
+      lectura: 'la nota del lexicón ya lo anotaba: «jagüey es panamericano, de origen taíno»'
+    - caquetio: 'bajareke ''tabique de tierra, palos y bejuco'' (Zavala #24)'
+      taino: 'bajareque ''bohío grande'' (Brinton p. 11; Goeje p. 10; Coll y Toste p. 191)'
+      clase: ii-solo-secundaria
+      lectura: 'la técnica de construcción, con la palabra que la nombra'
+    - caquetio: 'wako ''planta herbácea'' (retroabstraída, Zavala #126)'
+      taino: 'guaco ''planta medicinal'' (Coll y Toste p. 218)'
+      clase: ii-solo-secundaria
+      lectura: 'planta de uso, viva en las dos orillas'
+    - caquetio: 'warawara ''caracara'' (van Buurt §6, islas ABC)'
+      taino: 'guaraguao ''ave de rapiña'' (Coll y Toste pp. 223, 156)'
+      clase: ii-solo-secundaria
+      lectura: 'rapaz, y voz imitativa'
+    - caquetio: 'kiwa ''concha de almeja y otros moluscos'' (Zavala #214)'
+      taino: 'sigua ''caracolillo de costa'' (Coll y Toste pp. 252, 158)'
+      clase: ii-solo-secundaria
+      lectura: 'k ~ s'
+  debiles_que_no_se_cuentan:
+    - 'para ''mar'' ~ para ''lluvia'' (Coll y Toste): el campo del agua, no el mismo significado'
+    - 'tara ''mariposa'' ~ tama ''la mariposa'' (primaria): r ~ m no tiene apoyo'
+  lectura: >-
+    Lo que comparten el caquetío vivo y el taíno vivo son, sobre todo,
+    palabras de la ESFERA: la sabana, el jagüey, el bahareque, el guaco, el
+    guaraguao, el guatiao. Cosas, plantas, aves y alianzas que circulaban por
+    el Caribe. Eso es contacto o herencia compartida de la esfera, no
+    vocabulario del núcleo.
+  el_patron_k_s: >-
+    Tres parejas con el mismo significado muestran caquetío k donde el taíno
+    tiene s: piedra (kiba/siba), sabana (kabana/sabana), concha (kiwa/sigua).
+    T11 (cruce_taino_caquetio_2026-09-22.yaml, test_T11 de la pareja kiba)
+    dejó kiba/siba «indecidible»: «la diferencia la cubriría k ~ s — sólo 2
+    apoyos, por debajo del listón de 3 del propio proyecto». Hoy aparecen dos
+    parejas más con el mismo significado y la misma diferencia (kabana/sabana,
+    kiwa/sigua), las dos de la tradición viva que T11 no leía. NO se decide
+    aquí qué apoyos cuenta T11 ni si llegan al listón: se propone volver a
+    correrlo con la tradición viva dentro. Si pasa, k ~ s es una
+    correspondencia regular — parentesco, no préstamo.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LO QUE ESTABA MAL EN LA LISTA MAESTRA
+# ══════════════════════════════════════════════════════════════════════
+la_fuga:
+  que: >-
+    `consolidar_taino.py` lee la sección `costa_de_venezuela` de la
+    transcripción de Oviedo y la mete en la lista taína como clase i. Esa
+    misma transcripción dice que esas voces «TAMPOCO son taínos: son de la
+    provincia de Veneçuela y de Cubagua». Son cuatro (medición §fuga).
+  propuesta: 'excluir esa sección de la lista taína (o marcarla «venezuela»), y regenerar'
+el_lema_kiba:
+  que: >-
+    La lista tiene dos lemas para la misma palabra: `siba` (Pané) y `kiba`
+    («Ciba», Las Casas vía Coll y Toste p. 209). «Ciba» se lee /siba/ en la
+    ortografía del XVI, pero la regla de lemas de D5 pasa c → k (la c → s ante
+    e, i está «disputada en lemas» y sólo se aplica al comparar). El escriba
+    se fió del lema y dijo el 2026-09-24 que el caquetío kiba era «idéntico»
+    al taíno de Las Casas: era falso, y se le corrigió a Miguel.
+  propuesta: 'fundir `kiba` en `siba` como variante gráfica (misma glosa, mismo sonido)'
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. UNA ATESTACIÓN CAQUETÍA QUE SE HABÍA PERDIDO
+# ══════════════════════════════════════════════════════════════════════
+komoho:
+  que: >-
+    Oviedo (Historia general, lib. VIII cap. XXVIII, pp. 313-315; título y
+    cuerpo): el cardón de las tunas y su fruta «se llama comoho en la
+    provinçia de Veneçuela»; y que de ella hacen un vino tinto, y que es más
+    sabrosa que las tunas de La Española. Es la provincia de los caquetíos. El
+    lexicón tiene `komoho` 'higo', caquetío atestiguado, con una sola cita
+    (Zavala #88 (HB)). La transcripción de Oviedo marcó «en_el_lexicon: no»
+    porque buscó «comoho» con c y el lexicón lo guarda con k.
+  lo_que_cambia: >-
+    `komoho` pasa de una fuente a DOS independientes —un cronista del XVI en la
+    provincia y el glosario de Zavala— y la glosa se precisa: 'higo' es el
+    higo de tuna, el fruto del cardón. Propuesta de glosa: 'fruto del cardón
+    de las tunas (higo de tuna); también el cardón'.
+  a_que_esfera: 'lengua (la entrada del lexicón) y ecología: el cardonal (ecologia-007/018/032) y el vino de comoho'
+  verificacion: >-
+    p. 313 VERIFICADA EN IMAGEN (pdf 432 de fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf):
+    el título dice «De los cardos de las tunas é su fructa, la qual en la
+    provinçia de Veneçuela en la Tierra-Firme se llama comoho», y en el
+    mismo capítulo Oviedo llama «higos» a esos frutos («comiendo çinco ó
+    seys higos destos»): la glosa 'higo' de Zavala es la palabra del propio
+    cronista. p. 315 (pdf 434) por capa de texto: «este comoho es mas
+    sabroso mucho que las tunas».
+
+paraguana:
+  pedido: 'Miguel, 2026-09-24: «Que interesante que mencionen Paraguaná como palabra Taina no?» … «Vale, me parece»'
+  que: >-
+    Ninguna fuente llama taína a «Paraguaná»: lo hizo la lista maestra (§la_fuga).
+    Lo que Oviedo dice es otra cosa, y vale más: el nombre ya era el de la
+    gente del lugar en 1540. Historia general, lib. VI cap. XIX, p. 205
+    (VERIFICADO EN IMAGEN, pdf 324 de
+    fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf):
+    «En el camino que hay desde la cibdad de Coro, yendo al cabo de Sanct
+    Roman, que los indios llaman á aquella provinçia Paraguana, es un cabo que
+    sale á la mar veynte y çinco leguas ó mas». Oviedo toma juramento a dos
+    testigos ante la Audiencia de Santo Domingo el 13 de julio de 1540 (p.
+    206) y el capítulo trata de un espejismo en el istmo: el nombre llega de
+    paso, que es lo que lo hace fiable.
+  lo_que_cambia: >-
+    toponimo-018 (paraguaná) está en el canon con `procedencia: null` y `deuda:
+    sin-procedencia`. Oviedo p. 205 le da procedencia a la FORMA (así se
+    llamaba, y en boca de los indios, en 1540); NO a la glosa, que sigue en
+    #109 (el -ná). Propuesta: procedencia oviedo-y-valdes-1851 p. 205 para el
+    nombre, con la lectura «los indios llaman á aquella provinçia Paraguana».
+  la_conexion: >-
+    El primer segmento del nombre es para / parawa 'mar' (Zavala #190-191),
+    la misma palabra que el caquetío comparte con el habla de MUJERES kalinago
+    (balaua, barawa: kalinago_mujeres_2026-09-23.yaml §prueba). Es parentesco
+    arahuaco de familia, no un préstamo taíno.
+  como_se_aplica: 'por migrar_toponimos.py sobre lexicon_toponimos.py: 2-lengua/toponimos.yaml no se edita a mano'
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LAS DECISIONES
+# ══════════════════════════════════════════════════════════════════════
+decisiones:
+  - id: T1
+    pregunta: '¿la tradición viva taína cuenta como dato taíno?'
+    opciones:
+      - letra: A
+        que: >-
+          Sí, con su propia etiqueta —«taíno de tradición viva», como la
+          retroabstraída del caquetío— y separada de la del cronista. Entra en
+          los cruces y como comparanda de la esfera. Lo conjeturado (por el
+          autor o por Rafinesque) sigue fuera.
+      - letra: B
+        que: 'no: sólo cuenta la que tiene cronista, como hasta hoy'
+    recomendacion: A
+    por_que: 'es la regla que el proyecto ya se da para el caquetío (Miguel, 2026-09-24)'
+  - id: T2
+    pregunta: '¿komoho suma a Oviedo como segunda atestación, con la glosa precisada?'
+    recomendacion: 'sí (p. 313 ya vista en imagen)'
+  - id: T2b
+    pregunta: '¿toponimo-018 (paraguaná) toma a Oviedo p. 205 como procedencia del nombre?'
+    recomendacion: 'sí (verificado en imagen); la glosa sigue en #109'
+  - id: T3
+    pregunta: '¿se arregla la lista maestra (fuera las cuatro de Venezuela; kiba dentro de siba)?'
+    recomendacion: sí
+  - id: T4
+    pregunta: '¿se anotan en las notas de las ocho voces caquetías su pareja taína o antillana como comparanda de la esfera?'
+    voces: [kiba, kabana, waitiao, jagey, bajareke, wako, warawara, kiwa]
+    recomendacion: 'sí: es nota, no cambia ninguna glosa ni ninguna capa'
+  - id: T5
+    pregunta: '¿se vuelve a correr T11 con la tradición viva dentro, para decidir k ~ s?'
+    recomendacion: 'sí, después de la corrida base: no cambia el núcleo'

@@ -110,3 +110,14 @@ otros sacan del taíno?
 **Qué NO.** Revisión entrada a entrada: la transcripción es automática y la
 muestra de 20 dio 2 errores de segmentación y 1 de clasificación. Ver el issue
 `vocabularios-antillanos-2-2026-09-22.md`.
+
+## Bitácora: la tradición viva, leída como dato (2026-09-24)
+
+Miguel: «los cronistas no son la fuente principal… la tradición oral prela
+por encima». Lo afirmado sin fuente y lo secundario de esta obra (topónimos,
+plantas y animales en uso en Puerto Rico y Cuba) se propone como «taíno de
+tradición viva», separado de lo conjeturado por el autor. Cruzado nombre
+contra nombre con el caquetío vivo, da ocho parejas con el mismo significado,
+cinco de ellas de aquí: jagüey, bahareque, guaco, guaraguao, sigua. Y el
+vocabulario español-boriqueño del cap. X (el único básico) NO es tradición
+oral: es análisis del autor. Detalle: `6-fusion/taino_tradicion_viva_2026-09-24.yaml`.
