@@ -354,3 +354,5 @@ con c: el lexicón guarda `komoho` 'higo', caquetío atestiguado (Zavala #88).
 Con Oviedo pasa a dos fuentes independientes. Y la lista maestra taína lo
 contaba como taíno, igual que las otras tres voces de esa sección.
 Propuesta: `6-fusion/taino_tradicion_viva_2026-09-24.yaml` §komoho y §la_fuga.
+
+**✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): `komoho` tiene a Oviedo como segunda fuente y la glosa 'fruto del cardón de las tunas (higo de tuna)' (T2, por `SIG_CURADO` del minador de Zavala); Paraguaná toma la p. 205 como procedencia del NOMBRE (T2b, toponimo-018; la glosa sigue en #109); y la lista maestra taína ya no lee la sección de Venezuela (T3).

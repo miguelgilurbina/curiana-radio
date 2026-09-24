@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-24**.
 
-**7643 ítems propuestos** en 150 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**7643 ítems propuestos** en 152 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -63,6 +63,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-21.yaml` | ? | 0 |  |
 | `decisiones_tanda_final_2026-09-23.yaml` | ? | 0 |  |
+| `decisiones_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_era2.yaml` | ? | 11 |  |
@@ -113,6 +114,7 @@ editar_a_mano: no
 | `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
 | `medicion_tanda_final_2026-09-23.yaml` | ? | 0 |  |
+| `medicion_tanda_hermanas_2026-09-24.yaml` | ? | 4 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -157,9 +159,9 @@ editar_a_mano: no
 | `taino_goeje_1939.yaml` | ? | 145 |  |
 | `taino_inventario_2026-09-21.yaml` | ? | 0 |  |
 | `taino_las_casas_1875.yaml` | las-casas-1875 | 26 |  |
-| `taino_lista_maestra_2026-09-22.yaml` | ? | 1039 |  |
+| `taino_lista_maestra_2026-09-22.yaml` | ? | 1034 |  |
 | `taino_pane_c1498.yaml` | pane-c1498 | 24 |  |
-| `taino_tradicion_viva_2026-09-24.yaml` | ? | 5 |  |
+| `taino_tradicion_viva_2026-09-24.yaml` | ? | 6 |  |
 | `taino_zayas_1931.yaml` | ? | 39 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
@@ -240,13 +242,11 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `guaiqueries-manaure-dabajuroide-2026-09-23.md` | El asiento de Manaure, los guaiqueríes y la cronología dabajuroide (cc.5) |
 | `gumilla-cacatia-y-achagua-2026-09-23.md` | Gumilla 1791: los «Cacatia» de los Llanos y lo que aporta al achagua |
 | `habla-llanos-coro-perez-de-tolosa-2026-09-23.md` | «Aunque algo difieren en la habla á los de Coro» — ¿a dónde va este testigo? |
-| `kalinago-mujeres-2026-09-23.md` | El habla de las mujeres kalinago: la cuarta hermana |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `nominalizador-retroabstraccion-2026-09-21.md` | El nominalizador que no está: se buscó así, en esto, y no hay |
-| `nucleo-fundacional-hermanas-2026-09-24.md` | El núcleo fundacional, rehecho desde las hermanas |
 | `oliver1989-restante-2026-09-22.md` | Oliver 1989, lo que quedaba a medias: la A-9 entera, los vecinos, los dabajuranos y el mar |
 | `oviedo-restante-2026-09-22.md` | Tercera campaña de minería — M3: Oviedo y Valdés, lo que quedaba de los cuatro tomos |
 | `pares-atestiguado-reconstruido-2026-09-19.md` | Dos palabras para la misma cosa: los pares atestiguado / reconstruido |
@@ -261,7 +261,6 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `taino-inventario-y-fuentes-2026-09-21.md` | --- |
 | `taino-lascasas-pane-brinton-2026-09-21.md` | --- |
 | `taino-oviedo-2026-09-21.md` | Campaña del taíno — T1: Oviedo y Valdés 1851, vol. I |
-| `taino-tradicion-viva-2026-09-24.md` | El taíno de tradición viva |
 | `taino2-apologetica-2026-09-22.md` | La *Apologética* de Las Casas: 24 entradas del lexicón reciben cita, 3 entran en conflicto |
 | `taino2-etnohistoria-contacto-2026-09-22.md` | Lo que sabían unos de otros en 1492-1500 — y qué hace eso con la hipótesis |
 | `taino2-evidencia-material-2026-09-22.md` | Sí hubo contacto, y no fue con el taíno: los caquetíos de Curazao llevan dos tercios de sa |

@@ -53,6 +53,17 @@ categorías:
 
 ## Las capas epistémicas del caquetío
 
+> ⚠️ **La tabla de abajo es una foto vieja escrita a mano** (regla 1: las
+> cifras de hoy están en `TABLERO.md` y en cada medición de `6-fusion/`). Y
+> la fila de `caquetío-reconstruido` ya no describe el núcleo: desde la
+> **tanda de las hermanas (2026-09-24)** el «núcleo fundacional» se rehízo
+> desde el lokono y el habla de mujeres kalinago —dos hermanas con la misma
+> forma = reconstruida, una = hipotética—, sus voces viejas (que citaban
+> «cognado» sin obra) están archivadas en `FUERA_DEL_HABLA` con su capa, y
+> donde el caquetío atestiguado ya decía la cosa, manda él. Registro:
+> `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`; cifras:
+> `6-fusion/medicion_tanda_hermanas_2026-09-24.yaml`.
+
 De las 304 entradas de familia caquetía:
 
 | Etiqueta | n | Qué significa |

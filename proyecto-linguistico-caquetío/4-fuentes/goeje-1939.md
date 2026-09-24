@@ -222,3 +222,5 @@ Y una corrección a la prueba del 23: 'algodón' tiene forma de mujeres,
 **Qué NO ha dado.** Formas de mujeres dentro de líneas con otra sigla
 (`1 am`, `—`) pueden faltar: se leyó por la sigla del margen. Las pp. 117-118
 son préstamos europeos y el vocabulario guayano, sin habla de mujeres.
+
+**✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): el habla de mujeres cuenta como hermana (D1) y sube a reconstruidos `bui`, `lihi`, `tuhu` (p. 24), `diki` (p. 100) y `marisi` (p. 65); da `ani` (p. 94), `aita` (p. 101), `butu` y `aburi` (p. 74), `kibe` (p. 71), `kake` (p. 79), `sile` (p. 105) y `uli` (p. 53).

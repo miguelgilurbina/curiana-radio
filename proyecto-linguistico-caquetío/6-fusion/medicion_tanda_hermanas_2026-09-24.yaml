@@ -1,0 +1,198 @@
+# Generado por 6-fusion/scripts/medir_tanda_hermanas.py — NO editar a mano.
+medicion: tanda-de-las-hermanas
+fecha: 2026-09-24
+ref_de_antes: 6aa43a5
+decide: 6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml
+con_la_base: false
+instrumento:
+  vocabulario_base:
+    antes: 5496
+    hoy: 5488
+  fuera_del_habla:
+    antes: 36
+    hoy: 76
+  formas_de_plantilla:
+    antes: 5985
+    hoy: 6028
+  capas:
+    achagua:
+      antes: 3568
+      hoy: 3569
+    caquetío-hipotético:
+      antes: 58
+      hoy: 75
+    caquetío-reconstruido:
+      antes: 69
+      hoy: 45
+    lokono:
+      antes: 638
+      hoy: 636
+  claves_de_todas_las_reglas:
+    salen: []
+    entran: []
+    antes: 22
+    hoy: 22
+  prefijos:
+    salen: []
+    entran: []
+    antes: 6
+    hoy: 6
+  sufijos:
+    salen: []
+    entran: []
+    antes: 16
+    hoy: 16
+  voces_de_fuera:
+    salen: []
+    entran: []
+    antes: 44
+    hoy: 44
+  formas_de_plantilla_salen:
+    - alimento
+    - contigo
+    - da-nii
+    - debe
+    - kuru-bakoa
+    - kuru-bana
+    - ma-arua
+    - masa-kuba
+    - naa-ba
+    - naa-kuba
+    - raka-ba
+    - sima-bana
+    - vas
+    - wa-duna
+  formas_de_plantilla_entran:
+    - aburi
+    - ada-bakoa
+    - ada-bana
+    - aeke
+    - aeke-kuba
+    - aiima
+    - aita
+    - akusi
+    - alegrarse
+    - ani
+    - ati
+    - badia
+    - bena
+    - blanco
+    - bueno
+    - butu
+    - color
+    - comida
+    - da-akusi
+    - debe-achagua
+    - dunku
+    - enojo
+    - halikebe
+    - halira
+    - hikihi
+    - hiti
+    - hiti-ba
+    - huda-lokono
+    - ika
+    - isi
+    - iti
+    - kake
+    - kia-lokono
+    - kibe
+    - kidi-bana
+    - kudu
+    - kule
+    - kunu
+    - kunu-ba
+    - kunu-kuba
+    - ma-ako
+    - maba-achagua
+    - morir
+    - muerte
+    - negro
+    - rojo
+    - saika
+    - sile
+    - uli
+    - uni-achagua
+    - unia-achagua
+    - vayas
+    - vida
+    - vivir
+    - wa-uni
+    - wunabu-lokono
+    - ánimo
+prompt:
+  plantillas:
+    IDENTIDAD_LINGUISTICA:
+      antes: 1335
+      hoy: 1334
+      cambia: true
+    prompt_reglas_completo:
+      antes: 5211
+      hoy: 5391
+      cambia: true
+    prompt_reglas_breve:
+      antes: 1459
+      hoy: 1557
+      cambia: true
+    prompt_afijos_atestiguados:
+      antes: 734
+      hoy: 732
+      cambia: true
+    prompt_afijos_atestiguados_breve:
+      antes: 187
+      hoy: 187
+      cambia: false
+    "prompt_refuerzo[1.0]":
+      antes: 189
+      hoy: 192
+      cambia: true
+    "prompt_refuerzo[3.0]":
+      antes: 175
+      hoy: 178
+      cambia: true
+    "prompt_refuerzo[5.0]":
+      antes: 150
+      hoy: 150
+      cambia: true
+    "prompt_refuerzo[6.5]":
+      antes: 81
+      hoy: 82
+      cambia: true
+    "prompt_rescate[0]":
+      antes: 1008
+      hoy: 1008
+      cambia: false
+    "prompt_rescate[1]":
+      antes: 810
+      hoy: 810
+      cambia: false
+    "prompt_rescate[2]":
+      antes: 726
+      hoy: 726
+      cambia: false
+  system_prompt_de_los_63:
+    prompts:
+      antes: 63
+      hoy: 63
+    medio:
+      antes: 7871.2
+      hoy: 8002.6
+    mediana:
+      antes: 6872
+      hoy: 7021
+    min:
+      antes: 5295
+      hoy: 5382
+    max:
+      antes: 11924
+      hoy: 11874
+    cambio_medio_pct: 1.67
+  tu_emocionar_cambia_en: 0
+  semilla_de_idiolecto_cambia_en: 62
+  semilla_mas_corta_hoy: 6
+  agentes: 63
+pendiente_con_la_base:
+  - "el control: re-puntuar la serie C repetida con el motor del run tiene que reproducir sus scores"
+  - "cuánto se mueve el score de esas 216 + 216 respuestas de main a hoy, y por qué componente"
+  - el uso histórico de las voces archivadas (usos sueltos y como núcleo que dejan de contar)
+  - "que las formas NUEVAS de las plantillas no se hayan dicho nunca en la base (ada-bana, ada-bakoa, kidi-bana, kunu-kuba, da-akusi, wa-uni, ma-ako…): la condición de d21.14 para un ejemplo del prompt"

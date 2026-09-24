@@ -13,6 +13,18 @@
 # se mide contra main (prompt, pre-vuelo, guardianes y, con Docker, el
 # control y el uso histórico) y sólo entonces se mergea.
 
+meta:
+  estado: 'APLICADA (2026-09-24) en la rama tanda/hermanas-2026-09-24, SIN MERGEAR — queda la medición con la base (Docker) y el ok de Miguel; 0 decisiones de la tanda por aplicar salvo T5 (después de la corrida)'
+  aplicado_por:
+    - 6-fusion/scripts/aplicar_tanda_hermanas.py            # el lexicón: archivo, voces nuevas, capas, T4, claves lokono
+    - curiana_sim/minar_a2_swadesh.py --generar-modulo       # ada/hime a COLISIONES_A2
+    - 6-fusion/scripts/generar_lexicon_achagua.py            # uni/unia → -achagua
+    - curiana_sim/minar_zavala_glosario.py --generar-modulo  # T2 komoho y T4 (SIG_CURADO, NOTA_ANADIDA)
+    - curiana_sim/migrar_toponimos.py                        # T2b
+    - 6-fusion/scripts/consolidar_taino.py                   # T3
+    - 'a mano, en el mismo corte: plantillas, koiné, cronista, corpus (D4 y tres palabra_lexicon), sitios/clima, pre-vuelo y tests'
+  medido_en: '6-fusion/medicion_tanda_hermanas_2026-09-24.yaml (6-fusion/scripts/medir_tanda_hermanas.py; sin la base: control y score pendientes)'
+
 th.0_el_paquete:
   decision_literal: '«Acepto todo lo recomendado»'
   lectura: >-
@@ -87,6 +99,13 @@ th.7_N2_las_36_voces:
 
 th.8_T1_la_tradicion_viva_taina:
   eleccion: 'A — cuenta como dato taíno con su propia etiqueta, separada de la del cronista; lo conjeturado sigue fuera'
+  aplica: >-
+    en la lista maestra la tradición viva ya va aparte (clase ii, sin cronista)
+    y lo conjeturado en la iii; lo que T1 cambia es que la clase ii CUENTA como
+    dato en los cruces, y el cruce que lo usa es T11, que se vuelve a correr
+    después de la corrida (T5). No se renombra la clase: ii también trae
+    voces de Brinton o Bachiller sin cronista que no son tradición viva, y
+    llamarlas así sería afirmar de más.
   fuente: 6-fusion/taino_tradicion_viva_2026-09-24.yaml §decisiones
 
 th.9_T2_komoho:
@@ -161,3 +180,41 @@ lo_que_aparecio_al_aplicar:
     `kasalini` y `mautia`, y en la completa. `huda` y `kake` son
     reconstruidas y salen en la muestra. Si Miguel prefiere que no, se quitan
     de la línea: es una edición de la plantilla.
+  dos_glosas_mas_estrechas: >-
+    `badia` hereda de `ka` 'y, también, además' pero NO el 'con' (lokono
+    BADDIA 'y, también', Perea p. 538, no da 'con'), y `bena` hereda de `saa`
+    'cuando' pero NO el 'si' condicional (lokono BENNA 'cuando', p. 504). En
+    duda, degradar: el agente pierde 'con' y 'si' como voz propia. El ejemplo
+    de la completa se rehízo sin ellos («kia dai badia kunu-ba», 'después yo
+    también voy').
+  cuatro_nombres_del_elenco_sobre_raiz_archivada: >-
+    Dunakoa (duna), Ruata (rua), Simaure (sima) y Talata (talata). Los
+    nombres se quedan —el canon del elenco no se reescribe, y es el criterio
+    de la sigla E: «el agente no cambia, la voz sí»—; el test de la regla a de
+    los nombres exige ahora que esas cuatro raíces estén ARCHIVADAS por esta
+    tanda. Si Miguel quiere renombrarlos, es otra decisión.
+  el_mundo_apuntaba_a_las_voces_viejas: >-
+    sitios_era2.yaml y clima_era2.yaml nombraban la voz caquetía de cada cosa
+    con `voz_caquetia: {clave, capa}`, y el bloque [Tu tierra] decía «Lo decís
+    duna.» / «Lo decís arima.»: el pre-vuelo lo encontró en 14-20 de 126
+    prompts. Se repuntaron a la sustituta con su capa de hoy (duna→uni,
+    kaya→unia, arima→hime, amana→hikihi, kuru→ada, kono→jusual) y marisi sube
+    a reconstruida; las hipotéticas no se dicen en [Tu tierra] con el perfil
+    era2, que es la regla de siempre. Y 3-mundo/corpus/ecologia.yaml: tres
+    `palabra_lexicon` (kaya, arima, kuru) repuntadas igual.
+    verificar_sitios_era2.py daba 22 fallos y NO está entre los guardianes:
+    ahora está en verde.
+  la_semilla_derivada_se_quedaba_corta: >-
+    Buriche (oficio: el fermento) sólo dispara el campo «cuerpo», y ese campo
+    se quedó con una voz sembrable (`bari` bajó a hipotética, `sünatü` se
+    archivó): arrancaba con 3 formas y el mínimo son 5. formas_derivadas() se
+    completa ahora con el caquetío sembrable entero cuando el oficio agota sus
+    campos, como ya hacía con quien no dispara ninguno. La era 1 no cambia.
+    Y la semilla cambia en 62 de 63 agentes: el sorteo determinista cae sobre
+    otro conjunto de voces (medido).
+  ejemplos_de_regla_con_voces_archivadas: >-
+    -bana (sima-bana, kuru-bana), -bakoa (kuru-bakoa), -aima (arima-aima) y
+    el aspecto (naa-kuba, naa-ba) pasan a kidi/ada/hime/kunu. `ada-bakoa`
+    devuelve el ejemplo a la raíz del topónimo que la morfema-001 cita
+    (Adabacoa 'todo arboleda'): d21.14 lo había quitado sólo porque `ada` era
+    lokono. Que no se haya dicho nunca en la base queda POR MEDIR.

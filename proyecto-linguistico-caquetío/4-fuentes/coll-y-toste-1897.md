@@ -121,3 +121,5 @@ contra nombre con el caquetío vivo, da ocho parejas con el mismo significado,
 cinco de ellas de aquí: jagüey, bahareque, guaco, guaraguao, sigua. Y el
 vocabulario español-boriqueño del cap. X (el único básico) NO es tradición
 oral: es análisis del autor. Detalle: `6-fusion/taino_tradicion_viva_2026-09-24.yaml`.
+
+**✅ Aplicado el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): la tradición viva cuenta como dato taíno con su propia etiqueta (T1; entra en los cruces cuando se vuelva a correr T11, después de la corrida base) y la pareja taína está anotada en `jagey`, `bajareke`, `wako`, `warawara` y `kiwa` (T4). `kiba` se fundió en `siba` en la lista maestra (T3).

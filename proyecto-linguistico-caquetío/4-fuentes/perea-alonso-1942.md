@@ -323,6 +323,8 @@ use. Es la misma sospecha de la p. 606, dicha al final con todas las letras.
 - Los tomos II a V nunca se publicaron o no están en el repo; el tomo III iba a
   ser el **vocabulario arawak-español**, que es lo que de verdad haría falta.
 
+**✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): el núcleo fundacional sale en buena parte del lokono de Perea — `kunu` (p. 623), `hiti` (p. 258), `kudu` (pp. 253, 378), `hikihi` (p. 46), `wunabu` (pp. 95, 70, 96), `iti` (p. 123), `badia` (p. 538), `ika` (p. 528), `bena` (p. 504), `kia` (p. 508), `halikebe` (pp. 231, 336, 112), `huda` (p. 390) y `suka` (p. 71). Una sola hermana es hipotética; con el kalinago de mujeres, reconstruida.
+
 ## Enlaces
 
 [[brinton-1871]] · [[oliver-1989-cap2]] · [[medina-colina-sxx]]
