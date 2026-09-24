@@ -77,6 +77,15 @@
   --sim-fuego: #a05a10; /* la voz caquetía — pariente del ocre del chart */
   --sim-mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
   --sim-display: var(--font-fraunces), var(--font-lora), Georgia, serif;
+
+  /* Capas epistémicas — cómo sabemos cada palabra (lib/sim-theme.ts
+     CAPAS_EPISTEMICAS). De la tinta firme a la desvaída: lo documentado,
+     lo derivado de las hermanas, la voz viva proyectada hacia atrás y la
+     conjetura. Todas ≥ 4.5:1 sobre el pergamino. */
+  --capa-atestiguado: #2d6340;
+  --capa-reconstruido: #8c4e0c;
+  --capa-retroabstraido: #5a4a99;
+  --capa-hipotetico: #6f5f48;
 }
 
 /* ── Acto I: el laboratorio ────────────────────────────────────────────
@@ -94,6 +103,12 @@
   --sim-rule: #2f425b; /* deep-700: filetes */
   --sim-rubrica: #ff6b35; /* frequency: lo editorial del instrumento */
   --sim-fuego: #e2a158; /* ocre caquetío legible sobre tinta profunda */
+
+  /* Las mismas cuatro capas, legibles sobre la tinta profunda */
+  --capa-atestiguado: #7cc896;
+  --capa-reconstruido: #e2a158;
+  --capa-retroabstraido: #aea2f2;
+  --capa-hipotetico: #b8aa90;
 }
 
 /* ── Tema "Dial" de JAI Sounds ─────────────────────────────────────────
