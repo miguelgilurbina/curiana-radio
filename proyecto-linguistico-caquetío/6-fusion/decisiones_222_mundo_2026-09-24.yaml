@@ -247,8 +247,21 @@ decisiones:
       P3 A: una lectura `hipotesis` en toponimo-132, 138, 135 y 176. P3 B:
       NECESITA A MIGUEL. P4: la forma viva con su coordenada en un campo
       propio del canon, leído por barrer_mapa.py (tooling, no motor).
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: 'APLICADA en P3 A y P4 (2026-09-24); P3 B NECESITA A MIGUEL'
+    aplicado_por:
+      - 'P3 A — curiana_sim/lexicon_toponimos.py: una lectura `hipotesis` (eje referente, quien M6, con la página de Esteves y el veredicto «a revisar») en toponimo-132 cumairebo (~ Curaidebo, 201), 138 la miraba (~ Niraba, 278), 135 tabe (~ Jabe, 272) y 176 caduto (~ Coduto, 219); nada se funde'
+      - 'P4 — `forma_viva` con su coordenada en 33 topónimos (18 entradas de nivel y 15 descartes), pasada de la prosa de la propia entrada por 6-fusion/scripts/formas_vivas_al_canon.py; curiana_sim/migrar_toponimos.py la emite; curiana_sim/barrer_mapa.py la lee ANTES del cruce aproximado; curiana_sim/tests/test_barrer_mapa.py (3 tests); 2-lengua/datos-de-lengua.md documenta el campo'
+    mide: 'barrer_mapa: Paraguaná pasa de 8 nuevos y varios aproximados a 0 nuevos, 0 a revisar, 124 de 124 en alguna fuente; «Cerro Capuana» y «Cuabana» dejan de caer en `capana`'
+    necesita_a_miguel: >-
+      P3 B — sólo tú puedes decirlo sobre el terreno. Pregunta: ¿reconoces
+      estos cuatro sitios como el mismo lugar que nombra Esteves? (1) Cumairebo
+      (12.003, -69.920, entre Pueblo Nuevo y El Vínculo) = Curaidebo; (2) La
+      Miraba y el Cerro La Miraba (11.834, -70.054; municipio Moruy) = Niraba;
+      (3) Tabe (11.917, -70.104, a unos dos km de Jadacaquiva) = Jabe o San
+      José de Tarbes; (4) Coduto (11.817, -70.213, al este de Los Taques) y
+      Coduto / Punta Coduto en Médanos = el caduto del dictado. Los que
+      reconozcas se funden (la forma viva pasa a la entrada de Esteves y el
+      descartado de OSM se retira como `reubicado`).
 
   dp.2.10:
     tema: la cola nueva de topónimos (Sarasaragua, Norupara, Buinare, Paraguaná 1548)

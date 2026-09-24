@@ -14,6 +14,15 @@ La fuente es OpenStreetMap vía Overpass (Miguel lo decidió el 2026-09-07:
 cuatro regiones son las de `3-mundo/asentamientos.yaml`: paraguana,
 golfete-de-coro, falcon-occidental, islas-abc.
 
+La FORMA VIVA del canon (dp.2.09 de #222, P4, 2026-09-24). Un topónimo del
+canon que el mapa escribe de otra manera —Cividual por Sibidigual, Bajo Aroa
+por Bajabaroa, Nueva Jayama por Jayana— guarda esa forma en su campo
+`forma_viva` (con la coordenada), y este script la lee ANTES del cruce con la
+mesa: si el nombre del mapa es la forma viva de una entrada, el cruce es
+`forma-viva` y no es ni nuevo ni aproximado. Sin eso, el informe anunciaba
+como «en ninguna fuente» ocho nombres de Paraguaná que estaban en el canon
+desde el lote 7, y mandaba «Cerro Capuana» y «Cuabana» a `capana`.
+
 Lo que este script NO hace: decidir nivel, glosa ni etimología de nada. Es
 un inventario cruzado. Regla 5: propone; el humano fusiona. Regla 3: un
 nombre vivo en el mapa de 2026 es época moderna hasta que un documento lo
@@ -44,6 +53,7 @@ REPO = os.path.dirname(_AQUI)
 CRUDO_DIR = os.path.join(REPO, "fuentes_caquetios", "osm_kaketiana")
 SALIDA = os.path.join(REPO, "6-fusion", "toponimos_mapa_kaketiana.yaml")
 MESA = os.path.join(REPO, "6-fusion", "toponimos_por_fuente.yaml")
+CANON = os.path.join(REPO, "2-lengua", "toponimos.yaml")
 OVERPASS = "https://overpass-api.de/api/interpreter"
 AGENTE = "curiana-radio/barrer_mapa (proyecto-linguistico-caquetio; contacto en el repo)"
 
@@ -478,6 +488,23 @@ def cargar_mesa():
     return por_clave, por_palabra
 
 
+def cargar_formas_vivas() -> dict:
+    """{clave de la forma viva: (id, forma del canon)}, desde el campo
+    `forma_viva` de 2-lengua/toponimos.yaml. Se indexa también el nombre sin
+    genéricos («Cerro Capuana» → «Capuana»)."""
+    if not os.path.exists(CANON):
+        return {}
+    with open(CANON, encoding="utf-8") as fh:
+        doc = yaml.safe_load(fh) or {}
+    vivas = {}
+    for r in doc.get("toponimos") or []:
+        for f in r.get("forma_viva") or []:
+            for k in {clave(f["forma"]), clave(nombre_propio(f["forma"]) or f["forma"])}:
+                if k:
+                    vivas.setdefault(k, (r["id"], r["forma"]))
+    return vivas
+
+
 def cruzar(propio: str, por_clave, por_palabra):
     """Devuelve (entrada de la mesa | None, cómo). `cómo` es exacto, parcial
     (una palabra del nombre está en la mesa) o aproximado (distancia 1-2 tras
@@ -507,6 +534,7 @@ def cruzar(propio: str, por_clave, por_palabra):
 
 def compilar(entradas_crudas: list[dict]) -> tuple[list, dict]:
     por_clave, por_palabra = cargar_mesa()
+    vivas = cargar_formas_vivas()
     vistos, entradas, descartes = set(), [], Counter()
     for e in entradas_crudas:
         tags = e.get("tags") or {}
@@ -536,7 +564,10 @@ def compilar(entradas_crudas: list[dict]) -> tuple[list, dict]:
                "osm_tag": etiqueta, "clase": clase}
         if clave(propio) != clave(nombre):
             reg["nombre_propio"] = propio
-        if clase == "por-clasificar":
+        viva = vivas.get(clave(nombre)) or vivas.get(clave(propio))
+        if clase == "por-clasificar" and viva:
+            reg["cruce"] = {"con": viva[1], "como": "forma-viva", "en_canon": viva[0]}
+        elif clase == "por-clasificar":
             m, como = cruzar(propio, por_clave, por_palabra)
             if m:
                 cr = m.get("cruces") or {}

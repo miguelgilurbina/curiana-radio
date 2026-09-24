@@ -9,7 +9,7 @@ meta:
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 911
+    menciones: 915
     formas_distintas: 545
     fuentes: 18
     por_fuente:
@@ -17,8 +17,8 @@ meta:
         menciones: 58
         formas: 58
       esteves-1989:
-        menciones: 412
-        formas: 211
+        menciones: 416
+        formas: 215
       castellanos-elegias:
         menciones: 20
         formas: 17
@@ -58,15 +58,15 @@ meta:
       alvarado-1921:
         menciones: 2
         formas: 2
-      jahn-1927:
-        menciones: 1
-        formas: 1
-      oviedo-y-valdes-1851:
-        menciones: 1
-        formas: 1
       osm-kaketiana:
         menciones: 7
         formas: 7
+      oviedo-y-valdes-1851:
+        menciones: 1
+        formas: 1
+      jahn-1927:
+        menciones: 1
+        formas: 1
     en_canon: 307
     en_nodos: 19
     sin_canon_ni_nodo: 233
@@ -453,8 +453,8 @@ por_fuente:
 - obra: esteves-1989
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
-  menciones: 412
-  formas: 211
+  menciones: 416
+  formas: 215
   toponimos:
   - forma: bisure
     tipo: canon
@@ -1346,6 +1346,12 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: caserío del municipio Mitare, Distrito Miranda
     ref: toponimo-164 · nivel descartado · topónimo · fuente procedencia
+  - forma: caduto
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'es el Coduto de Esteves (p. 31; toponimo-219), que el libro da en dos lugares: el Istmo de Médanos (Baraived)…'
+    ref: 'toponimo-176 · M6, tercera minería (#216) · 2026-09-23 · a revisar: caduto viene del dictado y la vocal
+      no casa; con…'
   - forma: guayacanal
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -1412,6 +1418,25 @@ por_fuente:
     dato: lugar costeño «señalado en un antiguo mapa, localizado en el punto donde hoy está Amuaicito. Podría ser
       la mi…
     ref: toponimo-131 · nivel descartado · topónimo · fuente procedencia
+  - forma: cumairebo
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'es la Curaidebo de Esteves (p. 35; toponimo-201), «la aldea entre Pueblo Nuevo y El Vínculo»: está justo
+      entr…'
+    ref: 'toponimo-132 · M6, tercera minería (#216) · 2026-09-23 · a revisar: r~m no está entre las permutaciones
+      documentadas…'
+  - forma: tabe
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva
+    ref: 'toponimo-135 · M6, tercera minería (#216) · 2026-09-23 · a revisar: dos caminos posibles y ninguno documentado;
+      conf…'
+  - forma: la miraba
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano delante
+    ref: 'toponimo-138 · M6, tercera minería (#216) · 2026-09-23 · a revisar: n~m no está entre las permutaciones
+      documentadas…'
   - forma: arajó
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -4749,28 +4774,6 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: árbol indeterminado de Lara y Falcón
     ref: toponimo-152 · nivel C · topónimo · fuente procedencia
-- obra: jahn-1927
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 1
-  formas: 1
-  toponimos:
-  - forma: curarí
-    tipo: lectura:glosa-fuente
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
-    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
-- obra: oviedo-y-valdes-1851
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 1
-  formas: 1
-  toponimos:
-  - forma: paraguaná
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: Rodeada del mar
-    ref: toponimo-018 · nivel C · topónimo · fuente procedencia
 - obra: osm-kaketiana
   en_bibliografia: true
   descripcion: ''
@@ -4815,6 +4818,28 @@ por_fuente:
     dato: poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y sin fuente; no es
       Miraca
     ref: toponimo-138 · nivel descartado · topónimo · fuente procedencia
+- obra: oviedo-y-valdes-1851
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: paraguaná
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Rodeada del mar
+    ref: toponimo-018 · nivel C · topónimo · fuente procedencia
+- obra: jahn-1927
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: curarí
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
+    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
 indice_de_formas:
 - forma: abudure
   variantes:
@@ -5976,13 +6001,16 @@ indice_de_formas:
   variantes: []
   fuentes:
   - arcaya-1920
+  - esteves-1989
   cruces:
     en_canon: toponimo-176 · nivel descartado
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - arcaya-1920 · canon · toponimo-176 · nivel descartado · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:hipotesis · toponimo-176 · M6, tercera minería (#216) · 2026-09-23 · a revisar: caduto
+    viene del dictado y la vocal no casa; con…'
 - forma: caibacoa
   variantes:
   - Caibacoa
@@ -7132,13 +7160,16 @@ indice_de_formas:
   variantes: []
   fuentes:
   - osm-kaketiana
+  - esteves-1989
   cruces:
     en_canon: toponimo-132 · nivel descartado
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - osm-kaketiana · canon · toponimo-132 · nivel descartado · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:hipotesis · toponimo-132 · M6, tercera minería (#216) · 2026-09-23 · a revisar: r~m
+    no está entre las permutaciones documentadas…'
 - forma: cumaraguas
   variantes:
   - Cumaraguas
@@ -9076,13 +9107,16 @@ indice_de_formas:
   variantes: []
   fuentes:
   - osm-kaketiana
+  - esteves-1989
   cruces:
     en_canon: toponimo-138 · nivel descartado
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - osm-kaketiana · canon · toponimo-138 · nivel descartado · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:hipotesis · toponimo-138 · M6, tercera minería (#216) · 2026-09-23 · a revisar: n~m
+    no está entre las permutaciones documentadas…'
 - forma: miraca
   variantes:
   - Miraca
@@ -10322,13 +10356,16 @@ indice_de_formas:
   variantes: []
   fuentes:
   - osm-kaketiana
+  - esteves-1989
   cruces:
     en_canon: toponimo-135 · nivel descartado
-    en_esteves: false
+    en_esteves: true
     en_mapa_miguel: false
     en_nodos: null
   menciones:
   - osm-kaketiana · canon · toponimo-135 · nivel descartado · topónimo · fuente procedencia
+  - 'esteves-1989 · lectura:hipotesis · toponimo-135 · M6, tercera minería (#216) · 2026-09-23 · a revisar: dos
+    caminos posibles y ninguno documentado; conf…'
 - forma: tabicure
   variantes: []
   fuentes:

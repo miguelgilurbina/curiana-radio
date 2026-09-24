@@ -529,6 +529,7 @@ NIVEL_B = {
     # barrer_mapa.py emparejó con una entrada de Esteves, más los que no
     # están en ninguna fuente. Ver 4-fuentes/esteves-1989.md §lote 7. ──
     "bariquí": {
+        "forma_viva": [{"forma": "El Variquí", "tipo": "lugar", "lat": 12.013, "lon": -70.079, "fuente": "osm-kaketiana"}],
         "id": "toponimo-114", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 22,
         "glosa_fuente": "«Bariquire, que es la forma plena, es un árbol tanante "
@@ -642,6 +643,7 @@ NIVEL_B = {
     # 'duende del cerro' de Zavala #61, escrito por Esteves con h. Y la
     # percha de la hipótesis del centro sagrado de Miguel (2026-09-01). ──
     "capuhana": {
+        "forma_viva": [{"forma": "Cerro Capuana", "tipo": "cerro", "lat": 11.844, "lon": -69.896, "fuente": "osm-kaketiana", "nota": "la entrada declara la tensión: o son dos Capubana o el nombre bajó del cerro grande al pequeño"}],
         "id": "toponimo-113", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 26,
         "glosa_fuente": "«Capu-hana, con hache intercalada para deshacer el "
@@ -708,6 +710,7 @@ NIVEL_B = {
                  "'árbol'. Recurre en `guadabacoa` 'Arboleda' (wa-ada-bacoa).",
     },
     "guadabacoa": {
+        "forma_viva": [{"forma": "Guaydabacos", "tipo": "lugar", "lat": 12.041, "lon": -70.065, "fuente": "osm-kaketiana"}],
         "mapa_vivo": "OSM 2026: «Guaydabacos», lugar, 12.041 -70.065 — la grafía "
                      "de Esteves (Guaidabacoa) con y, y una -s final.",
         "clase": "topónimo", "fuente": "zavala-reyes-2015",
@@ -835,6 +838,7 @@ NIVEL_B = {
     # que están en el índice del libro. Ids explícitos desde 075: los 74 de
     # arriba no se mueven (otros archivos los citan). `pagina` es la del libro.
     "abudure": {
+        "forma_viva": [{"forma": "Abudare", "tipo": "lugar", "lat": 11.803, "lon": -70.015, "fuente": "osm-kaketiana"}],
         "mapa_vivo": "OSM 2026: «Abudare», lugar, 11.803 -70.015 — u > a en la "
                      "última sílaba; cf. la vacilación -ure/-are de Esteves.",
         "id": "toponimo-076",
@@ -1179,6 +1183,7 @@ NIVEL_C = {
     # talón `reubicado` que gasta su turno del contador. Carirubana era B.
     # ══════════════════════════════════════════════════════════════════
     "jurijurebo": {
+        "forma_viva": [{"forma": "Jurujurebo", "tipo": "poblado", "lat": 12.049, "lon": -69.94, "fuente": "osm-kaketiana"}],
         "id": "toponimo-001",
         "mapa_vivo": "OSM 2026: «Jurujurebo», poblado, 12.049 -69.940 — al norte de "
                      "Pueblo Nuevo y cerca de El Vínculo, donde Esteves lo sitúa "
@@ -1435,6 +1440,7 @@ NIVEL_C = {
     # ── Lote 7 (2026-09-07): el mapa vivo (OSM) contra Esteves. Cada uno
     # trae la forma viva con coordenadas y la entrada del libro. ──
     "cumujacoa": {
+        "forma_viva": [{"forma": "Cumajacoa", "tipo": "lugar", "lat": 11.823, "lon": -70.181, "fuente": "osm-kaketiana"}],
         "id": "toponimo-115", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 33,
         "glosa_fuente": "«Cumuyacoa es como está escrito en ese censo [1881]. La voz, "
@@ -1456,6 +1462,7 @@ NIVEL_C = {
                        "2026, lugar, 11.823 -70.181), u~a.",
     },
     "coabana": {
+        "forma_viva": [{"forma": "Cuabana", "tipo": "sector", "lat": 11.94, "lon": -69.928, "fuente": "osm-kaketiana"}],
         "id": "toponimo-116", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 31,
         # dp.2.08 de #222 (corrección del §2 del lote, 2026-09-24): la
@@ -1481,6 +1488,7 @@ NIVEL_C = {
                        "forma hablada le gana a la cabecera del libro.",
     },
     "guacuira": {
+        "forma_viva": [{"forma": "Guaquira Abajo", "tipo": "poblado", "lat": 11.932, "lon": -69.893, "fuente": "osm-kaketiana"}, {"forma": "Guaquira Arriba", "tipo": "poblado", "lat": 11.94, "lon": -69.887, "fuente": "osm-kaketiana"}],
         "id": "toponimo-117", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 38,
         "glosa_fuente": "«Dos versiones orales hemos obtenido sobre el origen del "
@@ -1518,6 +1526,7 @@ NIVEL_C = {
         ],
     },
     "caruca": {
+        "forma_viva": [{"forma": "Curuca", "tipo": "lugar", "lat": 12.096, "lon": -69.953, "fuente": "osm-kaketiana"}],
         "id": "toponimo-118", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 28,
         "glosa_fuente": "«Caruca es una hierba áspera que se usaba para la preparación "
@@ -1532,6 +1541,7 @@ NIVEL_C = {
                        "«Curuca» (OSM 2026, lugar, 12.096 -69.953), a~u.",
     },
     "bibuche": {
+        "forma_viva": [{"forma": "Chivuche", "tipo": "lugar", "lat": 12.026, "lon": -70.033, "fuente": "osm-kaketiana"}],
         "id": "toponimo-119", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 23,
         "glosa_fuente": "«Fundo pecuario al noroeste de Pueblo Nuevo, punto de "
@@ -1552,6 +1562,7 @@ NIVEL_C = {
                        "la forma hablada.",
     },
     "bajabaroa": {
+        "forma_viva": [{"forma": "Bajo Aroa", "tipo": "lugar", "lat": 12.186, "lon": -70.033, "fuente": "osm-kaketiana"}],
         "id": "toponimo-120", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 19,
         "glosa_fuente": "«Sitio costeño al oeste del Cabo de San Román. Se nos ha "
@@ -1578,6 +1589,7 @@ NIVEL_C = {
                        "castellana.",
     },
     "pitajaya": {
+        "forma_viva": [{"forma": "La Pitahaya", "tipo": "poblado", "lat": 11.87, "lon": -69.923, "fuente": "osm-kaketiana"}],
         "id": "toponimo-121", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 56,
         "glosa_fuente": "«La Pitajaya, aldea de Buenavista. Doce casas y 71 vecinos "
@@ -1594,6 +1606,7 @@ NIVEL_C = {
                        "con la h etimológica del castellano.",
     },
     "sabarigua": {
+        "forma_viva": [{"forma": "Sibarigua", "tipo": "lugar", "lat": 11.991, "lon": -69.879, "fuente": "osm-kaketiana"}],
         "id": "toponimo-122", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 57,
         "glosa_fuente": "«Aldea del municipio Adícora, al norte de la población de "
@@ -1608,6 +1621,7 @@ NIVEL_C = {
                        "Sibidigual (toponimo-123).",
     },
     "sibidigual": {
+        "forma_viva": [{"forma": "Cividual", "tipo": "lugar", "lat": 11.753, "lon": -69.806, "fuente": "osm-kaketiana"}],
         "id": "toponimo-123", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 60,
         "glosa_fuente": "«Lugar cercano a la aldea de Matividiro, pertenece al "
@@ -1625,6 +1639,7 @@ NIVEL_C = {
                        "menos. Es de los que el cruce exacto llamaba nuevo.",
     },
     "chiguaral": {
+        "forma_viva": [{"forma": "El Chiguare", "tipo": "lugar", "lat": 11.979, "lon": -70.158, "fuente": "osm-kaketiana", "nota": "la entrada dice «probablemente el mismo»"}],
         "id": "toponimo-124", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 36,
         "glosa_fuente": "«Lugar del municipio Jadacaquiva. Tenía en 1881 más de "
@@ -1642,6 +1657,7 @@ NIVEL_C = {
                        "mismo lugar o uno vecino en Jadacaquiva.",
     },
     "oripopo": {
+        "forma_viva": [{"forma": "Oropopo", "tipo": "lugar", "lat": 11.884, "lon": -70.203, "fuente": "osm-kaketiana"}],
         "id": "toponimo-125", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 55,
         "glosa_fuente": "«Lugar cercano a la aldea de Cumujacoa. Oripopo es zamuro en "
@@ -1668,6 +1684,7 @@ NIVEL_C = {
         ],
     },
     "asaro": {
+        "forma_viva": [{"forma": "Azaro", "tipo": "poblado", "lat": 11.969, "lon": -69.96, "fuente": "osm-kaketiana"}],
         "id": "toponimo-126", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 17,
         "glosa_fuente": "«Hay una gran semejanza con Sarosaro, un topónimo de La "
@@ -1685,6 +1702,7 @@ NIVEL_C = {
                        "-69.960), s~z.",
     },
     "baracara": {
+        "forma_viva": [{"forma": "Varacara", "tipo": "poblado", "lat": 11.798, "lon": -69.974, "fuente": "osm-kaketiana"}],
         "id": "toponimo-127", "clase": "topónimo", "fuente": "esteves-1989",
         "pagina": 19,
         "glosa_fuente": "«Maracara se lee en el censo de 1881, pero Baracara es como "
@@ -3429,6 +3447,12 @@ DESCARTES = {
         ],
     },
     "Dictado de Miguel 2026-09-10: referente fuera de Esteves, sin glosa": {
+        # dp.2.09 de #222 (P3 A, 2026-09-24): ver el comentario del grupo del
+        # mapa vivo. Coduto entró por la tanda 2 del lote de Esteves como
+        # entrada propia (toponimo-219), sin fundirla con ésta.
+        "lecturas": {
+            "caduto": [{"tipo": "hipotesis", "lectura": "es el Coduto de Esteves (p. 31; toponimo-219), que el libro da en dos lugares: el Istmo de Médanos (Baraived) y un caserío a tres kilómetros al este de Los Taques", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 31}, "apoyo": "a~o; el mapa vivo tiene Coduto en 11.817 -70.213 y Coduto / Punta Coduto en Médanos: los dos lugares de Esteves; Arcaya lista CODUTO en su serie coro-/curi-", "veredicto": "a revisar: caduto viene del dictado y la vocal no casa; confirmarlo es P3 B (Miguel)"}],
+        },
         "razon": "No están en el gazetteer de Esteves. El referente sale del "
                  "capítulo geográfico de Arcaya 1920 —un censo de los ríos y "
                  "cerros de Falcón que nadie había minado— o del gazetteer vivo. "
@@ -3545,6 +3569,7 @@ DESCARTES = {
         ],
     },
     "castellano: nombres del mapa vivo en español": {
+        "formas_vivas": {"villa real": [{"forma": "Villa Real", "tipo": "lugar", "lat": 12.054, "lon": -69.982, "fuente": "osm-kaketiana"}], "golfete de coro": [{"forma": "Golfete de Coro", "tipo": "bahía", "lat": 11.556, "lon": -69.974, "fuente": "osm-kaketiana"}], "la macolla": [{"forma": "La Macolla", "tipo": "lugar", "lat": 12.09, "lon": -70.204, "fuente": "osm-kaketiana"}, {"forma": "Punta Macolla", "tipo": "punta", "lat": 12.083, "lon": -70.217, "fuente": "osm-kaketiana"}], "buchal": [{"forma": "Buchal", "tipo": "poblado", "lat": 11.96, "lon": -69.842, "fuente": "osm-kaketiana"}]},
         "razon": "el nombre es transparente en castellano; no hay sustrato que "
                  "despejar. Se registra para que el barrido del mapa no lo "
                  "vuelva a proponer.",
@@ -3573,6 +3598,7 @@ DESCARTES = {
     # «Descartado» aquí = sin etimología despejable, NO «no existió»: los
     # dos son lugares vivos del mapa de Miguel.
     "Esteves 1989: sin glosa en la fuente y ningún morfema conocido alinea": {
+        "formas_vivas": {"jayana": [{"forma": "Nueva Jayama", "tipo": "poblado", "lat": 11.794, "lon": -70.198, "fuente": "osm-kaketiana"}], "guacujúa": [{"forma": "Guacujún", "tipo": "poblado", "lat": 11.827, "lon": -70.073, "fuente": "osm-kaketiana"}], "tequeguacare": [{"forma": "Teteguacure", "tipo": "lugar", "lat": 11.811, "lon": -70.062, "fuente": "osm-kaketiana"}], "sisibauco": [{"forma": "Sisibauco", "tipo": "lugar", "lat": 11.875, "lon": -69.847, "fuente": "osm-kaketiana"}]},
         "razon": "Esteves da referente, censo e historia, pero ninguna glosa "
                  "propia: solo la etimología popular, que él mismo relativiza. "
                  "Sin ecuación bilingüe no hay morfema que despejar; se registra "
@@ -3662,6 +3688,16 @@ DESCARTES = {
     # nodos y para que el barrido no lo vuelva a levantar; sube cuando una obra
     # lo nombre. Regla 3: nombre vivo en 2026, época moderna hasta nuevo aviso.
     "mapa vivo (OSM 2026): nombre indígena o dudoso sin fuente impresa": {
+        # dp.2.09 de #222 (P3 A, «Ok a todo», 2026-09-24): las identificaciones
+        # que el lote de Esteves (M6, #216, §mapa_vivo) deja «a revisar», como
+        # lecturas `hipotesis`, sin fundir nada. Decidirlas sobre el terreno es
+        # P3 B y queda para Miguel.
+        "lecturas": {
+            "cumairebo": [{"tipo": "hipotesis", "lectura": "es la Curaidebo de Esteves (p. 35; toponimo-201), «la aldea entre Pueblo Nuevo y El Vínculo»: está justo entre los dos pueblos, donde el libro la pone, y comparten -ebo", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 35}, "apoyo": "posición (12.003 -69.920, entre Pueblo Nuevo 11.948 y El Vínculo 12.069); r~m", "veredicto": "a revisar: r~m no está entre las permutaciones documentadas de la campaña; confirmarlo sobre el terreno es P3 B (Miguel)"}],
+            "la miraba": [{"tipo": "hipotesis", "lectura": "es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano delante", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 54}, "apoyo": "cae en el municipio Moruy; n~m", "veredicto": "a revisar: n~m no está entre las permutaciones documentadas; confirmarlo sobre el terreno es P3 B (Miguel)"}],
+            "tabe": [{"tipo": "hipotesis", "lectura": "es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 44}, "apoyo": "a unos dos kilómetros de Jadacaquiva; Tarbes > Tabe, o Jabe > Tabe", "veredicto": "a revisar: dos caminos posibles y ninguno documentado; confirmarlo sobre el terreno es P3 B (Miguel)"}],
+        },
+        "formas_vivas": {"cumairebo": [{"forma": "Cumairebo", "tipo": "lugar", "lat": 12.003, "lon": -69.92, "fuente": "osm-kaketiana"}], "divacoa": [{"forma": "Divacoa", "tipo": "poblado", "lat": 11.783, "lon": -69.936, "fuente": "osm-kaketiana"}], "gusimu": [{"forma": "Gusimu", "tipo": "lugar", "lat": 12.098, "lon": -70.178, "fuente": "osm-kaketiana"}], "tabe": [{"forma": "Tabe", "tipo": "lugar", "lat": 11.917, "lon": -70.104, "fuente": "osm-kaketiana"}], "urumare": [{"forma": "Urumare", "tipo": "lugar", "lat": 11.924, "lon": -70.152, "fuente": "osm-kaketiana"}], "pilancón": [{"forma": "Pilancón", "tipo": "poblado", "lat": 11.833, "lon": -69.927, "fuente": "osm-kaketiana"}], "la miraba": [{"forma": "La Miraba", "tipo": "poblado", "lat": 11.834, "lon": -70.054, "fuente": "osm-kaketiana"}, {"forma": "Cerro La Miraba", "tipo": "cerro", "lat": 11.85, "lon": -70.046, "fuente": "osm-kaketiana"}]},
         "razon": "el nombre está vivo en el mapa de 2026, con coordenadas, y "
                  "ninguna fuente impresa del proyecto lo trae: sin glosa no hay "
                  "ecuación. Se registra con deuda declarada; entra en C o mejor "
