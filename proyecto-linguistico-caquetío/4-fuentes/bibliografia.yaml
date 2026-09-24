@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 104
-  en_repo: 69
+  obras: 105
+  en_repo: 70
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -45,6 +45,27 @@ obras:
   - Amodio y Pérez 2006
   - Pautas de crianza wayuu
   en_repo: false
+- id: ampies-1526-carta
+  obra: Carta del Factor Juan de Ampíes al Rey, desde Santo Domingo
+  autor: Ampíes, Juan de (Factor de la Corona en La Española)
+  anio: 1526
+  publicacion: Publicada por Cesáreo Fernández Duro en el apéndice documental de Oviedo y Baños, *Historia
+    de la conquista y población de la provincia de Venezuela*, t. II, Madrid, Luis Navarro, 1885 (Biblioteca
+    de los Americanistas), pp. 209-213. Copiada en parte por Arcaya 1920, pp. 160-161, que dice tomarla
+    de Fernández Duro. El manuscrito está en el AGI; Velasco 2015 lo cita como «Folio 14»
+  edicion_del_ejemplar: el mismo tomo de Fernández Duro que la ficha perez-de-tolosa-1546 (ejemplar de
+    Harvard, archive.org historiadelacon00bagoog); impresa = pdf − 11
+  genero: documento
+  local:
+  - fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.pdf
+  - fuentes_caquetios/Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+  paginas: 209-213 impresas del t. II
+  aliases:
+  - Ampíes 1526
+  - carta de Ampíes
+  - Ampíes c. 1525-1526
+  - Juan de Ampíes
+  en_repo: true
 - id: angleria-1892
   obra: Fuentes Históricas sobre Colón y América (Décadas del Nuevo Mundo), vols. 1 y 4
   autor: Anglería, Pedro Mártir de

@@ -57,8 +57,11 @@ decisiones:
       1492» (reconstruido) y C2 «la esfera caquetía participaba en ese
       circuito» (hipotético), con la forma E —si lo hubo, fue por cadena de
       tramos cortos— y sus predicciones falsables escritas.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: geografia_politica-016 (costa ↔ ABC con parentesco, atestiguado), -017 (la embajada, la hija y La Española, atestiguado, colonial), -018 (C1: el circuito del guanín antes de 1492, reconstruido) y -019 (C2 + E: la esfera en ese circuito, hipotético, formulado como cadena de tramos cortos con sus predicciones)'
+      - '4-fuentes/ampies-1526-carta.md: ficha nueva (la carta, vista en imagen en Fernández Duro t. II p. 212), que sostiene -016 y -017'
+    verificado: 'Fernández Duro t. II p. 212 en imagen; Arcaya pp. 160-161 y 167-168; Colón en Navarrete t. I pp. 400-401; Oviedo vol. I p. 507; Anglería vol. 1 p. 309; Casale 2024 fig. 1 en imagen; Oliver DOC pp. 198, 258, 266'
 
   dp.2.02:
     tema: la polity de los llanos — misma lengua con variación, y los caquetíos del Casanare
@@ -70,8 +73,22 @@ decisiones:
       «Cacatia» de Gumilla en la ficha y en el mapa de dispersión del
       etnónimo. `curiana_polities.py` NO se toca (es del motor): la nota que
       Rivero (b) pide para `llanos` va al vault.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24), salvo el espejo en el motor, que NECESITA A MIGUEL
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: geografia_politica-020, un hecho con cuatro testigos (Federmann 1916 pp. 58 y 108; Pérez de Tolosa p. 234; Rivero pp. 29, 54, 144, 151, 201, 392; Gumilla t. II p. 55), atestiguado'
+      - '3-mundo/polities-caquetias.md: §«Los llanos: la misma lengua, con variedades — y el Casanare» (el rasgo de lengua y de economía de Tolosa A, la cita directa de Rivero (b)) y la tabla del etnónimo fuera de la costa (el mapa de dispersión de Gumilla A)'
+    verificado: 'Pérez de Tolosa p. 234, Rivero pp. 29, 151 y la lista de pueblos, y Gumilla t. II p. 55, en la capa de texto; Federmann por su propuesta (visto en imagen por su parcela)'
+    necesita_a_miguel: >-
+      Tolosa A y Rivero (b) piden también la línea en la polity `llanos` de
+      curiana_sim/curiana_polities.py (hoy `llanos` no tiene rasgo de lengua).
+      Es motor y este frente no lo toca (regla 6 del encargo). Pregunta: ¿se
+      lo pasas al frente del motor con esta edición? — añadir a `llanos` un
+      rasgo de LENGUA «misma nación que la costa, "aunque algo difieren en la
+      habla á los de Coro" (Pérez de Tolosa 1546, p. 234, de segunda mano)»,
+      uno de ECONOMÍA «"no son grandes labradores", carne y pescado (ibid.)»
+      y, en el territorio, la nota «el "hasta Casanare… Barraguán" descansa en
+      Rivero 1883 (pp. 29, 54, 144, 151, 201, 392) vía Jahn; colonial, sin
+      continuidad política probada».
 
   dp.2.03:
     tema: el campo `epoca` en 3-mundo/etnias.yaml
@@ -97,8 +114,29 @@ decisiones:
       política. T8 B: la corrección a la campaña 1 (gen-03 y el aviso de
       arq-01). T8 C: los arahuacos de las Antillas Menores, atestiguado,
       contacto poblacional hacia las ABC, con `epoca`.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24) salvo T8 C, que NECESITA A MIGUEL
+    aplicado_por:
+      - '3-mundo/etnias.yaml: M1 B — etnia-010 coanao, -011 wanebucán, -012 tairo, -013 xiriguana, -014 haruacana, -015 jirajara (costera, hipotético por la boda, contacto-temprano), -016 ayomán, -017 gayón, -018 xagua, -019 camagos; etnia-003 ciparicoto baja a familia `desconocida` con las dos lecturas y gana el apoyo concordante de Oliver n. 178'
+      - '3-mundo/etnias.yaml: T5 D — etnia-020 taíno (costera, hipotético, contacto ninguno, época `varias`); T5 la proponía como etnia-009, número que ya era del guaiquerí'
+      - '3-mundo/corpus/geografia_politica.yaml: T5 D — geografia_politica-014 (la deportación de 1513-1526, colonial) y -015 (el horizonte marítimo, precontacto, con nota de lo que llegó después)'
+      - '6-fusion/taino_en_la_esfera_2026-09-21.yaml: T8 B — gen-03 corregido (el cero de Fernandes era de la biblioteca) y el contrapeso genético en el aviso de arq-01'
+      - 'curiana_sim/tests/test_etnias.py: el cable-trampa de quién toca la costera pasa a {caribe del elenco, jirajara, taíno} y exige que ninguna sea atestiguada y que todas tengan época'
+    verificado: 'Oliver tesis pp. 211-220, 236-247 y 251 (OCR con marcador de página) y DOC pp. 198, 250 y 269-270; Arcaya pp. 154 y 159; Martínez-Cruzado 2003 p. 4; el preprint de Fernandes 2020 p. 14'
+    lecturas_del_escriba:
+      - 'donde M1 escribió una familia «probable» (coanao y haruacana, chibcha), el campo cerrado dice `desconocida` y la probable va a aviso_familia (regla 2)'
+      - 'haruacana: M1 escribió `tipo_de_contacto: guerra`, pero la guerra documentada es con los españoles y su propia nota dice «con los caquetíos, ninguno»: va `ninguno`'
+      - 'intensidad: M1 no la daba; va `desconocida` donde el dato no la mide y `ninguna` donde no hay contacto'
+      - 'taíno: `polity_caquetia: costera`, como la propuso T5 (el único contacto documentado, la deportación, es con la costera y sus islas); `ninguna` (tf.7 B) nació después y podría ajustar mejor: ver lo_que_aparecio_al_aplicar'
+    necesita_a_miguel: >-
+      T8 C — la ficha «arahuacos de las Antillas Menores», atestiguado, NO
+      entró: su dato no se pudo verificar en la fuente (ver
+      lo_que_aparecio_al_aplicar.fernandes_2020). Pregunta: ¿autorizas bajar
+      el texto publicado de Fernandes et al. 2020 y su suplemento (Europe PMC
+      sirve el XML; el suplemento está abierto en la web del laboratorio
+      autor) para verificar «Lesser Antilles, but not the Greater Antilles»
+      antes de escribir la ficha? ¿O entra ya con lo que dice el preprint del
+      repo —«arahuacos antillanos de la Edad Cerámica», sin distinguir Mayores
+      de Menores, cinco individuos de Curazao, 68,1 %—?
 
   dp.2.05:
     tema: las tres Curianas; toponimo-111 mal situado
@@ -121,8 +159,27 @@ decisiones:
       casas (que corrige geografia_politica-006 y nodo-008). D: Isabel,
       intérprete de 1502, como nota (no como hecho). E: la isla de las
       hierbas se CIERRA en espera, sin aplicar.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: 'APLICADA en B, D y E (2026-09-24); C NECESITA A MIGUEL'
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: B — geografia_politica-021 (el rescate en guanines, 1502, Navarrete p. 33), -022 (la cédula de 1501, pp. 518-519) y -023 (el palafito de «veinte» casas, pp. 8 y 219); la «tierra de riego» (m2.c3) y las grafías de Coquibacoa (m2.g2) NO se citan, como mandaba M2 sin C'
+      - '3-mundo/corpus/geografia_politica.yaml: en geografia_politica-006 la nota abierta de las «40 casas» se da por resuelta (son veinte) y se declaran los dos sitios de Navarrete; 3-mundo/asentamientos.yaml: la misma corrección en nodo-008, y -023 en su `corpus`'
+      - 'D como nota: Isabel, intérprete de 1502, en la nota_abierta de geografia_politica-021; y la corrección de t7.l4 en 6-fusion/taino2_etnohistoria_contacto.yaml'
+      - 'E: la isla de las hierbas (m2.p1) queda EN ESPERA, declarado en geografia_politica-021; no entra nada'
+    lectura_del_escriba: >-
+      «C primero» pedía la imagen antes de B. B entró desde la capa de texto,
+      que en este tomo lleva el folio en el flujo (la ficha lo declara: «la
+      cita se verifica sin la imagen»), y sin lo que C tenía que decidir: la
+      palabra «riego» y las grafías de Coquibacoa. Si Miguel prefiere que B
+      espere a C, se revierten -021 a -023 sin tocar nada más.
+    necesita_a_miguel: >-
+      C — ver en imagen Navarrete 1829 t. III pp. 32 (el OCR dice «rieeo»:
+      ¿«riego»?), 86-89 (la capitulación: ¿«Qoiquevacoa» = Quiquevacoa?), 518
+      y 544 (las grafías de Coquibacoa). El PDF no está en el repo (21,7 MB,
+      archive.org bub_gb_HFzXrEyoeCAC, dominio público). Hoy el visor de
+      archive.org falla con ese ítem («Unable to fetch …_page_numbers.json») y
+      Google Books pide una comprobación anti-robot, que no se salta; y bajar
+      un archivo pide tu permiso. Pregunta: ¿autorizas bajar el PDF, o miras
+      tú esas cinco páginas?
 
   dp.2.07:
     tema: creencia-013 — la cita de Ampíes, «como Dios» o «como digo»
@@ -235,7 +292,65 @@ decisiones:
       Se registra como `costa-oriental`, polity costera distinta de la
       Kaketiana y fuera del mapa de la era 2, donde el canon la necesita
       (vault de polities y la propuesta de Federmann); no entra ningún nodo.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: geografia_politica-024, `polity: costa-oriental`, atestiguado, contacto-temprano (Federmann 1916 pp. 120-123, visto en el texto)'
+      - '3-mundo/polities-caquetias.md: §«La costa oriental de Federmann: otra polity, fuera del mapa»'
+    no_se_hizo: 'ningún nodo nuevo en asentamientos.yaml (B la deja fuera del mapa) ni polity nueva en curiana_polities.py (motor; B no la pide)'
 
-lo_que_aparecio_al_aplicar: {}
+lo_que_aparecio_al_aplicar:
+
+  fernandes_2020:
+    donde: dp.2.04, T8 C (y la nota de geografia_politica-015 y -019)
+    que: >-
+      La ficha «arahuacos de las Antillas Menores», atestiguado, descansa en
+      el texto publicado de Fernandes et al. 2020 y su suplemento, que el repo
+      NO tiene (Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf pesa
+      0 bytes a propósito). Lo que sí está, el preprint de bioRxiv, dice otra
+      cosa en lo que importa: «We model five ancient individuals from Curaçao
+      as having 68.1±5.1% Caribbean_Ceramic-related ancestry… indicating that
+      people related to those who moved into the Greater Antilles also reached
+      Curaçao» (p. 14 del PDF). Es decir: el clado cerámico caribeño sin
+      distinguir, y cinco individuos. T8 dice además que el preprint «listaba
+      2 individuos de de Savaan»: el texto dice cinco (de Curazao). Y el propio
+      T8 declara que el grafo del suplemento pone la fuente «between» las
+      Mayores y las Menores. No se resolvió: la ficha no entró y la pregunta
+      va en dp.2.04 `necesita_a_miguel`. La corrección de B (gen-03) sí entró,
+      porque el preprint basta para ella: hubo flujo antillano hacia Curazao.
+
+  taino_costera_o_ninguna:
+    donde: dp.2.04, T5 D (etnia-020)
+    que: >-
+      T5 (2026-09-21) propuso el taíno con `polity_caquetia: costera`; el valor
+      `ninguna` —el vecino de la esfera que no toca ninguna polity, que exige
+      `tipo_de_contacto: ninguno`— se abrió después (tf.7 B, 2026-09-23) y el
+      resumen de #222 no lo mencionó. Se aplicó como lo propuso T5, con la
+      duda en `polity_nota`. Cambiarlo a `ninguna` es una línea y un test
+      (test_quienes_tocan_la_costera); decisión de Miguel.
+
+  paginas_citadas_que_no_eran:
+    que: >-
+      Al verificar en el PDF, varias páginas de las propuestas eran la de al
+      lado. Se escribió la verificada y se dejó dicho en la referencia:
+      Arcaya 1920 «pp. 153 y 158» (T5) son las impresas 154 y 159; la
+      identificación de Doña Juana, «pp. 166-167» (dc.4), está en las 167-168;
+      el rescate en guanines de Navarrete, «p. 34» (T7), está en la 33 (ya lo
+      había dicho M2). Arcaya: impresa = pdf − 8.
+
+  baracoica_pariente_de_quien:
+    que: >-
+      dc.4 y T8 escribieron que Baracoica era «pariente y deudo» de Manaure.
+      La carta (Fernández Duro t. II p. 212, vista en imagen) dice «es su
+      pariente y deudo», y el sujeto son los indios de la costa que lo envían:
+      pariente de ellos. Se escribió así en geografia_politica-016 y en la
+      ficha nueva de la carta; «hijo del mismo Manaure» es de Arcaya p. 199,
+      sin fuente.
+
+  navarrete_sin_imagen:
+    que: >-
+      dp.2.05 y dp.2.06 C pedían ver Navarrete 1829 t. III en imagen, y el PDF
+      no está en el repo. El visor de archive.org falla hoy con el ítem
+      (bub_gb_HFzXrEyoeCAC) y Google Books responde con una comprobación
+      anti-robot: no se intentó saltarla, y bajar el PDF pide el permiso de
+      Miguel. Lo que se aplicó de Navarrete va desde la capa de texto, con el
+      folio en el flujo, y lo que sólo la imagen decide quedó sin citar.

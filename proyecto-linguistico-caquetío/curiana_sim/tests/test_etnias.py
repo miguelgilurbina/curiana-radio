@@ -189,11 +189,21 @@ def test_quienes_tocan_la_costera():
     Llanos, los ciparicotos en Yaracuy. El único que la toca es el caribe del
     elenco, y es canon-simulación. Si esta lista cambia, es que entró evidencia
     nueva (un vecino documentado en el Golfete) y hay que mirarla; el
-    invariante de abajo no se toca — es la regla 4 en código."""
+    invariante de abajo no se toca — es la regla 4 en código.
+
+    Cambió el 2026-09-24, mirada y decidida (dp.2.04 de #222, «Ok a todo»):
+    entran el jirajara de la Sierra de San Luis (M1 B: hipotético por la boda
+    de Manaure, contacto-temprano) y el taíno (T5 D: hipotético, contacto
+    ninguno en precontacto, época `varias`). Ninguno de los dos es
+    `atestiguado`: si alguno sube, que alguien lo mire aquí."""
     etnias, _, _ = CE.compilar()
     costera = {e["nombre"] for e in etnias if e["polity_caquetia"] == "costera"}
-    assert costera == {"caribe del elenco"}
+    assert costera == {"caribe del elenco", "jirajara", "taíno"}
     for e in etnias:
         if e["polity_caquetia"] == "costera":
             assert e["etiqueta"] == "canon-simulacion" or e["procedencia"]["obra"], (
                 f"{e['nombre']}: toca la costera sin fuente ni decisión")
+            assert e["etiqueta"] != "atestiguado", (
+                f"{e['nombre']}: un vecino ATESTIGUADO de la costera es evidencia "
+                "nueva — mírala antes de cambiar este test")
+            assert e.get("epoca"), f"{e['nombre']}: costera sin época (dp.2.03)"

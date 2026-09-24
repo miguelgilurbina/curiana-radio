@@ -236,6 +236,11 @@ inventario:
         entero. Ninguna fuente del repo menciona cerámica ostionoide, chicoide
         ni meillacoide en Falcón o las ABC, ni dabajuroide en las Antillas
         Mayores — pero la obra que zanjaría eso está en 0 bytes (ver arq-05).
+        CONTRAPESO (T8 B, aplicada por dp.2.04 de #222, 2026-09-24): el límite
+        sigue en pie para los CACHARROS, pero no para la gente — en dos aldeas
+        caquetías de Curazao hay ancestría antillana sin fecha (Fernandes et al.
+        2020; ver gen-03). La cerámica para en las islas; los genes de las
+        islas vienen en parte de más al este.
 
     - id: arq-02
       afirmacion: >-
@@ -359,7 +364,21 @@ inventario:
         pregunta bien planteada, no como conclusión. Aquí queda igual.
 
     - id: gen-03
-      afirmacion: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética."
+      # 🔴 CORREGIDO el 2026-09-24 (T8 B de #196, aplicada por dp.2.04 de #222,
+      # «Ok a todo»). El primer negativo YA NO LO ES: el cero de Fernandes 2020
+      # era de la biblioteca (el PDF de Nature sigue en 0 bytes), no del
+      # registro. El preprint de bioRxiv, que sí está en el repo
+      # (Fernandes_et_al_2020_biorxiv_preprint_CCBYNCND.pdf, p. 14 del PDF),
+      # modela «five ancient individuals from Curaçao» con 68,1 ± 5,1 % de
+      # ancestría del clado cerámico caribeño y 31,9 % del venezolano: «people
+      # related to those who moved into the Greater Antilles also reached
+      # Curaçao». La versión publicada, según T8 (Europe PMC y el suplemento,
+      # no en el repo), afina el subclado a las Antillas MENORES «but not the
+      # Greater Antilles». Hay flujo antillano hacia Curazao, sin fecha. Ver
+      # 6-fusion/taino2_evidencia_material_contacto.yaml §gen-01 y el registro
+      # 6-fusion/decisiones_222_mundo_2026-09-24.yaml (dp.2.04). El segundo
+      # negativo (moreno-mayar-2018 no es genética del Caribe) sigue en pie.
+      afirmacion: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética — el primero, corregido el 2026-09-24 (ver arriba)."
       epoca: n/a
       etiqueta: atestiguado   # los ceros están medidos hoy
       detalle:

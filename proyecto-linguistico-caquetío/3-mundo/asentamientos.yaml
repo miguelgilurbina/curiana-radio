@@ -244,7 +244,7 @@ nodos:
     procedencia:
       obra: oliver-1989-cap3
       detalle: "p. 249, citando a Ramos Pérez (1976: 88) y Navarrete 1829 [3]: 218-219"
-    corpus: [geografia_politica-006]
+    corpus: [geografia_politica-006, geografia_politica-023]
     etimologia: no-aplica
     nota: >
       🔴 DEUDA DE FUENTE: descansa en Ramos Pérez, obra que NO está en el repo
@@ -252,6 +252,12 @@ nodos:
       pudieran ser de una comunidad pesquera especializada cuya relación con
       los asentamientos de tierra adentro NO está establecida — puede no ser
       el mismo poblado ni la misma gente. Nombre castellano, no caquetío.
+      Corrección de M2 (#212), aplicada por dp.2.06 B de #222 (2026-09-24):
+      la Lettera de Vespucio da «veinte grandes casas, con corta diferencia»
+      (Navarrete 1829 t. III p. 219; geografia_politica-023), y Navarrete
+      separa el palafito sin nombre de la costa oriental del golfo (p. 8) del
+      «lago de S. Bartolomé» donde se tomaron las indias (doc. XVIII, p. 105).
+      La `forma` del nodo no se cambia: renombrarlo es otra decisión.
 
   # ── Los nodos insulares: los únicos con precontacto sostenido ──────────
 
