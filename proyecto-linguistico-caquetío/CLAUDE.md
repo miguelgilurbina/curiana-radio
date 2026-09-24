@@ -101,7 +101,7 @@ cura y se publica en Curiana Radio (`/kaketiana`).
 cd curiana_sim
 pip install -r requirements.txt
 
-python guardianes.py              # los 9 en verde antes de cerrar nada
+python guardianes.py              # los 10 en verde antes de cerrar nada
 python guardianes.py --rapido     # sin los tests (más rápido)
 
 # Los datos de lengua y la bibliografía

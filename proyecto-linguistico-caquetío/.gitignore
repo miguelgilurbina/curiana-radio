@@ -32,3 +32,9 @@ supabase/.temp/
 # D8 (#37, cerrada 2026-09-12: lo liviano en git, lo pesado en OneDrive): las imágenes y el PDF de Neira y Ribero 1762 (200 MB) viven en OneDrive, no en git
 fuentes_caquetios/neira_ribero_1762/
 fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB_II-2910.pdf
+# D8 también para Breton 1665-1667 (141 MB, dominio público vía Internet Archive / John Carter Brown): el PDF en OneDrive, el texto OCR (djvu.txt) sí en git. Decidido el 2026-09-24 («Ok a todo»)
+fuentes_caquetios/Breton_1665_Dictionaire_caraibe_francois.pdf
+fuentes_caquetios/Breton_1666_Dictionaire_francois_caraibe.pdf
+fuentes_caquetios/Breton_1667_Grammaire_caraibe.pdf
+# González Batista 2002 (Boletín ANH 338): obra con derechos y el repo es público; copia local, NO en git (ver 4-fuentes/gonzalez-batista-2002-fundacion.md)
+fuentes_caquetios/GonzalezBatista_2002_Coro_problema_fundacion_BolANH338.*

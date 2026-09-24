@@ -50,3 +50,12 @@ marca hombre/mujer voz a voz siguiendo a Breton.
 
 - Los ~400 pares del *françois-caraïbe*, leídos en imagen: la única vía a las
   formas de mujeres que Goeje no recoge.
+
+**Cerrado el 2026-09-24** («Ok a todo, que no quede ninguna tarea pendiente»; la
+recomendación era leerlos «sólo si hiciera falta más allá de Goeje»). No hace falta
+para nada abierto: la transcripción del habla de mujeres de Goeje 1939 (302
+entradas, en imagen, `6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml`) es la que
+sostiene la tanda de las hermanas, y cada concepto del núcleo se cotejó contra
+ella. Breton queda como fuente PRIMARIA disponible —los PDF en OneDrive por D8, el
+OCR en git— para la era 3 o para verificar una forma concreta de Goeje contra su
+original. Si algún día se lee, se hace por página, no entero.

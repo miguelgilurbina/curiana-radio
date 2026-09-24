@@ -218,3 +218,64 @@ lo_que_aparecio_al_aplicar:
     devuelve el ejemplo a la raíz del topónimo que la morfema-001 cita
     (Adabacoa 'todo arboleda'): d21.14 lo había quitado sólo porque `ada` era
     lokono. Que no se haya dicho nunca en la base queda POR MEDIR.
+
+# ══════════════════════════════════════════════════════════════════════
+# LA SEGUNDA RESPUESTA — «Ok a todo, que no quede ninguna tarea pendiente»
+# ══════════════════════════════════════════════════════════════════════
+# Miguel, 2026-09-24, al informe de la tanda: «Ok a todo, que no quede ninguna
+# tarea pendiente. Lo único pendiente es lo que tenga que ver con docker». Lo
+# que el escriba le había dejado a él (`baja`, las seis de D2 en la breve) y
+# todo lo que quedaba «para después» y no necesita la base.
+
+th.14_ok_a_todo:
+  decision_literal: '«Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es lo que tenga que ver con docker»'
+  lectura_operativa: >-
+    se aplica la recomendación escrita de cada cosa pendiente que no depende de
+    la base; lo que sólo Miguel puede hacer (enviar un correo, mirar un sitio
+    que conoce) se deja preparado y dicho. La presentación de los HALLAZGOS de
+    la corrida base depende de la corrida (Docker).
+
+th.15_baja:
+  eleccion: '`baja` ''caño'' entra, HIPOTÉTICA por cc.4 (única fuente: Esteves p. 19, vista en imagen) y marcada como homógrafo del castellano ''baja'''
+  aplicado_por: 'curiana_sim/minar_zavala_glosario.py (NO_ES_LA_MISMA_VOZ, FUENTE_CURADA, CLASE_DE_LA_RAIZ, HOMOGRAFOS_ES)'
+
+th.16_las_seis_de_d2_en_la_breve:
+  eleccion: 'se quedan en la línea VOCES de la plantilla breve (la elección del escriba, aceptada)'
+
+th.17_notas_duplicadas_y_ana:
+  eleccion: >-
+    las cinco entradas con dos `notas` (maure, saruro, curiana, ma, ana),
+    fundidas; y el barrido encontró la última derivada del wayuu sin marca:
+    `ana` 'diseño' (Captain & Captain 2005), archivada con su capa por cc.12,
+    sin sustituta. Un test recorre todos los literales del lexicón.
+
+th.18_222_grupo_1:
+  eleccion: 'la recomendación del recopilador en cada entrada abierta (dp.1.01-03 y dp.1.07 los cerró la tanda final)'
+  aplicado_por: '6-fusion/scripts/aplicar_222_grupo1.py'
+  por_entrada:
+    dp.1.04: 'B recortada: `cacike` y `naboria` fuera de [Voces de fuera] (LLEGARON_CON_EL_ESPANOL, 44 → 42). La auditoría del resto (B entera): 6-fusion/taino_auditoria_vector_2026-09-24.yaml'
+    dp.1.05: 'reabierta y CERRADA sin mover la glosa: la cita de Arcaya dice «viruela»; las cuatro lecturas en notas; manda Alvarado (única localizada)'
+    dp.1.06: 'C2: nota con Oviedo t. II p. 330; la sigla HB espera la respuesta de Zavala (correo redactado)'
+    dp.1.07: 'cerrada en tf.6'
+    dp.1.08: 'A: `busera` entra atestiguada (Oviedo t. II p. 300); `kama` sin subir (Barquisimeto, falta la Relación); `auri` no se mueve; nota en `datihao`'
+    dp.1.09: 'C: `ka-` declara su valor con fuente («tiene X») y el «hay X» como extensión del proyecto; se sigue enseñando'
+    dp.1.10: 'B: las 8 kalinago que Goeje no da, con su deuda; `hiñaru` → ''mujer'''
+    dp.1.11: '`taita` y `yamosa` anotadas; `piragua` y `maboya` a kalinago; `bejique` y `guabina` con su nota'
+    dp.1.12: 'J, adelantada a este corte (la recomendación decía «después de la base» sólo para medirla aparte): `-oa` y `-bo` al desafijador, sin enseñarse; `-kiva` declarada y NO pelada (en grafía fonémica es `kiba` ''piedra'')'
+    dp.1.13: 'A: ninguna voz taína nueva en la era 2'
+  bagua: 'entra como taíno ''mar'' con su cronista (Oviedo t. I p. 436, en imagen); no se enseña en [Voces de fuera] (la geografía no se presta, por diseño)'
+
+th.19_herramientas_que_no_se_reproducian:
+  alvarado: 'la cadena de custodia buscaba por la clave fonémica (D5): busca por forma_fuente (13/27 → 25/27); `poporo` pasa a «reclasifica»'
+  cognados: 'el migrador borraba una procedencia escrita a mano en el YAML generado (barbacoa, Perea p. 651): va declarada en PROCEDENCIA_CURADA; el taíno de ''tabaco'' es `tabako`'
+
+th.20_guardian_del_mundo:
+  eleccion: '`verificar_sitios_era2.py` es el décimo guardián'
+
+th.21_breton:
+  eleccion: 'los PDF fuera de git por D8 (como Neira y Ribero); «los 400 pares» se cierran: no hacen falta para nada abierto (Goeje entero sostiene la tanda); Breton queda como fuente primaria disponible'
+
+th.22_worktrees:
+  eleccion: 'borrados los worktrees viejos limpios con su rama en main (sin --force; las ramas se quedan); se conserva el del agente de merges'
+  rescate: 'la copia local de González Batista 2002 (obra con derechos, NO en git) vivía sólo en un worktree: movida a fuentes_caquetios/ y declarada en .gitignore'
+  hallazgo: 'la rama `fix/oliver-cap3-paginacion` (c4d6811, 2026-09-14) nunca se mergeó ni tuvo PR: 112 reemplazos de cita propuestos. Se integra con el grupo 2 de #222 (mismos archivos)'
