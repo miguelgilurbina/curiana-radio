@@ -25,6 +25,17 @@ decidido: 2026-09-21 (6-fusion/decisiones_tanda_2026-09-21.yaml); 2026-09-23 (6-
 > punto 15 del «Cambio de instrumento». Las tablas de abajo son la foto de la
 > auditoría del 2026-09-20 y se regeneran con `6-fusion/scripts/tabla_morfemas.py`.
 
+> ⚠️ **La tanda de las hermanas (2026-09-24) no toca ningún morfema, pero sí
+> las capas y los ejemplos.** El habla de mujeres kalinago cuenta como
+> hermana (D1): `bui`, `lihi` y `tuhu` son ahora **reconstruidos** (lokono =
+> kalinago de mujeres, Goeje 1939 p. 24), y el apoyo de `-kuba`, `-ba`, `ma-`
+> y `ka-` gana un testigo (Adam 1879 pp. 277 y 300-301) sin dejar de ser
+> hipotético. Los ejemplos que el prompt da de cada afijo cambian de raíz
+> porque el núcleo cambió de voces: `kunu-kuba`, `kunu-ba`, `kidi-bana`,
+> `ada-bakoa` (la raíz del topónimo Adabacoa, que d21.14 había quitado cuando
+> `ada` era lokono), `hime-aima`, `da-akusi`. Registro en
+> `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`; bitácora, punto 16.
+
 > Lo que un agente puede **construir**, no sólo nombrar. Cada morfema va aquí
 > con **su evidencia y su estado** — porque el proyecto mezcló durante mucho
 > tiempo afijos atestiguados con afijos de trabajo sin marcar la diferencia, y

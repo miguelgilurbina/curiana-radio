@@ -1573,7 +1573,18 @@ NIVEL_C = {
                        "de tildes del 2026-09-07 (#109 §3: la -aná tónica es el "
                        "dato que distinguiría este sufijo del -ana de Curiana). "
                        "Censo de -ana en Esteves, mismo día: "
-                       "6-fusion/censo_ana_esteves_109.yaml.",
+                       "6-fusion/censo_ana_esteves_109.yaml. "
+                       "PROCEDENCIA DEL NOMBRE (T2b, tanda de las hermanas, "
+                       "2026-09-24, «Acepto todo lo recomendado»): Oviedo, "
+                       "Historia general lib. VI cap. XIX, p. 205 (visto en "
+                       "imagen, pdf 324): «que los indios llaman á aquella "
+                       "provinçia Paraguana», con testigos jurados ante la "
+                       "Audiencia de Santo Domingo el 13 de julio de 1540 (p. "
+                       "206). Da procedencia a la FORMA —así se llamaba, y en "
+                       "boca de los indios, en 1540—, NO a la glosa 'Rodeada "
+                       "del mar', que sigue abierta en #109. Ninguna fuente la "
+                       "llama taína: lo hizo la lista maestra taína (T3).",
+        "fuente": "oviedo-y-valdes-1851", "pagina": 205,
         "lecturas": [
             {"tipo": "etimologia-analitica",
              "lectura": "para 'agua en grandes cantidades' (Zavala #190) + gua "

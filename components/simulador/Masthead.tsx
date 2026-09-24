@@ -5,10 +5,12 @@ import { Overline } from "@/components/simulador/ui";
 // Habla en tokens --sim-*: sobre el pergamino es tinta parda; dentro del
 // Acto I "laboratorio" se resuelve solo al registro oscuro del instrumento.
 //
-// El nameplate es «Kaketiana» — 'el lugar de la gente', de `kaketio` 'ser
-// viviente' (Oliver 1989, Tabla A-9) y `-ana` 'lugar de' (atestiguado en
-// Paraguaná y Curiana). La palabra es un compuesto nuestro sobre morfemas
-// atestiguados; la portada lo declara, y por eso aquí no lleva asterisco.
+// El nameplate es «Kaketiana» — 'el lugar de la gente', de `kaketio` (el
+// autónimo; 'ser viviente' es la lectura de Oliver 1989 desde el lokono) y
+// `-ana`, final atestiguado en Paraguaná y Curiana cuya glosa 'lugar de' se
+// retiró del canon el 2026-09-07 (#109): el sentido es lectura nuestra. La
+// palabra es un compuesto nuestro; la portada lo declara (corregido el
+// 2026-09-24), y por eso aquí no lleva asterisco.
 export default function Masthead() {
   return (
     <header className="mb-10">

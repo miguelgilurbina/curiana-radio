@@ -117,7 +117,7 @@ entradas:
     procedencia: {obra: camacho-2011}
     dominios: [ecologia, clima]
     agentes_relacionados: [Shaboro, Korie-ko]
-    palabra_lexicon: kaya
+    palabra_lexicon: unia  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
     locacion: null
     implicacion_simulacion: >
       Confirma el calendario ritual bianual del canon (§2) como reflejo fiel del
@@ -273,7 +273,7 @@ entradas:
     referencia: "Ictiofauna del Golfo de Venezuela / La Vela de Coro (SVDB; FAO)"
     dominios: [ecologia, pesca]
     agentes_relacionados: [Bagre-ko, Kunaro-bana, Waranaro-sha, Dara-bana]
-    palabra_lexicon: arima
+    palabra_lexicon: hime  # era `arima`, archivada en la tanda de las hermanas (2026-09-24)
     locacion: orilla
     implicacion_simulacion: >
       cunaro, guaranaro y bagre se usan como nombres de agentes pero NO existen como
@@ -548,7 +548,7 @@ entradas:
     procedencia: {obra: camacho-2011}
     dominios: [ecologia, navegacion, comercio, oficios]
     agentes_relacionados: [Dara-ko, Nabaraka, Watapana, Tari-ko]
-    palabra_lexicon: kuru
+    palabra_lexicon: ada  # era `kuru`, archivada en la tanda de las hermanas (2026-09-24)
     locacion: taller_canoas
     implicacion_simulacion: >
       La canoa es un bien de importación y por tanto de valor: Dara-ko trabaja un

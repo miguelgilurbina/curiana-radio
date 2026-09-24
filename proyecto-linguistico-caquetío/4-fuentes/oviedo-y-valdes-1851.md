@@ -342,3 +342,30 @@ en imagen:
   Oviedo es también un ÁRBOL, no la planta del tabaco.
 
 Detalle y propuestas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
+
+## Bitácora: `comoho` es caquetío, y el lexicón no lo sabía (2026-09-24)
+
+**p. 313 (imagen)**: el cap. XXVIII del lib. VIII se titula «De los cardos de
+las tunas é su fructa, la qual en la provinçia de Veneçuela en la
+Tierra-Firme se llama comoho», y en el cuerpo Oviedo llama «higos» a esos
+frutos. La transcripción de la campaña del taíno (`6-fusion/taino_oviedo_valdes_1851.yaml`
+§costa_de_venezuela) lo tenía, pero marcó «en_el_lexicon: no» porque buscó
+con c: el lexicón guarda `komoho` 'higo', caquetío atestiguado (Zavala #88).
+Con Oviedo pasa a dos fuentes independientes. Y la lista maestra taína lo
+contaba como taíno, igual que las otras tres voces de esa sección.
+Propuesta: `6-fusion/taino_tradicion_viva_2026-09-24.yaml` §komoho y §la_fuga.
+
+**✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): `komoho` tiene a Oviedo como segunda fuente y la glosa 'fruto del cardón de las tunas (higo de tuna)' (T2, por `SIG_CURADO` del minador de Zavala); Paraguaná toma la p. 205 como procedencia del NOMBRE (T2b, toponimo-018; la glosa sigue en #109); y la lista maestra taína ya no lee la sección de Venezuela (T3).
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se halló (comparanda taína, lib. XIII cap. IX, visto en imagen):** «Llaman los
+indios de aquesta Isla Española á la mar *bagua*» (p. 436), en un capítulo de
+peces, sin relación con Yocahu (`yocah` = 0 en el tomo); el reverso, criado en
+agua de mar, al que se le dice «que sea *manicato*» y que «entiende muy bien el
+sermon humano» (pp. 435-436), sin nombre indígena en Oviedo; huracán =
+«tormenta ó tempestad muy excesiva» (lib. VI cap. III, pp. 167-168). **No se
+halló** el manatí criado (Matum): Oviedo sólo discute la etimología de Mártir (p.
+434).
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

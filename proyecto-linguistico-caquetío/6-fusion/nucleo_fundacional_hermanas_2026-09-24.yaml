@@ -1,0 +1,921 @@
+# ══════════════════════════════════════════════════════════════════════
+# PROPUESTA — el núcleo fundacional rehecho desde las hermanas
+#
+# Miguel, 2026-09-23: «preferiría usarlo [el kalinago de mujeres] de referencia
+# […] o al menos poder medirlo y poder usar lo más posible». Medido: empata con
+# el lokono (medicion_cercania_hermanas_2026-09-23.yaml). Y al mirar dónde
+# usarlo apareció que las 36 voces del «núcleo fundacional» —las que más dicen
+# los agentes— citaban «cognado en lokono/garífuna/proto-arahuaco» sin página y
+# casi ninguna tiene pareja (inventario_nucleo_fundacional_2026-09-23.yaml).
+# Ante la propuesta de rehacerlo desde el lokono y el kalinago de mujeres
+# juntos, Miguel (2026-09-24): «Dale». Y, sin Docker: «Avancemos en lo que
+# podemos».
+#
+# Regla 5: PROPONE. No toca curiana_sim/, 2-lengua/ ni CLAUDE.md.
+# Regla 1: los costes salen de 6-fusion/medicion_nucleo_fundacional_2026-09-24.yaml
+#   (6-fusion/scripts/medir_nucleo_fundacional.py; `--check` verifica). Medido
+#   SIN la base (Docker apagado): enseñanza, colisiones, fonotáctica y puerta
+#   de forma sí; el USO HISTÓRICO de cada voz, no — queda por medir.
+# Regla 2: en duda, degradar. Regla 3: todo es FORMA de hermanas (lokono de
+#   las Guayanas s. XVIII-XIX, kalinago de las Antillas s. XVII, achagua de los
+#   Llanos s. XVIII); nada dice cómo vivía un caquetío.
+# Borrador legible: issues-pendientes/publicados/nucleo-fundacional-hermanas-2026-09-24.md
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  recogido: '2026-09-24'
+  rama: campana/kalinago-mujeres
+  estado: 'FUSIONADA (2026-09-24) — «Acepto todo lo recomendado»; aplicada en la rama tanda/hermanas-2026-09-24, sin mergear hasta medir con la base. Registro: 6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml'
+  escriba: el coordinador de la sesión, en serie
+  obras: adam-1879 · goeje-1939 · perea-alonso-1942 · neira-ribero-1762 · oliver-1989-apendice-a · zavala-reyes-2015
+  verificado_en_imagen:
+    - 'Adam 1879 pp. 288-290: la tabla ENTERA de 79 voces arahuacas contra el kalinago (transcrita en 6-fusion/adam_1879_arrouague_caraibe.yaml)'
+    - 'Goeje 1939 pp. 32, 34, 40, 41, 56, 71, 78, 94, 101, 105, 110 (esta campaña) y las de #234'
+    - 'Goeje 1939 pp. 35-116: el habla de mujeres entera que faltaba (6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml)'
+  no_verificado_en_imagen: >-
+    Perea 1942 (las formas lokonas vienen de 6-fusion/lokono_perea_1942.yaml,
+    con página y ejemplo del Fraseario); Neira y Ribero (transcripción por
+    visión de la campaña D11). Goeje p. 55 «pluie f oya» (capa de texto).
+  el_metodo: >-
+    el de D11 fase 3 y tf.5: la forma de una hermana TAL CUAL, en grafía
+    fonémica (se quitan el prefijo a- del infinitivo y el sufijo -n, como en
+    `diki` < lokono a-ddiki-n); se prefiere la forma que comparten dos
+    hermanas, con la correspondencia regular que las fuentes muestran (lokono
+    d = kalinago r/l: Adam pp. 288-289, adiki/arica 'ver', ada/ara 'árbol').
+    Donde el caquetío ATESTIGUADO ya tiene la voz, no se reconstruye nada: se
+    archiva la reconstruida (política d19.b y su para qué, d19.c).
+  como_leer_el_coste: >-
+    `colisiones_de_la_nueva` vale 1 cuando la forma YA es la clave caquetía
+    (jusual, kidi, ateri, iero, ako, dare, bara, wairon) o es la voz que se
+    queda: no es un choque, es la propia voz. Los choques de verdad van en el
+    `aviso` de cada opción. `plantillas_a_tocar` es de la voz VIEJA: dónde hay
+    que reescribir si cambia.
+
+# ══════════════════════════════════════════════════════════════════════
+# LA DECISIÓN QUE VA PRIMERO — la etiqueta, y quién la ve
+# ══════════════════════════════════════════════════════════════════════
+decision_n1_la_etiqueta:
+  el_problema: >-
+    El perfil `era2` NO muestra la capa hipotética (5-experimento/
+    perfiles_de_run.yaml: «escondemos las hipotéticas»). Hoy las 36 voces del
+    núcleo son `caquetío-reconstruido` y salen en la muestra; pero esa etiqueta
+    es falsa para casi todas (no tienen pareja), y la regla 2 obliga a
+    degradarlas o a cambiarlas. Si la voz nueva entra hipotética, el agente
+    sólo la ve si una plantilla la enseña. Las 36 las enseña hoy alguna
+    plantilla (medición §voces_viejas), pero no todas las plantillas llegan a
+    los 63: la completa sólo va al tier 1.
+  opciones:
+    - letra: A
+      que: >-
+        DOS hermanas con la misma forma (o con la correspondencia regular
+        declarada) = `caquetío-reconstruido`, y sale en la muestra; UNA hermana
+        = `caquetío-hipotético`, y sólo llega por plantilla. Es el criterio (a)
+        de D11 fase 3, aplicado al léxico, contando el kalinago de mujeres si
+        D1 (#234) es A.
+      reconstruidas_si_d1_es_A: [ani, aeke, ati, dunku, aita, isi, akusi, kibe, ada, uni, unia, butu]
+      y_ademas_fuera_de_las_36: [diki, marisi]
+      reconstruidas_si_d1_es_B: [uni, unia]
+    - letra: B
+      que: >-
+        Toda forma de hermana tal cual y con cita = reconstruida en el núcleo.
+        Todo el núcleo nuevo sale en la muestra. Afloja D11: una sola hermana
+        pasa a bastar.
+    - letra: C
+      que: 'todo lo nuevo hipotético, como tf.5; el núcleo sólo llega por plantilla'
+  recomendacion: A
+  por_que: >-
+    es la regla que ya se usó para los pronombres, y deja a la vista lo mejor
+    sostenido. Lo de una sola hermana llega igual por las plantillas que hoy
+    enseñan la voz vieja, y lo que la plantilla no enseñe lo acuñará la
+    comunidad — que es la pregunta del perfil era2.
+
+# ══════════════════════════════════════════════════════════════════════
+# LAS 36 VOCES, POR GRUPO
+# ══════════════════════════════════════════════════════════════════════
+grupos:
+  - grupo: 1. La atestiguada ya lo dice — se archiva la reconstruida, no entra nada nuevo
+    voces:
+      - voz: kono
+        glosa: sembrar, plantar, cultivar
+        hoy: 'reconstruido; nota «cognado en lokono/taíno» — la forma es el taíno conuco'
+        opciones:
+          - letra: A
+            formas: [jusual]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #180 (AM), «sembrar, siembra, sembradío. Conuco»)'
+            derivacion: 'archivar `kono`; la atestiguada cubre el concepto (d19.c)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {jusual: 1}
+          - letra: B
+            formas: [abuna]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono Abunu-n ''planter'' → kalinago C. abona (Adam p. 288); Goeje p. 73 A abona'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {abuna: 0}
+        recomendacion: A
+        por_que: la atestiguada manda (d19.b/c)
+      - voz: sima
+        glosa: cerro, elevación
+        hoy: 'reconstruido; la nota cita el topónimo Barquisimeto'
+        opciones:
+          - letra: A
+            formas: [kidi]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #212 (AM), «Cerro, altura»)'
+            derivacion: 'archivar `sima`; ya estaba abierta en 6-fusion/curacion_glosas_pares_2026-09-19.yaml'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 4
+              colisiones_de_la_nueva: {kidi: 1}
+        recomendacion: A
+        por_que: la atestiguada manda
+      - voz: nomi
+        glosa: hombre adulto (no título)
+        hoy: 'reconstruido; sin pareja (lokono wadili, kalinago uekeli/eyeri)'
+        opciones:
+          - letra: A
+            formas: [ateri]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #17 (GC), «Hombre»)'
+            derivacion: 'archivar `nomi`; y ateri va con el eyeri de las mujeres kalinago (#234)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {ateri: 1}
+        recomendacion: A
+        por_que: la atestiguada manda
+      - voz: wari
+        glosa: mujer adulta (no título)
+        hoy: 'reconstruido; es el kalinago de HOMBRES wûri (caribe: K wori, Goeje p. 40)'
+        opciones:
+          - letra: A
+            formas: [iero]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #163 (GC), «Mujer»)'
+            derivacion: 'archivar `wari`; iero va con lokono hiaeru / mujeres inharu (Adam p. 289)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {iero: 1}
+        recomendacion: A
+        por_que: 'la atestiguada manda, y la vieja era caribe'
+      - voz: arua
+        glosa: alimento, comida
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [ako]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #4 (E+AM), «comida»)'
+            derivacion: 'archivar `arua`; ako se parece al lokono aeke / mujeres aica ''comer'''
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 2
+              colisiones_de_la_nueva: {ako: 1}
+        recomendacion: A
+        por_que: la atestiguada manda
+      - voz: buri
+        glosa: hijo, hija, criatura
+        hoy: 'reconstruido; sin pareja (lokono ditti, mujeres ira-hô)'
+        opciones:
+          - letra: A
+            formas: [dare]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #103, «diente; hijo (extensión metafórica)»)'
+            derivacion: archivar `buri`; dare ya lleva 'hijo'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {dare: 2}
+          - letra: B
+            formas: [diti]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono A-DITTI ''hijo'' (Perea p. 51, diez atestaciones)'
+            aviso: 'medido: a UNA letra de `diki` ''ver'''
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {diti: 0}
+        recomendacion: A
+        por_que: 'la atestiguada manda; B choca con diki'
+
+  - grupo: 2. Dos hermanas con la misma forma — la mejor sostenida
+    voces:
+      - voz: chaa
+        glosa: hacer, construir
+        hoy: 'reconstruido; sin pareja. Medido: vecina a una letra de ONCE voces (maa, naa, saa, taa, waa, kaa…)'
+        opciones:
+          - letra: A
+            formas: [ani]
+            etiqueta: 'reconstruido si D1 = A (si no, hipotético)'
+            derivacion: 'Goeje p. 94 (imagen): «faire h ani, aniro, anikua, A ani» — lokono y kalinago, la misma forma; Perea A-NI-SIA ''lo hecho'' (p. 346)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {ani: 0}
+          - letra: B
+            formas: [chaa]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {chaa: 1}
+        recomendacion: A
+        por_que: dos hermanas, la misma forma, y sale del racimo de CVV
+      - voz: masa
+        glosa: comer, alimentarse
+        hoy: 'reconstruido; nota «lokono/garífuna» — el lokono dice aeke'
+        opciones:
+          - letra: A
+            formas: [aeke]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'lokono «Aeke, manger» → mujeres «aica» (Adam p. 288, imagen); Goeje p. 78 (imagen): «manger f aika … A aeke, eke». La forma lokona'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 6
+              colisiones_de_la_nueva: {aeke: 0}
+          - letra: B
+            formas: [aika]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: la forma de las mujeres kalinago
+            aviso: 'medido: vecina de aka, arika, gika'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 6
+              colisiones_de_la_nueva: {aika: 0}
+        recomendacion: A
+        por_que: la forma lokona, y la de menos vecinas
+      - voz: awa
+        glosa: beber
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [ati]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'lokono «Atti-n, boire» → mujeres «ata-ca» (Adam p. 289, imagen); Perea M-A-TTI-N ''no bebió'' (p. 250); y Goeje p. 107 (imagen): «boire f ata … A ata, ato». La raíz lokona'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 4
+              colisiones_de_la_nueva: {ati: 0}
+          - letra: B
+            formas: [ata]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'la forma EXACTA de las dos hermanas (Goeje p. 107: f ata, A ata)'
+            aviso: '`ata` es clave ACHAGUA (''Rallo''); medido: vecina de ama, ana, aka, tata'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 4
+              colisiones_de_la_nueva: {ata: 1}
+        recomendacion: A
+        por_que: 'B es la forma exacta de las dos, pero choca con cuatro voces de tres letras; A sólo con kati'
+      - voz: suna
+        glosa: dormir, reposar
+        hoy: 'reconstruido; nota «lokono/proto» — el lokono dice adum-/adunku'
+        opciones:
+          - letra: A
+            formas: [dunku]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'Goeje p. 101 (imagen): «dormir f aromanka … A adunku»; Adam p. 288: lokono «Adum-ki-n» → mujeres «aroman-ca». Lokono d = kalinago r'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 5
+              colisiones_de_la_nueva: {dunku: 0}
+          - letra: B
+            formas: [dumki]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'la de Adam (a-dum-ki-n) y Perea (A-DUM-CA, p. 305)'
+            aviso: 'medido: el grupo mk no pasa la fonotáctica atestiguada; y es clave lokono'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 5
+              colisiones_de_la_nueva: {dumki: 1}
+        recomendacion: A
+        por_que: B no pasa la fonotáctica
+      - voz: panaa
+        glosa: saber, conocer
+        hoy: 'reconstruido; nota «lokono/garífuna» — el lokono dice aita/ditti'
+        opciones:
+          - letra: A
+            formas: [aita]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'Goeje p. 101 (imagen): «se mémorer aritaga … A aitoa, connaître A adita, aita»: lokono aita, kalinago aritaga (d = r)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {aita: 0}
+          - letra: B
+            formas: [diti]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono A-DITTI-N ''entender, conocer'' (Perea pp. 265, 313)'
+            aviso: 'a una letra de diki; y DITTI es también ''hijo'' en lokono'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {diti: 0}
+        recomendacion: A
+        por_que: dos hermanas y sin choque
+      - voz: kabo
+        glosa: cabeza, mente
+        hoy: 'reconstruido; sin pareja — y kabo es la MANO en las dos hermanas (lokono Uekabu → mujeres n-oucabo, Adam p. 290)'
+        opciones:
+          - letra: A
+            formas: [isi]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'Goeje p. 32 (imagen): «tête … išik, išöke … A iši»; Adam p. 289: lokono «Issihi, tête» → mujeres «ichic». La raíz de las dos'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {isi: 0}
+          - letra: B
+            formas: [isihi]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: la forma lokona de Adam entera
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {isihi: 1}
+        recomendacion: A
+        por_que: la raíz común, corta y sin choque
+      - voz: nii
+        glosa: ojo, mirada
+        hoy: 'reconstruido; nota «lokono-cogn» — el lokono dice akussi'
+        opciones:
+          - letra: A
+            formas: [akusi]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'lokono «Aku-ssi, œil» → mujeres «n-acou» (Adam p. 288, imagen); Goeje p. 33 f aku, A ako. La forma lokona'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 3
+              colisiones_de_la_nueva: {akusi: 0}
+          - letra: B
+            formas: [aku]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: la de las mujeres kalinago
+            aviso: 'a una letra de `ako` ''comida'' (no la detecta el medidor: pide 4 letras)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 3
+              colisiones_de_la_nueva: {aku: 0}
+        recomendacion: A
+        por_que: B se confunde con ako
+      - voz: wara
+        glosa: muy, mucho
+        hoy: 'reconstruido; sin pareja. Medido: vecina a una letra de DIEZ voces (bara, mara, para, tara, waya…)'
+        opciones:
+          - letra: A
+            formas: [kibe]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'Goeje p. 71 (imagen): «beaucoup f k-ibe … très A k-ibi, k-ibe-n» — las mujeres y el lokono'
+            aviso: 'a una letra de `kiba` ''piedra'''
+            coste_medido:
+              plantillas_a_tocar: 3
+              apariciones_en_plantillas: 4
+              colisiones_de_la_nueva: {kibe: 0}
+          - letra: B
+            formas: [wara]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {wara: 0}
+        recomendacion: A
+        por_que: 'dos hermanas; una vecina en vez de diez'
+      - voz: kuru
+        glosa: árbol, madera, tronco (el árbol vivo, d21.16)
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [ada]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: 'lokono «Ada, bois, arbre, forêt» → kalinago «ara-bou, dans le bois» (Adam p. 288, imagen): d = r. Mantiene la convivencia de d21.16 (ada el árbol vivo, bara el palo)'
+            aviso: '`ada` es clave LOKONO del lexicón: renombrar (precedente kuba-lokono)'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 5
+              colisiones_de_la_nueva: {ada: 1}
+          - letra: B
+            formas: [bara]
+            etiqueta: '— (ya está, reconstruida: Zavala #29 (E) + Alvarado barabara)'
+            derivacion: 'archivar kuru y deshacer la convivencia de d21.16'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 5
+              colisiones_de_la_nueva: {bara: 2}
+        recomendacion: A
+        por_que: no deshace d21.16
+      - voz: duna
+        glosa: agua corriente, bebible
+        hoy: 'reconstruido; es CARIBE: el tuna kalina vía el garífuna duna (Goeje p. 55)'
+        opciones:
+          - letra: A
+            formas: [uni]
+            etiqueta: caquetío-reconstruido
+            derivacion: 'achagua «Vni, Agua» (Neira pl. 32 izq.; V inicial = u) y lokono wuini / oni-abo (lexicón): la raíz arahuaca *uni en dos de las tres hermanas que Miguel nombró'
+            aviso: '`uni` es clave ACHAGUA del lexicón: renombrar'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 3
+              colisiones_de_la_nueva: {uni: 1}
+        recomendacion: A
+        por_que: 'dos hermanas nombradas: reconstruida con o sin D1'
+      - voz: kaya
+        glosa: lluvia
+        hoy: 'reconstruido; nota «lokono (juya-cogn)» — el lokono dice oni'
+        opciones:
+          - letra: A
+            formas: [unia]
+            etiqueta: caquetío-reconstruido
+            derivacion: 'achagua «Vnia, Lluvia» (Neira pl. 73 der.) y lokono oni ''lluvia'' (lexicón): la misma raíz del agua'
+            aviso: 'clave achagua: renombrar; a una letra de `uria` ''plantío'''
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {unia: 1}
+          - letra: B
+            formas: [oya]
+            etiqueta: caquetío-hipotético
+            derivacion: 'mujeres kalinago «pluie … f oya» (Goeje p. 55, capa de texto, sin imagen)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {oya: 0}
+        recomendacion: A
+        por_que: dos hermanas nombradas
+
+      - voz: taa
+        glosa: tomar, coger, recibir
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [butu]
+            etiqueta: 'reconstruido si D1 = A'
+            derivacion: >-
+              Goeje p. 74 (imagen, sigla fhA): «cueillir (a)bula-ka, abutu …
+              travailler abutu, cueillir … A abuti … prendre A abutu» — el
+              kalinago (los dos registros) y el lokono, la misma raíz; sin el
+              prefijo a- del infinitivo, como diki. Hallada en la transcripción
+              del habla de mujeres del 2026-09-24
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {butu: 0}
+          - letra: B
+            formas: [nika]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono A-NNICA-N ''tomaron'' (Perea p. 470), una hermana'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {nika: 0}
+          - letra: C
+            formas: [taa]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {taa: 0}
+        recomendacion: A
+        por_que: 'dos hermanas y sin ningún choque medido'
+
+  - grupo: 3. Una hermana — hipotética (sólo llega por plantilla)
+    voces:
+      - voz: naa
+        glosa: ir, moverse hacia
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [kunu]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono cunnu ''ir'' (Perea p. 623, vocabulario de Schumann) y A-CUN-TE (Fraseario p. 362, cuatro atestaciones)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 9
+              colisiones_de_la_nueva: {kunu: 0}
+          - letra: B
+            formas: [naa]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {naa: 0}
+        recomendacion: A
+        por_que: 'tiene cita; naa no'
+      - voz: waa
+        glosa: venir
+        hoy: 'reconstruido; sin pareja (se parece al kalinago de HOMBRES uabu)'
+        opciones:
+          - letra: A
+            formas: [sile]
+            etiqueta: caquetío-hipotético
+            derivacion: 'mujeres kalinago «venir, arriver, advenir f šile» (Goeje p. 105, imagen, sigla fam)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {sile: 0}
+          - letra: B
+            formas: [andi]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono ndi / andin (Perea p. 614; Oliver A-2 fila 66)'
+            aviso: 'medido: el grupo nd no pasa la fonotáctica'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {andi: 0}
+          - letra: C
+            formas: [waa]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {waa: 0}
+        recomendacion: A
+        por_que: 'B no pasa la fonotáctica; A depende de D1 (si D1 = B, C)'
+      - voz: raka
+        glosa: querer, desear
+        hoy: 'reconstruido; sin pareja; y Raka-bi es un nombre del elenco'
+        opciones:
+          - letra: A
+            formas: [hiti]
+            etiqueta: caquetío-hipotético
+            derivacion: 'Goeje p. 110 (imagen): «désirer A hiti, hite»; Perea -HITTI desiderativo (L-A-KI-N-HITTI-CU-MA ''quiso comer'', p. 258)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 2
+              colisiones_de_la_nueva: {hiti: 0}
+          - letra: B
+            formas: [raka]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {raka: 0}
+        recomendacion: A
+        por_que: tiene cita
+      - voz: rua
+        glosa: cargar, llevar
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [kudu]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono KÙDDÙ ''carga'' (Perea p. 253) y cudu-cutta ''llevar'' (p. 378)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {kudu: 1}
+          - letra: B
+            formas: [rua]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {rua: 1}
+        recomendacion: A
+        por_que: tiene cita
+      - voz: amana
+        glosa: fuego, lumbre
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [hikihi]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono HIKKI-HI ''fuego'' (Perea p. 46), la forma entera'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 2
+              colisiones_de_la_nueva: {hikihi: 1}
+          - letra: B
+            formas: [hiki]
+            etiqueta: caquetío-hipotético
+            derivacion: la raíz lokona
+            aviso: 'medido: a una letra de `diki` ''ver'''
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 2
+              colisiones_de_la_nueva: {hiki: 1}
+          - letra: C
+            formas: [wairon]
+            etiqueta: '— (ya es caquetío-atestiguado: Zavala #132 (HB), «hoguera»)'
+            derivacion: 'archivar amana y que la atestiguada cubra ''fuego'''
+            aviso: 'Wairon es también un nombre del elenco (lo separa la mayúscula)'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 2
+              colisiones_de_la_nueva: {wairon: 2}
+        recomendacion: A
+        por_que: 'hoguera no es fuego: la atestiguada no cubre el concepto entero'
+      - voz: arima
+        glosa: pez, pescado
+        hoy: 'reconstruido; sin pareja. Es la del ejemplo de IDENTIDAD («arima wara para»)'
+        opciones:
+          - letra: A
+            formas: [hime]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono hime (Oliver A-2 fila 19) e itime (Brinton)'
+            aviso: '`hime` es clave lokono: renombrar'
+            coste_medido:
+              plantillas_a_tocar: 2
+              apariciones_en_plantillas: 3
+              colisiones_de_la_nueva: {hime: 2}
+          - letra: B
+            formas: [arima]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {arima: 0}
+        recomendacion: A
+        por_que: tiene cita
+      - voz: dali
+        glosa: tierra, suelo
+        hoy: 'reconstruido; sin pareja. Medido: choca con el posesivo da- (se lee da-li)'
+        opciones:
+          - letra: A
+            formas: [wunabu]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono WUNABU ''tierra'' (Perea pp. 95, 70, 96; siete atestaciones)'
+            aviso: '`wunabu` es clave lokono: renombrar'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {wunabu: 1}
+          - letra: B
+            formas: [dali]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {dali: 1}
+        recomendacion: A
+        por_que: 'tiene cita, y dali choca con da-'
+      - voz: baba
+        glosa: padre
+        hoy: 'reconstruido; es el kalinago de HOMBRES (Goeje p. 40: «père … h baba, K papa»). Medido: choca con el aspecto -ba (se lee ba-ba)'
+        opciones:
+          - letra: A
+            formas: [iti]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono L-ITTI ''su padre'' (Perea p. 123) y Goeje p. 42 «père A iti»'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {iti: 0}
+          - letra: B
+            formas: [kusi]
+            etiqueta: caquetío-hipotético
+            derivacion: 'mujeres kalinago «père f u-kuši» (Goeje p. 40, imagen)'
+            aviso: 'a una letra de `kasi` ''sol'''
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {kusi: 1}
+          - letra: C
+            formas: [baba]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {baba: 1}
+        recomendacion: A
+        por_que: 'tiene cita, y baba choca con -ba y es caribe'
+      - voz: ka
+        glosa: y, también, con
+        hoy: 'reconstruido; sin pareja. Medido: ES un afijo del motor (ka- atributivo, -ka en desuso)'
+        opciones:
+          - letra: A
+            formas: [badia]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono BADDIA ''y, también'' (Perea p. 538; ocho atestaciones)'
+            coste_medido:
+              plantillas_a_tocar: 3
+              apariciones_en_plantillas: 9
+              colisiones_de_la_nueva: {badia: 0}
+          - letra: B
+            formas: [ka]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {ka: 2}
+        recomendacion: A
+        por_que: 'tiene cita, y quita la ambigüedad con ka-'
+      - voz: mara
+        glosa: pero, sin embargo
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [ika]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono ICCA ''pero'' (Perea p. 528) y ''entonces'' (p. 513)'
+            coste_medido:
+              plantillas_a_tocar: 3
+              apariciones_en_plantillas: 5
+              colisiones_de_la_nueva: {ika: 1}
+          - letra: B
+            formas: [mara]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {mara: 0}
+        recomendacion: A
+        por_que: tiene cita
+      - voz: saa
+        glosa: si, cuando
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [bena]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono BENNA ''cuando'' (Perea p. 504; cinco atestaciones)'
+            aviso: 'a una letra de `bana`'
+            coste_medido:
+              plantillas_a_tocar: 3
+              apariciones_en_plantillas: 6
+              colisiones_de_la_nueva: {bena: 0}
+          - letra: B
+            formas: [saa]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {saa: 0}
+        recomendacion: A
+        por_que: tiene cita
+      - voz: naka
+        glosa: después, luego
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [kia]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono KIA ''después'' (Perea p. 508; cuatro atestaciones)'
+            aviso: '`kia` es clave lokono: renombrar'
+            coste_medido:
+              plantillas_a_tocar: 3
+              apariciones_en_plantillas: 6
+              colisiones_de_la_nueva: {kia: 1}
+          - letra: B
+            formas: [naka]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {naka: 0}
+        recomendacion: A
+        por_que: tiene cita
+
+  - grupo: 4. Se quedan — con la cita que tienen, o degradadas
+    voces:
+      - voz: kaa
+        glosa: estar, ser (cópula)
+        hoy: 'reconstruido; sin pareja (lokono a/cuba, kalinago iem, achagua -ya-)'
+        opciones:
+          - letra: A
+            formas: [kaa]
+            etiqueta: caquetío-hipotético
+            derivacion: 'se queda y se DEGRADA: ninguna hermana da una cópula que se parezca, y cambiarla toca toda la gramática enseñada'
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {kaa: 1}
+        recomendacion: A
+        por_que: 'sin candidata mejor; en duda, degradar'
+      - voz: maa
+        glosa: decir, hablar
+        hoy: 'reconstruido; nota sin página'
+        opciones:
+          - letra: A
+            formas: [maa]
+            etiqueta: caquetío-hipotético
+            derivacion: 'se queda con cita: achagua «Numau, Decir» = nu-ma-u (Neira pl. 55 der.)'
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {maa: 0}
+          - letra: B
+            formas: [dia]
+            etiqueta: caquetío-hipotético
+            derivacion: 'lokono DIA ''decir'' (Perea p. 280, nueve atestaciones) → mujeres arian-ga (Adam p. 288)'
+            aviso: 'medido: no pasa neologismo_valido (''día'') y es anagrama de dai'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 4
+              colisiones_de_la_nueva: {dia: 2}
+        recomendacion: A
+        por_que: B choca con el castellano y con el pronombre
+      - voz: suka
+        glosa: noche, oscuridad
+        hoy: 'reconstruido; nota sin página'
+        opciones:
+          - letra: A
+            formas: [suka]
+            etiqueta: caquetío-hipotético
+            derivacion: 'se queda con cita: lokono CA-SACCU-DA ''de noche'' (Perea p. 71)'
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {suka: 1}
+        recomendacion: A
+        por_que: tiene una hermana
+      - voz: ama
+        glosa: madre
+        hoy: 'reconstruido; «proto-arahuaco universal»'
+        opciones:
+          - letra: A
+            formas: [ama]
+            etiqueta: caquetío-hipotético
+            derivacion: 'se queda y se degrada: voz infantil que casi toda lengua tiene'
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {ama: 0}
+          - letra: B
+            formas: [kusu]
+            etiqueta: caquetío-hipotético
+            derivacion: 'mujeres kalinago «mère f u-kušu» (Goeje p. 41, imagen, sigla fA)'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {kusu: 0}
+        recomendacion: A
+        por_que: 'en duda, degradar; B sólo si D1 = A y se quiere el par u-kuši/u-kušu'
+      - voz: bari
+        glosa: vientre, interior del cuerpo
+        hoy: 'reconstruido; sin pareja'
+        opciones:
+          - letra: A
+            formas: [bari]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {bari: 2}
+          - letra: B
+            formas: [ulakae]
+            etiqueta: caquetío-hipotético
+            derivacion: 'mujeres kalinago «ventre … f ulakae» (Goeje p. 34, imagen, sigla fA)'
+            aviso: 'medido: no pasa neologismo_valido'
+            coste_medido:
+              plantillas_a_tocar: 1
+              apariciones_en_plantillas: 1
+              colisiones_de_la_nueva: {ulakae: 0}
+        recomendacion: A
+        por_que: B no pasa el filtro de forma
+      - voz: puna
+        glosa: antes, ya, primero
+        hoy: 'reconstruido; sin pareja (lokono bura-mùn, achagua quecha)'
+        opciones:
+          - letra: A
+            formas: [puna]
+            etiqueta: caquetío-hipotético
+            derivacion: se queda y se degrada
+            coste_medido:
+              plantillas_a_tocar: 0
+              apariciones_en_plantillas: 0
+              colisiones_de_la_nueva: {puna: 0}
+        recomendacion: A
+        por_que: 'sin candidata limpia'
+
+lo_que_cambia_si_se_aplica_todo:
+  plantillas: >-
+    las 36 voces viejas las enseña alguna plantilla (medición §voces_viejas):
+    IDENTIDAD («Dai diki-kuba arima wara para» pasaría a «Dai diki-kuba hime
+    kibe para»), la breve, la completa, el refuerzo y el rescate. Se reescriben
+    en el corte, como en la tanda final.
+  koine: 'FORMAS_SEED y _NUCLEO_FALLBACK nombran naa, maa, ka, mara, kuru, arima, sima…: se migran'
+  tests: 'la medición cuenta las apariciones en tests por voz (kuru, wara, naa y sima son las que más)'
+  uso_historico: 'SIN MEDIR (Docker apagado): `medir_nucleo_fundacional.py` con la base lo da'
+  la_serie: 'otro corte de serie antes de la base, medido como la tanda final (control, prompt, pre-vuelo)'
+
+lo_que_cambia_la_transcripcion_del_habla_de_mujeres:
+  fuente: '6-fusion/kalinago_mujeres_goeje_2026-09-24.yaml (302 entradas, en imagen)'
+  suben_a_dos_hermanas:
+    - voz: diki
+      que: 'ver (tf.5, hoy hipotética): lokono a-ddiki-n = mujeres «arika», A adika (Goeje p. 100, imagen; d = r). Reconstruida si D1 = A y N1 = A'
+    - voz: marisi
+      que: 'maíz en mazorca (hoy hipotética, y por eso fuera de la muestra era2): «maïs … f mariši, A mariši» (Goeje p. 65, imagen): la MISMA forma en las dos. Reconstruida si D1 = A y N1 = A'
+    - voz: taa → butu
+      que: 'ver arriba: pasó del grupo 3 al 2'
+  apoyos_nuevos_para_lo_ya_propuesto:
+    - 'kudu ''cargar'': Goeje p. 98 «pesant A kudu»'
+    - 'hiti ''querer'': Goeje p. 109 «vouloir, disposé à A ahite(-ka)»'
+    - 'isi ''cabeza'': Goeje p. 105 «graine, tête A isi»'
+    - 'ani ''hacer'': es la forma de los HOMBRES y del lokono (p. 94, sigla 1 am 139, de origen arahuaco); las mujeres dicen ateka (p. 109). Sigue siendo de dos hermanas'
+    - 'wara ''muy'': el kalinago tiene una raíz uar- de ''fuerza'' (p. 114: «puissant f uarigo», 6 uwara ''puissance''); no es el mismo significado, y kibe sigue siendo la recomendada'
+  lo_que_no_sirve:
+    - 'amar: mujeres inši / lokono ansi (p. 95) — dos hermanas, pero el grupo ns no pasa la fonotáctica atestiguada; alaain se archiva sin sustituta, como proponía #234'
+    - 'rojo: mujeres pona / lokono bonaro (p. 77) — dos hermanas, pero pona queda a una letra de puna y de pana; kule sigue siendo la recomendada (#234)'

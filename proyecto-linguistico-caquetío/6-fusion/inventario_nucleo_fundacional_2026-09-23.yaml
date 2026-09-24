@@ -1,0 +1,65 @@
+# ══════════════════════════════════════════════════════════════════════
+# INVENTARIO — el «núcleo fundacional» contra las hermanas (PRIMERA PASADA)
+#
+# 2026-09-23, dentro de la campaña del habla de mujeres kalinago. Miguel:
+# «preferiría usarlo de referencia […] o al menos poder medirlo y poder usar lo
+# más posible». Para ver dónde se puede usar, se buscó cada voz reconstruida
+# cuya nota dice sólo «núcleo fundacional, forma justificada por cognado en
+# lokono/garífuna/proto-arahuaco» —sin página— en las fuentes del repo.
+#
+# ⚠️ PRIMERA PASADA: búsqueda por glosa en Perea 1942 (Fraseario, Hechos de los
+# Apóstoles: su campo NO es el de la vida diaria), las entradas lokono del
+# lexicón, Neira y Ribero 1762 y Goeje 1939 (capa de texto). NADA verificado
+# en imagen todavía. «ninguna» = no se encontró; un cero hay que verificarlo
+# (regla 6) antes de proponer nada.
+# Propone, no fusiona (regla 5). No es decisión: es el mapa para pedirla.
+# ══════════════════════════════════════════════════════════════════════
+meta:
+  recogido: '2026-09-23'
+  estado: primera pasada, sin verificar en imagen
+  voces_revisadas: 36
+  criterio: '¿la forma caquetía se parece a la de alguna hermana para el mismo concepto?'
+voces:
+  - {forma: naa,   glosa: ir,      lokono: 'cun-te, cunnu (Perea p. 362)', kalinago: 'aiba ''s''en aller'', A aiba (Goeje p. 68)', achagua: '—', veredicto: ninguna}
+  - {forma: waa,   glosa: venir,   lokono: 'ndi, andin', kalinago: 'h uabu, embui; f? šile (Goeje pp. 75, 105)', achagua: 'Nunu (pl. 97 izq.)', veredicto: 'débil (h uabu)'}
+  - {forma: kaa,   glosa: 'estar, ser', lokono: 'cuba, ddi-coa (Perea pp. 456, 326)', kalinago: 'iem (Goeje p. 25)', achagua: 'Nuyau (pl. 62 izq.)', veredicto: ninguna}
+  - {forma: maa,   glosa: decir,   lokono: 'dia (Perea p. 280, 9 at.)', kalinago: 'h eka; f,h elele (Goeje pp. 79, 87)', achagua: 'Nu-ma-u «Decir» (pl. 55 der.)', veredicto: 'una hermana (achagua)'}
+  - {forma: taa,   glosa: tomar,   lokono: 'bbuku, onna (Perea pp. 432, 470)', kalinago: 'abuye (Goeje p. 75)', achagua: 'Nubinau', veredicto: ninguna}
+  - {forma: chaa,  glosa: hacer,   lokono: 'amalliti-n (Adam p. 301)', kalinago: '—', achagua: 'Numeda (pl. 66 der.)', veredicto: ninguna}
+  - {forma: suna,  glosa: dormir,  lokono: 'dum, adunku (Perea p. 305; Goeje p. 101 A)', kalinago: 'f aromanka (Goeje p. 101)', achagua: 'Numayu', veredicto: ninguna}
+  - {forma: masa,  glosa: comer,   lokono: 'aeke (Adam p. 288), khin', kalinago: 'f aika (Goeje p. 78)', achagua: 'Nuyau', veredicto: ninguna}
+  - {forma: awa,   glosa: beber,   lokono: 'atti-n (Adam p. 289), tti (Perea p. 250)', kalinago: 'kura; h ina (Goeje pp. 84, 93)', achagua: 'Nuirrau', veredicto: ninguna}
+  - {forma: panaa, glosa: saber,   lokono: 'ditti, aithin', kalinago: 'ebedie; A adita (Goeje pp. 71, 101)', achagua: 'Nuayurena', veredicto: ninguna}
+  - {forma: kono,  glosa: sembrar, lokono: 'abunu-n ''planter'' (Adam p. 288), dikki', kalinago: 'abona (Goeje p. 73, A abona)', achagua: 'Nuabanao', veredicto: 'ninguna (la forma es el taíno conuco)'}
+  - {forma: raka,  glosa: querer,  lokono: 'pana-hitte (Perea p. 431)', kalinago: '—', achagua: 'Nubabai', veredicto: ninguna}
+  - {forma: rua,   glosa: llevar,  lokono: 'kùddù (Perea p. 253)', kalinago: 'h bare, f abarero (Goeje p. 70)', achagua: 'Nuteyu', veredicto: ninguna}
+  - {forma: duna,  glosa: agua,    lokono: 'wuini, oniabo', kalinago: 'tona (sigla K: CARIBE), garífuna duna (Goeje p. 55)', achagua: 'Vni = uni (pl. 32 izq.)', veredicto: 'CARIBE: es el tuna kalina vía el garífuna; el arahuaco es *uni'}
+  - {forma: amana, glosa: fuego,   lokono: 'hikki (Perea p. 46)', kalinago: 'uatu (K)', achagua: 'Sichai (pl. 64 der.)', veredicto: ninguna}
+  - {forma: kaya,  glosa: lluvia,  lokono: 'oni', kalinago: 'konobui (K); f oya (Goeje p. 55)', achagua: 'Vnia (pl. 73 der.)', veredicto: ninguna}
+  - {forma: kuru,  glosa: árbol,   lokono: 'ada, adda, balli', kalinago: 'huehue (K)', achagua: 'Aicuba (pl. 37 der.)', veredicto: ninguna}
+  - {forma: arima, glosa: pez,     lokono: 'hime, itime', kalinago: '—', achagua: 'Cubai (pl. 83 izq.)', veredicto: ninguna}
+  - {forma: dali,  glosa: tierra,  lokono: 'wunabu (Perea p. 95), koïa', kalinago: 'h nonum; monha (Goeje p. 56)', achagua: '—', veredicto: ninguna}
+  - {forma: suka,  glosa: noche,   lokono: 'saccu (Perea p. 71)', kalinago: 'kuku (K)', achagua: 'tayege', veredicto: 'una hermana (lokono saccu)'}
+  - {forma: sima,  glosa: cerro,   lokono: 'ori', kalinago: '—', achagua: 'Areberritai…', veredicto: 'ninguna (la nota cita el topónimo Barquisimeto)'}
+  - {forma: ama,   glosa: madre,   lokono: 'uju', kalinago: 'f ii-kušu; h šanu (Goeje p. 41)', achagua: 'Nao', veredicto: 'ninguna (voz infantil universal)'}
+  - {forma: baba,  glosa: padre,   lokono: 'bura (Perea p. 123), itti', kalinago: 'h baba (Goeje p. 40; Adam p. 283: galibi Baba → H. baba)', achagua: '—', veredicto: 'CARIBE de HOMBRES'}
+  - {forma: buri,  glosa: hijo,    lokono: 'ditti (Perea p. 51, 10 at.)', kalinago: 'f ira-hô (Goeje p. 40)', achagua: 'Curesi', veredicto: ninguna}
+  - {forma: nomi,  glosa: 'hombre adulto', lokono: 'wadili (Perea p. 100, 9 at.)', kalinago: 'h uekeli / f eyeri', achagua: 'Guanaricaberrí', veredicto: 'ninguna — y el caquetío ATESTIGUA ateri ''hombre'''}
+  - {forma: wari,  glosa: 'mujer adulta', lokono: 'hiaru (Perea p. 68), irei', kalinago: 'h uele, 2 h wûri, K wori (Goeje p. 40)', achagua: 'Yneretua', veredicto: 'CARIBE de HOMBRES — y el caquetío ATESTIGUA iero ''mujer'''}
+  - {forma: kabo,  glosa: cabeza,  lokono: 'waseye; (kabbu es ''mano'' en lokono)', kalinago: 'h bopu (Goeje p. 32)', achagua: 'Bitasi', veredicto: 'ninguna (se parece a la ''mano'' lokona)'}
+  - {forma: nii,   glosa: ojo,     lokono: 'akussi, wakusi', kalinago: 'f aku (Goeje p. 33)', achagua: 'Tuisi', veredicto: ninguna}
+  - {forma: bari,  glosa: vientre, lokono: 'ite; A adi-beyu', kalinago: 'f okobu (Goeje p. 34)', achagua: 'Yabaisi', veredicto: ninguna}
+  - {forma: arua,  glosa: comida,  lokono: 'khesia', kalinago: '—', achagua: 'Guabaidasi', veredicto: ninguna}
+  - {forma: ka,    glosa: 'y, con', lokono: 'baddia (Perea p. 538)', kalinago: 'inalaki (Goeje p. 30)', achagua: 'taba', veredicto: ninguna}
+  - {forma: mara,  glosa: pero,    lokono: 'icca (Perea p. 528)', kalinago: '—', achagua: 'Riayucata', veredicto: ninguna}
+  - {forma: saa,   glosa: 'si, cuando', lokono: 'benna (Perea p. 504)', kalinago: '—', achagua: 'cata', veredicto: ninguna}
+  - {forma: naka,  glosa: después, lokono: 'kia (Perea p. 508)', kalinago: '—', achagua: 'Riabenami', veredicto: ninguna}
+  - {forma: puna,  glosa: antes,   lokono: 'bura-mùn (Perea p. 496)', kalinago: '—', achagua: 'Quecha', veredicto: ninguna}
+  - {forma: wara,  glosa: muy,     lokono: 'hitte (Perea p. 322)', kalinago: '—', achagua: 'Maninãna', veredicto: ninguna}
+lectura_provisional: >-
+  De 36, dos con una hermana (maa en achagua, suka en lokono), una débil
+  (waa), tres que son CARIBE de hombres (duna, wari, baba) y el resto sin
+  pareja en lo que hay en el repo. Donde se buscó, el lokono y el kalinago de
+  MUJERES suelen coincidir entre sí (Adam p. 290: 60 de 79 voces arahuacas caen
+  en el habla de mujeres): ver, oír, comer, beber, dormir, sembrar. Es
+  exactamente donde el núcleo podría rehacerse desde dos hermanas a la vez.

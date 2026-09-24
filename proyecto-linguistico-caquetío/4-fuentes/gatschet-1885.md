@@ -243,3 +243,16 @@ toca. Para esas, las candidatas son [[zavala-reyes-2015]], [[alvarado-1921]] y
 ## Enlaces
 
 [[van-buurt-2014]] · [[zavala-reyes-2015]] · [[alvarado-1921]] · [[oliver-1989-cap3]] · [[02_protocolo_habla_paraguanera]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `gatschet1885`: 0 ventanas creencia × mar (0 con un nombre de la costa occidental cerca), 1 creencia × cielo de control.
+
+**Se halló:** Ninguna ventana creencia × mar.
+
+**No se halló:** Cero.

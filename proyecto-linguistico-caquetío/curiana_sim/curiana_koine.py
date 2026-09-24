@@ -143,27 +143,34 @@ _ASPECTO_SUFIJO = {"completivo": "-kuba", "continuativo": "", "prospectivo": "-b
 # es el verbo solo). Mismo número de formas por agente; la forma cambia. Y
 # las voces reconstruidas desde el wayuu (tf.5) se mudan a sus sustitutas:
 # `wana` → `diki`, `naba` → `kuburuku`.
+# TANDA DE LAS HERMANAS (2026-09-24): el núcleo rehecho desde el lokono y el
+# habla de mujeres kalinago. Cada voz archivada se muda a la que la sustituye,
+# con su aspecto: `naa`→`kunu`, `suna`→`dunku`, `masa`→`aeke`, `raka`→`hiti`,
+# `chaa`→`ani`, `arima`→`hime`, `kuru`→`ada`, `kabo`→`isi`, `dali`→`wunabu`,
+# `kaya`→`unia`; y donde el atestiguado ya lo decía, él: `buri`→`dare`,
+# `arua`→`ako`, `kono`→`jusual`, `sima`→`kidi`. Mismo número de formas por
+# agente. 6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml
 FORMAS_SEED: dict[str, list[str]] = {
-    "Manaure":    ["biro", "barsure", "kasi", "kati", "chiriware", "maa-kuba", "naa-kuba"],
-    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "suna", "kuburuku"],
-    "Nubiri-sha": ["ama", "buri", "arua", "biro", "konuko", "were-ba", "raka-ba"],
-    "Watapana":   ["biro", "maure", "kanoa", "para", "arima", "naa-ba", "diki-ba"],
-    "Dara-ko":    ["kuru", "kanoa", "bara", "arima", "kunaro", "bagre", "diki"],
-    "Paugis-sha": ["urari", "arua", "buri", "ama", "kabo", "kono-kuba", "diki-kuba"],
-    "Biro-ko":    ["biro", "para", "dali", "sima", "naa-kuba", "were-kuba"],
-    "Tawaka":     ["chiriware", "kabo", "arima", "para", "diki-ba", "naa-ba"],
-    "Saruro-sha": ["maure", "arua", "naure", "kuru", "kono", "chaa"],
-    "Chiriware": ["chiriware", "sima", "para", "kabo", "diki-kuba", "naa-kuba"],
+    "Manaure":    ["biro", "barsure", "kasi", "kati", "chiriware", "maa-kuba", "kunu-kuba"],
+    "Shaboro":    ["urari", "barsure", "boratio", "saruro", "kati", "dunku", "kuburuku"],
+    "Nubiri-sha": ["ama", "dare", "ako", "biro", "konuko", "were-ba", "hiti-ba"],
+    "Watapana":   ["biro", "maure", "kanoa", "para", "hime", "kunu-ba", "diki-ba"],
+    "Dara-ko":    ["ada", "kanoa", "bara", "hime", "kunaro", "bagre", "diki"],
+    "Paugis-sha": ["urari", "ako", "dare", "ama", "isi", "jusual-kuba", "diki-kuba"],
+    "Biro-ko":    ["biro", "para", "wunabu", "kidi", "kunu-kuba", "were-kuba"],
+    "Tawaka":     ["chiriware", "isi", "hime", "para", "diki-ba", "kunu-ba"],
+    "Saruro-sha": ["maure", "ako", "naure", "ada", "jusual", "ani"],
+    "Chiriware": ["chiriware", "kidi", "para", "isi", "diki-kuba", "kunu-kuba"],
     "Buio-sha":   ["barsure", "boratio", "kati", "suka", "urari", "kuburuku"],
-    "Korie-ko":   ["konuko", "buko", "kuru", "dali", "kaya", "kono"],  # buco→buko: fusión D5b, tanda 2026-08-30
-    "Dare-nu":    ["kanoa", "arima", "bara", "kuru", "naa-ba", "diki-ba"],
-    "Kadushi":    ["para", "kanoa", "biro", "kasi", "maure", "naa"],
-    "Marokoto-ni":["biro", "para", "kanoa", "arima", "naa-ba"],
-    "Tariwa":     ["arima", "para", "bara", "biro", "kanoa", "diki"],
-    "Kawa-ni":    ["arima", "para", "bara", "masa", "naa"],
-    "Piru-sha":   ["ama", "buri", "arua", "konuko", "masa"],
-    "Nabaraka":   ["maure", "naure", "sima", "biro", "kuru", "were-ba"],
-    "Raka-bi":    ["biro", "sima", "para", "naa", "were"],
+    "Korie-ko":   ["konuko", "buko", "ada", "wunabu", "unia", "jusual"],  # buco→buko: fusión D5b, tanda 2026-08-30
+    "Dare-nu":    ["kanoa", "hime", "bara", "ada", "kunu-ba", "diki-ba"],
+    "Kadushi":    ["para", "kanoa", "biro", "kasi", "maure", "kunu"],
+    "Marokoto-ni":["biro", "para", "kanoa", "hime", "kunu-ba"],
+    "Tariwa":     ["hime", "para", "bara", "biro", "kanoa", "diki"],
+    "Kawa-ni":    ["hime", "para", "bara", "aeke", "kunu"],
+    "Piru-sha":   ["ama", "dare", "ako", "konuko", "aeke"],
+    "Nabaraka":   ["maure", "naure", "kidi", "biro", "ada", "were-ba"],
+    "Raka-bi":    ["biro", "kidi", "para", "kunu", "were"],
 }
 
 # Núcleo caquetío compartido (último recurso, para quien no tiene formas-firma
@@ -172,7 +179,7 @@ FORMAS_SEED: dict[str, list[str]] = {
 # sus 60 agentes (medido 2026-09-16) y por eso allí sólo había 21 vectores-
 # semilla distintos de 60.
 # D11 fase 3 (tf.1): los pronombres del núcleo son los de las hermanas.
-_NUCLEO_FALLBACK = ["dai", "bui", "lihi", "tuhu", "naa", "diki", "maa", "ka", "mara"]
+_NUCLEO_FALLBACK = ["dai", "bui", "lihi", "tuhu", "kunu", "diki", "maa", "badia", "ika"]
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -489,6 +496,14 @@ def formas_derivadas(agente: str, emo: dict) -> list[str]:
                         formas.append(elegida[0])
                         faltan -= 1
                 vuelta += 1
+            # Si los campos del oficio se AGOTAN, se completa con el caquetío
+            # sembrable entero, como el residuo de abajo. Pasó con la tanda de
+            # las hermanas (2026-09-24): Buriche sólo dispara «cuerpo», y ese
+            # campo se quedó con una voz sembrable (`bari` bajó a hipotética y
+            # `sünatü` se archivó); arrancaba con 3 formas y el mínimo son 5.
+            if faltan > 0:
+                pool = [p for p in todas if p not in formas]
+                formas.extend(_sortear(pool, faltan, agente, "relleno"))
         else:
             # Residuo declarado: el oficio de 1 de los 63 (Chirwa, «aprendiza
             # de alfarería con Dabuda») no dispara ninguna categoría. Su
@@ -666,7 +681,7 @@ def formas_semilla(agente: str, emo: dict) -> list[str]:
         return derivadas
     suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "")
     base = list(_NUCLEO_FALLBACK)
-    base += [f"naa{suf}", f"diki{suf}"]   # verbos base con su aspecto
+    base += [f"kunu{suf}", f"diki{suf}"]   # verbos base con su aspecto (`naa` → `kunu`, 2026-09-24)
     return list(dict.fromkeys(base))
 
 

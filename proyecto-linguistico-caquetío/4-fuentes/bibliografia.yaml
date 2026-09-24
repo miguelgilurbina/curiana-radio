@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 103
-  en_repo: 68
+  obras: 105
+  en_repo: 70
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -17,6 +17,29 @@ obras:
   paginas: 27
   aliases:
   - Adam 1879
+  en_repo: true
+- id: aguado-1581
+  obra: Historia de Venezuela (Recopilación historial, segunda parte), tomo I
+  autor: Aguado, fray Pedro de
+  anio: 1581
+  publicacion: Escrita hacia 1581. Ed. de Jerónimo Bécker, Madrid, Real Academia de la Historia (Establecimiento
+    tipográfico de Jaime Ratés), 1918, 2 tomos
+  edicion_del_ejemplar: 'el tomo I de la ed. Bécker 1918 en la transcripción de Project Gutenberg (ebook
+    #39947, 2012, Online Distributed Proofreading Team, hecha sobre las imágenes de Internet Archive),
+    bajada de su copia en archive.org (historiadevenezu39947gut)'
+  genero: cronica
+  local:
+  - fuentes_caquetios/Aguado_1918_Historia_Venezuela_t1_gutenberg.txt
+  paginas: 'texto corrido sin paginación de la edición: se cita por libro y capítulo (lib. I cap. I =
+    el capítulo de Ampíes y del señor caquetío)'
+  acceso: 'Dominio público: texto de 1581, edición de 1918; archive.org lo marca NOT_IN_COPYRIGHT y Project
+    Gutenberg lo distribuye como dominio público en EE. UU. Se guarda con su cabecera y su licencia de
+    Gutenberg, sin tocar'
+  aliases:
+  - Aguado 1581
+  - Aguado, Historia de Venezuela
+  - Recopilación historial
+  - Aguado t. I
   en_repo: true
 - id: alvarado-1921
   obra: Glosario de voces indígenas de Venezuela
@@ -243,6 +266,24 @@ obras:
   - Inventario preliminar de la fauna del Cerro Santa Ana
   - bisbal-1990
   en_repo: false
+- id: breton-1665
+  obra: Dictionaire caraibe-françois (1665) · Dictionaire françois-caraibe (1666) · Grammaire caraibe
+    (1667)
+  autor: Breton, Raymond
+  anio: 1665
+  genero: diccionario-colonial
+  local:
+  - fuentes_caquetios/Breton_1665_Dictionaire_caraibe_francois.pdf
+  - fuentes_caquetios/Breton_1665_Dictionaire_caraibe_francois.djvu.txt
+  - fuentes_caquetios/Breton_1666_Dictionaire_francois_caraibe.pdf
+  - fuentes_caquetios/Breton_1666_Dictionaire_francois_caraibe.djvu.txt
+  - fuentes_caquetios/Breton_1667_Grammaire_caraibe.pdf
+  - fuentes_caquetios/Breton_1667_Grammaire_caraibe.djvu.txt
+  aliases:
+  - Breton 1665
+  - Breton 1666
+  - Breton 1667
+  en_repo: true
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
   autor: Brett Martínez, Alí

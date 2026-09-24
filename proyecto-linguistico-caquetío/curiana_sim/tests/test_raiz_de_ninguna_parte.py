@@ -55,7 +55,10 @@ DE_NINGUNA_PARTE = ["lumina", "lumina-bana", "lumina-bana-iro",
 # Acuñaciones con la MISMA morfología sobre raíz del lexicón. `kasi-nii-bana`
 # es la que fijó el eclipse en el brazo con escena; `biro-ana` usa el locativo
 # sobre la sal de Guaranao.
-DEL_CANON = ["kasi-nii-bana", "biro-ana", "kasuta-bana-iro", "juri-ima"]
+# `kasuta-bana-iro` (la que ganó «las cuentas» en la serie C limpia) pasa a
+# `halira-bana-iro`: `kasuta` se archivó en la tanda de las hermanas
+# (2026-09-24) y una raíz archivada ya no avala en la puerta (db.1).
+DEL_CANON = ["kasi-nii-bana", "biro-ana", "halira-bana-iro", "juri-ima"]
 
 
 def _neo(forma: str, autor: str = "Manaure") -> Neologismo:

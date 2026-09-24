@@ -1642,3 +1642,16 @@ Lectura: `6-fusion/sigla_E_zavala_lectura_2026-09-23.yaml`. Medición:
 ## Enlaces
 
 [[INDICE_FUENTES]] · [[arcaya-1920]] · [[zavala-reyes-2015]] · [[toponimia]] · [[esfera-de-interaccion]] · [[mapa-ecologia]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barridas las seis partes (OCR) buscando además leyenda/encanto/sirena/espanto/aparecido. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `esteves_1`: 1 ventanas creencia × mar (1 con un nombre de la costa occidental cerca), 0 creencia × cielo de control; `esteves_2`: 2 ventanas creencia × mar (2 con un nombre de la costa occidental cerca), 0 creencia × cielo de control; `esteves_3`: 1 ventanas creencia × mar (1 con un nombre de la costa occidental cerca), 0 creencia × cielo de control; `esteves_4`: 2 ventanas creencia × mar (2 con un nombre de la costa occidental cerca), 0 creencia × cielo de control; `esteves_5`: 0 ventanas creencia × mar (0 con un nombre de la costa occidental cerca), 0 creencia × cielo de control; `esteves_6`: 0 ventanas creencia × mar (0 con un nombre de la costa occidental cerca), 0 creencia × cielo de control.
+
+**Se halló:** Las leyendas de Esteves son de tierra: la cueva de Jague donde se asfixiaron los indios de las levas de Federmann (memoria colonial), las ánimas de músicos, el Capó del cerro. Del mar: atalayas de cardúmenes (Sarabón, Suriquiba), el nombre Paraguaná (p. 56).
+
+**No se halló:** Cero sirenas, encantos o seres del mar en el gazeteer.

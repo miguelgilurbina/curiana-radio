@@ -1,0 +1,77 @@
+# MEDICIÓN — el taíno de tradición viva (2026-09-24).
+# GENERADO por 6-fusion/scripts/medir_taino_tradicion_viva.py — no se edita a mano (regla 1).
+meta:
+  medido: '2026-09-24'
+  script: 6-fusion/scripts/medir_taino_tradicion_viva.py
+  umbral_de_similitud: 0.75
+procedencia:
+  voces_de_la_lista_maestra: 1039
+  por_clase:
+    i-primaria-del-XVI: 366
+    ii-solo-secundaria: 573
+    iii-conjetura-moderna: 100
+  clase_ii_por_obra:
+    coll-y-toste-1897: 533
+    goeje-1939: 53
+    bachiller-morales-1883: 15
+    brinton-1871: 9
+  clase_iii_que_viene_de_rafinesque: 74
+  coll_y_toste_tipo_de_apoyo_por_campo:
+    otro:
+      afirmada-sin-fuente: 157
+      conjetura-del-autor: 16
+      documentada: 151
+      sacada-por-el-autor: 18
+      secundaria: 13
+    toponimo:
+      afirmada-sin-fuente: 124
+      conjetura-del-autor: 8
+      documentada: 38
+      sacada-por-el-autor: 2
+      secundaria: 4
+    flora:
+      afirmada-sin-fuente: 66
+      conjetura-del-autor: 0
+      documentada: 23
+      sacada-por-el-autor: 2
+      secundaria: 9
+    antroponimo:
+      afirmada-sin-fuente: 23
+      conjetura-del-autor: 1
+      documentada: 16
+      sacada-por-el-autor: 0
+      secundaria: 0
+    fauna:
+      afirmada-sin-fuente: 17
+      conjetura-del-autor: 0
+      documentada: 9
+      sacada-por-el-autor: 1
+      secundaria: 8
+    creencia:
+      afirmada-sin-fuente: 4
+      conjetura-del-autor: 0
+      documentada: 5
+      sacada-por-el-autor: 0
+      secundaria: 0
+    gramatica:
+      afirmada-sin-fuente: 1
+      conjetura-del-autor: 3
+      documentada: 2
+      sacada-por-el-autor: 0
+      secundaria: 0
+  coll_y_toste_cap_X_vocabulario_espanol_boriqueno: 304
+fuga_de_venezuela:
+  voces:
+  - ado
+  - iakuaraha
+  - komoho
+  - parakuana
+  n: 4
+el_cruce:
+  caquetio_atestiguado_y_retroabstraido: 259
+  taino_sin_conjetura_ni_rafinesque_ni_venezuela: 904
+  parejas_candidatas_por_la_forma: 223
+  con_el_mismo_significado_leidas_a_mano: 8
+  de_ellas_por_clase:
+    i-primaria-del-XVI: 3
+    ii-solo-secundaria: 5

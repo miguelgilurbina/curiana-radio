@@ -1,5 +1,5 @@
 {
-  "n": 39,
+  "n": 104,
   "obras": [
     {
       "slug": "adam-1879",
@@ -50,6 +50,18 @@
       "lectura_url": null
     },
     {
+      "slug": "angulo-molina",
+      "titulo": "Angulo Molina — el compilador «AM» de Zavala",
+      "obra": "(obra no identificada) — el compilador «AM» del glosario de Zavala Reyes 2015",
+      "autor": "Angulo Molina (nombre de pila desconocido)",
+      "anio": "s.f.",
+      "publicacion": null,
+      "genero": "glosario",
+      "aporta": "Es el compilador que más entradas aporta al glosario de zavala-reyes-2015 y el único del verbo: los diecinueve verbos de acción del glosario son suyos, y los cinco verbos restantes (estativos) son de…",
+      "acceso": "🔴 NO IDENTIFICADA, verificado el 2026-09-22. Zavala Reyes 2015 nombra a «Angulo Molina (AM)» entre los nueve autores de su glosario (p. 64) y NO lo incluye en sus referencias bibliográficas (pp. 74-76): no hay título, año ni editorial. (Página según el encabezado del texto extraído; verificar en imagen antes de citarla.) Tampoco lo trae la entrada de blog que copia el glosario (Folkloreando, 2015). Búsquedas web sin resultado: «Angulo Molina» con caquetío, Falcón, Coro, toponimia, glosario, vocabulario, Lara, Yaracuy, Carora; y dos glosas suyas literales («Alcaboa… tierras solas», «Aburí… río lleno de arena») sólo devuelven a Zavala. En el repo: 0 menciones de «Angulo Molina» en los `.txt` de `fuentes_caquetios/` (sólo «Angulo» como apellido de conquistadores, obispos y un autor antillano que cita Bachiller y Morales).",
+      "lectura_url": null
+    },
+    {
       "slug": "antczak-2015-las-aves",
       "titulo": "Antczak & Antczak 2015 — Arqueología del archipiélago Las Aves",
       "obra": "Las Aves: arqueología del archipiélago (navegación insular, botuto, tortugas)",
@@ -74,6 +86,30 @@
       "lectura_url": null
     },
     {
+      "slug": "antolinez-1944-manaure",
+      "titulo": "Antolínez 1944 — El Diao Manaure o la Disección de un Hombre-Dios",
+      "obra": "El Diao Manaure o la Disección de un Hombre-Dios",
+      "autor": "Antolínez, Gilberto",
+      "anio": "1944",
+      "publicacion": "El Universal, Caracas, sábado 9 de septiembre de 1944",
+      "genero": "etnologia",
+      "aporta": "Artículo de prensa, no libro: El Universal, Caracas, sábado 9 de septiembre de 1944. La referencia exacta la da moron-2012-petroglifos, que además lo transcribe verbatim — así que el pasaje clave ya…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "antolinez-1946-hacia-el-indio",
+      "titulo": "Antolínez 1946 — Hacia el indio y su mundo",
+      "obra": "Hacia el indio y su mundo. Pensamientos vivos del hombre americano",
+      "autor": "Antolínez, Gilberto",
+      "anio": "1946",
+      "publicacion": "Ed. digital: Fundación Editorial El Perro y la Rana, Caracas, noviembre de 2023. Prefacio del autor fechado en Caracas, marzo de 1945",
+      "genero": "etnologia",
+      "aporta": "Se buscó por índice y por texto completo. El libro no incluye el artículo de 1944 sobre Manaure (antolinez-1944-manaure). Su índice es:",
+      "acceso": "Libre — Fundación Editorial El Perro y la Rana (ed. digital 2023). ⚠️ su servidor rechaza HTTPS: abrir en http://",
+      "lectura_url": null
+    },
+    {
       "slug": "arcaya-1920",
       "titulo": "Arcaya 1920 — Historia del Estado Falcón",
       "obra": "Historia del Estado Falcón, tomo I",
@@ -82,6 +118,114 @@
       "publicacion": null,
       "genero": "cronica-historia-regional",
       "aporta": "La fuente falconiana más directa. Historia regional de 1920 cuyo capítulo sobre religión trata específicamente a los caquetíos de Coro y cita a Oviedo y Valdés casi verbatim — lo que la convierte, en…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "arcaya-obra-inedita-1995",
+      "titulo": "Arcaya 1995 — Obra inédita y dispersa",
+      "obra": "Obra inédita y dispersa",
+      "autor": "Arcaya, Pedro Manuel",
+      "anio": "1995",
+      "publicacion": "CIHPMA-UNEFM, Coro",
+      "genero": null,
+      "aporta": "Es la única fuente localizada que promete algo que el proyecto no tiene: una fórmula de salutación caquetía recogida de hablantes, no de un glosario.",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "avendano-castillo-2014-erythrina",
+      "titulo": "Avendaño & Castillo 2014 — El género Erythrina en Venezuela",
+      "obra": "El género Erythrina L. (Leguminosae-Faboideae) en Venezuela",
+      "autor": "Avendaño, Neida & Aníbal Castillo",
+      "anio": "2014",
+      "publicacion": "Acta Botánica Venezuelica 37(2): 123-164. Fundación Instituto Botánico de Venezuela / UCV. Acceso abierto (saber.ucv.ve, rev_abv 12707)",
+      "genero": "botanica",
+      "aporta": "La revisión taxonómica del género Erythrina (los bucares) en Venezuela: claves, descripciones, nombres comunes, hábitats y distribución por estado de cada especie. Fuente científica, con capa de…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "aves-punteros-web-2026",
+      "titulo": "Punteros web de la campaña de aves",
+      "obra": "Punteros web de la campaña de aves: páginas de Wikipedia que remiten a Birds of the World, xeno-canto y Ferrer-Paris et al. 2014",
+      "autor": "Wikipedia en inglés y en español (colaborativa); fuentes primarias citadas por ellas: Brewer 2020 y Burger 2020 (Birds of the World, Cornell Lab of Ornithology), xeno-canto XC220411, Ferrer-Paris et al. 2014, Rojas-Suárez 2014",
+      "anio": "2014-2026",
+      "publicacion": "Wikipedia en «Vermilion cardinal», «Venezuelan troupial», «Laughing gull», «Grey plover»; Wikipedia es «Amazona barbadensis»; consultadas el 2026-09-22",
+      "genero": "datos",
+      "aporta": "La voz y el aspecto de tres aves candidatas a referente que las fuentes del repo no describen: el cardenal coriano, la gaviota guanaguare y la cotorra cabeciamarilla. Y dos negativos: el turpial y el…",
+      "acceso": "Libre en línea (Wikipedia). Las primarias: Birds of the World es de pago y NO se abrió; xeno-canto XC220411 no se abrió; Ferrer-Paris et al. 2014, Biological Conservation 173: 133-143, no se abrió",
+      "lectura_url": null
+    },
+    {
+      "slug": "bachiller-morales-1883",
+      "titulo": "Bachiller y Morales 1883 — Cuba primitiva",
+      "obra": "Cuba primitiva. Origen, lenguas, tradiciones e historia de los indios de las Antillas Mayores y las Lucayas",
+      "autor": "Bachiller y Morales, Antonio",
+      "anio": "1883",
+      "publicacion": null,
+      "genero": "etnohistoria-vocabulario",
+      "aporta": "La obra mayor de la tradición cubana sobre las lenguas antillanas: 2ª edición, 399 páginas, presentada al Congreso de Americanistas. Su valor para este proyecto no es que añada voces, sino que dice…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "ballesteros-1550",
+      "titulo": "Ballesteros 1550 — carta al Monarca sobre Coro",
+      "obra": "Carta al Monarca Español sobre la ciudad de Coro",
+      "autor": "Ballesteros, Miguel Gerónimo de (Obispo de Coro)",
+      "anio": "1550",
+      "publicacion": null,
+      "genero": "cronica",
+      "aporta": "arcaya-1920 lo transcribe entero (p. 170 impresa):",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "barrios-garrido-2018",
+      "titulo": "Barrios-Garrido 2018 — Las tortugas marinas del Golfo de Venezuela y los wayuu",
+      "obra": "Socio-economic drivers affecting marine turtle conservation status: causes and consequences",
+      "autor": "Barrios-Garrido, Héctor A.",
+      "anio": "2018",
+      "publicacion": "Tesis doctoral, James Cook University (Townsville). doi:10.25903/5be0fecec8548",
+      "genero": "etnografia",
+      "aporta": "¿Cómo se llaman las tortugas marinas en wayuunaiki? ¿Qué lugar ocupan en la cosmovisión wayuu y qué dice eso, o no dice, del mar caquetío?",
+      "acceso": "Libre en ResearchOnline@JCU: https://researchonline.jcu.edu.au/56047/1/JCU_56047-barrios-garrido-2018-thesis.pdf · leída en línea el 2026-09-22 (6.925.088 bytes; sha256 fdb3309d0583dd7476792456582a321f1bc5506b5a8a2f88f03a40bbb6a8933b). NO se guardó en el repo: © 2018 del autor; se cita corto y se parafrasea",
+      "lectura_url": "https://researchonline.jcu.edu.au/56047/1/JCU_56047-barrios-garrido-2018-thesis.pdf"
+    },
+    {
+      "slug": "bisbal-1990",
+      "titulo": "Bisbal 1990 — el inventario de fauna del Cerro Santa Ana (vía Wikipedia)",
+      "obra": "Inventario preliminar de la fauna del Cerro Santa Ana (Península de Paraguaná, estado Falcón, Venezuela)",
+      "autor": "Bisbal, Francisco J.",
+      "anio": "1990",
+      "publicacion": "Acta Científica Venezolana 41(3): 177-185. Leído POR INTERMEDIARIO: la lista de aves que reproduce Wikipedia es, «Vertebrados terrestres del Cerro Santa Ana (Paraguaná)», consultada el 2026-09-22",
+      "genero": "inventario",
+      "aporta": "¿Qué aves tiene el cerro y con qué nombres comunes las llama la ornitología venezolana de 1990?",
+      "acceso": "El artículo original no se localizó en acceso abierto en esta sesión. Puntero: https://es.wikipedia.org/wiki/Vertebrados_terrestres_del_Cerro_Santa_Ana_(Paraguan%C3%A1)",
+      "lectura_url": "https://es.wikipedia.org/wiki/Vertebrados_terrestres_del_Cerro_Santa_Ana_(Paraguan%C3%A1"
+    },
+    {
+      "slug": "breton-1665",
+      "titulo": "Breton 1665-1667 — el kalinago de primera mano",
+      "obra": "Dictionaire caraibe-françois (1665) · Dictionaire françois-caraibe (1666) · Grammaire caraibe (1667)",
+      "autor": "Breton, Raymond",
+      "anio": "1665",
+      "publicacion": null,
+      "genero": "diccionario-colonial",
+      "aporta": "Los tres libros del misionero dominico Raymond Breton, que vivió entre los kalinago de Dominica y Guadalupe (1635-1654). Son la fuente de todo lo que sabemos del caribe insular antiguo: Goeje 1939 y…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "brett-martinez-aquella-paraguana",
+      "titulo": "Brett Martínez 1971 — Aquella Paraguaná",
+      "obra": "Aquella Paraguaná",
+      "autor": "Brett Martínez, Alí",
+      "anio": "1971",
+      "publicacion": "1ª ed. 1971 (autofinanciada); 2ª ed. 1998, Fondo Editorial Alí Brett Martínez",
+      "genero": "cronica-regional",
+      "aporta": "Alí Brett Martínez, periodista y escritor del s. XX, nacido en Carirubana — es decir, cronista paraguanero escribiendo sobre su propia tierra, la misma categoría de testigo-residente que el proyecto…",
       "acceso": null,
       "lectura_url": null
     },
@@ -98,6 +242,18 @@
       "lectura_url": null
     },
     {
+      "slug": "brito-figueroa-poblacion-economia",
+      "titulo": "Brito Figueroa — Población y economía en el pasado indígena venezolano",
+      "obra": "Población y economía en el pasado indígena venezolano",
+      "autor": "Brito Figueroa, Federico",
+      "anio": "1962",
+      "publicacion": "Caracas, [Ediciones Historia], 1962. 48 pp., con mapa; 22 cm; bibliografía pp. 47-48 (catálogo BNV, koha.bnv.gob.ve, biblionumber 677)",
+      "genero": "historiografia",
+      "aporta": "Es la obra que Miguel estuvo leyendo el 2026-08-25 en Scribd, y de la que salió todo el lote de 6-fusion/politiesnocosterasfedermann.yaml.",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
       "slug": "camacho-2011",
       "titulo": "Camacho et al. 2011 — Dunas y médanos de Falcón",
       "obra": "Dunas y médanos del estado Falcón (geomorfología del Istmo de los Médanos)",
@@ -108,6 +264,90 @@
       "aporta": "La fuente estrella de mapa-ecologia: 13 páginas de geomorfología del Istmo de los Médanos que le dan al mundo de la Curiana su suelo, su clima y su viento con números. Es —junto a oliver-1989-cap3 y…",
       "acceso": null,
       "lectura_url": null
+    },
+    {
+      "slug": "casale-2024",
+      "titulo": "Casale et al. 2024 — Petrografía de la cerámica precolonial de Aruba",
+      "obra": "Petrographic insight into the sourcing and production of pre-colonial ceramics from Aruba",
+      "autor": "Casale, Simone; Groot, Niels; Dijkhoff, Raymundo A. C. F.; Kelly, Harold J.; Jacobs, Loe; Degryse, Patrick y Hofman, Corinne L.",
+      "anio": "2024",
+      "publicacion": "Geoarchaeology 39(6), pp. 609-627. doi:10.1002/gea.22017",
+      "genero": "arqueometria",
+      "aporta": "Análisis petrográfico de 50 tiestos de nueve yacimientos de Aruba contra 17 muestras de arcilla recogidas en la isla (proyecto de Leiden y el Museo Arqueológico Nacional de Aruba). La paginación que…",
+      "acceso": "Acceso abierto CC-BY 4.0. Wiley está detrás de una verificación antibots (Cloudflare) y no se forzó; la versión PUBLICADA se bajó el 2026-09-22 del repositorio de la KU Leuven (Lirias), por su API DSpace: https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content (registro: https://lirias.kuleuven.be/handle/20.500.12942/746055). Licencia CC-BY 4.0 en los metadatos del archivo y en la p. 1 del artículo. El md5 coincide con el del repositorio; tamaño y sha256 los imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.",
+      "lectura_url": "https://lirias.kuleuven.be/server/api/core/bitstreams/edec9732-9e50-4975-a63f-82850afa389c/content"
+    },
+    {
+      "slug": "castellanos-elegias",
+      "titulo": "Castellanos 1857 [c. 1589] — Elegías de varones ilustres de Indias",
+      "obra": "Elegías de varones ilustres de Indias (partes I-III)",
+      "autor": "Castellanos, Juan de",
+      "anio": "1857 [c. 1589]",
+      "publicacion": "Biblioteca de Autores Españoles (dir. Buenaventura Carlos Aribau), 2ª ed., Madrid, M. Rivadeneyra, 1857. La parte I se imprimió en 1589; la II quedó inédita hasta la BAE. Otras ediciones que cita el repo: ANH, Caracas 1962 (t. 57 — la de Velasco, cita por versos) y ANH 1987 (la de González Batista, cita por páginas)",
+      "genero": "cronica",
+      "aporta": "La crónica en verso del descubrimiento y la conquista — endecasílabos en octavas reales, miles de ellos — de Juan de Castellanos, que llegó joven a las Indias, anduvo la costa de Tierra Firme como…",
+      "acceso": "Internet Archive (OCR de Google Books); descargado el 2026-08-14 en la sesión 07_rastreo_documental",
+      "lectura_url": null
+    },
+    {
+      "slug": "castellanos-nuevo-reino-1886",
+      "titulo": "Castellanos 1886-1887 [c. 1601]: Historia del Nuevo Reino de Granada",
+      "obra": "Historia del Nuevo Reino de Granada (Elegías de varones ilustres de Indias, Parte IV)",
+      "autor": "Castellanos, Juan de",
+      "anio": "1886-1887 [c. 1601]",
+      "publicacion": "Madrid, Imprenta de A. Pérez Dubrull, 1886-1887, 2 tomos (Colección de Escritores Castellanos). «Publícala por primera vez Antonio Paz y Mélia». Es la Parte IV de las Elegías, que la BAE no imprimió; la ficha de las partes I-III es [[castellanos-elegias]]",
+      "genero": "cronica",
+      "aporta": "La Parte IV de las Elegías de varones ilustres de Indias: la conquista del altiplano muisca (Bogotá, Tunja) y lo que siguió, en endecasílabos sueltos. Quedó inédita hasta que Antonio Paz y Mélia la…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "coll-y-toste-1897",
+      "titulo": "Coll y Toste 1897 — Prehistoria de Puerto Rico",
+      "obra": "Prehistoria de Puerto Rico (con el Vocabulario indo-antillano)",
+      "autor": "Coll y Toste, Cayetano",
+      "anio": "1897",
+      "publicacion": null,
+      "genero": "etnohistoria-vocabulario",
+      "aporta": "La Prehistoria de Puerto Rico con su Vocabulario indo-antillano: probablemente la colección de voces taínas más extensa de su época, y la que más circula hoy por la web — casi siempre reeditada y sin…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "colon-hernando-1892",
+      "titulo": "Hernando Colón 1892 [c. 1539] — Historia del Almirante, vol. 2",
+      "obra": "Historia del Almirante don Cristóbal Colón, vol. 2",
+      "autor": "Colón, Hernando",
+      "anio": "1892 [c. 1539]",
+      "publicacion": "Colección de Libros Raros ó Curiosos que tratan de América, tomo VI. Madrid, Impr. de T. Minuesa, 1892. Reimpresión de la traducción castellana (de la Historie italiana de Ulloa, Venecia 1571). El original castellano de Hernando Colón se perdió",
+      "genero": "cronica",
+      "aporta": "La biografía que el hijo de Colón escribió con los papeles de su padre delante. Es la vía por la que sobreviven partes de la Relación del tercer viaje y del cuarto, y es —junto con Las Casas— una de…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "cook-forrest-2005",
+      "titulo": "Cook y Forrest 2005 — Lo que suena una tortuga cardón en la playa",
+      "obra": "Sounds Produced by Nesting Leatherback Sea Turtles (Dermochelys coriacea)",
+      "autor": "Cook, Sarah L. y Forrest, T. G.",
+      "anio": "2005",
+      "publicacion": "Herpetological Review, vol. 36, nº 4, pp. 387-390",
+      "genero": "ciencia-natural",
+      "aporta": "6-fusion/faunaparaguanamar2026-09-22.yaml (tortuga cardón y el referente de la tortuga que sale a desovar).",
+      "acceso": "Leído en línea el 2026-09-22 en la biblioteca de seaturtle.org: http://seaturtle.org/library/CookSL_2005_HerpetolRev.pdf. NO se guardó en el repo: el PDF declara que se ofrece «subject to the copyright policy of the journal»; se cita corto y se parafrasea",
+      "lectura_url": "http://seaturtle.org/library/CookSL_2005_HerpetolRev.pdf"
+    },
+    {
+      "slug": "dijkhoff-1997",
+      "titulo": "Dijkhoff 1997 — Tanki Flip, Aruba",
+      "obra": "Tanki Flip / Henriquez: an Early Urumaco Site in Aruba",
+      "autor": "Dijkhoff, Raymundo A. C. F.",
+      "anio": "1997",
+      "publicacion": "Tesis de máster, Archaeology and Culture History of Indigenous America, Universiteit Leiden",
+      "genero": "arqueologia",
+      "aporta": "Tesis de máster de Leiden sobre la cerámica del yacimiento de Tanki Flip (Aruba), con una síntesis larga de la arqueología y la etnohistoria de la isla. Es la monografía arubeña que…",
+      "acceso": "Libre en archive.org, ítem `MANA-DIG-TESIS-DIJKHOFF-1997`, subido por la Biblioteca Nacional Aruba (colecciones `mana.aw`, `arubathesis`); sin `access-restricted-item` ni `licenseurl` declarados. Descargado el 2026-09-22 de https://dn760004.eu.archive.org/0/items/MANA-DIG-TESIS-DIJKHOFF-1997/Dijkhoff-tesis-Tanki-Flip-1997.pdf (14.582.071 bytes, sha256 ea0e2e451e9b586b3b2a0e8a0971fc11748be7c1da93e29b151c17f69d9f84c9). ⚠️ **No está en el repo**: acceso abierto sin licencia CC explícita, así que se guarda en disco y se anota (política de Miguel, 2026-09-22).",
+      "lectura_url": "https://dn760004.eu.archive.org/0/items/MANA-DIG-TESIS-DIJKHOFF-1997/Dijkhoff-tesis-Tanki-Flip-1997.pdf"
     },
     {
       "slug": "esteves-1989",
@@ -122,15 +362,63 @@
       "lectura_url": null
     },
     {
+      "slug": "fabo-1911",
+      "titulo": "Fabo 1911 — Idiomas y etnografía de la región oriental de Colombia",
+      "obra": "Idiomas y etnografía de la región oriental de Colombia",
+      "autor": "Fabo, Pedro (fray, O.A.R.)",
+      "anio": "1911",
+      "publicacion": "Barcelona, José Benet, 1911. 293 pp.",
+      "genero": "gramatica",
+      "aporta": "Es la fuente de la que Jahn 1927 copió su vocabulario achagua (pp. 377-378, las 34 voces de 6-fusion/comparandasjahn1927.yaml). Ir a Fabo convierte esa tabla de transmisión en atestación, y es la…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "federmann-1916",
+      "titulo": "Federmann 1916 — Narración del primer viaje",
+      "obra": "Narración del primer viaje de Federmann a Venezuela",
+      "autor": "Federmann, Nicolás (trad. y notas de Pedro Manuel Arcaya)",
+      "anio": "1916",
+      "publicacion": "Caracas, Lit. y Tip. del Comercio, 1916. Traducción castellana de Arcaya hecha sobre la FRANCESA de Ternaux-Compans (1837), no sobre el alemán — Arcaya lo declara (p. 20: «En el texto francés, no sabemos si también en el original alemán…») —, con notas del traductor francés y de Arcaya. El original es la *Indianische Historia* (Hagenau, Sigmund Bund, 1557)",
+      "genero": "cronica",
+      "aporta": "arcaya-1920 sitúa el grueso de Federmann con precisión:",
+      "acceso": "Dominio público. 1916: traductor Pedro Manuel Arcaya (1874-1958), fallecido hace más de 60 años (Venezuela: vida + 60) y publicada antes de 1931 (EE. UU.); archive.org no la restringe. 1557 y 1859: sin derechos. Descargado el 2026-09-22. 1916: 9.359.616 bytes, sha256 dbe79cd85abf437d58ad54e54b014924962605e696fa24ef3c86d7bfd1ad7ec5. 1557: 25.545.486 bytes, sha256 9bf5cfed6ce099de291714c7825baad34db82c263f6ad020705b2db7c423cde8. 1859: 12.004.554 bytes, sha256 f6c85158b4378308e4bdbdb1ab02787a514734bdc7167d4e04e7d751961d2cbe.",
+      "lectura_url": null
+    },
+    {
       "slug": "fernandes-2020",
       "titulo": "Fernandes et al. 2020 — Historia genética del Caribe precontacto",
       "obra": "A genetic history of the pre-contact Caribbean",
-      "autor": "Fernandes, Daniel M. et al.",
+      "autor": "Fernandes, Daniel M.; Sirak, Kendra A. et al.",
       "anio": "2020",
-      "publicacion": "Nature 590 (2021), publicado online 2020",
+      "publicacion": "Nature 590, pp. 103-110 (2021); publicado online el 23-XII-2020. doi:10.1038/s41586-020-03053-2",
       "genero": "genetica",
-      "aporta": "Verificado el 2026-07-29. Es uno de los 6 archivos de 0 bytes del repositorio (ver INDICEFUENTES).",
-      "acceso": null,
+      "aporta": "ADN de genoma completo de 174 individuos de las Bahamas, La Española (Haití y República Dominicana), Puerto Rico, Curazao y Venezuela, que vivieron entre ~3.100 y ~400 años antes del presente,…",
+      "acceso": "Texto completo publicado, libre: Europe PMC / PMC7864882 — https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7864882/fullTextXML (licencia de Nature: se puede ver, imprimir, copiar y minar para investigación académica; NO es CC, no se redistribuye). Material suplementario, abierto y completo: https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/2020_FernandesSirak_Nature_Caribbean_Supplement.pdf Preprint de bioRxiv, CC-BY-NC-ND 4.0, SÍ en el repo: https://www.biorxiv.org/content/10.1101/2020.06.01.126730v1.full.pdf (sha256 eb0b507028851675737d3ff7c45dbb287bcc2c9afefb60130a739131e3d13fd4, 5.228.503 bytes, descargado el 2026-09-22). ⚠️ El PDF de PMC devuelve una página HTML «Preparing to download»: no se obtuvo, y el archivo de Nature del repo **sigue en 0 bytes a propósito**.",
+      "lectura_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7864882/fullTextXML"
+    },
+    {
+      "slug": "fishbase-sealifebase",
+      "titulo": "FishBase y SeaLifeBase — cómo es cada animal",
+      "obra": "FishBase y SeaLifeBase — fichas de especie (descripción, biología, nombres comunes)",
+      "autor": "Froese, R. y Pauly, D. (eds.) — FishBase; Palomares, M. L. D. y Pauly, D. (eds.) — SeaLifeBase",
+      "anio": "2026",
+      "publicacion": "www.fishbase.se y www.sealifebase.se, versiones en línea consultadas el 2026-09-22. Licencia CC BY-NC 4.0",
+      "genero": "datos",
+      "aporta": "Cada descripcionvisual de 6-fusion/faunaparaguanamar2026-09-22.yaml es una paráfrasis (≤ 220 caracteres, sin comparaciones modernas) de la sección «Morphology» y «Biology» de la ficha de la especie.…",
+      "acceso": "Libre en línea. Se leyeron las secciones «Morphology», «Biology» y la lista de nombres comunes de 80 especies",
+      "lectura_url": null
+    },
+    {
+      "slug": "fishsounds",
+      "titulo": "FishSounds — qué peces suenan",
+      "obra": "FishSounds — inventario mundial de los sonidos de los peces",
+      "autor": "Looby, A.; Vela, S.; Cox, K.; Riera, A.; Davies, H. L.; Spriel, B.; Murchy, K.; Bravo, S.; Rountree, R.; Juanes, F.; Reynolds, L. K. y Martin, C. W.",
+      "anio": "2026",
+      "publicacion": "FishSounds, http://www.fishsounds.net, versión 2026-Apr, consultada el 2026-09-22. Licencia CC BY-NC 4.0",
+      "genero": "datos",
+      "aporta": "Los haemúlidos (corocoro, roncos) y los esciénidos (corvinas) aparecen con estudios de sonido; su nombre común —grunt, croaker, drum, ronco, roncador— ya es la onomatopeya.",
+      "acceso": "Libre en línea",
       "lectura_url": null
     },
     {
@@ -146,6 +434,30 @@
       "lectura_url": null
     },
     {
+      "slug": "gbif-aves-paraguana-2026",
+      "titulo": "GBIF — las aves de la península, medidas",
+      "obra": "Registros de aves de la península de Paraguaná en GBIF (eBird, xeno-canto, iNaturalist y colecciones de museo), consulta del 2026-09-22",
+      "autor": "GBIF.org; Cornell Lab of Ornithology (EOD – eBird Observation Dataset); Xeno-canto Foundation; iNaturalist; MNHN, MCZ, FMNH, UMMZ",
+      "anio": "1896-2026",
+      "publicacion": "API abierta de GBIF, https://api.gbif.org/v1/occurrence/search?classKey=212&decimalLatitude=11.5,12.22&decimalLongitude=-70.32,-69.78 — cada dataset con su DOI y su licencia en 6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml (eBird: doi 10.15468/aomfnb, CC BY 4.0; xeno-canto: doi 10.15468/qv0ksn, CC BY-NC 4.0; iNaturalist: doi 10.15468/ab3s5x, CC BY-NC 4.0)",
+      "genero": "datos",
+      "aporta": "¿Qué aves hay en Paraguaná y sus aguas, cuáles se van y cuándo (en los tres períodos del canon de la era 2), y qué grabaciones hechas AQUÍ se pueden citar como «lo que se oye»?",
+      "acceso": "Libre en línea, sin clave. Reproducible con python 6-fusion/scripts/medir_gbif_aves_paraguana.py",
+      "lectura_url": null
+    },
+    {
+      "slug": "gbif-paraguana-2026",
+      "titulo": "GBIF — la fauna de tierra de Paraguaná que hoy se registra",
+      "obra": "GBIF — ocurrencias de fauna de tierra en el polígono de la península de Paraguaná y el istmo de los Médanos (consulta por API)",
+      "autor": "GBIF.org (Global Biodiversity Information Facility) y los conjuntos de datos que publica",
+      "anio": "2026",
+      "publicacion": "API pública https://api.gbif.org/v1/occurrence/search con facetas, consultada el 2026-09-22; sin descarga (una descarga pide cuenta), así que sin DOI de descarga",
+      "genero": "datos",
+      "aporta": "No es una obra: es una consulta a la base mundial de ocurrencias. Casi todo lo que devuelve es ciencia ciudadana reciente (iNaturalist) y colecciones del s. XX-XXI: es censo moderno (regla 3), útil…",
+      "acceso": "Libre; cada conjunto de datos tiene su licencia (CC0, CC BY o CC BY-NC), listada en el archivo generado",
+      "lectura_url": null
+    },
+    {
       "slug": "gilij-1780-1783",
       "titulo": "Gilij 1780-1783 — Saggio di Storia Americana",
       "obra": "Saggio di Storia Americana, vols. 1, 3 y 4",
@@ -158,6 +470,54 @@
       "lectura_url": "https://archive.org/details/saggiodistoriaam03gili"
     },
     {
+      "slug": "goeje-1939",
+      "titulo": "Goeje 1939 — Nouvel examen des langues des Antilles",
+      "obra": "Nouvel examen des langues des Antilles, avec notes sur les langues arawak-maipure et caraïbes et vocabulaires shebayo et guayana (Guyane)",
+      "autor": "Goeje, Claudius H. de",
+      "anio": "1939",
+      "publicacion": null,
+      "genero": "linguistica-comparativa",
+      "aporta": "El estudio comparado de las lenguas antillanas que fue la referencia estándar hasta Taylor 1977: 120 páginas en el Journal de la Société des Américanistes que juntan el taíno, el caribe insular (con…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "gonzalez-batista-2002-fundacion",
+      "titulo": "González Batista 2002 — «Coro: el problema de la fundación»",
+      "obra": "Coro: el problema de la fundación",
+      "autor": "González Batista, Carlos",
+      "anio": "2002",
+      "publicacion": "Boletín de la Academia Nacional de la Historia (Caracas), t. 85, n.º 338, 2002, pp. 147-172 (sección Miscelánea). Discurso por su designación como socio correspondiente en el Estado Falcón",
+      "genero": "historiografia",
+      "aporta": "Es del mismo autor que gonzalez-batista-nombre-de-coro, pero no es esa obra ni trata el nombre: es su discurso de 2002 ante la Academia sobre la fecha y el lugar de la fundación de Coro. Se buscaba…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "gonzalez-batista-nombre-de-coro",
+      "titulo": "González Batista — El nombre de Coro",
+      "obra": "El nombre de Coro",
+      "autor": "González Batista, Carlos",
+      "anio": "sin confirmar — posterior a 2000 (cita a Fernández Heres 2000)",
+      "publicacion": "Coro, Falcón",
+      "genero": null,
+      "aporta": "Carlos González Batista, historiador de Coro, autor de Tierras de Falcón/Paraguaná (Coro, 1999) — que esta obra cita como \"nuestro libro\" en su nota (16), y también en tercera persona por apellido en…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "granberry-vescelius-2004",
+      "titulo": "Granberry y Vescelius 2004 — Languages of the Pre-Columbian Antilles",
+      "obra": "Languages of the Pre-Columbian Antilles",
+      "autor": "Granberry, Julian y Vescelius, Gary S.",
+      "anio": "2004",
+      "publicacion": "Tuscaloosa, The University of Alabama Press, 2004",
+      "genero": "linguistica-comparativa",
+      "aporta": "Las dos campañas del taíno la pidieron: separa las comunidades de habla antillanas (taíno clásico, macorix, ciguayo, lucayo, «lengua de Cuba»…) y asigna cada voz a una variedad. Ver…",
+      "acceso": "🔴 En copyright (University of Alabama Press, 2004). No se buscó copia de descarga: el encargo manda sólo anotarla. Dónde conseguirla: compra (la editorial la mantiene en catálogo, en papel y en e-book) o préstamo interbibliotecario.",
+      "lectura_url": null
+    },
+    {
       "slug": "guerra-curvelo-palabrero",
       "titulo": "Cuadernillo Pütchipü'üi — el sistema normativo wayuu",
       "obra": "Pütchipü'üi, Palabrero Wayuu (cuadernillo, serie Patrimonio Cultural Inmaterial)",
@@ -168,6 +528,30 @@
       "aporta": "La destilación oficial de Guerra Curvelo (2002), La disputa y la palabra (Premio Nacional de Cultura 2001), que no tiene PDF libre. 22 páginas sobre el sistema normativo wayuu, Patrimonio Inmaterial…",
       "acceso": null,
       "lectura_url": null
+    },
+    {
+      "slug": "gumilla-1791",
+      "titulo": "Gumilla 1791 — El Orinoco Ilustrado y Defendido",
+      "obra": "El Orinoco Ilustrado y Defendido",
+      "autor": "Gumilla, Joseph",
+      "anio": "1791",
+      "publicacion": "Historia natural, civil y geográfica de las naciones situadas en las riveras del río Orinoco, nueva impresión, Barcelona, Imprenta de Carlos Gibert y Tutó, 1791, 2 tomos (1ª ed. con el título *El Orinoco ilustrado y defendido*, Madrid, 1741; 2ª, 1745)",
+      "genero": "cronica",
+      "aporta": "Se registra por su cobertura de achaguas y sálivas, y porque es la obra que gilij-1780-1783 discute y corrige. Pareja natural de rivero-1883.",
+      "acceso": "Dominio público (impreso en 1791; Gumilla †1750). Descargado el 2026-09-22. t. I: 21.893.451 bytes, sha256 0481059ecf1d81d0e4b88f33ac029e20084887dc63a6f37dd7325a5a350b4b6d. t. II: 19.819.370 bytes, sha256 248d1d54bf1af26f2a5e3a9b4b27f46c3f3d8f6eaa840cb4a86385c0120221b4.",
+      "lectura_url": null
+    },
+    {
+      "slug": "haviser-1990",
+      "titulo": "Haviser 1990 — Restos humanos prehistóricos de Curazao",
+      "obra": "Prehistoric Human Remains on Curaçao",
+      "autor": "Haviser, Jay B. Jr.",
+      "anio": "1990",
+      "publicacion": "Proceedings of the International Congress for Caribbean Archaeology, pp. 224-237",
+      "genero": "arqueologia",
+      "aporta": "El PDF no dice de qué congreso sale. Las páginas impresas son 224-237. fernandes-2020 cita «Tacoma, J. Skeletal remains from de Savaan Region, Curaçao. In Proceedings of the XI International Congress…",
+      "acceso": "Libre en la University of Florida Digital Collections: https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/00343/11-21.pdf Descargado el 2026-09-22 (1.308.271 bytes, sha256 2f6e8c59b9e365edcb611382b793744538e6be8e3ec4f9e1512e9a808063d8b2). Sin declaración de derechos en el propio PDF → se guarda en disco, **no en el repo** (política de Miguel, 2026-09-22).",
+      "lectura_url": "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/00343/11-21.pdf"
     },
     {
       "slug": "jahn-1927",
@@ -194,6 +578,30 @@
       "lectura_url": null
     },
     {
+      "slug": "knaf-2021",
+      "titulo": "Knaf et al. 2021 — El jade circumcaribeño por geoquímica",
+      "obra": "Trace-elemental and multi-isotopic (Sr-Nd-Pb) discrimination of jade in the circum-Caribbean: implications for pre-colonial inter-island exchange networks",
+      "autor": "Knaf, Alice C. S. et al.",
+      "anio": "2021",
+      "publicacion": "Journal of Archaeological Science 135, 105466. doi:10.1016/j.jas.2021.105466",
+      "genero": "arqueometria",
+      "aporta": "No es movilidad de personas por isótopos. Es la discriminación geoquímica de las fuentes de jadeíta del circuncaribe: elementos traza e isótopos de Sr-Nd-Pb medidos en 101 ROCAS de fuente (Guatemala…",
+      "acceso": "Acceso abierto CC-BY 4.0. Elsevier devuelve 403 y Leiden y el CSIC bloquean con un sistema de protección (no se forzó ninguno); la versión PUBLICADA se bajó el 2026-09-22 de la Research Collection de la ETH Zürich, por su API DSpace: https://www.research-collection.ethz.ch/server/api/core/bitstreams/a2e8fcb5-1e72-4301-9aee-1676ff7053c0/content (registro: https://doi.org/10.3929/ethz-b-000504053, dc.rights CC-BY 4.0). La ETH antepone una portada: página impresa = página del PDF − 1. Tamaño y sha256 los imprime `6-fusion/scripts/medir_arqueologia_insular_falcon.py`.",
+      "lectura_url": "https://www.research-collection.ethz.ch/server/api/core/bitstreams/a2e8fcb5-1e72-4301-9aee-1676ff7053c0/content"
+    },
+    {
+      "slug": "laguna-guaranao-parque",
+      "titulo": "Parque metropolitano Laguna de Guaranao — la laguna del nodo GUARANAO, hoy",
+      "obra": "Parque metropolitano Laguna de Guaranao — entrada enciclopédica",
+      "autor": "Wikipedia en español (colaborativa)",
+      "anio": "2026",
+      "publicacion": "Wikipedia es, «Parque metropolitano Laguna de Guaranao», consultada el 2026-09-16; cita cuatro referencias (blogs, archivos web y un documento legal venezolano)",
+      "genero": "datos",
+      "aporta": "¿Hay manglar y caimán en la laguna de Guaranao, y fue salina?",
+      "acceso": "Libre en línea. https://es.wikipedia.org/wiki/Parque_metropolitano_Laguna_de_Guaranao",
+      "lectura_url": "https://es.wikipedia.org/wiki/Parque_metropolitano_Laguna_de_Guaranao"
+    },
+    {
       "slug": "las-casas-1875",
       "titulo": "Las Casas 1875 [c. 1561] — Historia de las Indias, tomo I",
       "obra": "Historia de las Indias, tomo I",
@@ -201,8 +609,32 @@
       "anio": "1875 [c. 1561]",
       "publicacion": null,
       "genero": "cronica",
-      "aporta": "Una fuente de rendimiento nulo, y eso está documentado tres veces. Vale la pena tener la nota precisamente por eso: evita que una cuarta sesión la vuelva a barrer esperando algo.",
+      "aporta": "Durante tres sesiones fue una fuente de rendimiento nulo, y eso estaba documentado tres veces. El 2026-09-21 dejó de serlo: no cambió la fuente, cambió la pregunta. Se le preguntó por taíno —no por…",
       "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "las-casas-apologetica",
+      "titulo": "Las Casas 1909 [c. 1527-1559] — Apologética historia sumaria",
+      "obra": "Apologética historia sumaria (Historiadores de Indias, tomo I)",
+      "autor": "Casas, Bartolomé de las",
+      "anio": "1909 [c. 1527-1559]",
+      "publicacion": null,
+      "genero": "cronica",
+      "aporta": "La etnografía, no la denuncia. Donde la Historia de las Indias (las-casas-1875) narra, ésta describe: religión, gobierno, matrimonio, herencia, medicina, juego, comida, y —esto es lo que la hace…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "libro-rojo-fauna-venezolana-2015",
+      "titulo": "Libro Rojo de la Fauna Venezolana (2015) — cuatro fichas de la península",
+      "obra": "Libro Rojo de la Fauna Venezolana, 4.ª edición — fichas en línea",
+      "autor": "Rodríguez, J. P.; García-Rawlins, A.; Rojas-Suárez, F. (eds.); fichas de Colmenares, P.; Gutiérrez, E. E., Ochoa-G., J. y Sánchez-Hernández, J.; Molina, C., Rojas-Runjaic, F. J. M. y Rivas, G. A.; y otros",
+      "anio": "2015",
+      "publicacion": "Provita y Fundación Empresas Polar, Caracas; fichas en www.especiesamenazadas.org",
+      "genero": "datos",
+      "aporta": "La lista roja nacional (Provita), con una ficha por especie amenazada: categoría UICN, descripción, distribución, situación, amenazas. Capa moderna (regla 3). Sirve para describir el animal y su…",
+      "acceso": "Libre en línea, © Provita. especiesamenazadas.org rechazó la conexión directa el 2026-09-22; se leyeron las copias de archive.org (web.archive.org/web/2024id_/…). Obra con derechos: citas cortas y paráfrasis",
       "lectura_url": null
     },
     {
@@ -230,16 +662,64 @@
       "lectura_url": null
     },
     {
+      "slug": "martinon-torres-2012",
+      "titulo": "Martinón-Torres et al. 2012 — Metales indígenas y europeos en Cuba",
+      "obra": "Metallic encounters in Cuba: the technology, exchange and meaning of metals before and after Columbus",
+      "autor": "Martinón-Torres, Marcos; Valcárcel Rojas, Roberto; Sáenz Samper, Juanita y Guerra, María Filomena",
+      "anio": "2012",
+      "publicacion": "Journal of Anthropological Archaeology 31(4), pp. 439-454. doi:10.1016/j.jaa.2012.03.006",
+      "genero": "arqueometria",
+      "aporta": "pXRF y SEM-EDS sobre los metales de El Chorro de Maíta (cementerio indígena de Holguín, contacto temprano) y otros contextos cubanos: cuentas de oro de placer local, colgantes de aleación…",
+      "acceso": "Abierta en UCL Discovery: https://discovery.ucl.ac.uk/id/eprint/1361950/1/1361950.pdf Descargada el 2026-09-22 (2.144.405 bytes, sha256 2b06fe5f0628486ba2c6e71cc0da2763035f7f5e7d60a9db32f7c1d3a79c0b22). ⚠️ OpenAlex la da como CC-BY híbrida, pero el PDF del repositorio es la versión del editor y **no lleva licencia CC impresa**. En duda, degradar: se guarda en disco, **no en el repo**.",
+      "lectura_url": "https://discovery.ucl.ac.uk/id/eprint/1361950/1/1361950.pdf"
+    },
+    {
       "slug": "medina-colina-sxx",
       "titulo": "Medina Colina — Del Habla Paraguanera. Siglo XX",
       "obra": "Del Habla Paraguanera. Siglo XX",
       "autor": "Medina Colina, Juan Bautista",
-      "anio": "s. XX",
-      "publicacion": null,
+      "anio": "2013",
+      "publicacion": "2ª ed., ampliada y corregida. Diseño editorial Maribel Ovalles Miranda; impresión Editorial Miranda. Prefacio de Guillermo de León Calles. (1ª ed.: año no dictado; mención honorífica del CENAL)",
       "genero": "lexico-regional",
       "aporta": "El diccionario de paraguanerismos que 02protocolohablaparaguanera llevaba esperando desde antes de saber su título — el protocolo se escribió a ciegas (\"no se pudo confirmar el título exacto\") y…",
       "acceso": null,
       "lectura_url": null
+    },
+    {
+      "slug": "mol-2007",
+      "titulo": "Mol 2007 — Las caretas de concha (guaízas) y el intercambio taíno",
+      "obra": "Costly Giving, Giving Guaízas: towards an organic model of the exchange of social valuables in the Late Ceramic Age Caribbean",
+      "autor": "Mol, Angus A. A.",
+      "anio": "2007",
+      "publicacion": "Sidestone Press, Leiden. ISBN 978-90-8890-002-0",
+      "genero": "arqueologia",
+      "aporta": "Predicción 4 de la parcela T8: las conchas. Si hubo tráfico de objetos de concha entre la costa venezolana y las Antillas Mayores, el valioso social taíno hecho en concha —la guaíza, la careta— es el…",
+      "acceso": "Acceso abierto del editor: https://www.sidestone.com/openaccess/9789088900020.pdf Descargado el 2026-09-22 (4.514.865 bytes, sha256 1316874758889bb231c3c54f63d92919b5dcc80d07d94523113d45866045a52a). Sin licencia CC impresa → se guarda en disco, **no en el repo**.",
+      "lectura_url": "https://www.sidestone.com/openaccess/9789088900020.pdf"
+    },
+    {
+      "slug": "montecano-reserva",
+      "titulo": "Reserva Biológica Montecano — el agua al pie del cerro",
+      "obra": "Reserva Biológica Montecano — descripción de INFALCOSTA y entrada enciclopédica",
+      "autor": "Tulio Arends (INFALCOSTA); Wikipedia en español (colaborativa)",
+      "anio": "2019-2021",
+      "publicacion": "INFALCOSTA, «Reserva Biológica Montecano», 13-07-2021 (https://infalcosta.org/2021/07/13/reserva-biologica-montecano/); Wikipedia es, «Reserva biológica Montecano», consultada el 2026-09-14, que cita el Decreto N.º 3825 (2019), FUNDACITE Falcón (2010) e INPARQUES (2022)",
+      "genero": "datos",
+      "aporta": "¿Hay agua y bosque al pie del cerro, y de dónde viene la humedad?",
+      "acceso": "Libre en línea. INFALCOSTA: https://infalcosta.org/2021/07/13/reserva-biologica-montecano/ · Wikipedia: https://es.wikipedia.org/wiki/Reserva_biol%C3%B3gica_Montecano",
+      "lectura_url": "https://infalcosta.org/2021/07/13/reserva-biologica-montecano/"
+    },
+    {
+      "slug": "monumento-cerro-santa-ana",
+      "titulo": "Monumento Natural Cerro Santa Ana — la descripción moderna del Capubana",
+      "obra": "Monumento Natural Cerro Santa Ana — descripción institucional y enciclopédica (INPARQUES, MINEC, Wikipedia es)",
+      "autor": "INPARQUES; MINEC; Wikipedia en español (colaborativa)",
+      "anio": "1972-2022",
+      "publicacion": "Decreto N.º 1005 del 14-06-1972 (Gaceta Oficial N.º 29.832, 16-06-1972); INPARQUES, «Monumento Natural Cerro Santa Ana» e «El Monumento Natural Cerro Santa Ana cumple 47 años» (2019); MINEC, «Monumento Natural Cerro Santa Ana cuenta con cinco pisos bióticos»; Wikipedia es, «Cerro Santa Ana (Paraguaná)», consultada el 2026-09-14",
+      "genero": "datos",
+      "aporta": "¿Genera el cerro un microclima que dé agua cuando el resto de la península no la tiene? (Hipótesis de Miguel, 2026-09-14.)",
+      "acceso": "Libre en línea. Wikipedia: https://es.wikipedia.org/wiki/Cerro_Santa_Ana_(Paraguan%C3%A1) · INPARQUES: https://www.inparques.gob.ve/monumento-natural-cerro-santa-ana/ · MINEC: http://www.minec.gob.ve/monumento-natural-cerro-santa-ana-cuenta-con-cinco-pisos-bioticos/",
+      "lectura_url": "https://es.wikipedia.org/wiki/Cerro_Santa_Ana_(Paraguan%C3%A1"
     },
     {
       "slug": "moreno-mayar-2018",
@@ -251,6 +731,102 @@
       "genero": "genetica",
       "aporta": "Paper sobre el poblamiento temprano de América (Beringia, dispersiones del Pleistoceno tardío). Copia de DTU Orbit, 53 autores.",
       "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "moron-2012-petroglifos",
+      "titulo": "Morón 2012 — Petroglifos en Falcón: entre la roca y la memoria",
+      "obra": "Petroglifos en Falcón: entre la roca y la memoria",
+      "autor": "Morón, Camilo",
+      "anio": "2012",
+      "publicacion": "Boletín Antropológico, Año 30, N° 84, julio-diciembre 2012, pp. 163-175. Universidad de Los Andes, Mérida",
+      "genero": "etnologia",
+      "aporta": "Camilo Morón, UNEFM (Coro). Artículo del Boletín Antropológico de la ULA — la misma revista donde publicó zavala-reyes-2015, tres años antes. Eso convierte al Boletín en un filón: dos de las fuentes…",
+      "acceso": "Libre — Redalyc: http://www.redalyc.org/articulo.oa?id=71226816005",
+      "lectura_url": "http://www.redalyc.org/articulo.oa?id=71226816005"
+    },
+    {
+      "slug": "moron-guillermo-historia-venezuela",
+      "titulo": "Guillermo Morón — Historia de Venezuela y Los orígenes históricos",
+      "obra": "Historia de Venezuela (5 vols.) · Los orígenes históricos de Venezuela",
+      "autor": "Morón, Guillermo",
+      "anio": "1971",
+      "publicacion": "Historia de Venezuela, 5 vols., 1971 · Los orígenes históricos de Venezuela, introducción al siglo XVI, 1954",
+      "genero": "historiografia",
+      "aporta": "Dos Morón en el vault, sin relación conocida:",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "nagele-2020",
+      "titulo": "Nägele et al. 2020 — El primer poblamiento del Caribe",
+      "obra": "Genomic insights into the early peopling of the Caribbean",
+      "autor": "Nägele, Kathrin et al.",
+      "anio": "2020",
+      "publicacion": "Science 369(6502), pp. 456-460. doi:10.1126/science.aba8697",
+      "genero": "genetica",
+      "aporta": "El encargo de la segunda campaña del taíno (T8, 2026-09-22) la pedía expresamente: «Nägele et al. 2020, Science, \"Genomic insights into the early peopling of the Caribbean\" (versión en PubMed Central…",
+      "acceso": "🔴 SIN acceso abierto, verificado el 2026-09-22. Europe PMC: `isOpenAccess = N`, sin PMCID, y la única vía que lista es el DOI con «Subscription required». No hay depósito en PubMed Central. No se descargó (el encargo autoriza repositorios abiertos, no saltar muros de pago). Dónde conseguirla: compra del artículo en science.org, o vía una biblioteca universitaria. Preimpresión: no localizada.",
+      "lectura_url": null
+    },
+    {
+      "slug": "navarrete-1829-viages-menores",
+      "titulo": "Navarrete 1829 — Colección de los viages y descubrimientos, tomo III",
+      "obra": "Colección de los viages y descubrimientos que hicieron por mar los españoles desde fines del siglo XV, tomo III: Viages menores, y los de Vespucio; poblaciones en el Darién; suplemento al tomo II",
+      "autor": "Fernández de Navarrete, Martín",
+      "anio": "1829",
+      "publicacion": "Madrid, Imprenta Real, 1829. Edición documental: Navarrete reconstruye cada viaje menor a partir de los autos de los pleitos colombinos, las capitulaciones reales y las relaciones impresas, y publica los documentos íntegros en la Sección Tercera y el Apéndice",
+      "genero": "cronica",
+      "aporta": "Es el tomo de los viajes que sí pasaron por la Kaketiana. Colón nunca fue a Coro; Hojeda, Juan de la Cosa y Vespucio sí, en agosto de 1499, y Hojeda volvió en 1502. Este volumen reconstruye esos…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "navarrete-1859-viages-colon",
+      "titulo": "Navarrete 1858 — Colección de los viajes y descubrimientos, tomo I",
+      "obra": "Colección de los viajes y descubrimientos que hicieron por mar los españoles desde fines del siglo XV, tomo I (2.ª ed.): Viajes de Colón; Almirantazgo de Castilla",
+      "autor": "Fernández de Navarrete, Martín",
+      "anio": "1858 [documentos de 1492-1504]",
+      "publicacion": "Madrid, Imprenta Nacional, 1858 (segunda edición). Edición documental: contiene el Diario del primer viaje en la transcripción de Las Casas, la carta del doctor Chanca, la **Relación del tercer viaje** de Colón a los Reyes y la relación del cuarto",
+      "genero": "cronica",
+      "aporta": "Porque trae la Relación del tercer viaje en la letra de Colón, y ésa es la página donde se decide la pregunta de esta campaña. Hasta hoy el repo sólo tenía el tercer viaje por dos paráfrasis…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "neira-ribero-1762",
+      "titulo": "Neira y Ribero 1762 — Arte y vocabulario de la lengua achagua",
+      "obra": "Arte y vocabulario de la lengua achagua",
+      "autor": "Neira, Alonso de (S.J.) y Ribero, Juan (S.J.)",
+      "anio": "1762",
+      "publicacion": "Manuscrito. Terminado el 14 de septiembre de 1762; la copia de la Real Biblioteca es del 23 de abril de 1788 (RBPR II/2910): [4] h. + 42 p. + 70 f. + [3] h., 152×104 mm",
+      "genero": "gramatica",
+      "aporta": "Es el diccionario del achagua: la gramática (arte) y el vocabulario que dos jesuitas de las misiones del Meta compilaron en el siglo XVII y que se trasuntó en 1762. Todo lo que el repo tiene de…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "nueva-segovia-1579",
+      "titulo": "Nueva Segovia 1579 — Descripción de la Nueva Segovia",
+      "obra": "Descripción de la Nueva Segovia de la Gobernación de Venezuela de las Indias del Mar Océano",
+      "autor": "Arévalo, Gonzalo de y Ruiz de la Parra, Juan (alcaldes)",
+      "anio": "1579",
+      "publicacion": null,
+      "genero": "cronica",
+      "aporta": "Nueva Segovia es la actual Barquisimeto. Todo lo que aporta es de la polity del Turbio, no del Golfete. Ver federmann-1916 para el mismo aviso.",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "obis-gbif-caja-marina",
+      "titulo": "OBIS y GBIF — la caja marina de Paraguaná",
+      "obra": "OBIS y GBIF — registros de ocurrencia en la caja marina de Paraguaná (las dos aguas de la era 2)",
+      "autor": "Ocean Biodiversity Information System (IOC-UNESCO) y Global Biodiversity Information Facility (conjuntos de datos de múltiples publicadores)",
+      "anio": "2026",
+      "publicacion": "Consultados vía API (https://api.obis.org/v3/checklist y https://api.gbif.org/v1/occurrence/search) el 2026-09-22. Licencias CC0 o CC-BY según el conjunto de datos",
+      "genero": "datos",
+      "aporta": "¿Qué especies marinas tienen registro en las aguas de GUARANAO y de AMUAY, y cuáles de las que discute la campaña (tortugas, delfines, ballenas, manatí, peces de la pesca, moluscos de los conchales)…",
+      "acceso": "Libre. Se regenera con `python 6-fusion/scripts/caja_marina_obis_gbif.py` (usa red)",
       "lectura_url": null
     },
     {
@@ -314,6 +890,30 @@
       "lectura_url": "https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf"
     },
     {
+      "slug": "oliver-2000-guanin",
+      "titulo": "Oliver 2000 — El simbolismo del oro entre los cacicazgos caribeños",
+      "obra": "Gold symbolism among Caribbean chiefdoms: of feathers, çibas and guanín power among Taíno elites",
+      "autor": "Oliver, José R.",
+      "anio": "2000",
+      "publicacion": "En Colin McEwan (ed.), Precolumbian Gold: Technology, Style and Iconography, British Museum Press, Londres, pp. 196-219",
+      "genero": "arqueologia",
+      "aporta": "El encargo de la segunda campaña del taíno (T8, 2026-09-22) la señalaba como la fuente clave de la predicción del guanín, y con un argumento que pesa: es el mismo José Oliver cuya tesis de 1989…",
+      "acceso": "🔴 **Sin versión de acceso abierto**, verificado el 2026-09-22. Es un capítulo de un libro editado de British Museum Press; no hay depósito en repositorio institucional (ni en UCL Discovery, donde el autor sí tiene otros trabajos). **No se descargó.** Dónde conseguirlo: el volumen *Precolumbian Gold* (British Museum Press, 2000, ISBN 0-7141-2542-9), de segunda mano o por préstamo interbibliotecario. ⚠️ Ojo con la referencia: Martinón-Torres et al. 2012 lo citan con el título del volumen como *Pre-Columbian Gold in South America*; McEwan lo publicó como *Precolumbian Gold: Technology, Style and Iconography*. Mismo capítulo, mismas páginas.",
+      "lectura_url": null
+    },
+    {
+      "slug": "osm-kaketiana",
+      "titulo": "OpenStreetMap — el mapa vivo de la Kaketiana",
+      "obra": "OpenStreetMap — el mapa vivo de la Kaketiana (volcado por regiones)",
+      "autor": "OpenStreetMap contributors",
+      "anio": "2026",
+      "publicacion": "OpenStreetMap, consultado vía Overpass API (https://overpass-api.de) el 2026-09-07. Licencia ODbL 1.0.",
+      "genero": "datos",
+      "aporta": "El barrido del mapa topónimo por topónimo que pide la skill campana-toponimos §9: una lista de nombres del mapa vivo con coordenadas, por región, cruzada con la mesa de la campaña; lo que no está en…",
+      "acceso": "Libre. Se regenera con `python curiana_sim/barrer_mapa.py --descargar`; es decisión de Miguel (2026-09-07: «vamos con OSM»)",
+      "lectura_url": null
+    },
+    {
       "slug": "oviedo-y-banos",
       "titulo": "Oviedo y Baños — Conquista y población de la provincia de Venezuela",
       "obra": "Historia de la conquista y población de la provincia de Venezuela",
@@ -327,15 +927,39 @@
     },
     {
       "slug": "oviedo-y-valdes-1851",
-      "titulo": "Oviedo y Valdés — Historia general y natural de las Indias",
+      "titulo": "Oviedo y Valdés — Historia general y natural de las Indias, vol. I",
       "obra": "Historia general y natural de las Indias, vol. I",
       "autor": "Fernández de Oviedo y Valdés, Gonzalo",
       "anio": "1851 [s. XVI]",
-      "publicacion": null,
+      "publicacion": "Madrid, Imprenta de la Real Academia de la Historia, 1851. Primera parte (libros I-XIX), ed. José Amador de los Ríos, cotejada con el códice original",
       "genero": "cronica",
-      "aporta": "La deuda documental más grande del proyecto. Oviedo es la fuente última de los datos caquetíos más citados del corpus — el funeral del díao, y lo que Jahn cita como \"apéndice de voces caquetías\" del…",
-      "acceso": "El vol. I local está corrupto y es el tomo equivocado. Lo que hace falta SÍ es libre en Internet Archive, ed. Amador de los Ríos: tomo II (funerales) https://archive.org/details/historiageneral01fernguat · tomo IV (sin el apéndice de voces que se buscaba) https://archive.org/details/historiageneral04fernguat. Verificado en el rastreo de 2026-08-14.",
+      "aporta": "La crónica de Indias más antigua del repo con vocabulario glosado. Oviedo vivió en Santo Domingo desde 1514 y escribe hasta 1548: no recoge listas de palabras, pero explica lo que nombra, y con…",
+      "acceso": "Dos copias. La íntegra, del ítem de Internet Archive de la Biblioteca Ludwig von Mises (UFM), la misma colección de los tomos II-IV, `_completo.pdf`, se descargó el 2026-09-22 (https://archive.org/details/historiageneral00fernguat, dominio público — NOT IN COPYRIGHT; 55.449.811 B; sha1 e90c436186f5afd875a67078b11a6631875f09be = el del ítem; sha256 02e88f2beffea91494f34e48e8bbe294a8d46626bf8c2d0383accf9c9be2369a; commiteada, < 95 MB): pymupdf la abre sin reparar y renderiza TODAS las páginas. La vieja, de origen no documentado, está truncada (sin imagen desde la impresa 155), tiene otra paginación de PDF y otra capa OCR (lee `dalihao` donde la íntegra lee `datihao`); se conserva porque T1 cita su paginación. Los tomos II-IV: ver [[oviedo-y-valdes-1852-1855]]",
+      "lectura_url": "https://archive.org/details/historiageneral00fernguat"
+    },
+    {
+      "slug": "oviedo-y-valdes-1852-1855",
+      "titulo": "Oviedo y Valdés — Historia general y natural de las Indias, tomos II, III y IV",
+      "obra": "Historia general y natural de las Indias, tomos II, III y IV",
+      "autor": "Fernández de Oviedo y Valdés, Gonzalo",
+      "anio": "1852-1855 [s. XVI]",
+      "publicacion": "Madrid, Imprenta de la Real Academia de la Historia. Tomo II (segunda parte, libros XX-XXVIII) 1852 · tomo III (segunda parte, libros XXIX-XXXVIII) 1853 · tomo IV (tercera parte, libros XXXIX-L, + glosario e índices) 1855. Ed. José Amador de los Ríos, cotejada con el códice original",
+      "genero": "cronica",
+      "aporta": "La edición de Amador de los Ríos (Real Academia de la Historia) es la única completa de la obra: los cincuenta libros de Oviedo en cuatro tomos. El repo sólo tenía el primero. En los otros tres…",
+      "acceso": "Dominio público, descargados el 2026-09-22 de Internet Archive (los tres registros llevan `possible-copyright-status: NOT IN COPYRIGHT`). t. II https://archive.org/details/historiageneral01fernguat (45.433.954 B, sha256 a9fb3477b3e5250ea8147343b9b10e90c66c7f9018291187b6892615a14fbbd7) · t. III https://archive.org/details/historiageneral02fernguat (54.727.062 B, sha256 3e795e42f22785ab1007147023113c0881f22fc9dad545302ec407e3fffcfa77) · t. IV https://archive.org/details/historiageneral04fernguat (53.090.352 B, sha256 0d5dcc0270726c2b376e658ac53e856246c30375a8dd0eb958986171719f4a40). Los tres pesan menos de 95 MB y están commiteados. El tomo I de la misma digitalización, con la imagen íntegra, es `historiageneral00fernguat` (55.449.811 B) y sigue sin descargar",
       "lectura_url": "https://archive.org/details/historiageneral01fernguat"
+    },
+    {
+      "slug": "pane-c1498",
+      "titulo": "Pané c. 1498 — Relación acerca de las antigüedades de los indios",
+      "obra": "Relación acerca de las antigüedades de los indios",
+      "autor": "Pané, fray Ramón",
+      "anio": "1498",
+      "publicacion": "Escrita c. 1494-1498 en La Española por encargo de Colón. El original se perdió; sobrevive en la traducción italiana de Ulloa (1571) dentro de la Historia de Fernando Colón, y en los extractos de Anglería y Las Casas. El texto del repo es la retraducción castellana que publica Wikisource",
+      "genero": "cronica",
+      "aporta": "Es la fuente primaria del taíno: el primer texto etnográfico del Nuevo Mundo, y de donde salen la mayoría de las voces taínas de mito y rito que circulan de segunda mano (cemí, behique, Yocahu,…",
+      "acceso": null,
+      "lectura_url": null
     },
     {
       "slug": "paz-reverol-2017-2018",
@@ -351,14 +975,26 @@
     },
     {
       "slug": "perea-alonso-1942",
-      "titulo": "Perea y Alonso 1942 — Filología comparada de las lenguas arawak",
+      "titulo": "Perea y Alonso 1942 — Filología comparada de las lenguas arawak, tomo I",
       "obra": "Filología comparada de las lenguas y dialectos arawak, tomo I",
-      "autor": "Perea y Alonso, Sigfrido",
+      "autor": "Perea y Alonso, Sixto",
       "anio": "1942",
       "publicacion": null,
       "genero": "gramatica",
-      "aporta": "Evaluada y descartada, con motivo documentado — este es el modelo de cómo debería cerrarse una fuente que no rinde.",
+      "aporta": "El 2026-07-29 esta obra se cerró como descartada, con este motivo: \"se esperaba trabajo comparativo entre lenguas arahuacas; resultó ser gramática lokono pura, no comparativa\". CLAUDE.md la…",
       "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "perez-de-tolosa-1546",
+      "titulo": "Pérez de Tolosa 1546 — Relaciones y cartas al Rey",
+      "obra": "Relaciones y cartas al Rey",
+      "autor": "Pérez de Tolosa, Juan (Licenciado)",
+      "anio": "1546",
+      "publicacion": "Publicadas por Cesáreo Fernández Duro en el apéndice documental de Oviedo y Baños, *Historia de la conquista y población de la provincia de Venezuela*, t. II, Madrid, Luis Navarro, 1885 (Biblioteca de los Americanistas), pp. 219-258 (cartas y relación) y 259 ss. (interrogatorio de la pesquisa contra los Welser)",
+      "genero": "cronica",
+      "aporta": "Testimonio de 1546, veinte años después del contacto, de un gobernador que recorrió el territorio. Habla de los caquetíos de Paraguaná y de la costa, que es exactamente la polity que simulamos — no…",
+      "acceso": "Dominio público: impreso en Madrid en 1885, editor Cesáreo Fernández Duro (1830-1908); archive.org lo marca NOT_IN_COPYRIGHT. Descargado el 2026-09-22: 19.080.080 bytes, sha256 ed2f57985a064e17bcde0a8657917f0c59c74bcb64a5acbb1227e4b05b3137e6. Hay un segundo ejemplar del mismo tomo (NYPL, historiadelacon00goog) por si una página sale mal en éste. El t. I (sin las cartas) es historiadelacon01goog.",
       "lectura_url": null
     },
     {
@@ -374,6 +1010,42 @@
       "lectura_url": null
     },
     {
+      "slug": "pichardo-1862",
+      "titulo": "Pichardo 1862 — Diccionario provincial casi-razonado de vozes cubanas",
+      "obra": "Diccionario provincial casi-razonado de vozes cubanas",
+      "autor": "Pichardo y Tapia, Esteban",
+      "anio": "1862",
+      "publicacion": null,
+      "genero": "diccionario-dialectal",
+      "aporta": "Un diccionario del español de Cuba del s. XIX. No es un vocabulario taíno y no pretende serlo.",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "polar-el-maiz-glosario",
+      "titulo": "Fundación Empresas Polar — El maíz, glosario alimentario",
+      "obra": "El maíz — Glosario alimentario del maíz y bibliografía",
+      "autor": "Fundación Empresas Polar (ed.)",
+      "anio": "s.f.",
+      "publicacion": "Fundación Empresas Polar, Caracas. Capítulo 10 de la obra *El maíz*; PDF en bibliofep.fundacionempresaspolar.org (media/1378250)",
+      "genero": "glosario-alimentario",
+      "aporta": "El glosario alimentario del maíz que cierra la obra colectiva El maíz de la Fundación Empresas Polar (Caracas; capítulo 10, glosario y bibliografía). Voces de la cocina del maíz en Venezuela, con…",
+      "acceso": "https://bibliofep.fundacionempresaspolar.org/media/1378250/libro-el-maiz-10-glosario-y-bibliografia.pdf",
+      "lectura_url": "https://bibliofep.fundacionempresaspolar.org/media/1378250/libro-el-maiz-10-glosario-y-bibliografia.pdf"
+    },
+    {
+      "slug": "queffelec-2024",
+      "titulo": "Queffelec 2024 — La producción lapidaria de la Edad Cerámica caribeña",
+      "obra": "Diversity and similarity in the Ceramic Age lapidary production in the Caribbean islands",
+      "autor": "Queffelec, Alain",
+      "anio": "2024",
+      "publicacion": "Revista de Arqueología Americana 41 (2023), pp. 191-244; recibido 2023, aceptado 2024. doi:10.35424/rearam.v0i41.4308",
+      "genero": "arqueologia",
+      "aporta": "Predicción 2 de la parcela T8: las piedras verdes. El encargo preguntaba si la procedencia de la jadeíta y las demás piedras de los amuletos antillanos apunta alguna vez a Venezuela o a la Guajira.…",
+      "acceso": "Acceso abierto, **CC BY-NC-SA 4.0** declarada en la primera página. https://revistasipgh.org/index.php/rearam/article/download/4308/6464 Descargado el 2026-09-22 (5.991.165 bytes, sha256 a564955001a9c94912a2bfc6a6256a15b40e4c3876bc893286b016644933be1c). ⚠️ Por licencia SÍ podría entrar al repo; no se metió por no ser central para el proyecto. La decisión es de Miguel.",
+      "lectura_url": "https://revistasipgh.org/index.php/rearam/article/download/4308/6464"
+    },
+    {
       "slug": "ramos-perez-1978",
       "titulo": "Ramos Pérez 1978 — reseña",
       "obra": "Reseña (Persée)",
@@ -386,15 +1058,51 @@
       "lectura_url": null
     },
     {
+      "slug": "rivero-1883",
+      "titulo": "Rivero 1883 — Historia de las Misiones de los Llanos",
+      "obra": "Historia de las Misiones de los Llanos de Casanare y los ríos Orinoco y Meta",
+      "autor": "Rivero, Juan",
+      "anio": "1883",
+      "publicacion": "Bogotá, Imprenta de Silvestre y Compañía, 1883 (ed. de Ramón Guerra Azuola; escrita hacia 1736)",
+      "genero": "cronica",
+      "aporta": "Los achaguas son otro pueblo arahuaco, de los llanos del Casanare, Meta y Apure. Nada suyo entra al corpus costero. Se registra porque es un pariente lingüístico con documentación colonial abundante,…",
+      "acceso": "Dominio público: impreso en Bogotá en 1883, autor Juan Rivero (1681-1736); archive.org lo marca NOT_IN_COPYRIGHT. Descargado el 2026-09-22: 36.489.039 bytes, sha256 43bcb5c8dfda33b632e96599a4e575eef503b4b1bce231f434f509bfde92ef91. Hay una reedición de 1956 en archive.org (historiadelasmis00rive) que NO se bajó: su aparato editorial de 1956 puede tener derechos.",
+      "lectura_url": null
+    },
+    {
+      "slug": "romero-mayayo-agudo-1991",
+      "titulo": "Romero, Mayayo y Agudo 1991 — Los cetáceos de Venezuela",
+      "obra": "Los cetáceos recientes de Venezuela",
+      "autor": "Romero, Aldemaro; Mayayo, Ana y Agudo, Ignacio",
+      "anio": "1991",
+      "publicacion": "Memoria de la Sociedad de Ciencias Naturales La Salle, tomo LI, nº 135-136, pp. 169-180",
+      "genero": "ciencia-natural",
+      "aporta": "¿Qué delfines y ballenas están registrados cerca de Paraguaná y del Golfo de Venezuela, y cómo se llaman en el castellano de la costa?",
+      "acceso": "Descarga gratuita, SIN licencia abierta declarada — publicaciones del decano, Southern Illinois University Edwardsville: https://www.siue.edu/artsandsciences/pdf/deanspublications/260.LosCetaceosRecientesVenezuela.pdf · descargado el 2026-09-22 (33.860.799 bytes; sha256 164edf177101a83adb8eec2a75fa6a1960ddc111da976f31d6230658963847c4)",
+      "lectura_url": "https://www.siue.edu/artsandsciences/pdf/deanspublications/260.LosCetaceosRecientesVenezuela.pdf"
+    },
+    {
+      "slug": "rondon-medicci-2013",
+      "titulo": "Rondón-Médicci 2013 — Dónde desovan las tortugas marinas en Paraguaná",
+      "obra": "Registro de las áreas de desove de las tortugas marinas en la Península de Paraguaná, estado Falcón",
+      "autor": "Rondón-Médicci, María de los Ángeles",
+      "anio": "2013",
+      "publicacion": "Ciencia (Facultad Experimental de Ciencias, Universidad del Zulia), vol. 21, nº 3, pp. 113-121",
+      "genero": "ciencia-natural",
+      "aporta": "¿Qué tortugas marinas hay en las dos aguas de la era 2, en qué playas salen a desovar y en qué meses? ¿Cómo las llaman los pescadores?",
+      "acceso": "Libre, licencia CC BY-NC-SA 4.0 (la de la revista Ciencia, comprobada el 2026-09-23 en produccioncientificaluz.org/index.php/ciencia/about) — revista de acceso abierto de LUZ: https://www.produccioncientificaluz.org/index.php/ciencia/article/download/18736/18720 · descargado el 2026-09-22 (1.168.460 bytes; sha256 4a4640f5da72df3bca10c354a8b1f7274d42af8cba8e25078e9228580904ecb2). Texto: fuentes_caquetios/Tortugas_desove_Paraguana_Ciencia_LUZ.txt (pdftotext)",
+      "lectura_url": "https://www.produccioncientificaluz.org/index.php/ciencia/article/download/18736/18720"
+    },
+    {
       "slug": "rouse-cruxent-1963",
       "titulo": "Rouse & Cruxent 1963 — Venezuelan Archaeology",
       "obra": "Venezuelan Archaeology",
       "autor": "Rouse, Irving y Cruxent, José María",
       "anio": "1963",
-      "publicacion": null,
+      "publicacion": "Yale University Press, New Haven",
       "genero": "arqueologia",
-      "aporta": "Verificado de nuevo el 2026-07-29: sigue en 0 bytes, igual que cuando la sesión 2 lo descubrió.",
-      "acceso": null,
+      "aporta": "Verificado de nuevo el 2026-09-22: sigue en 0 bytes, igual que el 2026-09-21, el 2026-07-29 y que cuando la sesión 2 lo descubrió.",
+      "acceso": "🔴 **No descargable legalmente.** Hay dos ejemplares en archive.org — `venezuelanarchae0000rous` y `venezuelanarchae0000irvi`—, los dos con `access-restricted-item: true` y en las colecciones `inlibrary` / `printdisabled`: eso es **préstamo digital controlado**, que exige cuenta y préstamo, no descarga. Ninguno declara `licenseurl` ni `rights`. Verificado el 2026-09-22; tampoco respondió el servicio de «search inside», así que no se pudo ni sondear por dentro. En copyright (Yale UP). Dónde conseguirla: préstamo en archive.org con cuenta, préstamo interbibliotecario, o compra de segunda mano.",
       "lectura_url": null
     },
     {
@@ -407,6 +1115,42 @@
       "genero": "genetica",
       "aporta": "El genoma de una mujer lucaya (taína) de Preacher's Cave, Bahamas, que vivió ~500 años antes del contacto europeo, secuenciado a 12,4× de cobertura. Es un solo individuo: téngase presente en todo lo…",
       "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "sherwood-gianni-zurita-2023",
+      "titulo": "Sherwood y Gianni-Zurita 2023 — la tarántula azul de Paraguaná",
+      "obra": "Leveraging citizen science data to preliminarily infer the distribution and habitat associations of the Venezuelan endemic Chromatopelma cyaneopubescens (Strand, 1907) (Araneae: Theraphosidae)",
+      "autor": "Sherwood, Danniella; Gianni-Zurita, Rafael",
+      "anio": "2023",
+      "publicacion": "Anartia (Museo de Biología de La Universidad del Zulia) 36: 36-50; DOI 10.5281/zenodo.10429585",
+      "genero": "ciencia-natural",
+      "aporta": "Artículo de una revista venezolana de acceso abierto (Anartia, Museo de Biología de LUZ) sobre Chromatopelma cyaneopubescens: la primera revisión de su distribución en el campo —hasta entonces casi…",
+      "acceso": "Libre — CC BY 4.0 (Zenodo)",
+      "lectura_url": null
+    },
+    {
+      "slug": "steward-1948-hsai-4",
+      "titulo": "HSAI 4 (1948) — The Circum-Caribbean Tribes",
+      "obra": "Handbook of South American Indians, Vol. 4: The Circum-Caribbean Tribes",
+      "autor": "Steward, Julian H. (ed.); capítulos de Hernández de Alba, Kirchhoff, Kidder II, Rouse y otros",
+      "anio": "1948",
+      "publicacion": "Smithsonian Institution, Bureau of American Ethnology, Bulletin 143, vol. 4, Washington, U.S. Government Printing Office, 1948",
+      "genero": "etnologia",
+      "aporta": "El volumen del Handbook que trata el Caribe continental e insular. La ficha steward-1949 (vol. 5) se abrió por una cifra de población; al buscarla apareció que el que habla de los caquetíos es este.…",
+      "acceso": "Dominio público: publicación del gobierno federal de EE. UU. (Bureau of American Ethnology, GPO 1948); archive.org la marca «Not in copyright». Los demás ítems «Handbook of South American Indians» de archive.org son de préstamo controlado y NO se usaron. Descargado el 2026-09-22: 53.214.922 bytes, sha256 ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto: `pdftotext -enc UTF-8`, 1,58 MB.",
+      "lectura_url": null
+    },
+    {
+      "slug": "steward-1949",
+      "titulo": "Steward 1949 — Handbook of South American Indians V",
+      "obra": "Handbook of South American Indians, Vol. V",
+      "autor": "Steward, Julian H. (ed.)",
+      "anio": "1949",
+      "publicacion": "Smithsonian Institution, Bureau of American Ethnology, Bulletin 143, vol. 5: *The Comparative Ethnology of South American Indians*, Washington, U.S. Government Printing Office, 1949",
+      "genero": "etnologia",
+      "aporta": "Estimación de 350.000 indígenas en territorio venezolano en las últimas décadas del s. XV — la ventana del proyecto —, de los cuales 144.000 al norte del Orinoco, que es donde cae el Golfete.",
+      "acceso": "Dominio público: publicación del gobierno federal de EE. UU. (Bureau of American Ethnology, GPO 1949); archive.org la marca «Not in copyright». Descargado el 2026-09-22 el volumen entero (70.577.922 bytes, sha256 ae2d4e8249754c99cae33a7a846d299d5f5c50ca7035cb2eb36230e3377cde78) y extraídas con pymupdf las páginas que usa el proyecto; el extracto pesa 12.330.426 bytes, sha256 bfbfce950e7abe912264c3276069b2767c552f510c93ef7c8dc5802fdb3aa0b7. El resto del volumen se vuelve a bajar de la URL de arriba si hace falta.",
       "lectura_url": null
     },
     {
@@ -446,6 +1190,30 @@
       "lectura_url": null
     },
     {
+      "slug": "velasco-2015-resistencia",
+      "titulo": "Velasco 2015 — Historia de una Resistencia",
+      "obra": "Historia de una Resistencia: sobre el encubrimiento del pueblo caquetío y su exclusión de la historia",
+      "autor": "Velasco, Reinaldo Jesús",
+      "anio": "2015",
+      "publicacion": "Paraguaná. ISBN 978-980-12-8508-3, Depósito Legal lf06820159004042. Edición digital del autor, distribución libre no comercial",
+      "genero": "historiografia",
+      "aporta": "Reinaldo Jesús Velasco: UBV + responsable de la unidad de Antropología Física del CIAAP-UNEFM — el mismo centro de moron-2012-petroglifos. Miembro del consejo editorial de la revista Bacoa. Miguel lo…",
+      "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "wikipedia-es-fauna-marina",
+      "titulo": "Wikipedia en español — la fauna marina, descrita",
+      "obra": "Wikipedia en español — artículos de especie de la fauna marina del Caribe sur",
+      "autor": "Wikipedia en español (colaborativa)",
+      "anio": "2026",
+      "publicacion": "es.wikipedia.org, consultada vía la API de MediaWiki (extractos en texto plano) el 2026-09-22. Licencia CC BY-SA 4.0",
+      "genero": "datos",
+      "aporta": "Qué es. Enciclopedia colaborativa: capa moderna y de segunda mano. Se usó sólo para lo que no cambia en 600 años y no necesita autoridad —el color de un caparazón, la forma de una aleta, el chorro de…",
+      "acceso": "Libre en línea. Se leyeron los artículos en español de Chelonia mydas, Eretmochelys imbricata, Caretta caretta, Dermochelys coriacea, Lepidochelys olivacea, Tursiops truncatus, Sotalia guianensis, Balaenoptera edeni, Megaptera novaeangliae, Trichechus manatus y Haemulidae, y en inglés Haemulidae y Alpheidae (para el sonido); los de invertebrados en español quedaron sin leer (la API cortó por exceso de consultas)",
+      "lectura_url": null
+    },
+    {
       "slug": "zavala-reyes-2015",
       "titulo": "Zavala Reyes 2015 — Palabras vivas de una lengua muerta",
       "obra": "Palabras vivas de una lengua muerta: legado arawak-caquetío",
@@ -468,6 +1236,18 @@
       "aporta": "El archivo se llama 400-LEAL-436.pdf y no dice nada. Es un artículo de Interciencia (2018) sobre dos áreas de recolección arqueológica dentro del Parque Nacional Médanos de Coro, con caracterización…",
       "acceso": "Libre — Redalyc: https://www.redalyc.org/journal/339/33957447002/33957447002.pdf · Dialnet: https://dialnet.unirioja.es/servlet/articulo?codigo=6457604. Verificado en el rastreo de 2026-08-14.",
       "lectura_url": "https://www.redalyc.org/journal/339/33957447002/33957447002.pdf"
+    },
+    {
+      "slug": "zayas-1931",
+      "titulo": "Zayas y Alfonso 1931 — Lexicografía antillana (2ª ed.)",
+      "obra": "Lexicografía antillana. Diccionario de voces usadas por los aborígenes de las Antillas Mayores y de algunas de las menores y consideraciones acerca de su significado y de su formación",
+      "autor": "Zayas y Alfonso, Alfredo",
+      "anio": "1931",
+      "publicacion": "2ª ed., La Habana, Tipos-Molina y Cía., 1931, 2 tomos (1ª ed.: La Habana, El Siglo XX, 1914, un tomo)",
+      "genero": "vocabulario",
+      "aporta": "La segunda campaña del taíno (6-fusion/issues-pendientes/taino2-vocabularios-2026-09-22.md) la buscó y no la consiguió: «la ficha de dLOC responde 200 y no sirve el texto». El texto sí está: dLOC es…",
+      "acceso": "🟡 Los PDF pesan 381.832.748 y 441.578.577 bytes (sha256 5b194ccf342cd0ce557aa02ac13f969b3bbea9e25756dacbc9c2404eeea10398 y 38eadc8888fc919f05fda17c6b8d68662c6b84370663299c4a7845128e77395f): pasan de 95 MB y NO se commitean; en git van sólo los .txt de su capa de texto (`pdftotext -enc UTF-8`). Para ver una página en imagen, se vuelven a bajar de las URL de `origen_digital`. DERECHOS: dLOC no certifica dominio público — su nota dice que el ítem «may be protected by copyright» y lo sirve por uso legítimo para investigación. La lectura de esta ficha: Zayas murió en 1934; en Cuba (país de origen) el plazo de vida + 50 venció en 1984, antes del 1 de enero de 1996, así que la URAA no lo restauró en EE. UU. → dominio público en origen y en EE. UU. Es una lectura, no un dictamen: se usa para investigación, con cita corta, y la decisión de redistribuir más es de Miguel. La 1ª ed. (1914) está en HathiTrust como «pdus» (sólo EE. UU.) y detrás de una verificación de navegador: no se bajó.",
+      "lectura_url": null
     }
   ]
 }

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getBibliografia } from "@/lib/wiki";
+import { getFichasPorObra } from "@/lib/fichas";
 import type { ObraBiblio } from "@/types/wiki";
+import type { FichaIndice } from "@/types/fichas";
 import { Overline, EmptyState } from "@/components/simulador/ui";
+import { CapaGlifo } from "@/components/simulador/capa";
 
 export const metadata: Metadata = {
   title: "Bibliografía — Kaketiana | Curiana Radio",
@@ -14,7 +17,35 @@ export const metadata: Metadata = {
 // El id del <li> es el ancla a la que llegan las citas de los artículos
 // (`/kaketiana/bibliografia#alvarado-1921`), así que no se puede cambiar sin
 // romper los enlaces que genera export_wiki_seed.py.
-function Obra({ obra }: { obra: ObraBiblio }) {
+// Cuántas voces del diccionario se enlazan por obra antes del «y N más».
+const VOCES_VISIBLES = 12;
+
+function VocesQueLaCitan({ voces }: { voces: FichaIndice[] }) {
+  const visibles = voces.slice(0, VOCES_VISIBLES);
+  const resto = voces.length - visibles.length;
+  return (
+    <p className="mt-2 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
+      <span className="uppercase tracking-[0.12em]">
+        {voces.length === 1 ? "Sostiene una voz" : `Sostiene ${voces.length} voces`}
+      </span>{" "}
+      {visibles.map((v, i) => (
+        <span key={v.slug}>
+          {i > 0 && <span aria-hidden="true"> · </span>}
+          <Link
+            href={`/kaketiana/lexicon/${v.slug}`}
+            className="inline-flex items-baseline gap-1 sim-display text-sm font-semibold text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
+          >
+            <CapaGlifo capa={v.capa} size={8} />
+            {v.forma}
+          </Link>
+        </span>
+      ))}
+      {resto > 0 && <span> y {resto} más</span>}
+    </p>
+  );
+}
+
+function Obra({ obra, voces }: { obra: ObraBiblio; voces: FichaIndice[] }) {
   const ficha = [obra.autor, obra.anio, obra.publicacion].filter(Boolean).join(" · ");
   return (
     <li id={obra.slug} className="scroll-mt-24 border-t border-(--sim-rule) py-5 first:border-t-0">
@@ -48,6 +79,7 @@ function Obra({ obra }: { obra: ObraBiblio }) {
           </p>
         )
       )}
+      {voces.length > 0 && <VocesQueLaCitan voces={voces} />}
     </li>
   );
 }
@@ -65,6 +97,8 @@ export default function BibliografiaPage() {
   }
 
   const conLectura = obras.filter((o) => o.lectura_url).length;
+  // Qué voces del diccionario cita cada obra: el enlace de vuelta a las fichas.
+  const porObra = getFichasPorObra();
 
   return (
     <article className="mx-auto max-w-[760px]">
@@ -89,9 +123,15 @@ export default function BibliografiaPage() {
         </p>
       </header>
 
-      <ul className="mt-8">
+      {/* wrap-anywhere: las notas de acceso traen URL y sha256 sin espacios,
+          que en el móvil empujaban la página a lo ancho */}
+      <ul className="mt-8 wrap-anywhere">
         {obras.map((o) => (
-          <Obra key={o.slug} obra={o} />
+          <Obra
+            key={o.slug}
+            obra={o}
+            voces={(porObra.get(o.slug) ?? []).map(({ slug, forma, glosa, capa }) => ({ slug, forma, glosa, capa }))}
+          />
         ))}
       </ul>
     </article>

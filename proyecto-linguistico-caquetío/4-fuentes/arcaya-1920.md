@@ -340,3 +340,16 @@ indios fuese idéntico al español "Coro", que entre otras acepciones tiene la
 ahora desusada de "viento que corre de la parte donde se pone el sol en el
 solsticio de verano"». Es la refutación que el canon ya citaba; ahora con
 el castellano de 1582 (DICTER) detrás. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §coro.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero; leídas todas las ventanas creencia × mar. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `arcaya`: 6 ventanas creencia × mar (6 con un nombre de la costa occidental cerca), 8 creencia × cielo de control.
+
+**Se halló:** Repite a Oviedo (p. 98-99: «yrán a pescar» en la adivinación con tabaco) y a Pérez de Tolosa («mucha caza y pesca»); cita a Aguado para el poder de Manaure sobre el cielo (p. 115). La pesquería de perlas de su p. 329 es colonial (1599).
+
+**No se halló:** Cero creencia del mar.

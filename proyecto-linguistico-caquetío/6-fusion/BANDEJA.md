@@ -13,15 +13,16 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-23**.
+<!--GENERADO--> Generado el **2026-09-24**.
 
-**7189 ítems propuestos** en 140 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
+**7657 ítems propuestos** en 153 propuestas, más **57 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
 | `achagua_arte_neira_ribero_2026-09-22.yaml` | neira-ribero-1762 | 7 |  |
+| `adam_1879_arrouague_caraibe.yaml` | ? | 79 |  |
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
 | `antroponimos_caquetios.yaml` | varias | 48 |  |
 | `arqueologia_insular_falcon_2026-09-22.yaml` | ? | 10 |  |
@@ -41,6 +42,7 @@ editar_a_mano: no
 | `comparandas_jahn_1927.yaml` | jahn-1927 | 0 |  |
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml` | ? | 7 |  |
+| `cosmovision_marina_2026-09-24.yaml` | ? | 14 |  |
 | `cronicas_contacto_costa_occidental_2026-09-22.yaml` | ? | 20 |  |
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
@@ -62,6 +64,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-21.yaml` | ? | 0 |  |
 | `decisiones_tanda_final_2026-09-23.yaml` | ? | 0 |  |
+| `decisiones_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
 | `elenco_era2.yaml` | varias | 63 |  |
 | `escena_era2.yaml` | ? | 11 |  |
@@ -80,13 +83,17 @@ editar_a_mano: no
 | `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
+| `inventario_nucleo_fundacional_2026-09-23.yaml` | ? | 36 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
 | `kalinago_goeje_1939.yaml` | ? | 859 |  |
+| `kalinago_mujeres_2026-09-23.yaml` | ? | 4 |  |
+| `kalinago_mujeres_goeje_2026-09-24.yaml` | ? | 302 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_arte_achagua_2026-09-22.yaml` | ? | 33 |  |
+| `medicion_cercania_hermanas_2026-09-23.yaml` | ? | 24 |  |
 | `medicion_clases_de_raiz_2026-09-20.yaml` | ? | 0 |  |
 | `medicion_contaminacion_score_2026-09-09.yaml` | ? | 0 |  |
 | `medicion_d11_fase3_2026-09-23.yaml` | ? | 0 |  |
@@ -96,18 +103,23 @@ editar_a_mano: no
 | `medicion_formas_de_plantilla_corte_2026-09-18.yaml` | ? | 2 |  |
 | `medicion_gbif_aves_paraguana_2026-09-22.yaml` | ? | 230 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
+| `medicion_kalinago_mujeres_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
 | `medicion_nominalizacion_emergente_2026-09-21.yaml` | ? | 92 |  |
 | `medicion_nominalizador_2026-09-21.yaml` | ? | 82 |  |
+| `medicion_nucleo_fundacional_2026-09-24.yaml` | ? | 0 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
+| `medicion_taino_tradicion_viva_2026-09-24.yaml` | ? | 0 |  |
 | `medicion_tanda_21_2026-09-21.yaml` | ? | 13 |  |
 | `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
 | `medicion_tanda_final_2026-09-23.yaml` | ? | 0 |  |
+| `medicion_tanda_hermanas_2026-09-24.yaml` | ? | 4 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
+| `nucleo_fundacional_hermanas_2026-09-24.yaml` | ? | 4 |  |
 | `oliver1989_lexico_restante_2026-09-22.yaml` | oliver-1989-apendice-a | 50 |  |
 | `oliver1989_restante_2026-09-22.yaml` | ? | 38 |  |
 | `oliver_324_caribes.yaml` | ? | 0 | ⚠️ no parsea: mapping values are not allowed here
@@ -148,8 +160,9 @@ editar_a_mano: no
 | `taino_goeje_1939.yaml` | ? | 145 |  |
 | `taino_inventario_2026-09-21.yaml` | ? | 0 |  |
 | `taino_las_casas_1875.yaml` | las-casas-1875 | 26 |  |
-| `taino_lista_maestra_2026-09-22.yaml` | ? | 1039 |  |
+| `taino_lista_maestra_2026-09-22.yaml` | ? | 1034 |  |
 | `taino_pane_c1498.yaml` | pane-c1498 | 24 |  |
+| `taino_tradicion_viva_2026-09-24.yaml` | ? | 6 |  |
 | `taino_zayas_1931.yaml` | ? | 39 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
@@ -207,6 +220,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `arqueologia-insular-falcon-2026-09-22.md` | La arqueología de las islas y de Falcón: sitios, fauna, movimiento y mar (M8) |
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
+| `cosmovision-marina-2026-09-24.md` | El mar caquetío: economía, moneda, camino, parientes y nombre, con fuente; creencia, ningu |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
 | `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
 | `d11-voces-wayuu-2026-09-23.md` | D11 · las voces wayuu que quedan en el habla — qué pasa con cada una |
