@@ -1,0 +1,1542 @@
+# ======================================================================
+# GENERADO por 6-fusion/scripts/proponer_ediciones_lexicon_222_grupo3.py — no se edita a mano.
+# Las ediciones del lexicón del grupo 3 de #222, para el frente del lexicón.
+# ======================================================================
+meta:
+  fecha: '2026-09-24'
+  decision: «Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es lo que tenga que ver con docker»
+    (Miguel, 2026-09-24)
+  registro: 6-fusion/decisiones_222_documentacion_2026-09-24.yaml
+  generado_por: '6-fusion/scripts/proponer_ediciones_lexicon_222_grupo3.py (no se edita a mano: se corrige el script
+    y se regenera)'
+  que_es: 'las ediciones del grupo 3 de #222 que tocan curiana_sim/curiana_lexicon.py, un lexicon_*.py generado
+    o su regeneración. Este corte no toca esos archivos; las aplica el frente del lexicón'
+  como_aplicar:
+  - cada edición dice archivo, dict, clave, campo, operación y el texto exacto
+  - 'nunca cambian forma, `sig`, `cat` ni `fuente`: son `notas` (no llegan al prompt: verificado en db.5 y dc.1)'
+  - 'comprobar después: las mismas claves activas antes y después, sólo esas `notas` cambiadas (skill fusionar-propuesta
+    §3)'
+  - guardianes.py en verde y, si se archiva algo (dp.3.08 k5), verificar_sitios_era2.py
+  clave_corregida: 'la lista maestra de T10 escribe `oviedo-valdes-1851`, que NO está en 4-fuentes/bibliografia.yaml
+    (regla 8); aquí se escribe `oviedo-y-valdes-1851`. El generador de la lista (6-fusion/scripts/consolidar_taino.py,
+    PRIMARIAS) sigue con la clave vieja: no se toca en este corte'
+  cifras:
+    dp303_claves_tainas: 46
+    dp303_con_edicion: 43
+    dp303_sin_voz_en_la_lista: 3
+    dp303_ya_citan_en_prosa: 7
+    dp303_citas_de_oviedo_pendientes_de_imagen: 0
+    dp321_paginas_vistas_en_la_integra: 48
+    dp321_paginas_que_no_se_citan: 2
+    dp303_claves_con_alguna_cita_excluida: 2
+    dp308_voces_kalinago_con_apoyo: 11
+    dp308_ya_citan_goeje: 0
+dp.3.03_y_dp.3.15_procedencia_de_las_voces_tainas:
+  decision: 'T10 C (la del recopilador): una sola pasada con la lista maestra; T3 A3 NO (movería el prompt). dp.3.15:
+    `areito` entra en esta pasada con la cita de Oviedo que T1 verificó en imagen'
+  claves:
+  - clave: aji
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Chanca
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: aji
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `asi`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Chanca, Las Casas, Oviedo, Pedro Mártir.
+        primarias: oviedo-y-valdes-1851 pp. 275, 279, 308 (t. I, verificado en imagen; pp. 275, 279, 308 en la copia
+        íntegra, 2026-09-24, dp.3.21) · las-casas-1875 p. ~328. vía compiladores (no son atestaciones aparte, skill
+        minar-fuente §8): brinton-1871 p. 11 (cita: sin cronista declarado) · goeje-1939 p. 16 (cita: sin cronista
+        declarado) · coll-y-toste-1897 pp. 167, 183 (cita: Chanca, Las Casas, Pedro Mártir; sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '275'
+      forma: asi
+      se_ve: axi (título del cap. VII)
+    - pagina: '279'
+      forma: asi
+      se_ve: axi
+    - pagina: '308'
+      forma: asi
+      se_ve: axì
+  - clave: areito
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Herrera
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: areito
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `areito`): clase i-primaria-del-XVI, 3 cronista(s) independiente(s): Herrera, Oviedo, Pedro Mártir.
+        primarias: oviedo-y-valdes-1851 pp. 125, 127, 128 (t. I, verificado en imagen por T1). vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 11 (cita: Oviedo) · goeje-1939 p. 8
+        (cita: Oviedo) · bachiller-morales-1883 p. 210 (cita: Herrera, Oviedo) · coll-y-toste-1897 pp. 158, 159,
+        186 (cita: Pedro Mártir; sin cronista declarado).'
+  - clave: batata
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: batata
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `batata, batatas (+ 1 registro(s) de frase o lista)`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s):
+        Colón, Las Casas, Oviedo, Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 273, 274, 279 (t. I, verificado
+        en imagen; pp. 273, 274, 279 en la copia íntegra, 2026-09-24, dp.3.21) · las-casas-1875 p. ~329. vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 157, 168, 182, 191 (cita: Colón,
+        Las Casas, Pedro Mártir; Las Casas, Oviedo, Pedro Mártir; sin cronista declarado) · goeje-1939 p. 17 (cita:
+        Oviedo).'
+    verificado_en_la_integra:
+    - pagina: '273'
+      forma: batata
+      se_ve: batatas (título del cap. IV)
+    - pagina: '273'
+      forma: batata
+      se_ve: batatas (título del cap. IV)
+    - pagina: '274'
+      forma: batata
+      se_ve: batatas
+    - pagina: '279'
+      forma: batata
+      se_ve: batatas
+  - clave: batey
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: batey
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `batai`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas, Oviedo. primarias: oviedo-y-valdes-1851
+        pp. 163, 165, 471 (t. I, verificado en imagen; pp. 163, 165, 471 en la copia íntegra, 2026-09-24, dp.3.21).
+        vía compiladores (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: Las Casas)
+        · goeje-1939 p. 12 (cita: Las Casas) · coll-y-toste-1897 pp. 167, 192 (cita: Las Casas; sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '163'
+      forma: batai
+      se_ve: batey
+    - pagina: '165'
+      forma: batai
+      se_ve: batey (título del cap. II)
+    - pagina: '471'
+      forma: batai
+      se_ve: batey
+  - clave: bejique
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Pané
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: bejique
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `behike, behiko, besike, boies, buhiti, buhitihu`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s):
+        Las Casas, Pané. primarias: pane-c1498 cap. XIV-XX (la glosa, en XVII) · oviedo-y-valdes-1851 p. 126 (t.
+        I, verificado en imagen por T1). vía compiladores (no son atestaciones aparte, skill minar-fuente §8): goeje-1939
+        p. 7 (cita: Las Casas) · bachiller-morales-1883 pp. 388, 388, 389 (cita: Las Casas; sin cronista declarado)
+        · coll-y-toste-1897 pp. 168, 193, 195 (cita: Las Casas; sin cronista declarado) · brinton-1871 p. 12 (cita:
+        sin cronista declarado). ⚠️ alguna fuente la saca del taíno ([''caribe insular, según Goeje'']; [''eyeri
+        (caribe insular), en la lista de Bachiller'', ''eyeri = habla de mujeres del caribe insular (Bachiller p.
+        389; Goeje 1939)'']): eso es la opción A de T10, no se decide aquí.'
+  - clave: bixa
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: bixa
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `bila, bisa (+ 1 registro(s) de frase o lista)`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s):
+        Las Casas, Oviedo. primarias: oviedo-y-valdes-1851 p. 146 (t. I, verificado en imagen por T1). vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: Las Casas) · coll-y-toste-1897
+        pp. 155, 169, 194 (cita: Las Casas; sin cronista declarado) · goeje-1939 p. 16 (cita: Las Casas) · bachiller-morales-1883
+        p. 239 (cita: sin cronista declarado).'
+  - clave: bohio
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: bohio
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `bohio, buhio`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Las Casas. primarias: las-casas-1875
+        p. ~315 · oviedo-y-valdes-1851 pp. 163, 164, 165, 167 (t. I, verificado en imagen; pp. 163, 164, 165, 167
+        en la copia íntegra, 2026-09-24, dp.3.21). vía compiladores (no son atestaciones aparte, skill minar-fuente
+        §8): bachiller-morales-1883 p. 388 (cita: sin cronista declarado) · goeje-1939 p. 10 (cita: sin cronista
+        declarado).'
+    verificado_en_la_integra:
+    - pagina: '163'
+      forma: buhio
+      se_ve: buhio
+    - pagina: '164'
+      forma: buhio
+      se_ve: buhio
+    - pagina: '165'
+      forma: buhio
+      se_ve: buhios
+    - pagina: '167'
+      forma: buhio
+      se_ve: buhios
+  - clave: bohío
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: bohío
+      campo: notas
+      operacion: crear `notas` con este texto (hoy la entrada no tiene)
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `bohio, buhio, kanei`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas, Oviedo.
+        primarias: oviedo-y-valdes-1851 pp. 163, 164, 165, 167 (t. I, verificado en imagen; pp. 163, 164, 165, 167
+        en la copia íntegra, 2026-09-24, dp.3.21) · las-casas-1875 p. ~315. vía compiladores (no son atestaciones
+        aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: sin cronista declarado) · goeje-1939 p. 10 (cita:
+        sin cronista declarado) · coll-y-toste-1897 pp. 158, 202 (cita: Las Casas; sin cronista declarado) · bachiller-morales-1883
+        p. 388 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '164'
+      forma: kanei
+      se_ve: caney
+    - pagina: '165'
+      forma: kanei
+      se_ve: caney
+    - pagina: '163'
+      forma: buhio
+      se_ve: buhio
+    - pagina: '164'
+      forma: buhio
+      se_ve: buhio
+    - pagina: '165'
+      forma: buhio
+      se_ve: buhios
+    - pagina: '167'
+      forma: buhio
+      se_ve: buhios
+  - clave: cacike
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Chanca
+    - Colón
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cacike
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kakike, kasike, kasikus`): clase i-primaria-del-XVI, 5 cronista(s) independiente(s): Chanca, Colón,
+        Las Casas, Oviedo, Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 25, 90, 128, 164, 165 (t. I, verificado
+        en imagen por T1) · las-casas-1875 p. ~381. vía compiladores (no son atestaciones aparte, skill minar-fuente
+        §8): coll-y-toste-1897 pp. 163, 200 (cita: Chanca, Colón, Las Casas, Oviedo, Pedro Mártir; sin cronista
+        declarado) · brinton-1871 p. 12 (cita: sin cronista declarado) · goeje-1939 p. 9 (cita: sin cronista declarado)
+        · bachiller-morales-1883 pp. 388, 389 (cita: sin cronista declarado).'
+  - clave: cacique
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Chanca
+    - Colón
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cacique
+      campo: notas
+      operacion: crear `notas` con este texto (hoy la entrada no tiene)
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `duho, kakike, kanei, kasike, kasikus`): clase i-primaria-del-XVI, 5 cronista(s) independiente(s): Chanca,
+        Colón, Las Casas, Oviedo, Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 25, 90, 125, 128, 164, 165 (t.
+        I, verificado en imagen por T1) · las-casas-1875 p. ~381. vía compiladores (no son atestaciones aparte,
+        skill minar-fuente §8): coll-y-toste-1897 pp. 158, 163, 200, 202 (cita: Chanca, Colón, Las Casas, Oviedo,
+        Pedro Mártir; Las Casas; sin cronista declarado) · goeje-1939 pp. 9, 10, 11 (cita: Las Casas, Oviedo; sin
+        cronista declarado) · brinton-1871 p. 12 (cita: sin cronista declarado) · bachiller-morales-1883 pp. 388,
+        389 (cita: sin cronista declarado).'
+  - clave: cai
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cai
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `brio`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Las Casas. vía compiladores (no son
+        atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: sin cronista declarado) · goeje-1939
+        p. 14 (cita: Las Casas) · bachiller-morales-1883 pp. 245, 388, 389 (cita: Las Casas; sin cronista declarado)
+        · coll-y-toste-1897 pp. 206, 210 (cita: sin cronista declarado). ⚠️ alguna fuente la saca del taíno ([''eyeri
+        = habla de mujeres del caribe insular (Bachiller p. 389; Goeje 1939)'']): eso es la opción A de T10, no
+        se decide aquí.'
+  - clave: caiman
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: ii-solo-secundaria
+    cronistas_independientes: []
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: caiman
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `atmane, kaiman (+ 1 registro(s) de frase o lista)`): clase ii-solo-secundaria, ningún cronista del
+        XVI. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 14 (cita: sin cronista
+        declarado) · brinton-1871 p. 12 (cita: sin cronista declarado) · bachiller-morales-1883 pp. 239, 388 (cita:
+        sin cronista declarado) · coll-y-toste-1897 p. 201 (cita: sin cronista declarado).'
+  - clave: caney
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: caney
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kanei`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas, Oviedo. primarias: oviedo-y-valdes-1851
+        pp. 164, 165 (t. I, verificado en imagen; pp. 164, 165 en la copia íntegra, 2026-09-24, dp.3.21). vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: sin cronista declarado) ·
+        goeje-1939 p. 10 (cita: sin cronista declarado) · coll-y-toste-1897 pp. 158, 202 (cita: Las Casas; sin cronista
+        declarado).'
+    verificado_en_la_integra:
+    - pagina: '164'
+      forma: kanei
+      se_ve: caney
+    - pagina: '165'
+      forma: kanei
+      se_ve: caney
+  - clave: casabe
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Las Casas
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: casabe
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kakabi, kasabe, kasabi, sabi`): clase i-primaria-del-XVI, 3 cronista(s) independiente(s): Colón, Las
+        Casas, Pedro Mártir. primarias: las-casas-1875 p. ~306 · pane-c1498 cap. XI · oviedo-y-valdes-1851 pp. 264,
+        268, 271, 272 (t. I, verificado en imagen; pp. 264, 268, 271, 272 en la copia íntegra, 2026-09-24, dp.3.21).
+        vía compiladores (no son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 166, 206 (cita:
+        Colón, Las Casas, Pedro Mártir; sin cronista declarado) · goeje-1939 p. 16 (cita: Las Casas) · bachiller-morales-1883
+        p. 388 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '264'
+      forma: kakabi
+      se_ve: caçabi
+    - pagina: '268'
+      forma: kakabi
+      se_ve: caçabi (título del cap. II)
+    - pagina: '271'
+      forma: kakabi
+      se_ve: caçabi
+    - pagina: '272'
+      forma: kakabi
+      se_ve: caçabi
+  - clave: cayo
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cayo
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `brio, kaios`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Las Casas. primarias: las-casas-1875
+        p. ~292. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita:
+        sin cronista declarado) · goeje-1939 p. 14 (cita: Las Casas) · bachiller-morales-1883 pp. 245, 388, 389
+        (cita: Las Casas; sin cronista declarado) · coll-y-toste-1897 pp. 206, 210 (cita: sin cronista declarado).
+        ⚠️ alguna fuente la saca del taíno ([''eyeri = habla de mujeres del caribe insular (Bachiller p. 389; Goeje
+        1939)'']): eso es la opción A de T10, no se decide aquí.'
+  - clave: cazabi
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Las Casas
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cazabi
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kakabi, kasabe, kasabi, sabi`): clase i-primaria-del-XVI, 3 cronista(s) independiente(s): Colón, Las
+        Casas, Pedro Mártir. primarias: las-casas-1875 p. ~306 · pane-c1498 cap. XI · oviedo-y-valdes-1851 pp. 264,
+        268, 271, 272 (t. I, verificado en imagen; pp. 264, 268, 271, 272 en la copia íntegra, 2026-09-24, dp.3.21).
+        vía compiladores (no son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 166, 206 (cita:
+        Colón, Las Casas, Pedro Mártir; sin cronista declarado) · goeje-1939 p. 16 (cita: Las Casas) · bachiller-morales-1883
+        p. 388 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '264'
+      forma: kakabi
+      se_ve: caçabi
+    - pagina: '268'
+      forma: kakabi
+      se_ve: caçabi (título del cap. II)
+    - pagina: '271'
+      forma: kakabi
+      se_ve: caçabi
+    - pagina: '272'
+      forma: kakabi
+      se_ve: caçabi
+  - clave: cemi
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cemi
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kemi, kemies, khemin, semi`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas,
+        Oviedo. primarias: oviedo-y-valdes-1851 pp. 126, 138 (t. I, verificado en imagen por T1) · pane-c1498 cap.
+        proemio. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897 p. 253
+        (cita: sin cronista declarado) · brinton-1871 p. 13 (cita: Oviedo) · goeje-1939 p. 8 (cita: sin cronista
+        declarado) · bachiller-morales-1883 pp. 388, 389 (cita: sin cronista declarado). ⚠️ alguna fuente la saca
+        del taíno ([''eyeri (caribe insular), en la lista de Bachiller'', ''eyeri = habla de mujeres del caribe
+        insular (Bachiller p. 389; Goeje 1939)'']): eso es la opción A de T10, no se decide aquí.'
+    no_se_cita:
+    - obra: oviedo-y-valdes-1851
+      pagina: '50'
+      forma: kemi
+      por_que: 'la p. 50 dice «quemis», «otros animales que llaman mohuy» — el roedor, no el cemí: la lista maestra
+        fundió `çemi` y `quemí` en el lema `kemi`'
+    - obra: coll-y-toste-1897
+      pagina: '210'
+      forma: kemi
+      por_que: glosa del roedor quemí, no del cemí (fusión de lema en la lista maestra)
+    - obra: coll-y-toste-1897
+      pagina: '250'
+      forma: kemi
+      por_que: glosa del roedor quemí, no del cemí (fusión de lema en la lista maestra)
+  - clave: cobo
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Pané
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: cobo
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kobo`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Pané. primarias: pane-c1498 cap.
+        V. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): bachiller-morales-1883 p. 256 (cita:
+        sin cronista declarado) · coll-y-toste-1897 pp. 159, 211 (cita: sin cronista declarado).'
+  - clave: cohoba
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: sin-voz-en-la-lista
+    cronistas_independientes: []
+    edicion: 'ninguna: la lista maestra no recoge la voz (sin-voz-en-la-lista). Sus `notas` ya citan con página.'
+  - clave: daca
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Pané
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: daca
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `daka, maianimakana (+ 1 registro(s) de frase o lista)`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s):
+        Las Casas, Pané. primarias: pane-c1498 cap. XXV. vía compiladores (no son atestaciones aparte, skill minar-fuente
+        §8): bachiller-morales-1883 p. 270 (cita: Las Casas, Pané) · coll-y-toste-1897 p. 213 (cita: Las Casas,
+        Pané) · goeje-1939 p. 17 (cita: Pané).'
+  - clave: datihao
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: sin-voz-en-la-lista
+    cronistas_independientes: []
+    edicion: 'ninguna: la lista maestra no recoge la voz (sin-voz-en-la-lista). Sus `notas` ya citan con página.'
+  - clave: dujo
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: dujo
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `duho, dulios, duso`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas, Oviedo.
+        primarias: oviedo-y-valdes-1851 pp. 125, 165 (t. I, verificado en imagen por T1). vía compiladores (no son
+        atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 11 (cita: Las Casas, Oviedo) · brinton-1871 p.
+        12 (cita: Las Casas, Oviedo) · coll-y-toste-1897 p. 156 (cita: sin cronista declarado).'
+  - clave: guabina
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: guabina
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kuabina, kuabinas`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Las Casas. vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 166, 217 (cita: Las Casas; sin
+        cronista declarado) · bachiller-morales-1883 p. 267 (cita: Las Casas).'
+  - clave: guanin
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Herrera
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: guanin
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kuanin, kuanines`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Herrera, Las Casas, Oviedo,
+        Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 480, 507, 514 (t. I, verificado en imagen; pp. 480, 507,
+        514 en la copia íntegra, 2026-09-24, dp.3.21) · las-casas-1875 p. ~402 · pane-c1498 cap. VI. vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: sin cronista declarado) ·
+        goeje-1939 p. 10 (cita: sin cronista declarado) · coll-y-toste-1897 pp. 163, 221 (cita: Herrera, Las Casas,
+        Oviedo, Pedro Mártir; sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '480'
+      forma: kuanin
+      se_ve: guanin
+    - pagina: '507'
+      forma: kuanin
+      se_ve: guanines
+    - pagina: '514'
+      forma: kuanin
+      se_ve: gua-nin
+  - clave: guayaba
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: guayaba
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kuaiaba, kuaiabo`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Oviedo. primarias: oviedo-y-valdes-1851
+        p. 305 (t. I, verificado en imagen; p. 305 en la copia íntegra, 2026-09-24, dp.3.21). vía compiladores (no
+        son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 161, 212, 216, 225 … (cita: sin cronista
+        declarado) · goeje-1939 p. 15 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '305'
+      forma: kuaiaba
+      se_ve: guayaba, guayabo
+    no_se_cita:
+    - obra: oviedo-y-valdes-1851
+      pagina: '530'
+      forma: kuaiaba
+      por_que: '«guayaba» no aparece en la copia íntegra (pp. 528-532, capa de texto): no se localiza'
+  - clave: higuana
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Enciso
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: higuana
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `ibana, ikuana, suana`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Colón, Enciso, Las
+        Casas, Oviedo. primarias: las-casas-1875 p. ~314 · oviedo-y-valdes-1851 pp. 50, 152, 393, 394, 395, 396
+        (t. I, verificado en imagen por T1). vía compiladores (no son atestaciones aparte, skill minar-fuente §8):
+        goeje-1939 p. 14 (cita: sin cronista declarado) · coll-y-toste-1897 pp. 163, 230 (cita: Colón, Enciso, Las
+        Casas, Oviedo; sin cronista declarado) · brinton-1871 p. 13 (cita: Las Casas, Pedro Mártir).'
+  - clave: huracan
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: huracan
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `urakan`): clase i-primaria-del-XVI, 3 cronista(s) independiente(s): Las Casas, Oviedo, Pedro Mártir.
+        primarias: oviedo-y-valdes-1851 pp. 82, 167, 168, 169, 170 (t. I, verificado en imagen por T1). vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 13 (cita: sin cronista declarado) ·
+        goeje-1939 p. 13 (cita: sin cronista declarado) · bachiller-morales-1883 pp. 388, 389 (cita: sin cronista
+        declarado) · coll-y-toste-1897 p. 230 (cita: Las Casas, Pedro Mártir). ⚠️ alguna fuente la saca del taíno
+        ([''eyeri (caribe insular), en la lista de Bachiller'', ''eyeri = habla de mujeres del caribe insular (Bachiller
+        p. 389; Goeje 1939)'']): eso es la opción A de T10, no se decide aquí.'
+  - clave: hutia
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: hutia
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `iahutia, utia, utias`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas, Oviedo.
+        primarias: oviedo-y-valdes-1851 pp. 50, 274, 284, 389 (t. I, verificado en imagen por T1) · las-casas-1875
+        p. ~384. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 15 (cita: sin
+        cronista declarado) · coll-y-toste-1897 pp. 230, 258 (cita: Las Casas; Oviedo) · bachiller-morales-1883
+        pp. 388, 388 (cita: Oviedo; sin cronista declarado).'
+  - clave: iwana
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Enciso
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: iwana
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `ibana, ikuana, suana`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Colón, Enciso, Las
+        Casas, Oviedo. primarias: las-casas-1875 p. ~314 · oviedo-y-valdes-1851 pp. 50, 152, 393, 394, 395, 396
+        (t. I, verificado en imagen por T1). vía compiladores (no son atestaciones aparte, skill minar-fuente §8):
+        goeje-1939 p. 14 (cita: sin cronista declarado) · coll-y-toste-1897 pp. 163, 230 (cita: Colón, Enciso, Las
+        Casas, Oviedo; sin cronista declarado) · brinton-1871 p. 13 (cita: Las Casas, Pedro Mártir).'
+  - clave: kunuku
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: kunuku
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `komiko, konoko, konukos, kunuku`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s): Las Casas,
+        Oviedo. primarias: oviedo-y-valdes-1851 pp. 143, 149, 163, 269, 370 (t. I, verificado en imagen; pp. 143,
+        149, 163, 269, 370 en la copia íntegra, 2026-09-24, dp.3.21) · pane-c1498 cap. IX. vía compiladores (no
+        son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 12 (cita: Oviedo) · bachiller-morales-1883
+        p. 210 (cita: Oviedo) · coll-y-toste-1897 pp. 163, 210 (cita: Las Casas, Oviedo; sin cronista declarado)
+        · goeje-1939 p. 13 (cita: Oviedo).'
+    verificado_en_la_integra:
+    - pagina: '143'
+      forma: konoko
+      se_ve: conucos
+    - pagina: '149'
+      forma: konoko
+      se_ve: conucos
+    - pagina: '163'
+      forma: konoko
+      se_ve: conucos
+    - pagina: '269'
+      forma: konoko
+      se_ve: conuco
+    - pagina: '370'
+      forma: konoko
+      se_ve: conucos
+  - clave: maboya
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: ii-solo-secundaria
+    cronistas_independientes: []
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: maboya
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `maboia, mabuia`): clase ii-solo-secundaria, ningún cronista del XVI. vía compiladores (no son atestaciones
+        aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 160, 237 (cita: sin cronista declarado) · bachiller-morales-1883
+        pp. 388, 389 (cita: sin cronista declarado). ⚠️ alguna fuente la saca del taíno ([''eyeri (caribe insular),
+        en la lista de Bachiller'', ''eyeri = habla de mujeres del caribe insular (Bachiller p. 389; Goeje 1939)'']):
+        eso es la opción A de T10, no se decide aquí.'
+  - clave: maisi
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: maisi
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `mahis, mais, maisi`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Colón, Las Casas, Oviedo,
+        Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 264, 265, 266, 267, 268 (t. I, verificado en imagen; pp.
+        264, 265, 266, 267, 268 en la copia íntegra, 2026-09-24, dp.3.21) · las-casas-1875 p. ~334. vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 13 (cita: sin cronista declarado) ·
+        bachiller-morales-1883 p. 388 (cita: sin cronista declarado) · coll-y-toste-1897 pp. 164, 240 (cita: Colón,
+        Las Casas, Oviedo, Pedro Mártir; sin cronista declarado) · goeje-1939 p. 15 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '264'
+      forma: mahis
+      se_ve: mahiz
+    - pagina: '265'
+      forma: mahis
+      se_ve: mahiz
+    - pagina: '266'
+      forma: mahis
+      se_ve: mahizales
+    - pagina: '267'
+      forma: mahis
+      se_ve: mahizales, mahiz
+    - pagina: '268'
+      forma: mahis
+      se_ve: mahiz
+  - clave: manati
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: manati
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `manati, manti`): clase i-primaria-del-XVI, 3 cronista(s) independiente(s): Las Casas, Oviedo, Pedro
+        Mártir. primarias: oviedo-y-valdes-1851 p. 433 (t. I, verificado en imagen; p. 433 en la copia íntegra,
+        2026-09-24, dp.3.21). vía compiladores (no son atestaciones aparte, skill minar-fuente §8): coll-y-toste-1897
+        pp. 166, 170, 242 (cita: Las Casas, Oviedo, Pedro Mártir; sin cronista declarado) · goeje-1939 p. 14 (cita:
+        sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '433'
+      forma: manati
+      se_ve: manati (título del cap. IX)
+  - clave: manigua
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: ii-solo-secundaria
+    cronistas_independientes: []
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: manigua
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `manikua, manikuas`): clase ii-solo-secundaria, ningún cronista del XVI. vía compiladores (no son atestaciones
+        aparte, skill minar-fuente §8): coll-y-toste-1897 pp. 157, 164, 242 (cita: sin cronista declarado) · bachiller-morales-1883
+        p. 382 (cita: sin cronista declarado).'
+  - clave: mayani
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Pedro Mártir
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: mayani
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `maiani, maianimakana`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Pedro Mártir. vía
+        compiladores (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 13 (cita: Pedro Mártir)
+        · goeje-1939 pp. 17, 17 (cita: Pané; sin cronista declarado) · coll-y-toste-1897 pp. 165, 244 (cita: Pedro
+        Mártir; sin cronista declarado).'
+  - clave: maíz
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: maíz
+      campo: notas
+      operacion: crear `notas` con este texto (hoy la entrada no tiene)
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `mahis, mais, maisi`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Colón, Las Casas, Oviedo,
+        Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 264, 265, 266, 267, 268 (t. I, verificado en imagen; pp.
+        264, 265, 266, 267, 268 en la copia íntegra, 2026-09-24, dp.3.21) · las-casas-1875 p. ~334. vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): brinton-1871 p. 13 (cita: sin cronista declarado) ·
+        bachiller-morales-1883 p. 388 (cita: sin cronista declarado) · coll-y-toste-1897 pp. 164, 240 (cita: Colón,
+        Las Casas, Oviedo, Pedro Mártir; sin cronista declarado) · goeje-1939 p. 15 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '264'
+      forma: mahis
+      se_ve: mahiz
+    - pagina: '265'
+      forma: mahis
+      se_ve: mahiz
+    - pagina: '266'
+      forma: mahis
+      se_ve: mahizales
+    - pagina: '267'
+      forma: mahis
+      se_ve: mahizales, mahiz
+    - pagina: '268'
+      forma: mahis
+      se_ve: mahiz
+  - clave: naboria
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Archivo de Indias
+    - Las Casas
+    - Oviedo
+    - Pané
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: naboria
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `iahunaboriu, naboria, naborias (+ 1 registro(s) de frase o lista)`): clase i-primaria-del-XVI, 4 cronista(s)
+        independiente(s): Archivo de Indias, Las Casas, Oviedo, Pané. primarias: oviedo-y-valdes-1851 pp. 471, 472,
+        473 (t. I, verificado en imagen; pp. 471, 472, 473 en la copia íntegra, 2026-09-24, dp.3.21) · pane-c1498
+        cap. XXV. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 9 (cita: Pané)
+        · bachiller-morales-1883 p. 202 (cita: Archivo de Indias, Las Casas, Pané) · brinton-1871 p. 13 (cita: Las
+        Casas).'
+    verificado_en_la_integra:
+    - pagina: '471'
+      forma: naboria
+      se_ve: naboria
+    - pagina: '472'
+      forma: naboria
+      se_ve: naborias
+    - pagina: '473'
+      forma: naboria
+      se_ve: naboria
+  - clave: nitaino
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Archivo de Indias
+    - Colón
+    - Las Casas
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: nitaino
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `ditaino, naitano, nitainos`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Archivo de
+        Indias, Colón, Las Casas, Pedro Mártir. primarias: las-casas-1875 p. ~394. vía compiladores (no son atestaciones
+        aparte, skill minar-fuente §8): goeje-1939 p. 9 (cita: sin cronista declarado) · bachiller-morales-1883
+        pp. 283, 388, 389 (cita: Archivo de Indias, Las Casas; sin cronista declarado) · coll-y-toste-1897 pp. 163,
+        247 (cita: Colón, Las Casas, Pedro Mártir; sin cronista declarado) · brinton-1871 p. 13 (cita: Las Casas,
+        Pedro Mártir).'
+  - clave: papaya
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: papaya
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `papaia`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Oviedo. primarias: oviedo-y-valdes-1851
+        p. 323 (t. I, verificado en imagen; p. 323 en la copia íntegra, 2026-09-24, dp.3.21). vía compiladores (no
+        son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 16 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '323'
+      forma: papaia
+      se_ve: papaya (título del cap. XXXIII)
+  - clave: piragua
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Colón
+    - Las Casas
+    - Oviedo
+    - Pedro Mártir
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: piragua
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kanoa, pirakua, pirakuas`): clase i-primaria-del-XVI, 4 cronista(s) independiente(s): Colón, Las Casas,
+        Oviedo, Pedro Mártir. primarias: oviedo-y-valdes-1851 pp. 170, 171, 344 (t. I, verificado en imagen; pp.
+        170, 171, 344 en la copia íntegra, 2026-09-24, dp.3.21). vía compiladores (no son atestaciones aparte, skill
+        minar-fuente §8): brinton-1871 p. 12 (cita: sin cronista declarado) · bachiller-morales-1883 pp. 388, 389
+        (cita: sin cronista declarado) · coll-y-toste-1897 p. 203 (cita: Colón, Las Casas, Pedro Mártir) · goeje-1939
+        s. p. (cita: ). ⚠️ alguna fuente la saca del taíno ([''eyeri = habla de mujeres del caribe insular (Bachiller
+        p. 389; Goeje 1939)'']; [''caribe insular, según Goeje'']): eso es la opción A de T10, no se decide aquí.'
+    verificado_en_la_integra:
+    - pagina: '170'
+      forma: kanoa
+      se_ve: canoas (título del cap. IV)
+    - pagina: '171'
+      forma: kanoa
+      se_ve: canoas
+    - pagina: '170'
+      forma: pirakua
+      se_ve: piraguas (título del cap. IV)
+    - pagina: '344'
+      forma: pirakua
+      se_ve: piraguas
+  - clave: siba
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: sin-voz-en-la-lista
+    cronistas_independientes: []
+    edicion: 'ninguna: la lista maestra no recoge la voz (sin-voz-en-la-lista). Sus `notas` ya citan con página.'
+  - clave: tabako
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Pané
+    ya_cita_en_prosa: true
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: tabako
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `kohiba, tabako, tabakos`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Pané. primarias:
+        oviedo-y-valdes-1851 pp. 130, 131, 143 (t. I, verificado en imagen por T1) · las-casas-1875 p. ~333. vía
+        compiladores (no son atestaciones aparte, skill minar-fuente §8): bachiller-morales-1883 p. 256 (cita: Pané)
+        · coll-y-toste-1897 pp. 168, 169, 211, 253 (cita: sin cronista declarado) · brinton-1871 p. 13 (cita: sin
+        cronista declarado) · goeje-1939 p. 8 (cita: Oviedo).'
+  - clave: taita
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: ii-solo-secundaria
+    cronistas_independientes: []
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: taita
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `taita`): clase ii-solo-secundaria, ningún cronista del XVI. vía compiladores (no son atestaciones aparte,
+        skill minar-fuente §8): brinton-1871 p. 13 (cita: sin cronista declarado) · bachiller-morales-1883 p. 394
+        (cita: sin cronista declarado). ⚠️ alguna fuente la saca del taíno ([''el propio Bachiller la pone entre
+        las que pasan por indígenas y vienen de otras partes'']): eso es la opción A de T10, no se decide aquí.'
+  - clave: tuna
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Oviedo
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: tuna
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `tuna (+ 1 registro(s) de frase o lista)`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s):
+        Oviedo. vía compiladores (no son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 17 (cita: Oviedo)
+        · bachiller-morales-1883 pp. 388, 388 (cita: Pedro Mártir; sin cronista declarado) · coll-y-toste-1897 p.
+        255 (cita: sin cronista declarado).'
+  - clave: yamosa
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Las Casas
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: yamosa
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `iamoka`): clase i-primaria-del-XVI, 1 cronista(s) independiente(s): Las Casas. vía compiladores (no
+        son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 17 (cita: Las Casas) · coll-y-toste-1897
+        pp. 159, 258 (cita: sin cronista declarado).'
+  - clave: yuca
+    fuente_en_el_lexicon: taíno
+    clase_en_la_lista_maestra: i-primaria-del-XVI
+    cronistas_independientes:
+    - Oviedo
+    - Pané
+    ya_cita_en_prosa: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: yuca
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `iuka (+ 1 registro(s) de frase o lista)`): clase i-primaria-del-XVI, 2 cronista(s) independiente(s):
+        Oviedo, Pané. primarias: oviedo-y-valdes-1851 pp. 264, 268, 269, 270, 271, 272 (t. I, verificado en imagen;
+        pp. 264, 268, 269, 270, 271, 272 en la copia íntegra, 2026-09-24, dp.3.21) · pane-c1498 cap. XIX. vía compiladores
+        (no son atestaciones aparte, skill minar-fuente §8): goeje-1939 p. 16 (cita: sin cronista declarado) · coll-y-toste-1897
+        pp. 164, 168, 170 (cita: sin cronista declarado) · bachiller-morales-1883 p. 239 (cita: sin cronista declarado).'
+    verificado_en_la_integra:
+    - pagina: '264'
+      forma: iuka
+      se_ve: yuca
+    - pagina: '268'
+      forma: iuka
+      se_ve: yuca (título del cap. II)
+    - pagina: '269'
+      forma: iuka
+      se_ve: yuca
+    - pagina: '270'
+      forma: iuka
+      se_ve: yuca
+    - pagina: '271'
+      forma: iuka
+      se_ve: yuca
+    - pagina: '272'
+      forma: iuka
+      se_ve: yuca
+dp.3.21_pendientes_de_imagen:
+  pares_mirados_en_la_integra:
+  - forma: konoko
+    pagina: '143'
+    se_ve: conucos
+  - forma: konoko
+    pagina: '149'
+    se_ve: conucos
+  - forma: batai
+    pagina: '163'
+    se_ve: batey
+  - forma: buhio
+    pagina: '163'
+    se_ve: buhio
+  - forma: konoko
+    pagina: '163'
+    se_ve: conucos
+  - forma: buhio
+    pagina: '164'
+    se_ve: buhio
+  - forma: kanei
+    pagina: '164'
+    se_ve: caney
+  - forma: batai
+    pagina: '165'
+    se_ve: batey (título del cap. II)
+  - forma: buhio
+    pagina: '165'
+    se_ve: buhios
+  - forma: kanei
+    pagina: '165'
+    se_ve: caney
+  - forma: buhio
+    pagina: '167'
+    se_ve: buhios
+  - forma: kanoa
+    pagina: '170'
+    se_ve: canoas (título del cap. IV)
+  - forma: pirakua
+    pagina: '170'
+    se_ve: piraguas (título del cap. IV)
+  - forma: kanoa
+    pagina: '171'
+    se_ve: canoas
+  - forma: iuka
+    pagina: '264'
+    se_ve: yuca
+  - forma: kakabi
+    pagina: '264'
+    se_ve: caçabi
+  - forma: mahis
+    pagina: '264'
+    se_ve: mahiz
+  - forma: mahis
+    pagina: '265'
+    se_ve: mahiz
+  - forma: mahis
+    pagina: '266'
+    se_ve: mahizales
+  - forma: mahis
+    pagina: '267'
+    se_ve: mahizales, mahiz
+  - forma: iuka
+    pagina: '268'
+    se_ve: yuca (título del cap. II)
+  - forma: kakabi
+    pagina: '268'
+    se_ve: caçabi (título del cap. II)
+  - forma: mahis
+    pagina: '268'
+    se_ve: mahiz
+  - forma: iuka
+    pagina: '269'
+    se_ve: yuca
+  - forma: konoko
+    pagina: '269'
+    se_ve: conuco
+  - forma: iuka
+    pagina: '270'
+    se_ve: yuca
+  - forma: iuka
+    pagina: '271'
+    se_ve: yuca
+  - forma: kakabi
+    pagina: '271'
+    se_ve: caçabi
+  - forma: iuka
+    pagina: '272'
+    se_ve: yuca
+  - forma: kakabi
+    pagina: '272'
+    se_ve: caçabi
+  - forma: batata
+    pagina: '273'
+    se_ve: batatas (título del cap. IV)
+  - forma: batata
+    pagina: '274'
+    se_ve: batatas
+  - forma: asi
+    pagina: '275'
+    se_ve: axi (título del cap. VII)
+  - forma: asi
+    pagina: '279'
+    se_ve: axi
+  - forma: batata
+    pagina: '279'
+    se_ve: batatas
+  - forma: kuaiaba
+    pagina: '305'
+    se_ve: guayaba, guayabo
+  - forma: asi
+    pagina: '308'
+    se_ve: axì
+  - forma: papaia
+    pagina: '323'
+    se_ve: papaya (título del cap. XXXIII)
+  - forma: pirakua
+    pagina: '344'
+    se_ve: piraguas
+  - forma: konoko
+    pagina: '370'
+    se_ve: conucos
+  - forma: manati
+    pagina: '433'
+    se_ve: manati (título del cap. IX)
+  - forma: batai
+    pagina: '471'
+    se_ve: batey
+  - forma: naboria
+    pagina: '471'
+    se_ve: naboria
+  - forma: naboria
+    pagina: '472'
+    se_ve: naborias
+  - forma: naboria
+    pagina: '473'
+    se_ve: naboria
+  - forma: kuanin
+    pagina: '480'
+    se_ve: guanin
+  - forma: kuanin
+    pagina: '507'
+    se_ve: guanines
+  - forma: kuanin
+    pagina: '514'
+    se_ve: gua-nin
+  - forma: kemi
+    pagina: '50'
+    no_se_cita: 'la p. 50 dice «quemis», «otros animales que llaman mohuy» — el roedor, no el cemí: la lista maestra
+      fundió `çemi` y `quemí` en el lema `kemi`'
+  - forma: kuaiaba
+    pagina: '530'
+    no_se_cita: '«guayaba» no aparece en la copia íntegra (pp. 528-532, capa de texto): no se localiza'
+  que_es: 'las citas de Oviedo t. I que la pasada propondría y T1 no vio en imagen (verificación `ocr-sin-imagen`):
+    por T1 A1 no se citan hasta verlas. El 2026-09-24 se miraron en la copia íntegra (`pares_mirados_en_la_integra`:
+    lo que se ve, o por qué no se cita); `citas` es lo que quedó sin mirar. La copia íntegra está en el repo (fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf):
+    impresa = pdf − 120 contando las páginas desde 1 (M3 escribe «− 119» porque cuenta desde 0; comprobado en las
+    cabeceras de las impresas 143, 265, 471 y 530). Recortes para mirarlas: 6-fusion/scripts/recortes_oviedo_t1_integra.py'
+  citas: []
+dp.3.08_kalinago_de_goeje:
+  decision: 'A: citas (goeje-1939 con página) y registro en `notas` de las voces con apoyo; fundir `kalinagu`/`kalínagu`'
+  voces:
+  - clave: kati-kalinago
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: kati-kalinago
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 54, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 54 (habla de mujeres; hombres: nonum)».
+        REGISTRO: habla de mujeres (hombres: nonum), según Goeje; el lexicón no lo decía.'
+  - clave: barana
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: barana
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 55, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 55 (hombres, origen kalina; mujeres: balaua
+        ~ A bara)». REGISTRO: habla de hombres (mujeres: balaua ~ arawak bara), según Goeje; el lexicón no lo decía.'
+  - clave: buyei
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: buyei
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 37, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 37 (y p. 18 para behiko)».'
+  - clave: marisi-kalinago
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: marisi-kalinago
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 65, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 65 (habla de mujeres; hombres: aoasi)».
+        REGISTRO: habla de mujeres (hombres: aoasi), según Goeje; el lexicón no lo decía.'
+  - clave: kalinagu
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: kalinagu
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 43, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 43 (habla de hombres; mujeres: Kaliponam)».
+        REGISTRO: habla de hombres (mujeres: Kaliponam), según Goeje; el lexicón no lo decía.'
+  - clave: kalínagu
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: kalínagu
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 43, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 43». REGISTRO: habla de hombres (mujeres:
+        Kaliponam), según Goeje; el lexicón no lo decía.'
+  - clave: aban
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: aban
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 29, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 29».'
+  - clave: biama-kalinago
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: biama-kalinago
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 30, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 30».'
+  - clave: ma-kalinago
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: ma-kalinago
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 25, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 25 (m-, arahuaco); pp. 26 y 31 para -pa
+        y ua».'
+  - clave: hiñaru
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: hiñaru
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 40, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 40 — y revisar la glosa: «mujer (habla de
+        mujeres)», no «persona»». REGISTRO: habla de mujeres, según Goeje; el lexicón no lo decía.'
+  - clave: kanawa-caribe
+    existe_en_el_lexicon: true
+    ya_cita_goeje: false
+    edicion:
+      archivo: curiana_sim/curiana_lexicon.py
+      dict: VOCABULARIO_BASE
+      clave: kanawa-caribe
+      campo: notas
+      operacion: añadir al FINAL de `notas`, precedido de « · »
+      texto: 'PROCEDENCIA (dp.3.08 de #222, 2026-09-24): goeje-1939 p. 46, verificado en imagen (6-fusion/kalinago_goeje_1939.yaml
+        §cruce_con_el_lexicon). Propuesta de cita de M5: «goeje-1939 p. 46».'
+  fusion_kalinagu:
+    que: 'fundir `kalinagu` y `kalínagu` (k5 de M5): son dos claves para la misma línea de Goeje p. 43'
+    edicion: 'Propuesta: se queda `kalinagu` (Goeje imprime la forma sin tilde, «Kalinago», p. 43; la elección es
+      del frente, que mide antes cuál de las dos cita el resto del repo) y `kalínagu` pasa a FUERA_DEL_HABLA con
+      su entrada entera y esta huella al principio de `notas`: «Fundida en `kalinagu` (dp.3.08 de #222, 2026-09-24):
+      la misma voz de Goeje 1939 p. 43.» La glosa de `kalinagu` gana, al final de sus `notas`: «Variante con tilde
+      `kalínagu` archivada (dp.3.08); su glosa decía ''Caribe, autónimo del pueblo Caribe insular''.»'
+    medir_antes: '¿alguna de las dos está entre las candidatas de [Voces de fuera] o en sitios/clima (6-fusion/scripts/verificar_sitios_era2.py)?
+      Si lo está, archivarla mueve el prompt: se mide antes, como en cualquier archivo (CLAUDE.md, «El mundo nombra
+      voces del lexicón»).'
+    estado_actual:
+      kalinagu: Kalinago, gente propia (autónimo)
+      kalínagu: Caribe, kalínagu (autónimo del pueblo Caribe insular)
+  no_entra: k3 (la glosa de `hiñaru` 'persona' → 'mujer') y k4 (las ocho sin apoyo) son la opción B de M5, no la
+    A
+dp.3.07_P2_gumilla_en_neira:
+  decision: 'P2 A: las voces achaguas de Gumilla que corroboran a Neira y Ribero van como notas de sus entradas;
+    «se corrige el YAML de Neira y se regenera»'
+  por_que_es_del_frente: 'el generador de curiana_sim/lexicon_achagua.py (6-fusion/scripts/generar_lexicon_achagua.py)
+    lee `nota` del `vocabulario`: tocar el YAML obliga a regenerar el módulo, y regenerarlo mueve el score (CLAUDE.md,
+    «generados Y se importan»)'
+  archivo: 6-fusion/achagua_neira_ribero_1762.yaml
+  como: en cada entrada de `vocabulario` localizada por (castellano, pliego, lado), añadir al final de `nota` (o
+    crear `nota`) el texto; después `python 6-fusion/scripts/generar_lexicon_achagua.py`, comprobar que sólo cambian
+    esas `notas` del módulo, y `python 6-fusion/scripts/ensamblar_achagua_neira_ribero.py --check`
+  fuente: 6-fusion/gumilla_1791_2026-09-23.yaml §achagua.voces (verificadas en imagen donde lo dice)
+  aviso_de_independencia: 'Gumilla y Neira salen del mismo medio jesuita: «segunda mano del mismo taller», no dos
+    atestaciones ciegas. Por eso va en notas y no cambia ninguna capa'
+  ediciones:
+  - entrada:
+      castellano: Linage de tigre
+      pliego: 72
+      lado: der
+    texto: 'Gumilla 1791 t. I p. 112 da «Chavi» = Tigre (misma voz; Gumilla y Neira, mismo medio jesuita; dp.3.07
+      de #222)'
+  - entrada:
+      castellano: Vibrar la lanza
+      pliego: 97
+      lado: der
+    texto: 'Gumilla 1791 t. I p. 112 da «Chavina» = Lanza (misma voz; dp.3.07 de #222)'
+  - entrada:
+      castellano: Caribe
+      pliego: 46
+      lado: izq
+    texto: 'Gumilla 1791 t. I p. 112 da «Chavinavi» = Caribe, con dos etimologías achaguas («oriundo de Tigre» /
+      «hijos de Tigres con Lanzas»); coincide con el plural Chabinabi de aquí (dp.3.07 de #222)'
+  - entrada:
+      castellano: Arbol
+      pliego: 37
+      lado: der
+    texto: 'Gumilla 1791 t. I p. 114 (verificado en imagen) da «Aycubaverrenais», los que «se fingen hijos de los
+      Troncos»: aycuba-berrenai ''linaje del árbol'', la misma formación que Chabiberraenay (pl. 72 der.). Apoyo
+      a los linajes con nombre (dp.3.07 de #222)'
+  - entrada:
+      castellano: Agua
+      pliego: 32
+      lado: izq
+    texto: 'Gumilla 1791 t. I p. 114 (verificado en imagen) da «Univerrenais», los que «idean su estirpe de los
+      rios»: uni-berrenai ''linaje del agua''. Tercer testigo de que `uni` es agua (dp.3.07 de #222)'
+  - entrada:
+      castellano: Demonio, Diablo
+      pliego: 53
+      lado: izq
+    texto: 'Gumilla 1791 t. II pp. 23-24: «Los Indios Achaguas le llaman Tanasimi» — idéntica (dp.3.07 de #222)'
+  - entrada:
+      castellano: Cinco
+      pliego: 48
+      lado: izq
+    texto: 'Gumilla 1791 t. II p. 283 (verificado en imagen) da «Abacáje» = cinco, «los dedos de la mano» (dp.3.07
+      de #222)'
+  - entrada:
+      castellano: Diez
+      pliego: 55
+      lado: der
+    texto: 'Gumilla 1791 t. II p. 283 (verificado en imagen) da «Juchamacáje» = diez, «los dedos de ambas manos»:
+      la forma analítica de esta (dp.3.07 de #222)'
+  - entrada:
+      castellano: Veinte
+      pliego: 96
+      lado: der
+    texto: 'Gumilla 1791 t. II p. 283 da «Abacaytacáy» = veinte, «los dedos de piés y manos» (dp.3.07 de #222)'
+  - entrada:
+      castellano: Cuarenta
+      pliego: 51
+      lado: der
+    texto: 'Gumilla 1791 t. II p. 283 da «Juchámatatacáy» = cuarenta, «los dedos de dos hombres»: confirma la base
+      veinte, tacay = los dedos de un hombre (dp.3.07 de #222)'
+  - entrada:
+      castellano: Quarenta
+      pliego: 87
+      lado: izq
+    texto: 'Gumilla 1791 t. II p. 283 da «Juchámatatacáy» = cuarenta (dp.3.07 de #222)'
+  no_entran: 'Manóa (difiere en la glosa: laguna / mar), la frase de «matata» (aprisa / poco a poco), catena y arabata
+    (no están en Neira): P2 A dice «las que corroboran»'
+dp.3.10_togogo_tokoko_chogogo:
+  decision: F2.4 A, F2.6 A y la nota de `chogogo` con lo de Goeje (M5 §7)
+  fuente: '6-fusion/fauna_paraguana_aves_2026-09-22.yaml (ave-040, ave-041; FA2, #205) y 6-fusion/issues-pendientes/vocabularios-antillanos-2-2026-09-22.md
+    §7 (M5, #219)'
+  ediciones:
+  - archivo: curiana_sim/curiana_lexicon.py
+    dict: VOCABULARIO_BASE
+    clave: chogogo
+    campo: notas
+    operacion: añadir al FINAL de `notas`, precedido de « · »
+    texto: 'VARIANTE DE TIERRA FIRME (dp.3.10 F2.4 A de #222, 2026-09-24): «togogo», con t- donde las islas tienen
+      ch-, en dos fuentes independientes del s. XX verificadas en imagen: Alvarado 1921 p. 292 («¿Es el TOGOGO de
+      Coro?») y Esteves 1989 p. 134 (lema TOGOCO, «Togogo: ave ansérida»). Si es la misma voz, chogogo deja de ser
+      sólo insular. Y Goeje 1939 p. 60 la da como caribe: «flamant tuguku, K tokoko, dialecte de Bonaire chogogo»
+      (M5 §7): si Goeje tiene razón, el flamenco de las islas lleva nombre caribe. No cambia la capa: es evidencia
+      en conflicto, escrita'
+  - archivo: curiana_sim/curiana_lexicon.py
+    dict: VOCABULARIO_BASE
+    clave: tokoko
+    campo: notas
+    operacion: añadir al FINAL de `notas`, precedido de « · »
+    texto: 'PROCEDENCIA COMPARADA (dp.3.10 F2.6 A de #222, 2026-09-24): alvarado-1921 p. 292 da la cadena gal. tokoka,
+      car. tokóko, ar. tukkuku (verificado en imagen, FA2 ave-041). Es comparanda caribe/arahuaca: la entrada NO
+      sube de capa, sigue caquetío-hipotético (acuñación de la simulación)'
+  sin_edicion: '`togogo` no es clave del lexicón y no se crea: F2.4 A la registra en `notas` de `chogogo`'
+dp.3.23_taino_hipotetico_json:
+  decision: moverlo a 6-fusion/ con su fecha, no borrarlo
+  por_que_es_del_frente: 'vive en curiana_sim/ y dos scripts de campaña lo leen por esa ruta: la orden del corte
+    es no moverlo si algo lo lee'
+  lectores:
+  - 6-fusion/scripts/cruce_taino_caquetio.py — JSON_TAINO_HIP = os.path.join(R, "curiana_sim", "taino_hipotetico.json")
+  - 6-fusion/scripts/medir_taino_inventario.py — p = os.path.join(SIM, "taino_hipotetico.json")
+  ediciones:
+  - 'git mv curiana_sim/taino_hipotetico.json 6-fusion/taino_hipotetico_2026-06-21.json   # la fecha es la de su
+    único commit, 573719a'
+  - '6-fusion/scripts/cruce_taino_caquetio.py: JSON_TAINO_HIP = os.path.join(R, "6-fusion", "taino_hipotetico_2026-06-21.json")'
+  - '6-fusion/scripts/medir_taino_inventario.py: p = os.path.join(RAIZ_DE_6_FUSION, "taino_hipotetico_2026-06-21.json")
+    — con la variable de ruta que ese script ya use para 6-fusion/'
+  - 'una línea en el JSON no se puede poner (no admite comentarios): la huella va en el mensaje del commit y en
+    6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+  medir_despues: los dos scripts corren igual que antes (--check o su salida por defecto) y `git grep taino_hipotetico`
+    ya no apunta a curiana_sim/

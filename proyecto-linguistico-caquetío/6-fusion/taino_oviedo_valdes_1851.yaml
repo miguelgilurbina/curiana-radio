@@ -646,6 +646,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: casa
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 163, 164, 165, 167 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `bohio` y `bohío` (dos claves), SIN procedencia"
     aporta: "glosa explícita («quiere deçir casa ó morada») y, sobre todo, el alcance: es voz de todas las islas, no de una"
 
@@ -660,6 +661,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: casa
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 164, 165 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `caney`, glosa «caney, bohío rectangular del cacique»"
     # 🔴 conflicto de glosa, medido
     contradice_al_lexicon: >-
@@ -682,6 +684,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [rito, objeto, casa]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 163, 165, 471 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `batey`, glosa «batey, plaza central del poblado, cancha de…»"
     ojo: >-
       Para Oviedo `batey` es EL JUEGO, no la plaza: «el juego de la pelota que
@@ -701,6 +704,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [cultivo, ecologia]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 143, 149, 163, 269, 370 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `kunuku`, sin glosa legible y SIN procedencia"
     aporta: "dos glosas explícitas y cinco páginas. La forma del lexicón (`kunuku`) es la papiamentu moderna, no la de la fuente (`conuco`)"
 
@@ -735,6 +739,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [navegacion, objeto]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 170, 171 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "NO — `canoa` no es clave del lexicón (sí `piragua`)"
     aporta: "candidata nueva, con la glosa técnica completa y el modo de fabricación"
 
@@ -751,6 +756,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [navegacion, objeto]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 170, 344 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `piragua`, glosa «piragua, canoa grande de un palo»"
     ojo: >-
       Para Oviedo `canoa` y `piragua` son LA MISMA COSA con dos nombres según
@@ -771,6 +777,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [alimento, cultivo]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 264, 265, 266, 267, 268 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `maisi` y `maíz` (dos claves), glosa «maíz (Zea mays)», SIN procedencia"
     aporta: >-
       La forma de Oviedo es **mahiz**, no `maisi`. Y da la oposición que
@@ -790,6 +797,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [alimento, cultivo]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 264, 268, 271, 272 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `cazabi` y `casabe` (dos claves). `cazabi` es la forma que `FORMA_DE_LA_ESFERA` enseña en vez de «casabe»"
     aporta: >-
       Cita para la voz que el motor YA enseña con forma indígena. La forma de
@@ -809,6 +817,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [planta, alimento, cultivo]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 264, 268, 269, 270, 271, 272 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `yuca`, sin glosa legible, SIN procedencia"
     ojo: "`yuca` es de las 14 voces que, según la decisión del 2026-09-18, se quedan con grafía castellana porque la grafía ES la transcripción de la fuente. Esto lo confirma: Oviedo escribe `yuca`"
 
@@ -837,6 +846,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [planta, alimento, cultivo]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'p. 273 vista en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: no
 
   - forma_fuente: axi
@@ -854,6 +864,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [planta, alimento, cultivo]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 275, 279, 308 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `aji`, glosa «ají, chile (Capsicum spp.)», SIN procedencia"
     ojo: >-
       La forma de la fuente es `axi` (con x = /ʃ/), no `aji`. Y Oviedo declara
@@ -873,6 +884,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [planta, alimento, cultivo]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 273, 274, 279 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `batata`, sin glosa legible, SIN procedencia"
 
   # ⭐ las cinco especies de batata: cinco voces con una sola cita
@@ -1001,6 +1013,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: planta
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'p. 305 vista en imagen en la copia íntegra; p. 530 NO: «guayaba» no aparece en la copia íntegra (pp. 528-532, capa de texto): no se localiza (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `guayaba`, glosa «guayaba (Psidium guajava)», SIN procedencia"
     ojo: >-
       Oviedo NO dice aquí de quién es la voz. `atribucion: no-declarada`: la
@@ -1021,6 +1034,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: planta
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'p. 323 vista en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `papaya`, glosa «papaya, lechosa (Carica papaya)», SIN procedencia"
     # matiz que cambia el sentido del dato
     ojo: >-
@@ -1145,6 +1159,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: [objeto, rito]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 480, 507, 514 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `guanin`, glosa «guanín, aleación de oro y cobre, metal sagrado», SIN procedencia"
     estado: "LOCALIZADA, NO LEÍDA — tres páginas identificadas, el pasaje no se leyó entero. Queda para la segunda pasada"
 
@@ -1157,6 +1172,7 @@ la_espanola:
     variedad_declarada: no-declarada
     campo: animal
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'p. 433 vista en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `manati`, glosa «manatí (Trichechus manatus), vaca marina», SIN procedencia"
     ojo: "el pasaje leído describe la caza, no atribuye la voz. `no-declarada`: no cuenta como taína sin más lectura"
 
@@ -1221,6 +1237,7 @@ otras_islas:
     variedad_declarada: "la de San Juan"
     campo: [autoridad, parentesco]
     verificacion: ocr-sin-imagen
+    verificado_en_la_integra: 'pp. 471, 472, 473 vistas en imagen en la copia íntegra (2026-09-24, dp.3.21 de #222; fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1_completo.pdf, impresa = pdf − 120)'
     en_el_lexicon: "sí — `naboria`, glosa «naboría, servidor permanente, trabajador dep[endiente]», SIN procedencia"
     ojo: >-
       Las tres citas son de uso COLONIAL (el naboría de un español preso, cuatro
