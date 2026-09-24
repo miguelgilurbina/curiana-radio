@@ -210,3 +210,12 @@ Historia t. I, lib. I, **cap. XLVI** (capa de texto; el PDF es el ebook de
 Gutenberg y se cita por capítulo): «Estos mosquetes, ó como los llamaremos,
 llaman ellos *tabacos*». Es el pasaje que cita Zayas, y coincide con la
 Apologética p. 181. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se halló:** Matininó en boca de los informantes de Colón (enero de 1493), «una
+isla … habitada de solas mujeres», que Las Casas cree «fábulas» (lib. I, cap.
+LXVII; la paginación de esta copia es interpolada). **No se halló:** reverso ni
+guaicán (el vol. 1 no llega a la Cuba de 1494).
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

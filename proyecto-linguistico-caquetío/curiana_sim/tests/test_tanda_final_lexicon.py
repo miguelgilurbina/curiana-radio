@@ -135,12 +135,15 @@ def test_a_tabako_gana_el_rollo_y_cierra_lo_que_zayas_dejaba_abierto():
 
 
 def test_a_las_voces_de_zayas_sin_clave_no_entran_por_la_puerta_de_atras():
-    """`bagua`, `anaki`, `anua` y `manaya` no son claves del lexicón: su
-    etiqueta se decide en la lista maestra, y el lexicón no gana entradas que
-    nadie mandó fusionar (`bagua` en el habla de la esfera queda para Miguel)."""
-    for voz in ("bagua", "anaki", "anua", "aura", "manaya"):
+    """`anaki`, `anua` y `manaya` no son claves del lexicón: su etiqueta se
+    decide en la lista maestra, y el lexicón no gana entradas que nadie mandó
+    fusionar. `bagua` SÍ entró el 2026-09-24 («Ok a todo»: era lo que quedaba
+    para Miguel), como taíno 'mar' con su cronista, Oviedo t. I p. 436."""
+    for voz in ("anaki", "anua", "aura", "manaya"):
         assert voz not in VOCABULARIO_BASE, voz
         assert voz not in FUERA_DEL_HABLA, voz
+    assert VOCABULARIO_BASE["bagua"]["fuente"] == "taíno"
+    assert "p. 436" in VOCABULARIO_BASE["bagua"]["notas"]
 
 
 def test_a_daca_tiene_un_solo_testigo_de_la_frase():
@@ -308,8 +311,11 @@ def test_c_4a_iro_y_uco_se_ensenan_con_su_rotulo_y_siguen_en_el_desafijador():
         assert afijo in L.TODAS_LAS_REGLAS, afijo
         assert L.REGLAS_ESTEVES[afijo]["capa"] == "caquetío-hipotético"
         assert "Esteves 1989" in L.REGLAS_ESTEVES[afijo]["esteves"]
-    # el desafijador no se movió: mismas claves, mismo núcleo
-    assert set(L._SUFIJOS_CAQ) == sufijos_antes
+    # el desafijador no se movió: mismas claves, mismo núcleo. Desde el
+    # 2026-09-24 (dp.1.12) se suman `-oa` y `-bo`, los formantes de Oliver cap. 2
+    # pp. 147-148, que se pelan y no se enseñan; `-kiva` no, porque es `kiba`.
+    assert set(L._SUFIJOS_CAQ) == sufijos_antes | {"-oa", "-bo"}
+    assert "-kiba" not in L._SUFIJOS_CAQ and "-kiva" not in L._SUFIJOS_CAQ
     assert L.nucleo_de_token("dara-iro") == ["dara"]
     # y el agujero de *lumina* sigue cerrado (la razón de no elegir la c)
     for forma in ("lumina-bana-iro", "lumina-bana-uco"):

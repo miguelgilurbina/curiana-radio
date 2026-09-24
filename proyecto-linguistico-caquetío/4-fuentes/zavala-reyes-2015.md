@@ -487,3 +487,16 @@ cita).
 
 [[05_geografia_politica_y_sucesion]] · [[oliver-1989-cap2]] · [[arcaya-1920]] ·
 [[oliver-1989-apendice-a]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido el glosario y cruzado con el lexicón (las voces caquetías atestiguadas de mar y las de creencia). Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `zavala2015`: 2 ventanas creencia × mar (2 con un nombre de la costa occidental cerca), 0 creencia × cielo de control.
+
+**Se halló:** El léxico del mar (para, parawa, samuro, supi; kari, hoy hipotética) y el de la creencia (barsure, boratio, kana, kapu, kapo, kapubana, buio) NO se tocan: ninguna voz de creencia tiene glosa marina ni al revés.
+
+**No se halló:** Cero intersección.

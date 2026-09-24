@@ -61,3 +61,16 @@ cosmovisión wayuu y qué dice eso, o no dice, del mar caquetío?
 
 `6-fusion/fauna_paraguana_mar_2026-09-22.yaml` (nombres wayuu de las tortugas;
 `cosmovision_marina.comparanda`).
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se releyó cm-c3:** las tortugas como «cattle» de Pulowi se apoyan en Robles
+2008 y Villate 2010, y el cerro donde Pulowi las cura en «Guerra Curvelo, 2011»,
+que es otra obra (el Cuadernillo del repo, 2023, no nombra a Pulowi). Lo único
+de primera mano es un pescador: las tortugas son «gift from Maleiwa» (p. 187; y
+p. 194). El autor fecha la división pastores/pescadores después de la invasión
+europea, a mediados del s. XVIII (p. 195). La tesis no está en el repo (copia
+de sesión). **Veredicto:** Pulowi dueña de las tortugas es cita de cita:
+`reconstruido` como mucho.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

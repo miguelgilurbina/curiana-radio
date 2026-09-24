@@ -237,3 +237,16 @@ interpolado; (3) Navarrete pone palabras que su fuente no tiene («guanines»,
 
 [[angleria-1892]] · [[colon-hernando-1892]] · [[navarrete-1859-viages-colon]] ·
 [[oliver-1989-cap3]] · [[gonzalez-batista-nombre-de-coro]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero; leídas las ventanas con un nombre de la costa occidental cerca. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `navarrete1829`: 54 ventanas creencia × mar (7 con un nombre de la costa occidental cerca), 7 creencia × cielo de control.
+
+**Se halló:** Nada de creencia: rescates de perlas y oro, capitulaciones, Vespucio.
+
+**No se halló:** Cero.

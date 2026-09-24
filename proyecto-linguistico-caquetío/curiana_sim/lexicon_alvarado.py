@@ -50,7 +50,7 @@ CANDIDATOS_A: dict[str, dict] = {
         "pagina": 255,
         "lema_alvarado": "POPORO",
         "nivel": "A",
-        "razon": "Alvarado la atribuye EXPLÍCITAMENTE a los antiguos Caquetíos (y a los Guajiros), citando a Castellanos. Es la única voz de todo el glosario con atribución caquetía directa.  [curación humana]",
+        "razon": "Alvarado la atribuye EXPLÍCITAMENTE a los antiguos Caquetíos (y a los Guajiros), citando a Castellanos. ⚠️ CORREGIDO el 2026-09-23 (cc.3 / tf.6): leído Castellanos, el poporo es del guanebucán Boronata (Elegías p. 202), no de ningún caquetío; la voz salió del habla como español colonial de Tierra Fi",
     },
 }
 
@@ -1049,8 +1049,8 @@ AUDITORIA_82: dict[str, dict] = {
         "pagina": 255,
         "forma_alvarado": 'POPORO',
         "cita": "Arma, a manera de porra, usada por los an tiguos Caquetíos y los Guagíros. Ref. Cast. Bleg. I. c. 3?; — A^. Reino, I. 46. 65. Cf. Bapóron, Tolondro, lobanillo, || chichón, tumor, o cosa así.~'Ya tendrá para entretenerse con los poporos y cardenales que le hice'. (Tosta G., Bl 19 ",
-        "veredicto": "confirma",
-        "razon": "Alvarado la atribuye a los antiguos Caquetíos y cita a Castellanos. La glosa del lexicón ('maza-porra, arma de combate') coincide. → `caquetío-atestiguado` queda JUSTIFICADO, con cita.",
+        "veredicto": "reclasifica",
+        "razon": "Alvarado la atribuye a los antiguos Caquetíos y cita a Castellanos, pero el pasaje de Castellanos es del guanebucán Boronata (Elegías p. 202): cc.3 / tf.6 (2026-09-23) la sacó del habla como `español-colonial`. Hasta ese día este veredicto decía «confirma».",
     },
     "quidi": {
         "aparece": "no",
@@ -1197,34 +1197,35 @@ AUDITORIA_82: dict[str, dict] = {
 # Lisandro Alvarado es el compilador `A` del glosario de Zavala Reyes
 # 2015. Toda entrada del lexicón con esa sigla debe poder rastrearse a
 # una página concreta de ESTE glosario, o la cita es de tercera mano.
-# Resultado: 24/26 rastreadas.
+# Resultado: 25/27 rastreadas.
 CADENA_CUSTODIA_ZAVALA_A: dict[str, dict] = {
     "bachure": {"pagina": 19, "lema_alvarado": "BACHURE", "texto": "Maneto, patituerto. Us. en Coro."},
     "barabara": {"pagina": 21, "lema_alvarado": "BARABARA", "texto": "Clavija ornata, C. macrocarpa. Mirsináceas. Árbol de Coro. ''Madera dura y pesada, semejante a la de las especies de Jacquinia; se conoce fácilmente p"},
-    "cachipo": {"pagina": 43, "lema_alvarado": "CACHÍPO", "texto": "Heliconia Bihai. Bijao, arriba. Ref. Gilii, — En I. 18o. 1 -Pecíolo- de la hoja seca y caduca del banano. — 1 arec. kasipa. Sin. Baje^ro. En Coro es v"},
-    "cacuro": {"pagina": 40, "lema_alvarado": "CACURO", "texto": "En Coro significa avispero. ."},
-    "camaroa": {"pagina": 48, "lema_alvarado": "CAMARÓA", "texto": "Árbol lactescente de Coro, de hojas algo parecidas a las del Papayo."},
-    "caquetillo": {"pagina": 56, "lema_alvarado": "CAQUETILLO", "texto": "Árbol de construcción del Zulia. ¿Voz afín de caquetío?"},
-    "chaguanco": {"pagina": 112, "lema_alvarado": "CHAGUÁNCO", "texto": "Zorro. Voz usada en Coro. AGUARÁ CPI"},
-    "dacagua": {"pagina": 130, "lema_alvarado": "DACÁGUA", "texto": "Árbol de Coro y Barquisimeto, de corteza gris cenicienta cuando seca ; madera compacta, de color amarillento uniforme. Da trozos de 5 a 6 pulgadas de "},
-    "guacuaro": {"pagina": 143, "lema_alvarado": "GUACUARO", "texto": "Palo de tinte que se produce en Coro."},
-    "guamacho": {"pagina": 148, "lema_alvarado": "GUAMÁCHO", "texto": "Nombre dado a varios árboles del géne ro Pcreskia, fam. de las Cactáceas, cuyo tronco está cubierto de manojillos de espinas en disposición quincuncia"},
+    "chawanko": {"pagina": 112, "lema_alvarado": "CHAGUÁNCO", "texto": "Zorro. Voz usada en Coro. AGUARÁ CPI"},
+    "dakawa": {"pagina": 130, "lema_alvarado": "DACÁGUA", "texto": "Árbol de Coro y Barquisimeto, de corteza gris cenicienta cuando seca ; madera compacta, de color amarillento uniforme. Da trozos de 5 a 6 pulgadas de "},
     "isiro": {"pagina": 176, "lema_alvarado": "ISÍRO", "texto": "Árbol de construcción de Coro."},
     "jajato": {"pagina": 178, "lema_alvarado": "JAJÁTO", "texto": "Chloris radíala. Especie de yerba forrajera. Sin. Pata de gai.lina."},
-    "laguari": {"pagina": 184, "lema_alvarado": "LAUADRÍ", "texto": "Árbol indeterminado del E. Falcón. D. t. Laguadrí."},
+    "kachipo": {"pagina": 43, "lema_alvarado": "CACHÍPO", "texto": "Heliconia Bihai. Bijao, arriba. Ref. Gilii, — En I. 18o. 1 -Pecíolo- de la hoja seca y caduca del banano. — 1 arec. kasipa. Sin. Baje^ro. En Coro es v"},
+    "kaketillo": {"pagina": 56, "lema_alvarado": "CAQUETILLO", "texto": "Árbol de construcción del Zulia. ¿Voz afín de caquetío?"},
+    "kakuro": {"pagina": 40, "lema_alvarado": "CACURO", "texto": "En Coro significa avispero. ."},
+    "kamaroa": {"pagina": 48, "lema_alvarado": "CAMARÓA", "texto": "Árbol lactescente de Coro, de hojas algo parecidas a las del Papayo."},
+    "kiwawa": {"pagina": 261, "lema_alvarado": "GUAGUA", "texto": "Especie de haba de Coro, grande y blanca. Cf. Caráota chivata."},
+    "lawari": {"pagina": 184, "lema_alvarado": "LAUADRÍ", "texto": "Árbol indeterminado del E. Falcón. D. t. Laguadrí."},
     "orumo": {"pagina": 234, "lema_alvarado": "ORÚMO", "texto": "Myrcia cHcullata. Mirtáceas. 1—En Coro, el 1 AFÁMATE (?). Madera poco densa, fibrosa, pardusca o ama — rillenta matizada, del aspecto de la del pardil"},
     "paugis": {"pagina": 244, "lema_alvarado": "PAUJÍ", "texto": "Bumclia huxifolia. Sapotáceas. Árbol espinoso, de hojas elípticas, redondeadas en el ápice, acuñadas en la base, enterísimas, medio coriáceas, lampiña"},
     "piritu": {"pagina": 253, "lema_alvarado": "PÍRITU", "texto": "Bactris Piritu. Pequeña palmera, alta de 5 a 7 m., de tallo recto, delgado, cilindrico, con cicatrices peciolares de trecho en trecho y espinas negras"},
-    "quiguagua": {"pagina": 261, "lema_alvarado": "GUAGUA", "texto": "Especie de haba de Coro, grande y blanca. Cf. Caráota chivata."},
     "ruba": {"pagina": 266, "lema_alvarado": "RÚBA", "texto": "Especie de abeja silvestre negra de Coro. Véa— se RuBÍTA. 1 Planta de Mérida, y su raíz, que es un tu1 bérculo como la patata. Ref. Pie. 300."},
-    "sibidigua": {"pagina": 277, "lema_alvarado": "SIBIDÍGUA", "texto": "Jatropha gossypifolia. Túatúa. Voz us. en Lara y Falcón."},
+    "sibidiwa": {"pagina": 277, "lema_alvarado": "SIBIDÍGUA", "texto": "Jatropha gossypifolia. Túatúa. Voz us. en Lara y Falcón."},
     "surupa": {"pagina": 279, "lema_alvarado": "SURÚPA", "texto": "Blatta orientalis. Corredera, curiana. Sú rrttja en guajibo es cucaréicha; debe ser corrupción de su RÚPV, que a su vez parece tener la misma raíz que"},
+    "tukeke": {"pagina": 300, "lema_alvarado": "TUQUÉQUE", "texto": "Saurios de la familia de los Ascalabo tos, de dientes implantados en el borde interno de la man díbula, faltando los palatinos; ojos grandes, sin párp"},
     "turupia": {"pagina": 302, "lema_alvarado": "TURÚPIA", "texto": "Acacia sp. Especie de acacia o cují de Co ro. Cf. Trupillo."},
     "ubeda": {"pagina": 303, "lema_alvarado": "ÚBEDA", "texto": "Acacia foetida. Mapurite:, Cují hediondo."},
+    "wakuaro": {"pagina": 143, "lema_alvarado": "GUACUARO", "texto": "Palo de tinte que se produce en Coro."},
+    "wamacho": {"pagina": 148, "lema_alvarado": "GUAMÁCHO", "texto": "Nombre dado a varios árboles del géne ro Pcreskia, fam. de las Cactáceas, cuyo tronco está cubierto de manojillos de espinas en disposición quincuncia"},
     "yabo": {"pagina": 307, "lema_alvarado": "YABO", "texto": "Ccrcidium viride. Leguminosas. Árbol no muí elevado, ramoso, de tronco verde, resinoso ; hojas recompuestas, con 1 ó 2 pares de pínulas, y estas con 5"},
     "yagruma": {"pagina": 309, "lema_alvarado": "YAGRUMA", "texto": "En Coro es lo mismo que caracol (mo lusco )"},
-    "cocuy": {"pagina": None, "lema_alvarado": None, "texto": "p.84, dentro del bloque COCUY/COCUIZA que el OCR fusionó ('D. t. cucúi, que es la forma primitiva')"},
-    "guay": {"pagina": None, "lema_alvarado": None, "texto": "p.145, leído por el OCR como 'GUÁL. Bombax sp. Ceiba. Voz usada en Coro'"},
+    "kokuy": {"pagina": None, "lema_alvarado": None, "texto": "no localizada"},
+    "way": {"pagina": None, "lema_alvarado": None, "texto": "no localizada"},
 }
 
 
@@ -1235,9 +1236,9 @@ TOTALES = {
     "nivel_B": 36,
     "nivel_C": 13,
     "nivel_D": 57,
-    "f1_confirma": 7,
+    "f1_confirma": 6,
     "f1_no_concluyente": 64,
-    "f1_reclasifica": 11,
-    "cadena_zavala_A_total": 26,
-    "cadena_zavala_A_trazadas": 24,
+    "f1_reclasifica": 12,
+    "cadena_zavala_A_total": 27,
+    "cadena_zavala_A_trazadas": 25,
 }

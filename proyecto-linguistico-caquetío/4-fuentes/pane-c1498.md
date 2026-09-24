@@ -177,3 +177,18 @@ marcada como lectura.
   no se puede decidir más.
 
 Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se preguntó** por el mar en la creencia taína. **Se halló:** el mar es uno de
+los saberes de origen (proemio: «cómo se hizo el mar»); el mito de Yaya (caps.
+IX-X, cm-c2 verificado) con dos precisiones: Yaya MATA al hijo, y los huesos
+vueltos peces SE COMEN; Guahayona y la mujer que deja «en el mar», Guabonito,
+que le da guanines y cibas (caps. II-VI); el cobo, «el caracol de mar» (cap.
+V); peces llevados al cemí en los días solemnes y el mal mandado «a la montaña,
+o al mar» (cap. XVI); los cemíes del agua son de lluvia y viento (Guabancex,
+cemí mujer de la tormenta, de un cacique; caps. XI, XV, XXIII). «Yocahu Vagua
+Maorocoti» está en el proemio, sin glosa. **No se halló:** ningún cemí del mar;
+«huracán» 0 (la tormenta es Guabancex).
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

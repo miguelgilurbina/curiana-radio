@@ -200,6 +200,7 @@ HOMOGRAFOS_ES: dict[str, str] = {
     "capo":   "#59 (E) 'duende'. Caquetía (cf. #60 capu 'demonio'); colisión menor con 'capo'.",
     "carama": "#64 (E) 'ramazón'. Caquetía; 'carama' existe en español rural (escarcha).",
     "cocuy":  "#87 'penca; planta que da un vino'. Indigenismo de circulación pan-venezolana: ATRIBUCIÓN DÉBIL además de homógrafo.",
+    "baja":   "#23 (E) 'caño'. Hipotética (sólo Esteves, cc.4). Colisiona con el castellano 'baja' (bajar, bajo), de altísima frecuencia: la marca es imprescindible.",
     "dato":   "#105 (HB) 'fruto del cardón'. Caquetía, pero 'dato' es altísima frecuencia en español: la marca es imprescindible.",
     "guaca":  "#123 (E) 'ave, cotorra'. Caquetía; 'guaca' español (quechua, tesoro) es otra cosa.",
     "guay":   "#147 (E)(A) 'árbol parecido a la ceiba'. Caquetía; colisiona con la interjección.",
@@ -291,6 +292,7 @@ NO_ES_LA_MISMA_VOZ: dict[str, str] = {
     "turupia": "#263 (AM+A) 'árbol espinoso. Sitio en Cumarebo'. El homógrafo es `turupia-achagua` 'toche'.",
     "ima":     "#165 (E+PMA) AFIJO 'humedad, quebrada'. El homógrafo es el lokono `ima` 'enemigo'; un afijo no es una clave del léxico.",
     "coa":     "#6 (AM+PMA) variante del AFIJO `-aima` 'abundancia'. El homógrafo es `koa` (forma_fuente «coa»), el palo de siembra: misma grafía colonial, distinto morfema.",
+    "baba":    "#23 (E) variante «baba» de «Baja» 'caño' (Esteves p. 19: «baba y baja, indistintamente significan: caño»). El homógrafo es `baba` 'padre', la reconstruida que la tanda de las hermanas archivó (2026-09-24): otra voz. Sin esta fila el minador daba #23 por «ya está» y `baja` no entraba nunca.",
     "aburi":   "TOPÓNIMO 'Para designar las aguas de un río lleno de arena'. El homógrafo es `aburi` 'tener vergüenza', caquetío reconstruido desde las hermanas (mujeres kalinago aburi = lokono (h)aburi, Goeje 1939 p. 74; tanda de las hermanas, 2026-09-24): otro referente. Sin esta fila, la regeneración sacaba el topónimo de TOPONIMOS_ZAVALA.",
 }
 
@@ -365,6 +367,12 @@ CLASE_DE_LA_RAIZ: dict[str, dict] = {
                "trae el lokono `ipi-lli-be` 'ser grande' como v_raiz. La achagua "
                "verbaliza y nominaliza la misma raíz: `numanudau` 'engrandecer', "
                "`manucaicasi` 'grandeza' (neira-ribero-1762)."},
+    "baja": {
+        "cat": "sust", "clase": "nombre",
+        "por": "'Caño': un accidente del agua, un nombre. Entra el 2026-09-24 "
+               "(tanda de las hermanas, «Ok a todo»); la regeneración la había "
+               "emitido como v_raiz por el tier heurístico. zavala-reyes-2015 #23 (E), de esteves-1989 p. 19, la da "
+               "como formante del topónimo Bajabaroa ('el caño de Baroa')."},
     "bachure": {
         "cat": "v_estativo", "clase": "estativo",
         "por": "'Maneto, patituerto' es defecto corporal, y el lokono lo dice con "
@@ -1251,6 +1259,18 @@ FUENTE_CURADA: dict[str, dict] = {
                "caquetía. Retroabstraída, como chiriware y tukeke (2026-09-10). "
                "Esteves p. 47 (verificado: imagen): Juderecal (p. 47): colectivo "
                "de judereque, árbol ramoso parecido al chiguare.",
+    },
+    "baja": {   # → `baja`
+        "fuente": "caquetío-hipotético",
+        "decision": "tanda de las hermanas, 2026-09-24 («Ok a todo, que no quede ninguna tarea pendiente»), con la regla de cc.4 1-B",
+        "por": "En «#23 Baja, baba (E): Caño» la (E) es Esteves 1989, y es su "
+               "única fuente: la etimología de un topónimo, análisis suyo. "
+               "Esteves p. 19 (verificado: imagen, PDF 1 p. 13): «En este caso, "
+               "el topónimo querrá decir: el caño de Baroa, ya que baba y baja, "
+               "indistintamente significan: caño» (s.v. BAJABAROA). No cita a "
+               "nadie. Hasta el 2026-09-24 no entraba al habla: el minador la "
+               "daba por «ya está» porque su variante «baba» casaba con `baba` "
+               "'padre', otra voz.",
     },
     "juri": {   # → `juri`
         "fuente": "caquetío-hipotético",

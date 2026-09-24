@@ -145,3 +145,18 @@ smoking the cohoba» (texto del repo y `6-fusion/taino_brinton_1871.yaml`). La
 nota del lexicón que atribuye `cohiba` a Brinton cita mal la forma. ✅
 Verificado en imagen (pdf 20 = p. 12; pdf 21 = p. 13), sobre el PDF que
 repuso #204: la rama de la tanda de la base lo tenía vacío. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.cohiba_tabako.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se verificó cm-c1 (p. 18, imagen):** Orehu, «the spirit of the waters», da la
+maraca y el semeci a Arawanili; los arahuacos vivían «in an island to the
+north»; los negros de la colonia la llaman «watra-mamma». **Corrección a la
+bitácora de FA3:** Brinton SÍ dice de dónde lo toma, en la nota 49: Brett,
+*Indian Tribes of Guiana*, Part II, chap. x (1868). Son de Brinton, no de la
+fuente, la identificación Yocauna = Yauhahu, la de Atabeira con Orehu y la
+etimología acuática de Atabey («itabo, lake … era, water», p. 18), que es el
+primer «madre de las aguas» del repo. En p. 17 funde a Yaya con el ser supremo
+y extiende el mito a «all the waters of the world». `Bagua, the sea. Ar. bara`
+(p. 11).
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

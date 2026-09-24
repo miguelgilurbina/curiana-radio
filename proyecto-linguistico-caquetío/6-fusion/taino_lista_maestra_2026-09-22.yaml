@@ -12,14 +12,14 @@ meta:
     eso `atestaciones_independientes` cuenta cronistas distintos, no obras.'
   insumos:
     brinton-1871: 68
-    oviedo-valdes-1851: 60
+    oviedo-valdes-1851: 61
     las-casas-1875: 26
     pane-c1498: 33
     goeje-1939: 154
     bachiller-morales-1883: 34
     bachiller-morales-1883 (M5): 114
     coll-y-toste-1897 (M5): 1025
-  registros_leidos: 1514
+  registros_leidos: 1515
   registros_sin_forma_utilizable: 2
   aviso_de_lema: '`lema` agrupa grafías coloniales y fonémicas para poder contar; NO es el lema canónico
     de una entrada, que se fija en la fusión (`fusionar-propuesta` §5).'
@@ -32,7 +32,7 @@ resumen:
   con_dos_o_mas_cronistas_independientes: 96
   con_un_cronista: 265
   sin_cronista_pero_en_una_obra: 673
-  con_variedad_o_isla_declarada: 547
+  con_variedad_o_isla_declarada: 548
   sacadas_del_taino_por_alguna_fuente: 80
   con_aviso_de_independencia: 762
   por_campo_declarado:
@@ -93,11 +93,11 @@ las_claves_tainas_del_lexicon:
   que_mide: 'para cada clave taína del lexicón, qué clase le toca en la lista maestra. `sin-voz-en-la-lista`
     significa que ninguna de las seis transcripciones la recoge: ni atestiguada ni desmentida, simplemente
     ausente.'
-  claves: 46
+  claves: 45
   con_al_menos_un_cronista: 39
   por_clase:
     i-primaria-del-XVI: 39
-    ii-solo-secundaria: 4
+    ii-solo-secundaria: 3
     sin-voz-en-la-lista: 3
   detalle:
   - clave: aji
@@ -121,12 +121,20 @@ las_claves_tainas_del_lexicon:
     - Oviedo
     - Pedro Mártir
     sacada_del_taino: null
+  - clave: bagua
+    capa_en_el_lexicon: taíno
+    en_la_lista_maestra: true
+    clase: i-primaria-del-XVI
+    atestaciones_independientes: 1
+    cronistas: &id011
+    - Oviedo
+    sacada_del_taino: null
   - clave: batata
     capa_en_el_lexicon: taíno
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 4
-    cronistas: &id012
+    cronistas: &id013
     - Colón
     - Las Casas
     - Oviedo
@@ -137,7 +145,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id011
+    cronistas: &id012
     - Las Casas
     - Oviedo
     sacada_del_taino: null
@@ -146,7 +154,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id015
+    cronistas: &id016
     - Las Casas
     - Pané
     sacada_del_taino: null
@@ -155,7 +163,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id013
+    cronistas: &id014
     - Las Casas
     - Oviedo
     sacada_del_taino: null
@@ -164,7 +172,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id014
+    cronistas: &id015
     - Las Casas
     sacada_del_taino: null
   - clave: bohío
@@ -247,7 +255,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id023
+    cronistas: &id022
     - Las Casas
     - Oviedo
     sacada_del_taino: null
@@ -256,7 +264,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id024
+    cronistas: &id023
     - Pané
     sacada_del_taino: null
   - clave: cohoba
@@ -271,7 +279,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id016
+    cronistas: &id017
     - Las Casas
     - Pané
     sacada_del_taino: null
@@ -287,7 +295,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id017
+    cronistas: &id018
     - Las Casas
     - Oviedo
     sacada_del_taino: null
@@ -296,7 +304,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id027
+    cronistas: &id026
     - Las Casas
     sacada_del_taino: null
   - clave: guanin
@@ -304,7 +312,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 4
-    cronistas: &id029
+    cronistas: &id028
     - Herrera
     - Las Casas
     - Oviedo
@@ -315,7 +323,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id028
+    cronistas: &id027
     - Oviedo
     sacada_del_taino: null
   - clave: higuana
@@ -334,11 +342,11 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 3
-    cronistas: &id040
+    cronistas: &id038
     - Las Casas
     - Oviedo
     - Pedro Mártir
-    sacada_del_taino: &id041
+    sacada_del_taino: &id039
     - eyeri (caribe insular), en la lista de Bachiller
     - eyeri = habla de mujeres del caribe insular (Bachiller p. 389; Goeje 1939)
   - clave: hutia
@@ -346,7 +354,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id018
+    cronistas: &id019
     - Las Casas
     - Oviedo
     sacada_del_taino: null
@@ -362,16 +370,9 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id026
+    cronistas: &id025
     - Las Casas
     - Oviedo
-    sacada_del_taino: null
-  - clave: maboya
-    capa_en_el_lexicon: taíno
-    en_la_lista_maestra: true
-    clase: ii-solo-secundaria
-    atestaciones_independientes: 0
-    cronistas: &id030 []
     sacada_del_taino: null
   - clave: maisi
     capa_en_el_lexicon: taíno
@@ -389,7 +390,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 3
-    cronistas: &id032
+    cronistas: &id030
     - Las Casas
     - Oviedo
     - Pedro Mártir
@@ -399,14 +400,14 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: ii-solo-secundaria
     atestaciones_independientes: 0
-    cronistas: &id033 []
+    cronistas: &id031 []
     sacada_del_taino: null
   - clave: mayani
     capa_en_el_lexicon: taíno
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id031
+    cronistas: &id029
     - Pedro Mártir
     sacada_del_taino: null
   - clave: maíz
@@ -421,7 +422,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 4
-    cronistas: &id034
+    cronistas: &id032
     - Archivo de Indias
     - Las Casas
     - Oviedo
@@ -432,7 +433,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 4
-    cronistas: &id035
+    cronistas: &id033
     - Archivo de Indias
     - Colón
     - Las Casas
@@ -443,21 +444,9 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id037
+    cronistas: &id035
     - Oviedo
     sacada_del_taino: null
-  - clave: piragua
-    capa_en_el_lexicon: taíno
-    en_la_lista_maestra: true
-    clase: i-primaria-del-XVI
-    atestaciones_independientes: 4
-    cronistas: &id021
-    - Colón
-    - Las Casas
-    - Oviedo
-    - Pedro Mártir
-    sacada_del_taino: &id022
-    - eyeri = habla de mujeres del caribe insular (Bachiller p. 389; Goeje 1939)
   - clave: siba
     capa_en_el_lexicon: taíno
     en_la_lista_maestra: false
@@ -470,7 +459,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id025
+    cronistas: &id024
     - Pané
     sacada_del_taino: null
   - clave: taita
@@ -478,15 +467,15 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: ii-solo-secundaria
     atestaciones_independientes: 0
-    cronistas: &id038 []
-    sacada_del_taino: &id039
+    cronistas: &id036 []
+    sacada_del_taino: &id037
     - el propio Bachiller la pone entre las que pasan por indígenas y vienen de otras partes
   - clave: tuna
     capa_en_el_lexicon: taíno
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id036
+    cronistas: &id034
     - Oviedo
     sacada_del_taino: null
   - clave: yamosa
@@ -494,7 +483,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 1
-    cronistas: &id019
+    cronistas: &id020
     - Las Casas
     sacada_del_taino: null
   - clave: yuca
@@ -502,7 +491,7 @@ las_claves_tainas_del_lexicon:
     en_la_lista_maestra: true
     clase: i-primaria-del-XVI
     atestaciones_independientes: 2
-    cronistas: &id020
+    cronistas: &id021
     - Oviedo
     - Pané
     sacada_del_taino: null
@@ -584,10 +573,10 @@ conceptos_comparables_con_el_caquetio_atestiguado:
   glosas_en_frances: Goeje glosa en francés. Se traducen las glosas de UNA palabra con una tabla DECLARADA
     en el script (`GLOSAS_FR_ES`, 81 entradas); lo que no está en la tabla no se traduce ni se inventa,
     y por tanto NO cuenta. La cifra de abajo es un SUELO, no un techo.
-  conceptos_del_caquetio_atestiguado: 168
-  conceptos_de_la_lista_TAINA_VIEJA_solo_lexicon: 46
+  conceptos_del_caquetio_atestiguado: 169
+  conceptos_de_la_lista_TAINA_VIEJA_solo_lexicon: 45
   conceptos_de_la_lista_MAESTRA_nueva: 318
-  comparables_con_la_lista_vieja: 5
+  comparables_con_la_lista_vieja: 6
   comparables_con_la_lista_MAESTRA: 30
   los_comparables_uno_a_uno:
   - concepto: abe
@@ -716,7 +705,7 @@ conceptos_comparables_con_el_caquetio_atestiguado:
     taino_lista_maestra:
     - bakua
     - bakuakibalana
-    ya_estaba_en_la_lista_vieja: false
+    ya_estaba_en_la_lista_vieja: true
   - concepto: medico
     caquetio:
     - boratio
@@ -807,7 +796,6 @@ conceptos_comparables_con_el_caquetio_atestiguado:
   - lagartija
   - lugar
   - luna
-  - mar
   - medico
   - mujer
   - ombre
@@ -822,9 +810,11 @@ kalinago_de_goeje:
   que_mide: 'las voces kalinago del lexicón leídas contra Goeje 1939 (veredictos escritos a mano en `kalinago_goeje_1939.yaml`
     §cruce, leídos en imagen) y los conceptos del caquetío atestiguado que tienen voz kalinago en lo transcrito.
     ⚠️ El vocabulario kalinago está transcrito a medias (ver su §tramos): es un SUELO.'
-  claves_kalinago_en_el_lexicon: 23
+  claves_kalinago_en_el_lexicon: 25
   cruzadas: 23
-  sin_cruzar: []
+  sin_cruzar:
+  - maboya
+  - piragua
   por_veredicto:
     apoyo: 11
     apoyo-parcial: 4
@@ -4856,18 +4846,28 @@ voces:
   - bagua
   glosas_verbatim:
   - the sea
+  - «Llaman los indios de aquesta Isla Española á la mar bagua (no digo baygua, porque baygua es aquel
+    barbasco, con que toman mucho pescado, segund tengo dicho, sino bagua es el nombre de la mar en esta
+    isla).»
   - la mer
   - Oviedo (lib.
   obras_que_la_traen:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
+  - oviedo-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 11
     cronista_que_declara: null
     lo_que_dice_la_obra: null
+  - obra: oviedo-valdes-1851
+    tipo: primaria
+    pagina: 436
+    cronista_que_declara:
+    - Oviedo
+    lo_que_dice_la_obra: Oviedo
   - obra: goeje-1939
     tipo: intermediario
     pagina: 14
@@ -4879,19 +4879,20 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo
-  cronistas_independientes:
-  - Oviedo
+  cronistas_independientes: *id011
   atestaciones_independientes: 1
-  obras_que_la_traen_n: 3
+  obras_que_la_traen_n: 4
   variedad_o_isla:
+  - La Española
   - no-declarada
-  en_el_lexicon: null
+  en_el_lexicon:
+  - sí — `bagua`, fuente `taíno`, desde el 2026-09-24 («Ok a todo»)
   solo_conjetura: false
   comparanda_lokono:
   - bara, the sea
   clase: i-primaria-del-XVI
   por_que_esta_clase: la atestigua Oviedo
-  aviso_de_independencia: '3 obras la traen y sólo 1 cronista(s) distinto(s) la atestigua(n): copiar no
+  aviso_de_independencia: '4 obras la traen y sólo 1 cronista(s) distinto(s) la atestigua(n): copiar no
     es atestiguar (skill §8)'
 - lema: bakuakibalana
   formas_atestiguadas:
@@ -5543,7 +5544,7 @@ voces:
     pagina: 167
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id011
+  cronistas_independientes: *id012
   atestaciones_independientes: 2
   obras_que_la_traen_n: 4
   variedad_o_isla:
@@ -5620,7 +5621,7 @@ voces:
     pagina: 168
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id012
+  cronistas_independientes: *id013
   atestaciones_independientes: 4
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -6530,7 +6531,7 @@ voces:
     pagina: 169
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id013
+  cronistas_independientes: *id014
   atestaciones_independientes: 2
   obras_que_la_traen_n: 3
   variedad_o_isla:
@@ -6737,7 +6738,7 @@ voces:
     pagina: 388
     cronista_que_declara: null
     lo_que_dice_la_obra: ' || lista de Rafinesque (apéndice A)'
-  cronistas_independientes: *id014
+  cronistas_independientes: *id015
   atestaciones_independientes: 1
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -7546,7 +7547,7 @@ voces:
     cronista_que_declara:
     - Las Casas
     lo_que_dice_la_obra: no-declarada
-  cronistas_independientes: *id015
+  cronistas_independientes: *id016
   atestaciones_independientes: 2
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -7871,7 +7872,7 @@ voces:
     - Las Casas
     - Pané
     lo_que_dice_la_obra: Las Casas; Pané
-  cronistas_independientes: *id016
+  cronistas_independientes: *id017
   atestaciones_independientes: 2
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -8423,7 +8424,7 @@ voces:
     - Las Casas
     - Oviedo
     lo_que_dice_la_obra: no-declarada
-  cronistas_independientes: *id017
+  cronistas_independientes: *id018
   atestaciones_independientes: 2
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -9007,7 +9008,7 @@ voces:
     cronista_que_declara:
     - Las Casas
     lo_que_dice_la_obra: Las Casas
-  cronistas_independientes: *id018
+  cronistas_independientes: *id019
   atestaciones_independientes: 2
   obras_que_la_traen_n: 3
   variedad_o_isla:
@@ -9442,7 +9443,7 @@ voces:
     pagina: 159
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id019
+  cronistas_independientes: *id020
   atestaciones_independientes: 1
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -10921,7 +10922,7 @@ voces:
     pagina: 170
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id020
+  cronistas_independientes: *id021
   atestaciones_independientes: 2
   obras_que_la_traen_n: 4
   variedad_o_isla:
@@ -13043,7 +13044,11 @@ voces:
     - Las Casas
     - Pedro Mártir
     lo_que_dice_la_obra: Las Casas; Pedro Mártir; Colón
-  cronistas_independientes: *id021
+  cronistas_independientes:
+  - Colón
+  - Las Casas
+  - Oviedo
+  - Pedro Mártir
   atestaciones_independientes: 4
   obras_que_la_traen_n: 4
   variedad_o_isla:
@@ -13055,7 +13060,8 @@ voces:
   solo_conjetura: false
   comparanda_lokono:
   - kannoa, a boat
-  sacada_del_taino: *id022
+  sacada_del_taino:
+  - eyeri = habla de mujeres del caribe insular (Bachiller p. 389; Goeje 1939)
   clase: i-primaria-del-XVI
   por_que_esta_clase: la atestiguan Colón, Las Casas, Oviedo, Pedro Mártir
 - lema: kanoas
@@ -14468,7 +14474,7 @@ voces:
     pagina: 250
     cronista_que_declara: null
     lo_que_dice_la_obra: no-declarada
-  cronistas_independientes: *id023
+  cronistas_independientes: *id022
   atestaciones_independientes: 2
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -15348,7 +15354,7 @@ voces:
     pagina: 159
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id024
+  cronistas_independientes: *id023
   atestaciones_independientes: 1
   obras_que_la_traen_n: 3
   variedad_o_isla:
@@ -15445,7 +15451,7 @@ voces:
     pagina: 169
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id025
+  cronistas_independientes: *id024
   atestaciones_independientes: 1
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -15841,7 +15847,7 @@ voces:
     - Las Casas
     - Oviedo
     lo_que_dice_la_obra: Las Casas; Oviedo; Pichardo; Armas
-  cronistas_independientes: *id026
+  cronistas_independientes: *id025
   atestaciones_independientes: 2
   obras_que_la_traen_n: 4
   variedad_o_isla:
@@ -16475,7 +16481,7 @@ voces:
     pagina: 166
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id027
+  cronistas_independientes: *id026
   atestaciones_independientes: 1
   obras_que_la_traen_n: 1
   variedad_o_isla:
@@ -16699,7 +16705,7 @@ voces:
     pagina: 161
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id028
+  cronistas_independientes: *id027
   atestaciones_independientes: 1
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -19186,7 +19192,7 @@ voces:
     pagina: 163
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id029
+  cronistas_independientes: *id028
   atestaciones_independientes: 4
   obras_que_la_traen_n: 5
   variedad_o_isla:
@@ -21639,7 +21645,7 @@ voces:
     pagina: 160
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id030
+  cronistas_independientes: []
   atestaciones_independientes: 0
   obras_que_la_traen_n: 1
   variedad_o_isla:
@@ -21952,7 +21958,7 @@ voces:
     pagina: 165
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id031
+  cronistas_independientes: *id029
   atestaciones_independientes: 1
   obras_que_la_traen_n: 3
   variedad_o_isla:
@@ -23374,7 +23380,7 @@ voces:
     pagina: 170
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id032
+  cronistas_independientes: *id030
   atestaciones_independientes: 3
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -23571,7 +23577,7 @@ voces:
     pagina: 164
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id033
+  cronistas_independientes: *id031
   atestaciones_independientes: 0
   obras_que_la_traen_n: 1
   variedad_o_isla:
@@ -24606,7 +24612,7 @@ voces:
     - Las Casas
     - Pané
     lo_que_dice_la_obra: '**Documentos Inéditos del Archivo de Indias**'
-  cronistas_independientes: *id034
+  cronistas_independientes: *id032
   atestaciones_independientes: 4
   obras_que_la_traen_n: 3
   variedad_o_isla:
@@ -24752,7 +24758,7 @@ voces:
     pagina: 163
     cronista_que_declara: null
     lo_que_dice_la_obra: 'no-declarada (cap. X, vocabulario inverso: la cita va en el cap. XII)'
-  cronistas_independientes: *id035
+  cronistas_independientes: *id033
   atestaciones_independientes: 4
   obras_que_la_traen_n: 4
   variedad_o_isla:
@@ -25603,7 +25609,7 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo — «voir surtout Oviedo»
-  cronistas_independientes: *id036
+  cronistas_independientes: *id034
   atestaciones_independientes: 1
   obras_que_la_traen_n: 1
   variedad_o_isla:
@@ -26393,7 +26399,7 @@ voces:
     pagina: 16
     cronista_que_declara: null
     lo_que_dice_la_obra: no-declarada — marca `e`
-  cronistas_independientes: *id037
+  cronistas_independientes: *id035
   atestaciones_independientes: 1
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -30459,7 +30465,7 @@ voces:
     pagina: 394
     cronista_que_declara: null
     lo_que_dice_la_obra: «Pichardo la cree indígena de Cuba. Rojas, de otras partes de América»
-  cronistas_independientes: *id038
+  cronistas_independientes: *id036
   atestaciones_independientes: 0
   obras_que_la_traen_n: 2
   variedad_o_isla:
@@ -30469,7 +30475,7 @@ voces:
   solo_conjetura: false
   comparanda_lokono:
   - itta, father; dailta or dalli, my father
-  sacada_del_taino: *id039
+  sacada_del_taino: *id037
   clase: ii-solo-secundaria
   por_que_esta_clase: 'la traen bachiller-morales-1883, brinton-1871 y ninguna dice de qué cronista sale:
     existe, pero no está atestiguada'
@@ -31896,7 +31902,7 @@ voces:
     - Las Casas
     - Pedro Mártir
     lo_que_dice_la_obra: Las Casas; Pedro Mártir
-  cronistas_independientes: *id040
+  cronistas_independientes: *id038
   atestaciones_independientes: 3
   obras_que_la_traen_n: 5
   variedad_o_isla:
@@ -31908,7 +31914,7 @@ voces:
   - sí — `huracan`, glosa «huracán, espíritu del viento destructor, ciclón», SIN procedencia
   solo_conjetura: false
   comparanda_lokono: null
-  sacada_del_taino: *id041
+  sacada_del_taino: *id039
   clase: i-primaria-del-XVI
   por_que_esta_clase: la atestiguan Las Casas, Oviedo, Pedro Mártir
   aviso_de_independencia: '5 obras la traen y sólo 3 cronista(s) distinto(s) la atestigua(n): copiar no

@@ -300,3 +300,16 @@ existe por ella. Si un nominalizador hubiera sobrevivido en el habla, habría
 sobrevivido aquí.
 
 Propuesta: `6-fusion/propuesta_nominalizador_2026-09-21.yaml`.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido el dictado (6-fusion/medina_colina_dictado.yaml) por mar × creencia. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `medina_dictado`: 3 ventanas creencia × mar (3 con un nombre de la costa occidental cerca), 1 creencia × cielo de control.
+
+**Se halló:** La guarura, «un pito o bocina que se hacía con un caracol de mar» (mc-mundo-023): señal, no rito. «Aboyar» del muerto que flota es castellano náutico.
+
+**No se halló:** Cero creencia del mar en el habla paraguanera dictada.

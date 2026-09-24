@@ -1164,6 +1164,24 @@ la_espanola:
 # 3. LAS OTRAS ISLAS — Cuba, San Juan, los lucayos
 #    Porque el taíno tampoco era una sola lengua.
 # ══════════════════════════════════════════════════════════════════════
+  # ── 2.e  La mar (Libro XIII) — añadida el 2026-09-24 ────────────────
+  # Estaba en el cuerpo y nadie la veía: la voz va en cursiva y el OCR la
+  # destroza («á la mar tagua»). La halló #227 (fuentes_poporo_coro_zayas_2026-09-23.yaml §bagua).
+  - forma_fuente: bagua
+    glosa_fuente: >-
+      «Llaman los indios de aquesta Isla Española á la mar bagua (no digo
+      baygua, porque baygua es aquel barbasco, con que toman mucho pescado,
+      segund tengo dicho, sino bagua es el nombre de la mar en esta isla).»
+    libro: XIII
+    capitulo: IX
+    pagina_impresa: 436
+    atribucion: "«aquesta Isla Española» — DECLARADA"
+    variedad_declarada: La Española
+    campo: geografia
+    verificacion: imagen
+    en_el_lexicon: "sí — `bagua`, fuente `taíno`, desde el 2026-09-24 («Ok a todo»)"
+    aporta: "la página PRIMARIA de `bagua`: el glosario del editor (t. IV p. 594) y Zayas la copian de aquí"
+
 otras_islas:
 
   - forma_fuente: dalihao

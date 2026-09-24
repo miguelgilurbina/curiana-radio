@@ -96,9 +96,11 @@ def test_la_cat_emitida_es_la_que_la_clase_manda():
 
 # ── (b) el reparto, y su razón ────────────────────────────────────────
 def test_el_reparto_es_el_medido():
+    # 2026-09-24: entra `baja` 'caño' (nombre), que el minador daba por
+    # «ya está» por un homógrafo falso con `baba` 'padre'.
     assert REPARTO_DE_CLASES == {"estativo": 10, "accion": 9,
-                                 "nombre": 29, "adverbio": 1}
-    assert sum(REPARTO_DE_CLASES.values()) == 49
+                                 "nombre": 30, "adverbio": 1}
+    assert sum(REPARTO_DE_CLASES.values()) == 50
 
 
 def test_cada_fila_declara_su_apoyo_o_su_deuda():
@@ -235,7 +237,7 @@ def test_los_homografos_de_la_comparanda_estan_declarados_y_sus_voces_vivas():
     # `aburi` (2026-09-24): el topónimo de Zavala contra la voz reconstruida
     # 'tener vergüenza' de la tanda de las hermanas.
     assert set(M.NO_ES_LA_MISMA_VOZ) == {
-        "cana", "carama", "cuna", "turupia", "ima", "coa", "aburi"}
+        "cana", "carama", "cuna", "turupia", "ima", "coa", "aburi", "baba"}
     assert "aburi" in Z.TOPONIMOS_ZAVALA, "el topónimo aburi se perdió al regenerar"
     for razon in M.NO_ES_LA_MISMA_VOZ.values():
         assert len(razon) > 40

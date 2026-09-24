@@ -188,7 +188,7 @@ COGNADOS = {
         "CQ": None,
         "WY": None,
         "LK": "iuli",
-        "TN": "cohiba",    # TN innovó (cohiba = cigarro)
+        "TN": "tabako",    # era «cohiba»: forma del editor de Oviedo (1855), archivada en tf.6 / cc.7 (2026-09-23); la voz taína del lexicón es `tabako`
         "KL": None,        # forma KL no documentada con certeza
         "es": "tabaco (Nicotiana tabacum)"
     },

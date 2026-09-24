@@ -82,3 +82,27 @@ es la fuente de las fechas de contexto que Fernandes usa.
 ## Enlaces
 
 [[fernandes-2020]] · [[dijkhoff-1997]] · [[martinez-cruzado-2003]]
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Se preguntó** si hay objetos del mar dentro de los enterramientos
+dabajuroides de Curazao. **Se halló** (visto en imagen; impresa = pdf + 223):
+en la urna PRIMARIA de De Savaan, «among the bones», un diente de tiburón de
+2,2 cm, 14 discos de concha, calcita y una punta de sílex, y alrededor huesos
+de pez, coral, una lapa y pinzas de cangrejo de tierra (p. 230); en la urna
+SECUNDARIA, un diente de tiburón de 9 mm, fragmentos de ostra perlera
+(Pinctada), un fragmento de Strombus, un quitón y huesos de pez (p. 231); en San
+Hironimo, junto a los pies de un adulto, un fragmento de plastrón de tortuga
+marina molido y quemado (p. 232). El autor lo dice con condicional («could
+have been / may have been grave goods») y las fosas llevan tierra de conchero.
+Es DATO DE AJUAR, no de creencia.
+
+**Corrección a esta misma ficha:** «Nada de ajuares con procedencia» (arriba)
+vale para los dos entierros directos de 1980, NO para las urnas. Y la fecha de
+la urna primaria sale 600±20 a.p. en la p. 224 y «±660» en la p. 234: el
+artículo se contradice.
+
+**No se halló:** ninguna lectura del autor que ligue esos objetos al mar como
+creencia.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.

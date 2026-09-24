@@ -1080,6 +1080,10 @@ def main():
     if FALLOS:
         print("con %d medición(es) fallida(s) — están anotadas en el tablero"
               % len(FALLOS))
+    # Las cifras de 2-lengua/lexicon.md, con las mismas funciones (2026-09-24):
+    # la nota era una foto a mano del 2026-08-04 que la wiki seguía publicando.
+    import tabla_lexicon
+    tabla_lexicon.main([])
     return 0
 
 

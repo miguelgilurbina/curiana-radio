@@ -273,3 +273,33 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 
 [[oliver-1989-cap2]] · [[oliver-1989-cap3]] · [[zavala-reyes-2018]] ·
 [[esfera-de-interaccion]] · [[polities-caquetias]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrida la OCR de §4.7-4.15. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `oliver_cap4`: 0 ventanas creencia × mar (0 con un nombre de la costa occidental cerca), 0 creencia × cielo de control.
+
+**Se halló:** Ninguna ventana creencia × mar (la iconografía dabajurana, batracio y ave: ver oliver1989_restante §mar y la parcela de arqueología).
+
+**No se halló:** Cero.
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Se preguntó** qué acompaña a los entierros dabajuroides de la costa de
+Falcón. **Se halló:** lo que Oliver asocia a las urnas secundarias es CERÁMICA:
+el cuenco tetrápodo biomorfo para beber, «associated with the several secondary
+burial vessels» en Túcua y «more frequently found in and around secondary
+burial urns» en Corralito, que él liga al masato del funeral (p. 442, imagen; y
+p. 449). Ninguna concha, cuenta, diente o Strombus con esos entierros en
+§4.7-4.15. En las láminas del Apéndice C (C-29, C-46, C-63, vistas en imagen),
+ningún rasgo marino.
+
+**Desfase:** impresa = pdf − 27 en §4.7-4.15, pero **− 26** en el Apéndice C
+(pdf 647 = p. 621). El OCR del Apéndice C que hizo el minador quedó fuera del
+repo; se rehace con `ocr_fuente.py` si hace falta.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.

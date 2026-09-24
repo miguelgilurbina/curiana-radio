@@ -264,7 +264,7 @@ tanda.
 
 ```bash
 cd proyecto-linguistico-caquetío
-python curiana_sim/guardianes.py                 # los nueve, con tests: el lexicón los mueve
+python curiana_sim/guardianes.py                 # los diez, con tests: el lexicón los mueve
 python curiana_sim/generar_tablero.py --gh       # SIEMPRE con --gh
 python curiana_sim/generar_bandeja.py
 python curiana_sim/generar_bibliografia.py       # si entró una obra nueva

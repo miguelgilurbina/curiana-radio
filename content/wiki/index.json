@@ -1,7 +1,7 @@
 {
-  "generado": "2026-08-24",
+  "generado": "2026-09-24",
   "n": 15,
-  "n_biblio": 39,
+  "n_biblio": 104,
   "paginas": [
     {
       "slug": "lexico",
@@ -9,7 +9,7 @@
       "orden": 0,
       "tipo": "nota-viva",
       "titulo": "El lexicón",
-      "resumen": "El lexicón activo es VOCABULARIOBASE en curianasim/curianalexicon.py. Esta nota lo describe; no lo define. Todas las cifras se midieron el 2026-08-04 corriendo el propio módulo, no copiándolas de la documentación…"
+      "resumen": "El lexicón activo es VOCABULARIOBASE en curianasim/curianalexicon.py. Esta nota lo describe; no lo define. Las cifras de los bloques generados las mide y las escribe curianasim/tablalexicon.py con las mismas funciones…"
     },
     {
       "slug": "morfologia",
@@ -17,7 +17,7 @@
       "orden": 1,
       "tipo": "nota-viva",
       "titulo": "La morfología",
-      "resumen": "Lo que un agente puede construir, no solo nombrar. Cada afijo va aquí con su evidencia y su estado — porque el proyecto mezcló durante mucho tiempo afijos atestiguados con afijos de trabajo, sin marcar la diferencia, y…"
+      "resumen": "⚠️ La tanda final (2026-09-23) cambió el núcleo — D11 fase 3. Lo que abajo figura como «reconstruido desde el wayuu» y deuda de D11 ya no se enseña: los pronombres son dai, bui, lihi/tuhu, waya, naya (de lokono, taíno y…"
     },
     {
       "slug": "toponimia",

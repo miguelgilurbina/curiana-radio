@@ -224,3 +224,25 @@ Y una corrección a la prueba del 23: 'algodón' tiene forma de mujeres,
 son préstamos europeos y el vocabulario guayano, sin habla de mujeres.
 
 **✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): el habla de mujeres cuenta como hermana (D1) y sube a reconstruidos `bui`, `lihi`, `tuhu` (p. 24), `diki` (p. 100) y `marisi` (p. 65); da `ani` (p. 94), `aita` (p. 101), `butu` y `aburi` (p. 74), `kibe` (p. 71), `kake` (p. 79), `sile` (p. 105) y `uli` (p. 53).
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó** si Goeje añade algo del mar en la creencia o en el habla de
+mujeres (comparanda). **Se halló**, verificado en imagen (impresa = pdf − 1):
+p. 55, «la mer h balana … K parana (Tupi parana)» frente a «f balaua, 2 f
+barawa … A bara»: la voz de hombres es caribe/tupí y la de mujeres, arahuaca
+(el `barawa` es de Dominica moderna, Rat 1898, y del garífuna); p. 44,
+`balanagle` 'europeo, cristiano' con «parana-kere (mer-homme?)», conjetura
+suya con interrogación; p. 56, «le fond de l'eau kulubini», «route de mer
+kienuli». **No se halló** creencia sobre el mar: Goeje lee a Breton. Propuesta
+en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Comparanda lokono y kalinago, además del mar de la sección de arriba:**
+Orehu, Yauhahu y semeci, 0 (todo el mito del agua lokono del repo es Brett vía
+Brinton). En la sección «Religion, magie» del caribe de las islas, «esprit qui
+cause les naufrages *Umeku, Umoku*», con el kalina de Penard *Semuye* y «K?»
+(p. 38, imagen): Goeje no dice de quién toma la glosa marina.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

@@ -131,3 +131,13 @@ general (guerra, matrimonio, entierros, chicha), el sáliva, y el cotejo con
 [[gilij-1780-1783]], que discute a Gumilla.
 
 Índice: [[INDICE_FUENTES]]
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Control achagua (visto en imagen):** `Manóa` 'mar' es «no derrama, nombre que
+dan á todas las lagunas» (t. I p. 356); el diluvio *Catena Manóa*, «laguna
+general» (t. II pp. 6-7); unos se dicen hijos de los troncos y otros de los ríos,
+*Univerrenais* (t. I p. 114). **No se halló** ser ni rito del mar achagua; la
+«madre del agua» del t. II es una boa de lagunas, y la da para jiraras y Quito.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

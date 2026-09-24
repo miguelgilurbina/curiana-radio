@@ -138,3 +138,28 @@ literaria dada a la hipérbole"*.
   simbólica atestiguada materialmente**, con su geografía y sus estilos.
 
 Índice: [[INDICE_FUENTES]] · propuesta: `6-fusion/petroglifos_y_manaure.yaml`
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero (ver además la parcela de arqueología). Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `moron2012`: 2 ventanas creencia × mar (2 con un nombre de la costa occidental cerca), 1 creencia × cielo de control.
+
+**Se halló:** La leyenda del Salvaje (agua de una fuente, no del mar) y estaciones de petroglifos que los pescadores usan de referencia: s. XX.
+
+**No se halló:** Cero creencia del mar.
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Se preguntó** por motivos marinos en los petroglifos de la costa. **Se
+halló:** en la línea costera y la sabana árida «predominan los motivos
+geométricos y abstractos» (pp. 172-173; impresa = pdf + 161), y los de la playa
+de Cucuruchú (Taratara) los usan hoy los pescadores como referencia (s. XXI).
+**No se halló** ningún pez, tortuga, caracol u ola descrito. Las obras que
+describirían los motivos del cerro (Morón 2015, Acasio 2023, Caguao y Morón
+2024) no están descargadas: el cero es de lo que hay en el repo.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.

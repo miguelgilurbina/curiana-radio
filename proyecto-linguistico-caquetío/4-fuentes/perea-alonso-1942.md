@@ -328,3 +328,14 @@ use. Es la misma sospecha de la p. 606, dicha al final con todas las letras.
 ## Enlaces
 
 [[brinton-1871]] · [[oliver-1989-cap2]] · [[medina-colina-sxx]]
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se preguntó** si el lokono de Perea trae el mar en la creencia. **Se halló:** el
+fraseario s.v. MAR (`bara ù-llebu-mùn` 'en la orilla del mar', `bara
+iraccu-mùn` 'al fondo del mar', `bara caiman` 'mar tormentoso'; pp. 65-66, 462)
+sale de la traducción morava de los Hechos de los Apóstoles (1802): la tríada
+cielo-tierra-mar es la fórmula de Hechos 4, 24. **No se halló** ningún mito ni
+rito: Orehu, Yauhahu, semeci, piache, maraca, 0.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

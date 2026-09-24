@@ -176,3 +176,16 @@ waikeri en el ciclo de los pueblos «marginales» con los warao (**p. 225**). Es
 la lectura warao/precaribe, con los signos de interrogación del autor.
 
 Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero; leídas todas las ventanas creencia × mar. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `antolinez1946`: 37 ventanas creencia × mar (18 con un nombre de la costa occidental cerca), 71 creencia × cielo de control.
+
+**Se halló:** Tres cosas, las tres del s. XX o de fuera. (1) Es el único autor del repo que propone una religión de los pescadores de la costa de Coro y Paraguaná: una «economía parasitaria costera» que «desarrolló conductas religiosas primordiales propias de la condición social zoísta de las culturas protomorfas» (impresa 160) — teoría de los ciclos culturales, sin un solo dato, y PRE-arahuaca. (2) Una «teogonía karibe de las Antillas Menores» con «Curumón, las olas; Sabácu, las tempestades» (impresa 231), que cita a «Champlain, Laborde y Souvestre»: kalinago de tercera mano. (3) «pectorales o fúnebres ornamentos de concha de Strombus gigas» con forma de murciélago en los Andes (impresa 255): el caracol de mar como material funerario LEJOS del mar, regla 4. Y la Yara/María Lionza que liga al agua es de ríos y lagunas, no del mar.
+
+**No se halló:** Nada caquetío del mar en la creencia.
