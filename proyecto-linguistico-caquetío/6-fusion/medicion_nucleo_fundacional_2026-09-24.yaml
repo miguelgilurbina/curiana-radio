@@ -1,0 +1,3912 @@
+# MEDICIÓN — el núcleo fundacional rehecho desde las hermanas (2026-09-24).
+# GENERADO por 6-fusion/scripts/medir_nucleo_fundacional.py — no se edita a mano (regla 1).
+# La propuesta que lo usa: 6-fusion/nucleo_fundacional_hermanas_2026-09-24.yaml
+meta:
+  medido: '2026-09-24'
+  script: 6-fusion/scripts/medir_nucleo_fundacional.py (con medir_d11_voces_wayuu.medir)
+  motor_medido: 'ac7fe33 inventario(núcleo fundacional): primera pasada contra las hermanas — casi nada tiene pareja,
+    y duna/wari/baba so'
+  vocabulario_base: 5496
+  fuera_del_habla: 36
+  todas_las_reglas: 22
+  elenco:
+    era1: 60
+    era2: 63
+  base: no medida (sin Docker)
+  fonotactica:
+    formas_base: 184
+    nota: el filtro del módulo tal cual (medir()); los esqueletos de colisión usan gu→w (D5c)
+  puerta: es_raiz_de_ninguna_parte(forma, archivadas_avalan=False) sobre cada forma distinta de word_uses, con la
+    voz movida a FUERA_DEL_HABLA (y fuera de _RAICES_VERB) y las cachés reiniciadas; se restaura después
+la_lista:
+  voces:
+  - naa
+  - waa
+  - kaa
+  - maa
+  - taa
+  - chaa
+  - suna
+  - masa
+  - awa
+  - panaa
+  - kono
+  - raka
+  - rua
+  - duna
+  - amana
+  - kaya
+  - kuru
+  - arima
+  - dali
+  - suka
+  - sima
+  - ama
+  - baba
+  - buri
+  - nomi
+  - wari
+  - kabo
+  - nii
+  - bari
+  - arua
+  - ka
+  - mara
+  - saa
+  - naka
+  - puna
+  - wara
+  n: 36
+  fuera_del_lexicon: []
+voces_viejas:
+  ama:
+    glosa: madre, mujer que nutre y da origen
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 3
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 5
+    si_se_archiva:
+      base: no medida
+  amana:
+    glosa: fuego, lumbre, brasa
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 2
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+        prompt_refuerzo (4 tramos): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 5
+      tests_que_la_nombran:
+      - test_forma_de_la_esfera.py
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  arima:
+    glosa: pez, pescado
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 3
+      por_plantilla:
+        IDENTIDAD_LINGUISTICA (todos): 1
+        prompt_reglas_completo (tier I): 2
+      en_reglas_del_motor: 1
+      koine:
+        FORMAS_SEED: 7
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 22
+      tests_que_la_nombran:
+      - test_director.py
+      - test_elenco_era2.py
+      - test_era2_motor.py
+      - test_escena_motor.py
+      - test_formas_de_plantilla.py
+      - test_koine.py
+      - test_lexicon.py
+      - test_observer.py
+      - test_orchestrator.py
+      - test_politica_atestiguado_manda.py
+      - test_raiz_de_ninguna_parte.py
+      - test_referentes_cadena.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  arua:
+    glosa: alimento, comida, sustento (raíz de 'arawak')
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 2
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+        prompt_refuerzo (4 tramos): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 4
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 6
+      tests_que_la_nombran:
+      - test_formas_de_plantilla.py
+      - test_raiz_de_ninguna_parte.py
+      - test_tanda_21.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  awa:
+    glosa: beber, tomar líquido
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 4
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 2
+      tests_que_la_nombran:
+      - test_politica_atestiguado_manda.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  baba:
+    glosa: padre, hombre que protege
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  bari:
+    glosa: vientre, barriga, interior del cuerpo
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - barí
+      - achagua
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 1
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  buri:
+    glosa: hijo, hija, criatura, descendiente
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 3
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  chaa:
+    glosa: hacer, construir
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - kaa
+      - caquetío-reconstruido
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 15
+      tests_que_la_nombran:
+      - test_export_escena_seed.py
+      - test_politica_atestiguado_manda.py
+      - test_tanda_21.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  dali:
+    glosa: tierra, suelo, polvo
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 2
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 2
+      tests_que_la_nombran:
+      - test_koine.py
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  duna:
+    glosa: agua (corriente, bebible)
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 3
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+        prompt_refuerzo (4 tramos): 2
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 12
+      tests_que_la_nombran:
+      - test_export_escena_seed.py
+      - test_formas_de_plantilla.py
+      - test_koine.py
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_raiz_de_ninguna_parte.py
+      - test_tanda_base.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  ka:
+    glosa: y, también, además, con (conector aditivo)
+    cat: part
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - ca-lokono
+      - lokono
+      - VOCABULARIO_BASE
+    - - -ca
+      - achagua
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 3
+      apariciones_en_plantillas: 9
+      por_plantilla:
+        prompt_reglas_completo (tier I): 4
+        prompt_reglas_breve: 2
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 8
+      koine:
+        _NUCLEO_FALLBACK: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 17
+      tests_que_la_nombran:
+      - test_clases_de_raiz.py
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_tanda_21.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  kaa:
+    glosa: estar, existir, ser (cópula)
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - chaa
+      - caquetío-reconstruido
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 2
+      por_plantilla:
+        prompt_reglas_completo (tier I): 2
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 8
+      tests_que_la_nombran:
+      - test_forma_de_la_esfera.py
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  kabo:
+    glosa: cabeza, mente, lo alto de
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - khabo
+      - lokono
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 3
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 2
+    si_se_archiva:
+      base: no medida
+  kaya:
+    glosa: lluvia, agua del cielo
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  kono:
+    glosa: sembrar, plantar, cultivar
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 3
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  kuru:
+    glosa: árbol, madera, tronco
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 5
+      por_plantilla:
+        prompt_reglas_completo (tier I): 3
+        prompt_reglas_breve: 2
+      en_reglas_del_motor: 4
+      koine:
+        FORMAS_SEED: 5
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 51
+      tests_que_la_nombran:
+      - test_director.py
+      - test_era2_motor.py
+      - test_escena_motor.py
+      - test_escena_oir.py
+      - test_formas_de_plantilla.py
+      - test_koine.py
+      - test_lexicon.py
+      - test_orchestrator.py
+      - test_politica_atestiguado_manda.py
+      - test_tanda_21.py
+      - test_tanda_base.py
+      en_fichas_del_elenco: 1
+    si_se_archiva:
+      base: no medida
+  maa:
+    glosa: decir, hablar, comunicar
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 4
+      por_plantilla:
+        prompt_reglas_completo (tier I): 4
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 1
+        _NUCLEO_FALLBACK: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 11
+      tests_que_la_nombran:
+      - test_era2_motor.py
+      - test_escena_oir.py
+      - test_lexicon.py
+      - test_observer.py
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  mara:
+    glosa: pero, sin embargo, aunque (contraste)
+    cat: part
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 3
+      apariciones_en_plantillas: 5
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+        prompt_reglas_breve: 1
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 0
+      koine:
+        _NUCLEO_FALLBACK: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 4
+      tests_que_la_nombran:
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_raiz_de_ninguna_parte.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  masa:
+    glosa: comer, alimentarse
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 6
+      por_plantilla:
+        prompt_reglas_completo (tier I): 3
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 2
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 5
+      tests_que_la_nombran:
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_raiz_de_ninguna_parte.py
+      - test_tanda_21.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  naa:
+    glosa: ir, moverse hacia
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 9
+      por_plantilla:
+        prompt_reglas_completo (tier I): 9
+      en_reglas_del_motor: 2
+      koine:
+        FORMAS_SEED: 10
+        _NUCLEO_FALLBACK: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 45
+      tests_que_la_nombran:
+      - test_era2_motor.py
+      - test_escena_motor.py
+      - test_escena_oir.py
+      - test_export_escena_seed.py
+      - test_forma_de_la_esfera.py
+      - test_formas_de_plantilla.py
+      - test_koine.py
+      - test_lexicon.py
+      - test_nodos.py
+      - test_observer.py
+      - test_politica_atestiguado_manda.py
+      - test_presencias.py
+      - test_raiz_de_ninguna_parte.py
+      - test_tanda_21.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  naka:
+    glosa: después, luego, más tarde (temporal posterior)
+    cat: part
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 3
+      apariciones_en_plantillas: 6
+      por_plantilla:
+        prompt_reglas_completo (tier I): 2
+        prompt_reglas_breve: 1
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 3
+      tests_que_la_nombran:
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  nii:
+    glosa: ojo, mirada, visión
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 3
+      por_plantilla:
+        prompt_reglas_completo (tier I): 3
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 12
+      tests_que_la_nombran:
+      - test_raiz_de_ninguna_parte.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  nomi:
+    glosa: hombre adulto (no título)
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  panaa:
+    glosa: saber, conocer, entender
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 3
+      tests_que_la_nombran:
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_raiz_de_ninguna_parte.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  puna:
+    glosa: antes, ya, primero (temporal anterior)
+    cat: part
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 1
+      tests_que_la_nombran:
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  raka:
+    glosa: querer, desear, necesitar
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco:
+    - Raka-bi
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 2
+      por_plantilla:
+        prompt_reglas_completo (tier I): 2
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  rua:
+    glosa: cargar, transportar, llevar
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 4
+      tests_que_la_nombran:
+      - test_export_escena_seed.py
+      - test_koine.py
+      - test_referentes_cadena.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  saa:
+    glosa: si, cuando, al momento de (condicional/temp.)
+    cat: part
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 3
+      apariciones_en_plantillas: 6
+      por_plantilla:
+        prompt_reglas_completo (tier I): 2
+        prompt_reglas_breve: 1
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 3
+      tests_que_la_nombran:
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  sima:
+    glosa: cerro, elevación del terreno
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 4
+      por_plantilla:
+        prompt_reglas_completo (tier I): 4
+      en_reglas_del_motor: 2
+      koine:
+        FORMAS_SEED: 4
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 33
+      tests_que_la_nombran:
+      - test_era2_motor.py
+      - test_koine.py
+      - test_lexicon.py
+      - test_nodos.py
+      - test_politica_atestiguado_manda.py
+      - test_social.py
+      - test_tanda_21.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  suka:
+    glosa: noche, oscuridad
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - suca
+      - lokono
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 2
+      por_plantilla:
+        prompt_reglas_completo (tier I): 2
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 6
+      tests_que_la_nombran:
+      - test_koine.py
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 2
+    si_se_archiva:
+      base: no medida
+  suna:
+    glosa: dormir, reposar, descansar
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 2
+      apariciones_en_plantillas: 5
+      por_plantilla:
+        prompt_reglas_completo (tier I): 2
+        prompt_refuerzo (4 tramos): 3
+      en_reglas_del_motor: 0
+      koine:
+        FORMAS_SEED: 1
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 4
+      tests_que_la_nombran:
+      - test_lexicon.py
+      - test_politica_atestiguado_manda.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  taa:
+    glosa: tomar, coger, recibir
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  waa:
+    glosa: venir, aproximarse
+    cat: v_raiz
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 1
+      tests_que_la_nombran:
+      - test_politica_atestiguado_manda.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  wara:
+    glosa: muy, mucho, bastante (intensificador)
+    cat: part
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con: []
+    segmento_de_nombre_del_elenco: []
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 3
+      apariciones_en_plantillas: 4
+      por_plantilla:
+        IDENTIDAD_LINGUISTICA (todos): 1
+        prompt_reglas_completo (tier I): 2
+        prompt_reglas_breve: 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 46
+      tests_que_la_nombran:
+      - test_director.py
+      - test_era2_motor.py
+      - test_escena_motor.py
+      - test_escena_oir.py
+      - test_forma_de_la_esfera.py
+      - test_formas_de_plantilla.py
+      - test_lexicon.py
+      - test_observer.py
+      - test_orchestrator.py
+      - test_politica_atestiguado_manda.py
+      - test_raiz_de_ninguna_parte.py
+      - test_tanda_final.py
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+  wari:
+    glosa: mujer adulta (no título)
+    cat: sust
+    fuente: caquetío-reconstruido
+    fonotactica_atestiguada: pasa
+    comparte_esqueleto_con:
+    - - guari
+      - achagua
+      - VOCABULARIO_BASE
+    segmento_de_nombre_del_elenco:
+    - Wari-ko
+    uso:
+      base: no medida (sin Docker)
+    ensenanza:
+      plantillas_que_la_ensenan: 1
+      apariciones_en_plantillas: 1
+      por_plantilla:
+        prompt_reglas_completo (tier I): 1
+      en_reglas_del_motor: 0
+      koine: {}
+      escena_marca_caquetia: false
+      eventos_curiana_eventos: 0
+      apariciones_en_tests: 0
+      tests_que_la_nombran: []
+      en_fichas_del_elenco: 0
+    si_se_archiva:
+      base: no medida
+candidatas:
+  kunu:
+    opciones:
+    - naa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - kuna
+      - kuru
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kunu
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  naa:
+    opciones:
+    - naa.B
+    colisiones:
+      clave_exacta:
+      - - naa
+        - caquetío-reconstruido
+        - ir, moverse hacia
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: naa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - naa
+    - caquetío-reconstruido
+    - ir, moverse hacia
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  sile:
+    opciones:
+    - waa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: sile
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  andi:
+    opciones:
+    - waa.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: 'clusters no atestiguados: nd'
+      neologismo_valido: true
+      esqueleto: andi
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  waa:
+    opciones:
+    - waa.C
+    colisiones:
+      clave_exacta:
+      - - waa
+        - caquetío-reconstruido
+        - venir, aproximarse
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: waa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - waa
+    - caquetío-reconstruido
+    - venir, aproximarse
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  kaa:
+    opciones:
+    - kaa.A
+    colisiones:
+      clave_exacta:
+      - - kaa
+        - caquetío-reconstruido
+        - estar, existir, ser (cópula)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - chaa
+        - caquetío-reconstruido
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kaa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - kaa
+    - caquetío-reconstruido
+    - estar, existir, ser (cópula)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  maa:
+    opciones:
+    - maa.A
+    colisiones:
+      clave_exacta:
+      - - maa
+        - caquetío-reconstruido
+        - decir, hablar, comunicar
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: maa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - maa
+    - caquetío-reconstruido
+    - decir, hablar, comunicar
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  dia:
+    opciones:
+    - maa.B
+    colisiones:
+      clave_exacta:
+      - - dia
+        - lokono
+        - decir (y 4 acepción/es más)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: true
+      castellano_mismo_esqueleto:
+      - día
+      fonotactica_atestiguada: pasa
+      neologismo_valido: false
+      esqueleto: dia
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - dia
+    - lokono
+    - decir (y 4 acepción/es más)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  nika:
+    opciones:
+    - taa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - gika
+      - naka
+      - niwa
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: nika
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  taa:
+    opciones:
+    - taa.B
+    colisiones:
+      clave_exacta:
+      - - taa
+        - caquetío-reconstruido
+        - tomar, coger, recibir
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: taa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - taa
+    - caquetío-reconstruido
+    - tomar, coger, recibir
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  ani:
+    opciones:
+    - chaa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ani
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  chaa:
+    opciones:
+    - chaa.B
+    colisiones:
+      clave_exacta:
+      - - chaa
+        - caquetío-reconstruido
+        - hacer, construir
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - kaa
+        - caquetío-reconstruido
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - ka
+      - kama
+      - kana
+      - kasá
+      - kaya
+      - koa
+      - maa
+      - naa
+      - saa
+      - taa
+      - waa
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kaa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - chaa
+    - caquetío-reconstruido
+    - hacer, construir
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  dunku:
+    opciones:
+    - suna.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: dunku
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  dumki:
+    opciones:
+    - suna.B
+    colisiones:
+      clave_exacta:
+      - - dumki
+        - lokono
+        - dormir, pernoctar, alojarse
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: 'clusters no atestiguados: mk'
+      neologismo_valido: true
+      esqueleto: dumki
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - dumki
+    - lokono
+    - dormir, pernoctar, alojarse
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  aeke:
+    opciones:
+    - masa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - hueke
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: aeke
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  aika:
+    opciones:
+    - masa.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - aka
+      - arika
+      - gika
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: aika
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  ati:
+    opciones:
+    - awa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ati
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  ata:
+    opciones:
+    - awa.B
+    colisiones:
+      clave_exacta:
+      - - ata
+        - achagua
+        - Rallo
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ata
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - ata
+    - achagua
+    - Rallo
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  aita:
+    opciones:
+    - panaa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: aita
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  diti:
+    opciones:
+    - panaa.B
+    - buri.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - diki
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: diti
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  jusual:
+    opciones:
+    - kono.A
+    colisiones:
+      clave_exacta:
+      - - jusual
+        - caquetío-atestiguado
+        - sembrar, siembra, sembradío. Conuco
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: jusual
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - jusual
+    - caquetío-atestiguado
+    - sembrar, siembra, sembradío. Conuco
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  abuna:
+    opciones:
+    - kono.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: abuna
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  hiti:
+    opciones:
+    - raka.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - igi
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: iti
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  raka:
+    opciones:
+    - raka.B
+    colisiones:
+      clave_exacta:
+      - - raka
+        - caquetío-reconstruido
+        - querer, desear, necesitar
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - aka
+      - naka
+      - waka
+      nombre_del_elenco: []
+      segmento_de_nombre:
+      - Raka-bi
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: raka
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - raka
+    - caquetío-reconstruido
+    - querer, desear, necesitar
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  kudu:
+    opciones:
+    - rua.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - cu-du
+        - lokono
+        - VOCABULARIO_BASE
+      - - cu-dú
+        - lokono
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - kuru
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kudu
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  rua:
+    opciones:
+    - rua.B
+    colisiones:
+      clave_exacta:
+      - - rua
+        - caquetío-reconstruido
+        - cargar, transportar, llevar
+      archivada: []
+      clave_con_desambiguador:
+      - - rua-achagua
+        - achagua
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: rua
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - rua
+    - caquetío-reconstruido
+    - cargar, transportar, llevar
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  uni:
+    opciones:
+    - duna.A
+    colisiones:
+      clave_exacta:
+      - - uni
+        - achagua
+        - Agua
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: uni
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - uni
+    - achagua
+    - Agua
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  hikihi:
+    opciones:
+    - amana.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - ichii
+        - wayunaiki
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ikii
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  hiki:
+    opciones:
+    - amana.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - ichi
+        - lokono
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - diki
+      - hiko
+      - igi
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: iki
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  wairon:
+    opciones:
+    - amana.C
+    colisiones:
+      clave_exacta:
+      - - wairon
+        - caquetío-atestiguado
+        - hoguera
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco:
+      - Wairon
+      segmento_de_nombre:
+      - Wairon
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: wairon
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - wairon
+    - caquetío-atestiguado
+    - hoguera
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  unia:
+    opciones:
+    - kaya.A
+    colisiones:
+      clave_exacta:
+      - - unia
+        - achagua
+        - Lluvia
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - uria
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: unia
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - unia
+    - achagua
+    - Lluvia
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  oya:
+    opciones:
+    - kaya.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: oya
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  ada:
+    opciones:
+    - kuru.A
+    colisiones:
+      clave_exacta:
+      - - ada
+        - lokono
+        - árbol
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ada
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - ada
+    - lokono
+    - árbol
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  bara:
+    opciones:
+    - kuru.B
+    colisiones:
+      clave_exacta:
+      - - bara
+        - caquetío-reconstruido
+        - palo, árbol
+      archivada: []
+      clave_con_desambiguador:
+      - - bara-lokono
+        - lokono
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - baba
+      - bana
+      - bari
+      - dara
+      - mara
+      - para
+      - tara
+      - wara
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: bara
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - bara
+    - caquetío-reconstruido
+    - palo, árbol
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  hime:
+    opciones:
+    - arima.A
+    colisiones:
+      clave_exacta:
+      - - hime
+        - lokono
+        - pez
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - ime
+        - lokono
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ime
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - hime
+    - lokono
+    - pez
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  arima:
+    opciones:
+    - arima.B
+    colisiones:
+      clave_exacta:
+      - - arima
+        - caquetío-reconstruido
+        - pez, pescado
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - arika
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: arima
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - arima
+    - caquetío-reconstruido
+    - pez, pescado
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  wunabu:
+    opciones:
+    - dali.A
+    colisiones:
+      clave_exacta:
+      - - wunabu
+        - lokono
+        - 'tierra, ( la, el mundo : (y 2 acepción/es más)'
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: wunabu
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - wunabu
+    - lokono
+    - 'tierra, ( la, el mundo : (y 2 acepción/es más)'
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  dali:
+    opciones:
+    - dali.B
+    colisiones:
+      clave_exacta:
+      - - dali
+        - caquetío-reconstruido
+        - tierra, suelo, polvo
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final:
+      - da-
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - dai
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: dali
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - dali
+    - caquetío-reconstruido
+    - tierra, suelo, polvo
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  suka:
+    opciones:
+    - suka.A
+    colisiones:
+      clave_exacta:
+      - - suka
+        - caquetío-reconstruido
+        - noche, oscuridad
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - suca
+        - lokono
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - shukua
+      - suna
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: suka
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - suka
+    - caquetío-reconstruido
+    - noche, oscuridad
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  kidi:
+    opciones:
+    - sima.A
+    colisiones:
+      clave_exacta:
+      - - kidi
+        - caquetío-atestiguado
+        - sierra, serranía, cerro largo
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kidi
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - kidi
+    - caquetío-atestiguado
+    - sierra, serranía, cerro largo
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  ama:
+    opciones:
+    - ama.A
+    colisiones:
+      clave_exacta:
+      - - ama
+        - caquetío-reconstruido
+        - madre, mujer que nutre y da origen
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ama
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - ama
+    - caquetío-reconstruido
+    - madre, mujer que nutre y da origen
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  kusu:
+    opciones:
+    - ama.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - kuru
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kusu
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  iti:
+    opciones:
+    - baba.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: iti
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  kusi:
+    opciones:
+    - baba.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - cusí
+        - achagua
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - kasi
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kusi
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  baba:
+    opciones:
+    - baba.C
+    colisiones:
+      clave_exacta:
+      - - baba
+        - caquetío-reconstruido
+        - padre, hombre que protege
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final:
+      - -ba
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - bana
+      - bara
+      - maba
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: baba
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - baba
+    - caquetío-reconstruido
+    - padre, hombre que protege
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  dare:
+    opciones:
+    - buri.A
+    colisiones:
+      clave_exacta:
+      - - dare
+        - caquetío-atestiguado
+        - diente; hijo (extensión metafórica)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final:
+      - da-
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - dara
+      nombre_del_elenco: []
+      segmento_de_nombre:
+      - Dare-nu
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: dare
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - dare
+    - caquetío-atestiguado
+    - diente; hijo (extensión metafórica)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  ateri:
+    opciones:
+    - nomi.A
+    colisiones:
+      clave_exacta:
+      - - ateri
+        - caquetío-atestiguado
+        - hombre, varón
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ateri
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - ateri
+    - caquetío-atestiguado
+    - hombre, varón
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  iero:
+    opciones:
+    - wari.A
+    colisiones:
+      clave_exacta:
+      - - iero
+        - caquetío-atestiguado
+        - mujer
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: iero
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - iero
+    - caquetío-atestiguado
+    - mujer
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  isi:
+    opciones:
+    - kabo.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: isi
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  isihi:
+    opciones:
+    - kabo.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - isii
+        - lokono
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: isii
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  akusi:
+    opciones:
+    - nii.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: akusi
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  aku:
+    opciones:
+    - nii.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: aku
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  bari:
+    opciones:
+    - bari.A
+    colisiones:
+      clave_exacta:
+      - - bari
+        - caquetío-reconstruido
+        - vientre, barriga, interior del cuerpo
+      archivada: []
+      clave_con_desambiguador:
+      - - bari-achagua
+        - achagua
+      mismo_esqueleto_fonemico:
+      - - barí
+        - achagua
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - bara
+      - buri
+      - kari
+      - wari
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: bari
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - bari
+    - caquetío-reconstruido
+    - vientre, barriga, interior del cuerpo
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  ulakae:
+    opciones:
+    - bari.B
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: false
+      esqueleto: ulakae
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  ako:
+    opciones:
+    - arua.A
+    colisiones:
+      clave_exacta:
+      - - ako
+        - caquetío-atestiguado
+        - comida. Par, casal, pareja
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ako
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - ako
+    - caquetío-atestiguado
+    - comida. Par, casal, pareja
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  badia:
+    opciones:
+    - ka.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: badia
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  ka:
+    opciones:
+    - ka.B
+    colisiones:
+      clave_exacta:
+      - - ka
+        - caquetío-reconstruido
+        - y, también, además, con (conector aditivo)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - ca-lokono
+        - lokono
+        - VOCABULARIO_BASE
+      - - -ca
+        - achagua
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor:
+      - -ka
+      - ka-
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ka
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - ka
+    - caquetío-reconstruido
+    - y, también, además, con (conector aditivo)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  ika:
+    opciones:
+    - mara.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico:
+      - - yca
+        - achagua
+        - VOCABULARIO_BASE
+      - - ica
+        - achagua
+        - VOCABULARIO_BASE
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: ika
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  mara:
+    opciones:
+    - mara.B
+    colisiones:
+      clave_exacta:
+      - - mara
+        - caquetío-reconstruido
+        - pero, sin embargo, aunque (contraste)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - bara
+      - dara
+      - maa
+      - maba
+      - masa
+      - para
+      - tara
+      - wara
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: mara
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - mara
+    - caquetío-reconstruido
+    - pero, sin embargo, aunque (contraste)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  bena:
+    opciones:
+    - saa.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - bana
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: bena
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  saa:
+    opciones:
+    - saa.B
+    colisiones:
+      clave_exacta:
+      - - saa
+        - caquetío-reconstruido
+        - si, cuando, al momento de (condicional/temp.)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: saa
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - saa
+    - caquetío-reconstruido
+    - si, cuando, al momento de (condicional/temp.)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  kia:
+    opciones:
+    - naka.A
+    colisiones:
+      clave_exacta:
+      - - kia
+        - lokono
+        - después
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla: []
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kia
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - kia
+    - lokono
+    - después
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  naka:
+    opciones:
+    - naka.B
+    colisiones:
+      clave_exacta:
+      - - naka
+        - caquetío-reconstruido
+        - después, luego, más tarde (temporal posterior)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - aka
+      - naa
+      - nagua
+      - naya
+      - raka
+      - waka
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: naka
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - naka
+    - caquetío-reconstruido
+    - después, luego, más tarde (temporal posterior)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  puna:
+    opciones:
+    - puna.A
+    colisiones:
+      clave_exacta:
+      - - puna
+        - caquetío-reconstruido
+        - antes, ya, primero (temporal anterior)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - duna
+      - kuna
+      - pana
+      - suna
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: puna
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - puna
+    - caquetío-reconstruido
+    - antes, ya, primero (temporal anterior)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+  kibe:
+    opciones:
+    - wara.A
+    colisiones:
+      clave_exacta: []
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - kiba
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: kibe
+    uso_previo:
+      base: no medida (sin Docker)
+    al_entrar:
+      base: no medida
+  wara:
+    opciones:
+    - wara.B
+    colisiones:
+      clave_exacta:
+      - - wara
+        - caquetío-reconstruido
+        - muy, mucho, bastante (intensificador)
+      archivada: []
+      clave_con_desambiguador: []
+      mismo_esqueleto_fonemico: []
+      choque_con_la_tanda_final: []
+      vecinas_a_una_letra_en_el_caquetio_del_habla:
+      - bara
+      - dara
+      - mara
+      - para
+      - tara
+      - waa
+      - waka
+      - wari
+      - waru
+      - waya
+      nombre_del_elenco: []
+      segmento_de_nombre: []
+      es_afijo_del_motor: []
+      castellano_en_las_listas: false
+      castellano_mismo_esqueleto: []
+      fonotactica_atestiguada: pasa
+      neologismo_valido: true
+      esqueleto: wara
+    uso_previo:
+      base: no medida (sin Docker)
+    ya_es_clave:
+    - wara
+    - caquetío-reconstruido
+    - muy, mucho, bastante (intensificador)
+    al_entrar: 'ya está en el lexicón: no entra nada nuevo'
+coste_por_opcion:
+  naa:
+    A:
+      formas:
+      - kunu
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 9
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kunu: 0
+      fonotactica_de_la_nueva:
+        kunu: pasa
+    B:
+      formas:
+      - naa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        naa: 0
+      fonotactica_de_la_nueva:
+        naa: pasa
+    recomendada: A
+  waa:
+    A:
+      formas:
+      - sile
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        sile: 0
+      fonotactica_de_la_nueva:
+        sile: pasa
+    B:
+      formas:
+      - andi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        andi: 0
+      fonotactica_de_la_nueva:
+        andi: 'clusters no atestiguados: nd'
+    C:
+      formas:
+      - waa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        waa: 0
+      fonotactica_de_la_nueva:
+        waa: pasa
+    recomendada: A
+  kaa:
+    A:
+      formas:
+      - kaa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        kaa: 1
+      fonotactica_de_la_nueva:
+        kaa: pasa
+    recomendada: A
+  maa:
+    A:
+      formas:
+      - maa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        maa: 0
+      fonotactica_de_la_nueva:
+        maa: pasa
+    B:
+      formas:
+      - dia
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 4
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        dia: 2
+      fonotactica_de_la_nueva:
+        dia: pasa
+    recomendada: A
+  taa:
+    A:
+      formas:
+      - nika
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        nika: 0
+      fonotactica_de_la_nueva:
+        nika: pasa
+    B:
+      formas:
+      - taa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        taa: 0
+      fonotactica_de_la_nueva:
+        taa: pasa
+    recomendada: A
+  chaa:
+    A:
+      formas:
+      - ani
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ani: 0
+      fonotactica_de_la_nueva:
+        ani: pasa
+    B:
+      formas:
+      - chaa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        chaa: 1
+      fonotactica_de_la_nueva:
+        chaa: pasa
+    recomendada: A
+  suna:
+    A:
+      formas:
+      - dunku
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 5
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        dunku: 0
+      fonotactica_de_la_nueva:
+        dunku: pasa
+    B:
+      formas:
+      - dumki
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 5
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        dumki: 1
+      fonotactica_de_la_nueva:
+        dumki: 'clusters no atestiguados: mk'
+    recomendada: A
+  masa:
+    A:
+      formas:
+      - aeke
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 6
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        aeke: 0
+      fonotactica_de_la_nueva:
+        aeke: pasa
+    B:
+      formas:
+      - aika
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 6
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        aika: 0
+      fonotactica_de_la_nueva:
+        aika: pasa
+    recomendada: A
+  awa:
+    A:
+      formas:
+      - ati
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 4
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ati: 0
+      fonotactica_de_la_nueva:
+        ati: pasa
+    B:
+      formas:
+      - ata
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 4
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ata: 1
+      fonotactica_de_la_nueva:
+        ata: pasa
+    recomendada: A
+  panaa:
+    A:
+      formas:
+      - aita
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        aita: 0
+      fonotactica_de_la_nueva:
+        aita: pasa
+    B:
+      formas:
+      - diti
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        diti: 0
+      fonotactica_de_la_nueva:
+        diti: pasa
+    recomendada: A
+  kono:
+    A:
+      formas:
+      - jusual
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        jusual: 1
+      fonotactica_de_la_nueva:
+        jusual: pasa
+    B:
+      formas:
+      - abuna
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        abuna: 0
+      fonotactica_de_la_nueva:
+        abuna: pasa
+    recomendada: A
+  raka:
+    A:
+      formas:
+      - hiti
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 2
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        hiti: 0
+      fonotactica_de_la_nueva:
+        hiti: pasa
+    B:
+      formas:
+      - raka
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        raka: 0
+      fonotactica_de_la_nueva:
+        raka: pasa
+    recomendada: A
+  rua:
+    A:
+      formas:
+      - kudu
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kudu: 1
+      fonotactica_de_la_nueva:
+        kudu: pasa
+    B:
+      formas:
+      - rua
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        rua: 1
+      fonotactica_de_la_nueva:
+        rua: pasa
+    recomendada: A
+  duna:
+    A:
+      formas:
+      - uni
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 3
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        uni: 1
+      fonotactica_de_la_nueva:
+        uni: pasa
+    recomendada: A
+  amana:
+    A:
+      formas:
+      - hikihi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 2
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        hikihi: 1
+      fonotactica_de_la_nueva:
+        hikihi: pasa
+    B:
+      formas:
+      - hiki
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 2
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        hiki: 1
+      fonotactica_de_la_nueva:
+        hiki: pasa
+    C:
+      formas:
+      - wairon
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 2
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        wairon: 2
+      fonotactica_de_la_nueva:
+        wairon: pasa
+    recomendada: A
+  kaya:
+    A:
+      formas:
+      - unia
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        unia: 1
+      fonotactica_de_la_nueva:
+        unia: pasa
+    B:
+      formas:
+      - oya
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        oya: 0
+      fonotactica_de_la_nueva:
+        oya: pasa
+    recomendada: A
+  kuru:
+    A:
+      formas:
+      - ada
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 5
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ada: 1
+      fonotactica_de_la_nueva:
+        ada: pasa
+    B:
+      formas:
+      - bara
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 5
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        bara: 2
+      fonotactica_de_la_nueva:
+        bara: pasa
+    recomendada: A
+  arima:
+    A:
+      formas:
+      - hime
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 3
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        hime: 2
+      fonotactica_de_la_nueva:
+        hime: pasa
+    B:
+      formas:
+      - arima
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        arima: 0
+      fonotactica_de_la_nueva:
+        arima: pasa
+    recomendada: A
+  dali:
+    A:
+      formas:
+      - wunabu
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        wunabu: 1
+      fonotactica_de_la_nueva:
+        wunabu: pasa
+    B:
+      formas:
+      - dali
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        dali: 1
+      fonotactica_de_la_nueva:
+        dali: pasa
+    recomendada: A
+  suka:
+    A:
+      formas:
+      - suka
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        suka: 1
+      fonotactica_de_la_nueva:
+        suka: pasa
+    recomendada: A
+  sima:
+    A:
+      formas:
+      - kidi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 4
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kidi: 1
+      fonotactica_de_la_nueva:
+        kidi: pasa
+    recomendada: A
+  ama:
+    A:
+      formas:
+      - ama
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        ama: 0
+      fonotactica_de_la_nueva:
+        ama: pasa
+    B:
+      formas:
+      - kusu
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kusu: 0
+      fonotactica_de_la_nueva:
+        kusu: pasa
+    recomendada: A
+  baba:
+    A:
+      formas:
+      - iti
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        iti: 0
+      fonotactica_de_la_nueva:
+        iti: pasa
+    B:
+      formas:
+      - kusi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kusi: 1
+      fonotactica_de_la_nueva:
+        kusi: pasa
+    C:
+      formas:
+      - baba
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        baba: 1
+      fonotactica_de_la_nueva:
+        baba: pasa
+    recomendada: A
+  buri:
+    A:
+      formas:
+      - dare
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        dare: 2
+      fonotactica_de_la_nueva:
+        dare: pasa
+    B:
+      formas:
+      - diti
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        diti: 0
+      fonotactica_de_la_nueva:
+        diti: pasa
+    recomendada: A
+  nomi:
+    A:
+      formas:
+      - ateri
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ateri: 1
+      fonotactica_de_la_nueva:
+        ateri: pasa
+    recomendada: A
+  wari:
+    A:
+      formas:
+      - iero
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        iero: 1
+      fonotactica_de_la_nueva:
+        iero: pasa
+    recomendada: A
+  kabo:
+    A:
+      formas:
+      - isi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        isi: 0
+      fonotactica_de_la_nueva:
+        isi: pasa
+    B:
+      formas:
+      - isihi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        isihi: 1
+      fonotactica_de_la_nueva:
+        isihi: pasa
+    recomendada: A
+  nii:
+    A:
+      formas:
+      - akusi
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 3
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        akusi: 0
+      fonotactica_de_la_nueva:
+        akusi: pasa
+    B:
+      formas:
+      - aku
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 3
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        aku: 0
+      fonotactica_de_la_nueva:
+        aku: pasa
+    recomendada: A
+  bari:
+    A:
+      formas:
+      - bari
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        bari: 2
+      fonotactica_de_la_nueva:
+        bari: pasa
+    B:
+      formas:
+      - ulakae
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 1
+      apariciones_en_plantillas: 1
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ulakae: 0
+      fonotactica_de_la_nueva:
+        ulakae: pasa
+    recomendada: A
+  arua:
+    A:
+      formas:
+      - ako
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 2
+      apariciones_en_plantillas: 2
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ako: 1
+      fonotactica_de_la_nueva:
+        ako: pasa
+    recomendada: A
+  ka:
+    A:
+      formas:
+      - badia
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 3
+      apariciones_en_plantillas: 9
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        badia: 0
+      fonotactica_de_la_nueva:
+        badia: pasa
+    B:
+      formas:
+      - ka
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        ka: 2
+      fonotactica_de_la_nueva:
+        ka: pasa
+    recomendada: A
+  mara:
+    A:
+      formas:
+      - ika
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 3
+      apariciones_en_plantillas: 5
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        ika: 1
+      fonotactica_de_la_nueva:
+        ika: pasa
+    B:
+      formas:
+      - mara
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        mara: 0
+      fonotactica_de_la_nueva:
+        mara: pasa
+    recomendada: A
+  saa:
+    A:
+      formas:
+      - bena
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 3
+      apariciones_en_plantillas: 6
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        bena: 0
+      fonotactica_de_la_nueva:
+        bena: pasa
+    B:
+      formas:
+      - saa
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        saa: 0
+      fonotactica_de_la_nueva:
+        saa: pasa
+    recomendada: A
+  naka:
+    A:
+      formas:
+      - kia
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 3
+      apariciones_en_plantillas: 6
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kia: 1
+      fonotactica_de_la_nueva:
+        kia: pasa
+    B:
+      formas:
+      - naka
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        naka: 0
+      fonotactica_de_la_nueva:
+        naka: pasa
+    recomendada: A
+  puna:
+    A:
+      formas:
+      - puna
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        puna: 0
+      fonotactica_de_la_nueva:
+        puna: pasa
+    recomendada: A
+  wara:
+    A:
+      formas:
+      - kibe
+      se_queda_la_forma: false
+      usos_de_la_voz_vieja_que_dejan_de_contar: null
+      usos_como_nucleo_de_otra_forma: null
+      respuestas_que_la_dicen: null
+      plantillas_a_tocar: 3
+      apariciones_en_plantillas: 4
+      formas_de_la_base_a_raiz_de_ninguna_parte: null
+      colisiones_de_la_nueva:
+        kibe: 0
+      fonotactica_de_la_nueva:
+        kibe: pasa
+    B:
+      formas:
+      - wara
+      se_queda_la_forma: true
+      usos_de_la_voz_vieja_que_dejan_de_contar: 0
+      usos_como_nucleo_de_otra_forma: 0
+      respuestas_que_la_dicen: 0
+      plantillas_a_tocar: 0
+      apariciones_en_plantillas: 0
+      formas_de_la_base_a_raiz_de_ninguna_parte: 0
+      colisiones_de_la_nueva:
+        wara: 0
+      fonotactica_de_la_nueva:
+        wara: pasa
+    recomendada: A
+coste_de_la_recomendacion:
+  voces_que_cambian: 0
+  usos_sueltos: 0
+  usos_como_nucleo: 0
+  suma_por_voz_de_respuestas_que_la_dicen: 0
+  apariciones_en_plantillas: 0
+  apariciones_en_reglas_del_motor: 0
+  apariciones_en_la_koine: 0
+  apariciones_en_tests: 0

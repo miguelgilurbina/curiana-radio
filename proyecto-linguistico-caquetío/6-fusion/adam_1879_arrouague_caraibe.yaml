@@ -1,0 +1,408 @@
+# Adam 1879 — las 79 voces arahuacas en el caribe insular (transcritas en imagen).
+meta:
+  obra_id: adam-1879
+  que_es: 'La tabla de Adam 1879 (pp. 288-290): 79 voces ARAHUACAS (lokono, del vocabulario que Platzmann le copió,
+    «incompleto y moderno», nota p. 290) identificadas en el caribe insular, con el registro en que caen: F = habla
+    de mujeres, H = de hombres, C = común, D = dudoso.'
+  cifras_de_adam: 60 en la de mujeres, 5 en la de hombres, 11 comunes, 3 dudosas (p. 290)
+  transcrito: 2026-09-24, en IMAGEN (PyMuPDF sobre fuentes_caquetios/Adam_1879_Parler_hommes_femmes_langue_caraibe.pdf,
+    índices 14-16); la capa de texto rompe la cursiva
+  derechos: 1879, dominio público
+  para_que: 'el conjunto donde el lokono y el kalinago de mujeres COINCIDEN, voz a voz: la base de 6-fusion/nucleo_fundacional_hermanas_2026-09-24.yaml'
+  ortografia: 'la de Adam (francesa: ou = u, ch = š, gn = ñ)'
+voces:
+- n: 1
+  lokono: Abu
+  glosa_fr: avec
+  caribe_insular: C. abua
+  pagina: 288
+- n: 2
+  lokono: Abule-d-in
+  glosa_fr: perdre
+  caribe_insular: H. aboule-coua, F. leuketa
+  pagina: 288
+- n: 3
+  lokono: Abuna
+  glosa_fr: os
+  caribe_insular: F. abo, H. epoue
+  pagina: 288
+- n: 4
+  lokono: Abunu-n
+  glosa_fr: planter
+  caribe_insular: C. abona
+  pagina: 288
+- n: 5
+  lokono: Ada
+  glosa_fr: bois, arbre, forêt
+  caribe_insular: D. ara-bou, dans le bois
+  pagina: 288
+- n: 6
+  lokono: Adaku-n
+  glosa_fr: uriner
+  caribe_insular: F. n-arago-iem, j'urine; H. n-achiti-em, id.
+  pagina: 288
+- n: 7
+  lokono: Adiki-n
+  glosa_fr: voir
+  caribe_insular: F. arica, H. chenaim
+  pagina: 288
+- n: 8
+  lokono: Adian
+  glosa_fr: parler
+  caribe_insular: F. arian-ga, H. chicalete
+  pagina: 288
+- n: 9
+  lokono: Adike
+  glosa_fr: oreille
+  caribe_insular: C. aricae
+  pagina: 288
+- n: 10
+  lokono: Adiki
+  glosa_fr: après
+  caribe_insular: F. t-arici, H. t-ibapoue
+  pagina: 288
+- n: 11
+  lokono: Adenna
+  glosa_fr: bras
+  caribe_insular: C. areunna
+  pagina: 288
+- n: 12
+  lokono: Adimissi-n
+  glosa_fr: sentir
+  caribe_insular: F. k-irimicha-ti-ti; H. k-achirougou-ti
+  pagina: 288
+- n: 13
+  lokono: Adukuti
+  glosa_fr: grand-père
+  caribe_insular: F. n-argoutti, H. itamoulou
+  pagina: 288
+- n: 14
+  lokono: Adukutu-n
+  glosa_fr: montrer
+  caribe_insular: F. arocota, H. cheboukai-kèta
+  pagina: 288
+- n: 15
+  lokono: Adum-ki-n
+  glosa_fr: dormir
+  caribe_insular: F. aroman-ca, H. tihuetou
+  pagina: 288
+- n: 16
+  lokono: Adule-bu
+  glosa_fr: les côtes
+  caribe_insular: F. n-oroo-le
+  pagina: 288
+- n: 17
+  lokono: Aebussu-nua
+  glosa_fr: fructifier
+  caribe_insular: F. ebechou-a-rou, elle est conçue; H. ateca-coa-a-rou, id.
+  pagina: 288
+- n: 18
+  lokono: Aeke
+  glosa_fr: manger
+  caribe_insular: F. aica, H. chinaim
+  pagina: 288
+- n: 19
+  lokono: Aiy-i-n
+  glosa_fr: pleurer
+  caribe_insular: F. aya-coua, H. natamoin
+  pagina: 288
+- n: 20
+  lokono: Akannabu-n
+  glosa_fr: entendre
+  caribe_insular: F. acamba, H. tibanegue
+  pagina: 288
+- n: 21
+  lokono: Akatu
+  glosa_fr: hamac
+  caribe_insular: H. acat, F. ékéra
+  pagina: 288
+- n: 22
+  lokono: Akumu-du-n
+  glosa_fr: sécher au soleil
+  caribe_insular: F. acomou-rou, H. touloua-rou
+  pagina: 288
+- n: 23
+  lokono: Akussa-n
+  glosa_fr: coudre
+  caribe_insular: D. akecha-coua
+  pagina: 288
+- n: 24
+  lokono: Akuttu
+  glosa_fr: grand-mère
+  caribe_insular: F. n-aguette, H. i-nou-ti
+  pagina: 288
+- n: 25
+  lokono: Akuyu-kuttu-nua
+  glosa_fr: faire revenir
+  caribe_insular: F. acouyou-keta, H. chiramain
+  pagina: 288
+- n: 26
+  lokono: Akula-tu-n
+  glosa_fr: frapper
+  caribe_insular: C. k-acoula-ca-ti
+  pagina: 288
+- n: 27
+  lokono: Aku-ssi
+  glosa_fr: œil
+  caribe_insular: F. n-acou, H. enoulou
+  pagina: 288
+- n: 28
+  lokono: Ani
+  glosa_fr: appartenir
+  caribe_insular: C. ani
+  pagina: 289
+- n: 29
+  lokono: Anaku
+  glosa_fr: milieu
+  caribe_insular: H. anakê-ti, F. l-iranna-coua
+  pagina: 289
+- n: 30
+  lokono: Anaku-nua
+  glosa_fr: ramer
+  caribe_insular: F. anaca, H. atalimain
+  pagina: 289
+- n: 31
+  lokono: Anoan
+  glosa_fr: élire, choisir
+  caribe_insular: F. annoa, H. elé
+  pagina: 289
+- n: 32
+  lokono: Aolassa-n
+  glosa_fr: fendre
+  caribe_insular: F. aollacha, H. achara-keta
+  pagina: 289
+- n: 33
+  lokono: Aonaba-n
+  glosa_fr: répliquer
+  caribe_insular: F. aonaba, H. cheoucou
+  pagina: 289
+- n: 34
+  lokono: Aparra-n
+  glosa_fr: frapper, tuer
+  caribe_insular: F. apara, H. tioue
+  pagina: 289
+- n: 35
+  lokono: Ari
+  glosa_fr: dent
+  caribe_insular: F. n-ari, H. i-eri
+  pagina: 289
+- n: 36
+  lokono: Ari
+  glosa_fr: nom
+  caribe_insular: F. n-iri, H. i-eti
+  pagina: 289
+- n: 37
+  lokono: Arruku-ssa-n
+  glosa_fr: trembler
+  caribe_insular: C. ariki-cha-coua
+  pagina: 289
+- n: 38
+  lokono: Assa-n
+  glosa_fr: nommer
+  caribe_insular: F. acha-bae, nomme-le
+  pagina: 289
+- n: 39
+  lokono: Assur-tu-n
+  glosa_fr: sucer
+  caribe_insular: H. n-achouro-ien-li
+  pagina: 289
+- n: 40
+  lokono: Atta
+  glosa_fr: sang
+  caribe_insular: F. ita, H. timoinalou
+  pagina: 289
+- n: 41
+  lokono: Attiki-di-n
+  glosa_fr: tomber
+  caribe_insular: F. atikera-a-li; H. tioue-ha-li
+  pagina: 289
+- n: 42
+  lokono: Atti-n
+  glosa_fr: boire
+  caribe_insular: F. ata-ca, H. chinain
+  pagina: 289
+- n: 43
+  lokono: Atuku-n
+  glosa_fr: manger du fruit
+  caribe_insular: D. ataca-a-li
+  pagina: 289
+- n: 44
+  lokono: Balissi
+  glosa_fr: cendre
+  caribe_insular: F. balissi, H. hueronum
+  pagina: 289
+- n: 45
+  lokono: Emeu-du-n
+  glosa_fr: enfanter
+  caribe_insular: F. emei-gnoua, H. neumain
+  pagina: 289
+- n: 46
+  lokono: Era
+  glosa_fr: jus
+  caribe_insular: F. tira, H. teoucoulou
+  pagina: 289
+- n: 47
+  lokono: Eret-in
+  glosa_fr: se marier (une femme)
+  caribe_insular: F. k-araiti-ti-arou, elle est mariée; H. nicheouanae-arou, id.
+  pagina: 289
+- n: 48
+  lokono: Hala
+  glosa_fr: siège
+  caribe_insular: F. hala, H. moule
+  pagina: 289
+- n: 49
+  lokono: Hati
+  glosa_fr: poivre
+  caribe_insular: F. ati, H. boemoin
+  pagina: 289
+- n: 50
+  lokono: Hiaeru
+  glosa_fr: femme
+  caribe_insular: F. inharou, H. ouelle
+  pagina: 289
+- n: 51
+  lokono: Ibi-ki-n
+  glosa_fr: couper
+  caribe_insular: F. k-ibe-coua, couper bien; H. kamana
+  pagina: 289
+- n: 52
+  lokono: Ibi-ni-n
+  glosa_fr: danser
+  caribe_insular: H. abina-ca-ni, danse; F. abaima-ca-ni, id.
+  pagina: 289
+- n: 53
+  lokono: Issibu
+  glosa_fr: visage
+  caribe_insular: F. ichibou, H. embatali
+  pagina: 289
+- n: 54
+  lokono: Issihi
+  glosa_fr: tête
+  caribe_insular: F. ichic, H. boupou
+  pagina: 289
+- n: 55
+  lokono: Issiri
+  glosa_fr: nez
+  caribe_insular: C. ichiri
+  pagina: 289
+- n: 56
+  lokono: Issirimain
+  glosa_fr: premier-né
+  caribe_insular: F. n-ichiriman, H. ihuenema-tobou
+  pagina: 289
+- n: 57
+  lokono: Itika
+  glosa_fr: excrément
+  caribe_insular: F. itica, H. ouatte
+  pagina: 289
+- n: 58
+  lokono: Iouli
+  glosa_fr: tabac
+  caribe_insular: F. iouli, H. itamanle
+  pagina: 290
+- n: 59
+  lokono: Iwuera
+  glosa_fr: membre viril
+  caribe_insular: F. l-ihuera, H. li-aloucou-li
+  pagina: 290
+- n: 60
+  lokono: Kaduli-n
+  glosa_fr: avoir des racines (se dit du manioc)
+  caribe_insular: F. karale-ti, H. terouboui-ti
+  pagina: 290
+- n: 61
+  lokono: Kaku-n
+  glosa_fr: vivre
+  caribe_insular: F. kake-keili, il vit encore; H. noulou-keili, id.
+  pagina: 290
+- n: 62
+  lokono: Kalle
+  glosa_fr: manioc, cassave
+  caribe_insular: F. kele-tona, farine de manioc; H. cibiba
+  pagina: 290
+- n: 63
+  lokono: Karau
+  glosa_fr: herbes
+  caribe_insular: F. calao, H. toulloulli
+  pagina: 290
+- n: 64
+  lokono: Kati
+  glosa_fr: lune
+  caribe_insular: F. cati, H. nonum
+  pagina: 290
+- n: 65
+  lokono: Kudibi-u
+  glosa_fr: oiseau
+  caribe_insular: F. oulibi-gnum, oiseaux; H. tonnoulou
+  pagina: 290
+- n: 66
+  lokono: Kuliara
+  glosa_fr: bateau
+  caribe_insular: C. couliala
+  pagina: 290
+- n: 67
+  lokono: Lukku
+  glosa_fr: homme, arrouague
+  caribe_insular: F. a-louage, H. toualicha
+  pagina: 290
+- n: 68
+  lokono: Mabba
+  glosa_fr: miel
+  caribe_insular: C. mamba
+  pagina: 290
+- n: 69
+  lokono: Mabbaran
+  glosa_fr: chauve
+  caribe_insular: F. manbanna-ti, H. ekiekirou
+  pagina: 290
+- n: 70
+  lokono: Meikuru
+  glosa_fr: nègre
+  caribe_insular: F. meguerou, H. tiboulouc
+  pagina: 290
+- n: 71
+  lokono: U-banna
+  glosa_fr: feuille
+  caribe_insular: C. banna
+  pagina: 290
+- n: 72
+  lokono: Ubada
+  glosa_fr: ongle
+  caribe_insular: F. noubara
+  pagina: 290
+- n: 73
+  lokono: Ueda
+  glosa_fr: peau, écorce
+  caribe_insular: F. ora, t-ora, H. t-ibipoue
+  pagina: 290
+- n: 74
+  lokono: Ueia
+  glosa_fr: ombre
+  caribe_insular: F. iaoua
+  pagina: 290
+- n: 75
+  lokono: Uekabu
+  glosa_fr: main
+  caribe_insular: F. n-oucabo
+  pagina: 290
+- n: 76
+  lokono: Ukutti
+  glosa_fr: pied
+  caribe_insular: F. ougoutti, H. ovpou
+  pagina: 290
+- n: 77
+  lokono: Ulluku
+  glosa_fr: dedans
+  caribe_insular: F. t-iroucou, H. t-itao
+  pagina: 290
+- n: 78
+  lokono: Uwuria
+  glosa_fr: pour
+  caribe_insular: F. oaria
+  pagina: 290
+- n: 79
+  lokono: Ubuku
+  glosa_fr: cuisse
+  caribe_insular: F. n-ebouic, H. i-ebeti
+  pagina: 290
