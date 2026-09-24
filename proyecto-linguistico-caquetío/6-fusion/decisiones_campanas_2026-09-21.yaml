@@ -127,6 +127,14 @@ dc.3_nominalizador:
     (Arcaya p. 75 escribe «viruela», Zavala leyó «ciruela»; cambiar una glosa
     mueve canon). Y una deuda grande: Angulo Molina, de quien salen los 19
     verbos de acción del glosario, no está en el repo.
+  de_paso_archivado: >-
+    2026-09-24 — dp.3.24 de #222 («Ok a todo», Miguel; registro en
+    6-fusion/decisiones_222_documentacion_2026-09-24.yaml): H (la campaña del
+    prefijo `ja-`) e I (`cazebo` = `cazi` + `ebo`, a la mesa de `-ebo`) se
+    ARCHIVAN como preguntas para la era 3. Ninguna cierra algo que la corrida
+    base necesite. Se archivan las preguntas, no entradas del lexicón: nada
+    cambia en él. J (`cumaragua`) es dp.1.05 y Angulo Molina es dp.3.02: no
+    se archivan aquí.
   se_aplica_en: '2-lengua/morfologia.md §10 (fila «Nominalización») y §11; #193'
   estado_de_lo_que_quedaba: >-
     La derivación cero se ENSEÑA desde la tanda de la base (6-fusion/medicion_tanda_base_2026-09-23.yaml): «NOMBRE: un
