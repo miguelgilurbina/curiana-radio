@@ -1,0 +1,237 @@
+# Decisiones de Miguel sobre el GRUPO 2 de #222 — «Canon del mundo (no
+# cambian el prompt)», diecisiete entradas dp.2.01-dp.2.17 (2026-09-24)
+#
+# De dónde sale la lista: 6-fusion/decisiones_pendientes_2026-09-23.yaml,
+# clave `grupo_2_mundo` (datos, citas y opciones de cada una), y su resumen
+# legible 6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md
+# §Grupo 2 (la recomendación que se aplica: donde el escriba dice «Mía»,
+# manda la suya).
+#
+# Lo que dijo Miguel, en dos tiempos:
+#
+#   «Acepto todo lo recomendado»                       (tanda de las hermanas)
+#
+#   «Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es
+#   lo que tenga que ver con docker»                   (2026-09-24)
+#
+# Registrado ANTES de tocar nada (fusionar-propuesta §0). Cada entrada lleva
+# `eleccion` (la recomendación del resumen), `lectura_operativa` (lo que el
+# escriba entiende que eso obliga a hacer, escrito aparte para que no parezca
+# que lo decidió Miguel), `estado` (APLICADA / CERRADA SIN CAMBIO / NECESITA
+# A MIGUEL) y `aplicado_por`.
+#
+# Tres reglas del encargo que mandan sobre todas las entradas:
+#   1. Lo que la recomendación manda ESPERAR se cierra como decidido y
+#      declarado, sin aplicar nada.
+#   2. Lo que sólo Miguel puede hacer (reconocer un sitio, mirar un folio en
+#      PARES) no se inventa: queda NECESITA A MIGUEL con la pregunta exacta y
+#      el resto de la entrada aplicado.
+#   3. Lo que aparezca al aplicar y nadie previó (una colisión, una capa
+#      dudosa, un dato que contradice) NO se resuelve de paso: se salta, se
+#      escribe en `lo_que_aparecio_al_aplicar` y se dice en el informe.
+#
+# Y una frontera de este frente: no se tocan curiana_lexicon.py, los
+# lexicon_zavala/a2/achagua generados, el motor (curiana_*.py) ni las
+# plantillas — otro frente trabaja ahí. Lo que lo exija queda NECESITA A
+# MIGUEL con la razón.
+
+meta:
+  fecha: '2026-09-24'
+  rama: mundo/222-grupo2-2026-09-24 (cortada de tanda/hermanas-2026-09-24, c83937b)
+  decision_literal: '«Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es lo que tenga que ver con docker»'
+  decision_anterior: '«Acepto todo lo recomendado»'
+  lista: 6-fusion/decisiones_pendientes_2026-09-23.yaml §grupo_2_mundo
+  resumen: 6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md §Grupo 2
+  estado: EN CURSO — se pone al día al cerrar cada entrada
+
+decisiones:
+
+  dp.2.01:
+    tema: el contacto precolombino con las Antillas Mayores — ¿qué capa?
+    eleccion: 'C + E — se parte en dos afirmaciones (C1 reconstruida, C2 hipotética) y se reformula como contacto «por cadena de tramos cortos», falsable'
+    lectura_operativa: >-
+      Las tres afirmaciones de dc.4 entran al corpus de geografía política con
+      su capa: costa ↔ ABC con parentesco (atestiguado), costa/islas ↔ La
+      Española 1513-1526 (atestiguado, colonial) y la tercera partida en C1
+      «el guanín circulaba entre Tierra Firme y las Antillas Mayores antes de
+      1492» (reconstruido) y C2 «la esfera caquetía participaba en ese
+      circuito» (hipotético), con la forma E —si lo hubo, fue por cadena de
+      tramos cortos— y sus predicciones falsables escritas.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.02:
+    tema: la polity de los llanos — misma lengua con variación, y los caquetíos del Casanare
+    eleccion: 'Federmann A + Tolosa A + Rivero (b) + Gumilla A, aplicadas juntas: un solo hecho con cuatro testigos; el motor no se toca'
+    lectura_operativa: >-
+      Un hecho del corpus (geografía política) con las cuatro citas; el rasgo
+      de lengua y de economía a `llanos` en 3-mundo/polities-caquetias.md con
+      la nota de Rivero (cita directa, sin continuidad política probada) y
+      «Cacatia» de Gumilla en la ficha y en el mapa de dispersión del
+      etnónimo. `curiana_polities.py` NO se toca (es del motor): la nota que
+      Rivero (b) pide para `llanos` va al vault.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.03:
+    tema: el campo `epoca` en 3-mundo/etnias.yaml
+    eleccion: 'Sí, antes de dp.2.04 (T8 D)'
+    lectura_operativa: >-
+      `epoca` con vocabulario cerrado (precontacto · contacto-temprano ·
+      colonial · varias), exigido cuando `polity_caquetia: costera`, validado
+      por curiana_sim/compilar_etnias.py (el 9.º guardián; no es motor).
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.04:
+    tema: los vecinos que faltan en etnias.yaml
+    eleccion: 'M1 B, T5 D, T8 B y C, en ese orden (epoca primero)'
+    lectura_operativa: >-
+      M1 B: los grupos de Oliver que faltan, con el jirajara como vecino de la
+      costera (hipotético por la boda) y etnia-003 a familia `desconocida`.
+      T5 D: el taíno (contacto ninguno) y sus dos hechos de geografía
+      política. T8 B: la corrección a la campaña 1 (gen-03 y el aviso de
+      arq-01). T8 C: los arahuacos de las Antillas Menores, atestiguado,
+      contacto poblacional hacia las ABC, con `epoca`.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.05:
+    tema: las tres Curianas; toponimo-111 mal situado
+    eleccion: 'A, después de verificar Navarrete en imagen'
+    lectura_operativa: >-
+      Verificar en imagen Navarrete t. III pp. 13 n. 4 y 32 n. 3 (y la p. 32
+      de «riego», dp.2.06 C); registrar la separación de las Curianas
+      (oriental / occidental / La Ramada) donde el canon la necesita, y curar
+      toponimo-111: el «Coria-na» de Oliver está en La Ramada, no en Punta
+      Espada.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.06:
+    tema: los hechos de contacto temprano de las crónicas (1499-1502)
+    eleccion: 'C primero, luego B; D como nota; E en espera'
+    lectura_operativa: >-
+      C: ver en imagen las pp. 32, 86-89, 518 y 544 de Navarrete. B: al corpus
+      el rescate en guanines, la cédula de 1501 y el palafito de «veinte»
+      casas (que corrige geografia_politica-006 y nodo-008). D: Isabel,
+      intérprete de 1502, como nota (no como hecho). E: la isla de las
+      hierbas se CIERRA en espera, sin aplicar.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.07:
+    tema: creencia-013 — la cita de Ampíes, «como Dios» o «como digo»
+    eleccion: 'Tolosa A + HSAI a (el mismo gesto); B, ver el folio en PARES, cuando se pueda'
+    lectura_operativa: >-
+      creencia-013 cita las dos lecturas sin decidir (Fernández Duro p. 212 y
+      el folio 14 vía Velasco, variante en notas; nada se apoya en «como
+      Dios») y lleva la referencia de HSAI a (Ampíes en Oviedo y Baños 1885 t.
+      II p. 212 y Aguado vía Arcaya p. 115), con ficha para la carta de
+      Ampíes. B (mirar el folio 14 en PARES) sólo lo puede hacer Miguel.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.08:
+    tema: el lote de Esteves — cómo entra
+    eleccion: '2-A, por tandas'
+    lectura_operativa: >-
+      Por tandas, con la regla (E) = Esteves ya aplicada en los niveles del
+      lote (cc.4 → 1-A): primero las A y B más las correcciones del §2 que
+      tocan el canon, después las C, después los descartes. «Que no quede
+      ninguna tarea pendiente»: las tres tandas se aplican hoy, en commits
+      separados. Las correcciones que tocan el lexicón (la cita de
+      `kumarawa`) no son de este frente.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.09:
+    tema: el mapa vivo — cuatro identificaciones y la forma viva
+    eleccion: 'P3 A. P3 B necesita a Miguel (si reconoce los sitios). P4: el campo propio (recomendación del agente, que el resumen no contradice)'
+    lectura_operativa: >-
+      P3 A: una lectura `hipotesis` en toponimo-132, 138, 135 y 176. P3 B:
+      NECESITA A MIGUEL. P4: la forma viva con su coordenada en un campo
+      propio del canon, leído por barrer_mapa.py (tooling, no motor).
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.10:
+    tema: la cola nueva de topónimos (Sarasaragua, Norupara, Buinare, Paraguaná 1548)
+    eleccion: 'A la cola; T1 E1 (con la reserva de M3 sobre comoho)'
+    lectura_operativa: >-
+      Sarasaragua, Norupara y Buinare a la cola de campana-toponimos;
+      `Paraguana` (Oviedo t. I p. 205) a la campaña de topónimos; `comoho` a
+      ecologia.yaml con la reserva de M3 (una sola cadena, el obispo
+      Bastidas); `hado` congelado hasta verificar.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.11:
+    tema: Miraca en 1530 (nodo-031)
+    eleccion: 'A, junto con Oviedo t. IV p. 533'
+    lectura_operativa: >-
+      Sumar federmann-1916 p. 20 (1557 [13]) a la procedencia de nodo-031 y
+      1530 al principio de su cadena, con la segunda atestación de Oviedo t.
+      IV p. 533; `precontacto` sigue `desconocido`.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.12:
+    tema: Coro, nombre de río
+    eleccion: 'Sí'
+    lectura_operativa: >-
+      Una lectura `glosa-fuente` de referente en toponimo-111: la ciudad tomó
+      el nombre del río Coro (Ballesteros 1550 y Castellanos 1589,
+      independientes).
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.13:
+    tema: las propuestas a ecologia.yaml de las tres parcelas de fauna
+    eleccion: 'D1: todas, las de las tres parcelas (y FA3 (c) A: el cunaro en disputa)'
+    lectura_operativa: >-
+      Las propuestas de ecología de tierra (FA1), aves (FA2) y mar (FA3) al
+      final de ecologia.yaml con su capa y su procedencia; en ecologia-015 la
+      identificación del cunaro queda declarada en disputa (FA3 c A). La
+      parte que toca el lexicón no es de este frente.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.14:
+    tema: las aldeas de Aruba en asentamientos.yaml
+    eleccion: 'B: esperar a la fuente primaria (Dijkhoff 1997, Versteeg y Rostain 1997)'
+    lectura_operativa: >-
+      Decidido esperar: no se aplica nada. Se cierra declarado.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.15:
+    tema: parentesco-021 (tamude ← mude «primo»)
+    eleccion: '(a): partirla'
+    lectura_operativa: >-
+      parentesco-021 se queda con lo que Rivero atestigua (el etnónimo y la
+      voz *mude*, pp. 29 y 420); la etimología y el «como primos» pasan a una
+      entrada nueva `hipotetico` que cita a Jahn.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.16:
+    tema: parentesco-012 («daitiao» cognado del taíno)
+    eleccion: 'J: se queda con la reserva'
+    lectura_operativa: >-
+      parentesco-012 lleva escrita la reserva: el test (T11) no confirma el
+      cognado (letra C) y la afirmación tiene una sola fuente.
+    estado: POR APLICAR
+    aplicado_por: []
+
+  dp.2.17:
+    tema: la costa oriental de Federmann (Xaragua, Martinico, Atycares)
+    eleccion: 'B: otra polity costera, fuera del mapa de la era 2'
+    lectura_operativa: >-
+      Se registra como `costa-oriental`, polity costera distinta de la
+      Kaketiana y fuera del mapa de la era 2, donde el canon la necesita
+      (vault de polities y la propuesta de Federmann); no entra ningún nodo.
+    estado: POR APLICAR
+    aplicado_por: []
+
+lo_que_aparecio_al_aplicar: {}
