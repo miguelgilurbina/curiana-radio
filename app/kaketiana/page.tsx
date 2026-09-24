@@ -2,9 +2,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getWikiPorSeccion, getCifrasWiki } from "@/lib/wiki";
 import { getAllPersonajes } from "@/lib/personajes";
+import { getFichasSeed } from "@/lib/fichas";
+import { CAPAS_EPISTEMICAS } from "@/lib/sim-theme";
 import Masthead from "@/components/simulador/Masthead";
 import { Overline } from "@/components/simulador/ui";
 import { DataAside } from "@/components/simulador/prose";
+import { CapaGlifo } from "@/components/simulador/capa";
 
 export const metadata: Metadata = {
   title: "Kaketiana — el mundo del kaketío | Curiana Radio",
@@ -21,6 +24,7 @@ export default function KaketianaPage() {
   const pueblo = getWikiPorSeccion("pueblo");
   const lengua = getWikiPorSeccion("lengua");
   const personajes = getAllPersonajes();
+  const fichas = getFichasSeed();
 
   return (
     <div className="mx-auto max-w-6xl px-4 pb-24 pt-8 sm:px-6 lg:px-8">
@@ -68,6 +72,45 @@ export default function KaketianaPage() {
           </p>
         </section>
 
+        {/* La lengua viva: el diccionario, con la marca de cómo sabemos cada voz */}
+        {fichas.n > 0 && (
+          <section className="mt-12">
+            <div className="flex items-baseline justify-between gap-4">
+              <h3 className="sim-display text-2xl font-semibold text-(--sim-ink)">La lengua, palabra por palabra</h3>
+              <Overline>{fichas.n} voces</Overline>
+            </div>
+            <p className="mt-1 max-w-reading font-sans text-sm text-(--sim-ink-faint)">
+              Cada voz del diccionario dice cómo la sabemos. Es la misma marca en todo el sitio.
+            </p>
+            <ul className="mt-4 grid grid-cols-1 gap-x-8 sm:grid-cols-2">
+              {CAPAS_EPISTEMICAS.map((c) => (
+                <li key={c.key} className="border-t border-(--sim-rule)">
+                  <Link href={`/kaketiana/lexicon?capa=${c.key}`} className="group flex items-baseline gap-2.5 py-3">
+                    <span className="self-center">
+                      <CapaGlifo capa={c.key} size={12} />
+                    </span>
+                    <span className="font-sans text-sm font-semibold" style={{ color: c.color }}>
+                      {c.plural}
+                    </span>
+                    <span className="sim-mono text-xs tabular-nums text-(--sim-ink-faint)">{fichas.por_capa[c.key] ?? 0}</span>
+                    <span className="ml-auto min-w-0 font-sans text-xs text-(--sim-ink-soft) group-hover:text-(--sim-ink)">
+                      {fichas.capas[c.key]?.incierto}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 font-sans text-sm">
+              <Link href="/kaketiana/lexicon" className="font-medium text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)">
+                El diccionario →
+              </Link>
+              <Link href="/kaketiana/no-sabemos" className="font-medium text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)">
+                Lo que no sabemos →
+              </Link>
+            </div>
+          </section>
+        )}
+
         {[
           { seccion: "pueblo" as const, titulo: "El pueblo", lista: pueblo,
             desc: "Cómo vivían, en qué creían, cómo se organizaban y hasta dónde llegaba su mundo." },
@@ -112,6 +155,7 @@ export default function KaketianaPage() {
               { href: "/kaketiana/lexicon", label: "El diccionario" },
               { href: "/kaketiana/neologisms", label: "Los neologismos" },
               { href: "/kaketiana/bibliografia", label: "La bibliografía" },
+              { href: "/kaketiana/no-sabemos", label: "Lo que no sabemos" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="font-medium text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)">
                 {l.label}
