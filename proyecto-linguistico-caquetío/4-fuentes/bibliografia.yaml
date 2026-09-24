@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 104
-  en_repo: 69
+  obras: 105
+  en_repo: 70
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -308,6 +308,28 @@ obras:
   aliases:
   - Camacho et al. 2011
   - Camacho 2011
+  en_repo: true
+- id: carvajal-1892
+  obra: Relación del descubrimiento del río Apure hasta su ingreso en el Orinoco
+  autor: Carvajal, Jacinto de (fray, O.P.)
+  anio: 1892
+  publicacion: León, Diputación Provincial, 1892 (escrita en 1648)
+  edicion_del_ejemplar: ejemplar digitalizado por Google, en archive.org (relaciondeldesc00pubgoog)
+  genero: cronica
+  local:
+  - fuentes_caquetios/Carvajal_1892_Relacion_descubrimiento_rio_Apure.pdf
+  - fuentes_caquetios/Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt
+  paginas: '466 pp. de PDF; impresa = pdf − 15 en el tramo leído (medido: pdf 331 = p. 316, pdf 332 =
+    p. 317)'
+  acceso: 'Dominio público: impreso en León en 1892 (texto de 1648); archive.org lo marca NOT_IN_COPYRIGHT.
+    Descargado el 2026-09-24 por dp.3.05 H de #222 («Ok a todo», Miguel): PDF 13.459.362 bytes, sha256
+    a181411df3025f4a89190b675cbb5dcc0cd08964e829a33a0d7e046657115bd4; OCR 632.325 bytes, sha256 11be56c6d71706ecac68a0f553ca2456eb3282ee4b91fabe0222fc75d7889df9.
+    Hay otro ítem en archive.org de 2020 (subido por un particular) que no se bajó.'
+  aliases:
+  - Carvajal 1648
+  - Carvajal
+  - Relación del descubrimiento del río Apure
+  - Jacinto de Carvajal
   en_repo: true
 - id: casale-2024
   obra: Petrographic insight into the sourcing and production of pre-colonial ceramics from Aruba
