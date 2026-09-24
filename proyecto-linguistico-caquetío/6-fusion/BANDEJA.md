@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-24**.
 
-**7643 ítems propuestos** en 152 propuestas, más **56 issue(s)/comentario(s) redactados sin publicar**.
+**7654 ítems propuestos** en 153 propuestas, más **58 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -47,6 +47,7 @@ editar_a_mano: no
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
 | `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
+| `decisiones_222_documentacion_2026-09-24.yaml` | ? | 11 |  |
 | `decisiones_base_2026-09-22.yaml` | ? | 0 |  |
 | `decisiones_campanas_2026-09-21.yaml` | ? | 0 |  |
 | `decisiones_cierre_2026-09-23.yaml` | ? | 0 |  |
@@ -185,6 +186,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `medicion_politica_atestiguado_manda_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_politica_atestiguado_manda.py`
 - `medicion_sigla_E_zavala_2026-09-23.yaml` — generado por `6-fusion/scripts/medir_sigla_E_zavala.py`
 - `oviedo_restante_2026-09-22.yaml` — generado por `lectura del minador (agente Opus 5.5) sobre la capa de texto de los cuatro PDF, con verificación en IMAGEN de cada forma en cursiva que se propone y de cada descripción de sonido que se marca `imagen`. El tomo I se lee ahora en la copia íntegra descargada hoy (ver `meta.descarga`), que sí renderiza las impresas 155-614.`
+- `para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml` — generado por `6-fusion/scripts/proponer_ediciones_lexicon_222_grupo3.py (no se edita a mano: se corrige el script y se regenera)`
 - `pares_atestiguado_reconstruido_2026-09-19.yaml` — generado por `6-fusion/scripts/medir_pares_atestiguado_reconstruido.py`
 - `tainismos_en_medina.yaml` — generado por `6-fusion/scripts/tainismos_medina_a_caquetio.py`
 - `taino2_oviedo_venezuela.yaml` — generado por `lectura del escriba sobre la capa de texto de los tres PDF descargados hoy de Internet Archive, con verificación POR IMAGEN de cada forma que se propone. La imagen está entera en los tres tomos: aquí no hay el problema del tomo I (escaneo roto desde la impresa 155).`
@@ -219,6 +221,8 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `arqueologia-insular-falcon-2026-09-22.md` | La arqueología de las islas y de Falcón: sitios, fauna, movimiento y mar (M8) |
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
+| `correo-boletin-antropologico-zavala-2026-09-24.md` | Correo — al Boletín Antropológico (ULA), para Miguel Enrique Zavala Reyes: de dónde salen  |
+| `correo-cihpma-arcaya-1995-p247-2026-09-24.md` | Correo — al CIHPMA (UNEFM, Coro): el escaneo de la p. 247 de Arcaya, *Obra inédita y dispe |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
 | `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
 | `d11-voces-wayuu-2026-09-23.md` | D11 · las voces wayuu que quedan en el habla — qué pasa con cada una |
