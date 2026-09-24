@@ -6,7 +6,10 @@ meta:
     Al fallar las voces de nivel C del dictado de Medina, Miguel recordó que yo
     le había dado una mención de Federmann. Al buscarla salió que sí existía —
     en mi propio barrido web del 2026-09-09— pero colgada de la OTRA grafía.
-  estado: 'hipótesis registrada, no resuelta. Toca una decisión que D5 dejó abierta.'
+  estado: >-
+    hipótesis registrada, no resuelta. Toca una decisión que D5 dejó abierta.
+    Desde el 2026-09-24 (dp.3.12 A): Federmann ya está leído y aporta el
+    ENANO, no el nombre ni la transformación — ver `federmann_leido`.
 
 # ══════════════════════════════════════════════════════════════════════
 lo_que_hay_atestiguado:
@@ -102,11 +105,46 @@ correcciones:
       nadie la trate como tal.
 
 # ══════════════════════════════════════════════════════════════════════
+# 2026-09-24 — dp.3.12 A de #222 («Ok a todo», Miguel, 2026-09-24;
+# registro en 6-fusion/decisiones_222_documentacion_2026-09-24.yaml)
+federmann_leido:
+  fuente: >-
+    6-fusion/federmann_1530_costa_2026-09-22.yaml §sereton y fed-coro-010
+    (parcela Federmann de la tercera minería, #210): la 1916 entera y el
+    alemán de Klüpfel entero, por la forma y por el concepto
+  lo_que_federmann_aporta: >-
+    EL ENANO. Los enanos (`Zwergen`) de la nación ayamán de la sierra (1916
+    pp. 31, 37-38, 39, 41-44) y una mujer «de cuatro palmos» que un cacique
+    ayamán le da como prenda de paz y que Federmann lleva a Coro, donde se
+    queda (1916 p. 44; «Dise zwergin habe ich mit mir biß gen Coro gefürt,
+    daselbst sie bliben ist», Klüpfel p. 28; fed-coro-010). Es casi seguro la
+    raíz del «enano de sombrero de la Sierra de Falcón, atribuido a los
+    WELSER» que el barrido web del 2026-09-09 colgó del ceretón.
+  lo_que_no_aporta: >-
+    Ni el NOMBRE (cero de ceretón/seretón y variantes, en castellano y en
+    alemán) ni la TRANSFORMACIÓN (cero de hombre-animal: las 21 sondas de
+    concepto dan enanos, españoles tomados por demonios y una frase vacía
+    sobre «creencias diabólicas» de los ayamanes).
+  en_consecuencia:
+    - >-
+      La frase «el ceretón está en Federmann» NO se sostiene tal cual: lo que
+      está en Federmann es el enano, que la tradición posterior pudo asociar
+      con el nombre. Quien la cite, que cite fed-coro-010 y diga eso.
+    - >-
+      El seretón de Medina sigue en el corpus por su propio mérito, como ya
+      falló Miguel (mc-mundo-026): no se apoyaba en Federmann y sigue sin
+      apoyarse.
+    - >-
+      La hipótesis de Miguel (una sola voz con dos grafías) NO se decide
+      aquí: Federmann no la confirma ni la desmiente, porque no trae la
+      palabra. Sigue siendo la pregunta de ce/ci que D5 dejó disputada.
+
+# ══════════════════════════════════════════════════════════════════════
 que_lo_resolveria:
   - >-
-    🔴 **Federmann 1916**, que sigue sin estar en el repo. Es la fuente que
-    diría si el ceretón está ahí y con qué forma. Su prioridad ya subió a alta
-    por esto mismo.
+    ~~🔴 **Federmann 1916**, que sigue sin estar en el repo. Es la fuente que
+    diría si el ceretón está ahí y con qué forma.~~ Ya está en el repo y
+    leído (2026-09-23): trae el enano, no la palabra — ver `federmann_leido`.
   - >-
     Buscar si la versión del ENANO DE SOMBRERO sobrevive hoy en Falcón junto a
     la del transformista. Si conviven las dos con el mismo nombre, la hipótesis
