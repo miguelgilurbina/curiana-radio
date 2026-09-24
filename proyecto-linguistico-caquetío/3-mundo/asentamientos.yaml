@@ -765,7 +765,11 @@ nodos:
     variantes: [Myraca]
     rol: >
       Pueblo indígena de Paraguaná con la cadena de atestación más larga del registro:
-      Myraca con su cacique Bonyata en la carta de Bastidas (1538), pueblo existente en
+      «einen Puebles Miraca» donde Federmann halla comida para más de cien hombres en
+      enero de 1530 (1916 p. 20; 1557 [13]), el pueblo de Miraca «dos leguas la tierra
+      adentro» y doce de Coro, con españoles viviendo en él, en junio de 1534 (Oviedo t.
+      IV pp. 533-534, por el informante Sanabria), Myraca con su cacique Bonyata en la
+      carta de Bastidas (1538), pueblo existente en
       1556 (Arcaya vía Esteves), «ciudad de grandísimo momento» entre las once de
       Castellanos (1589), 79 casas en el censo de 1881, y población viva hoy — «de los
       cuales sólo existe hoy el pueblo de Miraca», dice Esteves de las tres ciudades de
@@ -774,13 +778,21 @@ nodos:
     procedencia:
       obra: velasco-2015-resistencia
       detalle: "carta de Bastidas, AGI Legajo 218 f. 2 (8-X-1538), transcrita en 6-fusion/velasco_primarios_agi.yaml; también castellanos-elegias (II-1, línea 48260) y esteves-1989 p. 52"
+    # dp.2.11 de #222 (A, con Oviedo t. IV p. 533; «Ok a todo», 2026-09-24):
+    # la cadena empieza ahora en 1530. `procedencia` admite una sola obra; las
+    # dos que se suman van aquí, con su página.
+    procedencia_adicional:
+      - {obra: federmann-1916, pagina: "20", detalle: "enero de 1530; «einen Puebles Miraca», 1557 [13], visto en imagen por la parcela Federmann (#210); la 1916 vista en el texto"}
+      - {obra: oviedo-y-valdes-1852-1855, pagina: "t. IV pp. 533-534", detalle: "junio de 1534, lib. L cap. XX; el naufragio de Sanabria; la capa de texto lleva el folio de cabecera (pdf 549-550); M3 (#206)"}
     etimologia: sin-resolver
     nota: >
       Entra el 2026-09-07 por decisión de Miguel: cierra la parte de Miraca del hueco
       declarado abajo (#92). Que un nombre siga en uso desde 1538 es dato de continuidad
       del asentamiento aunque no tenga etimología (la única glosa, 'atarraya' en warao, es
       de Esteves y sin cita: toponimo-095). Precontacto sigue `desconocido`: 1538 con
-      cacique no alcanza; haría falta arqueología.
+      cacique no alcanza; haría falta arqueología. Tampoco lo alcanza 1530 (dp.2.11 de
+      #222, 2026-09-24): Federmann llega a un pueblo con comida, no a uno fechable antes
+      del contacto; y en 1534 ya vivían allí españoles con un capitán.
 
 huecos:
 
