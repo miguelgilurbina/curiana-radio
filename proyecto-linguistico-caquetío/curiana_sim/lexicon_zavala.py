@@ -198,6 +198,7 @@ GLOSARIO_ZAVALA: dict[str, dict] = {
     "bachure":       {"sig": "maneto, patituerto", "cat": "v_estativo", "fuente": "caquetío-atestiguado", "glosa_fuente": "Maneto, patituerto [Zavala Reyes 2015 #19 (A)]", "notas": "Zavala Reyes 2015 #19 (A)"},
     "badamaro":      {"sig": "extraer, sacar", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Extraer, sacar [Zavala Reyes 2015 #20 (AM)]", "notas": "Zavala Reyes 2015 #20 (AM)"},
     "baharuko":      {"sig": "abuelo, viejo", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Abuelo, viejo [Zavala Reyes 2015 #22 (AM)]", "forma_fuente": "baharuco", "notas": "Zavala Reyes 2015 #22 (AM)"},
+    "baja":          {"sig": "caño", "cat": "sust", "fuente": "caquetío-hipotético", "glosa_fuente": "Caño [Zavala Reyes 2015 #23 (E)]", "notas": "Zavala Reyes 2015 #23 (E); homógrafo con español — resuelto por contexto en score_linguistico; variantes: baba; CAPA CURADA [tanda de las hermanas, 2026-09-24 («Ok a todo, que no quede ninguna tarea pendiente»), con la regla de cc.4 1-B]: era `caquetío-atestiguado`, pasa a `caquetío-hipotético`. En «#23 Baja, baba (E): Caño» la (E) es Esteves 1989, y es su única fuente: la etimología de un topónimo, análisis suyo. Esteves p. 19 (verificado: imagen, PDF 1 p. 13): «En este caso, el topónimo querrá decir: el caño de Baroa, ya que baba y baja, indistintamente significan: caño» (s.v. BAJABAROA). No cita a nadie. Hasta el 2026-09-24 no entraba al habla: el minador la daba por «ya está» porque su variante «baba» casaba con `baba` 'padre', otra voz."},
     "baperon":       {"sig": "calabaza con cal", "cat": "sust", "fuente": "caribe-pemeno", "glosa_fuente": "Calabaza con cal [Zavala Reyes 2015 #27 (HB)]", "notas": "Zavala Reyes 2015 #27 (HB); CAPA CURADA [tf.0, 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)]: era `caquetío-atestiguado`, pasa a `caribe-pemeno`. Oviedo y Valdés t. II lib. XXV caps. V y VI (Francisco Martín, el soldado de Alfínger que vivió como indio; verificado en imagen). p. 286: «la boca llena de hayo […] é su baperon: este es un calabaço en que traen los indios çierta manera de cal; para quitar la hambre, chupándola»; p. 294: «toda aquella tierra es poblada de indios pemenos». La marca «(Lengua de Venezuela.)» es del glosario del editor (t. IV, «Baperon y Baperoni»), no de Oviedo: la trampa de `datihao` (db.2). Es la fuente del BAPÓRON de Alvarado 1921 p. 20. Pemeno = caribe según el canon (3-mundo/etnias.yaml etnia-006, filiación inferida por Oliver 1989 pp. 226-228). Detalle en 6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml §poporo.pasajes.pp-7 y §visto_de_paso.vp-baperon"},
     "barbache":      {"sig": "iguana", "cat": "sust", "fuente": "caquetío-atestiguado", "glosa_fuente": "Iguana [Zavala Reyes 2015 #33 (PMA)]", "notas": "Zavala Reyes 2015 #33 (PMA)"},
     "beceremikore":  {"sig": "dominar, triunfar, victoria", "cat": "v_raiz", "fuente": "caquetío-atestiguado", "glosa_fuente": "Dominar, triunfar, victoria [Zavala Reyes 2015 #39 (AM)]", "forma_fuente": "beceremicore", "notas": "Zavala Reyes 2015 #39 (AM)"},
@@ -282,6 +283,8 @@ CLASES_DE_RAIZ_ZAVALA: dict[str, dict] = {
         "por": "'Extraer, sacar', dos infinitivos transitivos. Lokono `lluccu-waria` 'sacar' (perea-alonso-1942). La achagua los marca con el pronombre PREFIJADO nu-, que es la marca del transitivo (perea-alonso-1942 p. 635): `numunuayu` 'sacar una espina', `nusiguiayu` 'sacar estrujando' (neira-ribero-1762)."},
     "baharuko": {"clase": "nombre", "cat": "sust", "num": 22, "forma_zavala": "baharuco",
         "por": "'Abuelo, viejo': término de parentesco, y el parentesco arahuaco es nombre poseído — achagua `abi` 'abuelo' (neira-ribero-1762), wayuu `atuushi` 'abuelo' y `taata` 'papá, abuelo'. DUDOSO declarado: la segunda acepción ('viejo') sí es estativa, y el par con `guasima` #145 lo enseña; manda la primera, y en duda se degrada (regla 2)."},
+    "baja": {"clase": "nombre", "cat": "sust", "num": 23, "forma_zavala": "baja",
+        "por": "'Caño': un accidente del agua, un nombre. Entra el 2026-09-24 (tanda de las hermanas, «Ok a todo»); la regeneración la había emitido como v_raiz por el tier heurístico. zavala-reyes-2015 #23 (E), de esteves-1989 p. 19, la da como formante del topónimo Bajabaroa ('el caño de Baroa')."},
     "baperon": {"clase": "nombre", "cat": "sust", "num": 27, "forma_zavala": "baperon",
         "por": "'Calabaza con cal': el recipiente del chimó, un objeto. Achagua `cuirro` 'calabaza, uyama' (neira-ribero-1762); wayuu `aliita` 'totuma', `wüirü` 'auyama'. Gemela de #220 `raporon`."},
     "barbache": {"clase": "nombre", "cat": "sust", "num": 33, "forma_zavala": "barbache",
@@ -378,7 +381,7 @@ REPARTO_DE_CLASES: dict[str, int] = {
     "accion": 9,
     "adverbio": 1,
     "estativo": 10,
-    "nombre": 29,
+    "nombre": 30,
 }
 
 
@@ -404,6 +407,7 @@ SIN_CLASE_DECLARADA: list[str] = [
 
 HOMOGRAFOS_ZAVALA: frozenset = frozenset({
     "bagre",
+    "baja",
     "dato",
     "samuro",
     "tuba",
@@ -413,6 +417,7 @@ HOMOGRAFOS_ZAVALA: frozenset = frozenset({
 # Veredicto por forma, para que la marca sea auditable y no un acto de fe.
 VEREDICTO_HOMOGRAFOS: dict[str, str] = {
     "bagre": "#21 (AM) 'pez'. Caquetía según la fuente; el 'bagre' español es a su vez indigenismo. Colisión real.",
+    "baja": "#23 (E) 'caño'. Hipotética (sólo Esteves, cc.4). Colisiona con el castellano 'baja' (bajar, bajo), de altísima frecuencia: la marca es imprescindible.",
     "dato": "#105 (HB) 'fruto del cardón'. Caquetía, pero 'dato' es altísima frecuencia en español: la marca es imprescindible.",
     "samuro": "#223 (AM) 'punta hacia el mar'. La forma coincide con 'zamuro' (zoónimo venezolano) y la glosa es geográfica: ATRIBUCIÓN DÉBIL.",
     "tuba": "#253 (E) 'aglomeración, montón'. Caquetía; colisiona con 'tuba'.",
@@ -526,16 +531,16 @@ DESCARTADOS_ZAVALA: dict[str, str] = {
 
 TOTALES = {
     "afijos": 8,
-    "vocabulario_activo": 145,
+    "vocabulario_activo": 146,
     "renombradas_d5": 79,
-    "clases_declaradas": 49,
+    "clases_declaradas": 50,
     "clases_sin_declarar": 0,
-    "homografos": 4,
+    "homografos": 5,
     "homografos_disueltos_d5": 9,
     "colisiones_d5": 2,
     "toponimos": 45,
     "antroponimos": 14,
     "descartados": 4,
-    "ya_en_lexicon_antes_del_import": 72,
+    "ya_en_lexicon_antes_del_import": 71,
     "entradas_pdf": 288,
 }

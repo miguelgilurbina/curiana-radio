@@ -140,11 +140,18 @@ def test_aburi_es_voz_y_el_toponimo_de_zavala_sigue():
     assert "aburi" in Z.TOPONIMOS_ZAVALA
 
 
-def test_baja_cano_no_entra_por_la_puerta_de_atras():
+def test_baja_cano_entra_hipotetica_y_marcada():
     """Archivar `baba` destapaba la entrada #23 de Zavala («Baja (baba)»
     'caño', sigla E), que el minador daba por «ya está» por un homógrafo
-    falso. Que entre al habla es decisión de Miguel, no efecto de archivar."""
-    assert "baja" not in VOCABULARIO_BASE
+    falso. Miguel decidió que entre (2026-09-24, «Ok a todo»): hipotética por
+    cc.4 (su única fuente es Esteves p. 19) y marcada como homógrafo del
+    castellano 'baja', para que el score la trate neutra."""
+    e = VOCABULARIO_BASE["baja"]
+    assert e["fuente"] == "caquetío-hipotético" and e["cat"] == "sust"
+    assert "Esteves p. 19" in e["notas"]
+    assert "baja" in L.HOMOGRAFOS_ZAVALA
+    r = L.score_linguistico("La marea baja por la tarde.", L.LexicoComunitario())
+    assert "baja" not in r["palabras_caquetias"]
 
 
 @pytest.mark.parametrize("forma", ["kiba", "waitiao", "jagey", "warawara",
