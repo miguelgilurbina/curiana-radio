@@ -135,7 +135,11 @@ cruzados con las demás fuentes, en `6-fusion/TOPONIMOS_POR_FUENTE.md`.
 5. **Negativos, medidos**: la expresión literal «Gran Señor de Jurijurebo» no
    está (la atribución es de Esteves); **la muerte por perros** del señor de
    Hurehurebo no está — la línea 49364 («mataba con perros») es caza de
-   venados por soldados hambrientos; el «Piache de Todariquiba» que Velasco
+   venados por soldados hambrientos, **en Maracaibo (p. 189), no en Coro**
+   (corregido el 2026-09-24, dp.3.18 de #222, con M7:
+   `6-fusion/coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml`,
+   fauna; los «conejos y venados» de Coro son otra línea, la 48230, p. 185);
+   el «Piache de Todariquiba» que Velasco
    cita como v. 98 **no se localizó** en la ed. 1857 (`Todariquibo` aparece
    una sola vez, en la lista). O está en otra parte de la elegía con otra
    grafía, o la ed. 1962 difiere: probar `piache` + permutaciones.
