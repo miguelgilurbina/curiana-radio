@@ -281,8 +281,16 @@ decisiones:
       `Paraguana` (Oviedo t. I p. 205) a la campaña de topónimos; `comoho` a
       ecologia.yaml con la reserva de M3 (una sola cadena, el obispo
       Bastidas); `hado` congelado hasta verificar.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '6-fusion/toponimos_cola_otras_fuentes.yaml (nuevo): la cola de la campaña para lo que no es de Esteves ni del mapa de Miguel — Sarasaragua (Castellanos p. 201), Norupara (González Batista 2002 p. 162) y Buinare (Castellanos p. 184); curiana_sim/juntar_toponimos.py la lee (extractor cola_otras_fuentes) y la mesa la muestra'
+      - '`Paraguana` (Oviedo t. I p. 205): YA APLICADA por la tanda de las hermanas (th.10, T2b): toponimo-018 tiene esa procedencia del nombre; no se repite'
+      - '3-mundo/corpus/ecologia.yaml: ecologia-085 `comoho`, el cardón de las tunas y su fruta en la provincia de Venezuela (Oviedo vol. I pp. 313-315, en el texto), con la reserva de M3 en `limite` (una sola cadena, el obispo Bastidas)'
+      - '`hado`: CONGELADO, sin aplicar (el OCR dice hado y el contexto pide hayo; sin imagen no se decide)'
+    aparecio:
+      - 'Buinare NO es nombre nuevo: el canon ya tiene la isla como toponimo-066 «buynari» (van Buurt) y nodo-011. El «grep: 0» de M7 era un cero de consulta (la grafía de 1589). Queda en la cola anotado: al procesarlo entra como grafía fechada de 066.'
+      - 'La fecha de Paraguaná: T1 escribe «atestación de 1548» y la tanda de las hermanas (T2b, vista en imagen) «testigos jurados… el 13 de julio de 1540 (p. 206)». No se promedió; lo que está en el canon es lo de T2b.'
+      - 'ecologia-078 a -084 viven bajo la clave `huecos_lexicos` de ecologia.yaml, no bajo `entradas` (fusión del 2026-09-16): el validador los cuenta igual; no se movieron. Los hechos nuevos de este frente van al final de `entradas`.'
 
   dp.2.11:
     tema: Miraca en 1530 (nodo-031)
