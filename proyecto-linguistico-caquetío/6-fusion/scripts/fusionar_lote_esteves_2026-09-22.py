@@ -42,7 +42,7 @@ como campos propios (skill campana-toponimos §2: «cada cosa en su campo»);
 lectura del autor, §5); `cabecera` va a la observación. Dos tipos de lectura
 del lote no están en el vocabulario cerrado de compilar_lengua y se traducen:
 `segmentacion-de-autor` → `etimologia-analitica` y `hipotesis-de-autor` →
-`hipotesis`. Las lecturas llevan la fecha del lote (2026-09-23) y, si son de
+`hipotesis`; y el eje `filiacion` → `significado`. Las lecturas llevan la fecha del lote (2026-09-23) y, si son de
 Esteves o recogidas por él, su procedencia con la página.
 
 Lo que NO hace, y por qué:
@@ -75,6 +75,10 @@ DECISION = "dp.2.08 de #222, 2026-09-24"
 MARCA = "# ── Lote de Esteves 2026-09-22 (M6, #216), tanda {n} — dp.2.08 de #222 (2026-09-24) ──"
 TIPOS = {"segmentacion-de-autor": "etimologia-analitica",
          "hipotesis-de-autor": "hipotesis"}
+# `eje` también es cerrado (significado · referente · ambos). La lectura de
+# Iticuna habla de la filiación del nombre (una etimología maya), que es un
+# eje de significado: se traduce y se declara en la propia lectura.
+EJES = {"filiacion": "significado"}
 MUDANZAS = {"acaboa": "toponimo-153", "aguaque": "toponimo-154"}
 GRUPO_DICTADO = "Dictado de Miguel 2026-09-10: Esteves los registra sin glosarlos"
 
@@ -118,6 +122,9 @@ def lecturas_de(e):
     for lec in e.get("lecturas") or []:
         lec = dict(lec)
         lec["tipo"] = TIPOS.get(lec.get("tipo"), lec.get("tipo"))
+        if lec.get("eje") in EJES:
+            lec["lectura"] = f"{lec['lectura']} (en el lote, eje «{lec['eje']}»)"
+            lec["eje"] = EJES[lec["eje"]]
         lec.setdefault("fecha", FECHA_LOTE)
         if "esteves" in str(lec.get("quien", "")).lower() and "procedencia" not in lec:
             lec["procedencia"] = {"obra": "esteves-1989", "pagina": e["pagina"]}

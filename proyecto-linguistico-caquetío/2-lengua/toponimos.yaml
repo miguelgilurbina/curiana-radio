@@ -1,14 +1,14 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 208
+  toponimos: 261
   por_nivel:
     A: 21
     B: 30
-    C: 57
+    C: 110
     descartado: 100
-  con_procedencia: 148
-  con_lecturas: 36
-  lecturas: 67
+  con_procedencia: 201
+  con_lecturas: 40
+  lecturas: 71
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -2542,6 +2542,939 @@ toponimos:
   procedencia:
     obra: esteves-1989
     pagina: 14
+- id: toponimo-209
+  forma: tura
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Jura, juri: ventarrón.»'
+  segmentacion: juri (jura) — con T- por J- de copia
+  voces:
+  - juri
+  razon: '`juri` ''viento'' recurre (Judibana, Jurijurebo), pero en el lexicón sólo tiene a Zavala (E):
+    ninguna pieza independiente, y además el residuo de la T- que Esteves explica como corrupción escrita
+    de la J- de 1881. C. Es el homónimo que `tura_la_tesis_de_miguel.yaml` ya separó del tura ''maíz tierno'':
+    no se mezclan.'
+  referente: salinas al sur de Baraived
+  formas_antiguas:
+  - Hato de Jura, «como está escrito el fundo que fue censado en 1881»
+  observacion: '⚠️ Que `juri` sea (E) toca al canon: Judibana es A con «judi + bana, Esteves y Zavala»,
+    y ese Zavala es Esteves. Ver §correcciones.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 66
+- id: toponimo-210
+  forma: asubure
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Asubure es el nombre indígena del sesuvio» (Sesuvium portulacastrum, «vidrio»)
+  segmentacion: asubure (fitónimo sin componer)
+  voces:
+  - asubure
+  formantes:
+  - ure
+  razon: Fitónimo que sólo da Esteves. Termina en -ure pero él no lo parte.
+  referente: ensenada pesquera de la costa de Adícora, cerca de Santa Rita
+  formas_antiguas:
+  - Acabure, en un antiguo documento (la c con sonido de zeta)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 18
+- id: toponimo-211
+  forma: babahuro
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«el caño de las raíces, descompuesta así: baba: caño; ure: raíz»'
+  segmentacion: baba + ure (h para deshacer el diptongo)
+  voces:
+  - baba
+  - ure
+  formantes:
+  - ure
+  - uru
+  razon: 'Las dos piezas son sólo de Esteves: `ure` ''raíz'' es Zavala #272 (E) y recurre (Abudure, Bibidure,
+    Babahuro); `baba` ''caño'' lo afirma él mismo en la p. 19 («baba y baja, indistintamente significan:
+    caño»). Sin pieza independiente no llega a B.'
+  referente: ensenada pesquera de la costa de Adícora, cerca del balneario El Supí
+  formas_antiguas:
+  - Baba ure, «que es la forma primitiva»
+  observacion: '⚠️ Colisión: el lexicón tiene `baba` ''padre'' (caquetío-reconstruido, desde lokono/garífuna).
+    Si entra `baba` ''caño'', son homógrafos a declarar. Esteves atribuye el nombre a las raíces adventicias
+    del manglar del caño.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 18
+- id: toponimo-212
+  forma: bibidure
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«puede ser una alteración de Dividibure, que significa: raíz de dividive»'
+  segmentacion: dividive + ure (hipotética)
+  voces:
+  - dividive
+  - ure
+  formantes:
+  - ure
+  razon: Esteves lo da como posibilidad («puede ser») y las dos piezas sólo tienen a Zavala (E). C.
+  referente: estanque y conuco, restos de un fundo en las sabanas de Tiquiba, al norte de Pueblo Nuevo
+  observacion: 'Añade que en Oriente al dividive lo llaman «guatapanare»: es el watapana del papiamentu
+    que van Buurt (p. 27) pone como forma más original.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 23
+- id: toponimo-213
+  forma: buenevara
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«árbol de la colmena… Guani: abeja; bara: árbol.»'
+  segmentacion: guani + bara (sobre Guanibara)
+  voces:
+  - guani
+  - bara
+  razon: '`bara` está atestiguado; `guani` ''abeja'' sólo lo da Esteves (aquí y en Buenibativa, misma
+    glosa: recurrencia 2). Quedaría en B si la forma Guanibara tuviera documento; Esteves no lo cita.
+    En duda, C.'
+  referente: aldea del municipio Pueblo Nuevo
+  formas_antiguas:
+  - Guanibara, «en realidad, el nombre primitivo» (sin documento citado)
+  lecturas:
+  - tipo: etimologia-popular
+    lectura: «El Cacique de la Buena Vara», el que medía los conucos
+    quien: tradición oral recogida por Esteves
+    eje: significado
+    veredicto: 'rechazada por Esteves con Argensola: «lástima grande que no sea verdad»'
+    fecha: '2026-09-23'
+    procedencia:
+      obra: esteves-1989
+      pagina: 25
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 25
+- id: toponimo-214
+  forma: buenibativa
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Guani es el nombre de una abeja mansa… De la parte desinencial bativa nada sabemos.»
+  segmentacion: guani + bativa (sin despejar)
+  voces:
+  - guani
+  razon: Media ecuación, con la forma documental delante. C.
+  referente: lugar del caserío San Pedro (Adícora)
+  formas_antiguas:
+  - Guanibativa, «en antiguos papeles de la posesión de Urupaguaduco»
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 25
+- id: toponimo-215
+  forma: camunare
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «forma epentética de "camuare", un árbol de madera blanda»
+  segmentacion: camuare (con epéntesis)
+  voces:
+  - camuare
+  razon: 'Glosas en conflicto: Alvarado p. 50 da CAMUÁRE como palmera pequeña (Geonoma) de Oriente y Guayana;
+    Esteves, árbol de tallo grueso para bateas. Precedente Supí: C.'
+  referente: aldea del municipio Baraived; otro Camunare en Yaracuy
+  censo_1881: 30 casas, 252 habitantes
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 26
+- id: toponimo-216
+  forma: caradacagua
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «reducción de Caramatacaigua… guairón de cal» (caramata carbón, caigua almeja)
+  segmentacion: caramata + caigua (sobre la forma enmendada)
+  voces:
+  - caramata
+  - caigua
+  formantes:
+  - gua
+  razon: 'Etimología en otra lengua según el autor, sobre forma enmendada: C, como Maitiruma.'
+  referente: fundo pecuario al oeste de Pueblo Nuevo
+  filiacion_segun_autor: cumanagoto (según Esteves)
+  observacion: 'Esteves dice haber visto en el lugar restos de guairones donde se quemaban conchas para
+    cal (para pelar el maíz). Arqueología sin excavación: pista para el corpus, no hecho.'
+  lecturas:
+  - tipo: etimologia-popular
+    lectura: de la voz onomatopéyica de la dara, el alcaraván
+    quien: tradición recogida por Esteves
+    eje: significado
+    veredicto: «nos parece baladí» (Esteves); vale para §fauna como dato de sonido
+    fecha: '2026-09-23'
+    procedencia:
+      obra: esteves-1989
+      pagina: 27
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 27
+- id: toponimo-217
+  forma: cariguariana
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«la playa de los tabacones… Cari: orilla de mar. Guariana: tabaco pescador»'
+  segmentacion: cari + guariana
+  voces:
+  - cari
+  - guariana
+  formantes:
+  - ana
+  razon: 'Las dos piezas sólo por Zavala (E): `cari` recurre (Carirubana), `guariana` no. C. El -ana es
+    de la raíz guariana, no un sufijo (confirma el censo de #109).'
+  referente: salineta cercana a Adícora; sal blanca, sin la coloración de la artemia
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 28
+- id: toponimo-218
+  forma: caujarito
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Es diminutivo de Caujaro, árbol de madera liviana. (Cordia globosa).»
+  segmentacion: caujaro + -ito (castellano)
+  voces:
+  - caujaro
+  razon: 'caujaro está en Alvarado p. 73 y en Medina; el diminutivo es castellano. Precedente Sibidigual
+    (colectivo castellano): C.'
+  referente: aldea del municipio Punta Cardón
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 30
+- id: toponimo-219
+  forma: coduto
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «El sufijo uto y uco… con la significación de quebrada, cauce.»
+  segmentacion: cod- (sin despejar) + uto
+  formantes:
+  - uco
+  razon: Media ecuación glosada por la fuente, como Cocodite. C.
+  referente: 'dos lugares: en el Istmo de Médanos (Baraived), donde murió el prócer Juan Garcés en 1854;
+    y caserío a tres kilómetros al este de Los Taques'
+  observacion: 'El canon ya tiene «caduto» (toponimo-176, del dictado, Arcaya lista CODUTO en su serie
+    coro-/curi-). El mapa vivo tiene Coduto en 11.817, -70.213 (a unos cuatro kilómetros al este de Los
+    Taques) y Coduto / Punta Coduto en el Istmo de Médanos: los dos lugares de Esteves. El fusionador
+    (dp.2.08 de #222, 2026-09-24) la registra como entrada propia, con la página de Esteves; la identidad
+    con toponimo-176 queda como lectura `hipotesis` allí (dp.2.09, P3 A), sin fundirlas.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 31
+- id: toponimo-220
+  forma: cude
+  nivel: C
+  clase: topónimo
+  glosa_fuente: allí habita El Cude, «un ente sobrenatural, un espíritu perturbador»
+  segmentacion: cude (nombre del ente, sin componer)
+  voces:
+  - cude
+  razon: El topónimo es el nombre del ente, como capu en Capuhana; pero capu tiene la Relación de 1579
+    detrás y cude sólo a Esteves. C.
+  referente: El Cude, paraje boscoso con rocas cavernosas en el caserío Pedregalito (Adícora)
+  observacion: 'Para el corpus (creencia), no para el lexicón: dicen que se oyen voces y quejidos y se
+    ven luces. Dato del s. XX (regla 3).'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 32
+- id: toponimo-221
+  forma: cumaraguas
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Cumaragua es el nombre que dan a un pequeño cangrejo de caparazón rosada.»
+  segmentacion: cumaragua + -s (plural castellano)
+  voces:
+  - cumaragua
+  formantes:
+  - gua
+  razon: 'Tres glosas para la voz: cangrejo (Esteves), caracol de las costas de Paraguaná (Alvarado p.
+    102, la que el lexicón adoptó en D10) y viruela (Arcaya p. 75). Conflicto declarado: C.'
+  referente: salinas al este de El Vínculo, hoy con poblado; Yaima fue su puerto colonial de sal (p. 67)
+  observacion: 'Esteves une el Cumaragua de Yaracuy a «vínculos lingüísticos entre caquetíos y jirajaras»:
+    lectura suya.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 33
+- id: toponimo-222
+  forma: cuzubitos
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Podría ser Curubitos, diminutivo de Corubo, caparazón de moluscos.»
+  segmentacion: curubo + -itos (castellano), con z por r
+  voces:
+  - curubo
+  razon: Posibilidad del autor, sobre forma enmendada; curubo está en Medina (retroabstraído). C.
+  referente: punto costeño de los mapas antiguos, en La Boca del Caño, cerca de Santa Rita (Adícora)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 35
+- id: toponimo-223
+  forma: chichibana
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«el cerro de los achechives. Achechive: arbusto asperifoliáceo»'
+  segmentacion: achechive + bana
+  voces:
+  - achechive
+  - bana
+  formantes:
+  - bana
+  razon: 'bana atestiguado; achechive sólo en Esteves. Precedente Cumujacoa: C.'
+  referente: lugar cercano a El Vínculo (Pueblo Nuevo)
+  formas_antiguas:
+  - Achichibana, de la que Chichabana es aféresis
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 36
+- id: toponimo-224
+  forma: chujaro
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «árbol pequeño de madera rosada, chaguaro.»
+  segmentacion: chujaro (fitónimo sin componer)
+  voces:
+  - chujaro
+  razon: Fitónimo de fuente única. C, como Caseto.
+  referente: lugar del municipio Jadacaquiva
+  censo_1881: 4 casas, 29 vecinos
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 37
+- id: toponimo-225
+  forma: chunaure
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Chunaure es un apellido indígena… "naure", es jojoto, mazorca de maíz tierno.»
+  segmentacion: chu- (sin despejar) + naure
+  voces:
+  - naure
+  formantes:
+  - ure
+  razon: 'Esteves NO glosa Chunaure: dice que es apellido y da aparte naure ''jojoto'' y ñaure ''planta
+    bejucosa'' «en lengua caquetía». Media ecuación por yuxtaposición. C.'
+  referente: lugar al norte de Pueblo Nuevo
+  observacion: '⚠️ `tura_la_tesis_de_miguel.yaml` cita a Esteves entre comillas como si glosara Chunaure
+    «voz CAQUETÍA, jojota, mazorca tierna de maíz». La p. 37 no dice eso (ver §correcciones). El canon
+    tiene `chunare` de Zavala (''Apellido. Mazorca tierna''): con toda probabilidad el mismo nombre.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 37
+- id: toponimo-226
+  forma: dibaragua
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «la prótesis silábica "di" y la metátesis de "baragua" por "guaraba"»
+  segmentacion: di- + guaraba (con metátesis)
+  voces:
+  - guaraba
+  formantes:
+  - gua
+  razon: guaraba está en Alvarado p. 154, pero la derivación exige dos operaciones que sólo el autor propone.
+    C.
+  referente: lugar pecuario al norte de Pueblo Nuevo, cerca de Curaidebo; a una legua al oeste, el hato
+    La Guaraba
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 37
+- id: toponimo-227
+  forma: gisebo
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Ebo: significa camino.»'
+  segmentacion: gis- (sin despejar) + ebo
+  formantes:
+  - ebo
+  razon: Media ecuación glosada por la fuente.
+  referente: aldea del municipio Moruy
+  censo_1881: 11 casas, 69 habitantes
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 38
+- id: toponimo-228
+  forma: guachunepe
+  nivel: C
+  clase: topónimo
+  glosa_fuente: viene de guanepe, «cesto de fibra» para cargar a los recién nacidos
+  segmentacion: guanepe (alterado)
+  voces:
+  - guanepe
+  razon: guanepe está confirmado por Alvarado p. 152, pero el paso guanepe > guachunepe no lo explica
+    nadie. C.
+  referente: lugar del caserío Adaure
+  censo_1881: 2 casas, 18 vecinos
+  lecturas:
+  - tipo: etimologia-popular
+    lectura: del inglés «what you name?»
+    quien: «algunos opinan» (Esteves)
+    eje: significado
+    veredicto: 'rechazada por cronología: el nombre es anterior a las petroleras'
+    fecha: '2026-09-23'
+    procedencia:
+      obra: esteves-1989
+      pagina: 39
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 39
+- id: toponimo-229
+  forma: guaruguaja
+  nivel: C
+  clase: topónimo
+  glosa_fuente: cunarejal; guar[a], en caquetío, la cunareja
+  segmentacion: guara + guara (plural por duplicación) + -ja
+  voces:
+  - guara
+  formantes:
+  - reduplicacion
+  - gua
+  razon: Ya propuesto y transcrito en esteves_paginas_releidas_2026-09-16.yaml; se mantiene su C. Aquí
+    sólo entra en §fauna.
+  referente: fundo pecuario cerca de El Vínculo; Guaraguaro en Jadacaquiva «tiene el mismo significado»
+  verificado: imagen (2026-09-16)
+  procedencia:
+    obra: esteves-1989
+    pagina: 42
+- id: toponimo-230
+  forma: güica
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «es otro nombre indígena que tiene el árbol que llamamos Yabo.»
+  segmentacion: güica (fitónimo sin componer)
+  voces:
+  - guica
+  razon: 'gika es Zavala #150 (E): fuente única. C.'
+  referente: sabana y fundo del municipio Baraived
+  censo_1881: 3 casas, 32 vecinos
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 43
+- id: toponimo-231
+  forma: imujo
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Imujo es una aféresis de huaymujo, pequeño cangrejo.»
+  segmentacion: huaymujo (con aféresis)
+  voces:
+  - huaymujo
+  razon: 'huaymujo es Zavala #158 (E). C.'
+  referente: fundo pecuario al noroeste de El Vínculo
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 43
+- id: toponimo-232
+  forma: isito
+  nivel: C
+  clase: topónimo
+  glosa_fuente: por la vecindad con Isiro, «una simple alteración diferenciativa»
+  segmentacion: isiro (alterado)
+  voces:
+  - isiro
+  razon: Suposición del autor. C.
+  referente: aldea del municipio Jadacaquiva; «figura como tierras compuestas de la época colonial»
+  censo_1881: 6 casas, 56 vecinos
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 44
+- id: toponimo-233
+  forma: iticuna
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Cuna es el nombre de un pez que hay en el Golfete de Coro.»
+  segmentacion: iti- (sin despejar) + cuna
+  voces:
+  - cuna
+  razon: cuna por Alvarado p. 102; iti- sin despejar. C.
+  referente: aldea del municipio Jadacaquiva
+  censo_1881: 3 casas, 35 vecinos
+  formas_antiguas:
+  - Arituna, en el censo de 1881
+  lecturas:
+  - tipo: hipotesis
+    lectura: afinidad con el maya tecuna «mujer infiel» (en el lote, eje «filiacion»)
+    quien: Esteves
+    eje: significado
+    veredicto: 'no se sostiene: es el patrón mesoamericano que la ficha ya señala (§pp. 44-45)'
+    fecha: '2026-09-23'
+    procedencia:
+      obra: esteves-1989
+      pagina: 44
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 44
+- id: toponimo-234
+  forma: jagüe
+  nivel: C
+  clase: topónimo
+  glosa_fuente: en Los Andes, árbol de «madera de construcción muy fuerte»
+  segmentacion: jagüe (fitónimo sin componer)
+  voces:
+  - jague
+  razon: 'Alvarado p. 178 da JÁGÜE árbol maderable de Mérida: la voz existe, andina. C como Oripopo.'
+  referente: lugar al este de Punta Macoya con una cueva grande
+  filiacion_segun_autor: andina (según Esteves, citando a Febres Cordero)
+  observacion: 'La tradición oral pone en esa cueva la muerte por asfixia de indios de las levas de Federmann:
+    dato para el corpus, colonial (regla 3), de tradición oral.'
+  verificado: imagen (al fusionar, 2026-09-24; el lote la tenía sólo en OCR)
+  procedencia:
+    obra: esteves-1989
+    pagina: 45
+- id: toponimo-235
+  forma: jariaca
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Jariaca viene de jiracha, árbol maderable.»
+  segmentacion: jiracha (con metátesis)
+  voces:
+  - jiracha
+  razon: jiracha por Alvarado p. 181; la metátesis es fuerte. C (en Chirache, B).
+  referente: lugar al este de Buenavista, camino de Baraived; ruinas de un gran establecimiento mercantil
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 46
+- id: toponimo-236
+  forma: juderecal
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «plural colectivo de Judereque, un árbol ramoso, parecido al chiguare.»
+  segmentacion: judereque + -al (castellano)
+  voces:
+  - judereque
+  razon: 'judereke es Zavala #177 (E). Precedente Chiguaral: C.'
+  referente: lugar al norte de Jadacaquiva, hoy Las Margaritas
+  censo_1881: 4 casas, 28 vecinos
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 47
+- id: toponimo-237
+  forma: macama
+  nivel: C
+  clase: topónimo
+  glosa_fuente: macambo, «gentilicio despectivo» con que en Aruba y Curazao llaman a los holandeses
+  segmentacion: macambo (papiamento)
+  razon: Etimología en otra lengua según el autor. C, como estrato atribuido; la ficha ya lo llama «quinto
+    estrato».
+  referente: lugar al este de Punta Macoya (Jadacaquiva); Boca de Macama, donde desagua la quebrada homónima
+  censo_1881: 4 casas, 37 vecinos
+  formas_antiguas:
+  - Macamba y Macambo, en antiguos mapas
+  filiacion_segun_autor: papiamento (según Esteves)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 49
+- id: toponimo-238
+  forma: manadí
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Manadí, alteración de guanají, un cardo de aspecto lan[oso]»
+  segmentacion: guanají (alterado)
+  voces:
+  - guanajo
+  razon: guanajo/guanají por Alvarado; el paso gua- > ma- no lo explica nadie. C.
+  referente: pequeñas lomas del lindero de Moruy con Los Taques
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 50
+- id: toponimo-239
+  forma: manare
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Manare es voz cumanagota que significa: cesto de fibra.»'
+  segmentacion: manare (sin componer)
+  voces:
+  - manare
+  razon: 'Alvarado p. 199 tiene MANARE (harnero de tiras de caña): la voz existe. Filiación no caquetía
+    declarada: C.'
+  referente: lugar pecuario y de labranza en la aldea de Camunare (Baraived)
+  filiacion_segun_autor: cumanagoto (según Esteves)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 50
+- id: toponimo-240
+  forma: maquigua
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Mora es un árbol caparidáceo… Quigua: concha de almeja y otros moluscos.»'
+  segmentacion: mora + quigua (sobre Moriquigua)
+  voces:
+  - mora
+  - quigua
+  formantes:
+  - gua
+  razon: 'quigua fuera de Esteves (Zavala #214 E+AM; van Buurt kiwa); mora no está en ningún glosario
+    del repo y es palabra castellana. C.'
+  referente: aldea del municipio Baraived, muy poblada
+  censo_1881: 33 casas, 231 vecinos
+  formas_antiguas:
+  - Moriquigua, «en antiguas escrituras»
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 50
+- id: toponimo-241
+  forma: maracapana
+  nivel: C
+  clase: topónimo
+  glosa_fuente: según Alvarado, «las totumitas silvestres» con que se hacen los capachos
+  segmentacion: maracapana (sin componer)
+  formantes:
+  - ana
+  razon: 'La glosa es de Alvarado para la voz, no un análisis de este lugar, y el Maracapana famoso es
+    el de la costa de Cumaná (capitulación de 1528). C. El -ana va en la raíz (censo de #109).'
+  referente: lugar pecuario cercano a El Vínculo (Pueblo Nuevo)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 51
+- id: toponimo-242
+  forma: matacán
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Matacán: cérvido de poca alzada.»'
+  segmentacion: matacán (zoónimo sin componer)
+  voces:
+  - matacan
+  razon: 'La voz del lexicón es retroabstraída por decisión (2026-09-14), sobre esta misma página: no
+    hay segunda fuente. C.'
+  referente: Punta de Matacán, en el Golfete de Coro al este de Punta Cardón; hoy aldea de pescadores
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 51
+- id: toponimo-243
+  forma: matuto
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«la desinencia "uto", o "uco", expresa: quebrajón, cauce.»'
+  segmentacion: mat- (sin despejar) + uto
+  formantes:
+  - uco
+  razon: Media ecuación glosada por la fuente.
+  referente: punto de referencia en los linderos de Pueblo Nuevo con Baraived y Buenavista
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 51
+- id: toponimo-244
+  forma: michaco
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«la desidencia Aco significa: dos.»'
+  segmentacion: mich- (sin despejar) + aco
+  formantes:
+  - aco
+  razon: Media ecuación glosada por la fuente.
+  referente: quebrada que nace en las colinas de Montecano, cruza Guacuira y El Hato y desagua en la ciénaga
+    de Barabara
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 51
+- id: toponimo-245
+  forma: oboque
+  nivel: C
+  clase: topónimo
+  glosa_fuente: según Alvarado, «árbol indeterminado de Coro»
+  segmentacion: oboque (fitónimo sin componer)
+  razon: 'Esteves cita a Alvarado; en la capa de texto de Alvarado del repo la cabecera OBOQUE da cero
+    (buscada con y sin tilde). Un cero de OCR no es un cero de la fuente (regla 6): falta verlo en imagen.
+    Hasta entonces, C.'
+  referente: lugar de Buenavista, al norte de Adaure, de ubicación hoy incierta
+  formas_antiguas:
+  - en la Visita del obispo Martí (1773)
+  - en un censo de 1808 de Diego de Melo, regidor de Maracaibo
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 55
+- id: toponimo-246
+  forma: paguara
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Paguara es el nombre de un pez muy espinoso.»
+  segmentacion: paguara (zoónimo sin componer)
+  voces:
+  - paguara
+  formantes:
+  - gua
+  razon: Zoónimo de fuente única. C.
+  referente: sitio del Istmo de Médanos, con Paguarita al lado; descanso de recuas; desembarco de Miranda
+    en 1806
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 55
+- id: toponimo-247
+  forma: pipiribana
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «¿Será voz onomatopéyica?»
+  segmentacion: pipiri- (sin despejar) + bana
+  formantes:
+  - bana
+  razon: 'Esteves no glosa bana aquí, pero el referente es un CERRO y bana ''cerro'' es D9: la mitad cierra
+    contra el terreno, que es lo que la ficha pide a esta fuente. Es de los catorce -bana que toponimo-146
+    ya contaba. C.'
+  referente: cerro cercano al de Tausabana (Santa Ana)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 56
+- id: toponimo-248
+  forma: pury
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «En cumanagota, puripuri, plural por duplicación, es el molestoso mosquito»
+  segmentacion: puri (sobre puripuri)
+  voces:
+  - puripuri
+  formantes:
+  - reduplicacion
+  razon: 'Alvarado p. 259 da PURIPURI, jején de Anzoátegui: la voz y la zona casan con la atribución.
+    C.'
+  referente: nombre de un mapa antiguo, en el cerro Plantacio cerca de Caradacagua; los vecinos no lo
+    recuerdan
+  filiacion_segun_autor: cumanagoto (según Esteves)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 57
+- id: toponimo-249
+  forma: quipital
+  nivel: C
+  clase: topónimo
+  glosa_fuente: colectivo de quipito, árbol de corteza olorosa; también un insecto hematófago
+  segmentacion: quipito + -al (castellano)
+  voces:
+  - quipito
+  razon: Alvarado p. 263 tiene QUIPITO, pero como el insecto (Rhodnius prolixus), no como árbol. C.
+  referente: varios fundos de la península
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 57
+- id: toponimo-250
+  forma: sacuragua
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «modificación de Susucure, cardo de fruto rojo, la pi[tajaya]»
+  segmentacion: susucure (alterado)
+  voces:
+  - susucure
+  formantes:
+  - gua
+  razon: susukure está en Medina (retroabstraído). Alteración fuerte y forma primitiva ilegible. C.
+  referente: aldea de Pueblo Nuevo, al oeste de Guacuira y al sur de Pueblo Nuevo
+  formas_antiguas:
+  - '[S…]uragua, «el nombre primitivo» (tres letras ilegibles en la imagen, a 400 dpi)'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 58
+- id: toponimo-251
+  forma: sanajaquí
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Sanajaquire. Quire: color.»'
+  segmentacion: sanaja- (sin despejar) + quire
+  formantes:
+  - quire
+  razon: quire 'color' es morfema B del canon (Bariquire, recurrencia 4). Media ecuación. C.
+  referente: salinas del municipio Los Taques
+  formas_antiguas:
+  - Sanajaquire
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 58
+- id: toponimo-252
+  forma: sicaname
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Se nos ha informado que Sicaanme viene de Sicagua, árbol resinoso.»
+  segmentacion: sicagua (alterado)
+  voces:
+  - sicagua
+  razon: Dato de informante, voz sin otra fuente. C bajo.
+  referente: aldea del municipio Jadacaquiva
+  censo_1881: 10 casas, 55 vecinos
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 60
+- id: toponimo-253
+  forma: tacal
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Tacal, colectivo de taque, árbol nucífero.»
+  segmentacion: taque + -al (castellano)
+  voces:
+  - taque
+  razon: 'Precedente Chiguaral: C.'
+  referente: El Tacal, aldea del municipio Los Taques
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 61
+- id: toponimo-254
+  forma: tausabana
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «el cerro de las palomas "tautas"»
+  segmentacion: tauta + bana (sobre Tautabana)
+  voces:
+  - tauta
+  - bana
+  formantes:
+  - bana
+  razon: 'bana atestiguado; tauta es Zavala #244 (E), o sea Esteves. C.'
+  referente: cerro unos ocho kilómetros al este del de Santa Ana, con vecindario del mismo nombre
+  formas_antiguas:
+  - Tautabana, «primitivamente»
+  observacion: 'Arcaya 1920 nombra Tausabana (y el cerro de Arajó) entre los restos del terreno antiguo
+    de la península: el nombre está escrito en 1920. Tauta es nombre de un personaje de la era 2.'
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 62
+- id: toponimo-255
+  forma: ticuí
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Tigüí y no Ticuí es el nombre de una palomita que se alimenta de peces.»
+  segmentacion: tigüí (zoónimo sin componer)
+  voces:
+  - tigui
+  razon: 'tigi es Zavala #247 (E). C.'
+  referente: lugar pecuario en el caserío Maquigua (Baraived)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 63
+- id: toponimo-256
+  forma: tiguadare
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «Tigua es un árbol rutáceo.»
+  segmentacion: tigua + (d)are
+  voces:
+  - tigua
+  formantes:
+  - gua
+  - are
+  razon: tigua fuera de Esteves (Alvarado p. 290, Amyris, que es rutácea). El -(d)are 'sitio de' (morfema-002)
+    lo ponemos nosotros, no Esteves. C alto.
+  referente: punto costeño de la ribera norte del Golfete, al este de Punta Cardón
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 63
+- id: toponimo-257
+  forma: tijuro
+  nivel: C
+  clase: topónimo
+  glosa_fuente: «viene de Tijúa, paloma de canto onomatopéyico.» (informante)
+  segmentacion: tijúa (alterado)
+  voces:
+  - tijua
+  formantes:
+  - uru
+  razon: 'tijua es Zavala #248 (E). C.'
+  referente: sabanas del municipio Adícora; antiguo fundo del legionario británico John Hill (1826)
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 63
+- id: toponimo-258
+  forma: tiquiba
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«Quiba: es piedra.»'
+  segmentacion: ti- (sin despejar) + kiba
+  voces:
+  - kiba
+  formantes:
+  - kiva
+  razon: Media ecuación glosada por la fuente.
+  referente: sabanas al norte de Pueblo Nuevo, escenario de combates en 1868
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 63
+- id: toponimo-259
+  forma: tubarao
+  nivel: C
+  clase: topónimo
+  glosa_fuente: '«significa arenales. Tuba: montón. Rao: arena (r sencilla).»'
+  segmentacion: tuba + rao
+  voces:
+  - tuba
+  - rao
+  razon: Las dos piezas sólo por Zavala (E); tuba recurre (Tubariquiba, apéndice p. 73), rao no. C.
+  referente: lugar al oeste de la población de Santa Ana
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 64
+- id: toponimo-260
+  forma: tumarusa
+  nivel: C
+  clase: topónimo
+  glosa_fuente: Tumarure, «el apellido de un cacique» (informante)
+  segmentacion: tumarure (antropónimo)
+  razon: 'El canon ya tiene `tumarure` de Zavala (''Apellido de un cacique''): mismo nombre. Topónimo
+    de antropónimo. C.'
+  referente: aldea del municipio Moruy
+  censo_1881: 6 casas, 39 vecinos
+  formas_antiguas:
+  - Tumarure, como «siempre escribió» Arcaya
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 64
+- id: toponimo-261
+  forma: tutubacoa
+  nivel: C
+  clase: topónimo
+  glosa_fuente: 'dos informaciones: «el lugar de los tuturutos» o Datobacoa, «lugar de los datos»'
+  segmentacion: tutu(ruto) + bacoa  |  dato + bacoa
+  voces:
+  - tuturuto
+  - dato
+  - bacoa
+  formantes:
+  - bakoa
+  razon: 'bacoa atestiguado; las dos raíces tienen fuente fuera de Esteves (tuturuto en Medina, dato en
+    Zavala #105 HB), pero son dos lecturas en pugna y ninguna sin residuo. Precedente Supí: C.'
+  referente: lugar pecuario de Adícora; otro homónimo en Jadacaquiva
+  verificado: imagen
+  procedencia:
+    obra: esteves-1989
+    pagina: 66
 - id: toponimo-155
   forma: aracua
   nivel: descartado
