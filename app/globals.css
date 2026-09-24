@@ -1,5 +1,11 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
+/* El subproyecto de investigación vive dentro del repo pero no es parte del
+   sitio: la detección automática de Tailwind lo barría entero, y una ruta de
+   Windows en una nota del vault (una barra invertida seguida de seis cifras
+   hexadecimales) se leía como un escape CSS imposible y rompía el build y el
+   dev (RangeError: Invalid code point 14766420). */
+@source not "../proyecto-linguistico-caquetío";
 
 :root {
   /* Color System - Earth Tones */
