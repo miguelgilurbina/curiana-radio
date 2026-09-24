@@ -563,7 +563,10 @@ de_paso:
   - que: 'CIERRA LA CALIBRACIÓN DE JAHN. «león», la única de las 34 que quedó `no-esta` (el vocabulario no tiene lema
       «Leon»), está en el ARTE: «Leon varon, ó macho = Nerrianarre assiarricaberri … Leona hembra = Nerrianarre
       Ynagetua» (p. 19, pliego 16 der., verificado en zoom). Jahn da «mirrianare»: la misma voz con otra inicial.
-      Veredicto propuesto: difiere (consonante inicial). NO se toca el YAML del vocabulario: queda para quien fusione'
+      Veredicto propuesto: difiere (consonante inicial). NO se toca el YAML del vocabulario: queda para quien fusione.
+      ✅ APLICADO el 2026-09-24 (dp.3.06 E de #222): `calibracion_jahn` de achagua_neira_ribero_1762.yaml dice ya
+      `difiere`, y ensamblar_achagua_neira_ribero.py recontó la calibración. lexicon_achagua.py no cambia: su
+      generador no lee `calibracion_jahn`'
   - que: 'el locativo distingue LÍQUIDO de no líquido: «si el lugar … es cosa liquida, usan de Yaco … Sino es cosa
       liquida, usan de naco» — En el agua = Vni yaco · En la tierra = Cainabe naco · En la laguna = Carisa yaco · En
       el Rio Meta = Meda yaco (pp. 29-30, pliegos 21 der.-22 izq.). Para una lengua de pescadores es una pregunta que

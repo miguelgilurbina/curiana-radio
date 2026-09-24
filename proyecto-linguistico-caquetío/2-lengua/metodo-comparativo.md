@@ -172,6 +172,41 @@ apoya en etnografía wayuu, y eso **no depende de la filiación lingüística**.
 arco norteño es matrilineal de punta a punta; el lokono también lo es. Lo que se
 mueve es de quién se reconstruye **la lengua**.
 
+## Un antecedente de 1741: préstamo por comercio no es filiación
+
+*(dp.3.07 P3 A de #222, «Ok a todo», Miguel, 2026-09-24. Comparanda de
+método, no dato caquetío: Gumilla habla del Orinoco, no de la Kaketiana —
+regla 4. Transcripción y contexto en `6-fusion/gumilla_1791_2026-09-23.yaml`
+§lenguas.)*
+
+La distinción que este método usa —**los pronombres dicen la filiación; el
+léxico cultural puede ser contacto** (skill `minar-fuente` §3)— la escribió ya
+un misionero del XVIII, con dos lenguas arahuacas delante. [[gumilla-1791]]
+t. II p. 32:
+
+> «las que se derivan de una Capital, siempre mantienen los pronombres
+> primitivos de su matriz, aunque con alguna variedad; y se ha experimentado,
+> que es regla cierta»
+
+y en la misma página, sobre el achagua y el maipure:
+
+> «aunque en la lengua Maypúre se hallan muchas palabras Achaguas, son
+> introducidas por el comercio»
+
+(Las dos citas, verificadas en imagen el 2026-09-24: t. II, pdf 40, página
+impresa 32.) Es decir: palabras compartidas entre dos lenguas vecinas **no prueban** que
+una derive de la otra; lo que lo prueba son los pronombres. Es la misma regla
+con que el proyecto separa el préstamo de esfera («el producto de la esfera ES
+la esfera», decisión del 2026-09-17) de la filiación (D11). Y la misma obra
+dice que en el Orinoco **no había lengua general** (II 31): multilingüismo sin
+koiné, que es el punto de partida de la simulación.
+
+**Lo que no es:** una atestación. Gumilla y el vocabulario de
+[[neira-ribero-1762]] salen del mismo medio jesuita, así que sus voces achaguas
+no son dos testigos ciegos (dp.3.07 P2, para el frente del lexicón); y su
+clasificación de las lenguas (II 32) no ve la familia arahuaca: para él el
+«aruaca» es una lengua «estéril», sin parientes.
+
 ## Enlaces
 
 [[lexicon]] · [[morfologia]] · [[toponimia]] · [el tablero de decisiones](https://github.com/miguelgilurbina/curiana-radio/issues?q=is%3Aissue+label%3Adecision) · [[oliver-1989-cap2]] · [[oliver-1989-cap3]] · [[brinton-1871]] · [[perea-alonso-1942]] · [[adam-1879]]

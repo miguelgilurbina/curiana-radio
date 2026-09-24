@@ -188,8 +188,8 @@ meta:
     dudas_resueltas_en_parte: 2
     voces_jahn_calibradas: 34
     coinciden: 24
-    difieren: 9
-    no_estan: 1
+    difieren: 10
+    no_estan: 0
   censo_de_terminaciones:
     que_mide: sobre las formas achagua sueltas de `vocabulario` (separadas por coma, `vel` o `v.`), cuantas acaban
       en cada terminacion. Medido por 6-fusion/scripts/ensamblar_achagua_neira_ribero.py, no contado a mano. `-yi`
@@ -418,13 +418,18 @@ calibracion_jahn:
     T, pliegos 96-98) no se leyo. Degradado'
 - es: leon
   jahn: mirrianare
-  manuscrito: no localizada
-  pliego: null
-  lado: null
-  veredicto: no-esta
-  nota: 'SEGUNDA PASADA: el arranque de la L ya esta leido — esta al pie del pliego 71 der., no en el 73 como decia
-    la ficha —, y de ahi corre a los pliegos 72-73, que si se habian leido. El cero ya no mide la lectura: mide
-    que el manuscrito no trae lema «Leon»'
+  manuscrito: Nerrianarre («Leon varon, ó macho = Nerrianarre assiarricaberri … Leona hembra = Nerrianarre Ynagetua»,
+    ARTE p. 19)
+  pliego: 16
+  lado: der
+  veredicto: difiere
+  nota: 'CERRADA EL 2026-09-24 (dp.3.06 E de #222, «Ok a todo», Miguel; registro en 6-fusion/decisiones_222_documentacion_2026-09-24.yaml).
+    El vocabulario no tiene lema «Leon» (segunda pasada, abajo), pero el ARTE si: p. 19, pliego 16 der., verificado
+    en zoom por la lectura del arte (6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml §de_paso). Jahn da `mirrianare`
+    y el manuscrito `Nerrianarre`: la misma voz con otra consonante inicial, de ahi `difiere`. El pliego es del
+    ARTE, no del vocabulario. Nota anterior: SEGUNDA PASADA: el arranque de la L ya esta leido — esta al pie del
+    pliego 71 der., no en el 73 como decia la ficha —, y de ahi corre a los pliegos 72-73, que si se habian leido.
+    El cero ya no mide la lectura: mide que el manuscrito no trae lema «Leon»'
 - es: danta
   jahn: ema
   manuscrito: Ema («Danta animal — Ema»; «Caballo — Ema»)
