@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-24**.
 
-**7638 ítems propuestos** en 148 propuestas, más **58 issue(s)/comentario(s) redactados sin publicar**.
+**7643 ítems propuestos** en 150 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -108,6 +108,7 @@ editar_a_mano: no
 | `medicion_nucleo_fundacional_2026-09-24.yaml` | ? | 0 |  |
 | `medicion_prestigio_vinculos_era2_2026-09-17.yaml` | ? | 3 |  |
 | `medicion_raices_de_ninguna_parte_2026-09-20.yaml` | ? | 0 |  |
+| `medicion_taino_tradicion_viva_2026-09-24.yaml` | ? | 0 |  |
 | `medicion_tanda_21_2026-09-21.yaml` | ? | 13 |  |
 | `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
@@ -158,6 +159,7 @@ editar_a_mano: no
 | `taino_las_casas_1875.yaml` | las-casas-1875 | 26 |  |
 | `taino_lista_maestra_2026-09-22.yaml` | ? | 1039 |  |
 | `taino_pane_c1498.yaml` | pane-c1498 | 24 |  |
+| `taino_tradicion_viva_2026-09-24.yaml` | ? | 5 |  |
 | `taino_zayas_1931.yaml` | ? | 39 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
@@ -259,6 +261,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `taino-inventario-y-fuentes-2026-09-21.md` | --- |
 | `taino-lascasas-pane-brinton-2026-09-21.md` | --- |
 | `taino-oviedo-2026-09-21.md` | Campaña del taíno — T1: Oviedo y Valdés 1851, vol. I |
+| `taino-tradicion-viva-2026-09-24.md` | El taíno de tradición viva |
 | `taino2-apologetica-2026-09-22.md` | La *Apologética* de Las Casas: 24 entradas del lexicón reciben cita, 3 entran en conflicto |
 | `taino2-etnohistoria-contacto-2026-09-22.md` | Lo que sabían unos de otros en 1492-1500 — y qué hace eso con la hipótesis |
 | `taino2-evidencia-material-2026-09-22.md` | Sí hubo contacto, y no fue con el taíno: los caquetíos de Curazao llevan dos tercios de sa |
