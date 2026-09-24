@@ -26,7 +26,11 @@ meta:
   advertencia_ocr: >-
     🔴 Es OCR, no transcripción. Las glosas de aquí sirven para llegar a la
     página; la cita se saca de la imagen. Hay entradas partidas y nombres mal
-    leídos («Y abo» por Yabo, «Togogo» por Tococo, «Ácosta» por Acosta).
+    leídos («Y abo» por Yabo, «Ácosta» por Acosta). ⚠️ Corregido el
+    2026-09-24 (dp.3.10, F2.5 A de #222): aquí decía también «"Togogo" por
+    Tococo», y es AL REVÉS — en la imagen (p. 134) el lema es TOGOCO y la
+    glosa «(Togogo: ave ansérida)»; el que leyó mal fue el OCR, que dio
+    «TOCOCO». Ver `conflictos` → tokoko.
 
 cobertura_medida:
   entradas_parseadas: 387
@@ -187,7 +191,22 @@ conflictos:
   - forma: tokoko
     lexicon: "'flamenco o ibis, ave roja de la laguna'"
     esteves_parte_II: "«Togogo: ave ansérida»"
-    lectura: 'variante gráfica tococo ~ togogo; misma ave'
+    lectura: >-
+      CORREGIDA el 2026-09-24 (dp.3.10, F2.5 A de #222: «Ok a todo», Miguel;
+      registro en 6-fusion/decisiones_222_documentacion_2026-09-24.yaml).
+      Verificado en imagen por FA2 (#205): el lema de Esteves 1989 p. 134 es
+      TOGOCO, con la glosa «(Togogo: ave ansérida)»; el OCR leyó «TOCOCO».
+      «Togogo» no es error de OCR: es la forma de TIERRA FIRME del nombre del
+      flamenco, y Alvarado 1921 p. 292, también verificado en imagen,
+      pregunta «¿Es el TOGOGO de Coro?». Dos fuentes independientes del s. XX
+      para `togogo` ~ `chogogo` (insular, van Buurt 2014 p. 29). Lo que
+      Esteves da NO es la forma `tokoko` del lexicón (hipotética, sin cita):
+      ésa tiene su propia cadena comparada en Alvarado p. 292 (gal. tokoka,
+      car. tokóko, ar. tukkuku), y Goeje 1939 da «flamant tuguku, K tokoko,
+      dialecte de Bonaire chogogo» (M5 §7). Si las tres son una familia es
+      pregunta abierta, no se decide aquí. Detalle en
+      6-fusion/fauna_paraguana_aves_2026-09-22.yaml (ave-040, ave-041).
+    lectura_antes: 'variante gráfica tococo ~ togogo; misma ave'
 
 # ══════════════════════════════════════════════════════════════════════
 filiaciones_que_esteves_declara:
