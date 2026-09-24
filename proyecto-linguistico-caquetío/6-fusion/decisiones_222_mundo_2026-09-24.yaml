@@ -216,8 +216,29 @@ decisiones:
       ninguna tarea pendiente»: las tres tandas se aplican hoy, en commits
       separados. Las correcciones que tocan el lexicón (la cita de
       `kumarawa`) no son de este frente.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24), las tres tandas; las dos notas del lexicón NECESITAN A MIGUEL (otro frente)
+    aplicado_por:
+      - '6-fusion/scripts/fusionar_lote_esteves_2026-09-22.py --tanda 1 / 2 / 3 (un commit por tanda), y curiana_sim/migrar_toponimos.py para regenerar 2-lengua/toponimos.yaml'
+      - 'tanda 1: 14 A (toponimo-181 a -194) y 14 B (-195 a -208); correcciones del §2 en el canon: acaboa (153) y aguaque (154) de descartado a C con su id y su referente; Carirubana (148) glosa_fuente y p. 28, y la lectura pasa a «copia de Esteves»; Coabana (116) «cosas [sic: coas]»; curarí (180) p. 105 de Alvarado'
+      - 'tanda 2: 53 C (209 a 261); Coduto entra como entrada propia; Jagüe (234) vista en imagen al fusionar'
+      - 'tanda 3: 46 descartes (262 a 307) en tres grupos nuevos de DESCARTES, con nota, origen o estrato por forma; Arajó vista en imagen al fusionar'
+      - 'curiana_sim/migrar_toponimos.py: alvarado-1921 como obra (curarí y araguán salían sin procedencia citando), y los campos por forma de un grupo de DESCARTES (observaciones, orígenes, estratos, lecturas, formas vivas)'
+      - '6-fusion/toponimos_esteves_indice.yaml: la cola de la Parte I, vacía (ya_en_canon y por_procesar recontados por el script)'
+      - '6-fusion/tura_la_tesis_de_miguel.yaml: la cita de Chunaure que no está en Esteves (corrección del §2 fuera del canon)'
+      - '4-fuentes/esteves-1989.md: bitácora del 2026-09-24 y cobertura'
+    mide: 'topónimos 180 → 307 (A 7 → 21, B 16 → 30, C 55 → 110, descartado 102 → 146); con procedencia 118 → 247'
+    lecturas_del_escriba:
+      - '«por tandas» se aplicó HOY y entero, una tanda por commit, porque Miguel pidió que no quede nada pendiente'
+      - 'dos tipos de lectura del lote no son del vocabulario cerrado: segmentacion-de-autor → etimologia-analitica, hipotesis-de-autor → hipotesis; y el eje `filiacion` (Iticuna) → significado, declarado en la lectura'
+      - 'Coduto: el lote dejaba al fusionador elegir entre lectura de caduto (176) o entrada propia; entra propia, y la identidad es una lectura hipotesis en 176 (dp.2.09)'
+    necesita_a_miguel: >-
+      Las dos correcciones del §2 que tocan el LEXICÓN no son de este frente
+      (curiana_lexicon.py): la nota de `kumarawa` cita a Arcaya «mene y
+      cumaragua nombre de la ciruela» y la página (impresa 75, pdf 83, vista en
+      imagen por M6) dice «(nombres de la viruela)»; la nota de `urupagua` cita
+      Urupaguaduco en la «p. 71» y es la p. 66. Pregunta: ¿se las pasas al
+      frente del lexicón con estas dos ediciones?
+    no_entro: 'las secciones `fauna` y `flora` del lote (no son topónimos): siguen en la propuesta'
 
   dp.2.09:
     tema: el mapa vivo — cuatro identificaciones y la forma viva

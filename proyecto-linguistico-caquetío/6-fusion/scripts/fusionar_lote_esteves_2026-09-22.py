@@ -212,8 +212,16 @@ def actualizar_indice(procesados, tanda, cabecera_de):
         nombre = hallado.group(1)
         cola = cola[:hallado.start()] + cola[hallado.end():]
         nuevos.append(f"  - {{forma: {nombre}, canon: {rid}, lote: 2026-09-22-tanda-{tanda}}}")
-    cabeza = cabeza.rstrip("\n") + "\n" + "\n".join(nuevos) + "\n"
+    # los nuevos van detrás del último registrado, ANTES del comentario que
+    # abre la cola (el primer pase los dejó debajo de él: corregido a mano en
+    # el índice el 2026-09-24, y aquí)
+    com = cabeza.rfind("\n# Los que NO están")
+    if com == -1:
+        com = len(cabeza.rstrip("\n"))
+    cabeza = cabeza[:com].rstrip("\n") + "\n" + "\n".join(nuevos) + "\n" + cabeza[com:]
     t = cabeza + cola
+    if not re.search(r"\npor_procesar:\n  - ", t):
+        t = t.replace("\npor_procesar:\n", "\npor_procesar: []\n", 1)
     doc = yaml.safe_load(t)
     ya, pp = len(doc["ya_registrados"]), len(doc["por_procesar"] or [])
     t = re.sub(r"(\n  ya_en_canon: )\d+", rf"\g<1>{ya}", t, count=1)

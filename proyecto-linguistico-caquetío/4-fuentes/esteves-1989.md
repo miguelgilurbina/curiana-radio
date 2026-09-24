@@ -10,7 +10,7 @@ capa_texto: ocr  # sin capa propia (medido 2026-08-16); OCR local con ocr_fuente
 estado_minado: parcial
 prioridad: alta
 minado: 2026-09-23
-cobertura: "Parte I (Paraguaná, pp. 11-67): TODA leída — lotes 1-7 al canon (2026-09-06/10) y la cola restante propuesta entera, casi toda verificada en imagen (2026-09-23, 6-fusion/toponimos_esteves_lote_2026-09-22.yaml, sin fusionar) + Parte II (pp. 81-144) parseada, glosas extraídas (2026-09-10) pero sólo lo del dictado en el canon + campaña -gua (2026-09-21). Falta: fusionar el lote; la Parte II a la cola; el apéndice pp. 73-80 más allá de Adícora y tuba"
+cobertura: "Parte I (Paraguaná, pp. 11-67): TODA leída y TODA en el canon — lotes 1-7 (2026-09-06/10) y la cola restante, verificada en imagen, fusionada en tres tandas el 2026-09-24 (dp.2.08 de #222: toponimo-181 a -307) + Parte II (pp. 81-144) parseada, glosas extraídas (2026-09-10) pero sólo lo del dictado en el canon + campaña -gua (2026-09-21). Falta: la Parte II a la cola; el apéndice pp. 73-80 más allá de Adícora y tuba"
 medido: 2026-08-11
 sostiene: []
 ---
@@ -1595,6 +1595,31 @@ el homónimo guajiro de Juroguagua en Jahn (cero con cuatro patrones); tres
 letras de Sacuragua (p. 58) ilegibles aun a 400 dpi.
 
 ⚠️ Las citas de Esteves de la propuesta van recortadas: es obra con copyright.
+
+## Bitácora — el lote de la cola, al canon en tres tandas (2026-09-24, dp.2.08 de #222)
+
+«Ok a todo, que no quede ninguna tarea pendiente» (Miguel, 2026-09-24), sobre
+«2-A, por tandas». Lo aplicó `6-fusion/scripts/fusionar_lote_esteves_2026-09-22.py`
+(una tanda por commit), con el canon regenerado por `migrar_toponimos.py`.
+
+- **Tanda 1**: las A y las B del lote (toponimo-181 a -208), más las
+  correcciones del §2 que tocan el canon: Acaboa y Aguaque salen de los
+  descartes a C con su id (153, 154); Carirubana (148) gana glosa y p. 28, y su
+  «corroboración independiente» pasa a «copia de Esteves»; Coabana (116) cita
+  «cosas [sic: coas]»; curarí (180) gana la p. 105 de Alvarado.
+- **Tanda 2**: las C (209 a 261). Coduto entra como entrada propia; su
+  identidad con caduto (176) va como lectura `hipotesis` allí (dp.2.09, P3 A).
+  Jagüe, la única del lote leída sólo en OCR, vista en imagen al fusionar
+  (pdf 20 del tomo 2 = impresa 45).
+- **Tanda 3**: los descartes (262 a 307), en tres grupos —sin glosa, no
+  indígenas según el autor, estrato atribuido sin glosa— con la nota, el
+  origen o el estrato de cada forma en su campo (el migrador lo emite desde
+  hoy). Arajó, p. 17, vista en imagen al fusionar.
+- **La cola de la Parte I queda vacía** (`toponimos_esteves_indice.yaml`,
+  recontado por el script).
+- **Lo que no entró**: las notas de `kumarawa` y `urupagua` en el lexicón (la
+  cita de Arcaya «viruela» y la p. 66): son de `curiana_lexicon.py` y de otro
+  frente. Las secciones `fauna` y `flora` del lote siguen en la propuesta.
 
 ## 2026-09-23 — campaña cc.5 (asiento de Manaure, guaiqueríes, cronología dabajuroide)
 

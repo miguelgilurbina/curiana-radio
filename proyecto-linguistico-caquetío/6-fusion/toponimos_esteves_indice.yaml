@@ -19,11 +19,11 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-08-25'
-  estado: cola-de-trabajo   # lote 2026-09-22 (cola entera PROPUESTA en toponimos_esteves_lote_2026-09-22.yaml, sin fusionar) · lote 7 (2026-09-07, el mapa vivo OSM contra Esteves: 18 nombres) · lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
+  estado: cola-de-trabajo   # Parte I (Paraguaná) COMPLETA en el canon desde el 2026-09-24: lote 2026-09-22 fusionado en tres tandas (dp.2.08 de #222; toponimo-181 a -307) · lote 7 (2026-09-07, el mapa vivo OSM contra Esteves: 18 nombres) · lote 1 (2026-09-06, los del mapa de Miguel) y lote 2 (2026-09-07, los «caribe insular»; Maitiruma fue en el 1) procesados
   obra: esteves-1989
   total_indice: 187   # = ya_en_canon + por_procesar, recontado el 2026-09-23 (decía 186)
-  ya_en_canon: 141
-  por_procesar: 46
+  ya_en_canon: 187
+  por_procesar: 0
 
 # Los que YA están en 2-lengua/toponimos.yaml (referencia cruzada):
 ya_registrados:
@@ -88,8 +88,6 @@ ya_registrados:
   - {forma: Aguaque, canon: toponimo-154, lote: 2026-09-10}   # estaba en la cola sin estarlo: lo midió el lote 2026-09-22
   - {forma: Carirubana, canon: toponimo-148, lote: 2026-09-10}   # estaba en la cola sin estarlo: lo midió el lote 2026-09-22
 
-# Los que NO están — la cola. `estrato` marca los que Esteves atribuye a
-# lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
   - {forma: Barabara, canon: toponimo-181, lote: 2026-09-22-tanda-1}
   - {forma: Barisigua, canon: toponimo-182, lote: 2026-09-22-tanda-1}
   - {forma: Buchaquiba, canon: toponimo-183, lote: 2026-09-22-tanda-1}
@@ -171,51 +169,54 @@ ya_registrados:
   - {forma: Tubarao, canon: toponimo-259, lote: 2026-09-22-tanda-2}
   - {forma: Tumarusa, canon: toponimo-260, lote: 2026-09-22-tanda-2}
   - {forma: Tutubacoa, canon: toponimo-261, lote: 2026-09-22-tanda-2}
+  - {forma: Arajó, canon: toponimo-262, lote: 2026-09-22-tanda-3}
+  - {forma: Avotuca, canon: toponimo-263, lote: 2026-09-22-tanda-3}
+  - {forma: Bajarigua, canon: toponimo-264, lote: 2026-09-22-tanda-3}
+  - {forma: Biniche, canon: toponimo-265, lote: 2026-09-22-tanda-3}
+  - {forma: Carajaima, canon: toponimo-266, lote: 2026-09-22-tanda-3}
+  - {forma: Cucurubano, canon: toponimo-267, lote: 2026-09-22-tanda-3}
+  - {forma: Cujicana, canon: toponimo-268, lote: 2026-09-22-tanda-3}
+  - {forma: Duraguaco, canon: toponimo-269, lote: 2026-09-22-tanda-3}
+  - {forma: Guaricure, canon: toponimo-270, lote: 2026-09-22-tanda-3}
+  - {forma: Güima, canon: toponimo-271, lote: 2026-09-22-tanda-3}
+  - {forma: Jabe, canon: toponimo-272, lote: 2026-09-22-tanda-3}
+  - {forma: Juroguagua, canon: toponimo-273, lote: 2026-09-22-tanda-3}
+  - {forma: Manichare, canon: toponimo-274, lote: 2026-09-22-tanda-3}
+  - {forma: Matividiro, canon: toponimo-275, lote: 2026-09-22-tanda-3}
+  - {forma: Misaray, canon: toponimo-276, lote: 2026-09-22-tanda-3}
+  - {forma: Muaco, canon: toponimo-277, lote: 2026-09-22-tanda-3}
+  - {forma: Niraba, canon: toponimo-278, lote: 2026-09-22-tanda-3}
+  - {forma: Perabay, canon: toponimo-279, lote: 2026-09-22-tanda-3}
+  - {forma: Pipiacoa, canon: toponimo-280, lote: 2026-09-22-tanda-3}
+  - {forma: Quipayú, canon: toponimo-281, lote: 2026-09-22-tanda-3}
+  - {forma: Saguatumo, canon: toponimo-282, lote: 2026-09-22-tanda-3}
+  - {forma: Sarabón, canon: toponimo-283, lote: 2026-09-22-tanda-3}
+  - {forma: Sarinao, canon: toponimo-284, lote: 2026-09-22-tanda-3}
+  - {forma: Siraba, canon: toponimo-285, lote: 2026-09-22-tanda-3}
+  - {forma: Supideo, canon: toponimo-286, lote: 2026-09-22-tanda-3}
+  - {forma: Tacuato, canon: toponimo-287, lote: 2026-09-22-tanda-3}
+  - {forma: Tiraya, canon: toponimo-288, lote: 2026-09-22-tanda-3}
+  - {forma: Tobagía, canon: toponimo-289, lote: 2026-09-22-tanda-3}
+  - {forma: Yaguarima, canon: toponimo-290, lote: 2026-09-22-tanda-3}
+  - {forma: Yaima, canon: toponimo-291, lote: 2026-09-22-tanda-3}
+  - {forma: Yarí, canon: toponimo-292, lote: 2026-09-22-tanda-3}
+  - {forma: Antuní, canon: toponimo-293, lote: 2026-09-22-tanda-3}
+  - {forma: Barbasco, canon: toponimo-294, lote: 2026-09-22-tanda-3}
+  - {forma: Bucuruy, canon: toponimo-295, lote: 2026-09-22-tanda-3}
+  - {forma: Camoruco, canon: toponimo-296, lote: 2026-09-22-tanda-3}
+  - {forma: Capacheruda, canon: toponimo-297, lote: 2026-09-22-tanda-3}
+  - {forma: Cimiro, canon: toponimo-298, lote: 2026-09-22-tanda-3}
+  - {forma: Garrapata, canon: toponimo-299, lote: 2026-09-22-tanda-3}
+  - {forma: Peticuare, canon: toponimo-300, lote: 2026-09-22-tanda-3}
+  - {forma: Quitaire, canon: toponimo-301, lote: 2026-09-22-tanda-3}
+  - {forma: Quiyegua, canon: toponimo-302, lote: 2026-09-22-tanda-3}
+  - {forma: Sanquinche, canon: toponimo-303, lote: 2026-09-22-tanda-3}
+  - {forma: Suriquiva, canon: toponimo-304, lote: 2026-09-22-tanda-3}
+  - {forma: Cuara, canon: toponimo-305, lote: 2026-09-22-tanda-3}
+  - {forma: Nonocoti, canon: toponimo-306, lote: 2026-09-22-tanda-3}
+  - {forma: Tumatey, canon: toponimo-307, lote: 2026-09-22-tanda-3}
 
-por_procesar:
-  - {forma: Antuní, propuesta: lote-2026-09-22}
-  - {forma: Arajó, propuesta: lote-2026-09-22}
-  - {forma: Avotuca, propuesta: lote-2026-09-22}
-  - {forma: Bajarigua, propuesta: lote-2026-09-22}
-  - {forma: Barbasco, propuesta: lote-2026-09-22}
-  - {forma: Biniche, propuesta: lote-2026-09-22}
-  - {forma: Bucuruy, propuesta: lote-2026-09-22}
-  - {forma: Camoruco, propuesta: lote-2026-09-22}
-  - {forma: Capacheruda, propuesta: lote-2026-09-22}
-  - {forma: Carajaima, propuesta: lote-2026-09-22}
-  - {forma: Cimiro, propuesta: lote-2026-09-22}
-  - {forma: Cuara, propuesta: lote-2026-09-22}
-  - {forma: Cucurubano, propuesta: lote-2026-09-22}
-  - {forma: Cujicana, propuesta: lote-2026-09-22}
-  - {forma: Duraguaco, propuesta: lote-2026-09-22}
-  - {forma: Garrapata, propuesta: lote-2026-09-22}
-  - {forma: Guaricure, propuesta: lote-2026-09-22}
-  - {forma: Güima, propuesta: lote-2026-09-22}
-  - {forma: Jabe, propuesta: lote-2026-09-22}
-  - {forma: Juroguagua, propuesta: lote-2026-09-22}
-  - {forma: Manichare, propuesta: lote-2026-09-22}
-  - {forma: Matividiro, propuesta: lote-2026-09-22}
-  - {forma: Misaray, propuesta: lote-2026-09-22}
-  - {forma: Muaco, propuesta: lote-2026-09-22}
-  - {forma: Niraba, propuesta: lote-2026-09-22}
-  - {forma: Nonocoti, propuesta: lote-2026-09-22}
-  - {forma: Perabay, propuesta: lote-2026-09-22}
-  - {forma: Peticuare, propuesta: lote-2026-09-22}
-  - {forma: Pipiacoa, propuesta: lote-2026-09-22}
-  - {forma: Quitaire, propuesta: lote-2026-09-22}
-  - {forma: Quipayú, propuesta: lote-2026-09-22}
-  - {forma: Quiyegua, propuesta: lote-2026-09-22}
-  - {forma: Saguatumo, propuesta: lote-2026-09-22}
-  - {forma: Sanquinche, propuesta: lote-2026-09-22}
-  - {forma: Sarabón, propuesta: lote-2026-09-22}
-  - {forma: Sarinao, propuesta: lote-2026-09-22}
-  - {forma: Siraba, propuesta: lote-2026-09-22}
-  - {forma: Supideo, propuesta: lote-2026-09-22}
-  - {forma: Suriquiva, propuesta: lote-2026-09-22}
-  - {forma: Tacuato, propuesta: lote-2026-09-22}
-  - {forma: Tiraya, propuesta: lote-2026-09-22}
-  - {forma: Tobagía, propuesta: lote-2026-09-22}
-  - {forma: Tumatey, propuesta: lote-2026-09-22}
-  - {forma: Yaguarima, propuesta: lote-2026-09-22}
-  - {forma: Yaima, propuesta: lote-2026-09-22}
-  - {forma: Yarí, propuesta: lote-2026-09-22}
+# Los que NO están — la cola, VACÍA desde el 2026-09-24: el lote de la cola
+# entera (M6, #216) entró al canon en tres tandas por dp.2.08 de #222. Antes: `estrato` marca los que Esteves atribuye a
+# lengua no caquetía (la pregunta de B.1 / Oliver §3.2.4):
+por_procesar: []

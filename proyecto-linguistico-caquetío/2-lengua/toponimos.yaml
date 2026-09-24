@@ -1,14 +1,14 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 261
+  toponimos: 307
   por_nivel:
     A: 21
     B: 30
     C: 110
-    descartado: 100
-  con_procedencia: 201
-  con_lecturas: 40
-  lecturas: 71
+    descartado: 146
+  con_procedencia: 247
+  con_lecturas: 41
+  lecturas: 72
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -4507,6 +4507,516 @@ toponimos:
   razon: 'el comentario del autor es histórico o anecdótico, no etimológico: no hay glosa que despejar.'
   procedencia: null
   deuda: sin-procedencia
+- id: toponimo-262
+  forma: arajó
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: cerro erosionado al suroeste de Moruy, lindero con Santa Ana; Esteves sospecha la llana
+    «Arajo», pues las agudas escasean; homónimos en Sabaneta (Miranda) y Arajú (Federación); Arcaya 1920
+    ya lo nombra
+  procedencia:
+    obra: esteves-1989
+    pagina: 17
+- id: toponimo-263
+  forma: avotuca
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar desconocido; José Luis Cisneros (Descripción de la Provincia de Benezuela, 1764)
+    lo da como vigía de las costas de Paraguaná; Esteves lo supone en La Boca del Caño, al norte de Adícora
+  procedencia:
+    obra: esteves-1989
+    pagina: 18
+- id: toponimo-264
+  forma: bajarigua
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: fundo y salina al norte de El Vínculo, depresión a doce metros bajo el mar; -gua sin glosa
+  procedencia:
+    obra: esteves-1989
+    pagina: 19
+- id: toponimo-265
+  forma: biniche
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lindero de las tierras comuneras de Guacuira y Urupaguaduco
+  procedencia:
+    obra: esteves-1989
+    pagina: 23
+- id: toponimo-266
+  forma: carajaima
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: ciénaga del caserío San Pedro (Adícora); papeles de 1698 (linderos de Urupaguaduco) la
+    escriben Caramajaima; termina en -aima, afijo de REGLAS_ZAVALA sin glosa
+  procedencia:
+    obra: esteves-1989
+    pagina: 27
+- id: toponimo-267
+  forma: cucurubano
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lindero de Yauquiba y Guacujúa; «parece voz onomatopéyica»; termina en -bano pero no consta
+    que sea cerro
+  procedencia:
+    obra: esteves-1989
+    pagina: 32
+- id: toponimo-268
+  forma: cujicana
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: antiguo potrero de Carirubana, hoy zona residencial de Punto Fijo; -ana sin glosa (#109)
+  procedencia:
+    obra: esteves-1989
+    pagina: 32
+- id: toponimo-269
+  forma: duracuaco
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar del municipio Moruy, 3 casas y 20 vecinos en 1881; la cabecera impresa es DURACUACO
+    y el índice escribe Duraguaco El índice escribe duraguaco.
+  procedencia:
+    obra: esteves-1989
+    pagina: 37
+- id: toponimo-270
+  forma: guaricure
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar del municipio Moruy, «no tenemos más noticias» (transcrito el 2026-09-16)
+  procedencia:
+    obra: esteves-1989
+    pagina: 42
+- id: toponimo-271
+  forma: güima
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: vecindario de Charaima; nombre de un cacique albino de leyenda; los «montes de Güima» en
+    el título de composición de Urupaguaduco
+  procedencia:
+    obra: esteves-1989
+    pagina: 43
+- id: toponimo-272
+  forma: jabe
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar desaparecido de Jadacaquiva, también San José de Tarbes; ver §mapa_vivo (Tabe)
+  procedencia:
+    obra: esteves-1989
+    pagina: 44
+- id: toponimo-273
+  forma: juroguagua
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: 'lugar pecuario al este del cementerio de El Vínculo; la entrada sigue en la p. 49 (la
+    p. 48 es una fotografía): Esteves remite a Jahn para un homónimo guajiro que en el texto de Jahn del
+    repo da cero (ver medición)'
+  procedencia:
+    obra: esteves-1989
+    pagina: 47
+- id: toponimo-274
+  forma: manichare
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar del municipio Moruy
+  procedencia:
+    obra: esteves-1989
+    pagina: 50
+- id: toponimo-275
+  forma: matividiro
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: cerro de menos de 250 m y aldea (Buenavista); 37 casas y 286 vecinos en 1881; el cerro
+    orienta a los pescadores de pargo
+  procedencia:
+    obra: esteves-1989
+    pagina: 51
+- id: toponimo-276
+  forma: misaray
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: aldea de Santa Ana; deslinde de 1768 (Pedro de Llamas); «Masaray es la forma indígena»;
+    cementerio y petroglifo en Machuruca/Misaray (ficha)
+  procedencia:
+    obra: esteves-1989
+    pagina: 52
+- id: toponimo-277
+  forma: muaco
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: Caño del Muaco, albufera junto a Tacuato; el Río Muáco del mapa vivo es otro, en el Golfete
+    continental
+  procedencia:
+    obra: esteves-1989
+    pagina: 54
+- id: toponimo-278
+  forma: niraba
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: aldea de Moruy, 6 casas y 35 vecinos en 1881; ver §mapa_vivo (La Miraba)
+  procedencia:
+    obra: esteves-1989
+    pagina: 54
+- id: toponimo-279
+  forma: perabay
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lindero de Jadacaquiva, Pueblo Nuevo y Buenavista, cerca de Piedra Honda; -ay
+  procedencia:
+    obra: esteves-1989
+    pagina: 56
+- id: toponimo-280
+  forma: pipiacoa
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: sabanas dentro del Vínculo de Curaidebo; «leemos en un documento de 1596» — la fecha documental
+    más antigua del lote después del Cocodito de 1590; -coa sin glosa
+  procedencia:
+    obra: esteves-1989
+    pagina: 56
+- id: toponimo-281
+  forma: quipayú
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: cuevas naturales en La Cieneguita, cerca de Punta Salinas (Los Taques)
+  procedencia:
+    obra: esteves-1989
+    pagina: 57
+- id: toponimo-282
+  forma: saguatumo
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar de Moruy, 2 casas y 8 vecinos en 1881; «el nombre es antiquísimo»
+  procedencia:
+    obra: esteves-1989
+    pagina: 58
+- id: toponimo-283
+  forma: sarabón
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: punto costeño al norte de Punta Cardón, atalaya de pescadores
+  procedencia:
+    obra: esteves-1989
+    pagina: 58
+- id: toponimo-284
+  forma: sarinao
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: aldea de Santa Ana, 20 casas y 157 habitantes en 1881; primitivo Sarinaro (la misma erosión
+    -aro > -ao que Guaranaro > Guaranao)
+  procedencia:
+    obra: esteves-1989
+    pagina: 60
+- id: toponimo-285
+  forma: siraba
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: cerro cónico de unos 500 m unido al de Santa Ana; petroglifos «Las Piedras del Almanaque»
+  procedencia:
+    obra: esteves-1989
+    pagina: 60
+- id: toponimo-286
+  forma: supideo
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lugar de Moruy; cf. «arboleda supide» en la glosa de Zavala para supí, sin que Esteves
+    lo diga
+  procedencia:
+    obra: esteves-1989
+    pagina: 61
+- id: toponimo-287
+  forma: tacuato
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: población de Santa Ana, 37 casas y 237 vecinos en 1881; iglesia en 1773, «Tocato escribe
+    Martí»; ver lecturas
+  lecturas:
+  - tipo: etimologia-popular
+    lectura: '«Ta a cuatro»: el precio de la sal, cuatro reales el almud'
+    quien: informantes de Esteves
+    veredicto: 'Esteves se declara en desacuerdo y a la vez concede «visos de verosimilitud» por el Resguardo
+      de Salinas colonial: se registra la ambigüedad'
+    fecha: '2026-09-23'
+    procedencia:
+      obra: esteves-1989
+      pagina: 62
+  procedencia:
+    obra: esteves-1989
+    pagina: 62
+- id: toponimo-288
+  forma: tiraya
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: ensenada al norte de Adícora; Taria y Taría en los papeles de Urupaguaduco
+  procedencia:
+    obra: esteves-1989
+    pagina: 63
+- id: toponimo-289
+  forma: tobagía
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: lindero occidental de Pueblo Nuevo con Guaidabacoa y Chibuche
+  procedencia:
+    obra: esteves-1989
+    pagina: 64
+- id: toponimo-290
+  forma: yaguarima
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: punto costeño del Golfete al este de Punta Cardón; termina en -ima, que Esteves glosa «húmedo»
+    en la p. 93 sin aplicarlo aquí
+  procedencia:
+    obra: esteves-1989
+    pagina: 67
+- id: toponimo-291
+  forma: yaima
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: bahía de aguas profundas al norte de Adícora, puerto colonial de la sal de Las Cumaraguas
+  procedencia:
+    obra: esteves-1989
+    pagina: 67
+- id: toponimo-292
+  forma: yarí
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
+    del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
+  observacion: sitio en la sabana de Barabara y otro en Santa Ana; Yaride, el primitivo
+  procedencia:
+    obra: esteves-1989
+    pagina: 67
+- id: toponimo-293
+  forma: antuní
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: del apellido Antúnez «con pronunciación francesa o catalana»; copla de las datas y las
+    vainas de cují
+  origen_segun_autor: castellano (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 16
+- id: toponimo-294
+  forma: barbasco
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: nombre común de plantas usadas para embarbascar en la pesca
+  origen_segun_autor: castellano (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 22
+- id: toponimo-295
+  forma: bucuruy
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: de buco, «muy español el vocablo», compuerta de regadío; malecones de 1740
+  origen_segun_autor: castellano (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 24
+- id: toponimo-296
+  forma: camoruco
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: antes Semeruco (Malpighia); el camoruco «no existe en la flora autóctona de Paraguaná»
+  origen_segun_autor: transplantado (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 26
+- id: toponimo-297
+  forma: capacherúa
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: el índice escribe Capacheruda, que es la etimología de Esteves («algo con aspecto de capacho»),
+    no el nombre El índice escribe capacheruda.
+  origen_segun_autor: castellano (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 26
+- id: toponimo-298
+  forma: cimiro
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: cerro, lindero en Moruy; «No parece voz indígena»
+  origen_segun_autor: no-indigena (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 30
+- id: toponimo-299
+  forma: garrapata
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: cerro aislado del [ramal del] Cerro Atravesado (Santa Ana); «No parece vo[z indígen]a»
+  origen_segun_autor: castellano (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 38
+- id: toponimo-300
+  forma: peticuare
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: '«voz indígena adulterada con una raíz afrancesada: peti, petit»; -cuare como Pachacuare
+    y Maicuare'
+  origen_segun_autor: hibrido (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 56
+- id: toponimo-301
+  forma: quitaire
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: al este del Taparo (Santa Ana); «No parece voz indígena»
+  origen_segun_autor: no-indigena (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 57
+- id: toponimo-302
+  forma: quiyegua
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: «Piedra y Yegua» (ya medido en la campaña -gua)
+  origen_segun_autor: hibrido (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 57
+- id: toponimo-303
+  forma: sanquinche
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: Quinche, hipocorístico de Joaquín; leyenda moderna del espanto de los arrieros
+  origen_segun_autor: castellano (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 58
+- id: toponimo-304
+  forma: suriquiba
+  nivel: descartado
+  clase: topónimo
+  razon: El propio Esteves dice que el nombre no es indígena, o lo da por castellano, híbrido o transplantado.
+    Se registran aparte (filtro 1 del habla paraguanera), no se descartan en silencio.
+  observacion: '«voz híbrida que dice: la Piedra del Sur»; el índice escribe Suriquiva, la cabecera SURIQUIBA
+    El índice escribe suriquiva.'
+  origen_segun_autor: hibrido (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 61
+- id: toponimo-305
+  forma: cuara
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves atribuye el nombre a otra lengua sin dar glosa. El estrato es lectura suya (skill §5),
+    no dato.
+  observacion: ensenada de la ribera norte del Golfete (Santa Ana); homónimos en Aragua, Quíbor, Siquisique,
+    Aroa
+  estrato_segun_autor: ayamán (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 32
+- id: toponimo-306
+  forma: nonocoti
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves atribuye el nombre a otra lengua sin dar glosa. El estrato es lectura suya (skill §5),
+    no dato.
+  observacion: tierras comuneras entre Los Taques y Moruy; la etimología jocosa «el abuelo Coty» (Guillermo
+    Cossi) se registra como popular y rechazada
+  estrato_segun_autor: 'timote-cuica (según Esteves: «no hay dudas»)'
+  procedencia:
+    obra: esteves-1989
+    pagina: 55
+- id: toponimo-307
+  forma: tumatey
+  nivel: descartado
+  clase: topónimo
+  razon: Esteves atribuye el nombre a otra lengua sin dar glosa. El estrato es lectura suya (skill §5),
+    no dato.
+  observacion: 'ensenada de la costa oriental cerca del Cabo de San Román; la entrada sigue en la p. 66,
+    tras la foto de la p. 65: pescadores arubianos y tortugas (ver §correcciones y §fauna); -ey como Elegüey
+    y Maragüey (B.6: fonética, no filiación)'
+  estrato_segun_autor: taíno (según Esteves)
+  procedencia:
+    obra: esteves-1989
+    pagina: 64
 corroboraciones_lexicon:
 - palabra: bacoa
   glosa_lexicon: bosque, lugar, paraje, sitio fértil
