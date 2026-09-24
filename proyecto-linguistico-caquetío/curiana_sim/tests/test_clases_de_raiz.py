@@ -194,6 +194,12 @@ def test_la_glosa_verbatim_de_la_fuente_sigue_entera():
         assert e.get("glosa_fuente"), f"`{forma}` perdió su glosa_fuente"
         assert f"#{fila['num']}" in e["glosa_fuente"], forma
         # `sig` se deriva de la glosa verbatim y tampoco se tocó en esta tanda.
+        # Salvo excepción DECLARADA en SIG_CURADO, con su razón: `komoho`
+        # (T2 de la tanda de las hermanas, 2026-09-24) precisa 'higo' como el
+        # higo de tuna por Oviedo p. 313; la glosa verbatim sigue en glosa_fuente.
+        if fila["forma_zavala"] in M.SIG_CURADO:
+            assert e["sig"] == M.SIG_CURADO[fila["forma_zavala"]]["sig"], forma
+            continue
         assert e["sig"].lower().startswith(
             e["glosa_fuente"].split(" [Zavala")[0][:12].lower()), forma
 
@@ -226,8 +232,11 @@ def test_los_homografos_de_la_comparanda_estan_declarados_y_sus_voces_vivas():
     entre dos lenguas se leía como «ya está» y la regeneración borraba la voz
     caquetía. `NO_ES_LA_MISMA_VOZ` lo impide, fila a fila y con su razón."""
     import lexicon_zavala as Z
+    # `aburi` (2026-09-24): el topónimo de Zavala contra la voz reconstruida
+    # 'tener vergüenza' de la tanda de las hermanas.
     assert set(M.NO_ES_LA_MISMA_VOZ) == {
-        "cana", "carama", "cuna", "turupia", "ima", "coa"}
+        "cana", "carama", "cuna", "turupia", "ima", "coa", "aburi"}
+    assert "aburi" in Z.TOPONIMOS_ZAVALA, "el topónimo aburi se perdió al regenerar"
     for razon in M.NO_ES_LA_MISMA_VOZ.values():
         assert len(razon) > 40
     # Las cuatro voces y los dos afijos que se perdían.

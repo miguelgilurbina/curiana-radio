@@ -247,6 +247,19 @@ def lema(forma):
     return L[0] if L else ""
 
 
+# ── La misma voz, dos lemas (T3, tanda de las hermanas, 2026-09-24) ──────
+# `_lema1` pasa c → k siempre, también ante e, i (la c → s está «disputada en
+# lemas» y sólo se aplica al comparar), así que el «Ciba» de Las Casas (vía
+# Coll y Toste p. 209), que en la ortografía del XVI se lee /siba/, salía como
+# `kiba` y la lista tenía dos voces para la piedra: `siba` (Pané) y `kiba`. El
+# escriba se fió del lema y le dijo a Miguel que el caquetío kiba era
+# «idéntico» al taíno de Las Casas; era falso. Se funden declarando el par,
+# no cambiando la regla de lemas (que movería toda la lista).
+LEMAS_MISMA_VOZ = (
+    ("siba", "kiba"),
+)
+
+
 # ═════════════════════════════════════════════════════════════════════════
 # Lectores — uno por transcripción, porque cada una tiene su esquema
 # ═════════════════════════════════════════════════════════════════════════
@@ -283,7 +296,13 @@ def leer_oviedo():
     out = []
     if not Y:
         return out
-    for bloque in ("costa_de_venezuela", "la_espanola", "otras_islas"):
+    # T3 (tanda de las hermanas, 2026-09-24): `costa_de_venezuela` NO se lee.
+    # La propia transcripción lo dice («TAMPOCO son taínos: son de la
+    # provincia de Veneçuela y de Cubagua»), y este lector las metía como
+    # taíno de clase i: Paraguana, comoho, hado/hayo y yaguaraha. Son voces
+    # de la provincia de los caquetíos, y su sitio es el lexicón caquetío
+    # (komoho, T2) y el canon de topónimos (paraguaná, T2b).
+    for bloque in ("la_espanola", "otras_islas"):
         for e in Y.get(bloque) or []:
             out.append(_reg(e.get("forma_fuente"), e.get("glosa_fuente"),
                             "oviedo-valdes-1851", "primaria",
@@ -718,6 +737,11 @@ def construir():
         for L in Ls[1:]:
             unir(Ls[0], L)
         lemas_por_reg.append(Ls)
+    # T3 (tanda de las hermanas, 2026-09-24): la misma voz con dos lemas
+    # porque la regla de lemas pasa c → k también ante e, i (ver LEMAS_MISMA_VOZ).
+    for a, b in LEMAS_MISMA_VOZ:
+        if a in padre and b in padre:
+            unir(a, b)
 
     grupos = collections.defaultdict(list)
     for r, Ls in zip(registros, lemas_por_reg):

@@ -181,9 +181,11 @@ def test_competencia_ignora_uso_tras_fijacion():
     # forma con la raíz fuera de él no compite, y `forma-a` era justo eso.
     comp = CompetenciaLexica(soporte_minimo=1.0, umbral_fijacion=0.5)
     comp.activar("c", "algo")
-    comp.proponer("c", "kasuta-iro", "Manaure")
+    # `kasuta` → `halira` (tanda de las hermanas, 2026-09-24): una raíz
+    # archivada no avala en la puerta (db.1).
+    comp.proponer("c", "halira-iro", "Manaure")
     comp.proponer("c", "barsure-uco", "Tariwa")
-    comp.registrar_uso("kasuta-iro", "Shaboro")
+    comp.registrar_uso("halira-iro", "Shaboro")
     assert comp.evaluar_fijacion(dia=1)
     soporte_antes = comp.referentes["c"]["variantes"]["barsure-uco"]
     comp.registrar_uso("barsure-uco", "Shaboro")   # ya fijada: no debe sumar
@@ -458,10 +460,12 @@ def test_la_era_1_no_cambia_byte_a_byte():
         # Tanda final (D11 fase 3): el núcleo y el aspecto son los de las
         # hermanas —el continuativo es el verbo solo—, así que la era 1 deja
         # de ser byte a byte con sus runs, como con el ejemplo de identidad
-        # del 2026-09-19: es UNA koiné y los dos mundos la leen.
+        # del 2026-09-19: es UNA koiné y los dos mundos la leen. Y la tanda de
+        # las hermanas (2026-09-24): el verbo base es `kunu` (lokono cunnu), no
+        # `naa`, que se archivó.
         suf = _ASPECTO_SUFIJO.get(emo.get("aspecto", "continuativo"), "")
         assert formas_semilla(agente, emo) == \
-            list(dict.fromkeys(_NUCLEO_FALLBACK + [f"naa{suf}", f"diki{suf}"])), agente
+            list(dict.fromkeys(_NUCLEO_FALLBACK + [f"kunu{suf}", f"diki{suf}"])), agente
 
     vectores = {tuple(sorted(formas_semilla(n, emocionar_de(n, a.get("etnia")))))
                 for n, a in A.ALL_AGENTS.items()}

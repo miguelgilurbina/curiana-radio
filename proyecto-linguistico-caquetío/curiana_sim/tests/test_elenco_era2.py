@@ -125,8 +125,20 @@ def test_las_raices_de_los_nombres_son_caquetio_del_lexicon():
         encoding="utf-8"))
     capa_b = dict(medicion["por_opcion"]["B"]["voces"])
     capa_b["jachos"] = "español-colonial"          # la 6-a, verificada en el DLE
+    # La tanda de las hermanas (2026-09-24, «Acepto todo lo recomendado»)
+    # archivó cuatro voces que son raíz de un nombre: Dunakoa (duna), Ruata
+    # (rua), Simaure (sima) y Talata (talata). Mismo criterio: el nombre se
+    # queda y la voz sale del habla; lo que se exige es que esté ARCHIVADA por
+    # esa tanda —en FUERA_DEL_HABLA, con su capa—, no desaparecida.
+    from curiana_lexicon import FUERA_DEL_HABLA
+    archivadas_hermanas = {"duna", "rua", "sima", "talata"}
     assert len(mapa["nombres"]) == 63
     for fila in mapa["nombres"]:
+        if fila["raiz"] in archivadas_hermanas:
+            arch = FUERA_DEL_HABLA.get(fila["raiz"])
+            assert arch and "tanda de las hermanas" in arch["archivada"], fila
+            assert fila["raiz"] not in VOCABULARIO_BASE, fila
+            continue
         entrada = VOCABULARIO_BASE.get(fila["raiz"])
         assert entrada is not None, fila["raiz"]
         if fila["raiz"] in capa_b:

@@ -82,9 +82,14 @@ CAPA_AL_ARCHIVAR = {
 # pero NO por esta política —no tenían rival atestiguado—, sino por D11 fase 3
 # (cc.12: nada reconstruido desde el wayuu). Lo que este test fija sigue
 # valiendo: la política d19.b no los alcanzaba. Salen de la lista con su nota.
+# Tanda de las hermanas (2026-09-24): el núcleo se rehízo desde el lokono y el
+# habla de mujeres kalinago, y `naa`, `waa`, `chaa`, `suna`, `kuru`, `arima`,
+# `duna`, `amana` y `dali` salieron del habla por ESA decisión (th.7), no por
+# esta política: la voz nueva de cada una tampoco tiene rival atestiguado, y
+# es la que se fija aquí. `sima` sí la alcanzó —ver el test de abajo—.
 NUCLEO_INTACTO = ("waya", "naya",
-                  "naa", "waa", "kaa", "maa", "chaa", "suna",
-                  "kuru", "arima", "bara", "sima", "duna", "amana", "dali")
+                  "kunu", "sile", "kaa", "maa", "ani", "dunku",
+                  "ada", "hime", "bara", "uni", "hikihi", "wunabu")
 
 
 def _neo(forma, autor="Manaure", dia=1, turno=1):
@@ -166,7 +171,11 @@ def test_b_el_refuerzo_tampoco_la_dice_cuando_recorta_por_el_final(archivada):
     gastadas = ["wana", "suna", "masa", "awa", "barsure", "duna", "amana",
                 "ka", "mara", "saa", "naka", "panaa", "naba", "naa", "maa",
                 "kaa", "arima", "suka", "bara", "kuru", "kashi", "wara",
-                "yama", "puna"]
+                "yama", "puna",
+                # las listas de la tanda de las hermanas (2026-09-24)
+                "diki", "dunku", "aeke", "ati", "jai", "aita", "kuburuku",
+                "kunu", "badia", "ika", "bena", "kia", "danu", "kibe", "popoi",
+                "uni", "hikihi", "hime", "kasi", "ada"]
     for score in (1.0, 3.0, 5.0, 6.5):
         texto = lx.prompt_refuerzo(score, gastadas)
         assert archivada not in lx.formas_en_texto(texto), (
@@ -227,8 +236,8 @@ def test_c_una_forma_archivada_no_entra_en_competencia(archivada):
         f"`{archivada}` está archivada y aun así compite por un referente")
     # y una rival legítima sí entra, para que el test no pase por estar rota
     # la competencia entera
-    comp.proponer("cuentas", "kuru-bacoa", "Manaure")
-    assert "kuru-bacoa" in comp.referentes["cuentas"]["variantes"]
+    comp.proponer("cuentas", "hikihi-bana", "Manaure")
+    assert "hikihi-bana" in comp.referentes["cuentas"]["variantes"]
 
 
 def test_c_el_archivo_viejo_tambien_quedo_cerrado():
@@ -244,7 +253,7 @@ def test_c_una_acunacion_legitima_sigue_pasando():
     """La puerta no se cerró de más: lo que nadie enseña y nadie archivó sí
     se registra."""
     lex = LexicoComunitario()
-    assert lex.registrar_neologismo(_neo("kuru-bacoa")) is True
+    assert lex.registrar_neologismo(_neo("hikihi-bana")) is True
     assert not lex.rechazos_de_plantilla
 
 
@@ -319,20 +328,23 @@ def test_e_la_reconstruccion_sin_rival_atestiguado_no_se_toca(forma):
     assert forma not in FUERA_DEL_HABLA
 
 
-def test_e_sima_sigue_viva_porque_es_pregunta_de_miguel():
-    """El par 6 («cerro») lo ALCANZA la política —`turumako` es atestiguada,
-    Zavala #262— y NO se ha aplicado: es la pregunta que Miguel dejó abierta
-    y su coste está medido. Este test fija la conducta de HOY, para que el
-    día que se decida, se vea cambiar."""
-    assert "sima" in VOCABULARIO_BASE
-    assert "sima" not in FUERA_DEL_HABLA
-    assert VOCABULARIO_BASE["sima"]["fuente"] == "caquetío-reconstruido"
-    assert "turumako" in VOCABULARIO_BASE
+def test_e_sima_se_archivo_y_el_cerro_es_kidi():
+    """El par 6 («cerro») lo ALCANZABA la política —`turumako` es atestiguada,
+    Zavala #262— y quedó abierto como pregunta de Miguel (d21.16: «que
+    convivan»). Se decidió el 2026-09-24 por otra vía: en la tanda de las
+    hermanas («Acepto todo lo recomendado», th.7 grupo 1) `sima` se archivó
+    porque el caquetío ATESTIGUADO ya dice 'cerro' con `kidi` (Zavala #212).
+    `turumako`, el cerro de cima plana, sigue vivo."""
+    assert "sima" not in VOCABULARIO_BASE
+    assert "tanda de las hermanas" in FUERA_DEL_HABLA["sima"]["archivada"]
+    assert FUERA_DEL_HABLA["sima"]["fuente"] == "caquetío-reconstruido"   # la capa no se toca
+    assert VOCABULARIO_BASE["kidi"]["fuente"] == "caquetío-atestiguado"
     assert VOCABULARIO_BASE["turumako"]["fuente"] == "caquetío-atestiguado"
-    # y la plantilla la sigue enseñando, con su molde
+    # y la plantilla enseña el cerro atestiguado, con su molde
     completo = lx.prompt_reglas_completo()
-    assert "sima (cerro)" in completo
-    assert "sima-bana" in lx.formas_en_texto(completo)
+    assert "kidi (cerro)" in completo and "sima (cerro)" not in completo
+    assert "kidi-bana" in lx.formas_en_texto(completo)
+    assert "sima-bana" not in lx.formas_en_texto(completo)
 
 
 def test_e_la_colision_kasi_kashi_quedo_resuelta():

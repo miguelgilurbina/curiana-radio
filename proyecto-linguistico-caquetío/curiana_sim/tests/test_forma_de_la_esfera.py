@@ -211,12 +211,16 @@ def test_el_mock_construye_exactamente_las_mismas_filas():
 # mismas; los números, los del scorer de hoy (antes: 7,2 · 6,1 · 8,4 · 8,5).
 # Lo que este test vigila sigue igual: `prestamos_de_esfera` devuelve la
 # clave castellana y la normalización no mueve el score.
+# ⚠️ Tanda de las hermanas (2026-09-24): SE MOVIÓ otra vez, y también a
+# propósito — `wara`, `amana` y `naa` se archivaron (el núcleo sale ahora del
+# lokono y del habla de mujeres kalinago). Mismas frases; números de hoy
+# (antes: 6,2 · 6,1 · 5,1 · 6,4). Los préstamos de la esfera no se movieron.
 ANTES = [
-    ("Casabe kaa-ni wara amana-ni", 6.2, 0.750, 0.500, ["casabe"]),
+    ("Casabe kaa-ni wara amana-ni", 5.1, 0.500, 0.250, ["casabe"]),
     ("Maíz, yuca ta-kana", 6.1, 1.000, 0.333, ["maíz", "yuca"]),
-    ("Taya naa-ka casabe wana-ni, ta-casabe para-ko", 5.1, 0.500, 0.167,
+    ("Taya naa-ka casabe wana-ni, ta-casabe para-ko", 3.3, 0.333, 0.000,
      ["casabe", "ta-casabe"]),
-    ("Pia naa-ka maisi, cazabi kaa-ni wara", 6.4, 0.833, 0.500,
+    ("Pia naa-ka maisi, cazabi kaa-ni wara", 5.1, 0.500, 0.167,
      ["maisi", "cazabi"]),
 ]
 

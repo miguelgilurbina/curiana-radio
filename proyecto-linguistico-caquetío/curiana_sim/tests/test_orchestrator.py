@@ -370,7 +370,9 @@ def test_save_loanword_uses_escribe_la_lengua_real_en_su_tabla():
 # 29 de 40 acuñaciones de la era 2 (72,5%, analizar_nodos.py). Eso invierte las
 # rutas de contagio que se leen de `word_uses`.
 
-CON_ACUNACION = RESPUESTA + " [kuru-bacoa: kuru+-bacoa = la arboleda]."
+# Tanda de las hermanas (2026-09-24): `kuru` se archivó y una raíz archivada
+# no avala una acuñación (db.1): la acuñación de prueba va sobre `hikihi`.
+CON_ACUNACION = RESPUESTA + " [hikihi-bana: hikihi+-bana = el cerro del fuego]."
 
 
 def test_el_acunador_es_el_primer_usuario_registrado_de_su_forma(sim, monkeypatch):
@@ -389,17 +391,17 @@ def test_el_acunador_es_el_primer_usuario_registrado_de_su_forma(sim, monkeypatc
     # El scorer NO la ve (no está en `palabras_activas()`), así que el
     # orquestador la pasa aparte: el merge —y su lengua— los hace la capa de
     # base, que es la que escribe `word_uses`.
-    assert "kuru-bacoa" not in primera["words_used"]
-    assert primera["coined_words"] == ["kuru-bacoa"], (
+    assert "hikihi-bana" not in primera["words_used"]
+    assert primera["coined_words"] == ["hikihi-bana"], (
         "la forma acuñada no llega a la base en boca de su acuñador")
     assert primera["agent_name"] == inter[0]["agent"]
     # Todos dicen lo mismo (el agente es un mock), así que a partir del
     # segundo la forma YA está adoptada en el léxico y el scorer sí la ve: es
     # exactamente la asimetría que arreglamos. Nunca puede contarse dos veces.
     for r in db.respuestas:
-        veces = r["words_used"].count("kuru-bacoa") + r["coined_words"].count("kuru-bacoa")
+        veces = r["words_used"].count("hikihi-bana") + r["coined_words"].count("hikihi-bana")
         assert veces == 1, r["agent_name"]
-    adoptantes = [r for r in db.respuestas if "kuru-bacoa" in r["words_used"]]
+    adoptantes = [r for r in db.respuestas if "hikihi-bana" in r["words_used"]]
     assert adoptantes, "sin adopción no hay contraste que medir"
 
 
@@ -439,18 +441,18 @@ def test_save_agent_response_escribe_la_acunacion_como_caquetio():
             coined_words=coined)
         return dict(db.client.inserts)
 
-    con = _guardar(["kuru-bacoa"])
+    con = _guardar(["hikihi-bana"])
     sin = _guardar([])
     fila_resp = con["agent_responses"]
-    assert "kuru-bacoa" in fila_resp["words_used"]
+    assert "hikihi-bana" in fila_resp["words_used"]
     assert fila_resp["pct_caquetio"] == sin["agent_responses"]["pct_caquetio"]
 
     por_palabra = {f["word"]: f for f in con["word_uses"]}
-    assert por_palabra["kuru-bacoa"]["source_language"] == "caquetío"
-    assert por_palabra["kuru-bacoa"]["agent_name"] == "Manaure"
-    assert "kuru-bacoa" not in {f["word"] for f in sin["word_uses"]}
+    assert por_palabra["hikihi-bana"]["source_language"] == "caquetío"
+    assert por_palabra["hikihi-bana"]["agent_name"] == "Manaure"
+    assert "hikihi-bana" not in {f["word"] for f in sin["word_uses"]}
     # Una sola fila por acuñación, aunque llegue repetida o ya en words_used.
-    assert len([f for f in con["word_uses"] if f["word"] == "kuru-bacoa"]) == 1
-    repe = _guardar(["kuru-bacoa", "kuru-bacoa", "biro"])
-    assert repe["agent_responses"]["words_used"].count("kuru-bacoa") == 1
+    assert len([f for f in con["word_uses"] if f["word"] == "hikihi-bana"]) == 1
+    repe = _guardar(["hikihi-bana", "hikihi-bana", "biro"])
+    assert repe["agent_responses"]["words_used"].count("hikihi-bana") == 1
     assert repe["agent_responses"]["words_used"].count("biro") == 1

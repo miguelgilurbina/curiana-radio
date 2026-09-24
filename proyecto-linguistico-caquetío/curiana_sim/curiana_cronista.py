@@ -139,7 +139,7 @@ DESCOLONIZAR = [
     },
     {
         "ajeno": "el desierto, la tierra estéril",
-        "suyo": "biro · para · duna",
+        "suyo": "biro · para · uni",  # `duna` → `uni`: tanda de las hermanas, 2026-09-24
         "de_donde_viene": "el juicio de quien buscaba tierra de labor",
         "fuente": "oviedo-y-banos",
         "nota": "«Terreno arenoso y falto de aguas» es un veredicto agrícola "

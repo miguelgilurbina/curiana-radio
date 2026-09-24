@@ -645,10 +645,10 @@ def test_d_un_solo_ambito_no_es_la_via_de_dos():
     for quien in ("Birokoa", "Kasebo", "Ebokoa"):
         lex.situar(quien, "Tacuato:orilla")
     lex.registrar_neologismo(Neologismo(
-        turno=1, dia=1, autor="Birokoa", forma="kuru-ana", componentes="kuru + -ana",
+        turno=1, dia=1, autor="Birokoa", forma="hime-ana", componentes="hime + -ana",
         significado="x", contexto="", regla_aplicada="-ana"))
-    lex.adoptar("kuru-ana", "Kasebo", turno=2)
-    oficial = lex.adoptar("kuru-ana", "Ebokoa", turno=2, dia=1)
+    lex.adoptar("hime-ana", "Kasebo", turno=2)
+    oficial = lex.adoptar("hime-ana", "Ebokoa", turno=2, dia=1)
     assert oficial.via == "un-ambito" and oficial.oficial_en == ["Tacuato:orilla"]
     assert lex.adoptados_en_dos_ambitos() == []
 
@@ -671,14 +671,16 @@ def test_d_las_competencias_filtran_por_donde_se_propuso():
     # `kashi` se archivó en la tanda final (tf.5): una raíz archivada ya no
     # compite. El ejemplo pasa a `danu`, su sustituta.
     comp.proponer("cometa", "danu-iro", "Birokoa", ambito="Tacuato:orilla")
-    comp.proponer("cometa", "wara-bana", "Bajari", ambito="Caseto")
+    # `wara` → `unia` como raíz de la rival: `wara` se archivó (tanda de las
+    # hermanas, 2026-09-24) y una raíz archivada ya no compite.
+    comp.proponer("cometa", "unia-bana", "Bajari", ambito="Caseto")
     entero = comp.prompt_competencias()
-    assert "danu-iro" in entero and "wara-bana" in entero
+    assert "danu-iro" in entero and "unia-bana" in entero
     solo_tacuato = comp.prompt_competencias(ambito="Tacuato:orilla")
-    assert "danu-iro" in solo_tacuato and "wara-bana" not in solo_tacuato
+    assert "danu-iro" in solo_tacuato and "unia-bana" not in solo_tacuato
     assert comp.prompt_competencias(ambito="Moruy") == ""
     # la fijación NO se parte: el soporte suma venga del ámbito que venga
-    assert set(comp.referentes["cometa"]["variantes"]) == {"danu-iro", "wara-bana"}
+    assert set(comp.referentes["cometa"]["variantes"]) == {"danu-iro", "unia-bana"}
 
 
 # ══════════════════════════════════════════════════════════════════════

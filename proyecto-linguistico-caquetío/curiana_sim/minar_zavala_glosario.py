@@ -291,6 +291,7 @@ NO_ES_LA_MISMA_VOZ: dict[str, str] = {
     "turupia": "#263 (AM+A) 'árbol espinoso. Sitio en Cumarebo'. El homógrafo es `turupia-achagua` 'toche'.",
     "ima":     "#165 (E+PMA) AFIJO 'humedad, quebrada'. El homógrafo es el lokono `ima` 'enemigo'; un afijo no es una clave del léxico.",
     "coa":     "#6 (AM+PMA) variante del AFIJO `-aima` 'abundancia'. El homógrafo es `koa` (forma_fuente «coa»), el palo de siembra: misma grafía colonial, distinto morfema.",
+    "aburi":   "TOPÓNIMO 'Para designar las aguas de un río lleno de arena'. El homógrafo es `aburi` 'tener vergüenza', caquetío reconstruido desde las hermanas (mujeres kalinago aburi = lokono (h)aburi, Goeje 1939 p. 74; tanda de las hermanas, 2026-09-24): otro referente. Sin esta fila, la regeneración sacaba el topónimo de TOPONIMOS_ZAVALA.",
 }
 
 
@@ -760,8 +761,17 @@ def extraer(pdf_path: str = PDF_PATH) -> list[dict]:
 
 def clasificar(entradas: list[dict]) -> dict:
     """Cruza con VOCABULARIO_BASE y reparte en tiers."""
-    from curiana_lexicon import VOCABULARIO_BASE
+    from curiana_lexicon import VOCABULARIO_BASE, FUERA_DEL_HABLA
     from curiana_database import normalize_source_language
+
+    # LO ARCHIVADO TAMBIÉN «ESTÁ» (2026-09-24): una voz fuera del habla sigue
+    # siendo canon. Sin esto, archivar una voz destapa en silencio la entrada
+    # de Zavala que casaba con ella por grafía: al archivar `baba` 'padre'
+    # (tanda de las hermanas) entraba al habla `baja` 'caño' (#23 (E),
+    # variante «baba») — que casaba con `baba` por un homógrafo FALSO, y
+    # cuya única fuente es Esteves (cc.4). Si entra, lo decide Miguel: está
+    # anotado en 6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml.
+    VOCABULARIO_BASE = {**FUERA_DEL_HABLA, **VOCABULARIO_BASE}
 
     # IDEMPOTENCIA: curiana_lexicon.py fusiona GLOSARIO_ZAVALA en VOCABULARIO_BASE.
     # Si comparásemos contra el resultado de esa fusión, en la segunda ejecución
@@ -1017,6 +1027,47 @@ SIG_CURADO: dict[str, dict] = {
                "y `sima` la elevación a secas. La glosa de la fuente queda "
                "intacta en `glosa_fuente`",
     },
+    "comoho": {
+        "sig": "fruto del cardón de las tunas (higo de tuna)",
+        "por": "T2 de la tanda de las hermanas (2026-09-24, «Acepto todo lo "
+               "recomendado»): SEGUNDA ATESTACIÓN, independiente de Zavala. "
+               "Oviedo, Historia general, lib. VIII cap. XXVIII, pp. 313-315 "
+               "(oviedo-y-valdes-1851; p. 313 vista en imagen, pdf 432): «De los "
+               "cardos de las tunas é su fructa, la qual en la provinçia de "
+               "Veneçuela en la Tierra-Firme se llama comoho», y en el mismo "
+               "capítulo llama «higos» a esos frutos («comiendo çinco ó seys "
+               "higos destos»); p. 315: «este comoho es mas sabroso mucho que "
+               "las tunas». La glosa 'higo' de Zavala es la palabra del propio "
+               "cronista y se precisa: el higo de tuna. «La qual» es la fruta, "
+               "no la planta: la glosa no dice que el cardón se llame comoho. "
+               "Propuesta: 6-fusion/taino_tradicion_viva_2026-09-24.yaml §komoho",
+    },
+}
+
+
+# ── NOTAS AÑADIDAS por una decisión, sin tocar glosa ni capa ─────────
+# Lo que una tanda anota en una voz de Zavala: se añade al final de `notas`
+# y no cambia `sig` ni `fuente`. La clave es la GRAFÍA DE ZAVALA, como en
+# SIG_CURADO y FUENTE_CURADA.
+_T4 = ("T4 de la tanda de las hermanas (2026-09-24, «Acepto todo lo "
+       "recomendado»): pareja en la ESFERA — {}. Comparanda de la esfera, no "
+       "evidencia de préstamo ni de parentesco por sí sola; no cambia glosa ni "
+       "capa. Propuesta: 6-fusion/taino_tradicion_viva_2026-09-24.yaml §el_cruce")
+_KS = ("; es una de las tres parejas k ~ s (kiba/siba, kabana/sabana, kiwa/sigua) "
+       "que T11 dejó en «indecidible»: se vuelve a correr después de la corrida "
+       "base (T5)")
+NOTA_ANADIDA: dict[str, str] = {
+    "cabana": _T4.format("taíno «sabana» 'llanura sin árboles' (Oviedo p. 146; "
+                         "Brinton p. 13), de cronista del XVI: la sabana entró al "
+                         "castellano con s y el caquetío la tiene con k" + _KS),
+    "bajareque": _T4.format("taíno «bajareque» 'bohío grande' (Brinton p. 11; Goeje "
+                            "1939 p. 10; Coll y Toste 1897 p. 191), de la tradición "
+                            "viva: la técnica de construcción, con la palabra que la "
+                            "nombra"),
+    "guaco": _T4.format("taíno «guaco» 'planta medicinal' (Coll y Toste 1897 p. "
+                        "218), de la tradición viva: planta de uso en las dos orillas"),
+    "quigua": _T4.format("taíno «sigua» 'caracolillo de costa' (Coll y Toste 1897 "
+                         "pp. 252, 158), de la tradición viva" + _KS),
 }
 
 
@@ -1543,6 +1594,9 @@ def _entrada_py(e: dict, tier: str, indent: str = "    ") -> str:
         por = " ".join(str(capa["por"]).split()).replace('"', "'")
         nota += (f"; CAPA CURADA [{capa['decision']}]: era `caquetío-atestiguado`, "
                  f"pasa a `{fuente}`. {por}")
+    anadida = NOTA_ANADIDA.get(origen)
+    if anadida:
+        nota += "; " + " ".join(str(anadida).split()).replace('"', "'")
     cat, _clase, _por = clase_de(origen, tier)
     pad = " " * max(1, 14 - len(forma))
     # D7: la glosa de la fuente se conserva verbatim y trazable; la

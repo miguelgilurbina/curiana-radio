@@ -68,7 +68,6 @@ PARAUJANO_A2: dict[str, dict] = {
 
 LOKONO_A2: dict[str, dict] = {
     "abonaba": {"es": "hueso", "fuente": "lokono", "categoria": "cuerpo", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 31 'bone'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
-    "ada": {"es": "árbol", "fuente": "lokono", "categoria": "flora", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 23 'tree'; variantes: kunnuku. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "adada": {"es": "corteza", "fuente": "lokono", "categoria": "flora", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 27 'bark'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "adobona": {"es": "hoja", "fuente": "lokono", "categoria": "flora", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 25 'leaf'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "aithin": {"es": "saber, conocer", "fuente": "lokono", "categoria": "acciones", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 59 'know'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
@@ -87,7 +86,6 @@ LOKONO_A2: dict[str, dict] = {
     "farin": {"es": "matar", "fuente": "lokono", "categoria": "acciones", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 62 'kill'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "hadali": {"es": "sol", "fuente": "lokono", "categoria": "cosmos", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 72 'sun'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "halikan": {"es": "quién", "fuente": "lokono", "categoria": "gramatica", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 6 'who'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
-    "hime": {"es": "pez", "fuente": "lokono", "categoria": "fauna", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 19 'fish'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "hororo": {"es": "tierra", "fuente": "lokono", "categoria": "geografia", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 79 'earth'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "ichi": {"es": "piojo", "fuente": "lokono", "categoria": "fauna", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 22 'louse'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
     "ida": {"es": "piel, cuero", "fuente": "lokono", "categoria": "cuerpo", "notas": "Oliver 1989, Apéndice A, Tabla A-2, columna arawak/lokono, fila 28 'skin'. Transcripción a ojo del 2026-08-31 (verificada contra la imagen por Miguel el 2026-09-01) — D11 #39. Vocabulario de comparación, no habla de agentes"},
@@ -266,7 +264,9 @@ COLISIONES_A2: list[tuple] = [
     ("lokono", "12", "two", "biama"),
     ("lokono", "16", "woman", "hiaro"),
     ("lokono", "18", "person", "loko"),
+    ("lokono", "19", "fish", "hime"),
     ("lokono", "20", "bird", "kodibio"),
+    ("lokono", "23", "tree", "ada"),
     ("lokono", "63", "swim", "thimin"),
     ("lokono", "70", "give", "sikin"),
     ("lokono", "75", "water", "oniabo"),
@@ -276,7 +276,7 @@ COLISIONES_A2: list[tuple] = [
 
 TOTALES_A2 = {
     "paraujano": 47,
-    "lokono": 49,
+    "lokono": 47,
     "referencia": 125,
-    "colisiones": 12,
+    "colisiones": 14,
 }

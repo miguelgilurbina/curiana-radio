@@ -1,0 +1,163 @@
+# Decisiones de Miguel para la TANDA DE LAS HERMANAS (2026-09-24)
+#
+# Tres propuestas quedaron abiertas en la rama campana/kalinago-mujeres (#234):
+#   · 6-fusion/kalinago_mujeres_2026-09-23.yaml          (D1-D5)
+#   · 6-fusion/nucleo_fundacional_hermanas_2026-09-24.yaml (N1 y las 36 voces)
+#   · 6-fusion/taino_tradicion_viva_2026-09-24.yaml      (T1-T5, con T2b)
+# El escriba le resumió lo que faltaba («Vale, me parece. Que nos falta?») y
+# su respuesta cubre las tres de una vez:
+#
+#   «Acepto todo lo recomendado»
+#
+# Entra en UN corte antes de la corrida base, como la tanda final: se aplica,
+# se mide contra main (prompt, pre-vuelo, guardianes y, con Docker, el
+# control y el uso histórico) y sólo entonces se mergea.
+
+th.0_el_paquete:
+  decision_literal: '«Acepto todo lo recomendado»'
+  lectura: >-
+    Acepta la opción recomendada en cada casilla de las tres propuestas. Donde
+    dos recomendaciones se tocan, manda la posterior y más general, y se
+    declara aquí (th.2: N1 decide la etiqueta de las ocho voces de #234).
+
+th.1_D1_el_kalinago_como_hermana:
+  eleccion: 'A — el habla de mujeres kalinago cuenta como cuarta hermana para el criterio (a) de D11'
+  aplica: >-
+    `bui`, `lihi` y `tuhu` pasan de caquetío-hipotético a caquetío-reconstruido
+    (lokono y kalinago de mujeres con la misma forma: Goeje p. 24; Adam p.
+    277). Las formas no cambian. `dai` sigue reconstruido; su nota añade que el
+    kalinago de mujeres y el achagua dicen n-, no d-.
+  fuente: 6-fusion/kalinago_mujeres_2026-09-23.yaml §pronombres_y_gramatica.decision_d1
+
+th.2_D2_las_ocho_voces_del_wayuu:
+  eleccion: 'la recomendada en cada una: anasa→saika (A), mütsia→uli (B), kasuta→halira (A), sünatü→kule (A), outa→huda (A), kataa→kake (A), talata→halikebe (A), jashichi→aiima (C)'
+  la_etiqueta: >-
+    #234 las escribió todas hipotéticas (la regla de tf.5). N1, aceptada en el
+    mismo paquete y escrita después, pone la frontera en «dos hermanas con la
+    misma forma o con la correspondencia regular declarada». Dos de las ocho
+    la cruzan y entran RECONSTRUIDAS: `kake` (kalinago de mujeres kakê =
+    lokono kake, Goeje p. 79, la misma forma) y `huda` (lokono huda =
+    kalinago hila por d = l, Adam pp. 288-289). Las otras seis son
+    hipotéticas: la raíz se parece pero la forma no coincide (uli/uele,
+    halira/alu, aiima/iam, saika/sa-, kule/quirra) o hay una sola hermana
+    (halikebe).
+  archivo: las ocho viejas van a FUERA_DEL_HABLA con su capa intacta
+  renombre: 'la clave lokono `huda` pasa a `huda-lokono` (precedente kuba-lokono, tuhu-lokono)'
+  fuente: 6-fusion/kalinago_mujeres_2026-09-23.yaml §las_ocho_voces_del_wayuu
+
+th.3_D3_alaain_y_japu:
+  eleccion: '`alaain` al archivo sin sustituta; `japü` al archivo y entra `aburi` ''tener vergüenza'''
+  aburi: >-
+    reconstruida: kalinago de mujeres aburi = lokono (h)aburi (Goeje p. 74,
+    visto en imagen). Encontrado al aplicar, y declarado en su nota: `aburi`
+    ya es una grafía del glosario de Zavala, como TOPÓNIMO («Para designar
+    las aguas de un río lleno de arena», lexicon_zavala.TOPONIMOS_ZAVALA),
+    fuera del habla y fuera de 2-lengua/toponimos.yaml. No choca en
+    VOCABULARIO_BASE; es un homógrafo con un nombre de lugar, como los 52 del
+    elenco.
+  fuente: 6-fusion/kalinago_mujeres_2026-09-23.yaml §las_ocho_voces_del_wayuu.las_dos_hipoteticas_con_la_misma_etiqueta
+
+th.4_D4_el_mundo:
+  eleccion: 'transmision-035 entra en 3-mundo/corpus/transmision.yaml: el habla de mujeres kalinago, hecho kalinago, NO proyectado a las caquetías'
+  fuente: 6-fusion/kalinago_mujeres_2026-09-23.yaml §mundo
+
+th.5_D5_breton:
+  eleccion: 'ya resuelto el 2026-09-23 («Te dejo descargarlo»): los tres libros están en fuentes_caquetios/; su minería queda para después de la corrida'
+
+th.6_N1_la_etiqueta:
+  eleccion: 'A — dos hermanas con la misma forma (o correspondencia regular declarada) = caquetío-reconstruido y sale en la muestra; una hermana = caquetío-hipotético y llega sólo por plantilla'
+  reconstruidas: [ani, aeke, ati, dunku, aita, isi, akusi, kibe, ada, uni, unia, butu]
+  suben_a_reconstruidas: [diki, marisi]
+  fuente: 6-fusion/nucleo_fundacional_hermanas_2026-09-24.yaml §decision_n1_la_etiqueta
+
+th.7_N2_las_36_voces:
+  eleccion: 'A en las 36'
+  grupo_1_archivo_sin_nueva: 'kono (jusual), sima (kidi), nomi (ateri), wari (iero), arua (ako), buri (dare)'
+  grupo_2_dos_hermanas: 'chaa→ani, masa→aeke, awa→ati, suna→dunku, panaa→aita, kabo→isi, nii→akusi, wara→kibe, kuru→ada, duna→uni, kaya→unia, taa→butu'
+  grupo_3_una_hermana: 'naa→kunu, waa→sile, raka→hiti, rua→kudu, amana→hikihi, arima→hime, dali→wunabu, baba→iti, ka→badia, mara→ika, saa→bena, naka→kia'
+  grupo_4_se_quedan: 'kaa, maa (achagua Numau), suka (lokono ca-saccu-da), ama, bari, puna — todas a caquetío-hipotético'
+  renombres: >-
+    claves de comparanda que el núcleo nuevo ocupa: lokono `kia` y `wunabu`
+    (curiana_lexicon) → `kia-lokono`, `wunabu-lokono`; achagua `uni` y `unia`
+    (lexicon_achagua, generado) → `uni-achagua`, `unia-achagua`. Las lokono
+    `ada` y `hime` de la Tabla A-2 (lexicon_a2, generado) NO se renombran:
+    la disciplina de ese módulo es declarar la colisión, y pasan a
+    COLISIONES_A2 como `siba` u `oni`.
+  fuente: 6-fusion/nucleo_fundacional_hermanas_2026-09-24.yaml §grupos
+
+th.8_T1_la_tradicion_viva_taina:
+  eleccion: 'A — cuenta como dato taíno con su propia etiqueta, separada de la del cronista; lo conjeturado sigue fuera'
+  fuente: 6-fusion/taino_tradicion_viva_2026-09-24.yaml §decisiones
+
+th.9_T2_komoho:
+  eleccion: 'sí — Oviedo pp. 313-315 como segunda atestación, y la glosa se precisa como ''fruto del cardón de las tunas (higo de tuna)'''
+  matiz: >-
+    la propuesta añadía «también el cardón»; el borrador que Miguel leyó no, y
+    Oviedo tampoco lo sostiene: «la qual … se llama comoho» es la FRUTA. Se
+    aplica la glosa del borrador. Va por SIG_CURADO en minar_zavala_glosario.py
+    (lexicon_zavala.py es generado).
+
+th.10_T2b_paraguana:
+  eleccion: 'sí — toponimo-018 toma a Oviedo p. 205 como procedencia del NOMBRE; la glosa sigue abierta en #109'
+
+th.11_T3_la_lista_maestra:
+  eleccion: 'sí — fuera las cuatro voces de Venezuela; `kiba` se funde en `siba`'
+
+th.12_T4_las_parejas_taínas:
+  eleccion: 'sí — nota de comparanda de la esfera en kiba, kabana, waitiao, jagey, bajareke, wako, warawara y kiwa; ninguna glosa ni capa cambia'
+
+th.13_T5_k_s:
+  eleccion: 'sí, después de la corrida base'
+
+# ══════════════════════════════════════════════════════════════════════
+# LO QUE APARECIÓ AL APLICAR — declarado, y lo que queda para Miguel
+# ══════════════════════════════════════════════════════════════════════
+lo_que_aparecio_al_aplicar:
+  los_generadores_no_eran_reproducibles:
+    que: >-
+      Antes de tocar nada se regeneraron los tres módulos generados que el
+      motor importa, para comprobar que salían iguales. Dos no:
+      generar_lexicon_achagua.py comparaba contra un lexicón que YA llevaba su
+      propia comparanda y renombraba las 3.569 claves con `-achagua`; y
+      minar_a2_swadesh.py dejaba entrar el paraujano `pia` 'tú' porque el
+      `pia` caquetío se archivó en la tanda final y el archivo no contaba
+      como ocupado.
+    arreglo: >-
+      los dos generadores excluyen lo propio por IDENTIDAD de la entrada (no
+      por clave) y cuentan FUERA_DEL_HABLA como ocupado; el de Zavala también
+      (ver `baja`). Una voz archivada sigue siendo canon y ninguna comparanda
+      puede capturarla. Con el arreglo, A-2 y Zavala salen idénticos a lo
+      commiteado antes de la tanda.
+    deriva_que_entra_en_esta_tanda: >-
+      el achagua sí cambia fuera de lo decidido en dos claves que llevaban
+      chocando en silencio desde después de su fusión (2026-09-13): `maba`
+      'cera' (con `maba` 'panal', retroabstraída de Medina) y `debe`
+      'medicina' (palabra castellana de ES_STOPWORDS). Pasan a
+      `maba-achagua` y `debe-achagua`. En el habla no cambia nada: la voz
+      caquetía y el castellano ya ganaban por setdefault.
+  baja_cano_para_miguel:
+    que: >-
+      Zavala #23 «Baja (baba)» 'caño' (sigla E) nunca entró al habla porque el
+      minador la daba por «ya está»: casaba por grafía con `baba` 'padre', una
+      voz DISTINTA. Al archivar `baba` se destapaba y entraba como
+      caquetío-atestiguado. No entra en esta tanda: el minador cuenta ahora
+      lo archivado como existente y el estado queda como estaba.
+    pregunta: >-
+      ¿entra `baja` 'caño' al habla? Su única fuente es Esteves (la sigla E,
+      cc.4 → B), así que entraría HIPOTÉTICA por la regla de cc.4. Y su
+      variante «baba» es homógrafa del `baba` archivado.
+  aburi_toponimo: >-
+    `aburi` 'tener vergüenza' es homógrafo del topónimo de Zavala «aburi»
+    ('aguas de un río lleno de arena'). Va a NO_ES_LA_MISMA_VOZ en
+    minar_zavala_glosario.py; sin esa fila, la regeneración sacaba el
+    topónimo de TOPONIMOS_ZAVALA.
+  las_seis_hipoteticas_de_d2_en_la_breve: >-
+    N1 dice que lo hipotético llega por las plantillas que enseñaban la voz
+    vieja; las ocho de D2 no las enseñaba ninguna (llegaban por la muestra).
+    Aplicada al pie de la letra, `saika`, `uli`, `halira`, `kule`, `halikebe`
+    y `aiima` no las vería nadie en el perfil era2, y #234 contaba con que
+    «en la corrida base se dirán las nuevas desde el día 1». Se enseñan en la
+    línea VOCES de la plantilla breve, como hizo la tanda final con `ruku`,
+    `kasalini` y `mautia`, y en la completa. `huda` y `kake` son
+    reconstruidas y salen en la muestra. Si Miguel prefiere que no, se quitan
+    de la línea: es una edición de la plantilla.

@@ -40,8 +40,10 @@ def test_score_glosas_no_penalizan():
 
 def test_homografo_para_segun_contexto():
     lex = _lexico()
-    # rodeada de caquetío → "para" es el mar (léxico caquetío)
-    r_caq = score_linguistico("Taya naa-ni para-bana, wana-ka para wara arima.", lex)
+    # rodeada de caquetío → "para" es el mar (léxico caquetío). Tanda de las
+    # hermanas (2026-09-24): el contexto con el núcleo de hoy —`kunu`, `diki`,
+    # `kibe`, `hime`—; el viejo (`naa`, `wara`, `arima`) está archivado.
+    r_caq = score_linguistico("Dai kunu para-bana, diki-kuba para kibe hime.", lex)
     assert "para" in r_caq["palabras_caquetias"]
     # rodeada de español → es la preposición
     r_esp = score_linguistico("Esto es para que vayas mañana temprano.", lex)
@@ -183,11 +185,18 @@ def test_debe_es_castellano_y_no_fuga_a_otra_lengua_arahuaca():
     porque colisiona con la clave achagua `debe` 'medicina' de la comparanda,
     que se normaliza a proto-arahuaco. Medido antes del arreglo: «taya debe
     buko» → score 4,9 con fuga ×1. Es castellano: cuenta como español
-    funcional, y la comparanda no se toca."""
+    funcional, y la comparanda no se toca.
+
+    Desde la tanda de las hermanas (2026-09-24) el generador de la comparanda
+    vuelve a ser reproducible y aplica su propia regla —una clave que es
+    castellano corriente se desambigua—, así que la entrada achagua es hoy
+    `debe-achagua` y el choque desaparece en la fuente. Lo que se vigila es lo
+    mismo: la comparanda sigue ahí, y «debe» es castellano."""
     from curiana_lexicon import ES_STOPWORDS, VOCABULARIO_BASE, score_linguistico
 
     assert "debe" in ES_STOPWORDS
-    assert "debe" in VOCABULARIO_BASE, "la entrada achagua sigue en la comparanda"
+    assert "debe-achagua" in VOCABULARIO_BASE, "la entrada achagua sigue en la comparanda"
+    assert "debe" not in VOCABULARIO_BASE
     # Tanda final (D11 fase 3): el pronombre de la frase es `dai`.
     r = score_linguistico("dai debe buko", _lexico())
     assert r["palabras_otro_arahuaco"] == [] and r["otro_arahuaco"] == 0
@@ -320,12 +329,14 @@ def test_el_arreglo_no_toca_una_frase_de_canon_puro():
     # Tanda final (D11 fase 3): las mismas cinco frases dichas con el canon
     # de hoy —pronombres y aspecto de las hermanas, sin las voces que se
     # reconstruyeron desde el wayuu—. La invariante es la misma.
+    # Tanda de las hermanas (2026-09-24): y con el núcleo rehecho desde el
+    # lokono y el habla de mujeres kalinago.
     canon = [
-        "Dai diki-kuba da-barsure. Waya naa para-bana.",
-        "Bui suna-ba wa-duna danu. Lihi masa-kuba arima-kana.",
-        "Dai maa: saa kasi-bana wara kasalini, naka waya naa-ba para.",
+        "Dai diki-kuba da-barsure. Waya kunu para-bana.",
+        "Bui dunku-ba wa-uni danu. Lihi aeke-kuba hime-kana.",
+        "Dai maa: bena kasi-bana kibe kasalini, kia waya kunu-ba para.",
         "Wa-para-ubana juri diki-kuba. Dai kaa hayo, kuburuku boratio.",
-        "Lihi panaa chakamba. Kanoa-kana, bui diki-kuba?",
+        "Lihi aita chakamba. Kanoa-kana, bui diki-kuba?",
     ]
     for frase in canon:
         tokens = set(_tokenizar(frase))
@@ -349,8 +360,9 @@ def test_deteccion_de_vocabulario_respeta_el_limite_de_morfema():
     from curiana_lexicon import detectar_uso_vocabulario
 
     lex = _lexico()
-    hallado = set(detectar_uso_vocabulario("kasi-taro biro sima-bana", lex))
-    assert "kasi" in hallado and "sima" in hallado and "bana" in hallado, (
+    # `sima` → `kidi` (tanda de las hermanas, 2026-09-24: manda la atestiguada).
+    hallado = set(detectar_uso_vocabulario("kasi-taro biro kidi-bana", lex))
+    assert "kasi" in hallado and "kidi" in hallado and "bana" in hallado, (
         "los morfemas de un compuesto SÍ deben detectarse")
     assert "si" not in hallado, "'si' casó dentro de 'kasi-taro'"
     assert "bi" not in hallado, "'bi' casó dentro de 'biro'"

@@ -71,6 +71,8 @@ OBRA_POR_FUENTE = {
     # 2026-09-07: el mapa vivo (OSM) como capa de datos citable para
     # existencia y coordenadas, nunca para glosa.
     "osm-kaketiana": "osm-kaketiana",
+    # 2026-09-24 (T2b): Oviedo da la procedencia del NOMBRE de Paraguaná.
+    "oviedo-y-valdes-1851": "oviedo-y-valdes-1851",
 }
 
 

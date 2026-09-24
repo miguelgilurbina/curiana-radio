@@ -6,7 +6,9 @@ Nació el 2026-09-21, antes de repetir la serie C con la tanda del 21 dentro
 Las listas DEBE / NO_DEBE son las de ESE corte: al cambiar el instrumento se
 cambian aquí, y el script falla (exit 1) si algo no cuadra. Última puesta al
 día: la tanda de la base (2026-09-23), que añade además un cuarto caso — el
-turno en que se NOMBRA a un animal (el mensaje, no sólo el system prompt).
+turno en que se NOMBRA a un animal (el mensaje, no sólo el system prompt). Y
+la tanda de las hermanas (2026-09-24): el núcleo desde el lokono y el habla de
+mujeres kalinago, y fuera las 40 voces que se archivaron.
 
 Uso:  python 6-fusion/scripts/prevuelo_de_prompts.py [--volcar]
 
@@ -37,7 +39,8 @@ from curiana_state import estado_inicial                   # noqa: E402
 # Tanda final (D11 fase 3): la respuesta fija del ensayo, dicha con el canon de
 # hoy. Con la vieja, el turno 2 devolvía «taya, wana-ka» por [Tu manera de
 # hablar] y el pre-vuelo lo leía como plantilla.
-RESPUESTA = "Dai diki-kuba arima wara para. Da-barsure kuburuku."
+# Tanda de las hermanas (2026-09-24): `arima` → `hime`, `wara` → `kibe`.
+RESPUESTA = "Dai diki-kuba hime kibe para. Da-barsure kuburuku."
 
 
 def ensayo(escena: bool, capubana_cada: int, dia: int, turnos: int = 2,
@@ -94,6 +97,9 @@ DEBE = {
     "pronombre dai (tf.1)": _P + r"[Dd]ai" + _F,
     "aspecto -kuba (tf.2)": r"-kuba",
     "posesivo da- (tf.3)": _P + r"[Dd]a-barsure",
+    "ejemplo de las hermanas (th.7)": r"hime kibe para",
+    "conectores de las hermanas (th.7)": r"badia \(y/también\)",
+    "voces de D2 en la breve (th.2)": r"saika \(bueno\)",
 }
 NO_DEBE = {
     "-naiki (retirado d21.9)": r"-naiki\b",
@@ -115,6 +121,8 @@ NO_DEBE = {
     "Shaboro (era 1)": r"Shaboro",
     "Buio-sha (era 1)": r"Buio-sha",
     "Golfete de Coro (era 1)": r"Golfete de Coro",
+    "núcleo archivado (tanda de las hermanas)": _P + r"(?:naa|waa|chaa|masa|awa|suna|panaa|kabo|nii|wara|kuru|duna|kaya|taa|raka|rua|amana|arima|dali|baba|mara|saa|naka|kono|sima|nomi|wari|arua|buri)" + _F,
+    "voces wayuu de D2 (tanda de las hermanas)": _P + r"(?:anasa|mütsia|kasuta|sünatü|outa|kataa|talata|jashichi|alaain|japü)" + _F,
 }
 
 

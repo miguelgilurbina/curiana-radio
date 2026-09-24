@@ -733,3 +733,29 @@
     que "porta la pütchi" entre familias en disputa — y una tensión
     dramática natural con la autoridad de Manaure. Alimenta el programa
     de investigación wayuu (investigacion/PROGRAMA_WAYUU.md).
+
+- id: transmision-035
+  contenido: >
+    Entre los kalinago de las Antillas Menores (s. XVII) había dos maneras de
+    hablar: las mujeres usaban entre ellas unas cuatrocientas palabras y unos
+    prefijos que los hombres entendían pero no decían, y esa habla de mujeres
+    era la arahuaca. Adam atribuye que la gramática de las mujeres pesara más a
+    que eran ellas quienes criaban a los niños de los dos sexos hasta los nueve
+    o diez años.
+  fuente: atestiguado
+  referencia: "Adam 1879 pp. 275-277 y 301 (que cita a Labat y a Breton); tanda de las hermanas, D4 (6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml)"
+  procedencia: {obra: adam-1879}
+  dominios: [transmision, genero, comparanda_kalinago]
+  agentes_relacionados: []
+  restringido: false
+  nota_abierta: >
+    El relato de la conquista (los caribes mataron a los hombres y tomaron a
+    las mujeres) es el de los informantes de Breton y hoy está discutido: ver
+    parentesco-032 y la nota de 4-fuentes/adam-1879.md. Lo que se documenta es
+    el doble registro, no la conquista.
+  implicacion_simulacion: >
+    Ninguna directa: es un hecho KALINAGO y NO se proyecta a las caquetías (no
+    hay dato de un habla de mujeres caquetía; reglas 3 y 4). Sirve de
+    comparanda si alguna vez se pregunta por qué la gramática arahuaca es la de
+    las madres. Es además la razón de método de la tanda de las hermanas: el
+    habla de mujeres kalinago cuenta como hermana arahuaca (D1).
