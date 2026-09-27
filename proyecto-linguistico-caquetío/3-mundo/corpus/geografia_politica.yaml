@@ -653,4 +653,27 @@
     Ninguna para la era 2. Por analogía vale un dato de forma: una red de
     aldeas caquetías costeras aliadas y comunicadas por canoa, y una alianza
     entre una nación de la sierra y dos aldeas caquetías.
-
+- id: geografia_politica-025
+  contenido: 'El mar da nombre a la tierra y a la gente de la esfera, que es donde más pesa: la provincia se llamaba
+    Paraguaná en boca de los indios en 1540 («que los indios llaman á aquella provinçia Paraguana»), con `para` ''mar,
+    agua en grandes cantidades'' (Zavala #190-191); y los guajiros llaman a los paraujanos «Parauja, voz derivada
+    de Pará, mar», de «pararuañú», «indios o gentes de la orilla del mar o pescadores».'
+  fuente: reconstruido
+  referencia: 'oviedo-y-valdes-1851, p. 205; zavala-reyes-2015, p. #190, #191; jahn-1927, p. 191'
+  procedencia:
+    obra: oviedo-y-valdes-1851
+    pagina: 205
+  dominios:
+  - lengua
+  - geografia
+  - identidad
+  agentes_relacionados: []
+  epoca: contacto (el nombre, 1540); s. XX (la etimología paraujana de Jahn)
+  polity: costera
+  implicacion_simulacion: 'El nombre es dato; que el nombre sea una cosmología, no. Queda como el hecho de identidad
+    más fuerte que el mar tiene en la esfera. La glosa «rodeada de mar» sigue en #109 (el -ná): no se mueve aquí.'
+  lectura: La etiqueta es `reconstruido` porque la etimología (para = mar dentro del topónimo) es análisis, aunque
+    el nombre y la voz estén atestiguados.
+  limite: 'polity del candidato: costera (Paraguaná); paraujanos de Sinamaica (vecinos, regla 4)'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-08` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)

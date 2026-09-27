@@ -288,3 +288,11 @@ th.23_las_ramas_de_222:
   choques: 'cognados.yaml (se resolvió en el generador: migrar_cognados.RETIRADOS) y taino_en_la_esfera (Fernandes 2020: se queda la lectura de dp.2.04, que no afirma «Antillas Menores»)'
   mide: 'contra 11f1fdd, el prompt no se mueve (+0,0 %); contra main 6aa43a5, +2,26 % (medicion_tanda_hermanas_2026-09-24.yaml, re-medida)'
   queda: 'la auditoría B de [Voces de fuera] (la rama del taíno no llegó a ella) y la fusión de la paginación de Oliver cap. 3 (fix/oliver-cap3-paginacion)'
+
+th.24_cosmovision_marina_corpus:
+  que: 'la parte del corpus de cc.10, (c) A y (g) A (2026-09-27): 6-fusion/scripts/fusionar_cosmovision_marina_corpus.py'
+  entra: 'creencia-023 a -028 (cm24-01, -03, -04, -a01, -a02 y -07), ecologia-105 (cm24-05, la concha que vale lejos del mar), parentesco-041 (cm24-06, el mar une parientes), geografia_politica-025 (cm24-08, reconstruido)'
+  no_entra: 'cm24-02: es la procedencia de creencia-013 y dp.2.07 de #222 ya la escribió (Ampíes p. 212, Aguado vía Arcaya p. 115)'
+  citas: 'creencia-009 (Jahn impresa 184, con procedencia y el aviso de que la pesca del más allá no está en Jahn), transmision-018 (Anglería impresa 228), lx.13 de la Apologética («Vagua»), la bitácora de Brinton (Brett 1868, n. 49) y cm-s3, cm-n3 y cm-c3 de FA3 anotadas en su propuesta'
+  mide: 'compilar_corpus: 251 hechos, 0 avisos; pre-vuelo verde'
+  auditoria_b: 'la auditoría B de [Voces de fuera] NO es pendiente de este corte: dp.1.04 recomendaba «B recortada antes de la base; la auditoría del resto, después», y eso es lo que se aceptó'

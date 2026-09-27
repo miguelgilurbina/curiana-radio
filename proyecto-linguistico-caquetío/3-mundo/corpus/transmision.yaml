@@ -325,8 +325,8 @@
     zeme, y referían cantando las hazañas de los antepasados del
     cacique" — genealogía política cantada ante toda la comunidad.
   fuente: atestiguado
-  referencia: "Anglería, Fuentes Históricas sobre Colón y América (1892 [c.1530]), vol. 4, p. 236"
-  procedencia: {obra: angleria-1892}
+  referencia: "Anglería, Fuentes Históricas sobre Colón y América (1892 [c.1530]), vol. 4, p. 228 (impresa; decía «p. 236», que es la del PDF) (cc.10 (g) A, 2026-09-24)"
+  procedencia: {obra: angleria-1892, pagina: '228'}
   dominios: [transmision, genealogia, cancion]
   agentes_relacionados: [Bana-mana, Manaure]
   forma_transmision: genealogia_recitada

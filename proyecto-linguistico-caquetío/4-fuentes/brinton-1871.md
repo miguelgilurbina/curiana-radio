@@ -131,8 +131,8 @@ un nombre único.**
 
 Se le preguntó por el mar en la cosmovisión arahuaca. **p. 18**: el mito de
 Orehu, el espíritu de las aguas, que sale de las olas y le da a Arawanili la
-maraca del piache (lokono de Guayana, s. XIX; Brinton no dice de qué misionero
-lo toma). Va como comparanda —no como dato caquetío— en
+maraca del piache (lokono de Guayana, s. XIX; lo toma de Brett, *Indian Tribes of Guiana*, 1868:
+lo dice en la nota 49 de la p. 18 — antes esta línea decía que no lo decía (cc.10 (g) A, 2026-09-24)). Va como comparanda —no como dato caquetío— en
 `6-fusion/fauna_paraguana_mar_2026-09-22.yaml` §cosmovision_marina (cm-c1).
 Nada de fauna marina con nombre.
 

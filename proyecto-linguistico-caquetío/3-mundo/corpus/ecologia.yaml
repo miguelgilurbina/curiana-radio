@@ -2005,6 +2005,31 @@ entradas:
     limite: Oviedo escribe de la Española y de Tierra Firme en general; su presencia en Paraguaná es dudosa (ecologia-040)
     nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-8` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
       Miguel, 2026-09-24)'
+  - id: ecologia-105
+    contenido: 'La concha del mar vale lejos del mar. Los ayamanes del interior «no se adornan sino con pequeñas piedras
+      negras y brillantes que ensartan como cuentas de rosario; y también de conchas marítimas que compran a otras naciones
+      y que son raras en este pueblo tan lejano del mar que no lo conocen ni a sus orillas se han aproximado nunca».
+      Y en la costa, la concha es moneda: «se servían como de monedas de ciertas conchas marinas» (Arcaya, sobre la
+      carta de un alemán), y todavía en el Coro colonial «unas conchezuelas de pescados que tratan entre sí a valor
+      de un real cada una».'
+    fuente: atestiguado
+    referencia: federmann-1916, p. 45; arcaya-1920, p. 120, 264
+    procedencia:
+      obra: federmann-1916
+      pagina: 45
+    dominios:
+    - comercio
+    - prestigio
+    - ecologia
+    agentes_relacionados: []
+    implicacion_simulacion: 'El mar llega a la casa del interior como valor: cuenta, adorno, pago. Es lo más «simbólico»
+      que las fuentes le dan al mar con seguridad, y es valor, no culto.'
+    lectura: Oliver (DOC p. 271, cuentas de concha «as small as a pinhead», «almost like a monetary system») y cm-s4
+      de FA3 ya lo tenían; lo nuevo es el testigo del interior que dice que la concha viene de un mar que no conocen.
+    limite: 'Época: contacto (Federmann 1530); colonial (la carta de Coro de la p. 264). Polity: la concha sale de la
+      costa; el que la luce en la p. 45 es AYAMÁN (regla 4).'
+    nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-05` por cc.10 (c) A, cosmovisión marina («Ok
+      a todo», Miguel, 2026-09-24)
 
 huecos_lexicos:
 

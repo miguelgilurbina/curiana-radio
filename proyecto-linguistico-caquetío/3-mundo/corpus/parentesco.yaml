@@ -689,4 +689,25 @@
   implicacion_simulacion: >
     Ninguna: es una inferencia sobre el parentesco entre dos pueblos de los Llanos, colonial. No
     sostiene por sí sola la analogía achagua de parentesco-022.
-
+- id: parentesco-041
+  contenido: 'El mar une parientes y se cruza para visitarlos. Ampíes: los indios de la costa, «desde Paraguachoa
+    hasta la punta de Coquibacoa» —Paraguaná entre ellos—, «muchas veces se pasaban allá [a Curazao, Aruba y Bonaire]
+    á holgar» con los isleños, y le enviaron «un cacique que se dice D. Juan Baracoica, que está en las islas y es
+    su pariente y deudo»; y el mensaje «principalmente» lo mandaba Anaure. Oliver lo da por la arqueología: «there
+    is no doubt that the inhabitants of Curaçao had strong kinship ties to the Caquetío of Paraguaná».'
+  fuente: atestiguado
+  referencia: perez-de-tolosa-1546, p. 212 (carta de Ampíes); oliver-1989-cap4, p. 476
+  procedencia:
+    obra: perez-de-tolosa-1546
+    pagina: 212 (carta de Ampíes)
+  dominios:
+  - parentesco
+  - geografia_politica
+  - navegacion
+  agentes_relacionados: []
+  implicacion_simulacion: El otro lado del mar es familia, y se va de visita. Para la creencia no dice nada; para
+    la vida, dice que cruzar es ir a ver a los suyos.
+  limite: 'Época: contacto (Ampíes, antes de 1527); precontacto (la arqueología de Oliver). Polity: costera y las
+    ABC.'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-06` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)
