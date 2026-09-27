@@ -1410,16 +1410,20 @@ abierta abajo.
 >
 >      | | antes | después |
 >      |---|---:|---:|
->      | `VOCABULARIO_BASE` | 5.496 | 5.488 |
->      | `FUERA_DEL_HABLA` | 36 | 76 |
->      | caquetío reconstruido · hipotético | 69 · 58 | 45 · 75 |
->      | formas de plantilla | 5.985 | 6.028 |
->      | system prompt medio de los 63 | 7.871,2 | 8.002,6 (**+1,67 %**) |
+>      | `VOCABULARIO_BASE` | 5.496 | 5.489 |
+>      | `FUERA_DEL_HABLA` | 36 | 78 |
+>      | caquetío reconstruido · hipotético | 69 · 58 | 44 · 76 |
+>      | formas de plantilla | 5.985 | 6.031 |
+>      | system prompt medio de los 63 | 7.871,2 | 8.048,8 (**+2,26 %**) |
 >      | `[Tu emocionar]` / semilla de idiolecto distintas | — | 0 de 63 / 62 de 63 |
 >
 >      Plantillas: la breve +98 caracteres (la línea VOCES), la completa +180
 >      (una línea de ánimo y color, sólo tier 1). Pre-vuelo verde en los cuatro
->      casos con DEBE/NO_DEBE de este corte (control 7.896,1 → 8.070,8).
+>      casos con DEBE/NO_DEBE de este corte. La tabla es la medición del
+>      **cierre** (re-medida el 2026-09-27 con todo lo de abajo dentro): la
+>      primera, antes de th.14-th.23, daba 5.488 · 76 · 45/75 · 6.028 · +1,67 %.
+>      Lo que se integró después **no mueve el prompt**: medido contra 11f1fdd,
+>      +0,0 % (sólo `kalinago` 25 → 24 por `kalínagu`).
 >    - **Lo que NO está medido todavía**: el control y el score de la serie C
 >      re-puntuada, el uso histórico de las voces archivadas y que las formas
 >      nuevas de la plantilla no se hayan dicho nunca en la base. Hace falta
@@ -1431,12 +1435,22 @@ abierta abajo.
 >      reproducibles (el achagua renombraba sus 3.569 claves; la A-2 dejaba
 >      entrar el paraujano `pia`): ahora cuentan lo archivado como ocupado; el
 >      achagua arrastra `maba` y `debe` a `-achagua`. El de Zavala destapaba
->      `baja` 'caño' al archivar `baba` (homógrafo falso): no entra, queda para
->      Miguel. `[Tu tierra]` decía «Lo decís duna/arima» (el canon del mundo
+>      `baja` 'caño' al archivar `baba` (homógrafo falso): Miguel la dejó entrar
+>      como hipotética (th.14). `[Tu tierra]` decía «Lo decís duna/arima» (el canon del mundo
 >      apuntaba a las voces viejas; `verificar_sitios_era2.py` daba 22 fallos y
 >      no es guardián). Cuatro nombres del elenco tienen raíz archivada
 >      (Dunakoa, Ruata, Simaure, Talata): se quedan. Buriche arrancaba con 3
 >      formas de semilla: la derivada se completa si el oficio agota sus campos.
+>
+>    - **Lo que entró después, el mismo corte** («Ok a todo, que no quede
+>      ninguna tarea pendiente», th.14-th.23): `baja`, `busera` y `bagua`;
+>      #222 entero —grupo 1 (lexicón: `LLEGARON_CON_EL_ESPANOL`, las notas
+>      kalinago, `-oa`/`-bo` al desafijador), grupo 2 (canon del mundo:
+>      topónimos 180 → 307, 19 hechos de fauna en ecología) y grupo 3
+>      (documentación: 56 notas con procedencia, `kalínagu` archivada, los ocho
+>      cognados retirados, ahora declarados en el generador)—, la cosmovisión
+>      marina (Jachos lee el tabaco), T5 (k ~ s con la tradición viva), el
+>      décimo guardián y la web de las fichas.
 >
 >    **Desde qué run aplica**: desde la **base** (serie `era2-base`). Tests en
 >    `curiana_sim/tests/test_tanda_hermanas.py`.

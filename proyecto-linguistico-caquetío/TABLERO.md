@@ -13,15 +13,15 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-24 14:52**.
+<!--GENERADO--> Generado el **2026-09-27 19:31**.
 
 ## ¿Vamos bien?
 
 |  | Hoy | Referencia |  |
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
-| Hechos del corpus **con referencia** | **210 / 210** | — | 🟢 |
-| Tests del motor | ⚠️ no medido | — | ⚠️ |
+| Hechos del corpus **con referencia** | **242 / 242** | — | 🟢 |
+| Tests del motor | **1109 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
 | Decisiones esperando a Miguel | **9 abiertas** | 12 resueltas | 🟡 |
 
@@ -36,7 +36,7 @@ Detalle de cada número: [lexicón](#1-el-lexicón) · [fuentes](#2-las-fuentes)
 
 Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 
-**5490 entradas activas** en `VOCABULARIO_BASE`.
+**5489 entradas activas** en `VOCABULARIO_BASE`.
 
 ### Por lengua (categoría normalizada)
 
@@ -48,7 +48,7 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | caquetío | 380 | 6.9% |
 | paraujano | 47 | 0.9% |
 | taíno | 45 | 0.8% |
-| kalinago | 25 | 0.5% |
+| kalinago | 24 | 0.4% |
 | jirajaroide-contacto | 7 | 0.1% |
 | caribe-continental | 6 | 0.1% |
 | español-colonial | 3 | 0.1% |
@@ -66,7 +66,7 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | paraujano | 47 |
 | taíno | 45 |
 | caquetío-reconstruido | 44 |
-| kalinago | 25 |
+| kalinago | 24 |
 | jirajaroide | 7 |
 | español-colonial | 3 |
 | proto-arahuaco | 3 |
@@ -86,7 +86,7 @@ Nota: [[lexicon]] · código: `curiana_sim/curiana_lexicon.py`
 | `caquetío` a secas / topónimo | 75 | sin capa declarada en el campo `fuente` |
 | **total familia caquetía** | **380** |  |
 
-Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **77** entrada(s) en `FUERA_DEL_HABLA` (`piache`, `wanee`, `piama`, `apünüin`, `pienchi`, `jarai`, `kali`, `kasha`, `habo`, `paa`, `kira`, `joutai`, `mülia`, `abba`, `acoa`, `aduri`, `agari`, `akcicyaa`, `thigisi`, `wacusi`, `wagulo`, `taya`, `pia`, `nüma`, `kashi`, `yama`, `sulu`, `wana`, `naba`, `tüshi`, `kapua`, `anüiki`, `pütchi`, `wanü`, `poporo`, `cohiba`, `kono`, `sima`, `nomi`, `wari`, `arua`, `buri`, `chaa`, `masa`, `awa`, `suna`, `panaa`, `kabo`, `nii`, `wara`, `kuru`, `duna`, `kaya`, `taa`, `naa`, `waa`, `raka`, `rua`, `amana`, `arima`, `dali`, `baba`, `ka`, `mara`, `saa`, `naka`, `anasa`, `mütsia`, `kasuta`, `sünatü`, `outa`, `kataa`, `talata`, `jashichi`, `alaain`, `japü`, `ana`).
+Fuera del habla activa: **441** candidatas `hipotético-no-verificado` en `lexicon_candidatos.py` (aisladas el 2026-06-28) y **78** entrada(s) en `FUERA_DEL_HABLA` (`piache`, `wanee`, `piama`, `apünüin`, `pienchi`, `jarai`, `kali`, `kasha`, `habo`, `paa`, `kira`, `joutai`, `mülia`, `abba`, `acoa`, `aduri`, `agari`, `akcicyaa`, `thigisi`, `wacusi`, `wagulo`, `taya`, `pia`, `nüma`, `kashi`, `yama`, `sulu`, `wana`, `naba`, `tüshi`, `kapua`, `anüiki`, `pütchi`, `wanü`, `poporo`, `cohiba`, `kono`, `sima`, `nomi`, `wari`, `arua`, `buri`, `chaa`, `masa`, `awa`, `suna`, `panaa`, `kabo`, `nii`, `wara`, `kuru`, `duna`, `kaya`, `taa`, `naa`, `waa`, `raka`, `rua`, `amana`, `arima`, `dali`, `baba`, `ka`, `mara`, `saa`, `naka`, `anasa`, `mütsia`, `kasuta`, `sünatü`, `outa`, `kataa`, `talata`, `jashichi`, `alaain`, `japü`, `ana`, `kalínagu`).
 
 ### Censo de citas — la deuda de F1
 
@@ -101,9 +101,9 @@ Cuántas de las 380 entradas de familia caquetía **con `notas`** citan a cada o
 | [[zavala-reyes-2015]] | 221 | 58% |
 | [[zavala-reyes-2018]] | 221 | 58% |
 | [[medina-colina-sxx]] | 62 | 16% |
-| [[goeje-1939]] | 31 | 8% |
+| [[goeje-1939]] | 32 | 8% |
 | [[perea-alonso-1942]] | 29 | 8% |
-| [[alvarado-1921]] | 21 | 6% |
+| [[alvarado-1921]] | 23 | 6% |
 | [[oliver-1989-apendice-a]] | 20 | 5% |
 | [[oliver-1989-cap2]] | 20 | 5% |
 | [[oliver-1989-cap3-vecinos]] | 20 | 5% |
@@ -129,12 +129,13 @@ Cuántas de las 380 entradas de familia caquetía **con `notas`** citan a cada o
 | [[jahn-1927]] | 2 | 1% |
 | [[gonzalez-batista-2002-fundacion]] | 2 | 1% |
 | [[gonzalez-batista-nombre-de-coro]] | 2 | 1% |
+| [[carvajal-1892]] | 1 | 0% |
 | [[oviedo-y-banos]] | 1 | 0% |
 | [[ballesteros-1550]] | 1 | 0% |
 | [[federmann-1916]] | 1 | 0% |
 | [[monumento-cerro-santa-ana]] | 1 | 0% |
 
-Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **37**.
+Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas con `notas` que no citan a ninguna obra del vault: **36**.
 
 ---
 
@@ -142,25 +143,24 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**104 notas de obra.**
+**107 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 52 |
-| parcial | 22 |
+| parcial | 26 |
 | no-disponible | 11 |
 | minada-parcial | 7 |
 | segunda-mano | 5 |
 | puntual | 2 |
-| pendiente | 1 |
 | dictado-terminado | 1 |
 | en-curso | 1 |
 | sin-minar | 1 |
 | completo-con-reserva | 1 |
 
-**Prioridad ALTA sin minar (20):** [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
+**Prioridad ALTA sin minar (21):** [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
-<details><summary>Las 104 notas, una por fila</summary>
+<details><summary>Las 107 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -182,10 +182,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[keegan-1989]] | segunda-mano | media | — | 0 | 0 | 2 |
 | [[vansina-ong]] | segunda-mano | baja | — | 0 | 0 | 2 |
 | [[adam-1879]] | minado | hecha | si | 0 | 15 | 1 |
-| [[alvarado-1921]] | minado | media | si | 0 | 21 | 1 |
+| [[alvarado-1921]] | minado | media | si | 0 | 23 | 1 |
 | [[angleria-1892]] | parcial | alta | si | 0 | 0 | 1 |
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 1 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 14 | 1 |
+| [[aguado-1581]] | parcial | media | si | 0 | 0 | 0 |
+| [[ampies-1526-carta]] | parcial | alta | si | 0 | 0 | 0 |
 | [[angulo-molina]] | no-disponible | alta | no | 0 | 3 | 0 |
 | [[antczak-2017-cariban]] | minado | media | si | 0 | 0 | 0 |
 | [[antolinez-1944-manaure]] | segunda-mano | media | no | 0 | 0 | 0 |
@@ -196,9 +198,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[bachiller-morales-1883]] | parcial | alta | si | 0 | 0 | 0 |
 | [[barrios-garrido-2018]] | parcial | media | si | 0 | 0 | 0 |
 | [[bisbal-1990]] | parcial | media | web | 0 | 0 | 0 |
-| [[breton-1665]] | pendiente | media | mala | 0 | 0 | 0 |
+| [[breton-1665]] | parcial | media | mala | 0 | 0 | 0 |
 | [[brett-martinez-aquella-paraguana]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[brito-figueroa-poblacion-economia]] | no-disponible | alta | no | 0 | 0 | 0 |
+| [[carvajal-1892]] | parcial | baja | no — el PDF es sólo imagen; el .txt es el OCR del ítem de archive.org (djvu.txt), sin saltos de página: sirve para LOCALIZAR, la cita se saca de la imagen | 0 | 1 | 0 |
 | [[casale-2024]] | minado | alta | si | 0 | 0 | 0 |
 | [[castellanos-elegias]] | parcial | alta | si | 0 | 7 | 0 |
 | [[castellanos-nuevo-reino-1886]] | minada-parcial | baja | si | 0 | 7 | 0 |
@@ -215,7 +218,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[gbif-aves-paraguana-2026]] | minado | alta | datos | 0 | 0 | 0 |
 | [[gbif-paraguana-2026]] | minado | media | web | 0 | 0 | 0 |
 | [[gilij-1780-1783]] | parcial | baja | no | 0 | 0 | 0 |
-| [[goeje-1939]] | parcial | alta | si | 0 | 31 | 0 |
+| [[goeje-1939]] | parcial | alta | si | 0 | 32 | 0 |
 | [[gonzalez-batista-2002-fundacion]] | minado | media | si | 0 | 2 | 0 |
 | [[gonzalez-batista-nombre-de-coro]] | parcial | alta | no | 0 | 2 | 0 |
 | [[granberry-vescelius-2004]] | no-disponible | media | no | 0 | 0 | 0 |
@@ -282,11 +285,11 @@ Mapas: [[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-tran
 | Archivo | hechos | `atestiguado` | `reconstruido` | `canon-simulacion` | `hipotetico` | `retro-abstraido` | con `referencia` |
 |---|---|---|---|---|---|---|---|
 | `creencia.yaml` | 30 | 12 | 11 |  | 3 | 4 | 30/30 |
-| `ecologia.yaml` | 93 | 39 | 22 |  | 32 |  | 93/93 |
-| `geografia_politica.yaml` | 13 | 10 | 1 |  | 2 |  | 13/13 |
-| `parentesco.yaml` | 39 | 14 | 18 |  | 7 |  | 39/39 |
+| `ecologia.yaml` | 113 | 55 | 25 |  | 33 |  | 113/113 |
+| `geografia_politica.yaml` | 24 | 19 | 2 |  | 3 |  | 24/24 |
+| `parentesco.yaml` | 40 | 14 | 18 |  | 8 |  | 40/40 |
 | `transmision.yaml` | 35 | 14 | 5 | 14 | 2 |  | 35/35 |
-| **total** | **210** | **89** | **57** | **14** | **46** | **4** | **210/210** |
+| **total** | **242** | **114** | **61** | **14** | **49** | **4** | **242/242** |
 
 Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
 
@@ -301,8 +304,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
 | 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 13 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
-| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **210 hechos, 0 errores, 0 avisos** |
-| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 210/210 hechos **tienen** `referencia` |
+| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **242 hechos, 0 errores, 0 avisos** |
+| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 242/242 hechos **tienen** `referencia` |
 | 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | 8 | 🟢 | El desbalance wayunaiki/lokono resuelto | todas tomadas — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 769 vs. lokono 636 (1.2 a 1) · fase 1 de D11 FUSIONADA: 173 de 173 raíces de Perea ya están en el habla |
@@ -350,8 +353,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1551 en 830 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | no corridos (`--sin-tests`) o fallo al correrlos | ⚪ |
+| Wikilinks | 1584 en 855 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 1109 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**

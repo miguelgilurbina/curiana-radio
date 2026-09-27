@@ -279,3 +279,12 @@ th.22_worktrees:
   eleccion: 'borrados los worktrees viejos limpios con su rama en main (sin --force; las ramas se quedan); se conserva el del agente de merges'
   rescate: 'la copia local de González Batista 2002 (obra con derechos, NO en git) vivía sólo en un worktree: movida a fuentes_caquetios/ y declarada en .gitignore'
   hallazgo: 'la rama `fix/oliver-cap3-paginacion` (c4d6811, 2026-09-14) nunca se mergeó ni tuvo PR: 112 reemplazos de cita propuestos. Se integra con el grupo 2 de #222 (mismos archivos)'
+
+th.23_las_ramas_de_222:
+  que: 'las tres ramas del «Ok a todo» entran en esta, en merges separados (2026-09-27, «Puedes seguir con lo pendiente»)'
+  grupo_3: 'docs/222-grupo3 (2aba17e) y su frente del lexicón (ee98f90): registro 6-fusion/decisiones_222_documentacion_2026-09-24.yaml §aplicado_por_el_frente'
+  grupo_2: 'mundo/222-grupo2 (3b9b668) y dp.2.13, la fauna a ecología (0063f38): registro 6-fusion/decisiones_222_mundo_2026-09-24.yaml, CERRADO'
+  t5: 'taino/auditoria-b-y-t11 (21e8704): T11 con la tradición viva, 6-fusion/cruce_taino_caquetio_2026-09-24.yaml'
+  choques: 'cognados.yaml (se resolvió en el generador: migrar_cognados.RETIRADOS) y taino_en_la_esfera (Fernandes 2020: se queda la lectura de dp.2.04, que no afirma «Antillas Menores»)'
+  mide: 'contra 11f1fdd, el prompt no se mueve (+0,0 %); contra main 6aa43a5, +2,26 % (medicion_tanda_hermanas_2026-09-24.yaml, re-medida)'
+  queda: 'la auditoría B de [Voces de fuera] (la rama del taíno no llegó a ella) y la fusión de la paginación de Oliver cap. 3 (fix/oliver-cap3-paginacion)'

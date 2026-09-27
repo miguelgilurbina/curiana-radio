@@ -2,10 +2,10 @@
 tipo: nota-viva
 ambito: estado del lexicón activo
 fuente_de_verdad: curiana_sim/curiana_lexicon.py
-total: 5490
+total: 5489
 familia_caquetia: 380
 sin_cita: 0
-medido: 2026-09-24
+medido: 2026-09-27
 ---
 
 # El lexicón
@@ -20,7 +20,7 @@ medido: 2026-09-24
 ## El tamaño real
 
 <!-- GENERADO por curiana_sim/tabla_lexicon.py: tamano -->
-**5.490 entradas activas** en `VOCABULARIO_BASE`, y **77** archivadas en `FUERA_DEL_HABLA` (fuera del habla, con su capa intacta).
+**5.489 entradas activas** en `VOCABULARIO_BASE`, y **78** archivadas en `FUERA_DEL_HABLA` (fuera del habla, con su capa intacta).
 <!-- /GENERADO -->
 
 ```bash
@@ -42,7 +42,7 @@ categorías:
 | **caquetío** | 380 | 6,9 % |
 | paraujano | 47 | 0,9 % |
 | taíno | 45 | 0,8 % |
-| kalinago | 25 | 0,5 % |
+| kalinago | 24 | 0,4 % |
 | jirajaroide-contacto | 7 | 0,1 % |
 | caribe-continental | 6 | 0,1 % |
 | español-colonial | 3 | 0,1 % |
@@ -96,18 +96,18 @@ De las **185** entradas `caquetío-atestiguado`, cuántas citan a cada obra en s
 | [[zavala-reyes-2018]] | 174 |
 | [[arcaya-1920]] | 12 |
 | [[arcaya-obra-inedita-1995]] | 12 |
+| [[alvarado-1921]] | 12 |
 | [[oliver-1989-apendice-a]] | 12 |
 | [[oliver-1989-cap2]] | 12 |
 | [[oliver-1989-cap3-vecinos]] | 12 |
 | [[oliver-1989-cap3]] | 12 |
 | [[oliver-1989-cap4]] | 12 |
 | [[oliver-2000-guanin]] | 12 |
-| [[alvarado-1921]] | 11 |
 | [[van-buurt-2014]] | 7 |
 | [[coll-y-toste-1897]] | 6 |
 | [[brinton-1871]] | 5 |
+| [[goeje-1939]] | 4 |
 | [[gatschet-1885]] | 4 |
-| [[goeje-1939]] | 3 |
 | [[oviedo-y-valdes-1851]] | 3 |
 | [[angulo-molina]] | 2 |
 | [[oviedo-y-valdes-1852-1855]] | 2 |
@@ -121,6 +121,7 @@ De las **185** entradas `caquetío-atestiguado`, cuántas citan a cada obra en s
 | [[gonzalez-batista-nombre-de-coro]] | 1 |
 | [[ballesteros-1550]] | 1 |
 | [[pane-c1498]] | 1 |
+| [[carvajal-1892]] | 1 |
 | *sin obra reconocida en `notas`* | 0 |
 <!-- /GENERADO -->
 

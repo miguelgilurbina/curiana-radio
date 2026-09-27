@@ -7,31 +7,42 @@ con_la_base: false
 instrumento:
   vocabulario_base:
     antes: 5496
-    hoy: 5488
+    hoy: 5489
   fuera_del_habla:
     antes: 36
-    hoy: 76
+    hoy: 78
   formas_de_plantilla:
     antes: 5985
-    hoy: 6028
+    hoy: 6031
   capas:
     achagua:
       antes: 3568
       hoy: 3569
+    caquetío-atestiguado:
+      antes: 184
+      hoy: 185
     caquetío-hipotético:
       antes: 58
-      hoy: 75
+      hoy: 76
     caquetío-reconstruido:
       antes: 69
-      hoy: 45
+      hoy: 44
+    kalinago:
+      antes: 23
+      hoy: 24
     lokono:
       antes: 638
       hoy: 636
+    taíno:
+      antes: 46
+      hoy: 45
   claves_de_todas_las_reglas:
     salen: []
-    entran: []
+    entran:
+      - -bo
+      - -oa
     antes: 22
-    hoy: 22
+    hoy: 24
   prefijos:
     salen: []
     entran: []
@@ -39,14 +50,18 @@ instrumento:
     hoy: 6
   sufijos:
     salen: []
-    entran: []
+    entran:
+      - -bo
+      - -oa
     antes: 16
-    hoy: 16
+    hoy: 18
   voces_de_fuera:
-    salen: []
+    salen:
+      - cacike
+      - naboria
     entran: []
     antes: 44
-    hoy: 44
+    hoy: 42
   formas_de_plantilla_salen:
     - alimento
     - contigo
@@ -75,9 +90,12 @@ instrumento:
     - ani
     - ati
     - badia
+    - bagua
+    - baja
     - bena
     - blanco
     - bueno
+    - busera
     - butu
     - color
     - comida
@@ -176,17 +194,17 @@ prompt:
       hoy: 63
     medio:
       antes: 7871.2
-      hoy: 8002.6
+      hoy: 8048.8
     mediana:
       antes: 6872
-      hoy: 7021
+      hoy: 7067
     min:
       antes: 5295
-      hoy: 5382
+      hoy: 5474
     max:
       antes: 11924
-      hoy: 11874
-    cambio_medio_pct: 1.67
+      hoy: 11820
+    cambio_medio_pct: 2.26
   tu_emocionar_cambia_en: 0
   semilla_de_idiolecto_cambia_en: 62
   semilla_mas_corta_hoy: 6

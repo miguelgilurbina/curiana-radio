@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-27**.
 
-**7835 ítems propuestos** en 156 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**8009 ítems propuestos** en 157 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -47,6 +47,7 @@ editar_a_mano: no
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
 | `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
+| `cruce_taino_caquetio_2026-09-24.yaml` | ? | 174 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
 | `decisiones_222_documentacion_2026-09-24.yaml` | ? | 11 |  |
 | `decisiones_222_mundo_2026-09-24.yaml` | ? | 0 |  |
