@@ -42,7 +42,7 @@ meta:
   decision_anterior: '«Acepto todo lo recomendado»'
   lista: 6-fusion/decisiones_pendientes_2026-09-23.yaml §grupo_2_mundo
   resumen: 6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md §Grupo 2
-  estado: EN CURSO — se pone al día al cerrar cada entrada
+  estado: CERRADO (2026-09-24) — lo que queda es NECESITA A MIGUEL, con la pregunta en cada entrada
 
 decisiones:
 
@@ -249,6 +249,10 @@ decisiones:
       Urupaguaduco en la «p. 71» y es la p. 66. Pregunta: ¿se las pasas al
       frente del lexicón con estas dos ediciones?
     no_entro: 'las secciones `fauna` y `flora` del lote (no son topónimos): siguen en la propuesta'
+    aplicado_por_el_frente: >-
+      2026-09-24, al fusionar la rama: `kumarawa` ya llevaba la CITA CORREGIDA
+      (Arcaya p. 75, «viruela», desde dp.1.05/1.08 de la tanda de las hermanas);
+      `urupagua` cita ahora Urupaguaduco en la p. 66 (curiana_lexicon.py, sólo `notas`).
 
   dp.2.09:
     tema: el mapa vivo — cuatro identificaciones y la forma viva
@@ -322,8 +326,14 @@ decisiones:
       final de ecologia.yaml con su capa y su procedencia; en ecologia-015 la
       identificación del cunaro queda declarada en disputa (FA3 c A). La
       parte que toca el lexicón no es de este frente.
-    estado: POR APLICAR
-    aplicado_por: []
+    estado: APLICADA (2026-09-24, por el frente del lexicón al fusionar la rama)
+    aplicado_por:
+      - '6-fusion/scripts/fusionar_fauna_ecologia_dp213.py: 19 entradas nuevas en 3-mundo/corpus/ecologia.yaml (ecologia-086 a -104): las 7 de tierra (FA1), las 5 de aves (FA2) y los 7 hechos nuevos del mar (FA3), con su capa y su procedencia; los de FA3 llevados al esquema del corpus (referencia desde la procedencia, el apoyo a `nota`)'
+      - 'ecologia-015: `identificacion` EN DISPUTA (FA3 (c) A, pe-7): la especie del cunaro no se fija'
+    mide: 'compilar_corpus --check: 242 hechos, 0 avisos (era 1); pre-vuelo verde'
+    lecturas_del_escriba:
+      - 'la única corrección de forma: `locacion: salina` (FA2, el flamenco) no es locación del motor y pasa a `salinar`'
+      - 'la parte del LEXICÓN de FA3 (c) A no tiene dónde ir: `kunaro` no es clave del lexicón (es hueco; ecologia-015 ya lo dice)'
 
   dp.2.14:
     tema: las aldeas de Aruba en asentamientos.yaml

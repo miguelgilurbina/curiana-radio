@@ -279,6 +279,7 @@ entradas:
       cunaro, guaranaro y bagre se usan como nombres de agentes pero NO existen como
       palabras de especie en el lexicón (ver hueco-lex-004).
 
+    identificacion: 'EN DISPUTA (dp.2.13 de #222 («Ok a todo», Miguel, 2026-09-24), FA3 (c) A; 6-fusion/fauna_paraguana_mar_2026-09-22.yaml pe-7): El cunaro del corpus (Rhomboplites aurorubens, pargo de altura) no casa con la manteca de los jachos; la especie que da Zavala y Esteves («promicrops guasa») es el mero guasa (Epinephelus itajara), pez grande y graso de bajos y estuarios. Proponer que la identificación de `kunaro` quede en disputa y no fijada. (esteves-1989, p. 33). No se fija ninguna de las dos: el `contenido` sigue diciendo lo que decía, y esto dice que la especie del cunaro no está resuelta'
   - id: ecologia-016
     contenido: >
       La arqueología insular documenta el botuto o caracol reina (Lobatus/Strombus
@@ -1620,6 +1621,390 @@ entradas:
       con la información del obispo Bastidas: es una sola cadena, y vale igual
       para `dato`, `mamón` y `semeruco`. Contacto temprano (regla 3); la planta es
       del medio y se proyecta, el nombre en boca de quién, no.
+  - id: ecologia-086
+    voz: null
+    contenido: 'La tarántula azul (Chromatopelma cyaneopubescens, Strand 1907) es un animal de este monte: su localidad
+      tipo es Paraguaná («Paraguara»), el género tiene una sola especie, y 9 de sus 11 registros verificados están en
+      la península, su baluarte; los demás, en Coro, Colina y Lara. Vive en un hueco de árbol, tronco caído o grieta
+      de corteza que forra de seda; es azul metálico con el abdomen naranja; los machos vagan de abril a junio.
+    
+      '
+    fuente: atestiguado
+    referencia: Sherwood y Gianni-Zurita 2023, Anartia 36, pp. 36-41; Colmenares 2015 (Libro Rojo, En Peligro B1ab(iii,v))
+    procedencia:
+      obra: sherwood-gianni-zurita-2023
+      pagina: 36-41
+    dominios:
+    - ecologia
+    - fauna
+    - hueco_lexico
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: matorral
+    lectura: 'Presencia en el s. XV segura por biología (endemismo regional), no por documento: ninguna fuente la nombra
+      ni le da uso o creencia (búsqueda de 6-fusion/scripts/buscar_tarantula_azul.py). Es hueco léxico: el lexicón no
+      tiene voz caquetía para araña. «Endémica de la península» se corrige a endémica de Venezuela con núcleo en la
+      península.'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-085-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-087
+    contenido: 'La fauna de tierra de la provincia de Venezuela hacia 1540, según el informe del obispo Bastidas que
+      Oviedo copia: osos hormigueros, «tigres muchos», «venados en grand número, é á manadas», puercos de monte de dos
+      géneros, «conejos tantos ó mas que en nuestra España; pero… menores y alebrestados», perezas, armados, «cories»,
+      ardillas, dantas, «perros gosques que crian los indios en sus casas, é son mudos, que no ladran» y leones pardos.
+    
+      '
+    fuente: atestiguado
+    referencia: Oviedo y Valdés, Historia general y natural, t. II (1852), lib. XXV, cap. XXII, pp. 330-331 (verificado
+      en imagen el 2026-09-22)
+    procedencia:
+      obra: oviedo-y-valdes-1852-1855
+      pagina: 330-331
+    dominios:
+    - ecologia
+    - fauna
+    - caza
+    agentes_relacionados: []
+    palabra_lexicon: null
+    locacion: matorral
+    lectura: 'Capa de contacto temprano y de la PROVINCIA, no de la península (regla 4): prueba lo que había en la tierra
+      de Coro, no en cada cerro. Corrige a ecologia-033/034 en un punto: la caza de la provincia no era tan pobre como
+      el istmo de hoy («venados á manadas»). El perro mudo es el único animal doméstico precontacto de la lista y NO
+      es el perro europeo.'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-086-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-088
+    contenido: 'La miel era de abejas sin aguijón, y se criaban en casa: «Algunas crian los indios en sus casas en unos
+      calabaços grandes: no pican ni tienen ponçoña… y los vasillos de los panales… son cada uno tan grande como una
+      bellota»; hay miel de cera amarilla, más dulce, y de cera negra. También comían la miel de ciertas avispas «muy
+      malas y ponçoñosas».
+    
+      '
+    fuente: atestiguado
+    referencia: Oviedo y Valdés, t. II, lib. XXV, cap. XXII, p. 331 (verificado en imagen)
+    procedencia:
+      obra: oviedo-y-valdes-1852-1855
+      pagina: '331'
+    dominios:
+    - ecologia
+    - fauna
+    - recoleccion
+    - oficios
+    agentes_relacionados: []
+    palabra_lexicon: ruba
+    locacion: bohios
+    lectura: 'Es la primera técnica de cría animal de la provincia en el corpus, y casa con el racimo de la miel de
+      Medina (ecologia-062 a 067: la abeja amarilla `wakukero`, la negra `ruba`, el panal en tronco seco). Capa de contacto
+      temprano; su proyección al s. XV es lectura (la técnica no depende de nada europeo).'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-087-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-089
+    contenido: 'La langosta es plaga y es comida: «Hay mucha langosta, que los indios llaman tara, y esta no es continua;
+      pero algunos años hay tanta, que cubre el ayre á no se poder ver el çielo… si dá en un mahiçal, lo tala todo…
+      también los indios en su vengança las toman y embanastan y se las comen asadas».
+    
+      '
+    fuente: atestiguado
+    referencia: Oviedo y Valdés, t. II, lib. XXV, cap. XXII, p. 331 (verificado en imagen); la campaña taíno 2 ya lo
+      midió para la glosa de `tara`
+    procedencia:
+      obra: oviedo-y-valdes-1852-1855
+      pagina: '331'
+    dominios:
+    - ecologia
+    - fauna
+    - agricultura
+    agentes_relacionados: []
+    palabra_lexicon: tara
+    locacion: conuco
+    lectura: 'Un año de langosta es un evento del calendario, no un referente: tiene nombre (`tara`) y tiene respuesta
+      (cestas y brasa).'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-088-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-090
+    contenido: 'Los endemismos de tierra de la península: el ratón mochilero de Paraguaná (Heteromys oasicus), sólo
+      en los bosques del Cerro Santa Ana y Monte Cano; el tuqueque de Monte Cano (Lepidoblepharis montecanoensis), bajo
+      piedras y hojarasca de las quebradas; y la tarántula azul, con su núcleo aquí. El cerro y Monte Cano son islas
+      de bosque húmedo en el cardonal, y ahí vive lo que no hay en otra parte.
+    
+      '
+    fuente: atestiguado
+    referencia: Libro Rojo de la Fauna Venezolana 2015 (Gutiérrez et al.; Molina et al.); Sherwood y Gianni-Zurita 2023;
+      GBIF (6-fusion/gbif_fauna_tierra_paraguana_2026-09-22.yaml)
+    procedencia:
+      obra: libro-rojo-fauna-venezolana-2015
+      pagina: fichas del ratón mochilero y del tuqueque de Monte Cano
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: null
+    lectura: Capa moderna del censo; los endemismos son del medio (evolucionaron aquí) y por eso proyectables al s.
+      XV. Que el cerro sea isla de bosque sostiene capubana_agua_y_microclima.yaml.
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-089-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-091
+    contenido: 'El cardón necesita al murciélago: el murciélago cardonero (Leptonycteris curasoae) poliniza de noche
+      las flores de los cardones y los agaves y dispersa sus semillas; vive en colonias de miles en las cuevas de la
+      península (Jacuque, El Pico, Piedra Honda, El Guano) y cruza a las islas ABC.
+    
+      '
+    fuente: atestiguado
+    referencia: Libro Rojo de la Fauna Venezolana 2015, ficha del murciélago cardonero (Vulnerable A2c)
+    procedencia:
+      obra: libro-rojo-fauna-venezolana-2015
+      pagina: ficha del murciélago cardonero
+    dominios:
+    - ecologia
+    - fauna
+    - flora
+    agentes_relacionados: []
+    palabra_lexicon: wache
+    locacion: matorral
+    lectura: 'Enlaza el fruto del cardón (dato, tampañá, cachinare) con la noche y la cueva. Proyectable: la relación
+      planta-murciélago es del medio, no de la gente.'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-090-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-092
+    contenido: 'Las cabras llegaron pronto y se quedaron: hacia 1589 los campos de Coro estaban «llenos» de ganado y
+      «De cabras muchedumbre copiosa»; en 1546 ya había «algunas bacas y obejas y puercos». Hoy el pastoreo de caprinos
+      es la primera amenaza de los bosques del cerro y de Monte Cano.
+    
+      '
+    fuente: atestiguado
+    referencia: Castellanos, Elegías, líneas 48235-48243; Pérez de Tolosa 1546 vía Arcaya 1920 p. 264; Libro Rojo 2015
+      (ratón mochilero, tuqueque de Monte Cano)
+    procedencia:
+      obra: castellanos-elegias
+      pagina: líneas 48235-48243
+    dominios:
+    - ecologia
+    - fauna
+    - biosfera_perdida
+    - metodo
+    agentes_relacionados: []
+    palabra_lexicon: null
+    lectura: 'Fecha la frontera de la regla 3 para la fauna: el chivo no es del s. XV y el monte que hoy se ve está
+      ramoneado por él.'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_tierra_2026-09-22.yaml `ecologia-091-propuesto` (FA1, #211) por dp.2.13
+      de #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-093
+    contenido: 'Las aves del monte y de la orilla que un habitante oía a diario tienen en buena parte nombre caquetío,
+      y casi siempre el nombre imita la voz: dara (el alcaraván), wakoa (la paloma, cuyas formas en cinco lenguas «imitan…
+      el canto»), chuchubi (la paraulata), warawara (el caricare), chogogo (el flamenco), tijua («paloma de canto onomatopéyico»).
+      La lengua nombró al ave por lo que se oye de ella.'
+    fuente: reconstruido
+    referencia: 'Zavala Reyes 2015 #85, #102, #127, #248; Alvarado 1921 p. 143; van Buurt 2014 pp. 29, 37; 2-lengua/morfologia.md
+      §9'
+    procedencia:
+      obra: alvarado-1921
+      pagina: 143
+    dominios:
+    - ecologia
+    - fauna
+    - lengua
+    agentes_relacionados: []
+    palabra_lexicon: wakoa
+    locacion: matorral
+    implicacion_simulacion: 'Un agente que tenga que nombrar un ave sin nombre tiene en su propia lengua el modelo:
+      nombrarla por lo que se oye. Por eso el referente llega con `se_oye`.'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_aves_2026-09-22.yaml `ecologia-P-aves-01` (FA2, #205) por dp.2.13 de
+      #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-094
+    contenido: 'El año se oye y se ve en las aves: el waru (oripopo) y el águila pescadora abundan del Tiempo de Siembra
+      al de Viento y casi desaparecen en la seca larga; la gaviotica y el pico de tijera llegan a criar en las salinas
+      justo en la seca larga; la tijereta del sur sólo aparece en la seca larga; las bandadas de playeros llegan del
+      norte hacia el final de la seca y se van con el viento.'
+    fuente: reconstruido
+    referencia: GBIF, índice por período (6-fusion/medicion_gbif_aves_paraguana_2026-09-22.yaml, campo patron), proyectado
+      al s. XV por la antigüedad de las rutas migratorias
+    procedencia:
+      obra: gbif-aves-paraguana-2026
+    dominios:
+    - ecologia
+    - fauna
+    - clima
+    agentes_relacionados: []
+    palabra_lexicon: waru
+    locacion: orilla
+    implicacion_simulacion: Concreta ecologia-038 («las aves son un reloj») con especies y períodos del canon de la
+      era 2.
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_aves_2026-09-22.yaml `ecologia-P-aves-02` (FA2, #205) por dp.2.13 de
+      #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-095
+    contenido: 'La guacharaca «con ese cacareo resonante anuncian mui temprano la llegada del día»: en el cerro, el
+      amanecer tiene voz propia antes que la luz.'
+    fuente: atestiguado
+    referencia: 'Alvarado 1921 p. 143 (verificado en imagen); presencia en el cerro: monumento-cerro-santa-ana'
+    procedencia:
+      obra: alvarado-1921
+      pagina: 143
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: null
+    implicacion_simulacion: Frase candidata para el momento «amanecer» de los sitios del cerro (Capubana, Moruy) en
+      [Tu tierra].
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_aves_2026-09-22.yaml `ecologia-P-aves-03` (FA2, #205) por dp.2.13 de
+      #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-096
+    contenido: La cotorra de hombros amarillos vivió en Paraguaná hasta mediados del s. XX, cuando se extinguió allí
+      como en Aruba y Curazao; en el habla quedó la «cota», lora mayor que el perico.
+    fuente: atestiguado
+    referencia: Ferrer-Paris et al. 2014 vía Wikipedia es (aves-punteros-web-2026); Medina Colina p. 82
+    procedencia:
+      obra: medina-colina-sxx
+      pagina: 82
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: koro
+    locacion: matorral
+    implicacion_simulacion: 'Caso demostrativo de la regla de ecologia-037: el s. XV era más rico que el censo moderno.'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_aves_2026-09-22.yaml `ecologia-P-aves-04` (FA2, #205) por dp.2.13 de
+      #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-097
+    contenido: La forma de tierra firme del nombre del flamenco es «togogo» (Coro y Falcón), frente a «chogogo» de las
+      islas.
+    fuente: hipotetico
+    referencia: 'Alvarado 1921 p. 292 («¿Es el TOGOGO de Coro?») y Esteves 1989 p. 134 («Togogo: ave ansérida»), ambos
+      verificados en imagen; la identidad con el flamenco es inferencia'
+    procedencia:
+      obra: alvarado-1921
+      pagina: 292
+    dominios:
+    - ecologia
+    - fauna
+    - lengua
+    agentes_relacionados: []
+    palabra_lexicon: chogogo
+    locacion: salinar
+    implicacion_simulacion: Si se confirma, chogogo tiene hermana continental y deja de ser una voz sólo insular.
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_aves_2026-09-22.yaml `ecologia-P-aves-05` (FA2, #205) por dp.2.13 de
+      #222 («Ok a todo», Miguel, 2026-09-24)'
+  - id: ecologia-098
+    contenido: 'Lo que se comía en la orilla del Golfete no era el botuto: en los sitios caquetíos de los Médanos (s.
+      XIV-XVIII) el 42,4 % de la concha es chipichipi (Donax striatus) y el 27,0 % almeja (Callista); el botuto es el
+      1,0 %. El botuto es comida de las islas.'
+    fuente: atestiguado
+    referencia: zavala-reyes-2018, p. 405
+    procedencia:
+      obra: zavala-reyes-2018
+      pagina: 405
+    dominios:
+    - ecologia
+    - pesca
+    agentes_relacionados: []
+    palabra_lexicon: null
+    lectura: corrige el peso que ecologia-016/044 dan al botuto cuando se lee como comida de tierra firme
+    limite: 'el rango del sitio llega al s. XVIII: la tabla no separa precontacto de colonial'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-1` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24)'
+  - id: ecologia-099
+    contenido: 'Las cuatro tortugas marinas anidan hoy en Paraguaná, en la costa norte y este, de abril a septiembre
+      (el pico en junio-julio: la seca larga); la costa oeste no tiene nidos y allí la tortuga sólo se ve en la pesca.
+      En el Golfete se ha confirmado desove de la cardón y la verde, y Tacuato fue reportada como playa de la verde
+      (1988).'
+    fuente: atestiguado
+    referencia: rondon-medicci-2013, p. 114, 117, 119, 120
+    procedencia:
+      obra: rondon-medicci-2013
+      pagina: 114, 117, 119, 120
+    dominios:
+    - ecologia
+    - pesca
+    agentes_relacionados: []
+    palabra_lexicon: null
+    limite: 'capa moderna; la abundancia del s. XV era mayor (ecologia-044). Los meses tienen techo: se recorrió marzo-septiembre'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-2` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24)'
+  - id: ecologia-100
+    contenido: Los pescadores de Paraguaná tienen al carey por el macho y a la tortuga verde por la hembra; los wayuu,
+      al otro lado del Golfo, también.
+    fuente: atestiguado
+    referencia: rondon-medicci-2013, p. 116
+    procedencia:
+      obra: rondon-medicci-2013
+      pagina: 116
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: null
+    limite: moderno; la folk-taxonomía compartida entre las dos orillas del Golfo es dato de esfera, no de s. XV
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-3` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24). Apoyo: barrios-garrido-2018, p. 206'
+  - id: ecologia-101
+    contenido: 'En Aruba caquetía el pescado de todos los días era de la orilla y del bajo: en Tanki Flip el macabí
+      de hueso (warashi) es el 13,7 % de los restos de pez y el macabí el 5,2 %; peces que hoy casi no se comen por
+      sus espinas.'
+    fuente: atestiguado
+    referencia: van-buurt-2014, p. 33, 43
+    procedencia:
+      obra: van-buurt-2014
+      pagina: 33, 43
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: null
+    limite: cita de segunda mano de Versteeg y Rostain 1997; islas, no la península
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-4` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24)'
+  - id: ecologia-102
+    contenido: 'La lisa salada viajaba de Paraguaná a las islas con su nombre: waranawa en papiamento, guaranaro en
+      la península.'
+    fuente: reconstruido
+    referencia: van-buurt-2014, p. 37
+    procedencia:
+      obra: van-buurt-2014
+      pagina: 37
+    dominios:
+    - ecologia
+    - fauna
+    agentes_relacionados: []
+    palabra_lexicon: null
+    limite: el comercio que van Buurt describe llega hasta el s. XX; que el nombre viajara en el s. XV es su hipótesis
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-5` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24)'
+  - id: ecologia-103
+    contenido: 'El mar suena: el mero y la cuna retumban bajo el agua, los roncos roncan al sacarlos, las corvinas tamborean
+      en la freza, el camarón pistola crepita entre las ostras, la tortuga cardón resopla y gruñe al tapar su nido,
+      la tonina resopla al respirar (la costa la llama «soplón»).'
+    fuente: atestiguado
+    referencia: fishsounds, p. Epinephelus itajara; Mycteroperca bonaci; Haemulidae; Sciaenidae
+    procedencia:
+      obra: fishsounds
+      pagina: Epinephelus itajara; Mycteroperca bonaci; Haemulidae; Sciaenidae
+    dominios:
+    - ecologia
+    - fauna
+    - sonido
+    agentes_relacionados: []
+    palabra_lexicon: null
+    implicacion_simulacion: 'canal sonoro para el motor ambiental (ecologia-038 ya lo pide para las aves): el agente
+      puede OÍR el mar sin que se le explique'
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-6` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24). Apoyo: cook-forrest-2005, p. 387-389; romero-mayayo-agudo-1991, p. 172'
+  - id: ecologia-104
+    contenido: 'Dos animales del mar de las Indias que Oviedo vio y ya no están o casi: el «lobo marino» (foca monje)
+      que salía a dormir a las islas y roncaba tan fuerte que se oía de lejos, y el «pexe vihuela» (pez sierra) con
+      su espada dentada.'
+    fuente: atestiguado
+    referencia: oviedo-y-valdes-1851, p. 426, 428
+    procedencia:
+      obra: oviedo-y-valdes-1851
+      pagina: 426, 428
+    dominios:
+    - ecologia
+    - pesca
+    agentes_relacionados: []
+    palabra_lexicon: null
+    limite: Oviedo escribe de la Española y de Tierra Firme en general; su presencia en Paraguaná es dudosa (ecologia-040)
+    nota: 'Fusionada de 6-fusion/fauna_paraguana_mar_2026-09-22.yaml `pe-8` (FA3, #208) por dp.2.13 de #222 («Ok a todo»,
+      Miguel, 2026-09-24)'
 
 huecos_lexicos:
 
