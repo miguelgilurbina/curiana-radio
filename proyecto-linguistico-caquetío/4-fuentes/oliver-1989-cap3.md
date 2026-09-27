@@ -9,7 +9,7 @@ paginas: 113
 capa_texto: si
 acceso: "Libre — la tesis completa (823 pp., incluye este capítulo) está en UCL Discovery, depositada por el propio Oliver: PDF https://discovery.ucl.ac.uk/id/eprint/10157455/1/Oliver_10157455_thesis_redacted.pdf · ficha https://discovery.ucl.ac.uk/id/eprint/10157455/. Verificado en el rastreo de 2026-08-14."
 estado_minado: minado
-cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59), la esfera occidental §3.2 (2026-09-07, quinta polity), el taíno y las Antillas (2026-09-21, campaña del taíno T5)"
+cobertura: "familia (sesión 1), geografía política (sesión 5), economía/cerámica/guerra/religión (2026-08-04, issue #59), la esfera occidental §3.2 (2026-09-07, quinta polity), paginación DOC 2006 vs. impresa 1989 (2026-09-14), el taíno y las Antillas (2026-09-21, campaña del taíno T5)"
 prioridad: media
 sostiene: {hechos_corpus: 15, entradas_lexicon: 2, entradas_reforzadas: 1}
 verificado: 2026-09-21
@@ -35,6 +35,69 @@ sesiones enteras del programa cultural ([[mapa-familia]] y
 | Capa de texto | **sí**, buena (~310K caracteres) |
 | Receta | `pdftotext -enc UTF-8` o `pypdf`; ambos funcionan |
 | Artefacto conocido | **Es de `pypdf`, no del PDF** (medido 2026-08-04): `pypdf` parte "Todariquiba" en **"T odariquiba"** en sus 7 apariciones; `pdftotext -enc UTF-8`, con o sin `-layout`, la da **limpia** en las 7. La receta manda: si una búsqueda no da nada, probar la otra antes de concluir que el dato no está |
+| ⚠️ Paginación | **Este PDF no es la tesis impresa.** Es la reedición DOC/PDF de 2006: su cabecera es pdf + 182, y no coincide con la página de 1989. Ver §Paginación |
+
+## Paginación: dos ediciones del mismo capítulo (2026-09-14)
+
+**Qué se preguntó.** El 2026-09-13 apareció que el capítulo está en el repo
+dos veces, con paginaciones distintas, y que las citas de
+`oliver-1989-cap3` mezclan las dos. ¿En qué edición está cada cita, y cuál es
+su página impresa?
+
+**Las dos ediciones.**
+
+| | Edición DOC/PDF 2006 | Tesis impresa 1989 |
+|---|---|---|
+| Archivo | `Chapter 3 Ethnohistory.DOC-comprimido.pdf` | `Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf` (escaneo) |
+| Texto | capa de texto | ninguno: OCR con `ocr_fuente.py` |
+| Página | cabecera = pdf + 182 (constante en sus 113 páginas) | impresa = pdf − 27 (cabecera leída en las 141 páginas OCR, pdf 205-345) |
+| Notas al pie | numeradas desde 1 en el capítulo | numeradas corrido: **nota impresa = nota DOC + 92** |
+
+Entre las dos **no hay desfase constante**: la impresa intercala páginas de
+figura, y va de −1 al principio del capítulo a +17 al final. Y la DOC no es solo
+re-maquetación: añade material *«only in PDF version, 2006»* (la imagen
+satelital del Yaracuy, fotos, color) y **cambia alguna grafía**: el primer
+asiento de los Amuayes, «Cayerta» en la impresa (276), sale «Cayerúa» en la DOC
+(264).
+
+**Qué se halló.** La propuesta completa, cita por cita y con reemplazo, está en
+`6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml`. Incluye el mapa de las 113
+páginas DOC a su página impresa. Lo gordo:
+
+- **La mayoría de las citas de este capítulo están en la DOC**: §3.2 (salvo
+  los caribes), el pacto de Todariquiba, el buco, Barquisimeto y el tamude. Las
+  que están en la impresa son las que se minaron sobre el escaneo:
+  `oliver-1989-cap3-vecinos` (223-250), los dos clanes de Paraguaná (275-276) y
+  *Arubanas* (256). Y un grupo no cuadra con **ninguna** de las dos (abajo).
+- **La «corrección» del 2026-09-01 (255-256 → 265-266) fue un cambio de
+  edición, no un error**: 255-256 era la DOC. El corpus quedó en la impresa; el
+  ensayo 01, en la DOC.
+- **Hay citas que no son de ninguna de las dos.** La poligamia de Manaure, la
+  viuda «carnal or classificatory?» y el traslado de la hija se citaban en
+  260-262. Están en DOC 268-269 = impresa 280-281, mirado a ojo en la 280. La
+  frase «inherited by the son of the diao» está en §3.11, impresa 305. Y
+  **la carta de Bastidas de 1538** se colgaba de la p. 251, que es la del pacto
+  de 1527; está en DOC 258-259 = impresa 269, mirado a ojo. Esto último afecta a
+  cinco nodos de `asentamientos.yaml` y a tres topónimos.
+- **Dos errores de contenido que salieron al paso**, anotados como colaterales
+  en el YAML. (1) La maloca de 40-50 es de **Curazao** (Vespucio), no de
+  Barquisimeto/Yaracuy como decía la tabla de abajo (impresa 275). (2) La «red
+  de alianzas por comercio: cuentas de concha, sal y azabache» de
+  §Economía es de los **jirajaranos**, que además «none … had developed a
+  confederation» (impresa 245). La sal con los enemigos es de Barquisimeto
+  (impresa 247). Regla 4.
+
+**Qué no se hizo.** No se tocaron el corpus, `curiana_polities.py`,
+`lexicon_toponimos.py` ni los ensayos (regla 5). Tampoco las tablas de esta
+nota: **siguen con las páginas tal como se citaron**, y el YAML da la
+equivalencia. No se barrieron las otras notas de `4-fuentes/`, `1-plan/` ni
+`2-lengua/*.md`.
+
+> 📌 **Convención propuesta (la decide Miguel): citar la impresa.** La obra es
+> la tesis de 1989, y las otras notas de Oliver ya citan la impresa
+> (`-vecinos`, Tabla A-8, dos clanes). La DOC sigue siendo la mejor para
+> **buscar**: se busca la frase en la DOC y se traduce con el mapa del YAML,
+> nunca sumando un desfase. Toda «n. N» debe decir de qué edición es.
 
 ## Qué ha dado
 
@@ -63,7 +126,9 @@ de una glosa previa sin fuente.
 la Guajira) como polity futura «porque Oliver también menciona información de
 esa región en el contexto de Coquibacoa». ¿Qué dice, y con qué página? Este
 PDF tiene capa de texto y §3.2 está entero (la tesis completa no la tiene).
-Página impresa = pdf + 182.
+~~Página impresa = pdf + 182.~~ **No** (2026-09-14): eso es la cabecera de la
+edición DOC 2006. Las páginas de esta tabla son DOC; su página impresa está en
+`6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml` (ver §Paginación).
 
 **Qué se halló** (todo en `curiana_polities.py::POLITIES["occidental"]`):
 

@@ -1,0 +1,785 @@
+# PROPUESTA — Oliver 1989 cap. 3 existe en el repo en DOS paginaciones
+#
+# Hallazgo del 2026-09-13, medido el 2026-09-14. Las citas de
+# `oliver-1989-cap3` mezclan la paginación de la edición DOC/PDF de 2006
+# (la que tiene capa de texto) con la de la tesis impresa de 1989 (el escaneo
+# ProQuest/UMI). No hay desfase constante entre ambas: la impresa intercala
+# páginas de figura y reparte las notas al pie de otra manera.
+#
+# Regla 5: esto NO toca el corpus, ni curiana_polities.py, ni el lexicón. Deja
+# por cita la página DOC, la impresa y el reemplazo propuesto. Fusionar (y
+# decidir la convención) es de Miguel.
+#
+# Cómo leer cada pasaje:
+#   doc / impresa   la página del pasaje en cada edición
+#   convencion      en qué edición está la cita hoy: doc | impresa | ninguna
+#                   (no corresponde a ninguna de las dos) | mixta
+#   apariciones     dónde se cita, con el texto actual y el reemplazo
+#                   propuesto EN PAGINACIÓN IMPRESA; «= (sin cambio)» si ya lo está
+
+meta:
+  recogido: '2026-09-14'
+  estado: sin-fusionar
+  obra: oliver-1989-cap3
+  pregunta: >-
+    ¿En qué edición está cada cita de Oliver 1989 cap. 3 del repo, y cuál es su
+    página en la tesis impresa?
+  ediciones:
+    doc_2006:
+      archivo: "fuentes_caquetios/Chapter 3 Ethnohistory.DOC-comprimido.pdf"
+      paginacion: "cabecera = pdf + 182, medido en las 113 páginas (113/113)"
+      que_es: >-
+        Reedición de Oliver en DOC/PDF (2006). Tiene capa de texto. No es solo
+        re-maquetación: añade material «only in PDF version, 2006» (DOC 244,
+        imagen satelital del Yaracuy; DOC 229 y 295, color añadido; DOC 293,
+        fotos «FOR THE PDF VERSION ONLY») y cambia alguna grafía (ver
+        colaterales, Cayerta → Cayerúa).
+    impresa_1989:
+      archivo: "fuentes_caquetios/Oliver_1989_Tesis_Arawakan_NW_Venezuela_UCL.pdf"
+      paginacion: "impresa = pdf − 27; la cabecera OCR coincide en las 141 páginas leídas (pdf 205-345)"
+      que_es: "El escaneo de la tesis impresa, sin capa de texto."
+  notas_al_pie: >-
+    También cambian de número: la impresa numera las notas corrido desde
+    capítulos anteriores. Nota impresa = nota DOC + 92, medido en n. 3→95,
+    4→96 (el OCR lee «86»; la siguiente es 97 = DOC n. 5), 27→119, 28→120,
+    94→186, 109→201 (a ojo) y 126→218. Toda cita «n. N» hay que decir de qué
+    edición es.
+  metodo: >-
+    (1) Texto DOC por página con pymupdf. (2) OCR tesseract (eng, 200 dpi) del
+    escaneo, pdf 205-345, con la cabecera impresa leída en cada página.
+    (3) Alineación: cada trigrama de palabras de una página DOC que aparece en
+    una sola página del OCR vota por esa página impresa; resultado en
+    `mapa_doc_impresa`. (4) Cada cita se localizó por su frase-ancla en la DOC
+    y en el OCR, por separado. (5) A ojo sobre la imagen: impresas 259, 269 y
+    280. El OCR es pista de localización, no transcripción: ninguna cita
+    textual sale de aquí.
+  convencion_propuesta: >-
+    Citar la IMPRESA (1989) y, si se quiere, anotar la DOC aparte
+    (`pagina_doc`). Por qué: (a) la obra que el repo llama «Oliver 1989» es la
+    tesis; la DOC es de 2006 y no es idéntica. (b) Las otras notas de Oliver ya
+    citan la impresa, porque salen del mismo escaneo:
+    oliver-1989-cap3-vecinos (223-250), la Tabla A-8 (591-592) y
+    paraguana_dos_clanes (275-276). (c) Las notas al pie solo cuadran si se
+    dice la edición. La DOC sigue siendo la mejor para BUSCAR texto: se busca
+    en la DOC y se traduce con el mapa de abajo. Decisión de Miguel.
+  alcance: >-
+    Barrido: 3-mundo/corpus/*.yaml, 3-mundo/*.md (+ ensayos/),
+    3-mundo/asentamientos.yaml, 4-fuentes/oliver-1989-cap3.md, 6-fusion/*.yaml,
+    5-experimento/DISENO_ERA2.md, curiana_sim/curiana_polities.py y
+    curiana_sim/lexicon_toponimos.py (fuente de 2-lengua/toponimos.yaml). NO
+    barrido: las otras notas de 4-fuentes/, 1-plan/, 2-lengua/*.md y los tests.
+
+verificacion:
+  txt: &txt "frase-ancla hallada en el texto DOC (pymupdf) y en el OCR de la impresa"
+  ojo: &ojo "frase-ancla en el texto DOC y en el OCR de la impresa, y mirada a ojo en la imagen de la impresa"
+  vecinos: &vecinos "ancla en el OCR de la impresa (la nota -vecinos ya se minó sobre el escaneo) y equivalente en el texto DOC"
+
+pasajes:
+
+  # ── §3.2 The Western Sphere ──────────────────────────────────────────
+
+  - id: pag-01-avant-guarde
+    ancla: "«The Caquetío settlements were, in all probability, avant guarde posts that traded with the Wanebucán and Coanao» … «undoubtedly originated from Coastal Falcón»"
+    doc: "189"
+    impresa: "188"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-002 referencia, actual: "p. 189", propuesta: "p. 188"}
+      - {archivo: 3-mundo/esfera-de-interaccion.md, donde: "l. 60", actual: "p.189", propuesta: "p.188"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 103", actual: "p. 189", propuesta: "p. 188"}
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 71 y l. 78", actual: "pp. 189, 222 · p. 189", propuesta: "pp. 188, 229 · p. 188"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 373 occidental.asentamiento · l. 386 occidental.economia · l. 412 notas", actual: "p. 189", propuesta: "p. 188"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado fila 189 y §3.2 fila 189", actual: "189", propuesta: "188"}
+
+  - id: pag-02-nota-eirruku
+    ancla: "«The correct Guajiro kinship term is not clan but either eirrüku or apüshi (cf. Goulet 1981: 152)»"
+    doc: "189, n. 4"
+    impresa: "188, n. 96"
+    convencion: ninguna
+    nota: "Se citaba «190 n. 4»: la nota no está en la p. 190 de ninguna de las dos ediciones."
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 114 · l. 674 · l. 685", actual: "190, nota 4", propuesta: "188, n. 96"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 190 n.4", actual: "190 n.4", propuesta: "188 n. 96"}
+
+  - id: pag-03-western-sphere
+    ancla: "«The northeastern Maracaibo sub-area is a strategic locus»"
+    doc: "185 (§3.2 = DOC 185-224)"
+    impresa: "185 (§3.2 = impresa 185-230)"
+    convencion: impresa
+    nota: "El rango «pp. 185-230» de §3.2 ya es el de la impresa: en la DOC §3.3 empieza en la 225."
+    verificado: *txt
+    apariciones:
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 185", actual: "185", propuesta: "= (sin cambio)"}
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 57", actual: "§3.2 (pp. 185-230)", propuesta: "= (sin cambio)"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 339 (comentario)", actual: "§3.2 (pp. 185-230)", propuesta: "= (sin cambio)"}
+
+  - id: pag-04-castellanos-coquibacoa
+    ancla: "«Pedro de Limpias and his men proceeded in the direction of the hills and ranges of the Coquibacoa region (i.e. Macuira, Jarara)» (impresa 190) · «(Castellanos [1589] in Parra 1930a: 284)» (impresa 191)"
+    doc: "191"
+    impresa: "190-191"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 63", actual: "pp. 191, 192, 199, 211", propuesta: "pp. 190-191, 192, 201-202, 217"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 361 occidental.territorio", actual: "pp. 191, 199, 202, 222 (… de la Cosa 1500, p. 192)", propuesta: "pp. 190-191, 201-202, 205, 228 (… de la Cosa 1500, p. 192)"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 396 occidental.guerra", actual: "pp. 191 (Castellanos …) y 227 n. 154", propuesta: "pp. 190-191 (Castellanos …) y 227 n. 154", nota: "mixta: 191 es DOC, 227 n. 154 ya es impresa"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 191", actual: "191", propuesta: "190-191"}
+
+  - id: pag-05-de-la-cosa
+    ancla: "«neither Juan de La Cosa's map (1499/1500) nor the anonymous map of ca. 1534-5 (Figs. 32) show any inscriptions resembling the term guajiro»"
+    doc: "192"
+    impresa: "192"
+    convencion: impresa
+    nota: "Coinciden por casualidad."
+    verificado: *txt
+    apariciones:
+      - {archivo: 6-fusion/lengua_toponimia_quibacoa.yaml, donde: "l. 132", actual: "p. 192", propuesta: "= (sin cambio)"}
+      - {archivo: curiana_sim/lexicon_toponimos.py, donde: "l. 1417 (→ 2-lengua/toponimos.yaml l. 1137)", actual: "p. 192", propuesta: "= (sin cambio)"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 192", actual: "192", propuesta: "= (sin cambio)"}
+
+  - id: pag-06-martin-1534
+    ancla: "«eighty leagues west of Coro, all settled by caquetios» y «In Coquibacoa and in Cabo de la Vela … settled by Coanuao [Coanao, Caonao] and Caquetío Indians» (impresa 201) · «the Caquetío were settled in two areas of the Guajira peninsula» (impresa 202)"
+    doc: "199"
+    impresa: "201-202"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 199", actual: "199", propuesta: "201-202"}
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 63", actual: "199", propuesta: "201-202", nota: "misma línea que pag-04"}
+
+  - id: pag-07-cronologia-1200-1400
+    ancla: "«peaked in A.D. 1400» (llamada a nota) · «the archaeology of the Guajira peninsula is as yet unknown» (nota)"
+    doc: "200, n. 27 y 28"
+    impresa: "203, n. 119 y 120"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 73", actual: "p. 200", propuesta: "p. 203"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 373 occidental.asentamiento", actual: "pp. 189, 200, 202, 222", propuesta: "pp. 188, 203, 205, 228"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 407 occidental.ceramica", actual: "pp. 200 y 292", propuesta: "pp. 203 y 309"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 200", actual: "200 … (n. 28) … (n. 27)", propuesta: "203 … (n. 120) … (n. 119)"}
+
+  - id: pag-08-juruara
+    ancla: "«very little is known about the culture of the Juruara Caquetío» · «these are within the best agricultural lowlands locally available»"
+    doc: "202"
+    impresa: "205"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 69", actual: "p. 202", propuesta: "p. 205"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 361 y l. 373", actual: "202", propuesta: "205"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 202", actual: "202", propuesta: "205"}
+
+  - id: pag-09-paragua-nil-coria-na
+    ancla: "«we find morphemes in village names --such as Paragua-nil, and Coria-na-- which are suspiciously Caquetío»"
+    doc: "207"
+    impresa: "211"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 82", actual: "p. 207", propuesta: "p. 211"}
+      - {archivo: 6-fusion/censo_ana_esteves_109.yaml, donde: "l. 172 y l. 224", actual: "p. 207", propuesta: "p. 211"}
+      - {archivo: 2-lengua/morfemas.yaml, donde: "l. 168", actual: "p. 207", propuesta: "p. 211"}
+      - {archivo: curiana_sim/lexicon_toponimos.py, donde: "l. 1301 · l. 1378 (pagina=207) · l. 2802 (→ 2-lengua/toponimos.yaml l. 1035 al regenerar)", actual: "p. 207 · pagina=207", propuesta: "p. 211 · pagina=211"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 207", actual: "207", propuesta: "211"}
+
+  - id: pag-10-piedras-verdes
+    ancla: "«Quinquevacoa [Coquibacoa] en la parte de tierra firme donde están las piedras verdes» (Otte 1963: 3)"
+    doc: "211"
+    impresa: "217"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 6-fusion/lengua_toponimia_quibacoa.yaml, donde: "l. 130", actual: "p. 211", propuesta: "p. 217"}
+      - {archivo: curiana_sim/lexicon_toponimos.py, donde: "l. 1415 (→ 2-lengua/toponimos.yaml l. 1137)", actual: "p. 211", propuesta: "p. 217"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 386 occidental.economia", actual: "pp. 189, 211, 222, 227-229", propuesta: "pp. 188, 217, 229, 227-229", nota: "mixta: 227-229 ya es impresa"}
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 63", actual: "211", propuesta: "217", nota: "misma línea que pag-04"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 211", actual: "211", propuesta: "217"}
+
+  - id: pag-11-balance-esfera
+    ancla: "«frontier settlements or outposts in the Northern Guajira» (impresa 228) · «shunned any such relationships with Onoto, Kuis'na and Guajiro Indians» y «not one single reference» (impresa 229)"
+    doc: "222"
+    impresa: "228-229"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 68 · l. 71", actual: "p. 222 · pp. 189, 222", propuesta: "p. 228 · pp. 188, 229"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 361 territorio · l. 373 asentamiento · l. 386 economia", actual: "222", propuesta: "228 · 228 · 229"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 222", actual: "222", propuesta: "228-229"}
+
+  - id: pag-12-caribes-3-2-4
+    ancla: "«A notable exception to this is the Caquetío, who were always peaceful» e «the trade is highly selective between groups» (impresa 227) · «Pérez de Tolosa [1546] in Arellano 1964: 6-7» (impresa 228) · Durbin 1977 (impresa 224-225)"
+    doc: "218-222"
+    impresa: "223-230"
+    convencion: impresa
+    nota: >-
+      Todo lo que cita la obra `oliver-1989-cap3-vecinos` ya está en la impresa
+      y cuadra. Su «n. 154» es de la impresa (= DOC n. 62 por la regla +92; la
+      llamada DOC no se leyó directamente).
+    verificado: *vecinos
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: "geografia_politica-009 … -013 (procedencia oliver-1989-cap3-vecinos)", actual: "224-229", propuesta: "= (sin cambio)"}
+      - {archivo: 3-mundo/etnias.yaml, donde: "l. 137 · l. 177 · l. 197 · l. 221 · l. 243", actual: "226-229", propuesta: "= (sin cambio)"}
+      - {archivo: 6-fusion/oliver_324_caribes.yaml, donde: "todas las procedencias", actual: "223-230", propuesta: "= (sin cambio)"}
+      - {archivo: 6-fusion/petroglifos_y_manaure.yaml, donde: "l. 371", actual: "pp. impresas 223-230 = pdf 250-257", propuesta: "= (sin cambio)"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 386 · l. 397", actual: "227-229 · 227 n. 154", propuesta: "= (sin cambio)"}
+
+  # ── §3.5 Síntesis histórica de la conquista ─────────────────────────
+
+  - id: pag-13-chichibacoa
+    ancla: "«Today there is in the northern Guajira area a cape called Chichibacoa, a term that suspiciously sounds like Coquibacoa, except for a /k/::/ch/ sound shift»"
+    doc: "249, n. 94"
+    impresa: "257, n. 186"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 84", actual: "p. 249 n. 94", propuesta: "p. 257 n. 186"}
+      - {archivo: 6-fusion/lengua_toponimia_quibacoa.yaml, donde: "l. 134", actual: "p. 249 n. 94", propuesta: "p. 257 n. 186"}
+      - {archivo: curiana_sim/lexicon_toponimos.py, donde: "l. 1439 (pagina=249)", actual: "pagina=249", propuesta: "pagina=257"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 249 n. 94", actual: "249 n. 94", propuesta: "257 n. 186"}
+
+  - id: pag-14-san-bartolome
+    ancla: "«Puerto de San Bartolomé, which historian Ramos (1976:88) has correctly identified as being located in the Golfete» (impresa 256; Navarrete 1829 [3]: 218-219 en la nota, 256-257)"
+    doc: "249 (y 202, donde se adelanta con Ramos Pérez 1976: 88)"
+    impresa: "256 (y 206)"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-006 referencia, actual: "p. 249", propuesta: "p. 256 (y p. 206)"}
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 216 (San Bartolomé) procedencia.detalle", actual: "p. 249", propuesta: "p. 256"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 160", actual: "p. 249", propuesta: "p. 256"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 249", actual: "249", propuesta: "256"}
+
+  - id: pag-15-arubanas
+    ancla: "«whose Indians were referred as Arubanas in the mid XVIIIth century (Altoaguirre [1768] 1908:192)»"
+    doc: "249"
+    impresa: "256"
+    convencion: impresa
+    verificado: *txt
+    apariciones:
+      - {archivo: 6-fusion/toponimia_paraguana_miguel.yaml, donde: "l. 82 (→ toponimos_por_fuente.yaml l. 3559, generado)", actual: "p. 256", propuesta: "= (sin cambio)"}
+
+  - id: pag-16-pacto-1527-todariquiba
+    ancla: "«between Ampíes and the main diao or great cacique, Manaure» · «to resettle near what is today Coro (a village called Todariquiba)» · «This was accorded in 1527»"
+    doc: "251"
+    impresa: "259"
+    convencion: doc
+    verificado: *ojo
+    apariciones:
+      - {archivo: 3-mundo/corpus/genealogia.yaml, donde: "l. 93 Manaure.titulo", actual: "p.251", propuesta: "p.259"}
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-003 referencia, actual: "p. 251 (pacto de 1527)", propuesta: "p. 259 (pacto de 1527)"}
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-034 referencia, actual: "p. 251", propuesta: "p. 259"}
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-037 referencia, actual: "p.251", propuesta: "p.259"}
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 88 (Todariquiba) procedencia.detalle", actual: "pp. 251 (pacto de 1527), 261-262 (registros Welser …)", propuesta: "pp. 259 (pacto de 1527), 269 (ubicación en debate), 271 (registros Welser …)"}
+      - {archivo: 3-mundo/esfera-de-interaccion.md, donde: "l. 181-182", actual: "pp.251, 261-262", propuesta: "pp. 259, 269, 271", nota: "el pasaje cita la carta de Bastidas: está en la 269, ver pag-17"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 62 · l. 111", actual: "p. 251", propuesta: "p. 259"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 251", actual: "251", propuesta: "259"}
+
+  - id: pag-17-carta-bastidas-1538
+    ancla: "«Bishop Rodrigo de Bastidas, in 1538, writing to Charles V, mentioned the Caquetío villages of Guaibacoa, Cumarebo, Tomodore, Caujarao, Zazárida, Capatárida, and Todariquiba»"
+    doc: "258-259"
+    impresa: "269"
+    convencion: ninguna
+    nota: >-
+      ⚠️ No es un problema de edición: la carta de Bastidas se citaba en la
+      «p. 251», que es la del pacto de 1527 (pag-16). La lista de 1538 está en
+      DOC 258-259 = impresa 269. Pasa en los cinco nodos de asentamientos y en
+      los tres topónimos que heredan esa cita.
+    verificado: *ojo
+    apariciones:
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 113", actual: "la lista de 1538 en Oliver 1989 cap.3 p.251", propuesta: "… p.269"}
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 132 guaibacoa · l. 151 tomodore · l. 165 caujarao · l. 180 zazarida · l. 195 capatarida (procedencia.detalle)", actual: "p. 251, carta de Rodrigo de Bastidas 1538", propuesta: "p. 269, carta de Rodrigo de Bastidas 1538"}
+      - {archivo: curiana_sim/lexicon_toponimos.py, donde: "l. 2344 zazarida · l. 2348 tomodore · l. 2350 capatarida (→ 2-lengua/toponimos.yaml l. 2303, 2314 y toponimos_por_fuente.yaml l. 1505, 1522 al regenerar)", actual: "carta de Bastidas 1538 vía Oliver p. 251", propuesta: "… vía Oliver p. 269"}
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-003 referencia, actual: "carta de Rodrigo de Bastidas 1538 (sin página)", propuesta: "carta de Rodrigo de Bastidas 1538, p. 269"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 113-116 (bajo «p. 251»)", actual: "sin página propia", propuesta: "p. 269"}
+
+  - id: pag-18-ubicacion-todariquiba
+    ancla: "«Todariquiba's location is still a point of debate (Ramos 1978), but it is said to be about 1 or so leagues from Coro» · «the 4.5 -6 Kilometers suggested by the chronicles»"
+    doc: "259"
+    impresa: "269"
+    convencion: ninguna
+    nota: "Hoy se cita sin página, colgada de la 251."
+    verificado: *ojo
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-003 contenido, actual: "sin página", propuesta: "p. 269"}
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 81-85 (Todariquiba) ubicacion", actual: "sin página", propuesta: "p. 269"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 118-120", actual: "sin página", propuesta: "p. 269"}
+
+  - id: pag-19-registros-welser
+    ancla: "«Todariquiba has been mentioned many times (1977:94, 179-80, 238-40, 451)» (Ponce y Vaccari)"
+    doc: "261"
+    impresa: "271"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-003 referencia, actual: "pp. 261-262", propuesta: "p. 271"}
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 88", actual: "261-262", propuesta: "271", nota: "misma línea que pag-16"}
+      - {archivo: 3-mundo/esfera-de-interaccion.md, donde: "l. 182", actual: "261-262", propuesta: "271", nota: "misma línea que pag-16"}
+
+  - id: pag-20-ballesteros-400
+    ancla: "«[but now in 1550] I found in six villages of these Caquetío around Coro [left], of [only] up to four hundred Indians» (Ballesteros [1550] in Bécker 1950 [1]: 666, 688)"
+    doc: "253"
+    impresa: "261-262"
+    convencion: ninguna
+    nota: >-
+      La «p. 262» no es la DOC (253). Coincide con el final del pasaje en la
+      impresa, pero lo más probable es que se arrastrara del buco (pag-21, DOC
+      262-263).
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-005 referencia, actual: "p. 262", propuesta: "pp. 261-262"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 148-149", actual: "sin página", propuesta: "pp. 261-262"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 262-263 («400 hacia 1550»)", actual: "262-263", propuesta: "261-262 (y 273-274 para el buco)"}
+
+  - id: pag-21-ballesteros-buco
+    ancla: "«four or five thousand Indians to repair it. In the days when Coro and its surrounding area had fourteen or fifteen thousand Indians» (impresa 273) · «suggest that more than 30 villages were involved» (impresa 274)"
+    doc: "262-263"
+    impresa: "273-274"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/geografia_politica.yaml, donde: geografia_politica-004 referencia, actual: "pp. 262-263", propuesta: "pp. 273-274"}
+      - {archivo: 3-mundo/esfera-de-interaccion.md, donde: "l. 203", actual: "pp.262-263", propuesta: "pp.273-274"}
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 137-138", actual: "pp. 262-263", propuesta: "pp. 273-274"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 262-263", actual: "262-263", propuesta: "273-274"}
+
+  # ── §3.6 The Caquetío of Coastal Falcón ─────────────────────────────
+
+  - id: pag-22-palafitos
+    ancla: "«the pylon-dwelling structures described by Vespucci as located in the Puerto de San Bartolomé. These structures, characteristic of the contemporary Paraujano, probably belonged to sp[ecialized …]»"
+    doc: "263"
+    impresa: "274"
+    convencion: ninguna
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 165", actual: "~p. 265", propuesta: "p. 274"}
+
+  - id: pag-23-maloca-40-50
+    ancla: "«a fairly large maloca capable of housing between 40 and 50 individuals (Curaçao)»"
+    doc: "264"
+    impresa: "275"
+    convencion: ninguna
+    nota: >-
+      ⚠️ Contenido, no solo página: la maloca de 40-50 es de CURAZAO (Vespucio),
+      extendida por Oliver al caquetío de tierra firme. La bitácora (l. 54) y el
+      ensayo 01 (l. 676-677) la ponen en Barquisimeto/Yaracuy. El ensayo 05
+      (l. 164) la sitúa bien.
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/ensayos/05_geografia_politica_y_sucesion.md, donde: "l. 164", actual: "sin página", propuesta: "p. 275"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 268-270", actual: "268-270 (malocas de 40-50 en Barquisimeto/Yaracuy)", propuesta: "275 (maloca de 40-50, Curazao)"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 676-677", actual: "269-270 (malocas de familia extendida en Barquisimeto/Yaracuy)", propuesta: "275 (Curazao); las viviendas de 5-8 familias del Yaracuy están en la 293 (DOC 278)"}
+
+  - id: pag-24-dos-clanes-paraguana
+    ancla: "«the Amuayes which controlled the southern part and the Guaranaos who controlled the northern part» y «quite secretive about their most ritual/sacred spaces» (impresa 275) · el documento de Delmonte y «integrated at a higher level of organization» (impresa 276)"
+    doc: "264-265"
+    impresa: "275-276"
+    convencion: impresa
+    nota: "Minado el 2026-09-01 sobre el escaneo y verificado a ojo entonces. Todo cuadra."
+    verificado: *txt
+    apariciones:
+      - {archivo: 6-fusion/paraguana_dos_clanes.yaml, donde: "l. 8 y las cinco procedencias", actual: "275 · 276", propuesta: "= (sin cambio)"}
+      - {archivo: 5-experimento/DISENO_ERA2.md, donde: "l. 42 · l. 44 · l. 45", actual: "pp. 275-276 · p. 276 · p. 275", propuesta: "= (sin cambio)"}
+      - {archivo: 6-fusion/decisiones_tanda_2026-09-01.yaml, donde: "l. 234", actual: "pp. 275-276", propuesta: "= (sin cambio)"}
+      - {archivo: 6-fusion/toponimia_paraguana_miguel.yaml, donde: "l. 201", actual: "p. 275", propuesta: "= (sin cambio)"}
+      - {archivo: curiana_sim/lexicon_toponimos.py, donde: "l. 580 · l. 1892 · l. 1912 · l. 2051 · l. 2073", actual: "275 · 275-276 · 276", propuesta: "= (sin cambio)"}
+      - {archivo: 3-mundo/asentamientos.yaml, donde: "l. 616 · l. 658", actual: "p. 276", propuesta: "= (sin cambio)"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 275-276", actual: "275-276", propuesta: "= (sin cambio)"}
+
+  - id: pag-25-cayerua-coyarna
+    ancla: "«The village of Cayerúa or \"Coyarna\", still extant in Paraguaná, is mentioned as well»"
+    doc: "261"
+    impresa: "271"
+    convencion: ninguna
+    nota: >-
+      Una sola cita junta dos pasajes. «still extant» (Cayerúa o «Coyarna»)
+      está en la impresa 271. El primer asiento de los Amuayes está en la 276
+      (pag-24). Grafía, según el OCR (sin mirar a ojo): la impresa 276 escribe
+      «Cayerta» («Cayarba [Cayerta]», «Cayertia» en la cita de González Batista
+      1984); la DOC 264 escribe «Cayerúa» en el mismo pasaje.
+    verificado: *txt
+    apariciones:
+      - {archivo: 6-fusion/toponimia_paraguana_miguel.yaml, donde: "l. 108", actual: "Cayerda/Cayerta/\"Coyarna\" en Oliver p. 276, que la da como \"still extant\"", propuesta: "p. 271 (Cayerúa o «Coyarna», still extant) y p. 276 (Cayerta, primer asiento de los Amuayes)"}
+
+  - id: pag-26-sucesion-bastardia
+    ancla: "«the Crown recognized Don Sancho Uriacoa … succeeded by his son Don Luis Caguallo, who in 1636 \"abdicated\" in favor of his brother Don Luis Martínez Manaure» (impresa 265-266) · «The Indians of Santa Ana and Moruy (Paraguaná) were dead set against Martínez Manaure's claims because of the question of bastardy» y «enough clues … purity of blood, primogeniture … survival of tradition» (impresa 266)"
+    doc: "255-256"
+    impresa: "265-266"
+    convencion: mixta
+    nota: >-
+      La «corrección» del 2026-09-01 (255-256 → 265-266) fue un CAMBIO DE
+      EDICIÓN, no la corrección de un error: 255-256 era la DOC y era correcta
+      en la DOC. Lo que se miró entonces a ojo (la 255 es la Fig. 40, la 256 el
+      viaje de Ojeda) es la impresa. El corpus quedó en la impresa; el ensayo 01,
+      en la DOC.
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: "parentesco-001 referencia (la parte 265-266)", actual: "pp. 265-266", propuesta: "= (sin cambio)"}
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-003 referencia, actual: "pp. 265-266", propuesta: "= (sin cambio)"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 265-266", actual: "265-266", propuesta: "= (sin cambio)"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 73 · l. 674 · l. 686", actual: "255-256", propuesta: "265-266"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 75", actual: "256", propuesta: "266"}
+
+  - id: pag-27-manaure-gran-chaman
+    ancla: "«his extraordinary capabilities as a great shaman, who could control and predict natural phenomena» y «Manaure was always carried in hammocks» (impresa 278) · «whom Ampíes noted to have power over natural elements» (impresa 269, DOC 258)"
+    doc: "266-267 (y 258)"
+    impresa: "278 (y 269)"
+    convencion: ninguna
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 157 costera.liderazgo", actual: "pp. 251 y ss., 279", propuesta: "pp. 269, 278, 294"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Religión, «[Costa] Manaure sí lo era»", actual: "p. ~251 y ss.", propuesta: "p. 278 (y 269)"}
+
+  - id: pag-28-poligamia-manaure
+    ancla: "«only Manaure is unambiguously cited to be polygamous» · «Polygamy involves a much broader and extensive kinship network» (impresa 280)"
+    doc: "268"
+    impresa: "280"
+    convencion: ninguna
+    nota: "Se citaba 260-261 / 260-262: no es ninguna de las dos ediciones (DOC 268 = impresa 280)."
+    verificado: *ojo
+    apariciones:
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-015 referencia, actual: "pp. 260-261", propuesta: "pp. 280-281"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 87 · l. 675", actual: "260-261 · 260-262", propuesta: "280-281"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 260-262", actual: "260-262", propuesta: "280-281"}
+
+  - id: pag-29-hijas-de-caribes
+    ancla: "«confederated and married with daughters of the caribes» (Probanza de 1526, en Ramos Pérez 1978: 236-237)"
+    doc: "269"
+    impresa: "281"
+    convencion: ninguna
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: "parentesco-015 contenido", actual: "bajo pp. 260-261", propuesta: "p. 281", nota: "misma referencia que pag-28"}
+
+  - id: pag-30-viuda-carnal-o-clasificatorio
+    ancla: "«married his father's wife; that is, his mother (carnal or classificatory?)» y la hija casada con un principal de Hurihurebo (impresa 280) · «was to set up residence in the cacique's (her son, Don Juan) village» (impresa 281)"
+    doc: "268"
+    impresa: "280-281"
+    convencion: ninguna
+    nota: "Se citaba «p. 262»: no es ninguna de las dos ediciones."
+    verificado: *ojo
+    apariciones:
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-002 referencia, actual: "p. 262", propuesta: "pp. 280-281"}
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-004 referencia, actual: "p. 262", propuesta: "p. 280"}
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-016 referencia, actual: "pp. 261-262", propuesta: "pp. 280-281"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 65 · l. 548", actual: "262", propuesta: "280"}
+
+  - id: pag-31-oficio-heredado
+    ancla: "textual: «The office of chief or diao was in the XVIth century inherited by the son of the diao» (§3.11, impresa 305) · el caso: «Don Alexandre, who inherited his father's chiefdom upon retiring» (impresa 280)"
+    doc: "289 (textual) · 268 (el caso)"
+    impresa: "305 (textual) · 280 (el caso)"
+    convencion: ninguna
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: "parentesco-001 referencia (la parte 268)", actual: "pp. 265-266, 268 (\"the office of chief …\")", propuesta: "pp. 265-266, 280, 305 (\"the office of chief …\" está en la 305)"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 676", actual: "268-269 (oficio heredado por el hijo del diao)", propuesta: "280, 305"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 268-270", actual: "268-270", propuesta: "280, 305 (y 275 para la maloca, pag-23)"}
+
+  # ── §3.7-3.8 Barquisimeto y Yaracuy; la comparación ──────────────────
+
+  - id: pag-32-comparacion-3-8
+    ancla: "«explains absolutely nothing, and blurs the differences that make a difference» · «a single paramount chief, who also acts as a great shaman. Villages of the Coastal Caquetío polity are of \"medium\" size (ca. 200 to 500 individuals), and village settlements are more dispersed» · «the boratio described by the chronicle of 1579 … lived apart»"
+    doc: "278-279"
+    impresa: "294"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/polities-caquetias.md, donde: "l. 15", actual: "p. 278", propuesta: "p. 294"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 160 costera.asentamiento · l. 163 costera.demografia · l. 192 costera.religion", actual: "p. 279", propuesta: "p. 294"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 526 (comentario) · l. 544 (aviso)", actual: "p.279", propuesta: "p.294"}
+
+  - id: pag-33-jefe-de-paz-y-de-guerra
+    ancla: "«two kinds of leaders among the Barquisimeto Caquetío: A Peace Chief and a War Chief» (impresa 290) · «antagonistic to those of the War Chief» y «Big Man» (impresa 291) · «no lord that governs them» (impresa 292)"
+    doc: "276-277"
+    impresa: "290-292"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 221 barquisimeto.liderazgo", actual: "pp. 276-279", propuesta: "pp. 290-292"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Guerra, «Doble jefatura»", actual: "pp. 276-279", propuesta: "pp. 290-292"}
+
+  - id: pag-34-documento-1579
+    ancla: "«dicen que aquella quieren dar al sol por mujer» (impresa 290) · «shaman specialists who, contrary to the Coastal Caquetío boratio, did not live within the village» (impresa 289)"
+    doc: "275-276"
+    impresa: "289-290"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 252 barquisimeto.religion", actual: "pp. 276-279 (documento de 1579 …)", propuesta: "pp. 289-290, 294 (documento de 1579 …)"}
+
+  - id: pag-35-aldeas-barquisimeto
+    ancla: "«tightly clustered (up to 23), and with an estimated 4,000 individuals per village. Villages were well defended (\"fortificadas\")» y «(Federmann [1557] 1958: 66-67)» (impresa 292) · «The 23 villages, according to Federmann» (impresa 287, DOC 273)"
+    doc: "277-278 (y 273)"
+    impresa: "292 (y 287)"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 225 barquisimeto.asentamiento", actual: "pp. 277-279 (Federmann [1557] 1958: 66-67)", propuesta: "p. 292 (y 287) (Federmann [1557] 1958: 66-67)"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 228 barquisimeto.demografia", actual: "p. 277", propuesta: "p. 292"}
+
+  - id: pag-36-economia-barquisimeto
+    ancla: "sal con los enemigos: «such as the Xaguas with whom they trade salt, they are, as I said, also their enemies» (§3.3.1, impresa 247) · «gold could to be obtained from the Nirgüa-Buria highlands, while the salt was probably obtained via Yaracuy Valley» (§3.11, impresa 306) · «redistribute the most wealth, in the form of maize, maçato, manioc and legumes» (impresa 290-291)"
+    doc: "240 · 290 · 276"
+    impresa: "247 · 306 · 290-291"
+    convencion: ninguna
+    nota: "Dos de los tres datos no están en «276-278» de ninguna edición: están en §3.3.1 y en §3.11."
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 235 barquisimeto.economia", actual: "pp. 276-278", propuesta: "pp. 247, 290-291, 306"}
+
+  - id: pag-37-ciclo-paz-guerra
+    ancla: "«any population pressures generated by growth … Thus, a cycle of peace and warfare» (impresa 293) · «the attrition of agricultural space» (impresa 292)"
+    doc: "277-278"
+    impresa: "292-293"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 243 barquisimeto.guerra", actual: "p. 278", propuesta: "pp. 292-293"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Guerra, «El ciclo de paz y guerra tiene motor agrícola»", actual: "p. 278", propuesta: "pp. 292-293"}
+
+  - id: pag-38-yaracuy
+    ancla: "«(Federmann [1557] 1958: 108)» y «communications between the Llanos and the Caribbean Coast» (impresa 293) · «The villages in Yaracuy were of variable density» (impresa 292)"
+    doc: "278"
+    impresa: "292-293"
+    convencion: doc
+    nota: "«tan poblado como Barquisimeto» (l. 287) no se localizó por frase; la DOC 278 entera cae en 292-293."
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 277 yaracuy.liderazgo · l. 292 economia · l. 296 guerra", actual: "p. 278", propuesta: "p. 293"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 283 yaracuy.asentamiento · l. 287 demografia", actual: "p. 278", propuesta: "pp. 292-293"}
+
+  # ── §3.9-3.11 Llanos y conclusiones ─────────────────────────────────
+
+  - id: pag-39-itabana-esclavos
+    ancla: "nota: «the Caquetío of the Cojedes-LLanos area appear to have institutionalized the slave raiding type of warfare» · «Federmann ([1557] 1958:94) asked the cacique»"
+    doc: "277, n. 126"
+    impresa: "291-292, n. 218 (la nota empieza en la 291 y sigue en la 292)"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 323 llanos.economia · l. 329 llanos.guerra", actual: "n. 126, p. 277", propuesta: "n. 218, pp. 291-292"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Guerra, «Guerra de captura de esclavos»", actual: "n. 126, p. 277", propuesta: "n. 218, pp. 291-292"}
+
+  - id: pag-40-diao-curahamara-itabana
+    ancla: "«as it is clear from the behavior of the diao of Curahamara and Itabana. None of the chiefs were characterized as having also shamanistic powers»"
+    doc: "291"
+    impresa: "308"
+    convencion: ninguna
+    nota: "Hoy sin página."
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 317 llanos.liderazgo · l. 332 llanos.religion", actual: "sin página", propuesta: "p. 308"}
+
+  - id: pag-41-ceramica-dabajurana
+    ancla: "«the Coastal Caquetío distribution in time and space is precisely congruent with the distribution of the Dabajuran Sub-Tradition» · «which can only have been derived from the Ranchería area»"
+    doc: "292"
+    impresa: "309"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 200 costera.ceramica · l. 258 barquisimeto.ceramica", actual: "sin página", propuesta: "p. 309"}
+      - {archivo: curiana_sim/curiana_polities.py, donde: "l. 407 occidental.ceramica", actual: "pp. 200 y 292", propuesta: "pp. 203 y 309", nota: "misma línea que pag-07"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, fila 292", actual: "292", propuesta: "309"}
+
+  - id: pag-42-tamude
+    ancla: "«the kinship term mude (roughly translated as: \"cousin\") of the Achagua was incorporated in tamude»"
+    doc: "287"
+    impresa: "303-304"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/corpus/parentesco.yaml, donde: parentesco-021 referencia, actual: "pp. 287-288", propuesta: "pp. 303-304"}
+      - {archivo: 3-mundo/ensayos/01_familia_caquetia.md, donde: "l. 295 · l. 688", actual: "287-288", propuesta: "303-304"}
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§Qué ha dado, fila 287-288", actual: "287-288", propuesta: "303-304"}
+
+  # ── Notas, figuras y la propia bitácora ─────────────────────────────
+
+  - id: pag-43-nota-kakitho
+    ancla: "«the term Caquetío /kaketío/ is cognate to the Lokono term kakitho meaning 'person, people'»"
+    doc: "186, n. 3"
+    impresa: "186, n. 95"
+    convencion: doc
+    verificado: *txt
+    apariciones:
+      - {archivo: 3-mundo/esfera-de-interaccion.md, donde: "l. 19", actual: "nota al pie 3", propuesta: "nota al pie 95 (p. 186)"}
+
+  - id: pag-44-figura-43-sarinao
+    ancla: "«Figure 43: Pola Urbina, of the caserío of Sarinao in Paraguaná»"
+    doc: "294"
+    impresa: "311"
+    convencion: impresa
+    nota: "El número de figura es el mismo en las dos ediciones; solo cambia la página."
+    verificado: *txt
+    apariciones:
+      - {archivo: 6-fusion/pendientes_en_alvarado_y_arcaya.yaml, donde: "l. 475", actual: "fig. 43", propuesta: "= (sin cambio; si se pagina, p. 311)"}
+
+  - id: pag-45-desfase-de-la-bitacora
+    ancla: "la nota decía «Página impresa = pdf + 182»"
+    doc: "cabecera = pdf + 182"
+    impresa: "sin desfase constante: ver mapa_doc_impresa"
+    convencion: doc
+    nota: "Corregido en la bitácora en esta misma sesión: es la única edición que hace esta propuesta, porque la bitácora no es canon."
+    verificado: "113/113 páginas DOC y 141/141 páginas del escaneo"
+    apariciones:
+      - {archivo: 4-fuentes/oliver-1989-cap3.md, donde: "§3.2, «Qué se preguntó»", actual: "Página impresa = pdf + 182.", propuesta: "cabecera DOC = pdf + 182; la impresa, por el mapa"}
+
+colaterales:
+  - id: col-01-confederacion-no-es-costera
+    que: >-
+      ⚠️ Regla 4. costera.economia (curiana_polities.py l. 165-170) atribuye a
+      Oliver una «red de alianzas sostenida en comercio: cuentas de concha, sal
+      y azabache» y una «confederación por comercio». El único pasaje con esos
+      tres bienes es sobre los JIRAJARANOS, y dice lo contrario:
+      «none of the Jirajaran villages in this region had developed a
+      "confederation" … They did develop a system of alliances on the basis of
+      trade and exchange of goods (e.g. shell-beads, salt, azabache)» (DOC 238 =
+      impresa 245). Y «confederated … with the Xaguas with whom they trade salt»
+      es de Barquisimeto (DOC 240 = impresa 247). La bitácora §Economía
+      («[Costa/Guajira] Red de alianzas comercial») y horizonte-de-contacto.md
+      l. 46 arrastran lo mismo. No se ha buscado otro pasaje costero equivalente:
+      queda para quien fusione.
+  - id: col-02-maloca-de-curazao
+    que: "Ver pag-23: la maloca de 40-50 es de Curazao, no de Barquisimeto/Yaracuy."
+  - id: col-03-cayerta-cayerua
+    que: >-
+      La edición 2006 cambia la grafía del primer asiento de los Amuayes: la
+      impresa (276) trae «Cayerta», y «Cayarba [Cayerta]» / «Cayertia» en la
+      cita de González Batista 1984; la DOC (264) escribe «Cayerúa». Para la
+      campaña de topónimos: «Cayerúa» en la DOC 264 puede ser normalización de
+      Oliver en 2006, no la forma de Delmonte. Leído en OCR; mirar la imagen de
+      la impresa 276 antes de usarlo.
+  - id: col-04-carta-bastidas
+    que: "Ver pag-17: la carta de Bastidas se localizaba en la página del pacto de 1527; afecta a cinco nodos y tres topónimos."
+  - id: col-05-generados
+    que: >-
+      2-lengua/toponimos.yaml y 6-fusion/toponimos_por_fuente.yaml son
+      generados: sus páginas se corrigen en curiana_sim/lexicon_toponimos.py (y
+      en toponimia_paraguana_miguel.yaml) y se regenera. No editarlos a mano
+      (trampa de CLAUDE.md).
+
+mapa_doc_impresa:
+  nota: >-
+    Generado por alineación de trigramas DOC ↔ OCR del escaneo (ver meta.metodo).
+    `impresas` son las páginas impresas con apoyo real (≥ 5 trigramas únicos o
+    ≥ 5 % de los encontrados). La primera suele ser el cuerpo; una página
+    impresa lejana al final suele ser una nota al pie, que la impresa pone en la
+    página de su llamada. `cobertura` es la fracción de trigramas de la página
+    DOC hallados en una sola página del OCR: por debajo de 0,3 la página es
+    figura, mapa o tabla. Para citar un pasaje concreto se busca su frase, no se
+    lee la página DOC entera.
+  paginas:
+    - {doc: 183, impresas: [183], cobertura: 0.76}
+    - {doc: 184, impresas: [], cobertura: 0.0, nota: "Figure 28: XVIth Century Ethnic Distribution in Western Venezuela"}
+    - {doc: 185, impresas: [185, 186], cobertura: 0.71}
+    - {doc: 186, impresas: [186], cobertura: 0.7}
+    - {doc: 187, impresas: [], cobertura: 0.0, nota: "sin texto en la DOC (figura o imagen)"}
+    - {doc: 188, impresas: [], cobertura: 0.0, nota: "sin texto en la DOC (figura o imagen)"}
+    - {doc: 189, impresas: [188, 189], cobertura: 0.74}
+    - {doc: 190, impresas: [189, 190], cobertura: 0.76}
+    - {doc: 191, impresas: [190, 191, 192], cobertura: 0.75}
+    - {doc: 192, impresas: [192, 193], cobertura: 0.71}
+    - {doc: 193, impresas: [193, 194], cobertura: 0.75}
+    - {doc: 194, impresas: [194, 195, 196], cobertura: 0.81}
+    - {doc: 195, impresas: [196, 198], cobertura: 0.79}
+    - {doc: 196, impresas: [197], cobertura: 0.06, nota: "Figure 30: XVIth Century Ethnic Distribution in the Guajira Peninsula Area"}
+    - {doc: 197, impresas: [198, 199], cobertura: 0.75}
+    - {doc: 198, impresas: [199, 200], cobertura: 0.72}
+    - {doc: 199, impresas: [201, 202], cobertura: 0.7}
+    - {doc: 200, impresas: [202, 203], cobertura: 0.71}
+    - {doc: 201, impresas: [203, 204, 205], cobertura: 0.76}
+    - {doc: 202, impresas: [205, 206], cobertura: 0.71}
+    - {doc: 203, impresas: [206, 207], cobertura: 0.68}
+    - {doc: 204, impresas: [207, 209], cobertura: 0.73}
+    - {doc: 205, impresas: [208], cobertura: 0.11, nota: "Figure 31: XVIth Century Ethnic Distribution in the Province of Santa Marta, Co"}
+    - {doc: 206, impresas: [209, 210], cobertura: 0.77}
+    - {doc: 207, impresas: [210, 211, 212], cobertura: 0.8}
+    - {doc: 208, impresas: [212, 213], cobertura: 0.75}
+    - {doc: 209, impresas: [213, 214], cobertura: 0.7}
+    - {doc: 210, impresas: [214, 215], cobertura: 0.77}
+    - {doc: 211, impresas: [216, 217], cobertura: 0.76}
+    - {doc: 212, impresas: [217, 218], cobertura: 0.75}
+    - {doc: 213, impresas: [218, 219], cobertura: 0.74}
+    - {doc: 214, impresas: [220, 223], cobertura: 0.77}
+    - {doc: 215, impresas: [223], cobertura: 0.59}
+    - {doc: 216, impresas: [221, 311], cobertura: 0.1, nota: "Figure 32: Anonymous Map of the Maracaibo Basin Area, ca"}
+    - {doc: 217, impresas: [222], cobertura: 0.15, nota: "Figure 33: Anonymous Map of Western Venezuela, ca"}
+    - {doc: 218, impresas: [223, 224], cobertura: 0.77}
+    - {doc: 219, impresas: [224, 225], cobertura: 0.76}
+    - {doc: 220, impresas: [225, 226], cobertura: 0.77}
+    - {doc: 221, impresas: [227, 228], cobertura: 0.61}
+    - {doc: 222, impresas: [228, 229], cobertura: 0.66}
+    - {doc: 223, impresas: [229, 230], cobertura: 0.7}
+    - {doc: 224, impresas: [230], cobertura: 0.75}
+    - {doc: 225, impresas: [231], cobertura: 0.78}
+    - {doc: 226, impresas: [232, 248], cobertura: 0.35}
+    - {doc: 227, impresas: [233], cobertura: 0.74}
+    - {doc: 228, impresas: [234], cobertura: 0.21, nota: "Figure 35: XVIth Century Painting of Alfinger, Hohermuth and Federmann in Spain"}
+    - {doc: 229, impresas: [235], cobertura: 0.28, nota: "Figure 36: Routes of the Major Expeditions into the Continent as Interpreted by"}
+    - {doc: 230, impresas: [236, 237], cobertura: 0.75}
+    - {doc: 231, impresas: [237], cobertura: 0.61}
+    - {doc: 232, impresas: [238], cobertura: 0.38}
+    - {doc: 233, impresas: [239, 240], cobertura: 0.83}
+    - {doc: 234, impresas: [240, 241], cobertura: 0.87}
+    - {doc: 235, impresas: [241], cobertura: 0.8}
+    - {doc: 236, impresas: [242], cobertura: 0.22, nota: "Figure 38: Route of Federmann's 1530-31 Expedition"}
+    - {doc: 237, impresas: [243, 244], cobertura: 0.82}
+    - {doc: 238, impresas: [244, 245], cobertura: 0.78}
+    - {doc: 239, impresas: [245, 246, 247], cobertura: 0.74}
+    - {doc: 240, impresas: [247, 248], cobertura: 0.79}
+    - {doc: 241, impresas: [248, 249], cobertura: 0.85}
+    - {doc: 242, impresas: [249, 251], cobertura: 0.74}
+    - {doc: 243, impresas: [250], cobertura: 0.25, nota: "Figure 39: Route of Federmann's 1530-31 Expedition"}
+    - {doc: 244, impresas: [251, 252], cobertura: 0.66}
+    - {doc: 245, impresas: [252, 253], cobertura: 0.85}
+    - {doc: 246, impresas: [253, 254], cobertura: 0.78}
+    - {doc: 247, impresas: [254], cobertura: 0.69}
+    - {doc: 248, impresas: [255], cobertura: 0.07, nota: "Figure 40: Segment of Juan de La Cosa Map (1500)"}
+    - {doc: 249, impresas: [256, 257], cobertura: 0.77}
+    - {doc: 250, impresas: [257, 258], cobertura: 0.8}
+    - {doc: 251, impresas: [258, 259, 260], cobertura: 0.84}
+    - {doc: 252, impresas: [260, 261], cobertura: 0.86}
+    - {doc: 253, impresas: [261, 262, 263], cobertura: 0.74}
+    - {doc: 254, impresas: [263, 264], cobertura: 0.79}
+    - {doc: 255, impresas: [264, 265, 266], cobertura: 0.8}
+    - {doc: 256, impresas: [266, 267], cobertura: 0.81}
+    - {doc: 257, impresas: [267, 268], cobertura: 0.76}
+    - {doc: 258, impresas: [268, 269], cobertura: 0.76}
+    - {doc: 259, impresas: [269, 271], cobertura: 0.72}
+    - {doc: 260, impresas: [232, 286], cobertura: 0.2, nota: "Figure 41: Location of Caquetío Settlements in the XVIth Century"}
+    - {doc: 261, impresas: [271, 272], cobertura: 0.71}
+    - {doc: 262, impresas: [272, 273], cobertura: 0.77}
+    - {doc: 263, impresas: [273, 274, 275], cobertura: 0.8}
+    - {doc: 264, impresas: [275, 276], cobertura: 0.77}
+    - {doc: 265, impresas: [276, 277], cobertura: 0.71}
+    - {doc: 266, impresas: [277, 278], cobertura: 0.83}
+    - {doc: 267, impresas: [278, 279], cobertura: 0.82}
+    - {doc: 268, impresas: [279, 280, 281], cobertura: 0.81}
+    - {doc: 269, impresas: [281, 282], cobertura: 0.8}
+    - {doc: 270, impresas: [282, 283, 284], cobertura: 0.81}
+    - {doc: 271, impresas: [284, 285], cobertura: 0.84}
+    - {doc: 272, impresas: [285, 286], cobertura: 0.8}
+    - {doc: 273, impresas: [286, 287], cobertura: 0.7}
+    - {doc: 274, impresas: [287, 288], cobertura: 0.75}
+    - {doc: 275, impresas: [288, 289], cobertura: 0.77}
+    - {doc: 276, impresas: [289, 290, 291], cobertura: 0.82}
+    - {doc: 277, impresas: [291, 292], cobertura: 0.83}
+    - {doc: 278, impresas: [292, 293, 294], cobertura: 0.77}
+    - {doc: 279, impresas: [294], cobertura: 0.75}
+    - {doc: 280, impresas: [295, 296], cobertura: 0.74}
+    - {doc: 281, impresas: [296, 297], cobertura: 0.81}
+    - {doc: 282, impresas: [297, 298], cobertura: 0.79}
+    - {doc: 283, impresas: [299, 300], cobertura: 0.84}
+    - {doc: 284, impresas: [300, 301], cobertura: 0.71}
+    - {doc: 285, impresas: [301], cobertura: 0.69}
+    - {doc: 286, impresas: [], cobertura: 0.0, nota: "sin texto en la DOC (figura o imagen)"}
+    - {doc: 287, impresas: [303, 304], cobertura: 0.8}
+    - {doc: 288, impresas: [304], cobertura: 0.73}
+    - {doc: 289, impresas: [305, 306], cobertura: 0.71}
+    - {doc: 290, impresas: [306, 307], cobertura: 0.81}
+    - {doc: 291, impresas: [308, 309], cobertura: 0.77}
+    - {doc: 292, impresas: [309, 310], cobertura: 0.74}
+    - {doc: 293, impresas: [], cobertura: 0.0, nota: "FOR THE PDF VERSION ONLY Juana de Dios López making a ceramic bowl, El Lla"}
+    - {doc: 294, impresas: [311], cobertura: 0.59}
+    - {doc: 295, impresas: [], cobertura: 0.0, nota: "impressions (1982).. [B & W rerplaced with color only in the PDF versi"}

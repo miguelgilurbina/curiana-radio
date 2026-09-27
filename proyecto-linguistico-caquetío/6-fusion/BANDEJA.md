@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-27**.
 
-**8009 ítems propuestos** en 157 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**8054 ítems propuestos** en 158 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -129,6 +129,7 @@ editar_a_mano: no
   in "<unicode string>", line 83, column 81:
      ... os bubures» (Oviedo y Valdés [6]: 33); «basically the same natio ... 
                                          ^ |
+| `paginas_oliver_cap3_doc_vs_impresa.yaml` | oliver-1989-cap3 | 45 |  |
 | `paraguana_dos_clanes.yaml` | oliver-1989-cap3 | 5 |  |
 | `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `perez_de_tolosa_1546_2026-09-23.yaml` | perez-de-tolosa-1546 | 15 |  |
