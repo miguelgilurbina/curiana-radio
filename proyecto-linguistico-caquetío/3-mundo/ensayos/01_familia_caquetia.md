@@ -62,7 +62,7 @@ propuesta de diseño de este ensayo:
 
 **(a) El caso de la viuda.** Cuando Manaure murió, su esposa principal (Doña Sancha) *"'married' her
 son and was to set up residence in the cacique's (her son, Don Juan) village"* — y Oliver anota
-explícitamente su propia duda: *"his mother (carnal or classificatory?)"* (Oliver 1989: 262). Es decir:
+explícitamente su propia duda: *"his mother (carnal or classificatory?)"* (Oliver 1989: 280). Es decir:
 el propio autor sospecha que "hijo" en boca de un escribano español puede estar traduciendo un término
 de parentesco clasificatorio (p. ej., un sobrino tratado ritualmente como hijo) y no necesariamente
 una filiación biológica directa. La fuente no cierra la pregunta; la deja abierta.
@@ -70,9 +70,9 @@ una filiación biológica directa. La fuente no cierra la pregunta; la deja abie
 **(b) La legitimidad se juzga por la madre, no por el padre.** El obispo Mariano Martí registra en el
 siglo XVIII un conflicto de sucesión en Paraguaná: un cacique fue rechazado por los indios locales por
 motivo de **"bastardía"**, ligada a que su padre se había casado con una española (Martí 1969, citado
-en Oliver 1989: 255-256). Oliver comenta: *"while there are enough clues to suggest that... the
+en Oliver 1989: 265-266). Oliver comenta: *"while there are enough clues to suggest that... the
 inheritance of cacique had been influenced by the monarchical models of Europe (purity of blood,
-primogeniture), other features suggest a survival of tradition"* (Oliver 1989: 256). Que la comunidad
+primogeniture), other features suggest a survival of tradition"* (Oliver 1989: 266). Que la comunidad
 impugne a un heredero por la identidad/estatus de su **madre**, no de su padre, es exactamente lo que
 esperaríamos de un sistema donde la pertenencia legítima se hereda por línea materna, aunque el título
 formal ("oficio") se documente en papel español como transmisión de varón a varón. (Nótese que este
@@ -84,10 +84,10 @@ debía ser antes de que existiera la presión española hacia la primogenitura.)
 
 **(c) La poligamia como red de parentesco político.** Manaure es *"the only cacique unambiguously
 cited to be polygamous"* entre los nombrados por los cronistas, casado con Doña Sancha y con
-*"daughters of the caribes"* — alianzas matrimoniales interétnicas deliberadas (Oliver 1989: 260-261).
+*"daughters of the caribes"* — alianzas matrimoniales interétnicas deliberadas (Oliver 1989: 280-281).
 Oliver interpreta la poligamia cacical como estrategia política: *"Polygamy involves a much broader
 and extensive kinship network... an extensive set of reciprocal obligations among affines"* (Oliver
-1989: 260). Esto **sí es directamente compatible** con el canon actual, y refuerza (no sustituye) la
+1989: 280). Esto **sí es directamente compatible** con el canon actual, y refuerza (no sustituye) la
 idea de que el matrimonio es instrumento de estado, no solo afecto privado.
 
 **Lectura de síntesis (revisada):** dado que el registro patrilineal es de por sí un artefacto
@@ -111,7 +111,7 @@ si el proyecto decide alguna vez modelar esa transición.
 Los wayuu son, como ya establece el canon (§1), la lengua y cultura arahuaca hermana mejor documentada
 y la base comparativa principal del proyecto. Su organización social es matrilineal por clanes
 llamados **e'irüku** (también *apüshi*; el término correcto no es "clan" sino uno de estos dos —
-Goulet 1981, citado en Oliver 1989: 190, nota 4). Cada e'irüku tiene tótem (animal o fenómeno
+Goulet 1981, citado en Oliver 1989: 188, n. 96). Cada e'irüku tiene tótem (animal o fenómeno
 natural), territorio asociado y símbolos propios.
 
 El eje estructural es el **avunculado**: el tío materno (hermano de la madre) es la máxima autoridad
@@ -292,7 +292,7 @@ no más débil, porque muestra que la matrilinealidad no es un supuesto románti
 - **Achagua (Llanos del Meta-Casanare)** — el pariente que las propias fuentes del proyecto ligan más
   directamente al caquetío: Jahn descubrió en el padre Rivero que los achagua llamaban a los caquetíos
   de los Llanos **tamude**, incorporando su término de parentesco *mude* ("primo") — los trataban,
-  literalmente, como primos (Oliver 1989: 287-288, citando Jahn 1927: 213). Su organización social:
+  literalmente, como primos (Oliver 1989: 303-304, citando Jahn 1927: 213). Su organización social:
   **numerosos linajes con nombre de animal** (serpiente, murciélago, jaguar, zorro), cada linaje
   ocupando **una casa comunal propia** en la aldea; exogamia de linaje; poligamia (cada esposa con su
   conuco propio, jurídicamente iguales); y un patrón residencial de pareja mayor con hijas casadas y
@@ -545,7 +545,7 @@ construida sobre datos reales (el cuello de botella matrimonial, el debate histo
 2. **Sucesión: el sucesor de Manaure es un sobrino uterino, no un hijo — hoy no existe en el elenco,
    se propone uno.** Ver genealogia.yaml: **Waimo-ko** (~21 años), hijo de una hermana no nombrada de
    Manaure (**Itana-sha**, propuesta como persona de fondo). Esto sigue la lógica avuncular wayuu/taína
-   Y aprovecha la ambigüedad que el propio Oliver (1989: 262) señala sobre "hijo" vs. "sobrino
+   Y aprovecha la ambigüedad que el propio Oliver (1989: 280) señala sobre "hijo" vs. "sobrino
    clasificatorio" en el registro colonial de la sucesión de Manaure — es decir, no es una invención
    sin apoyo: es tomar en serio la duda que la fuente académica del proyecto ya dejó abierta.
 
@@ -671,10 +671,11 @@ sobrinos.** Todo lo demás — linajes concretos, genealogías, sucesores — so
 - Arcaya, Pedro Manuel. *Historia del Estado Falcón* (1920), pp. 119-129 (instituciones familiares,
   poligamia por analogía, tatuaje y clanes).
 - Oliver, José R. *Chapter 3: XVI Century Ethnic Boundaries and the Nature of Caquetío Polities*
-  (1989), pp. 190 (n.4, término correcto wayuu *eirrüku*/*apüshi*), 255-256 (sucesión y bastardía en
-  Paraguaná, s. XVIII), 260-262 (poligamia de Manaure, herencia del cacicazgo, viuda de Manaure),
-  268-269 (oficio heredado por el hijo del diao, s. XVI), 269-270 (linaje como base del cacicazgo de
-  poblado, malocas de familia extendida en Barquisimeto/Yaracuy — contrastadas con el patrón costero).
+  (1989), pp. 188 (n. 96, término correcto wayuu *eirrüku*/*apüshi*), 265-266 (sucesión y bastardía en
+  Paraguaná, s. XVIII), 280-281 (poligamia de Manaure, herencia del cacicazgo, viuda de Manaure),
+  280, 305 (oficio heredado por el hijo del diao, s. XVI), 275 (linaje como base del cacicazgo de
+  poblado; la maloca de 40-50 es de Curazao, no de Barquisimeto/Yaracuy), 293 (viviendas de 5-8
+  familias extendidas del Yaracuy, DOC 278) — contrastadas con el patrón costero).
 - Oliver, José R. *Chapter 2: Arawakan Historical Linguistics* (1989), p. 147 (término caquetío
   atestiguado *daitiao*, raíz de parentesco /-atti-/ cognada con taíno y lokono).
 - Jahn, Alfredo. *Los aborígenes del occidente de Venezuela* (1927), pp. 171-173 (matriarcado guajiro,
@@ -682,10 +683,10 @@ sobrinos.** Todo lo demás — linajes concretos, genealogías, sucesores — so
   distinción léxica tío materno/tío paterno).
 - Las Casas, Bartolomé de. *Historia de las Indias*, tomo I (1875 [c. 1561]) — revisado sin hallazgos
   específicos de Coro/caquetío (ver hoja de fuentes).
-- Goulet (1981), citado en Oliver (1989: 190, n.4) — término correcto del clan wayuu.
-- Martí, Mariano (1969 [s. XVIII]), citado en Oliver (1989: 255-256) — testimonio de Paraguaná sobre
+- Goulet (1981), citado en Oliver (1989: 188, n. 96) — término correcto del clan wayuu.
+- Martí, Mariano (1969 [s. XVIII]), citado en Oliver (1989: 265-266) — testimonio de Paraguaná sobre
   bastardía y sucesión cacical.
-- Oliver, José R. (1989), cap. 3, pp. 287-288 — vínculo achagua-caquetío vía el término de parentesco
+- Oliver, José R. (1989), cap. 3, pp. 303-304 — vínculo achagua-caquetío vía el término de parentesco
   *mude* → *tamude* ("primos"), citando Jahn 1927: 213 y Rivero [1728-9].
 - Literatura wayuu contemporánea (fuentes secundarias web, sin verificación académica línea por línea
   — ver hoja de fuentes): clanes *e'irüku*, sistema de avunculado, herencia por sobrinos.

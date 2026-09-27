@@ -12,7 +12,7 @@ medido: 2026-09-07
 
 > "To say that the Caquetío are a Theocratic Chiefdom […] explains absolutely
 > nothing, and **blurs the differences that make a difference**."
-> — Oliver 1989, cap. 3, p. 278
+> — Oliver 1989, cap. 3, p. 294
 
 ## La respuesta en una frase
 
@@ -60,28 +60,28 @@ Ranchería y el César. Coquibacoa es el nombre de la Guajira en el mapa de Juan
 de la Cosa (1500) y en la capitulación de Ojeda del mismo año
 («Quinquevacoa… donde están las piedras verdes»); Castellanos lo restringe al
 norte-noreste de la península (Macuira, Jarara); y a principios del XVI la
-Gobernación de Venezuela entera se llamó así (Oliver pp. 191, 192, 199, 211).
+Gobernación de Venezuela entera se llamó así (Oliver pp. 190-191, 192, 201-202, 217).
 
 Lo que se sabe de los caquetíos de ahí cabe en cuatro rasgos, todos con página
 en el módulo: **dónde** (dos sectores de la Guajira, «precisely where some
 limited agriculture was possible», y aldeas entre los bubures de Juruara,
-p. 222); **cómo** (puestos de frontera y avanzada, minoría numérica, siempre en
-las mejores tierras bajas de cultivo, nunca en tierras altas, p. 202); **de qué
+p. 228); **cómo** (puestos de frontera y avanzada, minoría numérica, siempre en
+las mejores tierras bajas de cultivo, nunca en tierras altas, p. 205); **de qué
 viven** (comercio: sal hacia el interior, oro de Valledupar y la Sierra Nevada
-hacia la costa; socios elegidos, wayú evitados, pp. 189, 222); y **desde
+hacia la costa; socios elegidos, wayú evitados, pp. 188, 229); y **desde
 cuándo** (quizá desde 1200 d.C., con el pico del contacto Guajira ↔ Los Médanos
-**en 1400 d.C., dentro de la ventana de la simulación**, p. 200). Liderazgo,
+**en 1400 d.C., dentro de la ventana de la simulación**, p. 203). Liderazgo,
 demografía y religión son huecos: «very little is known about the culture of
 the Juruara Caquetío», y lo mismo de los guajiros. No se rellenan.
 
 Por qué importa: es **hija de la costera** («undoubtedly originated from
-Coastal Falcón», p. 189) y el único modelo documentado de un enclave caquetío
+Coastal Falcón», p. 188) y el único modelo documentado de un enclave caquetío
 que comercia y convive sin fundirse — justo lo que la era 2 necesita. Y trae
 dos regalos para la lengua: entre los nombres de aldea wanebucán de Punta
 Espada–Chichibacoa Oliver lee «Paragua-nil» y «Coria-na», «suspiciously
-Caquetío» (p. 207: toca el nombre Curiana, #33, y el sufijo, #109); y el cabo
+Caquetío» (p. 211: toca el nombre Curiana, #33, y el sufijo, #109); y el cabo
 Chichibacoa «suspiciously sounds like Coquibacoa, except for a /k/::/ch/ sound
-shift» (p. 249 n. 94).
+shift» (p. 257 n. 186).
 
 > ⚠️ Regla 3: **Coquibacoa como nombre de región es español**. Arcaya 1920
 > (p. 130) lo dice: se llamó así «por el nombre indígena de uno de sus sitios»

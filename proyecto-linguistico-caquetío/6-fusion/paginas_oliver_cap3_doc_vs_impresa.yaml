@@ -19,7 +19,7 @@
 
 meta:
   recogido: '2026-09-14'
-  estado: sin-fusionar
+  estado: fusionado-2026-09-27
   obra: oliver-1989-cap3
   pregunta: >-
     ¿En qué edición está cada cita de Oliver 1989 cap. 3 del repo, y cuál es su
@@ -783,3 +783,17 @@ mapa_doc_impresa:
     - {doc: 293, impresas: [], cobertura: 0.0, nota: "FOR THE PDF VERSION ONLY Juana de Dios López making a ceramic bowl, El Lla"}
     - {doc: 294, impresas: [311], cobertura: 0.59}
     - {doc: 295, impresas: [], cobertura: 0.0, nota: "impressions (1982).. [B & W rerplaced with color only in the PDF versi"}
+
+fusion_2026-09-27:
+  aplicadas: 112
+  no_aplicadas: []
+  como: >-
+    Cada aparición se localizó por su ancla y su contexto, no por el número de
+    línea (desactualizado en ~26 casos): se reemplazó solo la paginación según
+    la propuesta, incluida su intención cuando pedía añadir página donde no
+    había ninguna («sin página» → página impresa); se respetó que
+    `curiana_polities.py` es motor y solo se tocaron números de página dentro
+    de citas, nunca contenido; `2-lengua/toponimos.yaml` y
+    `2-lengua/morfemas.yaml` no se editaron a mano — se corrigió
+    `curiana_sim/lexicon_toponimos.py` y se regeneraron con
+    `migrar_toponimos.py`; y `colaterales` quedó intacta para Miguel.

@@ -108,10 +108,10 @@ nodos:
       EXACTA SIGUE EN DEBATE: no se ha hallado sitio arqueológico del tamaño
       correspondiente en la periferia de Coro. Oliver sospecha que quedó bajo
       la expansión urbana moderna, o más allá de la distancia que sugieren las
-      crónicas.
+      crónicas (Oliver 1989 cap.3 p. 269).
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "pp. 251 (pacto de 1527), 259 (carta de Bastidas 1538: Todariquiba, el pueblo de Don Alexandre), 261-262 (registros Welser, Ponce y Vaccari 1977), 268 (la salida de Manaure y Don Alexandre); la carta de Bastidas transcrita en velasco-2015-resistencia p. 33"
+      detalle: "pp. 259 (pacto de 1527), 269 (ubicación en debate), 259 (carta de Bastidas 1538: Todariquiba, el pueblo de Don Alexandre), 271 (registros Welser, Ponce y Vaccari 1977), 268 (la salida de Manaure y Don Alexandre); la carta de Bastidas transcrita en velasco-2015-resistencia p. 33"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
     nota: >
@@ -136,7 +136,7 @@ nodos:
     ubicacion: costa oriental del estado Falcón, al este de Coro.
     procedencia:
       obra: van-buurt-2014
-      detalle: "Puerto de los Indios Curaçao, citando a Hartog 1968; la lista de 1538 en Oliver 1989 cap.3 p.251"
+      detalle: "Puerto de los Indios Curaçao, citando a Hartog 1968; la lista de 1538 en Oliver 1989 cap.3 p.269"
     corpus: [geografia_politica-001, geografia_politica-003]
     etimologia: sin-resolver
     etimologia_detalle: >
@@ -159,7 +159,7 @@ nodos:
     rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+      detalle: "p. 269, carta de Rodrigo de Bastidas 1538"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
     nota: >
@@ -178,7 +178,7 @@ nodos:
     rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+      detalle: "p. 269, carta de Rodrigo de Bastidas 1538"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
 
@@ -192,7 +192,7 @@ nodos:
     rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+      detalle: "p. 269, carta de Rodrigo de Bastidas 1538"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
 
@@ -207,7 +207,7 @@ nodos:
     rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+      detalle: "p. 269, carta de Rodrigo de Bastidas 1538"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
 
@@ -222,7 +222,7 @@ nodos:
     rol: Nombrado en la carta de Bastidas a Carlos V (1538). Nada más se sabe.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "p. 251, carta de Rodrigo de Bastidas 1538"
+      detalle: "p. 269, carta de Rodrigo de Bastidas 1538"
     corpus: [geografia_politica-003]
     etimologia: sin-resolver
     nota: >
@@ -243,7 +243,7 @@ nodos:
       en el Golfete de Coro, no en el Lago de Maracaibo.
     procedencia:
       obra: oliver-1989-cap3
-      detalle: "p. 249, citando a Ramos Pérez (1976: 88) y Navarrete 1829 [3]: 218-219"
+      detalle: "p. 256, citando a Ramos Pérez (1976: 88) y Navarrete 1829 [3]: 218-219"
     corpus: [geografia_politica-006, geografia_politica-023]
     etimologia: no-aplica
     nota: >

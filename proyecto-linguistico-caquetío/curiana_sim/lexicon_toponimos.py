@@ -1755,7 +1755,7 @@ NIVEL_C = {
                  "significado compiten, ninguna cierra, y -ana perdió la glosa "
                  "'lugar de' el 2026-09-07. C: forma segura, significado abierto.",
         "observacion": "D2 (#33), territorio o asentamiento: Arcaya da las dos "
-                       "cosas. Y hay un segundo Coriana: Oliver (cap. 3 p. 207) "
+                       "cosas. Y hay un segundo Coriana: Oliver (cap. 3 p. 211) "
                        "lee «Coria-na» entre los nombres de aldea wanebucán, "
                        "«suspiciously Caquetío». CORREGIDO el 2026-09-24 (M7 "
                        "D-f.1, dp.2.05 de #222): esa Coriana NO está en Punta "
@@ -1841,7 +1841,7 @@ NIVEL_C = {
                         "«Paragua-nil»: morfemas «suspiciously Caquetío» que Oliver "
                         "explica por el nexo comercial con los caquetíos de allí",
              "quien": "Oliver 1989", "fecha": "2026-09-07", "eje": "referente",
-             "procedencia": dict(obra="oliver-1989-cap3", pagina=207),
+             "procedencia": dict(obra="oliver-1989-cap3", pagina=211),
              "veredicto": "si Coria-na se repite donde no hay nada que llamar Coro, "
                           "la raíz coria- es léxica (formación común, 'tierra o "
                           "lugar de X') o el nombre viajó con los comerciantes: en "
@@ -1927,11 +1927,11 @@ NIVEL_C = {
         "observacion": "Regla 3: la extensión al Golfo y sus tierras es española; "
                        "lo indígena es el sitio. La grafía más antigua es la "
                        "reduplicada: «Quinquevacoa» en la capitulación de Ojeda "
-                       "(28-VII-1500, Otte 1963: 3, vía Oliver cap. 3 p. 211); de "
+                       "(28-VII-1500, Otte 1963: 3, vía Oliver cap. 3 p. 217); de "
                        "la Cosa 1500 escribe Coquibacoa sobre toda la Guajira "
                        "(p. 192). Y el cabo Chichibacoa «suspiciously sounds like "
-                       "Coquibacoa, except for a /k/::/ch/ sound shift» (p. 249 "
-                       "n. 94): el sitio puede seguir vivo con otro sonido.",
+                       "Coquibacoa, except for a /k/::/ch/ sound shift» (p. 257 "
+                       "n. 186): el sitio puede seguir vivo con otro sonido.",
         "lecturas": [
             {"tipo": "etimologia-analitica",
              "lectura": "qui~quiba (reduplicación con valor plural, como juri → "
@@ -1951,7 +1951,7 @@ NIVEL_C = {
                         "Coquibacoa con /k/ > /ch/: el sitio indígena de Arcaya "
                         "seguiría vivo en el mapa",
              "quien": "Oliver 1989", "fecha": "2026-09-07", "eje": "referente",
-             "procedencia": dict(obra="oliver-1989-cap3", pagina=249),
+             "procedencia": dict(obra="oliver-1989-cap3", pagina=257),
              "apoyo": "un nombre que sigue vivo es dato (Miguel); Punta "
                       "Chichibacoa existe en el mapa de hoy"},
         ],
@@ -3591,13 +3591,13 @@ DESCARTES = {
             "Machuruca, donde hay cementerio indígena, o El Supí, donde hay "
             "piedras escritas; la grafía en -i explica el cero de Oliver)",
             "zazarida (Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; "
-            "carta de Bastidas 1538 vía Oliver p. 251, nodo-006; hoy Zazárida, "
+            "carta de Bastidas 1538 vía Oliver p. 269, nodo-006; hoy Zazárida, "
             "población viva de Falcón)",
             "carao (Castellanos; «Arcaya lo suponía en el actual Carazao»)",
             "tomodore (Tamadoré en Castellanos; Tomadoré cerca de La Vela según "
-            "Arcaya; carta de Bastidas 1538 vía Oliver p. 251, nodo-004)",
+            "Arcaya; carta de Bastidas 1538 vía Oliver p. 269, nodo-004)",
             "capatarida (Capatarida en Castellanos; carta de Bastidas 1538 vía "
-            "Oliver p. 251, nodo-007; hoy Capatárida, capital del municipio "
+            "Oliver p. 269, nodo-007; hoy Capatárida, capital del municipio "
             "Buchivacoa: nombre vivo desde 1538)",
             "carona (Castellanos; Arcaya: «ni el nombre queda» — pues aquí está, "
             "en 1589)",
@@ -4112,7 +4112,7 @@ FORMATIVOS_SIN_GLOSA = {
         "apariciones": 6,
         "ejemplos": ["Paraguaná", "Curiana", "Chamuriana", "Cujicana",
                      "Jayana", "Coria-na (aldea wanebucán de la Guajira, "
-                     "Oliver 1989 cap. 3 p. 207)"],
+                     "Oliver 1989 cap. 3 p. 211)"],
         "nota": "Forma atestiguada, **glosa retirada** (#109, decisión B, "
                 "2026-09-07). Tenía 'lugar de' con dos apoyos, Paraguaná y "
                 "Curiana; Paraguaná no descompone con ella («Rodeada del mar», "

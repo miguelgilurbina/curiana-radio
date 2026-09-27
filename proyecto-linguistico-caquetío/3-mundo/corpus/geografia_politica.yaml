@@ -29,7 +29,7 @@
     laderas de la Sierra Nevada. Los caquetíos de la Guajira se originaron, sin duda, de la costa
     de Falcón.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, p. 189 (\"The Caquetío settlements were, in all probability, avant guarde posts... The Caquetío of the Guajira undoubtedly originated from Coastal Falcón\")"
+  referencia: "Oliver 1989, cap. 3, p. 188 (\"The Caquetío settlements were, in all probability, avant guarde posts... The Caquetío of the Guajira undoubtedly originated from Coastal Falcón\")"
   dominios: [politica, geografia, comercio]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -49,10 +49,10 @@
     vista, y hay una alternativa de testigo: Galeotto Cey, en Coro desde 1545, lo pone en el pueblo
     de Coro, en una «casa grandísima». Ninguna fuente dice dónde se sentaba antes de 1527; la única
     anterior al pacto (Ampíes, c. 1526) lo pone «diez leguas la tierra adentro en la provincia de
-    Coro». La ubicación de Todariquiba sigue en debate: no se ha hallado sitio arqueológico de
-    tamaño correspondiente en la periferia de Coro.
+    Coro». La ubicación de Todariquiba sigue en debate (Oliver 1989 cap.3 p. 269): no se ha hallado
+    sitio arqueológico de tamaño correspondiente en la periferia de Coro.
   fuente: reconstruido
-  referencia: "Oliver 1989, cap. 3, DOC p. 251 (pacto de 1527 y reasentamiento, vía Ramos Pérez 1978, Arcaya 1977 y Oliver Ms. 1987a), p. 259 (carta de Bastidas 1538 vía Armado Maldonado 1973), pp. 261-262 (registros Welser, Ponce y Vaccari 1977: 94, 179-80, 238-40, 451), p. 268 (la salida de Manaure y Don Alexandre, juicios de residencia); Velasco 2015 p. 33 (carta de Bastidas, AGI Santo Domingo leg. 218, f. 2, 8-X-1538: «dos leguas»); González Batista 2002 p. 161 n. 47-48 (la otra carta: una legua) y pp. 163-164 (Galeotto Cey, Viaje y descripción de las Indias, p. 56); Ampíes c. 1526 en Pérez de Tolosa / Fernández Duro 1885 t. II p. 212. Re-etiquetado de atestiguado a reconstruido el 2026-09-23 (tf.7, Manaure A): aquí «reconstruido» es lectura historiográfica de Oliver sin el documento, no método comparativo. Datos: 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_1 (mau-01 … mau-06)"
+  referencia: "Oliver 1989, cap. 3, p. 259 (pacto de 1527 y reasentamiento, vía Ramos Pérez 1978, Arcaya 1977 y Oliver Ms. 1987a), p. 259 (carta de Bastidas 1538 vía Armado Maldonado 1973), p. 269 (la lista de pueblos: Guaibacoa, Cumarebo, Tomodore, Caujarao, Zazárida, Capatárida y Todariquiba), p. 271 (registros Welser, Ponce y Vaccari 1977: 94, 179-80, 238-40, 451), p. 268 (la salida de Manaure y Don Alexandre, juicios de residencia); Velasco 2015 p. 33 (carta de Bastidas, AGI Santo Domingo leg. 218, f. 2, 8-X-1538: «dos leguas»); González Batista 2002 p. 161 n. 47-48 (la otra carta: una legua) y pp. 163-164 (Galeotto Cey, Viaje y descripción de las Indias, p. 56); Ampíes c. 1526 en Pérez de Tolosa / Fernández Duro 1885 t. II p. 212. Re-etiquetado de atestiguado a reconstruido el 2026-09-23 (tf.7, Manaure A): aquí «reconstruido» es lectura historiográfica de Oliver sin el documento, no método comparativo. Datos: 6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml §pregunta_1 (mau-01 … mau-06)"
   procedencia: {obra: oliver-1989-cap3}
   dominios: [politica, geografia]
   agentes_relacionados: [Manaure]
@@ -73,7 +73,7 @@
     veces, requiriendo "cuatro o cinco mil indios" para repararlo. En la época en que Coro y sus
     alrededores tenían "catorce o quince mil indios", el canal se arreglaba en tres o cuatro días.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 262-263, citando a Ballesteros [1550] en Bécker 1950 [1]: 688"
+  referencia: "Oliver 1989, cap. 3, pp. 273-274, citando a Ballesteros [1550] en Bécker 1950 [1]: 688"
   dominios: [politica, geografia, comercio]
   agentes_relacionados: [Korie-ko, Buko-ko]
   implicacion_simulacion: >
@@ -90,7 +90,7 @@
     pacto Ampíes-Manaure de 1527) solo quedaban "hasta cuatrocientos indios" repartidos en seis
     poblados alrededor de Coro.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, p. 262, citando a Ballesteros [1550] en Bécker 1950 [1]: 666, 688"
+  referencia: "Oliver 1989, cap. 3, pp. 261-262, citando a Ballesteros [1550] en Bécker 1950 [1]: 666, 688"
   dominios: [politica, geografia]
   agentes_relacionados: []
   implicacion_simulacion: >
@@ -107,7 +107,7 @@
     identificado por el historiador Demetrio Ramos Pérez como ubicado en el Golfete de Coro, y no
     en el área del Lago de Maracaibo, donde suele situarse la leyenda del nombre.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, p. 249, citando a Ramos Pérez (1976: 88); Navarrete 1829 [3]: 218-219"
+  referencia: "Oliver 1989, cap. 3, p. 256 (y p. 206), citando a Ramos Pérez (1976: 88); Navarrete 1829 [3]: 218-219"
   dominios: [politica, geografia]
   agentes_relacionados: []
   implicacion_simulacion: >

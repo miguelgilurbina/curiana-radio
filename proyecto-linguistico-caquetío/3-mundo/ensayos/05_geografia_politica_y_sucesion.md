@@ -59,7 +59,7 @@ y Ramos (1978: 237), sobre *"el Diao"*, *"poderoso para todo y... casado con hij
 caribes"*. La lectura más simple no es que "Diao" sea sinónimo exclusivo de Manaure, sino que
 **Manaure ES un diao** — el de Coro — además de tener un estatus adicional (ver §4).
 
-Esta lectura se confirma, de forma independiente, en el propio Oliver (1989, cap. 3, p. 251), quien
+Esta lectura se confirma, de forma independiente, en el propio Oliver (1989, cap. 3, p. 259), quien
 narra el pacto de 1527 con Ampíes y escribe: *"the stage was set for a series of dialogues... between
 Ampíes and the main diao or great cacique, Manaure."* Dos fuentes académicas distintas (Zavala/Ramos
 y Oliver), sin relación entre sí que sepamos, coinciden en llamar a Manaure **"el diao principal"** —
@@ -100,7 +100,7 @@ bien ancladas:
   (Van Buurt 2014, ya en `fuentes_caquetios/`). Ya asumido por el elenco: Kadushi es "caquetío de
   Aruba", Watapana viaja regularmente ahí.
 - **Paraguaná** — núcleo geográfico ya central del proyecto.
-- **Guajira** — Oliver (1989, cap. 3, p. 189) es explícito: *"The Caquetío settlements were, in all
+- **Guajira** — Oliver (1989, cap. 3, p. 188) es explícito: *"The Caquetío settlements were, in all
   probability, avant guarde posts that traded with the Wanebucán and Coanao... The Caquetío of the
   Guajira undoubtedly originated from Coastal Falcón."* Puestos de avanzada comercial —sal por oro y
   bienes de Valledupar y la Sierra Nevada— fundados desde la misma costa de Falcón que Coro. Confirma
@@ -108,17 +108,17 @@ bien ancladas:
 
 ## 5. Todariquiba: el asentamiento real que estamos reconstruyendo
 
-La pieza que cierra el círculo. Oliver (1989, cap. 3, p. 251) narra que, tras el pacto de 1527,
+La pieza que cierra el círculo. Oliver (1989, cap. 3, p. 259) narra que, tras el pacto de 1527,
 *"Manaure agreed to ally himself with Ampíes... and to resettle near what is today Coro (a village
 called Todariquiba)"* — y su hijo/sucesor Don Alexandre también residió ahí. El nombre recurre en la
-carta de 1538 del obispo Rodrigo de Bastidas a Carlos V (junto a Guaibacoa, Cumarebo, Tomodore,
+carta de 1538 del obispo Rodrigo de Bastidas a Carlos V (p. 269; junto a Guaibacoa, Cumarebo, Tomodore,
 Caujarao, Zazárida, Capatárida) y en registros administrativos posteriores del período Welser (Ponce
 y Vaccari 1977: 94, 179-80, 238-40, 451) — no es una mención aislada.
 
-Su ubicación exacta sigue en debate: Oliver mismo dice que no se ha hallado un sitio arqueológico de
-tamaño correspondiente en la periferia de Coro, y sospecha que quedó bajo la expansión urbana moderna
-o más allá de las 4.5-6 km que sugieren las crónicas. Eso es una ventaja para la simulación, no un
-problema: no hace falta fijar coordenadas que la propia arqueología no ha fijado.
+Su ubicación exacta sigue en debate (Oliver 1989 cap.3 p. 269): Oliver mismo dice que no se ha hallado
+un sitio arqueológico de tamaño correspondiente en la periferia de Coro, y sospecha que quedó bajo la
+expansión urbana moderna o más allá de las 4.5-6 km que sugieren las crónicas. Eso es una ventaja para
+la simulación, no un problema: no hace falta fijar coordenadas que la propia arqueología no ha fijado.
 
 **Todariquiba es, con la mejor evidencia disponible, el asentamiento real que "la Curiana" de la
 simulación reconstruye.** Es casi con certeza la misma palabra que Miguel recordaba al principio de
@@ -135,7 +135,7 @@ el inicio del programa:
 > se rompe dos o tres veces, de forma que se requerían **cuatro o cinco mil indios** para repararlo.
 > En los días en que Coro y sus alrededores tenían **catorce o quince mil indios**, en tres o cuatro
 > días el canal quedaba arreglado..."* (Ballesteros [1550] en Bécker 1950 [1]: 688, vía Oliver 1989,
-> cap. 3, pp. 262-263)
+> cap. 3, pp. 273-274)
 
 Oliver interpreta: 4-5 mil trabajadores implican coordinación entre **más de 30 poblados** (asumiendo
 150-200 personas por poblado de todas las edades). El *buco* que ya es central en el canon —Korie-ko,
@@ -145,8 +145,9 @@ narrativamente, **una fracción pequeña** de la población real de Todariquiba 
 con la idea ya establecida de que los linajes son "unidades de expansión" del elenco (parentesco-025),
 no con que 60 personas agoten el asentamiento.
 
-La misma carta documenta el colapso: para 1550 —23 años después del pacto de 1527— solo quedaban
-*"hasta cuatrocientos indios"* en seis poblados alrededor de Coro. De 14-15 mil a 400 en una
+La misma carta documenta el colapso (Oliver 1989 cap.3 pp. 261-262): para 1550 —23 años después del
+pacto de 1527— solo quedaban *"hasta cuatrocientos indios"* en seis poblados alrededor de Coro. De
+14-15 mil a 400 en una
 generación. Dato que no es material para la Curiana precontacto que la simulación modela hoy, pero
 que fija la magnitud real de lo que el propio Zavala (2015: 60) llama *"el éxodo que dirigía el
 Manaure"*.
@@ -157,12 +158,12 @@ Pieza adicional, confirmada solo en parte. El "Puerto de San Bartolomé" que des
 Vespucio hacia 1500 —un poblado de viviendas sobre estacas (palafitos) que le recordó a Venecia y dio
 origen al nombre "Venezuela"— ha sido identificado por el historiador Demetrio Ramos Pérez (1976: 88)
 como ubicado **en el Golfete de Coro**, no en el área del Lago de Maracaibo, donde suele situarse la
-leyenda (Oliver 1989, cap. 3, p. 249). Si se confirma, el propio nombre del país se ancla a un poblado
+leyenda (Oliver 1989, cap. 3, p. 256). Si se confirma, el propio nombre del país se ancla a un poblado
 del Golfete.
 
 Lo que esta sesión **no pudo confirmar** es el número de "40 casas" que Miguel recordaba para ese
 poblado: la única cifra de esa magnitud encontrada en Oliver (40-50 individuos) corresponde a la
-capacidad de una maloca en **Curazao**, un dato distinto. Oliver además sugiere (cap. 3, ~p. 265) que
+capacidad de una maloca en **Curazao** (p. 275), un dato distinto. Oliver además sugiere (cap. 3, p. 274) que
 las viviendas sobre estacas podrían pertenecer a una comunidad pesquera especializada, de relación aún
 no establecida con los asentamientos caquetíos de tierra adentro como Todariquiba — es decir, ni
 siquiera está claro que San Bartolomé y Todariquiba sean, o dependan, del mismo poblado. Queda

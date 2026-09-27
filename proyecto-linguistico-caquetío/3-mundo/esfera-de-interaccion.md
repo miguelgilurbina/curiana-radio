@@ -16,7 +16,7 @@ abre: la fase 2 del experimento
 
 ## 1. El nombre ya lo decía
 
-Oliver 1989, capítulo 3, nota al pie 3:
+Oliver 1989, capítulo 3, nota al pie 95 (p. 186):
 
 > el término Caquetío /kaketío/ es **cognado del lokono `kakitho`, que significa
 > 'persona, gente'** — y por eso hay razón para creer que los españoles
@@ -69,7 +69,7 @@ no solo en la interpretación.
 |---|---|---|
 | Ruta dabajuroide Yaracuy → costa → Aruba/Bonaire/Curazao | ~900 d.C. | Antczak 2017 p.157 |
 | Disputa arahuaco/caribe por Las Aves y Los Roques | 1200 d.C. – Contacto | Antczak 2017 p.157 |
-| Puestos de avanzada caquetíos en la Guajira, **fundados desde Falcón** | precolonial | Oliver 1989 cap.3 p.189 (`geografia_politica-002`) |
+| Puestos de avanzada caquetíos en la Guajira, **fundados desde Falcón** | precolonial | Oliver 1989 cap.3 p.188 (`geografia_politica-002`) |
 | Préstamos léxicos caquetíos supervivientes en papiamento | colonial | Van Buurt 2014 (`geografia_politica-001`) |
 
 Una zona con rutas de ida y vuelta durante siglos **no produce una lengua
@@ -191,7 +191,7 @@ un solo asentamiento difuso, «convergencia» solo puede medirse entre individuo
 ### Lo que ya está atestiguado y sirve de punto de partida
 
 De la carta del obispo Rodrigo de Bastidas a Carlos V (1538), vía Oliver 1989
-cap.3 pp.251, 261-262 (`geografia_politica-003`):
+cap.3 pp. 259, 269, 271 (`geografia_politica-003`):
 
 > **Todariquiba** (el pueblo de Don Alexandre, hijo de Manaure, a una o dos
 > leguas de Coro) · **Guaibacoa** · **Cumarebo** · **Tomodore** · **Caujarao** ·
@@ -217,7 +217,7 @@ De esos, dos rinden mucho más que los otros cinco:
 > Es el enlace continente-isla mejor sostenido que tiene el proyecto, y es lo
 > que hace viable un diseño de dos nodos con tráfico real entre ellos.
 
-Y la escala, de la carta de Ballesteros (1550), vía Oliver cap.3 pp.262-263
+Y la escala, de la carta de Ballesteros (1550), vía Oliver cap.3 pp.273-274
 (`geografia_politica-004`): el canal del **buco** requería «cuatro o cinco mil
 indios» para repararlo, de lo que Oliver infiere coordinación entre **más de 30
 poblados**. La región tenía «catorce o quince mil indios».

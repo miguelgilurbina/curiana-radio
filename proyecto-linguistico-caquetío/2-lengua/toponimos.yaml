@@ -1692,7 +1692,7 @@ toponimos:
     fuente son referenciales. Cuatro lecturas del significado compiten, ninguna cierra, y -ana perdió
     la glosa ''lugar de'' el 2026-09-07. C: forma segura, significado abierto.'
   observacion: 'D2 (#33), territorio o asentamiento: Arcaya da las dos cosas. Y hay un segundo Coriana:
-    Oliver (cap. 3 p. 207) lee «Coria-na» entre los nombres de aldea wanebucán, «suspiciously Caquetío».
+    Oliver (cap. 3 p. 211) lee «Coria-na» entre los nombres de aldea wanebucán, «suspiciously Caquetío».
     CORREGIDO el 2026-09-24 (M7 D-f.1, dp.2.05 de #222): esa Coriana NO está en Punta Espada-Chichibacoa,
     como decía esta nota, sino en LA RAMADA —la costa guanebucana entre la Sierra Nevada y el río de la
     Hacha—, en la lista de pueblos junto al mar de Castellanos: «Dos Guaymaros, Debuya, Coriana, / Tapi,
@@ -1773,7 +1773,7 @@ toponimos:
     eje: referente
     procedencia:
       obra: oliver-1989-cap3
-      pagina: 207
+      pagina: 211
     veredicto: 'si Coria-na se repite donde no hay nada que llamar Coro, la raíz coria- es léxica (formación
       común, ''tierra o lugar de X'') o el nombre viajó con los comerciantes: en los dos casos toca D2.
       Está también en la lista viva de -ana (#109). ⚠️ El sitio es La Ramada (Castellanos p. 264), no
@@ -1835,9 +1835,9 @@ toponimos:
     choca con Quiva #218 ''piedra'', y la glosa es reconstruida, no impresa.'
   observacion: 'Regla 3: la extensión al Golfo y sus tierras es española; lo indígena es el sitio. La
     grafía más antigua es la reduplicada: «Quinquevacoa» en la capitulación de Ojeda (28-VII-1500, Otte
-    1963: 3, vía Oliver cap. 3 p. 211); de la Cosa 1500 escribe Coquibacoa sobre toda la Guajira (p. 192).
+    1963: 3, vía Oliver cap. 3 p. 217); de la Cosa 1500 escribe Coquibacoa sobre toda la Guajira (p. 192).
     Y el cabo Chichibacoa «suspiciously sounds like Coquibacoa, except for a /k/::/ch/ sound shift» (p.
-    249 n. 94): el sitio puede seguir vivo con otro sonido.'
+    257 n. 186): el sitio puede seguir vivo con otro sonido.'
   lecturas:
   - tipo: etimologia-analitica
     lectura: qui~quiba (reduplicación con valor plural, como juri → jurijurebo) + bacoa 'lugar de' = 'lugar
@@ -1858,7 +1858,7 @@ toponimos:
     eje: referente
     procedencia:
       obra: oliver-1989-cap3
-      pagina: 249
+      pagina: 257
     apoyo: un nombre que sigue vivo es dato (Miguel); Punta Chichibacoa existe en el mapa de hoy
   procedencia:
     obra: arcaya-1920
@@ -3951,7 +3951,7 @@ toponimos:
   nivel: descartado
   clase: topónimo
   glosa_fuente: Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; carta de Bastidas 1538 vía Oliver
-    p. 251, nodo-006; hoy Zazárida, población viva de Falcón
+    p. 269, nodo-006; hoy Zazárida, población viva de Falcón
   razon: Castellanos enumera, no traduce; Arcaya y Esteves los sitúan o los dan por perdidos; ningún morfema
     del canon alinea sin forzar. Se registran con su forma de 1589, su identificación moderna y su nodo,
     para que la campaña no los vuelva a abrir sin dato nuevo.
@@ -3974,7 +3974,7 @@ toponimos:
   nivel: descartado
   clase: topónimo
   glosa_fuente: Tamadoré en Castellanos; Tomadoré cerca de La Vela según Arcaya; carta de Bastidas 1538
-    vía Oliver p. 251, nodo-004
+    vía Oliver p. 269, nodo-004
   razon: Castellanos enumera, no traduce; Arcaya y Esteves los sitúan o los dan por perdidos; ningún morfema
     del canon alinea sin forzar. Se registran con su forma de 1589, su identificación moderna y su nodo,
     para que la campaña no los vuelva a abrir sin dato nuevo.
@@ -3985,7 +3985,7 @@ toponimos:
   forma: capatarida
   nivel: descartado
   clase: topónimo
-  glosa_fuente: 'Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 251, nodo-007; hoy Capatárida,
+  glosa_fuente: 'Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 269, nodo-007; hoy Capatárida,
     capital del municipio Buchivacoa: nombre vivo desde 1538'
   razon: Castellanos enumera, no traduce; Arcaya y Esteves los sitúan o los dan por perdidos; ningún morfema
     del canon alinea sin forzar. Se registran con su forma de 1589, su identificación moderna y su nodo,

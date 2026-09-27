@@ -9,7 +9,7 @@
     ("abdicación" de 1636). Manaure (Don Martín) fue sucedido por su hijo Don Alexandre, ya bajo
     encomienda y con casi una década de negociación con Ampíes a sus espaldas.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 265-266, 268 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\")"
+  referencia: "Oliver 1989, cap. 3, pp. 265-266, 280, 305 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\" está en la p. 305; el caso de Don Alexandre en la p. 280)"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -27,7 +27,7 @@
     ambigüedad de si ese parentesco es carnal o clasificatorio (es decir, posiblemente un sobrino
     tratado con un término que el español tradujo como "hijo").
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, p. 262 (\"his mother (carnal or classificatory?)\")"
+  referencia: "Oliver 1989, cap. 3, pp. 280-281 (\"his mother (carnal or classificatory?)\")"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -60,7 +60,7 @@
     comparado (wayuu, taíno) y tomando en serio la duda que el propio Oliver deja abierta sobre el
     caso de Manaure.
   fuente: reconstruido
-  referencia: "analogía wayuu y taína: herencia por sobrinos uterinos, no hijos (ver parentesco-006, 007); apoyo indirecto en Oliver 1989, cap. 3, p. 262"
+  referencia: "analogía wayuu y taína: herencia por sobrinos uterinos, no hijos (ver parentesco-006, 007); apoyo indirecto en Oliver 1989, cap. 3, p. 280"
   dominios: [parentesco, politica]
   agentes_relacionados: [Chiriware, Chiri-ko, Manaure]
   implicacion_simulacion: >
@@ -217,9 +217,9 @@
     La poligamia cacical funcionaba como estrategia política deliberada: ampliaba la red de parentesco
     y las obligaciones recíprocas entre familias aliadas. El Manaure histórico de CONTACTO (Don Martín,
     ya negociando con Ampíes) es el único cacique documentado sin ambigüedad como polígamo, casado con
-    Doña Sancha y con "hijas de los caribes" — alianza matrimonial interétnica explícita.
+    Doña Sancha y con "hijas de los caribes" (Oliver 1989 cap.3 p. 281) — alianza matrimonial interétnica explícita.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 260-261 (\"Polygamy involves a much broader and extensive kinship network\"); dato del Manaure histórico de contacto, no del período precontacto que la simulación modela"
+  referencia: "Oliver 1989, cap. 3, pp. 280-281 (\"Polygamy involves a much broader and extensive kinship network\"); dato del Manaure histórico de contacto, no del período precontacto que la simulación modela"
   dominios: [parentesco, politica, comercio]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -240,7 +240,7 @@
     consolida donde está el poder o el recurso (ver también el caso de la hija y la viuda de Manaure,
     que se trasladan al pueblo del cacique-esposo o del cacique-hijo).
   fuente: reconstruido
-  referencia: "patrón documentado en Oliver 1989, cap. 3, pp. 261-262 (traslado de la hija y de la viuda de Manaure al pueblo del cónyuge/heredero) aplicado por analogía a los casos ya existentes en curiana_agents.py"
+  referencia: "patrón documentado en Oliver 1989, cap. 3, pp. 280-281 (traslado de la hija y de la viuda de Manaure al pueblo del cónyuge/heredero) aplicado por analogía a los casos ya existentes en curiana_agents.py"
   dominios: [parentesco]
   agentes_relacionados: [Piru-sha, Wata-ni, Nubiri-sha]
   implicacion_simulacion: >
@@ -319,7 +319,7 @@
     «que así se llaman en tales casos aunque nunca lo sean». Rivero da las dos cosas por separado y
     no las une.
   fuente: atestiguado
-  referencia: "Rivero 1883 p. 29 (Tamudes; pdf 50) y pp. 419-420 (mude; pdf 438-439), vistas en imagen por la parcela de Rivero (#217, 6-fusion/rivero_1883_2026-09-23.yaml §cruces.tamude). Antes: «Oliver 1989, cap. 3, pp. 287-288, citando Jahn 1927: 213 y Rivero [1728-9] 1956: 30», que es la cadena Rivero → Jahn → Oliver."
+  referencia: "Rivero 1883 p. 29 (Tamudes; pdf 50) y pp. 419-420 (mude; pdf 438-439), vistas en imagen por la parcela de Rivero (#217, 6-fusion/rivero_1883_2026-09-23.yaml §cruces.tamude). Antes: «Oliver 1989, cap. 3, pp. 303-304, citando Jahn 1927: 213 y Rivero [1728-9] 1956: 30», que es la cadena Rivero → Jahn → Oliver."
   procedencia: {obra: rivero-1883, pagina: "29, 419-420"}
   dominios: [parentesco, lenguaje]
   agentes_relacionados: []
@@ -570,7 +570,7 @@
     relato del pacto con Ampíes: es decir, Manaure ES un diao (el de Coro/Todariquiba), reconocido
     además como el principal entre varios.
   fuente: atestiguado
-  referencia: "Zavala Reyes 2015, p.67 (glosario, entrada 106: \"Diao (HB)(AM): Señor principal. Jefe mayor\"); Oliver 1989, cap. 3, p. 251 (\"the main diao or great cacique, Manaure\")"
+  referencia: "Zavala Reyes 2015, p.67 (glosario, entrada 106: \"Diao (HB)(AM): Señor principal. Jefe mayor\"); Oliver 1989, cap. 3, p. 259 (\"the main diao or great cacique, Manaure\")"
   dominios: [parentesco, politica, lenguaje]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -620,7 +620,7 @@
     político directo a Manaure, que está fuera de alcance geográfico razonable de "algunas
     circunvecinas".
   fuente: reconstruido
-  referencia: "síntesis de esta sesión sobre datos atestiguados (parentesco-034; Zavala Reyes 2015 p.60; Oliver 1989 cap.3 p.251); el ENSAMBLE de los tres niveles como sistema es interpretación, no una fuente que lo describa así de explícito"
+  referencia: "síntesis de esta sesión sobre datos atestiguados (parentesco-034; Zavala Reyes 2015 p.60; Oliver 1989 cap.3 p.259); el ENSAMBLE de los tres niveles como sistema es interpretación, no una fuente que lo describa así de explícito"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure, Korie-ko, Chiriware, Paugis-sha, Sha-korie]
   implicacion_simulacion: >
