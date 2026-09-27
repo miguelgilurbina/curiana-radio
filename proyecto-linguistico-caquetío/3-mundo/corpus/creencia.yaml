@@ -305,9 +305,21 @@
     teocrático se le atribuye poder sobre las lluvias y las tormentas; su
     legitimidad depende de que el cielo le obedezca ante la comunidad.
   fuente: atestiguado
-  referencia: "crónicas del contacto sobre Manaure; canon CULTURA_CAQUETIA.md §1,§6"
+  referencia: "Carta de Juan de Ampíes al Rey (c. 1525-1526), en Oviedo y Baños ed. Fernández Duro 1885 t. II p. 212 (vista en imagen): el gran cacique de Coro «da á entender á los indios que él da los temporales»; la misma carta leída del manuscrito del AGI por Velasco 2015 p. 18 («Folio 14»); y fray Pedro de Aguado, Historia de Venezuela t. I p. 40, vía Arcaya 1920 p. 115 (Manaure les había hecho creer «que él era el autor y hacedor» de «las lluvias, granizos, truenos y relámpagos y heladas y secas»; Aguado no está en el repo). Dos testigos independientes: la carta, anterior a 1527, y Aguado, de fines del XVI. Antes decía «crónicas del contacto sobre Manaure; canon CULTURA_CAQUETIA.md §1,§6». Cambio de dp.2.07 de #222 (Tolosa A + HSAI a, 2026-09-24)."
+  procedencia: {obra: ampies-1526-carta, pagina: "212"}
   dominios: [creencia, poder, calendario]
   agentes_relacionados: [Manaure, Shaboro]
+  aviso: >
+    La carta tiene dos lecturas de la misma frase y no se decide entre ellas
+    (Tolosa A, #209): Fernández Duro imprime «se hace adorar como Dios, dando á
+    entender á los indios que él da los temporales»; Velasco, del manuscrito,
+    «se haze adorar como digo dando a entender a los indios q el da los
+    temporales». Lo que no cambia —«se hace adorar» y «él da los
+    temporales»— es lo que este hecho usa. Nada del corpus se apoya en «como
+    Dios» por esta carta. Aguado, por su lado, dice «cuasi lo tenían por
+    Dios» (vía Arcaya p. 115, donde Arcaya sí copia la frase de Ampíes; en la
+    p. 161 la salta). Decidir entre las dos lecturas pide ver el folio 14 en
+    PARES (opción B): queda para Miguel.
   implicacion_simulacion: >
     Ya en el canon; se incluye para anclar el calendario ritual al poder.
 

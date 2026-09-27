@@ -221,6 +221,19 @@ lengua… pero, *como no había intérpretes, no entendieron lo que decía*»
 **Qué NO dio:** Coro, Paraguaná, Curazao, Aruba, Bonaire, caquetíos: cero en
 los dos volúmenes (con `isla`, `oro` e `indio` por centenares de control).
 
+## 2026-09-24 — lo que entró al canon (#222, grupo 2)
+
+«Ok a todo, que no quede ninguna tarea pendiente» (Miguel, 2026-09-24).
+
+- **dp.2.05**: la Curiana de Niño y Guerra (vol. 1 p. 303) queda registrada
+  como la ORIENTAL en `toponimo-111` (lecturas), con Navarrete t. III p. 13 n.
+  4; la red Curiana ↔ Cauchieto de la sesión del 2026-09-21 se acota en
+  `6-fusion/taino_en_la_esfera_2026-09-21.yaml` (eth-00): es de la costa
+  oriental, no de la Kaketiana.
+- **dp.2.01**: la p. 309 (pdf 373) —las ferias «pero de cerca» y el oro que
+  «se les llevan de otras partes á cambio»— sostiene, con su aviso de costa
+  oriental, la forma «cadena de tramos cortos» de `geografia_politica-019`.
+
 ## Qué falta
 
 - **Barrido dirigido a los caquetíos**: queda sin preguntar la religión. La

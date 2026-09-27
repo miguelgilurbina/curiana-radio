@@ -73,6 +73,10 @@ OBRA_POR_FUENTE = {
     "osm-kaketiana": "osm-kaketiana",
     # 2026-09-24 (T2b): Oviedo da la procedencia del NOMBRE de Paraguaná.
     "oviedo-y-valdes-1851": "oviedo-y-valdes-1851",
+    # 2026-09-24 (dp.2.08 de #222, corrección del lote de Esteves): curarí y
+    # araguán ya decían `fuente: alvarado-1921`, pero la obra no estaba aquí y
+    # salían con `deuda: sin-procedencia` aunque citaban.
+    "alvarado-1921": "alvarado-1921",
 }
 
 
@@ -151,6 +155,16 @@ def toponimos(T):
     # rehabilitar o reclasificar un original sin mover a los demás.
     # `clase` y `polity` de grupo viajan a cada forma (los antropónimos de
     # Barquisimeto: regla 4).
+    # Desde el 2026-09-24 (dp.2.08 y dp.2.09 de #222) un grupo puede traer
+    # además, POR FORMA: `observaciones` {forma: texto}, que va a `observacion`
+    # y deja la glosa para lo que es glosa (antes el referente se metía en el
+    # paréntesis y salía como `glosa_fuente`); `lecturas` {forma: [lecturas]},
+    # la tercera voz también para un descartado (las identificaciones con el
+    # mapa vivo, P3 A); `origenes` {forma: texto}, lo que el autor dice del
+    # origen del nombre (castellano, híbrido, transplantado); `estratos`
+    # {forma: texto}, la lengua que el autor le atribuye («según Esteves», no
+    # dato); y `formas_vivas` {forma: [{forma, lat, lon, tipo}]}, la forma del
+    # mapa vivo con su coordenada, que lee barrer_mapa.py (P4).
     for razon, e in T.DESCARTES.items():
         ids = e.get("ids", {})
         paginas = e.get("paginas", {})
@@ -177,6 +191,14 @@ def toponimos(T):
             if m:
                 reg["glosa_fuente"] = m.group(2)
             reg["razon"] = e.get("razon") or razon
+            for campo, destino in (("observaciones", "observacion"),
+                                   ("origenes", "origen_segun_autor"),
+                                   ("estratos", "estrato_segun_autor"),
+                                   ("lecturas", "lecturas"),
+                                   ("formas_vivas", "forma_viva")):
+                valor = (e.get(campo) or {}).get(base)
+                if valor:
+                    reg[destino] = valor
             reg["procedencia"] = _procedencia({"fuente": e.get("fuente"),
                                                "pagina": paginas.get(base)})
             if not reg["procedencia"]:

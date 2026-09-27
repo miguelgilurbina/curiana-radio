@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-09-27**.
 
-**7669 ítems propuestos** en 154 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**7835 ítems propuestos** en 156 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -49,6 +49,7 @@ editar_a_mano: no
 | `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
 | `decisiones_222_documentacion_2026-09-24.yaml` | ? | 11 |  |
+| `decisiones_222_mundo_2026-09-24.yaml` | ? | 0 |  |
 | `decisiones_base_2026-09-22.yaml` | ? | 0 |  |
 | `decisiones_campanas_2026-09-21.yaml` | ? | 0 |  |
 | `decisiones_cierre_2026-09-23.yaml` | ? | 0 |  |
@@ -167,7 +168,8 @@ editar_a_mano: no
 | `taino_zayas_1931.yaml` | ? | 39 |  |
 | `toponimia_coro_espina.yaml` | gonzalez-batista-nombre-de-coro | 5 |  |
 | `toponimia_paraguana_miguel.yaml` | ? | 5 |  |
-| `toponimos_esteves_indice.yaml` | esteves-1989 | 127 |  |
+| `toponimos_cola_otras_fuentes.yaml` | ? | 3 |  |
+| `toponimos_esteves_indice.yaml` | esteves-1989 | 187 |  |
 | `toponimos_esteves_lote_2026-09-22.yaml` | esteves-1989 | 83 |  |
 | `tura_la_tesis_de_miguel.yaml` | ? | 0 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
@@ -206,7 +208,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 218 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 171 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 274 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 | `lexicon_perea.py` | perea-alonso-1942 | 173 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 

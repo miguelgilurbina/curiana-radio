@@ -18,7 +18,7 @@
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-09-23'
-  estado: sin-fusionar
+  estado: fusionado   # 2026-09-24, en tres tandas (dp.2.08 de #222): toponimo-181 a -307; ver 6-fusion/decisiones_222_mundo_2026-09-24.yaml
   obra: esteves-1989
   quien: escriba (Claude), parcela M6 de la tercera campaña de minería
   lote:

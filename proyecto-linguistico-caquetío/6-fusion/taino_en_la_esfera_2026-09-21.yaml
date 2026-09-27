@@ -236,16 +236,11 @@ inventario:
         entero. Ninguna fuente del repo menciona cerámica ostionoide, chicoide
         ni meillacoide en Falcón o las ABC, ni dabajuroide en las Antillas
         Mayores — pero la obra que zanjaría eso está en 0 bytes (ver arq-05).
-      contrapeso_genetico: >-
-        2026-09-24 (dp.3.19, T8 B de #222). El límite de la CERÁMICA sigue en
-        pie (T8 lo volvió a medir: cero antillano en Urbina y en Zavala Reyes
-        2018, cer-01 de T8; y la cerámica de Aruba es local o de origen
-        indeterminable, cer-02 de T8 y mov-02 de M8). Pero ya no es todo lo
-        que hay: la GENÉTICA dice que la gente sí se movió. Las aldeas
-        caquetías de Curazao llevan ~dos tercios de ancestría de las Antillas
-        MENORES (Fernandes 2020; gen-01 de T8), sin fecha para la mezcla y sin
-        el taíno de las Mayores. «Y no más allá» vale para los cacharros, no
-        para las personas.
+        CONTRAPESO (T8 B, aplicada por dp.2.04 de #222, 2026-09-24): el límite
+        sigue en pie para los CACHARROS, pero no para la gente — en dos aldeas
+        caquetías de Curazao hay ancestría antillana sin fecha (Fernandes et al.
+        2020; ver gen-03). La cerámica para en las islas; los genes de las
+        islas vienen en parte de más al este.
 
     - id: arq-02
       afirmacion: >-
@@ -369,21 +364,28 @@ inventario:
         pregunta bien planteada, no como conclusión. Aquí queda igual.
 
     - id: gen-03
-      afirmacion: >-
-        ⚠️ CORREGIDO el 2026-09-24 (dp.3.19, T8 B de #222: «Ok a todo»,
-        Miguel). De los «dos negativos medidos» queda UNO. El primero era un
-        cero de la BIBLIOTECA, no del registro: Fernandes et al. 2020 sí es
-        legible (Europe PMC y el suplemento del laboratorio; el PDF del repo
-        sigue en 0 bytes a propósito, por la licencia) y trae ADN antiguo de
-        DOS ALDEAS CAQUETÍAS DE CURAZAO con ~dos tercios de ancestría
-        emparentada con las Antillas MENORES — y, en el texto principal, «but
-        not the Greater Antilles» (con el matiz del qpGraph, «entre las dos»).
-        Detalle, cifras y límites en 6-fusion/taino2_evidencia_material_contacto.yaml
-        `gen-01` (T8, #196). El segundo negativo sigue en pie:
-        moreno-mayar-2018 no es genética del Caribe.
-      afirmacion_antes: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética."
+      # 🔴 CORREGIDO el 2026-09-24 (T8 B de #196, aplicada por dp.2.04 de #222,
+      # «Ok a todo»). El primer negativo YA NO LO ES: el cero de Fernandes 2020
+      # era de la biblioteca (el PDF de Nature sigue en 0 bytes), no del
+      # registro. El preprint de bioRxiv, que sí está en el repo
+      # (Fernandes_et_al_2020_biorxiv_preprint_CCBYNCND.pdf, p. 14 del PDF),
+      # modela «five ancient individuals from Curaçao» con 68,1 ± 5,1 % de
+      # ancestría del clado cerámico caribeño y 31,9 % del venezolano: «people
+      # related to those who moved into the Greater Antilles also reached
+      # Curaçao». La versión publicada, según T8 (Europe PMC y el suplemento,
+      # no en el repo), afina el subclado a las Antillas MENORES «but not the
+      # Greater Antilles». Hay flujo antillano hacia Curazao, sin fecha. Ver
+      # 6-fusion/taino2_evidencia_material_contacto.yaml §gen-01 y el registro
+      # 6-fusion/decisiones_222_mundo_2026-09-24.yaml (dp.2.04). El segundo
+      # negativo (moreno-mayar-2018 no es genética del Caribe) sigue en pie.
+      # Al fusionar las dos ramas (2026-09-24): dp.3.19 (#222 grupo 3) había
+      # corregido este mismo registro dando por hecho «~dos tercios de
+      # ancestría emparentada con las Antillas MENORES». Se queda la lectura
+      # de dp.2.04, que no afirma más de lo que dice el preprint del repo; lo
+      # de «Menores» es la lectura de T8 de un texto que el repo no tiene.
+      afirmacion: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética — el primero, corregido el 2026-09-24 (ver arriba)."
       epoca: n/a
-      etiqueta: atestiguado   # el cero de moreno-mayar-2018 está medido; lo de Fernandes, en gen-01 de T8
+      etiqueta: atestiguado   # los ceros están medidos hoy
       detalle:
         - >-
           `Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf` — la
@@ -402,6 +404,13 @@ inventario:
   etnohistorica_precontacto:
 
     - id: eth-00
+      # 🔴 ACOTADO el 2026-09-24 (dp.2.05 de #222, con M2 #212 y T7 #199): la
+      # Curiana de Niño y Guerra es la ORIENTAL —«la costa que está enfrente
+      # de la Margarita, y comprende la costa de Cumaná y golfo de Cariaco»
+      # (Navarrete 1829 t. III p. 13 n. 4)—, no la de Coro. La red Curiana ↔
+      # Cauchieto de abajo es una red de la costa oriental de Venezuela: la
+      # conclusión «continental y de eje este-oeste» se sostiene, pero no es
+      # la red de la Kaketiana. Ver toponimo-111 (lecturas).
       afirmacion: >-
         🔴 NINGÚN cronista del repo describe tráfico precolombino entre la
         costa caquetía o las islas ABC y las Antillas Mayores. El único relato

@@ -119,6 +119,12 @@
     El número de "40 casas" que Miguel recordó para este poblado NO se confirmó en esta sesión: la
     cifra de 40-50 encontrada en Oliver corresponde a la capacidad de una maloca en Curazao, un
     dato distinto. Pendiente de verificar contra Vespucio directamente si se retoma esta pieza.
+    RESUELTO (dp.2.06 B de #222, 2026-09-24): Vespucio dice «veinte grandes casas, con corta
+    diferencia» (Navarrete 1829 t. III p. 219), no cuarenta — ver geografia_politica-023. Y
+    Navarrete separa dos sitios: el poblado sobre estacas de la costa oriental del golfo, sin
+    nombre (p. 8), y el «lago de S. Bartolomé» donde el primer viaje tomó las indias (doc.
+    XVIII, p. 105). Llamar «Puerto de San Bartolomé» al palafito es de Ramos Pérez vía
+    Oliver; renombrar la pieza es otra decisión y no se toma aquí.
 
 - id: geografia_politica-007
   contenido: >
@@ -277,4 +283,374 @@
     Taku-ko, Pari-nu) y un raid caribe en la biografía de Chiriware, todo
     canon-simulación. Este hecho impide que «los caquetíos eran pacíficos» se
     use como argumento para quitarlos.
+
+# ── dp.2.04 de #222 (2026-09-24, «Ok a todo»): T5 D, los dos hechos de la
+# campaña del taíno (6-fusion/taino_en_la_esfera_2026-09-21.yaml
+# §propuesta_corpus). Van con la ficha del taíno en 3-mundo/etnias.yaml. ──
+- id: geografia_politica-014
+  contenido: >
+    Desde 1513 la Corona declaró «islas inútiles» a Curazao, Aruba y Bonaire y
+    autorizó a los colonos de Santo Domingo y Puerto Rico a llevarse indios de
+    ellas: de ahí salió la saca de unos dos mil caquetíos insulares hacia La
+    Española y Puerto Rico —y, según Arcaya, «sin duda» también de Paraguaná y
+    de la costa de Coro más cercana a las islas—, a sustituir la mano de obra
+    taína que se moría. Algunos pasaron a la casa de Juan de Ampíes en Santo
+    Domingo como indios de servicio; Ampíes los trató, fue sabiendo por ellos de
+    la tierra firme y de su gente, y de ahí salió la negociación que acabó en el
+    pacto con Manaure. Desde 1526 se devolvieron a Aruba y Curazao entre 150 y
+    200, «mainly Caquetíos, but some Arawaks from other Caribbean islands».
+  fuente: atestiguado
+  epoca: colonial
+  referencia: "Arcaya 1920 pp. 154 y 159 (la declaración de 1513, la saca de Diego de Salazar y Ampíes conversando con los deportados); Oliver 1989 cap. 3 pp. 250-251 (el mecanismo, «especially designed to supply Hispaniola with Indian labor, since the local Taíno population had dramatically decreased», y la saca de Martín Baso Zabala en 1515) y p. 212 (Ampíes informado de la tierra sin haberla pisado); Martínez-Cruzado et al. 2003, p. 4 del artículo, vía Hartog 1961 (el retorno desde 1526). Propuesta de T5 (#192), fusionada por dp.2.04 de #222. T5 citaba a Arcaya «pp. 153 y 158»: vistas en el PDF son las impresas 154 y 159 (pdf 162 y 167)."
+  procedencia: {obra: arcaya-1920, pagina: "154, 159"}
+  dominios: [politica, geografia, colonial]
+  agentes_relacionados: []
+  aviso: >
+    No se promedia: Arcaya da 1513 y Diego de Salazar; Oliver, 1515 y Martín
+    Baso Zabala; Martínez-Cruzado vía Hartog, «two years later» de 1513 y unos
+    dos mil. Puede haber una saca o varias; cerrarlo pide Ramos Pérez 1978 y
+    CoDoIn 1864/1868, que no están en el repo. Y que la saca alcanzara
+    Paraguaná es inferencia de Arcaya («sin duda»): el documento cubre las
+    islas.
+  implicacion_simulacion: >
+    NINGUNA para el mundo del siglo XV: es posterior a la ventana y no describe
+    una ruta indígena. Vale como método: explica por qué un cronista que
+    escribe en Santo Domingo entre 1513 y 1540 pudo oír caquetío —y por tanto
+    por qué una voz «de La Española» no es automáticamente taína—, y el retorno
+    de 1526 es un contacto dialectal documentado a 30 km de Paraguaná,
+    análogo histórico del DISENO_KOINE, nunca evidencia de él.
+
+- id: geografia_politica-015
+  contenido: >
+    El horizonte marítimo de la polity costera caquetía tiene tres tramos
+    documentados y un cuarto que no existe. Hacia el norte, la travesía a
+    Aruba, Curazao y Bonaire, que no es salir de la polity sino recorrerla: las
+    islas están dentro del mayor territorio contiguo bajo un solo mando
+    caquetío («including the Netherland Antilles»). Hacia el este, las
+    estaciones de pesca y concha de Las Aves y Los Roques, en disputa con
+    grupos caribes desde el 1200 d.C. Hacia el oeste, el eje largo y el más
+    rico: la Alta Guajira, el valle del Ranchería y, de oídas, la Sierra Nevada
+    de Santa Marta, de donde vienen el oro y las piedras verdes. Hacia las
+    Antillas Mayores, nada: ninguna fuente documenta una travesía, un objeto ni
+    una noticia entre ellas y la Kaketiana.
+  fuente: atestiguado
+  epoca: precontacto
+  referencia: "Oliver 1989 cap. 3 pp. 198 (el territorio, «including the Netherland Antilles»), 200 y 207-212 (el eje occidental, las piedras verdes de la capitulación de Ojeda) y cap. 4 (Los Médanos A/B ≈ Ranchería); Antczak y Antczak 2017 p. 157 (Las Aves y Los Roques); Antczak y Antczak 2015. Propuesta de T5 (#192), fusionada por dp.2.04 de #222."
+  procedencia: {obra: oliver-1989-cap3, pagina: "198, 200, 207-212"}
+  dominios: [politica, geografia, comercio, islas]
+  agentes_relacionados: [Kadushi, Watapana]
+  nota_abierta: >
+    Escrito el 2026-09-21; tres cosas llegaron después y se declaran sin
+    rehacer el hecho. (1) T8 (#196) trae flujo génico antillano en dos aldeas
+    caquetías de Curazao, sin fecha para la mezcla: de las Antillas MENORES
+    según el texto publicado de Fernandes et al. 2020, que el repo no tiene
+    (0 bytes); del clado cerámico caribeño sin distinguir, según el preprint
+    que sí está. No contradice el cuarto tramo —habla de otra cadena— pero es
+    un tramo más hacia el noreste, visto en los huesos y no en los objetos
+    (etnias.yaml: la ficha quedó para Miguel, 6-fusion/decisiones_222_mundo_2026-09-24.yaml).
+    (2) T7 (#199) halló una noticia indígena anterior a 1492 de una tierra
+    firme al sur de La Española que no localiza nada, y el circuito del guanín
+    entre el istmo y las Mayores: geografia_politica-018 y -019. (3) Casale et
+    al. 2024 (fig. 1) une cada isla ABC con la costa de enfrente y ninguna con
+    otra ni con las Antillas.
+  implicacion_simulacion: >
+    Da el mapa mental del tier 1 que navega, y lo da con bordes: lo que conoce
+    por haber ido (las islas ABC, Los Roques) y lo que conoce de oídas (la
+    Guajira, la Sierra Nevada). El cuarto tramo, el del norte lejano, es el que
+    NO debe aparecer: un agente del siglo XV no tiene noticia de La Española.
+
+# ── dp.2.01 de #222 (2026-09-24, «Ok a todo»): la hipótesis de Miguel sobre el
+# contacto con las Antillas Mayores (dc.4), partida en tres afirmaciones con su
+# capa y la tercera en dos (C) y reformulada como cadena de tramos cortos (E).
+# Propuestas: T7 (#199, 6-fusion/taino2_etnohistoria_contacto.yaml), dc.4
+# (decisiones_campanas_2026-09-21.yaml), M2 (#212), M8 (#203), T8 (#196). ──
+- id: geografia_politica-016
+  contenido: >
+    En 1525-1526 la gente de la costa de Tierra Firme frente a Curazao, Aruba y
+    Bonaire —«desde Paraguachoa hasta la punta de Coquibacoa», con Sauca y
+    Paraguaná entre sus puertos— «muchas veces se pasaban allá á holgar» con
+    los de las islas, y costa e islas estaban emparentadas: el cacique D. Juan
+    Baracoica, «que está en las islas», era «su pariente y deudo», el de los
+    indios de la costa que lo mandaron a Ampíes en nombre de Manaure. La esfera
+    cruza el agua como una sola comunidad con parentesco.
+  fuente: atestiguado
+  epoca: colonial (1525-1526), describiendo un hábito ya establecido
+  referencia: "Carta de Juan de Ampíes al Rey, en Oviedo y Baños ed. Fernández Duro 1885 t. II p. 212 (vista en imagen, pdf 223); copiada por Arcaya 1920 pp. 160-161; Oliver 1989 cap. 3 p. 258 lo lee como parentesco entre los caciques de Curazao y los de Paraguaná. Primera de las tres afirmaciones de dc.4, fusionada por dp.2.01 de #222 (C + E)."
+  procedencia: {obra: ampies-1526-carta, pagina: "212"}
+  dominios: [politica, geografia, parentesco, islas]
+  agentes_relacionados: [Kadushi, Watapana]
+  aviso: >
+    dc.4 y T8 escribieron que Baracoica era «pariente y deudo» de Manaure. La
+    carta dice «su», y el sujeto son los indios de la costa que lo envían; que
+    fuera «hijo del mismo Manaure» es de Arcaya p. 199, sin fuente. Y es un
+    documento de 1525-1526: proyectar el hábito al siglo XV es una decisión
+    (regla 3), no una lectura. geografia_politica-001 ya daba la presencia
+    caquetía en las islas; esto añade el parentesco y la frecuencia.
+  implicacion_simulacion: >
+    Para los agentes que navegan: ir a las islas es visitar parientes, no salir
+    de su mundo. El elenco ya tiene a Kadushi «caquetío de Aruba» y a Watapana
+    viajando a Aruba y Bonaire.
+
+- id: geografia_politica-017
+  contenido: >
+    Entre 1513 y 1526 la costa y las islas estuvieron en contacto con La
+    Española, en barcos castellanos: Manaure hizo llegar a Juan de Ampíes, en
+    Santo Domingo, una embajada encabezada por un pariente de los isleños;
+    Ampíes mandó una carabela con cinco cristianos, esos indios y una india
+    criada en su casa para que les hablase; una armada castellana tomó parte de
+    aquellos indios y «una india hija del gran Cacique de Coro», con su marido,
+    y los llevó a La Española como esclavos; los jueces mandaron volverlos.
+    Oliver resume que Manaure mandó caciques a Curazao, a Aruba «and even
+    Hispaniola».
+  fuente: atestiguado
+  epoca: colonial (1513-1526)
+  referencia: "Carta de Ampíes, Fernández Duro 1885 t. II p. 212 (vista en imagen); Arcaya 1920 pp. 160-161 (la copia) y 167-168 (la identificación de la hija con Doña Juana, mujer del señor de Hurehurebo, con Castellanos, y la india rescatada que Federmann halla en Paraguaná en 1531); Oliver 1989 cap. 3 p. 266. Segunda de las tres afirmaciones de dc.4, fusionada por dp.2.01 de #222."
+  procedencia: {obra: ampies-1526-carta, pagina: "212"}
+  dominios: [politica, geografia, parentesco, colonial]
+  agentes_relacionados: [Manaure]
+  aviso: >
+    Es diplomacia con el factor de la Corona, en barco español y dentro de una
+    negociación colonial: NO es una ruta de canoa. Y la hija no tiene nombre en
+    la carta: Doña Juana es la identificación de Arcaya; «Judibana», de
+    Velasco. Que la india de Federmann fuera ella lo dice Arcaya, no Federmann
+    (#210).
+  implicacion_simulacion: >
+    Ninguna para el mundo del siglo XV. Es el argumento de Miguel en dc.4 («debe
+    haber habido contacto precolombino»), y su lugar es de razón, no de dato: lo
+    que prueba es que Manaure sabía mandar gente al otro lado del agua cuando
+    tenía a quién, no que antes de 1499 hubiera a quién.
+
+- id: geografia_politica-018
+  contenido: >
+    Antes de 1492 circulaba entre Tierra Firme y las Antillas Mayores el
+    guanín, un oro bajo —«pieças de cobre doradas; é si algund oro tienen, es
+    muy poco ó ninguno», lo define Oviedo— que los taínos de La Española
+    estimaban por el olor y el color morado y decían traído de fuera, sin que
+    el sitio que nombraban resultara ser una isla; que la gente de Paria
+    llevaba al cuello en 1498 y decía venir de «una tierra frontera dellos al
+    Poniente, que era muy alta, mas no lejos»; y que en Veragua, en 1502, era
+    local y trabajado en águilas y espejos. Los dos extremos apuntan a un foco
+    continental lejano, al oeste-suroeste: la orfebrería del istmo y de
+    Colombia. Ninguno apunta a la Kaketiana.
+  fuente: reconstruido
+  epoca: precontacto (inferido hacia atrás desde testimonios de 1492-1502)
+  referencia: "Las Casas 1875 lib. I caps. LX y LXVII (La Española, 1492-1493); Colón, Relación del tercer viaje, en Navarrete 1859 t. I p. 401 (Paria, 1498; visto en el texto); Hernando Colón 1892 p. 165 (Veragua, 1502); Oviedo y Valdés 1851 vol. I lib. XVII cap. IX, p. 507 (la definición, pdf 627). Afirmación C1 de T7 (#199), fusionada por dp.2.01 de #222."
+  procedencia: {obra: navarrete-1859-viages-colon, pagina: "401"}
+  dominios: [comercio, geografia, metales]
+  agentes_relacionados: []
+  aviso: >
+    «reconstruido» aquí no es método comparativo: es inferencia hacia atrás
+    desde lo que los propios indios dijeron entre 1492 y 1502, con la reserva de
+    Colón escrita en la misma página («entendí entonces… y después he
+    pensado»). Dos trampas medidas: Hernando Colón (p. 57) dice «otras islas
+    occidentales» donde su padre escribió «tierra»; y un cronista que llama
+    guanín a algo no atestigua que allí se llamara así —Oviedo lo hace en
+    Yucatán—. Y desde 1499 los castellanos sacaban guanines de Paria y
+    Coquibacoa y los vendían en La Española (cédula de 1501,
+    geografia_politica-022): un guanín antillano posterior a 1499 no prueba
+    nada anterior.
+  implicacion_simulacion: >
+    Ninguna directa: el guanín no es de la Kaketiana. Sirve para que nadie
+    escriba que el oro de las Mayores venía de Coro.
+
+- id: geografia_politica-019
+  contenido: >
+    Que la esfera caquetía participara en el circuito del guanín, o tuviera
+    trato con las Antillas Mayores antes de 1492, no lo documenta ninguna
+    fuente. Si lo hubo, fue por una CADENA de tramos cortos y no por travesía:
+    así viaja un nombre de alianza entre señores de eslabón en eslabón sin que
+    los extremos se hablen, que es lo que se observa —una voz y una
+    institución compartidas por taíno y caquetío (datihao), y en Paria, en
+    1498, «ambas las partes gran pena porque no se entendían»—. Las ferias de
+    la costa oriental comerciaban «pero de cerca», y el oro aleado «se les
+    llevan de otras partes á cambio». La hipótesis es falsable: un objeto
+    antillano en las islas ABC o un tiesto dabajuroide en las Mayores sería un
+    tramo que no debería existir.
+  fuente: hipotetico
+  epoca: precontacto
+  referencia: "Afirmación C2 de T7 (#199) con la reformulación E, fusionadas por dp.2.01 de #222 (2026-09-24, «Ok a todo»). Apoyos: Colón en Navarrete 1859 t. I p. 400 (Paria, no se entendían); Anglería 1892 vol. 1 p. 309 (pdf 373: «pero de cerca», el oro «se les llevan de otras partes á cambio»; es la Curiana ORIENTAL, ver toponimo-111); Las Casas 1875 lib. I cap. LXVIII (la «renclera de islas» donde cada noche se puede dormir en una); Casale et al. 2024 p. 2, fig. 1 (vista en imagen: cada isla ABC unida con la costa de enfrente, ninguna con otra ni con las Antillas); la cédula de 1501 (geografia_politica-022)."
+  procedencia: {obra: navarrete-1859-viages-colon, pagina: "400"}
+  dominios: [comercio, geografia, teoria, islas]
+  agentes_relacionados: []
+  nota_abierta: >
+    Lo que la subiría es un objeto, no una crónica: el oro que los de Hojeda
+    vieron colgado en Curazao en 1502 (T7, t7.kak2; otros testigos del pleito
+    dicen que no lo vieron) se decide en los autos del pleito de Hojeda, fols.
+    16-21, que el repo no tiene. Y T8 (#196) trae flujo génico antillano en
+    Curazao, sin fecha y —según qué versión de Fernandes et al. 2020 se lea—
+    de las Antillas Menores o del clado cerámico caribeño sin distinguir: si
+    es de las Menores, es otra cadena, por el sur. La ficha de ese vecino quedó
+    para Miguel (6-fusion/decisiones_222_mundo_2026-09-24.yaml, dp.2.04).
+  implicacion_simulacion: >
+    Ninguna todavía: la capa es hipotética y el perfil era2 no la ve. Para
+    los agentes, La Española no existe; lo que existe son los vecinos de
+    enfrente y, más allá, noticias que llegan de mano en mano.
+
+# ── dp.2.02 de #222 (2026-09-24, «Ok a todo»): Federmann A + Tolosa A +
+# Rivero (b) + Gumilla A — un solo hecho con cuatro testigos. ──
+- id: geografia_politica-020
+  contenido: >
+    «Caquetío» era también el nombre de una lengua extendida de la costa a los
+    llanos, con variación. En 1530 un caquetío de Coro sirvió de intérprete y
+    embajador ante los caquetíos de Barquisimeto, los mismos intérpretes
+    bastaron en el valle del Yaracuy, y la expedición, que había necesitado
+    hasta cinco lenguas para cruzar la sierra, no se esperaba que al otro lado
+    se hablara como en Coro; en 1546 los caquetíos de los llanos, «docientas
+    leguas de tierra», eran la misma nación, «aunque algo difieren en la habla
+    á los de Coro», y además vivían de otro modo («no son grandes
+    labradores»). En los siglos XVII y XVIII el etnónimo sigue en el Casanare:
+    «Cacatíos» en Pauto, un misionero «lidiando con la lengua Caquetá» de su
+    pueblo hacia 1667, «Caquetíos de Pauto» en 1666, los que los achaguas
+    llamaban «Tamudes» y los españoles caquetíos al sur del Meta, y una «Nacion
+    Cacatia, Christiana ya» en Gumilla.
+  fuente: atestiguado
+  epoca: contacto-temprano (1530, 1546) y colonial (Casanare y Orinoco, ss. XVII-XVIII)
+  referencia: "Federmann 1916 p. 58 (1557 [46], visto en imagen por la parcela Federmann: los intérpretes y la sorpresa) y p. 108 (Klüpfel p. 70: «dieweil wir diser sprache der Caquetios selber tolmetschen hetten»); Pérez de Tolosa 1546, en Fernández Duro 1885 t. II p. 234 (de segunda mano: lo que le contaron «personas cuerdas»); Rivero 1883 pp. 29, 54, 144, 151, 201 y 392; Gumilla 1791 t. II p. 55. Propuestas: #210 (fed-len-002), #209 (ptol-16), #217 (§2) y #218 (pregunta 1), fusionadas juntas por dp.2.02 de #222."
+  procedencia: {obra: perez-de-tolosa-1546, pagina: "234"}
+  dominios: [politica, geografia, lengua]
+  agentes_relacionados: []
+  aviso: >
+    Ningún testigo da una sola palabra de esa lengua ni dice EN QUÉ difieren
+    las hablas: «algo» es la palabra de un castellano. El contraste es llanos
+    frente a Coro y no se extiende a variación dentro de la costa (regla 4).
+    Rivero no compara el habla de Pauto con la de Coro ni prueba continuidad
+    política con los caquetíos del Cojedes: es el mismo etnónimo, en misión,
+    junto a tunebos y támaras. Lo del Casanare es colonial y de otra polity.
+  implicacion_simulacion: >
+    Ninguna para el motor hoy: simulamos una sola polity y la fuente no da una
+    forma que distinga las variedades. Si alguna vez entra una segunda polity,
+    llega con su variedad de lengua (polities-caquetias.md, «Qué falta» 3).
+
+# ── dp.2.06 de #222 (2026-09-24, «Ok a todo»): «C primero, luego B; D como
+# nota; E en espera». C (verlo en imagen) no se pudo hacer en esta sesión y
+# queda para Miguel; B entra desde la capa de texto de Navarrete, que lleva el
+# folio en el flujo, y SIN lo que C tenía que decidir: «tierra de riego»
+# (m2.c3) y las grafías de Coquibacoa (m2.g2) no se citan. Propuesta: M2
+# (#212, 6-fusion/cronicas_contacto_costa_occidental_2026-09-22.yaml). ──
+- id: geografia_politica-021
+  contenido: >
+    En abril de 1502, en la costa occidental que Hojeda llamó Valfermoso —«que
+    los indios llamaban Curiana», según Navarrete—, los de Hojeda se llevaron
+    hamacas, algodón y enseres y prendieron algunas indias, «de las cuales
+    unas se rescataron por guanines»; y los indios volvían después, con seguro,
+    «á rescatar estas mismas prendas á precio de guanines, quejándose
+    amargamente del mal que sin causa se les había hecho». La gente de esa
+    costa tenía guanín con que pagar en 1502.
+  fuente: atestiguado
+  epoca: contacto-temprano (1502)
+  referencia: "Navarrete 1829 t. III p. 33 (narración sobre la declaración del escribano, fol. 16 de los autos; capa de texto, folio en el flujo) — no la 34 que dejó T7. Hallazgo m2.m1 de M2 (#212), fusionado por dp.2.06 B de #222."
+  procedencia: {obra: navarrete-1829-viages-menores, pagina: "33"}
+  dominios: [comercio, metales, colonial]
+  agentes_relacionados: []
+  aviso: >
+    Regla 3: el rescate «á precio de guanines» es aquí respuesta a un saqueo,
+    no una costumbre vista en paz, y desde 1499 el guanín ya circulaba por
+    manos castellanas (geografia_politica-022). Que Valfermoso sea Coro es
+    inferencia de Navarrete, y su propio itinerario la tensa (de allí Hojeda va
+    a Puerto Flechado, que él pone al este): costa occidental, entre Codera y
+    Coquibacoa. Y el nombre «Curiana» para Valfermoso es frase de Navarrete
+    sobre los autos, no transcripción: es la Curiana occidental, distinta de
+    la del rescate de perlas (toponimo-111).
+  nota_abierta: >
+    (D, como nota.) La armada de 1502 llevaba una intérprete indígena de
+    Tierra Firme, Isabel: la instrucción de Hojeda del 20 de mayo de 1502
+    manda vigilarla «de noche ni de dia sin guarda», venir «costa á costa
+    hablando á los indios en todas las partes que podierdes» y que traiga
+    «algún pariente suyo» (Navarrete t. III pp. 107-108, doc. XX). Era cautiva
+    y no se dice de dónde; Navarrete supone que la tomaron en 1499 (p. 36 n.
+    1). Corrige a T7 (t7.l4): en 1502 no sólo entendía a los indios un
+    español que se quedó trece meses; los españoles se hacían sus propias
+    lenguas en la costa. Y queda EN ESPERA, sin aplicar (E), la «isla de las
+    hierbas» (m2.p1): hasta cotejar la arqueología de las ABC.
+  implicacion_simulacion: >
+    Ninguna para la ventana del siglo XV. Si algún día se escribe el contacto,
+    el guanín de 1502 es mercancía ya tocada por la trata.
+
+- id: geografia_politica-022
+  contenido: >
+    Una real cédula de 1501 (Granada, 3 de septiembre) prohíbe lo que ya
+    estaba pasando: que algunos, sin licencia, se habían puesto a «sacar
+    mineros de ciertos metales que se dicen guanines en las islas de la Paria
+    é de Caquibacoa, é de otras de las dichas islas é tierra-firme, é los han
+    traído é traen á vender á los dichos indios de la dicha isla Española, é á
+    otras partes». Entre 1499 y 1501 el guanín de Tierra Firme —el de
+    Coquibacoa incluido— entraba en La Española en barcos castellanos.
+  fuente: atestiguado
+  epoca: contacto-temprano (1499-1501)
+  referencia: "Navarrete 1829 t. III pp. 518-519 (suplemento, doc. XLVII, del proceso de Vergara y Ocampo contra Hojeda; capa de texto). Hallazgo m2.m2 de M2 (#212), fusionado por dp.2.06 B de #222. La grafía «Caquibacoa» es la del OCR: las grafías de Coquibacoa esperan la imagen (dp.2.06 C)."
+  procedencia: {obra: navarrete-1829-viages-menores, pagina: "518-519"}
+  dominios: [comercio, metales, colonial]
+  agentes_relacionados: []
+  aviso: >
+    «sacar mineros de ciertos metales» es la idea castellana de una mina de
+    guanín: la cédula no dice que se extrajera allí, sino que de allí se
+    sacaba. Es el vector castellano del guanín documentado en el acto: todo
+    guanín de las Antillas Mayores posterior a 1499 deja de servir como prueba
+    de contacto precolombino (geografia_politica-018, -019).
+  implicacion_simulacion: >
+    Ninguna: es de después de la ventana. Protege al corpus de un argumento
+    circular.
+
+- id: geografia_politica-023
+  contenido: >
+    En agosto de 1499, tras doblar el cabo de San Román y entrar en el golfo
+    que «los indios le llamaban Golfo de Coquibacoa», los de Hojeda vieron en
+    su costa oriental una gran población fundada en el agua sobre estacas,
+    comunicada de casa en casa con canoas; la Lettera de Vespucio la cuenta
+    como «veinte grandes casas, con corta diferencia, construidas á modo de
+    campanas… y fundadas sobre sólidas y fuertes estacas», con «unos como
+    puentes levadizos» delante de las puertas. Es un avistamiento de un día, y
+    un poblado sin nombre en el texto.
+  fuente: atestiguado
+  epoca: contacto-temprano (1499)
+  referencia: "Navarrete 1829 t. III p. 8 (la narración sobre los papeles de Hojeda) y p. 219 (la Lettera, traducida por Navarrete; capa de texto, folio en el flujo). Hallazgo m2.c1 de M2 (#212), fusionado por dp.2.06 B de #222."
+  procedencia: {obra: navarrete-1829-viages-menores, pagina: "8, 219"}
+  dominios: [geografia, asentamiento]
+  agentes_relacionados: []
+  aviso: >
+    Vespucio es mal testigo de cifras y coloca el episodio en su «primera
+    navegación» de 1497, que Navarrete tiene por fingida y reconstruida sobre
+    este viaje. «Veinte» es, con todo, lo que la fuente dice: las «40 casas»
+    que se buscaban para geografia_politica-006 no están ahí. Y el nombre
+    «San Bartolomé» es de OTRO sitio en Navarrete: el lago donde el primer
+    viaje «tomó las indias» (doc. XVIII, p. 105). Que el palafito fuera la
+    forma de asentamiento del siglo XV en esa orilla es verosímil, pero la
+    fuente es un solo avistamiento (regla 3).
+  implicacion_simulacion: >
+    Da la escala de un poblado de agua de la costa del golfo: unas veinte
+    casas grandes, no una ciudad.
+
+# ── dp.2.17 de #222 (2026-09-24, «Ok a todo»): la costa oriental de
+# Federmann es OTRA polity costera, fuera del mapa de la era 2 (B, «por
+# ahora»). Propuesta: #210, 6-fusion/federmann_1530_costa_2026-09-22.yaml
+# §fed-coro-007. ──
+- id: geografia_politica-024
+  contenido: >
+    A la vuelta de su primer viaje, en 1531, Federmann recorrió la costa del
+    Falcón oriental desde cerca de la boca del Yaracuy (Xaragua) hasta Coro:
+    los caquetíos de junto al Yaracuy habían dejado sus aldeas por las razzias
+    de los esclavistas de Santo Domingo; desde Martinico empezaban los
+    caquetíos amigos, y de allí a Coro, «sesenta y cinco leguas, siguiendo la
+    costa del mar», el país «lo habitaban los Caquetíos, nuestros aliados»,
+    comunicados por canoa. En la sierra, una nación, los Atycares, estaba
+    «confederada con dos aldeas de Caquetíos».
+  fuente: atestiguado
+  polity: costa-oriental
+  epoca: contacto-temprano (1531)
+  referencia: "Federmann 1916 pp. 120-123 (la Narración, trad. de Arcaya; vista en el texto); el alemán, 1557 [112] (imagen 124, verificado por la parcela Federmann) y Klüpfel pp. 80-81. Hallazgo fed-coro-007 de #210, fusionado por dp.2.17 de #222."
+  procedencia: {obra: federmann-1916, pagina: "120-123"}
+  dominios: [politica, geografia]
+  agentes_relacionados: []
+  aviso: >
+    Regla 4: es costa y es caquetía, pero no es el Golfete. Se registra como
+    OTRA polity costera, `costa-oriental`, y se queda fuera del mapa de la era
+    2: nada de lo que dice Federmann la une a la Kaketiana más que el nombre de
+    la nación. Ninguno de sus lugares (Xaragua, Martinico, Hytodes, Atycares)
+    es nodo de asentamientos.yaml, y no entra ninguno. `costa-oriental` no es
+    una de las polities de curiana_sim/curiana_polities.py: es el nombre del
+    campo `polity` de este hecho, no una polity del motor.
+  implicacion_simulacion: >
+    Ninguna para la era 2. Por analogía vale un dato de forma: una red de
+    aldeas caquetías costeras aliadas y comunicadas por canoa, y una alianza
+    entre una nación de la sierra y dos aldeas caquetías.
 

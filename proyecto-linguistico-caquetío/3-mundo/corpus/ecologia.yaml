@@ -1590,6 +1590,37 @@ entradas:
     identificacion: Phaseolus lunatus, el frijol de Lima (el amargor que se lava es el de los glucósidos
       cianogénicos de la especie)
 
+  # ── dp.2.10 de #222 (T1 E1, con la reserva de M3; «Ok a todo», 2026-09-24):
+  # `comoho` a ecología como dato del cardonal. ──
+  - id: ecologia-085
+    voz: comoho
+    contenido: >
+      Hacia 1540, en la provincia de Venezuela, el cardón de las tunas y su fruta
+      tenían nombre propio: «De los cardos de las tunas é su fructa, la qual en la
+      provinçia de Venecuela en la Tierra-Firme se llama comoho» (Oviedo, lib. VIII
+      cap. XXVIII, p. 313); de su fruta, menor que la de las tunas de La Española,
+      dice que «es mas sabroso mucho» y que se hace con ella un vino «tinto, de la
+      color de vino tinto de uvas» (p. 315).
+    fuente: atestiguado
+    referencia: "Oviedo y Valdés 1851, vol. I, lib. VIII, cap. XXVIII, pp. 313-315 (visto en la capa de texto; el OCR lee «comolio» en el título). Propuesta de T1 (#188, E1), fusionada por dp.2.10 de #222 con la reserva de M3 (#206)."
+    procedencia: {obra: oviedo-y-valdes-1851, pagina: "313-315"}
+    dominios: [ecologia, flora, alimentacion, cardonal]
+    agentes_relacionados: []
+    palabra_lexicon: komoho
+    locacion: matorral
+    lectura: >-
+      Es ecología del cardonal (ecologia-018): la tuna y su fruta, con nombre
+      indígena, comida y bebida. «Provinçia de Venecuela» es en 1540 la
+      gobernación de los Welser entera, no una etnia: el nombre no se puede llamar
+      caquetío por esta cita (T1). El lexicón ya lo tiene como `komoho`, con esta
+      misma página por segunda atestación (th.9 de la tanda de las hermanas).
+    limite: >-
+      Reserva de M3: NO son dos atestaciones independientes dentro de Oviedo. En el
+      t. II (p. 331) dice que añadió al t. I los capítulos de frutas de Venezuela
+      con la información del obispo Bastidas: es una sola cadena, y vale igual
+      para `dato`, `mamón` y `semeruco`. Contacto temprano (regla 3); la planta es
+      del medio y se proyecta, el nombre en boca de quién, no.
+
 huecos_lexicos:
 
   - id: hueco-lex-001

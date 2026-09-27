@@ -601,6 +601,15 @@ hallazgos:
     precisión.
 
 - id: t7.l4
+  # 🔴 CORREGIDO el 2026-09-24 (M2 D de #212, aplicada como nota por dp.2.06
+  # de #222, «Ok a todo»). El cero de `intérprete` medía la PALABRA, no la
+  # práctica: la armada de Hojeda de 1502 llevaba una intérprete indígena de
+  # Tierra Firme, Isabel, cautiva, y la instrucción del 20 de mayo de 1502 la
+  # manda a trabajar «costa á costa hablando á los indios» y a traer «algún
+  # pariente suyo» (Navarrete 1829 t. III pp. 107-108, doc. XX; nota de
+  # Navarrete p. 36 n. 1). «El único hombre que en 1502 entiende a los indios
+  # de esa costa es un español» ya no se sostiene. La nota está en
+  # 3-mundo/corpus/geografia_politica.yaml, geografia_politica-021.
   pregunta: 3-y-4-la-costa-y-la-lengua
   titulo: En Curiana, en 1499, también por señas — y el negativo que lo acompaña
   cita: >-
