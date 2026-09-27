@@ -28,6 +28,18 @@ mismo patrón que `lokono` ('gente'), `wayuu` ('persona'), `taíno` ('bueno,
 noble') — autodenominaciones que los cronistas convirtieron en etnónimos con
 bordes duros que en el original no tenían.
 
+> ⚠️ **Corrección (2026-09-24, dp.3.16 de #222): `taíno` no es una
+> autodenominación.** Es el truncamiento de `nitayno`, un **título** de
+> nobleza —«caballero y señor principal» en [[las-casas-1875]] t. I cap.
+> LVIII—, que Rafinesque ascendió a nombre de pueblo en 1836: «There is not
+> the slightest authority for this» ([[brinton-1871]] p. 13). Los autónimos
+> antillanos que sí hay son locales (`lucayos` 'hombres de las islas',
+> `Siboneyes` 'hombres de las rocas', p. 14-15). El ejemplo, así, refuerza
+> el argumento en vez de ilustrarlo: ni siquiera hubo un nombre propio que
+> los cronistas endurecieran; el etnónimo lo puso un naturalista del XIX.
+> El proyecto sigue usando `taíno` como etiqueta de lengua (no se renombra
+> nada), sabiendo que es una convención moderna.
+
 **Consecuencia metodológica:** tratar «caquetío» como una etiqueta étnica
 excluyente es un artefacto de la fuente colonial, no un hallazgo. Y es
 exactamente el tipo de aplanamiento que Oliver denuncia cuando rechaza el

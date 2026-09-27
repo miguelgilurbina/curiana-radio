@@ -1,0 +1,325 @@
+# ─────────────────────────────────────────────────────────────────────────
+# DECISIONES DE #222, GRUPO 3 — «Documentación y deuda» (dp.3.01-dp.3.25)
+#
+# La lista: 6-fusion/decisiones_pendientes_2026-09-23.yaml
+#           §grupo_3_documentacion_y_deuda (datos, opciones, evidencia)
+#           6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md
+#           §Grupo 3 (resumen legible con la recomendación a aplicar)
+#
+# La respuesta de Miguel, 2026-09-24, a la lista entera:
+#
+#   «Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es
+#   lo que tenga que ver con docker»
+#
+# Se registró ANTES de tocar nada (skill fusionar-propuesta §0, commit
+# 7cae53e) y se cierra aquí. Por entrada: `eleccion` (qué recomendación se
+# acepta: donde el resumen dice «mía», manda la del recopilador),
+# `lectura_operativa` (lo que el escriba hizo con ella, escrito aparte para
+# que no parezca que Miguel lo dijo), `estado` y `aplicado_por`.
+#
+# Estados:
+#   APLICADA                     — hecha en esta rama.
+#   CERRADA SIN CAMBIO           — la recomendación es no hacer nada, o ya
+#                                  estaba hecho; se dice dónde.
+#   NECESITA A MIGUEL            — sólo él puede hacerlo (comprar, pedir,
+#                                  escribir): se deja preparado, no se inventa.
+#   PARA EL FRENTE DEL LEXICÓN   — exige tocar curiana_lexicon.py, un
+#                                  lexicon_*.py generado o su regeneración, que
+#                                  en este corte son de otro frente: la edición
+#                                  exacta está en
+#                                  6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml
+#
+# «Ok a todo» es la recomendación de cada casilla, y nada más (§0: una
+# autorización vale para lo que dice). Lo que salió al aplicar y nadie
+# previó está en `lo_que_aparecio`, sin resolver.
+# ─────────────────────────────────────────────────────────────────────────
+
+meta:
+  fecha: '2026-09-24'
+  decision_literal: '«Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es lo que tenga que ver con docker»'
+  alcance: 'grupo 3 de #222 (25 entradas); los grupos 1 y 2 los aplican otros frentes'
+  rama: docs/222-grupo3-2026-09-24 (desde tanda/hermanas-2026-09-24, c83937b); sin push ni merge
+  estado: >-
+    CERRADO en esta rama (2026-09-24). Lo que queda fuera de ella es de dos
+    clases: NECESITA A MIGUEL (dp.3.01, dp.3.02, dp.3.25: preparado, con los
+    borradores y la vía exacta) y PARA EL FRENTE DEL LEXICÓN (dp.3.03,
+    dp.3.07 P2, dp.3.08, dp.3.10 F2.4/F2.6, dp.3.15, dp.3.23: la edición
+    exacta, generada). Y el backlog que la propia recomendación manda
+    después de la base (`al_backlog`).
+  docker: 'ninguna entrada del grupo 3 necesita Docker'
+  medido_al_cerrar: 'guardianes.py y generar_bandeja.py, al final de la rama (ver el último commit)'
+
+dp.3.01_nueva_segovia_1579:
+  eleccion: 'B2 o B3 (B1 cae: el libro de Sindéresis no trae la Relación)'
+  lectura_operativa: >-
+    Conseguir la Relación es de Miguel (préstamo, compra de segunda mano o
+    petición al AGI). El escriba dejó la vía exacta en la ficha. Medido el
+    2026-09-24: Arellano Moreno 1964 está en HathiTrust SÓLO BÚSQUEDA (registro
+    001448214, ejemplar wu.89057098766, derechos `ic`, «Limited
+    (search-only)», API del catálogo); el visor pide una verificación de
+    navegador que no se forzó. La Biblioteca Nacional de Venezuela tiene
+    cuatro ejemplares prestables (911.87 R382) y hay uno en siete
+    bibliotecas públicas centrales; segunda mano sin anuncio vivo; el
+    manuscrito del AGI, por PARES (signatura sin verificar; PARES no
+    respondió desde la sesión).
+  estado: NECESITA A MIGUEL
+  accion_de_miguel: 'pedir Arellano Moreno 1964 en préstamo (BNV 911.87 R382 u OCLC 66463298 por préstamo interbibliotecario), o buscar la Relación en PARES y pedir la reproducción al AGI'
+  aplicado_por: [4-fuentes/nueva-segovia-1579.md (commits 5bf79ac, 8d89311)]
+
+dp.3.02_angulo_molina:
+  eleccion: 'A1 (ya decidida en cc.11) + A2 (conseguir Hernández Baño 1984)'
+  lectura_operativa: >-
+    Borrador del correo a la redacción del Boletín Antropológico (ULA) con las
+    dos preguntas de cc.11, en nombre de Miguel Gil, a las direcciones de la
+    página de contacto de la revista. Hernández Baño: la BNV tiene el libro
+    de 1984 (980.00498 H557) y una tesis suya de 1981 (UCV, TESIS CAF8878);
+    Google Books (vista de fragmentos) encuentra «corie» y «Molina» en el
+    libro de 1984. No se envió nada.
+  estado: NECESITA A MIGUEL
+  accion_de_miguel: 'enviar (o no) el correo de 6-fusion/issues-pendientes/correo-boletin-antropologico-zavala-2026-09-24.md; pedir en la BNV la página de «corie» y la de «Molina» del libro de 1984'
+  aplicado_por: [6-fusion/issues-pendientes/correo-boletin-antropologico-zavala-2026-09-24.md, 4-fuentes/angulo-molina.md (commit 8d89311)]
+
+dp.3.03_citas_de_las_voces_tainas:
+  eleccion: 'la del recopilador: T10 C, una sola pasada con la lista maestra (que ya separa primaria y secundaria); T3 A3 NO'
+  lectura_operativa: >-
+    Las citas van en `notas` de curiana_lexicon.py, que en este corte es de
+    otro frente: el escriba generó la edición exacta por clave desde la lista
+    maestra, con las citas de Oviedo t. I que T1 no había visto en imagen ya
+    miradas en la copia íntegra (dp.3.21). No mueve el prompt: `notas` no
+    llega a él.
+  estado: PARA EL FRENTE DEL LEXICÓN
+  aplicado_por: [6-fusion/scripts/proponer_ediciones_lexicon_222_grupo3.py, 6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml (commit 6947f70)]
+
+dp.3.04_test_cognado_prestamo_y_sets:
+  eleccion: 'T11 A (el test se queda como instrumento de campaña) + T4 G: retirar los 8 sets malos'
+  lectura_operativa: >-
+    T11 A no pide nada: el test ya vive en 6-fusion/. Los ocho sets
+    (cognado-020, -021, -022, -023, -027, -028, -034, -050) pasan enteros de
+    `cognados` a `no_son_cognados` con `diagnostico` y `retirado`; el `meta`
+    se recuenta por script. El motor no lee cognados.yaml: el score no se
+    mueve.
+  estado: APLICADA
+  aplicado_por: [6-fusion/scripts/retirar_cognados_dp304.py, 2-lengua/cognados.yaml (commit 0ec1050)]
+
+dp.3.05_diao_tiao_y_carvajal:
+  eleccion: 'G ya (anotar el contraste como pregunta abierta sobre C1 y D11); H sin prisa (la p. 317 de Carvajal)'
+  lectura_operativa: >-
+    G en 2-lengua/morfologia.md §1, sin cambiar lo que enseña el motor. H: la
+    Relación de Carvajal (ed. León 1892) está en archive.org, dominio
+    público; entró a fuentes_caquetios/ con su ficha, y la p. 317 se leyó en
+    imagen: `tiaos` es como «los naturales de los llanos» llaman a la nación
+    caquetía de la laguna de Caranaca, no el título del cacique. La pregunta
+    sigue abierta con otra forma.
+  estado: APLICADA
+  aplicado_por: [2-lengua/morfologia.md, 4-fuentes/carvajal-1892.md, fuentes_caquetios/Carvajal_1892_Relacion_descubrimiento_rio_Apure.pdf (commits 7181c78, 19a89e2)]
+
+dp.3.06_achagua_en_la_morfologia:
+  eleccion: 'la del recopilador: A + E + G ya (documentación); B y H después de la base'
+  lectura_operativa: >-
+    A: el achagua del arte como tercera comparanda en morfologia.md §5, §6,
+    §7, §10 y §11. G: el `pìa` maipure de Gilij en §1. E: «león» pasa a
+    `difiere` en `calibracion_jahn`; ensamblar_achagua_neira_ribero.py
+    recontó (24 / 10 / 0); lexicon_achagua.py no se regeneró porque su
+    generador no lee esa sección. B y H, en `al_backlog`.
+  estado: 'APLICADA (A, E, G); B y H al backlog, como manda la recomendación'
+  aplicado_por: [2-lengua/morfologia.md, 6-fusion/achagua_neira_ribero_1762.yaml, 6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml (commit 19a89e2)]
+
+dp.3.07_gumilla:
+  eleccion: 'P2 A (las voces achaguas de Gumilla como notas de las entradas de Neira que corroboran) + P3 A (Gumilla II 32 en metodo-comparativo.md)'
+  lectura_operativa: >-
+    P3 A aplicada, con las dos citas verificadas en imagen (t. II p. 32). P2 A
+    cambia `nota` del `vocabulario` del YAML de Neira, que SÍ lee el
+    generador de lexicon_achagua.py: va como edición exacta (11 entradas,
+    localizador comprobado) para el frente del lexicón, que regenera.
+  estado: 'P3 APLICADA; P2 PARA EL FRENTE DEL LEXICÓN'
+  aplicado_por: [2-lengua/metodo-comparativo.md, 6-fusion/gumilla_1791_2026-09-23.yaml (commit 19a89e2), 6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml (commit 6947f70)]
+
+dp.3.08_citas_kalinago_de_goeje:
+  eleccion: 'A: citas (goeje-1939 con página) y registro hombres/mujeres en `notas` de las voces con apoyo; fundir `kalinagu`/`kalínagu`'
+  lectura_operativa: 'todo en curiana_lexicon.py → edición exacta para el frente (11 voces; la fusión con lo que hay que medir antes de archivar)'
+  estado: PARA EL FRENTE DEL LEXICÓN
+  aplicado_por: [6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml (commit 6947f70)]
+
+dp.3.09_recorrer_el_cruce_taino:
+  eleccion: 'no re-correr cruce_taino_caquetio.py ahora'
+  lectura_operativa: >-
+    No se corrió. Ojo para quien lo corra: dp.3.04 retiró ocho sets de
+    cognados.yaml que el cruce lee, así que su próxima salida cambiará por
+    eso también.
+  estado: CERRADA SIN CAMBIO
+  aplicado_por: []
+
+dp.3.10_togogo_y_tokoko:
+  eleccion: 'las tres A (F2.4, F2.5, F2.6) y la nota de `chogogo` con lo de Goeje (M5 §7)'
+  lectura_operativa: >-
+    F2.5 A aplicada en 6-fusion/esteves_parte2_falcon.yaml. F2.4 A (`togogo`
+    en `notas` de `chogogo`), F2.6 A (procedencia comparada de `tokoko`, sin
+    subirla de capa) y la nota de Goeje son `notas` del lexicón.
+  estado: 'F2.5 APLICADA; F2.4, F2.6 y chogogo PARA EL FRENTE DEL LEXICÓN'
+  aplicado_por: [6-fusion/esteves_parte2_falcon.yaml (commit e904489), 6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml (commit 6947f70)]
+
+dp.3.11_prop_polity:
+  eleccion: 'Federmann A (páginas buenas y lectura directa) + HSAI (b) (prop-polity-016 cita a Brito Figueroa)'
+  lectura_operativa: 'prop-polity-001..005 con la página de fed-int-001, 002, 005 y 006; prop-polity-016 a brito-figueroa-poblacion-economia (pagina null, deuda sin-pagina); la página vieja en `antes`'
+  estado: APLICADA
+  aplicado_por: [6-fusion/polities_no_costeras_federmann.yaml, 4-fuentes/steward-1949.md (commit 5bf79ac)]
+
+dp.3.12_sereton:
+  eleccion: 'A: registrar que Federmann aporta el enano, no el nombre ni la transformación'
+  lectura_operativa: '`federmann_leido` en 6-fusion/ceret_on_hipotesis_miguel.yaml; el seretón de Medina sigue en el corpus por su propio mérito; la hipótesis ce/ci sigue abierta'
+  estado: APLICADA
+  aplicado_por: [6-fusion/ceret_on_hipotesis_miguel.yaml (commit da89f30)]
+
+dp.3.13_oyama:
+  eleccion: 'A: anotarla con las dos lecturas (ñame / auyama), sin decidir'
+  lectura_operativa: '`candidatas_de_otras_campanas` en 6-fusion/descastellanizar_esfera_2026-09-18.yaml (el archivo de curación de las voces de la esfera); medir_descastellanizar_esfera: 0 de 8 frases cambian'
+  estado: APLICADA
+  aplicado_por: [6-fusion/descastellanizar_esfera_2026-09-18.yaml (commit da89f30)]
+
+dp.3.14_dato_axagua:
+  eleccion: '(c): marcar como no caquetío en las fichas el sol, la luna y el sacrificio de la niña'
+  lectura_operativa: >-
+    Las fichas del Handbook (steward-1948-hsai-4, steward-1949) ya lo
+    marcaban. Faltaba la puerta por la que entraría: la ficha de la Relación
+    de Nueva Segovia 1579, que ahora lo dice (Arcaya 1920 p. 102).
+  estado: APLICADA
+  aplicado_por: [4-fuentes/nueva-segovia-1579.md (commit 5bf79ac)]
+
+dp.3.15_areito:
+  eleccion: 'B (la cita de Oviedo, que T1 ya verificó en imagen), entra con dp.3.03'
+  lectura_operativa: '`notas` de `areito`: oviedo-y-valdes-1851 pp. 125, 127, 128 (verificadas por T1), en la misma pasada que dp.3.03'
+  estado: PARA EL FRENTE DEL LEXICÓN
+  aplicado_por: [6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml (commit 6947f70)]
+
+dp.3.16_el_nombre_taino:
+  eleccion: 'T2.5 (a) (anotarlo en las notas de fuente y en el glosario); T2.4 (b) al backlog'
+  lectura_operativa: >-
+    La nota de fuente (4-fuentes/brinton-1871.md) ya lo decía. El vault no
+    tiene «glosario»: la corrección va en 3-mundo/esfera-de-interaccion.md
+    §1, que afirmaba lo contrario. T2.4 en `al_backlog`.
+  estado: 'APLICADA (T2.5 a); T2.4 al backlog'
+  aplicado_por: [3-mundo/esfera-de-interaccion.md (commit 798854c)]
+
+dp.3.17_bana_y_gua:
+  eleccion: 'H sí (morfologia.md §8: el paralelo taíno de Oliver empuja hacia «cubierto / extensión»); I no'
+  lectura_operativa: 'nota en §8; D9 no se reabre'
+  estado: 'APLICADA (H); I CERRADA SIN CAMBIO'
+  aplicado_por: [2-lengua/morfologia.md (commit 19a89e2)]
+
+dp.3.18_curaciones_de_coro:
+  eleccion: 'aplicar D-f.2 y D-f.3'
+  lectura_operativa: >-
+    D-f.2: geografia_politica-008 cita la probanza de 1680 vía
+    gonzalez-batista-2002-fundacion pp. 163-164, con nota_abierta de que las
+    formas son de 1680; la etiqueta no se tocó. D-f.3: «que mataba con
+    perros» es de Maracaibo (p. 189), corregido en la ficha castellanos-elegias
+    y en castellanos_1589_toponimos.yaml; la nota de `matakán` no lo cita,
+    así que el lexicón no se tocó.
+  estado: APLICADA
+  aplicado_por: [3-mundo/corpus/geografia_politica.yaml, 4-fuentes/castellanos-elegias.md, 6-fusion/castellanos_1589_toponimos.yaml (commit 27eaf04)]
+
+dp.3.19_arreglos_a_t5_y_t8:
+  eleccion: 'M8 D3 A (corregir el YAML de T8) + T8 B (gen-03 y el aviso de arq-01 de T5)'
+  lectura_operativa: 'cer-01 a urbina-jimenez-2007-2011; cer-02 a atestiguado con la página del pasaje; pie-01 cierra su deuda con mov-04; gen-03 corregido; arq-01 con su contrapeso genético; las dos prop-01 marcan `aplicada`'
+  estado: APLICADA
+  aplicado_por: [6-fusion/taino2_evidencia_material_contacto.yaml, 6-fusion/taino_en_la_esfera_2026-09-21.yaml, 6-fusion/arqueologia_insular_falcon_2026-09-22.yaml (commit a92e8e7)]
+
+dp.3.20_fauna_de_los_conchales:
+  eleccion: 'la del recopilador: cubierta por #208'
+  lectura_operativa: >-
+    Verificado: 6-fusion/fauna_paraguana_mar_2026-09-22.yaml (FA3, #208) leyó
+    la Tabla II de Zavala Reyes et al. 2018 en imagen, corrigió su página
+    (405, no 404) y pasó sus especies al esquema `fauna:` con
+    `{obra: zavala-reyes-2018, pagina: 405}`. Dijkhoff 1997, Versteeg y
+    Rostain 1997 y Antczak 1998 no hacen falta para la base.
+  estado: CERRADA SIN CAMBIO
+  aplicado_por: []
+
+dp.3.21_oviedo_pdf_truncado:
+  eleccion: 'no retirar el PDF truncado mientras T1 lo cite; la verificación de las formas ocr-sin-imagen entra con dp.3.03'
+  lectura_operativa: >-
+    El PDF se queda. La verificación se hizo para las citas que dp.3.03
+    propone: 48 pares forma-página mirados en la copia íntegra con láminas,
+    2 que no se citan (la p. 50 es del roedor quemí, no del cemí; «guayaba» no
+    está en la p. 530). T1 gana `verificado_en_la_integra` en 17 entradas;
+    su `verificacion` no se cambió. Las demás entradas ocr-sin-imagen de T1
+    (las que no alimentan ninguna cita del lexicón) no se miraron.
+  estado: 'CERRADA SIN CAMBIO (el PDF); la verificación, APLICADA para dp.3.03'
+  aplicado_por: [6-fusion/scripts/recortes_oviedo_t1_integra.py, 6-fusion/taino_oviedo_valdes_1851.yaml (commit 6947f70)]
+
+dp.3.22_xeno_canto:
+  eleccion: 'no hace falta: db.6 decidió que el sonido se describe, no se transcribe'
+  lectura_operativa: 'no se abre ninguna cuenta'
+  estado: CERRADA SIN CAMBIO
+  aplicado_por: []
+
+dp.3.23_taino_hipotetico_json:
+  eleccion: 'moverlo, no borrarlo'
+  lectura_operativa: >-
+    El motor no lo importa, pero dos scripts de campaña lo leen por su ruta
+    en curiana_sim/ (6-fusion/scripts/cruce_taino_caquetio.py y
+    6-fusion/scripts/medir_taino_inventario.py). La orden del corte es no
+    moverlo si algo lo lee: va la edición exacta (git mv + las dos rutas).
+  estado: PARA EL FRENTE DEL LEXICÓN
+  aplicado_por: [6-fusion/para_el_frente_del_lexicon_222_grupo3_2026-09-24.yaml (commit 6947f70)]
+
+dp.3.24_ja_y_cazebo:
+  eleccion: 'la del recopilador: archivarlas como preguntas para la era 3'
+  lectura_operativa: 'se archivan las PREGUNTAS (dc.3 `de_paso_archivado`), no entradas del lexicón'
+  estado: APLICADA
+  aplicado_por: [6-fusion/decisiones_campanas_2026-09-21.yaml (commit 798854c)]
+
+dp.3.25_compras_y_prestamos:
+  eleccion: 'sólo C: pedir al CIHPMA el escaneo de la p. 247 de Arcaya 1995'
+  lectura_operativa: >-
+    Borrador del pedido en nombre de Miguel Gil. No se encontró dirección
+    pública del CIHPMA (la web de la UNEFM no respondió): el borrador lo dice
+    y no la inventa. Vía de reserva localizada: la BNV tiene el libro
+    (987.24 A668o) y el Archivo General de la Nación otro ejemplar. E, T3 D3
+    y T3 D4 no se compran.
+  estado: NECESITA A MIGUEL
+  accion_de_miguel: 'conseguir la dirección del CIHPMA (UNEFM, Coro) y enviar el borrador de 6-fusion/issues-pendientes/correo-cihpma-arcaya-1995-p247-2026-09-24.md; o pedir la reproducción de la p. 247 a la Biblioteca Nacional'
+  aplicado_por: [6-fusion/issues-pendientes/correo-cihpma-arcaya-1995-p247-2026-09-24.md, 4-fuentes/arcaya-obra-inedita-1995.md (commit 8d89311)]
+
+al_backlog:
+  - 'dp.3.06 B — dar a `ka-`/`ma-` la cita del achagua en REGLAS_ATRIBUTIVAS (texto del motor; medir antes): después de la base'
+  - 'dp.3.06 H — minar el cap. X de Gilij (gramática maipure, pp. 185-190): campaña corta, después de la base'
+  - 'dp.3.16 T2.4 — verificar las 12 voces de Brinton contra Anglería 1892'
+  - 'dp.3.24 H — campaña del prefijo `ja-` (era 3)'
+  - 'dp.3.24 I — `cazebo` = `cazi` + `ebo`, a la mesa de `-ebo` (era 3)'
+
+lo_que_aparecio:
+  # Nadie lo previó; se registra y NO se resuelve (fusionar-propuesta §0).
+  - que: 'la lista maestra de T10 fundió `çemi` (el ídolo) y `quemí` (el roedor) en el lema `kemi`'
+    donde: '6-fusion/taino_lista_maestra_2026-09-22.yaml (voz kemi); la genera 6-fusion/scripts/consolidar_taino.py'
+    efecto: 'Oviedo p. 50 y Coll y Toste pp. 210 y 250 son del animal; la propuesta de dp.3.03 los excluye de `cemi`. Cualquier otro uso de la lista (el cruce, los conceptos comparables) hereda la fusión'
+  - que: 'la lista maestra cita Oviedo t. I con la clave `oviedo-valdes-1851`, que NO está en 4-fuentes/bibliografia.yaml (es `oviedo-y-valdes-1851`)'
+    donde: '6-fusion/scripts/consolidar_taino.py, PRIMARIAS y dos llamadas'
+    efecto: 'regla 8: la propuesta de dp.3.03 la corrige; la lista y su generador no se tocaron'
+  - que: 'el desfase de la copia íntegra de Oviedo t. I que M3 dejó escrito («impresa = pdf − 119») cuenta las páginas desde 0; desde 1, como el visor, es − 120'
+    donde: '6-fusion/oviedo_restante_2026-09-22.yaml §desfase_tomo_I_copia_integra'
+    efecto: 'comprobado en las cabeceras de las impresas 143, 265, 471 y 530; no se corrigió allí'
+  - que: 'Oviedo t. I p. 530 no trae «guayaba» en la copia íntegra (pp. 528-532)'
+    donde: '6-fusion/taino_oviedo_valdes_1851.yaml, entrada guayaba (anotada)'
+    efecto: 'no se cita; de dónde sacó T1 esa página, sin averiguar'
+  - que: '`creencia-001b` del corpus dice «tiao entre los caquetíos de Apure» como si fuera la voz caquetía del cargo; Carvajal p. 317 dice que `tiaos` es como los llaneros llaman a la nación'
+    donde: '3-mundo/corpus/creencia.yaml, creencia-001b'
+    efecto: 'la frase la sostiene Arcaya p. 48, no Carvajal. No se tocó el corpus: corregirla es decisión aparte'
+  - que: '`geografia_politica-008` es `atestiguado` y sus formas son de 1680'
+    donde: '3-mundo/corpus/geografia_politica.yaml'
+    efecto: 'la curación dp.3.18 lo dejó escrito en nota_abierta; si la etiqueta debe bajar (regla 3) no lo decidió nadie'
+  - que: 'Hernández Baño tiene una tesis de 1981 en la UCV además del libro de 1984; y el libro de 1984 trae «corie» (y un «Molina») según la búsqueda de Google Books'
+    donde: '4-fuentes/angulo-molina.md'
+    efecto: 'la pregunta HB del correo nombra las dos obras; `corie` (dp.1.06) podría tener su página en el libro de 1984'
+  - que: 'el `meta` de 2-lengua/cognados.yaml ya estaba desfasado antes de dp.3.04 (decía 16 con procedencia y había 17)'
+    donde: '2-lengua/cognados.yaml'
+    efecto: 'recontado por el script de dp.3.04'
+  - que: 'la ficha zavala-reyes-2018 sigue diciendo que la Tabla II está en la p. 404; FA3 la vio en la 405'
+    donde: '4-fuentes/zavala-reyes-2018.md'
+    efecto: 'no se corrigió (no es de ninguna entrada del grupo 3)'
+  - que: '6-fusion/achagua_fabo_1911.yaml conserva `veredicto_neira_vs_jahn: no-esta` para voces que la segunda pasada de Neira ya resolvió (nariz, arena, esposa…)'
+    donde: '6-fusion/achagua_fabo_1911.yaml (generado por 6-fusion/scripts/minar_fabo_1911_achagua.py)'
+    efecto: 'derivado desfasado; «león» no está entre ellas. No se regeneró'
+  - que: 'Carvajal trae más sobre los caquetíos de Caranaca y Manaure (pp. 146-147, 318) y unos «manaures muy labrados» que parecen objeto'
+    donde: '4-fuentes/carvajal-1892.md'
+    efecto: 'sin leer: está en «Qué preguntarle» de la ficha'

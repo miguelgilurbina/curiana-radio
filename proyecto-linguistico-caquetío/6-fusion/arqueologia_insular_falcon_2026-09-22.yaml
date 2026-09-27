@@ -909,6 +909,7 @@ propuesta:
       `cer-02`, subir la etiqueta a `atestiguado` y cambiar la página a «pp.
       12-14 (versión en línea)», porque el pasaje ya está leído. (c) En
       `pie-01`, cerrar la `deuda` con `mov-04` de aquí.
+    aplicada: '2026-09-24 — dp.3.19 (M8 D3 A) de #222, «Ok a todo» (6-fusion/decisiones_222_documentacion_2026-09-24.yaml): (a), (b) y (c) hechas en el YAML de T8'
 
   - id: prop-02
     donde: 3-mundo/asentamientos.yaml (o geografia_politica.yaml)

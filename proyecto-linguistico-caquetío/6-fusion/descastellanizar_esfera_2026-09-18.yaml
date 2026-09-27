@@ -461,3 +461,38 @@ deudas_que_quedan:
   - '`bohio`/`bohío` y `kalinagu`/`kalínagu` son cuatro claves para dos voces. La tabla resuelve la primera para el motor; el lexicón sigue con las cuatro.'
   - 'Las reconstrucciones de `reconstruir_taino()` (acoa, daca, wacusi, akcicyaa) llevan etiqueta correcta pero grafía taína de generador; sólo `akcicyaa` llega al hablante.'
   - '`ture` y `pauji` siguen con las glosas que la medición del 2026-09-17 puso en duda. No se tocan aquí.'
+
+# ══════════════════════════════════════════════════════════════════════
+# CANDIDATAS QUE TRAJERON OTRAS CAMPAÑAS — para quien cure las voces de la
+# esfera. No deciden nada: se anotan con sus lecturas.
+# ══════════════════════════════════════════════════════════════════════
+candidatas_de_otras_campanas:
+
+  - forma_fuente: Oyama
+    decision: >-
+      dp.3.13 A de #222: «anotarla con las dos lecturas, sin decidir»
+      («Ok a todo», Miguel, 2026-09-24; registro en
+      6-fusion/decisiones_222_documentacion_2026-09-24.yaml)
+    donde: >-
+      Federmann, Indianische Historia (Hagenau 1557) [24], imagen 34,
+      verificado en imagen: una aldea AYAMÁN de la sierra enumera sus
+      cultivos «Mahis / Juca / Batata / Oyama». La traducción de 1916
+      (federmann-1916 p. 35) da «ñames». Fuente: 6-fusion/federmann_1530_costa_2026-09-22.yaml
+      (bloque de voces, `Oyama`) e issue federmann-costa-2026-09-23.md §6.
+    epoca: contacto-temprano (1530)
+    lecturas:
+      - lectura: 'ñame (Dioscorea)'
+        a_favor: 'es la equivalencia de la traducción de 1916 (de Ternaux o de Arcaya: no se sabe cuál la puso)'
+        en_contra: 'la forma no se le parece; y «ñame» es una glosa castellana del traductor, no una forma indígena'
+      - lectura: 'auyama / ahuyama (Cucurbita, la calabaza)'
+        a_favor: >-
+          la forma: Oyama ~ auyama/ahuyama; el lexicón ya tiene `auyama`
+          (`caribe-cumanagoto`, Alvarado 1921 p. 16, D10) y
+          2-lengua/cognados.yaml da un yavitero `oyama` en el set de la
+          auyama (Oliver cap. 2 p. 145)
+        en_contra: 'la equivalencia no se puede probar desde Federmann, que no la glosa'
+    que_seria_si_se_acepta: >-
+      la atestación fechada más temprana de la voz de la calabaza en la
+      esfera, en boca de una aldea ayamán (no caquetía: regla 4). No cambia
+      la etiqueta de `auyama` ni nada que el motor enseñe.
+    estado: anotada, sin decidir

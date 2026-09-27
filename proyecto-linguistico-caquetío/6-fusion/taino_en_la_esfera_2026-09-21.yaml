@@ -236,6 +236,16 @@ inventario:
         entero. Ninguna fuente del repo menciona cerámica ostionoide, chicoide
         ni meillacoide en Falcón o las ABC, ni dabajuroide en las Antillas
         Mayores — pero la obra que zanjaría eso está en 0 bytes (ver arq-05).
+      contrapeso_genetico: >-
+        2026-09-24 (dp.3.19, T8 B de #222). El límite de la CERÁMICA sigue en
+        pie (T8 lo volvió a medir: cero antillano en Urbina y en Zavala Reyes
+        2018, cer-01 de T8; y la cerámica de Aruba es local o de origen
+        indeterminable, cer-02 de T8 y mov-02 de M8). Pero ya no es todo lo
+        que hay: la GENÉTICA dice que la gente sí se movió. Las aldeas
+        caquetías de Curazao llevan ~dos tercios de ancestría de las Antillas
+        MENORES (Fernandes 2020; gen-01 de T8), sin fecha para la mezcla y sin
+        el taíno de las Mayores. «Y no más allá» vale para los cacharros, no
+        para las personas.
 
     - id: arq-02
       afirmacion: >-
@@ -359,9 +369,21 @@ inventario:
         pregunta bien planteada, no como conclusión. Aquí queda igual.
 
     - id: gen-03
-      afirmacion: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética."
+      afirmacion: >-
+        ⚠️ CORREGIDO el 2026-09-24 (dp.3.19, T8 B de #222: «Ok a todo»,
+        Miguel). De los «dos negativos medidos» queda UNO. El primero era un
+        cero de la BIBLIOTECA, no del registro: Fernandes et al. 2020 sí es
+        legible (Europe PMC y el suplemento del laboratorio; el PDF del repo
+        sigue en 0 bytes a propósito, por la licencia) y trae ADN antiguo de
+        DOS ALDEAS CAQUETÍAS DE CURAZAO con ~dos tercios de ancestría
+        emparentada con las Antillas MENORES — y, en el texto principal, «but
+        not the Greater Antilles» (con el matiz del qpGraph, «entre las dos»).
+        Detalle, cifras y límites en 6-fusion/taino2_evidencia_material_contacto.yaml
+        `gen-01` (T8, #196). El segundo negativo sigue en pie:
+        moreno-mayar-2018 no es genética del Caribe.
+      afirmacion_antes: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética."
       epoca: n/a
-      etiqueta: atestiguado   # los ceros están medidos hoy
+      etiqueta: atestiguado   # el cero de moreno-mayar-2018 está medido; lo de Fernandes, en gen-01 de T8
       detalle:
         - >-
           `Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf` — la

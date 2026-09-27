@@ -704,6 +704,8 @@ grupo_2_mundo:
 #           (no mueven el prompt ni el score)
 # ═════════════════════════════════════════════════════════════════════════
 grupo_3_documentacion_y_deuda:
+  # ✅ DECIDIDO el 2026-09-24 («Ok a todo»): registro y estado de cada entrada
+  #    en 6-fusion/decisiones_222_documentacion_2026-09-24.yaml
 
   - id: dp.3.01
     tema: la Relación de Nueva Segovia (Barquisimeto) 1579 — cómo conseguirla

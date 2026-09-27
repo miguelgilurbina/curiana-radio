@@ -4,7 +4,7 @@ ambito: afijos y reglas de formación de palabras
 fuente_de_verdad: curiana_sim/curiana_lexicon.py (TODAS_LAS_REGLAS, REGLAS_ZAVALA, REGLAS_TOPONIMICAS)
 propuestas: [lexicon_van_buurt.py, lexicon_gatschet.py, lexicon_toponimos.py]
 medido: 2026-09-20 (6-fusion/scripts/auditar_morfologia.py)
-decidido: 2026-09-21 (6-fusion/decisiones_tanda_2026-09-21.yaml); 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml)
+decidido: 2026-09-21 (6-fusion/decisiones_tanda_2026-09-21.yaml); 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml); 2026-09-24, sólo documentación (6-fusion/decisiones_222_documentacion_2026-09-24.yaml)
 ---
 
 # La morfología
@@ -101,6 +101,56 @@ Manaure y con el forastero—, no el elenco entero.
 > idéntica, 'usted formal' ≠ 'tú'—, así que no es un caso de la política sino
 > una decisión aparte. Y es el **caso barato** de esa política: no hay que
 > archivar nada, las dos formas se reparten registros.
+
+> **`pia` no era «sólo wayuu»** (dp.3.06 G de #222, 2026-09-24). El maipure
+> de [[gilij-1780-1783]], t. III p. 186 (verificado en imagen): «nuja io,
+> **pìa tu**, la quello, juja quella, uaja noi, nia voi»; y `pinavà` 'tú ves'
+> (p. 187). Es la primera hermana arahuaca del norte que no es wayuu y da la
+> misma forma letra por letra. **No la vuelve caquetía** (regla 4) ni cambia
+> nada de lo que se enseña: desde la tanda final (2026-09-23) `pia` está
+> archivada y la 2sg es `bui`. Queda dicho para que nadie escriba que `pia`
+> sólo tenía apoyo wayuu. El achagua del arte no la apoya (`Jia` / `Ji-`;
+> Gilij escribe el achagua `Gijà`), y `uaja` 'nosotros' es la cuarta
+> hermana que da `waya`. Detalle: `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml`
+> §gilij_1780_1783.
+
+### Pregunta abierta: `díao` (Coro) ~ `tiao` (Apure), y lo que dice Carvajal
+
+*(dp.3.05 G y H de #222, «Ok a todo», Miguel, 2026-09-24. Sólo documentación:
+no cambia nada de lo que el motor enseña.)*
+
+[[arcaya-1920]] p. 48 dice que los caquetíos de Coro llamaban **`díaos`** a
+sus caciques principales, «nombre idéntico al de **tiaos**» con que se
+designaba a los caquetíos de Apure, y remite al Padre Carvajal. T11 lo leyó
+como un posible contraste **/d-/ ~ /t-/ dentro del caquetío**
+(`6-fusion/issues-pendientes/taino2-prueba-linguistica-2026-09-22.md` §4.5),
+y eso tocaría el pilar de la tesis lokonoide: la C1 de Oliver —la 1ª sg.
+`/dA-/` que sólo lokono y taíno conservan, frente a la `/tA-/` innovada del
+guajiro-paraujano— y, con ella, D11. Si el contraste fuera real, «el caquetío
+conserva `/d-/`» sería una afirmación sobre el caquetío **costero**, no sobre
+la nación entera: la regla 4 mordiendo en la fonología.
+
+**La página de Carvajal, leída** ([[carvajal-1892]] p. 317, verificada en
+imagen): «a los quales nombran caquetios, y **los naturales de los llanos le
+llaman tiaos** a los mismos yndios». O sea:
+
+- `tiaos` es el nombre que **otros pueblos** de los llanos dan a **la nación
+  entera** de los caquetíos de la laguna de Caranaca — un exónimo, no el
+  título del cacique.
+- El par de Arcaya junta **un título caquetío de Coro con un etnónimo en boca
+  ajena**. No es, tal como está, un contraste fonológico interno del caquetío:
+  puede ser la misma voz pasada por la boca de los vecinos, o dos palabras
+  distintas. La página no decide cuál.
+- La coincidencia es de Arcaya: Carvajal no menciona el `díao` de Coro. Y los
+  caquetíos de Caranaca, según la tradición que él recoge, **llegaron de Coro
+  con Manaure después de los españoles**: reglas 3 y 4 a la vez.
+
+**Queda abierta**, y ahora con otra forma: para que `tiao` dijera algo de la
+`/t-/` caquetía haría falta que un caquetío la dijera. Mientras tanto, la
+`/d-/` de C1 sigue apoyada en lo que la apoyaba (Oliver, la costa), y D11 no
+se mueve por esto. `creencia-001b` del corpus escribe «tiao entre los
+caquetíos de Apure» como si fuera la voz caquetía del cargo: eso no lo
+sostiene Carvajal (anotado en el registro de #222, sin tocar el corpus).
 
 ---
 
@@ -403,6 +453,31 @@ lokono**, que es D11 fase 3 y está abierta. Que el lokono ponga el sujeto detr�
 en los estativos es la razón **tipológica** para reconocer la clase, no una
 forma que se copie. Queda disponible si D11 fase 3 se resuelve hacia el lokono.
 
+> **El achagua, tercera comparanda** (dp.3.06 A de #222, 2026-09-24; arte de
+> [[neira-ribero-1762]], numeración propia del arte, transcripción por
+> visión: verificar en imagen antes de citar la forma; detalle en
+> `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml` §p1_personas). Es de
+> los Llanos y del s. XVIII: comparanda marcada, nunca canon costero (regla 4).
+>
+> - **Dos juegos de persona, dichos por el autor**: prefijos `Nu- Ji- Ri- Ru-
+>   Gua- Y- Na-` para «los demás verbos» y sufijos `-na -si -ni -no -bi -y
+>   -na` para los compuestos del verbo «ser» `Vyuna` (p. 12). Con el arte, **las
+>   dos hermanas de las que hay gramática en el repo parten la persona en dos
+>   juegos**: el hueco de arriba deja de ser «un rasgo del lokono» y pasa a
+>   ser «un rasgo de las dos hermanas».
+> - **Y algo que esta nota no decía del lokono**: el juego sufijado es también
+>   el del **objeto** — `Nacabauna` 'me miran', `Ricabauna` 'me mira' (p. 16).
+> - **El estativo se predica con los SUFIJOS de persona, no con aspecto**:
+>   `Ribena saica-una` 'para que yo sea bueno' (p. 11), `Cunamisa-una` 'tengo
+>   calentura' (p. 20). Eso contradice la línea de arriba —«un estado se
+>   predica con aspecto igual que una acción»—, que es decisión del proyecto
+>   (d21.4 B), no rasgo de las hermanas. No se cambia nada: la razón para no
+>   importar sigue en pie, porque **sigue sin haber un dato caquetío**.
+> - El maipure de [[gilij-1780-1783]] t. III p. 187 es la **tercera hermana
+>   con el corte activo/estativo**: «due sole le congiugazioni … una degli
+>   attivi, una de' passivi, la quale serve anche pe' neutri», y los neutros
+>   toman la desinencia del verbo «ser».
+
 > ⚠️ **Tensión abierta, y no se resuelve aquí.** El lexicón tiene además una
 > categoría `adj` con **11 entradas** —`anasa` 'bueno', `tüshi` 'frío', `mütsia`
 > 'negro', `kasuta` 'blanco', `sünatü` 'rojo', `tsipana` 'verde', `kanawa`
@@ -476,6 +551,34 @@ prefijos —`ka-` 564 usos, `ma-` 2.195— pero casi nunca sobre estos nombres.
 > anteriores. `juri` **es** caquetío atestiguado y la fila dice la verdad sobre
 > su lengua; lo que estaba mal es el molde, y para eso está el corte declarado.
 
+### El achagua: el par con par mínimo propio, y un límite para el «hay»
+
+*(dp.3.06 A de #222, 2026-09-24. Arte de [[neira-ribero-1762]], transcripción
+por visión: verificar en imagen antes de citar. Comparanda de los Llanos,
+regla 4. `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml`
+§p4_atributivo_privativo.)*
+
+- **Tercera hermana con el par, y la única con par mínimo en su propia
+  gramática**: `masacorreyisa` 'cosa limpia' / `casacorreyisa` 'cosa sucia'
+  (pp. 18-19). Y el nombre predicado con `ca-` **y persona**: `Cabarruani
+  vyuna` 'estoy rico' (`ca-` + la hacienda poseída + «ser» con `-na`, p. 25),
+  `Cagicunacana` 'yo pecador' (`ca-` + `gicuna` 'pecado' + `-ca` + `-na`,
+  p. 27). «Un nombre se predica con `ka-`» coincide.
+- **Lo que el achagua NO hace con `ca-` es el «hay» impersonal**: «Hay mucho
+  calor = Amo ayusamí» (verbos del arte, pliego 26), «No hay = Quenia»
+  (p. 18), «no tengo vestido = queniu nubarre» (p. 25). Lo que esta hermana sostiene es «X **tiene**
+  viento» —el atributivo de un sujeto: un sitio, una persona—, y *Casibari*
+  '(sitio) que tiene rocas duras' de van Buurt cabe en esa lectura. **«Hay
+  viento» como impersonal meteorológico es extensión nuestra**, no de esta
+  hermana. No se cambia nada (sería la opción C de M4, sin decidir): se
+  escribe para que la glosa 'hay X' no se cite como si las tres hermanas la
+  dieran.
+- La sonda sobre el caquetío atestiguado da **cero**: ninguna voz en
+  `ka-`/`ma-` con glosa de «sin», «hay» o «tiene»
+  (`6-fusion/medicion_arte_achagua_2026-09-22.yaml` §sonda_ka_ma). El
+  `ka-`/`ma-` del canon sigue apoyado en lo insular (van Buurt) y en las
+  hermanas.
+
 ---
 
 ## 7. Las reglas de trabajo: aspecto, posesión y número — y la deuda D11
@@ -531,6 +634,22 @@ wayunaiki, no en dato caquetío** — lo declaran ellas mismas en un campo
 > convergencia a favor de modelar con ASPECTO y no con tiempo** — juicio de
 > autor, no prueba, pero con su razón dicha.
 
+> **Añadido el 2026-09-24 — el achagua, segunda voz** (dp.3.06 A de #222;
+> arte de [[neira-ribero-1762]], transcripción por visión: verificar en imagen
+> antes de citar; `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml`
+> §p2_aspecto_tiempo_modo). El arte da un sistema de **tiempo a la latina**
+> (`-nimi-` pasado, `-su` futuro, `-bita` subjuntivo, `-ca` infinitivo,
+> `-cata` gerundio) y su autor dice, como Perea del lokono, que **casi no se
+> usa**: «ut plurimum, apenas usan ni del preterito perfecto, ni del futuro,
+> ni del subjuntivo, cong.e el pres.te de Indicativo es el q.e hace el gasto»
+> (p. 28). Quitado el juicio colonial, es un dato de uso: **dos gramáticas
+> misioneras de dos hermanas, independientes entre sí, dicen lo mismo**. Sigue
+> siendo juicio de autor, no prueba. Contra las tres marcas viejas: en achagua
+> `-ca` es el infinitivo y `-ni` la 3ª sg. masculina del juego sufijado
+> (`Viuni` 'él es'); `-da` no aparece como marca. Formas de dos letras: no se
+> afirma ni se niega cognación. (Que el aspecto de hoy sea `-kuba`/`-ba` es de
+> la tanda final; esta nota no lo toca.)
+
 ### `-kana`: el «cognado directo» que no tenía forma detrás (d21.8)
 
 La regla afirmaba *«COGNADO DIRECTO con Caquetío»*. Las tres sondas dicen que no:
@@ -550,6 +669,19 @@ plural con voz wayuu se reescriben con voz caquetía (`barsure-kana`).
 ancianos», y el dato lokono en contra —el plural es `-nu` pospuesto y **los
 irracionales no distinguen número**, [[perea-alonso-1942]] p. 556— es de otra
 lengua. Se declara como hueco en §10, no se importa.
+
+> **El achagua dice lo mismo que el lokono** (dp.3.06 A de #222,
+> 2026-09-24; arte de [[neira-ribero-1762]] p. 6): «à las cosas inanimadas y
+> irracionales no se les dà plural: y asi no se dirá muchas estrellas, sino
+> mucha estrella … muchas estrellas = Carruna Cuni». La muchedumbre se dice
+> con el adjetivo `Carruna`; los racionales llevan `-nay`, `-beni` o `-sanã`
+> (p. 7). **No hay `-kana`.** Y una trampa, medida: el arte llama «nombres
+> verbalizados q.e tienen el cana» a `Cagicunacana` 'yo pecador' (p. 27), pero
+> ahí `-cana` es `-ca` + `-na` 1ª sg.; en todo el vocabulario achagua, las
+> formas que acaban en `kana` no tienen ni una glosa plural
+> (`6-fusion/medicion_arte_achagua_2026-09-22.yaml` §trampa_kana). Quien
+> busque `-kana` en el achagua lo encontrará en «maíz», «mi padre» y «vez»,
+> nunca en un plural.
 
 > Se usa 258 veces, y **162 de ellas sobre raíz verbal** (`maa-ni-kana`,
 > `masa-da-kana`, `chaa-ni-kana`), que la propia regla prohíbe. Esa cifra
@@ -649,6 +781,21 @@ se reduplica a `shishiri`, lo que queda detrás es `-bana` entero, no `-ana`.
   (`SURA u-banna` = la azotea), que queda **más cerca del 'ancho, llano' de van
   Buurt que del 'cerro' de D9**. No derriba D9; tampoco lo refuerza, y
   presentarlo como refuerzo sería leer hacia la conclusión que conviene.
+
+  > **Y el paralelo taíno de Oliver, tampoco** (dp.3.17 H de #222,
+  > 2026-09-24; la nota es de T4, #192:
+  > `6-fusion/issues-pendientes/taino-caquetio-similitudes-2026-09-21.md` §3).
+  > [[oliver-1989-cap2]] p. 148 mete en la misma bolsa el `-bana` caquetío, el
+  > taíno `pana-pe(n)` 'fruto del pan' y *Agüey-bana*, el guajiro `a-pana`
+  > 'hoja' y el lokono `-bana` 'techo', todos bajo **'rodear, cubrir,
+  > extensión'** —y en la tabla A-9 glosa `-bana` «surrounding»
+  > (`6-fusion/oliver1989_lexico_restante_2026-09-22.yaml`, #213)—. **El paralelo
+  > taíno empuja hacia 'cubierto / extensión', no hacia 'cerro'**: como el
+  > `u-banna` de Perea, no corrobora D9, tira al otro lado. Y es un solo
+  > nombre: en la onomástica de Pané el formante `-bana` da cero fuera de
+  > *Agüeybana*. D9 no se reabre —sus seis apoyos son caquetíos y no
+  > dependen de esto—; se escribe para que nadie cite el taíno como refuerzo
+  > de 'cerro'.
 
   > **Lo que la medición añade**: `-bana` es el locativo más productivo —**2.323
   > usos, 254 formas, 149 raíces**— y **886 de esos usos van sobre una raíz que
@@ -765,6 +912,35 @@ regla 8 prohíbe para las fuentes, y vale igual para la gramática.
 | **Reduplicación** | [[gatschet-1885]] y [[perea-alonso-1942]] p. 679 | Medida con control (§9), **no implementada** |
 | **Segundo diminutivo `-bi`** | [[van-buurt-2014]] §6: *gobí, gogorobí, kokorobí, lobi, makambí* | En `MORFEMAS_VAN_BUURT`, **sin adjudicar** |
 
+> **El achagua del arte en esta tabla** (dp.3.06 A de #222, 2026-09-24; arte
+> de [[neira-ribero-1762]], transcripción por visión: verificar en imagen
+> antes de citar; comparanda de los Llanos, regla 4;
+> `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml`). Ninguna fila cambia
+> de decisión; tres ganan testigo y una pierde el «rasgo de familia»:
+>
+> - **Posesión no-poseída — coincide la categoría, no la forma.** El achagua
+>   marca la cosa sin dueño con un **sufijo**, `-si`, que cae al poseer:
+>   `Sarricanasi` → `Nusarricana` 'mi padre' (pp. 32-33). El `u-` lokono que
+>   entró es un **prefijo**. Si alguna vez se pregunta cómo marcan el
+>   no-poseído las hermanas, la respuesta ya no es una sola. Tiene además los
+>   posesivos absolutos `Nusina`, `Guasina` (p. 33), la misma pieza que el
+>   `da-kía`/`wa-kía` lokono.
+> - **Número de los irracionales — el hueco pasa a ser de las dos
+>   hermanas**: lo inanimado y lo irracional no llevan plural (p. 6; §7).
+> - **Alineamiento — dos juegos también en achagua** (§5), y el sufijado es
+>   además el del objeto.
+> - **Nominalización — contradice «no hay nominalizador» como rasgo de
+>   FAMILIA, no el negativo caquetío.** El achagua nominaliza con sufijo, y
+>   el autor declina el resultado como nombre: `-erri` el que hace
+>   (`Ycaberri` 'el que ve', p. 6), `-nicay` lo hecho, con el agente en
+>   prefijo (`Nucabanicay` 'lo que yo veo'), `-can(s)i`/`-si` la acción y el
+>   abstracto (pp. 4-6, 11, 13). Con el lokono (`-hù`, `-hi`), **las dos
+>   hermanas con gramática nominalizan con sufijo**. Eso refuerza la reserva
+>   de §11 —lo que no se afirma es que el caquetío no marcara la
+>   nominalización—: el hueco es del registro caquetío, no de la familia. La
+>   sonda sobre el atestiguado sigue en cero
+>   (`6-fusion/medicion_arte_achagua_2026-09-22.yaml` §sonda_nominalizadores).
+
 ---
 
 ## 11. La gramática que emergió
@@ -876,6 +1052,17 @@ la había nombrado. Medido sobre 95.445 usos de `word_uses` (runs anteriores al
 forma a forma contra `nucleo_de_token()`:
 `6-fusion/medicion_nominalizacion_emergente_2026-09-21.yaml`.
 
+> **La segunda invención tiene comparanda** (dp.3.06 A de #222, 2026-09-24).
+> El vocabulario achagua de [[neira-ribero-1762]] hace **exactamente esto, y
+> con el mismo verbo**: «Sin beber = Mairracasa, mairracayisa»; «Sin dormir =
+> Mamacayisa»; «Sin comer = Maiacasa» (pliegos 91 der. y 92 izq.;
+> transcripción por visión). Es el **privativo verbal achagua reinventado
+> desde el uso**, como la 4.ª conjugación lokono del §5. Con una diferencia:
+> el achagua pone el infinitivo `-ca` entre `ma-` y el sufijo, y la comunidad
+> lo pone sobre la raíz desnuda. **Lo emergente no es evidencia de lo
+> atestiguado, ni al revés**: que una hermana lo haga no lo vuelve caquetío,
+> y que los agentes lo hagan no prueba nada del achagua.
+
 > **Las cifras anteriores de esta sección (1.107 y 1.132) eran de ANTES de #178**,
 > que sacó 30 raíces de `v_raiz`: con menos raíces verbales hay menos «prefijo
 > sobre verbo». No estaban mal medidas; medían otro lexicón.
@@ -892,6 +1079,14 @@ posesivo nominaliza.** Es describir el sistema que emergió, no sancionarlo. Es
 una solución razonable y **no es la arahuaca** —el lokono nominaliza con `-hù`
 y `-hi`—, y eso es precisamente lo que la hace un dato: la comunidad llenó un
 hueco por su cuenta, con lo que tenía a mano.
+
+> **Tampoco es la achagua** (dp.3.06 A de #222, 2026-09-24). La vía achagua
+> para «lo que yo hago» es `nu-meda-nicay` (prefijo de persona + verbo +
+> `-nicay`) y para «mi hacer», el infinitivo `nu-meda-ca`: persona sobre el
+> verbo, sí, pero **siempre con sufijo** (arte de [[neira-ribero-1762]]; el
+> poema de Fabo 1911 p. 115 lo trae en uso, `Rimedanicaimi Dios` 'lo que
+> hizo Dios', pero Fabo lo copia de Rivero o de Neira y no cuenta aparte).
+> La frase de arriba se sostiene con dos hermanas en vez de una.
 
 #### Lo que dicen las fuentes: no hay nominalizador que retroabstraer (A), y sí derivación cero (B)
 

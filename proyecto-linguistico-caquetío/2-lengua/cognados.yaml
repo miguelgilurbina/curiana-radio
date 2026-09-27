@@ -1,8 +1,8 @@
 meta:
   generado_por: curiana_sim/migrar_cognados.py
-  cognados: 51
+  cognados: 43
   con_procedencia: 17
-  sin_procedencia: 34
+  sin_procedencia: 26
   lenguas_nucleo:
   - CAIC
   - CQ
@@ -13,7 +13,7 @@ meta:
   - TN
   - WY
   lenguas_comparanda: 25
-  no_son_cognados: 2
+  no_son_cognados: 10
   nota: 'Fusión de arahuaco_comparative.COGNADOS (37, sin procedencia) y cognados_oliver.COGNADOS_OLIVER
     (16, con página y ancla). Las formas van en un mapa abierto: los códigos en mayúscula son el núcleo
     con reglas de transducción; los nombres en minúscula son comparanda citada, y son abiertos a propósito.'
@@ -393,54 +393,6 @@ cognados:
   procedencia: null
   deuda: sin-procedencia
   clave_origen: mar
-- id: cognado-020
-  glosa: canoa, embarcación
-  formas:
-    PA: '*kanoa'
-    CQ: canoa
-    LK: kannoa
-    TN: canoa
-    KL: kanawa
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: canoa
-- id: cognado-021
-  glosa: hamaca, cama colgante
-  formas:
-    PA: '*hamaka'
-    CQ: hamaca
-    LK: hamaha
-    TN: hamaca
-    KL: hamaka
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: hamaca
-- id: cognado-022
-  glosa: casabe, pan de yuca
-  formas:
-    PA: '*kasabi'
-    CQ: casabe
-    LK: kasabi
-    TN: casabe
-    KL: kasabi
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: casabe
-- id: cognado-023
-  glosa: chamán, curandero, piache
-  formas:
-    PA: '*piay'
-    CQ: piache
-    LK: piaye
-    TN: bejique
-    KL: buyei
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: chaman
 - id: cognado-024
   glosa: iguana (Iguana iguana)
   formas:
@@ -477,30 +429,6 @@ cognados:
   procedencia: null
   deuda: sin-procedencia
   clave_origen: piedra
-- id: cognado-027
-  glosa: isla, cayo
-  formas:
-    PA: '*kairi'
-    CQ: cairi
-    LK: kairi
-    TN: cai
-    KL: kairi
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: isla
-- id: cognado-028
-  glosa: yuca, mandioca (Manihot esculenta)
-  formas:
-    PA: '*yuka'
-    CQ: yuca
-    LK: yuka
-    TN: yuca
-    KL: yuka
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: yuca
 - id: cognado-029
   glosa: maíz (Zea mays)
   formas:
@@ -558,19 +486,6 @@ cognados:
     donde se pone habitualmente a secar o ahumar algo», dado como ejemplo de -coa «estado, permanencia».
     El lado taíno sigue sin cita (añadido 2026-09-12; antes: sin-procedencia)'
   clave_origen: barbacoa
-- id: cognado-034
-  glosa: persona arahuaca, gente propia
-  formas:
-    PA: '*lokono'
-    CQ: caquetio
-    WY: wayuu
-    LK: lokono
-    TN: taino
-    KL: kalinagu
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: persona
 - id: cognado-035
   glosa: casa, vivienda
   formas:
@@ -729,17 +644,6 @@ cognados:
   procedencia: null
   deuda: sin-procedencia
   clave_origen: fuego
-- id: cognado-050
-  glosa: Caribe, pueblo Kalinago (nombre arahuaco y autónimo)
-  formas:
-    CQ: karibna
-    LK: karibna
-    TN: caribe
-    KL: kalínagu
-  fuente: reconstruido
-  procedencia: null
-  deuda: sin-procedencia
-  clave_origen: caribe_gente
 - id: cognado-052
   glosa: persona, ser humano (registro femenino KL)
   formas:
@@ -770,3 +674,127 @@ no_son_cognados:
   deuda: sin-procedencia
   clave_origen: hombre_caribe
   diagnostico: ya existe en VOCABULARIO_BASE — este registro sobra
+- id: cognado-020
+  glosa: canoa, embarcación
+  formas:
+    PA: '*kanoa'
+    CQ: canoa
+    LK: kannoa
+    TN: canoa
+    KL: kanawa
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: canoa
+  diagnostico: 'NO ES UN COGNADO: la misma palabra escrita dos veces (canoa ~ canoa), sin cita. Es el
+    préstamo que el castellano tomó del taíno y devolvió a todas partes; prueba que escribimos igual las
+    dos columnas (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-021
+  glosa: hamaca, cama colgante
+  formas:
+    PA: '*hamaka'
+    CQ: hamaca
+    LK: hamaha
+    TN: hamaca
+    KL: hamaka
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: hamaca
+  diagnostico: 'NO ES UN COGNADO: la misma palabra escrita dos veces (hamaca ~ hamaca), sin cita. Mismo
+    caso que cognado-020 (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-022
+  glosa: casabe, pan de yuca
+  formas:
+    PA: '*kasabi'
+    CQ: casabe
+    LK: kasabi
+    TN: casabe
+    KL: kasabi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: casabe
+  diagnostico: 'EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `casabe`, está en el lexicón
+    etiquetada `taíno`; el set empareja una voz taína consigo misma y no dice nada del caquetío (T4, #192:
+    6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-023
+  glosa: chamán, curandero, piache
+  formas:
+    PA: '*piay'
+    CQ: piache
+    LK: piaye
+    TN: bejique
+    KL: buyei
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: chaman
+  diagnostico: 'EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `piache`, está en el lexicón
+    como `caribe-cháima` y archivada (D10: su lugar lo ocupa `boratio`); piache ~ bejique no dice nada
+    del caquetío (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-027
+  glosa: isla, cayo
+  formas:
+    PA: '*kairi'
+    CQ: cairi
+    LK: kairi
+    TN: cai
+    KL: kairi
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: isla
+  diagnostico: 'EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `cairi`, es en el lexicón
+    `kairi`, lokono; cairi ~ cai no dice nada del caquetío (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-028
+  glosa: yuca, mandioca (Manihot esculenta)
+  formas:
+    PA: '*yuka'
+    CQ: yuca
+    LK: yuka
+    TN: yuca
+    KL: yuka
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: yuca
+  diagnostico: 'EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `yuca`, está en el lexicón
+    etiquetada `taíno`; el set empareja una voz taína consigo misma (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-034
+  glosa: persona arahuaca, gente propia
+  formas:
+    PA: '*lokono'
+    CQ: caquetio
+    WY: wayuu
+    LK: lokono
+    TN: taino
+    KL: kalinagu
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: persona
+  diagnostico: 'CIRCULAR: es un etnónimo (caquetio ~ taino). Emparejar el nombre de un pueblo con el de
+    otro no es un cognado léxico; y `taíno` ni siquiera es autónimo: es el truncamiento de un título,
+    nitayno (Brinton 1871 p. 13) (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'
+- id: cognado-050
+  glosa: Caribe, pueblo Kalinago (nombre arahuaco y autónimo)
+  formas:
+    CQ: karibna
+    LK: karibna
+    TN: caribe
+    KL: kalínagu
+  fuente: reconstruido
+  procedencia: null
+  deuda: sin-procedencia
+  clave_origen: caribe_gente
+  diagnostico: 'CIRCULAR: es un etnónimo (karibna ~ caribe). Emparejar el nombre de un pueblo con el de
+    otro no es un cognado léxico (T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml)'
+  retirado: 'dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — 6-fusion/decisiones_222_documentacion_2026-09-24.yaml'

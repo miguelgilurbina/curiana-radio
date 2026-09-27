@@ -82,4 +82,23 @@ Distinta de [[arcaya-1920]], que sí está en el repo.
 
 **No localizada.** Objetivo concreto y pequeño: **p. 247**.
 
+## 2026-09-24 — localizada en biblioteca, y el pedido preparado (dp.3.25 C de #222)
+
+Miguel, 2026-09-24: «Ok a todo». La recomendación es pedir al CIHPMA el
+escaneo de la p. 247. Lo que hay:
+
+- **El pedido, en borrador**:
+  `6-fusion/issues-pendientes/correo-cihpma-arcaya-1995-p247-2026-09-24.md`.
+  ⚠️ No se encontró una dirección de correo pública del CIHPMA (la web de la
+  UNEFM no respondió desde la sesión); el borrador lo dice y no la inventa.
+- **La Biblioteca Nacional de Venezuela lo tiene** (catálogo
+  `koha.bnv.gob.ve`, leído el 2026-09-24): *Obra inédita y dispersa*,
+  compilación y notas de **Carlos González Batista**, Coro, UNEFM, 1995 —
+  Colección Bibliográfica Contemporánea, **987.24 A668o** (biblionumbers
+  416583 y 502585, con ejemplares también en la Biblioteca Pública Central
+  Simón Rodríguez), y la Biblioteca del Archivo General de la Nación,
+  **086.1 A668** (414904). Es la vía de reserva si el CIHPMA no contesta.
+- El compilador es el mismo González Batista de
+  [[gonzalez-batista-nombre-de-coro]], la obra por la que llegó la cita.
+
 Índice: [[INDICE_FUENTES]]

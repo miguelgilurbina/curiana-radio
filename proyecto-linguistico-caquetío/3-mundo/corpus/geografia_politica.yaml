@@ -145,8 +145,21 @@
     laudatorio, no el único nombre del cacique caquetío — también recibía los dictados de
     "managuanare" y "managuarire".
   fuente: atestiguado
-  referencia: "González, Carlos, estudio histórico del PLINCODE, p. 23, citado en Zavala Reyes 2015, nota al pie (2)"
-  procedencia: {obra: zavala-reyes-2015}
+  referencia: >-
+    Probanza de 1680 (Archivo Histórico de Coro, Fondo Arcaya, t. VII, pp. 5-21),
+    leída por González Batista 2002 pp. 163-164: los testigos llaman al señor
+    «managuarire» (el cura rector Pérez Ortiz), «managuanare» (Gervasio del
+    Barrio, 75 años) y «managuanaré» (el capitán Esteban de Quero). Antes esta
+    entrada citaba «González, Carlos, estudio histórico del PLINCODE, p. 23,
+    citado en Zavala Reyes 2015, nota al pie (2)», que es el mismo dato un
+    eslabón más arriba. Curación de cita dp.3.18 (D-f.2 de M7, #207), «Ok a
+    todo», Miguel, 2026-09-24.
+  procedencia: {obra: gonzalez-batista-2002-fundacion, pagina: '163-164', via: 'probanza de 1680, AHC, Fondo Arcaya, t. VII, pp. 5-21', antes: zavala-reyes-2015}
+  nota_abierta: >-
+    Regla 3: las FORMAS son de 1680, en boca de testigos, siglo y medio después
+    de Manaure; son coloniales tardías, no de 1527. González Batista las da por
+    dictados de honor «correctamente caquetíos» sin prueba (6-fusion/coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml
+    m7-gb02-005). La etiqueta de la entrada no se tocó en esta curación.
   dominios: [politica, lenguaje]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >

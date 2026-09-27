@@ -66,6 +66,38 @@ están medidas en `6-fusion/propuesta_nominalizador_2026-09-21.yaml`
 3. Catálogos de la Biblioteca Nacional de Venezuela y de la UNEFM por
    «Angulo Molina».
 
+## 2026-09-24 — preparado para Miguel (dp.3.02 de #222: A1 + A2)
+
+Miguel, 2026-09-24: «Ok a todo». Las dos vías quedan listas; las dos las
+hace él:
+
+- **A1, el correo a Zavala** por la redacción del *Boletín Antropológico*:
+  borrador en
+  `6-fusion/issues-pendientes/correo-boletin-antropologico-zavala-2026-09-24.md`,
+  con las dos preguntas de cc.11. Las direcciones, leídas el 2026-09-24 en
+  la página de contacto de la revista (`erevistas.saber.ula.ve`,
+  boletin_antropologico/about/contact): boletinantropologico.ula@gmail.com y
+  boletinantropologico@ula.ve; contacto principal, Dr. Lino Meneses.
+- **A2, Hernández Baño.** Dos obras, no una (catálogo de la Biblioteca
+  Nacional de Venezuela, `koha.bnv.gob.ve`, leído el 2026-09-24):
+  - *Los caquetíos de Falcón: modos de vida*, Coro, Instituto de Cultura del
+    Estado Falcón, 1984, 121 pp. — BNV, Colección Bibliográfica
+    Contemporánea, **980.00498 H557** (biblionumber 263173). Google Books lo
+    tiene en vista de fragmentos (id `2FhsAAAAMAAJ`, ejemplar de la
+    Universidad de Texas): la búsqueda dentro del libro da **1 página con
+    «corie»** y **1 con «Molina»**, **0 con «Angulo»**, y 12 con «Arcaya»
+    (el control: la búsqueda funciona). O sea: el libro trae `corie`, que
+    es la única fuente de `korie` (dp.1.06), y nombra a algún Molina. Sin
+    ver la página no se sabe si es Angulo Molina.
+  - *Los caquetíos de Curiana, Cacicure y Paraguaná, de aldeas felices;
+    siglo XV a pueblos extintos en el XVI: ensayo marxista sobre los modos de
+    vida de una comunidad aborigen*, tesis de licenciatura en Sociología,
+    UCV, 1981 — BNV, **TESIS CAF8878** (biblionumber 55294).
+  - **Cómo conseguirlos:** consulta en sala o reproducción de páginas en la
+    Biblioteca Nacional (Caracas); o préstamo interbibliotecario del
+    ejemplar de Texas. Lo primero que conviene ver del libro de 1984: la
+    página de «Molina» y la de «corie».
+
 ## Qué daría
 
 La procedencia de los diecinueve verbos: si son de hablantes, de documentos

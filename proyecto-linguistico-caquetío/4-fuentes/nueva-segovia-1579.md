@@ -10,7 +10,7 @@ estado_minado: no-disponible
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-09-24
 aliases: ["Descripción de la Nueva Segovia", "Nueva Segovia 1579", "Arévalo y Ruiz de la Parra"]
 ---
 
@@ -97,5 +97,65 @@ es una pista de cuál es su fuente ([[angulo-molina]]).
 **Para Miguel:** (a) comprar la edición de Sindéresis (confirmar índice
 antes); (b) préstamo de Arellano Moreno 1964 en una biblioteca venezolana;
 (c) PARES, si trae imágenes, con transcripción por visión.
+
+## 2026-09-24 — la vía, ya elegida (dp.3.01 de #222)
+
+Miguel, 2026-09-24: «Ok a todo». La (a) se cae: el índice de Sindéresis
+(muestra de la editorial) tiene diecisiete documentos venezolanos de
+1520-1600 y **ninguno es esta Relación** (medido el 2026-09-23,
+`6-fusion/decisiones_pendientes_2026-09-23.yaml` §datos_cc11). Quedan dos
+vías, y las dos son de Miguel:
+
+1. **Arellano Moreno 1964**, *Relaciones geográficas de Venezuela* (Caracas,
+   ANH, Fuentes para la Historia Colonial de Venezuela 70; lvi + 578 pp.;
+   OCLC 66463298). Zavala lo cita como AAM.
+   - **HathiTrust: sólo búsqueda, no vista completa.** Registro 001448214,
+     un ejemplar (`wu.89057098766`, University of Wisconsin-Madison),
+     derechos `ic`, «Limited (search-only)»: medido el 2026-09-24 con la API
+     del catálogo (`catalog.hathitrust.org/api/volumes/full/recordnumber/001448214.json`).
+     La búsqueda dentro del libro dice en qué páginas sale una palabra, sin
+     mostrar el texto; desde aquí no se pudo usar (el visor pide una
+     verificación de navegador, que no se fuerza). Desde un navegador,
+     Miguel puede buscar «Segovia» o «Barquisimeto» en
+     `babel.hathitrust.org/cgi/pt?id=wu.89057098766` y saber qué páginas
+     pedir.
+   - **Préstamo**: con el OCLC 66463298, por préstamo interbibliotecario
+     desde su biblioteca; lo tienen, entre otras, Wisconsin-Madison y la
+     biblioteca de la Universidad de Gante (`lib.ugent.be`,
+     rug01:002198645). En Venezuela, la **Biblioteca Nacional** tiene cuatro
+     ejemplares prestables (Colección Bibliográfica Contemporánea,
+     **911.87 R382**, biblionumber 31828 en `koha.bnv.gob.ve`, leído el
+     2026-09-24), y hay uno en cada Biblioteca Pública Central de Caracas,
+     Anzoátegui, Carabobo, Monagas, Táchira y **Yaracuy**, y dos en la del
+     Archivo General de la Nación (911.87 A679). Y la Biblioteca de la
+     Academia Nacional de la Historia, que lo editó.
+   - **Segunda mano**: el único anuncio que salió (AbeBooks, Librería
+     Cocheras-Coliseo, 31677057923) sigue **no disponible** el 2026-09-24.
+     Una alerta de búsqueda en IberLibro/AbeBooks por el título es la vía.
+   - ⚠️ Hay copias del libro en sitios de subida de documentos: no son una
+     vía (no se descarga lo que no es de acceso legítimo).
+2. **El manuscrito, por PARES** (portal de Archivos Españoles): buscar
+   «Nueva Segovia» o «Barquisimeto» con fecha 1579 en el Archivo General de
+   Indias. La signatura que circula, **Patronato 294, n. 12, no está
+   verificada** (arriba). Si la unidad tiene imágenes digitalizadas, se
+   descargan desde el visor y se leen por visión (leer-fuente §4, como Neira
+   y Ribero); si no las tiene, se pide la reproducción al AGI desde la ficha
+   de la unidad. Desde esta sesión PARES no respondió (certificado), así que
+   la búsqueda la hace Miguel en su navegador.
+
+## ❌ El sol, la luna y la niña NO son caquetíos (dp.3.14 de #222)
+
+Por esta Relación entra al Handbook un dato que no es caquetío: el culto al
+sol y a la luna y el sacrificio de una niña «de diez años para arriba» al sol
+para que llueva. [[arcaya-1920]] p. 102 cita la Relación y lo dice **de los
+axaguas**: «se agrega respecto a los Axaguas: "Esta generación adora al sol y
+a la luna…"». Hernández de Alba ([[steward-1948-hsai-4]] p. 474) se lo
+atribuye a caquetíos y jirajaras vía Antolínez 1943, y Steward lo generaliza
+a todo el noroeste ([[steward-1949]]). Cuando la Relación llegue, **lo de los
+axaguas se queda como axagua**: no entra al corpus ni a la creencia caquetía
+(regla 4), y además es de 1579 y declarado vivo bajo la colonia («después que
+poblamos lo hacen, más hacenlo de escondidas»), así que tampoco es
+precontacto sin decirlo (regla 3). Medido en
+`6-fusion/hsai_caquetios_2026-09-23.yaml` hda-21 y hda-22.
 
 Índice: [[INDICE_FUENTES]]
