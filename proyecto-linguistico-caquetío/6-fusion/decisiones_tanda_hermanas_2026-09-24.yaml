@@ -287,7 +287,7 @@ th.23_las_ramas_de_222:
   t5: 'taino/auditoria-b-y-t11 (21e8704): T11 con la tradición viva, 6-fusion/cruce_taino_caquetio_2026-09-24.yaml'
   choques: 'cognados.yaml (se resolvió en el generador: migrar_cognados.RETIRADOS) y taino_en_la_esfera (Fernandes 2020: se queda la lectura de dp.2.04, que no afirma «Antillas Menores»)'
   mide: 'contra 11f1fdd, el prompt no se mueve (+0,0 %); contra main 6aa43a5, +2,26 % (medicion_tanda_hermanas_2026-09-24.yaml, re-medida)'
-  queda: 'la auditoría B de [Voces de fuera] (la rama del taíno no llegó a ella) y la fusión de la paginación de Oliver cap. 3 (fix/oliver-cap3-paginacion)'
+  queda: 'nada sin Docker: la cosmovisión (th.24) y Oliver (th.25) entraron después; la auditoría B es de después de la base (th.24)'
 
 th.24_cosmovision_marina_corpus:
   que: 'la parte del corpus de cc.10, (c) A y (g) A (2026-09-27): 6-fusion/scripts/fusionar_cosmovision_marina_corpus.py'
@@ -296,3 +296,9 @@ th.24_cosmovision_marina_corpus:
   citas: 'creencia-009 (Jahn impresa 184, con procedencia y el aviso de que la pesca del más allá no está en Jahn), transmision-018 (Anglería impresa 228), lx.13 de la Apologética («Vagua»), la bitácora de Brinton (Brett 1868, n. 49) y cm-s3, cm-n3 y cm-c3 de FA3 anotadas en su propuesta'
   mide: 'compilar_corpus: 251 hechos, 0 avisos; pre-vuelo verde'
   auditoria_b: 'la auditoría B de [Voces de fuera] NO es pendiente de este corte: dp.1.04 recomendaba «B recortada antes de la base; la auditoría del resto, después», y eso es lo que se aceptó'
+
+th.25_paginacion_oliver_cap3:
+  que: 'la rama fix/oliver-cap3-paginacion (2026-09-14, sin PR) entra (a1cb155) y sus 112 reemplazos se aplican (bd4d016): las citas de Oliver 1989 cap. 3 pasan a la tesis IMPRESA'
+  mide: '112 de 112 aplicadas, 0 sin aplicar; toponimos.yaml y morfemas.yaml regenerados desde lexicon_toponimos.py (no a mano); curiana_polities.py sólo cambia páginas; el prompt no se mueve (8.048,8); los 10 guardianes en verde'
+  queda_para_miguel: 'los `colaterales` de 6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml (col-01: la «confederación por comercio» de costera.economia es de los jirajaranos, regla 4; Cayerta/Cayerúa en la impresa 276): tocan contenido del canon, no páginas'
+  worktree: 'retirado .claude/worktrees/visual-image-gallery-9b1b36 (limpio; la rama queda)'
