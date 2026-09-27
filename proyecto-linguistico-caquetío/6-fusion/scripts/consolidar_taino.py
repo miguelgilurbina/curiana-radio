@@ -95,7 +95,7 @@ CRONISTAS = {
 # Compiladores e intermediarios: NO atestiguan, sólo transmiten.
 INTERMEDIARIOS = ("brinton-1871", "goeje-1939", "bachiller-morales-1883",
                   "pichardo-1862", "coll-y-toste-1897", "rafinesque-1836")
-PRIMARIAS = ("oviedo-valdes-1851", "las-casas-1875", "pane-c1498")
+PRIMARIAS = ("oviedo-y-valdes-1851", "las-casas-1875", "pane-c1498")
 
 # Marcas de conjetura moderna dentro de la glosa o de la nota de la fuente.
 CONJETURA = re.compile(
@@ -305,7 +305,7 @@ def leer_oviedo():
     for bloque in ("la_espanola", "otras_islas"):
         for e in Y.get(bloque) or []:
             out.append(_reg(e.get("forma_fuente"), e.get("glosa_fuente"),
-                            "oviedo-valdes-1851", "primaria",
+                            "oviedo-y-valdes-1851", "primaria",
                             pagina=e.get("pagina_impresa"),
                             declara="Oviedo",
                             variedad=e.get("variedad_declarada") or e.get("atribucion"),
@@ -313,7 +313,7 @@ def leer_oviedo():
                             bloque=bloque))
     for e in Y.get("no_taino") or []:
         out.append(_reg(e.get("forma_fuente"), e.get("glosa_fuente"),
-                        "oviedo-valdes-1851", "primaria",
+                        "oviedo-y-valdes-1851", "primaria",
                         pagina=e.get("pagina_impresa"), declara="Oviedo",
                         variedad=e.get("lengua"), campo=e.get("campo"),
                         en_el_lexicon=e.get("en_el_lexicon"),
@@ -505,7 +505,7 @@ def leer_coll_y_toste():
     return out
 
 
-LECTORES = [("brinton-1871", leer_brinton), ("oviedo-valdes-1851", leer_oviedo),
+LECTORES = [("brinton-1871", leer_brinton), ("oviedo-y-valdes-1851", leer_oviedo),
             ("las-casas-1875", leer_las_casas), ("pane-c1498", leer_pane),
             ("goeje-1939", leer_goeje), ("bachiller-morales-1883", leer_bachiller),
             ("bachiller-morales-1883 (M5)", leer_bachiller_m5),

@@ -12,7 +12,7 @@ meta:
     eso `atestaciones_independientes` cuenta cronistas distintos, no obras.'
   insumos:
     brinton-1871: 68
-    oviedo-valdes-1851: 61
+    oviedo-y-valdes-1851: 61
     las-casas-1875: 26
     pane-c1498: 33
     goeje-1939: 154
@@ -810,8 +810,8 @@ kalinago_de_goeje:
   que_mide: 'las voces kalinago del lexicón leídas contra Goeje 1939 (veredictos escritos a mano en `kalinago_goeje_1939.yaml`
     §cruce, leídos en imagen) y los conceptos del caquetío atestiguado que tienen voz kalinago en lo transcrito.
     ⚠️ El vocabulario kalinago está transcrito a medias (ver su §tramos): es un SUELO.'
-  claves_kalinago_en_el_lexicon: 25
-  cruzadas: 23
+  claves_kalinago_en_el_lexicon: 24
+  cruzadas: 22
   sin_cruzar:
   - maboya
   - piragua
@@ -868,7 +868,7 @@ voces:
   obras_que_la_traen:
   - brinton-1871
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -876,7 +876,7 @@ voces:
     cronista_que_declara:
     - Las Casas
     lo_que_dice_la_obra: Las Casas, Hist. Gen. lib. iii, cap. 21
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 132
     cronista_que_declara:
@@ -1327,9 +1327,9 @@ voces:
   - «hay otro animal que llaman ayre, tamaño como un conejo, de color entre pardo y bermejo, y es muy
     duro de comer»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 500
     cronista_que_declara:
@@ -1385,7 +1385,7 @@ voces:
   - coll-y-toste-1897
   - goeje-1939
   - las-casas-1875
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -1393,7 +1393,7 @@ voces:
     cronista_que_declara:
     - Pedro Mártir
     lo_que_dice_la_obra: Pet. Martyr, Decades
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 25
@@ -1769,9 +1769,9 @@ voces:
   - bachiller-morales-1883
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 296
@@ -2027,14 +2027,14 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 12
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 131
@@ -2611,9 +2611,9 @@ voces:
   - Oviedo (lib.
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 274
     cronista_que_declara:
@@ -2971,7 +2971,7 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -2979,7 +2979,7 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo, Hist. Gen. lib. V, c. 1
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 125
@@ -3370,14 +3370,14 @@ voces:
   - coll-y-toste-1897
   - goeje-1939
   - las-casas-1875
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 11
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 275
@@ -4855,14 +4855,14 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 11
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 436
     cronista_que_declara:
@@ -5510,7 +5510,7 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -5518,7 +5518,7 @@ voces:
     cronista_que_declara:
     - Las Casas
     lo_que_dice_la_obra: Las Casas, Hist. Apol. c. 204
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 163
@@ -5578,15 +5578,15 @@ voces:
   - Raíz para asar
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 273
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 273
@@ -5921,9 +5921,9 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 164
     cronista_que_declara:
@@ -6350,9 +6350,9 @@ voces:
   - 'p.163: «otros cubren de paja delgada é luenga: otros cubren con hojas de bihaos». p.132: «las quales
     haçen de los bihaos»'
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 132
@@ -6501,7 +6501,7 @@ voces:
   obras_que_la_traen:
   - brinton-1871
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -6509,7 +6509,7 @@ voces:
     cronista_que_declara:
     - Las Casas
     lo_que_dice_la_obra: Las Casas, Hist. Apol. cap. 241
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 146
     cronista_que_declara:
@@ -7036,9 +7036,9 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 269
@@ -7462,9 +7462,9 @@ voces:
   - maison
   obras_que_la_traen:
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 163
@@ -7504,9 +7504,9 @@ voces:
     lo demas». Y: «Estos, por la mayor parte, eran grandes hervolarios é tenian conosçidas las propiedades
     de muchos árboles é plantas é hiervas; é como sanaban á muchos con tal arte, teníanlos en gran veneraçión»'
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 126
     cronista_que_declara:
@@ -7968,9 +7968,9 @@ voces:
   - '«y entonçes dixo el caçique: “Adelante, adelante, á mi dalihao (que quiere deçir mi señor, ó el que,
     como yo, se nombra), dexa ese bellaco”»'
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 473
     cronista_que_declara:
@@ -8407,9 +8407,9 @@ voces:
   - escabeau en bois
   obras_que_la_traen:
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 125
@@ -8717,9 +8717,9 @@ voces:
   - «Tornemos á las casas en que moraban, las quales comunmente llaman buhio en estas islas todas (que
     quiere deçir casa ó morada); pero propriamente en la lengua de Hayti el buhio ó casa se llama eracra»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 163
@@ -8989,9 +8989,9 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 274
     cronista_que_declara:
@@ -9064,9 +9064,9 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 280
@@ -9743,9 +9743,9 @@ voces:
   - «la hierva que los indios de Nicaragua llaman yaat» (la misma que en Venezuela `hado`/`hayo` y en
     el Perú `coca`)
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 206
@@ -9852,9 +9852,9 @@ voces:
     quien no la conosçe, es muy espantoso animal»; y «se dirá de la yvana, que es una serpiente también
     de quatro pies»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 50
@@ -10137,7 +10137,7 @@ voces:
   obras_que_la_traen:
   - brinton-1871
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -10145,7 +10145,7 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo, Hist. Gen. lib. v, cap. 2
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 132
@@ -10682,9 +10682,9 @@ voces:
   glosas_verbatim:
   - «alli donde á las hiervas llaman yracas seyendo muchas, llaman á la muger yra, y á la mançeba yracha»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 279
     cronista_que_declara:
@@ -10714,9 +10714,9 @@ voces:
   - Yerba comestible
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 279
     cronista_que_declara:
@@ -10881,10 +10881,10 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   - pane-c1498
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 264
@@ -11861,9 +11861,9 @@ voces:
   - «Del pan de los indios que se llama caçabi, que es la segunda manera de pan que en esta Isla Española
     é otras partes hacen los indios… lo qual se hace de una planta que llaman yuca»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 264
@@ -12014,9 +12014,9 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - las-casas-1875
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 25
@@ -12853,14 +12853,14 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 12
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 164
@@ -13016,14 +13016,14 @@ voces:
   - bachiller-morales-1883
   - brinton-1871
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 12
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 170
@@ -14446,9 +14446,9 @@ voces:
   - Uno de los animalejos comibles, hallados en Haytí, mayor que la futía.
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 126
@@ -14456,7 +14456,7 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 50
     cronista_que_declara:
@@ -15220,9 +15220,9 @@ voces:
   - «De la planta ó árbol que los indios llaman goaconax y los chripstianos le llaman bálsamo, del qual
     se hace el bálsamo artifiçial para las heridas é para otras enfermedades»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 376
@@ -15814,7 +15814,7 @@ voces:
   - bachiller-morales-1883
   - brinton-1871
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -15822,7 +15822,7 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo, Hist. Gen. lib. vii, cap. 2
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 143
@@ -16615,9 +16615,9 @@ voces:
     mixto con bermejo. La cola poblada é la cabeça como de hurón, é hay muchos dellos en la costa de la
     isla Fernandina»'
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 500
@@ -16685,9 +16685,9 @@ voces:
   - Fruta del guayabo
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 305
@@ -18686,9 +18686,9 @@ voces:
   - Véase Samaná.
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 24
@@ -19151,14 +19151,14 @@ voces:
   - coll-y-toste-1897
   - goeje-1939
   - las-casas-1875
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 12
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 480
@@ -20977,9 +20977,9 @@ voces:
   - Yerba medicinal.
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 380
     cronista_que_declara:
@@ -21263,9 +21263,9 @@ voces:
     nasçe en una planta que los indios cultivan… é debaxo de tierra echa su fructo, que es blanco é del
     tamaño que dátiles gruessos… hay mucha por las plaças que la sacan á vender»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 279
@@ -21738,9 +21738,9 @@ voces:
   - maïs
   obras_que_la_traen:
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 264
@@ -22033,9 +22033,9 @@ voces:
   - «el qual puerto es doçe leguas mas al poniente de la punta que llaman Mayci; é allí falló gente, assi
     de la propia isla de Cuba, como de las otras que están al norte opuestas»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 25
     cronista_que_declara:
@@ -22541,14 +22541,14 @@ voces:
   - coll-y-toste-1897
   - goeje-1939
   - las-casas-1875
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 13
     cronista_que_declara: null
     lo_que_dice_la_obra: Navarrete, Viages. i. p. 135
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 68
@@ -23354,9 +23354,9 @@ voces:
   - Vaca marina
   obras_que_la_traen:
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 433
     cronista_que_declara:
@@ -23435,9 +23435,9 @@ voces:
   obras_que_la_traen:
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 274
     cronista_que_declara:
@@ -24587,9 +24587,9 @@ voces:
   obras_que_la_traen:
   - bachiller-morales-1883
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 471
@@ -24925,9 +24925,9 @@ voces:
   - «pero las donzellas vírgines ninguna cosa trayan destas mantas (que llaman naguas) sino de todo punto
     toda la persona desnuda»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 68
     cronista_que_declara:
@@ -26021,9 +26021,9 @@ voces:
   glosas_verbatim:
   - «en la gobernaçión de Nicaragua llaman esta fructa olocoton» (la papaya)
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 323
     cronista_que_declara:
@@ -26386,9 +26386,9 @@ voces:
   - papaye
   obras_que_la_traen:
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 323
     cronista_que_declara:
@@ -26476,9 +26476,9 @@ voces:
   - panier
   obras_que_la_traen:
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 132
     cronista_que_declara:
@@ -26573,9 +26573,9 @@ voces:
   - grand canot à voile
   obras_que_la_traen:
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 170
@@ -27192,7 +27192,7 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
@@ -27200,7 +27200,7 @@ voces:
     cronista_que_declara:
     - Oviedo
     lo_que_dice_la_obra: Oviedo, Hist. Gen. lib. vi. cap. 8
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 146
     cronista_que_declara:
@@ -30140,14 +30140,14 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 13
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 130
@@ -30743,9 +30743,9 @@ voces:
   glosas_verbatim:
   - «la isla de las Perlas (que los indios llaman Terarcqui)»
   obras_que_la_traen:
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina: 41
     cronista_que_declara:
@@ -31862,14 +31862,14 @@ voces:
   - brinton-1871
   - coll-y-toste-1897
   - goeje-1939
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
   - obra: brinton-1871
     tipo: intermediario
     pagina: 13
     cronista_que_declara: null
     lo_que_dice_la_obra: null
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 82
@@ -31988,9 +31988,9 @@ voces:
   obras_que_la_traen:
   - bachiller-morales-1883
   - coll-y-toste-1897
-  - oviedo-valdes-1851
+  - oviedo-y-valdes-1851
   cadena_de_custodia:
-  - obra: oviedo-valdes-1851
+  - obra: oviedo-y-valdes-1851
     tipo: primaria
     pagina:
     - 50

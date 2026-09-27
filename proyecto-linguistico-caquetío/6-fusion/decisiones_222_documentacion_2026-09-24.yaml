@@ -323,3 +323,16 @@ lo_que_aparecio:
   - que: 'Carvajal trae más sobre los caquetíos de Caranaca y Manaure (pp. 146-147, 318) y unos «manaures muy labrados» que parecen objeto'
     donde: '4-fuentes/carvajal-1892.md'
     efecto: 'sin leer: está en «Qué preguntarle» de la ficha'
+
+# ── Aplicado por el frente del lexicón (2026-09-24, al fusionar la rama) ──
+aplicado_por_el_frente:
+  fecha: '2026-09-24'
+  rama: tanda/hermanas-2026-09-24
+  script: 6-fusion/scripts/aplicar_222_grupo3_lexicon.py (idempotente, --dry-run)
+  que:
+  - 'dp.3.03, dp.3.15, dp.3.08, dp.3.10: las 56 ediciones de `notas` del YAML del frente, tal cual; comprobado que sólo cambian `notas` (5.490 claves activas antes, 5.489 después: la que sale es kalínagu)'
+  - 'dp.3.08 k5: `kalínagu` pasa entera a FUERA_DEL_HABLA con la huella y `kalinagu` gana la nota de la variante; se queda la de sin tilde porque Goeje imprime «Kalinago» (p. 43). Pre-vuelo verde y verificar_sitios_era2 en verde después'
+  - 'dp.3.07 P2: 11 notas de Gumilla en 6-fusion/achagua_neira_ribero_1762.yaml; lexicon_achagua.py regenerado: cambian las `notas` de 10 claves de COMPARANDA_ACHAGUA y nada más (una de las 11 entradas no llega al módulo); ensamblar_achagua_neira_ribero.py --check limpio'
+  - 'dp.3.23: git mv curiana_sim/taino_hipotetico.json 6-fusion/taino_hipotetico_2026-06-21.json; cruce_taino_caquetio.py y medir_taino_inventario.py leen la ruta nueva'
+  - 'clave_corregida: consolidar_taino.py y medir_taino_tradicion_viva.py escriben ya `oviedo-y-valdes-1851`; la lista maestra regenerada cambia esa clave (117 veces) y, por el archivo de kalínagu, claves_kalinago_en_el_lexicon 25 → 24 y cruzadas 23 → 22'
+  - 'cognados: los ocho retirados de dp.3.04 se declaran en curiana_sim/migrar_cognados.py::RETIRADOS (el YAML es generado); el merge lo comprobó registro a registro'

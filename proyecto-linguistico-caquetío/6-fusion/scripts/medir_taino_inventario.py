@@ -140,7 +140,7 @@ def censo():
     fuera = {k: v for k, v in getattr(L, "FUERA_DEL_HABLA", {}).items()
              if v.get("fuente") in FUENTES_TAINO}
     hip = {}
-    p = os.path.join(SIM, "taino_hipotetico.json")
+    p = os.path.join(RAIZ, "6-fusion", "taino_hipotetico_2026-06-21.json")  # dp.3.23 de #222
     if os.path.exists(p):
         hip = json.load(io.open(p, encoding="utf-8"))
     med = []

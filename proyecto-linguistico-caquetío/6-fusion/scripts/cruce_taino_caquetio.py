@@ -113,7 +113,7 @@ YAML_CONTROL = os.path.join(R, "6-fusion", "control_jirajarano_jahn_1927.yaml")
 YAML_TOPONIMOS = os.path.join(R, "2-lengua", "toponimos.yaml")
 YAML_COGNADOS = os.path.join(R, "2-lengua", "cognados.yaml")
 YAML_ANTROPONIMOS = os.path.join(R, "6-fusion", "antroponimos_caquetios.yaml")
-JSON_TAINO_HIP = os.path.join(R, "curiana_sim", "taino_hipotetico.json")
+JSON_TAINO_HIP = os.path.join(R, "6-fusion", "taino_hipotetico_2026-06-21.json")  # dp.3.23 de #222
 TXT_BRINTON = os.path.join(R, "fuentes_caquetios", "Brinton_1871_texto.txt")
 TXT_PANE = os.path.join(R, "fuentes_caquetios",
                         "Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt")

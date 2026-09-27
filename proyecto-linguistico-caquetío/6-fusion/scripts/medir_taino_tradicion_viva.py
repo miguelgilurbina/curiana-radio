@@ -72,7 +72,7 @@ def medir() -> dict:
     venez = [e.get("forma_fuente") for e in O.get("costa_de_venezuela") or [] if e.get("forma_fuente")]
     fuga = sorted(e["lema"] for e in T
                   if {_n(x) for x in (e.get("formas_atestiguadas") or [])} & {_n(f) for f in venez}
-                  and set(e.get("obras_que_la_traen", [])) == {"oviedo-valdes-1851"})
+                  and set(e.get("obras_que_la_traen", [])) == {"oviedo-y-valdes-1851"})
 
     # 2. el cruce
     V = CL.VOCABULARIO_BASE
