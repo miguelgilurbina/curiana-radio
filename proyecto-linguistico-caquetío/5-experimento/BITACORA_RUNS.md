@@ -53,6 +53,87 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > Cada fila guarda el commit del motor, si estaba sucio y los hashes del
 > lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
 
+### Era 2 · serie `era2-base` — 30 días con escena; el control, cortado por falta de saldo (2026-09-27/28)
+
+> «Mi ok para correr la sim» (Miguel, 2026-09-27). Motor: tag `base-era2-1`
+> (main `5240a42` + la medición, rama `base/era2-2026-09-27`, `91860d7`),
+> árbol limpio en los 34 días. Antes de gastar: `medir_tanda_hermanas.py
+> --con-base`, control 216/216 verde en los dos brazos. Protocolo: `--elenco
+> era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos
+> --perfil era2 --reflexion --serie era2-base`, semilla = 100 + día; brazo A
+> `--escena --capubana-cada 3`, brazo B sin escena; día 1 sin `--continuar`.
+> El estado en disco de la serie C se guardó aparte (no se borró) en
+> `C:\Users\migue\curiana_estado_backup\`; scripts (`correr_cadena.sh`,
+> `correr_serie.sh`) y un log por día, fuera del repo, en
+> `C:\Users\migue\curiana_runs_log\era2-base\`. Todos los números de abajo
+> salen de la base local, de `curiana_cadena.py` y de `analizar_nodos.py`
+> (informe entero: `5-experimento/analisis/era2_base_escena_nodos_2026-09-28.txt`).
+
+**Brazo con escena: los 30 días** (`dd680e49` → `720d1ef1`, 00:04-05:05 del
+28, unos diez minutos por día). 2.160 respuestas de los 63; `lugar` en las
+2.160, en 28 lugares; score medio por día entre 7,38 y 7,92. **Limpio**: cero
+residuos de la era 1 (la búsqueda marca uno y es `biro-koa`, sal + `-koa`) y
+cuatro usos de voces archivadas en 30 días (`kuru` 3, `naa` 1). 273
+acuñaciones, 66 adoptadas; la puerta rechazó 69 por raíz y 3 por plantilla. El
+núcleo de las hermanas es lo que se habla: `diki-ba` (899 usos, los 63),
+`ani-ba`, `jai-ba`, `usera-kuba` encabezan las formas emergentes.
+
+**El resultado: en 30 días la koiné baja y se estanca — no converge de forma
+sostenida** (veredicto de `curiana_cadena`: «SE ESTABILIZA ~»). Las cadenas de
+tres días de la serie C decían «CONVERGE»: eran el tramo inicial.
+
+| día | acumulada | ventana | emergente |
+|---:|---:|---:|---:|
+| 1 | 0,7326 | 0,609 | 0,927 |
+| 5 | 0,3578 | 0,3038 | 0,7508 |
+| 10 | 0,2493 | 0,2371 | 0,6586 |
+| 15 | 0,2068 | 0,2354 | **0,6101** (mínimo) |
+| 20 | 0,1789 | 0,2281 | 0,6297 |
+| 25 | 0,1676 | 0,2282 | 0,6477 |
+| 29 | 0,1725 | 0,2431 | 0,6976 |
+| 30 | 0,1619 | 0,2329 | 0,6628 |
+
+La ventana deja de bajar hacia el día 9 (≈ 0,23 hasta el 30); la emergente
+toca fondo el día 15 y **vuelve a subir** en la segunda quincena. No se
+explica aquí (lo que emerge se describe): queda como la pregunta de la serie.
+
+**Los nodos: una brecha pequeña que crece despacio en lo acumulado.** Con las
+63 semillas distintas (una por agente; ver la trampa de abajo), la distancia
+emergente ACUMULADA baja más rápido dentro de cada nodo que entre ellos
+(intra 0,9245 → 0,4896, −47,0 %; entre 0,9273 → 0,5252, −43,4 %; brecha
++0,0028 → +0,0356). En la ventana y en la emergente del día la brecha se queda
+en torno a cero. Las formas cruzan: 343 de 419 clasificables pasaron de nodo,
+con una mediana de 12 turnos (dos días) hasta cruzar y sólo 5 en el mismo turno.
+
+**Siete palabras fijadas por competencia** (`koine_lexicon`), las siete sobre
+raíces del canon: `punu-dunku` (día 5, los peces grises que andan en grupo junto
+a la canoa), `saka-ruku` (13, la mancha en el mar que hierve y brilla; soporte
+39,6), `diki-pui-bana` (14, el cometa), `sona-koro-iro` (15, el animal pardo de
+orejas largas y cola blanca), `kasi-uli-kiba` (21, el eclipse: sol + negro +
+piedra), `halira-iro` (24, el pájaro rojo de penacho; soporte 74,3) y
+`diki-kiba` (27, las aves blancas de pico rojo que siguen la canoa).
+
+**La esfera en la boca** (`loanword_uses`): `kai` (paraujano) 62, `cazabi` 35,
+`maisi` 31, `watapana` (caribe continental) 15, `tabako` 11, `yuca` 8, `aji` 7.
+
+**Brazo de control: días 1-3 completos, el 4 cortado.** `f40e5f34` →
+`281be9a5` → `7041f46a`; el día 4 (`41a5148a`) se cortó en el turno 2
+(2026-09-28 05:38): «Your credit balance is too low to access the Anthropic
+API». El estado en disco quedó en el día 4, turno 2, y se copió a
+`C:\Users\migue\curiana_estado_backup\era2-base-control-d04t1-sin-credito\`.
+**No se compara nada entre brazos hasta que el control tenga sus 30 días.**
+Para retomarlo hace falta recargar el saldo de la API; la propuesta es
+rehacerlo desde el día 1 (no hay copia del cierre del día 3, y un día 4 partido
+en dos runs no se compara con el del brazo A).
+
+> ⚠️ **Trampa medida al analizar**: `analizar_nodos.py` sin
+> `CURIANA_ELENCO=era2` avisa «NO HAY DIVERGENCIA SEMBRADA POR NODO» (62 de 63
+> con la misma semilla). Es falsa alarma: su chequeo llama a
+> `curiana_koine.formas_semilla()`, que deriva la semilla de la ficha del elenco
+> ACTIVO. Con la variable puesta salen 63 vectores distintos y los dos nodos
+> con semilla propia. El motor corrió con `--elenco era2`: la serie estuvo bien
+> sembrada. Las distancias del informe no dependen de la variable.
+
 ### Era 2 · serie C — la escena por lugar, en dos brazos (desde el 2026-09-18)
 
 > Miguel, 2026-09-17: «si no se mueven, ¿cómo podemos hacer que hagan cosas y
