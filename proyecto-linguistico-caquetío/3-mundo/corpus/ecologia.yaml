@@ -489,6 +489,15 @@ entradas:
     agentes_relacionados: [Buko-ko, Korie-ko, Manaure]
     palabra_lexicon: buko
     locacion: buco
+    nota: >-
+      Navarrete 1829 t. III p. 32 (vista en imagen el 2026-09-27): en abril de 1502
+      Hojeda «llegó á una tierra de riego que los indios llamaban Curiana y él nombró
+      Valfermoso»; la nota 3 de la misma página la identifica con Coro («distinta de la
+      que hemos hablado en la nota 4 de la pag. 13»), y esa identificación es inferencia
+      de Navarrete. Es la mención de regadío más temprana de esa costa, de contacto
+      temprano. Se ANOTA y no se proyecta al s. XV ni sube la capa de este hecho
+      (decisión de Miguel, 2026-09-27; regla 3). Propuesta: 6-fusion/cronicas_contacto_
+      costa_occidental_2026-09-22.yaml m2.c3.
     implicacion_simulacion: >
       Convierte al buco en la locación MEJOR ANCLADA históricamente de la simulación:
       nombre propio, técnica y ubicación documentados. La "ingeniería hidráulica" que el

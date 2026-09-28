@@ -720,3 +720,60 @@ etnias:
       - 3-mundo/esfera-de-interaccion.md
       - 3-mundo/horizonte-de-contacto.md
 
+  # ── Los arahuacos de las Antillas Menores (dp.2.04 T8 C, decisión de
+  # Miguel del 2026-09-27: «vecino sin contacto») ──────────────────────
+  # La ancestría compartida está atestiguada (Fernandes et al. 2020, texto
+  # publicado, leído el 2026-09-27); el trato en la ventana simulada, no.
+  - id: etnia-021
+    nombre: arahuacos de las Antillas Menores
+    variantes: [LesserAntilles_Ceramic, antillanos menores de la Edad Cerámica]
+    etiqueta: atestiguado
+    familia_linguistica: arahuaca
+    aviso_familia: >-
+      Lo atestiguado es ANCESTRÍA, no lengua: el clado genético
+      «LesserAntilles_Ceramic» de Fernandes et al. (dos sitios, uno en Santa
+      Lucía) se asocia a gente de habla arahuaca por el marco del artículo
+      («related to Arawak-speakers from northeast South America»).
+    donde: >-
+      las Antillas Menores (el clado sale de dos sitios; Lavoutte, en Santa
+      Lucía, 1000-650 BP). Ninguna fuente del repo pone a esta gente en
+      Falcón, Paraguaná ni las ABC.
+    polity_caquetia: ninguna
+    polity_nota: >-
+      Decisión de Miguel, 2026-09-27 («vecino sin contacto»): como el taíno
+      (etnia-020), primos y no vecinos. El artículo lee la ancestría
+      compartida como ORIGEN —«a south-to-north stepping stone trajectory
+      into the Caribbean»—, no como trato entre pueblos, y la mezcla no está
+      fechada. T8 proponía `costera`, contacto «poblacional» e intensidad
+      alta: no entra así porque eso diría que el elenco del s. XV tenía
+      vecinos antillanos, y lo documentado es ancestría sin fecha.
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      ninguno documentado en la ventana simulada. Lo que hay es genética: los
+      cinco ceramistas de Curazao del estudio —Santa Cruz (1) y De Savaan (4),
+      14C de 610 a 720 ± 20 BP, s. XIII-XIV, contexto dabajuroide— se modelan
+      con 74,5 ± 3,7 % de ancestría emparentada con LesserAntilles_Ceramic y
+      25,5 ± 3,7 % con Venezuela_Ceramic, la otra asociada a los estilos
+      dabajuroides; y comparten ancestría con las Antillas Menores «but not
+      the Greater Antilles».
+    intensidad: ninguna
+    epoca: precontacto
+    epoca_nota: >-
+      la de los INDIVIDUOS (s. XIII-XIV), no la del contacto: la mezcla no
+      está fechada.
+    cita: >-
+      «the sharing of some ancestry between individuals from Curaçao and those
+      from the Lesser Antilles but not the Greater Antilles supports a
+      south-to-north stepping stone trajectory into the Caribbean»
+      (Fernandes et al., Nature 590, 2021; manuscrito del autor en Europe PMC,
+      PMC7864882).
+    procedencia: {obra: fernandes-2020, pagina: "texto publicado, Discussion; Table S15; Supplementary Data 1-3"}
+    aviso: >-
+      El PDF de Nature sigue en 0 bytes a propósito (licencia): lo leído el
+      2026-09-27 se cita y no se guarda. El preprint del repo daba 68,1 %
+      «Caribbean_Ceramic» sin distinguir Mayores de Menores; la versión
+      publicada afina, y es la que manda.
+    ver_tambien:
+      - 4-fuentes/fernandes-2020.md
+      - 6-fusion/taino2_evidencia_material_contacto.yaml
+      - 6-fusion/taino_en_la_esfera_2026-09-21.yaml
