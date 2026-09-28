@@ -154,20 +154,31 @@ POLITIES = {
             "gran chamán**: poder secular y sagrado fundidos en una persona. "
             "Manaure media entre lo natural y lo sobrenatural, y su reputación "
             "descansa en poder predecir y controlar fenómenos naturales.",
-            _OLIVER + ", pp. 251 y ss., 279"),
+            _OLIVER + ", pp. 269, 278, 294"),
         asentamiento=Rasgo(
             "Aldeas dispersas por las llanuras costeras.",
-            _OLIVER + ", p. 279"),
+            _OLIVER + ", p. 294"),
         demografia=Rasgo(
             "Aldeas de tamaño medio, ~200 a 500 personas.",
-            _OLIVER + ", p. 279"),
+            _OLIVER + ", p. 294"),
         economia=Rasgo(
-            "Red de alianzas sostenida en comercio: cuentas de concha, sal y "
-            "azabache. Salinas abundantes; tierra arenosa y falta de aguas, "
+            "Sal y concha. Salinas abundantes; tierra arenosa y falta de aguas, "
             "comarca por lo demás 'abundante y regalada' — la tesis de tierra "
-            "pobre y mar rico.",
-            _OLIVER + " (confederación por comercio); " + _OVIEDO_B + " (Coro: "
-            "'su terreno arenoso y falto de aguas', 'abundantes salinas')"),
+            "pobre y mar rico. La concha del mar circula como valor: en la "
+            "costa servía 'como de monedas', y en el Coro colonial unas "
+            "'conchezuelas de pescados' se trataban 'a valor de un real cada "
+            "una'; tierra adentro, los ayamanes se adornaban con 'conchas "
+            "marítimas que compran a otras naciones'.",
+            _OVIEDO_B + " (Coro: 'su terreno arenoso y falto de aguas', "
+            "'abundantes salinas'); Arcaya 1920, pp. 120 y 264 (la concha como "
+            "moneda); Federmann [1530], ed. 1916, p. 45 (los ayamanes la "
+            "compran) — ecologia-105"),
+        # Hasta el 2026-09-27 este rasgo decía «red de alianzas sostenida en
+        # comercio: cuentas de concha, sal y azabache» y lo atribuía a Oliver
+        # como «confederación por comercio». Ese pasaje es de los JIRAJARANOS,
+        # y dice que NO formaron confederación (Oliver 1989 cap. 3, p. 245).
+        # Regla 4: corregido por decisión de Miguel («sólo justificar la sal y
+        # la concha»; col-01 de 6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml).
         guerra=Rasgo(
             "Disputa documentada con los grupos de descendencia caribe "
             "(valencioides) por el acceso y control de los archipiélagos de Las "
@@ -189,7 +200,7 @@ POLITIES = {
             "**'cada uno es boratio'**: adivinación doméstica con tabaco "
             "enrollado en una mazorca, leyendo la ceniza (curva como hoz = "
             "bien; recta = al revés).",
-            _OLIVER + ", p. 279 (el jefe como gran chamán); Oviedo y Valdés, "
+            _OLIVER + ", p. 294 (el jefe como gran chamán); Oviedo y Valdés, "
             "*Historia General y Natural de las Indias*, t. II p. 298, citado "
             "extensamente en Arcaya 1920, pp. 97-100"),
         ceramica=Rasgo(
@@ -197,7 +208,7 @@ POLITIES = {
             "la sub-tradición **Dabajurana**. ⚠️ El propio Oliver matizó esto "
             "en 2016: no todos los rasgos de los sitios de la costa de Falcón "
             "son dabajuroides.",
-            _OLIVER + "; matiz en " + _ANTCZAK + " (José Oliver 2016, pers. comm.)",
+            _OLIVER + ", p. 309; matiz en " + _ANTCZAK + " (José Oliver 2016, pers. comm.)",
             epoca="arqueológico, larga duración"),
         notas="Es la polity que la simulación modela. Todo `curiana_agents.py` "
               "y `curiana_state.py` pertenece aquí.",
@@ -218,21 +229,21 @@ POLITIES = {
             "redistribuir y pierde autoridad si acumula. Cada oficio solo opera "
             "en su contexto: en paz los aldeanos declaran que 'no tienen señor "
             "que los gobierne'; en guerra la autoridad se centraliza.",
-            _OLIVER + ", pp. 276-279 (Federmann 1530 y documento de 1579)"),
+            _OLIVER + ", pp. 290-292 (Federmann 1530 y documento de 1579)"),
         asentamiento=Rasgo(
             "23 aldeas fuertemente agrupadas y **fortificadas** ('fortificadas', "
             "quizá empalizadas). Viviendas de hasta ocho familias — tipo maloca.",
-            _OLIVER + ", pp. 277-279 (Federmann [1557] 1958: 66-67)"),
+            _OLIVER + ", p. 292 (y 287) (Federmann [1557] 1958: 66-67)"),
         demografia=Rasgo(
             "~4.000 personas por aldea. Densidad muy superior a la costera.",
-            _OLIVER + ", p. 277"),
+            _OLIVER + ", p. 292"),
         economia=Rasgo(
             "Comerciaban **sal con sus propios enemigos**, estando rodeados de "
             "ellos. El oro venía de las serranías de Nirgüa-Buria; la sal, "
             "probablemente por el valle del Yaracuy. El maçato (cerveza de "
             "maíz) es el instrumento político del Jefe de Paz, que redistribuye "
             "maíz, yuca y legumbres a cambio de trabajo en los campos.",
-            _OLIVER + ", pp. 276-278"),
+            _OLIVER + ", pp. 247, 290-291, 306"),
         guerra=Rasgo(
             "Ciclo de paz y guerra con **motor agrícola**: valles de tamaño "
             "limitado más crecimiento demográfico llevan a expandirse sobre "
@@ -240,7 +251,7 @@ POLITIES = {
             "agrícola, que la presión erosiona. Solo la victoria o la derrota "
             "completa rompe el ciclo. Guerra 'constreñida', a diferencia de la "
             "kalina, que sí hace del raid de prisioneros el motor del prestigio.",
-            _OLIVER + ", p. 278"),
+            _OLIVER + ", pp. 292-293"),
         religion=Rasgo(
             "El **boratio vive apartado**, en su propia casita de paja fuera de "
             "la aldea principal, y el Jefe de Paz **no** es a la vez gran "
@@ -249,13 +260,13 @@ POLITIES = {
             "madre una muchacha de diez años arriba y la degüellan en la ribera "
             "para darla 'al sol por mujer', porque el sol está enojado y por eso "
             "no llueve. Tras la llegada española lo siguen haciendo a escondidas.",
-            _OLIVER + ", pp. 276-279 (documento de 1579, Arellano Moreno "
+            _OLIVER + ", pp. 289-290, 294 (documento de 1579, Arellano Moreno "
             "1964: 189-190)",
             epoca="1579 — **colonial y tardío**; no proyectar al precontacto"),
         ceramica=Rasgo(
             "Oliver la hace corresponder con la sub-tradición **Tierran**, en "
             "paralelo a costera↔Dabajurana.",
-            _OLIVER,
+            _OLIVER + ", p. 309",
             epoca="arqueológico, larga duración"),
         notas="El contraste más fuerte con la costera, y la fuente de varios "
               "rasgos que el canon del proyecto usa sin marcar su origen.",
@@ -274,26 +285,26 @@ POLITIES = {
             "dos, tres o cuatro aldeas aliadas entre sí — por eso Federmann los "
             "juzga menos poderosos que Barquisimeto. Pero anota que **se unirían "
             "si fueran atacados** con fuerza suficiente.",
-            _OLIVER + ", p. 278 (Federmann [1557] 1958: 108)"),
+            _OLIVER + ", p. 293 (Federmann [1557] 1958: 108)"),
         asentamiento=Rasgo(
             "Densidad variable: unos son racimos de tres aldeas, otros "
             "viviendas sueltas, y algunos se estiran linealmente hasta milla y "
             "media con una o dos calles a lo sumo. Viviendas de cinco a ocho "
             "familias.",
-            _OLIVER + ", p. 278 (Federmann)"),
+            _OLIVER + ", pp. 292-293 (Federmann)"),
         demografia=Rasgo(
             "Tan poblado como Barquisimeto en número total, pero repartido de "
             "otro modo.",
-            _OLIVER + ", p. 278"),
+            _OLIVER + ", pp. 292-293"),
         economia=Rasgo(
             "El límite Barquisimeto/Yaracuy es **el paso entre los Llanos y la "
             "costa caribeña**: controlarlo era controlar el comercio y las "
             "comunicaciones. Es una de las causas de la competencia entre ambas.",
-            _OLIVER + ", p. 278"),
+            _OLIVER + ", p. 293"),
         guerra=Rasgo(
             "En competencia dura con Barquisimeto por tierra, espacio y "
             "(probablemente) acceso al mar Caribe.",
-            _OLIVER + ", p. 278"),
+            _OLIVER + ", p. 293"),
         # religion y ceramica quedan vacías a propósito: la fuente no dice.
         notas="Oliver advierte que 'no es en absoluto una sola unidad política'. "
               "Es la polity peor documentada de las cuatro.",
@@ -314,25 +325,35 @@ POLITIES = {
             "jefatura militar es cosa de colaboración, no de mando. "
             "**Ninguno de los jefes aparece con poderes chamánicos** — el eje "
             "sagrado no se registra.",
-            _OLIVER + " (comportamiento de los diao de Curahamara e Itabana)"),
+            _OLIVER + ", p. 308 (comportamiento de los diao de Curahamara e Itabana)"),
         economia=Rasgo(
             "En el bajo Cojedes, **comercio de esclavos capturados** entre "
             "grupos: Federmann pidió comprar una naboria en la aldea de Itabana "
             "y se la negaron, 'aunque acostumbraban a comprarlas y venderlas "
-            "entre sí'.",
-            _OLIVER + ", n. 126, p. 277 (Federmann [1557] 1958: 94)"),
+            "entre sí'. Y, de segunda mano, Pérez de Tolosa (1546): «no son "
+            "grandes labradores»; comen carne y pescado.",
+            _OLIVER + ", n. 218, pp. 291-292 (Federmann [1557] 1958: 94); "
+            "Pérez de Tolosa [1546], en Fernández Duro 1885 t. II p. 234 "
+            "(dp.2.02 de #222, 2026-09-27)"),
         guerra=Rasgo(
             "**Guerra de captura de esclavos institucionalizada** — pero Oliver "
             "subraya que esto vale **solo** para el bajo Cojedes y que no hay "
             "afirmación equivalente para los caquetíos de otras áreas. La razzia "
             "esclavista era común y extendida en los Llanos en general.",
-            _OLIVER + ", n. 126, p. 277"),
+            _OLIVER + ", n. 218, pp. 291-292"),
         religion=Rasgo(
             "Ausencia notable: ninguno de los jefes es caracterizado como chamán.",
-            _OLIVER),
+            _OLIVER + ", p. 308"),
         notas="Es la polity que más se aleja del modelo costero, y la única con "
               "esclavitud documentada. Oliver acota el dato con cuidado; "
-              "conviene no generalizarlo.",
+              "conviene no generalizarlo. LENGUA (el modelo no tiene eje de "
+              "lengua, así que va aquí): misma nación que la costa, «aunque algo "
+              "difieren en la habla á los de Coro» (Pérez de Tolosa [1546], en "
+              "Fernández Duro 1885 t. II p. 234, de segunda mano). TERRITORIO: "
+              "el «hasta Casanare… Barraguán» descansa en Rivero 1883 (pp. 29, "
+              "54, 144, 151, 201, 392) vía Jahn; es colonial, sin continuidad "
+              "política probada. (dp.2.02 de #222, decisión de Miguel del "
+              "2026-09-27.)",
     ),
 
     # ── La quinta: la esfera occidental, FUTURA (decisión de Miguel,
@@ -358,7 +379,7 @@ POLITIES = {
             "costa, poblado de indios coanaos e caquetíos». Castellanos llama "
             "Coquibacoa al norte-noreste de la península (Macuira, Jarara); "
             "Juan de la Cosa (1500) escribe Coquibacoa sobre toda la Guajira.",
-            _OLIVER + ", pp. 191, 199, 202, 222 (Martín [1534] en María "
+            _OLIVER + ", pp. 190-191, 201-202, 205, 228 (Martín [1534] en María "
             "1977: 505; Castellanos [1589] en Parra 1930a: 284; de la Cosa "
             "1500, p. 192)"),
         asentamiento=Rasgo(
@@ -370,7 +391,7 @@ POLITIES = {
             "lowlands locally available»; nunca en tierras altas. Oliver "
             "los hace salir «out of the coast of Falcón and/or the islands "
             "of Aruba and Curaçao, north of Paraguaná».",
-            _OLIVER + ", pp. 189, 200, 202, 222"),
+            _OLIVER + ", pp. 188, 203, 205, 228"),
         economia=Rasgo(
             "Comercio de larga distancia como razón de estar ahí: punto "
             "intermedio entre el valle César-Ranchería y la costa de Falcón. "
@@ -383,7 +404,7 @@ POLITIES = {
             "partnership»; y probablemente en el mercado del lago (productos "
             "agrícolas por pescado). El comercio de la esfera es «highly "
             "selective between groups».",
-            _OLIVER + ", pp. 189, 211, 222, 227-229 (capitulación de Ojeda "
+            _OLIVER + ", pp. 188, 217, 229, 227-229 (capitulación de Ojeda "
             "1500 en Otte 1963: 3; Martín [1534] sobre los coanaos)"),
         guerra=Rasgo(
             "Un solo episodio: en la sierra de Coquibacoa (Macuira, Jarara) "
@@ -393,7 +414,7 @@ POLITIES = {
             "crónicas los llaman «always peaceful» frente a onotos, wayú y "
             "kusi'na «more bellicose and rebellious» — etiqueta colonial "
             "(regla 3), registrada como hipotético en geografia_politica-013.",
-            _OLIVER + ", pp. 191 (Castellanos [1589] en Parra 1930a: 284) y "
+            _OLIVER + ", pp. 190-191 (Castellanos [1589] en Parra 1930a: 284) y "
             "227 n. 154"),
         ceramica=Rasgo(
             "El correlato material del eje Guajira ↔ Falcón: formas de vasija "
@@ -404,12 +425,12 @@ POLITIES = {
             "intensificación con el Cabo de la Vela y la costa Punta "
             "Espada-Chichibacoa **tiene su pico en 1400 d.C.** — dentro de la "
             "ventana de la simulación.",
-            _OLIVER + ", pp. 200 y 292",
+            _OLIVER + ", pp. 203 y 309",
             epoca="1200-1400 d.C. (arqueológico, Los Médanos) — **dentro de la "
                   "ventana de la simulación**"),
         notas="ESFERA FUTURA: no se simula; ningún agente vive aquí. Es hija "
               "de la costera (Oliver: «undoubtedly originated from Coastal "
-              "Falcón», p. 189) y el modelo real de contacto para la era 2. "
+              "Falcón», p. 188) y el modelo real de contacto para la era 2. "
               "Jahn y Arcaya meten la orilla del lago en la franja costera; "
               "aquí se sigue a Oliver, que separa a estos caquetíos como "
               "avanzadas. Liderazgo, demografía y religión: «very little is "
@@ -523,7 +544,7 @@ def coherencia_del_canon() -> list:
     # Lo que separa a la costera de Barquisimeto NO es que existan boratios
     # —los hay en las dos, "en cada pueblo principal hay un boratio"— sino si
     # el JEFE es además gran chamán. En la costa sí; en Barquisimeto el jefe de
-    # paz no lo es (Oliver p.279). Así que la comprobación mira al cacique, no
+    # paz no lo es (Oliver p.294). Así que la comprobación mira al cacique, no
     # a si los oficios están repartidos entre personas distintas.
     if POLITY_SIMULADA == "costera":
         caciques = [n for n, a in ALL_AGENTS.items()
@@ -541,7 +562,7 @@ def coherencia_del_canon() -> list:
             avisos.append(
                 f"ningún cacique del elenco ({', '.join(caciques)}) aparece "
                 "como gran chamán, y eso es lo que distingue a la polity "
-                "'costera' de la de barquisimeto (Oliver 1989 cap.3 p.279): "
+                "'costera' de la de barquisimeto (Oliver 1989 cap.3 p.294): "
                 "en la costa el diao gobierna el cuerpo y el cielo. Revisar "
                 "el canon o cambiar POLITY_SIMULADA.")
 

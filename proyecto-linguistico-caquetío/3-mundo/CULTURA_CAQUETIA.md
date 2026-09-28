@@ -43,23 +43,27 @@ Las crónicas coloniales registran un dato extraordinario y bien atestiguado sob
 cacique caquetío del primer contacto (c. 1499–1528): se le atribuía **poder sobre las lluvias y las
 tormentas**, y su autoridad era a la vez política y sacerdotal. En la simulación, este rasgo se
 proyecta hacia atrás al jefe teocrático precolonial: **gobernar la Curiana y mediar con el cielo son
-la misma función.** **[reconstruido]** El Sol (*kali*) y la Luna (*kasha*) ordenan el tiempo; la lluvia
-(*kaya*) es a la vez bendición (siembra) y amenaza (tormenta).
+la misma función.** **[reconstruido]** El Sol (*kasi*) y la Luna (*kati*) ordenan el tiempo; la lluvia
+(*unia*) es a la vez bendición (siembra) y amenaza (tormenta).
 
 ### Espíritus dueños y el mundo poblado
-**[reconstruido]** Para la mente arahuaca, los lugares y los recursos tienen *dueños* espirituales:
-el mar, los bancos de peces, el manglar, la sal, los animales de caza. Por eso el pescador pide
-permiso antes de botar la canoa (ver al agente Bagre-ko) y la recolectora respeta ciertas plantas. No
-es superstición decorativa: es una **ética de relación** con un mundo que no se considera materia
-inerte sino una red de seres con voluntad.
+**[hipótesis]** Para la mente arahuaca, los lugares y los recursos pueden tener *dueños*
+espirituales. Los que dejan rastro en las fuentes del proyecto son **el bosque del cerro** (Capó,
+creencia-021) y **los cerros y las salinas** (creencia-015, retroabstraído). **Del mar, no:** ninguna
+fuente caquetía ni vecina dice que tenga dueño ni que el pescador pida permiso antes de botar la canoa
+(campaña de la cosmovisión marina, 2026-09-24, cc.10: negativa medida; 6-fusion/cosmovision_marina_2026-09-24.yaml). Lo que sí está atestiguado es que **la pesca se adivina con tabaco**,
+como caminar, sembrar o cazar: «cada uno es boratio» (Oviedo t. II p. 298). Hasta el 2026-09-24 este
+párrafo decía [reconstruido] y ponía al mar y a los bancos de peces entre los dueños, sin comparanda
+citada: se bajó (regla 2).
 
 ### Fuerzas en tensión: sequía-viento y lluvia-fecundidad
-**[reconstruido, por analogía wayuu — la lengua hermana más documentada y más pesada en el lexicón]**
+**[comparanda wayuu — un vecino, no una hermana: D11 retiró al wayuu como hermana por defecto]**
 Los wayuu de la Guajira, vecinos lingüísticos más cercanos, conciben esta misma polaridad
 seca/lluvia como dos fuerzas con nombre y voluntad propia, no solo clima: **Pulowi**, fuerza
 femenina de la sequía y el viento, ligada a lugares concretos de la península (tiene
-residencias); y **Juyá** ("Lluvia"), amo de las aguas del cielo, fecundidad, el que hace
-germinar la semilla. No son buena/mala — son dos fuerzas que se alternan y a veces conviven,
+residencias; **sin fuente primaria en el repo**: Pulowi sale 0 veces en Jahn y en el Cuadernillo,
+y lo que la describe son blogs); y **Juyá** ("Lluvia"), amo de las aguas del cielo, fecundidad, el
+que hace germinar la semilla (con procedencia: Guerra Curvelo, Cuadernillo pp. 26-27; Jahn 1927 p. 362). No son buena/mala — son dos fuerzas que se alternan y a veces conviven,
 igual que el Tiempo de Viento y el Tiempo de Siembra de la Curiana (§2). Junto a ellas, los
 **Wanülüü** — espíritus maléficos de apariencia humana que hieren de noche — sirven de fuente de
 desgracia inexplicada (mala pesca, enfermedad) sin necesidad de un villano literal.
@@ -114,7 +118,7 @@ tierra**:
 - **Mantenimiento del buco** (las represas que distribuyen el agua).
 - Más tiempo para **ceremonias, duelos, transmisión oral** y trabajo artesanal bajo techo.
 
-**[hipótesis]** El calendario probablemente se afinaba con observación lunar (*kasha*) y con la
+**[hipótesis]** El calendario probablemente se afinaba con observación lunar (*kati*) y con la
 aparición de ciertas estrellas o el comportamiento de animales y plantas, como en los Wayuu.
 
 ---
@@ -156,9 +160,9 @@ costa.
 
 **[reconstruido]** — composición etnográfica plausible, no un documento.
 
-**Antes del amanecer (*kapua*).** El frío suave de la madrugada falconiana. Olor a brasa reavivada y a
-casabe del día anterior. Las mujeres soplan el fogón; los pescadores revisan redes y piden permiso al
-mar en voz baja. Chiriware reparte la guardia mirando al este. Shaboro ya está fuera de su choza si la
+**Antes del amanecer (*mautia*, la mañana temprana).** El frío suave de la madrugada falconiana. Olor a brasa reavivada y a
+casabe del día anterior. Las mujeres soplan el fogón; los pescadores revisan redes y leen el tabaco
+antes de salir (Oviedo t. II p. 298: la pesca se adivina como las demás faenas). Chiriware reparte la guardia mirando al este. Shaboro ya está fuera de su choza si la
 noche le trajo un sueño.
 
 **Mañana.** El viento noreste arrecia. Las canoas salen al Golfete; los agricultores bajan al conuco y
@@ -187,7 +191,8 @@ trae un aviso.
 
 La lengua caquetía es **arahuaca** (emparentada con el wayuunaiki, el lokono y el taíno) y, en la
 Curiana, es **mucho más que un medio de comunicación: es identidad y frontera.** El que no habla la
-lengua es, literalmente, **ma-anüiki** ("sin habla"): un extranjero incomprensible. Hablar bien
+lengua es, literalmente, un **sin habla** —el privativo `ma-`; la voz para 'habla' que usaba el
+proyecto, *anüiki*, salía del wayuu y está archivada (D11, tf.5)—: un extranjero incomprensible. Hablar bien
 caquetío marca quién pertenece.
 
 ### Cómo se aprende
@@ -198,8 +203,9 @@ prefijos y orden de palabras que los delatan como forasteros — y esa marca soc
 
 ### Qué palabras son "sagradas" o cargadas
 - **barsure** (alma) — no se usa a la ligera; toca lo espiritual.
-- **pütchi** (mensaje / palabra sagrada / voz del espíritu) — la palabra que viene del más allá o que
-  obliga; en los Wayuu, la palabra del mediador. **[cognado wayunaiki]**
+- *pütchi* (mensaje / palabra sagrada / voz del espíritu) — **archivada el 2026-09-23** (D11, tf.5):
+  se había reconstruido desde el wayuu, donde es la palabra del mediador (palabrero). El concepto
+  queda sin voz caquetía: si hace falta, la comunidad la acuña.
 - **urari** (curare / veneno-medicina) — palabra de poder del piache.
 - **manaure** — **título laudatorio**, no un simple nombre propio; nombrarlo invoca autoridad.
 - Los **nombres de los muertos**, que solo se pronuncian en el contexto ritual del recuerdo.
@@ -292,7 +298,9 @@ genealogía y derecho oral, y una lengua que la propia comunidad sigue ampliando
 - Zavala Reyes (2015) — recopilación léxica caquetía empleada en la simulación.
 - Comparanda arahuacos vivos: wayuunaiki (Guajira), lokono (Guayanas), taíno (Antillas), garífuna —
   base de las reconstrucciones marcadas **[reconstruido]**.
-- Mitología wayuu (Pulowi, Juyá, Wanülüü, Lapü): "Mitología Wayúu: Religión Wayúu" (lisbet52.blogspot.com);
+- Mitología wayuu (Pulowi, Juyá, Wanülüü, Lapü) — ⚠️ lo que sigue son BLOGS, no fuentes (2026-09-24,
+  cc.10); Juyá tiene procedencia en el repo (Guerra Curvelo, Cuadernillo pp. 26-27; Jahn 1927 p. 362),
+  Pulowi no: "Mitología Wayúu: Religión Wayúu" (lisbet52.blogspot.com);
   "Pulowi, deidad mítica femenina de los Wayúu" (ADEPAC); "Mitología Wayúu (6): Pulowi, la muerte, la
   sequía y la oscuridad" (albazero.wordpress.com).
 

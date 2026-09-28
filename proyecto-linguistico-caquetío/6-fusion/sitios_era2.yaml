@@ -102,7 +102,10 @@ meta:
     # 2026-09-23 (sigla E): 74 → 72. `jachos` deja de ser voz caquetía (es
     # «hacho», castellano: 6-a) y `joutai`, archivada el 2026-09-19, cede su
     # línea a `juri` (2-a).
-    voces_caquetias_citadas: 72
+    # 2026-09-24 (tanda de las hermanas): 72 → 71. Las voces archivadas ceden su
+    # línea a su sustituta (duna→uni, kaya→unia, arima→hime, amana→hikihi,
+    # kuru→ada) y `kono` a `jusual`, que ya estaba citada.
+    voces_caquetias_citadas: 71
     hechos_del_corpus_citados: 47
     obras_citadas: 11
 
@@ -207,7 +210,7 @@ sitios:
           procedencia: {obra: arcaya-1920, pagina: '22'}
           apoyo_en_repo: [ecologia-007, ecologia-008]
           estacion: 'todo el año'
-          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
         - dato: >-
             La técnica es la charca artificial: la agricultura de esta costa pide
             «"hand" irrigation by extracting rainwater collected from artificial
@@ -284,7 +287,7 @@ sitios:
           capa: contacto (1546, Pérez de Tolosa)
           procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 261 (pdf 79), n. 110'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: arima, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: hime, capa: caquetío-hipotético}  # era `arima`, archivada en la tanda de las hermanas (2026-09-24)
       recoleccion:
         - dato: >-
             La concha es dinero: «Entre todos ellos no ay oro, ni plata ni moneda
@@ -404,7 +407,7 @@ sitios:
           procedencia: {obra: camacho-2011, pagina: '16 (vía ecologia-032)'}
           apoyo_en_repo: [ecologia-031, ecologia-032, hueco-lex-008]
           estacion: 'todo el año'
-          voz_caquetia: {clave: kuru, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: ada, capa: caquetío-reconstruido}  # era `kuru`, archivada en la tanda de las hermanas (2026-09-24)
         - dato: >-
             Las cuentas de collar valían «almost like a monetary system»: tres
             tipos —boroyda, mamas y querequetero o quitero—, de piedra y de concha,
@@ -579,7 +582,7 @@ sitios:
           capa: 's. XIX-XX (la glosa es del autor; el censo es de 1881)'
           procedencia: {obra: esteves-1989, pagina: '49'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
           lectura: 'y el morfema encaja: «la desinencia "ima", que significa humedad en caquetío» (Esteves p. 93), presente en Maitiruma y Yaguarima'
         - dato: 'Y la quebrada del taque: «Tacaduto: expresa la quebrada del taque. Uto: cauce.» Es una aldea del municipio Moruy.'
           etiqueta: atestiguado
@@ -608,7 +611,7 @@ sitios:
           deuda: sin-procedencia
           apoyo: 'curiana_agents_era2.SITIOS (zona_de_pesca: None); estructura_social_era2.yaml §dos_circuitos.redistribucion'
           estacion: 'todo el año'
-          voz_caquetia: {clave: arima, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: hime, capa: caquetío-hipotético}  # era `arima`, archivada en la tanda de las hermanas (2026-09-24)
       recoleccion:
         - dato: >-
             El fruto del cardón se baja con vara: la DATERA es «vara hecha con el
@@ -809,7 +812,7 @@ sitios:
           capa: moderno (INFALCOSTA, Arends 2021)
           procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021)'}
           estacion: 'seca larga'
-          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
           regla_3: 'describe el medio físico de hoy; que alguien bebiera de ahí en el s. XV es la decisión del Capubana, no el dato'
       mar_y_pesca:
         - dato: >-
@@ -906,7 +909,7 @@ sitios:
           etiqueta: reconstruido
           procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 245 (pdf 63)'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: kuru, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: ada, capa: caquetío-reconstruido}  # era `kuru`, archivada en la tanda de las hermanas (2026-09-24)
           regla_3: 'el suelo pelado de hoy es colonial (las cabras de los Welser); el del s. XV está sombreado'
       sal:
         - dato: >-
@@ -1098,7 +1101,7 @@ sitios:
           capa: s. XX
           procedencia: {obra: medina-colina-sxx, pagina: '130 (mc-mundo-018)'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: amana, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: hikihi, capa: caquetío-hipotético}  # era `amana`, archivada en la tanda de las hermanas (2026-09-24)
 
   # ───────────────────────────────────────────────────────────────
   - sitio: Capubana
@@ -1117,7 +1120,7 @@ sitios:
           capa: 's. XX (Arcaya 1920 sobre Sievers 1892)'
           procedencia: {obra: arcaya-1920, pagina: '22'}
           estacion: 'todo el año'
-          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
           lectura: 'es la ÚNICA agua corriente de la península en toda la bibliografía del repo'
         - dato: >-
             Al pie hay diez microcuencas, «que son los únicos cursos de agua que
@@ -1127,7 +1130,7 @@ sitios:
           capa: moderno (INFALCOSTA, Arends 2021; Decreto 3825 de 2019)
           procedencia: {obra: montecano-reserva, pagina: 'INFALCOSTA (Arends, 2021); Wikipedia es (Decreto N.º 3825)'}
           estacion: 'seca larga'
-          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
           regla_3: 'describe el medio físico de hoy; la proyección al s. XV es la decisión de Miguel del 2026-09-14'
         - dato: >-
             Y la humedad no es lluvia: en la cumbre hay «abundantes epífitas, musgos

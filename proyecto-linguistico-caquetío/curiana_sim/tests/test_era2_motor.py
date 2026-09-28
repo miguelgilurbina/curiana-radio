@@ -290,14 +290,16 @@ def test_las_formas_de_las_plantillas_quedan_fuera_de_lo_emergente():
     # Tanda final (D11 fase 3): el paradigma y las voces de la plantilla son
     # las de las hermanas; las viejas están en el archivo, y el archivo
     # también es puerta.
-    for forma in ("da-barsure", "diki-kuba", "kuburuku", "naa-ba", "sima-bana"):
+    # Tanda de las hermanas (2026-09-24): `kunu-ba` y `kidi-bana` son las del
+    # núcleo de hoy (`naa` y `sima` están archivadas).
+    for forma in ("da-barsure", "diki-kuba", "kuburuku", "kunu-ba", "kidi-bana"):
         assert forma in orch._FORMAS_EXCLUIDAS, forma
     # la plantilla dejó de enseñar `buko-ana` (tanda de la base): vuelve a
     # poder acuñarse, que es la consecuencia declarada
     assert "buko-ana" not in orch._FORMAS_EXCLUIDAS
     assert "dai" in orch._FORMAS_EXCLUIDAS           # vocabulario base
     assert "taya" in orch._FORMAS_EXCLUIDAS          # archivada: también puerta
-    assert "kuru-bacoa" not in orch._FORMAS_EXCLUIDAS  # una acuñación de agente sí cuenta
+    assert "hikihi-bana" not in orch._FORMAS_EXCLUIDAS  # una acuñación de agente sí cuenta
 
 
 def test_formas_en_texto_extrae_compuestos_y_minusculas():

@@ -583,6 +583,17 @@ no canon (regla 5); comparanda de los Llanos (regla 4).
 - No se tocó `lexicon_achagua.py`, su YAML, `curiana_lexicon.py`, `2-lengua/` ni
   el corpus.
 
+**✅ Aplicado al canon el 2026-09-24** (tanda de las hermanas, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`): `uni` 'agua' (pliego 32 izq.) y `unia` 'lluvia' (pliego 73 der.) son reconstruidas con el lokono; `saika` 'bueno' (pliegos 43-44) es hipotética; `maa` 'decir' se queda con «Numau» (pliego 55 der.). Las claves achagua `uni` y `unia` pasaron a `-achagua`.
+
 ## Enlaces
 
 [[fabo-1911]] · [[jahn-1927]] · [[rivero-1883]]
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Control achagua:** Mar = *Manoa*, Marino = *Manoa say*, Piélago = *Manoa*,
+Costa del mar = *Manoa, numacoa* (vía `6-fusion/achagua_neira_ribero_1762.yaml`,
+transcripción del 2026-09-12): la palabra del mar es la de la laguna (Gumilla).
+Las entradas «marino» y «piélago» parecen pedidas para la doctrina.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

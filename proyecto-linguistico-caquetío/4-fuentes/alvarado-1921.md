@@ -388,3 +388,16 @@ sostienen. Las tablas no se reescriben porque son historia; esta bitácora
 las corrige.
 
 Propuesta y citas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero; leídas las ventanas. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `alvarado1921`: 8 ventanas creencia × mar (8 con un nombre de la costa occidental cerca), 6 creencia × cielo de control.
+
+**Se halló:** BOTUTO (p. 32): «Antigua trompeta sagrada de algunas tribus orinocenses, descrita por el P. Gumilla y Humboldt» y, aparte, el Strombus «Gran caracol de las costas del mar Caribe. Táñenlo a modo de trompa los carreteros». La trompeta SAGRADA es del Orinoco; la de caracol, de uso profano. Lo mismo que Medina para la guarura (s. XX).
+
+**No se halló:** Cero.

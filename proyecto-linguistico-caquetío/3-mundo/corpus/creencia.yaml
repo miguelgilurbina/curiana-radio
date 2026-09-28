@@ -197,7 +197,9 @@
     vida allí prolonga la terrenal (tierras, ganado o pesca, familia) y no hay
     premio ni castigo por la conducta en vida.
   fuente: reconstruido
-  referencia: "Paz Reverol 2018; Jahn 1927:229 (Jepira/Cabo de la Vela, guajiro)"
+  referencia: "Paz Reverol 2018; Jahn 1927 p. 184 (Jepira/Cabo de la Vela, guajiro; decía «1927:229», que es la página del PDF) (cc.10 (g) A, 2026-09-24)"
+  procedencia: {obra: jahn-1927, pagina: '184'}
+  aviso: "En Jahn Jepira es el Cabo de la Vela por donde el alma PASA hacia «espléndidas sabanas»; la «pesca» del más allá no está en Jahn (6-fusion/cosmovision_marina_2026-09-24.yaml cm24-c-w02). (cc.10 (g) A, 2026-09-24)"
   dominios: [creencia, muerte]
   agentes_relacionados: [Bana-mana]
   implicacion_simulacion: >
@@ -305,9 +307,21 @@
     teocrático se le atribuye poder sobre las lluvias y las tormentas; su
     legitimidad depende de que el cielo le obedezca ante la comunidad.
   fuente: atestiguado
-  referencia: "crónicas del contacto sobre Manaure; canon CULTURA_CAQUETIA.md §1,§6"
+  referencia: "Carta de Juan de Ampíes al Rey (c. 1525-1526), en Oviedo y Baños ed. Fernández Duro 1885 t. II p. 212 (vista en imagen): el gran cacique de Coro «da á entender á los indios que él da los temporales»; la misma carta leída del manuscrito del AGI por Velasco 2015 p. 18 («Folio 14»); y fray Pedro de Aguado, Historia de Venezuela t. I p. 40, vía Arcaya 1920 p. 115 (Manaure les había hecho creer «que él era el autor y hacedor» de «las lluvias, granizos, truenos y relámpagos y heladas y secas»; Aguado no está en el repo). Dos testigos independientes: la carta, anterior a 1527, y Aguado, de fines del XVI. Antes decía «crónicas del contacto sobre Manaure; canon CULTURA_CAQUETIA.md §1,§6». Cambio de dp.2.07 de #222 (Tolosa A + HSAI a, 2026-09-24)."
+  procedencia: {obra: ampies-1526-carta, pagina: "212"}
   dominios: [creencia, poder, calendario]
   agentes_relacionados: [Manaure, Shaboro]
+  aviso: >
+    La carta tiene dos lecturas de la misma frase y no se decide entre ellas
+    (Tolosa A, #209): Fernández Duro imprime «se hace adorar como Dios, dando á
+    entender á los indios que él da los temporales»; Velasco, del manuscrito,
+    «se haze adorar como digo dando a entender a los indios q el da los
+    temporales». Lo que no cambia —«se hace adorar» y «él da los
+    temporales»— es lo que este hecho usa. Nada del corpus se apoya en «como
+    Dios» por esta carta. Aguado, por su lado, dice «cuasi lo tenían por
+    Dios» (vía Arcaya p. 115, donde Arcaya sí copia la frase de Ampíes; en la
+    p. 161 la salta). Decidir entre las dos lecturas pide ver el folio 14 en
+    PARES (opción B): queda para Miguel.
   implicacion_simulacion: >
     Ya en el canon; se incluye para anclar el calendario ritual al poder.
 
@@ -516,3 +530,144 @@
     (los períodos de la era 2 quedan sin nombre caquetío a propósito, p2). Lo que
     subiría el hecho: una lectura publicada de esos petroglifos, o comprobar si el
     inventario de Morón 2012 para Falcón incluye Siraba.
+- id: creencia-023
+  contenido: 'La comida del rito caquetío es de MAÍZ, no del mar. El boratio, antes de curar, manda ayunar a toda
+    la casa: «que no coman sino magamorra rala de mahiz que ellos llaman caça, y no mas de una vez cada dia». Antes
+    de la guerra o de «sacrificar», la casa entera ayuna y sólo come «una magamorra». Y en los dos funerales, el del
+    señor y el del díao, los huesos molidos se beben en `maçato`, brebaje de maíz. Ninguno de los ritos que Oviedo
+    describe usa pescado, concha ni agua de mar.'
+  fuente: atestiguado
+  referencia: oviedo-y-valdes-1852-1855, p. t. II, impresas 297 (funeral de los çaquitios), 299 (el ayuno de la cura),
+    300 (el díao), 329 (el ayuno de la guerra)
+  procedencia:
+    obra: oviedo-y-valdes-1852-1855
+    pagina: t. II, impresas 297 (funeral de los çaquitios), 299 (el ayuno de la cura), 300 (el díao), 329 (el ayuno
+      de la guerra)
+  dominios:
+  - creencia
+  - alimentacion
+  - rito
+  agentes_relacionados: []
+  implicacion_simulacion: 'Un rito, un ayuno o un funeral se hace con mazamorra y con maçato; el pescado es comida
+    de todos los días. Si un agente ofrenda pescado o concha en un rito, eso no lo enseña el canon: es emergencia
+    y se mide.'
+  lectura: 'Es un dato negativo con forma positiva: dice qué comida es la del rito. No prueba que el mar no tuviera
+    rito; prueba que los tres que conocemos son de tierra de labranza.'
+  limite: 'Época: contacto (Oviedo escribe 1535-1548; el cap. XXII, de boca del obispo Bastidas). Polity: los çaquitios
+    de la gobernación (p. 297); el díao «en algunas partes desta gobernaçión» (p. 299); el ayuno, «los indios en aquella
+    tierra» (p. 328). Costa y más allá: regla 4, no es exclusivo de la costa.'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-01` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)
+- id: creencia-024
+  contenido: 'La pesca se adivina con tabaco, como cualquier otra faena, y cada uno es su propio adivino: «para ver
+    si caminarán ó yrán á pescar ó sembrarán, y para saber si matarán caça ó si su muger los quiere bien, cada uno
+    es boratio»: envuelven la hoja alrededor de la mazorca, encienden un cabo, soplan, y si lo quemado queda «á manera
+    de hoz encorvado» saldrá bien, y si «derecho», mal. Es el único acto ritual atestiguado que toca el mar, y no
+    lo distingue: la pesca va en la misma lista que caminar, sembrar, cazar y el amor.'
+  fuente: atestiguado
+  referencia: oviedo-y-valdes-1852-1855, p. t. II, impresa 298
+  procedencia:
+    obra: oviedo-y-valdes-1852-1855
+    pagina: t. II, impresa 298
+  dominios:
+  - creencia
+  - pesca
+  - adivinacion
+  agentes_relacionados: []
+  implicacion_simulacion: 'Es lo que el prompt de Jachos puede decir en vez del «dueño del agua» sin fuente (decisión
+    b del issue): un pescador que lee el tabaco antes de botar la canoa. Refina cm-s5 de FA3, que ya lo citaba vía
+    Arcaya.'
+  lectura: 'Lo que el boratio de pueblo adivina, en la misma página, es otra cosa: «si lloverá ó si el año será seco
+    ó abundante, ó si deben yr á la guerra» y si los cristianos son buenos. Lo grave se le pregunta al boratio, y
+    es cielo y guerra; el mar queda en la adivinación de cada uno.'
+  limite: 'Época: contacto. Polity: «los indios de Veneçuela» (Oviedo generaliza para la gobernación; regla 4).'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-03` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)
+- id: creencia-025
+  contenido: 'El espíritu que ven los boratios se pinta «en sus joyas y en madera de relieve y en todas las cosas
+    y partes que mas estiman». La fuente no dice qué forma tiene: ni pez ni concha ni ninguna otra.'
+  fuente: atestiguado
+  referencia: oviedo-y-valdes-1852-1855, p. t. II, impresa 298
+  procedencia:
+    obra: oviedo-y-valdes-1852-1855
+    pagina: t. II, impresa 298
+  dominios:
+  - creencia
+  - arte
+  agentes_relacionados: []
+  implicacion_simulacion: 'Si la arqueología da la forma (batracio y ave en la loza dabajurana, oliver1989_restante
+    §mar), es otra fuente; este dato sólo dice DÓNDE se pinta el espíritu: en lo que más se estima.'
+  limite: 'Época: contacto. Polity: la gobernación (regla 4). Restringido (el candidato lo marca: saber de boratio
+    o de señor).'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-04` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)
+- id: creencia-026
+  contenido: 'En Curazao, hacia los s. XIII-XIV, las dos urnas dabajuroides de De Savaan llevaban entre los huesos
+    un diente de tiburón cada una: la primaria, «a (2.2 cm. long) sharks tooth», 14 discos de concha, calcita y una
+    punta de sílex, y alrededor huesos de pez, coral y una lapa; la secundaria, un diente de 9 mm, fragmentos de ostra
+    perlera (Pinctada), un fragmento de Strombus y huesos de pez. El excavador lo dice con condicional: «could have
+    been / may have been grave goods». En San Hironimo, junto a los pies de un adulto, un plastrón de tortuga marina
+    molido y quemado, en una fosa rellena de tierra de conchero.'
+  fuente: atestiguado
+  referencia: haviser-1990, p. 230-232 (vistas en imagen); fecha C-14 600±20 a.p. en la p. 224 y «±660» en la p. 234
+  procedencia:
+    obra: haviser-1990
+    pagina: 230-232 (vistas en imagen); fecha C-14 600±20 a.p. en la p. 224 y «±660» en la p. 234
+  dominios:
+  - muerte
+  - ajuar
+  - mar
+  agentes_relacionados: []
+  implicacion_simulacion: 'Es lo más cerca que las fuentes llegan de «el mar en la tumba caquetía». Para el mundo:
+    un muerto puede ir con un diente de tiburón y cuentas de concha. Que eso signifique algo del mar en la creencia
+    es lectura.'
+  lectura: 'Pequeño, insular y con condicional. La ficha haviser-1990 decía «nada de ajuares con procedencia»: vale
+    para los entierros directos de 1980, no para las urnas (corregido en su bitácora).'
+  limite: 'Época: precontacto (s. XIII-XIV sin calibrar); San Hironimo, dabajuroide tardío, quizá protohistórico.
+    Polity: las ABC dabajuroides (Curazao).'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-a01` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)
+- id: creencia-027
+  contenido: En la costa de Falcón, lo que la arqueología pone junto a la urna secundaria es el cuenco tetrápodo biomorfo
+    para BEBER, «associated with the several secondary burial vessels» (Túcua) y «more frequently found in and around
+    secondary burial urns» (Corralito), que Oliver liga al masato del funeral. Ninguna concha, cuenta, diente ni Strombus
+    se menciona con esos entierros. La concha de Coro existe —cuentas y colgantes; en Cayerúa (Paraguaná), cuentas,
+    un hacha de Strombus y «Strombus tips»— pero ninguna fuente la pone dentro de una urna.
+  fuente: atestiguado
+  referencia: oliver-1989-cap4, p. 442 (imagen), 449; steward-1948-hsai-4, p. 429 (Kidder II, imagen)
+  procedencia:
+    obra: oliver-1989-cap4
+    pagina: 442 (imagen), 449
+  dominios:
+  - muerte
+  - ajuar
+  - alimentacion
+  agentes_relacionados: []
+  implicacion_simulacion: 'Refuerza creencia-010/010b (beber los huesos, segundo entierro) con arqueología: el ajuar
+    del continente es la bebida, de maíz. Casa con cm24-01.'
+  limite: 'Época: precontacto (Urumaco; el cuenco tetrápodo más antiguo fechado, Corralito, 1278-[1336]-1393 d.C.
+    cal.). Polity: costera (Túcua, Corralito, Coro, Cayerúa).'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-a02` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)
+- id: creencia-028
+  contenido: 'La tierra de los muertos, en la única voz que se atribuye al caquetío, está ABAJO, no mar adentro: «sawaka
+    (C) - the underworld, the realm of the dead, the beyond. In old Papiamentu the expression baha na sawaka existed,
+    meaning ''to descend to the underworld'' or ''to die''». Van Buurt la parte con el lokono: «Waka means underground».'
+  fuente: reconstruido
+  referencia: van-buurt-2014, p. 35
+  procedencia:
+    obra: van-buurt-2014
+    pagina: 35
+  dominios:
+  - creencia
+  - muerte
+  - lengua
+  agentes_relacionados: []
+  implicacion_simulacion: 'Si un agente dice adónde van los muertos, lo que el léxico sostiene es «bajar», no «cruzar
+    el mar». El lexicón tiene `sawaka` como caquetío-atestiguado; aquí se etiqueta reconstruido porque es una voz
+    de papiamento atribuida, y en duda se degrada (regla 2). La etiqueta del lexicón no se toca: se anota para quien
+    fusione.'
+  limite: 'Época: papiamento antiguo (s. XIX-XX); la atribución caquetía es de van Buurt, que avisa que su lista «has
+    a subjective element». Polity: las ABC (Curazao).'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-07` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)

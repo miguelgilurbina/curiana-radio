@@ -102,7 +102,10 @@ def test_las_gemelas_si_se_ensenan_y_el_bloque_las_escribe():
     """El bloque decía «maíz = planta de maíz» y ahora dice «maisi = …»."""
     import random
     formas = {f for _p, f, _g, _fam in L.voces_de_fuera_posibles()}
-    assert {"maisi", "cazabi", "cacike", "bohio"} <= formas
+    # `cacike` dejó de enseñarse el 2026-09-24 (dp.1.04: llegó en boca del
+    # español); las gemelas que siguen se enseñan por su forma indígena.
+    assert {"maisi", "cazabi", "bohio"} <= formas
+    assert "cacike" not in formas
 
     random.seed(20260918)
     bloque = L.prompt_voces_de_fuera(n=60)
@@ -132,7 +135,11 @@ def test_el_catalogo_no_pierde_voces_por_accidente():
     # de Venezuela)» es del editor, como en `datihao`—, y el caribe continental
     # es esfera. El mismo día `cohiba` se archivó y entró `cohoba` (tf.6):
     # una sale y otra entra, el total no se mueve por eso.
-    assert len(formas) == 44
+    # 44 → 42 el 2026-09-24 (dp.1.04 de #222, «Ok a todo»): `cacike` y
+    # `naboria`, las que Oliver nombra como traídas por el español desde La
+    # Española, dejan de enseñarse (LLEGARON_CON_EL_ESPANOL). El scorer no se toca.
+    assert len(formas) == 42
+    assert not {"cacike", "naboria"} & formas
     assert "datihao" in formas
     assert {"baperon", "raporon", "cohoba"} <= formas
     assert "cohiba" not in formas
@@ -211,12 +218,16 @@ def test_el_mock_construye_exactamente_las_mismas_filas():
 # mismas; los números, los del scorer de hoy (antes: 7,2 · 6,1 · 8,4 · 8,5).
 # Lo que este test vigila sigue igual: `prestamos_de_esfera` devuelve la
 # clave castellana y la normalización no mueve el score.
+# ⚠️ Tanda de las hermanas (2026-09-24): SE MOVIÓ otra vez, y también a
+# propósito — `wara`, `amana` y `naa` se archivaron (el núcleo sale ahora del
+# lokono y del habla de mujeres kalinago). Mismas frases; números de hoy
+# (antes: 6,2 · 6,1 · 5,1 · 6,4). Los préstamos de la esfera no se movieron.
 ANTES = [
-    ("Casabe kaa-ni wara amana-ni", 6.2, 0.750, 0.500, ["casabe"]),
+    ("Casabe kaa-ni wara amana-ni", 5.1, 0.500, 0.250, ["casabe"]),
     ("Maíz, yuca ta-kana", 6.1, 1.000, 0.333, ["maíz", "yuca"]),
-    ("Taya naa-ka casabe wana-ni, ta-casabe para-ko", 5.1, 0.500, 0.167,
+    ("Taya naa-ka casabe wana-ni, ta-casabe para-ko", 3.3, 0.333, 0.000,
      ["casabe", "ta-casabe"]),
-    ("Pia naa-ka maisi, cazabi kaa-ni wara", 6.4, 0.833, 0.500,
+    ("Pia naa-ka maisi, cazabi kaa-ni wara", 5.1, 0.500, 0.167,
      ["maisi", "cazabi"]),
 ]
 

@@ -437,3 +437,16 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
   en cada «Coro» con viento/latín/nombre cerca).
 
 Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo, §coro y §zayas.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Releído el cap. IX (impresas 297-302) y el XXII (328-332) del lib. XXV, y leídas todas las ventanas creencia × mar del libro. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `oviedo_t2_lib25`: 8 ventanas creencia × mar (3 con un nombre de la costa occidental cerca), 1 creencia × cielo de control.
+
+**Se halló:** El mar no entra en ningún rito de los çaquitios. Los tres ritos del libro se hacen con MAÍZ: el ayuno que el boratio impone a la casa del enfermo («no coman sino magamorra rala de mahiz que ellos llaman caça», p. 299), el ayuno antes de la guerra o de «sacrificar» (p. 329) y los dos funerales, con los huesos molidos en `maçato` (pp. 297 y 300). Al boratio se le pregunta «si lloverá ó si el año será seco ó abundante, ó si deben yr á la guerra» (p. 298): cielo y guerra. La pesca sale una sola vez, en la adivinación DOMÉSTICA con tabaco, en la misma lista que caminar, sembrar, cazar y el amor de la mujer (p. 298): una faena más, no un dominio aparte. Y la figura del «diablo» se pinta «en sus joyas y en madera de relieve y en todas las cosas y partes que mas estiman» (p. 298), sin decir qué forma tiene. Los onotos del lago de Maracaibo viven de la pesca y la venden a «gaquitios é bubures» (p. 300): el pescado entra en la vida caquetía por el trueque, no por el rito.
+
+**No se halló:** Ni un ser, ni una ofrenda, ni un tabú del mar. Las ventanas creencia × mar restantes son de españoles (tormentas, navíos) o de la Nueva Granada.

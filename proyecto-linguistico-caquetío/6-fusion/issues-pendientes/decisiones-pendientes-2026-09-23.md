@@ -66,6 +66,10 @@ Diecisiete entradas.
 
 ## Grupo 3 — Documentación y deuda (se pueden contestar en bloque)
 
+> ✅ **Contestado el 2026-09-24** («Ok a todo, que no quede ninguna tarea
+> pendiente…»). Registro, estado y lo que queda para Miguel y para el frente
+> del lexicón: `6-fusion/decisiones_222_documentacion_2026-09-24.yaml`.
+
 Veinticinco entradas. Ninguna mueve el prompt ni el score, salvo T3 A3, que no
 recomiendo. Las que piden algo que sólo tú puedes hacer:
 

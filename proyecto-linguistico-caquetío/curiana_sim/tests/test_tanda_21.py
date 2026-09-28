@@ -79,22 +79,24 @@ def test_d21_1_el_aspecto_exige_verbo_debajo():
     # Tanda final (2026-09-23, D11 fase 3): el paradigma es `-kuba`/`-ba` y el
     # presente va sin marca. La invariante de d21.1 —el aspecto exige verbo
     # debajo— es la misma; cambian los sufijos con que se comprueba.
-    assert _aspectos("naa-kuba") == ["completivo"]
-    assert _aspectos("chaa-ba") == ["prospectivo"]
+    # Tanda de las hermanas (2026-09-24): y los verbos, `naa` → `kunu`,
+    # `chaa` → `ani`, `masa` → `aeke`.
+    assert _aspectos("kunu-kuba") == ["completivo"]
+    assert _aspectos("ani-ba") == ["prospectivo"]
     # Sustantivo + sufijo de aspecto: un guion y cero verbo.
     assert _aspectos("hamaka-ba") == []
     assert _aspectos("barsure-kuba") == []
     assert _aspectos("baro-ba") == []
     # y los sufijos viejos ya no cuentan, sobre verbo o no
-    assert _aspectos("naa-ka") == [] and _aspectos("chaa-ni") == []
+    assert _aspectos("kunu-ka") == [] and _aspectos("ani-ni") == []
 
 
 def test_d21_1_el_compuesto_con_verbo_dentro_sigue_contando():
     """El caso legítimo que el comodín cubría a ciegas: la opción C lo
     conserva y la A lo habría tirado."""
     # Tanda final: `-kuba`/`-ba`, `da-` y `kasi` (kali y ta- salieron).
-    assert _aspectos("da-hamaka-chaa-ba") == ["prospectivo"]
-    assert _aspectos("kasi-barsure-masa-kuba") == ["completivo"]
+    assert _aspectos("da-hamaka-ani-ba") == ["prospectivo"]
+    assert _aspectos("kasi-barsure-aeke-kuba") == ["completivo"]
 
 
 def test_d21_1_el_aspecto_apilado_solo_cuenta_una_vez():
@@ -102,8 +104,8 @@ def test_d21_1_el_aspecto_apilado_solo_cuenta_una_vez():
     primero, no sobre un verbo. El apilamiento es gramática emergente (d21.12)
     y se describe en morfologia.md; no se premia en el score."""
     # Tanda final: el mismo apilamiento con el paradigma nuevo.
-    assert _aspectos("chaa-kuba-ba") == []
-    assert _aspectos("chaa-kuba chaa-ba") == ["completivo", "prospectivo"]
+    assert _aspectos("ani-kuba-ba") == []
+    assert _aspectos("ani-kuba ani-ba") == ["completivo", "prospectivo"]
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -398,9 +400,13 @@ def test_d21_15_kadushi_no_se_toca():
 # ══════════════════════════════════════════════════════════════════════
 def test_d21_16_chaa_pierde_crear():
     """Emparejaba con `eroa` «empezar, crear, originar», que es atestiguada, y
-    no son lo mismo: uno construye, el otro origina."""
-    assert VOCABULARIO_BASE["chaa"]["sig"] == "hacer, construir"
-    assert "crear" not in VOCABULARIO_BASE["chaa"]["sig"]
+    no son lo mismo: uno construye, el otro origina.
+
+    Tanda de las hermanas (2026-09-24): `chaa` se archivó con su glosa y la
+    hereda `ani` (lokono ani = kalinago ani, Goeje p. 94)."""
+    for e in (FUERA_DEL_HABLA["chaa"], VOCABULARIO_BASE["ani"]):
+        assert e["sig"] == "hacer, construir"
+        assert "crear" not in e["sig"]
 
 
 def test_d21_16_apana_es_una_medida_de_tiempo_y_no_un_mes():
@@ -412,15 +418,20 @@ def test_d21_16_apana_es_una_medida_de_tiempo_y_no_un_mes():
 
 
 def test_d21_16_bara_y_kuru_declaran_su_convivencia():
-    for clave, gemela in (("bara", "kuru"), ("kuru", "bara")):
+    # Tanda de las hermanas (2026-09-24): `kuru` se archivó y el árbol vivo es
+    # `ada`; la convivencia con `bara` se mantiene y las dos lo dicen.
+    for clave, gemela in (("bara", "ada"), ("ada", "bara")):
         notas = VOCABULARIO_BASE[clave]["notas"]
         assert "CONVIVENCIA DECLARADA" in notas, clave
         assert gemela in notas, clave
-    assert VOCABULARIO_BASE["bara"]["sig"] != VOCABULARIO_BASE["kuru"]["sig"]
+    assert VOCABULARIO_BASE["bara"]["sig"] != VOCABULARIO_BASE["ada"]["sig"]
+    assert "CONVIVENCIA DECLARADA" in FUERA_DEL_HABLA["kuru"]["notas"]
 
 
 def test_d21_16_sima_y_turumako_dejan_de_emparejar():
-    sima, turu = VOCABULARIO_BASE["sima"], VOCABULARIO_BASE["turumako"]
+    # `sima` está archivada desde la tanda de las hermanas (2026-09-24: manda
+    # la atestiguada `kidi`); lo que d21.16 le puso viaja con ella.
+    sima, turu = FUERA_DEL_HABLA["sima"], VOCABULARIO_BASE["turumako"]
     assert "CONVIVENCIA DECLARADA" in sima["notas"]
     assert "turumako" in sima["notas"]
     assert sima["sig"] != turu["sig"]

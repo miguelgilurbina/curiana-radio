@@ -18,7 +18,12 @@
 #             (polity_caquetia admite además `ninguna` desde tf.7 B,
 #             2026-09-23: el vecino de la esfera que no toca ninguna polity;
 #             exige `tipo_de_contacto: ninguno`)
+#             · epoca (desde dp.2.03 de #222, 2026-09-24: precontacto ·
+#             contacto-temprano · colonial · varias — de CUÁNDO es el
+#             contacto que la ficha afirma; obligatoria con
+#             `polity_caquetia: costera`, regla 3)
 #   matiz     aviso_familia · polity_nota · contacto_nota · intensidad_nota
+#             · epoca_nota
 #   fuente    procedencia{obra, pagina, via} — obra y via son claves foráneas
 #             contra 4-fuentes/bibliografia.yaml — o `deuda: sin-procedencia`
 #   cruces    ver_tambien: lista de hechos del corpus o archivos del repo
@@ -31,8 +36,11 @@ meta:
   nota: >-
     Registro canon de los pueblos en contacto con los caquetíos, hermano de
     asentamientos.yaml. Cada entrada cita obra y página (o declara la deuda)
-    y declara la polity caquetía a la que toca (regla 4). La única que toca
-    la costera es el «caribe» del elenco, y es canon-simulación (etnia-008).
+    y declara la polity caquetía a la que toca (regla 4). Hasta el
+    2026-09-24 la única que tocaba la costera era el «caribe» del elenco,
+    canon-simulación (etnia-008); desde dp.2.04 de #222 la toca también el
+    jirajara (etnia-015), `hipotetico` y con su época declarada. El taíno
+    (etnia-020) entró tocándola y el 2026-09-27 pasó a `ninguna` (Miguel).
 
 etnias:
 
@@ -145,10 +153,17 @@ etnias:
     nombre: ciparicoto
     variantes: [ciparigoto, cipariconto]
     etiqueta: atestiguado
-    familia_linguistica: arahuaca
+    # dp.2.04 de #222 (M1 B, «Ok a todo», 2026-09-24): era `arahuaca`.
+    familia_linguistica: desconocida
     aviso_familia: >-
-      Zavala Reyes 2015 (p. 61, vía Molina 2009) los lista como ARAWAK, junto a
-      achaguas y caquetíos. Pero su etnónimo lleva formante caribe — ver abajo.
+      Dos lecturas que no concuerdan, y en duda, degradar (regla 2; M1 B de
+      #213, aplicada por dp.2.04 de #222). Zavala Reyes 2015 (p. 61, vía
+      Molina 2009) los lista como ARAWAK, junto a achaguas y caquetíos —era la
+      familia de esta ficha hasta el 2026-09-24—. Oliver, con Federmann
+      delante: «Their language was clearly different from the Caquetío, and
+      perhaps related to Carib, since no one in Federmann's expedition could
+      communicate with them» (tesis p. 251). Y su etnónimo lleva formante
+      caribe — ver abajo.
     donde: Yaracuy y sierras de Falcón
     polity_caquetia: yaracuy
     polity_nota: frontera oriental del área caquetía
@@ -185,6 +200,14 @@ etnias:
       que un caso suelto. Y subraya lo raro de `ciparicoto`: los otros llevan
       raíz caribe, este lleva raíz ARAHUACA (`cipa` 'piedra') con formante
       caribe — lo que encaja con que sea exónimo, nombre puesto desde fuera.
+    apoyo_2026-09-24: >-
+      CUARTO apoyo, concordante y de otra mano (M1 B de #213, dp.2.04 de
+      #222): Oliver (tesis p. 251, n. 178) lee `chipa` como voz probablemente
+      CAQUETÍA para esa gente ('piedra, montaña') y -coto como sufijo caribe
+      que, con Butt Colson, NO significa 'esclavo' sino gente de un tramo de
+      río: «chipa (= stone/mountain) plus -coto or -goto means 'Mountain
+      People'». No contradice a Arcaya. Y registra «a Chipa Indian who knew how
+      to speak Caquetío».
 
   # ── Los grupos de lengua caribe de Oliver §3.2.4 (B.6, 2026-09-07) ──
   # Todos de la esfera OCCIDENTAL (Maracaibo, Perijá): regla 4. Detalle y
@@ -304,6 +327,10 @@ etnias:
     contacto_nota: comercio y, en la memoria de Chiriware, un raid
     intensidad: baja
     intensidad_nota: episódica
+    epoca: precontacto
+    epoca_nota: >-
+      Es la ficción del elenco dentro de la ventana simulada (s. XIV-XV), no
+      un contacto documentado: la época dice DÓNDE la pone la simulación.
     procedencia: null
     deuda: sin-procedencia
     ver_tambien: [6-fusion/oliver_324_caribes.yaml (§5), geografia_politica-013]
@@ -367,3 +394,386 @@ etnias:
       los guayquiri del Orinoco de Gumilla (p. 406): son otros.
     procedencia: {obra: steward-1948-hsai-4, pagina: "399 (Hernández de Alba, «The Achagua and their neighbors»)"}
     ver_tambien: [6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml (§pregunta_2)]
+
+  # ── Los vecinos de Oliver que faltaban (dp.2.04 de #222, M1 B; «Ok a todo»,
+  # Miguel, 2026-09-24). Propuesta: 6-fusion/oliver1989_restante_2026-09-22.yaml
+  # §vecinos (#213). Páginas de la TESIS impresa (oliver-1989-cap3-vecinos),
+  # comprobadas en Oliver_1989_cap3_s323/s33_*.ocr.txt; la de las esposas de
+  # Manaure, en el DOC (oliver-1989-cap3, pp. 269-270). Donde M1 escribió una
+  # familia «probable», el campo cerrado dice `desconocida` y la probable va
+  # al aviso (regla 2). ──
+
+  - id: etnia-010
+    nombre: coanao
+    variantes: [coanaos, guamos (Castellanos)]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      Oliver los cree macro-chibchas, pero lo dice él mismo: «this can not be
+      proven on linguistic grounds, but rather in terms of dress etiquette»
+      (p. 214) — el capote y la manta de algodón, como los kogi de hoy. La
+      filiación es por la ropa, no por la lengua. En duda, degradar.
+    donde: >-
+      Ranchería medio y César alto, compartido con los buredes; con puestos de
+      frontera en el norte de la Sierra de Jarara, en la Guajira (pp. 214-216)
+    polity_caquetia: occidental
+    polity_nota: la esfera occidental (Guajira, Ranchería), NO la costera
+    tipo_de_contacto: mercado
+    contacto_nota: >-
+      sal hacia el interior a cambio de oro (Esteban Martín, 1534). El intérprete
+      Martín, que sabía caquetío, se entendía con coanaos y buredes sin
+      intermediario: «the Caquetio of coastal Falcón could and did communicate
+      with the Coanao as well as the Burede» (p. 218) — el caquetío como lengua
+      de trato en la Guajira
+    intensidad: desconocida
+    cita: >-
+      «These Coanaos are numerous peoples… and are a people that trade a lot
+      [with] inland [peoples], taking the salt to 'sell' in exchange for gold»
+      (Martín [1534], vía Oliver p. 214).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "214-218"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-011
+    nombre: wanebucán
+    variantes: [guanebucán, guanebucanes, Duanabuká (tradición kogi)]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      «The language spoken by the Wanebucán is unknown» (p. 211). Oliver
+      sospecha que fueran arahuacos por nombres de aldea «suspiciously
+      Caquetio» —Paragua-nil, Coria-na—, pero él mismo lo explica mejor por el
+      nexo comercial con los caquetíos de la Guajira. Sospecha, no filiación.
+    donde: >-
+      La Ramada, la costa entre la Sierra Nevada y el río de la Hacha, con
+      aldeas en la Guajira (Punta Espada–Chichibacoa); tras la conquista se
+      refugian en la Sierra Nevada y los kogi los absorben como clanes (pp.
+      211-213)
+    polity_caquetia: occidental
+    polity_nota: la esfera occidental, NO la costera
+    tipo_de_contacto: mercado
+    contacto_nota: >-
+      nexo comercial con los caquetíos en Punta Espada–Chichibacoa (p. 211). Y
+      el «Coriana» junto a «Paraguanil» de su costa está en Castellanos p. 264
+      (La Ramada), no en la Guajira: toponimo-111
+    intensidad: desconocida
+    cita: >-
+      una casa ceremonial con «a thousand Indians sculptured in wood», todos en
+      filas (Castellanos vía Oliver p. 211).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "211-213"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-012
+    nombre: tairo
+    variantes: [tairona, tairos]
+    etiqueta: atestiguado
+    familia_linguistica: chibcha
+    aviso_familia: >-
+      Antepasados de los kogi; «all appear to be sub-groups of the XVIth
+      century "Tairona" (Macro-Chibchan)» (p. 212).
+    donde: Sierra Nevada de Santa Marta (Buritaca, Guachaca)
+    polity_caquetia: occidental
+    polity_nota: sin contacto caquetío documentado
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      indirecto: vecinos de los wanebucanes, «Never there was war between
+      them» (Castellanos vía Oliver p. 211)
+    intensidad: ninguna
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "211-213"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-013
+    nombre: xiriguana
+    variantes: [yrriguanas, jiriguana]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      De la misma ropa y estatura que los coanaos, «except that they have other
+      differences in their speech» (Martín [1534], vía Oliver p. 216).
+    donde: >-
+      unas veinticinco leguas al sur de coanaos y buredes; aldeas de diez a
+      quince bohíos (pp. 215-216)
+    polity_caquetia: occidental
+    polity_nota: sin contacto caquetío documentado
+    tipo_de_contacto: ninguno
+    intensidad: ninguna
+    cita: >-
+      «píntanse las mugeres los pechos y los brazos de muy lindas pinturas
+      negras y las pinturas son fijas que nunca se quitan» (Martín [1534], vía
+      Oliver p. 216).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "215-216"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-014
+    nombre: haruacana
+    variantes: [arhuaco, aruaco, aruacana, aruago, haroacana, haraocana]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      «it is conceivable that these Haruacana spoke a Macro-Chibchan language,
+      if not Arhuaco (Ica/Bintucua) itself» (p. 219): conjetura del autor.
+    donde: >-
+      laderas sur y sureste de la Sierra Nevada; el valle de Chinacota
+      (Pamplona); dos aldeas en el suroeste del lago de Maracaibo (pp. 218-220)
+    polity_caquetia: occidental
+    polity_nota: sin contacto caquetío documentado
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      La guerra documentada es con los españoles —con flechas envenenadas les
+      atribuyen la muerte de Alfinger y la del capitán Monsarrate (pp.
+      219-220)—, no con los caquetíos. M1 había escrito `guerra`; el campo mide
+      el contacto con una polity caquetía, y con ésa no hay ninguno.
+    intensidad: ninguna
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "218-220"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-015
+    nombre: jirajara
+    variantes: [girara, jirara, xidehara, xideharas, piracoras (Pérez de Tolosa, «in all probability a mistranscription»)]
+    etiqueta: hipotetico
+    aviso: >-
+      `hipotetico` por la boda, que es la parte que la toca con la polity
+      costera: que las «hijas de caribes» con que estaba casado Manaure
+      (probanza de Ampíes, 1526) fueran jirajaras de San Luis es inferencia de
+      Oliver sobre la palabra «caribes» —a los jirajaras se los llamaba así por
+      belicosos— y él mismo deja abierta la posibilidad de mujeres de lengua
+      caribe de verdad (DOC pp. 269-270). El abasto de maíz, en cambio, es dato.
+    familia_linguistica: jirajara
+    aviso_familia: >-
+      Con ayomán y gayón. Greenberg la mete en el paezano; Oliver tiene
+      «serious doubts» (p. 236).
+    donde: >-
+      la Sierra de San Luis, «Three leagues from the city of Coro»; también
+      Nirgua, Aroa, el valle del Yaracuy y la Sierra de Jirajara (pp. 236-237)
+    polity_caquetia: costera
+    polity_nota: >-
+      el vecino de TIERRA ADENTRO inmediato de la polity costera. Es la primera
+      ficha de este registro que toca la costera con fuente (la del caribe del
+      elenco es canon-simulación).
+    tipo_de_contacto: corresidencia
+    contacto_nota: >-
+      por el matrimonio del diao (propuesta de Oliver, no dato); y el abasto: en
+      paz, entre 1527 y 1530, «they supplied maize to the Spanish of the city of
+      Coro» (Pérez de Tolosa, vía Oliver p. 237). Federmann cruzó en 1530 la
+      sierra de San Luis sin ataques y sólo los halló hostiles en Churuguara.
+      Hacia el interior, guerra de rapto y «shifting and ephemeral alliances»
+      (p. 245)
+    intensidad: desconocida
+    epoca: contacto-temprano
+    epoca_nota: >-
+      la boda (probanza de 1526) y el maíz (1527-1530) son con los españoles ya
+      en Coro. Proyectarlo al siglo XV es decisión aparte (regla 3).
+    cita: >-
+      «Three leagues from the city of Coro one finds the sierras, and these are
+      settled by Indians of the nation piracora, who are bellicose and
+      warriors. They are excellent maize farmers» (Pérez de Tolosa, vía Oliver
+      p. 237).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "236-237, 244-245; DOC 269-270"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-016
+    nombre: ayomán
+    variantes: [ayamán, ayamanes]
+    etiqueta: atestiguado
+    familia_linguistica: jirajara
+    donde: >-
+      al sur de Churuguara, el valle del Tocuyo y la Sierra de Parúpano-Matarere,
+      donde Federmann describe a los «enanos» ayamanes (pp. 237-243)
+    polity_caquetia: barquisimeto
+    polity_nota: NO la costera
+    tipo_de_contacto: mercado
+    contacto_nota: >-
+      indirecto: el azabache y la concha les llegaban por una red «down-the-line»
+      (p. 241), y la concha marina «perhaps via Yaracuy» (p. 243), que es
+      conjetura de Oliver. Contacto directo con caquetíos, ninguno documentado
+    intensidad: desconocida
+    cita: >-
+      compraban conchas «from other nations, and because they live far from it
+      [sea] they esteem them as exotic items, since they know nothing about the
+      sea and never go there» (Federmann, vía Oliver p. 243).
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "237-243"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-017
+    nombre: gayón
+    variantes: [coyón, cuyón, cayones]
+    etiqueta: atestiguado
+    familia_linguistica: jirajara
+    donde: >-
+      las sierras al norte de Barquisimeto, a «three leagues» de Nueva Segovia
+      (Relación de 1579, vía Oliver p. 244)
+    polity_caquetia: barquisimeto
+    polity_nota: NO la costera
+    tipo_de_contacto: ninguno
+    contacto_nota: archienemigos de ayomanes y xaguas (Federmann, vía Oliver p. 244)
+    intensidad: ninguna
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "244"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-018
+    nombre: xagua
+    variantes: [axagua, jagua]
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      «the few words recorded by the chroniclers have no relationship to either
+      Jirajaran or Caquetio» (p. 245). Oliver no acepta que sean los achaguas
+      (contra Arcaya 1977).
+    donde: la Sabana de Carora; hacia 1546, en las alturas de Baragua (pp. 245-247)
+    polity_caquetia: barquisimeto
+    polity_nota: NO la costera
+    tipo_de_contacto: mercado
+    contacto_nota: >-
+      enemigos Y socios de los caquetíos de Barquisimeto: «some Xaguas of the
+      last villages… trade salt with those [Caquetío] peacefully» (Federmann,
+      vía Oliver p. 247)
+    intensidad: desconocida
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "245-247"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  - id: etnia-019
+    nombre: camagos
+    etiqueta: atestiguado
+    familia_linguistica: desconocida
+    aviso_familia: >-
+      «todos éstos diferentes en lenguas [en] cada nación» (Relación de Nueva
+      Segovia de Barquisimeto, 1579, en Arellano 1964: 182, vía Oliver p. 244).
+    donde: las sierras al norte de Barquisimeto, junto a gayones, jaguas y jirajaras
+    polity_caquetia: barquisimeto
+    polity_nota: NO la costera
+    tipo_de_contacto: ninguno
+    intensidad: ninguna
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: "244 (Relación de 1579, Arellano 1964: 182)"}
+    ver_tambien: [6-fusion/oliver1989_restante_2026-09-22.yaml (§vecinos)]
+
+  # ── El taíno (dp.2.04 de #222, T5 D; «Ok a todo»). Propuesta:
+  # 6-fusion/taino_en_la_esfera_2026-09-21.yaml §propuesta_etnias (#192), que
+  # la proponía como etnia-009 antes de que ese número lo tomara el guaiquerí.
+  # T5 la escribió `costera` antes de que existiera `polity_caquetia:
+  # ninguna` (tf.7 B): se aplica como la propuso y la duda va al registro. ──
+  - id: etnia-020
+    nombre: taíno
+    variantes: [taino, arahuaco insular, antillano, lucayo]
+    etiqueta: hipotetico
+    aviso: >-
+      En duda, degradar (regla 2). No hay un solo hecho de contacto precolombino
+      documentado; lo documentado es colonial y de sentido único.
+      `atestiguado` diría que la relación existió en la ventana simulada, y no
+      consta; `canon-simulacion` diría que la inventamos, y tampoco: el taíno
+      está en el motor por la puerta del léxico (ESFERA_DE_CONTACTO), no por
+      la del mundo. Y el circuito del guanín entre el istmo y las Mayores no
+      pasa por la Kaketiana (geografia_politica-018, -019).
+    familia_linguistica: arahuaca
+    aviso_familia: >-
+      Del mismo nodo del árbol arahuaco que el caquetío (Oliver 1989 cap. 2
+      pp. 150, 155), con el caquetío más cerca del lokono. Eso es profundidad
+      temporal —de 1,8 a 2,6 milenios—, no vecindad; y las rutas los separan:
+      el taíno entró a las Antillas por Trinidad y la costa oriental, el
+      caquetío se fue al oeste. Primos, no vecinos.
+    donde: >-
+      las Antillas Mayores —La Española, Cuba, Boriquén, Jamaica— y las
+      Lucayas. Ningún asentamiento taíno en la costa de Falcón, en Paraguaná ni
+      en las islas ABC está documentado por fuente alguna del repo.
+    polity_caquetia: ninguna
+    polity_nota: >-
+      Decisión de Miguel, 2026-09-27 («ninguna», sobre la duda que dp.2.04 de
+      #222 dejó escrita): vecino de la ESFERA, no de una polity. La campaña del
+      taíno midió «ni vecino ni pariente medible» y la cerámica antillana se
+      detiene antes de las ABC (T8). Entró el 2026-09-24 como `costera`, como
+      lo propuso T5 —la polity costera con sus islas, que Oliver mete dentro
+      («including the Netherland Antilles», p. 198)—, porque el único contacto
+      documentado, la deportación, es con ella; pero esa deportación es
+      colonial y aquí se declara la ventana simulada. Las voces taínas de la
+      esfera no cambian: entran por la puerta del léxico, no por ésta.
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      ninguno documentado en precontacto, que es la ventana simulada. Lo
+      documentado es de otra época y de otra naturaleza: desde 1513 los
+      españoles deportaron caquetíos de las islas ABC —y, según Arcaya, de
+      Paraguaná y la costa de Coro— a La Española y Puerto Rico, a sustituir la
+      mano de obra taína que se moría (geografia_politica-014).
+    intensidad: ninguna
+    intensidad_nota: >-
+      cero en precontacto. En la colonia la intensidad es alta y traumática,
+      pero es deportación, no vecindad, y ninguna de las dos poblaciones la
+      eligió.
+    epoca: varias
+    epoca_nota: >-
+      precontacto: ninguno · contacto temprano: ninguno · colonial:
+      deportación (1513-1526). Es el desglose que T5 dejó como
+      `epoca_propuesta` cuando el campo no existía.
+    cita: >-
+      «the Coast of the Province of Venezuela, especially Falcón, was subjected
+      to Spanish raids, especially designed to supply Hispaniola and with
+      Indian labor, since the local Taíno population had dramatically
+      decreased due to disease and other effects of the Conquest» (Oliver 1989,
+      cap. 3, p. 250).
+    procedencia: {obra: oliver-1989-cap3, pagina: "250"}
+    apoyo: >-
+      Arcaya 1920 pp. 154 y 159 (el año 1513, Diego de Salazar, dos mil indios,
+      Puerto Rico además de Santo Domingo, y Ampíes conversando con los
+      deportados). T5 citaba «153, 158»: vistas en el PDF son las impresas
+      154 y 159.
+    ver_tambien:
+      - geografia_politica-014
+      - geografia_politica-015
+      - 6-fusion/taino_en_la_esfera_2026-09-21.yaml
+      - 3-mundo/esfera-de-interaccion.md
+      - 3-mundo/horizonte-de-contacto.md
+
+  # ── Los arahuacos de las Antillas Menores (dp.2.04 T8 C, decisión de
+  # Miguel del 2026-09-27: «vecino sin contacto») ──────────────────────
+  # La ancestría compartida está atestiguada (Fernandes et al. 2020, texto
+  # publicado, leído el 2026-09-27); el trato en la ventana simulada, no.
+  - id: etnia-021
+    nombre: arahuacos de las Antillas Menores
+    variantes: [LesserAntilles_Ceramic, antillanos menores de la Edad Cerámica]
+    etiqueta: atestiguado
+    familia_linguistica: arahuaca
+    aviso_familia: >-
+      Lo atestiguado es ANCESTRÍA, no lengua: el clado genético
+      «LesserAntilles_Ceramic» de Fernandes et al. (dos sitios, uno en Santa
+      Lucía) se asocia a gente de habla arahuaca por el marco del artículo
+      («related to Arawak-speakers from northeast South America»).
+    donde: >-
+      las Antillas Menores (el clado sale de dos sitios; Lavoutte, en Santa
+      Lucía, 1000-650 BP). Ninguna fuente del repo pone a esta gente en
+      Falcón, Paraguaná ni las ABC.
+    polity_caquetia: ninguna
+    polity_nota: >-
+      Decisión de Miguel, 2026-09-27 («vecino sin contacto»): como el taíno
+      (etnia-020), primos y no vecinos. El artículo lee la ancestría
+      compartida como ORIGEN —«a south-to-north stepping stone trajectory
+      into the Caribbean»—, no como trato entre pueblos, y la mezcla no está
+      fechada. T8 proponía `costera`, contacto «poblacional» e intensidad
+      alta: no entra así porque eso diría que el elenco del s. XV tenía
+      vecinos antillanos, y lo documentado es ancestría sin fecha.
+    tipo_de_contacto: ninguno
+    contacto_nota: >-
+      ninguno documentado en la ventana simulada. Lo que hay es genética: los
+      cinco ceramistas de Curazao del estudio —Santa Cruz (1) y De Savaan (4),
+      14C de 610 a 720 ± 20 BP, s. XIII-XIV, contexto dabajuroide— se modelan
+      con 74,5 ± 3,7 % de ancestría emparentada con LesserAntilles_Ceramic y
+      25,5 ± 3,7 % con Venezuela_Ceramic, la otra asociada a los estilos
+      dabajuroides; y comparten ancestría con las Antillas Menores «but not
+      the Greater Antilles».
+    intensidad: ninguna
+    epoca: precontacto
+    epoca_nota: >-
+      la de los INDIVIDUOS (s. XIII-XIV), no la del contacto: la mezcla no
+      está fechada.
+    cita: >-
+      «the sharing of some ancestry between individuals from Curaçao and those
+      from the Lesser Antilles but not the Greater Antilles supports a
+      south-to-north stepping stone trajectory into the Caribbean»
+      (Fernandes et al., Nature 590, 2021; manuscrito del autor en Europe PMC,
+      PMC7864882).
+    procedencia: {obra: fernandes-2020, pagina: "texto publicado, Discussion; Table S15; Supplementary Data 1-3"}
+    aviso: >-
+      El PDF de Nature sigue en 0 bytes a propósito (licencia): lo leído el
+      2026-09-27 se cita y no se guarda. El preprint del repo daba 68,1 %
+      «Caribbean_Ceramic» sin distinguir Mayores de Menores; la versión
+      publicada afina, y es la que manda.
+    ver_tambien:
+      - 4-fuentes/fernandes-2020.md
+      - 6-fusion/taino2_evidencia_material_contacto.yaml
+      - 6-fusion/taino_en_la_esfera_2026-09-21.yaml

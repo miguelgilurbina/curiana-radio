@@ -1,0 +1,67 @@
+# ─────────────────────────────────────────────────────────────────────────
+# LA COLA DE LA CAMPAÑA DE TOPÓNIMOS — lo que traen otras fuentes
+#
+# La cola de Esteves tiene su propio registro (toponimos_esteves_indice.yaml,
+# vacío en la Parte I desde el 2026-09-24) y la del mapa de Miguel el suyo
+# (toponimia_paraguana_miguel.yaml §cola_de_mapa). Los nombres que traen las
+# parcelas de otras obras no tenían dónde esperar: vivían en la sección
+# `destino` de cada propuesta y nadie los veía en la mesa.
+#
+# Esto NO es canon (regla 5). Es la cola: cada nombre entra al canon sólo al
+# procesarlo con la skill campana-toponimos (§2-§8), con su página y su
+# época. juntar_toponimos.py lo lee y lo pone en la mesa
+# (6-fusion/TOPONIMOS_POR_FUENTE.md), cruzado con el canon, Esteves y los nodos.
+#
+# Abierto por dp.2.10 de #222 («Ok a todo», Miguel, 2026-09-24; «A la cola»).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  abierto: '2026-09-24'
+  por: dp.2.10 de #222 (6-fusion/decisiones_222_mundo_2026-09-24.yaml)
+  estado: cola-de-trabajo
+
+cola:
+  - forma: Sarasaragua
+    obra: castellanos-elegias
+    pagina: 201
+    cita: '«Guiábalos ya gente caquetía / Del pueblo que se diz Sarasaragua»'
+    donde: línea 52537 del texto de 1857 del repo
+    epoca: contacto-temprano (abril de 1531)
+    nota: >-
+      Pueblo caquetío de donde salieron los guías que llevaron a Federmann de
+      vuelta a la costa. Es del INTERIOR, de la ruta de Federmann, no de
+      Paraguaná (regla 4): su región la decide asentamientos.yaml. Un `-gua`
+      caquetío con fecha, sin glosa (campaña -gua). Cero en Esteves y en el
+      mapa vivo, con permutaciones (M6).
+    de: '#207 (M7) m7-cast-008; #216 (M6) §cola_nueva'
+
+  - forma: Norupara
+    obra: gonzalez-batista-2002-fundacion
+    pagina: '162 (n. 49)'
+    cita: '«cabe el puerto de esta ciudad que se llama Norupara»'
+    via: 'ANH, Descubrimiento y conquista de Venezuela, t. II, Caracas 1988, p. 309'
+    epoca: colonial
+    nota: >-
+      Poblado indígena junto al puerto de Coro. Cero en el texto de
+      Castellanos del repo («norup», «nurupa»). La copia de González Batista
+      2002 es local y no está en git (obra con derechos): la cita se tomó de
+      la parcela M7 y no se volvió a ver.
+    de: '#207 (M7) m7-gb02-004'
+
+  - forma: Buinare
+    obra: castellanos-elegias
+    pagina: 184
+    cita: '«Lo de Aruba, Curazao y Buinare»'
+    donde: línea 48028 del texto de 1857 del repo
+    epoca: contacto-temprano (grafía de 1589)
+    identificado_con: Bonaire
+    nota: >-
+      Bonaire. Otras grafías fechadas en el repo: «Buinare (Bonaire)» en la
+      declaración de islas inútiles de 1513 según Arcaya 1920 p. 154, y
+      «Buynari» en Federmann 1557 [9] (#210, fed-len-006). Las islas quedan
+      fuera de los topónimos de Esteves: la región es islas-abc.
+      ⚠️ Medido al abrir la cola (2026-09-24): NO es nombre nuevo. El canon ya
+      tiene la isla como toponimo-066, «buynari» (van Buurt §7, descartado), y
+      el registro de nodos como nodo-011. M7 dio «grep: 0» buscando la grafía
+      de 1589: fue un cero de consulta. Al procesarla entra como grafía fechada
+      de 066, no como entrada.
+    de: '#207 (M7) m7-cast-015'

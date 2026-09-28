@@ -135,7 +135,11 @@ cruzados con las demás fuentes, en `6-fusion/TOPONIMOS_POR_FUENTE.md`.
 5. **Negativos, medidos**: la expresión literal «Gran Señor de Jurijurebo» no
    está (la atribución es de Esteves); **la muerte por perros** del señor de
    Hurehurebo no está — la línea 49364 («mataba con perros») es caza de
-   venados por soldados hambrientos; el «Piache de Todariquiba» que Velasco
+   venados por soldados hambrientos, **en Maracaibo (p. 189), no en Coro**
+   (corregido el 2026-09-24, dp.3.18 de #222, con M7:
+   `6-fusion/coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml`,
+   fauna; los «conejos y venados» de Coro son otra línea, la 48230, p. 185);
+   el «Piache de Todariquiba» que Velasco
    cita como v. 98 **no se localizó** en la ed. 1857 (`Todariquibo` aparece
    una sola vez, en la lista). O está en otra parte de la elegía con otra
    grafía, o la ed. 1962 difiere: probar `piache` + permutaciones.
@@ -290,3 +294,16 @@ Páginas de la BAE sacadas con `6-fusion/scripts/castellanos_pagina.py`
   cronista, sino un juego culto sobre un hidrónimo.
 
 Propuesta: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §poporo y §coro.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barridas las partes I-II; leídas una a una las ventanas creencia × mar con un nombre de la costa occidental cerca, y releído el tramo de Coro (Parte II, Elegía I). Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `castellanos`: 78 ventanas creencia × mar (16 con un nombre de la costa occidental cerca), 80 creencia × cielo de control.
+
+**Se halló:** De los isleños de Curazao y Aruba, «su lenguaje es el de caquetío» y «En el agua se mueven diestramente […] Puntería de tiros escelente / En aves, en conejos, en pescados» (p. 184, ya cristianizados: «tienen templos»). De Coro, «grande pesquería de pescados» (p. 185) y del lago, ferias «A trueco de la sal y del pescado». Destreza y comercio, no creencia. La única regla ritual con pescado del tramo occidental es de SANTA MARTA (tairona): en sus ayunos «Carne no comerán de ningún arte, / Sino pescado» — chibcha, fuera de la esfera.
+
+**No se halló:** Ningún rito, ser u ofrenda del mar entre los caquetíos. Las «cornetas» y «trompetas» del tramo son de guerra o de los españoles.

@@ -33,6 +33,9 @@ revisión encima (el de D9 lleva tres, con dos autocorrecciones).
 | `antroponimos-era2.md` | issue **#129** (`decision`, `fidelidad`), **abierta**: la campaña de antropónimos, el sistema de nombres y el mapa viejo → nuevo; ocho preguntas con recomendación | 2026-09-14 |
 | `fallo-miguel-nivel-C-medina.md` | **no se publicó: se aplicó** al corpus el 2026-09-12 (32 hechos, `fusionar_nivel_c_medina.py`). Queda como registro del fallo en cuatro tandas | 2026-09-12 |
 | `formas-de-plantilla-en-la-registracion-2026-09-18.md` | **no se publicó: se aplicó** al motor el 2026-09-18 con la **opción A** («Dale pues con A», Miguel), como corte de serie declarado (punto 8 del «Cambio de instrumento» de `BITACORA_RUNS.md`). Queda abierta su §4: ¿debe la adopción exigir que el adoptante pudiera VER la propuesta? | 2026-09-18 |
+| `kalinago-mujeres-2026-09-23.md` | **no se publicó: se aplicó** el 2026-09-24 en la tanda de las hermanas («Acepto todo lo recomendado»: D1-D4; D5 ya resuelta el 09-23). Queda como registro; el PR del borrador es #234 | 2026-09-24 |
+| `nucleo-fundacional-hermanas-2026-09-24.md` | **no se publicó: se aplicó** el 2026-09-24 en la tanda de las hermanas (N1 → A y las 36 voces con su recomendada). Punto 16 del «Cambio de instrumento» de `BITACORA_RUNS.md` | 2026-09-24 |
+| `taino-tradicion-viva-2026-09-24.md` | **no se publicó: se aplicó** el 2026-09-24 en la tanda de las hermanas (T1-T4; T5, volver a correr T11, después de la corrida base) | 2026-09-24 |
 
 Nada de esto está fusionado al canon: son argumentos publicados esperando
 decisión humana.

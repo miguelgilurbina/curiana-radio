@@ -1,0 +1,2494 @@
+# Goeje 1939 — el habla de MUJERES kalinago que faltaba (transcrita en imagen, 2026-09-24).
+meta:
+  obra_id: goeje-1939
+  que_es: 'El habla de MUJERES del caribe insular (kalinago) en Goeje 1939: las entradas con «f» en la sigla del
+    margen de las páginas que la parcela M5 (kalinago_goeje_1939.yaml) no transcribió, con la forma lokona (columna
+    A) cuando Goeje la da.'
+  pedido: 'Miguel, 2026-09-24: «Pero no tenemos más palabras del Kalinago femenino?» … «Dale». Para reforzar el
+    núcleo con dos hermanas y rehacer la cercanía con más conceptos.'
+  como_se_leyo: se localizan en la capa de texto las siglas con f del margen (x < 120 pt en impares, < 205 en pares)
+    y se lee en IMAGEN cada bloque con la entrada anterior, porque «id.» remite a la glosa de arriba. Páginas impresas
+    = índice PyMuPDF (pdf − 1).
+  sigla: f = habla de mujeres; h = de hombres; A = arahuaco (la forma lokona va en el cuerpo tras «A»); am = vocabulario
+    comparado arahuaco-maipure de Goeje; K = kalina; T = taíno; — = sin origen
+  derechos: 'Goeje †1955: dato lexicográfico (forma, glosa corta, página); nada más literal'
+  entradas: 302
+  paginas:
+  - 35
+  - 36
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+  - 49
+  - 50
+  - 53
+  - 54
+  - 55
+  - 56
+  - 57
+  - 59
+  - 60
+  - 62
+  - 63
+  - 64
+  - 65
+  - 66
+  - 67
+  - 70
+  - 71
+  - 72
+  - 73
+  - 74
+  - 75
+  - 76
+  - 77
+  - 78
+  - 79
+  - 80
+  - 81
+  - 82
+  - 83
+  - 84
+  - 94
+  - 95
+  - 96
+  - 97
+  - 98
+  - 99
+  - 100
+  - 101
+  - 103
+  - 104
+  - 105
+  - 106
+  - 107
+  - 108
+  - 109
+  - 110
+  - 111
+  - 112
+  - 113
+  - 114
+  - 115
+  - 116
+voces:
+- pagina_impresa: 35
+  sigla_margen: fam?
+  glosa_fr: épaule
+  forma_mujeres: eše
+  lokono_A: null
+  otras: 5 st äše; 6 wl ege; Yav zeba; Uar sepa; Kat, Si teapa
+  nota: '«id.» de la última línea de p. 34 (épaule muta); p. 86: «bossu f ila-ti eše (épaule)»'
+  verificado_en_imagen: true
+- pagina_impresa: 35
+  sigla_margen: f2 am 7
+  glosa_fr: cuisse
+  forma_mujeres: ebuik
+  lokono_A: u-bukö
+  otras: null
+  nota: 'Adam p. 290: Ubuku → F. n-ebouic'
+  verificado_en_imagen: true
+- pagina_impresa: 35
+  sigla_margen: f-
+  glosa_fr: genou
+  forma_mujeres: agagirik
+  lokono_A: null
+  otras: 5 st agašerügü (I chair)
+  nota: h ekona, K ekuna
+  verificado_en_imagen: true
+- pagina_impresa: 35
+  sigla_margen: f2 am 8
+  glosa_fr: jambe
+  forma_mujeres: urna
+  lokono_A: idana
+  otras: 5s uruna; genou 6 wl uruna
+  nota: h ami; h iše-ri
+  verificado_en_imagen: true
+- pagina_impresa: 35
+  sigla_margen: f 1 am 28
+  glosa_fr: pied
+  forma_mujeres: u-guti
+  lokono_A: o-kuti
+  otras: 5 st ugudi; 6 u-gudi
+  nota: 'h bupu; Adam p. 290: Ukutti → F. ougoutti'
+  verificado_en_imagen: true
+- pagina_impresa: 36
+  sigla_margen: f-
+  glosa_fr: fièvre
+  forma_mujeres: oko-biri
+  lokono_A: null
+  otras: 6 abiru-wow; 2 abiru
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 36
+  sigla_margen: fam?
+  glosa_fr: tumeur, furoncle
+  forma_mujeres: šibuli
+  lokono_A: subuli
+  otras: Ach ka-iubari
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 37
+  sigla_margen: fam?
+  glosa_fr: hochet de l'homme-médecin
+  forma_mujeres: šišira
+  lokono_A: null
+  otras: G yeirü
+  nota: h malaga; K, A maraka
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: 1 am 137
+  glosa_fr: sortilège, remède, teinture
+  forma_mujeres: ibien
+  lokono_A: ibina
+  otras: ebene (sin registro)
+  nota: la sigla no lleva f; la forma f va en el cuerpo
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: f 2 am 45?
+  glosa_fr: sortilège, ensorceler, maléfice
+  forma_mujeres: inharo
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: f2 am 10
+  glosa_fr: dieu, génie tutélaire
+  forma_mujeres: šeme
+  lokono_A: seme-he
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: fam?
+  glosa_fr: esprit, âme de mort
+  forma_mujeres: opoyem
+  lokono_A: null
+  otras: upoyem; 5 ufuia; 6 ufuñe; 6 co gubida; T hupia
+  nota: es la opía taína de Pané
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: fam?
+  glosa_fr: diable
+  forma_mujeres: mapoya
+  lokono_A: null
+  otras: 2 nl mafuiya; 5 mafuia; 6 mafia (sans-âme ?)
+  nota: sin f en el cuerpo
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: fam?
+  glosa_fr: marque, signe
+  forma_mujeres: t-abakêta-ka
+  lokono_A: null
+  otras: null
+  nota: h oko-tobu
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: fA
+  glosa_fr: clair; léger
+  forma_mujeres: hua
+  lokono_A: üya
+  otras: iya, iha, hia, uha (clair); 5 huale
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 38
+  sigla_margen: fT?
+  glosa_fr: âme, cœur, courage, sagesse
+  forma_mujeres: aniši
+  lokono_A: null
+  otras: 5 st aniši; 2 anisi; 5 st h, f anigui; 6 wl anidi; T goeiz
+  nota: h iuani
+  verificado_en_imagen: true
+- pagina_impresa: 39
+  sigla_margen: fA
+  glosa_fr: nom
+  forma_mujeres: iri
+  lokono_A: iri
+  otras: null
+  nota: 'h, K eti; Adam p. 289: Ari ''nom'' → F. n-iri'
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: f1 am 30
+  glosa_fr: homme
+  forma_mujeres: eyeri
+  lokono_A: null
+  otras: 2 f eyeri; 5 st f eierili; 6 sa f eyeri
+  nota: h uekeli
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: f1 am 32
+  glosa_fr: femme
+  forma_mujeres: inharu
+  lokono_A: hiaro
+  otras: 2 f yaru; 6 sa f uñaru
+  nota: h uele
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: f2 am 12
+  glosa_fr: époux
+  forma_mujeres: irai-ti
+  lokono_A: ire-ti
+  otras: 5 st eyeri-ti
+  nota: h igno
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: f1 am 32
+  glosa_fr: épouse
+  forma_mujeres: (2) iani
+  lokono_A: null
+  otras: 6 inuma; 5 enauna; Gu n-aune
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: f,h 1 am 134 A
+  glosa_fr: être veuf(-ve)
+  forma_mujeres: moinša
+  lokono_A: ka-muna-iga (en misère)
+  otras: 6 muesa; 5 st amuisaru
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: f2 am 11
+  glosa_fr: enfant, fils, fille, petit
+  forma_mujeres: ira-hö
+  lokono_A: null
+  otras: 2 yrahau; 2 nl irahou; 5 st iraiü; 6 irahi, ira-hu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 40
+  sigla_margen: fA
+  glosa_fr: père
+  forma_mujeres: u-kuši
+  lokono_A: tuyuku-ti (adulte, parent)
+  otras: 2 n-kusi; 6 u-guši; 2 nl u-kusu; 5 st uguši
+  nota: h baba, K papa
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: fA
+  glosa_fr: mère
+  forma_mujeres: u-kušu
+  lokono_A: null
+  otras: 2 u-kusu; 5 st u-gušu; 6 sa h, f u-gutšu
+  nota: h šanu; K bibi
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: f2 am 13
+  glosa_fr: grand-père
+  forma_mujeres: arguti
+  lokono_A: aduku-ti
+  otras: 5 st aruguti; 6 aruguti
+  nota: 'h tamu; Adam p. 288: Adukuti → F. n-argoutti'
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: fA
+  glosa_fr: grand-mère
+  forma_mujeres: aguete
+  lokono_A: akütü
+  otras: 6 sa h, f agut
+  nota: 'h inuti; Adam p. 288: Akuttu → F. n-aguette'
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: f-
+  glosa_fr: belle-mère, marâtre
+  forma_mujeres: ukušuru-tona-ru
+  lokono_A: null
+  otras: null
+  nota: h i-šanumteni
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: f-
+  glosa_fr: fils
+  forma_mujeres: itaganum
+  lokono_A: null
+  otras: null
+  nota: h šö
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: f am
+  glosa_fr: enfant d'un autre mariage
+  forma_mujeres: n-irahö-kayem
+  lokono_A: null
+  otras: null
+  nota: h in-iemuta-li
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: fA
+  glosa_fr: petit-fils
+  forma_mujeres: ilikini
+  lokono_A: welikin-ti
+  otras: null
+  nota: h ibali; h iegue
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: fA
+  glosa_fr: frère aîné
+  forma_mujeres: ibukayem
+  lokono_A: o-buke-či
+  otras: 2 ibukaye; 6 ibugaña
+  nota: h iloi
+  verificado_en_imagen: true
+- pagina_impresa: 41
+  sigla_margen: fA
+  glosa_fr: frère aîné (vocatif)
+  forma_mujeres: bibi
+  lokono_A: bebe
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 42
+  sigla_margen: f1 am 36
+  glosa_fr: sœur
+  forma_mujeres: itu
+  lokono_A: o-tu
+  otras: 5 st, 6 itu
+  nota: «id.» de la última línea de p. 41 (sœur h iananti); Perea TTU 'hija' p. 51
+  verificado_en_imagen: true
+- pagina_impresa: 42
+  sigla_margen: fam
+  glosa_fr: frère ou sœur cadette
+  forma_mujeres: amule
+  lokono_A: null
+  otras: 5 st amurie; 6 amule; G emurie
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 42
+  sigla_margen: fA?
+  glosa_fr: cousin maternel (dit par la cousine)
+  forma_mujeres: igatu
+  lokono_A: augi-ti (frère cadet), augi-tu (sœur c.)
+  otras: 6 st f igoto (belle-sœur)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 42
+  sigla_margen: A
+  glosa_fr: progéniteur, parent
+  forma_mujeres: itigno
+  lokono_A: iti (père)
+  otras: itegno; ton bâtard f m-eteigno-n-ti
+  nota: sigla A
+  verificado_en_imagen: true
+- pagina_impresa: 42
+  sigla_margen: fA
+  glosa_fr: proche, parent, nation
+  forma_mujeres: ibe
+  lokono_A: ibe
+  otras: ikibe; 5 b-ubiebe; 6 b-ubesinan
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 42
+  sigla_margen: f-
+  glosa_fr: parent, semblable
+  forma_mujeres: ituk(a)e
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 43
+  sigla_margen: f1 am 39
+  glosa_fr: femme esclave
+  forma_mujeres: hai
+  lokono_A: (h)aie-ro
+  otras: ahi
+  nota: h ube(h)eru
+  verificado_en_imagen: true
+- pagina_impresa: 43
+  sigla_margen: fA?
+  glosa_fr: putain, garce
+  forma_mujeres: u-bua-ru
+  lokono_A: null
+  otras: (ve B aboa)
+  nota: h in-eku-li; h imanšaku
+  verificado_en_imagen: true
+- pagina_impresa: 43
+  sigla_margen: f-
+  glosa_fr: Indien arawak
+  forma_mujeres: Aluague
+  lokono_A: null
+  otras: K Aruako; Warau Aruwakü
+  nota: 'Adam p. 290: Lukku → F. a-louage'
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f-
+  glosa_fr: pot de vin
+  forma_mujeres: ebueyu
+  lokono_A: null
+  otras: null
+  nota: h tomtom
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f-
+  glosa_fr: coupe d'une demi-calebasse (Crescentia)
+  forma_mujeres: rita
+  lokono_A: null
+  otras: null
+  nota: h kuaiko; h batana, batêna
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f2 am 2
+  glosa_fr: amidon
+  forma_mujeres: öke-hö
+  lokono_A: kuak
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f-
+  glosa_fr: farine de manioc, provision de pain
+  forma_mujeres: keletona
+  lokono_A: null
+  otras: null
+  nota: 'Adam p. 290: Kalle → F. kele-tona'
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f2am45
+  glosa_fr: eau de manioc
+  forma_mujeres: inhali
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: fAK
+  glosa_fr: boisson de cassave ou de patates
+  forma_mujeres: bayaula
+  lokono_A: baiwaru
+  otras: t-ubayaulu-ni; K payawaru
+  nota: h ueku, K woku; el paiwarí
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f-
+  glosa_fr: pain pour manger avec la pitance
+  forma_mujeres: laona
+  lokono_A: null
+  otras: null
+  nota: h etupunu
+  verificado_en_imagen: true
+- pagina_impresa: 49
+  sigla_margen: f-
+  glosa_fr: viande
+  forma_mujeres: n-oira (ma viande)
+  lokono_A: null
+  otras: ohi-tium (ils ont de la viande); 2 uibi
+  nota: — amatara
+  verificado_en_imagen: true
+- pagina_impresa: 50
+  sigla_margen: f1 am 58
+  glosa_fr: peigne
+  forma_mujeres: bulera
+  lokono_A: balida
+  otras: null
+  nota: h kuamain
+  verificado_en_imagen: true
+- pagina_impresa: 50
+  sigla_margen: hf-
+  glosa_fr: bandeau frontal
+  forma_mujeres: boeme
+  lokono_A: null
+  otras: null
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 50
+  sigla_margen: f-
+  glosa_fr: couronne, guirlande
+  forma_mujeres: iamatabu
+  lokono_A: null
+  otras: tiamatabui
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 50
+  sigla_margen: fK
+  glosa_fr: couronne
+  forma_mujeres: umali
+  lokono_A: null
+  otras: K umari
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 50
+  sigla_margen: fam?
+  glosa_fr: bijou
+  forma_mujeres: niari
+  lokono_A: null
+  otras: iari, inhari (I dent)
+  nota: h eneka
+  verificado_en_imagen: true
+- pagina_impresa: 50
+  sigla_margen: fam?
+  glosa_fr: cache-sexe de femme
+  forma_mujeres: orere
+  lokono_A: null
+  otras: G kurur; B orani; Moxo muiria
+  nota: h u(h)aiku, K wayuku
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: fh 1 am 132 E
+  glosa_fr: lumière
+  forma_mujeres: alukunê
+  lokono_A: harunaha
+  otras: h luku l-alu-ni; 6 arugauga; aruleti
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: fam
+  glosa_fr: faire jour; demain
+  forma_mujeres: aluka-a-li; aluka
+  lokono_A: null
+  otras: 6 sa f, h haruga
+  nota: h imamê
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: fham
+  glosa_fr: avant-hier (-buka 'passé')
+  forma_mujeres: liguira-buga (6 sa f)
+  lokono_A: null
+  otras: h tukura-buka; 6 sa h tugura-buga
+  nota: -buka marca el pasado
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: f1 am 133
+  glosa_fr: nuit
+  forma_mujeres: ariabu
+  lokono_A: origa-hu
+  otras: 6 ariabu
+  nota: «id.» de «nuit kuku, K koko»
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: fam
+  glosa_fr: hier
+  forma_mujeres: ulinanka
+  lokono_A: null
+  otras: 6 sa f urinog
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: fam
+  glosa_fr: avant-hier
+  forma_mujeres: uraga-buka
+  lokono_A: null
+  otras: nous avons séjourné uraga-a-ti-ua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: fA
+  glosa_fr: obscur, ténèbre
+  forma_mujeres: bure, burua
+  lokono_A: bura-to (temps obscur)
+  otras: 6 buriga
+  nota: la lune dans son décours taburua-ru kati
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: f1 am 132E
+  glosa_fr: blanc
+  forma_mujeres: alu
+  lokono_A: arira, hallira
+  otras: 2, 5, 6 haru
+  nota: h tamone
+  verificado_en_imagen: true
+- pagina_impresa: 53
+  sigla_margen: hfK
+  glosa_fr: saison de sécheresse, été
+  forma_mujeres: t-iromu-li
+  lokono_A: null
+  otras: 6 irumo; K iromun
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: f 1 am 62
+  glosa_fr: soleil
+  forma_mujeres: kaši
+  lokono_A: null
+  otras: null
+  nota: h hueyu (M5)
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: hfK
+  glosa_fr: midi
+  forma_mujeres: kulitani-a-li uao
+  lokono_A: null
+  otras: K kurita-ne
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: f 1 am 62
+  glosa_fr: lune, mois
+  forma_mujeres: kati
+  lokono_A: kači
+  otras: 2 f kati; 6 hati; 6 wl hat, kat
+  nota: h nonum
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: f 1 am 64 A
+  glosa_fr: Lucifer, planète
+  forma_mujeres: uainamala
+  lokono_A: iaro-wia (Vénus)
+  otras: null
+  nota: — tubayuala
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: fK
+  glosa_fr: les Pléiades; un an
+  forma_mujeres: širik
+  lokono_A: null
+  otras: K siriko
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: f 2 am 7
+  glosa_fr: Orion
+  forma_mujeres: manbuikayem
+  lokono_A: mabukulu (sans-cuisse)
+  otras: null
+  nota: h ebetiuman
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: fA
+  glosa_fr: la Grande Ourse
+  forma_mujeres: l-ukuni yabura (le canot du crabier)
+  lokono_A: anula-kuya (héron-esprit)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 54
+  sigla_margen: f 1 am 40
+  glosa_fr: une constellation
+  forma_mujeres: kulumon
+  lokono_A: kururuman (dieu créateur)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 55
+  sigla_margen: fam?
+  glosa_fr: vent
+  forma_mujeres: memeeli
+  lokono_A: null
+  otras: le vent s'apaise mele oka-li
+  nota: h bebeite, K pepeito
+  verificado_en_imagen: true
+- pagina_impresa: 55
+  sigla_margen: f-
+  glosa_fr: tonnerre
+  forma_mujeres: ualuhuyuru
+  lokono_A: null
+  otras: 6 waruhuyuru; 6 wl uaguguru; G zuturajuya
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 55
+  sigla_margen: f 2am 28
+  glosa_fr: le bruit du tonnerre
+  forma_mujeres: tôrêrô
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 55
+  sigla_margen: f 1 am 151
+  glosa_fr: pluie
+  forma_mujeres: oya
+  lokono_A: null
+  otras: 2 nl, 2 f; 6 sa f huya; 2 br uya; 6 wl hüya
+  nota: h konobui
+  verificado_en_imagen: true
+- pagina_impresa: 55
+  sigla_margen: f-
+  glosa_fr: arc-en-ciel
+  forma_mujeres: šegue-ti
+  lokono_A: null
+  otras: (ve S šegue)
+  nota: h alamulu
+  verificado_en_imagen: true
+- pagina_impresa: 55
+  sigla_margen: f 1 am 70
+  glosa_fr: la mer
+  forma_mujeres: balaua
+  lokono_A: bara
+  otras: 2 f barawa; 6 sa f baraua; 6 barawa
+  nota: h balana (M5)
+  verificado_en_imagen: true
+- pagina_impresa: 56
+  sigla_margen: fam
+  glosa_fr: marée basse
+  forma_mujeres: m-akêra
+  lokono_A: makera-l-ika (saison de sécheresse)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 56
+  sigla_margen: f 1 am 71
+  glosa_fr: île, pays, patrie
+  forma_mujeres: akaera
+  lokono_A: kairi (île)
+  otras: 5, 6 agaira; rive 2 akai-ruku
+  nota: h ubao
+  verificado_en_imagen: true
+- pagina_impresa: 56
+  sigla_margen: f am?
+  glosa_fr: pays plat
+  forma_mujeres: uaša
+  lokono_A: waa
+  otras: Ach bašaida
+  nota: h arayuma
+  verificado_en_imagen: true
+- pagina_impresa: 56
+  sigla_margen: f-
+  glosa_fr: jardin
+  forma_mujeres: išali
+  lokono_A: null
+  otras: 2 isari (ve S iša)
+  nota: 'h maina; Adam p. 303: taíno «Jardin, chali» → F. ni-chali'
+  verificado_en_imagen: true
+- pagina_impresa: 57
+  sigla_margen: fT
+  glosa_fr: côte rocheuse, falaise, caverne
+  forma_mujeres: šauai
+  lokono_A: null
+  otras: grotte f šauai-roku; T xagueye (citerne naturelle)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 57
+  sigla_margen: f 1 am 75
+  glosa_fr: pierre
+  forma_mujeres: šiba
+  lokono_A: siba
+  otras: null
+  nota: K tebu (M5)
+  verificado_en_imagen: true
+- pagina_impresa: 57
+  sigla_margen: f-
+  glosa_fr: bois à brûler
+  forma_mujeres: tobua
+  lokono_A: null
+  otras: tubua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 57
+  sigla_margen: f 1 am 66 A
+  glosa_fr: cendre
+  forma_mujeres: balisi
+  lokono_A: bališi
+  otras: 2 balisi; 5 baligie; poussière t-ubuliši-nonum
+  nota: 'h hueronum; Adam p. 289: Balissi → F. balissi'
+  verificado_en_imagen: true
+- pagina_impresa: 59
+  sigla_margen: f 1 am 91
+  glosa_fr: oiseau
+  forma_mujeres: ulibignum
+  lokono_A: kodibiyu
+  otras: null
+  nota: 'h tonolu; Adam p. 290: Kudibi-u → F. oulibi-gnum'
+  verificado_en_imagen: true
+- pagina_impresa: 59
+  sigla_margen: f am?
+  glosa_fr: ara (arara)
+  forma_mujeres: kaaru
+  lokono_A: karo
+  otras: Yu karu (Tupi arara)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 59
+  sigla_margen: fA
+  glosa_fr: épervier, esp.; vautour
+  forma_mujeres: anana
+  lokono_A: anuana (vautour)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 60
+  sigla_margen: fA
+  glosa_fr: gros crabier; cigogne
+  forma_mujeres: yabura
+  lokono_A: yaurure (cigogne)
+  otras: 6 wl yabura; Aruan yaurüru
+  nota: h šauaku, K sawaku
+  verificado_en_imagen: true
+- pagina_impresa: 60
+  sigla_margen: fK
+  glosa_fr: tortue
+  forma_mujeres: kararu
+  lokono_A: null
+  otras: K kararuwa
+  nota: origen kalina; — uayamun, alakaka
+  verificado_en_imagen: true
+- pagina_impresa: 62
+  sigla_margen: —, h, f
+  glosa_fr: crabe, esp. div.
+  forma_mujeres: höle; ualeiba
+  lokono_A: null
+  otras: 2 nl waraiba
+  nota: h tibuku
+  verificado_en_imagen: true
+- pagina_impresa: 62
+  sigla_margen: fA
+  glosa_fr: ver de bois, vermine
+  forma_mujeres: ibiši
+  lokono_A: bibisu
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 62
+  sigla_margen: — h, f
+  glosa_fr: lambi
+  forma_mujeres: uatabui
+  lokono_A: null
+  otras: null
+  nota: h uarapiakam
+  verificado_en_imagen: true
+- pagina_impresa: 63
+  sigla_margen: fA
+  glosa_fr: liane, vigne
+  forma_mujeres: mibi
+  lokono_A: mibi
+  otras: 6 mibi
+  nota: h šinatê
+  verificado_en_imagen: true
+- pagina_impresa: 63
+  sigla_margen: f1am2
+  glosa_fr: suc, sève, jus
+  forma_mujeres: ira
+  lokono_A: era, ura
+  otras: null
+  nota: 'h euku-lu; Adam p. 289: Era jus → F. tira'
+  verificado_en_imagen: true
+- pagina_impresa: 63
+  sigla_margen: f1am112
+  glosa_fr: feuille, plume d'oiseau, cheveux
+  forma_mujeres: bana
+  lokono_A: u-bana
+  otras: 6 u-bana; chauve f man-bana
+  nota: sigla f; es la -ubana de los topónimos caquetíos (Zavala)
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: fA?
+  glosa_fr: le manioc est bien chargé de racines
+  forma_mujeres: t-imine-ti
+  lokono_A: himikona (igname)
+  otras: null
+  nota: h t-imone-ti
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: fA
+  glosa_fr: racine tuberculeuse
+  forma_mujeres: oroole
+  lokono_A: t-odoli, duli
+  otras: null
+  nota: lokono d = kalinago r
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: f 1 am 118
+  glosa_fr: fruit
+  forma_mujeres: im
+  lokono_A: iwi
+  otras: 6 in
+  nota: h ebe
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: f 1 am 118
+  glosa_fr: fleur
+  forma_mujeres: ilebue
+  lokono_A: null
+  otras: 2 ilewe; Ach ibi; Ad eliui; Mand iui
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: f-
+  glosa_fr: calebasse (-ier)
+  forma_mujeres: komori
+  lokono_A: null
+  otras: null
+  nota: h mulutuku
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: f-
+  glosa_fr: calebasse longue, qui sert de pot
+  forma_mujeres: ebueyu
+  lokono_A: null
+  otras: ebueya
+  nota: h tonton
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: 2 am 42
+  glosa_fr: calebasse (Crescentia)
+  forma_mujeres: huira
+  lokono_A: iwida
+  otras: null
+  nota: h matalu
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: f-
+  glosa_fr: carratas, fruits (Bromelia pinguis ?)
+  forma_mujeres: karua
+  lokono_A: null
+  otras: chanvre karu-ara, kalu-ara
+  nota: cf. el hipotético caquetío kürara 'cuerda'
+  verificado_en_imagen: true
+- pagina_impresa: 64
+  sigla_margen: f-
+  glosa_fr: chou caraïbe
+  forma_mujeres: uahö
+  lokono_A: null
+  otras: 6 wl uague; 2 nl kwai
+  nota: h taya
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: f 2 am 58
+  glosa_fr: coton
+  forma_mujeres: (u)amulu
+  lokono_A: null
+  otras: (ve M mula)
+  nota: «id.» de la última línea de p. 64 (coton h manhulu, K mauru); cf. caquetío maure
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: f 2 am 26
+  glosa_fr: Genipa
+  forma_mujeres: šaua
+  lokono_A: laña (A, 1 am 121)
+  otras: null
+  nota: h tabulubu, K tapurupo
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: f 2 am 44
+  glosa_fr: goyave, esp.
+  forma_mujeres: ualiapa
+  lokono_A: null
+  otras: 6 sa variafa; 6 wl uariyafa
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: fA
+  glosa_fr: herbe sauvage
+  forma_mujeres: kalao
+  lokono_A: karau
+  otras: 2 kalao
+  nota: 'Adam p. 290: Karau → F. calao'
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: —, h, f (K)
+  glosa_fr: herbe coupante, esp.
+  forma_mujeres: naru
+  lokono_A: null
+  otras: null
+  nota: h nalubui; — šauiyu, K sawaiyu
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: fK
+  glosa_fr: jonc ou roseau à tresser
+  forma_mujeres: ualoman
+  lokono_A: null
+  otras: K waruma
+  nota: origen kalina; h atikum
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: fh-
+  glosa_fr: arbre dont le suc noircit le roseau
+  forma_mujeres: komati
+  lokono_A: null
+  otras: null
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: f 1 am 122
+  glosa_fr: maïs
+  forma_mujeres: mariši
+  lokono_A: mariši
+  otras: null
+  nota: h aoaši, K awasi; cf. el hipotético caquetío marisi
+  verificado_en_imagen: true
+- pagina_impresa: 65
+  sigla_margen: f 1 am 120
+  glosa_fr: manioc
+  forma_mujeres: key; kanh-im (fruit)
+  lokono_A: kali
+  otras: 2 f kai; 6 vi gai
+  nota: h kiere, K kiere
+  verificado_en_imagen: true
+- pagina_impresa: 66
+  sigla_margen: fK
+  glosa_fr: prunier jaune (Spondias)
+  forma_mujeres: momben
+  lokono_A: null
+  otras: 6 wl mube; K mope
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 66
+  sigla_margen: fT
+  glosa_fr: prunier rouge (icaque)
+  forma_mujeres: ikaku
+  lokono_A: null
+  otras: T hikako
+  nota: h nalubonum
+  verificado_en_imagen: true
+- pagina_impresa: 66
+  sigla_margen: f-
+  glosa_fr: raisinier
+  forma_mujeres: uliem
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 66
+  sigla_margen: fT
+  glosa_fr: roucou (Bixa)
+  forma_mujeres: bišet
+  lokono_A: null
+  otras: T biša
+  nota: h kušehue, K kusewe
+  verificado_en_imagen: true
+- pagina_impresa: 67
+  sigla_margen: f-
+  glosa_fr: arbre à savon
+  forma_mujeres: luluru
+  lokono_A: null
+  otras: (ve L lo)
+  nota: — iripali; h tuliši
+  verificado_en_imagen: true
+- pagina_impresa: 70
+  sigla_margen: hfK
+  glosa_fr: aider, protéger; nourrir, élever
+  forma_mujeres: iabanabui
+  lokono_A: null
+  otras: K epanopu; élever ibuanabui; venger f uibanabu
+  nota: de los dos registros, origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 70
+  sigla_margen: fA?
+  glosa_fr: porter; être chargé
+  forma_mujeres: abarero
+  lokono_A: abali, aboli (passer)
+  otras: bare (porter); 2 bara; 6 baru
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 70
+  sigla_margen: hfK
+  glosa_fr: traverser, débouquer
+  forma_mujeres: anibateru
+  lokono_A: null
+  otras: h uebate, n-ibate; K pato
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 70
+  sigla_margen: f-
+  glosa_fr: fou
+  forma_mujeres: baišue
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 70
+  sigla_margen: fA
+  glosa_fr: piller
+  forma_mujeres: abayu
+  lokono_A: abota
+  otras: 6 abuhudu; 5 abudaha
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: f-
+  glosa_fr: poltron
+  forma_mujeres: abaua
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: fA
+  glosa_fr: assez, vieux; fin, borne
+  forma_mujeres: (h)ebe
+  lokono_A: hebe
+  otras: hebe-ni (fin, frontière)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: fA
+  glosa_fr: beaucoup, très
+  forma_mujeres: k-ibe
+  lokono_A: k-ibi, k-ibe-n
+  otras: 2 k-ibe; 6 ibe
+  nota: también en nucleo_fundacional_hermanas (wara → kibe)
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: f 2 am 52
+  glosa_fr: payement; remplacer, changer, traduire
+  forma_mujeres: ebeci
+  lokono_A: null
+  otras: ebeci-kua (changer); 6 f ebeci
+  nota: cf. el hipotético caquetío paratü 'trueque'
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: fA
+  glosa_fr: couper, blesser
+  forma_mujeres: (i)bi
+  lokono_A: ibiki
+  otras: 6 bitu; ibiko
+  nota: 'Adam p. 289: Ibi-ki-n → F. k-ibe-coua'
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: fA
+  glosa_fr: trouver, attraper; avoir de la chance
+  forma_mujeres: ibi
+  lokono_A: abukü (recevoir)
+  otras: 6 ibi; ibikua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 71
+  sigla_margen: fA
+  glosa_fr: bluter; pluie fine
+  forma_mujeres: ibi; aibika
+  lokono_A: aiubosi
+  otras: a(h)ibika; chute f t-aibika-ni
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 72
+  sigla_margen: f h 2 am 53
+  glosa_fr: danser
+  forma_mujeres: abinaka
+  lokono_A: ibini
+  otras: 2 nl binaha; 6 abinaha
+  nota: 'de los dos registros; Adam p. 289: Ibi-ni-n → F. abaima-ca-ni'
+  verificado_en_imagen: true
+- pagina_impresa: 72
+  sigla_margen: f-
+  glosa_fr: large(ur)
+  forma_mujeres: abubere
+  lokono_A: null
+  otras: 5 d-abubere
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 72
+  sigla_margen: fA
+  glosa_fr: chasser, expulser, faire la chasse
+  forma_mujeres: (a)buka(ša)
+  lokono_A: aibokotoa (reprocher)
+  otras: 6 abugu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 72
+  sigla_margen: hfK
+  glosa_fr: jeter, lancer
+  forma_mujeres: š-ibuka-e
+  lokono_A: null
+  otras: h š-ibuki; K poka
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 73
+  sigla_margen: fA
+  glosa_fr: friand
+  forma_mujeres: bukone, bukuni
+  lokono_A: funa
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 73
+  sigla_margen: fA
+  glosa_fr: gouverner le canot
+  forma_mujeres: abukura
+  lokono_A: abukudua
+  otras: null
+  nota: lokono d = kalinago r
+  verificado_en_imagen: true
+- pagina_impresa: 73
+  sigla_margen: f h am?
+  glosa_fr: dessiné, écrit; signe
+  forma_mujeres: bule; bule-bo
+  lokono_A: buri
+  otras: 5 burua; suie pour peindre Si buli-tai
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 73
+  sigla_margen: fA
+  glosa_fr: déborder; sourdre
+  forma_mujeres: abuleke
+  lokono_A: abuledua
+  otras: abuleša-kua; buli-buli; torrent 5 l-abule-ha duna (eau)
+  nota: «duna (eau)» es del garífuna
+  verificado_en_imagen: true
+- pagina_impresa: 73
+  sigla_margen: f-
+  glosa_fr: percer; phlébotomie
+  forma_mujeres: abulušago-ni
+  lokono_A: buletua (faire un trou rond)
+  otras: bulu (percer)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 73
+  sigla_margen: f 1 am 145
+  glosa_fr: planter, enterrer
+  forma_mujeres: abona-ka
+  lokono_A: abona
+  otras: 2 abuna-ha; 6 habunua
+  nota: 'Adam p. 288: Abunu-n → C. abona'
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: fA
+  glosa_fr: nuisible, contraire; air malsain
+  forma_mujeres: ka-buri
+  lokono_A: bureha, buraha (aigre)
+  otras: uburi (infection)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: fA
+  glosa_fr: avoir honte
+  forma_mujeres: aburi
+  lokono_A: (h)aburi
+  otras: … aniši (cœur)
+  nota: cf. el hipotético caquetío japü 'vergüenza' (etiqueta wayuu)
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: f-
+  glosa_fr: aborder à terre
+  forma_mujeres: aburika
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: f am?
+  glosa_fr: las, faible, fatigué
+  forma_mujeres: buša
+  lokono_A: abusia (somnolent)
+  otras: 6 buša
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: fhA
+  glosa_fr: cueillir; travailler; prendre
+  forma_mujeres: abutu
+  lokono_A: abuti (cueillir), abutu (prendre)
+  otras: (a)bula-ka; 2 abuta-ha; donner f ubute; 6 abudu
+  nota: de los dos registros; candidata para 'tomar, coger'
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: hfK
+  glosa_fr: grand, gros, puissant
+  forma_mujeres: ubuto
+  lokono_A: null
+  otras: K poto
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 74
+  sigla_margen: fhA
+  glosa_fr: corrompu
+  forma_mujeres: aboa, abua
+  lokono_A: aboa
+  otras: 6 abua; tromper h abuara-kua
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 75
+  sigla_margen: fA
+  glosa_fr: bouillir, cuire
+  forma_mujeres: abuaka
+  lokono_A: abukoa
+  otras: 2 abuaha
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 75
+  sigla_margen: fA
+  glosa_fr: défendre, garder
+  forma_mujeres: aoya
+  lokono_A: abuya (pâturer)
+  otras: pâturer ebui; bois à brûler f t-ohua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 75
+  sigla_margen: f-
+  glosa_fr: beau
+  forma_mujeres: buitu
+  lokono_A: null
+  otras: bon 6 buidi; paix, louange 5 buidu
+  nota: cf. 'bueno' (anasa)
+  verificado_en_imagen: true
+- pagina_impresa: 75
+  sigla_margen: f-
+  glosa_fr: étoffe, matière
+  forma_mujeres: uboyana
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 76
+  sigla_margen: f 1 am 134 B
+  glosa_fr: frapper, tuer
+  forma_mujeres: apara
+  lokono_A: afara, afora
+  otras: 2 apara; 6 afara; sarbacane anfara-gle
+  nota: 'Adam p. 289: Aparra-n → F. apara'
+  verificado_en_imagen: true
+- pagina_impresa: 76
+  sigla_margen: fA
+  glosa_fr: souffleter
+  forma_mujeres: pata
+  lokono_A: afatadi
+  otras: apataru
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 76
+  sigla_margen: f-
+  glosa_fr: flotter, naviguer
+  forma_mujeres: (a)paya
+  lokono_A: null
+  otras: apayara
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 76
+  sigla_margen: fA
+  glosa_fr: lie, ordure
+  forma_mujeres: epe, ipe
+  lokono_A: fe
+  otras: 5 ife; 6 iwiye
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: fA
+  glosa_fr: miette, ordure
+  forma_mujeres: epelugu
+  lokono_A: null
+  otras: 5 ifelegu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: f-
+  glosa_fr: cuit
+  forma_mujeres: epe
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: f-
+  glosa_fr: se moquer de, injurier
+  forma_mujeres: epeta-kua
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: f-
+  glosa_fr: sacrifier, inciser (dent d'agouti)
+  forma_mujeres: piu-kua
+  lokono_A: null
+  otras: apui-takua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: f-
+  glosa_fr: baiser
+  forma_mujeres: pula
+  lokono_A: null
+  otras: enfoncer dans la boue pula-pula
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: fA
+  glosa_fr: rouge, mûr
+  forma_mujeres: pona
+  lokono_A: bonaro
+  otras: 6 funa
+  nota: 'cf. ''rojo'' (sünatü): dos hermanas'
+  verificado_en_imagen: true
+- pagina_impresa: 77
+  sigla_margen: fA
+  glosa_fr: agile, vite
+  forma_mujeres: opono
+  lokono_A: funa, pana (avide)
+  otras: il tarde f man-hopo-go-n-ti
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 78
+  sigla_margen: f(K)
+  glosa_fr: tirer des patates
+  forma_mujeres: ika
+  lokono_A: null
+  otras: … mabi
+  nota: h eka, ika 'tirer'
+  verificado_en_imagen: true
+- pagina_impresa: 79
+  sigla_margen: fA
+  glosa_fr: s'éveiller; ressusciter
+  forma_mujeres: akako(a)tua; akakošua
+  lokono_A: null
+  otras: éveiller 6 agagudu
+  nota: de kakê 'vivre'
+  verificado_en_imagen: true
+- pagina_impresa: 79
+  sigla_margen: fA
+  glosa_fr: entendre
+  forma_mujeres: akambo
+  lokono_A: akanabu, akonabo
+  otras: 2 akaba; 6 aganbu
+  nota: 'Adam p. 288: Akannabu-n → F. acamba'
+  verificado_en_imagen: true
+- pagina_impresa: 80
+  sigla_margen: fA
+  glosa_fr: mêler; assaisonner
+  forma_mujeres: akanakua; akana
+  lokono_A: akakata
+  otras: agnantakua; 6 aganagoa
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 80
+  sigla_margen: hfK?
+  glosa_fr: se lever debout
+  forma_mujeres: aganêka
+  lokono_A: null
+  otras: Cum, Oy ekakta
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 80
+  sigla_margen: fA
+  glosa_fr: ennemi
+  forma_mujeres: akani
+  lokono_A: null
+  otras: 5 agane; 5 st agani; 6 b-aganinu
+  nota: cf. el taíno anaki (Zayas; Adam p. 303)
+  verificado_en_imagen: true
+- pagina_impresa: 80
+  sigla_margen: f 1 am 132 B
+  glosa_fr: douleur, mal
+  forma_mujeres: kari
+  lokono_A: kari
+  otras: 6 agarigu; épicé kariua-ti; aigre karêgué-ti
+  nota: homógrafo del hipotético caquetío kari 'orilla'
+  verificado_en_imagen: true
+- pagina_impresa: 80
+  sigla_margen: f 2 am 56
+  glosa_fr: se baigner, se laver
+  forma_mujeres: akaua
+  lokono_A: aka
+  otras: 6 agowa
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 80
+  sigla_margen: f(K)
+  glosa_fr: viser
+  forma_mujeres: ökenê
+  lokono_A: null
+  otras: blanc à viser ökêni
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 81
+  sigla_margen: f-
+  glosa_fr: haïr
+  forma_mujeres: akera-nompti
+  lokono_A: null
+  otras: mécontent itakere
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 81
+  sigla_margen: fA
+  glosa_fr: nouer, lier
+  forma_mujeres: akêra, akeri
+  lokono_A: akera
+  otras: 6 aguragoa; 2 kürakua; lié 5 kururua; lacet akerka
+  nota: cf. el hipotético caquetío kürara 'cuerda'
+  verificado_en_imagen: true
+- pagina_impresa: 82
+  sigla_margen: fA
+  glosa_fr: avare
+  forma_mujeres: akin
+  lokono_A: ikiaha
+  otras: null
+  nota: h akinuma (refuser)
+  verificado_en_imagen: true
+- pagina_impresa: 82
+  sigla_margen: f-
+  glosa_fr: gratter, ratisser le manioc, peler
+  forma_mujeres: kia
+  lokono_A: null
+  otras: akiaka, akiara, aglika; 2 ahürüha
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 82
+  sigla_margen: f am?
+  glosa_fr: force, vertu, puissance
+  forma_mujeres: u-kubo
+  lokono_A: akuba (le cœur du bois)
+  otras: augmenter (fièvre) f kobu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 83
+  sigla_margen: hfK
+  glosa_fr: net, beau; jeu, récréation
+  forma_mujeres: kulana
+  lokono_A: null
+  otras: K kurango
+  nota: de los dos registros, origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 83
+  sigla_margen: fA
+  glosa_fr: tordre
+  forma_mujeres: kolibi
+  lokono_A: uribi
+  otras: akolibita; embrasser kulišua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 84
+  sigla_margen: f-
+  glosa_fr: submergé, naufragé, périr
+  forma_mujeres: akona
+  lokono_A: null
+  otras: gouffre t-akona-gle
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 84
+  sigla_margen: hfKA
+  glosa_fr: empoisonner (enivrer la rivière)
+  forma_mujeres: akonara
+  lokono_A: kunali
+  otras: K kunabalu, kunami
+  nota: de los dos registros; el barbasco
+  verificado_en_imagen: true
+- pagina_impresa: 84
+  sigla_margen: fA
+  glosa_fr: échouer, jeter à la côte
+  forma_mujeres: akura-a-li
+  lokono_A: null
+  otras: les brisants l-akuru-ni
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 84
+  sigla_margen: fAK?
+  glosa_fr: sarcler
+  forma_mujeres: akuruka
+  lokono_A: akuradi, akorodi (briser)
+  otras: K ikoroka (nettoyer)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 84
+  sigla_margen: f-
+  glosa_fr: brûler
+  forma_mujeres: kota, akoto
+  lokono_A: null
+  otras: 2 akuta; 6 agudu; bois à brûler akhoto
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 94
+  sigla_margen: fhA?
+  glosa_fr: petit, menu; jeune
+  forma_mujeres: nian; nian-kei-li (il est encore jeune)
+  lokono_A: null
+  otras: 2 hia-ki-ti-na (j'étais jeune)
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 94
+  sigla_margen: fhA?
+  glosa_fr: peu
+  forma_mujeres: nianhuanke
+  lokono_A: null
+  otras: être impuissant anhanyanro
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 94
+  sigla_margen: f-
+  glosa_fr: difforme, hideux; méchant
+  forma_mujeres: nianhuan; ianhua (méchant)
+  lokono_A: null
+  otras: mauvais regard nianua; ingrat nianuan
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 94
+  sigla_margen: f-
+  glosa_fr: branler, cligner
+  forma_mujeres: nyaka-nyaka
+  lokono_A: null
+  otras: ania; cligner des yeux niaku-niaku
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 94
+  sigla_margen: f-
+  glosa_fr: pourrir, digérer, être mûr
+  forma_mujeres: nianla
+  lokono_A: null
+  otras: trop cuit niala-koa
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: f-
+  glosa_fr: douceur (de goût)
+  forma_mujeres: oniem
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: f-
+  glosa_fr: le navire a débouqué
+  forma_mujeres: hanlakêta-kua
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: fA
+  glosa_fr: railler, se moquer de
+  forma_mujeres: animato
+  lokono_A: imita, imitada
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: f 2 am 59
+  glosa_fr: amour, aimer
+  forma_mujeres: inši, k-inši
+  lokono_A: ansi, k-ansi
+  otras: 2 k-anisi; 6 hisain, hisiñe; 5 hisie
+  nota: 'dos hermanas: cf. el hipotético caquetío alaain ''amor'' (etiqueta wayuu) y raka ''querer'''
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: f-
+  glosa_fr: envoyer
+  forma_mujeres: inš(i)a
+  lokono_A: null
+  otras: ne m'induis pas f m-inšiaka ba-na t-uagon
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: f 1 am 149 A
+  glosa_fr: puer; pourri
+  forma_mujeres: inši, ingi
+  lokono_A: (h)isi
+  otras: 6 hingia; dégoûtant ka-ši
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: fam?
+  glosa_fr: crainte
+  forma_mujeres: anubu-te
+  lokono_A: null
+  otras: 6 anufude; 2 hanuhute; ka-ifute
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: f-
+  glosa_fr: tas, monceau
+  forma_mujeres: nuka-yem
+  lokono_A: null
+  otras: null
+  nota: cf. el hipotético caquetío tuba 'montón'
+  verificado_en_imagen: true
+- pagina_impresa: 95
+  sigla_margen: hfK
+  glosa_fr: mépriser, fâché; méchant
+  forma_mujeres: inoka (méchant)
+  lokono_A: null
+  otras: fâché enoka; Chayma ez-eneka
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 96
+  sigla_margen: fA
+  glosa_fr: être en peine de
+  forma_mujeres: niule … aniši
+  lokono_A: yura … ansi
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 96
+  sigla_margen: fA
+  glosa_fr: pourri, mou, en poussière
+  forma_mujeres: niulu, ululu
+  lokono_A: turu
+  otras: doux, mou 5 iulu
+  nota: cf. el hipotético caquetío siwa 'blando'
+  verificado_en_imagen: true
+- pagina_impresa: 96
+  sigla_margen: fK
+  glosa_fr: cela me fait de la peine; être triste
+  forma_mujeres: n-ainuma-in-ti
+  lokono_A: null
+  otras: K wonu-menga (penser)
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 96
+  sigla_margen: fam
+  glosa_fr: s'asseoir, se coucher, satisfaire; content; rassasié
+  forma_mujeres: niuru; ebura (content); eura (rassasié)
+  lokono_A: orosi
+  otras: anhuyura, ayuluka; 6 ñu; anururu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 96
+  sigla_margen: fA
+  glosa_fr: fuir; apprivoisé
+  forma_mujeres: anura; m-anura-ti-ti
+  lokono_A: yura (se hâter)
+  otras: 6 anura
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: fA
+  glosa_fr: choisir; éplucher un crabe
+  forma_mujeres: anoa, anoha
+  lokono_A: anoa
+  otras: anoato; 5 anuadu
+  nota: 'Adam p. 289: Anoan → F. annoa'
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: fA?
+  glosa_fr: suer
+  forma_mujeres: ara-ogua
+  lokono_A: null
+  otras: null
+  nota: uriner ara-gua, A adahaka
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: fA?
+  glosa_fr: peler, écailler, curer
+  forma_mujeres: ara … ora (peau)
+  lokono_A: null
+  otras: ronger aroira; retrousser aru(-kua)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: f 1 am 2
+  glosa_fr: l'œil lui pleure
+  forma_mujeres: ka-ra-ti l-aku
+  lokono_A: null
+  otras: (VI suc)
+  nota: h ula
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: fA
+  glosa_fr: arracher; enlever, ravir
+  forma_mujeres: rake
+  lokono_A: ereke
+  otras: 5, 6 raga
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: fA
+  glosa_fr: séjourner
+  forma_mujeres: uragaba-ti-bu menhem
+  lokono_A: null
+  otras: (IV avant-hier)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 97
+  sigla_margen: f-
+  glosa_fr: descendre; débarquer
+  forma_mujeres: rali
+  lokono_A: null
+  otras: 6 rari; mettre pied à terre aralira-kua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: fam?
+  glosa_fr: cacher
+  forma_mujeres: aramêta
+  lokono_A: null
+  otras: 6 aramudu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: hf-
+  glosa_fr: il a cette propriété
+  forma_mujeres: k-aralugu-ti
+  lokono_A: null
+  otras: null
+  nota: h k-aranaim-gu-ti
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: fA?
+  glosa_fr: fort; gras; faible
+  forma_mujeres: ele
+  lokono_A: null
+  otras: 6 here; gras, violent ka-re; faible m-ele-koa
+  nota: ka- y ma- sobre la misma raíz
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: f 1 am 141
+  glosa_fr: pesant; léger
+  forma_mujeres: k-öre; m-ere (léger)
+  lokono_A: kudu (pesant); dele (ancre)
+  otras: 6 herengu; pesanteur t-ököre
+  nota: el lokono kudu 'pesado' apoya kudu 'cargar' (nucleo_fundacional)
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: f-
+  glosa_fr: se retirer
+  forma_mujeres: rere, reta
+  lokono_A: null
+  otras: rester 6 rede, erederu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: fhA
+  glosa_fr: attacher, lisser une corde
+  forma_mujeres: ere-kua, rö-kua
+  lokono_A: null
+  otras: erörê, öröre; h ere(re)ke
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 98
+  sigla_margen: f-
+  glosa_fr: se fondre (miel, cire, nuées)
+  forma_mujeres: rörö(koa)
+  lokono_A: null
+  otras: tamiser arera-goa
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 99
+  sigla_margen: f-
+  glosa_fr: empoisonner; pénible
+  forma_mujeres: ekelera
+  lokono_A: null
+  otras: pénible k-ele; dangereux aköle
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 99
+  sigla_margen: hfK
+  glosa_fr: demeurer; le lieu de ma demeure
+  forma_mujeres: n-eremato-ni
+  lokono_A: null
+  otras: h erema(ta); 2 arimeta
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: f-
+  glosa_fr: mon plant
+  forma_mujeres: arere
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: hf-
+  glosa_fr: rire, se moquer; être joyeux
+  forma_mujeres: erero, eraka; ka-rêle … aniši (joyeux)
+  lokono_A: null
+  otras: 6 eheraha; pas joyeux ma-rêle
+  nota: de los dos registros; ka-/ma- sobre rêle
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: fA
+  glosa_fr: parler; accuser
+  forma_mujeres: arianga
+  lokono_A: adia-ka
+  otras: 2 ariaku; 6 ariñagu
+  nota: 'Adam p. 288: Adian → F. arian-ga (d = r)'
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: fA
+  glosa_fr: rôtir, boucaner
+  forma_mujeres: aribeleta
+  lokono_A: idibale
+  otras: null
+  nota: d = r
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: fA
+  glosa_fr: planter (du manioc)
+  forma_mujeres: aribu-ka
+  lokono_A: adi (debout)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: f 1 am 149 B
+  glosa_fr: véritable, sensible, taciturne
+  forma_mujeres: iribu
+  lokono_A: k-id-ua (vrai)
+  otras: null
+  nota: d = r
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: fA
+  glosa_fr: voir, regarder
+  forma_mujeres: arika
+  lokono_A: adika
+  otras: 6 ariha; 2 aribu; fureter k-ariaka
+  nota: 'el caquetío diki (tf.5) tiene aquí su segunda hermana: lokono a-ddiki-n = mujeres arika (d = r)'
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: fA
+  glosa_fr: sentir bien, flairer
+  forma_mujeres: irimiša
+  lokono_A: adimisa
+  otras: 6 wl irimiša
+  nota: 'Adam p. 288: Adimissi-n → F. k-irimicha-ti-ti'
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: f-
+  glosa_fr: (faire) une corvée
+  forma_mujeres: ario-ni
+  lokono_A: null
+  otras: ališi
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: f-
+  glosa_fr: s'ennuyer
+  forma_mujeres: aliru, alirua
+  lokono_A: null
+  otras: alu-ka
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 100
+  sigla_margen: f-
+  glosa_fr: partager, diviser
+  forma_mujeres: liri-kua
+  lokono_A: null
+  otras: a(n)liritakua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 101
+  sigla_margen: fK
+  glosa_fr: trahir
+  forma_mujeres: irobu(ta)
+  lokono_A: null
+  otras: prévoir irobuma
+  nota: origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 101
+  sigla_margen: hfK
+  glosa_fr: beau (bon)
+  forma_mujeres: irupa
+  lokono_A: null
+  otras: bon iropon; 2 irufu; K irupa, irupu(n)
+  nota: de los dos registros, origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 101
+  sigla_margen: fA
+  glosa_fr: montrer, enseigner
+  forma_mujeres: arokota
+  lokono_A: adokota
+  otras: 5 aruhuda; enseigner 6 arufuda
+  nota: 'Adam p. 288: Adukutu-n → F. arocota'
+  verificado_en_imagen: true
+- pagina_impresa: 101
+  sigla_margen: f-
+  glosa_fr: chanter
+  forma_mujeres: aromanka
+  lokono_A: null
+  otras: null
+  nota: homógrafo de 'dormir' f aromanka
+  verificado_en_imagen: true
+- pagina_impresa: 101
+  sigla_margen: f-
+  glosa_fr: fièvre intermittente
+  forma_mujeres: ka-rongo-nia-li l-uago
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 103
+  sigla_margen: fh
+  glosa_fr: sarcloir; amoncelé
+  forma_mujeres: ašaraši (sarcloir)
+  lokono_A: null
+  otras: amoncelé šara-gua; tas h t-ašarago-ne
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 103
+  sigla_margen: f-
+  glosa_fr: tirer, tailler de la pite
+  forma_mujeres: šaua, ašau(a)ra
+  lokono_A: null
+  otras: le bruit du roseau sec šao
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 103
+  sigla_margen: fam?
+  glosa_fr: le reflux de la mer; desséché
+  forma_mujeres: l-ašauaro-nê balaua
+  lokono_A: saka (desséché)
+  otras: 6 sow, asouru; 5 sauga; Gu hazabe-oko
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 103
+  sigla_margen: f-
+  glosa_fr: se plaire, s'accoutumer
+  forma_mujeres: eše-be
+  lokono_A: null
+  otras: quérir ešeika; désobéir f m-ešeikani
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 103
+  sigla_margen: f-
+  glosa_fr: poisson (allons manger du poisson)
+  forma_mujeres: aoto
+  lokono_A: null
+  otras: … šenokui anij
+  nota: 'la voz común, caribe (Adam p. 285: galibi oto → C. aoto)'
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: fam?
+  glosa_fr: les racines de manioc sont pourries
+  forma_mujeres: ešere-e-li kiere
+  lokono_A: null
+  otras: (I ulcère)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: hfK
+  glosa_fr: nouveau
+  forma_mujeres: (f ?) išeri
+  lokono_A: null
+  otras: 6 iseri; K esp ixeri, K oseiri
+  nota: de los dos registros, origen kalina
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: f-
+  glosa_fr: lève-toi, tiens-toi debout
+  forma_mujeres: šöta-ba
+  lokono_A: null
+  otras: null
+  nota: con el -ba del imperativo/futuro
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: f-
+  glosa_fr: ennui, envie, mal du pays; amoureux
+  forma_mujeres: iši; išua (amoureux)
+  lokono_A: null
+  otras: faire signe des yeux išuaka
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: f-
+  glosa_fr: lâcher, laisser
+  forma_mujeres: išira
+  lokono_A: null
+  otras: 2 isiru; couper une corde eši, išira k-êši
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: f-
+  glosa_fr: affilé, pointu
+  forma_mujeres: šibu
+  lokono_A: null
+  otras: šibi; pointu (nez, bouche) šubi
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: fA
+  glosa_fr: fouiller; fosse
+  forma_mujeres: ašika
+  lokono_A: aciga
+  otras: 2 asika; 6 ašiga; fosse t-ašiki-ni
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 104
+  sigla_margen: fhA
+  glosa_fr: étendre la main; donner, mener; envoyer
+  forma_mujeres: išigoa; inša(kua)
+  lokono_A: asika
+  otras: 6 išiga, inšu; 2 isiku; donner 6 išugu
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: f-
+  glosa_fr: tu as gâté ma besogne
+  forma_mujeres: šikimain b-oa n-atika
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: fhA
+  glosa_fr: curer, vider; un puits
+  forma_mujeres: šikuli, šikulu
+  lokono_A: null
+  otras: šugu, ašuguri, šura; un puits ašikuli; bêche šikula
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: f-
+  glosa_fr: le pus aboutit
+  forma_mujeres: šila-a-li l-öke
+  lokono_A: null
+  otras: rasseoir (la mouchache) šilea
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: fam
+  glosa_fr: venir, arriver, advenir
+  forma_mujeres: šile
+  lokono_A: null
+  otras: ašileru, šului; 2 šülü, šülürü; 6 šilu; bonjour f šile-a-ti-bu
+  nota: ya en nucleo_fundacional (waa → sile)
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: fA
+  glosa_fr: jaloux
+  forma_mujeres: šimuka
+  lokono_A: simika
+  otras: 5, 6 gimuga
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: f 1 am 14?
+  glosa_fr: rond; pleine lune
+  forma_mujeres: širi
+  lokono_A: isi (graine, tête)
+  otras: arrondir aši(ri)goa; percer širi
+  nota: 'el lokono isi ''cabeza'' (nucleo_fundacional: kabo → isi)'
+  verificado_en_imagen: true
+- pagina_impresa: 105
+  sigla_margen: f-
+  glosa_fr: ils lient leurs bâtiments
+  forma_mujeres: šišaluka
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 106
+  sigla_margen: f-
+  glosa_fr: piquant, âpre, rude
+  forma_mujeres: šušu, šuru, šaru
+  lokono_A: asorobodi (balayer)
+  otras: sculpter ašurugu
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 106
+  sigla_margen: fA
+  glosa_fr: couper, abattre
+  forma_mujeres: ašuku
+  lokono_A: asoko
+  otras: ašuaka, ašueke; 2 asuaha; 6 šuga; ébréché f ma-šuko-n
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 106
+  sigla_margen: f-
+  glosa_fr: achever
+  forma_mujeres: ašura
+  lokono_A: null
+  otras: médire ašura-gua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 107
+  sigla_margen: fam
+  glosa_fr: fermé, serré, cloué
+  forma_mujeres: tahö
+  lokono_A: null
+  otras: ta, tai
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 107
+  sigla_margen: f 1 am 3
+  glosa_fr: boire
+  forma_mujeres: ata
+  lokono_A: ata, ato
+  otras: 6 atu; 6 sa atua
+  nota: la MISMA forma en las dos hermanas; cf. nucleo_fundacional (awa → ati/ata)
+  verificado_en_imagen: true
+- pagina_impresa: 107
+  sigla_margen: fam
+  glosa_fr: rougir de honte
+  forma_mujeres: ita-kua … išibu (visage)
+  lokono_A: null
+  otras: ita oka; (I sang)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 107
+  sigla_margen: f 2 am 61
+  glosa_fr: boucher; trouble de la parole
+  forma_mujeres: ataga; taka(-kua)
+  lokono_A: atagi; hatata
+  otras: 6 daga-daga
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 107
+  sigla_margen: f-
+  glosa_fr: poser une offrande sur l'autel
+  forma_mujeres: ataguerguê … anakri (offrande)
+  lokono_A: null
+  otras: takakêta
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 108
+  sigla_margen: fA
+  glosa_fr: assembler
+  forma_mujeres: atamanlikua
+  lokono_A: null
+  otras: 6 adamuridagua
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 108
+  sigla_margen: f-
+  glosa_fr: élargir, dilater
+  forma_mujeres: atamališa
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 108
+  sigla_margen: fhAK
+  glosa_fr: déchirer, effacer
+  forma_mujeres: tarara
+  lokono_A: aterakida
+  otras: h tarakêta; 6 eteiridagua
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 108
+  sigla_margen: f-
+  glosa_fr: assurément, c'est lui
+  forma_mujeres: tata likia
+  lokono_A: null
+  otras: teteguê; jurer eteteguêra-ka
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 109
+  sigla_margen: f-
+  glosa_fr: débris de navire
+  forma_mujeres: tatakaraka-ni kanabire
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 109
+  sigla_margen: f-
+  glosa_fr: chienne chaude
+  forma_mujeres: ka-tatu uele anli
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 109
+  sigla_margen: f-
+  glosa_fr: éprouver la fermeté du canot
+  forma_mujeres: atayaka
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 109
+  sigla_margen: fam?
+  glosa_fr: faire
+  forma_mujeres: ateka, atekuago
+  lokono_A: ahite(-ka) (vouloir, disposé à)
+  otras: 2 atüka; 5 adigu; 6 adugu
+  nota: los hombres dicen ani (p. 94); el lokono ahite 'querer' apoya hiti (nucleo_fundacional)
+  verificado_en_imagen: true
+- pagina_impresa: 109
+  sigla_margen: f-
+  glosa_fr: dur, raide
+  forma_mujeres: tele
+  lokono_A: null
+  otras: 2 br dire; 6 dere; raide talee
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 110
+  sigla_margen: f-
+  glosa_fr: jeûner
+  forma_mujeres: aterua, atrua
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 110
+  sigla_margen: fA
+  glosa_fr: tromper
+  forma_mujeres: etembulera
+  lokono_A: amurida
+  otras: null
+  nota: cf. el atestiguado caquetío kiboata 'engañar'
+  verificado_en_imagen: true
+- pagina_impresa: 110
+  sigla_margen: fA
+  glosa_fr: attendre, emprunter, prêter
+  forma_mujeres: atênabo
+  lokono_A: atenabo
+  otras: null
+  nota: la misma forma en las dos hermanas
+  verificado_en_imagen: true
+- pagina_impresa: 110
+  sigla_margen: fA
+  glosa_fr: une tache
+  forma_mujeres: teteši, tete-kua
+  lokono_A: itibi
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 110
+  sigla_margen: fh-
+  glosa_fr: mouillé, trempé
+  forma_mujeres: töla, töle
+  lokono_A: null
+  otras: mouiller h atötêlakoa; terre à potier töte-li
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 110
+  sigla_margen: fhA?
+  glosa_fr: pêcher; piquer
+  forma_mujeres: atiaka
+  lokono_A: atiadi (piquer)
+  otras: h atika; 2 tika; atiahã
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 111
+  sigla_margen: fA
+  glosa_fr: toux; tousser
+  forma_mujeres: iatonê
+  lokono_A: atundu
+  otras: éternuer atiunka
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 111
+  sigla_margen: f 1 am 140
+  glosa_fr: songer, rêver
+  forma_mujeres: ka-tobui-kua
+  lokono_A: otobo-ni
+  otras: null
+  nota: el sueño; cf. el corpus de creencia y transmisión
+  verificado_en_imagen: true
+- pagina_impresa: 111
+  sigla_margen: f-
+  glosa_fr: méchanceté
+  forma_mujeres: t-itobu-li
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 112
+  sigla_margen: f-
+  glosa_fr: arroser, mouiller
+  forma_mujeres: atugnukêta
+  lokono_A: null
+  otras: atuara, atugnuru; 6 aturu; le mouvement de l'eau 6 l-aduñuru-n duna
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 112
+  sigla_margen: fA
+  glosa_fr: traîner, descendre le canot, contraindre
+  forma_mujeres: aturguta
+  lokono_A: u-turu (pied, manchon)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 112
+  sigla_margen: fA
+  glosa_fr: paquet de feuilles; répandre
+  forma_mujeres: aogo-ni
+  lokono_A: null
+  otras: répandre t-ao; asperger atuaragua; plat t-aoba
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 112
+  sigla_margen: f-
+  glosa_fr: crier; appeler
+  forma_mujeres: auara; aoka (appeler)
+  lokono_A: null
+  otras: ua, aoro, a-k-aoara; 6 aguwara
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 113
+  sigla_margen: f-
+  glosa_fr: paillarder
+  forma_mujeres: ka-uali-gua
+  lokono_A: null
+  otras: (ve L alia-gua)
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 113
+  sigla_margen: fam
+  glosa_fr: dérober
+  forma_mujeres: iualu-ka
+  lokono_A: awahudu (vagabonder)
+  otras: 5 st ivuaru; 6 hiwaru; G aruaia
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: f am?
+  glosa_fr: respirer; haleine
+  forma_mujeres: au(ha)ra … aniši
+  lokono_A: ahakobu
+  otras: aoara; Gu n-ahahatakaya; dernier soupir auakaka-a-li
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: fA
+  glosa_fr: fort, puissant
+  forma_mujeres: uarigo
+  lokono_A: null
+  otras: fort uana; puissance 6 uwara, waina; 5 wairegu
+  nota: 'raíz uar- ''fuerza'': cf. el reconstruido caquetío wara ''muy'''
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: fh-
+  glosa_fr: paisible; accommoder; se réjouir
+  forma_mujeres: auaše; auašata; auaša-goa (se réjouir)
+  lokono_A: null
+  otras: assez uaša; attrayant šawa-ti aniši
+  nota: de los dos registros
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: fA
+  glosa_fr: vieux, usé
+  forma_mujeres: uai
+  lokono_A: wahadu; wa-kili (jadis)
+  otras: 2 awaita; 6 waya
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: fA
+  glosa_fr: se quereller; mauvais
+  forma_mujeres: ka-auai
+  lokono_A: wakaya (mauvais)
+  otras: null
+  nota: h ka-uainême, K yawame
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: fA
+  glosa_fr: grand, de haute taille
+  forma_mujeres: uairi
+  lokono_A: wadi; -wai (très)
+  otras: 6 wairi; étonné 6 wayri … anigui
+  nota: d = r
+  verificado_en_imagen: true
+- pagina_impresa: 114
+  sigla_margen: f-
+  glosa_fr: il traite bien, reçoit bien son monde
+  forma_mujeres: t-ebueke-ti
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 115
+  sigla_margen: f-
+  glosa_fr: vomir
+  forma_mujeres: ebuereka
+  lokono_A: null
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 115
+  sigla_margen: f 1 am 150
+  glosa_fr: pleurer
+  forma_mujeres: aya(-kua)
+  lokono_A: aiya
+  otras: pleurs 6 iyahua; cri 6 aiyahua
+  nota: 'Adam p. 288: Aiy-i-n → F. aya-coua'
+  verificado_en_imagen: true
+- pagina_impresa: 115
+  sigla_margen: f-
+  glosa_fr: faire de la cassave
+  forma_mujeres: ayaka
+  lokono_A: null
+  otras: 'gâteau enveloppé dans une feuille: Papiamento (Curaçao) ayaka'
+  nota: la hallaca; Curaçao está en la Kaketiana
+  verificado_en_imagen: true
+- pagina_impresa: 115
+  sigla_margen: fA
+  glosa_fr: s'éclipser, s'écouler, choir
+  forma_mujeres: aikua
+  lokono_A: aiakati (cacher); aika (mourir)
+  otras: null
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 116
+  sigla_margen: f am
+  glosa_fr: aiguiser; râper
+  forma_mujeres: yara
+  lokono_A: atarata … airi
+  otras: râper ayarata; 6 ayraho … ari; G ayara
+  nota: null
+  verificado_en_imagen: true
+- pagina_impresa: 116
+  sigla_margen: f 2 am 62
+  glosa_fr: aller par terre, se promener
+  forma_mujeres: ayubu-ka, ayobuka
+  lokono_A: aiahadi
+  otras: 5, 6 aibuga
+  nota: null
+  verificado_en_imagen: true

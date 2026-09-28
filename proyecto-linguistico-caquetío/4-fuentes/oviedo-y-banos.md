@@ -192,3 +192,16 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 Barrido de «Coro» junto a viento/latín/cauro: un solo caso, los vientos
 contrarios que impiden a Carvajal «coger a Coro». Oviedo y Baños no trae la
 lectura 'viento'. Es de Castellanos. Detalle: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §coro.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero y leídas las ventanas creencia × mar. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `oviedo_banos`: 13 ventanas creencia × mar (13 con un nombre de la costa occidental cerca), 14 creencia × cielo de control.
+
+**Se halló:** Nada caquetío: Aguirre, la reventazón del mar, los caracoles de guerra de los indios de Caracas (Paramaconi, Guaicaipuro).
+
+**No se halló:** Cero.

@@ -240,6 +240,24 @@ rehabilita un `descartado` se registra al subirlo de nivel, que es la decisión.
 Las lecturas que todavía viven en `6-fusion/` sin colgar de su topónimo se
 listan en `issues-pendientes/issue-esquema-lecturas-toponimos.md`.
 
+Un **descartado** puede llevar lecturas desde el 2026-09-24 (dp.2.09 de #222):
+el grupo de `DESCARTES` trae `lecturas: {forma: [...]}` y el migrador las
+cuelga de la forma. Es lo que permite dejar una identificación «a revisar»
+(Cumairebo ~ Curaidebo) sin subirla de nivel.
+
+## Topónimos: la forma viva, con su coordenada (2026-09-24)
+
+Cuando el mapa escribe un topónimo del canon de otra manera —Cividual por
+Sibidigual, Bajo Aroa por Bajabaroa— la entrada guarda esa forma en
+`forma_viva: [{forma, tipo, lat, lon, fuente: osm-kaketiana}]` (en un grupo
+de descartes, `formas_vivas: {forma: [...]}`). Lo decidió dp.2.09 de #222
+(P4): hasta entonces la forma viva sólo vivía en la prosa de `observacion`, y
+`barrer_mapa.py` anunciaba como «nuevos» nombres que ya estaban. Ahora el
+barrido la lee **antes** del cruce aproximado. Las coordenadas salen del
+volcado de OSM del lote 7 y se copiaron de la propia entrada
+(`6-fusion/scripts/formas_vivas_al_canon.py`); una identificación dudosa NO
+va aquí, va como lectura `hipotesis`.
+
 ## Lo que falta
 
 1. **Los 38 ambiguos**, con un `procedencia` que exprese la cadena

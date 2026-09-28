@@ -164,13 +164,20 @@ def minar():
     # IDEMPOTENCIA: como con lexicon_zavala — medir contra el lexicón PREVIO,
     # excluyendo lo que este propio módulo ya haya fusionado.
     sys.path.insert(0, AQUI)
+    # Se excluye por IDENTIDAD de la entrada, no por clave: una clave A-2 que
+    # otra capa ocupó después (el núcleo de las hermanas tomó `ada` y `hime`,
+    # 2026-09-24) ya no es «propia» y tiene que salir como colisión. Y lo
+    # ARCHIVADO cuenta como ocupado: una voz caquetía fuera del habla sigue
+    # siendo canon (sin esto, `pia` 'tú' paraujano entraba al archivarse el
+    # `pia` caquetío en la tanda final).
     try:
         from lexicon_a2 import PARAUJANO_A2 as _P, LOKONO_A2 as _L
-        propias = set(_P) | set(_L)
+        propias = {**_P, **_L}
     except ImportError:
-        propias = set()
-    from curiana_lexicon import VOCABULARIO_BASE
-    existentes = {w for w in VOCABULARIO_BASE if w not in propias}
+        propias = {}
+    from curiana_lexicon import VOCABULARIO_BASE, FUERA_DEL_HABLA
+    existentes = {w for w, e in VOCABULARIO_BASE.items()
+                  if propias.get(w) is not e} | set(FUERA_DEL_HABLA)
 
     out = {"paraujano": {}, "lokono": {}}
     referencia = {"paraujano": [], "lokono": []}

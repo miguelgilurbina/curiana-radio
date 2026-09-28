@@ -34,6 +34,13 @@ que es exactamente el error que Oliver denuncia.
 4. `polity_caquetia: ninguna` (desde tf.7 B, 2026-09-23) es el vecino de la
    ESFERA que no toca a ninguna polity caquetía —los guaiqueríes de
    Margarita—, y exige `tipo_de_contacto: ninguno`.
+5. `epoca` (desde dp.2.03, #222, 2026-09-24) dice de QUÉ época es el
+   contacto que la ficha afirma —`precontacto` · `contacto-temprano` ·
+   `colonial` · `varias`—, y es obligatoria cuando `polity_caquetia:
+   costera`. Sin ella, una ficha con fuente y polity costera pasa diciendo
+   que hay un vecino documentado de la Curiana del siglo XV aunque lo
+   documentado sea de 1513 (regla 3: precontacto ≠ colonial). El matiz va en
+   `epoca_nota`.
 
 Y la de siempre: `procedencia.obra` es clave foránea contra la bibliografía, y
 `ver_tambien` solo puede apuntar a hechos del corpus o archivos que existan.
@@ -87,6 +94,14 @@ POLITY_NINGUNA = "ninguna"
 VALORES_POLITY = POLITIES + (POLITY_NINGUNA,)
 CONTACTOS = ("corresidencia", "vecindad", "mercado", "guerra", "visita", "ninguno")
 INTENSIDADES = ("maxima", "alta", "media", "baja", "ninguna", "desconocida")
+# La época del contacto que la ficha afirma (dp.2.03 de #222, 2026-09-24,
+# «Ok a todo»; propuesta de T5 y T8, las dos campañas del taíno). Es el mismo
+# problema que `asentamientos.yaml` resolvió partiendo etiqueta / atestacion /
+# precontacto: la etiqueta dice cuánto sabemos, la época dice DE CUÁNDO es lo
+# que sabemos. `varias` es la ficha cuyo contacto cambia de naturaleza con la
+# época (el taíno: ninguno en precontacto, deportación en la colonia); el
+# desglose va en `epoca_nota`.
+EPOCAS = ("precontacto", "contacto-temprano", "colonial", "varias")
 
 OBLIGATORIOS = ("id", "nombre", "etiqueta", "familia_linguistica", "donde",
                 "polity_caquetia", "tipo_de_contacto", "intensidad")
@@ -211,7 +226,7 @@ def validar_vocabularios(etnias: list) -> list:
     """Cada campo cerrado, con su lista cerrada. Sin esto no se puede agrupar."""
     cerrados = (("etiqueta", ETIQUETAS), ("familia_linguistica", FAMILIAS),
                 ("polity_caquetia", VALORES_POLITY), ("tipo_de_contacto", CONTACTOS),
-                ("intensidad", INTENSIDADES))
+                ("intensidad", INTENSIDADES), ("epoca", EPOCAS))
     problemas = []
     for etnia in etnias:
         donde = etnia.get("id", "(sin id)")
@@ -230,6 +245,7 @@ def _nota_de(campo: str) -> str:
             "polity_caquetia": "polity_nota",
             "tipo_de_contacto": "contacto_nota",
             "intensidad": "intensidad_nota",
+            "epoca": "epoca_nota",
             "etiqueta": "aviso"}[campo]
 
 
@@ -254,6 +270,9 @@ def validar_polity(etnias: list) -> list:
     4. `polity_caquetia: ninguna` (tf.7 B) exige `tipo_de_contacto: ninguno`:
        el vecino de la esfera que no toca a ninguna polity no puede declarar
        un contacto con los caquetíos, porque ese contacto sería con ALGUNA.
+    5. `polity_caquetia: costera` exige `epoca` (dp.2.03): la fuente puede
+       documentar un contacto de 1513, y sin la época el registro diría que
+       el vecino es del siglo que se simula (regla 3).
     """
     problemas = []
     for etnia in etnias:
@@ -287,6 +306,13 @@ def validar_polity(etnias: list) -> list:
                 "sin-procedencia-ni-deuda", donde,
                 "no cita obra ni declara `deuda: sin-procedencia` (regla 8: "
                 "el hueco se admite, callarlo no)"))
+
+        if polity == POLITY_SIMULADA and not etnia.get("epoca"):
+            problemas.append(_error(
+                "costera-sin-epoca", donde,
+                "toca la polity costera (la simulada) y no dice de qué época es "
+                f"el contacto (`epoca`: {', '.join(EPOCAS)}). Una fuente de 1513 "
+                "no documenta un vecino del siglo XV (regla 3)"))
 
         if polity == POLITY_NINGUNA and etnia.get("tipo_de_contacto") != "ninguno":
             problemas.append(_error(
@@ -411,7 +437,8 @@ def informe(etnias, meta, problemas) -> None:
         for e in costera:
             como = ("canon-simulación" if e.get("etiqueta") == "canon-simulacion"
                     else f"documentado en {e.get('procedencia', {}).get('obra')}")
-            print(f"    {e.get('nombre'):22} {como}")
+            print(f"    {e.get('nombre'):22} {como} · {e.get('etiqueta')}"
+                  f" · época {e.get('epoca', '?')}")
     else:
         print("\n  ⚠ NINGÚN vecino documentado toca la polity costera.")
 

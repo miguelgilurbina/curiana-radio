@@ -1274,6 +1274,7 @@ cosmovision_marina:
       capa: 's. XX (tradición local impresa); la etimología «rodeada de mar» es LECTURA y depende de na = «tierra», que ninguna fuente da (toponimo-018, #109)'
       procedencia: {obra: esteves-1989, pagina: 56}
     - id: cm-s3
+      corregido_cc10: 'CORREGIDO (cc.10 (g) A, 2026-09-24): «viciosos de comida de carne y pescado» es de los caquetíos de los LLANOS (Pérez de Tolosa en Fernández Duro 1885 t. II p. 234; Arcaya p. 46); las otras dos citas sí son de la costa'
       dato: 'El mar es la despensa que la crónica le ve a esta gente: «pueblos medianos y mucha caza, pesca y ropa de hamacas»; «viciosos de comida de carne y pescado»; «mucho pescado de mar y de río».'
       etiqueta: atestiguado
       capa: 'contacto (Pérez de Tolosa 1546)'
@@ -1323,6 +1324,7 @@ cosmovision_marina:
         El cielo y la lluvia tienen más peso atestiguado que el mar.
       que_lo_subiria: 'en orden de rendimiento esperado: (1) Oviedo t. II, libro XXV, capítulos de Coro, releído entero buscando «mar», «pescado», «tiburón», «tortuga» en contexto ritual; (2) los ajuares de los enterramientos dabajuroides (¿conchas marinas, dientes de tiburón?) — cruzar con M8; (3) la iconografía de los petroglifos (moron-2012-petroglifos) buscando motivos marinos'
     - id: cm-n3
+      corregido_cc10: 'CORREGIDO (cc.10 (g) A, 2026-09-24): en Las Aves la espira agujereada es para sacar la carne (cm24-a05): lo que subiría la bocina es un ápice cortado y pulido como embocadura, fuera de contexto alimentario'
       intuicion: 'Que la guarura (caracol-bocina) fuera instrumento ritual caquetío.'
       estado: 'La guarura es s. XX (Medina); la trompeta de botuto como objeto ritual es de la glosa del lexicón para el taíno `cobo` («trompeta ritual»), sin procedencia. Sin dato caquetío.'
       que_lo_subiria: 'un botuto con la punta cortada (bocina) en un sitio dabajuroide'
@@ -1347,6 +1349,7 @@ cosmovision_marina:
       procedencia: {obra: pane-c1498, pagina: 'caps. IX-X'}
       limite: 'la esfera de contacto, no el caquetío (la campaña del taíno: «ni vecino ni pariente medible»). Rima con que el caquetío BEBE los huesos (creencia-010): esa rima es lectura de esta campaña, no dato'
     - id: cm-c3
+      corregido_cc10: 'CORREGIDO (cc.10 (g) A, 2026-09-24): no es atestiguado: en el repo descansa en una tesis que lo cita de terceros y Pulowi sale 0 veces en Jahn y en el Cuadernillo; es `reconstruido` como mucho (cm24-c-w01)'
       lengua: wayuu
       dato: 'Para los wayuu las tortugas marinas son el «ganado» de Pulowi, y un cerro sagrado es donde ella las cura; son don de Maleiwa.'
       etiqueta: atestiguado

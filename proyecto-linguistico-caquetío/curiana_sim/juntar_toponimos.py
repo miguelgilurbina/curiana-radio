@@ -432,6 +432,24 @@ def miguel() -> list[Mencion]:
     return out
 
 
+def cola_otras_fuentes() -> list[Mencion]:
+    """La cola de la campaña que no es de Esteves ni del mapa de Miguel
+    (6-fusion/toponimos_cola_otras_fuentes.yaml, abierta por dp.2.10 de #222,
+    2026-09-24): lo que traen las parcelas de otras obras, con su página y su
+    época, hasta que alguien lo procese."""
+    ruta = "6-fusion/toponimos_cola_otras_fuentes.yaml"
+    if not (RAIZ / ruta).exists():
+        return []
+    d = leer_yaml(ruta)
+    out = []
+    for e in d.get("cola") or []:
+        out.append(Mencion(e["forma"], e["obra"], "cola", f"{ruta} §cola",
+                           dato=corto(e.get("nota", "")), ref=f"p. {e.get('pagina', '?')}",
+                           identificado_con=e.get("identificado_con", ""),
+                           epoca=str(e.get("epoca", ""))))
+    return out
+
+
 def nodos() -> dict[str, dict]:
     """3-mundo/asentamientos.yaml — el registro de nodos, para el cruce."""
     d = leer_yaml("3-mundo/asentamientos.yaml")
@@ -474,7 +492,8 @@ def juntar():
 
     menciones: list[Mencion] = []
     for extractor in (canon, esteves, castellanos, bastidas, gonzalez_batista, arcaya,
-                      moron, oliver_delmonte, medina_colina, gatschet, van_buurt, miguel):
+                      moron, oliver_delmonte, medina_colina, gatschet, van_buurt, miguel,
+                      cola_otras_fuentes):
         menciones += extractor()
 
     avisos = []

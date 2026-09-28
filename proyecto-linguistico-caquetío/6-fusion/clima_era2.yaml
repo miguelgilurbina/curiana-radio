@@ -300,7 +300,7 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '8-9'}
         apoyo_en_repo: [ecologia-005, ecologia-006]
         estacion: 'seca'
-        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: unia, capa: caquetío-reconstruido}  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
     mar:
       - dato: >-
           El agua se pone clara y calma y se abre la temporada de buceo: «El
@@ -350,7 +350,7 @@ periodos:
         capa: 's. XX (Arcaya 1920 sobre Sievers 1892)'
         procedencia: {obra: arcaya-1920, pagina: '22'}
         estacion: 'todo el año'
-        voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
         lectura: 'la fuente del cerro corre a su propio ritmo, no al del jagüey: es la excepción que hace del Capubana el centro (capubana_agua_y_microclima.yaml)'
     cielo:
       - dato: >-
@@ -472,7 +472,7 @@ periodos:
         capa: 's. XIX-XX'
         procedencia: {obra: arcaya-1920, pagina: '24'}
         estacion: 'seca larga'
-        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: unia, capa: caquetío-reconstruido}  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
       - dato: >-
           El hambre de fin de seca tiene testimonio: en Amuay, 1556, pidieron al
           obispo «Danos otro cura, que no sea cobarde como el que tenemos, que en
@@ -493,7 +493,7 @@ periodos:
         procedencia: {obra: arcaya-1920, pagina: '264 (Pérez de Tolosa 1546)'}
         apoyo_en_repo: [ecologia-036]
         estacion: 'todo el año'
-        voz_caquetia: {clave: arima, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: hime, capa: caquetío-hipotético}  # era `arima`, archivada en la tanda de las hermanas (2026-09-24)
     agua_dulce:
       - dato: >-
           El agua del jagüey se acaba o se vuelve mala: se excavan pozos «(cacimbas
@@ -553,7 +553,7 @@ periodos:
         capa: 'colonial: Castellanos vio Coro hacia 1540 y publicó en 1589'
         procedencia: {obra: castellanos-elegias, pagina: 'línea 48246 del txt (Parte II, Introducción)'}
         estacion: 'seca larga'
-        voz_caquetia: {clave: marisi, capa: caquetío-hipotético}
+        voz_caquetia: {clave: marisi, capa: caquetío-reconstruido}  # era hipotética: dos hermanas (tanda de las hermanas, 2026-09-24)
         aviso: '`marisi` es de las 38 hipotéticas que el perfil era2 esconde; el maíz que el agente ve nombrado es `kasá` (puche) y `buriche` (chicha), no el grano'
     el_dia:
       amanecer:
@@ -562,7 +562,7 @@ periodos:
           deuda: sin-procedencia
           apoyo_en_repo: [ecologia-008]
           estacion: 'seca larga — amanecer'
-          voz_caquetia: {clave: duna, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: uni, capa: caquetío-reconstruido}  # era `duna`, archivada en la tanda de las hermanas (2026-09-24)
       mediodia:
         - dato: >-
             El calor llega al máximo sobre suelo descubierto; Oliver mide el
@@ -616,7 +616,7 @@ periodos:
         procedencia: {obra: camacho-2011, pagina: '8-9'}
         apoyo_en_repo: [ecologia-006]
         estacion: 'lluvias'
-        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: unia, capa: caquetío-reconstruido}  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
       - dato: >-
           ⭐ El pulso, visto en el sitio y fechado: «Sievers, que estuvo allí en
           los últimos días de octubre y primeros de noviembre de 1892, época
@@ -627,7 +627,7 @@ periodos:
         capa: 's. XIX (observación de 1892), citada por Arcaya en 1920'
         procedencia: {obra: arcaya-1920, pagina: '24'}
         estacion: 'lluvias'
-        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: unia, capa: caquetío-reconstruido}  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
         lectura: >-
           Es el único testimonio del repo que fecha el pulso DENTRO de Paraguaná
           y no en la estación de Coro: coincide con ecologia-006 y es lo que
@@ -639,7 +639,7 @@ periodos:
         capa: s. XX
         procedencia: {obra: arcaya-1920, pagina: '24'}
         estacion: 'lluvias'
-        voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: unia, capa: caquetío-reconstruido}  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
       - dato: >-
           La lluvia también rompe: la acequia del buco de Coro «todos los años en
           tiempos de aguas... se enarena, y la presa se quiebra en dos y tres
@@ -702,7 +702,7 @@ periodos:
         deuda: sin-procedencia
         apoyo_en_repo: [ecologia-030]
         estacion: 'lluvias'
-        voz_caquetia: {clave: amana, capa: caquetío-reconstruido}
+        voz_caquetia: {clave: hikihi, capa: caquetío-hipotético}  # era `amana`, archivada en la tanda de las hermanas (2026-09-24)
     el_dia:
       amanecer:
         - dato: 'Se lee el cielo antes de clavar la estaca: la señal de que el pulso empezó decide la siembra del año entero.'
@@ -710,7 +710,7 @@ periodos:
           deuda: sin-procedencia
           apoyo_en_repo: [ecologia-006]
           estacion: 'lluvias — amanecer'
-          voz_caquetia: {clave: kono, capa: caquetío-reconstruido}
+          voz_caquetia: {clave: jusual, capa: caquetío-atestiguado}  # era `kono`, archivada en la tanda de las hermanas (2026-09-24)
       mañana:
         - dato: 'El conuco se abre con la coa: «palo de madera aguzado para abrir el surco». Es la herramienta agrícola indígena y no tiene nombre caquetío en el lexicón.'
           etiqueta: retro-abstraido
@@ -912,7 +912,7 @@ ritos_del_calendario:
       deuda: sin-procedencia
       apoyo: 'curiana_state.EVENTOS_ESTACIONALES; ecologia-006'
       estacion: 'lluvias'
-      voz_caquetia: {clave: kaya, capa: caquetío-reconstruido}
+      voz_caquetia: {clave: unia, capa: caquetío-reconstruido}  # era `kaya`, archivada en la tanda de las hermanas (2026-09-24)
     - dato: >-
         GRAN COSECHA DE SAL (dentro de P1): el motor la declara de la seca y la
         física la confirma — «es el Tiempo de Viento (alisio ENE fuerte + sol

@@ -230,7 +230,7 @@ if __name__ == "__main__":
     proto_data    = generar_proto_reconstruidos()
 
     # Guardar JSON para revisión
-    out_taino = Path("taino_hipotetico.json")
+    out_taino = Path("taino_hipotetico.json")  # el de 2026-06-21 vive en 6-fusion/ (dp.3.23 de #222)
     out_proto = Path("proto_arahuaco_reconstruido.json")
     out_taino.write_text(json.dumps(taino_data, ensure_ascii=False, indent=2), encoding="utf-8")
     out_proto.write_text(json.dumps(proto_data, ensure_ascii=False, indent=2), encoding="utf-8")

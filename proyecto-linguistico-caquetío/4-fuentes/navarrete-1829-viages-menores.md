@@ -237,3 +237,37 @@ interpolado; (3) Navarrete pone palabras que su fuente no tiene («guanines»,
 
 [[angleria-1892]] · [[colon-hernando-1892]] · [[navarrete-1859-viages-colon]] ·
 [[oliver-1989-cap3]] · [[gonzalez-batista-nombre-de-coro]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero; leídas las ventanas con un nombre de la costa occidental cerca. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `navarrete1829`: 54 ventanas creencia × mar (7 con un nombre de la costa occidental cerca), 7 creencia × cielo de control.
+
+**Se halló:** Nada de creencia: rescates de perlas y oro, capitulaciones, Vespucio.
+
+**No se halló:** Cero.
+
+## 2026-09-27 — el PDF entra y se ven las páginas que el OCR dejaba en duda
+
+Con el permiso de Miguel (dp.2.05/2.06 C de #222) se bajó el PDF de archive.org
+(`bub_gb_HFzXrEyoeCAC`, marca de dominio público; el servidor principal daba 500 y
+salió del espejo europeo): `fuentes_caquetios/Navarrete_1829_Coleccion_Viages_t3_Viages_Menores.pdf`,
+21.662.102 bytes, 668 páginas, sha256 `9e93ecf12d78a8c4…`. Pesa: se queda en OneDrive y
+fuera de git, como Breton (D8). **Página impresa = pdf − 22.**
+
+Vistas en imagen:
+
+- **p. 32**: «llegó á una tierra de **riego** que los indios llamaban *Curiana*» (el OCR
+  decía «rieeo»).
+- **p. 86**: «las otras que allí estan cerca della, que se dicen **Quiquevacoa**» (el
+  OCR, «Qoiquevacoa»); **p. 87** «la isla **Caquevacoa**»; **p. 89** «la isla de
+  **Caquivacoa**» (12-VI-1501).
+- **p. 518**: «las islas de la Pária é de **Caquibacoa**».
+- **pp. 544-545**: «**Quinquibacoa**» cuatro veces, sin tilde: la «í» era del OCR.
+
+Van a `toponimo-034` (la observación) y a la propuesta de M2
+(`6-fusion/cronicas_contacto_costa_occidental_2026-09-22.yaml`, `verificado_en_imagen`).

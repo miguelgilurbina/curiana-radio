@@ -4,7 +4,7 @@
 CURIANA — los guardianes, en un solo comando
 ============================================
 
-El proyecto tiene nueve comprobaciones que miden **contra el dato** y no contra
+El proyecto tiene diez comprobaciones que miden **contra el dato** y no contra
 la documentación. Estaban sueltas, y correrlas dependía de que alguien se
 acordara de todas:
 
@@ -17,8 +17,14 @@ acordara de todas:
     7. los datos de lengua        python curiana_sim/compilar_lengua.py --check
     8. el registro de nodos       python curiana_sim/compilar_asentamientos.py --check
     9. el registro de vecinos     python curiana_sim/compilar_etnias.py --check
+   10. el mundo de la era 2       python 6-fusion/scripts/verificar_sitios_era2.py --conteos
 
-Acordarse de nueve cosas no es un método: es suerte. Esto las corre todas,
+El décimo entró el 2026-09-24: `sitios_era2.yaml` y `clima_era2.yaml` nombran la
+voz caquetía de cada cosa (`voz_caquetia: {clave, capa}`) y `[Tu tierra]` la
+enseña; al archivar voces en la tanda de las hermanas el verificador daba 22
+fallos y no lo vio nadie hasta que el pre-vuelo encontró «Lo decís duna».
+
+Acordarse de diez cosas no es un método: es suerte. Esto las corre todas,
 informa en una tabla y sale con código ≠ 0 si alguna falla, para que se pueda
 colgar de un hook o de CI.
 
@@ -27,7 +33,7 @@ viejo cada vez que cambia una cifra medida, que es constantemente, y bloquear
 por eso sería ruido. Se regenera, no se vigila.
 
 Uso:
-    python guardianes.py            # los nueve, informe en tabla
+    python guardianes.py            # los diez, informe en tabla
     python guardianes.py --rapido   # salta los tests (los más lentos)
     python guardianes.py --silencio # solo el veredicto, para hooks
 """
@@ -71,6 +77,9 @@ GUARDIANES = [
      REPO, False),
     ("registro de vecinos",
      [PY, os.path.join(AQUI, "compilar_etnias.py"), "--check"],
+     REPO, False),
+    ("el mundo de la era 2",
+     [PY, os.path.join(REPO, "6-fusion", "scripts", "verificar_sitios_era2.py"), "--conteos"],
      REPO, False),
 ]
 

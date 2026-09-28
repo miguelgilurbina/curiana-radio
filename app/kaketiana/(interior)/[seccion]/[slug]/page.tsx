@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getWikiPagina, getWikiParams, getVecinos } from "@/lib/wiki";
+import { enlazarVoces } from "@/lib/fichas";
 import { SECCIONES_WIKI, type SeccionWiki } from "@/types/wiki";
 import { Overline } from "@/components/simulador/ui";
 import { WikiProse } from "@/components/simulador/wiki-mdx";
@@ -62,7 +63,8 @@ export default async function ArticuloPage({ params }: ArticuloProps) {
       </header>
 
       <div className="mt-8">
-        <WikiProse source={pagina.cuerpo} />
+        {/* Las voces caquetías que el artículo nombra enlazan a su ficha */}
+        <WikiProse source={enlazarVoces(pagina.cuerpo)} />
       </div>
 
       {/* Sobre qué se sostiene — rescatado del preámbulo del ensayo */}

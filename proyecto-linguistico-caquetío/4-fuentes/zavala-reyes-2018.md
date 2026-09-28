@@ -203,3 +203,16 @@ Lo mide `python 6-fusion/scripts/medir_taino2_evidencia_material.py`.
 
 [[camacho-2011]] · [[antczak-2015-las-aves]] · [[oliver-1989-cap2]] ·
 [[zavala-reyes-2015]] · [[arcaya-1920]] · [[esfera-de-interaccion]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido entero. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `zavala2018`: 0 ventanas creencia × mar (0 con un nombre de la costa occidental cerca), 0 creencia × cielo de control.
+
+**Se halló:** Ninguna ventana creencia × mar: el conchal de los Médanos es comida.
+
+**No se halló:** Cero.

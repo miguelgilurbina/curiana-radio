@@ -109,7 +109,8 @@ rasgo que la Parte 4 atribuye a los caquetíos, con su fuente. Propuesta:
   350,000; 1940: 103,000». La prop-polity-015 de
   `6-fusion/polities_no_costeras_federmann.yaml` está bien.
 - ❌ **Las «tres áreas demográficas» no son de Steward** (arriba). La
-  prop-polity-016 debería citar a Brito Figueroa como lectura propia. Lo más
+  prop-polity-016 debería citar a Brito Figueroa como lectura propia —
+  ✅ corregido el 2026-09-24 (dp.3.11 de #222). Lo más
   cercano en Steward es genérico (p. 665): las segundas densidades más altas
   eran las circum-caribeñas, «where the people relied on ocean resources as
   much as on farming».

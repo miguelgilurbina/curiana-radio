@@ -221,6 +221,19 @@ lengua… pero, *como no había intérpretes, no entendieron lo que decía*»
 **Qué NO dio:** Coro, Paraguaná, Curazao, Aruba, Bonaire, caquetíos: cero en
 los dos volúmenes (con `isla`, `oro` e `indio` por centenares de control).
 
+## 2026-09-24 — lo que entró al canon (#222, grupo 2)
+
+«Ok a todo, que no quede ninguna tarea pendiente» (Miguel, 2026-09-24).
+
+- **dp.2.05**: la Curiana de Niño y Guerra (vol. 1 p. 303) queda registrada
+  como la ORIENTAL en `toponimo-111` (lecturas), con Navarrete t. III p. 13 n.
+  4; la red Curiana ↔ Cauchieto de la sesión del 2026-09-21 se acota en
+  `6-fusion/taino_en_la_esfera_2026-09-21.yaml` (eth-00): es de la costa
+  oriental, no de la Kaketiana.
+- **dp.2.01**: la p. 309 (pdf 373) —las ferias «pero de cerca» y el oro que
+  «se les llevan de otras partes á cambio»— sostiene, con su aviso de costa
+  oriental, la forma «cadena de tramos cortos» de `geografia_politica-019`.
+
 ## Qué falta
 
 - **Barrido dirigido a los caquetíos**: queda sin preguntar la religión. La
@@ -239,3 +252,30 @@ los dos volúmenes (con `isla`, `oro` e `indio` por centenares de control).
 
 [[04_transmision_saber]] · [[las-casas-1875]] · [[colon-hernando-1892]] ·
 [[navarrete-1859-viages-colon]] · [[navarrete-1829-viages-menores]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barridos los dos volúmenes; leídas las ventanas con un nombre de la costa occidental cerca. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `angleria_v1`: 25 ventanas creencia × mar (1 con un nombre de la costa occidental cerca), 16 creencia × cielo de control; `angleria_v4`: 32 ventanas creencia × mar (1 con un nombre de la costa occidental cerca), 31 creencia × cielo de control.
+
+**Se halló:** El único «Creen que hay dioses en el mar» de las crónicas del repo es de CHICORA (las Carolinas), vol. 4 p. 107, en la fiesta en que una estatua se tira «de cabeza al mar» (p. 105): fuera de la esfera, no se proyecta.
+
+**No se halló:** Cero de la costa occidental.
+
+## 2026-09-24 — campaña cosmovisión marina (comparanda)
+
+**Se halló (comparanda taína, vol. 1, Déc. I lib. IX):** Pané resumido: «Jocauna,
+Guamaonocon» (p. 339, imagen), sin «vagua»; la mujer «en el fondo del mar» que
+da cibas y guaninos, joyas que «tienen por sagradas los Reyes» (p. 342,
+imagen); la calabaza de Jaia de la que salieron «ballenas y grandes cetáceos», y
+las islas como las cumbres que el mar no alcanzó (pp. 345-346, imagen); el pez
+cazador `guaicano` de Cuba, al que alimentan con la presa (p. 187, imagen); y en
+el vol. 4 el areíto con sonajas de caracoles (pp. 226-228). **Corrección:** el
+areíto se cita en `transmision-018` y en esta ficha como «vol. 4, p. 236», que es
+la página del PDF: la impresa es **228**.
+
+COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.

@@ -1,7 +1,7 @@
 # GENERADO por curiana_sim/barrer_mapa.py — no editar a mano.
 meta:
   generado_por: curiana_sim/barrer_mapa.py
-  generado: '2026-09-22'
+  generado: '2026-09-27'
   editar_a_mano: no — se edita el script o se vuelve a descargar, y se regenera
   fuente_mapa: OpenStreetMap vía Overpass, descargado el 2026-09-07
   licencia: ODbL 1.0 — © OpenStreetMap contributors
@@ -25,16 +25,17 @@ meta:
     entradas: 1696
     por_region:
       paraguana: {total: 357, castellano: 225, castellano_con_voz_indigena: 8, neerlandes_papiamento: 0, por_clasificar: 124,
-        de_ellos_en_canon: 39, de_ellos_en_esteves: 81, de_ellos_en_alguna_fuente: 101, aproximados_a_revisar: 15,
-        nuevos: 8}
+        de_ellos_en_canon: 112, de_ellos_en_esteves: 77, de_ellos_en_alguna_fuente: 124, aproximados_a_revisar: 0,
+        nuevos: 0}
       golfete-de-coro: {total: 314, castellano: 169, castellano_con_voz_indigena: 10, neerlandes_papiamento: 0,
-        por_clasificar: 135, de_ellos_en_canon: 7, de_ellos_en_esteves: 5, de_ellos_en_alguna_fuente: 17, aproximados_a_revisar: 13,
+        por_clasificar: 135, de_ellos_en_canon: 11, de_ellos_en_esteves: 5, de_ellos_en_alguna_fuente: 17, aproximados_a_revisar: 13,
         nuevos: 105}
       falcon-occidental: {total: 145, castellano: 47, castellano_con_voz_indigena: 3, neerlandes_papiamento: 0,
-        por_clasificar: 95, de_ellos_en_canon: 9, de_ellos_en_esteves: 1, de_ellos_en_alguna_fuente: 11, aproximados_a_revisar: 11,
+        por_clasificar: 95, de_ellos_en_canon: 10, de_ellos_en_esteves: 1, de_ellos_en_alguna_fuente: 11, aproximados_a_revisar: 11,
         nuevos: 73}
       islas-abc: {total: 880, castellano: 81, castellano_con_voz_indigena: 0, neerlandes_papiamento: 88, por_clasificar: 711,
-        de_ellos_en_canon: 8, de_ellos_en_esteves: 0, de_ellos_en_alguna_fuente: 64, aproximados_a_revisar: 8, nuevos: 639}
+        de_ellos_en_canon: 10, de_ellos_en_esteves: 0, de_ellos_en_alguna_fuente: 66, aproximados_a_revisar: 8,
+        nuevos: 637}
     descartados_por_etiqueta: {duplicado: 551, natural=tree: 92, natural=cave_entrance: 19, place=square: 16, waterway=drain: 10,
       place=archipelago: 6, waterway=dock: 6, place=state: 5, waterway=boatyard: 5, natural=coastline: 4, place=region: 3,
       place=country: 2, place=plot: 2, place=borough: 2, natural=grass: 2, natural=hot_spring: 1, natural=grassland: 1,
@@ -188,11 +189,7 @@ entradas:
   osm: relation/9993715
   osm_tag: natural=bay
   clase: por-clasificar
-  cruce:
-    con: golfete de coro
-    como: exacto
-    fuentes: [sin-procedencia]
-    en_canon: toponimo-140 · nivel descartado
+  cruce: {con: golfete de coro, como: forma-viva, en_canon: toponimo-140}
 - {forma: Las Grietas, tipo: lugar, lat: 11.06857, lon: -70.4778, region: falcon-occidental, fuente_mapa: osm, osm: node/11141212395,
   osm_tag: place=locality, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
 - {forma: Guaguana, tipo: poblado, lat: 10.83106, lon: -71.01402, region: falcon-occidental, fuente_mapa: osm, osm: node/5312521858,
@@ -469,9 +466,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: tacal
   cruce:
-    con: Tacal
+    con: tacal
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-253 · nivel C
     en_esteves: true
 - forma: Río Tupure
   tipo: río
@@ -661,9 +659,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Sacuragua
+    con: sacuragua
     como: aproximado:sacuragua
     fuentes: [esteves-1989]
+    en_canon: toponimo-250 · nivel C
     en_esteves: true
   revisar: true
   nuevo: true
@@ -719,9 +718,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: acurigua
   cruce:
-    con: Sacuragua
+    con: sacuragua
     como: aproximado:sacuragua
     fuentes: [esteves-1989]
+    en_canon: toponimo-250 · nivel C
     en_esteves: true
   revisar: true
   nuevo: true
@@ -789,9 +789,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: garrapata
   cruce:
-    con: Garrapata
+    con: garrapata
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-299 · nivel descartado
     en_esteves: true
 - {forma: Cerro Juan Díaz, tipo: cerro, lat: 11.37604, lon: -69.27408, region: golfete-de-coro, fuente_mapa: osm,
   osm: node/5873308551, osm_tag: natural=peak, clase: por-clasificar, nombre_propio: juan diaz, nuevo: true, deuda: sin-procedencia}
@@ -846,9 +847,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: lauaraba
   cruce:
-    con: Cararapa
+    con: cararapa
     como: aproximado:cararapa
     fuentes: [esteves-1989]
+    en_canon: toponimo-198 · nivel B
     en_esteves: true
   revisar: true
   nuevo: true
@@ -874,9 +876,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: paguara
   cruce:
-    con: Paguara
+    con: paguara
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-246 · nivel C
     en_esteves: true
 - {forma: Cerro Pan de Azúcar, tipo: cerro, lat: 11.27497, lon: -69.39231, region: golfete-de-coro, fuente_mapa: osm,
   osm: node/5873308570, osm_tag: natural=peak, clase: por-clasificar, nombre_propio: pan de azucar, nuevo: true,
@@ -933,7 +936,8 @@ entradas:
   cruce:
     con: curiana
     como: exacto
-    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3]
+    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3,
+      navarrete-1829-viages-menores]
     en_canon: toponimo-111 · nivel C
 - {forma: La Cruz del Desecho, tipo: lugar, lat: 11.49778, lon: -69.46209, region: golfete-de-coro, fuente_mapa: osm,
   osm: node/5878373947, osm_tag: place=locality, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
@@ -951,7 +955,8 @@ entradas:
   cruce:
     con: curiana
     como: aproximado:curiana
-    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3]
+    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3,
+      navarrete-1829-viages-menores]
     en_canon: toponimo-111 · nivel C
   revisar: true
   nuevo: true
@@ -972,9 +977,10 @@ entradas:
   osm_tag: natural=water
   clase: por-clasificar
   cruce:
-    con: Isiro
+    con: isiro
     como: parcial:isiro
     fuentes: [esteves-1989]
+    en_canon: toponimo-189 · nivel A
     en_esteves: true
 - {forma: El Estanque, tipo: poblado, lat: 11.46303, lon: -69.38439, region: golfete-de-coro, fuente_mapa: osm,
   osm: node/5878373901, osm_tag: place=village, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
@@ -987,11 +993,7 @@ entradas:
   osm: relation/9993715
   osm_tag: natural=bay
   clase: por-clasificar
-  cruce:
-    con: golfete de coro
-    como: exacto
-    fuentes: [sin-procedencia]
-    en_canon: toponimo-140 · nivel descartado
+  cruce: {con: golfete de coro, como: forma-viva, en_canon: toponimo-140}
 - forma: Guaibacoa
   tipo: poblado
   lat: 11.417
@@ -1081,7 +1083,8 @@ entradas:
   cruce:
     con: curiana
     como: exacto
-    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3]
+    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3,
+      navarrete-1829-viages-menores]
     en_canon: toponimo-111 · nivel C
 - {forma: Mitare, tipo: poblado, lat: 11.34992, lon: -70.0327, region: golfete-de-coro, fuente_mapa: osm, osm: node/3948744958,
   osm_tag: place=village, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
@@ -1115,7 +1118,7 @@ entradas:
     con: cumarebo
     como: exacto
     fuentes: [zavala-reyes-2015, castellanos-elegias]
-    en_canon: toponimo-004 · nivel A
+    en_canon: toponimo-004 · nivel C
     en_nodos: nodo-002 (atestiguado, precontacto desconocido)
 - {forma: El Puenteo, tipo: lugar, lat: 11.40981, lon: -69.25484, region: golfete-de-coro, fuente_mapa: osm, osm: node/11141339168,
   osm_tag: place=locality, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
@@ -1133,7 +1136,7 @@ entradas:
     con: cumarebo
     como: exacto
     fuentes: [zavala-reyes-2015, castellanos-elegias]
-    en_canon: toponimo-004 · nivel A
+    en_canon: toponimo-004 · nivel C
     en_nodos: nodo-002 (atestiguado, precontacto desconocido)
 - forma: Punta Barbacoa
   tipo: punta
@@ -1201,9 +1204,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Quiyegua
+    con: quiyegua
     como: aproximado:quiyegua
     fuentes: [esteves-1989]
+    en_canon: toponimo-302 · nivel descartado
     en_esteves: true
   revisar: true
   nuevo: true
@@ -1223,9 +1227,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: acurigua
   cruce:
-    con: Sacuragua
+    con: sacuragua
     como: aproximado:sacuragua
     fuentes: [esteves-1989]
+    en_canon: toponimo-250 · nivel C
     en_esteves: true
   revisar: true
   nuevo: true
@@ -1247,7 +1252,8 @@ entradas:
   cruce:
     con: curiana
     como: exacto
-    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3]
+    fuentes: [arcaya-1920, gonzalez-batista-nombre-de-coro, castellanos-elegias, testimonio-miguel, oliver-1989-cap3,
+      navarrete-1829-viages-menores]
     en_canon: toponimo-111 · nivel C
 - {forma: Río Cujima, tipo: río, lat: 11.34518, lon: -69.82649, region: golfete-de-coro, fuente_mapa: osm, osm: way/550250864,
   osm_tag: waterway=river, clase: por-clasificar, nombre_propio: cujima, nuevo: true, deuda: sin-procedencia}
@@ -1264,9 +1270,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: muaco
   cruce:
-    con: Muaco
+    con: muaco
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-277 · nivel descartado
     en_esteves: true
 - {forma: Río Ricoa, tipo: río, lat: 11.30258, lon: -69.40251, region: golfete-de-coro, fuente_mapa: osm, osm: way/1201688241,
   osm_tag: waterway=river, clase: por-clasificar, nombre_propio: ricoa, nuevo: true, deuda: sin-procedencia}
@@ -1326,9 +1333,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Sanquinche
+    con: sanquinche
     como: aproximado:sanquinche
     fuentes: [esteves-1989]
+    en_canon: toponimo-303 · nivel descartado
     en_esteves: true
   revisar: true
   nuevo: true
@@ -2023,8 +2031,21 @@ entradas:
     fuentes: [van-buurt-2014]
 - {forma: Boko/Playa Uniko, tipo: playa, lat: 12.16418, lon: -69.00828, region: islas-abc, fuente_mapa: osm, osm: way/987813266,
   osm_tag: natural=beach, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
-- {forma: Bonaire, tipo: isla, lat: 12.16845, lon: -68.30821, region: islas-abc, fuente_mapa: osm, osm: relation/4266671,
-  osm_tag: place=island, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+- forma: Bonaire
+  tipo: isla
+  lat: 12.16845
+  lon: -68.30821
+  region: islas-abc
+  fuente_mapa: osm
+  osm: relation/4266671
+  osm_tag: place=island
+  clase: por-clasificar
+  cruce:
+    con: Buynari
+    como: exacto
+    fuentes: [van-buurt-2014, castellanos-elegias]
+    en_canon: toponimo-066 · nivel descartado
+    en_nodos: nodo-011 (atestiguado, precontacto si)
 - {forma: Bonam, tipo: sector, lat: 12.14784, lon: -68.87801, region: islas-abc, fuente_mapa: osm, osm: node/297295207,
   osm_tag: place=neighbourhood, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
 - forma: Boroncana
@@ -2639,8 +2660,21 @@ entradas:
   osm_tag: place=neighbourhood, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
 - {forma: Kirindongo Abou, tipo: sector, lat: 12.14891, lon: -68.87129, region: islas-abc, fuente_mapa: osm, osm: node/3196517139,
   osm_tag: place=neighbourhood, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
-- {forma: Klein Bonaire, tipo: isla, lat: 12.15722, lon: -68.3109, region: islas-abc, fuente_mapa: osm, osm: relation/5176051,
-  osm_tag: place=island, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+- forma: Klein Bonaire
+  tipo: isla
+  lat: 12.15722
+  lon: -68.3109
+  region: islas-abc
+  fuente_mapa: osm
+  osm: relation/5176051
+  osm_tag: place=island
+  clase: por-clasificar
+  cruce:
+    con: Buynari
+    como: parcial:bonaire
+    fuentes: [van-buurt-2014, castellanos-elegias]
+    en_canon: toponimo-066 · nivel descartado
+    en_nodos: nodo-011 (atestiguado, precontacto si)
 - {forma: Klein Davelaar, tipo: sector, lat: 12.11309, lon: -68.90185, region: islas-abc, fuente_mapa: osm, osm: node/8161136324,
   osm_tag: place=neighbourhood, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
 - {forma: Kleine Berg, tipo: lugar, lat: 12.19837, lon: -69.00516, region: islas-abc, fuente_mapa: osm, osm: node/3196517141,
@@ -4314,16 +4348,7 @@ entradas:
   osm: node/5506061329
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: abudure
-    como: aproximado:abudure
-    fuentes: [esteves-1989, testimonio-miguel]
-    en_canon: toponimo-076 · nivel B
-    en_esteves: true
-    en_mapa_miguel: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: abudure, como: forma-viva, en_canon: toponimo-076}
 - forma: Acaboa
   tipo: lugar
   lat: 12.00755
@@ -4337,7 +4362,7 @@ entradas:
     con: acaboa
     como: exacto
     fuentes: [esteves-1989]
-    en_canon: toponimo-153 · nivel descartado
+    en_canon: toponimo-153 · nivel C
     en_esteves: true
 - forma: Adaro
   tipo: lugar
@@ -4349,9 +4374,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Adaro
+    con: adaro
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-195 · nivel B
     en_esteves: true
 - forma: Adaure
   tipo: poblado
@@ -4425,9 +4451,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Antuní
+    con: antuní
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-293 · nivel descartado
     en_esteves: true
 - forma: Asubure
   tipo: poblado
@@ -4439,12 +4466,21 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Asubure
+    con: asubure
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-210 · nivel C
     en_esteves: true
-- {forma: Azaro, tipo: poblado, lat: 11.96926, lon: -69.96019, region: paraguana, fuente_mapa: osm, osm: node/5506061290,
-  osm_tag: place=village, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+- forma: Azaro
+  tipo: poblado
+  lat: 11.96926
+  lon: -69.96019
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506061290
+  osm_tag: place=village
+  clase: por-clasificar
+  cruce: {con: asaro, como: forma-viva, en_canon: toponimo-126}
 - forma: Bajarigua
   tipo: lugar
   lat: 12.0965
@@ -4455,12 +4491,22 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Bajarigua
+    con: bajarigua
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-264 · nivel descartado
     en_esteves: true
-- {forma: Bajo Aroa, tipo: lugar, lat: 12.18587, lon: -70.03282, region: paraguana, fuente_mapa: osm, osm: node/5506060733,
-  osm_tag: place=locality, clase: por-clasificar, nombre_propio: aroa, nuevo: true, deuda: sin-procedencia}
+- forma: Bajo Aroa
+  tipo: lugar
+  lat: 12.18587
+  lon: -70.03282
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506060733
+  osm_tag: place=locality
+  clase: por-clasificar
+  nombre_propio: aroa
+  cruce: {con: bajabaroa, como: forma-viva, en_canon: toponimo-120}
 - forma: El Bajo de Supi
   tipo: punta
   lat: 11.67521
@@ -4488,9 +4534,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Barabara
+    con: barabara
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-181 · nivel A
     en_esteves: true
 - forma: Baraived
   tipo: poblado
@@ -4518,9 +4565,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Barbasco
+    con: barbasco
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-294 · nivel descartado
     en_esteves: true
 - forma: Barunú
   tipo: poblado
@@ -4546,11 +4594,7 @@ entradas:
   osm: node/5506061141
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: buchal
-    como: exacto
-    fuentes: [sin-procedencia]
-    en_canon: toponimo-142 · nivel descartado
+  cruce: {con: buchal, como: forma-viva, en_canon: toponimo-142}
 - forma: Buchuaco
   tipo: poblado
   lat: 11.98452
@@ -4576,9 +4620,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Buenevara
+    con: buenevara
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-213 · nivel C
     en_esteves: true
 - forma: Cararapa
   tipo: caserío
@@ -4590,9 +4635,10 @@ entradas:
   osm_tag: place=hamlet
   clase: por-clasificar
   cruce:
-    con: Cararapa
+    con: cararapa
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-198 · nivel B
     en_esteves: true
 - forma: Carirubana
   tipo: sector
@@ -4607,7 +4653,7 @@ entradas:
     con: carirubana
     como: exacto
     fuentes: [esteves-1989, proyecto, medina-colina-sxx]
-    en_canon: toponimo-148 · nivel B
+    en_canon: toponimo-148 · nivel C
     en_esteves: true
 - forma: Caseto
   tipo: poblado
@@ -4650,9 +4696,10 @@ entradas:
   osm_tag: place=town
   clase: por-clasificar
   cruce:
-    con: Cayude
+    con: cayude
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-184 · nivel A
     en_esteves: true
 - forma: Cerro Arajó
   tipo: cerro
@@ -4665,9 +4712,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: arajo
   cruce:
-    con: Arajó
+    con: arajó
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-262 · nivel descartado
     en_esteves: true
 - forma: Cerro Capuana
   tipo: cerro
@@ -4679,15 +4727,7 @@ entradas:
   osm_tag: natural=peak
   clase: por-clasificar
   nombre_propio: capuana
-  cruce:
-    con: capana
-    como: aproximado:capana
-    fuentes: [esteves-1989]
-    en_canon: toponimo-156 · nivel descartado
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: capuhana, como: forma-viva, en_canon: toponimo-113}
 - forma: Cerro La Miraba
   tipo: cerro
   lat: 11.84963
@@ -4698,11 +4738,7 @@ entradas:
   osm_tag: natural=peak
   clase: por-clasificar
   nombre_propio: miraba
-  cruce:
-    con: la miraba
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-138 · nivel descartado
+  cruce: {con: niraba, como: forma-viva, en_canon: toponimo-278}
 - forma: Cerro Tausabana
   tipo: cerro
   lat: 11.78414
@@ -4714,9 +4750,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: tausabana
   cruce:
-    con: Tausabana
+    con: tausabana
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-254 · nivel C
     en_esteves: true
 - forma: Charaima
   tipo: poblado
@@ -4743,15 +4780,7 @@ entradas:
   osm: node/5506060042
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: chiguaral
-    como: aproximado:chiguaral
-    fuentes: [esteves-1989]
-    en_canon: toponimo-124 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: chiguaral, como: forma-viva, en_canon: toponimo-124}
 - forma: Chivuche
   tipo: lugar
   lat: 12.02581
@@ -4761,17 +4790,17 @@ entradas:
   osm: node/5506060922
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: bibuche
-    como: aproximado:bibuche
-    fuentes: [esteves-1989]
-    en_canon: toponimo-119 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
-- {forma: Cividual, tipo: lugar, lat: 11.75343, lon: -69.80618, region: paraguana, fuente_mapa: osm, osm: node/5506061156,
-  osm_tag: place=locality, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+  cruce: {con: bibuche, como: forma-viva, en_canon: toponimo-119}
+- forma: Cividual
+  tipo: lugar
+  lat: 11.75343
+  lon: -69.80618
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506061156
+  osm_tag: place=locality
+  clase: por-clasificar
+  cruce: {con: sibidigual, como: forma-viva, en_canon: toponimo-123}
 - forma: Coduto
   tipo: poblado
   lat: 11.81737
@@ -4781,11 +4810,7 @@ entradas:
   osm: node/5506060713
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: Coduto
-    como: exacto
-    fuentes: [esteves-1989]
-    en_esteves: true
+  cruce: {con: coduto, como: forma-viva, en_canon: toponimo-219}
 - forma: Coduto
   tipo: lugar
   lat: 11.6259
@@ -4795,11 +4820,7 @@ entradas:
   osm: node/5506061164
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: Coduto
-    como: exacto
-    fuentes: [esteves-1989]
-    en_esteves: true
+  cruce: {con: coduto, como: forma-viva, en_canon: toponimo-219}
 - forma: Cuabana
   tipo: sector
   lat: 11.94004
@@ -4809,15 +4830,7 @@ entradas:
   osm: node/5506061291
   osm_tag: place=suburb
   clase: por-clasificar
-  cruce:
-    con: capana
-    como: aproximado:capana
-    fuentes: [esteves-1989]
-    en_canon: toponimo-156 · nivel descartado
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: coabana, como: forma-viva, en_canon: toponimo-116}
 - forma: Cubiano
   tipo: lugar
   lat: 11.84998
@@ -4828,9 +4841,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Cubiano
+    con: cubiano
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-199 · nivel B
     en_esteves: true
 - forma: Cumairebo
   tipo: lugar
@@ -4841,11 +4855,7 @@ entradas:
   osm: node/5506060988
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: cumairebo
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-132 · nivel descartado
+  cruce: {con: cumairebo, como: forma-viva, en_canon: toponimo-132}
 - forma: Cumajacoa
   tipo: lugar
   lat: 11.82335
@@ -4855,15 +4865,7 @@ entradas:
   osm: node/5506060712
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: cumujacoa
-    como: aproximado:cumujacoa
-    fuentes: [esteves-1989]
-    en_canon: toponimo-115 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: cumujacoa, como: forma-viva, en_canon: toponimo-115}
 - forma: Las Cumaraguas
   tipo: poblado
   lat: 12.10309
@@ -4874,9 +4876,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Cumaraguas
+    con: cumaraguas
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-221 · nivel C
     en_esteves: true
 - forma: Curuca
   tipo: lugar
@@ -4887,15 +4890,7 @@ entradas:
   osm: node/5506060958
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: caruca
-    como: aproximado:caruca
-    fuentes: [esteves-1989]
-    en_canon: toponimo-118 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: caruca, como: forma-viva, en_canon: toponimo-118}
 - forma: Davaduvare
   tipo: poblado
   lat: 11.78326
@@ -4919,11 +4914,7 @@ entradas:
   osm: node/5506061176
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: divacoa
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-133 · nivel descartado
+  cruce: {con: divacoa, como: forma-viva, en_canon: toponimo-133}
 - forma: Estanquecitos de Los Taques
   tipo: lugar
   lat: 11.76797
@@ -4946,11 +4937,7 @@ entradas:
   osm: relation/9993715
   osm_tag: natural=bay
   clase: por-clasificar
-  cruce:
-    con: golfete de coro
-    como: exacto
-    fuentes: [sin-procedencia]
-    en_canon: toponimo-140 · nivel descartado
+  cruce: {con: golfete de coro, como: forma-viva, en_canon: toponimo-140}
 - forma: Guacujún
   tipo: poblado
   lat: 11.82686
@@ -4960,15 +4947,7 @@ entradas:
   osm: node/5506061319
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: guacujúa
-    como: aproximado:guacujua
-    fuentes: [esteves-1989]
-    en_canon: toponimo-128 · nivel descartado
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: guacujúa, como: forma-viva, en_canon: toponimo-128}
 - forma: Guacurebo
   tipo: poblado
   lat: 11.84269
@@ -4984,10 +4963,26 @@ entradas:
     fuentes: [zavala-reyes-2015, esteves-1989, testimonio-miguel]
     en_canon: toponimo-021 · nivel C
     en_esteves: true
-- {forma: Guaquira Abajo, tipo: poblado, lat: 11.93193, lon: -69.89322, region: paraguana, fuente_mapa: osm, osm: node/5506061143,
-  osm_tag: place=village, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
-- {forma: Guaquira Arriba, tipo: poblado, lat: 11.94044, lon: -69.88665, region: paraguana, fuente_mapa: osm, osm: node/5506061142,
-  osm_tag: place=village, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+- forma: Guaquira Abajo
+  tipo: poblado
+  lat: 11.93193
+  lon: -69.89322
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506061143
+  osm_tag: place=village
+  clase: por-clasificar
+  cruce: {con: guacuira, como: forma-viva, en_canon: toponimo-117}
+- forma: Guaquira Arriba
+  tipo: poblado
+  lat: 11.94044
+  lon: -69.88665
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506061142
+  osm_tag: place=village
+  clase: por-clasificar
+  cruce: {con: guacuira, como: forma-viva, en_canon: toponimo-117}
 - forma: Guaranao
   tipo: sector
   lat: 11.67477
@@ -4998,9 +4993,10 @@ entradas:
   osm_tag: place=suburb
   clase: por-clasificar
   cruce:
-    con: Guaranao
+    con: guaranao
     como: exacto
     fuentes: [esteves-1989, oliver-1989-cap3]
+    en_canon: toponimo-204 · nivel B
     en_esteves: true
 - forma: El Guayacanal
   tipo: lugar
@@ -5026,15 +5022,7 @@ entradas:
   osm: node/5506060803
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: guadabacoa
-    como: aproximado:guadabacoa
-    fuentes: [zavala-reyes-2015, esteves-1989, gonzalez-batista-nombre-de-coro, castellanos-elegias]
-    en_canon: toponimo-008 · nivel B
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: guadabacoa, como: forma-viva, en_canon: toponimo-008}
 - forma: Gusimu
   tipo: lugar
   lat: 12.0975
@@ -5044,11 +5032,7 @@ entradas:
   osm: node/5506060780
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: gusimu
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-134 · nivel descartado
+  cruce: {con: gusimu, como: forma-viva, en_canon: toponimo-134}
 - forma: El Imujo
   tipo: lugar
   lat: 12.1393
@@ -5059,9 +5043,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Imujo
+    con: imujo
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-231 · nivel C
     en_esteves: true
 - forma: Isiro
   tipo: lugar
@@ -5073,9 +5058,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Isiro
+    con: isiro
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-189 · nivel A
     en_esteves: true
 - forma: Isito
   tipo: lugar
@@ -5087,9 +5073,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Isito
+    con: isito
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-232 · nivel C
     en_esteves: true
 - forma: Iticuna
   tipo: poblado
@@ -5101,9 +5088,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Iticuna
+    con: iticuna
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-233 · nivel C
     en_esteves: true
 - forma: Jacuque
   tipo: lugar
@@ -5147,9 +5135,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Jariaca
+    con: jariaca
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-235 · nivel C
     en_esteves: true
 - forma: Jayana
   tipo: poblado
@@ -5179,7 +5168,7 @@ entradas:
     con: judibana
     como: exacto
     fuentes: [esteves-1989, testimonio-miguel, proyecto]
-    en_canon: toponimo-075 · nivel A
+    en_canon: toponimo-075 · nivel B
     en_esteves: true
     en_mapa_miguel: true
 - forma: Jurujurebo
@@ -5191,15 +5180,7 @@ entradas:
   osm: node/5506060982
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: jurijurebo
-    como: aproximado:jurijurebo
-    fuentes: [zavala-reyes-2015, gonzalez-batista-nombre-de-coro, testimonio-miguel, esteves-1989]
-    en_canon: toponimo-001 · nivel A
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: jurijurebo, como: forma-viva, en_canon: toponimo-001}
 - forma: Laguna de Guaranao
   tipo: laguna
   lat: 11.6825
@@ -5211,9 +5192,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: guaranao
   cruce:
-    con: Guaranao
+    con: guaranao
     como: exacto
     fuentes: [esteves-1989, oliver-1989-cap3]
+    en_canon: toponimo-204 · nivel B
     en_esteves: true
 - forma: Macama
   tipo: lugar
@@ -5225,9 +5207,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Macama
+    con: macama
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-237 · nivel C
     en_esteves: true
 - forma: Machuruca
   tipo: poblado
@@ -5255,11 +5238,7 @@ entradas:
   osm: node/5506060784
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: la macolla
-    como: exacto
-    fuentes: [sin-procedencia]
-    en_canon: toponimo-141 · nivel descartado
+  cruce: {con: la macolla, como: forma-viva, en_canon: toponimo-141}
 - forma: Maicara
   tipo: poblado
   lat: 11.86764
@@ -5302,9 +5281,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Maquigua
+    con: maquigua
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-240 · nivel C
     en_esteves: true
 - forma: Matacán
   tipo: lugar
@@ -5316,9 +5296,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Matacán
+    con: matacán
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-242 · nivel C
     en_esteves: true
 - forma: Matividiro
   tipo: poblado
@@ -5330,9 +5311,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Matividiro
+    con: matividiro
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-275 · nivel descartado
     en_esteves: true
 - forma: La Miraba
   tipo: poblado
@@ -5343,11 +5325,7 @@ entradas:
   osm: node/5506061318
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: la miraba
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-138 · nivel descartado
+  cruce: {con: niraba, como: forma-viva, en_canon: toponimo-278}
 - forma: Miraca
   tipo: poblado
   lat: 11.8765
@@ -5374,9 +5352,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Misaray
+    con: misaray
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-276 · nivel descartado
     en_esteves: true
 - forma: Morro de Chaure
   tipo: punta
@@ -5389,9 +5368,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: chaure
   cruce:
-    con: Chaure
+    con: chaure
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-185 · nivel A
     en_esteves: true
 - forma: Moruy
   tipo: poblado
@@ -5409,8 +5389,16 @@ entradas:
     en_canon: toponimo-108 · nivel C
     en_esteves: true
     en_nodos: nodo-027 (atestiguado, precontacto desconocido)
-- {forma: Nueva Jayama, tipo: poblado, lat: 11.79376, lon: -70.1984, region: paraguana, fuente_mapa: osm, osm: node/9737732088,
-  osm_tag: place=village, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+- forma: Nueva Jayama
+  tipo: poblado
+  lat: 11.79376
+  lon: -70.1984
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/9737732088
+  osm_tag: place=village
+  clase: por-clasificar
+  cruce: {con: jayana, como: forma-viva, en_canon: toponimo-110}
 - forma: Oropopo
   tipo: lugar
   lat: 11.88354
@@ -5420,15 +5408,7 @@ entradas:
   osm: node/5506060717
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: oripopo
-    como: aproximado:oripopo
-    fuentes: [esteves-1989]
-    en_canon: toponimo-125 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: oripopo, como: forma-viva, en_canon: toponimo-125}
 - forma: Paraguaná Peninsula
   tipo: península
   lat: 11.90052
@@ -5441,7 +5421,7 @@ entradas:
   cruce:
     con: paraguaná
     como: parcial:paraguana
-    fuentes: [van-buurt-2014, proyecto, gonzalez-batista-nombre-de-coro, esteves-1989]
+    fuentes: [oviedo-y-valdes-1851, proyecto, gonzalez-batista-nombre-de-coro, esteves-1989, van-buurt-2014]
     en_canon: toponimo-018 · nivel C
     en_esteves: true
 - forma: Pilancón
@@ -5453,11 +5433,7 @@ entradas:
   osm: node/5506061261
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: pilancón
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-137 · nivel descartado
+  cruce: {con: pilancón, como: forma-viva, en_canon: toponimo-137}
 - forma: La Pitahaya
   tipo: poblado
   lat: 11.87021
@@ -5467,15 +5443,7 @@ entradas:
   osm: node/5506061280
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: pitajaya
-    como: aproximado:pitajaya
-    fuentes: [esteves-1989]
-    en_canon: toponimo-121 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: pitajaya, como: forma-viva, en_canon: toponimo-121}
 - forma: Playa De Tumatey
   tipo: playa
   lat: 12.17197
@@ -5487,9 +5455,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: tumatey
   cruce:
-    con: Tumatey
+    con: tumatey
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-307 · nivel descartado
     en_esteves: true
 - forma: Playa El Supi
   tipo: playa
@@ -5551,9 +5520,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: tiraya
   cruce:
-    con: Tiraya
+    con: tiraya
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-288 · nivel descartado
     en_esteves: true
 - forma: Playa Yaima
   tipo: playa
@@ -5566,9 +5536,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: yaima
   cruce:
-    con: Yaima
+    con: yaima
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-291 · nivel descartado
     en_esteves: true
 - forma: Los Pozones
   tipo: lugar
@@ -5594,9 +5565,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: adaro
   cruce:
-    con: Adaro
+    con: adaro
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-195 · nivel B
     en_esteves: true
 - forma: Punta Coduto
   tipo: punta
@@ -5608,11 +5580,7 @@ entradas:
   osm_tag: natural=cape
   clase: por-clasificar
   nombre_propio: coduto
-  cruce:
-    con: Coduto
-    como: exacto
-    fuentes: [esteves-1989]
-    en_esteves: true
+  cruce: {con: coduto, como: forma-viva, en_canon: toponimo-219}
 - forma: Punta Cuara
   tipo: punta
   lat: 11.64885
@@ -5624,9 +5592,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: cuara
   cruce:
-    con: Cuara
+    con: cuara
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-305 · nivel descartado
     en_esteves: true
 - forma: Punta de Jacuque
   tipo: punta
@@ -5659,7 +5628,7 @@ entradas:
     con: judibana
     como: exacto
     fuentes: [esteves-1989, testimonio-miguel, proyecto]
-    en_canon: toponimo-075 · nivel A
+    en_canon: toponimo-075 · nivel B
     en_esteves: true
     en_mapa_miguel: true
 - forma: Punta Macama
@@ -5673,9 +5642,10 @@ entradas:
   clase: por-clasificar
   nombre_propio: macama
   cruce:
-    con: Macama
+    con: macama
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-237 · nivel C
     en_esteves: true
 - forma: Punta Macolla
   tipo: punta
@@ -5687,11 +5657,7 @@ entradas:
   osm_tag: natural=cape
   clase: por-clasificar
   nombre_propio: macolla
-  cruce:
-    con: la macolla
-    como: exacto
-    fuentes: [sin-procedencia]
-    en_canon: toponimo-141 · nivel descartado
+  cruce: {con: la macolla, como: forma-viva, en_canon: toponimo-141}
 - forma: Punto Fijo
   tipo: poblado
   lat: 11.69317
@@ -5715,9 +5681,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Quitaire
+    con: quitaire
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-301 · nivel descartado
     en_esteves: true
 - forma: Rosa Matuto
   tipo: lugar
@@ -5729,9 +5696,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Matuto
+    con: matuto
     como: parcial:matuto
     fuentes: [esteves-1989]
+    en_canon: toponimo-243 · nivel C
     en_esteves: true
 - forma: Sacuragua
   tipo: poblado
@@ -5743,9 +5711,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Sacuragua
+    con: sacuragua
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-250 · nivel C
     en_esteves: true
 - forma: Sarinao
   tipo: poblado
@@ -5757,9 +5726,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Sarinao
+    con: sarinao
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-284 · nivel descartado
     en_esteves: true
 - forma: Sibarigua
   tipo: lugar
@@ -5770,15 +5740,7 @@ entradas:
   osm: node/5506061137
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: sabarigua
-    como: aproximado:sabarigua
-    fuentes: [esteves-1989]
-    en_canon: toponimo-122 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: sabarigua, como: forma-viva, en_canon: toponimo-122}
 - forma: Sicaname
   tipo: lugar
   lat: 11.90229
@@ -5789,9 +5751,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Sicaname
+    con: sicaname
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-252 · nivel C
     en_esteves: true
 - forma: Siraba
   tipo: lugar
@@ -5803,9 +5766,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Siraba
+    con: siraba
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-285 · nivel descartado
     en_esteves: true
 - forma: Sisibauco
   tipo: lugar
@@ -5816,12 +5780,7 @@ entradas:
   osm: node/5506061152
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: sisibauco
-    como: exacto
-    fuentes: [esteves-1989]
-    en_canon: toponimo-130 · nivel descartado
-    en_esteves: true
+  cruce: {con: sisibauco, como: forma-viva, en_canon: toponimo-130}
 - forma: El Supí
   tipo: poblado
   lat: 12.01032
@@ -5847,11 +5806,7 @@ entradas:
   osm: node/5506060695
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: tabe
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-135 · nivel descartado
+  cruce: {con: jabe, como: forma-viva, en_canon: toponimo-272}
 - forma: Tacaduto
   tipo: poblado
   lat: 11.84131
@@ -5862,9 +5817,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Tacaduto
+    con: tacaduto
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-207 · nivel B
     en_esteves: true
 - forma: El Tacal
   tipo: poblado
@@ -5876,9 +5832,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Tacal
+    con: tacal
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-253 · nivel C
     en_esteves: true
 - forma: Tacuato
   tipo: poblado
@@ -5890,9 +5847,10 @@ entradas:
   osm_tag: place=town
   clase: por-clasificar
   cruce:
-    con: Tacuato
+    con: tacuato
     como: exacto
     fuentes: [esteves-1989, medina-colina-sxx]
+    en_canon: toponimo-287 · nivel descartado
     en_esteves: true
 - forma: Los Taques
   tipo: poblado
@@ -5907,8 +5865,16 @@ entradas:
     con: Los Taques
     como: exacto
     fuentes: [medina-colina-sxx]
-- {forma: Teteguacure, tipo: lugar, lat: 11.81126, lon: -70.06241, region: paraguana, fuente_mapa: osm, osm: node/5506061320,
-  osm_tag: place=locality, clase: por-clasificar, nuevo: true, deuda: sin-procedencia}
+- forma: Teteguacure
+  tipo: lugar
+  lat: 11.81126
+  lon: -70.06241
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506061320
+  osm_tag: place=locality
+  clase: por-clasificar
+  cruce: {con: tequeguacare, como: forma-viva, en_canon: toponimo-129}
 - forma: Tiguadare
   tipo: poblado
   lat: 11.62267
@@ -5919,9 +5885,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Tiguadare
+    con: tiguadare
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-256 · nivel C
     en_esteves: true
 - forma: Tiraya
   tipo: poblado
@@ -5933,9 +5900,10 @@ entradas:
   osm_tag: place=town
   clase: por-clasificar
   cruce:
-    con: Tiraya
+    con: tiraya
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-288 · nivel descartado
     en_esteves: true
 - forma: Tumarusa
   tipo: poblado
@@ -5947,9 +5915,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Tumarusa
+    con: tumarusa
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-260 · nivel C
     en_esteves: true
 - forma: Tura
   tipo: lugar
@@ -5961,9 +5930,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Tura
+    con: tura
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-209 · nivel C
     en_esteves: true
 - forma: Urumare
   tipo: lugar
@@ -5974,11 +5944,7 @@ entradas:
   osm: node/5506060698
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: urumare
-    como: exacto
-    fuentes: [osm-kaketiana]
-    en_canon: toponimo-136 · nivel descartado
+  cruce: {con: urumare, como: forma-viva, en_canon: toponimo-136}
 - forma: La Urupagua
   tipo: lugar
   lat: 12.1046
@@ -5989,9 +5955,10 @@ entradas:
   osm_tag: place=locality
   clase: por-clasificar
   cruce:
-    con: Urupagua
+    con: urupagua
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-193 · nivel A
     en_esteves: true
 - forma: Varacara
   tipo: poblado
@@ -6002,15 +5969,7 @@ entradas:
   osm: node/5506061324
   osm_tag: place=village
   clase: por-clasificar
-  cruce:
-    con: baracara
-    como: aproximado:baracara
-    fuentes: [esteves-1989]
-    en_canon: toponimo-127 · nivel C
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
+  cruce: {con: baracara, como: forma-viva, en_canon: toponimo-127}
 - forma: El Variquí
   tipo: lugar
   lat: 12.01311
@@ -6020,17 +5979,18 @@ entradas:
   osm: node/5506060811
   osm_tag: place=locality
   clase: por-clasificar
-  cruce:
-    con: bariquí
-    como: aproximado:bariqui
-    fuentes: [esteves-1989]
-    en_canon: toponimo-114 · nivel B
-    en_esteves: true
-  revisar: true
-  nuevo: true
-  deuda: sin-procedencia
-- {forma: Villa Real, tipo: lugar, lat: 12.05357, lon: -69.98177, region: paraguana, fuente_mapa: osm, osm: node/5506060947,
-  osm_tag: place=locality, clase: por-clasificar, nombre_propio: real, nuevo: true, deuda: sin-procedencia}
+  cruce: {con: bariquí, como: forma-viva, en_canon: toponimo-114}
+- forma: Villa Real
+  tipo: lugar
+  lat: 12.05357
+  lon: -69.98177
+  region: paraguana
+  fuente_mapa: osm
+  osm: node/5506060947
+  osm_tag: place=locality
+  clase: por-clasificar
+  nombre_propio: real
+  cruce: {con: villa real, como: forma-viva, en_canon: toponimo-139}
 - forma: El Vínculo
   tipo: poblado
   lat: 12.06853
@@ -6068,9 +6028,10 @@ entradas:
   osm_tag: place=village
   clase: por-clasificar
   cruce:
-    con: Yaima
+    con: yaima
     como: exacto
     fuentes: [esteves-1989]
+    en_canon: toponimo-291 · nivel descartado
     en_esteves: true
 - {forma: Cardón Grande, tipo: lugar, lat: 12.06666, lon: -70.02859, region: paraguana, fuente_mapa: osm, osm: node/5506060936,
   osm_tag: place=locality, clase: castellano-con-voz-indigena}

@@ -364,7 +364,7 @@ def _plantillas(L) -> dict:
     return p
 
 
-def _ensayo_de_prompt(L) -> dict:
+def _ensayo_de_prompt(L, respuesta: str | None = None) -> dict:
     """El system prompt ENTERO de los 63, montado con el `run_turn` de verdad.
 
     `_invoke` espiado, Director mudo, misma semilla del RNG global en los dos
@@ -379,7 +379,10 @@ def _ensayo_de_prompt(L) -> dict:
     from curiana_perfiles import cargar_perfil
     from curiana_state import estado_inicial
 
-    respuesta = "Taya wana-ka arima wara kari. Ta-barsure naba-ni."
+    # La respuesta fija de las mediciones del 21 y de la tanda final. La tanda
+    # de las hermanas (2026-09-24) pasa la suya: con el lexicón de hoy ésta
+    # dispara la segunda pasada (rescate) y el ensayo cuenta cada prompt dos veces.
+    respuesta = respuesta or "Taya wana-ka arima wara kari. Ta-barsure naba-ni."
     elenco = dict(_era2.ALL_AGENTS)
     perfil = cargar_perfil("era2")
     roster = list(elenco)

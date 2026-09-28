@@ -161,3 +161,22 @@ fechas de contexto y no está en abierto.
 [[schroeder-2018]] · [[martinez-cruzado-2003]] · [[nagele-2020]] ·
 [[dijkhoff-1997]] · [[haviser-1990]] · [[rouse-cruxent-1963]] ·
 [[esfera-de-interaccion]]
+
+## 2026-09-27 — el texto publicado, leído (dp.2.04 de #222, con permiso de Miguel)
+
+Se leyó el manuscrito del autor en Europe PMC (PMC7864882, acceso abierto: «Users may view, print,
+copy, and download text and data-mine the content… for the purposes of academic research») y la
+hoja de datos suplementaria de Nature (`41586_2020_3053_MOESM4_ESM.xlsx`). **Nada de eso entra al
+repo** (licencia; como el PDF de Nature, que sigue en 0 bytes): se cita.
+
+- «We model ceramic users from Curaçao as 74.5±3.7% LesserAntilles_Ceramic-related ancestry and
+  25.5±3.7% Venezuela_Ceramic-related ancestry (Table S15)» — y la otra parte «associated with the
+  Dabajuroid ceramic styles linking sites like Las Locas to Curaçao».
+- «the sharing of some ancestry between individuals from Curaçao and those from the Lesser Antilles
+  but not the Greater Antilles supports a south-to-north stepping stone trajectory». **T8 leía bien**;
+  el preprint del repo (68,1 % «Caribbean_Ceramic») no distinguía.
+- Supplementary Data 1-3: los cinco `Curacao_Ceramic` son de **dos sitios**, Santa Cruz (I10758) y
+  De Savaan (I10759, I11892, I12967, I13472); 14C 720, 620, 710 y 610 ± 20 BP (s. XIII-XIV) y un
+  contexto de 1160-1500 d. C.; dieta «70% C4» en la clasificación de los autores.
+- La mezcla **no está fechada**, y el marco del artículo es de ORIGEN (una trayectoria de
+  poblamiento de sur a norte), no de trato entre vecinos.

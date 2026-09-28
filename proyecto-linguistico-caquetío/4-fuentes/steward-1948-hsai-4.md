@@ -165,3 +165,26 @@ Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6
 
 [[steward-1949]] · [[rouse-cruxent-1963]] · [[oliver-1989-cap3]] ·
 [[federmann-1916]] · [[perez-de-tolosa-1546]]
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido el volumen entero; leídas las ventanas con un nombre de la costa occidental cerca. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `steward1948`: 96 ventanas creencia × mar (21 con un nombre de la costa occidental cerca), 73 creencia × cielo de control.
+
+**Se halló:** Hernández de Alba (p. 473): «Musical instruments reported are horns and shell trumpets. These accompanied songs, such as those eulogizing the deceased at funerals» — es la ÚNICA frase del repo que pone una bocina de caracol en un funeral caquetío, y no cita fuente (ya lo dijo hda-20: no localizada en las primarias). Kidder II: la concha de la costa de Coro en cuentas y pendientes, y en Cayerúa (Paraguaná) «beads, a Strombus-shell ax, and Strombus tips» (p. 429; la OCR lee «499»; ver la parcela de arqueología).
+
+**No se halló:** Cero creencia del mar caquetía; lo que sí hay de sol y luna es de los axaguas de Nueva Segovia (hda-21).
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Kidder II, verificado en imagen (p. 429, pdf 563; la OCR lee «499»):** «Shell,
+lacking at Quibor and Carache, occurs in the Coro district in the form of beads
+and pendants, and Cayerua produced beads, a Strombus-shell ax, and Strombus
+tips». Las «Strombus tips» son una clase de artefacto de 1943 sin describir:
+no son una bocina. Nada de concha DENTRO de las urnas de Coro.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.

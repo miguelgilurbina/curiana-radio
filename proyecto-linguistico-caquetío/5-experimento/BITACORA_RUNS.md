@@ -435,7 +435,7 @@ abierta abajo.
 
 ### Era 2 · serie A — pruebas del motor (2026-09-14 → 16)
 
-> ⚠️ **Cambio de instrumento (2026-09-16 → 09-23), declarado.** Quince cambios,
+> ⚠️ **Cambio de instrumento (2026-09-16 → 09-24), declarado.** Dieciséis cambios,
 > en el orden en que se decidieron. Los dos primeros son de
 > `score_linguistico()` y pasaron DESPUÉS de los runs de abajo, así que los del
 > 09-14 no son estrictamente comparables con los que vengan:
@@ -1383,7 +1383,79 @@ abierta abajo.
 >    corrido antes queda del otro lado del corte. Tests en
 >    `curiana_sim/tests/test_tanda_final.py` y `test_tanda_final_lexicon.py`.
 >
-> Ninguno de los quince toca `capas_de_score`, y `curiana_observer` sigue sin
+> 16. **La tanda de las hermanas: el núcleo desde el lokono y el habla de
+>     mujeres kalinago** (2026-09-24, `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`
+>     th.0-th.13). «Acepto todo lo recomendado» (Miguel), sobre tres
+>     propuestas: el habla de mujeres kalinago (#234), el núcleo fundacional
+>     rehecho desde las hermanas y el taíno de tradición viva. Las 36 voces del
+>     «núcleo fundacional» citaban «cognado en lokono/garífuna/proto-arahuaco»
+>     sin obra ni página, y casi ninguna tenía pareja en una hermana; `duna`,
+>     `wari` y `baba` eran caribe de hombres.
+>
+>    - **Lo que cambia.**
+>
+>      | | qué se hizo |
+>      |---|---|
+>      | **N1** la etiqueta | dos hermanas con la misma forma (o con la correspondencia regular declarada, lokono d = kalinago r/l) = reconstruida y sale en la muestra; una hermana = hipotética y llega sólo por plantilla |
+>      | **D1** pronombres | el habla de mujeres kalinago cuenta como hermana: `bui`, `lihi`, `tuhu` suben a reconstruidos (Goeje p. 24); `dai` se queda (kalinago y achagua dicen n-) |
+>      | **el núcleo** (36) | manda la atestiguada: `kono`→`jusual`, `sima`→`kidi`, `nomi`→`ateri`, `wari`→`iero`, `arua`→`ako`, `buri`→`dare`. Dos hermanas: `ani`, `aeke`, `ati`, `dunku`, `aita`, `isi`, `akusi`, `kibe`, `ada`, `uni`, `unia`, `butu`. Una: `kunu`, `sile`, `hiti`, `kudu`, `hikihi`, `hime`, `wunabu`, `iti`, `badia`, `ika`, `bena`, `kia`. Se quedan, hipotéticas: `kaa`, `maa`, `suka`, `ama`, `bari`, `puna` |
+>      | **D2** las ocho del wayuu | `saika` bueno, `uli` negro, `halira` blanco, `kule` rojo, `halikebe` alegrarse, `aiima` enojo (hipotéticas); `huda` morir y `kake` vivir (reconstruidas) |
+>      | **D3** | `alaain` al archivo sin sustituta; `japü` → `aburi` 'tener vergüenza' (reconstruida) |
+>      | `diki`, `marisi` | ganan su segunda hermana en la transcripción del habla de mujeres: reconstruidas |
+>      | plantillas | IDENTIDAD dice «Dai diki-kuba hime kibe para. Da-barsure kuburuku»; la breve enseña los conectores nuevos y, en VOCES, las seis hipotéticas de D2 (ninguna plantilla las enseñaba y el perfil `era2` no muestrea lo hipotético) |
+>      | taíno | `komoho` con Oviedo p. 313 y la glosa 'fruto del cardón de las tunas (higo de tuna)'; Paraguaná toma a Oviedo p. 205 como procedencia del NOMBRE; la lista maestra pierde las cuatro voces de Venezuela y funde `kiba` en `siba`; nota de la pareja taína en ocho voces de la esfera |
+>
+>    - **El instrumento, medido** (`6-fusion/medicion_tanda_hermanas_2026-09-24.yaml`,
+>      contra `main` 6aa43a5, SIN la base):
+>
+>      | | antes | después |
+>      |---|---:|---:|
+>      | `VOCABULARIO_BASE` | 5.496 | 5.489 |
+>      | `FUERA_DEL_HABLA` | 36 | 78 |
+>      | caquetío reconstruido · hipotético | 69 · 58 | 44 · 76 |
+>      | formas de plantilla | 5.985 | 6.031 |
+>      | system prompt medio de los 63 | 7.871,2 | 8.048,8 (**+2,26 %**) |
+>      | `[Tu emocionar]` / semilla de idiolecto distintas | — | 0 de 63 / 62 de 63 |
+>
+>      Plantillas: la breve +98 caracteres (la línea VOCES), la completa +180
+>      (una línea de ánimo y color, sólo tier 1). Pre-vuelo verde en los cuatro
+>      casos con DEBE/NO_DEBE de este corte. La tabla es la medición del
+>      **cierre** (re-medida el 2026-09-27 con todo lo de abajo dentro): la
+>      primera, antes de th.14-th.23, daba 5.488 · 76 · 45/75 · 6.028 · +1,67 %.
+>      Lo que se integró después **no mueve el prompt**: medido contra 11f1fdd,
+>      +0,0 % (sólo `kalinago` 25 → 24 por `kalínagu`).
+>    - **Lo que NO está medido todavía**: el control y el score de la serie C
+>      re-puntuada, el uso histórico de las voces archivadas y que las formas
+>      nuevas de la plantilla no se hayan dicho nunca en la base. Hace falta
+>      Docker: `medir_tanda_hermanas.py --con-base`. Por analogía con la tanda
+>      final, leer la serie C con este lexicón la hará caer —está dicha con
+>      `naa`, `arima`, `wara`…—; eso vuelve a decir que no es comparable, no
+>      predice la base.
+>    - **Visto al aplicar.** Los generadores de la comparanda no eran
+>      reproducibles (el achagua renombraba sus 3.569 claves; la A-2 dejaba
+>      entrar el paraujano `pia`): ahora cuentan lo archivado como ocupado; el
+>      achagua arrastra `maba` y `debe` a `-achagua`. El de Zavala destapaba
+>      `baja` 'caño' al archivar `baba` (homógrafo falso): Miguel la dejó entrar
+>      como hipotética (th.14). `[Tu tierra]` decía «Lo decís duna/arima» (el canon del mundo
+>      apuntaba a las voces viejas; `verificar_sitios_era2.py` daba 22 fallos y
+>      no es guardián). Cuatro nombres del elenco tienen raíz archivada
+>      (Dunakoa, Ruata, Simaure, Talata): se quedan. Buriche arrancaba con 3
+>      formas de semilla: la derivada se completa si el oficio agota sus campos.
+>
+>    - **Lo que entró después, el mismo corte** («Ok a todo, que no quede
+>      ninguna tarea pendiente», th.14-th.23): `baja`, `busera` y `bagua`;
+>      #222 entero —grupo 1 (lexicón: `LLEGARON_CON_EL_ESPANOL`, las notas
+>      kalinago, `-oa`/`-bo` al desafijador), grupo 2 (canon del mundo:
+>      topónimos 180 → 307, 19 hechos de fauna en ecología) y grupo 3
+>      (documentación: 56 notas con procedencia, `kalínagu` archivada, los ocho
+>      cognados retirados, ahora declarados en el generador)—, la cosmovisión
+>      marina (Jachos lee el tabaco), T5 (k ~ s con la tradición viva), el
+>      décimo guardián y la web de las fichas.
+>
+>    **Desde qué run aplica**: desde la **base** (serie `era2-base`). Tests en
+>    `curiana_sim/tests/test_tanda_hermanas.py`.
+>
+> Ninguno de los dieciséis toca `capas_de_score`, y `curiana_observer` sigue sin
 > modificarse.
 
 > ⚠️ **Dos artefactos del instrumento descubiertos al cerrar el día 3

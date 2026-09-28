@@ -12,7 +12,7 @@ medido: 2026-09-07
 
 > "To say that the Caquetío are a Theocratic Chiefdom […] explains absolutely
 > nothing, and **blurs the differences that make a difference**."
-> — Oliver 1989, cap. 3, p. 278
+> — Oliver 1989, cap. 3, p. 294
 
 ## La respuesta en una frase
 
@@ -60,32 +60,88 @@ Ranchería y el César. Coquibacoa es el nombre de la Guajira en el mapa de Juan
 de la Cosa (1500) y en la capitulación de Ojeda del mismo año
 («Quinquevacoa… donde están las piedras verdes»); Castellanos lo restringe al
 norte-noreste de la península (Macuira, Jarara); y a principios del XVI la
-Gobernación de Venezuela entera se llamó así (Oliver pp. 191, 192, 199, 211).
+Gobernación de Venezuela entera se llamó así (Oliver pp. 190-191, 192, 201-202, 217).
 
 Lo que se sabe de los caquetíos de ahí cabe en cuatro rasgos, todos con página
 en el módulo: **dónde** (dos sectores de la Guajira, «precisely where some
 limited agriculture was possible», y aldeas entre los bubures de Juruara,
-p. 222); **cómo** (puestos de frontera y avanzada, minoría numérica, siempre en
-las mejores tierras bajas de cultivo, nunca en tierras altas, p. 202); **de qué
+p. 228); **cómo** (puestos de frontera y avanzada, minoría numérica, siempre en
+las mejores tierras bajas de cultivo, nunca en tierras altas, p. 205); **de qué
 viven** (comercio: sal hacia el interior, oro de Valledupar y la Sierra Nevada
-hacia la costa; socios elegidos, wayú evitados, pp. 189, 222); y **desde
+hacia la costa; socios elegidos, wayú evitados, pp. 188, 229); y **desde
 cuándo** (quizá desde 1200 d.C., con el pico del contacto Guajira ↔ Los Médanos
-**en 1400 d.C., dentro de la ventana de la simulación**, p. 200). Liderazgo,
+**en 1400 d.C., dentro de la ventana de la simulación**, p. 203). Liderazgo,
 demografía y religión son huecos: «very little is known about the culture of
 the Juruara Caquetío», y lo mismo de los guajiros. No se rellenan.
 
 Por qué importa: es **hija de la costera** («undoubtedly originated from
-Coastal Falcón», p. 189) y el único modelo documentado de un enclave caquetío
+Coastal Falcón», p. 188) y el único modelo documentado de un enclave caquetío
 que comercia y convive sin fundirse — justo lo que la era 2 necesita. Y trae
 dos regalos para la lengua: entre los nombres de aldea wanebucán de Punta
 Espada–Chichibacoa Oliver lee «Paragua-nil» y «Coria-na», «suspiciously
-Caquetío» (p. 207: toca el nombre Curiana, #33, y el sufijo, #109); y el cabo
+Caquetío» (p. 211: toca el nombre Curiana, #33, y el sufijo, #109); y el cabo
 Chichibacoa «suspiciously sounds like Coquibacoa, except for a /k/::/ch/ sound
-shift» (p. 249 n. 94).
+shift» (p. 257 n. 186).
 
 > ⚠️ Regla 3: **Coquibacoa como nombre de región es español**. Arcaya 1920
 > (p. 130) lo dice: se llamó así «por el nombre indígena de uno de sus sitios»
 > y luego «se le dio también entonces al Golfo». Lo indígena es el sitio.
+
+### Los llanos: la misma lengua, con variedades — y el Casanare (2026-09-24)
+
+Cuatro testigos de un solo hecho (`geografia_politica-020`), entrados juntos
+por dp.2.02 de #222 («Ok a todo», Miguel, 2026-09-24): Federmann A, Pérez de
+Tolosa A, Rivero (b) y Gumilla A.
+
+- **Lengua.** En 1530 un caquetío de Coro sirve de intérprete ante los de
+  Barquisimeto y los mismos intérpretes bastan en el valle del Yaracuy
+  ([[federmann-1916]] pp. 58 y 108). En 1546 los caquetíos de los llanos son
+  la misma nación, «aunque algo difieren en la habla á los de Coro»
+  ([[perez-de-tolosa-1546]] p. 234, de segunda mano). **Es el primer rasgo de
+  lengua de la polity `llanos`**: una lengua con variedades, sin una sola
+  palabra que las distinga.
+- **Economía.** En la misma frase: «no son grandes labradores», comen carne
+  y pescado — frente al valle de Barquisimeto, «grandes labradores de maíz»
+  (p. 233). Misma nación, habla algo distinta y sociedad distinta.
+- **El «hasta Casanare».** El extremo suroeste que la fila de `llanos`
+  reclama descansaba en [[jahn-1927]], que lo saca de Rivero. La cita directa:
+  [[rivero-1883]] pp. 29 (los que los achaguas llaman «Tamudes» y los
+  españoles caquetíos, al sur del Meta), 54 («Cacatíos» en Pauto), 144, 151
+  (el P. Meland «lidiando con la lengua *Caquetá*» de Pauto, hacia 1667), 201
+  («Caquetíos de Pauto», 1666) y 392 (caquetíos en el Guaviare, 1723). ⚠️ Es
+  **colonial** (ss. XVII-XVIII), en misión, y Rivero **no prueba continuidad
+  política** con los caquetíos del Cojedes de Federmann: no dice nada de
+  autoridad, economía ni guerra. No es una sexta polity (la (c) de #217 no se
+  eligió).
+
+⚠️ `curiana_sim/curiana_polities.py` —el espejo en código de esta tabla— **no
+se tocó**: es motor y lo trabaja otro frente. La línea de lengua y economía de
+Tolosa y la nota de Rivero para la polity `llanos` quedan escritas aquí y
+propuestas para allá (registro:
+`6-fusion/decisiones_222_mundo_2026-09-24.yaml`, dp.2.02).
+
+**El etnónimo fuera de la costa**, fechado (el mapa de dispersión que pedía
+Gumilla A; ninguno de estos es dato de la Kaketiana, regla 4):
+
+| Forma | Dónde | Cuándo | Fuente |
+|---|---|---|---|
+| *Caquecios*, *Caquetios* | Barquisimeto, Yaracuy, llanos | 1530-1531 | [[federmann-1916]] (1557 [19], [46]-[48]) |
+| «indios de nación Caquetios» | los llanos, 200 leguas | 1546 | [[perez-de-tolosa-1546]] p. 234 |
+| «Cacatíos de nación», «Caquetíos de Pauto», lengua «Caquetá» | Pauto y Tame (Casanare) | antes de 1629 – 1667 | [[rivero-1883]] pp. 54, 151, 201 |
+| «Tamudes» de los achaguas, caquetíos de los españoles | Barragua, Airico, al sur del Meta | antes de 1657 | [[rivero-1883]] p. 29 |
+| caquetíos en el Guaviare | Guaviare | 1723 | [[rivero-1883]] p. 392 |
+| «Nacion Cacatia, Christiana ya» | misiones jesuitas del Orinoco y los Llanos | 1741 (ed. 1791) | [[gumilla-1791]] t. II p. 55 |
+
+### La costa oriental de Federmann: otra polity, fuera del mapa (2026-09-24)
+
+En 1531 Federmann vuelve a Coro por la costa desde la boca del Yaracuy:
+sesenta y cinco leguas de «Caquetíos, nuestros aliados», comunicados por
+canoa, y una nación de la sierra, los Atycares, «confederada con dos aldeas de
+Caquetíos» ([[federmann-1916]] pp. 120-123; `geografia_politica-024`).
+Decidido por dp.2.17 de #222 (B, «por ahora»; «Ok a todo», 2026-09-24): es
+**otra polity costera**, marcada `costa-oriental` en el corpus, y se queda
+**fuera del mapa de la era 2** — nada la une al Golfete más que el nombre de
+la nación. No es una sexta polity del motor ni entra ningún nodo.
 
 ## Lo que el modelo destapó
 

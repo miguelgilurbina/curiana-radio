@@ -39,7 +39,14 @@ sys.path.insert(0, os.path.join(R, "curiana_sim"))
 import curiana_lexicon as CL
 
 Y = yaml.safe_load(io.open(os.path.join(R, "6-fusion", "achagua_neira_ribero_1762.yaml"), encoding="utf-8"))
-V = CL.VOCABULARIO_BASE
+# Las claves con las que choca una forma achagua: el lexicón SIN lo que este
+# mismo módulo ya fusionó (si no, cada clave choca consigo misma y sale entera
+# con `-achagua`: medido el 2026-09-24, 3.569 de 3.569) y CON lo archivado —
+# una voz caquetía que sale del habla sigue siendo canon, y una comparanda que
+# la capturara la contaría como achagua el día que alguien la dijera.
+_PROPIAS = getattr(CL, "COMPARANDA_ACHAGUA", {})
+V = {k: e for k, e in CL.VOCABULARIO_BASE.items() if _PROPIAS.get(k) is not e}
+V.update(CL.FUERA_DEL_HABLA)
 ES = {r.lower() for r in CL.RAICES_ESPANOLAS} | set(CL.ES_STOPWORDS) | {
     "casa", "cara", "cama", "capa", "cata", "cana", "mana", "mata", "masa", "misa", "nada", "nena", "pena", "pata",
     "rata", "rima", "sana", "tara", "tela", "tema", "toca", "bata", "bala", "cera", "cita", "coca", "cuna", "dama",

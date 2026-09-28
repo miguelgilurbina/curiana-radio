@@ -244,3 +244,16 @@ oriental, no Margarita; la «Paragrachoa» de la p. 252 cabe ahí (hipótesis).
 **p. 248**: Manaore residía «en la comarca de la ciudad de Coro».
 
 Propuesta: `6-fusion/guaiqueries_manaure_dabajuroide_2026-09-23.yaml`; issue: `6-fusion/issues-pendientes/guaiqueries-manaure-dabajuroide-2026-09-23.md`.
+
+## 2026-09-24 — campaña cosmovisión marina
+
+**Se preguntó:** ¿dice esta obra algo del MAR en la vida simbólica, ritual o
+cosmológica de los caquetíos de la costa (un ser, un mito, un rito, una
+ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
+`6-fusion/cosmovision_marina_2026-09-24.yaml`.
+
+**Cómo:** Barrido el .txt entero (Oviedo y Baños 1723 + el apéndice documental), leídas las ventanas creencia × mar con un nombre de la costa occidental cerca. Medido con `6-fusion/scripts/medir_cosmovision_marina.py`: `fd_t2_documentos`: 11 ventanas creencia × mar (9 con un nombre de la costa occidental cerca), 6 creencia × cielo de control.
+
+**Se halló:** La carta de Ampíes (p. 212) es la otra primaria del poder del señor caquetío, y es de cielo: «se hace adorar como Dios, dando á entender á los indios que él da los temporales», y vive «diez leguas la tierra adentro». La misma carta dice que un «D. Juan Baracoica, que está en las islas», es «su pariente y deudo»: el mar une parientes. Pérez de Tolosa: «viciosos de comida de carne y pescado» (caquetíos de los llanos, no de la costa).
+
+**No se halló:** Cero creencia del mar: las ventanas son de la conquista de Caracas (caracoles y fotutos de guerra de Guaicaipuro, regla 4) y de capitulaciones.

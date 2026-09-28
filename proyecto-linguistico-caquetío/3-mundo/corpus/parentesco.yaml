@@ -9,7 +9,7 @@
     ("abdicación" de 1636). Manaure (Don Martín) fue sucedido por su hijo Don Alexandre, ya bajo
     encomienda y con casi una década de negociación con Ampíes a sus espaldas.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 265-266, 268 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\")"
+  referencia: "Oliver 1989, cap. 3, pp. 265-266, 280, 305 (\"the office of chief or diao was in the XVIth century inherited by the son of the diao\" está en la p. 305; el caso de Don Alexandre en la p. 280)"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -27,7 +27,7 @@
     ambigüedad de si ese parentesco es carnal o clasificatorio (es decir, posiblemente un sobrino
     tratado con un término que el español tradujo como "hijo").
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, p. 262 (\"his mother (carnal or classificatory?)\")"
+  referencia: "Oliver 1989, cap. 3, pp. 280-281 (\"his mother (carnal or classificatory?)\")"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -60,7 +60,7 @@
     comparado (wayuu, taíno) y tomando en serio la duda que el propio Oliver deja abierta sobre el
     caso de Manaure.
   fuente: reconstruido
-  referencia: "analogía wayuu y taína: herencia por sobrinos uterinos, no hijos (ver parentesco-006, 007); apoyo indirecto en Oliver 1989, cap. 3, p. 262"
+  referencia: "analogía wayuu y taína: herencia por sobrinos uterinos, no hijos (ver parentesco-006, 007); apoyo indirecto en Oliver 1989, cap. 3, p. 280"
   dominios: [parentesco, politica]
   agentes_relacionados: [Chiriware, Chiri-ko, Manaure]
   implicacion_simulacion: >
@@ -172,6 +172,15 @@
   referencia: "Oliver 1989, cap. 2, p. 147"
   dominios: [parentesco, lenguaje]
   agentes_relacionados: []
+  aviso: >
+    RESERVA (J de T11, #197; aplicada por dp.2.16 de #222, «Ok a todo», 2026-09-24): el test de
+    cognado/préstamo de la campaña del taíno NO confirma este cognado —da letra C, indecidible:
+    daitiao y guatiao comparten morfología, no una correspondencia de sonido— y la afirmación tiene
+    UNA sola fuente, Oliver sobre Oviedo, que además duda por escrito de que la voz sea caquetía
+    («I have no absolute certainty that it belongs to a Caquetío language», cap. 2 n. 42). Y desde
+    db.2 (2026-09-22) el lexicón da `datihao` como taíno. La entrada se queda con su etiqueta, como
+    dice J («si se queda, que se quede con la reserva»); no se degrada. Ver
+    6-fusion/issues-pendientes/taino2-prueba-linguistica-2026-09-22.md §4.2 y §7.
   implicacion_simulacion: >
     Candidato a incorporar a curiana_lexicon.py en trabajo futuro (fuera de alcance de esta sesión de
     investigación, que no toca código). No usar todavía en prompts hasta que Miguel lo revise.
@@ -208,9 +217,9 @@
     La poligamia cacical funcionaba como estrategia política deliberada: ampliaba la red de parentesco
     y las obligaciones recíprocas entre familias aliadas. El Manaure histórico de CONTACTO (Don Martín,
     ya negociando con Ampíes) es el único cacique documentado sin ambigüedad como polígamo, casado con
-    Doña Sancha y con "hijas de los caribes" — alianza matrimonial interétnica explícita.
+    Doña Sancha y con "hijas de los caribes" (Oliver 1989 cap.3 p. 281) — alianza matrimonial interétnica explícita.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 260-261 (\"Polygamy involves a much broader and extensive kinship network\"); dato del Manaure histórico de contacto, no del período precontacto que la simulación modela"
+  referencia: "Oliver 1989, cap. 3, pp. 280-281 (\"Polygamy involves a much broader and extensive kinship network\"); dato del Manaure histórico de contacto, no del período precontacto que la simulación modela"
   dominios: [parentesco, politica, comercio]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -231,7 +240,7 @@
     consolida donde está el poder o el recurso (ver también el caso de la hija y la viuda de Manaure,
     que se trasladan al pueblo del cacique-esposo o del cacique-hijo).
   fuente: reconstruido
-  referencia: "patrón documentado en Oliver 1989, cap. 3, pp. 261-262 (traslado de la hija y de la viuda de Manaure al pueblo del cónyuge/heredero) aplicado por analogía a los casos ya existentes en curiana_agents.py"
+  referencia: "patrón documentado en Oliver 1989, cap. 3, pp. 280-281 (traslado de la hija y de la viuda de Manaure al pueblo del cónyuge/heredero) aplicado por analogía a los casos ya existentes en curiana_agents.py"
   dominios: [parentesco]
   agentes_relacionados: [Piru-sha, Wata-ni, Nubiri-sha]
   implicacion_simulacion: >
@@ -300,18 +309,29 @@
     fragmentos componibles para system prompts modulares futuros, no como mecánica ya implementada.
 
 - id: parentesco-021
+  # dp.2.15 de #222 (Rivero, decisión B → (a): partir la entrada; «Ok a todo»,
+  # Miguel, 2026-09-24). Aquí queda lo que Rivero atestigua; la etimología y
+  # el «como primos», que son de Jahn, pasan a parentesco-040 (hipotético).
   contenido: >
-    Los achagua de los Llanos llamaban a los caquetíos llaneros "tamude", incorporando su término de
-    parentesco "mude" (aprox. "primo") — los trataban literalmente como primos. Jahn argumentó que el
-    término prueba origen común de achagua y caquetío dentro de la gran familia arahuaca.
+    Los achaguas llamaban «Tamudes» a una nación que los españoles llamaban caquetíos, al sur del
+    Meta, en Barragua o Airico (antes de 1657); y entre los achaguas del Airico, hacia 1720-1730, el
+    saludo ceremonial al huésped era «mude, que significa primo»: se decía a los recién llegados,
+    «que así se llaman en tales casos aunque nunca lo sean». Rivero da las dos cosas por separado y
+    no las une.
   fuente: atestiguado
-  referencia: "Oliver 1989, cap. 3, pp. 287-288, citando Jahn 1927: 213 y Rivero [1728-9] 1956: 30"
+  referencia: "Rivero 1883 p. 29 (Tamudes; pdf 50) y pp. 419-420 (mude; pdf 438-439), vistas en imagen por la parcela de Rivero (#217, 6-fusion/rivero_1883_2026-09-23.yaml §cruces.tamude). Antes: «Oliver 1989, cap. 3, pp. 303-304, citando Jahn 1927: 213 y Rivero [1728-9] 1956: 30», que es la cadena Rivero → Jahn → Oliver."
+  procedencia: {obra: rivero-1883, pagina: "29, 419-420"}
   dominios: [parentesco, lenguaje]
   agentes_relacionados: []
+  aviso: >
+    Hasta el 2026-09-24 esta entrada decía que los achaguas «incorporaban» mude en tamude y trataban
+    a los caquetíos «literalmente como primos», y que eso probaba origen común: eso es de Jahn, no de
+    Rivero, y está ahora en parentesco-040, hipotético. Colonial y de los Llanos (regla 3 y 4).
   implicacion_simulacion: >
-    Legitima usar la etnografía achagua como comparanda de primer orden para la familia caquetía
-    (parentesco-022), al nivel de wayuu y lokono: son los parientes que las propias fuentes del
-    proyecto declaran "primos".
+    Da el nombre achagua de unos caquetíos llaneros y un saludo de hospitalidad achagua; no, por sí
+    solo, un parentesco reconocido entre los dos pueblos. ⚠️ parentesco-022 justifica la analogía
+    achagua con «los 'primos' declarados del caquetío, ver parentesco-021»: ese «primos» es desde
+    hoy parentesco-040, hipotético. No se tocó parentesco-022 (registro de dp.2.15).
 
 - id: parentesco-022
   contenido: >
@@ -550,7 +570,7 @@
     relato del pacto con Ampíes: es decir, Manaure ES un diao (el de Coro/Todariquiba), reconocido
     además como el principal entre varios.
   fuente: atestiguado
-  referencia: "Zavala Reyes 2015, p.67 (glosario, entrada 106: \"Diao (HB)(AM): Señor principal. Jefe mayor\"); Oliver 1989, cap. 3, p. 251 (\"the main diao or great cacique, Manaure\")"
+  referencia: "Zavala Reyes 2015, p.67 (glosario, entrada 106: \"Diao (HB)(AM): Señor principal. Jefe mayor\"); Oliver 1989, cap. 3, p. 259 (\"the main diao or great cacique, Manaure\")"
   dominios: [parentesco, politica, lenguaje]
   agentes_relacionados: [Manaure]
   implicacion_simulacion: >
@@ -600,7 +620,7 @@
     político directo a Manaure, que está fuera de alcance geográfico razonable de "algunas
     circunvecinas".
   fuente: reconstruido
-  referencia: "síntesis de esta sesión sobre datos atestiguados (parentesco-034; Zavala Reyes 2015 p.60; Oliver 1989 cap.3 p.251); el ENSAMBLE de los tres niveles como sistema es interpretación, no una fuente que lo describa así de explícito"
+  referencia: "síntesis de esta sesión sobre datos atestiguados (parentesco-034; Zavala Reyes 2015 p.60; Oliver 1989 cap.3 p.259); el ENSAMBLE de los tres niveles como sistema es interpretación, no una fuente que lo describa así de explícito"
   dominios: [parentesco, politica]
   agentes_relacionados: [Manaure, Korie-ko, Chiriware, Paugis-sha, Sha-korie]
   implicacion_simulacion: >
@@ -644,3 +664,50 @@
     capacidad_de_expansion "más sobrinos rivales entre sí por la sucesión" como paso de crecimiento
     natural — esta entrada formaliza esa intuición con respaldo comparativo. No se inventa un segundo
     sobrino en esta sesión; queda como candidato de expansión explícito, sujeto a que Miguel lo apruebe.
+
+# ── dp.2.15 de #222 (2026-09-24, «Ok a todo»): la mitad de parentesco-021 que
+# no es de Rivero sino de Jahn, partida y en su capa (Rivero, decisión B →
+# (a); propuesta en 6-fusion/rivero_1883_2026-09-23.yaml §cruces.tamude). ──
+- id: parentesco-040
+  contenido: >
+    Jahn une las dos cosas que Rivero da por separado: lee en el etnónimo «tamudas» la voz achagua
+    «mude» 'primo', concluye que los achaguas se consideraban «emparentados con los Caquetíos», y de
+    ahí el «origen común de Caquetíos y Achaguas». Oliver lo hereda: los achaguas trataban a los
+    caquetíos llaneros «literalmente como primos».
+  fuente: hipotetico
+  referencia: "Jahn 1927 p. 213 y n. 30 («J. Rivero, obra citada, páginas 29 y 420»; pdf 267, visto en el texto); Oliver 1989 cap. 3 pp. 287-288. Partida de parentesco-021 por dp.2.15 de #222."
+  procedencia: {obra: jahn-1927, pagina: "213"}
+  dominios: [parentesco, lenguaje]
+  agentes_relacionados: []
+  aviso: >
+    Tres cosas lo dejan en hipótesis. (1) Rivero no relaciona «Tamudes» (p. 29) con «mude» (p. 420),
+    que salen a 390 páginas y dos siglos de distancia. (2) El propio Rivero dice que «mude» se le dice
+    al huésped «aunque nunca lo sean»: llamar primos a otro pueblo sería cortesía, no parentesco
+    reconocido. (3) El repo tiene otras dos lecturas de la forma: Neira y Ribero 1762 da «Primo =
+    Nude, Nudetuare», con n- y no m- (6-fusion/achagua_neira_ribero_1762.yaml, pliego 85), y
+    6-fusion/petroglifos_y_manaure.yaml trae «tamudi» 'abuelos (en los Llanos)', vía Antolínez.
+  implicacion_simulacion: >
+    Ninguna: es una inferencia sobre el parentesco entre dos pueblos de los Llanos, colonial. No
+    sostiene por sí sola la analogía achagua de parentesco-022.
+- id: parentesco-041
+  contenido: 'El mar une parientes y se cruza para visitarlos. Ampíes: los indios de la costa, «desde Paraguachoa
+    hasta la punta de Coquibacoa» —Paraguaná entre ellos—, «muchas veces se pasaban allá [a Curazao, Aruba y Bonaire]
+    á holgar» con los isleños, y le enviaron «un cacique que se dice D. Juan Baracoica, que está en las islas y es
+    su pariente y deudo»; y el mensaje «principalmente» lo mandaba Anaure. Oliver lo da por la arqueología: «there
+    is no doubt that the inhabitants of Curaçao had strong kinship ties to the Caquetío of Paraguaná».'
+  fuente: atestiguado
+  referencia: perez-de-tolosa-1546, p. 212 (carta de Ampíes); oliver-1989-cap4, p. 476
+  procedencia:
+    obra: perez-de-tolosa-1546
+    pagina: 212 (carta de Ampíes)
+  dominios:
+  - parentesco
+  - geografia_politica
+  - navegacion
+  agentes_relacionados: []
+  implicacion_simulacion: El otro lado del mar es familia, y se va de visita. Para la creencia no dice nada; para
+    la vida, dice que cruzar es ir a ver a los suyos.
+  limite: 'Época: contacto (Ampíes, antes de 1527); precontacto (la arqueología de Oliver). Polity: costera y las
+    ABC.'
+  nota: Fusionado de 6-fusion/cosmovision_marina_2026-09-24.yaml `cm24-06` por cc.10 (c) A, cosmovisión marina («Ok
+    a todo», Miguel, 2026-09-24)

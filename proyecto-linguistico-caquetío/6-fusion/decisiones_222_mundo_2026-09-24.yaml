@@ -1,0 +1,456 @@
+# Decisiones de Miguel sobre el GRUPO 2 de #222 — «Canon del mundo (no
+# cambian el prompt)», diecisiete entradas dp.2.01-dp.2.17 (2026-09-24)
+#
+# De dónde sale la lista: 6-fusion/decisiones_pendientes_2026-09-23.yaml,
+# clave `grupo_2_mundo` (datos, citas y opciones de cada una), y su resumen
+# legible 6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md
+# §Grupo 2 (la recomendación que se aplica: donde el escriba dice «Mía»,
+# manda la suya).
+#
+# Lo que dijo Miguel, en dos tiempos:
+#
+#   «Acepto todo lo recomendado»                       (tanda de las hermanas)
+#
+#   «Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es
+#   lo que tenga que ver con docker»                   (2026-09-24)
+#
+# Registrado ANTES de tocar nada (fusionar-propuesta §0). Cada entrada lleva
+# `eleccion` (la recomendación del resumen), `lectura_operativa` (lo que el
+# escriba entiende que eso obliga a hacer, escrito aparte para que no parezca
+# que lo decidió Miguel), `estado` (APLICADA / CERRADA SIN CAMBIO / NECESITA
+# A MIGUEL) y `aplicado_por`.
+#
+# Tres reglas del encargo que mandan sobre todas las entradas:
+#   1. Lo que la recomendación manda ESPERAR se cierra como decidido y
+#      declarado, sin aplicar nada.
+#   2. Lo que sólo Miguel puede hacer (reconocer un sitio, mirar un folio en
+#      PARES) no se inventa: queda NECESITA A MIGUEL con la pregunta exacta y
+#      el resto de la entrada aplicado.
+#   3. Lo que aparezca al aplicar y nadie previó (una colisión, una capa
+#      dudosa, un dato que contradice) NO se resuelve de paso: se salta, se
+#      escribe en `lo_que_aparecio_al_aplicar` y se dice en el informe.
+#
+# Y una frontera de este frente: no se tocan curiana_lexicon.py, los
+# lexicon_zavala/a2/achagua generados, el motor (curiana_*.py) ni las
+# plantillas — otro frente trabaja ahí. Lo que lo exija queda NECESITA A
+# MIGUEL con la razón.
+
+meta:
+  fecha: '2026-09-24'
+  rama: mundo/222-grupo2-2026-09-24 (cortada de tanda/hermanas-2026-09-24, c83937b)
+  decision_literal: '«Ok a todo, que no quede ninguna tarea pendiente. Lo único pendiente es lo que tenga que ver con docker»'
+  decision_anterior: '«Acepto todo lo recomendado»'
+  lista: 6-fusion/decisiones_pendientes_2026-09-23.yaml §grupo_2_mundo
+  resumen: 6-fusion/issues-pendientes/decisiones-pendientes-2026-09-23.md §Grupo 2
+  estado: CERRADO (2026-09-24) — lo que queda es NECESITA A MIGUEL, con la pregunta en cada entrada
+
+decisiones:
+
+  dp.2.01:
+    tema: el contacto precolombino con las Antillas Mayores — ¿qué capa?
+    eleccion: 'C + E — se parte en dos afirmaciones (C1 reconstruida, C2 hipotética) y se reformula como contacto «por cadena de tramos cortos», falsable'
+    lectura_operativa: >-
+      Las tres afirmaciones de dc.4 entran al corpus de geografía política con
+      su capa: costa ↔ ABC con parentesco (atestiguado), costa/islas ↔ La
+      Española 1513-1526 (atestiguado, colonial) y la tercera partida en C1
+      «el guanín circulaba entre Tierra Firme y las Antillas Mayores antes de
+      1492» (reconstruido) y C2 «la esfera caquetía participaba en ese
+      circuito» (hipotético), con la forma E —si lo hubo, fue por cadena de
+      tramos cortos— y sus predicciones falsables escritas.
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: geografia_politica-016 (costa ↔ ABC con parentesco, atestiguado), -017 (la embajada, la hija y La Española, atestiguado, colonial), -018 (C1: el circuito del guanín antes de 1492, reconstruido) y -019 (C2 + E: la esfera en ese circuito, hipotético, formulado como cadena de tramos cortos con sus predicciones)'
+      - '4-fuentes/ampies-1526-carta.md: ficha nueva (la carta, vista en imagen en Fernández Duro t. II p. 212), que sostiene -016 y -017'
+    verificado: 'Fernández Duro t. II p. 212 en imagen; Arcaya pp. 160-161 y 167-168; Colón en Navarrete t. I pp. 400-401; Oviedo vol. I p. 507; Anglería vol. 1 p. 309; Casale 2024 fig. 1 en imagen; Oliver DOC pp. 198, 258, 266'
+
+  dp.2.02:
+    tema: la polity de los llanos — misma lengua con variación, y los caquetíos del Casanare
+    eleccion: 'Federmann A + Tolosa A + Rivero (b) + Gumilla A, aplicadas juntas: un solo hecho con cuatro testigos; el motor no se toca'
+    lectura_operativa: >-
+      Un hecho del corpus (geografía política) con las cuatro citas; el rasgo
+      de lengua y de economía a `llanos` en 3-mundo/polities-caquetias.md con
+      la nota de Rivero (cita directa, sin continuidad política probada) y
+      «Cacatia» de Gumilla en la ficha y en el mapa de dispersión del
+      etnónimo. `curiana_polities.py` NO se toca (es del motor): la nota que
+      Rivero (b) pide para `llanos` va al vault.
+    estado: APLICADA (2026-09-24), salvo el espejo en el motor, que NECESITA A MIGUEL
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: geografia_politica-020, un hecho con cuatro testigos (Federmann 1916 pp. 58 y 108; Pérez de Tolosa p. 234; Rivero pp. 29, 54, 144, 151, 201, 392; Gumilla t. II p. 55), atestiguado'
+      - '3-mundo/polities-caquetias.md: §«Los llanos: la misma lengua, con variedades — y el Casanare» (el rasgo de lengua y de economía de Tolosa A, la cita directa de Rivero (b)) y la tabla del etnónimo fuera de la costa (el mapa de dispersión de Gumilla A)'
+    verificado: 'Pérez de Tolosa p. 234, Rivero pp. 29, 151 y la lista de pueblos, y Gumilla t. II p. 55, en la capa de texto; Federmann por su propuesta (visto en imagen por su parcela)'
+    necesita_a_miguel: >-
+      Tolosa A y Rivero (b) piden también la línea en la polity `llanos` de
+      curiana_sim/curiana_polities.py (hoy `llanos` no tiene rasgo de lengua).
+      Es motor y este frente no lo toca (regla 6 del encargo). Pregunta: ¿se
+      lo pasas al frente del motor con esta edición? — añadir a `llanos` un
+      rasgo de LENGUA «misma nación que la costa, "aunque algo difieren en la
+      habla á los de Coro" (Pérez de Tolosa 1546, p. 234, de segunda mano)»,
+      uno de ECONOMÍA «"no son grandes labradores", carne y pescado (ibid.)»
+      y, en el territorio, la nota «el "hasta Casanare… Barraguán" descansa en
+      Rivero 1883 (pp. 29, 54, 144, 151, 201, 392) vía Jahn; colonial, sin
+      continuidad política probada».
+
+  dp.2.03:
+    tema: el campo `epoca` en 3-mundo/etnias.yaml
+    eleccion: 'Sí, antes de dp.2.04 (T8 D)'
+    lectura_operativa: >-
+      `epoca` con vocabulario cerrado (precontacto · contacto-temprano ·
+      colonial · varias), exigido cuando `polity_caquetia: costera`, validado
+      por curiana_sim/compilar_etnias.py (el 9.º guardián; no es motor).
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - 'curiana_sim/compilar_etnias.py: EPOCAS, `epoca` en los vocabularios cerrados (matiz en `epoca_nota`) y el error `costera-sin-epoca`'
+      - 'curiana_sim/tests/test_etnias.py: tres tests nuevos (costera sin época, vocabulario cerrado, fuera de la costera no se exige)'
+      - '3-mundo/etnias.yaml: el esquema de la cabecera, y `epoca: precontacto` en etnia-008 (la única costera al aplicar: la ficción del elenco en la ventana simulada)'
+    no_se_hizo: 'no se rellenó `epoca` en las fichas no costeras: la decisión la exige sólo para la costera, y fecharlas es leer cada fuente otra vez'
+
+  dp.2.04:
+    tema: los vecinos que faltan en etnias.yaml
+    eleccion: 'M1 B, T5 D, T8 B y C, en ese orden (epoca primero)'
+    lectura_operativa: >-
+      M1 B: los grupos de Oliver que faltan, con el jirajara como vecino de la
+      costera (hipotético por la boda) y etnia-003 a familia `desconocida`.
+      T5 D: el taíno (contacto ninguno) y sus dos hechos de geografía
+      política. T8 B: la corrección a la campaña 1 (gen-03 y el aviso de
+      arq-01). T8 C: los arahuacos de las Antillas Menores, atestiguado,
+      contacto poblacional hacia las ABC, con `epoca`.
+    estado: APLICADA (2026-09-24) salvo T8 C, que NECESITA A MIGUEL
+    aplicado_por:
+      - '3-mundo/etnias.yaml: M1 B — etnia-010 coanao, -011 wanebucán, -012 tairo, -013 xiriguana, -014 haruacana, -015 jirajara (costera, hipotético por la boda, contacto-temprano), -016 ayomán, -017 gayón, -018 xagua, -019 camagos; etnia-003 ciparicoto baja a familia `desconocida` con las dos lecturas y gana el apoyo concordante de Oliver n. 178'
+      - '3-mundo/etnias.yaml: T5 D — etnia-020 taíno (costera, hipotético, contacto ninguno, época `varias`); T5 la proponía como etnia-009, número que ya era del guaiquerí'
+      - '3-mundo/corpus/geografia_politica.yaml: T5 D — geografia_politica-014 (la deportación de 1513-1526, colonial) y -015 (el horizonte marítimo, precontacto, con nota de lo que llegó después)'
+      - '6-fusion/taino_en_la_esfera_2026-09-21.yaml: T8 B — gen-03 corregido (el cero de Fernandes era de la biblioteca) y el contrapeso genético en el aviso de arq-01'
+      - 'curiana_sim/tests/test_etnias.py: el cable-trampa de quién toca la costera pasa a {caribe del elenco, jirajara, taíno} y exige que ninguna sea atestiguada y que todas tengan época'
+    verificado: 'Oliver tesis pp. 211-220, 236-247 y 251 (OCR con marcador de página) y DOC pp. 198, 250 y 269-270; Arcaya pp. 154 y 159; Martínez-Cruzado 2003 p. 4; el preprint de Fernandes 2020 p. 14'
+    lecturas_del_escriba:
+      - 'donde M1 escribió una familia «probable» (coanao y haruacana, chibcha), el campo cerrado dice `desconocida` y la probable va a aviso_familia (regla 2)'
+      - 'haruacana: M1 escribió `tipo_de_contacto: guerra`, pero la guerra documentada es con los españoles y su propia nota dice «con los caquetíos, ninguno»: va `ninguno`'
+      - 'intensidad: M1 no la daba; va `desconocida` donde el dato no la mide y `ninguna` donde no hay contacto'
+      - 'taíno: `polity_caquetia: costera`, como la propuso T5 (el único contacto documentado, la deportación, es con la costera y sus islas); `ninguna` (tf.7 B) nació después y podría ajustar mejor: ver lo_que_aparecio_al_aplicar'
+    necesita_a_miguel: >-
+      T8 C — la ficha «arahuacos de las Antillas Menores», atestiguado, NO
+      entró: su dato no se pudo verificar en la fuente (ver
+      lo_que_aparecio_al_aplicar.fernandes_2020). Pregunta: ¿autorizas bajar
+      el texto publicado de Fernandes et al. 2020 y su suplemento (Europe PMC
+      sirve el XML; el suplemento está abierto en la web del laboratorio
+      autor) para verificar «Lesser Antilles, but not the Greater Antilles»
+      antes de escribir la ficha? ¿O entra ya con lo que dice el preprint del
+      repo —«arahuacos antillanos de la Edad Cerámica», sin distinguir Mayores
+      de Menores, cinco individuos de Curazao, 68,1 %—?
+
+  dp.2.05:
+    tema: las tres Curianas; toponimo-111 mal situado
+    eleccion: 'A, después de verificar Navarrete en imagen'
+    lectura_operativa: >-
+      Verificar en imagen Navarrete t. III pp. 13 n. 4 y 32 n. 3 (y la p. 32
+      de «riego», dp.2.06 C); registrar la separación de las Curianas
+      (oriental / occidental / La Ramada) donde el canon la necesita, y curar
+      toponimo-111: el «Coria-na» de Oliver está en La Ramada, no en Punta
+      Espada.
+    estado: 'APLICADA (2026-09-24) con Navarrete desde la capa de texto; la imagen NECESITA A MIGUEL (la misma pregunta que dp.2.06 C)'
+    aplicado_por:
+      - 'curiana_sim/lexicon_toponimos.py → 2-lengua/toponimos.yaml: toponimo-111 corrige la observación (la Coriana de Oliver está en La Ramada, Castellanos p. 264, no en Punta Espada) y el veredicto de la lectura de Oliver, y gana una lectura `glosa-fuente` de referente con las Curianas (oriental: Navarrete t. III p. 13 n. 4 y Anglería vol. 1 p. 303; de Coro: p. 32 n. 3 y Valfermoso, p. 32)'
+      - '6-fusion/taino_en_la_esfera_2026-09-21.yaml: eth-00 acotado (la red Curiana ↔ Cauchieto es la oriental)'
+      - '4-fuentes/angleria-1892.md: bitácora'
+    verificado: 'Navarrete t. III pp. 13 n. 4 y 32 n. 3 en la capa de texto (folio en el flujo); Anglería vol. 1 p. 303 en el texto (vista en imagen por M2); Castellanos p. 264 en el texto de 1857'
+    lectura_del_escriba: >-
+      «A, después de verificar Navarrete en imagen»: la imagen que pedía M2
+      (C) era para «riego» y las grafías de Coquibacoa, no para las dos notas
+      de las Curianas, que el OCR lee limpias. Se aplicó A desde el texto y la
+      verificación en imagen queda pendiente con dp.2.06 C. No se tocó #33 en
+      GitHub (no se publica nada).
+
+  dp.2.06:
+    tema: los hechos de contacto temprano de las crónicas (1499-1502)
+    eleccion: 'C primero, luego B; D como nota; E en espera'
+    lectura_operativa: >-
+      C: ver en imagen las pp. 32, 86-89, 518 y 544 de Navarrete. B: al corpus
+      el rescate en guanines, la cédula de 1501 y el palafito de «veinte»
+      casas (que corrige geografia_politica-006 y nodo-008). D: Isabel,
+      intérprete de 1502, como nota (no como hecho). E: la isla de las
+      hierbas se CIERRA en espera, sin aplicar.
+    estado: 'APLICADA en B, D y E (2026-09-24); C NECESITA A MIGUEL'
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: B — geografia_politica-021 (el rescate en guanines, 1502, Navarrete p. 33), -022 (la cédula de 1501, pp. 518-519) y -023 (el palafito de «veinte» casas, pp. 8 y 219); la «tierra de riego» (m2.c3) y las grafías de Coquibacoa (m2.g2) NO se citan, como mandaba M2 sin C'
+      - '3-mundo/corpus/geografia_politica.yaml: en geografia_politica-006 la nota abierta de las «40 casas» se da por resuelta (son veinte) y se declaran los dos sitios de Navarrete; 3-mundo/asentamientos.yaml: la misma corrección en nodo-008, y -023 en su `corpus`'
+      - 'D como nota: Isabel, intérprete de 1502, en la nota_abierta de geografia_politica-021; y la corrección de t7.l4 en 6-fusion/taino2_etnohistoria_contacto.yaml'
+      - 'E: la isla de las hierbas (m2.p1) queda EN ESPERA, declarado en geografia_politica-021; no entra nada'
+    lectura_del_escriba: >-
+      «C primero» pedía la imagen antes de B. B entró desde la capa de texto,
+      que en este tomo lleva el folio en el flujo (la ficha lo declara: «la
+      cita se verifica sin la imagen»), y sin lo que C tenía que decidir: la
+      palabra «riego» y las grafías de Coquibacoa. Si Miguel prefiere que B
+      espere a C, se revierten -021 a -023 sin tocar nada más.
+    necesita_a_miguel: >-
+      C — ver en imagen Navarrete 1829 t. III pp. 32 (el OCR dice «rieeo»:
+      ¿«riego»?), 86-89 (la capitulación: ¿«Qoiquevacoa» = Quiquevacoa?), 518
+      y 544 (las grafías de Coquibacoa). El PDF no está en el repo (21,7 MB,
+      archive.org bub_gb_HFzXrEyoeCAC, dominio público). Hoy el visor de
+      archive.org falla con ese ítem («Unable to fetch …_page_numbers.json») y
+      Google Books pide una comprobación anti-robot, que no se salta; y bajar
+      un archivo pide tu permiso. Pregunta: ¿autorizas bajar el PDF, o miras
+      tú esas cinco páginas?
+
+  dp.2.07:
+    tema: creencia-013 — la cita de Ampíes, «como Dios» o «como digo»
+    eleccion: 'Tolosa A + HSAI a (el mismo gesto); B, ver el folio en PARES, cuando se pueda'
+    lectura_operativa: >-
+      creencia-013 cita las dos lecturas sin decidir (Fernández Duro p. 212 y
+      el folio 14 vía Velasco, variante en notas; nada se apoya en «como
+      Dios») y lleva la referencia de HSAI a (Ampíes en Oviedo y Baños 1885 t.
+      II p. 212 y Aguado vía Arcaya p. 115), con ficha para la carta de
+      Ampíes. B (mirar el folio 14 en PARES) sólo lo puede hacer Miguel.
+    estado: 'APLICADA en Tolosa A + HSAI a (2026-09-24); B NECESITA A MIGUEL'
+    aplicado_por:
+      - '3-mundo/corpus/creencia.yaml: creencia-013 cita la carta (Fernández Duro t. II p. 212, vista en imagen), el folio 14 vía Velasco p. 18 y Aguado vía Arcaya p. 115; `procedencia: ampies-1526-carta`; la variante «como Dios / como digo» va en `aviso`, sin decidir'
+      - '4-fuentes/ampies-1526-carta.md: la ficha de la carta (creada en el commit de dp.2.01), con la tabla de las lecturas'
+    aparecio: >-
+      Arcaya sí copia la frase de Ampíes, entera, en la p. 115 (junto a
+      Aguado); la que salta es la de la p. 161. Y Velasco p. 18 fecha la carta
+      «(1513-1521)» donde Arcaya la supone de 1525-1526: declarado en la
+      ficha, sin promediar. Aguado no tiene clave en la bibliografía (no está
+      en el repo): se cita vía Arcaya en la referencia.
+    necesita_a_miguel: >-
+      B — ver el folio 14 de la carta en PARES (AGI; la signatura del traslado
+      la da Velasco 2015 p. 18) y decir si dice «como Dios» o «como digo». Es
+      lo único que decide entre las dos lecturas; mientras tanto el canon no
+      se apoya en «como Dios».
+
+  dp.2.08:
+    tema: el lote de Esteves — cómo entra
+    eleccion: '2-A, por tandas'
+    lectura_operativa: >-
+      Por tandas, con la regla (E) = Esteves ya aplicada en los niveles del
+      lote (cc.4 → 1-A): primero las A y B más las correcciones del §2 que
+      tocan el canon, después las C, después los descartes. «Que no quede
+      ninguna tarea pendiente»: las tres tandas se aplican hoy, en commits
+      separados. Las correcciones que tocan el lexicón (la cita de
+      `kumarawa`) no son de este frente.
+    estado: APLICADA (2026-09-24), las tres tandas; las dos notas del lexicón NECESITAN A MIGUEL (otro frente)
+    aplicado_por:
+      - '6-fusion/scripts/fusionar_lote_esteves_2026-09-22.py --tanda 1 / 2 / 3 (un commit por tanda), y curiana_sim/migrar_toponimos.py para regenerar 2-lengua/toponimos.yaml'
+      - 'tanda 1: 14 A (toponimo-181 a -194) y 14 B (-195 a -208); correcciones del §2 en el canon: acaboa (153) y aguaque (154) de descartado a C con su id y su referente; Carirubana (148) glosa_fuente y p. 28, y la lectura pasa a «copia de Esteves»; Coabana (116) «cosas [sic: coas]»; curarí (180) p. 105 de Alvarado'
+      - 'tanda 2: 53 C (209 a 261); Coduto entra como entrada propia; Jagüe (234) vista en imagen al fusionar'
+      - 'tanda 3: 46 descartes (262 a 307) en tres grupos nuevos de DESCARTES, con nota, origen o estrato por forma; Arajó vista en imagen al fusionar'
+      - 'curiana_sim/migrar_toponimos.py: alvarado-1921 como obra (curarí y araguán salían sin procedencia citando), y los campos por forma de un grupo de DESCARTES (observaciones, orígenes, estratos, lecturas, formas vivas)'
+      - '6-fusion/toponimos_esteves_indice.yaml: la cola de la Parte I, vacía (ya_en_canon y por_procesar recontados por el script)'
+      - '6-fusion/tura_la_tesis_de_miguel.yaml: la cita de Chunaure que no está en Esteves (corrección del §2 fuera del canon)'
+      - '4-fuentes/esteves-1989.md: bitácora del 2026-09-24 y cobertura'
+    mide: 'topónimos 180 → 307 (A 7 → 21, B 16 → 30, C 55 → 110, descartado 102 → 146); con procedencia 118 → 247'
+    lecturas_del_escriba:
+      - '«por tandas» se aplicó HOY y entero, una tanda por commit, porque Miguel pidió que no quede nada pendiente'
+      - 'dos tipos de lectura del lote no son del vocabulario cerrado: segmentacion-de-autor → etimologia-analitica, hipotesis-de-autor → hipotesis; y el eje `filiacion` (Iticuna) → significado, declarado en la lectura'
+      - 'Coduto: el lote dejaba al fusionador elegir entre lectura de caduto (176) o entrada propia; entra propia, y la identidad es una lectura hipotesis en 176 (dp.2.09)'
+    necesita_a_miguel: >-
+      Las dos correcciones del §2 que tocan el LEXICÓN no son de este frente
+      (curiana_lexicon.py): la nota de `kumarawa` cita a Arcaya «mene y
+      cumaragua nombre de la ciruela» y la página (impresa 75, pdf 83, vista en
+      imagen por M6) dice «(nombres de la viruela)»; la nota de `urupagua` cita
+      Urupaguaduco en la «p. 71» y es la p. 66. Pregunta: ¿se las pasas al
+      frente del lexicón con estas dos ediciones?
+    no_entro: 'las secciones `fauna` y `flora` del lote (no son topónimos): siguen en la propuesta'
+    aplicado_por_el_frente: >-
+      2026-09-24, al fusionar la rama: `kumarawa` ya llevaba la CITA CORREGIDA
+      (Arcaya p. 75, «viruela», desde dp.1.05/1.08 de la tanda de las hermanas);
+      `urupagua` cita ahora Urupaguaduco en la p. 66 (curiana_lexicon.py, sólo `notas`).
+
+  dp.2.09:
+    tema: el mapa vivo — cuatro identificaciones y la forma viva
+    eleccion: 'P3 A. P3 B necesita a Miguel (si reconoce los sitios). P4: el campo propio (recomendación del agente, que el resumen no contradice)'
+    lectura_operativa: >-
+      P3 A: una lectura `hipotesis` en toponimo-132, 138, 135 y 176. P3 B:
+      NECESITA A MIGUEL. P4: la forma viva con su coordenada en un campo
+      propio del canon, leído por barrer_mapa.py (tooling, no motor).
+    estado: 'APLICADA en P3 A y P4 (2026-09-24); P3 B NECESITA A MIGUEL'
+    aplicado_por:
+      - 'P3 A — curiana_sim/lexicon_toponimos.py: una lectura `hipotesis` (eje referente, quien M6, con la página de Esteves y el veredicto «a revisar») en toponimo-132 cumairebo (~ Curaidebo, 201), 138 la miraba (~ Niraba, 278), 135 tabe (~ Jabe, 272) y 176 caduto (~ Coduto, 219); nada se funde'
+      - 'P4 — `forma_viva` con su coordenada en 33 topónimos (18 entradas de nivel y 15 descartes), pasada de la prosa de la propia entrada por 6-fusion/scripts/formas_vivas_al_canon.py; curiana_sim/migrar_toponimos.py la emite; curiana_sim/barrer_mapa.py la lee ANTES del cruce aproximado; curiana_sim/tests/test_barrer_mapa.py (3 tests); 2-lengua/datos-de-lengua.md documenta el campo'
+    mide: 'barrer_mapa: Paraguaná pasa de 8 nuevos y varios aproximados a 0 nuevos, 0 a revisar, 124 de 124 en alguna fuente; «Cerro Capuana» y «Cuabana» dejan de caer en `capana`'
+    necesita_a_miguel: >-
+      P3 B — sólo tú puedes decirlo sobre el terreno. Pregunta: ¿reconoces
+      estos cuatro sitios como el mismo lugar que nombra Esteves? (1) Cumairebo
+      (12.003, -69.920, entre Pueblo Nuevo y El Vínculo) = Curaidebo; (2) La
+      Miraba y el Cerro La Miraba (11.834, -70.054; municipio Moruy) = Niraba;
+      (3) Tabe (11.917, -70.104, a unos dos km de Jadacaquiva) = Jabe o San
+      José de Tarbes; (4) Coduto (11.817, -70.213, al este de Los Taques) y
+      Coduto / Punta Coduto en Médanos = el caduto del dictado. Los que
+      reconozcas se funden (la forma viva pasa a la entrada de Esteves y el
+      descartado de OSM se retira como `reubicado`).
+
+  dp.2.10:
+    tema: la cola nueva de topónimos (Sarasaragua, Norupara, Buinare, Paraguaná 1548)
+    eleccion: 'A la cola; T1 E1 (con la reserva de M3 sobre comoho)'
+    lectura_operativa: >-
+      Sarasaragua, Norupara y Buinare a la cola de campana-toponimos;
+      `Paraguana` (Oviedo t. I p. 205) a la campaña de topónimos; `comoho` a
+      ecologia.yaml con la reserva de M3 (una sola cadena, el obispo
+      Bastidas); `hado` congelado hasta verificar.
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '6-fusion/toponimos_cola_otras_fuentes.yaml (nuevo): la cola de la campaña para lo que no es de Esteves ni del mapa de Miguel — Sarasaragua (Castellanos p. 201), Norupara (González Batista 2002 p. 162) y Buinare (Castellanos p. 184); curiana_sim/juntar_toponimos.py la lee (extractor cola_otras_fuentes) y la mesa la muestra'
+      - '`Paraguana` (Oviedo t. I p. 205): YA APLICADA por la tanda de las hermanas (th.10, T2b): toponimo-018 tiene esa procedencia del nombre; no se repite'
+      - '3-mundo/corpus/ecologia.yaml: ecologia-085 `comoho`, el cardón de las tunas y su fruta en la provincia de Venezuela (Oviedo vol. I pp. 313-315, en el texto), con la reserva de M3 en `limite` (una sola cadena, el obispo Bastidas)'
+      - '`hado`: CONGELADO, sin aplicar (el OCR dice hado y el contexto pide hayo; sin imagen no se decide)'
+    aparecio:
+      - 'Buinare NO es nombre nuevo: el canon ya tiene la isla como toponimo-066 «buynari» (van Buurt) y nodo-011. El «grep: 0» de M7 era un cero de consulta (la grafía de 1589). Queda en la cola anotado: al procesarlo entra como grafía fechada de 066.'
+      - 'La fecha de Paraguaná: T1 escribe «atestación de 1548» y la tanda de las hermanas (T2b, vista en imagen) «testigos jurados… el 13 de julio de 1540 (p. 206)». No se promedió; lo que está en el canon es lo de T2b.'
+      - 'ecologia-078 a -084 viven bajo la clave `huecos_lexicos` de ecologia.yaml, no bajo `entradas` (fusión del 2026-09-16): el validador los cuenta igual; no se movieron. Los hechos nuevos de este frente van al final de `entradas`.'
+
+  dp.2.11:
+    tema: Miraca en 1530 (nodo-031)
+    eleccion: 'A, junto con Oviedo t. IV p. 533'
+    lectura_operativa: >-
+      Sumar federmann-1916 p. 20 (1557 [13]) a la procedencia de nodo-031 y
+      1530 al principio de su cadena, con la segunda atestación de Oviedo t.
+      IV p. 533; `precontacto` sigue `desconocido`.
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/asentamientos.yaml: nodo-031 empieza su cadena en enero de 1530 (Federmann 1916 p. 20, verificado en el texto) y suma junio de 1534 (Oviedo t. IV pp. 533-534, verificado en la capa de texto con el folio de cabecera); las dos obras van en `procedencia_adicional` porque `procedencia` admite una sola; `precontacto` sigue `desconocido`, con la razón'
+
+  dp.2.12:
+    tema: Coro, nombre de río
+    eleccion: 'Sí'
+    lectura_operativa: >-
+      Una lectura `glosa-fuente` de referente en toponimo-111: la ciudad tomó
+      el nombre del río Coro (Ballesteros 1550 y Castellanos 1589,
+      independientes).
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - 'curiana_sim/lexicon_toponimos.py → 2-lengua/toponimos.yaml: lectura `glosa-fuente`, eje referente, en toponimo-111 — Ballesteros 1550 vía Arcaya p. 170 (verificado en el PDF, pdf 178) con Castellanos 1589 p. 185 como segundo testigo independiente'
+
+  dp.2.13:
+    tema: las propuestas a ecologia.yaml de las tres parcelas de fauna
+    eleccion: 'D1: todas, las de las tres parcelas (y FA3 (c) A: el cunaro en disputa)'
+    lectura_operativa: >-
+      Las propuestas de ecología de tierra (FA1), aves (FA2) y mar (FA3) al
+      final de ecologia.yaml con su capa y su procedencia; en ecologia-015 la
+      identificación del cunaro queda declarada en disputa (FA3 c A). La
+      parte que toca el lexicón no es de este frente.
+    estado: APLICADA (2026-09-24, por el frente del lexicón al fusionar la rama)
+    aplicado_por:
+      - '6-fusion/scripts/fusionar_fauna_ecologia_dp213.py: 19 entradas nuevas en 3-mundo/corpus/ecologia.yaml (ecologia-086 a -104): las 7 de tierra (FA1), las 5 de aves (FA2) y los 7 hechos nuevos del mar (FA3), con su capa y su procedencia; los de FA3 llevados al esquema del corpus (referencia desde la procedencia, el apoyo a `nota`)'
+      - 'ecologia-015: `identificacion` EN DISPUTA (FA3 (c) A, pe-7): la especie del cunaro no se fija'
+    mide: 'compilar_corpus --check: 242 hechos, 0 avisos (era 1); pre-vuelo verde'
+    lecturas_del_escriba:
+      - 'la única corrección de forma: `locacion: salina` (FA2, el flamenco) no es locación del motor y pasa a `salinar`'
+      - 'la parte del LEXICÓN de FA3 (c) A no tiene dónde ir: `kunaro` no es clave del lexicón (es hueco; ecologia-015 ya lo dice)'
+
+  dp.2.14:
+    tema: las aldeas de Aruba en asentamientos.yaml
+    eleccion: 'B: esperar a la fuente primaria (Dijkhoff 1997, Versteeg y Rostain 1997)'
+    lectura_operativa: >-
+      Decidido esperar: no se aplica nada. Se cierra declarado.
+    estado: CERRADA SIN CAMBIO (2026-09-24)
+    aplicado_por: []
+    queda_declarado: >-
+      Tanki Flip, Ser'i Noka y Savaneta NO entran a asentamientos.yaml hasta
+      tener la fuente primaria (Dijkhoff 1997; Versteeg y Rostain 1997), que
+      el repo no tiene. Lo que Casale 2024 resume de ellas sigue en
+      6-fusion/arqueologia_insular_falcon_2026-09-22.yaml (prop-02).
+
+  dp.2.15:
+    tema: parentesco-021 (tamude ← mude «primo»)
+    eleccion: '(a): partirla'
+    lectura_operativa: >-
+      parentesco-021 se queda con lo que Rivero atestigua (el etnónimo y la
+      voz *mude*, pp. 29 y 420); la etimología y el «como primos» pasan a una
+      entrada nueva `hipotetico` que cita a Jahn.
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/parentesco.yaml: parentesco-021 queda con lo que Rivero atestigua (Tamudes, p. 29; mude, pp. 419-420), `procedencia: rivero-1883`'
+      - '3-mundo/corpus/parentesco.yaml: parentesco-040 (nueva, hipotético): la unión de las dos cosas y el «como primos», de Jahn 1927 p. 213 (verificado en el texto, pdf 267) y Oliver, con las otras dos lecturas de la forma (Neira «Nude», Antolínez «tamudi»)'
+    aparecio: >-
+      parentesco-022 (la analogía achagua de linajes) se justifica con «los
+      'primos' declarados del caquetío, ver parentesco-021»: ese «primos» es
+      ahora la hipótesis de parentesco-040. No se tocó -022 (no es de esta
+      decisión); queda anotado en -021.
+
+  dp.2.16:
+    tema: parentesco-012 («daitiao» cognado del taíno)
+    eleccion: 'J: se queda con la reserva'
+    lectura_operativa: >-
+      parentesco-012 lleva escrita la reserva: el test (T11) no confirma el
+      cognado (letra C) y la afirmación tiene una sola fuente.
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/parentesco.yaml: parentesco-012 lleva `aviso` con la reserva (letra C del test de T11, una sola fuente, la duda escrita de Oliver n. 42, y que db.2 pasó `datihao` al taíno); la etiqueta no cambia'
+
+  dp.2.17:
+    tema: la costa oriental de Federmann (Xaragua, Martinico, Atycares)
+    eleccion: 'B: otra polity costera, fuera del mapa de la era 2'
+    lectura_operativa: >-
+      Se registra como `costa-oriental`, polity costera distinta de la
+      Kaketiana y fuera del mapa de la era 2, donde el canon la necesita
+      (vault de polities y la propuesta de Federmann); no entra ningún nodo.
+    estado: APLICADA (2026-09-24)
+    aplicado_por:
+      - '3-mundo/corpus/geografia_politica.yaml: geografia_politica-024, `polity: costa-oriental`, atestiguado, contacto-temprano (Federmann 1916 pp. 120-123, visto en el texto)'
+      - '3-mundo/polities-caquetias.md: §«La costa oriental de Federmann: otra polity, fuera del mapa»'
+    no_se_hizo: 'ningún nodo nuevo en asentamientos.yaml (B la deja fuera del mapa) ni polity nueva en curiana_polities.py (motor; B no la pide)'
+
+lo_que_aparecio_al_aplicar:
+
+  fernandes_2020:
+    donde: dp.2.04, T8 C (y la nota de geografia_politica-015 y -019)
+    que: >-
+      La ficha «arahuacos de las Antillas Menores», atestiguado, descansa en
+      el texto publicado de Fernandes et al. 2020 y su suplemento, que el repo
+      NO tiene (Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf pesa
+      0 bytes a propósito). Lo que sí está, el preprint de bioRxiv, dice otra
+      cosa en lo que importa: «We model five ancient individuals from Curaçao
+      as having 68.1±5.1% Caribbean_Ceramic-related ancestry… indicating that
+      people related to those who moved into the Greater Antilles also reached
+      Curaçao» (p. 14 del PDF). Es decir: el clado cerámico caribeño sin
+      distinguir, y cinco individuos. T8 dice además que el preprint «listaba
+      2 individuos de de Savaan»: el texto dice cinco (de Curazao). Y el propio
+      T8 declara que el grafo del suplemento pone la fuente «between» las
+      Mayores y las Menores. No se resolvió: la ficha no entró y la pregunta
+      va en dp.2.04 `necesita_a_miguel`. La corrección de B (gen-03) sí entró,
+      porque el preprint basta para ella: hubo flujo antillano hacia Curazao.
+
+  taino_costera_o_ninguna:
+    donde: dp.2.04, T5 D (etnia-020)
+    que: >-
+      T5 (2026-09-21) propuso el taíno con `polity_caquetia: costera`; el valor
+      `ninguna` —el vecino de la esfera que no toca ninguna polity, que exige
+      `tipo_de_contacto: ninguno`— se abrió después (tf.7 B, 2026-09-23) y el
+      resumen de #222 no lo mencionó. Se aplicó como lo propuso T5, con la
+      duda en `polity_nota`. Cambiarlo a `ninguna` es una línea y un test
+      (test_quienes_tocan_la_costera); decisión de Miguel.
+
+  paginas_citadas_que_no_eran:
+    que: >-
+      Al verificar en el PDF, varias páginas de las propuestas eran la de al
+      lado. Se escribió la verificada y se dejó dicho en la referencia:
+      Arcaya 1920 «pp. 153 y 158» (T5) son las impresas 154 y 159; la
+      identificación de Doña Juana, «pp. 166-167» (dc.4), está en las 167-168;
+      el rescate en guanines de Navarrete, «p. 34» (T7), está en la 33 (ya lo
+      había dicho M2). Arcaya: impresa = pdf − 8.
+
+  baracoica_pariente_de_quien:
+    que: >-
+      dc.4 y T8 escribieron que Baracoica era «pariente y deudo» de Manaure.
+      La carta (Fernández Duro t. II p. 212, vista en imagen) dice «es su
+      pariente y deudo», y el sujeto son los indios de la costa que lo envían:
+      pariente de ellos. Se escribió así en geografia_politica-016 y en la
+      ficha nueva de la carta; «hijo del mismo Manaure» es de Arcaya p. 199,
+      sin fuente.
+
+  navarrete_sin_imagen:
+    que: >-
+      dp.2.05 y dp.2.06 C pedían ver Navarrete 1829 t. III en imagen, y el PDF
+      no está en el repo. El visor de archive.org falla hoy con el ítem
+      (bub_gb_HFzXrEyoeCAC) y Google Books responde con una comprobación
+      anti-robot: no se intentó saltarla, y bajar el PDF pide el permiso de
+      Miguel. Lo que se aplicó de Navarrete va desde la capa de texto, con el
+      folio en el flujo, y lo que sólo la imagen decide quedó sin citar.
+
+respuestas_de_miguel_2026-09-27:
+  dp.2.02: 'Sí: los llanos ganan en curiana_polities.py la economía de Pérez de Tolosa («no son grandes labradores», carne y pescado) y, en `notas` (el modelo no tiene eje de lengua), la lengua («algo difieren en la habla á los de Coro») y el territorio colonial hasta Casanare vía Rivero y Jahn'
+  dp.2.04_taino: 'etnia-020 pasa a `polity_caquetia: ninguna` («ninguna»); test_quienes_tocan_la_costera: la costera la tocan el caribe del elenco y el jirajara'
+  dp.2.04_fernandes: 'VERIFICADO (4-fuentes/fernandes-2020.md, 2026-09-27): el texto publicado dice «Lesser Antilles but not the Greater Antilles» (74,5 % ± 3,7); cinco individuos de Santa Cruz y De Savaan, s. XIII-XIV; la mezcla sin fecha y el marco del artículo es de origen, no de trato. Miguel eligió «vecino sin contacto»: etnia-021, atestiguado, polity `ninguna`, contacto `ninguno`'
+  dp.2.05_y_2.06_C: 'HECHO: PDF bajado (espejo europeo de archive.org; fuera de git por D8; impresa = pdf − 22) y vistas en imagen las cinco páginas: p. 32 «tierra de riego»; p. 86 «Quiquevacoa» (y p. 87 «la isla Caquevacoa», p. 89 «la isla de Caquivacoa»); p. 518 «Caquibacoa»; pp. 544-545 «Quinquibacoa» sin tilde. Citadas en toponimo-034 (observación, sin cambiar el nivel) y en la propuesta de M2; la proyección de «riego» al buco (regla 3) queda como pregunta'
+  dp.2.07_B: 'NO SE PUDO: el buscador de PARES dio 503/502 el 2026-09-27. Y de paso: la cita de Velasco no es signatura del AGI, es un «Traslado… U. C. Caja Nº 1» (4-fuentes/ampies-1526-carta.md)'
+  dp.2.09_P3_B: 'La Miraba = Niraba, Tabe = Jabe / San José de Tarbes y Coduto = caduto: FUNDIDAS (6-fusion/scripts/fundir_sitios_dp209b.py; toponimo-138, -135 y -176 quedan `reubicados` sin mover ningún otro id). Cumairebo NO: «Cumairebo y Curaidebo son dos lugares distintos en Paraguaná»; la hipótesis queda refutada, con su testimonio'
+  oliver_col_01: 'después de explicárselo, «Me parece, sólo justificar la sal y la concha»: costera.economia queda en sal (Oviedo y Baños) y concha (Arcaya pp. 120 y 264; Federmann p. 45); la red concha–sal–azabache sin confederación es jirajarana (Oliver p. 245). Corregidos también la ficha de Oliver y horizonte-de-contacto.md'
+  riego_m2_c3: 'Miguel: nota, sin proyectar. En ecologia-028 (el buco): la tierra de riego de 1502 (Navarrete p. 32), que la nota 3 de Navarrete identifica con Coro'

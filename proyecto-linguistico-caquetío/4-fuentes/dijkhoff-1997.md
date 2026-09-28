@@ -139,3 +139,23 @@ no son testimonios independientes.
 
 [[martinez-cruzado-2003]] · [[fernandes-2020]] · [[haviser-1990]] ·
 [[casale-2024]] · [[oliver-1989-cap3]] · [[esfera-de-interaccion]]
+
+## 2026-09-24 — campaña cosmovisión marina (arqueología)
+
+**Se preguntó** por objetos del mar en los enterramientos dabajuroides de
+Aruba y por motivos marinos en su arte rupestre. **Se halló** (visto en imagen,
+se cita por sección y pdf porque la capa no trae la paginación): el ajuar de
+las fosas son «dishes, manos and metates, shell beads and other items», y las
+urnas «sólo tienen huesos» (§3.9.3, pdf 86-88); objetos de Strombus
+«ceremonial» (una varilla con cabeza de animal estilizada, Santa Cruz) y
+colgantitos de concha (§3.9.2.2); el cementerio PRECERÁMICO de Malmok, con
+conchas dispuestas y un ~10 % de muertos sobre o bajo caparazón de tortuga
+marina (§3.4.2.2, pdf 46) — anterior a los caquetíos, regla 4; y ~300
+pictografías sin atribuir ni al precerámico ni al cerámico (§3.7, pdf 59-60),
+donde el minador lee en una lámina de Arikok un pez bajo una línea ondulada que
+el autor no nombra.
+
+**No se halló:** ningún diente de tiburón, botuto entero ni tortuga en el
+ajuar dabajuroide de Aruba; ningún motivo marino nombrado por el autor.
+
+Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.

@@ -74,9 +74,23 @@ EL MÉTODO, con las tres lecciones de la skill `minar-fuente` en código
    - PRUEBA DE PREDICCIÓN dejando fuera: una correspondencia vista en un par
      predice sobre los demás conceptos. Una que sale una vez no es nada.
 
+LO QUE AÑADE T5 (2026-09-24)
+----------------------------
+th.8 (T1) y th.13 (T5) de `6-fusion/decisiones_tanda_hermanas_2026-09-24.yaml`,
+«Acepto todo lo recomendado»: la clase ii de la lista maestra —la voz taína
+que existe y que ninguna obra ata a un cronista, casi toda tradición viva de
+Coll y Toste— CUENTA como dato en los cruces, con su propia etiqueta
+(«taíno de tradición viva») y separada del cronista; y T11 se vuelve a correr
+con ella dentro para decidir k ~ s, que el 22 quedó con dos apoyos.
+
+Con `--con-tradicion-viva` la clase ii entra como una COLUMNA APARTE (`TV`),
+con su propio azar, y sale `meta.T5_k_s`. Sin la opción el script hace
+exactamente lo de antes. Lo que ya se medía no se toca.
+
 SALIDA (PROPUESTA, regla 5)
 ---------------------------
     6-fusion/cruce_taino_caquetio_2026-09-22.yaml
+    6-fusion/cruce_taino_caquetio_2026-09-24.yaml   (con --con-tradicion-viva)
 
 `6-fusion/cruce_taino_caquetio_2026-09-21.yaml` queda como está: es la medición
 del día anterior y el script la LEE para emitir el antes/después medido
@@ -87,6 +101,7 @@ No toca `curiana_lexicon.py`, ni `lexicon_*.py`, ni `2-lengua/*`, ni
 
     python 6-fusion/scripts/cruce_taino_caquetio.py
     python 6-fusion/scripts/cruce_taino_caquetio.py --check   # ¿está al día?
+    python 6-fusion/scripts/cruce_taino_caquetio.py --con-tradicion-viva [--check]
 """
 import argparse
 import collections
@@ -113,11 +128,22 @@ YAML_CONTROL = os.path.join(R, "6-fusion", "control_jirajarano_jahn_1927.yaml")
 YAML_TOPONIMOS = os.path.join(R, "2-lengua", "toponimos.yaml")
 YAML_COGNADOS = os.path.join(R, "2-lengua", "cognados.yaml")
 YAML_ANTROPONIMOS = os.path.join(R, "6-fusion", "antroponimos_caquetios.yaml")
-JSON_TAINO_HIP = os.path.join(R, "curiana_sim", "taino_hipotetico.json")
+JSON_TAINO_HIP = os.path.join(R, "6-fusion", "taino_hipotetico_2026-06-21.json")  # dp.3.23 de #222
 TXT_BRINTON = os.path.join(R, "fuentes_caquetios", "Brinton_1871_texto.txt")
 TXT_PANE = os.path.join(R, "fuentes_caquetios",
                         "Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt")
 FECHA = "2026-09-22"
+
+# ── T5 (2026-09-24): la tradición viva, en su columna y con su etiqueta ───
+SALIDA_TV = os.path.join(R, "6-fusion", "cruce_taino_caquetio_2026-09-24.yaml")
+YAML_LISTA_MAESTRA = os.path.join(R, "6-fusion", "taino_lista_maestra_2026-09-22.yaml")
+YAML_TRADICION_VIVA = os.path.join(R, "6-fusion", "taino_tradicion_viva_2026-09-24.yaml")
+YAML_COLL = os.path.join(R, "6-fusion", "taino3_coll_y_toste_1897.yaml")
+FECHA_TV = "2026-09-24"
+TV = "taíno-tv"                          # la columna: NUNCA se funde en «taíno»
+ETIQUETA_TV = "taíno de tradición viva"  # th.8: su etiqueta, separada del cronista
+CLASE_TV = "ii-solo-secundaria"          # la clase de la lista maestra que entra
+SEMILLA_TV = 1492 + 24                   # su propio azar: no desplaza el de las demás
 
 # ── las transcripciones de T1/T2 (PR #189-#192), que es lo que entra hoy ───
 # Cada sección se declara con la obra (clave foránea a 4-fuentes/bibliografia.yaml,
@@ -931,6 +957,125 @@ def fundir_taino(del_lexicon, de_transcripcion):
     return salida, fusiones
 
 
+# ═════════════════════════════════════════════════════════════════════════
+# T5 · La tradición viva: la clase ii de la lista maestra, en su columna
+# ═════════════════════════════════════════════════════════════════════════
+def _de_rafinesque(v):
+    """La lista de Rafinesque vía Rochefort: Goeje (p. 5) la da por mezclada de caribe."""
+    return any("afinesque" in str(c.get("lo_que_dice_la_obra"))
+               for c in v.get("cadena_de_custodia") or [])
+
+
+def _solo_cap_X(v):
+    """Sólo la trae el vocabulario inverso de Coll y Toste (cap. X): análisis del
+    autor, no tradición oral (taino_tradicion_viva_2026-09-24.yaml §el_capitulo_X)."""
+    cad = v.get("cadena_de_custodia") or []
+    return bool(cad) and all("cap. X," in str(c.get("lo_que_dice_la_obra")) for c in cad)
+
+
+def cargar_tradicion_viva(gu):
+    """Las voces de clase ii de la lista maestra, con la etiqueta de th.8.
+
+    Se leen del YAML que ya existe (`consolidar_taino.py` la genera); no se
+    decide aquí qué es clase ii. Fuera, y contado: lo que su propia fuente saca
+    del taíno, lo que sólo viene de Rafinesque y lo que no trae glosa. Lo que
+    sólo sostiene el cap. X de Coll y Toste ENTRA —th.8 dice que la clase ii
+    cuenta y no se renombra— pero lleva la marca `solo_cap_X`, y el bloque de
+    k ~ s dice si alguna pareja depende de eso.
+    """
+    Y = yaml.safe_load(io.open(YAML_LISTA_MAESTRA, encoding="utf-8"))
+    C = yaml.safe_load(io.open(YAML_COLL, encoding="utf-8"))
+    apoyo_coll, glosa_coll = collections.defaultdict(set), collections.defaultdict(list)
+    for e in C.get("voces") or []:
+        f = e.get("forma_fuente")
+        if f:
+            apoyo_coll[str(f)].add(str(e.get("tipo_de_apoyo")))
+            if e.get("glosa_fuente"):
+                glosa_coll[str(f)].append(str(e["glosa_fuente"]).strip())
+    entradas, fuera, partidas = [], collections.Counter(), [0, 0]
+    for v in Y.get("voces") or []:
+        if v.get("clase") != CLASE_TV:
+            continue
+        if v.get("sacada_del_taino"):
+            fuera["su propia fuente la saca del taíno"] += 1
+            continue
+        if _de_rafinesque(v):
+            fuera["viene de la lista de Rafinesque"] += 1
+            continue
+        originales = [str(f) for f in (v.get("formas_atestiguadas") or []) if f]
+        # El cap. X de Coll y Toste junta varias formas en una: «bagua. — ci.
+        # balana», «guayabo ~ guava». Se parten por « — » y «~», y la parte que
+        # el propio autor marca «ci.» (caribe insular) NO entra como taíno.
+        formas = []
+        for f in originales:
+            partes = [x.strip(" .,;:") for x in re.split(r"\s+[—–]\s+|\s*~\s*", f)]
+            if len(partes) > 1:
+                partidas[0] += 1
+            for x in partes:
+                if not x or re.match(r"ci\.\s", x + " "):
+                    if x:
+                        partidas[1] += 1
+                    continue
+                formas.append(x)
+        # la glosa en castellano: la de Coll y Toste si la hay; las inglesas de
+        # Brinton pasan por GLOSA_EN_ES; el resto se lee tal cual (el filtro de
+        # significado sólo empareja cabezas castellanas exactas).
+        glosas = [g for f in originales for g in glosa_coll.get(f, [])]
+        for g in v.get("glosas_verbatim") or []:
+            g = str(g).strip()
+            g = GLOSA_EN_ES.get(g, g)
+            if g not in glosas:
+                glosas.append(g)
+        conc = conceptos(" ; ".join(glosas))
+        if not conc:
+            fuera["sin glosa"] += 1
+            continue
+        cands = []
+        for fm in dict.fromkeys(f.lower() for f in formas):
+            fb = fon(fm, "colonial", gu)
+            if len(fb) < MIN_FONEMAS:
+                continue
+            for r_ in radicales(fb, "taíno"):
+                cands.append((r_, fm, r_ != fb))
+        if not cands:
+            fuera["forma de menos de tres fonemas"] += 1
+            continue
+        base = cands[0][1]
+        cadena = v.get("cadena_de_custodia") or []
+        donde = ", ".join(f"{c.get('obra')} p. {c.get('pagina')}" for c in cadena)
+        tipos = sorted({t for f in originales for t in apoyo_coll.get(f, set())})
+        entradas.append({
+            "lengua": TV, "forma": base, "glosa": glosas[0], "clave": f"{v['lema']}@lista-maestra",
+            "cands": cands, "conceptos": conc, "fon_base": cands[0][0],
+            "ficha": {"forma": base, "glosa": glosas[0],
+                      "estrato": f"{ETIQUETA_TV} (clase ii, sin cronista): {donde}",
+                      "etiqueta": ETIQUETA_TV, "clase_en_la_lista_maestra": CLASE_TV,
+                      "lema_de_la_lista": v["lema"],
+                      "obras": list(v.get("obras_que_la_traen") or []),
+                      "apoyo_en_coll_y_toste": tipos or None,
+                      "solo_cap_X": _solo_cap_X(v)},
+            "dominio": "sin-declarar", "nota_mira_al_caquetio": False,
+            "de_tradicion_viva": True})
+    entradas.sort(key=lambda e: e["clave"])
+    meta = {
+        "etiqueta": ETIQUETA_TV,
+        "de_donde": os.path.relpath(YAML_LISTA_MAESTRA, R).replace("\\", "/"),
+        "clase_que_entra": CLASE_TV,
+        "voces_de_clase_ii_en_la_lista": sum(1 for v in Y.get("voces") or []
+                                             if v.get("clase") == CLASE_TV),
+        "entran": len(entradas),
+        "de_ellas_solo_por_el_cap_X_de_coll_y_toste": sum(
+            1 for e in entradas if e["ficha"]["solo_cap_X"]),
+        "fuera_por": dict(sorted(fuera.items())),
+        "formas_compuestas_partidas": partidas[0],
+        "partes_marcadas_ci_que_no_entran": partidas[1],
+        "aviso": ("la forma sale tal como la escribe la fuente; el cap. X mezcla alguna glosa en la "
+                  "casilla de la forma («augur. — bohique»). Se mide igual y se dice: una forma "
+                  "castellana no empareja con nada caquetío por el filtro de glosa"),
+    }
+    return entradas, meta
+
+
 def medir_jirajaroide_frontera():
     """Por qué el control que el encargo sugería no sirve — medido, no dicho."""
     import json
@@ -1097,7 +1242,7 @@ def veredicto(sim, n_exactas, n_cercanas, corto, circ, n_cortas=0):
     return "sin-parecido", ""
 
 
-def medir(gu, con_nulo=True):
+def medir(gu, con_nulo=True, con_tv=False):
     t0 = time.time()
     lengs = {L: cargar_comparanda(L, gu) for L in LENGUAS + INFORMATIVAS}
     lengs[CONTROL], meta_control = cargar_control(gu)
@@ -1116,6 +1261,11 @@ def medir(gu, con_nulo=True):
         "fusiones": fusiones_tr,
         "bitacora_de_glosas": bitacora_tr,
     }
+    # T5: la tradición viva, en su PROPIA columna — nunca fundida en «taíno»
+    meta_tv = None
+    if con_tv:
+        lengs[TV], meta_tv = cargar_tradicion_viva(gu)
+    columnas = TODAS + ((TV,) if con_tv else ())
     idx = {L: indexar(es) for L, es in lengs.items()}
     caq = cargar_caquetio(gu)
 
@@ -1123,7 +1273,7 @@ def medir(gu, con_nulo=True):
     for c in caq:
         corto = max((len(fa) for fa, _ in c["cands"]), default=0) < MIN_FONEMAS
         por = {}
-        for L in TODAS:
+        for L in columnas:
             exactas, n_cerc, n_cortas = emparejar(c, *idx[L])
             ranking = []
             if not corto:
@@ -1132,7 +1282,8 @@ def medir(gu, con_nulo=True):
                     ranking.append((s, e, cb, ca))
                 ranking.sort(key=lambda x: (-x[0], x[1]["clave"]))
             sim = ranking[0][0] if ranking else 0.0
-            circ = L in c["derivada_de"] or "proto-arahuaco" in c["derivada_de"]
+            circ = ((L if L != TV else "taíno") in c["derivada_de"]
+                    or "proto-arahuaco" in c["derivada_de"])
             ver, porque = veredicto(sim, len(exactas), n_cerc, corto, circ, n_cortas)
             por[L] = {"exactas": exactas, "n_cercanas": n_cerc, "n_cortas": n_cortas,
                       "ranking": ranking, "sim": sim, "veredicto": ver, "porque": porque}
@@ -1165,9 +1316,34 @@ def medir(gu, con_nulo=True):
                         muestra.append(e)
                     sims.append(max(0.0, mejor(r["c"]["cands"], muestra)[0]) if muestra else 0.0)
                 r["nulo"][L] = sims
+    # T5: el modelo nulo de la tradición viva tira de su PROPIO generador, DESPUÉS
+    # de las demás: así ninguna réplica de las columnas de siempre se desplaza.
+    if con_tv:
+        pool[TV] = sorted([e for e in lengs[TV] if e["cands"]], key=lambda e: str(e["clave"]))
+        rng_tv = random.Random(SEMILLA_TV)
+        for r in (res if con_nulo else ()):
+            if r["c"]["capa"] != ATESTIGUADO or r["corto"]:
+                continue
+            n = len(r["por"][TV]["exactas"])
+            if not n or len(pool[TV]) <= n:
+                continue
+            excl = {id(e) for e in r["por"][TV]["exactas"]}
+            sims = []
+            for _ in range(REPLICAS):
+                muestra, ids, intentos = [], set(), 0
+                while len(muestra) < n and intentos < 500:
+                    intentos += 1
+                    e = pool[TV][rng_tv.randrange(len(pool[TV]))]
+                    if id(e) in excl or id(e) in ids:
+                        continue
+                    ids.add(id(e))
+                    muestra.append(e)
+                sims.append(max(0.0, mejor(r["c"]["cands"], muestra)[0]) if muestra else 0.0)
+            r.setdefault("nulo", {})[TV] = sims
     return {"res": res, "lengs": lengs, "idx": idx, "pool": pool,
             "meta_control": meta_control, "transcripciones": transcripciones,
-            "segundos": round(time.time() - t0, 1)}
+            "segundos": round(time.time() - t0, 1),
+            **({"con_tv": True, "tradicion_viva": meta_tv} if con_tv else {})}
 
 
 # ═════════════════════════════════════════════════════════════════════════
@@ -1696,9 +1872,14 @@ def diferencias_consonanticas(a, b):
     return out, max(0, sobra)
 
 
-def juzgar_por_correspondencias(fa, fb, tabla="caquetío↔taíno"):
-    """El corazón del test. Devuelve el diagnóstico consonante a consonante."""
-    mapa = TABLAS[tabla]["mapa"]
+def juzgar_por_correspondencias(fa, fb, tabla="caquetío↔taíno", mapa=None):
+    """El corazón del test. Devuelve el diagnóstico consonante a consonante.
+
+    `mapa` sólo lo pasa T5 (2026-09-24), para volver a juzgar una pareja con
+    los apoyos que quedan DEJÁNDOLA FUERA; por defecto manda la tabla escrita
+    antes de mirar.
+    """
+    mapa = mapa if mapa is not None else TABLAS[tabla]["mapa"]
     ca, cb = esqueleto(fa), esqueleto(fb)
     pares, sobra = diferencias_consonanticas(ca, cb)
     identicas, regulares, neutras, violaciones, persona, candidatas = [], [], [], [], [], []
@@ -1732,7 +1913,7 @@ def juzgar_por_correspondencias(fa, fb, tabla="caquetío↔taíno"):
 
 
 def test_cognado_o_prestamo(fa, fb, dominio=None, p_nulo=None, campo_de_rango=False,
-                            tabla="caquetío↔taíno"):
+                            tabla="caquetío↔taíno", mapa=None):
     """A cognado heredado · B préstamo o cruce reciente · C indecidible.
 
     El orden importa y está declarado: primero lo que descalifica la pareja
@@ -1741,7 +1922,7 @@ def test_cognado_o_prestamo(fa, fb, dominio=None, p_nulo=None, campo_de_rango=Fa
     decide solo. «Lo que decide no es SI se comparte, sino QUÉ» vale para la
     clase de la pareja; para el mecanismo, manda el sonido.
     """
-    j = juzgar_por_correspondencias(fa, fb, tabla)
+    j = juzgar_por_correspondencias(fa, fb, tabla, mapa)
     ca, cb = j["esqueleto_caquetio"], j["esqueleto_taino"]
     razones = []
     if len(ca) < 2 or len(cb) < 2:
@@ -3218,12 +3399,483 @@ def construir(M, M2, MT):
             "sin_concepto_en_ninguna_comparanda": len(res) - len(comparables),
         },
     }
+    if M.get("con_tv"):
+        # T5: se AÑADE; lo que el 22 medía queda en su sitio y con su forma
+        meta["medido"] = FECHA_TV
+        meta["campana"] += (" · y **T5** (2026-09-24): T11 vuelto a correr con el taíno de "
+                            "tradición viva dentro (th.8 y th.13 de "
+                            "decisiones_tanda_hermanas_2026-09-24.yaml)")
+        meta["lo_que_cambia_respecto_del_2026_09_22"] = [
+            f"la clase ii de la lista maestra entra como columna aparte, `{TV}` («{ETIQUETA_TV}»): "
+            "no se funde con el cronista, y su azar no desplaza el de las otras columnas "
+            "(`la_tradicion_viva`)",
+            "k ~ s se vuelve a contar con las parejas que T4 leyó a mano y el test de T11 se "
+            "vuelve a aplicar dejando fuera cada pareja (`T5_k_s`)",
+            "y el lexicón es el de la tanda de las hermanas: las cifras de las columnas de "
+            "siempre pueden moverse por eso, no por la tradición viva",
+        ]
+        meta["antes_y_despues_del_2026_09_22"] = bloque_antes_y_despues_del_22()
+        meta["la_tradicion_viva"] = bloque_tradicion_viva(M)
+        meta["T5_k_s"] = bloque_k_s(M, GU_TEST)
     rango = {"cognado-probable": 0, "parecido-debil": 1, "circular": 2,
              "sin-parecido": 3, "no-comparable": 4}
     comparables.sort(key=lambda r: (r["c"]["capa"] != ATESTIGUADO, r["c"]["capa"],
                                     rango[r["por"]["taíno"]["veredicto"]],
                                     -r["por"]["taíno"]["sim"], r["c"]["clave"]))
     return {"meta": meta, "parejas": parejas, "conceptos": [registro(r) for r in comparables]}
+
+
+# ═════════════════════════════════════════════════════════════════════════
+# T5 (2026-09-24) · la tradición viva dentro, y k ~ s otra vez
+# ═════════════════════════════════════════════════════════════════════════
+def _primera_palabra(s):
+    return re.split(r"[\s,]+", str(s).strip())[0].strip("'«»\"")
+
+
+def _clase_en_la_lista(forma):
+    """La clase que la lista maestra le da a una forma taína (por sus grafías)."""
+    Y = yaml.safe_load(io.open(YAML_LISTA_MAESTRA, encoding="utf-8"))
+    f = sin_diacriticos(forma, False).lower()
+    for v in Y.get("voces") or []:
+        if any(sin_diacriticos(x, False).lower() == f for x in v.get("formas_atestiguadas") or []):
+            return v["lema"], v.get("clase")
+    return None, None
+
+
+def _mejor_par(caq_formas, forma_b, gu):
+    """La forma caquetía (clave o forma_fuente) más cercana a la taína, fonemizadas."""
+    fb = fon(forma_b, "colonial", gu)
+    best = None
+    for fm in caq_formas:
+        fa = fon(fm, "colonial", gu)
+        s = difflib.SequenceMatcher(None, fa, fb, autojunk=False).ratio()
+        if best is None or s > best[0]:
+            best = (s, fa, fm)
+    return best[1], fb, best[2], round(best[0], 3)
+
+
+def _k_frente_a(fa, fb):
+    """[(posición, consonante hermana, vocal que sigue)] de cada /k/ caquetía."""
+    ca, cb = esqueleto(fa), esqueleto(fb)
+    pares, _ = diferencias_consonanticas(ca, cb)
+    out = []
+    for i, (x, y) in enumerate(pares):
+        if x != "k":
+            continue
+        # posición en la FORMA, no en el esqueleto: inicial sólo si la palabra empieza por ella
+        pos_forma = [j for j, ch in enumerate(fa) if ch in CONSONANTES][i]
+        vocal = next((ch for ch in fa[pos_forma + 1:] if ch in VOCALES), "")
+        out.append(("inicial" if pos_forma == 0 else "interior", y or "∅", vocal))
+    return out
+
+
+def _fmt(d, pre=""):
+    """{'kiba': 2} -> «kiba 2»; con pre='caq /' -> «caq /k/ 3»."""
+    if pre:
+        return ", ".join(f"{pre}{k}/ {v}" for k, v in d.items())
+    return ", ".join(f"{k} {v}" for k, v in d.items())
+
+
+# Donde la glosa de las dos orillas no es la misma palabra castellana, lo que
+# dice que SÍ es la misma cosa. Tabla corta, declarada, con cita (regla 8).
+PUENTES_DE_GLOSA = {
+    "kiwa": ("van-buurt-2014 p. 32: «kiwa (A, C, B) - kiwa is the West Indian top shell (Cittarium "
+             "pica). This word is also found in Venezuela as quigua and in Cuba as cigua» — la misma "
+             "concha en las islas ABC, en Venezuela y en Cuba, dicho por una obra que no es la del "
+             "lado taíno (Coll y Toste es de Puerto Rico)"),
+}
+
+
+def _apoyo_coll_de(forma):
+    """El tipo de apoyo que la transcripción de Coll y Toste declara para una forma (cap. XII)."""
+    C = yaml.safe_load(io.open(YAML_COLL, encoding="utf-8"))
+    f = sin_diacriticos(forma, False).lower()
+    tipos = sorted({str(e.get("tipo_de_apoyo")) for e in C.get("voces") or []
+                    if sin_diacriticos(str(e.get("forma_fuente")), False).lower() == f})
+    return tipos or None
+
+
+def _frente_a_s(fa, fb):
+    """Qué consonante caquetía tiene enfrente cada /s/ de la hermana (la otra dirección)."""
+    pares, _ = diferencias_consonanticas(esqueleto(fa), esqueleto(fb))
+    return [x for x, y in pares if y == "s"]
+
+
+def _parejas_misma_palabra(gu):
+    """Las parejas caquetío↔taíno que T4 leyó a mano con el MISMO significado.
+
+    Las lee de la propuesta de la tradición viva (§el_cruce), que las escribió
+    ANTES de esta corrida y que Miguel aceptó (th.12, T4: van como nota de
+    comparanda en el lexicón). Aquí no se elige ninguna: se cuentan todas.
+    """
+    T = yaml.safe_load(io.open(YAML_TRADICION_VIVA, encoding="utf-8"))
+    out = []
+    for p in (T.get("el_cruce") or {}).get("parejas_con_el_mismo_significado") or []:
+        clave = _primera_palabra(p["caquetio"])
+        v = CL.VOCABULARIO_BASE.get(clave) or {}
+        formas = [clave] + ([v["forma_fuente"]] if v.get("forma_fuente") else [])
+        tn = _primera_palabra(p["taino"])
+        fa, fb, caq_forma, sim = _mejor_par(formas, tn, gu)
+        lema, clase_lista = _clase_en_la_lista(tn)
+        out.append({"caquetio": clave, "capa": CL.capa_epistemica(v.get("fuente")) or v.get("fuente"),
+                    "taino": tn, "clase_taina": p.get("clase"),
+                    "clase_en_la_lista_maestra": clase_lista, "lema_en_la_lista": lema,
+                    "comparado": f"{fa} ~ {fb}", "caq_forma": caq_forma, "similitud": sim,
+                    "fa": fa, "fb": fb, "dominio": dominio_de(v),
+                    "cita_caquetia": p["caquetio"], "cita_taina": p["taino"],
+                    "apoyo_en_coll_y_toste": _apoyo_coll_de(tn),
+                    "puente_de_glosa": PUENTES_DE_GLOSA.get(clave),
+                    "k": _k_frente_a(fa, fb)})
+    return out
+
+
+def _cognados_lokono_con_cita(gu):
+    """Los cognados caquetío↔lokono de `cognados.yaml` con obra y página: la pata A."""
+    Y = yaml.safe_load(io.open(YAML_COGNADOS, encoding="utf-8"))
+    out = []
+    for c in Y["cognados"]:
+        f, proc = c.get("formas") or {}, c.get("procedencia") or {}
+        if "CQ" not in f or "LK" not in f or not proc.get("obra") or c.get("fuente") != "atestiguado":
+            continue
+        cq = re.split(r"\s*/\s*", str(f["CQ"]))[0].strip().lstrip("*")
+        lk = re.split(r"\s*/\s*", str(f["LK"]))[0].strip().lstrip("*")
+        fa, fb = fon(cq, "colonial", gu), fon(lk.replace("-", ""), "colonial", gu)
+        out.append({"set": c["id"], "caquetio": cq, "lokono": lk, "glosa": c.get("glosa"),
+                    "cita": f"{proc['obra']} p. {proc.get('pagina')}",
+                    "comparado": f"{fa} ~ {fb}", "k": _k_frente_a(fa, fb)})
+    return out
+
+
+def bloque_tradicion_viva(M):
+    """Qué entra de la clase ii, qué empareja el filtro automático y qué no."""
+    meta = M["tradicion_viva"]
+    ates = [r for r in M["res"] if r["c"]["capa"] == ATESTIGUADO and not r["corto"]]
+    comparables = [r for r in ates if r["por"][TV]["exactas"]]
+    filas = []
+    for r in comparables:
+        s, e, cb, ca = r["por"][TV]["ranking"][0]
+        fila = {"caquetio": r["c"]["clave"], "glosa_caquetia": r["c"]["sig"],
+                "taino_tradicion_viva": cb[1], "glosa": e["glosa"],
+                "estrato": e["ficha"]["estrato"][:160],
+                "comparado": f"{ca[0]} ~ {cb[0]}", "similitud": round(s, 3),
+                "veredicto": r["por"][TV]["veredicto"]}
+        p = p_nulo_de(r, TV)
+        if p is not None:
+            fila["p_por_azar"] = round(p, 3)
+        if r["por"][TV]["veredicto"] in ("cognado-probable", "parecido-debil"):
+            fa, fb = fon(ca[1], "colonial", GU_TEST), fon(cb[1], "colonial", GU_TEST)
+            letra, porque, j = test_cognado_o_prestamo(fa, fb, r["c"]["dominio"], p)
+            fila["test_T11"] = {"letra": letra, "por_que": porque,
+                                "esqueletos": f"{j['esqueleto_caquetio']} ~ {j['esqueleto_taino']}"}
+        filas.append(fila)
+    filas.sort(key=lambda d: (-d["similitud"], d["caquetio"]))
+    obs = sum(1 for r in comparables if r["por"][TV]["sim"] >= UMBRAL_PARECIDO)
+    con_nulo = [r for r in comparables if TV in (r.get("nulo") or {})]
+    esperados = (round(sum(sum(r["nulo"][TV][i] >= UMBRAL_PARECIDO for r in con_nulo)
+                           for i in range(REPLICAS)) / REPLICAS, 2) if con_nulo else None)
+    pred = prueba_dejando_fuera(M, (TV,))[TV]
+    return {
+        "que_es": (
+            "th.8 (T1): la clase ii de la lista maestra CUENTA como dato en los cruces, con su "
+            f"etiqueta propia («{ETIQUETA_TV}») y separada del cronista. Entra como columna aparte "
+            f"(`{TV}`), con su propio azar (semilla {SEMILLA_TV}): la columna «taíno» —el cronista— "
+            "se mide exactamente como el 22. Lo conjeturado (clase iii) sigue fuera."),
+        "insumos": meta,
+        "el_filtro_automatico": {
+            "como": ("el mismo del 22: glosa castellana EXACTA en los dos lados, y el parecido de "
+                     "forma sólo abre la candidatura"),
+            "conceptos_comparables": len(comparables),
+            "parecidos_ge_umbral": obs,
+            "parecidos_esperados_por_azar": esperados,
+            "parejas": filas,
+        },
+        "lo_que_el_filtro_no_ve": (
+            "las parejas de T4 cuyo significado es el mismo con otras palabras («sabana» / «llanura», "
+            "«concha de almeja» / «caracolillo de costa»): el filtro exige la MISMA cabeza de glosa. "
+            "No se relaja aquí —cambiaría lo que el 22 medía—; esas parejas entran en `T5_k_s` como "
+            "lo que son, glosas leídas a mano y aceptadas en th.12."),
+        "prueba_de_prediccion": pred,
+    }
+
+
+def bloque_k_s(M, gu):
+    """¿Llega k ~ s al listón de tres apoyos con la tradición viva dentro?
+
+    Testigo = una palabra caquetía ATESTIGUADA que tiene /k/ donde su hermana,
+    con el mismo significado, tiene /s/. Cuenta cada palabra caquetía UNA vez.
+    Dejando fuera: la pareja que se juzga no puede apoyarse en sí misma, ni en
+    otra que comparta su palabra caquetía o su palabra hermana. Es la regla del
+    22 («lo que la cerraría es un tercer apoyo independiente») hecha cuenta.
+    """
+    mp = _parejas_misma_palabra(gu)
+    lk = _cognados_lokono_con_cita(gu)
+    CLASE_LEGIBLE = {"i-primaria-del-XVI": "taíno de cronista (clase i)",
+                     "ii-solo-secundaria": f"{ETIQUETA_TV} (clase ii)"}
+
+    testigos, en_contra = [], []
+    for p in mp:
+        if p["capa"] != ATESTIGUADO:
+            continue
+        for pos, y, vocal in p["k"]:
+            fila = {"caquetio": p["caquetio"], "hermana": p["taino"], "lengua_hermana": "taíno",
+                    "clase_de_apoyo": CLASE_LEGIBLE.get(p["clase_taina"], p["clase_taina"]),
+                    "clase": p["clase_taina"], "posicion": pos, "vocal_que_sigue": vocal,
+                    "comparado": p["comparado"], "cita_caquetia": p["cita_caquetia"],
+                    "cita_hermana": p["cita_taina"],
+                    **({"apoyo_en_coll_y_toste": p["apoyo_en_coll_y_toste"]}
+                       if p["apoyo_en_coll_y_toste"] else {}),
+                    **({"puente_de_glosa": p["puente_de_glosa"]} if p["puente_de_glosa"] else {})}
+            (testigos if y == "s" else en_contra).append(dict(fila, frente_a=y))
+    for c in lk:
+        for pos, y, vocal in c["k"]:
+            fila = {"caquetio": c["caquetio"], "hermana": c["lokono"], "lengua_hermana": "lokono",
+                    "clase_de_apoyo": f"lokono, cognado con cita ({c['set']}, {c['cita']}): la pata "
+                                      "caquetío↔lokono de P7",
+                    "clase": "lokono-cognado-citado", "posicion": pos, "vocal_que_sigue": vocal,
+                    "comparado": c["comparado"], "cita_caquetia": c["cita"], "cita_hermana": c["cita"]}
+            (testigos if y == "s" else en_contra).append(dict(fila, frente_a=y))
+    # una palabra caquetía cuenta una vez
+    vistos, unicos = set(), []
+    for t in testigos:
+        if t["caquetio"] not in vistos:
+            vistos.add(t["caquetio"])
+            unicos.append(t)
+
+    def independientes(t, conjunto):
+        return [w for w in conjunto if w["caquetio"] != t["caquetio"] and w["hermana"] != t["hermana"]]
+
+    escenarios = {
+        "todo_lo_que_hay (clase i + clase ii + la pata lokono)": lambda w: True,
+        "sin_la_tradicion_viva (como el 22, más lo leído a mano de clase i)":
+            lambda w: w["clase"] != CLASE_TV,
+        "solo_caquetio_taino_directo (sin la pata lokono)":
+            lambda w: w["lengua_hermana"] == "taíno",
+        "solo_posicion_inicial": lambda w: w["posicion"] == "inicial",
+    }
+    directas = [t for t in unicos if t["lengua_hermana"] == "taíno"]
+    por_escenario = {}
+    for nombre, filtro in escenarios.items():
+        conj = [w for w in unicos if filtro(w)]
+        # sólo se juzgan las parejas taínas que el escenario conserva
+        dej = {t["caquetio"]: len(independientes(t, conj)) for t in directas if filtro(t)}
+        por_escenario[nombre] = {
+            "testigos": [f"{w['caquetio']} ~ {w['hermana']}" for w in conj],
+            "apoyos_dejando_fuera_cada_pareja": dej,
+            "llega_al_liston_en_todas": bool(dej) and min(dej.values()) >= LISTON_DE_APOYOS,
+        }
+    principal = por_escenario["todo_lo_que_hay (clase i + clase ii + la pata lokono)"]
+    pasa = principal["llega_al_liston_en_todas"]
+
+    # el test de T11 otra vez, pareja por pareja, con los apoyos que quedan dejándola fuera
+    rejuzgadas = []
+    for t in directas:
+        p = next(x for x in mp if x["caquetio"] == t["caquetio"])
+        n = len(independientes(t, unicos))
+        mapa = {c: dict(d) for c, d in PREDICHO_CQ_TN.items()}
+        mapa["k"] = ({"admite": {"k", "s"}, "candidatas": set(), "diagnostica": False, "apoyos": n}
+                     if n >= LISTON_DE_APOYOS else
+                     {"admite": {"k"}, "candidatas": {"s"}, "diagnostica": False, "apoyos": n})
+        l0, _p0, _j0 = test_cognado_o_prestamo(p["fa"], p["fb"], p["dominio"])
+        l1, p1, j1 = test_cognado_o_prestamo(p["fa"], p["fb"], p["dominio"], mapa=mapa)
+        rejuzgadas.append({"pareja": f"{t['caquetio']} ~ {t['hermana']}", "comparado": p["comparado"],
+                           "apoyos_independientes": n,
+                           "con_cuales": [f"{w['caquetio']} ~ {w['hermana']} ({w['clase_de_apoyo']})"
+                                          for w in independientes(t, unicos)],
+                           "letra_con_la_tabla_del_22": l0, "letra_hoy": l1, "por_que": p1})
+
+    # desconfiar: ponerla a predecir sobre las parejas que SON la misma palabra
+    def a_predecir(inicial):
+        filas = []
+        sup = {t["caquetio"] for t in unicos}
+        for p in mp:
+            if p["capa"] != ATESTIGUADO or p["caquetio"] in sup:
+                continue
+            for pos, y, _v in p["k"]:
+                if inicial and pos != "inicial":
+                    continue
+                filas.append(f"{p['caquetio']} ~ {p['taino']} ({pos}: k ~ {y}): "
+                             + ("acierta" if y == "s" else "falla"))
+        return {"aplicables": len(filas),
+                "aciertos": sum(1 for f in filas if f.endswith("acierta")), "casos": filas}
+
+    fuera_de_la_capa = [f"{p['caquetio']} ~ {p['taino']} ({p['capa']})" for p in mp
+                        if p["capa"] != ATESTIGUADO and p["k"]]
+    auto = {}
+    for L in ("taíno", TV):
+        for rg in prueba_dejando_fuera(M, (L,))[L]["reglas"]:
+            if rg["regla"].startswith(("caq k ~", "caq #k ~")) and rg["regla"].endswith(" s"):
+                auto[f"{L} · {rg['regla']}"] = {k: rg[k] for k in (
+                    "apoyos", "visto_en", "aplicables", "aciertos", "tasa_de_acierto",
+                    "tasa_por_azar", "juicio")}
+
+    clases = collections.Counter(t["clase_de_apoyo"] for t in unicos)
+    posiciones = collections.Counter(f"{t['lengua_hermana']} · {t['posicion']}" for t in unicos)
+    sin_tv = por_escenario["sin_la_tradicion_viva (como el 22, más lo leído a mano de clase i)"]
+    sin_lk = por_escenario["solo_caquetio_taino_directo (sin la pata lokono)"]
+    ini = por_escenario["solo_posicion_inicial"]
+    pred_cq, pred_ini = a_predecir(False), a_predecir(True)
+
+    # la otra dirección: donde la HERMANA tiene /s/, ¿qué tiene el caquetío?
+    desde_la_hermana = {}
+    for nombre, filas in (("taíno", [(f"{p['caquetio']} ~ {p['taino']}", p["fa"], p["fb"])
+                                     for p in mp if p["capa"] == ATESTIGUADO]),
+                          ("lokono", [(f"{c['caquetio']} ~ {c['lokono']}", *c["comparado"].split(" ~ "))
+                                      for c in lk])):
+        casos = [(par, x) for par, fa, fb in filas for x in _frente_a_s(fa, fb)]
+        desde_la_hermana[nombre] = {
+            "s_de_la_hermana_con_pareja_caquetia": len(casos),
+            "reparto": dict(sorted(collections.Counter(x for _p, x in casos).items())),
+            "casos": [f"{p}: s ~ caq {x}" for p, x in casos]}
+    contra_lk = [c for c in desde_la_hermana["lokono"]["casos"] if not c.endswith(" k")]
+    respuesta = (
+        (f"SÍ llega al listón de {LISTON_DE_APOYOS}: {len(unicos)} palabras caquetías atestiguadas "
+         f"tienen /k/ donde su hermana tiene /s/, y dejando fuera cada pareja quedan "
+         f"{min(principal['apoyos_dejando_fuera_cada_pareja'].values())} apoyos independientes. "
+         if pasa else
+         f"NO llega al listón de {LISTON_DE_APOYOS}: dejando fuera cada pareja quedan "
+         f"{_fmt(principal['apoyos_dejando_fuera_cada_pareja'])} apoyos. ")
+        + ("Sin la tradición viva no llegaría "
+           f"({_fmt(sin_tv['apoyos_dejando_fuera_cada_pareja'])}): el apoyo que faltaba el 22 es de clase ii. "
+           if pasa and not sin_tv["llega_al_liston_en_todas"] else "")
+        + ("Llega justo, y sólo contando juntas las dos patas: sin la lokona quedan "
+           f"{_fmt(sin_lk['apoyos_dejando_fuera_cada_pareja'])}, y contando sólo la /k/ INICIAL —donde "
+           f"están las tres taínas— quedan {_fmt(ini['apoyos_dejando_fuera_cada_pareja'])}. "
+           if pasa and not (sin_lk["llega_al_liston_en_todas"] and ini["llega_al_liston_en_todas"])
+           else "")
+        + (f"Puesta a predecir sobre las parejas que son la misma palabra y no la sugirieron: "
+           f"{pred_cq['aciertos']} de {pred_cq['aplicables']} en cualquier posición, "
+           f"{pred_ini['aciertos']} de {pred_ini['aplicables']} en inicial"
+           + (f" ({'; '.join(pred_cq['casos'])})" if pred_cq["casos"] else "") + ". ")
+        + ("Y mirada desde la hermana: donde el taíno tiene /s/, el caquetío tiene "
+           f"{_fmt(desde_la_hermana['taíno']['reparto'], 'caq /')}; donde el lokono tiene /s/, "
+           f"{_fmt(desde_la_hermana['lokono']['reparto'], 'caq /')}"
+           + (f" — la pata lokona está partida ({'; '.join(contra_lk)})" if contra_lk else "")
+           + "."))
+
+    # la nota que se PROPONE para las tres voces (regla 5: la aplica quien fusiona)
+    notas = {}
+    limites = ([] if sin_lk["llega_al_liston_en_todas"] else ["sin la pata lokona no llegaría"]) \
+        + ([] if ini["llega_al_liston_en_todas"] else ["contando sólo la /k/ inicial tampoco"]) \
+        + ([f"y la pata lokona está partida ({'; '.join(contra_lk)})"] if contra_lk else [])
+    no_la_siguen = [c.split(" (")[0] for c in pred_cq["casos"] if c.endswith("falla")]
+    limite_txt = ("Llega justo: " + ", ".join(limites) + "" if limites else "") \
+        + ((("; y " if limites else "") + ", ".join(f"`{x}`" for x in no_la_siguen)
+            + " no la sigue") if no_la_siguen else "") + ("." if (limites or no_la_siguen) else "")
+    for r_ in rejuzgadas:
+        clave = r_["pareja"].split(" ~ ")[0]
+        t = next(w for w in unicos if w["caquetio"] == clave)
+        if pasa:
+            notas[clave] = (
+                f"T5 de la tanda de las hermanas (th.13, 2026-09-24): T11 vuelto a correr con el "
+                f"taíno de tradición viva dentro. k ~ s llega al listón de {LISTON_DE_APOYOS} apoyos: "
+                f"dejando fuera esta pareja ({r_['pareja']}, {t['clase_de_apoyo']}) quedan "
+                f"{r_['apoyos_independientes']} — " + "; ".join(r_["con_cuales"]) + ". "
+                f"El test pasa de {r_['letra_con_la_tabla_del_22']} a {r_['letra_hoy']}: "
+                "correspondencia regular caquetío /k/ ~ taíno /s/, así que la pareja es COGNADA "
+                "(parentesco arahuaco), no préstamo de la esfera — un préstamo desde el taíno "
+                "traería /s/, y el caquetío la tiene (`barisi`). " + limite_txt
+                + " No cambia glosa ni capa. Medición: "
+                "6-fusion/cruce_taino_caquetio_2026-09-24.yaml §T5_k_s")
+    return {
+        "la_pregunta": ("th.13 (T5): con la tradición viva dentro, ¿la correspondencia caquetío /k/ ~ "
+                        "taíno /s/ llega a los tres apoyos que el proyecto exige («una "
+                        "correspondencia que sale una o dos veces no es nada»)? El 22 tenía dos "
+                        "—`koke`:`kuse` y `siba`:`siba`— y dejó `kiba`/`siba` en C: «lo que la "
+                        "cerraría es un tercer apoyo independiente»."),
+        "como_se_cuenta": (
+            "testigo = una palabra caquetía de la capa ATESTIGUADA con /k/ donde su hermana, con el "
+            "mismo significado, tiene /s/; cada palabra caquetía cuenta una vez. Las hermanas: el "
+            "taíno de las parejas que T4 leyó a mano (propuesta de la tradición viva §el_cruce, "
+            "aceptada en th.12) y los cognados caquetío↔lokono de cognados.yaml con obra y página "
+            "(la pata A de P7). Dejando fuera: una pareja no se apoya en sí misma ni en otra que "
+            "comparta su palabra caquetía o su palabra hermana. `siba`:`siba` (taíno↔lokono) no es "
+            "testigo caquetío: es la mitad taína de `kiba`/`siba`, y contarla aparte la contaría dos "
+            "veces."),
+        "respuesta": respuesta,
+        "los_testigos": unicos,
+        "por_clase_de_apoyo": dict(sorted(clases.items())),
+        "por_posicion": dict(sorted(posiciones.items())),
+        "escenarios": por_escenario,
+        "el_test_de_T11_otra_vez": rejuzgadas,
+        "k_caquetia_frente_a_otra_cosa": {
+            "que_es": ("las /k/ caquetías de las mismas parejas que NO tienen /s/ enfrente. Contradicen "
+                       "la regla leída desde el caquetío («toda /k/ es /s/ en la hermana»); no la "
+                       "contradicen leída desde la hermana (ver `desconfiar_ponerla_a_predecir."
+                       "desde_la_hermana`), porque una /k/ frente a /k/ puede ser la /k/ de siempre"),
+            "casos": en_contra},
+        "desconfiar_ponerla_a_predecir": {
+            "por_que": ("skill minar-fuente §2: «si de dos casos sacas una correspondencia fonética, "
+                        "ponla a predecir». Dos pruebas, y miden cosas distintas."),
+            "sobre_las_parejas_que_son_la_misma_palabra": {
+                "que_mide": ("sólo las parejas de T4 (misma palabra por la glosa leída a mano) que "
+                             "no son testigos: ahí una correspondencia regular TIENE que cumplirse"),
+                "k_en_cualquier_posicion": pred_cq,
+                "k_inicial": pred_ini,
+                "fuera_de_la_capa_atestiguada_no_deciden": fuera_de_la_capa,
+            },
+            "desde_la_hermana": {
+                "que_mide": ("la otra dirección, que es la que importa si el caquetío FUNDIÓ dos "
+                             "sonidos en /k/: donde la hermana tiene /s/, ¿tiene el caquetío /k/? "
+                             "Una /k/ caquetía frente a /k/ hermana no la contradice (sería la /k/ de "
+                             "siempre); una /s/ caquetía frente a /s/ hermana, sí"),
+                **desde_la_hermana,
+            },
+            "la_prueba_automatica_del_22_sobre_toda_glosa_exacta": {
+                "que_mide": ("predice sobre TODOS los demás conceptos con la misma glosa, sean o no la "
+                             "misma palabra, contra el azar. Castiga también las parejas que no son "
+                             "cognadas (`tarika` ~ `itabo` 'laguna'), así que su fallo no desmiente la "
+                             "correspondencia: dice que fuera de sus testigos no hay con qué verla"),
+                "reglas": auto,
+            },
+        },
+        "lo_que_no_decide": [
+            "la dirección del cambio: si el caquetío conserva una /k/ que el taíno y el lokono "
+            "volvieron /s/, o al revés. Maipure `kuki` y yavitero `hoke` 'bachaco' (Oliver cap. 2 p. "
+            "145) tienen /k/ donde el lokono tiene /s/: apunta a que el caquetío conserva, pero son "
+            "una pareja y no se escribe como regla",
+            "el condicionamiento: los testigos se reparten así por posición — "
+            + ", ".join(f"{k}: {v}" for k, v in sorted(posiciones.items()))
+            + "; y en contra (/k/ caquetía frente a otra cosa): "
+            + (", ".join(f"{w['caquetio']} ~ {w['hermana']} ({w['posicion']}: k ~ {w['frente_a']})"
+                         for w in en_contra) or "ninguna")
+            + ". Con este material no se puede decir si la correspondencia depende de la posición",
+            "si `kabana`/`sabana` es la misma palabra: lo dice la glosa leída a mano (T4), y la "
+            "sabana es de las voces que viajan (`PRESTAMOS_CONOCIDOS` la lleva como préstamo taíno "
+            "al castellano); lo que la separa de un préstamo es justo la /k/",
+        ],
+        "si_pasa_por_que_es_parentesco_y_no_prestamo": (
+            "un préstamo desde el taíno llegaría con /s/ —así llegó `sabana` al castellano—, y el "
+            "caquetío TIENE /s/ (`barisi`, cognado-001): no tenía por qué cambiarla por /k/. Una /k/ "
+            "sistemática donde el taíno tiene /s/ es la huella de un cambio de sonido heredado, no de "
+            "una palabra que cruzó."),
+        "pasa": pasa,
+        "notas_propuestas": notas or {
+            "ninguna": ("k ~ s no llega al listón: `kiba`, `kabana` y `kiwa` se quedan con la nota de "
+                        "T4 tal como está, y la negativa se anota aquí")},
+        "como_se_aplican": (
+            "regla 5: esto PROPONE. Quien fusione añade el texto al final de `notas` de cada voz en "
+            "curiana_sim/curiana_lexicon.py (`kiba`, `kabana`, `kiwa`) y la cláusula de T4 «se "
+            "vuelve a correr después de la corrida base (T5)» queda contestada por él. `notas` no "
+            "llega al prompt: no mueve el score ni el habla."),
+    }
+
+
+def bloque_antes_y_despues_del_22():
+    """Lo que el YAML del 22 decía, leído de él. Ninguna cifra a mano."""
+    A = yaml.safe_load(io.open(SALIDA, encoding="utf-8"))
+    m = A.get("meta") or {}
+    k7 = next((p for p in (m.get("las_predicciones") or {}).get("tabla") or [] if p.get("id") == "P7"), {})
+    kiba = next((p for p in A.get("parejas") or [] if p.get("caquetio") == "kiba"), {})
+    return {
+        "fuente": os.path.relpath(SALIDA, R).replace("\\", "/"),
+        "que_es": ("lo que el cruce del 22 decía de k ~ s, leído de su YAML. Entre el 22 y hoy "
+                   "cambiaron DOS cosas y no se confunden: el lexicón (la tanda de las hermanas) y la "
+                   "tradición viva, que entra en su columna"),
+        "P7_apoyos_el_22": k7.get("apoyos"),
+        "kiba_el_22": (kiba.get("test_T11") or {}).get("letra"),
+        "kiba_por_que_el_22": (kiba.get("test_T11") or {}).get("por_que"),
+        "reparto_por_letra_el_22": m.get("reparto_por_letra_del_test"),
+    }
 
 
 CABECERA = (
@@ -3241,9 +3893,23 @@ CABECERA = (
 )
 
 
+CABECERA_TV = (
+    "# ══════════════════════════════════════════════════════════════════════\n"
+    "# CRUCE TAÍNO <-> CAQUETÍO ATESTIGUADO — T11 VUELTO A CORRER CON LA\n"
+    "# TRADICIÓN VIVA DENTRO (T5, 2026-09-24; th.8 y th.13).\n"
+    "# PROPUESTA (regla 5). Generado por\n"
+    "#   python 6-fusion/scripts/cruce_taino_caquetio.py --con-tradicion-viva\n"
+    "# no se edita a mano; se corrige el script o sus insumos y se regenera.\n"
+    "# Toda cifra de `meta` la emite el script (regla 1). La respuesta está en\n"
+    "# `meta.T5_k_s`; la columna nueva, en `meta.la_tradicion_viva`.\n"
+    "# El YAML del 2026-09-22 NO se toca: este script lo lee como el «antes».\n"
+    "# ══════════════════════════════════════════════════════════════════════\n"
+)
+
+
 def texto_yaml(salida):
     buf = io.StringIO()
-    buf.write(CABECERA)
+    buf.write(CABECERA_TV if salida["meta"].get("T5_k_s") else CABECERA)
     yaml.safe_dump(salida, buf, allow_unicode=True, sort_keys=False, width=110)
     return buf.getvalue()
 
@@ -3322,17 +3988,43 @@ def consola(salida):
     print(f"\n  reparto por letra del test: {m['reparto_por_letra_del_test']}")
 
 
+def consola_tv(salida):
+    m = salida["meta"]
+    tv = m["la_tradicion_viva"]
+    print("\n═══ T5 · LA TRADICIÓN VIVA (columna aparte) ═══")
+    print(f"  entran {tv['insumos']['entran']} de {tv['insumos']['voces_de_clase_ii_en_la_lista']}"
+          f" · fuera {tv['insumos']['fuera_por']}")
+    fa = tv["el_filtro_automatico"]
+    print(f"  filtro automático: comparables {fa['conceptos_comparables']} · parecidos "
+          f"{fa['parecidos_ge_umbral']} (azar {fa['parecidos_esperados_por_azar']})")
+    k = m["T5_k_s"]
+    print("\n═══ T5 · k ~ s ═══")
+    for t in k["los_testigos"]:
+        print(f"  {t['caquetio']:<8} ~ {t['hermana']:<8} [{t['posicion']}] {t['clase_de_apoyo']}")
+    for n, e in k["escenarios"].items():
+        print(f"  {n:<70} {e['apoyos_dejando_fuera_cada_pareja']} → "
+              f"{'llega' if e['llega_al_liston_en_todas'] else 'no llega'}")
+    for r_ in k["el_test_de_T11_otra_vez"]:
+        print(f"  {r_['pareja']:<16} {r_['letra_con_la_tabla_del_22']} → {r_['letra_hoy']}")
+    print(f"  → {k['respuesta']}")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("--check", action="store_true",
                     help="no escribe: dice si el YAML del repo está al día")
+    ap.add_argument("--con-tradicion-viva", action="store_true",
+                    help=("T5: la clase ii de la lista maestra entra como columna aparte y se "
+                          "vuelve a contar k ~ s; escribe el YAML del 2026-09-24, no el del 22"))
     args = ap.parse_args(argv)
+    con_tv = args.con_tradicion_viva
+    destino = SALIDA_TV if con_tv else SALIDA
 
     print("midiendo (gu_es_w=False) ...")
-    M = medir(GU_ES_W)
+    M = medir(GU_ES_W, con_tv=con_tv)
     print(f"  {M['segundos']} s")
     print("midiendo la sensibilidad (gu_es_w=True) ...")
-    M2 = medir(not GU_ES_W)
+    M2 = medir(not GU_ES_W, con_tv=con_tv)
     print(f"  {M2['segundos']} s")
     # el test corre sobre la fonemización con ⟨gu⟩ = /w/
     MT = M2 if GU_TEST == (not GU_ES_W) else M
@@ -3341,17 +4033,19 @@ def main(argv=None):
     nuevo = texto_yaml(salida)
 
     if args.check:
-        viejo = io.open(SALIDA, encoding="utf-8").read() if os.path.exists(SALIDA) else ""
+        viejo = io.open(destino, encoding="utf-8").read() if os.path.exists(destino) else ""
         if viejo == nuevo:
-            print(f"\n✓ {os.path.relpath(SALIDA, R)} está al día")
+            print(f"\n✓ {os.path.relpath(destino, R)} está al día")
             return 0
-        print(f"\n✗ {os.path.relpath(SALIDA, R)} DESFASADO: re-ejecuta el script sin --check")
+        print(f"\n✗ {os.path.relpath(destino, R)} DESFASADO: re-ejecuta el script sin --check")
         return 1
 
-    with io.open(SALIDA, "w", encoding="utf-8", newline="\n") as fh:
+    with io.open(destino, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(nuevo)
     consola(salida)
-    print(f"\n✓ {os.path.relpath(SALIDA, R)}")
+    if con_tv:
+        consola_tv(salida)
+    print(f"\n✓ {os.path.relpath(destino, R)}")
     return 0
 
 

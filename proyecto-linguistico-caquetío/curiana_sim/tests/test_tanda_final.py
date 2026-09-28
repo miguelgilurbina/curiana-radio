@@ -36,8 +36,11 @@ def _ensena(forma: str, texto: str) -> bool:
 # ══════════════════════════════════════════════════════════════════════
 # tf.1 — los pronombres de las hermanas
 # ══════════════════════════════════════════════════════════════════════
-PRONOMBRES = {"dai": "caquetío-reconstruido", "bui": "caquetío-hipotético",
-              "lihi": "caquetío-hipotético", "tuhu": "caquetío-hipotético",
+# Tanda de las hermanas (2026-09-24, D1 → A): el habla de mujeres kalinago
+# cuenta como hermana y dice b(u)-, l(i)-, t(u)- como el lokono, así que
+# `bui`, `lihi` y `tuhu` suben a reconstruidos (Goeje 1939 p. 24).
+PRONOMBRES = {"dai": "caquetío-reconstruido", "bui": "caquetío-reconstruido",
+              "lihi": "caquetío-reconstruido", "tuhu": "caquetío-reconstruido",
               "waya": "caquetío-reconstruido", "naya": "caquetío-reconstruido"}
 
 
@@ -60,7 +63,7 @@ def test_tf1_el_pronombre_del_wayuu_al_archivo_con_su_capa(forma):
 def test_tf1_las_claves_lokono_que_chocaban_llevan_su_etiqueta():
     assert VOCABULARIO_BASE["tuhu-lokono"]["fuente"] == "lokono"
     assert VOCABULARIO_BASE["kuba-lokono"]["fuente"] == "lokono"
-    assert VOCABULARIO_BASE["tuhu"]["fuente"] == "caquetío-hipotético"
+    assert VOCABULARIO_BASE["tuhu"]["fuente"] == "caquetío-reconstruido"   # D1, 2026-09-24
 
 
 def test_tf1_el_formal_no_se_toca():
@@ -82,9 +85,11 @@ def test_tf2_las_reglas_son_kuba_y_ba_y_los_viejos_solo_se_pelan():
 
 
 def test_tf2_el_detector_se_sustituye_no_se_une():
-    tok = ["naa-kuba", "diki-ba", "naa-ka", "naa-ni", "naa-da", "naa"]
+    # `naa` → `kunu` (tanda de las hermanas, 2026-09-24): una raíz archivada
+    # ya no es verbo para el detector.
+    tok = ["kunu-kuba", "diki-ba", "kunu-ka", "kunu-ni", "kunu-da", "kunu"]
     assert L._aspectos_morfologicos(tok) == ["completivo", "prospectivo"]
-    assert L._aspectos_morfologicos(["naa"]) == [], "el presente no se marca"
+    assert L._aspectos_morfologicos(["kunu"]) == [], "el presente no se marca"
 
 
 def test_tf2_el_desafijador_sigue_pelando_lo_viejo():
@@ -140,10 +145,14 @@ def test_tf5_las_que_se_archivan_sin_sustituta(vieja):
 
 
 def test_tf5_las_nuevas_son_hipoteticas_con_cita_y_las_que_mandan_atestiguadas():
-    for forma in ("danu", "ruku", "diki", "kuburuku", "kasalini", "mautia"):
+    for forma in ("danu", "ruku", "kuburuku", "kasalini", "mautia"):
         e = VOCABULARIO_BASE[forma]
         assert e["fuente"] == "caquetío-hipotético", forma
         assert "Perea" in e["notas"] or "Neira" in e["notas"], forma
+    # `diki` ganó su segunda hermana en la transcripción del habla de mujeres
+    # (arika, Goeje 1939 p. 100) y sube a reconstruida (N1, 2026-09-24).
+    assert VOCABULARIO_BASE["diki"]["fuente"] == "caquetío-reconstruido"
+    assert "Goeje 1939 p. 100" in VOCABULARIO_BASE["diki"]["notas"]
     for forma in ("popoi", "wasima"):
         assert VOCABULARIO_BASE[forma]["fuente"] == "caquetío-atestiguado"
     assert VOCABULARIO_BASE["bana"]["fuente"] == "caquetío-hipotético"
@@ -173,7 +182,8 @@ def test_ninguna_plantilla_ensena_lo_retirado():
 
 
 def test_la_identidad_ensena_el_nucleo_nuevo():
-    assert "Dai diki-kuba arima wara para." in IDENTIDAD_LINGUISTICA
+    # `arima` → `hime`, `wara` → `kibe` (tanda de las hermanas, 2026-09-24).
+    assert "Dai diki-kuba hime kibe para." in IDENTIDAD_LINGUISTICA
     assert "Da-barsure kuburuku." in IDENTIDAD_LINGUISTICA
     assert "kari" not in IDENTIDAD_LINGUISTICA, "sigla E: kari es hipotética"
 
@@ -189,7 +199,8 @@ def test_la_breve_lleva_lo_que_la_muestra_del_perfil_era2_no_da():
 
 def test_el_refuerzo_ensena_por_recorte_sin_las_viejas():
     """La plantilla enseña por RECORTE (`[:4]`): se cambian las LISTAS."""
-    usadas = ["diki", "suna", "masa", "awa", "ka", "mara", "saa", "naka"]
+    # Con las listas de la tanda de las hermanas (2026-09-24).
+    usadas = ["diki", "dunku", "aeke", "ati", "badia", "ika", "bena", "kia"]
     texto = L.prompt_refuerzo(3.0, usadas)
     for forma in ("wana", "naba", "kashi", "yama"):
         assert not _ensena(forma, texto), forma

@@ -239,6 +239,13 @@ hallazgos:
   fuerza: alta para la ruta
 
 - id: m2.g2
+  verificado_en_imagen: >-
+    2026-09-27 (Navarrete 1829 t. III, PDF de archive.org; impresa = pdf − 22): p. 86
+    «Quiquevacoa» (el OCR «Qoiquevacoa»; once letras, sin nasal); p. 87 «la isla
+    Caquevacoa»; p. 89 «la isla de Ca-quivacoa» (12-VI-1501); p. 518 «Caquibacoa»;
+    pp. 544-545 «Quinquibacoa» las cuatro veces, SIN tilde (la «í» es del OCR).
+    Caquevacoa/Caquivacoa llevan Ca- de verdad, no Co- mal leído. Citadas en
+    toponimo-034 (observación), sin cambiar su nivel.
   esfera: toponimos
   titulo: '«Los indios le llamaban Golfo de Coquibacoa» — y cómo lo escriben los papeles de 1500-1515'
   cita: >-
@@ -373,6 +380,10 @@ hallazgos:
   fuerza: media
 
 - id: m2.c3
+  verificado_en_imagen: >-
+    2026-09-27 (pdf 54 = impresa 32): «llegó á una tierra de riego que los indios
+    llamaban Curiana y él nombró Valfermoso» — dice «riego». La proyección al
+    buco (regla 3) sigue siendo decisión de Miguel.
   esfera: ecologia / agricultura
   titulo: '«una tierra de riego que los indios llamaban Curiana» — Valfermoso, abril de 1502'
   cita: >-

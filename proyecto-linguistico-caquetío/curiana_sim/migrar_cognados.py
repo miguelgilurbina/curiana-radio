@@ -124,19 +124,71 @@ def construir():
         registros.append(reg)
 
     # ── Los 37 del set curado: sin procedencia, y se dice ──────────────
+    # Salvo la procedencia que se les encontró DESPUÉS y está declarada en
+    # PROCEDENCIA_CURADA: antes se escribía a mano en el YAML generado y la
+    # regeneración la borraba (medido el 2026-09-24 con `barbacoa`).
     for clave, e in A.COGNADOS.items():
         n += 1
+        curada = PROCEDENCIA_CURADA.get(clave, {})
         registros.append({
             "id": f"cognado-{n:03d}",
             "glosa": e.get("es") or clave,
             "formas": _formas(e),
             "fuente": "reconstruido",
-            "procedencia": None,
-            "deuda": "sin-procedencia",
+            "procedencia": curada.get("procedencia"),
+            "deuda": curada.get("deuda", "sin-procedencia"),
             "clave_origen": clave,
         })
 
     return registros
+
+
+# La procedencia que un set curado ganó después de la migración. Se declara
+# aquí, no en `2-lengua/cognados.yaml`, que es generado.
+PROCEDENCIA_CURADA: dict[str, dict] = {
+    "barbacoa": {
+        "procedencia": {"obra": "perea-alonso-1942", "pagina": 651,
+                        "ancla": "barba-coa = cañizo"},
+        "deuda": ("la procedencia cubre el lado LOKONO: Perea 1942 p. 651 «barba-coa = "
+                  "cañizo, como parrillas, donde se pone habitualmente a secar o ahumar "
+                  "algo», dado como ejemplo de -coa «estado, permanencia». El lado taíno "
+                  "sigue sin cita (añadido 2026-09-12; antes: sin-procedencia)"),
+    },
+}
+
+
+# Los sets que se RETIRARON de `cognados` (retirar no es borrar: pasan enteros
+# a `no_son_cognados` con su diagnóstico y la huella). Se declaran aquí y no en
+# el YAML, que es generado: el 2026-09-24 la rama de #222 grupo 3 los movió con
+# 6-fusion/scripts/retirar_cognados_dp304.py sobre el YAML, y la siguiente
+# regeneración los habría devuelto a `cognados` (la misma trampa que borró la
+# procedencia de `barbacoa`).
+RETIRADO_HUELLA = ("dp.3.04 (T4 G) de #222, «Ok a todo», Miguel, 2026-09-24 — "
+                   "6-fusion/decisiones_222_documentacion_2026-09-24.yaml")
+_T4 = "T4, #192: 6-fusion/cruce_taino_caquetio_2026-09-21.yaml"
+RETIRADOS: dict[str, str] = {
+    "canoa": ("NO ES UN COGNADO: la misma palabra escrita dos veces (canoa ~ canoa), sin cita. "
+              "Es el préstamo que el castellano tomó del taíno y devolvió a todas partes; "
+              f"prueba que escribimos igual las dos columnas ({_T4})"),
+    "hamaca": ("NO ES UN COGNADO: la misma palabra escrita dos veces (hamaca ~ hamaca), sin cita. "
+               f"Mismo caso que cognado-020 ({_T4})"),
+    "casabe": ("EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `casabe`, está en el "
+               "lexicón etiquetada `taíno`; el set empareja una voz taína consigo misma y no dice "
+               f"nada del caquetío ({_T4})"),
+    "chaman": ("EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `piache`, está en el "
+               "lexicón como `caribe-cháima` y archivada (D10: su lugar lo ocupa `boratio`); "
+               f"piache ~ bejique no dice nada del caquetío ({_T4})"),
+    "isla": ("EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `cairi`, es en el "
+              f"lexicón `kairi`, lokono; cairi ~ cai no dice nada del caquetío ({_T4})"),
+    "yuca": ("EL LADO CAQUETÍO NO ES CAQUETÍO: la forma de la columna CQ, `yuca`, está en el "
+             "lexicón etiquetada `taíno`; el set empareja una voz taína consigo misma "
+             f"({_T4})"),
+    "persona": ("CIRCULAR: es un etnónimo (caquetio ~ taino). Emparejar el nombre de un pueblo con "
+                 "el de otro no es un cognado léxico; y `taíno` ni siquiera es autónimo: es el "
+                 f"truncamiento de un título, nitayno (Brinton 1871 p. 13) ({_T4})"),
+    "caribe_gente": ("CIRCULAR: es un etnónimo (karibna ~ caribe). Emparejar el nombre de un pueblo con "
+                f"el de otro no es un cognado léxico ({_T4})"),
+}
 
 
 def separar_no_cognados(registros):
@@ -161,8 +213,13 @@ def separar_no_cognados(registros):
     except Exception:                                        # noqa: BLE001
         lexico = set()
 
-    cognados, sueltos = [], []
+    cognados, sueltos, retirados = [], [], []
     for r in registros:
+        if r.get("clave_origen") in RETIRADOS:
+            r["diagnostico"] = RETIRADOS[r["clave_origen"]]
+            r["retirado"] = RETIRADO_HUELLA
+            retirados.append(r)
+            continue
         if len(r.get("formas") or {}) >= 2:
             cognados.append(r)
             continue
@@ -173,7 +230,9 @@ def separar_no_cognados(registros):
             "NO está en VOCABULARIO_BASE — este registro es su única "
             "constancia; moverlo al lexicón antes de retirarlo de aquí")
         sueltos.append(r)
-    return cognados, sueltos
+    faltan = set(RETIRADOS) - {r["clave_origen"] for r in retirados}
+    assert not faltan, f"RETIRADOS que ya no están en el set curado: {sorted(faltan)}"
+    return cognados, sueltos + retirados
 
 
 def duplicados(registros):
