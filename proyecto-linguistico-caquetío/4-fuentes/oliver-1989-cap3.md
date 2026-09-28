@@ -252,9 +252,14 @@ costa** — que es justo donde vive la simulación.
 
 ### Economía
 
-- **[Costa/Guajira] Red de alianzas comercial**: cuentas de concha, **sal** y
-  **azabache**. Las aldeas de la región desarrollaron una "confederación" —una
-  red amplia de alianzas— sobre la base del comercio.
+- **[Jirajaranos, NO la costa] Red de alianzas comercial** (impresa p. 245):
+  cuentas de concha, **sal** y **azabache** — y SIN confederación: «none of the
+  Jirajaran villages in this region had developed a "confederation"». ⚠️ Hasta el
+  2026-09-27 esta línea decía «[Costa/Guajira]» y «confederación», y así pasó al
+  canon de la polity costera (`curiana_polities.py`, economía). Corregido por
+  decisión de Miguel (regla 4; col-01 de
+  `6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml`): la costera se queda con la
+  sal (Oviedo y Baños) y la concha (Arcaya pp. 120 y 264; Federmann p. 45).
 - **[Barquisimeto] Comerciaban sal con sus propios enemigos**, rodeados de
   ellos. El oro venía de las serranías de **Nirgüa-Buria**; la sal, probablemente
   por el valle del **Yaracuy**.

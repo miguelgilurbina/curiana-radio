@@ -162,12 +162,23 @@ POLITIES = {
             "Aldeas de tamaño medio, ~200 a 500 personas.",
             _OLIVER + ", p. 294"),
         economia=Rasgo(
-            "Red de alianzas sostenida en comercio: cuentas de concha, sal y "
-            "azabache. Salinas abundantes; tierra arenosa y falta de aguas, "
+            "Sal y concha. Salinas abundantes; tierra arenosa y falta de aguas, "
             "comarca por lo demás 'abundante y regalada' — la tesis de tierra "
-            "pobre y mar rico.",
-            _OLIVER + " (confederación por comercio); " + _OVIEDO_B + " (Coro: "
-            "'su terreno arenoso y falto de aguas', 'abundantes salinas')"),
+            "pobre y mar rico. La concha del mar circula como valor: en la "
+            "costa servía 'como de monedas', y en el Coro colonial unas "
+            "'conchezuelas de pescados' se trataban 'a valor de un real cada "
+            "una'; tierra adentro, los ayamanes se adornaban con 'conchas "
+            "marítimas que compran a otras naciones'.",
+            _OVIEDO_B + " (Coro: 'su terreno arenoso y falto de aguas', "
+            "'abundantes salinas'); Arcaya 1920, pp. 120 y 264 (la concha como "
+            "moneda); Federmann [1530], ed. 1916, p. 45 (los ayamanes la "
+            "compran) — ecologia-105"),
+        # Hasta el 2026-09-27 este rasgo decía «red de alianzas sostenida en
+        # comercio: cuentas de concha, sal y azabache» y lo atribuía a Oliver
+        # como «confederación por comercio». Ese pasaje es de los JIRAJARANOS,
+        # y dice que NO formaron confederación (Oliver 1989 cap. 3, p. 245).
+        # Regla 4: corregido por decisión de Miguel («sólo justificar la sal y
+        # la concha»; col-01 de 6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml).
         guerra=Rasgo(
             "Disputa documentada con los grupos de descendencia caribe "
             "(valencioides) por el acceso y control de los archipiélagos de Las "

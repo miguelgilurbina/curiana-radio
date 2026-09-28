@@ -43,7 +43,7 @@ Lo que ya está minado y en el vault:
 | Falcón llano, Paraguaná, Golfete | [[jahn-1927]] pp.200-202 (vía Arcaya) | `atestiguado` |
 | → Aruba, Bonaire, Curazao | [[jahn-1927]]; [[antczak-2017-cariban]] p.157 | `atestiguado` |
 | Yaracuy (**Vararida**), Barquisimeto, Llanos hasta Casanare | [[jahn-1927]] | `atestiguado` |
-| Comercio: cuentas de concha, **sal**, azabache; oro de Nirgüa-Buria | [[oliver-1989-cap3]] | `atestiguado` |
+| Comercio de la costa: **sal** (las salinas de Coro) y **concha** como valor —moneda en la costa, comprada tierra adentro— (corregido el 2026-09-27: la red concha–sal–azabache de Oliver p. 245 es jirajarana, y el oro de Nirgüa-Buria es de Barquisimeto) | [[oviedo-y-banos]]; [[arcaya-1920]] pp. 120, 264; [[federmann-1916]] p. 45 | `atestiguado` |
 | Disputa con caribes por Las Aves y Los Roques, 1200 d.C.–Contacto | [[antczak-2017-cariban]] p.157 | `atestiguado` |
 | Formas de vasija en Coro derivadas del **Ranchería** (Guajira) | [[oliver-1989-cap3]] | `atestiguado` |
 

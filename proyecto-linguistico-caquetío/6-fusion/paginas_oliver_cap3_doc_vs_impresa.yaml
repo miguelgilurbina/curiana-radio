@@ -627,6 +627,7 @@ pasajes:
 
 colaterales:
   - id: col-01-confederacion-no-es-costera
+    aplicado: '2026-09-27 — Miguel: «sólo justificar la sal y la concha». costera.economia, la ficha §Economía y horizonte-de-contacto.md corregidos'
     que: >-
       ⚠️ Regla 4. costera.economia (curiana_polities.py l. 165-170) atribuye a
       Oliver una «red de alianzas sostenida en comercio: cuentas de concha, sal
