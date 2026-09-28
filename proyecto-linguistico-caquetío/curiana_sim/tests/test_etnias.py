@@ -195,10 +195,13 @@ def test_quienes_tocan_la_costera():
     entran el jirajara de la Sierra de San Luis (M1 B: hipotético por la boda
     de Manaure, contacto-temprano) y el taíno (T5 D: hipotético, contacto
     ninguno en precontacto, época `varias`). Ninguno de los dos es
-    `atestiguado`: si alguno sube, que alguien lo mire aquí."""
+    `atestiguado`: si alguno sube, que alguien lo mire aquí.
+
+    Y el 2026-09-27 el taíno SALIÓ (Miguel: «ninguna»): vecino de la esfera,
+    sin contacto documentado en la ventana simulada."""
     etnias, _, _ = CE.compilar()
     costera = {e["nombre"] for e in etnias if e["polity_caquetia"] == "costera"}
-    assert costera == {"caribe del elenco", "jirajara", "taíno"}
+    assert costera == {"caribe del elenco", "jirajara"}
     for e in etnias:
         if e["polity_caquetia"] == "costera":
             assert e["etiqueta"] == "canon-simulacion" or e["procedencia"]["obra"], (

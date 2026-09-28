@@ -444,3 +444,12 @@ lo_que_aparecio_al_aplicar:
       anti-robot: no se intentó saltarla, y bajar el PDF pide el permiso de
       Miguel. Lo que se aplicó de Navarrete va desde la capa de texto, con el
       folio en el flujo, y lo que sólo la imagen decide quedó sin citar.
+
+respuestas_de_miguel_2026-09-27:
+  dp.2.02: 'Sí: los llanos ganan en curiana_polities.py la economía de Pérez de Tolosa («no son grandes labradores», carne y pescado) y, en `notas` (el modelo no tiene eje de lengua), la lengua («algo difieren en la habla á los de Coro») y el territorio colonial hasta Casanare vía Rivero y Jahn'
+  dp.2.04_taino: 'etnia-020 pasa a `polity_caquetia: ninguna` («ninguna»); test_quienes_tocan_la_costera: la costera la tocan el caribe del elenco y el jirajara'
+  dp.2.04_fernandes: 'autoriza bajar el texto publicado (Europe PMC) y el suplemento para verificar antes de escribir la ficha — en curso'
+  dp.2.05_y_2.06_C: 'autoriza bajar Navarrete 1829 t. III de archive.org — en curso'
+  dp.2.07_B: 'que lo intente el escriba en PARES con el navegador — en curso'
+  dp.2.09_P3_B: 'La Miraba = Niraba, Tabe = Jabe / San José de Tarbes y Coduto = caduto: FUNDIDAS (6-fusion/scripts/fundir_sitios_dp209b.py; toponimo-138, -135 y -176 quedan `reubicados` sin mover ningún otro id). Cumairebo NO: «Cumairebo y Curaidebo son dos lugares distintos en Paraguaná»; la hipótesis queda refutada, con su testimonio'
+  oliver_col_01: 'no la marcó entre las correcciones a aplicar: la «confederación por comercio» de costera.economia se queda como está, con el colateral escrito en 6-fusion/paginas_oliver_cap3_doc_vs_impresa.yaml'

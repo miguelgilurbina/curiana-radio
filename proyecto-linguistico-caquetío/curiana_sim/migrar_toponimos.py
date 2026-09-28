@@ -173,7 +173,10 @@ def toponimos(T):
             m = re.match(r"^(.+?)\s+\((.+)\)$", forma)
             base = m.group(1) if m else forma
             if base in reubicados:
-                n += 1
+                # Un reubicado con id EXPLÍCITO no gasta turno del contador: nunca
+                # lo gastó (dp.2.09 P3 B, 2026-09-27: La Miraba, Tabe, caduto).
+                if base not in ids:
+                    n += 1
                 continue
             if base in ids:
                 rid = ids[base]

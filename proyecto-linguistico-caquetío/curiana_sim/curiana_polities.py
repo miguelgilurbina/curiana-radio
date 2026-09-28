@@ -319,8 +319,11 @@ POLITIES = {
             "En el bajo Cojedes, **comercio de esclavos capturados** entre "
             "grupos: Federmann pidió comprar una naboria en la aldea de Itabana "
             "y se la negaron, 'aunque acostumbraban a comprarlas y venderlas "
-            "entre sí'.",
-            _OLIVER + ", n. 218, pp. 291-292 (Federmann [1557] 1958: 94)"),
+            "entre sí'. Y, de segunda mano, Pérez de Tolosa (1546): «no son "
+            "grandes labradores»; comen carne y pescado.",
+            _OLIVER + ", n. 218, pp. 291-292 (Federmann [1557] 1958: 94); "
+            "Pérez de Tolosa [1546], en Fernández Duro 1885 t. II p. 234 "
+            "(dp.2.02 de #222, 2026-09-27)"),
         guerra=Rasgo(
             "**Guerra de captura de esclavos institucionalizada** — pero Oliver "
             "subraya que esto vale **solo** para el bajo Cojedes y que no hay "
@@ -332,7 +335,14 @@ POLITIES = {
             _OLIVER + ", p. 308"),
         notas="Es la polity que más se aleja del modelo costero, y la única con "
               "esclavitud documentada. Oliver acota el dato con cuidado; "
-              "conviene no generalizarlo.",
+              "conviene no generalizarlo. LENGUA (el modelo no tiene eje de "
+              "lengua, así que va aquí): misma nación que la costa, «aunque algo "
+              "difieren en la habla á los de Coro» (Pérez de Tolosa [1546], en "
+              "Fernández Duro 1885 t. II p. 234, de segunda mano). TERRITORIO: "
+              "el «hasta Casanare… Barraguán» descansa en Rivero 1883 (pp. 29, "
+              "54, 144, 151, 201, 392) vía Jahn; es colonial, sin continuidad "
+              "política probada. (dp.2.02 de #222, decisión de Miguel del "
+              "2026-09-27.)",
     ),
 
     # ── La quinta: la esfera occidental, FUTURA (decisión de Miguel,

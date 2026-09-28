@@ -3,14 +3,14 @@
 # trabaja desde aquí, pero el canon sigue siendo 2-lengua/toponimos.yaml.
 meta:
   generado_por: curiana_sim/juntar_toponimos.py
-  generado: '2026-09-24'
+  generado: '2026-09-27'
   editar_a_mano: no — se edita la fuente y se regenera
   que_es: 'vista: todos los topónimos del proyecto, agrupados por obra y cruzados entre sí. No es canon ni propuesta
     de fusión.'
   marcas: ★ en el canon · ≡ en el índice de Esteves · ◆ en el mapa de Miguel · ⌂ en asentamientos.yaml
   resumen:
-    menciones: 920
-    formas_distintas: 547
+    menciones: 921
+    formas_distintas: 544
     fuentes: 20
     por_fuente:
       zavala-reyes-2015:
@@ -18,7 +18,7 @@ meta:
         formas: 58
       esteves-1989:
         menciones: 416
-        formas: 215
+        formas: 212
       castellanos-elegias:
         menciones: 22
         formas: 19
@@ -29,8 +29,8 @@ meta:
         menciones: 14
         formas: 12
       arcaya-1920:
-        menciones: 28
-        formas: 24
+        menciones: 27
+        formas: 23
       moron-2012-petroglifos:
         menciones: 26
         formas: 23
@@ -47,8 +47,8 @@ meta:
         menciones: 211
         formas: 180
       testimonio-miguel:
-        menciones: 48
-        formas: 38
+        menciones: 52
+        formas: 42
       proyecto:
         menciones: 6
         formas: 6
@@ -58,22 +58,22 @@ meta:
       alvarado-1921:
         menciones: 2
         formas: 2
-      gonzalez-batista-2002-fundacion:
-        menciones: 1
-        formas: 1
-      osm-kaketiana:
-        menciones: 7
-        formas: 7
       navarrete-1829-viages-menores:
-        menciones: 1
-        formas: 1
-      jahn-1927:
         menciones: 1
         formas: 1
       oviedo-y-valdes-1851:
         menciones: 1
         formas: 1
-    en_canon: 307
+      jahn-1927:
+        menciones: 1
+        formas: 1
+      osm-kaketiana:
+        menciones: 5
+        formas: 5
+      gonzalez-batista-2002-fundacion:
+        menciones: 1
+        formas: 1
+    en_canon: 304
     en_nodos: 20
     sin_canon_ni_nodo: 235
     cruces:
@@ -144,6 +144,7 @@ meta:
       - Santa Ana (3)
       - carirubana (3)
       - cayeruba (3)
+      - cumairebo (3)
       - curiana (6)
       - dabudare (3)
       - guacurebo (3)
@@ -460,7 +461,7 @@ por_fuente:
   en_bibliografia: true
   descripcion: 'el índice ''Topónimos compilados'' de Paraguaná (pp. 68-69): la cola de la campaña'
   menciones: 416
-  formas: 215
+  formas: 212
   toponimos:
   - forma: bisure
     tipo: canon
@@ -1076,6 +1077,11 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: «El sufijo uto y uco… con la significación de quebrada, cauce.»
     ref: toponimo-219 · nivel C · topónimo · fuente procedencia
+  - forma: coduto
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'es el Coduto de Esteves (p. 31; toponimo-219), que el libro da en dos lugares: el Istmo de Médanos (Baraived)…'
+    ref: toponimo-219 · M6, tercera minería (#216) · 2026-09-23 · confirmada
   - forma: cude
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -1352,12 +1358,6 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: caserío del municipio Mitare, Distrito Miranda
     ref: toponimo-164 · nivel descartado · topónimo · fuente procedencia
-  - forma: caduto
-    tipo: lectura:hipotesis
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: 'es el Coduto de Esteves (p. 31; toponimo-219), que el libro da en dos lugares: el Istmo de Médanos (Baraived)…'
-    ref: 'toponimo-176 · M6, tercera minería (#216) · 2026-09-23 · a revisar: caduto viene del dictado y la vocal
-      no casa; con…'
   - forma: guayacanal
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -1429,20 +1429,7 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml §lecturas
     dato: 'es la Curaidebo de Esteves (p. 35; toponimo-201), «la aldea entre Pueblo Nuevo y El Vínculo»: está justo
       entr…'
-    ref: 'toponimo-132 · M6, tercera minería (#216) · 2026-09-23 · a revisar: r~m no está entre las permutaciones
-      documentadas…'
-  - forma: tabe
-    tipo: lectura:hipotesis
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva
-    ref: 'toponimo-135 · M6, tercera minería (#216) · 2026-09-23 · a revisar: dos caminos posibles y ninguno documentado;
-      conf…'
-  - forma: la miraba
-    tipo: lectura:hipotesis
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano delante
-    ref: 'toponimo-138 · M6, tercera minería (#216) · 2026-09-23 · a revisar: n~m no está entre las permutaciones
-      documentadas…'
+    ref: 'toponimo-132 · M6, tercera minería (#216) · 2026-09-23 · refutada: son dos lugares distintos'
   - forma: arajó
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -1487,6 +1474,11 @@ por_fuente:
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     ref: toponimo-272 · nivel descartado · topónimo · fuente procedencia
+  - forma: jabe
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva
+    ref: toponimo-272 · M6, tercera minería (#216) · 2026-09-23 · confirmada
   - forma: juroguagua
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -1511,6 +1503,11 @@ por_fuente:
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     ref: toponimo-278 · nivel descartado · topónimo · fuente procedencia
+  - forma: niraba
+    tipo: lectura:hipotesis
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano delante
+    ref: toponimo-278 · M6, tercera minería (#216) · 2026-09-23 · confirmada
   - forma: perabay
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -2415,7 +2412,7 @@ por_fuente:
   - forma: zazarida
     tipo: canon
     donde: 2-lengua/toponimos.yaml
-    dato: Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; carta de Bastidas 1538 vía Oliver p. 251, nodo-006;
+    dato: Zacerida en Castellanos; Sacerida/Zazárida en Arcaya; carta de Bastidas 1538 vía Oliver p. 269, nodo-006;
       hoy…
     ref: toponimo-097 · nivel descartado · topónimo · fuente procedencia
   - forma: carao
@@ -2427,12 +2424,12 @@ por_fuente:
     tipo: canon
     donde: 2-lengua/toponimos.yaml
     dato: Tamadoré en Castellanos; Tomadoré cerca de La Vela según Arcaya; carta de Bastidas 1538 vía Oliver p.
-      251, no…
+      269, no…
     ref: toponimo-099 · nivel descartado · topónimo · fuente procedencia
   - forma: capatarida
     tipo: canon
     donde: 2-lengua/toponimos.yaml
-    dato: Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 251, nodo-007; hoy Capatárida, capital
+    dato: Capatarida en Castellanos; carta de Bastidas 1538 vía Oliver p. 269, nodo-007; hoy Capatárida, capital
       del mu…
     ref: toponimo-100 · nivel descartado · topónimo · fuente procedencia
   - forma: carona
@@ -2657,8 +2654,8 @@ por_fuente:
 - obra: arcaya-1920
   en_bibliografia: true
   descripcion: Quiquibacoa/Coquibacoa, Curiana y la serie Coro-/Curi-
-  menciones: 28
-  formas: 24
+  menciones: 27
+  formas: 23
   toponimos:
   - forma: curiana
     tipo: canon
@@ -2752,12 +2749,6 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: municipio Miranda
     ref: toponimo-175 · nivel descartado · topónimo · fuente procedencia
-  - forma: caduto
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: municipio Carirubana, Paraguaná; Arcaya lista CODUTO y CURARADUTO entre los nombres «de lugares en las
-      region…
-    ref: toponimo-176 · nivel descartado · topónimo · fuente procedencia
   - forma: tibana
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -4438,8 +4429,8 @@ por_fuente:
   en_bibliografia: false
   descripcion: 'Miguel Gil Urbina: lecturas de investigación coloquial, tradición local, mapa vivo — deuda sin-procedencia,
     por diseño'
-  menciones: 48
-  formas: 38
+  menciones: 52
+  formas: 42
   toponimos:
   - forma: yauquiba
     tipo: lectura:testimonio-residente
@@ -4538,6 +4529,26 @@ por_fuente:
     dato: el pueblo de Santa Ana es fundación colonial (franciscana según Miguel, «los españoles» en 1538 según
       Esteves…
     ref: 'toponimo-109 · Miguel Gil Urbina · 2026-09-01 · Esteves lo sostiene: aldea indígena ANTERIOR a la fundación…'
+  - forma: coduto
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: Coduto (al este de Los Taques) y Coduto / Punta Coduto en Médanos son el «caduto» que dictó el 2026-09-10
+    ref: toponimo-219 · Miguel · 2026-09-27
+  - forma: cumairebo
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «Cumairebo y Curaidebo son dos lugares distintos en Paraguaná»
+    ref: toponimo-132 · Miguel · 2026-09-27
+  - forma: jabe
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: Tabe, a unos dos kilómetros de Jadacaquiva, es la Jabe o San José de Tarbes de Esteves
+    ref: toponimo-272 · Miguel · 2026-09-27
+  - forma: niraba
+    tipo: lectura:testimonio-residente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: La Miraba (el poblado y el Cerro La Miraba, municipio Moruy) es la Niraba de Esteves
+    ref: toponimo-278 · Miguel · 2026-09-27
   - forma: Judibana
     tipo: testimonio-residente
     donde: 6-fusion/velasco_primarios_agi.yaml §judibana_tradicion
@@ -4802,24 +4813,46 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: árbol indeterminado de Lara y Falcón
     ref: toponimo-152 · nivel C · topónimo · fuente procedencia
-- obra: gonzalez-batista-2002-fundacion
+- obra: navarrete-1829-viages-menores
   en_bibliografia: true
   descripcion: ''
   menciones: 1
   formas: 1
   toponimos:
-  - forma: Norupara
-    tipo: cola
-    donde: 6-fusion/toponimos_cola_otras_fuentes.yaml §cola
-    dato: Poblado indígena junto al puerto de Coro. Cero en el texto de Castellanos del repo («norup», «nurupa»).
-      La co…
-    ref: p. 162 (n. 49)
-    epoca: colonial
+  - forma: curiana
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: 'hay más de una Curiana. La oriental: «Ambos llaman tierra de Curiana, que es el rescate de las perlas,
+      á la c…'
+    ref: 'toponimo-111 · Navarrete 1829 · 2026-09-22 · resuelve el REFERENTE, no el significado: la red Curiana
+      ↔ …'
+- obra: oviedo-y-valdes-1851
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: paraguaná
+    tipo: canon
+    donde: 2-lengua/toponimos.yaml
+    dato: Rodeada del mar
+    ref: toponimo-018 · nivel C · topónimo · fuente procedencia
+- obra: jahn-1927
+  en_bibliografia: true
+  descripcion: ''
+  menciones: 1
+  formas: 1
+  toponimos:
+  - forma: curarí
+    tipo: lectura:glosa-fuente
+    donde: 2-lengua/toponimos.yaml §lecturas
+    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
+    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
 - obra: osm-kaketiana
   en_bibliografia: true
   descripcion: ''
-  menciones: 7
-  formas: 7
+  menciones: 5
+  formas: 5
   toponimos:
   - forma: cumairebo
     tipo: canon
@@ -4838,11 +4871,6 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: lugar, 12.098 -70.178
     ref: toponimo-134 · nivel descartado · topónimo · fuente procedencia
-  - forma: tabe
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: lugar, 11.917 -70.104
-    ref: toponimo-135 · nivel descartado · topónimo · fuente procedencia
   - forma: urumare
     tipo: canon
     donde: 2-lengua/toponimos.yaml
@@ -4853,47 +4881,19 @@ por_fuente:
     donde: 2-lengua/toponimos.yaml
     dato: poblado, 11.833 -69.927; suena castellano (-ón) pero no restituye a ninguna palabra conocida
     ref: toponimo-137 · nivel descartado · topónimo · fuente procedencia
-  - forma: la miraba
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y sin fuente; no es
-      Miraca
-    ref: toponimo-138 · nivel descartado · topónimo · fuente procedencia
-- obra: navarrete-1829-viages-menores
+- obra: gonzalez-batista-2002-fundacion
   en_bibliografia: true
   descripcion: ''
   menciones: 1
   formas: 1
   toponimos:
-  - forma: curiana
-    tipo: lectura:glosa-fuente
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: 'hay más de una Curiana. La oriental: «Ambos llaman tierra de Curiana, que es el rescate de las perlas,
-      á la c…'
-    ref: 'toponimo-111 · Navarrete 1829 · 2026-09-22 · resuelve el REFERENTE, no el significado: la red Curiana
-      ↔ …'
-- obra: jahn-1927
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 1
-  formas: 1
-  toponimos:
-  - forma: curarí
-    tipo: lectura:glosa-fuente
-    donde: 2-lengua/toponimos.yaml §lecturas
-    dato: «CURARIRE (Tecoma serratifolia)» — guajiro `kurátschi`
-    ref: toponimo-180 · Jahn 1927 · 2026-09-10 · da el taxón que Alvarado solo conjeturaba; la forma guajira…
-- obra: oviedo-y-valdes-1851
-  en_bibliografia: true
-  descripcion: ''
-  menciones: 1
-  formas: 1
-  toponimos:
-  - forma: paraguaná
-    tipo: canon
-    donde: 2-lengua/toponimos.yaml
-    dato: Rodeada del mar
-    ref: toponimo-018 · nivel C · topónimo · fuente procedencia
+  - forma: Norupara
+    tipo: cola
+    donde: 6-fusion/toponimos_cola_otras_fuentes.yaml §cola
+    dato: Poblado indígena junto al puerto de Coro. Cero en el texto de Castellanos del repo («norup», «nurupa»).
+      La co…
+    ref: p. 162 (n. 49)
+    epoca: colonial
 indice_de_formas:
 - forma: abudure
   variantes:
@@ -6054,20 +6054,6 @@ indice_de_formas:
   menciones:
   - van-buurt-2014 · indice-abc · §7
   - van-buurt-2014 · indice-abc · §7
-- forma: caduto
-  variantes: []
-  fuentes:
-  - arcaya-1920
-  - esteves-1989
-  cruces:
-    en_canon: toponimo-176 · nivel descartado
-    en_esteves: true
-    en_mapa_miguel: false
-    en_nodos: null
-  menciones:
-  - arcaya-1920 · canon · toponimo-176 · nivel descartado · topónimo · fuente procedencia
-  - 'esteves-1989 · lectura:hipotesis · toponimo-176 · M6, tercera minería (#216) · 2026-09-23 · a revisar: caduto
-    viene del dictado y la vocal no casa; con…'
 - forma: caibacoa
   variantes:
   - Caibacoa
@@ -6951,6 +6937,7 @@ indice_de_formas:
   - Coduto
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   cruces:
     en_canon: toponimo-219 · nivel C
     en_esteves: true
@@ -6958,6 +6945,8 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · canon · toponimo-219 · nivel C · topónimo · fuente procedencia
+  - esteves-1989 · lectura:hipotesis · toponimo-219 · M6, tercera minería (#216) · 2026-09-23 · confirmada
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-219 · Miguel · 2026-09-27
   - esteves-1989 · indice · toponimo-219
 - forma: Corobore
   variantes: []
@@ -7218,6 +7207,7 @@ indice_de_formas:
   fuentes:
   - osm-kaketiana
   - esteves-1989
+  - testimonio-miguel
   cruces:
     en_canon: toponimo-132 · nivel descartado
     en_esteves: true
@@ -7225,8 +7215,9 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - osm-kaketiana · canon · toponimo-132 · nivel descartado · topónimo · fuente procedencia
-  - 'esteves-1989 · lectura:hipotesis · toponimo-132 · M6, tercera minería (#216) · 2026-09-23 · a revisar: r~m
-    no está entre las permutaciones documentadas…'
+  - 'esteves-1989 · lectura:hipotesis · toponimo-132 · M6, tercera minería (#216) · 2026-09-23 · refutada: son dos
+    lugares distintos'
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-132 · Miguel · 2026-09-27
 - forma: cumaraguas
   variantes:
   - Cumaraguas
@@ -8274,6 +8265,7 @@ indice_de_formas:
   - Jabe
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   cruces:
     en_canon: toponimo-272 · nivel descartado
     en_esteves: true
@@ -8281,6 +8273,8 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · canon · toponimo-272 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · lectura:hipotesis · toponimo-272 · M6, tercera minería (#216) · 2026-09-23 · confirmada
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-272 · Miguel · 2026-09-27
   - esteves-1989 · indice · toponimo-272
 - forma: Jaburibari
   variantes: []
@@ -9165,20 +9159,6 @@ indice_de_formas:
   menciones:
   - esteves-1989 · canon · toponimo-244 · nivel C · topónimo · fuente procedencia
   - esteves-1989 · indice · toponimo-244
-- forma: la miraba
-  variantes: []
-  fuentes:
-  - osm-kaketiana
-  - esteves-1989
-  cruces:
-    en_canon: toponimo-138 · nivel descartado
-    en_esteves: true
-    en_mapa_miguel: false
-    en_nodos: null
-  menciones:
-  - osm-kaketiana · canon · toponimo-138 · nivel descartado · topónimo · fuente procedencia
-  - 'esteves-1989 · lectura:hipotesis · toponimo-138 · M6, tercera minería (#216) · 2026-09-23 · a revisar: n~m
-    no está entre las permutaciones documentadas…'
 - forma: miraca
   variantes:
   - Miraca
@@ -9323,6 +9303,7 @@ indice_de_formas:
   - Niraba
   fuentes:
   - esteves-1989
+  - testimonio-miguel
   cruces:
     en_canon: toponimo-278 · nivel descartado
     en_esteves: true
@@ -9330,6 +9311,8 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · canon · toponimo-278 · nivel descartado · topónimo · fuente procedencia
+  - esteves-1989 · lectura:hipotesis · toponimo-278 · M6, tercera minería (#216) · 2026-09-23 · confirmada
+  - testimonio-miguel · lectura:testimonio-residente · toponimo-278 · Miguel · 2026-09-27
   - esteves-1989 · indice · toponimo-278
 - forma: Noka
   variantes: []
@@ -10436,20 +10419,6 @@ indice_de_formas:
     en_nodos: null
   menciones:
   - esteves-1989 · indice · toponimo-304
-- forma: tabe
-  variantes: []
-  fuentes:
-  - osm-kaketiana
-  - esteves-1989
-  cruces:
-    en_canon: toponimo-135 · nivel descartado
-    en_esteves: true
-    en_mapa_miguel: false
-    en_nodos: null
-  menciones:
-  - osm-kaketiana · canon · toponimo-135 · nivel descartado · topónimo · fuente procedencia
-  - 'esteves-1989 · lectura:hipotesis · toponimo-135 · M6, tercera minería (#216) · 2026-09-23 · a revisar: dos
-    caminos posibles y ninguno documentado; conf…'
 - forma: tabicure
   variantes: []
   fuentes:

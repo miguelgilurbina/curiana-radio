@@ -38,9 +38,9 @@ meta:
     asentamientos.yaml. Cada entrada cita obra y página (o declara la deuda)
     y declara la polity caquetía a la que toca (regla 4). Hasta el
     2026-09-24 la única que tocaba la costera era el «caribe» del elenco,
-    canon-simulación (etnia-008); desde dp.2.04 de #222 la tocan también el
-    jirajara (etnia-015) y el taíno (etnia-020), los dos `hipotetico` y con
-    su época declarada.
+    canon-simulación (etnia-008); desde dp.2.04 de #222 la toca también el
+    jirajara (etnia-015), `hipotetico` y con su época declarada. El taíno
+    (etnia-020) entró tocándola y el 2026-09-27 pasó a `ninguna` (Miguel).
 
 etnias:
 
@@ -673,12 +673,17 @@ etnias:
       las Antillas Mayores —La Española, Cuba, Boriquén, Jamaica— y las
       Lucayas. Ningún asentamiento taíno en la costa de Falcón, en Paraguaná ni
       en las islas ABC está documentado por fuente alguna del repo.
-    polity_caquetia: costera
+    polity_caquetia: ninguna
     polity_nota: >-
-      como la propuso T5: la polity costera con sus islas, que Oliver mete
-      dentro («including the Netherland Antilles», p. 198), porque el único
-      contacto documentado —la deportación— es con ella. `ninguna` existe
-      desde el 2026-09-23 y podría ajustarse mejor: decisión de Miguel.
+      Decisión de Miguel, 2026-09-27 («ninguna», sobre la duda que dp.2.04 de
+      #222 dejó escrita): vecino de la ESFERA, no de una polity. La campaña del
+      taíno midió «ni vecino ni pariente medible» y la cerámica antillana se
+      detiene antes de las ABC (T8). Entró el 2026-09-24 como `costera`, como
+      lo propuso T5 —la polity costera con sus islas, que Oliver mete dentro
+      («including the Netherland Antilles», p. 198)—, porque el único contacto
+      documentado, la deportación, es con ella; pero esa deportación es
+      colonial y aquí se declara la ventana simulada. Las voces taínas de la
+      esfera no cambian: entran por la puerta del léxico, no por ésta.
     tipo_de_contacto: ninguno
     contacto_nota: >-
       ninguno documentado en precontacto, que es la ventana simulada. Lo

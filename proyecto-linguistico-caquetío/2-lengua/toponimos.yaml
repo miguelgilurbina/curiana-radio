@@ -1,14 +1,14 @@
 meta:
   generado_por: curiana_sim/migrar_toponimos.py
-  toponimos: 307
+  toponimos: 304
   por_nivel:
     A: 21
     B: 30
     C: 110
-    descartado: 146
-  con_procedencia: 247
+    descartado: 143
+  con_procedencia: 244
   con_lecturas: 45
-  lecturas: 78
+  lecturas: 82
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -979,7 +979,9 @@ toponimos:
   - iglesia en 1773 según la Visita del obispo Martí
   observacion: '🗺️ El mapa vivo tiene «Cumairebo» (toponimo-132, descartado sin fuente) en 12.003, -69.920:
     justo entre Pueblo Nuevo (11.948) y El Vínculo (12.069), donde Esteves pone Curaidebo. Candidato a
-    ser el mismo nombre (r~m, que NO está entre las permutaciones documentadas): ver §mapa_vivo.'
+    ser el mismo nombre (r~m, que NO está entre las permutaciones documentadas): ver §mapa_vivo. NO LO
+    ES (dp.2.09 P3 B de #222, 2026-09-27): «Cumairebo y Curaidebo son dos lugares distintos en Paraguaná»
+    (Miguel).'
   verificado: imagen
   procedencia:
     obra: esteves-1989
@@ -2920,7 +2922,37 @@ toponimos:
     coro-/curi-). El mapa vivo tiene Coduto en 11.817, -70.213 (a unos cuatro kilómetros al este de Los
     Taques) y Coduto / Punta Coduto en el Istmo de Médanos: los dos lugares de Esteves. El fusionador
     (dp.2.08 de #222, 2026-09-24) la registra como entrada propia, con la página de Esteves; la identidad
-    con toponimo-176 queda como lectura `hipotesis` allí (dp.2.09, P3 A), sin fundirlas.'
+    con toponimo-176 queda como lectura `hipotesis` allí (dp.2.09, P3 A), sin fundirlas. FUNDIDAS el 2026-09-27
+    (dp.2.09 P3 B de #222): Miguel reconoce el caduto del dictado (toponimo-176, que queda reubicado aquí)
+    como este Coduto. Lo que decía aquella entrada: municipio Carirubana, Paraguaná; Arcaya lista CODUTO
+    y CURARADUTO entre los nombres «de lugares en las regiones ocupadas por los caquetíos», y Miguel dictó
+    además CODORE: el formante `-duto` merece censo.'
+  lecturas:
+  - tipo: hipotesis
+    lectura: 'es el Coduto de Esteves (p. 31; toponimo-219), que el libro da en dos lugares: el Istmo
+      de Médanos (Baraived) y un caserío a tres kilómetros al este de Los Taques'
+    quien: M6, tercera minería (#216)
+    fecha: '2026-09-23'
+    eje: referente
+    procedencia:
+      obra: esteves-1989
+      pagina: 31
+    apoyo: 'a~o; el mapa vivo tiene Coduto en 11.817 -70.213 y Coduto / Punta Coduto en Médanos: los dos
+      lugares de Esteves; Arcaya lista CODUTO en su serie coro-/curi-'
+    veredicto: confirmada
+    validacion: 'confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)'
+  - tipo: testimonio-residente
+    lectura: Coduto (al este de Los Taques) y Coduto / Punta Coduto en Médanos son el «caduto» que dictó
+      el 2026-09-10
+    quien: Miguel
+    fecha: '2026-09-27'
+    eje: referente
+  forma_viva:
+  - forma: Coduto
+    tipo: lugar
+    lat: 11.817
+    lon: -70.213
+    fuente: osm-kaketiana
   verificado: imagen
   procedencia:
     obra: esteves-1989
@@ -3882,32 +3914,6 @@ toponimos:
     geolocalizarlos.
   procedencia:
     obra: arcaya-1920
-- id: toponimo-176
-  forma: caduto
-  nivel: descartado
-  clase: topónimo
-  glosa_fuente: 'municipio Carirubana, Paraguaná; Arcaya lista CODUTO y CURARADUTO entre los nombres «de
-    lugares en las regiones ocupadas por los caquetíos», y Miguel dictó además CODORE: el formante `-duto`
-    merece censo'
-  razon: No están en el gazetteer de Esteves. El referente sale del capítulo geográfico de Arcaya 1920
-    —un censo de los ríos y cerros de Falcón que nadie había minado— o del gazetteer vivo. Sin glosa en
-    ninguna fuente. Se registran con su referente para que existan en la mesa y el barrido del mapa pueda
-    geolocalizarlos.
-  lecturas:
-  - tipo: hipotesis
-    lectura: 'es el Coduto de Esteves (p. 31; toponimo-219), que el libro da en dos lugares: el Istmo
-      de Médanos (Baraived) y un caserío a tres kilómetros al este de Los Taques'
-    quien: M6, tercera minería (#216)
-    fecha: '2026-09-23'
-    eje: referente
-    procedencia:
-      obra: esteves-1989
-      pagina: 31
-    apoyo: 'a~o; el mapa vivo tiene Coduto en 11.817 -70.213 y Coduto / Punta Coduto en Médanos: los dos
-      lugares de Esteves; Arcaya lista CODUTO en su serie coro-/curi-'
-    veredicto: 'a revisar: caduto viene del dictado y la vocal no casa; confirmarlo es P3 B (Miguel)'
-  procedencia:
-    obra: arcaya-1920
 - id: toponimo-177
   forma: tibana
   nivel: descartado
@@ -4284,8 +4290,13 @@ toponimos:
       obra: esteves-1989
       pagina: 35
     apoyo: posición (12.003 -69.920, entre Pueblo Nuevo 11.948 y El Vínculo 12.069); r~m
-    veredicto: 'a revisar: r~m no está entre las permutaciones documentadas de la campaña; confirmarlo
-      sobre el terreno es P3 B (Miguel)'
+    veredicto: 'refutada: son dos lugares distintos'
+    validacion: 'refutada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)'
+  - tipo: testimonio-residente
+    lectura: «Cumairebo y Curaidebo son dos lugares distintos en Paraguaná»
+    quien: Miguel
+    fecha: '2026-09-27'
+    eje: referente
   forma_viva:
   - forma: Cumairebo
     tipo: lugar
@@ -4327,34 +4338,6 @@ toponimos:
     fuente: osm-kaketiana
   procedencia:
     obra: osm-kaketiana
-- id: toponimo-135
-  forma: tabe
-  nivel: descartado
-  clase: topónimo
-  glosa_fuente: lugar, 11.917 -70.104
-  razon: 'el nombre está vivo en el mapa de 2026, con coordenadas, y ninguna fuente impresa del proyecto
-    lo trae: sin glosa no hay ecuación. Se registra con deuda declarada; entra en C o mejor cuando una
-    obra lo nombre.'
-  lecturas:
-  - tipo: hipotesis
-    lectura: es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva
-    quien: M6, tercera minería (#216)
-    fecha: '2026-09-23'
-    eje: referente
-    procedencia:
-      obra: esteves-1989
-      pagina: 44
-    apoyo: a unos dos kilómetros de Jadacaquiva; Tarbes > Tabe, o Jabe > Tabe
-    veredicto: 'a revisar: dos caminos posibles y ninguno documentado; confirmarlo sobre el terreno es
-      P3 B (Miguel)'
-  forma_viva:
-  - forma: Tabe
-    tipo: lugar
-    lat: 11.917
-    lon: -70.104
-    fuente: osm-kaketiana
-  procedencia:
-    obra: osm-kaketiana
 - id: toponimo-136
   forma: urumare
   nivel: descartado
@@ -4385,41 +4368,6 @@ toponimos:
     tipo: poblado
     lat: 11.833
     lon: -69.927
-    fuente: osm-kaketiana
-  procedencia:
-    obra: osm-kaketiana
-- id: toponimo-138
-  forma: la miraba
-  nivel: descartado
-  clase: topónimo
-  glosa_fuente: poblado, 11.834 -70.054, y Cerro La Miraba, 11.850 -70.046; con artículo castellano y
-    sin fuente; no es Miraca
-  razon: 'el nombre está vivo en el mapa de 2026, con coordenadas, y ninguna fuente impresa del proyecto
-    lo trae: sin glosa no hay ecuación. Se registra con deuda declarada; entra en C o mejor cuando una
-    obra lo nombre.'
-  lecturas:
-  - tipo: hipotesis
-    lectura: es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano
-      delante
-    quien: M6, tercera minería (#216)
-    fecha: '2026-09-23'
-    eje: referente
-    procedencia:
-      obra: esteves-1989
-      pagina: 54
-    apoyo: cae en el municipio Moruy; n~m
-    veredicto: 'a revisar: n~m no está entre las permutaciones documentadas; confirmarlo sobre el terreno
-      es P3 B (Miguel)'
-  forma_viva:
-  - forma: La Miraba
-    tipo: poblado
-    lat: 11.834
-    lon: -70.054
-    fuente: osm-kaketiana
-  - forma: Cerro La Miraba
-    tipo: cerro
-    lat: 11.85
-    lon: -70.046
     fuente: osm-kaketiana
   procedencia:
     obra: osm-kaketiana
@@ -4928,6 +4876,29 @@ toponimos:
   razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
     del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
   observacion: lugar desaparecido de Jadacaquiva, también San José de Tarbes; ver §mapa_vivo (Tabe)
+  lecturas:
+  - tipo: hipotesis
+    lectura: es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva
+    quien: M6, tercera minería (#216)
+    fecha: '2026-09-23'
+    eje: referente
+    procedencia:
+      obra: esteves-1989
+      pagina: 44
+    apoyo: a unos dos kilómetros de Jadacaquiva; Tarbes > Tabe, o Jabe > Tabe
+    veredicto: confirmada
+    validacion: 'confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)'
+  - tipo: testimonio-residente
+    lectura: Tabe, a unos dos kilómetros de Jadacaquiva, es la Jabe o San José de Tarbes de Esteves
+    quien: Miguel
+    fecha: '2026-09-27'
+    eje: referente
+  forma_viva:
+  - forma: Tabe
+    tipo: lugar
+    lat: 11.917
+    lon: -70.104
+    fuente: osm-kaketiana
   procedencia:
     obra: esteves-1989
     pagina: 44
@@ -4993,6 +4964,35 @@ toponimos:
   razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
     del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
   observacion: aldea de Moruy, 6 casas y 35 vecinos en 1881; ver §mapa_vivo (La Miraba)
+  lecturas:
+  - tipo: hipotesis
+    lectura: es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano
+      delante
+    quien: M6, tercera minería (#216)
+    fecha: '2026-09-23'
+    eje: referente
+    procedencia:
+      obra: esteves-1989
+      pagina: 54
+    apoyo: cae en el municipio Moruy; n~m
+    veredicto: confirmada
+    validacion: 'confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)'
+  - tipo: testimonio-residente
+    lectura: La Miraba (el poblado y el Cerro La Miraba, municipio Moruy) es la Niraba de Esteves
+    quien: Miguel
+    fecha: '2026-09-27'
+    eje: referente
+  forma_viva:
+  - forma: La Miraba
+    tipo: poblado
+    lat: 11.834
+    lon: -70.054
+    fuente: osm-kaketiana
+  - forma: Cerro La Miraba
+    tipo: cerro
+    lat: 11.85
+    lon: -70.046
+    fuente: osm-kaketiana
   procedencia:
     obra: esteves-1989
     pagina: 54
