@@ -383,6 +383,10 @@ inventario:
       # ancestría emparentada con las Antillas MENORES». Se queda la lectura
       # de dp.2.04, que no afirma más de lo que dice el preprint del repo; lo
       # de «Menores» es la lectura de T8 de un texto que el repo no tiene.
+      # VERIFICADO el 2026-09-27 en el texto publicado (Europe PMC PMC7864882, manuscrito del autor, y el suplemento de Nature, MOESM4): «We model ceramic users from Curaçao as 74.5±3.7% LesserAntilles_Ceramic-related ancestry and 25.5±3.7% Venezuela_Ceramic-related ancestry» y «the sharing of some ancestry between individuals from Curaçao and those from the Lesser Antilles but not the Greater Antilles».
+      # T8 leía bien; el preprint del repo daba 68,1 % sin distinguir.
+      # Cinco individuos de DOS sitios —Santa Cruz (1) y De Savaan (4)—, con 14C de 610 a 720 ± 20 BP (s.
+      # XIII-XIV) y dieta ~70 % C4 según los autores. La mezcla no está fechada.
       afirmacion: "🔴 DOS NEGATIVOS MEDIDOS en la clase genética — el primero, corregido el 2026-09-24 (ver arriba)."
       epoca: n/a
       etiqueta: atestiguado   # los ceros están medidos hoy

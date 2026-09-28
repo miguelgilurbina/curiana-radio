@@ -1,6 +1,6 @@
 # Correo — al CIHPMA (UNEFM, Coro): el escaneo de la p. 247 de Arcaya, *Obra inédita y dispersa* (1995)
 
-> **BORRADOR. No se ha enviado ni se ha creado en ningún servicio de correo.**
+> **BORRADOR, creado en el Gmail de Miguel el 2026-09-27 (sin destinatario: falta la dirección del CIHPMA, que sigue sin aparecer en fuentes públicas). NO se ha enviado: lo revisa y lo envía él.**
 > Lo envía Miguel, si le parece. Decisión: dp.3.25 C de #222 («Ok a todo»,
 > Miguel, 2026-09-24). Registro:
 > `6-fusion/decisiones_222_documentacion_2026-09-24.yaml`.

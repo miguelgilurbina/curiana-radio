@@ -79,3 +79,11 @@ para Miguel.
   Arcaya que la copian son las impresas 160-161 (pdf 168-169), y la
   identificación de la hija con Doña Juana está en las 167-168 (pdf 175-176):
   dc.4 decía 166-167.
+
+**2026-09-27** (dp.2.07 B de #222: Miguel pidió que lo intentara el escriba). Dos cosas:
+(1) la cita de Velasco 2015 NO es una signatura del AGI: dice «0006. Carta de Ampíes al Rey
+(1513-1521) Traslado del Archivo General de Indias. U. C. Caja Nº 1. Folio n14» — un TRASLADO
+guardado en otro sitio («U. C.», sin desarrollar), así que su «como digo» es la lectura de una copia;
+(2) el buscador de PARES respondió 503 y 502 ese día (y su certificado no valida desde la línea de
+comandos): no se pudo buscar el original. Queda: buscar en PARES «Ampíes» en Santo Domingo o
+Patronato, o localizar el traslado «U. C.».

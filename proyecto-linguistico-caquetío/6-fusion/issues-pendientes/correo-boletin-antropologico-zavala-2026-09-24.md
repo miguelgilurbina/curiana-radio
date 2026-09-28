@@ -1,6 +1,6 @@
 # Correo — al Boletín Antropológico (ULA), para Miguel Enrique Zavala Reyes: de dónde salen «AM» y «HB»
 
-> **BORRADOR. No se ha enviado ni se ha creado en ningún servicio de correo.**
+> **BORRADOR, creado en el Gmail de Miguel el 2026-09-27 (con destinatario y copia). NO se ha enviado: lo revisa y lo envía él.**
 > Lo envía Miguel desde su cuenta, si le parece. Decisión: cc.11 (escribirle
 > a Zavala) y dp.3.02 de #222 («Ok a todo», Miguel, 2026-09-24). Registro:
 > `6-fusion/decisiones_222_documentacion_2026-09-24.yaml`.
