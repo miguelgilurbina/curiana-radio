@@ -17,6 +17,16 @@ const nextConfig = {
   // We'll add MDX support after installing next-mdx-remote
   async redirects() {
     return [
+      // 2026-09-28 — el dominio propio. La dirección vieja de Vercel manda al
+      // dominio nuevo con la misma ruta, para que los enlaces viejos no mueran
+      // y no haya dos copias del sitio. Sólo atrapa ese host exacto: las
+      // vistas previas de las ramas (otros *.vercel.app) no se tocan.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'curiana-radio.vercel.app' }],
+        destination: 'https://curianaradio.com/:path*',
+        permanent: true,
+      },
       // /simulador/runs se fusionó al landing de tres actos (Acto I).
       {
         source: '/simulador/runs',
