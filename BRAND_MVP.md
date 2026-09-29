@@ -191,7 +191,7 @@ Activos en `public/marca/`:
 |---------|--------|-----|
 | `lockup-bnw.png` | lockup oficial CURIANA/RADIO (1024²) | **el logo**; donde haya espacio y resolución |
 | `isotipo-espiral.png` | isotipo 1024² | avatar, OG, piezas grandes |
-| `espiral.svg` | trazado vectorial | favicon, UI pequeña. NO es la fuente del 3D |
+| `espiral.svg` | trazado vectorial | UI pequeña. NO es la fuente del 3D ni del favicon (§8.1) |
 | `isotipo-calco.png` | el PNG original del autor | **la fuente del calco 3D**: la intro lo carga en runtime |
 
 **La espiral 3D** (`lib/espiral-3d.ts`) no es una curva paramétrica: es un
@@ -208,6 +208,28 @@ saturado. La geometría se calcula una vez (~10 ms) y queda cacheada por URL.
 
 El visor/exportador OBJ+GLB del handoff (`Espiral 3D.html`) no se portó: es
 herramienta de diseño, no producto. Si hace falta un GLB, se genera desde ahí.
+
+### 8.1 El favicon: "la noche" (decisión de Miguel, 2026-09-28)
+
+Espiral `arte-hueso #F3EAD4` sobre `deep-900 #0F1621`, cuadrado de radio 16%.
+De las cuatro opciones del handoff (sello naranja, noche, tinta sin fondo,
+remolino índigo/ácido) se eligió esta: es la que mejor lee a 16px (hueso sobre
+noche 15:1) y es registro sobrio, no tinta del arte. **La noche define el mood
+de esta primera versión de Curiana Radio.** La unificación del resto del
+sitio con ese mood está en curso (Miguel).
+
+| Archivo en `public/` | Tamaño | Nota |
+|---|---|---|
+| `favicon.ico` | 16 + 32 + 48 | el que piden los navegadores por defecto |
+| `favicon-16x16.png` · `-32x32` · `-48x48` | | canal de la espiral ensanchado ~1.2% (erosión óptica) para que no se empaste |
+| `apple-touch-icon.png` | 180 | aplanado sobre `#0F1621`: iOS pinta de negro la transparencia |
+| `icon-192.png` · `icon-512.png` | | manifest, `purpose: any`; trazo exacto al 72% |
+| `icon-maskable-512.png` | 512 | el 512 a sangre sobre `#0F1621`, para la máscara de Android |
+
+`theme-color` y `background_color` del manifest: `#0F1621`. Fuente de los
+píxeles: el PNG original del autor (`isotipo-calco.png`), no `espiral.svg`.
+El handoff (`design_handoff_favicon/`) se queda en disco, fuera de git, con
+las otras tres opciones por si se cambia la decisión.
 
 ---
 
