@@ -69,14 +69,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  // JAI Sounds: la curaduría musical. Por ahora solo la portada del dial;
-  // las páginas de mood entran cuando exista la taxonomía real.
+  // JAI Sounds: la curaduría musical — la portada del dial y el podcast.
+  // Las páginas de mood entran cuando exista la taxonomía real.
   const jaiSoundsPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/jai-sounds`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/jai-sounds/descubriendo`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
     },
   ];
 

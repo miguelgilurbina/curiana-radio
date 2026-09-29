@@ -1,10 +1,13 @@
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import { supabase, supabaseConfigured } from "./supabase";
 import type {
   CensoCatalogo,
+  EdicionSintonizada,
   FichaPlaylist,
   Mood,
+  PistaResenada,
   Taxonomia,
 } from "@/types/jai-sounds";
 
@@ -65,6 +68,56 @@ export function hueDeSlug(slug: string): number {
     h = Math.imul(h, 0x01000193);
   }
   return (h >>> 0) % 360;
+}
+
+/**
+ * Las cinco pistas reseñadas de una edición. La fuente es el mismo MDX que
+ * renderiza la página de la edición — no se copia a otro archivo, para que
+ * la reseña tenga un solo lugar donde corregirse. Cada pista es un
+ * `### N. Artista - "Título"` seguido de su párrafo.
+ *
+ * Devuelve null si la edición no existe; un MDX con otra forma devuelve las
+ * pistas que sí se reconocen (y la página muestra las que haya).
+ */
+export function getEdicionSintonizada(
+  numero = "01"
+): EdicionSintonizada | null {
+  const dir = path.join(process.cwd(), "content", "editions", numero);
+  let meta: {
+    title: string;
+    theme: string;
+    spotifyPlaylistId?: string;
+  };
+  let mdx: string;
+  try {
+    meta = JSON.parse(fs.readFileSync(path.join(dir, "metadata.json"), "utf-8"));
+    mdx = matter(fs.readFileSync(path.join(dir, "jai-sounds.mdx"), "utf-8"))
+      .content;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw err;
+  }
+
+  const pistas: PistaResenada[] = [];
+  for (const bloque of mdx.split(/^###\s+/m).slice(1)) {
+    const [cabecera, ...cuerpo] = bloque.split("\n");
+    const m = cabecera.match(/^\d+\.\s+(.+?)\s+-\s+["“](.+?)["”]\s*$/);
+    if (!m) continue;
+    const resena = cuerpo
+      .join("\n")
+      .split(/^---\s*$/m)[0]
+      .replace(/\s+/g, " ")
+      .trim();
+    pistas.push({ artista: m[1], titulo: m[2], resena });
+  }
+
+  return {
+    numero,
+    titulo: meta.title,
+    tema: meta.theme,
+    spotify_id: meta.spotifyPlaylistId ?? null,
+    pistas,
+  };
 }
 
 const CENSO_VACIO: CensoCatalogo = {

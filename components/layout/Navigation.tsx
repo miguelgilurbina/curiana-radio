@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface NavigationProps {
@@ -10,6 +11,13 @@ interface NavigationProps {
 export default function Navigation({ editionNumber }: NavigationProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+
+  // La sección en la que estás queda en frecuencia, como en el hover.
+  const tono = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`)
+      ? "text-frequency"
+      : "text-deep-700";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +79,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* Archive Link */}
               <Link
                 href="/archivo"
-                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
+                className={`shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/archivo")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
                 Archivo
               </Link>
@@ -79,7 +87,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* JAI Sounds Link */}
               <Link
                 href="/jai-sounds"
-                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
+                className={`shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/jai-sounds")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
                 JAI Sounds
               </Link>
@@ -87,7 +95,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* Galería Link */}
               <Link
                 href="/galeria"
-                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
+                className={`shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/galeria")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
                 Galería
               </Link>
@@ -95,7 +103,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* Simulador Link */}
               <Link
                 href="/kaketiana"
-                className="shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
+                className={`shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/kaketiana")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
                 Simulador
               </Link>
@@ -103,7 +111,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
               {/* About Link (optional) */}
               <Link
                 href="/sobre"
-                className="hidden md:block shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans text-deep-700 hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase"
+                className={`hidden md:block shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/sobre")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
                 Sobre
               </Link>
