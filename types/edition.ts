@@ -34,6 +34,15 @@ export interface EditionMetadata {
 
   /** Optional Open Graph image path */
   ogImage?: string;
+
+  /** Portada de la edición (la landing la muestra dentro de la Cenefa) */
+  portada?: string;
+
+  /** Bajada de la landing: la edición contada en una o dos frases */
+  sinopsis?: string;
+
+  /** Ficha en mono de la landing, p. ej. "05 pistas · 01 ensayo híbrido · 01 lengua viva" */
+  ficha?: string;
 }
 
 /**
@@ -95,6 +104,9 @@ export interface ArchiveItem {
   description: string;
   slug: string;
   thumbnail?: string;
+  portada?: string;
+  sinopsis?: string;
+  ficha?: string;
 }
 
 /**

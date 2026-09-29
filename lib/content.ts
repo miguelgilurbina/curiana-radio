@@ -125,6 +125,9 @@ export async function getAllEditions(): Promise<ArchiveItem[]> {
         description: metadata.description,
         slug,
         thumbnail: metadata.ogImage,
+        portada: metadata.portada,
+        sinopsis: metadata.sinopsis,
+        ficha: metadata.ficha,
       };
     })
   );

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Fraunces, Inter, Lora } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import Background from "@/components/layout/Background";
+import ShellRadio from "@/components/layout/ShellRadio";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -49,6 +49,21 @@ export const metadata: Metadata = {
     description: "Transmisión Cultural desde Abya Yala",
     type: "website",
   },
+  // Favicon "la noche": espiral hueso sobre deep-900 (BRAND_MVP.md §8.1).
+  // Los archivos viven en public/; no hay app/favicon.ico que los pise.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0F1621",
 };
 
 export default function RootLayout({
@@ -59,13 +74,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable} ${archivoBlack.variable}`}>
       <body className="font-sans antialiased">
-        <Background>
-          <Navigation />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </Background>
+        <ShellRadio nav={<Navigation />} footer={<Footer />}>
+          {children}
+        </ShellRadio>
       </body>
     </html>
   );
