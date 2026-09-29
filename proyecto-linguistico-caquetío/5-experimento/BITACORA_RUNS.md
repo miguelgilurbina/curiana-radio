@@ -53,7 +53,7 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > Cada fila guarda el commit del motor, si estaba sucio y los hashes del
 > lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
 
-### Era 2 · serie `era2-base` — 30 días con escena; el control, cortado por falta de saldo (2026-09-27/28)
+### Era 2 · serie `era2-base` — 30 días × 2 brazos: la koiné se estanca en los dos, y la geografía sostiene la variación (2026-09-27/29)
 
 > «Mi ok para correr la sim» (Miguel, 2026-09-27). Motor: tag `base-era2-1`
 > (main `5240a42` + la medición, rama `base/era2-2026-09-27`, `91860d7`),
@@ -116,15 +116,54 @@ piedra), `halira-iro` (24, el pájaro rojo de penacho; soporte 74,3) y
 **La esfera en la boca** (`loanword_uses`): `kai` (paraujano) 62, `cazabi` 35,
 `maisi` 31, `watapana` (caribe continental) 15, `tabako` 11, `yuca` 8, `aji` 7.
 
-**Brazo de control: días 1-3 completos, el 4 cortado.** `f40e5f34` →
-`281be9a5` → `7041f46a`; el día 4 (`41a5148a`) se cortó en el turno 2
-(2026-09-28 05:38): «Your credit balance is too low to access the Anthropic
-API». El estado en disco quedó en el día 4, turno 2, y se copió a
-`C:\Users\migue\curiana_estado_backup\era2-base-control-d04t1-sin-credito\`.
-**No se compara nada entre brazos hasta que el control tenga sus 30 días.**
-Para retomarlo hace falta recargar el saldo de la API; la propuesta es
-rehacerlo desde el día 1 (no hay copia del cierre del día 3, y un día 4 partido
-en dos runs no se compara con el del brazo A).
+**Brazo de control: los 30 días** (`6c465b4f` → `7526edf1`, 2026-09-28 23:19 →
+09-29 04:34). El primer intento se cortó en el día 4 por falta de saldo de la API
+(`f40e5f34` → `41a5148a`, en la base como cadena interrumpida; su estado y sus
+logs, guardados aparte): se rehízo **desde el día 1**, desde el tag
+`base-era2-1`, con créditos recargados. Los 30 runs con `motor_commit` 91860d7 y
+`motor_sucio: false`, igual que el brazo A. (La salvaguarda de `correr_cadena.sh`
+paró la cadena una vez antes del día 2 por una carpeta nueva sin versionar en la
+raíz, `design_handoff_*`; se excluyó sólo de `git status` con una línea local
+temporal en `.git/info/exclude`, ya quitada, y la cadena siguió con `--continuar`.)
+2.160 respuestas de los 63, score medio por día 7,43-8,04, cero residuos de la era
+1, 13 respuestas con voces archivadas (`kuru` 6, `wari` 3, `nomi` 3, `duna`, `kali`,
+`naa`; el brazo A, 4).
+
+**Los dos brazos, lado a lado** (`curiana_cadena.py`):
+
+| | con escena | control |
+|---|---|---|
+| acumulada, día 1 → 30 | 0,7326 → 0,1619 | 0,7419 → 0,1688 |
+| ventana, meseta desde el día ~9 | ≈ 0,23 | ≈ 0,23 |
+| emergente: día 1 · mínimo · día 30 | 0,927 · **0,6101** (día 15) · 0,6628 | 0,8763 · **0,4919** (día 20) · 0,5528 |
+| veredicto | SE ESTABILIZA ~ | SE ESTABILIZA ~ |
+
+- **El estancamiento es del motor, no de la geografía**: se da en los dos brazos,
+  con la misma meseta de la ventana y la misma subida de la emergente después de
+  su mínimo. Lo que tienen en común es el núcleo que se enseña, el modelo y el
+  ritmo de novedades (un referente cada dos días, idéntico en los dos).
+- **La geografía sostiene la variación de lo nuevo**: la emergente del brazo con
+  escena queda ≈ 0,1 por encima del control los 30 días — las palabras nuevas se
+  parecen menos entre sí cuando cada uno vive en su lugar. Es lo mismo que la
+  serie C vio en tres días («el control converge un poco más»), ahora en treinta.
+- **La brecha entre los pueblos es de la escena** (`analizar_nodos.py`,
+  acumulada emergente): con escena crece de +0,0028 a **+0,0356** (dentro de cada
+  pueblo se converge más rápido que entre ellos); en el control se cierra de
+  +0,0166 a **+0,0021**. Formas que nunca salieron de su pueblo: 56 con escena,
+  22 en el control.
+- **El diente de sierra es del Capubana** (control como placebo): con escena los
+  días de reunión (múltiplos de 3) bajan la emergente del día a 0,807 contra 0,880
+  y dejan la brecha en +0,0005 contra +0,0293; en el control esos mismos días no se
+  distinguen (0,814 contra 0,815; 4 de 10 más bajos, azar) — el control no tiene
+  reunión.
+- **La competencia**: el control fijó 6 de sus 15 referentes (el brazo A, 7).
+  ⚠️ Pero 4 de sus 9 «abiertos» son nombres **unánimes** — la guacharaca es `taka`
+  con soporte 106,4 y ninguna rival — que nunca se fijan porque
+  `CompetenciaLexica.evaluar_fijacion` exige al menos dos variantes. Defecto del
+  instrumento, anotado para después de la serie; en el brazo A los 8 abiertos
+  tienen de 3 a 10 variantes y la lectura de las disputas que se acumulan se
+  sostiene. Informe por nodo del control:
+  `5-experimento/analisis/era2_base_control_nodos_2026-09-29.txt`.
 
 > ⚠️ **Trampa medida al analizar**: `analizar_nodos.py` sin
 > `CURIANA_ELENCO=era2` avisa «NO HAY DIVERGENCIA SEMBRADA POR NODO» (62 de 63
