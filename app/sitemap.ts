@@ -17,6 +17,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
+      // la landing: / es la intro El Disco, que lleva aquí
+      url: `${baseUrl}/inicio`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+    {
       url: `${baseUrl}/archivo`,
       lastModified: new Date(),
       changeFrequency: 'monthly',

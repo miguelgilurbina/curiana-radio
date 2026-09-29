@@ -20,7 +20,7 @@ export default function EditionNotFound() {
 
         <div className="space-x-4">
           <Link
-            href="/"
+            href="/inicio"
             className="inline-block px-6 py-3 border-2 border-frequency text-frequency font-sans text-sm tracking-wider hover:bg-frequency hover:text-white transition-colors"
           >
             Volver al Inicio

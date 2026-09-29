@@ -43,7 +43,7 @@ export default function Navigation({ editionNumber }: NavigationProps) {
           <div className="flex items-center justify-between h-16">
             {/* Logo / Brand */}
             <Link
-              href="/"
+              href="/inicio"
               className="flex items-center space-x-3 group"
             >
               <div className="font-serif text-xl md:text-2xl text-deep-900 group-hover:text-frequency transition-colors">

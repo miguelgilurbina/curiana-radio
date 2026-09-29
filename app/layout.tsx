@@ -3,7 +3,7 @@ import { Archivo_Black, Fraunces, Inter, Lora } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import Background from "@/components/layout/Background";
+import ShellRadio from "@/components/layout/ShellRadio";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -74,13 +74,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable} ${archivoBlack.variable}`}>
       <body className="font-sans antialiased">
-        <Background>
-          <Navigation />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </Background>
+        <ShellRadio nav={<Navigation />} footer={<Footer />}>
+          {children}
+        </ShellRadio>
       </body>
     </html>
   );
