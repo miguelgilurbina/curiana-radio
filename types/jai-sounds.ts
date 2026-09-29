@@ -57,6 +57,29 @@ export interface FichaPlaylist {
   estado: "pendiente" | "copy" | "listo";
 }
 
+// ── La edición sintonizada: content/editions/NN/jai-sounds.mdx ───────
+
+/** Una pista con reseña: curaduría escrita, no catálogo. */
+export interface PistaResenada {
+  artista: string;
+  titulo: string;
+  resena: string;
+}
+
+/**
+ * Las cinco pistas de una edición, con su playlist. Es lo que el dial
+ * muestra sintonizado de entrada, mientras las estaciones no tengan cinco
+ * reseñadas propias.
+ */
+export interface EdicionSintonizada {
+  /** "01" — el nombre de la carpeta de la edición. */
+  numero: string;
+  titulo: string;
+  tema: string;
+  spotify_id: string | null;
+  pistas: PistaResenada[];
+}
+
 // ── Catálogo: tablas de Supabase (esquema `jai`) ─────────────────────
 
 export interface JaiArtist {

@@ -124,12 +124,34 @@
   --jai-luz-faint: #7b8a9c;
   --jai-rule: #24303f; /* filetes de la banda */
   --jai-mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
-  --jai-display: var(--font-fraunces), var(--font-lora), Georgia, serif;
+  /* --font-fraunces-jai la carga app/jai-sounds/layout.tsx con opsz e
+     itálica: la display de JAI vive en opsz 9 y la del podcast en itálica,
+     y ninguno de los dos ejes viene en la Fraunces del resto del sitio. */
+  --jai-display: var(--font-fraunces-jai), var(--font-fraunces),
+    var(--font-lora), Georgia, serif;
 
-  /* Fallback del dial cuando no hay estación (avisos, filetes). */
-  --jai-hue: 40;
+  /* La rotación (manual de marca, pág. 05): hue(i) = semilla + i · 360/N.
+     La semilla es de la SESIÓN, no de la estación — la pone
+     lib/jai-rotacion.ts antes del primer pintado. Sin JS, el dial arranca
+     en 40 y se lee igual. oklch da la vuelta solo: 400 es 40. */
+  --jai-semilla: 40;
+  --jai-hue: var(--jai-semilla);
   --jai-senal: oklch(0.8 0.15 var(--jai-hue));
   --jai-senal-tenue: oklch(0.28 0.06 var(--jai-hue));
+}
+
+/* Descubriendo con Chocolate: la única parte de JAI con color propio fijo,
+   porque es una voz y no una estación que rota. Sale de la portada del
+   podcast (colorway lavanda, hue 246). */
+[data-descubriendo-theme="orbe"] {
+  --orbe-fondo: #1b1a33;
+  --orbe-panel: #23224a;
+  --orbe-filete: #34325e;
+  --orbe-borde: #4a4880;
+  --orbe-lavanda: #c9c8f5;
+  --orbe-texto: #eceafd;
+  --orbe-meta: #a9a7d8;
+  --jai-ja-reposo: var(--orbe-texto);
 }
 
 /* Una custom property con var() se sustituye en el elemento donde se DECLARA,
@@ -141,10 +163,116 @@
    El color va en oklch y no en hsl a propósito: a lightness fija, hsl vuelve
    los violetas mucho más oscuros que los verdes y el contraste se cae por
    debajo de AA en algunas estaciones. oklch mantiene la luminosidad
-   PERCIBIDA constante mientras gira el matiz — que es lo que un dial pide. */
+   PERCIBIDA constante mientras gira el matiz — que es lo que un dial pide.
+
+   El matiz sale de su turno en el dial (--jai-i, --jai-sector, puestos en
+   línea por el componente). Quien fije --jai-hue en línea gana igual. */
 [data-jai-theme="dial"] .jai-estacion {
+  --jai-hue: calc(var(--jai-semilla) + var(--jai-i, 0) * var(--jai-sector, 0));
   --jai-senal: oklch(0.8 0.15 var(--jai-hue));
   --jai-senal-tenue: oklch(0.28 0.06 var(--jai-hue));
+}
+
+@layer components {
+  /* Tres voces de Fraunces (manual, pág. 06). Los ejes van fijos: la
+     display es opsz 9 a 96px a propósito — tripas gruesas que riman con el
+     monograma, no el contraste fino que pondría el opsz automático. */
+  .jai-display {
+    font-family: var(--jai-display);
+    font-weight: 900;
+    font-variation-settings: "opsz" 9, "SOFT" 50, "WONK" 1;
+    letter-spacing: -0.015em;
+  }
+  .jai-titulo {
+    font-family: var(--jai-display);
+    font-weight: 700;
+    font-variation-settings: "opsz" 72, "SOFT" 0, "WONK" 1;
+  }
+  .jai-pista {
+    font-family: var(--jai-display);
+    font-weight: 600;
+    font-variation-settings: "opsz" 36, "SOFT" 0, "WONK" 1;
+  }
+  .jai-manifiesto {
+    font-family: var(--jai-display);
+    font-weight: 500;
+    font-variation-settings: "opsz" 72, "SOFT" 30, "WONK" 1;
+    text-wrap: pretty;
+  }
+  /* La versión más redonda del sistema: rima con el script de la portada
+     de Descubriendo con Chocolate. Solo para el podcast. */
+  .jai-orbe {
+    font-family: var(--jai-display);
+    font-style: italic;
+    font-weight: 700;
+    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  }
+  /* Mono habla en datos: minúscula, tracking 0.3em (la cabina es más lenta
+     que el 0.18em de la radio). */
+  .jai-dato {
+    font-family: var(--jai-mono);
+    letter-spacing: 0.3em;
+  }
+
+  /* ── El monograma jA ─────────────────────────────────────────────────
+     Monocromo en reposo (luz sobre noche); solo bajo el mouse recorre el
+     dial. Es el único elemento de JAI con esa divergencia de color. La
+     silueta es la máscara: el color lo pone el fondo, así sirve igual sobre
+     noche, papel u orbe. El gatillo puede ser el propio jA o un contenedor
+     (.jai-ja-gatillo), como la placa de estación. */
+  .jai-ja {
+    display: block;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    background-color: var(--jai-ja-reposo, var(--jai-luz, #f1ece2));
+    -webkit-mask: url("/jai/jai-negro.png") center / contain no-repeat;
+    mask: url("/jai/jai-negro.png") center / contain no-repeat;
+    transition: background-color 0.3s;
+  }
+  .jai-ja:hover,
+  .jai-ja-gatillo:hover .jai-ja {
+    animation: jai-dial 4s linear infinite;
+  }
+  @keyframes jai-dial {
+    0% { background-color: oklch(0.8 0.15 9); }
+    12% { background-color: oklch(0.8 0.15 38); }
+    25% { background-color: oklch(0.8 0.15 55); }
+    37% { background-color: oklch(0.8 0.15 89); }
+    50% { background-color: oklch(0.8 0.15 141); }
+    62% { background-color: oklch(0.8 0.15 204); }
+    75% { background-color: oklch(0.8 0.15 246); }
+    87% { background-color: oklch(0.8 0.15 346); }
+    100% { background-color: oklch(0.8 0.15 9); }
+  }
+
+  /* ── El escrito, difuso ──────────────────────────────────────────────
+     El texto fundacional atraviesa la página: cada fragmento está borroso
+     mientras queda lejos y se enfoca al pasar por el centro de la pantalla
+     (components/jai-sounds/Difuso.tsx pone el atributo). Sin JS no hay
+     atributo, y el texto se lee nítido. */
+  .jai-difuso {
+    transition:
+      filter 0.9s ease-out,
+      opacity 0.9s ease-out;
+  }
+  .jai-difuso[data-difuso="lejos"] {
+    filter: blur(6px);
+    opacity: 0.28;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .jai-ja:hover,
+    .jai-ja-gatillo:hover .jai-ja {
+      animation: none;
+      background-color: var(--jai-senal, oklch(0.8 0.15 204));
+    }
+    .jai-difuso,
+    .jai-difuso[data-difuso="lejos"] {
+      transition: none;
+      filter: none;
+      opacity: 1;
+    }
+  }
 }
 
 @layer base {
