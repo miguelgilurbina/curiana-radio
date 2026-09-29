@@ -5,5 +5,8 @@
   "theme": "Sintonía Ancestral y Silencio Digital",
   "description": "Una exploración sobre la tecnología de la escucha, desde los sonidos de los Caquetíos hasta la IA contemporánea.",
   "spotifyPlaylistId": "3XhOiOcdPfckIbXQt6zYBD",
-  "ogImage": "/images/editions/01/og-image.jpg"
+  "ogImage": "/images/editions/01/og-image.jpg",
+  "portada": "/landing/edicion-01-640.webp",
+  "sinopsis": "Una primera emisión sobre lo que se oye cuando la máquina se calla: el ruido del monte como archivo, la estática como memoria, y cinco pistas para cruzar el umbral.",
+  "ficha": "05 pistas · 01 ensayo híbrido · 01 lengua viva"
 }

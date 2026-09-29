@@ -100,12 +100,33 @@ Se usan como utilidades Tailwind (`text-earth-600`, `bg-earth-50`, `text-frequen
 | `deep-50 … 900` | `#f0f4f8 → #0f1621` | azul profundo: títulos, texto fuerte, datos |
 | `frequency` | `#FF6B35` | **acento**: CTA, "en vivo", resaltados, foco |
 | `arte-acido` · `arte-indigo` · `arte-electrico` · `arte-ocre` · `arte-rojo` · `arte-hueso` | `#C7C91C` · `#26396A` · `#2154C5` · `#C36712` · `#B64924` · `#F3EAD4` | **tintas del arte**: el registro saturado/serigráfico (intro, carteles, ecos). Nunca para UI de lectura |
-| `rubrica` | `#8F3B26` | tinta roja seca: material canónico del isotipo 3D (= `--sim-rubrica`) |
-| `arcilla` | `#B8502E` | la espiral 3D sobre fondo saturado (intro) |
-| `--color-intro` | `#23224F` | la noche ultramar: fondo de la intro (solo CSS) |
+| `rubrica` | `#8F3B26` | tinta roja seca (= `--sim-rubrica`) |
+| `arcilla` | `#B8502E` | la espiral de arcilla (de la intro psicodélica, retirada) |
 
 > Para recolorar la marca: edita los `--color-*` en `app/globals.css` **y** el
 > espejo en `tailwind.config.ts`.
+
+**v1 · la noche** (solo CSS, `--noche-*` en `:root`; se usan como
+`bg-(--noche-fondo)`). El favicon definió el mood de la primera versión
+(§8.1): la radio pasa de papel cálido a **noche en movimiento**. Todo texto de
+lectura ≥ 4.5:1, apuntando a ≥ 7:1.
+
+| Token | Hex | Rol |
+|-------|-----|-----|
+| `--noche-fondo` | `#0F1621` | fondo base (= deep-900) |
+| `--noche-hondo` | `#07090D` | colofón, intro, velo de entrada |
+| `--noche-panel` | `#131C28` | tarjetas y formularios (= `--jai-panel`) |
+| `--noche-hueso` | `#EEE6D4` | texto principal y display (≈ 14:1) |
+| `--noche-hueso-2` | `#C6CFD9` | texto secundario, overlines, metadatos (≈ 10:1); **nunca más tenue** |
+| `--noche-filete` · `--noche-filete-fuerte` | `#3A4B61` · `#5A6D85` | bordes; puntos inactivos |
+| `--noche-oro` | `#E0BB66` | la firma de El Disco |
+| gradiente | `#0F1621 → #1F2C3E → #131C28 → #2F425B` | `.noche-gradiente`, 15 s a 135° |
+
+**Superficies de sección** (tokens scoped por atributo, como `data-sim-theme`
+y `data-jai-theme`): `[data-galeria-theme="sala"]` → `--gal-*` (la sala
+acromática, `#101010`) y `[data-buchibe-theme="telon"]` → `--buc-*` (telón
+`#8C2B12`, noche ultramar, oro `#C9A05A`). Los `-faint` son solo para trazos:
+el texto usa `-soft` o más claro.
 
 ### 3.2 Color de datos / semántico del Simulador → `lib/sim-theme.ts`
 Única fuente para todo lo que el simulador pinta con color "de significado".
@@ -189,51 +210,122 @@ Activos en `public/marca/`:
 
 | Archivo | Qué es | Uso |
 |---------|--------|-----|
-| `lockup-bnw.png` | lockup oficial CURIANA/RADIO (1024²) | **el logo**; donde haya espacio y resolución |
-| `isotipo-espiral.png` | isotipo 1024² | avatar, OG, piezas grandes |
-| `espiral.svg` | trazado vectorial | favicon, UI pequeña. NO es la fuente del 3D |
-| `isotipo-calco.png` | el PNG original del autor | **la fuente del calco 3D**: la intro lo carga en runtime |
+| `lockup-bnw.png` | lockup oficial CURIANA/RADIO (1024²), tinta negra | **el logo**; donde haya espacio y resolución, sobre claro |
+| `lockup-hueso.png` | el lockup en hueso con alfa (390²) | el logo sobre la noche (barra del hero) |
+| `isotipo-espiral.png` | isotipo 1024², tinta sobre transparente | avatar, OG, piezas grandes; **la máscara del revelado de El Disco** |
+| `isotipo-hueso.png` | el isotipo en hueso con alfa (512²) | sobre la noche: barra del hero, intro sin WebGL2 |
+| `espiral.svg` | trazado vectorial | UI pequeña. NO es la fuente del favicon (§8.1) |
+| `isotipo-calco.png` | el PNG original del autor | fuente del calco 3D de la intro psicodélica (retirada) |
 
-**La espiral 3D** (`lib/espiral-3d.ts`) no es una curva paramétrica: es un
-calco directo del PNG — rejilla 180², binarizado (alpha > 120 y RGB < 400),
-marching squares, lazos < 24 puntos descartados, suavizado 1-2-1 ×2,
-submuestreo 1/2, extrusión `depth 0.09 / bevel 0.012 · 0.01 · 3`. Fidelidad
-total a las imperfecciones del dibujo. El lazo de mayor área es el disco; el
-resto, agujeros (el canal espiral).
+Las versiones en hueso salen del PNG por la misma máscara que usan el favicon
+y El Disco: alfa = `(255 − lum) × 1.25`, color `#EEE6D4`. **No se invierte con
+`filter: invert()`**: eso deja una caja negra alrededor del lockup.
 
-Material canónico **"arcilla rúbrica"**: `MeshStandardMaterial{ color: rubrica,
-roughness ~0.55–0.62, metalness ~0.08–0.12 }`. En la intro se aclara a
-`arcilla` (`roughness 0.5, metalness 0.12`) para contrastar con el fondo
-saturado. La geometría se calcula una vez (~10 ms) y queda cacheada por URL.
+**La espiral 3D** (calco en extrusión del PNG, material "arcilla rúbrica") se
+retiró con la intro psicodélica al llegar El Disco. El código queda en la
+historia de git (`lib/espiral-3d.ts`, `components/intro/IntroCuriana.tsx`,
+commit `3a903b1`) por si vuelve como pieza.
 
-El visor/exportador OBJ+GLB del handoff (`Espiral 3D.html`) no se portó: es
-herramienta de diseño, no producto. Si hace falta un GLB, se genera desde ahí.
+### 8.1 El favicon: "la noche" (decisión de Miguel, 2026-09-28)
+
+Espiral `arte-hueso #F3EAD4` sobre `deep-900 #0F1621`, cuadrado de radio 16%.
+De las cuatro opciones del handoff (sello naranja, noche, tinta sin fondo,
+remolino índigo/ácido) se eligió esta: es la que mejor lee a 16px (hueso sobre
+noche 15:1) y es registro sobrio, no tinta del arte. **La noche define el mood
+de esta primera versión de Curiana Radio.** Ya la llevan la intro (§9) y la
+landing (§10); el resto del sitio (archivo, ediciones) sigue en papel.
+
+| Archivo en `public/` | Tamaño | Nota |
+|---|---|---|
+| `favicon.ico` | 16 + 32 + 48 | el que piden los navegadores por defecto |
+| `favicon-16x16.png` · `-32x32` · `-48x48` | | canal de la espiral ensanchado ~1.2% (erosión óptica) para que no se empaste |
+| `apple-touch-icon.png` | 180 | aplanado sobre `#0F1621`: iOS pinta de negro la transparencia |
+| `icon-192.png` · `icon-512.png` | | manifest, `purpose: any`; trazo exacto al 72% |
+| `icon-maskable-512.png` | 512 | el 512 a sangre sobre `#0F1621`, para la máscara de Android |
+
+`theme-color` y `background_color` del manifest: `#0F1621`. Fuente de los
+píxeles: el PNG original del autor (`isotipo-calco.png`), no `espiral.svg`.
+El handoff (`design_handoff_favicon/`) se queda en disco, fuera de git, con
+las otras tres opciones por si se cambia la decisión.
 
 ---
 
-## 9. La intro (pantalla de entrada)
+## 9. La intro v1: El Disco (pantalla de entrada)
 
-`components/intro/` — el visitante llega a un remolino serigráfico con la
-espiral 3D al frente y un túnel de seis ecos detrás. Al pulsar
-**[ SINTONIZAR → ]** el remolino se dispara (velocidad 1 → 27), la cámara
-atraviesa el centro (dolly 0 → 2.35) en 1600 ms ease-out-cubic, y un velo
-`arte-hueso` amanece hacia la landing. **La intro es lo saturado; la landing
-que sigue es lo sobrio**: la regla de los dos registros hecha secuencia.
+`components/intro/` (`IntroDisco.tsx` + `disco-motor.ts` + `disco-shader.ts`).
+El visitante llega a un **disco de arena** sobre la noche y está obligado a
+interactuar: trazando círculos alrededor del disco, los surcos horizontales
+del viento se reorganizan desde el centro hasta formar la espiral del isotipo.
+Afinado, la espiral original aparece en hueso y se habilita
+**[ SINTONIZAR → ]**, que lleva a la landing (`/inicio`). Handoff:
+`design_handoff_intro_v1_disco/` (en disco, fuera de git).
 
-- Se ve **una vez por sesión** en `/` (`IntroGate`, `sessionStorage.curianaIntroVista`).
-  En `/intro` se puede volver a ver (noindex).
-- `prefers-reduced-motion`: shader congelado, sin giro ni flotación,
-  misregistro estático; el botón entra directo sin animación.
-- Sin WebGL (o sin JS) la intro degrada: índigo + UI con el botón funcionando,
-  o directamente no tapa la landing.
-- three.js se carga en su propio chunk, solo cuando la intro va a mostrarse.
-- Capas, de atrás hacia adelante: shader (remolino posterizado a 5 niveles) →
-  6 ecos planos en las tintas del arte → la espiral en arcilla con luz cálida
-  `#FFB08A` y ácida → trama de semitono + scanlines (DOM) → UI (nombre en mono
-  con misregistro rojo/índigo, badge 88.8, estado en ácido, botón, proverbio
-  en Lora itálica) → velo.
-- Timing: hover 300 ms `cubic-bezier(.22,1,.36,1)` · sintonizar 1600 ms ·
-  misregistro 7 s · pulso 1.1 s `steps(2)` · amanecer 900 ms.
+- **Rutas.** `/` es la intro; una vez por sesión (`sessionStorage`
+  `curiana:intro-v1 = "visto"`): quien vuelve pasa directo a `/inicio` sin ver
+  la interfaz. `/intro` la muestra siempre (noindex). Sin JS: el isotipo y un
+  enlace a `/inicio`.
+- **Gesto.** Progreso += |Δθ| / (2π·2.2): unas **2.2 vueltas** afinan
+  (presionando, ×1.4; cada toque suma 3 %). La frecuencia sube de 87.5 a 88.8
+  y la aguja recorre el dial; el patrón pasa de surcos a remolino (>15 %),
+  vórtice (>60 %) y espiral. El viento (km/h y rumbo) sale del puntero real.
+- **Salida.** 1.7 s smoothstep: los surcos se comprimen al centro, velo negro
+  desde el 55 %, y la landing amanece desde `#07090D` en 600 ms.
+- **Shader** (WebGL2, un triángulo a pantalla completa, DPR ≤ 2), de fondo a
+  frente: noche con granos dorados sueltos → borde de arena derramada (nunca un
+  círculo perfecto) → campo de surcos (viento → espiral ovalada `q·(.9, 1.15)`,
+  la proporción del isotipo) → ondas de toque y bulto bajo el cursor → domo y
+  manchas → **grano aprobado** (fino ±.15, medio ±.11, 2.5 % brillantes, 4 %
+  oscuros: no suavizar) → revelado con el PNG como alfa a 0.95R.
+- **Paleta.** `--noche-hondo` de fondo; arena oro `#E6B43C` sobre tinta
+  `#090806`; texto en hueso/hueso-2 sobre placa sólida (≥ 11:1), **nunca texto
+  sobre arena**; firma en `--noche-oro`; aguja, punto y cursor en frequency.
+- **Accesibilidad.** `prefers-reduced-motion`: el tiempo se congela, arranca
+  afinado y SINTONIZAR navega sin transición. Botones reales en el orden
+  SALTAR → SINTONIZAR (el foco pasa solo al segundo); "señal encontrada" se
+  anuncia con `aria-live`. Sin WebGL2: el isotipo en hueso con el bloque final
+  ya visible.
+- **Móvil (< 640 px).** Se oculta el bloque de datos de arriba a la derecha y
+  la firma sube a esa esquina (abajo chocaba con el proverbio).
+
+---
+
+## 10. La landing v1 · la noche (`/inicio`)
+
+`components/landing/` + `app/inicio/page.tsx`. El marco que contiene todas
+las aristas. Estructura, copy e interacciones del handoff
+(`design_handoff_landing/`); la paleta es la de la noche (§3.1): donde el
+prototipo dice papel, aquí manda el README del handoff.
+
+| # | Sección | Superficie |
+|---|---|---|
+| 01 | Hero · carrusel de aristas | barra (isotipo + lockup en hueso + "88.8 FM · SINTONIZADO") y 5 diapositivas en su superficie |
+| 02 | Manifiesto | gradiente noche + grano; capitular, bloque expandible, blockquote |
+| 03 | Interludio de arte | sala `#101010`; 3 obras que reservan su color dominante |
+| 04 | Las aristas | noche; 4 tarjetas, cada una en su registro |
+| 05 | Última transmisión | gradiente noche + grano; portada en `Cenefa` |
+| 06 | Archivo y suscripción | noche; ediciones + formulario |
+| 07 | Colofón | `--noche-hondo`; burro ASCII, proverbio, badge outline |
+
+- **El hero** arranca sintonizado (la intro ya obligó a interactuar): auto-avance
+  cada 5 s que se pausa con hover o foco y **se detiene** al tocar flechas,
+  puntos, teclado (←/→) o swipe. Diapositivas inactivas `inert`. Con
+  movimiento reducido: sin auto-avance y fundido de 200 ms.
+- **Sin nav ni pie globales**: la landing y la intro traen los suyos
+  (`components/layout/ShellRadio.tsx` los omite en `/`, `/intro`, `/inicio`).
+  El logo de la nav del resto del sitio lleva a `/inicio`.
+- **La edición** viene del contenido: `portada`, `sinopsis` y `ficha` en el
+  `metadata.json` de cada edición; la landing muestra la última.
+- **Suscripción**: envía a `NEXT_PUBLIC_SUSCRIPCION_URL` (POST de formulario
+  con `email`). Sin proveedor, el formulario se ve deshabilitado y lo dice.
+- **Buchibe** aún no tiene sección: su diapositiva y su tarjeta anuncian el
+  telón ("CORRER EL TELÓN · PRONTO") sin enlazar.
+- **Contraste** (requisito del cliente, ≥ 4.5:1): los `-faint` de sección se
+  subieron a `-soft` en texto; el CTA y la etiqueta del telón van en
+  `--buc-luz` (el oro sobre el telón da 3.5:1: vale para el título grande, no
+  para texto chico). **Pendiente de decisión:** el botón naranja con texto
+  blanco que pide el handoff da 2.8:1.
+- Arte en `public/landing/` como WebP pre-generado (480/960 px; portada 640),
+  con `<img srcset>` como la galería, sin el optimizador de Next.
 
 ---
 
