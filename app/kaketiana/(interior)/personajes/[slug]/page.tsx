@@ -148,7 +148,7 @@ export default async function PersonajePage({ params }: PersonajePageProps) {
                     </p>
                   )}
                   <Link
-                    href={`/kaketiana/experimento#epoca-${ev.epocaId}`}
+                    href={`/kaketiana/experimento/era-1#epoca-${ev.epocaId}`}
                     className="mt-1 inline-block font-sans text-xs text-(--sim-ink-faint) transition-colors hover:text-(--sim-fuego)"
                   >
                     ver en «{ev.epocaTitulo}» →

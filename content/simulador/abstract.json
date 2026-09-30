@@ -1,89 +1,105 @@
 {
-  "version": 1,
+  "version": 2,
   "pitch": {
-    "overline": "Acto I · El experimento",
-    "caquetio": "Tayamaa anüiki-ni. Wa-barsure anüiki-ni.",
-    "traduccion": "Nosotros seguimos hablando. Nuestra alma sigue hablando.",
-    "titulo": "Una lengua que dejó de hablarse hace cuatro siglos, hablada de nuevo — por sesenta voces sintéticas.",
-    "bajada": "Reconstruimos el caquetío desde crónicas coloniales y sus lenguas hermanas; se lo dimos a una comunidad de personajes simulados con inteligencia artificial; y medimos qué hace esa comunidad con él: qué palabras inventa, cuáles adopta, y si converge en una lengua común."
+    "overline": "El experimento · era 2",
+    "titulo": "Una lengua que nadie habla desde hace cuatro siglos, hablada de nuevo por {agentes} voces sintéticas durante {dias} días.",
+    "bajada": "Reconstruimos lo que se puede del caquetío desde crónicas, topónimos y sus parientes arahuacos; se lo dimos a una comunidad de personajes simulados con inteligencia artificial en la Paraguaná del siglo XV; y medimos qué hace esa comunidad con él: qué palabras inventa para lo que no tiene nombre, cuáles adopta, y si dos pueblos terminan hablando igual."
+  },
+  "frase": {
+    "caquetio": "Lihi punu-dunku-kana para-ruku. Punu kibe, dunku kibe.",
+    "traduccion": "Los punu-dunku en el agua. Soplan mucho, suenan mucho.",
+    "quien": "Wache",
+    "lugar": "El Cayude",
+    "run": "2607d272",
+    "dia": 5,
+    "nota": "La glosa es la del propio personaje, entre paréntesis al final de su intervención. Ese día la comunidad fijó punu-dunku para el delfín."
   },
   "abstract": [
-    "El caquetío fue la lengua arahuaca del Golfete de Coro. Dejó de hablarse hace siglos y sobrevive en topónimos, crónicas coloniales y unas decenas de palabras registradas. Este proyecto la reconstruye parcialmente con el método comparativo — el de la lingüística histórica: inferir la forma caquetía probable comparando sus lenguas hermanas, el wayuunaiki y el lokono vivos, el taíno documentado — y la entrega a una comunidad simulada: sesenta personajes del siglo XV, cada uno un agente de inteligencia artificial con rol, edad, etnia y manera propia de hablar.",
-    "Los agentes conversan día a día. Inventan palabras cuando el mundo lo exige, adoptan las de otros, y un observador mide cada turno: cuánto caquetío hay en el habla, qué formas nacen y mueren, y si las maneras de hablar se acercan entre sí.",
-    "La pregunta central: ¿puede esa comunidad converger en una norma compartida — una koiné — y podemos probar que la convergencia es emergente y no un artefacto del instrumento? Tras seis simulaciones curadas y un experimento de control: sí, con matices que vuelven el resultado más interesante que el sí."
+    "El caquetío fue la lengua arahuaca de la costa de Falcón, de Paraguaná y de las islas de enfrente. Dejó de hablarse hace siglos y sobrevive en topónimos, en unas decenas de palabras que anotaron cronistas y en voces sueltas del habla de la península. Este proyecto reconstruye lo que se puede con esas piezas —cada palabra con su fuente y su grado de certeza— y se la entrega a una comunidad simulada: {agentes} personajes del siglo XV, cada uno un agente de inteligencia artificial con oficio, casa, pueblo y una manera propia de hablar.",
+    "Los personajes viven en dos pueblos de Paraguaná, Guaranao y Amuay, y se reúnen en el cerro Capubana. Cada día van a los lugares de su oficio y hablan con quien está ahí. Cada dos días aparece algo que no tiene nombre —un animal del monte, un eclipse, un metal amarillo llegado por trueque— y la comunidad tiene que nombrarlo. Nada de eso se les dicta: inventan palabras con las raíces que conocen, adoptan las de otros, y un instrumento mide, turno a turno, cuánto se parecen sus maneras de hablar.",
+    "La pregunta es si esa comunidad forma una lengua común —una koiné— y qué papel juega el territorio. Para saberlo corrimos la misma simulación dos veces, {dias} días cada una, con el mismo motor y las mismas semillas: una con el mapa, donde cada quien está donde su oficio lo pone y todos suben al Capubana cada {capubana_cada} días, y otra de control, sin mapa. El resultado, dicho con cuidado: la lengua común avanza y se estanca igual en los dos brazos, así que el estancamiento es del motor. Lo que el mapa cambia es otra cosa: mantiene viva la variación de las palabras nuevas y hace que cada pueblo hable a su manera."
   ],
   "conceptos": [
     {
-      "id": "lexicon",
-      "termino": "El lexicón",
-      "lema": "Las 1.262 palabras con las que arranca la lengua.",
-      "cuerpo": "Solo 75 están atestiguadas en crónicas (Galeotto Cey, Oviedo, Las Casas) y trabajo académico; 82 son reconstrucciones de trabajo del proyecto; el resto viene de las lenguas hermanas, marcado como tal. Cada palabra lleva su fuente a la vista: aquí la especulación nunca se presenta como dato.",
-      "dato": "441 formas hipotéticas fueron retiradas del léxico activo por no pasar validación."
+      "id": "diccionario",
+      "termino": "El diccionario",
+      "lema": "{voces} voces, cada una con cómo la sabemos.",
+      "cuerpo": "Una voz atestiguada la registra una fuente, con obra y página. Una reconstruida sale de comparar las lenguas hermanas. Una retroabstraída está viva hoy en el habla de la península y se proyecta hacia atrás. Una hipotética es una conjetura declarada. A los personajes se les enseñan las tres primeras; las hipotéticas se esconden, para ver si las inventan solos.",
+      "dato": "{atestiguadas} atestiguadas · {reconstruidas} reconstruidas · {retroabstraidas} retroabstraídas · {hipoteticas} hipotéticas."
     },
     {
       "id": "comunidad",
-      "termino": "La comunidad simulada",
-      "lema": "Sesenta personajes, un solo golfete.",
-      "cuerpo": "Caciques, piaches, pescadoras, aprendices: cada agente tiene identidad histórica, red social y un emocionar — una disposición que sesga qué palabras alcanza primero y cómo arma la frase. La variación inicial no es ruido: es la materia prima. Sin hablantes distintos, no hay nada que pueda converger."
+      "termino": "La comunidad",
+      "lema": "{agentes} personajes, dos pueblos.",
+      "cuerpo": "Apopos de casa, pescadores, alfareras, una cordelera, una boratia, un oráculo, el Manaure y sus aprendices: cada agente tiene un nombre, una casa, un oficio, un prestigio y un emocionar —una disposición que sesga qué palabras alcanza primero y cómo arma la frase—. Cada uno arranca hablando un poco distinto. Sin esa variación inicial no habría nada que pudiera converger.",
+      "dato": "Guaranao, {agentes_guaranao} · Amuay, {agentes_amuay}."
     },
     {
-      "id": "neologismos",
-      "termino": "Los neologismos",
-      "lema": "Cómo nace una palabra.",
-      "cuerpo": "Cuando aparece algo sin nombre — un cometa, una fiebre, un metal amarillo — los agentes componen con la morfología documentada: kali (luz) + dusha (lejos) → kali-dusha, la sombra. Una palabra propuesta no es nada todavía: solo existe cuando otra boca la repite."
+      "id": "escena",
+      "termino": "La escena",
+      "lema": "Cada uno está en algún sitio.",
+      "cuerpo": "Un personaje no vive en una etiqueta: está en un lugar —la salina, la playa, el conuco, el camino— a una hora del día, y sólo oye a quien está ahí. Cada {capubana_cada} días todos suben al cerro Capubana, y ese es el único día en que los dos pueblos se oyen enteros."
     },
     {
-      "id": "contagio",
-      "termino": "El contagio léxico",
-      "lema": "Por qué unas prenden y otras no.",
-      "cuerpo": "Las formas viajan por la red social: la frecuencia y el prestigio de quien las usa les dan soporte; las que nadie repite decaen y mueren. El resultado son curvas de adopción en forma de S — las mismas que dibujan las lenguas reales."
-    },
-    {
-      "id": "deriva",
-      "termino": "La deriva lingüística",
-      "lema": "El pulso de la mezcla.",
-      "cuerpo": "Cada turno se mide la composición del habla: cuánto es caquetío, cuánto se fuga al español o a las hermanas arahuacas. Es el electrocardiograma de la simulación: la primera señal de si la lengua vive o se apaga.",
-      "dato": "De 92% caquetío en el primer run calibrado a 99% sostenido."
+      "id": "referentes",
+      "termino": "Lo que no tiene nombre",
+      "lema": "Cada dos días, algo nuevo.",
+      "cuerpo": "El mundo les pone delante cosas sin palabra: la tarántula azul del monte, la guacharaca, un eclipse, un metal amarillo. Los personajes componen nombres con las raíces que tienen, y a veces con el sonido del animal. Varios nombres compiten; cuando uno reúne más del {umbral_pct} % del apoyo, la comunidad lo fija.",
+      "dato": "{referentes} cosas por nombrar en {dias} días."
     },
     {
       "id": "koine",
       "termino": "La koiné",
       "lema": "Cuando muchos modos de hablar se vuelven uno.",
-      "cuerpo": "Así llama la lingüística a la lengua común que emerge al nivelarse dialectos en contacto — como el griego koiné o, en esta misma costa, el papiamento. En términos de Maturana: un dominio consensual, coordinaciones de conducta que se estabilizan entre quienes conviven. Su firma medible: las variantes rivales para un concepto se reducen a una.",
-      "dato": "Diccionario koiné de 7 conceptos fijados por competencia."
+      "cuerpo": "Así llama la lingüística a la lengua común que emerge cuando se nivelan hablas en contacto, como el griego koiné o, en esta misma costa, el papiamento. En términos de Maturana: coordinaciones de conducta que se estabilizan entre quienes conviven. Su firma medible es que las maneras de hablar se acercan y que, para cada cosa nueva, las variantes rivales se reducen a una."
     },
     {
-      "id": "convergencia",
-      "termino": "La convergencia y su medida",
-      "lema": "El experimento honesto.",
-      "cuerpo": "La distancia idiolectal mide cuánto difieren las maneras de hablar de los agentes, día a día, en tres lecturas de exigencia creciente; la más dura solo cuenta las formas emergentes. En el camino descubrimos que la lectura ingenua «convergía» sola por acumulación — un artefacto que corregimos y dejamos documentado, porque el error metodológico contado también es resultado."
+      "id": "lecturas",
+      "termino": "La medida",
+      "lema": "Tres lecturas, de menos a más exigente.",
+      "cuerpo": "La distancia idiolectal mide cuánto difieren las maneras de hablar de los personajes, día a día. Contando todo lo dicho desde el principio, baja casi siempre por pura acumulación; por eso el veredicto se lee en la lectura más dura, la que sólo cuenta las palabras nacidas en la simulación."
     },
     {
-      "id": "ablacion",
-      "termino": "La ablación",
-      "lema": "¿Y si es un truco del andamiaje?",
-      "cuerpo": "La misma simulación, dos veces: una con los empujones que favorecen la convergencia, otra sin ellos. La evidencia de koineización emergente no es que el run normal converja — es la diferencia: 2,7 veces más convergencia con andamiaje… y aun sin él, la comunidad fija 4 conceptos por su cuenta. Esa fijación residual es la señal emergente pura."
+      "id": "control",
+      "termino": "El control",
+      "lema": "La misma simulación, sin mapa.",
+      "cuerpo": "El brazo de control corre con el mismo motor, las mismas semillas y la misma gente, pero sin escena: todos oyen a todos, siempre. Lo que difiere entre los dos brazos es del mapa. Lo que comparten es del motor, del modelo o de lo que se enseña."
+    },
+    {
+      "id": "director",
+      "termino": "El Director",
+      "lema": "Un narrador que no decide lo que se dice.",
+      "cuerpo": "Al cerrar cada día, otro agente lee lo que pasó y lo cuenta en unas pocas oraciones: qué cambió, qué palabra prendió, qué quedó abierto. Es la crónica del experimento. Lo que narra no es dato; los datos son lo que dijeron los personajes."
     }
   ],
   "pipeline": [
     {
       "titulo": "Fuentes",
-      "sub": "Crónicas coloniales y cuatro lenguas hermanas: lo que sobrevivió del caquetío y sus parientes vivos."
+      "sub": "Crónicas coloniales, topónimos, el habla viva de la península y los parientes arahuacos mejor documentados."
     },
     {
       "titulo": "Reconstrucción",
-      "sub": "El método comparativo arma un lexicón de trabajo; cada palabra lleva marcada su fuente."
+      "sub": "Cada voz entra al diccionario con su fuente y su grado de certeza. La especulación nunca se presenta como dato."
     },
     {
       "titulo": "Simulación",
-      "sub": "Sesenta personajes con IA conversan día a día en el Golfete: inventan, adoptan, olvidan."
+      "sub": "{agentes} personajes viven {dias} días en Paraguaná: van a sus lugares, hablan, inventan, adoptan, olvidan."
     },
     {
       "titulo": "Medición",
-      "sub": "Un observador puntúa cada turno: deriva, adopción, convergencia. Todo queda registrado."
+      "sub": "Cada turno queda registrado: quién dijo qué, dónde, y cuánto se parecen las maneras de hablar."
     }
   ],
-  "ejemplo_form": "kali-dusha",
-  "cierre": "Hasta aquí, el instrumento: lo que se midió, tal como se midió. Lo que sigue es lo que se oyó — la crónica del run insignia, contada por el señor de la Curiana y por un cronista que lo ve todo.",
-  "nota_honestidad": "Sobre este contenido: los datos — palabras, adopciones, deriva, convergencia — salen de la simulación tal cual ocurrieron y son reproducibles desde la bitácora del proyecto. Las voces del narrador y de Manaure son reconstrucción editorial hipotética, escrita para esta publicación, y se marcan siempre con su grado de certeza."
+  "limites": [
+    "Todos los personajes son el mismo modelo de lenguaje con distintas instrucciones. Una comunidad real no es eso.",
+    "Es una sola serie, sin réplicas todavía: los dos brazos comparten semillas, pero cada uno corrió una sola vez.",
+    "El instrumento tiene defectos anotados. Un nombre que nadie disputa nunca se fija, porque la regla pide al menos dos rivales; y algunas formas llegan con marcas de formato pegadas y reparten el apoyo con su forma limpia.",
+    "Nada de esto prueba cómo hablaban los caquetíos. Prueba qué le pasa a una lengua reconstruida cuando una comunidad la usa."
+  ],
+  "siguiente": [
+    "Corregir los defectos del instrumento y declarar el corte.",
+    "Probar si el estancamiento lo causa el ritmo de cosas nuevas: una serie con menos novedades.",
+    "Repetir la serie con otros modelos, para separar lo que es de la lengua de lo que es del modelo."
+  ],
+  "nota_honestidad": "Sobre este contenido: las cifras de esta página se exportan de la base de la simulación y no se escriben a mano. Las voces citadas las dijeron los personajes tal como aparecen. Los resúmenes del Director son narración de otro agente y se leen como tal."
 }

@@ -50,6 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const simuladorPages: MetadataRoute.Sitemap = [
     { path: '/kaketiana', priority: 0.9 },
     { path: '/kaketiana/experimento', priority: 0.8 },
+    { path: '/kaketiana/experimento/era-1', priority: 0.5 },
     { path: '/kaketiana/bibliografia', priority: 0.7 },
     { path: '/kaketiana/personajes', priority: 0.7 },
     { path: '/kaketiana/lexicon', priority: 0.7 },

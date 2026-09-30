@@ -6,8 +6,6 @@ import { getManaureFragment } from "@/lib/manaure";
 import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
-import { getEscenasParaElVisor } from "@/lib/escena";
-import { getAbstract, getCifrasLab, getEjemploVida } from "@/lib/abstract";
 import { getGlosasPorManaure, getGlosasPorEvento } from "@/lib/glosas";
 import Masthead from "@/components/simulador/Masthead";
 import Timeline from "@/components/simulador/Timeline";
@@ -15,53 +13,47 @@ import Umbral from "@/components/simulador/Umbral";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
 import GlosaCronista from "@/components/simulador/GlosaCronista";
 import LanguageDriftChart from "@/components/simulador/LanguageDriftChart";
-import {
-  PortadaLab,
-  AbstractCientifico,
-  Conceptos,
-  PipelineFlujo,
-} from "@/components/simulador/laboratorio";
-import VidaDeUnaPalabra from "@/components/simulador/VidaDeUnaPalabra";
-import MapaDeEscena from "@/components/simulador/MapaDeEscena";
 import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evolucion";
 import { ExperimentoControl } from "@/components/simulador/experimento";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
 import { Overline, EmptyState } from "@/components/simulador/ui";
 
-export function generateMetadata(): Metadata {
-  const { pitch } = getAbstract();
-  return {
-    title: "Simulador Caquetío — Una lengua hablada de nuevo | Curiana Radio",
-    description: pitch.bajada,
-  };
-}
+export const metadata: Metadata = {
+  title: "La era 1 del experimento — cómo se construyó el motor | Curiana Radio",
+  description:
+    "Las seis simulaciones de junio y julio de 2026 con las que se construyó el motor de Kaketiana: pruebas de desarrollo, no resultados, y el primer experimento de control.",
+};
+
+// El copy de esta página era el del abstract de la era 1; queda aquí, fijo,
+// porque ya no cambia.
+const CIERRE =
+  "Hasta aquí, el instrumento: lo que se midió, tal como se midió. Lo que sigue es lo que se oyó — la crónica del run insignia, contada por el señor de la Curiana y por un cronista que lo ve todo.";
+const NOTA_HONESTIDAD =
+  "Sobre este contenido: los datos — palabras, adopciones, deriva, convergencia — salen de la simulación tal cual ocurrieron y son reproducibles desde la bitácora del proyecto. Las voces del narrador y de Manaure son reconstrucción editorial hipotética, escrita para esta publicación, y se marcan siempre con su grado de certeza.";
 
 const ANEXOS = [
-  { href: "/kaketiana/personajes", label: "Personajes", desc: "Las veinte voces curadas del run y sus arcos." },
+  { href: "/kaketiana/personajes", label: "Personajes", desc: "Las veinte voces de la crónica de esta era y sus arcos." },
   { href: "/kaketiana/lexicon", label: "Léxico", desc: "Las voces caquetías, palabra por palabra, con su fuente y cómo la sabemos." },
   { href: "/kaketiana/neologisms", label: "Neologismos", desc: "Todas las palabras inventadas: las que prendieron y las que no." },
   // /kaketiana/fuentes no existe desde 2026-08-24: el wiki es /kaketiana
   { href: "/kaketiana", label: "Fuentes", desc: "El wiki de investigación: crónicas, glosarios y el mundo caquetío, cada dato con su fuente." },
 ];
 
-// El landing en tres actos: el laboratorio (abstract de disertación, a sangre
-// completa en el registro oscuro), el umbral, y la crónica sobre pergamino.
-// El lector primero ENTIENDE el experimento; después lo oye.
-export default function SimuladorPage() {
-  const abstract = getAbstract();
-  const cifras = getCifrasLab();
+// La era 1 (2026-06-22 → 2026-07-06): las simulaciones con las que se
+// construyó el motor. Antes era el landing del experimento; desde la era 2 es
+// su historia. La bitácora del proyecto (5-experimento/BITACORA_RUNS.md,
+// decisión de Miguel del 2026-08-03) pide que cualquier cita de estos números
+// lleve su advertencia: va arriba, antes de cualquier cifra.
+export default function EraUnoPage() {
   const runsIndex = getRunsIndex();
   const runNormal = runsIndex?.runs.find((r) => r.rol === "normal");
   const experimento = runNormal ? getParejaExperimento(runNormal.id8) : null;
-  const escenas = getEscenasParaElVisor();
 
   const runs = getRunsPublicados();
   const run = getRunActivo();
   const resumen = getResumen();
   const personajes = getAllPersonajes();
   const nombrePorSlug = new Map(personajes.map((p) => [p.slug, p.nombre]));
-  const slugPorNombre = new Map(personajes.map((p) => [p.nombre, p.slug]));
-  const ejemploVida = getEjemploVida();
   const epocasNav = run.epocas.map(({ id, titulo, dias, hito }) => ({ id, titulo, dias, hito }));
 
   const hero = run.manaure_hero ? getManaureFragment(run.manaure_hero) : null;
@@ -73,48 +65,54 @@ export default function SimuladorPage() {
 
   return (
     <>
-      {/* ══ ACTO I · EL LABORATORIO ═══════════════════════════════════
-          Los tokens --sim-* se resuelven al registro oscuro del
-          instrumento dentro de este wrapper (ver globals.css). */}
       <div data-sim-acto="laboratorio" className="bg-(--sim-paper)">
         <div className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
           <Masthead />
 
           <div className="mx-auto max-w-[820px]">
-            <PortadaLab pitch={abstract.pitch} />
+            <header>
+              <Link
+                href="/kaketiana/experimento"
+                className="font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
+              >
+                ← El experimento, hoy
+              </Link>
+              <div className="mt-6">
+                <Overline>Historia del motor · era 1</Overline>
+              </div>
+              <h2 className="sim-display mt-2 text-4xl font-semibold leading-tight tracking-tight text-(--sim-ink) md:text-5xl">
+                Cómo se construyó el instrumento
+              </h2>
+              <p className="mt-5 max-w-reading font-sans text-base leading-relaxed text-(--sim-ink-soft) md:text-lg">
+                Entre junio y julio de 2026 corrieron las primeras simulaciones: de veinte a treinta y
+                ocho personajes en un Golfete de Coro sin mapa, con un lexicón que todavía mezclaba el
+                caquetío con sus lenguas vecinas. Sirvieron para construir el motor. Esta página las
+                conserva tal como se publicaron entonces.
+              </p>
+            </header>
 
-            <DataAside
-              items={[
-                {
-                  label: "Palabras en el lexicón",
-                  value: cifras.palabrasLexicon.toLocaleString("es-VE"),
-                  sub: `${cifras.atestiguadas} atestiguadas en crónicas`,
-                },
-                {
-                  label: "Simulaciones curadas",
-                  value: cifras.runsCurados,
-                  sub: `${cifras.respuestasTotales.toLocaleString("es-VE")} respuestas de agentes`,
-                },
-                {
-                  label: "Agentes por run",
-                  value: cifras.agentesRango,
-                  sub: "caciques, adultos, jóvenes",
-                },
-                {
-                  label: "Experimento",
-                  value: cifras.factorExperimento ? `${cifras.factorExperimento}×` : "—",
-                  sub: "convergencia normal vs. control",
-                },
-              ]}
-            />
-
-            <AbstractCientifico parrafos={abstract.abstract} />
-            <Conceptos conceptos={abstract.conceptos} />
-            <VidaDeUnaPalabra
-              neo={ejemploVida}
-              proposerSlug={slugPorNombre.get(ejemploVida.proposed_by)}
-            />
-            <PipelineFlujo pasos={abstract.pipeline} />
+            <aside className="mt-8 rounded-xl border border-(--sim-rubrica)/60 bg-(--sim-paper-deep) px-5 py-4">
+              <p className="font-sans text-sm font-semibold text-(--sim-ink)">
+                Léase con esta advertencia
+              </p>
+              <ul className="mt-2 list-disc space-y-1.5 pl-5 font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
+                <li>
+                  Las seis simulaciones de esta era son{" "}
+                  <strong className="text-(--sim-ink)">pruebas de desarrollo del motor, no resultados</strong>.
+                  Entre una y otra cambiaron el motor y el instrumento que las mide, así que no se
+                  comparan entre sí.
+                </li>
+                <li>
+                  La única comparación limpia es el par de control del 6 de julio: mismo motor, mismo
+                  día, una sola diferencia.
+                </li>
+                <li>
+                  El lexicón de entonces trataba al wayuunaiki como lengua hermana y enseñaba palabras
+                  que el proyecto después retiró. Algunas aparecen en la crónica de abajo; el
+                  diccionario actual dice cuáles y por qué.
+                </li>
+              </ul>
+            </aside>
 
             {/* La bitácora: qué pasó ENTRE las simulaciones (antes /simulador/runs) */}
             <section id="bitacora" className="mt-14 scroll-mt-24">
@@ -157,31 +155,12 @@ export default function SimuladorPage() {
               </section>
             )}
 
-            {/* La escena: el mundo no es un tablero, es un grafo de lugares.
-                Visor de repetición sobre el mapa real (decisión de Miguel
-                2026-09-17, §5b del issue de la escena). Estático: lee
-                content/simulador/escena/*.json, nunca la base. */}
-            {escenas.length > 0 && (
-              <section id="escena" className="mt-14 scroll-mt-24">
-                <Overline>El mundo, turno a turno</Overline>
-                <h3 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
-                  Dónde estaba cada uno
-                </h3>
-                <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-                  Un agente ya no vive en una etiqueta: está en un sitio, a una hora, con quien
-                  esté ahí. Esto no simula nada — lee la escena que el motor guardó, los sesenta y
-                  tres en un lugar cada momento del día, y la pone sobre Paraguaná. Lo que se dijo
-                  en un sitio se lee pinchando el sitio.
-                </p>
-                <MapaDeEscena seeds={escenas} />
-              </section>
-            )}
-          </div>
+            </div>
         </div>
       </div>
 
       {/* ══ EL UMBRAL ══════════════════════════════════════════════════ */}
-      <Umbral texto={abstract.cierre} />
+      <Umbral texto={CIERRE} />
 
       {/* ══ ACTO II · LA CRÓNICA ══════════════════════════════════════ */}
       <div className="mx-auto max-w-6xl px-4 pb-24 pt-14 sm:px-6 lg:px-8">
@@ -355,7 +334,7 @@ export default function SimuladorPage() {
                 </ul>
 
                 <p className="mt-10 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
-                  {abstract.nota_honestidad}
+                  {NOTA_HONESTIDAD}
                 </p>
               </footer>
             </article>
