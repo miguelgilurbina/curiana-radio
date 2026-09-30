@@ -331,3 +331,39 @@ prototipo dice papel, aquí manda el README del handoff.
 
 *MVP — iteraremos. La paleta es provisional y está pensada para cambiarse;
 toda la lógica de color ya está centralizada (§3) para hacerlo en minutos.*
+
+---
+
+## 11. Kaketiana (`/kaketiana`)
+
+Handoff: `design_handoff_kaketiana/` (en disco, fuera de git). Kaketiana es la
+placa clara, mineral y arqueológica dentro de la v1 nocturna: dirección
+**6b «Sal y almagre»**, tipografía **7a · Fraunces WONK + Inter**, hero **1a ·
+la palabra se arma**. Reutiliza los tokens `--sim-*` para heredar los
+componentes del cronista.
+
+- **Tokens.** `[data-kk-dir="sal"]` en `app/globals.css`: papel `#F2EDE3`,
+  hundido `#E4DBC8`, tinta `#241D15`, rúbrica almagre `#9C3A1D`, fuego ocre
+  `#B06A1C`, `--kk-extra` salina `#3F7D74` (enlaces, datos vivos). `ink-faint`
+  no se usa para texto que se lea. El Acto I del experimento es la tinta
+  profunda de `[data-sim-acto="laboratorio"]`: esa inversión es su firma.
+- **La escala epistémica** (`components/kaketiana/Etiqueta.tsx`, clases
+  `.kk-ep-*`): la certeza es la solidez del trazo. ▮ atestiguado lleno ·
+  ◆ reconstruido firme · ◇ hipotético discontinuo · ~ retro-abstraído punteado
+  · ◉ canon-simulación doble, **sólo en el experimento**. En prosa se abrevia,
+  en tabla es la última columna, en imagen va dentro del marco.
+- **Movimiento.** Una curva, `--kk-curva` = `cubic-bezier(0.22, 1, 0.36, 1)`;
+  `--kk-t-rapido` 300 ms, `--kk-t-tinta` 600 ms, `--kk-t-umbral` 1200 ms.
+  Amanecer (`components/kaketiana/Amanecer.tsx`) una vez por sección; Rúbrica
+  en las acciones `.kk-accion`; el **caret es sólo de las voces simuladas**.
+  `prefers-reduced-motion` apaga todo.
+- **Micro-labels** en mono (`.kk-label`; dentro de `[data-kk]` los `Overline`
+  pasan a mono) y **acciones** en registro terminal: `[ CRUZAR AL LABORATORIO → ]`.
+- **Aplicado (2026-09-29):** `/kaketiana/experimento` — el umbral §05 (placa
+  clara → banda sin texto → laboratorio, con la escala del lado oscuro para que
+  las etiquetas se lean), ◉ en la frase simulada y en la tabla de nombres
+  (fichas en móvil, sin scroll horizontal), el titular con Amanecer.
+- **Pendiente:** la portada con el hero 1a, el wiki entero en 6b (hoy sigue en
+  el pergamino 6a del cronista), artículo de pueblo (65ch, capitular) y de
+  lengua (referencia, ancho completo), bibliografía con anclas, y los
+  experimentales §07–09.

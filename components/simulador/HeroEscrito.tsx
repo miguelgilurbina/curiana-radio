@@ -3,8 +3,11 @@
 import { useEffect, useState } from "react";
 
 // "El cronista escribe": el hero del laboratorio tipea primero la frase
-// caquetía, respira, y entonces escribe el titular en español — la máquina
-// que redacta la crónica, elevada a primer segundo de la experiencia.
+// caquetía, respira, y entonces llega el titular en español. Manual de
+// Kaketiana (design_handoff_kaketiana): el caret es SÓLO de las voces
+// simuladas — la frase la dijo un personaje y se tipea con él; el titular es
+// nuestra voz y entra con Amanecer (sube 14px y aparece, 600ms, la curva
+// única), sin caret.
 //
 // Progressive enhancement estricto: el servidor (y el primer paint) rinden
 // el texto completo; la animación solo arranca tras montar, y nunca con
@@ -14,7 +17,7 @@ import { useEffect, useState } from "react";
 // (sr-only durante la animación).
 
 const MS_LETRA_CAQUETIO = 46; // el caquetío se escribe despacio, letra a letra
-const MS_PALABRA_TITULO = 85; // el español llega rápido, palabra a palabra
+const MS_AMANECER = 600; // --kk-t-tinta
 const PAUSA_TRADUCCION = 750; // el respiro entre lengua y lengua
 const CARET_DESPEDIDA = 2600; // cuánto sigue parpadeando el caret al terminar
 
@@ -41,10 +44,7 @@ export default function HeroEscrito({
   const [animando, setAnimando] = useState(false);
   const [fase, setFase] = useState<Fase>("caquetio");
   const [letras, setLetras] = useState(0);
-  const [palabras, setPalabras] = useState(0);
   const [caretVivo, setCaretVivo] = useState(true);
-
-  const tituloPalabras = titulo.split(" ");
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -60,12 +60,7 @@ export default function HeroEscrito({
     }
     en((t += 80), () => setFase("pausa"));
     en((t += PAUSA_TRADUCCION), () => setFase("titulo"));
-    const nPalabras = titulo.split(" ").length;
-    for (let i = 1; i <= nPalabras; i++) {
-      const n = i;
-      en((t += MS_PALABRA_TITULO), () => setPalabras(n));
-    }
-    en((t += 120), () => setFase("fin"));
+    en((t += MS_AMANECER), () => setFase("fin"));
     en((t += CARET_DESPEDIDA), () => setCaretVivo(false));
 
     return () => timers.forEach(clearTimeout);
@@ -84,7 +79,7 @@ export default function HeroEscrito({
             </span>
             <span className="absolute inset-0" aria-hidden="true">
               {caquetio.slice(0, letras)}
-              <Caret visible={caretVivo && fase === "caquetio"} />
+              <Caret visible={caretVivo} />
             </span>
             <span className="sr-only">{caquetio}</span>
           </>
@@ -100,22 +95,20 @@ export default function HeroEscrito({
         {traduccion}
       </p>
 
-      {/* El titular: el cronista lo reescribe en español */}
-      <h2 className="relative mt-6 sim-display text-4xl font-semibold leading-[1.02] tracking-tight text-(--sim-ink) sm:text-5xl md:text-6xl">
-        {animando ? (
-          <>
-            <span className="invisible" aria-hidden="true">
-              {titulo}
-            </span>
-            <span className="absolute inset-0" aria-hidden="true">
-              {tituloPalabras.slice(0, palabras).join(" ")}
-              {(fase === "titulo" || fase === "fin") && <Caret visible={caretVivo} />}
-            </span>
-            <span className="sr-only">{titulo}</span>
-          </>
-        ) : (
-          titulo
-        )}
+      {/* El titular: nuestra voz, en español — entra con Amanecer */}
+      <h2
+        className="relative mt-6 sim-display text-4xl font-semibold leading-[1.02] tracking-tight text-(--sim-ink) sm:text-5xl md:text-6xl"
+        style={
+          animando
+            ? {
+                opacity: fase === "titulo" || fase === "fin" ? 1 : 0,
+                transform: fase === "titulo" || fase === "fin" ? "none" : "translateY(14px)",
+                transition: "opacity var(--kk-t-tinta) var(--kk-curva), transform var(--kk-t-tinta) var(--kk-curva)",
+              }
+            : undefined
+        }
+      >
+        {titulo}
       </h2>
     </div>
   );

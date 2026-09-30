@@ -41,6 +41,15 @@ export interface FraseCitada {
 
 export interface AbstractContent {
   version: number;
+  /** La transición wiki → experimento del manual de Kaketiana (§05). */
+  umbral: {
+    miga: string;
+    titulo: string[];
+    entrada: string;
+    ficcion: string;
+    nota: string;
+    accion: string;
+  };
   pitch: {
     overline: string;
     /** La frase que el cronista tipea antes del titular. No se escribe en el

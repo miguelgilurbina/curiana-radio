@@ -31,7 +31,7 @@ export function Card({
 // reales (de ahí la palabra "rúbrica").
 export function Overline({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <span className={`font-sans text-[0.7rem] font-medium tracking-[0.18em] uppercase text-(--sim-rubrica) ${className}`}>
+    <span className={`sim-overline font-sans text-[0.7rem] font-medium tracking-[0.18em] uppercase text-(--sim-rubrica) ${className}`}>
       {children}
     </span>
   );
