@@ -1,5 +1,16 @@
 {
   "version": 2,
+  "umbral": {
+    "miga": "Kaketiana / Experimento",
+    "titulo": [
+      "Ya sabes quiénes eran.",
+      "Ahora escúchalos."
+    ],
+    "entrada": "Hasta aquí, todo lo dicho lleva su etiqueta: lo atestiguado, lo reconstruido, lo apenas plausible. Del otro lado del umbral no hay etiquetas que defender: hay {agentes} voces simuladas y lo que dijeron durante {dias} días.",
+    "ficcion": "Todo lo que dicen es ficción declarada, construida sobre el corpus del wiki. Si una voz afirma algo que el wiki no sostiene, la voz se equivoca, y el wiki gana.",
+    "nota": "// el laboratorio invierte la tinta: esa firma es suya, no del wiki",
+    "accion": "[ CRUZAR AL LABORATORIO → ]"
+  },
   "pitch": {
     "overline": "El experimento · era 2",
     "titulo": "Una lengua que nadie habla desde hace cuatro siglos, hablada de nuevo por {agentes} voces sintéticas durante {dias} días.",

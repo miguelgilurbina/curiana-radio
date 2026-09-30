@@ -122,6 +122,164 @@
   --capa-hipotetico: #b8aa90;
 }
 
+/* ── Kaketiana: el manual de la sección ────────────────────────────────
+   design_handoff_kaketiana/ (2026-09-29). Dirección de color 6b «Sal y
+   almagre» para el wiki —la placa clara, mineral y arqueológica— y el Acto I
+   del experimento en tinta profunda ([data-sim-acto="laboratorio"], arriba),
+   que es su firma exclusiva. Reutiliza los --sim-* para heredar los
+   componentes. Una sola curva: la tinta seca, no rebota. */
+:root {
+  --kk-curva: cubic-bezier(0.22, 1, 0.36, 1);
+  --kk-t-rapido: 300ms; /* hovers, estados */
+  --kk-t-tinta: 600ms; /* entradas de contenido */
+  --kk-t-umbral: 1200ms; /* sólo la transición al experimento */
+}
+[data-kk-dir="sal"] {
+  --sim-paper: #f2ede3;
+  --sim-paper-deep: #e4dbc8; /* hundido: citas, ancla */
+  --sim-ink: #241d15;
+  --sim-ink-soft: #4f4638;
+  --sim-ink-faint: #857a66; /* sólo trazos y metadatos grandes: < 4.5:1 */
+  --sim-rule: #d5c9b0;
+  --sim-rubrica: #9c3a1d; /* almagre: lo editorial, «, subrayado */
+  --sim-fuego: #b06a1c; /* ocre: la forma caquetía, ◆ */
+  --kk-extra: #3f7d74; /* salina: enlaces, datos vivos */
+}
+
+@layer components {
+  /* La escala epistémica: la certeza es la solidez del trazo. Lleno es
+     evidencia, firme es inferencia citada, discontinuo es plausible,
+     punteado es tradición viva, doble es ficción declarada (sólo en el
+     experimento). En chips pequeños el texto va en ink-soft, nunca faint. */
+  .kk-ep {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 9px;
+    border-radius: 2px;
+    font-family: var(--sim-mono);
+    font-size: 0.6rem;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .kk-ep-s {
+    gap: 4px;
+    padding: 1px 6px;
+    font-size: 0.52rem;
+  }
+  .kk-ep-a {
+    background: var(--sim-ink);
+    color: var(--sim-paper);
+  }
+  .kk-ep-r {
+    border: 1.5px solid var(--sim-fuego);
+    color: var(--sim-fuego);
+  }
+  .kk-ep-h {
+    border: 1.5px dashed var(--sim-ink-faint);
+    color: var(--sim-ink-soft);
+  }
+  .kk-ep-x {
+    border: 1.5px dotted var(--sim-ink-faint);
+    color: var(--sim-ink-soft);
+  }
+  .kk-ep-c {
+    border: 3px double var(--sim-rubrica);
+    color: var(--sim-rubrica);
+  }
+
+  /* Micro-label: mono, tracking ancho, versalitas */
+  .kk-label {
+    font-family: var(--sim-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* La forma caquetía: display itálico en fuego */
+  .kk-forma {
+    font-family: var(--sim-display);
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 0, "WONK" 1;
+    font-style: italic;
+    color: var(--sim-fuego);
+  }
+
+  /* Acción en registro terminal, con la Rúbrica al pasar: subrayado de 2px
+     que se dibuja desde la izquierda. */
+  .kk-accion {
+    position: relative;
+    display: inline-block;
+    font-family: var(--sim-mono);
+    letter-spacing: 0.18em;
+    color: var(--sim-rubrica);
+  }
+  .kk-accion::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background: var(--sim-rubrica);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--kk-t-rapido) var(--kk-curva);
+  }
+  .kk-accion:hover::after,
+  .kk-accion:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Amanecer: la sección entra una sola vez, al llegar al viewport
+     (components/kaketiana/Amanecer.tsx). Sólo se esconde lo que todavía no
+     se ve: sin JS, o arriba del pliegue, todo está ahí desde el principio. */
+  .kk-amanecer[data-amanecer="espera"] {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .kk-amanecer[data-amanecer="visto"] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity var(--kk-t-tinta) var(--kk-curva),
+      transform var(--kk-t-tinta) var(--kk-curva);
+  }
+
+  /* El umbral: del pergamino de sal al laboratorio. Es el único registro que
+     cambia de tinta a mitad de camino, y lo hace en una banda SIN texto: arriba
+     se lee sobre la placa clara, abajo sobre la tinta, nunca en el medio. */
+  .kk-umbral-claro {
+    background: linear-gradient(180deg, #f2ede3 0%, #e4dbc8 100%);
+  }
+  .kk-umbral-banda {
+    background: linear-gradient(180deg, #e4dbc8 0%, #3a3040 55%, #0f1621 100%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kk-amanecer[data-amanecer] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .kk-accion::after {
+      transition: none;
+    }
+  }
+}
+
+/* Dentro de Kaketiana los overlines son micro-labels del manual (mono). Va
+   fuera de capa a propósito: tiene que ganarle a las utilidades de Tailwind
+   que el componente trae (font-sans, text-[0.7rem]). */
+[data-kk] .sim-overline {
+  font-family: var(--sim-mono);
+  font-weight: 400;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+}
+
 /* ── Tema "Dial" de JAI Sounds ─────────────────────────────────────────
    La tercera arista tiene su propio registro: ni el pergamino del cronista
    ni el papel de la radio. Es la cabina de noche — tinta profunda, y el

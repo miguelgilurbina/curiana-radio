@@ -4,7 +4,9 @@ import { getAbstract } from "@/lib/abstract";
 import { getFichasSeed } from "@/lib/fichas";
 import { getSerie, brazo, SERIE_ACTUAL } from "@/lib/serie";
 import { getEscenasParaElVisor } from "@/lib/escena";
-import Masthead from "@/components/simulador/Masthead";
+import Umbral from "@/components/kaketiana/Umbral";
+import Amanecer from "@/components/kaketiana/Amanecer";
+import Etiqueta from "@/components/kaketiana/Etiqueta";
 import {
   PortadaLab,
   AbstractCientifico,
@@ -40,10 +42,13 @@ function H3({ children }: { children: React.ReactNode }) {
 }
 
 // El experimento, era 2: la serie `era2-base`, dos brazos de treinta días.
-// La página entera vive en el registro oscuro del laboratorio. Las cifras salen
-// de los seeds (series/, escena/, wiki/fichas.json) y el texto del abstract las
-// recibe por marcas: nada aquí se escribe a mano. La era 1 —cómo se construyó
-// el motor— tiene su página aparte, con la advertencia de su bitácora.
+// Diseño: el manual de Kaketiana (design_handoff_kaketiana). Se entra por el
+// umbral —la placa clara del wiki que anochece— y del otro lado todo es el
+// Acto I en tinta profunda: lo que dice la simulación lleva ◉ canon-simulación
+// y sólo la voz simulada se escribe con caret. Las cifras salen de los seeds
+// (series/, escena/, wiki/fichas.json) y el texto del abstract las recibe por
+// marcas: nada aquí se escribe a mano. La era 1 —cómo se construyó el motor—
+// tiene su página aparte, con la advertencia de su bitácora.
 export default function ExperimentoPage() {
   const abstract = getAbstract();
   const serie = getSerie();
@@ -55,153 +60,169 @@ export default function ExperimentoPage() {
   const nf = (n: number) => n.toLocaleString("es-VE");
 
   return (
-    <div data-sim-acto="laboratorio" className="bg-(--sim-paper)">
-      <div className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        <Masthead />
+    <div data-kk>
+      <Umbral umbral={abstract.umbral} destino="#laboratorio" />
 
-        <div className="mx-auto max-w-[820px]">
-          <PortadaLab pitch={abstract.pitch} />
-          <p className="mt-4 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
-            La frase del principio la dijo {frase.quien}, en {frase.lugar}, el día {frase.dia} de la
-            simulación (run <code className="sim-mono">{frase.run}</code>). {frase.nota}
-          </p>
-
-          {serie?.elenco && escena && control && (
-            <DataAside
-              items={[
-                {
-                  label: "Voces",
-                  value: nf(serie.elenco.total),
-                  sub: Object.entries(serie.elenco.por_nodo)
-                    .map(([nodo, n]) => `${nodo.charAt(0)}${nodo.slice(1).toLowerCase()} ${n}`)
-                    .join(" · "),
-                },
-                { label: "Días", value: `${escena.dias} × ${serie.brazos.length}`, sub: "con escena y de control" },
-                {
-                  label: "Intervenciones",
-                  value: nf(escena.respuestas + control.respuestas),
-                  sub: "todas guardadas, todas citables",
-                },
-                {
-                  label: "Diccionario",
-                  value: nf(fichas.n),
-                  sub: `${nf(fichas.por_capa.atestiguado)} voces atestiguadas`,
-                },
-              ]}
-            />
-          )}
-
-          <AbstractCientifico parrafos={abstract.abstract} />
-
-          {serie && escena && control ? (
-            <>
-              <section id="resultados" className="mt-14 scroll-mt-24">
-                <Overline>Lo que pasó</Overline>
-                <H3>
-                  {escena.dias} días, {serie.brazos.length} brazos
-                </H3>
-                <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-                  La misma comunidad, dos veces: una con el mapa de Paraguaná y el Capubana cada{" "}
-                  {serie.capubana.cada} días, y otra sin mapa, donde todos oyen a todos. La gráfica
-                  mide la distancia entre las maneras de hablar de los {serie.elenco?.total} personajes,
-                  día a día.
-                </p>
-                <figure className="mt-6">
-                  <SerieBrazosChart escena={escena.serie} control={control.serie} capubana={serie.capubana.dias} />
-                  <figcaption className="sim-mono mt-3 text-[0.65rem] uppercase tracking-[0.14em] text-(--sim-ink-faint)">
-                    Fig. 1 · Distancia idiolectal media por día, serie {serie.serie}. Baja = las voces se
-                    parecen más.
-                  </figcaption>
-                </figure>
-                <HallazgosSerie seed={serie} />
-              </section>
-
-              <section id="nombres" className="mt-16 scroll-mt-24">
-                <Overline>Lo que la comunidad nombró</Overline>
-                <H3>La misma cosa, dos nombres</H3>
-                <NombresDeLaSerie seed={serie} />
-              </section>
-            </>
-          ) : (
-            <div className="mt-14">
-              <EmptyState
-                title="Todavía no hay una serie exportada"
-                hint="Corre export_serie_seed.py contra Supabase local al cerrar una serie."
-              />
-            </div>
-          )}
-
-          {/* La escena: el visor de repetición sobre el mapa real (decisión de
-              Miguel 2026-09-17). Sólo los días exportados de ESTA serie. */}
-          {escenas.length > 0 && (
-            <section id="escena" className="mt-16 scroll-mt-24">
-              <Overline>El mundo, turno a turno</Overline>
-              <H3>Dónde estaba cada uno</H3>
-              <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-                Un personaje no vive en una etiqueta: está en un sitio, a una hora, con quien esté ahí.
-                Esto no simula nada: lee la escena que el motor guardó, a cada uno en un lugar en cada
-                momento del día, y la pone sobre Paraguaná. Lo que se dijo en un sitio se lee pinchando
-                el sitio.
-              </p>
-              <MapaDeEscena seeds={escenas} />
-            </section>
-          )}
-
-          <Conceptos conceptos={abstract.conceptos} />
-          <PipelineFlujo pasos={abstract.pipeline} />
-
-          <section id="limites" className="mt-14 scroll-mt-24">
-            <Overline>Dicho con cuidado</Overline>
-            <H3>Lo que esto no prueba</H3>
-            <ul className="mt-5 max-w-reading list-disc space-y-2 pl-5 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-              {abstract.limites.map((l) => (
-                <li key={l}>{l}</li>
-              ))}
-            </ul>
-            <p className="sim-display mt-8 text-xl font-semibold text-(--sim-ink)">Lo que sigue</p>
-            <ul className="mt-3 max-w-reading list-disc space-y-2 pl-5 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-              {abstract.siguiente.map((l) => (
-                <li key={l}>{l}</li>
-              ))}
-            </ul>
-          </section>
-
-          <footer className="mt-16 border-t border-(--sim-rule) pt-8">
-            <Link href="/kaketiana/experimento/era-1" className="group block max-w-reading">
-              <Overline>Historia del motor</Overline>
-              <span className="sim-display mt-1 block text-xl font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
-                La era 1: cómo se construyó el instrumento →
+      <div id="laboratorio" data-sim-acto="laboratorio" className="scroll-mt-0 bg-(--sim-paper)">
+        <div className="mx-auto max-w-6xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[820px]">
+            <PortadaLab pitch={abstract.pitch} />
+            {/* El pie de la cita, como lo pide el manual: quién, dónde, cuándo y
+                la etiqueta. Es una voz simulada: ◉. */}
+            <p className="mt-4 flex max-w-reading flex-wrap items-center gap-x-2 gap-y-1.5">
+              <span className="sim-mono text-[0.7rem] tracking-[0.08em] text-(--sim-ink-soft)">
+                — {frase.quien} · {frase.lugar} · día {frase.dia} · run {frase.run}
               </span>
-              <span className="mt-1 block font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
-                Las simulaciones de junio y julio de 2026, su crónica y el primer experimento de control.
-                Pruebas de desarrollo, no resultados.
-              </span>
-            </Link>
-
-            <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {ANEXOS.map((a) => (
-                <li key={a.href}>
-                  <Link href={a.href} className="group block">
-                    <span className="sim-display text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
-                      {a.label} →
-                    </span>
-                    <span className="mt-1 block font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{a.desc}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-10 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
-              {abstract.nota_honestidad}
+              <Etiqueta grado="canon" corta />
             </p>
-            {serie && escena && control && (
-              <p className="sim-mono mt-3 max-w-reading text-[0.65rem] leading-relaxed text-(--sim-ink-faint)">
-                Serie {serie.serie} · con escena {escena.runs.primero}→{escena.runs.ultimo} · control{" "}
-                {control.runs.primero}→{control.runs.ultimo} · motor {serie.motor.join(", ")} ·{" "}
-                {escena.motor.modelos.join(", ")} · exportado {serie.generado.slice(0, 10)}
-              </p>
+            <p className="mt-2 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-soft)">
+              {frase.nota}
+            </p>
+
+            {serie?.elenco && escena && control && (
+              <DataAside
+                items={[
+                  {
+                    label: "Voces",
+                    value: nf(serie.elenco.total),
+                    sub: Object.entries(serie.elenco.por_nodo)
+                      .map(([nodo, n]) => `${nodo.charAt(0)}${nodo.slice(1).toLowerCase()} ${n}`)
+                      .join(" · "),
+                  },
+                  { label: "Días", value: `${escena.dias} × ${serie.brazos.length}`, sub: "con escena y de control" },
+                  {
+                    label: "Intervenciones",
+                    value: nf(escena.respuestas + control.respuestas),
+                    sub: "todas guardadas, todas citables",
+                  },
+                  {
+                    label: "Diccionario",
+                    value: nf(fichas.n),
+                    sub: `${nf(fichas.por_capa.atestiguado)} voces atestiguadas`,
+                  },
+                ]}
+              />
             )}
-          </footer>
+
+            <AbstractCientifico parrafos={abstract.abstract} />
+
+            {serie && escena && control ? (
+              <>
+                <Amanecer as="section" id="resultados" className="mt-14 scroll-mt-24">
+                  <Overline>Lo que pasó</Overline>
+                  <H3>
+                    {escena.dias} días, {serie.brazos.length} brazos
+                  </H3>
+                  <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                    La misma comunidad, dos veces: una con el mapa de Paraguaná y el Capubana cada{" "}
+                    {serie.capubana.cada} días, y otra sin mapa, donde todos oyen a todos. La gráfica
+                    mide la distancia entre las maneras de hablar de los {serie.elenco?.total} personajes,
+                    día a día.
+                  </p>
+                  <figure className="mt-6">
+                    <SerieBrazosChart escena={escena.serie} control={control.serie} capubana={serie.capubana.dias} />
+                    <figcaption className="sim-mono mt-3 text-[0.65rem] uppercase tracking-[0.14em] text-(--sim-ink-faint)">
+                      Fig. 1 · Distancia idiolectal media por día, serie {serie.serie}. Baja = las voces se
+                      parecen más.
+                    </figcaption>
+                  </figure>
+                  <HallazgosSerie seed={serie} />
+                </Amanecer>
+
+                <Amanecer as="section" id="nombres" className="mt-16 scroll-mt-24">
+                  <Overline>Lo que la comunidad nombró</Overline>
+                  <H3>La misma cosa, dos nombres</H3>
+                  <NombresDeLaSerie seed={serie} />
+                </Amanecer>
+              </>
+            ) : (
+              <div className="mt-14">
+                <EmptyState
+                  title="Todavía no hay una serie exportada"
+                  hint="Corre export_serie_seed.py contra Supabase local al cerrar una serie."
+                />
+              </div>
+            )}
+
+            {/* La escena: el visor de repetición sobre el mapa real (decisión de
+                Miguel 2026-09-17). Sólo los días exportados de ESTA serie. */}
+            {escenas.length > 0 && (
+              <Amanecer as="section" id="escena" className="mt-16 scroll-mt-24">
+                <Overline>El mundo, turno a turno</Overline>
+                <H3>Dónde estaba cada uno</H3>
+                <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                  Un personaje no vive en una etiqueta: está en un sitio, a una hora, con quien esté ahí.
+                  Esto no simula nada: lee la escena que el motor guardó, a cada uno en un lugar en cada
+                  momento del día, y la pone sobre Paraguaná. Lo que se dijo en un sitio se lee pinchando
+                  el sitio.
+                </p>
+                <MapaDeEscena seeds={escenas} />
+              </Amanecer>
+            )}
+
+            <Amanecer>
+              <Conceptos conceptos={abstract.conceptos} />
+            </Amanecer>
+            <Amanecer>
+              <PipelineFlujo pasos={abstract.pipeline} />
+            </Amanecer>
+
+            <Amanecer as="section" id="limites" className="mt-14 scroll-mt-24">
+              <Overline>Dicho con cuidado</Overline>
+              <H3>Lo que esto no prueba</H3>
+              <ul className="mt-5 max-w-reading list-disc space-y-2 pl-5 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                {abstract.limites.map((l) => (
+                  <li key={l}>{l}</li>
+                ))}
+              </ul>
+              <p className="sim-display mt-8 text-xl font-semibold text-(--sim-ink)">Lo que sigue</p>
+              <ul className="mt-3 max-w-reading list-disc space-y-2 pl-5 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                {abstract.siguiente.map((l) => (
+                  <li key={l}>{l}</li>
+                ))}
+              </ul>
+            </Amanecer>
+
+            <footer className="mt-16 border-t border-(--sim-rule) pt-8">
+              <div className="max-w-reading">
+                <Overline>Historia del motor</Overline>
+                <p className="sim-display mt-1 text-xl font-semibold text-(--sim-ink)">
+                  La era 1: cómo se construyó el instrumento
+                </p>
+                <p className="mt-1 font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
+                  Las simulaciones de junio y julio de 2026, su crónica y el primer experimento de control.
+                  Pruebas de desarrollo, no resultados.
+                </p>
+                <Link href="/kaketiana/experimento/era-1" className="kk-accion mt-3 text-[0.75rem]">
+                  [ LEER LA ERA 1 → ]
+                </Link>
+              </div>
+
+              <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {ANEXOS.map((a) => (
+                  <li key={a.href}>
+                    <Link href={a.href} className="group block">
+                      <span className="sim-display text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
+                        {a.label} →
+                      </span>
+                      <span className="mt-1 block font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{a.desc}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-10 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-faint)">
+                {abstract.nota_honestidad}
+              </p>
+              {serie && escena && control && (
+                <p className="sim-mono mt-3 max-w-reading text-[0.65rem] leading-relaxed text-(--sim-ink-faint)">
+                  Serie {serie.serie} · con escena {escena.runs.primero}→{escena.runs.ultimo} · control{" "}
+                  {control.runs.primero}→{control.runs.ultimo} · motor {serie.motor.join(", ")} ·{" "}
+                  {escena.motor.modelos.join(", ")} · exportado {serie.generado.slice(0, 10)}
+                </p>
+              )}
+            </footer>
+          </div>
         </div>
       </div>
     </div>
