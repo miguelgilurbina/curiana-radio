@@ -129,9 +129,11 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
           <br />
           patrón <span ref={patron}>surcos</span>
         </div>
-        <h1 className="intro-disco-esq intro-disco-firma m-0">
-          Curiana
-          <br />
+        {/* El nombre va con el logo: aparece cuando la espiral se revela, al
+            costado del disco (debajo en pantallas angostas), nunca encima de
+            la arena. Sigue en el DOM desde el principio: es el h1 de la página. */}
+        <h1 className="intro-disco-nombre m-0">
+          Curiana <br className="intro-disco-nombre-salto" />
           Radio
         </h1>
 

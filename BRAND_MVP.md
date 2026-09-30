@@ -119,7 +119,7 @@ lectura ≥ 4.5:1, apuntando a ≥ 7:1.
 | `--noche-hueso` | `#EEE6D4` | texto principal y display (≈ 14:1) |
 | `--noche-hueso-2` | `#C6CFD9` | texto secundario, overlines, metadatos (≈ 10:1); **nunca más tenue** |
 | `--noche-filete` · `--noche-filete-fuerte` | `#3A4B61` · `#5A6D85` | bordes; puntos inactivos |
-| `--noche-oro` | `#E0BB66` | la firma de El Disco |
+| `--noche-oro` | `#E0BB66` | el nombre de El Disco, junto al logo |
 | gradiente | `#0F1621 → #1F2C3E → #131C28 → #2F425B` | `.noche-gradiente`, 15 s a 135° |
 
 **Superficies de sección** (tokens scoped por atributo, como `data-sim-theme`
@@ -278,14 +278,17 @@ Afinado, la espiral original aparece en hueso y se habilita
   oscuros: no suavizar) → revelado con el PNG como alfa a 0.95R.
 - **Paleta.** `--noche-hondo` de fondo; arena oro `#E6B43C` sobre tinta
   `#090806`; texto en hueso/hueso-2 sobre placa sólida (≥ 11:1), **nunca texto
-  sobre arena**; firma en `--noche-oro`; aguja, punto y cursor en frequency.
+  sobre arena**; el nombre en `--noche-oro`; aguja, punto y cursor en frequency.
 - **Accesibilidad.** `prefers-reduced-motion`: el tiempo se congela, arranca
   afinado y SINTONIZAR navega sin transición. Botones reales en el orden
   SALTAR → SINTONIZAR (el foco pasa solo al segundo); "señal encontrada" se
   anuncia con `aria-live`. Sin WebGL2: el isotipo en hueso con el bloque final
   ya visible.
-- **Móvil (< 640 px).** Se oculta el bloque de datos de arriba a la derecha y
-  la firma sube a esa esquina (abajo chocaba con el proverbio).
+- **El nombre va con el logo** (Miguel, 2026-09-29). «Curiana Radio» ya no es
+  una firma de esquina: aparece al afinar, al ritmo del revelado de la espiral,
+  como lockup — a la derecha del disco y centrado en él; en pantallas
+  verticales, debajo del disco y en una línea. Nunca sobre la arena.
+- **Móvil (< 640 px).** Se oculta el bloque de datos de arriba a la derecha.
 
 ---
 
