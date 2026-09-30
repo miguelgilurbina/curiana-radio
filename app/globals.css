@@ -58,7 +58,7 @@
   --noche-hueso-2: #c6cfd9; /* texto secundario y metadatos: nunca más tenue */
   --noche-filete: #3a4b61; /* borde */
   --noche-filete-fuerte: #5a6d85; /* borde fuerte, puntos inactivos */
-  --noche-oro: #e0bb66; /* la firma de El Disco */
+  --noche-oro: #e0bb66; /* el nombre de El Disco, junto al logo */
 
   /* Typography */
   --font-serif: var(--font-lora);
@@ -600,15 +600,31 @@
   .intro-disco-tr span {
     color: var(--noche-hueso);
   }
-  .intro-disco-firma {
-    right: 30px;
-    bottom: 26px;
-    text-align: right;
+  /* El nombre va con el logo, como un lockup: aparece al afinar, al ritmo
+     del revelado de la espiral (rev sube en ~1.8 s), a la derecha del disco y
+     centrado en él. Nunca encima de la arena: sale del borde del disco, que
+     es min(32vh, 44vw) de radio con el centro 9vh arriba (disco-motor.ts). */
+  .intro-disco-nombre {
+    position: absolute;
+    z-index: 2;
+    left: calc(50% + min(32vh, 44vw) + clamp(22px, 2.6vw, 44px));
+    top: calc(50% - 9vh);
+    transform: translate(-10px, -50%);
+    text-align: left;
     font-family: var(--font-lora), Georgia, serif;
     font-weight: 600;
-    font-size: clamp(20px, 2.2vw, 28px);
+    font-size: clamp(22px, 2.6vw, 38px);
     line-height: 1.05;
     color: var(--noche-oro);
+    pointer-events: none;
+    opacity: 0;
+    transition:
+      opacity 1.8s ease-out,
+      transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .intro-disco[data-ok] .intro-disco-nombre {
+    opacity: 1;
+    transform: translate(0, -50%);
   }
   .intro-disco-pie {
     position: absolute;
@@ -839,16 +855,31 @@
     .intro-disco-punto {
       animation: none;
     }
+    .intro-disco-nombre {
+      transition: none;
+    }
   }
   @media (max-width: 640px) {
     .intro-disco-tr {
       display: none;
     }
-    /* Abajo a la derecha la firma chocaría con el proverbio: sube a la
-       esquina que deja libre el bloque de datos. */
-    .intro-disco-firma {
-      top: 26px;
-      bottom: auto;
+  }
+  /* Vertical (el disco llena el ancho): al costado no cabe, así que el nombre
+     va debajo del disco, en una línea, antes del bloque final. */
+  @media (max-aspect-ratio: 1/1) {
+    .intro-disco-nombre {
+      left: 50%;
+      top: calc(50% - 9vh + min(32vh, 44vw) + 22px);
+      transform: translate(-50%, 8px);
+      text-align: center;
+      white-space: nowrap;
+      font-size: clamp(20px, 5.4vw, 30px);
+    }
+    .intro-disco[data-ok] .intro-disco-nombre {
+      transform: translate(-50%, 0);
+    }
+    .intro-disco-nombre-salto {
+      display: none;
     }
   }
 }

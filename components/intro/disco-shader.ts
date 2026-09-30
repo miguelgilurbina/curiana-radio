@@ -2,7 +2,10 @@
 // (design_handoff_intro_v1_disco/Intro v1 El Disco.html). Un solo triángulo a
 // pantalla completa; todo el disco sale del fragment shader. Las capas, de
 // fondo a frente, están descritas en BRAND_MVP.md §9. Los valores del grano
-// están aprobados: no suavizar.
+// están aprobados: no suavizar. Única desviación del prototipo, la costura de
+// atan en el radio izquierdo (2026-09-29): el antialias ya no la ve (era un
+// filete con la espiral hecha) y a medio armar se reparte en una cuña (era un
+// corte recto en los surcos). Con la espiral hecha el disco es idéntico.
 
 export const VERTICE = `#version 300 es
 in vec2 a; void main(){ gl_Position = vec4(a,0.,1.); }`;
@@ -43,9 +46,20 @@ void main(){
     // campo 2: espiral ovalada como el isotipo
     vec2 e = q * vec2(.9, 1.15);
     float r = length(e), a = atan(e.y, e.x);
-    float f2 = r*9. - a/TAU - uT*.04 + (fbm(q*3.)-.5)*.14;
+    // el mismo ángulo con la costura del otro lado (eje +x): sólo para medir
+    // el antialias, ver aa más abajo
+    float a2 = atan(-e.y, -e.x) + TAU*.5;
     float grow = uM * 1.6;
     float wm = smoothstep(grow + .28, grow - .05, r) * smoothstep(0., .06, uM);
+    // Mientras el anillo se arma (0 < wm < 1) la espiral tiene que pasar de
+    // no dar vuelta a dar una, y con la mezcla lineal todo ese salto caía en
+    // el semieje −x: un corte recto en los surcos. Se reparte en una cuña que
+    // sólo existe a medio armar (ancho ∝ wm·(1−wm)): con la espiral hecha o
+    // sin empezar, u = a/TAU y el disco es el del prototipo.
+    float u = a/TAU;
+    float cuna = .9 * 4.*wm*(1. - wm);
+    if (cuna > 1e-3) u *= 1. - smoothstep(TAU*.5 - cuna, TAU*.5, abs(a));
+    float f2 = r*9. - u - uT*.04 + (fbm(q*3.)-.5)*.14;
     float f = mix(f1, f2, wm);
     for (int i = 0; i < 8; i++) {
       vec4 k = uW[i]; float age = uT - k.z;
@@ -59,7 +73,13 @@ void main(){
     f += uExit*uExit*10.*r;
     float lit = .5 + .5*sin(TAU*f + .95), h = .5 + .5*sin(TAU*f);
     float b = smoothstep(.1, .96, .62*lit + .38*h);
-    float aa = fwidth(f);
+    // atan salta de π a −π en el semieje −x: f salta ahí en wm (1 con la
+    // espiral hecha). El seno no lo ve —período 1—, pero fwidth sí, y el
+    // antialias pintaba un filete gris a lo largo del radio izquierdo. f2b es
+    // f con la costura del otro lado; el menor de los dos fwidth no ve
+    // ninguna de las dos. f no cambia: el disco se dibuja igual.
+    float f2b = f - wm*(a2 - a)/TAU;
+    float aa = min(fwidth(f), fwidth(f2b));
     b = mix(.4, b, clamp(1. - aa*1.6, 0., 1.));
     // domo: el disco es una colina vista de frente
     float dome = sqrt(max(0., 1. - dd*dd));
