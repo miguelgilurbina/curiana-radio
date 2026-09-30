@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getWikiPorSeccion, getCifrasWiki } from "@/lib/wiki";
-import { getAllPersonajes } from "@/lib/personajes";
+import { getSerie, brazo } from "@/lib/serie";
 import { getFichasSeed } from "@/lib/fichas";
 import { CAPAS_EPISTEMICAS } from "@/lib/sim-theme";
 import Masthead from "@/components/simulador/Masthead";
@@ -23,7 +23,8 @@ export default function KaketianaPage() {
   const cifras = getCifrasWiki();
   const pueblo = getWikiPorSeccion("pueblo");
   const lengua = getWikiPorSeccion("lengua");
-  const personajes = getAllPersonajes();
+  const serie = getSerie();
+  const escena = serie ? brazo(serie, "escena") : undefined;
   const fichas = getFichasSeed();
 
   return (
@@ -53,7 +54,9 @@ export default function KaketianaPage() {
           items={[
             { label: "Artículos", value: cifras.articulos, sub: "sobre el pueblo y su lengua" },
             { label: "Obras", value: cifras.obras, sub: `${cifras.conLectura} se pueden leer en línea` },
-            { label: "Voces simuladas", value: personajes.length, sub: "personajes con arco propio" },
+            ...(serie?.elenco
+              ? [{ label: "Voces simuladas", value: serie.elenco.total, sub: "en dos pueblos de Paraguaná" }]
+              : []),
           ]}
         />
 
@@ -152,15 +155,17 @@ export default function KaketianaPage() {
         <section className="mt-12 border-t border-(--sim-ink) pt-6">
           <h3 className="sim-display text-2xl font-semibold text-(--sim-ink)">Y un experimento</h3>
           <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-            Con todo lo anterior se construyó una simulación: {personajes.length} personajes
-            hablan el caquetío reconstruido, inventan palabras y se contagian entre sí. No
-            prueba cómo hablaban los caquetíos — prueba qué le pasa a una lengua cuando la
-            gente la usa.
+            Con todo lo anterior se construyó una simulación:{" "}
+            {serie?.elenco ? `${serie.elenco.total} personajes` : "una comunidad de personajes"} en
+            dos pueblos de Paraguaná hablan el caquetío reconstruido
+            {escena ? ` durante ${escena.dias} días` : ""}, inventan nombres para lo que no lo tiene
+            y se contagian entre sí. No prueba cómo hablaban los caquetíos: prueba qué le pasa a
+            una lengua cuando la gente la usa, y qué cambia cuando cada pueblo vive en su lugar.
           </p>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-sans text-sm">
             {[
               { href: "/kaketiana/experimento", label: "El experimento →" },
-              { href: "/kaketiana/personajes", label: "Los personajes" },
+              { href: "/kaketiana/personajes", label: "Los personajes de la era 1" },
               { href: "/kaketiana/lexicon", label: "El diccionario" },
               { href: "/kaketiana/neologisms", label: "Los neologismos" },
               { href: "/kaketiana/bibliografia", label: "La bibliografía" },

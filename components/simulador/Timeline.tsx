@@ -72,7 +72,7 @@ export default function Timeline({
         {epocas.map((e) => (
           <Link
             key={e.id}
-            href={`/kaketiana/experimento#epoca-${e.id}`}
+            href={`/kaketiana/experimento/era-1#epoca-${e.id}`}
             className={`shrink-0 rounded-full px-3 py-1 font-sans text-xs transition-colors ${
               enPortada && activa === e.id
                 ? "bg-(--sim-ink) text-(--sim-paper)"
@@ -119,7 +119,7 @@ export default function Timeline({
                   esActiva ? "bg-(--sim-rubrica)" : "bg-(--sim-rule)"
                 }`}
               />
-              <Link href={`/kaketiana/experimento#epoca-${e.id}`} className="group block">
+              <Link href={`/kaketiana/experimento/era-1#epoca-${e.id}`} className="group block">
                 <span className="font-sans text-[0.7rem] tabular-nums uppercase tracking-wide text-(--sim-ink-faint)">
                   Días {e.dias[0]}–{e.dias[1]}
                 </span>

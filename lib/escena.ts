@@ -130,8 +130,15 @@ export function getEscenas(): EscenaSeed[] {
  * No hay `index.json` que mantener: el índice ES el directorio, leído en el
  * build. Así no puede quedarse viejo respecto de los seeds que lista.
  */
-export function getEscenasParaElVisor(): EscenaSeed[] {
-  const seeds = getEscenas();
+export function getEscenasParaElVisor(serie?: string): EscenaSeed[] {
+  const todos = getEscenas();
+  // Con `serie`, sólo los días de esa serie, en orden de día: la página cuenta
+  // un experimento, no todo lo que alguna vez se exportó.
+  const seeds = serie
+    ? todos
+        .filter((s) => s.run.serie === serie)
+        .sort((a, b) => (a.run.dias[0] ?? 0) - (b.run.dias[0] ?? 0))
+    : todos;
   return [...seeds.filter((s) => !s.vacio), ...seeds.filter((s) => s.vacio)];
 }
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllPersonajes, type Personaje } from "@/lib/personajes";
 import { Overline, Avatar, ScoreGauge, EmptyState } from "@/components/simulador/ui";
+import { getSerie } from "@/lib/serie";
 
 export const metadata: Metadata = {
   title: "Personajes — Simulador Caquetío | Curiana Radio",
@@ -63,6 +64,7 @@ export default function PersonajesPage() {
     );
   }
 
+  const elenco = getSerie()?.elenco ?? null;
   const agrupados = GRUPOS.map((g) => ({
     ...g,
     personajes: personajes.filter((p) => p.tier === g.tier),
@@ -78,6 +80,23 @@ export default function PersonajesPage() {
           {personajes.length} voces de la Curiana con historia propia. Cada una llegó con una
           biografía fija — y salió de la historia con un arco, un puñado de palabras nuevas y
           frases que nadie le escribió de antemano.
+        </p>
+        <p className="mt-3 max-w-reading rounded-md border border-(--sim-rule) bg-(--sim-paper-deep) px-4 py-3 font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
+          Son las voces de la crónica de la{" "}
+          <Link href="/kaketiana/experimento/era-1" className="text-(--sim-fuego) hover:text-(--sim-rubrica)">
+            era 1
+          </Link>
+          , cuando el experimento todavía era un solo golfete sin mapa.
+          {elenco && (
+            <>
+              {" "}El elenco de la era 2 —{elenco.total} personajes en dos pueblos de Paraguaná— se
+              cuenta en{" "}
+              <Link href="/kaketiana/experimento" className="text-(--sim-fuego) hover:text-(--sim-rubrica)">
+                el experimento
+              </Link>
+              .
+            </>
+          )}
         </p>
       </header>
 

@@ -1,0 +1,1443 @@
+{
+  "version": 1,
+  "generado": "2026-09-30T01:59:13+00:00",
+  "serie": "era2-base",
+  "elenco": {
+    "total": 63,
+    "por_nodo": {
+      "GUARANAO": 39,
+      "AMUAY": 24
+    }
+  },
+  "motor": [
+    "91860d7b"
+  ],
+  "brazos": [
+    {
+      "clave": "escena",
+      "escena": true,
+      "capubana_cada": 3,
+      "runs": {
+        "primero": "dd680e49",
+        "ultimo": "720d1ef1",
+        "n": 30
+      },
+      "dias": 30,
+      "semillas": [
+        "101",
+        "130"
+      ],
+      "motor": {
+        "modelos": [
+          "claude-haiku-4-5-20251001"
+        ],
+        "commits": [
+          "91860d7b"
+        ],
+        "sucios": 0,
+        "sin_huella": 0
+      },
+      "respuestas": 2160,
+      "agentes": 63,
+      "serie": [
+        {
+          "dia": 1,
+          "acumulada": 0.7326,
+          "ventana": 0.609,
+          "emergente": 0.927,
+          "brecha": 0.0028,
+          "emergente_dia": 0.9259,
+          "brecha_dia": 0.0028
+        },
+        {
+          "dia": 2,
+          "acumulada": 0.5764,
+          "ventana": 0.4645,
+          "emergente": 0.9035,
+          "brecha": 0.0128,
+          "emergente_dia": 0.9133,
+          "brecha_dia": 0.0191
+        },
+        {
+          "dia": 3,
+          "acumulada": 0.4593,
+          "ventana": 0.374,
+          "emergente": 0.7629,
+          "brecha": 0.003,
+          "emergente_dia": 0.7276,
+          "brecha_dia": -0.0088
+        },
+        {
+          "dia": 4,
+          "acumulada": 0.4091,
+          "ventana": 0.3398,
+          "emergente": 0.7744,
+          "brecha": 0.0094,
+          "emergente_dia": 0.8968,
+          "brecha_dia": 0.0178
+        },
+        {
+          "dia": 5,
+          "acumulada": 0.3578,
+          "ventana": 0.3038,
+          "emergente": 0.7508,
+          "brecha": 0.0024,
+          "emergente_dia": 0.9132,
+          "brecha_dia": 0.0031
+        },
+        {
+          "dia": 6,
+          "acumulada": 0.3167,
+          "ventana": 0.276,
+          "emergente": 0.6983,
+          "brecha": -0.0035,
+          "emergente_dia": 0.8326,
+          "brecha_dia": -0.0096
+        },
+        {
+          "dia": 7,
+          "acumulada": 0.2967,
+          "ventana": 0.2628,
+          "emergente": 0.6849,
+          "brecha": -0.0041,
+          "emergente_dia": 0.8989,
+          "brecha_dia": 0.0185
+        },
+        {
+          "dia": 8,
+          "acumulada": 0.2793,
+          "ventana": 0.2523,
+          "emergente": 0.6818,
+          "brecha": 0.0021,
+          "emergente_dia": 0.8944,
+          "brecha_dia": 0.0363
+        },
+        {
+          "dia": 9,
+          "acumulada": 0.2586,
+          "ventana": 0.2415,
+          "emergente": 0.6618,
+          "brecha": 0.0,
+          "emergente_dia": 0.8229,
+          "brecha_dia": -0.0005
+        },
+        {
+          "dia": 10,
+          "acumulada": 0.2493,
+          "ventana": 0.2371,
+          "emergente": 0.6586,
+          "brecha": 0.0055,
+          "emergente_dia": 0.8761,
+          "brecha_dia": 0.0273
+        },
+        {
+          "dia": 11,
+          "acumulada": 0.2383,
+          "ventana": 0.2362,
+          "emergente": 0.6491,
+          "brecha": 0.0114,
+          "emergente_dia": 0.883,
+          "brecha_dia": 0.0243
+        },
+        {
+          "dia": 12,
+          "acumulada": 0.2286,
+          "ventana": 0.2355,
+          "emergente": 0.6295,
+          "brecha": 0.0123,
+          "emergente_dia": 0.7745,
+          "brecha_dia": 0.0126
+        },
+        {
+          "dia": 13,
+          "acumulada": 0.2133,
+          "ventana": 0.2272,
+          "emergente": 0.6252,
+          "brecha": 0.0158,
+          "emergente_dia": 0.8787,
+          "brecha_dia": 0.0374
+        },
+        {
+          "dia": 14,
+          "acumulada": 0.2099,
+          "ventana": 0.2319,
+          "emergente": 0.6277,
+          "brecha": 0.0201,
+          "emergente_dia": 0.8812,
+          "brecha_dia": 0.047
+        },
+        {
+          "dia": 15,
+          "acumulada": 0.2068,
+          "ventana": 0.2354,
+          "emergente": 0.6101,
+          "brecha": 0.0205,
+          "emergente_dia": 0.8373,
+          "brecha_dia": 0.0136
+        },
+        {
+          "dia": 16,
+          "acumulada": 0.1996,
+          "ventana": 0.2328,
+          "emergente": 0.6258,
+          "brecha": 0.0213,
+          "emergente_dia": 0.8909,
+          "brecha_dia": 0.0184
+        },
+        {
+          "dia": 17,
+          "acumulada": 0.194,
+          "ventana": 0.2324,
+          "emergente": 0.6225,
+          "brecha": 0.0236,
+          "emergente_dia": 0.8659,
+          "brecha_dia": 0.0297
+        },
+        {
+          "dia": 18,
+          "acumulada": 0.1954,
+          "ventana": 0.2391,
+          "emergente": 0.6175,
+          "brecha": 0.022,
+          "emergente_dia": 0.7566,
+          "brecha_dia": -0.0197
+        },
+        {
+          "dia": 19,
+          "acumulada": 0.1872,
+          "ventana": 0.2325,
+          "emergente": 0.6276,
+          "brecha": 0.0244,
+          "emergente_dia": 0.8923,
+          "brecha_dia": 0.0314
+        },
+        {
+          "dia": 20,
+          "acumulada": 0.1789,
+          "ventana": 0.2281,
+          "emergente": 0.6297,
+          "brecha": 0.0253,
+          "emergente_dia": 0.8602,
+          "brecha_dia": 0.0479
+        },
+        {
+          "dia": 21,
+          "acumulada": 0.1756,
+          "ventana": 0.2271,
+          "emergente": 0.6284,
+          "brecha": 0.0252,
+          "emergente_dia": 0.8495,
+          "brecha_dia": 0.0229
+        },
+        {
+          "dia": 22,
+          "acumulada": 0.1732,
+          "ventana": 0.2272,
+          "emergente": 0.6397,
+          "brecha": 0.0295,
+          "emergente_dia": 0.905,
+          "brecha_dia": 0.0431
+        },
+        {
+          "dia": 23,
+          "acumulada": 0.1738,
+          "ventana": 0.2313,
+          "emergente": 0.6505,
+          "brecha": 0.0309,
+          "emergente_dia": 0.9028,
+          "brecha_dia": 0.0143
+        },
+        {
+          "dia": 24,
+          "acumulada": 0.164,
+          "ventana": 0.2216,
+          "emergente": 0.6418,
+          "brecha": 0.0309,
+          "emergente_dia": 0.8186,
+          "brecha_dia": -0.0081
+        },
+        {
+          "dia": 25,
+          "acumulada": 0.1676,
+          "ventana": 0.2282,
+          "emergente": 0.6477,
+          "brecha": 0.0352,
+          "emergente_dia": 0.9032,
+          "brecha_dia": 0.0659
+        },
+        {
+          "dia": 26,
+          "acumulada": 0.1669,
+          "ventana": 0.2338,
+          "emergente": 0.6654,
+          "brecha": 0.0378,
+          "emergente_dia": 0.9073,
+          "brecha_dia": 0.0522
+        },
+        {
+          "dia": 27,
+          "acumulada": 0.1668,
+          "ventana": 0.2355,
+          "emergente": 0.6753,
+          "brecha": 0.0351,
+          "emergente_dia": 0.8879,
+          "brecha_dia": 0.0087
+        },
+        {
+          "dia": 28,
+          "acumulada": 0.1678,
+          "ventana": 0.2363,
+          "emergente": 0.6853,
+          "brecha": 0.036,
+          "emergente_dia": 0.9003,
+          "brecha_dia": 0.0138
+        },
+        {
+          "dia": 29,
+          "acumulada": 0.1725,
+          "ventana": 0.2431,
+          "emergente": 0.6976,
+          "brecha": 0.0381,
+          "emergente_dia": 0.8938,
+          "brecha_dia": 0.0365
+        },
+        {
+          "dia": 30,
+          "acumulada": 0.1619,
+          "ventana": 0.2329,
+          "emergente": 0.6628,
+          "brecha": 0.0356,
+          "emergente_dia": 0.7713,
+          "brecha_dia": -0.0059
+        }
+      ],
+      "veredicto": {
+        "lectura": "emergente",
+        "codigo": "plateau",
+        "mensaje": "SE ESTABILIZA ~ (bajó y se estancó — sin convergencia sostenida)",
+        "inicio": 0.927,
+        "fin": 0.6628
+      },
+      "emergente_min": {
+        "dia": 15,
+        "valor": 0.6101
+      },
+      "formas": {
+        "emergentes": 1185,
+        "clasificables": 419,
+        "cruzaron": 343,
+        "no_cruzaron": 56,
+        "nacidas_en_los_dos": 20
+      },
+      "fijadas": [
+        {
+          "concepto": "delfin",
+          "descripcion": "unos peces grandes y grises que andan en grupo junto a la canoa, asoman el lomo, soplan y se hunden otra vez",
+          "forma": "punu-dunku",
+          "dia": 5,
+          "n_variantes": 4,
+          "soporte": 6.05
+        },
+        {
+          "concepto": "cardumen",
+          "descripcion": "desde la punta se ve una mancha en el mar que hierve y brilla: miles de pececillos que suben juntos, con las aves cayendo encima",
+          "forma": "saka-ruku",
+          "dia": 13,
+          "n_variantes": 5,
+          "soporte": 39.55
+        },
+        {
+          "concepto": "cometa",
+          "descripcion": "una estrella con cola que cruza el cielo varias noches seguidas",
+          "forma": "diki-pui-bana",
+          "dia": 14,
+          "n_variantes": 6,
+          "soporte": 12.5
+        },
+        {
+          "concepto": "conejo",
+          "descripcion": "el animal pardo de orejas largas y cola blanca que se agacha quieto entre la paja y huye corriendo; al que no se le tira echado",
+          "forma": "sona-koro-iro",
+          "dia": 15,
+          "n_variantes": 4,
+          "soporte": 6.8
+        },
+        {
+          "concepto": "eclipse",
+          "descripcion": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera",
+          "forma": "kasi-uli-kiba",
+          "dia": 21,
+          "n_variantes": 2,
+          "soporte": 17.0
+        },
+        {
+          "concepto": "cardenal",
+          "descripcion": "un pájaro rojo entero con un penacho alto siempre erguido, que canta desde la punta del cardón; su hembra es gris y sólo lleva rojo el penacho",
+          "forma": "halira-iro",
+          "dia": 24,
+          "n_variantes": 5,
+          "soporte": 74.25
+        },
+        {
+          "concepto": "gaviota",
+          "descripcion": "unas aves blancas de lomo gris y pico rojo que siguen a la canoa y se pelean el pescado en la orilla; en la cría llevan la cabeza negra",
+          "forma": "diki-kiba",
+          "dia": 27,
+          "n_variantes": 6,
+          "soporte": 12.65
+        }
+      ],
+      "competencia": {
+        "umbral": 0.55,
+        "soporte_minimo": 3.0,
+        "referentes": 15,
+        "fijados": 7,
+        "lista": [
+          {
+            "concepto": "tarantula_azul",
+            "orden": 0,
+            "descripcion": "la araña grande y peluda de patas azules y vientre naranja que vive en un hueco de árbol forrado de tela blanca, en el monte del cerro",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 10,
+            "rivales": [
+              {
+                "forma": "kule-biro-iro",
+                "soporte": 31.95
+              },
+              {
+                "forma": "oto-biro-oto",
+                "soporte": 31.0
+              },
+              {
+                "forma": "uli-pata-ada",
+                "soporte": 14.8
+              }
+            ]
+          },
+          {
+            "concepto": "guacharaca",
+            "orden": 1,
+            "descripcion": "un ave parda y grande, de cola larga y papada roja, que desde los árboles del cerro grita al amanecer antes que todas",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "tuke-jai",
+                "soporte": 28.2
+              },
+              {
+                "forma": "jai-ubana-kida",
+                "soporte": 24.45
+              },
+              {
+                "forma": "tuke-jai-ubana",
+                "soporte": 18.25
+              }
+            ]
+          },
+          {
+            "concepto": "delfin",
+            "orden": 2,
+            "descripcion": "unos peces grandes y grises que andan en grupo junto a la canoa, asoman el lomo, soplan y se hunden otra vez",
+            "fijada": "punu-dunku",
+            "fijada_dia": 5,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "punu-dunku",
+                "soporte": 6.05
+              },
+              {
+                "forma": "tuhu-puhi-puhi",
+                "soporte": 1.7
+              },
+              {
+                "forma": "pui-pui-tara",
+                "soporte": 1.55
+              }
+            ]
+          },
+          {
+            "concepto": "cascabel",
+            "orden": 3,
+            "descripcion": "la serpiente gruesa de rombos oscuros y cabeza de triángulo que duerme entre los cujíes y, al sentir el paso, levanta la cola y la hace sonar",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 10,
+            "rivales": [
+              {
+                "forma": "biro-saka",
+                "soporte": 78.55
+              },
+              {
+                "forma": "sona-iro",
+                "soporte": 34.3
+              },
+              {
+                "forma": "saka-ruku",
+                "soporte": 24.7
+              }
+            ]
+          },
+          {
+            "concepto": "cardenal",
+            "orden": 4,
+            "descripcion": "un pájaro rojo entero con un penacho alto siempre erguido, que canta desde la punta del cardón; su hembra es gris y sólo lleva rojo el penacho",
+            "fijada": "halira-iro",
+            "fijada_dia": 24,
+            "n_variantes": 5,
+            "rivales": [
+              {
+                "forma": "halira-iro",
+                "soporte": 74.25
+              },
+              {
+                "forma": "sona-sona-kida",
+                "soporte": 25.65
+              },
+              {
+                "forma": "isi-kule-ubana",
+                "soporte": 20.35
+              }
+            ]
+          },
+          {
+            "concepto": "cardumen",
+            "orden": 5,
+            "descripcion": "desde la punta se ve una mancha en el mar que hierve y brilla: miles de pececillos que suben juntos, con las aves cayendo encima",
+            "fijada": "saka-ruku",
+            "fijada_dia": 13,
+            "n_variantes": 5,
+            "rivales": [
+              {
+                "forma": "saka-ruku",
+                "soporte": 39.55
+              },
+              {
+                "forma": "hime-butu-saka",
+                "soporte": 14.6
+              },
+              {
+                "forma": "butu-saka",
+                "soporte": 9.85
+              }
+            ]
+          },
+          {
+            "concepto": "cometa",
+            "orden": 6,
+            "descripcion": "una estrella con cola que cruza el cielo varias noches seguidas",
+            "fijada": "diki-pui-bana",
+            "fijada_dia": 14,
+            "n_variantes": 6,
+            "rivales": [
+              {
+                "forma": "diki-pui-bana",
+                "soporte": 12.5
+              },
+              {
+                "forma": "diki-ubana",
+                "soporte": 3.35
+              },
+              {
+                "forma": "barsure-dunku",
+                "soporte": 1.45
+              }
+            ]
+          },
+          {
+            "concepto": "conejo",
+            "orden": 7,
+            "descripcion": "el animal pardo de orejas largas y cola blanca que se agacha quieto entre la paja y huye corriendo; al que no se le tira echado",
+            "fijada": "sona-koro-iro",
+            "fijada_dia": 15,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "sona-koro-iro",
+                "soporte": 6.8
+              },
+              {
+                "forma": "kapara-ubana",
+                "soporte": 1.3
+              },
+              {
+                "forma": "paja-koro",
+                "soporte": 1.3
+              }
+            ]
+          },
+          {
+            "concepto": "corocoro",
+            "orden": 8,
+            "descripcion": "unas aves zancudas rojas como la sangre, de pico largo y curvo, que cruzan en fila sobre la laguna y el manglar",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 9,
+            "rivales": [
+              {
+                "forma": "kule-pui-tara",
+                "soporte": 29.3
+              },
+              {
+                "forma": "jai-tara",
+                "soporte": 26.1
+              },
+              {
+                "forma": "kule-saka-ruku",
+                "soporte": 16.35
+              }
+            ]
+          },
+          {
+            "concepto": "tortugas_de_mar",
+            "orden": 9,
+            "descripcion": "dos tortugas de mar que parecen pareja: una de pico curvo y concha de placas aserradas, otra de cabeza redonda que pace en los bajos",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 10,
+            "rivales": [
+              {
+                "forma": "mau-diki",
+                "soporte": 52.25
+              },
+              {
+                "forma": "kibe-piko-buio",
+                "soporte": 45.5
+              },
+              {
+                "forma": "tuhu-buso-halira-wa",
+                "soporte": 21.35
+              }
+            ]
+          },
+          {
+            "concepto": "eclipse",
+            "orden": 10,
+            "descripcion": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera",
+            "fijada": "kasi-uli-kiba",
+            "fijada_dia": 21,
+            "n_variantes": 2,
+            "rivales": [
+              {
+                "forma": "kasi-uli-kiba",
+                "soporte": 17.0
+              },
+              {
+                "forma": "**kasi-uli-kiba",
+                "soporte": 1.4
+              }
+            ]
+          },
+          {
+            "concepto": "perro_mudo",
+            "orden": 11,
+            "descripcion": "el perro pequeño de pelo corto que duerme junto al fogón y sigue a la gente al conuco, y que nunca ladra",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 7,
+            "rivales": [
+              {
+                "forma": "sile-ubana",
+                "soporte": 7.05
+              },
+              {
+                "forma": "ada-iro",
+                "soporte": 5.65
+              },
+              {
+                "forma": "biro-ato-kida",
+                "soporte": 5.45
+              }
+            ]
+          },
+          {
+            "concepto": "gaviota",
+            "orden": 12,
+            "descripcion": "unas aves blancas de lomo gris y pico rojo que siguen a la canoa y se pelean el pescado en la orilla; en la cría llevan la cabeza negra",
+            "fijada": "diki-kiba",
+            "fijada_dia": 27,
+            "n_variantes": 6,
+            "rivales": [
+              {
+                "forma": "diki-kiba",
+                "soporte": 12.65
+              },
+              {
+                "forma": "karuhu-kana",
+                "soporte": 3.6
+              },
+              {
+                "forma": "**karuhu-puhi-puhi-kibe**",
+                "soporte": 1.7
+              }
+            ]
+          },
+          {
+            "concepto": "metal_amarillo",
+            "orden": 13,
+            "descripcion": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "halira-despopo",
+                "soporte": 32.2
+              },
+              {
+                "forma": "mara-biro-kule",
+                "soporte": 21.75
+              },
+              {
+                "forma": "mara-kule",
+                "soporte": 13.8
+              }
+            ]
+          },
+          {
+            "concepto": "ballena",
+            "orden": 14,
+            "descripcion": "mar afuera, un animal más largo que diez canoas echa un chorro de agua al aire y enseña un lomo gris con una aleta curva",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 3,
+            "rivales": [
+              {
+                "forma": "tuhu bari-saka-ruku",
+                "soporte": 1.45
+              },
+              {
+                "forma": "**bari-butu-koro**",
+                "soporte": 1.3
+              },
+              {
+                "forma": "**butu-koro-saka**",
+                "soporte": 1.3
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "clave": "control",
+      "escena": false,
+      "capubana_cada": 0,
+      "runs": {
+        "primero": "6c465b4f",
+        "ultimo": "7526edf1",
+        "n": 30
+      },
+      "dias": 30,
+      "semillas": [
+        "101",
+        "130"
+      ],
+      "motor": {
+        "modelos": [
+          "claude-haiku-4-5-20251001"
+        ],
+        "commits": [
+          "91860d7b"
+        ],
+        "sucios": 0,
+        "sin_huella": 0
+      },
+      "respuestas": 2160,
+      "agentes": 63,
+      "serie": [
+        {
+          "dia": 1,
+          "acumulada": 0.7419,
+          "ventana": 0.6072,
+          "emergente": 0.8763,
+          "brecha": 0.0166,
+          "emergente_dia": 0.878,
+          "brecha_dia": 0.0166
+        },
+        {
+          "dia": 2,
+          "acumulada": 0.5781,
+          "ventana": 0.4612,
+          "emergente": 0.7487,
+          "brecha": 0.0044,
+          "emergente_dia": 0.7829,
+          "brecha_dia": 0.0026
+        },
+        {
+          "dia": 3,
+          "acumulada": 0.4777,
+          "ventana": 0.3907,
+          "emergente": 0.677,
+          "brecha": 0.0067,
+          "emergente_dia": 0.7795,
+          "brecha_dia": 0.0072
+        },
+        {
+          "dia": 4,
+          "acumulada": 0.408,
+          "ventana": 0.3431,
+          "emergente": 0.6578,
+          "brecha": 0.0052,
+          "emergente_dia": 0.7971,
+          "brecha_dia": 0.0159
+        },
+        {
+          "dia": 5,
+          "acumulada": 0.3586,
+          "ventana": 0.3085,
+          "emergente": 0.6397,
+          "brecha": -0.0004,
+          "emergente_dia": 0.8383,
+          "brecha_dia": -0.0037
+        },
+        {
+          "dia": 6,
+          "acumulada": 0.3201,
+          "ventana": 0.2794,
+          "emergente": 0.6052,
+          "brecha": 0.0004,
+          "emergente_dia": 0.7968,
+          "brecha_dia": -0.002
+        },
+        {
+          "dia": 7,
+          "acumulada": 0.2945,
+          "ventana": 0.2619,
+          "emergente": 0.582,
+          "brecha": -0.0019,
+          "emergente_dia": 0.8145,
+          "brecha_dia": 0.0395
+        },
+        {
+          "dia": 8,
+          "acumulada": 0.2715,
+          "ventana": 0.2453,
+          "emergente": 0.5729,
+          "brecha": -0.0044,
+          "emergente_dia": 0.8188,
+          "brecha_dia": 0.0095
+        },
+        {
+          "dia": 9,
+          "acumulada": 0.262,
+          "ventana": 0.245,
+          "emergente": 0.5785,
+          "brecha": -0.0022,
+          "emergente_dia": 0.8534,
+          "brecha_dia": 0.013
+        },
+        {
+          "dia": 10,
+          "acumulada": 0.2441,
+          "ventana": 0.2348,
+          "emergente": 0.5597,
+          "brecha": -0.0009,
+          "emergente_dia": 0.8045,
+          "brecha_dia": 0.0161
+        },
+        {
+          "dia": 11,
+          "acumulada": 0.2338,
+          "ventana": 0.233,
+          "emergente": 0.5511,
+          "brecha": 0.0003,
+          "emergente_dia": 0.8082,
+          "brecha_dia": 0.0201
+        },
+        {
+          "dia": 12,
+          "acumulada": 0.2272,
+          "ventana": 0.2344,
+          "emergente": 0.5472,
+          "brecha": 0.0016,
+          "emergente_dia": 0.813,
+          "brecha_dia": 0.0016
+        },
+        {
+          "dia": 13,
+          "acumulada": 0.2105,
+          "ventana": 0.2251,
+          "emergente": 0.5445,
+          "brecha": 0.0024,
+          "emergente_dia": 0.8274,
+          "brecha_dia": 0.0017
+        },
+        {
+          "dia": 14,
+          "acumulada": 0.2112,
+          "ventana": 0.2313,
+          "emergente": 0.5456,
+          "brecha": 0.0041,
+          "emergente_dia": 0.8143,
+          "brecha_dia": 0.0012
+        },
+        {
+          "dia": 15,
+          "acumulada": 0.2076,
+          "ventana": 0.2316,
+          "emergente": 0.5432,
+          "brecha": 0.007,
+          "emergente_dia": 0.8365,
+          "brecha_dia": 0.0119
+        },
+        {
+          "dia": 16,
+          "acumulada": 0.1997,
+          "ventana": 0.2299,
+          "emergente": 0.5378,
+          "brecha": 0.0067,
+          "emergente_dia": 0.7938,
+          "brecha_dia": -0.016
+        },
+        {
+          "dia": 17,
+          "acumulada": 0.1965,
+          "ventana": 0.2323,
+          "emergente": 0.5389,
+          "brecha": 0.0048,
+          "emergente_dia": 0.825,
+          "brecha_dia": -0.0012
+        },
+        {
+          "dia": 18,
+          "acumulada": 0.1965,
+          "ventana": 0.239,
+          "emergente": 0.5276,
+          "brecha": 0.0053,
+          "emergente_dia": 0.7883,
+          "brecha_dia": 0.0226
+        },
+        {
+          "dia": 19,
+          "acumulada": 0.1888,
+          "ventana": 0.2319,
+          "emergente": 0.517,
+          "brecha": 0.0022,
+          "emergente_dia": 0.7454,
+          "brecha_dia": 0.0042
+        },
+        {
+          "dia": 20,
+          "acumulada": 0.1789,
+          "ventana": 0.2225,
+          "emergente": 0.4919,
+          "brecha": 0.0008,
+          "emergente_dia": 0.8347,
+          "brecha_dia": 0.0001
+        },
+        {
+          "dia": 21,
+          "acumulada": 0.1774,
+          "ventana": 0.2222,
+          "emergente": 0.4967,
+          "brecha": 0.0017,
+          "emergente_dia": 0.8405,
+          "brecha_dia": 0.0565
+        },
+        {
+          "dia": 22,
+          "acumulada": 0.1759,
+          "ventana": 0.2258,
+          "emergente": 0.5058,
+          "brecha": 0.0015,
+          "emergente_dia": 0.8491,
+          "brecha_dia": 0.008
+        },
+        {
+          "dia": 23,
+          "acumulada": 0.1741,
+          "ventana": 0.2291,
+          "emergente": 0.5372,
+          "brecha": 0.0029,
+          "emergente_dia": 0.8455,
+          "brecha_dia": 0.0192
+        },
+        {
+          "dia": 24,
+          "acumulada": 0.1667,
+          "ventana": 0.2272,
+          "emergente": 0.5476,
+          "brecha": 0.0023,
+          "emergente_dia": 0.8345,
+          "brecha_dia": 0.0023
+        },
+        {
+          "dia": 25,
+          "acumulada": 0.1686,
+          "ventana": 0.2297,
+          "emergente": 0.5578,
+          "brecha": 0.0028,
+          "emergente_dia": 0.8504,
+          "brecha_dia": 0.0103
+        },
+        {
+          "dia": 26,
+          "acumulada": 0.1685,
+          "ventana": 0.2332,
+          "emergente": 0.5649,
+          "brecha": 0.0011,
+          "emergente_dia": 0.7665,
+          "brecha_dia": -0.0123
+        },
+        {
+          "dia": 27,
+          "acumulada": 0.1677,
+          "ventana": 0.2335,
+          "emergente": 0.5669,
+          "brecha": 0.0,
+          "emergente_dia": 0.8453,
+          "brecha_dia": 0.0001
+        },
+        {
+          "dia": 28,
+          "acumulada": 0.168,
+          "ventana": 0.2404,
+          "emergente": 0.5682,
+          "brecha": 0.0005,
+          "emergente_dia": 0.8346,
+          "brecha_dia": 0.0096
+        },
+        {
+          "dia": 29,
+          "acumulada": 0.1616,
+          "ventana": 0.2355,
+          "emergente": 0.573,
+          "brecha": 0.0009,
+          "emergente_dia": 0.8546,
+          "brecha_dia": 0.025
+        },
+        {
+          "dia": 30,
+          "acumulada": 0.1688,
+          "ventana": 0.2437,
+          "emergente": 0.5528,
+          "brecha": 0.0021,
+          "emergente_dia": 0.8064,
+          "brecha_dia": 0.0079
+        }
+      ],
+      "veredicto": {
+        "lectura": "emergente",
+        "codigo": "plateau",
+        "mensaje": "SE ESTABILIZA ~ (bajó y se estancó — sin convergencia sostenida)",
+        "inicio": 0.8763,
+        "fin": 0.5528
+      },
+      "emergente_min": {
+        "dia": 20,
+        "valor": 0.4919
+      },
+      "formas": {
+        "emergentes": 1004,
+        "clasificables": 368,
+        "cruzaron": 325,
+        "no_cruzaron": 22,
+        "nacidas_en_los_dos": 21
+      },
+      "fijadas": [
+        {
+          "concepto": "delfin",
+          "descripcion": "unos peces grandes y grises que andan en grupo junto a la canoa, asoman el lomo, soplan y se hunden otra vez",
+          "forma": "uni-aeke",
+          "dia": 11,
+          "n_variantes": 4,
+          "soporte": 173.35
+        },
+        {
+          "concepto": "cardumen",
+          "descripcion": "desde la punta se ve una mancha en el mar que hierve y brilla: miles de pececillos que suben juntos, con las aves cayendo encima",
+          "forma": "ta-ta-ta-kule-aima",
+          "dia": 13,
+          "n_variantes": 2,
+          "soporte": 18.1
+        },
+        {
+          "concepto": "cometa",
+          "descripcion": "una estrella con cola que cruza el cielo varias noches seguidas",
+          "forma": "kasi-sira-ubana",
+          "dia": 13,
+          "n_variantes": 3,
+          "soporte": 19.9
+        },
+        {
+          "concepto": "corocoro",
+          "descripcion": "unas aves zancudas rojas como la sangre, de pico largo y curvo, que cruzan en fila sobre la laguna y el manglar",
+          "forma": "jai-sira-kule",
+          "dia": 19,
+          "n_variantes": 4,
+          "soporte": 35.4
+        },
+        {
+          "concepto": "eclipse",
+          "descripcion": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera",
+          "forma": "kasi-ruku-ubana-ima",
+          "dia": 21,
+          "n_variantes": 3,
+          "soporte": 15.5
+        },
+        {
+          "concepto": "perro_mudo",
+          "descripcion": "el perro pequeño de pelo corto que duerme junto al fogón y sigue a la gente al conuco, y que nunca ladra",
+          "forma": "aji-ma-jai-ima",
+          "dia": 23,
+          "n_variantes": 2,
+          "soporte": 7.95
+        }
+      ],
+      "competencia": {
+        "umbral": 0.55,
+        "soporte_minimo": 3.0,
+        "referentes": 15,
+        "fijados": 6,
+        "lista": [
+          {
+            "concepto": "tarantula_azul",
+            "orden": 0,
+            "descripcion": "la araña grande y peluda de patas azules y vientre naranja que vive en un hueco de árbol forrado de tela blanca, en el monte del cerro",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 5,
+            "rivales": [
+              {
+                "forma": "akusi-uli-bana-ima",
+                "soporte": 44.55
+              },
+              {
+                "forma": "hiko-akusi-uli-bakoa-ima",
+                "soporte": 26.65
+              },
+              {
+                "forma": "kibe-uli-akusi",
+                "soporte": 19.85
+              }
+            ]
+          },
+          {
+            "concepto": "guacharaca",
+            "orden": 1,
+            "descripcion": "un ave parda y grande, de cola larga y papada roja, que desde los árboles del cerro grita al amanecer antes que todas",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 1,
+            "rivales": [
+              {
+                "forma": "taka",
+                "soporte": 106.4
+              }
+            ]
+          },
+          {
+            "concepto": "delfin",
+            "orden": 2,
+            "descripcion": "unos peces grandes y grises que andan en grupo junto a la canoa, asoman el lomo, soplan y se hunden otra vez",
+            "fijada": "uni-aeke",
+            "fijada_dia": 11,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "uni-aeke",
+                "soporte": 173.35
+              },
+              {
+                "forma": "silu-aeke",
+                "soporte": 71.25
+              },
+              {
+                "forma": "ta-aeke",
+                "soporte": 39.1
+              }
+            ]
+          },
+          {
+            "concepto": "cascabel",
+            "orden": 3,
+            "descripcion": "la serpiente gruesa de rombos oscuros y cabeza de triángulo que duerme entre los cujíes y, al sentir el paso, levanta la cola y la hace sonar",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 1,
+            "rivales": [
+              {
+                "forma": "ta-ta-ta-ima",
+                "soporte": 82.85
+              }
+            ]
+          },
+          {
+            "concepto": "cardenal",
+            "orden": 4,
+            "descripcion": "un pájaro rojo entero con un penacho alto siempre erguido, que canta desde la punta del cardón; su hembra es gris y sólo lleva rojo el penacho",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 5,
+            "rivales": [
+              {
+                "forma": "ta-kule-sira-ima",
+                "soporte": 22.05
+              },
+              {
+                "forma": "silu-kule-ta-ima",
+                "soporte": 13.5
+              },
+              {
+                "forma": "ta-kule-sira",
+                "soporte": 11.05
+              }
+            ]
+          },
+          {
+            "concepto": "cardumen",
+            "orden": 5,
+            "descripcion": "desde la punta se ve una mancha en el mar que hierve y brilla: miles de pececillos que suben juntos, con las aves cayendo encima",
+            "fijada": "ta-ta-ta-kule-aima",
+            "fijada_dia": 13,
+            "n_variantes": 2,
+            "rivales": [
+              {
+                "forma": "ta-ta-ta-kule-aima",
+                "soporte": 18.1
+              },
+              {
+                "forma": "ta-ta-ta-aima",
+                "soporte": 11.4
+              }
+            ]
+          },
+          {
+            "concepto": "cometa",
+            "orden": 6,
+            "descripcion": "una estrella con cola que cruza el cielo varias noches seguidas",
+            "fijada": "kasi-sira-ubana",
+            "fijada_dia": 13,
+            "n_variantes": 3,
+            "rivales": [
+              {
+                "forma": "kasi-sira-ubana",
+                "soporte": 19.9
+              },
+              {
+                "forma": "**kasi-sira-ubana**",
+                "soporte": 1.6
+              },
+              {
+                "forma": "kasi-sira-ima-ubana",
+                "soporte": 1.5
+              }
+            ]
+          },
+          {
+            "concepto": "conejo",
+            "orden": 7,
+            "descripcion": "el animal pardo de orejas largas y cola blanca que se agacha quieto entre la paja y huye corriendo; al que no se le tira echado",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 1,
+            "rivales": [
+              {
+                "forma": "pata-sira-bakoa-ima",
+                "soporte": 28.05
+              }
+            ]
+          },
+          {
+            "concepto": "corocoro",
+            "orden": 8,
+            "descripcion": "unas aves zancudas rojas como la sangre, de pico largo y curvo, que cruzan en fila sobre la laguna y el manglar",
+            "fijada": "jai-sira-kule",
+            "fijada_dia": 19,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "jai-sira-kule",
+                "soporte": 35.4
+              },
+              {
+                "forma": "ta-ta-kule-sira-ima",
+                "soporte": 18.65
+              },
+              {
+                "forma": "hiko-dani",
+                "soporte": 7.4
+              }
+            ]
+          },
+          {
+            "concepto": "tortugas_de_mar",
+            "orden": 9,
+            "descripcion": "dos tortugas de mar que parecen pareja: una de pico curvo y concha de placas aserradas, otra de cabeza redonda que pace en los bajos",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 5,
+            "rivales": [
+              {
+                "forma": "kara-akusi-halira-ima",
+                "soporte": 25.45
+              },
+              {
+                "forma": "kara-jusual-sira-aima",
+                "soporte": 21.1
+              },
+              {
+                "forma": "kara-akusi-halira",
+                "soporte": 4.7
+              }
+            ]
+          },
+          {
+            "concepto": "eclipse",
+            "orden": 10,
+            "descripcion": "el sol se oscurece en pleno día y luego vuelve, como si algo lo cubriera",
+            "fijada": "kasi-ruku-ubana-ima",
+            "fijada_dia": 21,
+            "n_variantes": 3,
+            "rivales": [
+              {
+                "forma": "kasi-ruku-ubana-ima",
+                "soporte": 15.5
+              },
+              {
+                "forma": "kasi-ma-halira-sira",
+                "soporte": 8.65
+              },
+              {
+                "forma": "**kasi-ma-halira-sira-ubana-ima**",
+                "soporte": 1.8
+              }
+            ]
+          },
+          {
+            "concepto": "perro_mudo",
+            "orden": 11,
+            "descripcion": "el perro pequeño de pelo corto que duerme junto al fogón y sigue a la gente al conuco, y que nunca ladra",
+            "fijada": "aji-ma-jai-ima",
+            "fijada_dia": 23,
+            "n_variantes": 2,
+            "rivales": [
+              {
+                "forma": "aji-ma-jai-ima",
+                "soporte": 7.95
+              },
+              {
+                "forma": "aji-ma-kati-ima",
+                "soporte": 1.7
+              }
+            ]
+          },
+          {
+            "concepto": "gaviota",
+            "orden": 12,
+            "descripcion": "unas aves blancas de lomo gris y pico rojo que siguen a la canoa y se pelean el pescado en la orilla; en la cría llevan la cabeza negra",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 5,
+            "rivales": [
+              {
+                "forma": "biro-uro",
+                "soporte": 185.8
+              },
+              {
+                "forma": "jai-kibe-duma",
+                "soporte": 124.05
+              },
+              {
+                "forma": "jai-jai-ima",
+                "soporte": 74.5
+              }
+            ]
+          },
+          {
+            "concepto": "metal_amarillo",
+            "orden": 13,
+            "descripcion": "un trozo de metal amarillo y pesado, distinto del oro conocido, llegado por trueque",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 1,
+            "rivales": [
+              {
+                "forma": "kasi-kiba-uro",
+                "soporte": 24.4
+              }
+            ]
+          },
+          {
+            "concepto": "ballena",
+            "orden": 14,
+            "descripcion": "mar afuera, un animal más largo que diez canoas echa un chorro de agua al aire y enseña un lomo gris con una aleta curva",
+            "fijada": null,
+            "fijada_dia": null,
+            "n_variantes": 4,
+            "rivales": [
+              {
+                "forma": "jai-buksale-sira-ima",
+                "soporte": 16.55
+              },
+              {
+                "forma": "soku-jai-ima",
+                "soporte": 11.9
+              },
+              {
+                "forma": "jai-soku-ima",
+                "soporte": 9.65
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "capubana": {
+    "cada": 3,
+    "dias": [
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27,
+      30
+    ],
+    "emergente_dia": {
+      "escena": {
+        "capubana": 0.8079,
+        "resto": 0.8942,
+        "n_capubana": 10
+      },
+      "control": {
+        "capubana": 0.8194,
+        "resto": 0.8192,
+        "n_capubana": 10
+      }
+    },
+    "brecha_dia": {
+      "escena": {
+        "capubana": 0.0005,
+        "resto": 0.0293,
+        "n_capubana": 10
+      },
+      "control": {
+        "capubana": 0.0121,
+        "resto": 0.0083,
+        "n_capubana": 10
+      }
+    },
+    "bajan": {
+      "escena": {
+        "bajan": 10,
+        "de": 10
+      },
+      "control": {
+        "bajan": 5,
+        "de": 10
+      }
+    }
+  },
+  "avisos": [
+    "brazo control: se descarta la cadena f40e5f34 → 41a5148a (4 runs, 4 cerrados); la comparación usa la más larga"
+  ]
+}
