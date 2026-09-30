@@ -152,10 +152,14 @@ temporal en `.git/info/exclude`, ya quitada, y la cadena siguió con `--continua
   +0,0166 a **+0,0021**. Formas que nunca salieron de su pueblo: 56 con escena,
   22 en el control.
 - **El diente de sierra es del Capubana** (control como placebo): con escena los
-  días de reunión (múltiplos de 3) bajan la emergente del día a 0,807 contra 0,880
-  y dejan la brecha en +0,0005 contra +0,0293; en el control esos mismos días no se
-  distinguen (0,814 contra 0,815; 4 de 10 más bajos, azar) — el control no tiene
-  reunión.
+  días de reunión (múltiplos de 3) bajan la emergente del día a 0,808 contra 0,894
+  los otros 20 días, los 10 quedan por debajo del día anterior, y dejan la brecha
+  del día en +0,0005 contra +0,0293; en el control esos mismos días no se
+  distinguen (0,819 contra 0,819; 5 de 10 por debajo del día anterior, azar) — el
+  control no tiene reunión. Medido con `export_serie_seed.py` (#240) sobre la
+  lectura emergente de un solo día de `analizar_nodos`; la primera versión de este
+  párrafo (0,807/0,880 y 0,814/0,815) salió de un cálculo a mano y se corrigió el
+  2026-09-29.
 - **La competencia**: el control fijó 6 de sus 15 referentes (el brazo A, 7).
   ⚠️ Pero 4 de sus 9 «abiertos» son nombres **unánimes** — la guacharaca es `taka`
   con soporte 106,4 y ninguna rival — que nunca se fijan porque
