@@ -53,6 +53,130 @@ detallados por run en archivos `ANALISIS_RUN_*.md` enlazados.
 > Cada fila guarda el commit del motor, si estaba sucio y los hashes del
 > lexicón, el corpus y el elenco. Protocolo: [[04_protocolo_run_1_era_auditada]].
 
+### Era 2 · serie `era2-base` — 30 días × 2 brazos: la koiné se estanca en los dos, y la geografía sostiene la variación (2026-09-27/29)
+
+> «Mi ok para correr la sim» (Miguel, 2026-09-27). Motor: tag `base-era2-1`
+> (main `5240a42` + la medición, rama `base/era2-2026-09-27`, `91860d7`),
+> árbol limpio en los 34 días. Antes de gastar: `medir_tanda_hermanas.py
+> --con-base`, control 216/216 verde en los dos brazos. Protocolo: `--elenco
+> era2 --auto 6 --turnos-por-dia 6 --agentes-por-turno 12 --roster todos
+> --perfil era2 --reflexion --serie era2-base`, semilla = 100 + día; brazo A
+> `--escena --capubana-cada 3`, brazo B sin escena; día 1 sin `--continuar`.
+> El estado en disco de la serie C se guardó aparte (no se borró) en
+> `C:\Users\migue\curiana_estado_backup\`; scripts (`correr_cadena.sh`,
+> `correr_serie.sh`) y un log por día, fuera del repo, en
+> `C:\Users\migue\curiana_runs_log\era2-base\`. Todos los números de abajo
+> salen de la base local, de `curiana_cadena.py` y de `analizar_nodos.py`
+> (informe entero: `5-experimento/analisis/era2_base_escena_nodos_2026-09-28.txt`).
+
+**Brazo con escena: los 30 días** (`dd680e49` → `720d1ef1`, 00:04-05:05 del
+28, unos diez minutos por día). 2.160 respuestas de los 63; `lugar` en las
+2.160, en 28 lugares; score medio por día entre 7,38 y 7,92. **Limpio**: cero
+residuos de la era 1 (la búsqueda marca uno y es `biro-koa`, sal + `-koa`) y
+cuatro usos de voces archivadas en 30 días (`kuru` 3, `naa` 1). 273
+acuñaciones, 66 adoptadas; la puerta rechazó 69 por raíz y 3 por plantilla. El
+núcleo de las hermanas es lo que se habla: `diki-ba` (899 usos, los 63),
+`ani-ba`, `jai-ba`, `usera-kuba` encabezan las formas emergentes.
+
+**El resultado: en 30 días la koiné baja y se estanca — no converge de forma
+sostenida** (veredicto de `curiana_cadena`: «SE ESTABILIZA ~»). Las cadenas de
+tres días de la serie C decían «CONVERGE»: eran el tramo inicial.
+
+| día | acumulada | ventana | emergente |
+|---:|---:|---:|---:|
+| 1 | 0,7326 | 0,609 | 0,927 |
+| 5 | 0,3578 | 0,3038 | 0,7508 |
+| 10 | 0,2493 | 0,2371 | 0,6586 |
+| 15 | 0,2068 | 0,2354 | **0,6101** (mínimo) |
+| 20 | 0,1789 | 0,2281 | 0,6297 |
+| 25 | 0,1676 | 0,2282 | 0,6477 |
+| 29 | 0,1725 | 0,2431 | 0,6976 |
+| 30 | 0,1619 | 0,2329 | 0,6628 |
+
+La ventana deja de bajar hacia el día 9 (≈ 0,23 hasta el 30); la emergente
+toca fondo el día 15 y **vuelve a subir** en la segunda quincena. No se
+explica aquí (lo que emerge se describe): queda como la pregunta de la serie.
+
+**Los nodos: una brecha pequeña que crece despacio en lo acumulado.** Con las
+63 semillas distintas (una por agente; ver la trampa de abajo), la distancia
+emergente ACUMULADA baja más rápido dentro de cada nodo que entre ellos
+(intra 0,9245 → 0,4896, −47,0 %; entre 0,9273 → 0,5252, −43,4 %; brecha
++0,0028 → +0,0356). En la ventana y en la emergente del día la brecha se queda
+en torno a cero. Las formas cruzan: 343 de 419 clasificables pasaron de nodo,
+con una mediana de 12 turnos (dos días) hasta cruzar y sólo 5 en el mismo turno.
+
+**Siete palabras fijadas por competencia** (`koine_lexicon`), las siete sobre
+raíces del canon: `punu-dunku` (día 5, los peces grises que andan en grupo junto
+a la canoa), `saka-ruku` (13, la mancha en el mar que hierve y brilla; soporte
+39,6), `diki-pui-bana` (14, el cometa), `sona-koro-iro` (15, el animal pardo de
+orejas largas y cola blanca), `kasi-uli-kiba` (21, el eclipse: sol + negro +
+piedra), `halira-iro` (24, el pájaro rojo de penacho; soporte 74,3) y
+`diki-kiba` (27, las aves blancas de pico rojo que siguen la canoa).
+
+**La esfera en la boca** (`loanword_uses`): `kai` (paraujano) 62, `cazabi` 35,
+`maisi` 31, `watapana` (caribe continental) 15, `tabako` 11, `yuca` 8, `aji` 7.
+
+**Brazo de control: los 30 días** (`6c465b4f` → `7526edf1`, 2026-09-28 23:19 →
+09-29 04:34). El primer intento se cortó en el día 4 por falta de saldo de la API
+(`f40e5f34` → `41a5148a`, en la base como cadena interrumpida; su estado y sus
+logs, guardados aparte): se rehízo **desde el día 1**, desde el tag
+`base-era2-1`, con créditos recargados. Los 30 runs con `motor_commit` 91860d7 y
+`motor_sucio: false`, igual que el brazo A. (La salvaguarda de `correr_cadena.sh`
+paró la cadena una vez antes del día 2 por una carpeta nueva sin versionar en la
+raíz, `design_handoff_*`; se excluyó sólo de `git status` con una línea local
+temporal en `.git/info/exclude`, ya quitada, y la cadena siguió con `--continuar`.)
+2.160 respuestas de los 63, score medio por día 7,43-8,04, cero residuos de la era
+1, 13 respuestas con voces archivadas (`kuru` 6, `wari` 3, `nomi` 3, `duna`, `kali`,
+`naa`; el brazo A, 4).
+
+**Los dos brazos, lado a lado** (`curiana_cadena.py`):
+
+| | con escena | control |
+|---|---|---|
+| acumulada, día 1 → 30 | 0,7326 → 0,1619 | 0,7419 → 0,1688 |
+| ventana, meseta desde el día ~9 | ≈ 0,23 | ≈ 0,23 |
+| emergente: día 1 · mínimo · día 30 | 0,927 · **0,6101** (día 15) · 0,6628 | 0,8763 · **0,4919** (día 20) · 0,5528 |
+| veredicto | SE ESTABILIZA ~ | SE ESTABILIZA ~ |
+
+- **El estancamiento es del motor, no de la geografía**: se da en los dos brazos,
+  con la misma meseta de la ventana y la misma subida de la emergente después de
+  su mínimo. Lo que tienen en común es el núcleo que se enseña, el modelo y el
+  ritmo de novedades (un referente cada dos días, idéntico en los dos).
+- **La geografía sostiene la variación de lo nuevo**: la emergente del brazo con
+  escena queda ≈ 0,1 por encima del control los 30 días — las palabras nuevas se
+  parecen menos entre sí cuando cada uno vive en su lugar. Es lo mismo que la
+  serie C vio en tres días («el control converge un poco más»), ahora en treinta.
+- **La brecha entre los pueblos es de la escena** (`analizar_nodos.py`,
+  acumulada emergente): con escena crece de +0,0028 a **+0,0356** (dentro de cada
+  pueblo se converge más rápido que entre ellos); en el control se cierra de
+  +0,0166 a **+0,0021**. Formas que nunca salieron de su pueblo: 56 con escena,
+  22 en el control.
+- **El diente de sierra es del Capubana** (control como placebo): con escena los
+  días de reunión (múltiplos de 3) bajan la emergente del día a 0,808 contra 0,894
+  los otros 20 días, los 10 quedan por debajo del día anterior, y dejan la brecha
+  del día en +0,0005 contra +0,0293; en el control esos mismos días no se
+  distinguen (0,819 contra 0,819; 5 de 10 por debajo del día anterior, azar) — el
+  control no tiene reunión. Medido con `export_serie_seed.py` (#240) sobre la
+  lectura emergente de un solo día de `analizar_nodos`; la primera versión de este
+  párrafo (0,807/0,880 y 0,814/0,815) salió de un cálculo a mano y se corrigió el
+  2026-09-29.
+- **La competencia**: el control fijó 6 de sus 15 referentes (el brazo A, 7).
+  ⚠️ Pero 4 de sus 9 «abiertos» son nombres **unánimes** — la guacharaca es `taka`
+  con soporte 106,4 y ninguna rival — que nunca se fijan porque
+  `CompetenciaLexica.evaluar_fijacion` exige al menos dos variantes. Defecto del
+  instrumento, anotado para después de la serie; en el brazo A los 8 abiertos
+  tienen de 3 a 10 variantes y la lectura de las disputas que se acumulan se
+  sostiene. Informe por nodo del control:
+  `5-experimento/analisis/era2_base_control_nodos_2026-09-29.txt`.
+
+> ⚠️ **Trampa medida al analizar**: `analizar_nodos.py` sin
+> `CURIANA_ELENCO=era2` avisa «NO HAY DIVERGENCIA SEMBRADA POR NODO» (62 de 63
+> con la misma semilla). Es falsa alarma: su chequeo llama a
+> `curiana_koine.formas_semilla()`, que deriva la semilla de la ficha del elenco
+> ACTIVO. Con la variable puesta salen 63 vectores distintos y los dos nodos
+> con semilla propia. El motor corrió con `--elenco era2`: la serie estuvo bien
+> sembrada. Las distancias del informe no dependen de la variable.
+
 ### Era 2 · serie C — la escena por lugar, en dos brazos (desde el 2026-09-18)
 
 > Miguel, 2026-09-17: «si no se mueven, ¿cómo podemos hacer que hagan cosas y

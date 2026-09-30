@@ -1,0 +1,253 @@
+
+══════════════════════════════════════════════════════════════════════════════
+  NODOS — cadena 6c465b4f → b5b98838 → d6f06972 → 6f22d482 → 08fa80cc → 534a5251 → 02084572 → 31d08392 → 6b3e3d2c → e7009411 → 145d84f3 → 03fbbeb4 → e0b50760 → 92cc67d4 → a96a3fe7 → 949196f7 → abb3326c → 7441f8b9 → 2ad63b61 → 0aef1069 → 8be4516f → ec383a97 → 43a48c2f → bb901ef8 → 51489ae3 → d598916e → 7693e54c → f914ccac → ddf977ee → 7526edf1
+══════════════════════════════════════════════════════════════════════════════
+  Brazo: sin escena (brazo de control) · serie era2-base
+  Elenco: 63 agentes — GUARANAO 39, AMUAY 24
+  Umbral de inclinación: razón de tasas ≥ 2.0 · mínimo 3 hablantes para clasificar
+  Formas excluidas del recuento emergente: 6031 (vocabulario base + lo que enseñan las plantillas) + toda forma con la raíz fuera del lexicón
+  Raíz de ninguna parte (relectura, la base no se reescribe): 26 de 1281 formas · 27 de 64268 usos (0.04%)
+    raíces: hilo-bora ×2 · beno ×1 · fibra ×1 · nudo ×1 · baro-dani ×1 · buro-uku ×1
+    ¿aguanta la lectura emergente al descontarlas? (serie RECONSTRUIDA de `word_uses`: no es `distance_emergente`,
+     que el motor calcula sobre sus idiolectos — sólo vale para comparar con y sin. La cifra del motor,
+     con el mismo veredicto, la mide `6-fusion/scripts/medir_raices_de_ninguna_parte.py`)
+      con raíz ajena  0.8794 → 0.7838 → 0.7811 → 0.7971 → 0.8383 → 0.7977 → 0.8145 → 0.8206 → 0.8534 → 0.8045 → 0.8082 → 0.813 → 0.8274 → 0.8152 → 0.8368 → 0.7945 → 0.8259 → 0.7884 → 0.7454 → 0.8347 → 0.8405 → 0.8491 → 0.8455 → 0.8345 → 0.8504 → 0.7686 → 0.8453 → 0.8349 → 0.8546 → 0.8064  (-8.3 %, converge)
+      sin raíz ajena  0.878 → 0.7829 → 0.7795 → 0.7971 → 0.8383 → 0.7968 → 0.8145 → 0.8195 → 0.8534 → 0.8045 → 0.8082 → 0.813 → 0.8274 → 0.8143 → 0.8365 → 0.7938 → 0.825 → 0.7883 → 0.7454 → 0.8347 → 0.8405 → 0.8491 → 0.8455 → 0.8345 → 0.8504 → 0.7665 → 0.8453 → 0.8346 → 0.8546 → 0.8064  (-8.2 %, converge)
+      → la lectura NO cambia de signo al descontarlas
+  Divergencia sembrada: 63 vector(es)-semilla distinto(s) entre 63 agentes · 1 comparten el mismo · nodos con semilla propia: AMUAY, GUARANAO
+  Cobertura: 63 de 63 agentes de la base tienen nodo · 100.0% de los usos
+
+── Cuánto habló cada nodo (la reserva: GUARANAO es 39 de 63 = 61,9% del censo) ──
+  día  nodo          usos    cuota    censo  activos  formas
+  1    GUARANAO      1384    66.6%    61.9%       35     255
+  1    AMUAY          693    33.4%    38.1%       24     195
+  2    GUARANAO      1227    54.3%    61.9%       37     259
+  2    AMUAY         1031    45.7%    38.1%       24     215
+  3    GUARANAO      1358    65.2%    61.9%       39     258
+  3    AMUAY          726    34.8%    38.1%       24     186
+  4    GUARANAO      1533    66.8%    61.9%       36     262
+  4    AMUAY          763    33.2%    38.1%       23     199
+  5    GUARANAO      1215    56.8%    61.9%       37     211
+  5    AMUAY          924    43.2%    38.1%       24     204
+  6    GUARANAO      1064    50.3%    61.9%       33     213
+  6    AMUAY         1053    49.7%    38.1%       21     213
+  7    GUARANAO      1371    64.6%    61.9%       38     241
+  7    AMUAY          752    35.4%    38.1%       24     173
+  8    GUARANAO      1645    69.1%    61.9%       36     252
+  8    AMUAY          735    30.9%    38.1%       22     186
+  9    GUARANAO      1226    55.0%    61.9%       33     230
+  9    AMUAY         1002    45.0%    38.1%       21     194
+  10   GUARANAO      1510    69.0%    61.9%       39     234
+  10   AMUAY          679    31.0%    38.1%       24     166
+  11   GUARANAO      1369    67.4%    61.9%       39     231
+  11   AMUAY          663    32.6%    38.1%       24     177
+  12   GUARANAO      1346    63.9%    61.9%       33     242
+  12   AMUAY          761    36.1%    38.1%       23     182
+  13   GUARANAO      1115    55.3%    61.9%       33     220
+  13   AMUAY          900    44.7%    38.1%       24     208
+  14   GUARANAO      1151    58.5%    61.9%       34     216
+  14   AMUAY          817    41.5%    38.1%       24     197
+  15   GUARANAO      1506    69.8%    61.9%       37     241
+  15   AMUAY          653    30.2%    38.1%       22     189
+  16   GUARANAO      1191    55.2%    61.9%       38     225
+  16   AMUAY          966    44.8%    38.1%       24     198
+  17   GUARANAO      1274    64.5%    61.9%       35     234
+  17   AMUAY          702    35.5%    38.1%       23     177
+  18   GUARANAO      1574    69.4%    61.9%       37     255
+  18   AMUAY          695    30.6%    38.1%       19     186
+  19   GUARANAO      1158    55.6%    61.9%       36     216
+  19   AMUAY          926    44.4%    38.1%       24     197
+  20   GUARANAO      1119    53.8%    61.9%       34     221
+  20   AMUAY          960    46.2%    38.1%       24     201
+  21   GUARANAO      1472    67.1%    61.9%       33     245
+  21   AMUAY          723    32.9%    38.1%       21     177
+  22   GUARANAO      1540    72.5%    61.9%       38     250
+  22   AMUAY          583    27.5%    38.1%       20     161
+  23   GUARANAO      1206    55.8%    61.9%       34     235
+  23   AMUAY          954    44.2%    38.1%       22     210
+  24   GUARANAO      1475    76.3%    61.9%       38     233
+  24   AMUAY          458    23.7%    38.1%       17     127
+  25   GUARANAO      1451    70.0%    61.9%       39     255
+  25   AMUAY          623    30.0%    38.1%       22     167
+  26   GUARANAO      1275    57.3%    61.9%       34     250
+  26   AMUAY          949    42.7%    38.1%       24     208
+  27   GUARANAO      1230    56.1%    61.9%       34     245
+  27   AMUAY          961    43.9%    38.1%       22     208
+  28   GUARANAO      1486    69.4%    61.9%       37     267
+  28   AMUAY          656    30.6%    38.1%       20     184
+  29   GUARANAO      1608    73.0%    61.9%       33     247
+  29   AMUAY          595    27.0%    38.1%       22     171
+  30   GUARANAO      1326    58.0%    61.9%       34     244
+  30   AMUAY          960    42.0%    38.1%       21     215
+
+── Formas emergentes — las 25 más usadas (tasa = hablantes / hablantes posibles del nodo) ──
+    forma                   usos  GUA habl  GUA tasa  AMU habl  AMU tasa   razón  clase             acuñó         cruce  Δturnos
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+    diki-ba                  922        39     1.000        24     1.000    1.00  compartida        ~AMU+GUA d1t1    n/a        —
+    ani-ba                   394        36     0.923        24     1.000    1.08  compartida        ~GUA d1t1      d1t2        1
+    butu-ba                  329        35     0.897        22     0.917    1.02  compartida        ~AMU+GUA d1t1    n/a        —
+    jai-kuba                 310        37     0.949        24     1.000    1.05  compartida        ~AMU d1t1      d1t3        2
+  * kasi-sira-ubana          289        39     1.000        24     1.000    1.00  compartida        AMU+GUA d13t5    n/a        —
+    jai-ba                   269        37     0.949        21     0.875    1.08  compartida        ~GUA d1t1      d1t4        3
+    sile-ba                  265        30     0.769        12     0.500    1.54  compartida        ~GUA d1t1      d1t2        1
+  n aiima-ima                238        39     1.000        19     0.792    1.26  compartida        GUA d6t2       d7t5        9
+  n halira-dani              233        37     0.949        24     1.000    1.05  compartida        GUA d15t6     d16t1        1
+    dunku-ba                 218        33     0.846        23     0.958    1.13  compartida        ~AMU d1t2      d1t3        1
+    aita-ba                  207        30     0.769        20     0.833    1.08  compartida        ~AMU d1t2      d1t3        1
+  n biro-ubana               203        38     0.974        24     1.000    1.03  compartida        GUA d8t5       d9t3        4
+    aeke-ba                  190        34     0.872        19     0.792    1.10  compartida        ~GUA d1t1      d1t4        3
+    maa-kuba                 190        13     0.333         7     0.292    1.14  compartida        ~AMU d1t2      d1t6        4
+    usera-kuba               189        31     0.795        21     0.875    1.10  compartida        ~GUA d1t1      d1t2        1
+  n biro-maki                188        37     0.949        22     0.917    1.03  compartida        GUA d3t4       d4t2        4
+    ani-kuba                 186        27     0.692        19     0.792    1.14  compartida        ~AMU+GUA d1t2    n/a        —
+    kuburuku-kuba            182        11     0.282         6     0.250    1.13  compartida        ~AMU+GUA d1t1    n/a        —
+  n biro-uro                 180        38     0.974        22     0.917    1.06  compartida        GUA d25t5     d26t1        2
+    eroa-ba                  172        32     0.821        22     0.917    1.12  compartida        ~AMU+GUA d1t1    n/a        —
+    sile-kuba                172        23     0.590        15     0.625    1.06  compartida        ~GUA d1t1      d1t2        1
+  * uni-aeke                 172        37     0.949        24     1.000    1.05  compartida        GUA d5t5       d5t6        1
+  n saika-ma                 165        36     0.923        24     1.000    1.08  compartida        GUA d21t6     d22t1        1
+    ati-ba                   153        34     0.872        22     0.917    1.05  compartida        ~AMU d1t2      d2t5        9
+    butu-kuba                153        26     0.667        18     0.750    1.12  compartida        ~GUA d1t1      d1t2        1
+
+  (* fijada en koine_lexicon · n registrada como neologismo · acuñó/cruce en díaNturnoN · ~ = acuñador aproximado por primer uso, sin registro en neologisms · Δturnos = turnos hasta el primer uso fuera del nodo que acuñó · n/a = la acuñaron los DOS nodos a la vez, así que no hay frontera que cruzar)
+
+  Reparto de clases: poco-atestiguada 636 · compartida 269 · inclinada 77 · exclusiva 22
+  De 368 formas clasificables: 325 cruzaron de nodo, 22 no cruzaron, 21 nacieron en los dos nodos a la vez (evento de nombramiento simultáneo)
+  Con acuñador registrado en `neologisms`: 68; el resto lleva acuñador aproximado por primer uso (marcado ~)
+  ⚠ Acuñaciones cuya forma NO queda en word_uses en la misma respuesta: 0 de 143 (0.0%). Al acuñar, la forma aún no está en el léxico comunitario y `words_used` no la recoge: el primer uso registrado es el del que la ADOPTÓ, que puede ser del otro nodo. Descontar esto antes de leer rutas.
+  Sólo con acuñador registrado → 63 cruzaron, 0 no, 5 multinodo
+  Turnos hasta cruzar (las que cruzaron): mediana 14, mínimo 0, máximo 156 · mismo turno: 10
+
+── Distancia idiolectal (1 − coseno) — vectores reconstruidos de word_uses por día ──
+  día  lectura                  n  intra GUA  intra AMU    intra    entre   brecha
+  1    ventana                 59     0.5824     0.6350   0.5991   0.6153   0.0162
+  1    emergente               49     0.8570     0.9099   0.8701   0.8867   0.0166
+  1    acumulada_emergente     49     0.8570     0.9099   0.8701   0.8867   0.0166
+  2    ventana                 61     0.5903     0.5587   0.5810   0.5766  -0.0044
+  2    emergente               59     0.7782     0.7900   0.7816   0.7842   0.0026
+  2    acumulada_emergente     62     0.7395     0.7713   0.7485   0.7529   0.0044
+  3    ventana                 63     0.5829     0.5981   0.5870   0.5877   0.0007
+  3    emergente               62     0.7718     0.7869   0.7760   0.7832   0.0072
+  3    acumulada_emergente     63     0.6661     0.6975   0.6746   0.6813   0.0067
+  4    ventana                 59     0.5458     0.5822   0.5562   0.5708   0.0146
+  4    emergente               58     0.8010     0.7582   0.7895   0.8054   0.0159
+  4    acumulada_emergente     63     0.6572     0.6700   0.6607   0.6659   0.0052
+  5    ventana                 61     0.5763     0.5396   0.5655   0.5651  -0.0004
+  5    emergente               54     0.8660     0.7994   0.8402   0.8365  -0.0037
+  5    acumulada_emergente     63     0.6418     0.6354   0.6401   0.6397  -0.0004
+  6    ventana                 54     0.5679     0.5325   0.5579   0.5547  -0.0032
+  6    emergente               52     0.8178     0.7535   0.7978   0.7958  -0.0020
+  6    acumulada_emergente     63     0.6152     0.6040   0.6121   0.6125   0.0004
+  7    ventana                 62     0.5479     0.5803   0.5570   0.5826   0.0256
+  7    emergente               60     0.7912     0.8097   0.7958   0.8353   0.0395
+  7    acumulada_emergente     63     0.5893     0.5722   0.5846   0.5827  -0.0019
+  8    ventana                 58     0.5268     0.5640   0.5368   0.5492   0.0124
+  8    emergente               55     0.8150     0.8124   0.8142   0.8237   0.0095
+  8    acumulada_emergente     63     0.5802     0.5620   0.5753   0.5709  -0.0044
+  9    ventana                 54     0.5514     0.5271   0.5445   0.5424  -0.0021
+  9    emergente               50     0.8455     0.8516   0.8471   0.8601   0.0130
+  9    acumulada_emergente     63     0.5678     0.5548   0.5643   0.5621  -0.0022
+  10   ventana                 63     0.5404     0.5856   0.5527   0.5708   0.0181
+  10   emergente               60     0.7856     0.8377   0.7971   0.8132   0.0161
+  10   acumulada_emergente     63     0.5508     0.5499   0.5505   0.5496  -0.0009
+  11   ventana                 63     0.5519     0.5899   0.5622   0.5725   0.0103
+  11   emergente               60     0.7871     0.8340   0.7987   0.8188   0.0201
+  11   acumulada_emergente     63     0.5364     0.5445   0.5386   0.5389   0.0003
+  12   ventana                 56     0.5551     0.5804   0.5633   0.5737   0.0104
+  12   emergente               48     0.8136     0.8083   0.8122   0.8138   0.0016
+  12   acumulada_emergente     63     0.5242     0.5309   0.5261   0.5277   0.0016
+  13   ventana                 57     0.5312     0.5703   0.5447   0.5545   0.0098
+  13   emergente               51     0.8244     0.8303   0.8265   0.8282   0.0017
+  13   acumulada_emergente     63     0.5104     0.5178   0.5124   0.5148   0.0024
+  14   ventana                 58     0.5537     0.5734   0.5602   0.5672   0.0070
+  14   emergente               54     0.8100     0.8204   0.8137   0.8149   0.0012
+  14   acumulada_emergente     63     0.5005     0.5140   0.5042   0.5083   0.0041
+  15   ventana                 59     0.5624     0.5937   0.5705   0.5797   0.0092
+  15   emergente               53     0.8166     0.8640   0.8307   0.8426   0.0119
+  15   acumulada_emergente     63     0.4895     0.5110   0.4953   0.5023   0.0070
+  16   ventana                 62     0.5714     0.5576   0.5675   0.5606  -0.0069
+  16   emergente               49     0.8192     0.7475   0.8014   0.7854  -0.0160
+  16   acumulada_emergente     63     0.4811     0.5010   0.4865   0.4932   0.0067
+  17   ventana                 58     0.5579     0.5735   0.5625   0.5674   0.0049
+  17   emergente               56     0.8243     0.8286   0.8256   0.8244  -0.0012
+  17   acumulada_emergente     63     0.4767     0.4911   0.4806   0.4854   0.0048
+  18   ventana                 56     0.5320     0.5723   0.5402   0.5541   0.0139
+  18   emergente               53     0.7687     0.8225   0.7783   0.8009   0.0226
+  18   acumulada_emergente     63     0.4686     0.4851   0.4731   0.4784   0.0053
+  19   ventana                 60     0.5616     0.5270   0.5510   0.5483  -0.0027
+  19   emergente               56     0.7600     0.7133   0.7433   0.7475   0.0042
+  19   acumulada_emergente     63     0.4626     0.4660   0.4635   0.4657   0.0022
+  20   ventana                 58     0.5716     0.5416   0.5617   0.5544  -0.0073
+  20   emergente               57     0.8471     0.8112   0.8347   0.8348   0.0001
+  20   acumulada_emergente     63     0.4567     0.4566   0.4567   0.4575   0.0008
+  21   ventana                 54     0.5289     0.5453   0.5335   0.5618   0.0283
+  21   emergente               53     0.8017     0.8461   0.8134   0.8699   0.0565
+  21   acumulada_emergente     63     0.4509     0.4539   0.4517   0.4534   0.0017
+  22   ventana                 58     0.5523     0.6024   0.5630   0.5848   0.0218
+  22   emergente               55     0.8526     0.8147   0.8455   0.8535   0.0080
+  22   acumulada_emergente     63     0.4481     0.4517   0.4491   0.4506   0.0015
+  23   ventana                 56     0.5608     0.5720   0.5640   0.5711   0.0071
+  23   emergente               51     0.8485     0.8101   0.8360   0.8552   0.0192
+  23   acumulada_emergente     63     0.4482     0.4494   0.4485   0.4514   0.0029
+  24   ventana                 55     0.5538     0.5654   0.5557   0.5706   0.0149
+  24   emergente               50     0.8332     0.8360   0.8336   0.8359   0.0023
+  24   acumulada_emergente     63     0.4448     0.4474   0.4455   0.4478   0.0023
+  25   ventana                 61     0.5755     0.6075   0.5831   0.5916   0.0085
+  25   emergente               59     0.8420     0.8602   0.8457   0.8560   0.0103
+  25   acumulada_emergente     63     0.4414     0.4467   0.4428   0.4456   0.0028
+  26   ventana                 58     0.5690     0.5645   0.5675   0.5625  -0.0050
+  26   emergente               58     0.7834     0.7508   0.7726   0.7603  -0.0123
+  26   acumulada_emergente     63     0.4386     0.4418   0.4395   0.4406   0.0011
+  27   ventana                 56     0.5835     0.5432   0.5718   0.5729   0.0011
+  27   emergente               55     0.8767     0.7736   0.8453   0.8454   0.0001
+  27   acumulada_emergente     63     0.4353     0.4380   0.4361   0.4361   0.0000
+  28   ventana                 57     0.5601     0.5923   0.5672   0.5806   0.0134
+  28   emergente               54     0.8252     0.8511   0.8303   0.8399   0.0096
+  28   acumulada_emergente     63     0.4313     0.4340   0.4320   0.4325   0.0005
+  29   ventana                 55     0.5290     0.6066   0.5527   0.5715   0.0188
+  29   emergente               53     0.8135     0.9105   0.8424   0.8674   0.0250
+  29   acumulada_emergente     63     0.4275     0.4331   0.4290   0.4299   0.0009
+  30   ventana                 55     0.5679     0.5542   0.5642   0.5668   0.0026
+  30   emergente               54     0.8136     0.7748   0.8026   0.8105   0.0079
+  30   acumulada_emergente     63     0.4232     0.4301   0.4251   0.4272   0.0021
+
+  ventana: día 1 → 30 · intra 0.5991→0.5642 (-5.8%) · entre 0.6153→0.5668 (-7.9%) · brecha +0.0162→+0.0026
+     veredicto: entre-nodos-baja-mas-rapido (margen 2%)
+
+  emergente: día 1 → 30 · intra 0.8701→0.8026 (-7.8%) · entre 0.8867→0.8105 (-8.6%) · brecha +0.0166→+0.0079
+     veredicto: bajan-igual (margen 2%)
+
+  acumulada_emergente: día 1 → 30 · intra 0.8701→0.4251 (-51.1%) · entre 0.8867→0.4272 (-51.8%) · brecha +0.0166→+0.0021
+     veredicto: bajan-igual (margen 2%)
+
+  Contraste con lo que el motor guardó en koine_metrics (ventana de 10 turnos de habla, no del día; sin partir por nodo):
+    día 1: acumulada 0.7419 · ventana 0.6072 · emergente 0.8763 · n 59
+    día 2: acumulada 0.5781 · ventana 0.4612 · emergente 0.7487 · n 61
+    día 3: acumulada 0.4777 · ventana 0.3907 · emergente 0.677 · n 63
+    día 4: acumulada 0.408 · ventana 0.3431 · emergente 0.6578 · n 59
+    día 5: acumulada 0.3586 · ventana 0.3085 · emergente 0.6397 · n 61
+    día 6: acumulada 0.3201 · ventana 0.2794 · emergente 0.6052 · n 54
+    día 7: acumulada 0.2945 · ventana 0.2619 · emergente 0.582 · n 62
+    día 8: acumulada 0.2715 · ventana 0.2453 · emergente 0.5729 · n 58
+    día 9: acumulada 0.262 · ventana 0.245 · emergente 0.5785 · n 54
+    día 10: acumulada 0.2441 · ventana 0.2348 · emergente 0.5597 · n 63
+    día 11: acumulada 0.2338 · ventana 0.233 · emergente 0.5511 · n 63
+    día 12: acumulada 0.2272 · ventana 0.2344 · emergente 0.5472 · n 56
+    día 13: acumulada 0.2105 · ventana 0.2251 · emergente 0.5445 · n 57
+    día 14: acumulada 0.2112 · ventana 0.2313 · emergente 0.5456 · n 58
+    día 15: acumulada 0.2076 · ventana 0.2316 · emergente 0.5432 · n 59
+    día 16: acumulada 0.1997 · ventana 0.2299 · emergente 0.5378 · n 62
+    día 17: acumulada 0.1965 · ventana 0.2323 · emergente 0.5389 · n 58
+    día 18: acumulada 0.1965 · ventana 0.239 · emergente 0.5276 · n 56
+    día 19: acumulada 0.1888 · ventana 0.2319 · emergente 0.517 · n 60
+    día 20: acumulada 0.1789 · ventana 0.2225 · emergente 0.4919 · n 58
+    día 21: acumulada 0.1774 · ventana 0.2222 · emergente 0.4967 · n 54
+    día 22: acumulada 0.1759 · ventana 0.2258 · emergente 0.5058 · n 58
+    día 23: acumulada 0.1741 · ventana 0.2291 · emergente 0.5372 · n 56
+    día 24: acumulada 0.1667 · ventana 0.2272 · emergente 0.5476 · n 55
+    día 25: acumulada 0.1686 · ventana 0.2297 · emergente 0.5578 · n 61
+    día 26: acumulada 0.1685 · ventana 0.2332 · emergente 0.5649 · n 58
+    día 27: acumulada 0.1677 · ventana 0.2335 · emergente 0.5669 · n 56
+    día 28: acumulada 0.168 · ventana 0.2404 · emergente 0.5682 · n 57
+    día 29: acumulada 0.1616 · ventana 0.2355 · emergente 0.573 · n 55
+    día 30: acumulada 0.1688 · ventana 0.2437 · emergente 0.5528 · n 55
