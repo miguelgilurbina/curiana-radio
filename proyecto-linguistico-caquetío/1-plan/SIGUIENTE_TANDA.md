@@ -8,6 +8,9 @@ bandeja: 6-fusion/BANDEJA.md
 
 # Siguiente tanda
 
+> **2026-10-01**: lo que sigue después de cerrar la versión (la serie era2-base y Kaketiana en la web) está en [[HANDOFF_2026-10-01]]. Esta nota conserva el plan de arranque de agosto y septiembre.
+
+
 > **Para una sesión que arranca en frío.** Antes de nada:
 > ```
 > python curiana_sim/generar_tablero.py    # el canon, medido

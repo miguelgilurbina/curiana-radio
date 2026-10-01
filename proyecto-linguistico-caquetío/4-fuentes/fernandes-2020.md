@@ -167,7 +167,8 @@ fechas de contexto y no está en abierto.
 Se leyó el manuscrito del autor en Europe PMC (PMC7864882, acceso abierto: «Users may view, print,
 copy, and download text and data-mine the content… for the purposes of academic research») y la
 hoja de datos suplementaria de Nature (`41586_2020_3053_MOESM4_ESM.xlsx`). **Nada de eso entra al
-repo** (licencia; como el PDF de Nature, que sigue en 0 bytes): se cita.
+repo** (licencia; como el PDF de Nature, que sigue en 0 bytes): se cita. La hoja quedó como copia
+local en `fuentes_caquetios/`, en el `.gitignore` (2026-10-01), para poder volver a verificar.
 
 - «We model ceramic users from Curaçao as 74.5±3.7% LesserAntilles_Ceramic-related ancestry and
   25.5±3.7% Venezuela_Ceramic-related ancestry (Table S15)» — y la otra parte «associated with the
