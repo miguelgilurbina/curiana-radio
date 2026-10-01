@@ -49,6 +49,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // renombrado y sus redirects están en next.config.js.
   const simuladorPages: MetadataRoute.Sitemap = [
     { path: '/kaketiana', priority: 0.9 },
+    { path: '/kaketiana/pueblo', priority: 0.8 },
+    { path: '/kaketiana/lengua', priority: 0.8 },
     { path: '/kaketiana/experimento', priority: 0.8 },
     { path: '/kaketiana/experimento/era-1', priority: 0.5 },
     { path: '/kaketiana/bibliografia', priority: 0.7 },

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getWikiPorSeccion, getCifrasWiki } from "@/lib/wiki";
-import { getSerie, brazo } from "@/lib/serie";
 import { getFichasSeed } from "@/lib/fichas";
-import { CAPAS_EPISTEMICAS } from "@/lib/sim-theme";
-import Masthead from "@/components/simulador/Masthead";
-import { Overline } from "@/components/simulador/ui";
-import { DataAside } from "@/components/simulador/prose";
-import { CapaGlifo } from "@/components/simulador/capa";
+import { getSerie, brazo } from "@/lib/serie";
+import { getMapa } from "@/lib/mapa";
+import { ESTILO_NIVEL } from "@/lib/mapa-estilo";
+import HeroPalabra from "@/components/kaketiana/HeroPalabra";
+import { SCRIPT_HERO } from "@/lib/kaketiana-hero";
+import MapaKaketiana from "@/components/kaketiana/MapaKaketiana";
+import Etiqueta from "@/components/kaketiana/Etiqueta";
 
 export const metadata: Metadata = {
   title: "Kaketiana — el mundo del kaketío | Curiana Radio",
@@ -15,169 +16,212 @@ export const metadata: Metadata = {
     "Qué sabemos del pueblo caquetío del Golfete de Coro, siglos XIV-XV: cómo vivían, en qué creían, y cómo suena una lengua que nadie habla desde hace cuatrocientos años. Cada afirmación con su fuente.",
 };
 
-// ⚠️ ANDAMIO — esta portada existe para que la ruta funcione y la navegación
-// cierre. El diseño real se hace aparte (ver el brief de secciones).
-// Lo único que NO es provisional aquí son las cifras: se miden, no se
-// escriben a mano (regla 1 del proyecto).
+// La portada del manual de Kaketiana (design_handoff_kaketiana, Vistas §01 y
+// hero 1a): placa clara 6b «Sal y almagre», la etimología como hero, el mapa
+// del territorio, tres cifras, las dos puertas y la franja del experimento.
+// Nada más: las listas de artículos viven en /kaketiana/pueblo y
+// /kaketiana/lengua (decisión de Miguel, 2026-09-30: la portada estaba
+// sobrecargada). Las cifras se miden, no se escriben a mano (regla 1).
+
+const NAV = [
+  { href: "/kaketiana/pueblo", label: "El pueblo" },
+  { href: "/kaketiana/lengua", label: "La lengua" },
+  { href: "/kaketiana/bibliografia", label: "Bibliografía" },
+];
+
+function Cifra({ label, valor, sub }: { label: string; valor: number | string; sub: string }) {
+  return (
+    <div className="border-t border-(--sim-rule) pt-3">
+      <span className="kk-label block text-[0.6rem] text-(--sim-ink-soft)">{label}</span>
+      <span className="sim-display mt-1 block text-3xl font-semibold leading-none text-(--sim-ink)">{valor}</span>
+      <span className="mt-1.5 block font-sans text-xs leading-snug text-(--sim-ink-soft)">{sub}</span>
+    </div>
+  );
+}
+
+function Puerta({
+  href,
+  overline,
+  titulo,
+  items,
+  accion,
+}: {
+  href: string;
+  overline: string;
+  titulo: string;
+  items: string[];
+  accion: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group flex flex-col gap-3 border border-(--sim-rule) p-6 transition-colors duration-300 hover:border-(--sim-rubrica)"
+    >
+      <span className="kk-label text-[0.6rem] text-(--sim-ink-soft)">{overline}</span>
+      <span className="sim-display text-2xl font-semibold text-(--sim-ink)">{titulo}</span>
+      <ul className="flex flex-col gap-1.5 font-sans text-sm text-(--sim-ink-soft)">
+        {items.map((i) => (
+          <li key={i}>{i}</li>
+        ))}
+      </ul>
+      <span className="kk-label mt-auto pt-2 text-[0.66rem] text-(--sim-rubrica)">{accion}</span>
+    </Link>
+  );
+}
+
 export default function KaketianaPage() {
   const cifras = getCifrasWiki();
   const pueblo = getWikiPorSeccion("pueblo");
   const lengua = getWikiPorSeccion("lengua");
+  const fichas = getFichasSeed();
   const serie = getSerie();
   const escena = serie ? brazo(serie, "escena") : undefined;
-  const fichas = getFichasSeed();
+  const mapa = getMapa();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-24 pt-8 sm:px-6 lg:px-8">
-      <Masthead />
+    <div data-kk data-kk-dir="sal" className="min-h-screen bg-(--sim-paper)">
+      {/* Corre antes de pintar el hero: ver SCRIPT_HERO */}
+      <script dangerouslySetInnerHTML={{ __html: SCRIPT_HERO }} />
 
-      <article className="mx-auto max-w-[760px]">
-        <header>
-          <Overline>El mundo del kaketío</Overline>
-          <h2 className="mt-2 sim-display text-4xl font-semibold leading-tight text-(--sim-ink) md:text-5xl">
-            Un pueblo del Golfete de Coro, y la lengua que hablaba
-          </h2>
-          <p className="mt-5 max-w-reading font-sans text-lg leading-relaxed text-(--sim-ink-soft)">
-            Los caquetíos vivieron en la costa de Falcón y las islas de enfrente
-            hasta que la conquista los deshizo. No dejaron escritura. Lo que queda
-            son crónicas de quienes los invadieron, topónimos que nadie tradujo,
-            palabras sueltas en el papiamento de Aruba y Curazao, y lo que la
-            arqueología saca de la arena.
-          </p>
-          <p className="mt-4 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-            Esto es lo que se puede reconstruir con eso — y, con el mismo cuidado,
-            lo que no.
-          </p>
-        </header>
+      {/* La nav de la sección, en registro terminal */}
+      <nav className="border-b border-(--sim-rule)">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-7 gap-y-2 px-4 py-4 sm:px-6 lg:px-8">
+          <Link href="/kaketiana" className="sim-display text-xl font-semibold text-(--sim-ink)">
+            Kaketiana
+          </Link>
+          <span className="hidden flex-1 sm:block" />
+          {NAV.map((n) => (
+            <Link
+              key={n.href}
+              href={n.href}
+              className="kk-label text-[0.66rem] text-(--sim-ink-soft) transition-colors hover:text-(--sim-rubrica)"
+            >
+              {n.label}
+            </Link>
+          ))}
+          <Link href="/kaketiana/experimento" className="kk-accion text-[0.66rem]">
+            [ EXPERIMENTO ]
+          </Link>
+        </div>
+      </nav>
 
-        <DataAside
-          items={[
-            { label: "Artículos", value: cifras.articulos, sub: "sobre el pueblo y su lengua" },
-            { label: "Obras", value: cifras.obras, sub: `${cifras.conLectura} se pueden leer en línea` },
-            ...(serie?.elenco
-              ? [{ label: "Voces simuladas", value: serie.elenco.total, sub: "en dos pueblos de Paraguaná" }]
-              : []),
-          ]}
-        />
+      <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 md:pt-14 lg:px-8">
+        <p className="kk-label text-(--sim-rubrica)">Un wiki de investigación · Golfete de Coro · s. XIV–XV</p>
 
-        {/* La etimología del nombre, que es también la declaración de método */}
-        <section className="mt-10 rounded-md border border-(--sim-rule) bg-(--sim-paper-deep) px-5 py-4">
-          <p className="sim-display text-xl text-(--sim-fuego)">
-            Kaketiana <span className="font-sans text-base italic text-(--sim-ink-soft)">— el lugar de la gente</span>
-          </p>
-          <p className="mt-2 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
-            De <em>kaketio</em>, el nombre del pueblo (Oliver 1989 lo lee &lsquo;ser
-            viviente, gente&rsquo; desde el lokono), y <em>-ana</em>, un final que sí está
-            documentado —en <em>Paraguaná</em> y en <em>Curiana</em>— pero cuyo valor nadie
-            anotó: &lsquo;lugar de&rsquo; es lectura nuestra.{" "}
-            <strong className="text-(--sim-ink)">La palabra no está documentada:</strong>{" "}
-            la formamos con piezas que sí lo están, y el sentido lo ponemos nosotros. Es la
-            misma regla que gobierna todo lo demás de este sitio — lo atestiguado se
-            distingue de lo reconstruido, siempre.
-          </p>
-        </section>
+        {/* El hero y el mapa, lado a lado */}
+        <div className="mt-6 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14">
+          <HeroPalabra />
 
-        {/* La lengua viva: el diccionario, con la marca de cómo sabemos cada voz */}
-        {fichas.n > 0 && (
-          <section className="mt-12">
-            <div className="flex items-baseline justify-between gap-4">
-              <h3 className="sim-display text-2xl font-semibold text-(--sim-ink)">La lengua, palabra por palabra</h3>
-              <Overline>{fichas.n} voces</Overline>
-            </div>
-            <p className="mt-1 max-w-reading font-sans text-sm text-(--sim-ink-faint)">
-              Cada voz del diccionario dice cómo la sabemos. Es la misma marca en todo el sitio.
+          <div className="flex flex-col gap-5">
+            {mapa && mapa.puntos.length > 0 && (
+              <figure>
+                <div className="relative h-[300px] overflow-hidden border border-(--sim-rule) bg-(--sim-paper-deep) md:h-[380px]">
+                  <MapaKaketiana puntos={mapa.puntos} />
+                  {/* La etiqueta y la marca van dentro del marco (manual) */}
+                  <span className="pointer-events-none absolute right-2.5 top-2.5 z-[1000]">
+                    <Etiqueta grado="rec" corta className="bg-(--sim-paper)" />
+                  </span>
+                  <span className="pointer-events-none absolute bottom-2 left-2.5 z-[1000] kk-label bg-(--sim-paper)/85 px-1.5 text-[0.52rem] tracking-[0.18em] text-(--sim-ink-soft)">
+                    Kaketiana · datos propios
+                  </span>
+                </div>
+                <figcaption className="mt-2.5 flex flex-col gap-2">
+                  <span className="sim-mono text-[0.68rem] text-(--sim-ink-soft)">
+                    {mapa.resumen.toponimos_con_lugar} de {mapa.resumen.toponimos_canon} topónimos del canon
+                    tienen lugar en el mapa de hoy · {mapa.resumen.puntos} puntos
+                  </span>
+                  <span className="flex flex-wrap gap-x-4 gap-y-1 font-sans text-xs text-(--sim-ink-soft)">
+                    {(["A", "B", "C", "sin"] as const).map((n) => {
+                      const e = ESTILO_NIVEL[n];
+                      return (
+                        <span key={n} className="inline-flex items-center gap-1.5">
+                          <svg width="12" height="12" aria-hidden="true">
+                            <circle
+                              cx="6"
+                              cy="6"
+                              r="4.5"
+                              fill={e.relleno}
+                              fillOpacity={e.opacidad}
+                              stroke="#b06a1c"
+                              strokeWidth="1.5"
+                              strokeDasharray={e.trazo}
+                            />
+                          </svg>
+                          {n === "sin" ? e.etiqueta : `${n} · ${e.etiqueta}`} ({mapa.resumen.por_nivel[n]})
+                        </span>
+                      );
+                    })}
+                  </span>
+                  <span className="font-sans text-xs leading-relaxed text-(--sim-ink-soft)">
+                    El trazo mide la lectura del nombre, no su existencia: todos están en el canon y en el mapa de
+                    hoy, ubicados con OpenStreetMap. Los que no tienen lectura dicen por qué al pasar sobre ellos.
+                  </span>
+                </figcaption>
+              </figure>
+            )}
+
+            <p className="font-serif text-base italic leading-relaxed text-(--sim-ink-soft)">
+              Semiárido siempre: médanos, cardones, cujíes. Tierra pobre, mar rico. Nada de selva.
             </p>
-            <ul className="mt-4 grid grid-cols-1 gap-x-8 sm:grid-cols-2">
-              {CAPAS_EPISTEMICAS.map((c) => (
-                <li key={c.key} className="border-t border-(--sim-rule)">
-                  <Link href={`/kaketiana/lexicon?capa=${c.key}`} className="group block py-3">
-                    <span className="flex items-baseline gap-2.5">
-                      <span className="self-center">
-                        <CapaGlifo capa={c.key} size={12} />
-                      </span>
-                      <span className="font-sans text-sm font-semibold" style={{ color: c.color }}>
-                        {c.plural}
-                      </span>
-                      <span className="sim-mono text-xs tabular-nums text-(--sim-ink-faint)">
-                        {fichas.por_capa[c.key] ?? 0}
-                      </span>
-                    </span>
-                    {fichas.capas[c.key] && (
-                      <span className="mt-0.5 block pl-[1.4rem] font-sans text-xs text-(--sim-ink-soft) group-hover:text-(--sim-ink)">
-                        Lo incierto: {fichas.capas[c.key].incierto.charAt(0).toLowerCase()}
-                        {fichas.capas[c.key].incierto.slice(1)}
-                      </span>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 font-sans text-sm">
-              <Link href="/kaketiana/lexicon" className="font-medium text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)">
-                El diccionario →
-              </Link>
-              <Link href="/kaketiana/no-sabemos" className="font-medium text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)">
-                Lo que no sabemos →
-              </Link>
-            </div>
-          </section>
-        )}
 
-        {[
-          { seccion: "pueblo" as const, titulo: "El pueblo", lista: pueblo,
-            desc: "Cómo vivían, en qué creían, cómo se organizaban y hasta dónde llegaba su mundo." },
-          { seccion: "lengua" as const, titulo: "La lengua", lista: lengua,
-            desc: "Cómo es el caquetío reconstruido — y cómo se reconstruye una lengua sin hablantes." },
-        ].map((s) => (
-          <section key={s.seccion} className="mt-12">
-            <div className="flex items-baseline justify-between gap-4">
-              <h3 className="sim-display text-2xl font-semibold text-(--sim-ink)">{s.titulo}</h3>
-              <Overline>{s.lista.length} artículos</Overline>
+            <div className="grid grid-cols-3 gap-4">
+              <Cifra
+                label="Artículos"
+                valor={cifras.articulos}
+                sub={`${pueblo.length} pueblo · ${lengua.length} lengua`}
+              />
+              <Cifra label="Obras citadas" valor={cifras.obras} sub={`${cifras.conLectura} se leen en línea`} />
+              {serie?.elenco && (
+                <Cifra label="Voces simuladas" valor={serie.elenco.total} sub="sólo en el experimento" />
+              )}
             </div>
-            <p className="mt-1 max-w-reading font-sans text-sm text-(--sim-ink-faint)">{s.desc}</p>
-            <ul className="mt-4">
-              {s.lista.map((p) => (
-                <li key={p.slug} className="border-t border-(--sim-rule) first:border-t-0">
-                  <Link href={`/kaketiana/${s.seccion}/${p.slug}`} className="group block py-3.5">
-                    <h4 className="sim-display text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
-                      {p.titulo}
-                    </h4>
-                    <p className="mt-0.5 line-clamp-2 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
-                      {p.resumen}
-                    </p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-
-        <section className="mt-12 border-t border-(--sim-ink) pt-6">
-          <h3 className="sim-display text-2xl font-semibold text-(--sim-ink)">Y un experimento</h3>
-          <p className="mt-2 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-            Con todo lo anterior se construyó una simulación:{" "}
-            {serie?.elenco ? `${serie.elenco.total} personajes` : "una comunidad de personajes"} en
-            dos pueblos de Paraguaná hablan el caquetío reconstruido
-            {escena ? ` durante ${escena.dias} días` : ""}, inventan nombres para lo que no lo tiene
-            y se contagian entre sí. No prueba cómo hablaban los caquetíos: prueba qué le pasa a
-            una lengua cuando la gente la usa, y qué cambia cuando cada pueblo vive en su lugar.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-sans text-sm">
-            {[
-              { href: "/kaketiana/experimento", label: "El experimento →" },
-              { href: "/kaketiana/personajes", label: "Los personajes de la era 1" },
-              { href: "/kaketiana/lexicon", label: "El diccionario" },
-              { href: "/kaketiana/neologisms", label: "Los neologismos" },
-              { href: "/kaketiana/bibliografia", label: "La bibliografía" },
-              { href: "/kaketiana/no-sabemos", label: "Lo que no sabemos" },
-            ].map((l) => (
-              <Link key={l.href} href={l.href} className="font-medium text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)">
-                {l.label}
-              </Link>
-            ))}
           </div>
-        </section>
-      </article>
+        </div>
+
+        {/* Las dos puertas */}
+        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
+          <Puerta
+            href="/kaketiana/pueblo"
+            overline={`El pueblo · ${pueblo.length} artículos · ensayo`}
+            titulo="Preguntas de fondo"
+            items={pueblo.slice(0, 4).map((p) => p.titulo.split(" — ")[0].split(":")[0])}
+            accion="Leer →"
+          />
+          <Puerta
+            href="/kaketiana/lengua"
+            overline={`La lengua · ${lengua.length} artículos · referencia`}
+            titulo="Obra de consulta"
+            items={[
+              ...(fichas.n > 0 ? [`El diccionario · ${fichas.n} voces`] : []),
+              ...lengua.slice(0, 3).map((p) => p.titulo.split(" — ")[0]),
+            ]}
+            accion="Consultar →"
+          />
+        </div>
+        <p className="mt-4 font-sans text-sm text-(--sim-ink-soft)">
+          También:{" "}
+          <Link href="/kaketiana/no-sabemos" className="text-(--kk-extra) hover:text-(--sim-rubrica)">
+            lo que no sabemos
+          </Link>{" "}
+          ·{" "}
+          <Link href="/kaketiana/bibliografia" className="text-(--kk-extra) hover:text-(--sim-rubrica)">
+            la bibliografía
+          </Link>
+        </p>
+      </div>
+
+      {/* La franja del experimento: ya es del otro lado del umbral */}
+      <Link href="/kaketiana/experimento" data-sim-acto="laboratorio" className="group block bg-(--sim-paper)">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-7 sm:px-6 lg:px-8">
+          <span className="kk-accion text-[0.75rem]">[ EXPERIMENTO ]</span>
+          <span className="font-sans text-sm text-(--sim-ink-soft)">
+            {serie?.elenco ? `${serie.elenco.total} voces simuladas` : "Voces simuladas"}
+            {escena ? `, ${escena.dias} días en Paraguaná` : ""}: ficción declarada, del otro lado del umbral.
+          </span>
+          <span className="hidden flex-1 sm:block" />
+          <Etiqueta grado="canon" />
+        </div>
+      </Link>
     </div>
   );
 }
