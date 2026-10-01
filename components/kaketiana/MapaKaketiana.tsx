@@ -46,7 +46,9 @@ export default function MapaKaketiana({ puntos }: { puntos: PuntoMapa[] }) {
             .bindTooltip(
               `<em>${escapar(p.forma)}</em> · ${escapar(p.nombre_en_el_mapa)}` +
                 (p.glosa ? `<br><span style="opacity:.75">${escapar(p.glosa)}</span>` : "") +
-                `<br><span style="opacity:.75">lectura ${p.nivel}</span>`,
+                `<br><span style="opacity:.75">${
+                  p.nivel === "sin" ? `sin lectura: ${escapar(p.motivo ?? "")}` : `lectura ${p.nivel}`
+                }</span>`,
               { direction: "top", opacity: 0.95 },
             )
             .addTo(mapa);

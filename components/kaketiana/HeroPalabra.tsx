@@ -96,7 +96,7 @@ export default function HeroPalabra() {
         <span {...p("ana")} className="flex flex-col gap-1.5">
           <span className="kk-forma text-5xl leading-none md:text-6xl">-ana</span>
           <span className="flex items-center gap-2">
-            <span className="font-sans text-xs text-(--sim-ink-soft)">en Paraguaná y Curiana</span>
+            <span className="font-sans text-xs text-(--sim-ink-soft)">en Paraguaná, Curiana, Jayana…</span>
             <Etiqueta grado="atest" corta />
           </span>
         </span>

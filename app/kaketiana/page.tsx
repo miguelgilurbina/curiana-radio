@@ -127,11 +127,11 @@ export default function KaketianaPage() {
                 </div>
                 <figcaption className="mt-2.5 flex flex-col gap-2">
                   <span className="sim-mono text-[0.68rem] text-(--sim-ink-soft)">
-                    {mapa.resumen.toponimos_con_lugar} de {mapa.resumen.toponimos_vigentes} topónimos del canon
+                    {mapa.resumen.toponimos_con_lugar} de {mapa.resumen.toponimos_canon} topónimos del canon
                     tienen lugar en el mapa de hoy · {mapa.resumen.puntos} puntos
                   </span>
                   <span className="flex flex-wrap gap-x-4 gap-y-1 font-sans text-xs text-(--sim-ink-soft)">
-                    {(["A", "B", "C"] as const).map((n) => {
+                    {(["A", "B", "C", "sin"] as const).map((n) => {
                       const e = ESTILO_NIVEL[n];
                       return (
                         <span key={n} className="inline-flex items-center gap-1.5">
@@ -147,14 +147,14 @@ export default function KaketianaPage() {
                               strokeDasharray={e.trazo}
                             />
                           </svg>
-                          {n} · {e.etiqueta} ({mapa.resumen.por_nivel[n]})
+                          {n === "sin" ? e.etiqueta : `${n} · ${e.etiqueta}`} ({mapa.resumen.por_nivel[n]})
                         </span>
                       );
                     })}
                   </span>
                   <span className="font-sans text-xs leading-relaxed text-(--sim-ink-soft)">
-                    El trazo mide la lectura del nombre, no su existencia: todos están en una fuente y en el mapa
-                    de hoy, ubicados con OpenStreetMap.
+                    El trazo mide la lectura del nombre, no su existencia: todos están en el canon y en el mapa de
+                    hoy, ubicados con OpenStreetMap. Los que no tienen lectura dicen por qué al pasar sobre ellos.
                   </span>
                 </figcaption>
               </figure>

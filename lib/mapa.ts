@@ -8,8 +8,9 @@ import path from "path";
 const MAPA_PATH = path.join(process.cwd(), "content", "wiki", "mapa.json");
 
 /** La lectura del nombre, no su existencia: A cierra con morfemas
- *  atestiguados, B exige un morfema despejado, C es plausible. */
-export type NivelLectura = "A" | "B" | "C";
+ *  atestiguados, B exige un morfema despejado, C es plausible, «sin» no tiene
+ *  lectura (el «descartado» del canon: se descartó la lectura, no el lugar). */
+export type NivelLectura = "A" | "B" | "C" | "sin";
 
 export interface PuntoMapa {
   id: string;
@@ -22,6 +23,8 @@ export interface PuntoMapa {
   nivel: NivelLectura;
   cruce: "exacto" | "forma-viva" | "parcial";
   glosa: string | null;
+  /** Sólo en «sin»: por qué no hay lectura, dicho desde la razón del canon. */
+  motivo: string | null;
   obra: string | null;
 }
 
@@ -33,7 +36,7 @@ export interface MapaSeed {
   resumen: {
     puntos: number;
     toponimos_con_lugar: number;
-    toponimos_vigentes: number;
+    toponimos_canon: number;
     por_nivel: Record<NivelLectura, number>;
     puntos_por_region: Record<string, number>;
   };
