@@ -366,7 +366,17 @@ componentes del cronista.
   clara → banda sin texto → laboratorio, con la escala del lado oscuro para que
   las etiquetas se lean), ◉ en la frase simulada y en la tabla de nombres
   (fichas en móvil, sin scroll horizontal), el titular con Amanecer.
-- **Pendiente:** la portada con el hero 1a, el wiki entero en 6b (hoy sigue en
-  el pergamino 6a del cronista), artículo de pueblo (65ch, capitular) y de
-  lengua (referencia, ancho completo), bibliografía con anclas, y los
-  experimentales §07–09.
+- **Aplicado (2026-09-30):** la portada `/kaketiana` (Vistas §01 + hero 1a),
+  aligerada a pedido de Miguel: nav de la sección, la ecuación que se arma
+  (`components/kaketiana/HeroPalabra.tsx`, una vez por visita), el mapa de los
+  topónimos del canon (`export_mapa_seed.py` → `content/wiki/mapa.json`;
+  teselas en sepia y el trazo por nivel de lectura: A sólido, B firme, C
+  discontinuo), tres cifras, las dos puertas y la franja del experimento. Las
+  listas de artículos pasan a `/kaketiana/pueblo` y `/kaketiana/lengua`.
+  **El canon manda sobre el handoff** en la etimología: la glosa 'lugar de' de
+  *-ana* se retiró (#109) y *kaketiana* es un compuesto nuestro, así que la
+  palabra va ◇ hipotética (sin asterisco), no ◆.
+- **Pendiente:** el wiki entero en 6b (hoy sigue en el pergamino 6a del
+  cronista, también las páginas de las puertas), artículo de pueblo (65ch,
+  capitular) y de lengua (referencia, ancho completo), bibliografía con
+  anclas, y los experimentales §07–09.

@@ -258,13 +258,44 @@
     background: linear-gradient(180deg, #e4dbc8 0%, #3a3040 55%, #0f1621 100%);
   }
 
+  /* Hero 1a «la palabra se arma» (components/kaketiana/HeroPalabra.tsx).
+     El ocultamiento de arranque NO vive aquí: lo inyecta en <head> el script
+     en línea de la portada (lib/kaketiana-hero.ts), sólo cuando la secuencia
+     toca, y el componente lo quita al terminar — así React no encuentra un
+     atributo que no puso. Si React nunca arranca, kk-hero-seguro destapa todo
+     a los 4 s: nada se queda escondido sin JS. */
+  .kk-hero [data-paso] {
+    transition:
+      opacity var(--kk-t-tinta) var(--kk-curva),
+      transform var(--kk-t-tinta) var(--kk-curva);
+  }
+  .kk-hero [data-paso="signos"] {
+    transition-duration: var(--kk-t-rapido);
+  }
+  @keyframes kk-hero-seguro {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* El mapa de la portada: las teselas en sepia, para que sea de la placa de
+     sal; los puntos (SVG) quedan con su color. */
+  .kk-mapa .leaflet-tile-pane {
+    filter: grayscale(1) sepia(0.35) contrast(0.92) brightness(1.04);
+  }
+  .kk-mapa .leaflet-container {
+    background: var(--sim-paper-deep);
+    font-family: var(--font-sans, Inter, sans-serif);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .kk-amanecer[data-amanecer] {
       opacity: 1;
       transform: none;
       transition: none;
     }
-    .kk-accion::after {
+    .kk-accion::after,
+    .kk-hero [data-paso] {
       transition: none;
     }
   }
