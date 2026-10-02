@@ -384,7 +384,25 @@ componentes del cronista.
   en móvil «Kaketiana · 88.8 · `[ ≡ ]`» (44px). Se retiraron el masthead de la
   era 1 y la cronología lateral de las páginas interiores (`SimShell`); la
   cronología queda sólo en `/kaketiana/experimento/era-1`, que es donde cuenta.
-- **Pendiente:** el artículo de pueblo (65ch, capitular, miga con progreso,
-  sumario, citas en serif), el de lengua (referencia, ancho completo, tablas →
-  fichas), la bibliografía con anclas, separar lectura de cuaderno de trabajo,
-  el marco de imagen, el modo oscuro de lectura y los experimentales §07–09.
+- **Aplicado (2026-10-02): el artículo de pueblo** (Vistas §02, móvil en
+  Sistema §06; `components/kaketiana/ArticuloEnsayo.tsx`). Miga con progreso
+  («KAKETIANA / EL PUEBLO / …» · `07 / 10`; en móvil «← EL PUEBLO»); sumario de
+  230px con la sección actual en rúbrica y la Rúbrica, «… N secciones más», y en
+  móvil plegado en «EN ESTE ARTÍCULO · N ▾» (`Sumario.tsx`); la `pregunta` del
+  frontmatter como título; prosa a 65ch con capitular; «sobre qué se sostiene»
+  en dos columnas y la tarjeta «siguiente pregunta». Todo lo que lleva número
+  sale del cuerpo (`lib/articulo.ts`). En la prosa de todo el wiki
+  (`wiki-mdx.tsx`): los `##` llevan ancla; **la cita de una fuente** (abre con
+  comillas) va en serif sobre papel hundido con la « colgada y el pie en mono,
+  y en móvil a sangre completa; **nuestras notas** (avisos, correcciones) vuelven
+  a sans con un filete, en rúbrica si avisan; enlaces en salina; tablas `.kt`.
+  No se aplicó el **índice de certeza**: el manual lo calcula de las etiquetas
+  de cada afirmación y los ensayos no las llevan; contado sobre las voces que
+  nombran salían de 0 a 5 por ensayo, y eso mide el formato, no la certeza.
+  Tampoco se cuentan «citas» por obra: los ensayos citan en prosa y enlazan cada
+  obra una vez o ninguna.
+- **Pendiente:** el artículo de lengua (referencia, ancho completo, tablas →
+  fichas), la bibliografía con anclas, separar lectura de cuaderno de trabajo
+  (las líneas de sesión, rutas y hojas de fuentes del vault siguen en los
+  ensayos), el marco de imagen, el modo oscuro de lectura, el índice de certeza
+  (pide etiquetar las afirmaciones en el vault) y los experimentales §07–09.

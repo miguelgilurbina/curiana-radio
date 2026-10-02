@@ -84,6 +84,35 @@ export function getBibliografia(): ObraBiblio[] {
   return cacheBiblio.obras;
 }
 
+// El `genero` de una obra viene del frontmatter del vault como slug sin tildes
+// («arqueo-linguistica»). Para leerlo se le devuelven palabra por palabra.
+const TILDES: Record<string, string> = {
+  academico: "académico",
+  antropologia: "antropología",
+  arqueologia: "arqueología",
+  arqueometria: "arqueometría",
+  botanica: "botánica",
+  cronica: "crónica",
+  etnografia: "etnografía",
+  genetica: "genética",
+  gramatica: "gramática",
+  historiografia: "historiografía",
+  lexico: "léxico",
+  linguistica: "lingüística",
+  religion: "religión",
+  resenia: "reseña",
+  teorico: "teórico",
+};
+
+/** «arqueo-linguistica» → «arqueo lingüística». */
+export function generoLegible(genero: string | null): string | null {
+  if (!genero) return null;
+  return genero
+    .split("-")
+    .map((w) => TILDES[w] ?? w)
+    .join(" ");
+}
+
 /** Cifras medidas para la portada. Ninguna se escribe a mano (regla 1). */
 export function getCifrasWiki(): { articulos: number; obras: number; conLectura: number } {
   const obras = getBibliografia();

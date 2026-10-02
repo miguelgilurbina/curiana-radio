@@ -256,6 +256,54 @@
     transform: scaleX(1);
   }
 
+  /* El sumario del ensayo (components/kaketiana/Sumario.tsx): la sección
+     donde está el lector lleva la Rúbrica, como el título activo del manual. */
+  .kk-sumario-enlace {
+    position: relative;
+    display: inline-block;
+  }
+  .kk-sumario-enlace::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background: var(--sim-rubrica);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--kk-t-rapido) var(--kk-curva);
+  }
+  .kk-sumario-enlace:hover::after,
+  .kk-sumario-enlace:focus-visible::after,
+  .kk-sumario-enlace[data-actual]::after {
+    transform: scaleX(1);
+  }
+
+  /* La capitular del ensayo (Vistas §02): la primera letra del primer párrafo
+     de la prosa, en display WONK y almagre, colgada a la izquierda. Sólo el
+     párrafo de primer nivel: las citas y las notas no la llevan. Si el primero
+     es la línea de sesión del vault, en cursiva, la lleva el segundo
+     (lib/articulo.ts, abreConCursiva). */
+  .kk-capitular > p:first-of-type::first-letter,
+  .kk-capitular-2 > p:nth-of-type(2)::first-letter {
+    float: left;
+    padding: 5px 10px 0 0;
+    font-family: var(--sim-display);
+    font-variation-settings: "SOFT" 0, "WONK" 1;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 0.78;
+    color: var(--sim-rubrica);
+  }
+  @media (min-width: 640px) {
+    .kk-capitular > p:first-of-type::first-letter,
+    .kk-capitular-2 > p:nth-of-type(2)::first-letter {
+      padding: 6px 14px 0 0;
+      font-size: 4rem;
+    }
+  }
+
   /* Amanecer: la sección entra una sola vez, al llegar al viewport
      (components/kaketiana/Amanecer.tsx). Sólo se esconde lo que todavía no
      se ve: sin JS, o arriba del pliegue, todo está ahí desde el principio. */
@@ -332,6 +380,7 @@
     }
     .kk-accion::after,
     .kk-nav-enlace::after,
+    .kk-sumario-enlace::after,
     .kk-hero [data-paso] {
       transition: none;
     }

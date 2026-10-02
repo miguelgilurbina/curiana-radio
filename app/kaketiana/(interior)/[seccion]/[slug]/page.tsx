@@ -6,6 +6,7 @@ import { enlazarVoces } from "@/lib/fichas";
 import { SECCIONES_WIKI, type SeccionWiki } from "@/types/wiki";
 import { Overline } from "@/components/simulador/ui";
 import { WikiProse } from "@/components/simulador/wiki-mdx";
+import ArticuloEnsayo from "@/components/kaketiana/ArticuloEnsayo";
 
 interface ArticuloProps {
   params: Promise<{ seccion: string; slug: string }>;
@@ -38,16 +39,17 @@ export default async function ArticuloPage({ params }: ArticuloProps) {
   const pagina = getWikiPagina(seccion, slug);
   if (!pagina) notFound();
 
+  // `pueblo` es prosa larga con citas de crónicas: el artículo de fondo del
+  // manual de Kaketiana (Vistas §02). `lengua` es material de referencia —20%
+  // de sus líneas son tabla— y sigue aquí abajo hasta que le toque su vista
+  // (Vistas §03: ancho completo, tablas que en móvil son fichas).
+  if (seccion === "pueblo") return <ArticuloEnsayo pagina={pagina} />;
+
   const info = SECCIONES_WIKI[seccion];
   const { anterior, siguiente } = getVecinos(seccion, slug);
 
-  // `lengua` es material de referencia: 20% de sus líneas son tabla. `pueblo`
-  // es prosa larga con citas de crónicas. Por ahora comparten plantilla y solo
-  // cambia el ancho de la columna; separarlos de verdad es trabajo de diseño.
-  const anchoColumna = seccion === "lengua" ? "max-w-[860px]" : "max-w-[720px]";
-
   return (
-    <article className={`mx-auto ${anchoColumna}`}>
+    <article className="mx-auto max-w-[860px]">
       <Link
         href="/kaketiana"
         className="font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
