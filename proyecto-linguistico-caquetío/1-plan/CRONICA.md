@@ -13,10 +13,126 @@ editar_a_mano: no
 > python curiana_sim/generar_cronica.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-16**. **118 cambios** en main, del 2025-11-30 al 2026-09-16.
+<!--GENERADO--> Generado el **2026-10-02**. **231 cambios** en main, del 2025-11-30 al 2026-10-02.
 
-## 2026-09 — 8 cambio(s)
+## 2026-10 — 4 cambio(s)
 
+- **2026-10-02** `d89b714` Merge pull request #246 from miguelgilurbina/web/kaketiana-marco
+- **2026-10-02** `78c244b` Merge pull request #245 from miguelgilurbina/web/experimento-capas
+- **2026-10-02** `a13b48c` Merge pull request #244 from miguelgilurbina/docs/cierre-version-2026-10-01
+- **2026-10-01** `ce6d16b` Merge pull request #243 from miguelgilurbina/web/kaketiana-portada
+
+## 2026-09 — 117 cambio(s)
+
+- **2026-09-29** `7e3b9f8` Merge pull request #242 from miguelgilurbina/web/kaketiana-diseno
+- **2026-09-29** `8254168` Merge pull request #241 from miguelgilurbina/web/intro-nombre-con-logo
+- **2026-09-29** `ea2483a` Merge pull request #238 from miguelgilurbina/base/era2-2026-09-27
+- **2026-09-29** `894fb92` Merge pull request #240 from miguelgilurbina/web/kaketiana-era2
+- **2026-09-29** `95ac0e2` Merge pull request #239 from miguelgilurbina/claude/jai-sounds-design-bdef52
+- **2026-09-29** `aea0775` Merge pull request #237 from miguelgilurbina/claude/favicon-design-review-08840b
+- **2026-09-28** `dc5982a` Merge pull request #236 from miguelgilurbina/web/dominio-curianaradio
+- **2026-09-27** `5240a42` Merge pull request #235 from miguelgilurbina/tanda/hermanas-2026-09-24
+- **2026-09-23** `6aa43a5` Merge pull request #233 from miguelgilurbina/docs/bandeja-tras-tanda-final
+- **2026-09-23** `3ec2612` Merge pull request #232 from miguelgilurbina/tanda/final-2026-09-23
+- **2026-09-23** `1a97628` Merge pull request #230 from miguelgilurbina/docs/bandeja-tras-cc-campanas
+- **2026-09-23** `5c17d53` Merge pull request #228 from miguelgilurbina/campana/guaiqueries-manaure-dabajuroide
+- **2026-09-23** `e127ff9` Merge pull request #227 from miguelgilurbina/campana/poporo-coro-zayas
+- **2026-09-23** `4f20c14` Merge pull request #229 from miguelgilurbina/campana/sigla-E-zavala
+- **2026-09-23** `eb1e502` Merge pull request #226 from miguelgilurbina/campana/d11-fase3-pronombres-aspectos
+- **2026-09-23** `71229cc` Merge pull request #225 from miguelgilurbina/docs/bandeja-tras-fauna-mar
+- **2026-09-23** `8b5b6fa` Merge pull request #224 from miguelgilurbina/campana/fauna-mar-sin-romero
+- **2026-09-23** `50ee9db` Merge pull request #222 from miguelgilurbina/docs/decisiones-pendientes-2026-09-23
+- **2026-09-23** `5ed584e` Merge pull request #223 from miguelgilurbina/fix/registro-base-yaml
+- **2026-09-23** `66287d1` Merge pull request #221 from miguelgilurbina/docs/bandeja-tras-mineria3
+- **2026-09-23** `f6796a5` Merge pull request #211 from miguelgilurbina/campana/fauna-tierra
+- **2026-09-23** `e3367fc` Merge pull request #205 from miguelgilurbina/campana/fauna-aves
+- **2026-09-23** `3b8ba86` Merge pull request #206 from miguelgilurbina/campana/mineria3-oviedo
+- **2026-09-23** `8306791` Merge pull request #216 from miguelgilurbina/campana/mineria3-toponimos
+- **2026-09-23** `a8fd55c` Merge pull request #219 from miguelgilurbina/campana/mineria3-vocabularios
+- **2026-09-23** `cd80578` Merge pull request #203 from miguelgilurbina/campana/mineria3-arqueologia
+- **2026-09-23** `11c4c58` Merge pull request #207 from miguelgilurbina/campana/mineria3-coro
+- **2026-09-23** `37ddf7a` Merge pull request #215 from miguelgilurbina/campana/mineria3-achagua-llanos
+- **2026-09-23** `f178836` Merge pull request #213 from miguelgilurbina/campana/mineria3-oliver
+- **2026-09-23** `ec5cab4` Merge pull request #212 from miguelgilurbina/campana/mineria3-cronicas
+- **2026-09-23** `df835e4` Merge pull request #217 from miguelgilurbina/campana/mineria3-rivero
+- **2026-09-23** `2fd5bf1` Merge pull request #209 from miguelgilurbina/campana/mineria3-perez-de-tolosa
+- **2026-09-23** `e2f6ae1` Merge pull request #220 from miguelgilurbina/campana/mineria3-zayas
+- **2026-09-23** `4f0de49` Merge pull request #218 from miguelgilurbina/campana/mineria3-gumilla
+- **2026-09-23** `3ed0b10` Merge pull request #214 from miguelgilurbina/campana/mineria3-steward-hsai
+- **2026-09-23** `978779c` Merge pull request #210 from miguelgilurbina/campana/mineria3-federmann
+- **2026-09-23** `22d6656` Merge pull request #204 from miguelgilurbina/campana/mineria3-fuentes-que-faltan
+- **2026-09-23** `1f58fd3` Merge pull request #202 from miguelgilurbina/tanda/base-2026-09-22
+- **2026-09-23** `ea3e34d` Merge pull request #201 from miguelgilurbina/docs/decisiones-base-2026-09-22
+- **2026-09-22** `797bace` Merge pull request #200 from miguelgilurbina/docs/bandeja-tras-campana-taino-2
+- **2026-09-22** `055d5ba` Merge pull request #199 from miguelgilurbina/campana/taino2-etnohistoria
+- **2026-09-22** `5ac0ebe` Merge pull request #198 from miguelgilurbina/campana/taino2-vocabularios
+- **2026-09-22** `e777235` Merge pull request #197 from miguelgilurbina/campana/taino2-prueba-linguistica
+- **2026-09-22** `35ef953` Merge pull request #196 from miguelgilurbina/campana/taino2-arqueologia-genetica
+- **2026-09-22** `38a546f` Merge pull request #195 from miguelgilurbina/campana/taino2-oviedo-ii-iv
+- **2026-09-22** `5cec148` Merge pull request #194 from miguelgilurbina/campana/taino2-apologetica
+- **2026-09-22** `187fb32` Merge pull request #193 from miguelgilurbina/fix/cierre-campanas-2026-09-21
+- **2026-09-21** `8e60ad6` Merge pull request #191 from miguelgilurbina/campana/taino-esfera
+- **2026-09-21** `21ada50` Merge pull request #192 from miguelgilurbina/campana/taino-cruce-caquetio
+- **2026-09-21** `5326adf` Merge pull request #190 from miguelgilurbina/campana/taino-lascasas-pane-brinton
+- **2026-09-21** `c3ee90a` Merge pull request #189 from miguelgilurbina/campana/taino-oviedo
+- **2026-09-21** `7bd1ad7` Merge pull request #188 from miguelgilurbina/campana/taino-inventario
+- **2026-09-21** `b7a57bf` Merge pull request #186 from miguelgilurbina/campana/nominalizador
+- **2026-09-21** `ecd84ad` Merge pull request #185 from miguelgilurbina/campana/gua-procedencia
+- **2026-09-21** `506d9a4` Merge pull request #184 from miguelgilurbina/campana/macana-etiqueta
+- **2026-09-21** `4b0e9d0` Merge pull request #187 from miguelgilurbina/docs/serie-c-repetida
+- **2026-09-21** `c49d9f8` Merge pull request #183 from miguelgilurbina/docs/canon-tras-corte-13
+- **2026-09-21** `114c991` Merge pull request #182 from miguelgilurbina/fix/tanda-21-morfologia
+- **2026-09-21** `e04e26c` Merge pull request #181 from miguelgilurbina/worktree-agent-a55822af798729cdb
+- **2026-09-21** `b5733f1` Merge pull request #180 from miguelgilurbina/docs/decisiones-21
+- **2026-09-20** `fac1b4f` Merge pull request #179 from miguelgilurbina/docs/auditoria-morfologia-2026-09-20
+- **2026-09-20** `d12d22c` Merge pull request #178 from miguelgilurbina/fix/clase-de-la-raiz
+- **2026-09-20** `1efcb24` Merge pull request #177 from miguelgilurbina/fix/raiz-de-ninguna-parte
+- **2026-09-20** `b8c85ca` Merge pull request #176 from miguelgilurbina/docs/serie-c-dos-brazos
+- **2026-09-20** `42f67ed` Merge pull request #175 from miguelgilurbina/docs/serie-c-atestiguada
+- **2026-09-20** `e16009d` Merge pull request #174 from miguelgilurbina/docs/reconstruido-blind-spots
+- **2026-09-19** `35d5119` Merge pull request #173 from miguelgilurbina/worktree-agent-a041547d716d05f13
+- **2026-09-19** `f864482` Merge pull request #172 from miguelgilurbina/worktree-agent-ae2d1f0e8390af7cd
+- **2026-09-19** `3a793c7` Merge pull request #171 from miguelgilurbina/worktree-agent-afab186d81b8b07e8
+- **2026-09-18** `d1ce3d7` Merge pull request #170 from miguelgilurbina/docs/serie-c-limpia
+- **2026-09-18** `5177c7d` Merge pull request #169 from miguelgilurbina/worktree-agent-a1d187f195835f1a4
+- **2026-09-18** `8f9376a` Merge pull request #168 from miguelgilurbina/docs/serie-c-dias-1-2
+- **2026-09-18** `55c0299` Merge pull request #167 from miguelgilurbina/worktree-agent-a2adf5ef64c04b3bf
+- **2026-09-18** `753d147` Merge pull request #166 from miguelgilurbina/worktree-agent-a62afdea512c5d08d
+- **2026-09-18** `a8bf751` Merge pull request #165 from miguelgilurbina/worktree-agent-a3be6ac9f80030b06
+- **2026-09-18** `95b05a2` Merge pull request #164 from miguelgilurbina/docs/serie-c-dia1
+- **2026-09-18** `5770de6` Merge pull request #163 from miguelgilurbina/worktree-agent-a7ed4b9a985e3c71a
+- **2026-09-17** `7a8d7bc` Merge pull request #162 from miguelgilurbina/fix/esfera-incluye-los-hispanismos
+- **2026-09-17** `f3b3ca4` Merge pull request #161 from miguelgilurbina/docs/decisiones-17-tarde
+- **2026-09-17** `be4270d` Merge pull request #160 from miguelgilurbina/fix/hispanismos-no-son-prestamo-de-esfera
+- **2026-09-17** `390397e` Merge pull request #159 from miguelgilurbina/worktree-agent-a371bd92eeb5caeb4
+- **2026-09-17** `b39fd2a` Merge pull request #158 from miguelgilurbina/worktree-agent-ad9a6315b7e5b92c7
+- **2026-09-17** `de990d4` Merge pull request #157 from miguelgilurbina/worktree-agent-a853faef9aafd978b
+- **2026-09-17** `ef535cd` Merge pull request #156 from miguelgilurbina/worktree-agent-a3b110c0456659933
+- **2026-09-17** `4d5e7f3` Merge pull request #155 from miguelgilurbina/worktree-agent-acfa75a3762f521f7
+- **2026-09-17** `4436f51` Merge pull request #154 from miguelgilurbina/worktree-agent-a0219ad2a2b83a8cc
+- **2026-09-17** `8910fdd` Merge pull request #153 from miguelgilurbina/worktree-agent-a13e6fd99eeeafb81
+- **2026-09-17** `4d7bbf9` Merge pull request #152 from miguelgilurbina/fix/golfete-en-paraguana
+- **2026-09-17** `bc33134` Merge pull request #151 from miguelgilurbina/worktree-agent-aabc987c442aa3ebd
+- **2026-09-17** `432edd1` Merge pull request #150 from miguelgilurbina/docs/serie-b-dia1-limpio
+- **2026-09-17** `340f4fd` Merge pull request #149 from miguelgilurbina/feat/referentes-por-cadena
+- **2026-09-16** `9481578` Merge pull request #148 from miguelgilurbina/feat/estado-inicial-era2
+- **2026-09-16** `cc158af` Merge pull request #147 from miguelgilurbina/docs/serie-b-dia1
+- **2026-09-16** `7ab8c2b` Merge pull request #146 from miguelgilurbina/feat/serie-de-runs
+- **2026-09-16** `22da878` Merge pull request #145 from miguelgilurbina/feat/precarga-idiolectos
+- **2026-09-16** `8bd8a34` Merge pull request #144 from miguelgilurbina/feat/analisis-nodos
+- **2026-09-16** `5028fda` Merge pull request #143 from miguelgilurbina/feat/director-sin-residuos
+- **2026-09-16** `5bb0cb4` Merge pull request #142 from miguelgilurbina/feat/scorer-falsos
+- **2026-09-16** `bbeb95b` Merge pull request #141 from miguelgilurbina/feat/koine-cadena
+- **2026-09-16** `c58bdc5` Merge pull request #140 from miguelgilurbina/docs/cierre-dia3
+- **2026-09-16** `1be0d52` Merge pull request #139 from miguelgilurbina/docs/cierre-dia2-reflexiones
+- **2026-09-16** `9d652d4` Merge pull request #138 from miguelgilurbina/feat/director-y-eventos-era2
+- **2026-09-16** `87ee2a5` Merge pull request #137 from miguelgilurbina/docs/barrido-web-y-guaranao-1985
+- **2026-09-16** `b744922` Merge pull request #136 from miguelgilurbina/docs/esteves-releido-y-oliver-122
+- **2026-09-16** `cd2109e` Merge pull request #135 from miguelgilurbina/docs/bitacora-dia2-89fc1744
+- **2026-09-16** `669ff38` Merge pull request #134 from miguelgilurbina/feat/corpus-alias-era2
+- **2026-09-16** `5c166c3` Merge pull request #133 from miguelgilurbina/feat/prestamos-en-la-base
+- **2026-09-16** `cb38999` Merge pull request #132 from miguelgilurbina/docs/bitacora-c6837386
+- **2026-09-16** `c69e042` Merge pull request #131 from miguelgilurbina/chore/cronica-tras-130
 - **2026-09-16** `806e234` Merge pull request #130 from miguelgilurbina/feat/era2-elenco
 - **2026-09-14** `add5566` Merge pull request #128 from miguelgilurbina/feat/era2-arranque
 - **2026-09-13** `2ef4199` Merge pull request #125 from miguelgilurbina/feat/perea-fase1-d11-y-flecos
