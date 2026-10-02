@@ -233,6 +233,29 @@
     transform: scaleX(1);
   }
 
+  /* La nav de la sección (components/kaketiana/NavKaketiana.tsx): la misma
+     Rúbrica al pasar, y fija en la sección donde está el lector. */
+  .kk-nav-enlace {
+    position: relative;
+  }
+  .kk-nav-enlace::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: var(--sim-rubrica);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--kk-t-rapido) var(--kk-curva);
+  }
+  .kk-nav-enlace:hover::after,
+  .kk-nav-enlace:focus-visible::after,
+  .kk-nav-enlace[data-actual]::after {
+    transform: scaleX(1);
+  }
+
   /* Amanecer: la sección entra una sola vez, al llegar al viewport
      (components/kaketiana/Amanecer.tsx). Sólo se esconde lo que todavía no
      se ve: sin JS, o arriba del pliegue, todo está ahí desde el principio. */
@@ -295,6 +318,7 @@
       transition: none;
     }
     .kk-accion::after,
+    .kk-nav-enlace::after,
     .kk-hero [data-paso] {
       transition: none;
     }
