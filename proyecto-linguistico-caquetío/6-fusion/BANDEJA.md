@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-27**.
+<!--GENERADO--> Generado el **2026-10-01**.
 
-**8054 ítems propuestos** en 158 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**8050 ítems propuestos** en 158 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -118,7 +118,7 @@ editar_a_mano: no
 | `medicion_tanda_21_en_la_boca_2026-09-21.yaml` | ? | 10 |  |
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
 | `medicion_tanda_final_2026-09-23.yaml` | ? | 0 |  |
-| `medicion_tanda_hermanas_2026-09-24.yaml` | ? | 4 |  |
+| `medicion_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |

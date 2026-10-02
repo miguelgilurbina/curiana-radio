@@ -9,6 +9,9 @@ sustituye_en_parte_a: HANDOFF_2026-09-11.md
 
 # Revisión pre-era 2 — 2026-09-12
 
+> **2026-10-01**: el traspaso vivo está en [[HANDOFF_2026-10-01]]. Esto queda como registro de lo que se revisó antes de la era 2.
+
+
 > **Cómo se midió.** Todo lo que lleva número sale de correr, hoy:
 > `guardianes.py` (9 en verde), `generar_tablero.py --gh`, `curiana_fonotactica.py`,
 > y cuatro mediciones ad hoc que se citan donde tocan. **No copiar cifras de

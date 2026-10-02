@@ -13,15 +13,15 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-09-27 19:31**.
+<!--GENERADO--> Generado el **2026-10-01 19:25**.
 
 ## ¿Vamos bien?
 
 |  | Hoy | Referencia |  |
 |---|---|---|---|
 | Entradas del lexicón **sin cita** | **0** | 82 (2026-07-21) | 🟢 −82 |
-| Hechos del corpus **con referencia** | **242 / 242** | — | 🟢 |
-| Tests del motor | **1109 en verde** | 0 rojos | 🟢 |
+| Hechos del corpus **con referencia** | **251 / 251** | — | 🟢 |
+| Tests del motor | **1129 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
 | Decisiones esperando a Miguel | **9 abiertas** | 12 resueltas | 🟡 |
 
@@ -284,12 +284,12 @@ Mapas: [[mapa-familia]] · [[mapa-ecologia]] · [[mapa-creencia]] · [[mapa-tran
 
 | Archivo | hechos | `atestiguado` | `reconstruido` | `canon-simulacion` | `hipotetico` | `retro-abstraido` | con `referencia` |
 |---|---|---|---|---|---|---|---|
-| `creencia.yaml` | 30 | 12 | 11 |  | 3 | 4 | 30/30 |
-| `ecologia.yaml` | 113 | 55 | 25 |  | 33 |  | 113/113 |
-| `geografia_politica.yaml` | 24 | 19 | 2 |  | 3 |  | 24/24 |
-| `parentesco.yaml` | 40 | 14 | 18 |  | 8 |  | 40/40 |
+| `creencia.yaml` | 36 | 17 | 12 |  | 3 | 4 | 36/36 |
+| `ecologia.yaml` | 114 | 56 | 25 |  | 33 |  | 114/114 |
+| `geografia_politica.yaml` | 25 | 19 | 3 |  | 3 |  | 25/25 |
+| `parentesco.yaml` | 41 | 15 | 18 |  | 8 |  | 41/41 |
 | `transmision.yaml` | 35 | 14 | 5 | 14 | 2 |  | 35/35 |
-| **total** | **242** | **114** | **61** | **14** | **49** | **4** | **242/242** |
+| **total** | **251** | **121** | **63** | **14** | **49** | **4** | **251/251** |
 
 Además, estructuras del corpus que **no son hechos etiquetados** (y por eso no entran en el total): `genealogia.yaml::linajes` (6), `genealogia.yaml::agentes` (60), `genealogia.yaml::personas_de_fondo` (14).
 
@@ -304,8 +304,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | 1 | 🟢 | Lexicón: 0 entradas de familia caquetía sin cita **o sin degradar** (F1) | 0 sin cita (eran 82 el 2026-07-21) |
 | 2 | 🟢 | Pares c/k resueltos (F2) | todas tomadas — [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) · medido: 13 colisiones, 2 dentro del caquetío |
 | 3 | 🟢 | Las 3 fuentes ALTA minadas (F3, F4, F5) | F3 [[alvarado-1921]] minado · F4 [[gatschet-1885]] minado · F5 [[oliver-1989-cap2]] minado |
-| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **242 hechos, 0 errores, 0 avisos** |
-| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 242/242 hechos **tienen** `referencia` |
+| 4 | 🟢 | `compilar_corpus.py` en verde (V2) | **251 hechos, 0 errores, 0 avisos** |
+| 5 | ⚪ | Citas del corpus verificadas por muestreo (F10) | **no automedible**: que la cita *resuelva* (que la página exista) es trabajo humano. Medible sí: 251/251 hechos **tienen** `referencia` |
 | 6 | 🟢 | D1, D3 y D5 tomadas | todas tomadas — [D1](https://github.com/miguelgilurbina/curiana-radio/issues/32) · [D3](https://github.com/miguelgilurbina/curiana-radio/issues/34) · [D5](https://github.com/miguelgilurbina/curiana-radio/issues/36) |
 | 7 | 🟢 | La glosa de `-bana` resuelta | todas tomadas — [D9](https://github.com/miguelgilurbina/curiana-radio/issues/38) |
 | 8 | 🟢 | El desbalance wayunaiki/lokono resuelto | todas tomadas — [D11](https://github.com/miguelgilurbina/curiana-radio/issues/39) · medido: wayunaiki 769 vs. lokono 636 (1.2 a 1) · fase 1 de D11 FUSIONADA: 173 de 173 raíces de Perea ya están en el habla |
@@ -353,8 +353,8 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1584 en 855 notas indexadas | 🟢 0 rotos |
-| Tests (`curiana_sim/tests/`) | 1109 passed, 0 failed | 🟢 |
+| Wikilinks | 1587 en 867 notas indexadas | 🟢 0 rotos |
+| Tests (`curiana_sim/tests/`) | 1129 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
 **Avisos de `curiana_polities.py::coherencia_del_canon()`:**
