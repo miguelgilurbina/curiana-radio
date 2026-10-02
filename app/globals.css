@@ -248,6 +248,19 @@
       transform var(--kk-t-tinta) var(--kk-curva);
   }
 
+  /* «Más hondo» (components/kaketiana/Desplegable.tsx): al abrir, el cuerpo
+     amanece como una sección. Mientras está cerrado lo oculta el atributo
+     hidden que pone el componente, así que la animación corre al aparecer. */
+  .kk-desplegable-cuerpo:not([hidden]) {
+    animation: kk-desplegar var(--kk-t-tinta) var(--kk-curva);
+  }
+  @keyframes kk-desplegar {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+
   /* El umbral: del pergamino de sal al laboratorio. Es el único registro que
      cambia de tinta a mitad de camino, y lo hace en una banda SIN texto: arriba
      se lee sobre la placa clara, abajo sobre la tinta, nunca en el medio. */
@@ -297,6 +310,9 @@
     .kk-accion::after,
     .kk-hero [data-paso] {
       transition: none;
+    }
+    .kk-desplegable-cuerpo:not([hidden]) {
+      animation: none;
     }
   }
 }

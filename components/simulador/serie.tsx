@@ -4,6 +4,7 @@
 // sólo se decide cómo se dice.
 import type { ReactNode } from "react";
 import Etiqueta from "@/components/kaketiana/Etiqueta";
+import Desplegable from "@/components/kaketiana/Desplegable";
 import {
   brazo,
   dec,
@@ -23,16 +24,27 @@ function N({ children }: { children: ReactNode }) {
   return <span className="sim-mono whitespace-nowrap font-semibold text-(--sim-ink)">{children}</span>;
 }
 
-function Hallazgo({ n, titulo, children }: { n: number; titulo: string; children: ReactNode }) {
+// Capa 1: el título y una línea, siempre a la vista. Capa 2: el dato, con
+// sus cifras, plegado — el lector decide si lo abre.
+function Hallazgo({
+  n,
+  titulo,
+  resumen,
+  children,
+}: {
+  n: number;
+  titulo: string;
+  resumen: string;
+  children: ReactNode;
+}) {
   return (
-    <li className="border-t border-(--sim-rule) pt-5">
-      <div className="flex items-baseline gap-3">
-        <span className="sim-mono text-xs tabular-nums text-(--sim-ink-faint)">{String(n).padStart(2, "0")}</span>
-        <h4 className="sim-display text-xl font-semibold text-(--sim-ink)">{titulo}</h4>
-      </div>
-      <p className="mt-2 max-w-reading pl-7 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-        {children}
-      </p>
+    <li className="flex flex-col gap-2 border-t border-(--sim-rule) pt-5">
+      <span className="sim-mono text-xs tabular-nums text-(--sim-ink-soft)">{String(n).padStart(2, "0")}</span>
+      <h4 className="sim-display text-xl font-semibold leading-snug text-(--sim-ink)">{titulo}</h4>
+      <p className="font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">{resumen}</p>
+      <Desplegable abrir="[ ver el dato ↓ ]">
+        <p className="font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{children}</p>
+      </Desplegable>
     </li>
   );
 }
@@ -56,8 +68,12 @@ export function HallazgosSerie({ seed }: { seed: SerieSeed }) {
   const mismoVeredicto = e.veredicto.codigo === c.veredicto.codigo;
 
   return (
-    <ol className="mt-10 space-y-8">
-      <Hallazgo n={1} titulo={mismoVeredicto ? "La lengua común avanza y se estanca, con y sin mapa" : "La lengua común avanza"}>
+    <ol className="mt-10 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
+      <Hallazgo
+        n={1}
+        titulo={mismoVeredicto ? "La lengua común avanza y se estanca, con y sin mapa" : "La lengua común avanza"}
+        resumen="Las maneras de hablar se acercan y después se quedan quietas, igual en los dos brazos: no es cosa del mapa, es cosa del motor."
+      >
         Contando todo lo dicho, la distancia entre las maneras de hablar cae de{" "}
         <N>{dec(primero(e, "acumulada"))}</N> a <N>{dec(ultimo(e, "acumulada"))}</N> con escena y de{" "}
         <N>{dec(primero(c, "acumulada"))}</N> a <N>{dec(ultimo(c, "acumulada"))}</N> en el control. Pero
@@ -78,15 +94,21 @@ export function HallazgosSerie({ seed }: { seed: SerieSeed }) {
       </Hallazgo>
 
       {ventaja && (
-        <Hallazgo n={2} titulo="El mapa mantiene viva la variación">
+        <Hallazgo
+          n={2}
+          titulo="El mapa mantiene viva la variación"
+          resumen="Cuando cada quien vive en su lugar y oye a quien tiene cerca, las palabras nuevas se parecen menos entre sí."
+        >
           La distancia entre palabras nuevas del brazo con escena queda por encima de la del control{" "}
           <N>{ventaja.dias} de {ventaja.de}</N> días, en promedio <N>{decConSigno(ventaja.media, 3)}</N>.
-          Cuando cada quien vive en su lugar y oye a quien tiene cerca, lo que se inventa se parece
-          menos entre sí.
         </Hallazgo>
       )}
 
-      <Hallazgo n={3} titulo="Cada pueblo empieza a hablar a su manera, pero sólo con mapa">
+      <Hallazgo
+        n={3}
+        titulo="Cada pueblo empieza a hablar a su manera, pero sólo con mapa"
+        resumen="Con mapa, dentro de cada pueblo se habla más parecido que entre los dos, y hay palabras que nunca salen de donde nacieron."
+      >
         La brecha entre pueblos mide cuánto más se parecen dos personas del mismo pueblo que dos de
         pueblos distintos. Es pequeña, pero con escena crece de <N>{decConSigno(primero(e, "brecha"))}</N> a{" "}
         <N>{decConSigno(ultimo(e, "brecha"))}</N>; en el control se cierra, de{" "}
@@ -96,7 +118,11 @@ export function HallazgosSerie({ seed }: { seed: SerieSeed }) {
       </Hallazgo>
 
       {capE && capC && bajanE && bajanC && (
-        <Hallazgo n={4} titulo="El día de Capubana se nota">
+        <Hallazgo
+          n={4}
+          titulo="El día de Capubana se nota"
+          resumen="Los días en que todos suben al cerro, las palabras nuevas se acercan. Sin mapa, esos mismos días no se distinguen."
+        >
           Los días en que todos suben al cerro, la distancia entre palabras nuevas de ese día baja a{" "}
           <N>{dec(capE.capubana, 3)}</N>, contra <N>{dec(capE.resto, 3)}</N> el resto de los días, y{" "}
           <N>{bajanE.bajan} de {bajanE.de}</N> quedan por debajo del día anterior. En el control, los
@@ -155,6 +181,24 @@ function Celda({ d, minimo }: { d: DisputaSerie | undefined; minimo: number | nu
 
 const TH = "px-3 py-2 text-left align-bottom font-medium kk-label text-[0.6rem] tracking-[0.14em]";
 
+// Capa 1 de la sección: cuatro cosas nombradas, a la vista. Elección editorial
+// (2026-10-01): las que los dos brazos fijaron con nombres distintos y que se
+// entienden sin explicación. Las quince van plegadas debajo.
+const DESTACADOS = ["delfin", "eclipse", "cometa", "cardumen"];
+
+function FormaCorta({ d }: { d: DisputaSerie | undefined }) {
+  if (!d) return <span className="text-(--sim-ink-soft)">—</span>;
+  if (d.fijada) return <span className="kk-forma text-lg">{formaLimpia(d.fijada)}</span>;
+  const a = d.rivales[0];
+  if (!a) return <span className="sim-mono text-[0.68rem] text-(--sim-ink-soft)">todavía sin nombre</span>;
+  return (
+    <span>
+      <span className="kk-forma text-lg opacity-80">{formaLimpia(a.forma)}</span>
+      <span className="sim-mono ml-2 text-[0.62rem] text-(--sim-rubrica)">en disputa</span>
+    </span>
+  );
+}
+
 export function NombresDeLaSerie({ seed }: { seed: SerieSeed }) {
   const e = brazo(seed, "escena");
   const c = brazo(seed, "control");
@@ -166,92 +210,126 @@ export function NombresDeLaSerie({ seed }: { seed: SerieSeed }) {
     (d) => !d.fijada && d.n_variantes === 1,
   );
 
+  const destacados = DESTACADOS.map((k) => e.competencia!.lista.find((d) => d.concepto === k)).filter(
+    (d): d is DisputaSerie => Boolean(d),
+  );
+
   return (
     <div>
       <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
         Cada dos días el mundo les puso delante algo sin nombre. Los dos brazos vieron lo mismo, en el
-        mismo orden y con las mismas semillas, y aun así casi nunca lo nombraron igual. Con escena la
-        comunidad fijó <N>{e.competencia.fijados}</N> de <N>{e.competencia.referentes}</N>; en el
-        control, <N>{c.competencia.fijados}</N>. Las que no se fijan no se resuelven: se acumulan.
+        mismo orden y con las mismas semillas, y aun así casi nunca lo nombraron igual.
       </p>
 
-      {/* ≥ 640px: la tabla comparativa */}
-      <table className="mt-6 hidden w-full border-collapse text-left sm:table">
-        <thead>
-          <tr className="border-b-2 border-(--sim-ink)">
-            <th className={`${TH} pl-0 text-(--sim-ink-soft)`}>Lo que llegó</th>
-            <th className={TH} style={{ color: COLOR_ESCENA }}>
-              Con escena
-            </th>
-            <th className={TH} style={{ color: COLOR_CONTROL }}>
-              Control
-            </th>
-            <th className={`${TH} pr-0 text-right text-(--sim-ink-soft)`}>Etiqueta</th>
-          </tr>
-        </thead>
-        <tbody>
-          {e.competencia.lista.map((d) => (
-            <tr key={d.concepto} className="border-b border-(--sim-rule) align-top">
-              <td className="py-3 pl-0 pr-3">
-                <span className="font-sans text-sm font-semibold text-(--sim-ink)">{nombreDeConcepto(d.concepto)}</span>
-                <span className="mt-0.5 block max-w-[15rem] font-sans text-xs leading-snug text-(--sim-ink-soft)">
-                  {d.descripcion}
-                </span>
-              </td>
-              <td className="px-3 py-3">
-                <Celda d={d} minimo={minimo} />
-              </td>
-              <td className="px-3 py-3">
-                <Celda d={deControl.get(d.concepto)} minimo={minimoControl} />
-              </td>
-              <td className="py-3 pl-3 pr-0 text-right">
-                <Etiqueta grado="canon" corta />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* < 640px: fichas, una por cosa nombrada, sin scroll horizontal */}
-      <ul className="mt-6 sm:hidden">
-        {e.competencia.lista.map((d) => (
-          <li key={d.concepto} className="border-b border-(--sim-rule) py-4 first:border-t-2 first:border-t-(--sim-ink)">
+      <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {destacados.map((d) => (
+          <li key={d.concepto} className="border border-(--sim-rule) p-4">
             <div className="flex items-start justify-between gap-3">
               <span className="font-sans text-sm font-semibold text-(--sim-ink)">{nombreDeConcepto(d.concepto)}</span>
               <Etiqueta grado="canon" corta />
             </div>
-            <p className="mt-0.5 font-sans text-xs leading-snug text-(--sim-ink-soft)">{d.descripcion}</p>
-            <dl className="mt-3 grid grid-cols-1 gap-2.5">
-              <div>
-                <dt className="kk-label text-[0.6rem]" style={{ color: COLOR_ESCENA }}>
-                  Con escena
-                </dt>
-                <dd className="mt-0.5">
-                  <Celda d={d} minimo={minimo} />
-                </dd>
-              </div>
-              <div>
-                <dt className="kk-label text-[0.6rem]" style={{ color: COLOR_CONTROL }}>
-                  Control
-                </dt>
-                <dd className="mt-0.5">
-                  <Celda d={deControl.get(d.concepto)} minimo={minimoControl} />
-                </dd>
-              </div>
+            <dl className="mt-3 grid grid-cols-[auto_minmax(0,1fr)] items-baseline gap-x-3 gap-y-1.5">
+              <dt className="kk-label text-[0.58rem]" style={{ color: COLOR_ESCENA }}>
+                Con escena
+              </dt>
+              <dd>
+                <FormaCorta d={d} />
+              </dd>
+              <dt className="kk-label text-[0.58rem]" style={{ color: COLOR_CONTROL }}>
+                Control
+              </dt>
+              <dd>
+                <FormaCorta d={deControl.get(d.concepto)} />
+              </dd>
             </dl>
           </li>
         ))}
       </ul>
 
-      <p className="mt-3 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-soft)">
-        Una forma se fija cuando reúne más del{" "}
-        {e.competencia.umbral != null ? `${Math.round(e.competencia.umbral * 100)} %` : "umbral"} del
-        apoyo, que suma cuántas veces se dijo y el prestigio de quien la dijo.
-        {hayUnanime &&
-          " † Un nombre sin rival nunca se fija, porque la regla pide al menos dos variantes: es un defecto anotado del instrumento, no una decisión de la comunidad."}{" "}
-        Las formas se muestran sin las marcas de formato que el modelo a veces les pega. ◉ canon-simulación:
-        lo dijo la simulación; es ficción declarada, no dato del caquetío.
-      </p>
+      <Desplegable abrir={`[ ver las ${e.competencia.referentes} ↓ ]`} className="mt-5">
+        <p className="max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
+          Con escena la comunidad fijó <N>{e.competencia.fijados}</N> de <N>{e.competencia.referentes}</N>; en el
+          control, <N>{c.competencia.fijados}</N>. Las que no se fijan no se resuelven: se acumulan.
+        </p>
+
+        {/* ≥ 640px: la tabla comparativa */}
+        <table className="mt-6 hidden w-full border-collapse text-left sm:table">
+          <thead>
+            <tr className="border-b-2 border-(--sim-ink)">
+              <th className={`${TH} pl-0 text-(--sim-ink-soft)`}>Lo que llegó</th>
+              <th className={TH} style={{ color: COLOR_ESCENA }}>
+                Con escena
+              </th>
+              <th className={TH} style={{ color: COLOR_CONTROL }}>
+                Control
+              </th>
+              <th className={`${TH} pr-0 text-right text-(--sim-ink-soft)`}>Etiqueta</th>
+            </tr>
+          </thead>
+          <tbody>
+            {e.competencia.lista.map((d) => (
+              <tr key={d.concepto} className="border-b border-(--sim-rule) align-top">
+                <td className="py-3 pl-0 pr-3">
+                  <span className="font-sans text-sm font-semibold text-(--sim-ink)">{nombreDeConcepto(d.concepto)}</span>
+                  <span className="mt-0.5 block max-w-[15rem] font-sans text-xs leading-snug text-(--sim-ink-soft)">
+                    {d.descripcion}
+                  </span>
+                </td>
+                <td className="px-3 py-3">
+                  <Celda d={d} minimo={minimo} />
+                </td>
+                <td className="px-3 py-3">
+                  <Celda d={deControl.get(d.concepto)} minimo={minimoControl} />
+                </td>
+                <td className="py-3 pl-3 pr-0 text-right">
+                  <Etiqueta grado="canon" corta />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {/* < 640px: fichas, una por cosa nombrada, sin scroll horizontal */}
+        <ul className="mt-6 sm:hidden">
+          {e.competencia.lista.map((d) => (
+            <li key={d.concepto} className="border-b border-(--sim-rule) py-4 first:border-t-2 first:border-t-(--sim-ink)">
+              <div className="flex items-start justify-between gap-3">
+                <span className="font-sans text-sm font-semibold text-(--sim-ink)">{nombreDeConcepto(d.concepto)}</span>
+                <Etiqueta grado="canon" corta />
+              </div>
+              <p className="mt-0.5 font-sans text-xs leading-snug text-(--sim-ink-soft)">{d.descripcion}</p>
+              <dl className="mt-3 grid grid-cols-1 gap-2.5">
+                <div>
+                  <dt className="kk-label text-[0.6rem]" style={{ color: COLOR_ESCENA }}>
+                    Con escena
+                  </dt>
+                  <dd className="mt-0.5">
+                    <Celda d={d} minimo={minimo} />
+                  </dd>
+                </div>
+                <div>
+                  <dt className="kk-label text-[0.6rem]" style={{ color: COLOR_CONTROL }}>
+                    Control
+                  </dt>
+                  <dd className="mt-0.5">
+                    <Celda d={deControl.get(d.concepto)} minimo={minimoControl} />
+                  </dd>
+                </div>
+              </dl>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-3 max-w-reading font-sans text-xs leading-relaxed text-(--sim-ink-soft)">
+          Una forma se fija cuando reúne más del{" "}
+          {e.competencia.umbral != null ? `${Math.round(e.competencia.umbral * 100)} %` : "umbral"} del
+          apoyo, que suma cuántas veces se dijo y el prestigio de quien la dijo.
+          {hayUnanime &&
+            " † Un nombre sin rival nunca se fija, porque la regla pide al menos dos variantes: es un defecto anotado del instrumento, no una decisión de la comunidad."}{" "}
+          Las formas se muestran sin las marcas de formato que el modelo a veces les pega. ◉ canon-simulación:
+          lo dijo la simulación; es ficción declarada, no dato del caquetío.
+        </p>
+      </Desplegable>
     </div>
   );
 }

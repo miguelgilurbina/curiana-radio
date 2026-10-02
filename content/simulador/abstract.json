@@ -25,6 +25,7 @@
     "dia": 5,
     "nota": "La glosa es la del propio personaje, entre paréntesis al final de su intervención. Ese día la comunidad fijó punu-dunku para el delfín."
   },
+  "resultado": "La misma comunidad de {agentes} voces vivió {dias} días dos veces: una con el mapa de Paraguaná, donde cada quien está en su lugar y todos suben al Capubana cada {capubana_cada} días, y otra sin mapa, donde todos oyen a todos. La lengua común avanzó y se estancó igual en las dos. Lo que cambió el mapa fue otra cosa.",
   "abstract": [
     "El caquetío fue la lengua arahuaca de la costa de Falcón, de Paraguaná y de las islas de enfrente. Dejó de hablarse hace siglos y sobrevive en topónimos, en unas decenas de palabras que anotaron cronistas y en voces sueltas del habla de la península. Este proyecto reconstruye lo que se puede con esas piezas —cada palabra con su fuente y su grado de certeza— y se la entrega a una comunidad simulada: {agentes} personajes del siglo XV, cada uno un agente de inteligencia artificial con oficio, casa, pueblo y una manera propia de hablar.",
     "Los personajes viven en dos pueblos de Paraguaná, Guaranao y Amuay, y se reúnen en el cerro Capubana. Cada día van a los lugares de su oficio y hablan con quien está ahí. Cada dos días aparece algo que no tiene nombre —un animal del monte, un eclipse, un metal amarillo llegado por trueque— y la comunidad tiene que nombrarlo. Nada de eso se les dicta: inventan palabras con las raíces que conocen, adoptan las de otros, y un instrumento mide, turno a turno, cuánto se parecen sus maneras de hablar.",
