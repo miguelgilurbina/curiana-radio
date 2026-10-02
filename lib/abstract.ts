@@ -60,6 +60,8 @@ export interface AbstractContent {
     bajada: string;
   };
   frase: FraseCitada;
+  /** El resultado en dos líneas: lo primero que lee quien llega (capa 1). */
+  resultado: string;
   abstract: string[];
   conceptos: ConceptoAbstract[];
   pipeline: PasoPipeline[];

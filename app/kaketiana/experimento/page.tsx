@@ -7,12 +7,9 @@ import { getEscenasParaElVisor } from "@/lib/escena";
 import Umbral from "@/components/kaketiana/Umbral";
 import Amanecer from "@/components/kaketiana/Amanecer";
 import Etiqueta from "@/components/kaketiana/Etiqueta";
-import {
-  PortadaLab,
-  AbstractCientifico,
-  Conceptos,
-  PipelineFlujo,
-} from "@/components/simulador/laboratorio";
+import Desplegable from "@/components/kaketiana/Desplegable";
+import Glosario from "@/components/kaketiana/Glosario";
+import { PortadaLab, AbstractCientifico, PipelineFlujo } from "@/components/simulador/laboratorio";
 import SerieBrazosChart from "@/components/simulador/SerieBrazosChart";
 import { HallazgosSerie, NombresDeLaSerie } from "@/components/simulador/serie";
 import MapaDeEscena from "@/components/simulador/MapaDeEscena";
@@ -33,6 +30,27 @@ const ANEXOS = [
   { href: "/kaketiana", label: "El mundo del kaketío", desc: "Cómo vivían, en qué creían, y cómo se reconstruye su lengua." },
 ];
 
+// Capa 3, la madriguera: lo que el lector puede abrir si quiere todo. El repo
+// es público; la bitácora y los datos de esta página se leen tal cual.
+const REPO = "https://github.com/miguelgilurbina/curiana-radio/blob/main";
+const MADRIGUERA = [
+  {
+    href: `${REPO}/proyecto-linguistico-caquet%C3%ADo/5-experimento/BITACORA_RUNS.md`,
+    label: "La bitácora de la serie",
+    desc: "Cómo se corrió, día por día, y lo que salió mal en el camino.",
+  },
+  {
+    href: `${REPO}/content/simulador/series/era2-base.json`,
+    label: "Los datos de esta página",
+    desc: "Las dos curvas, las palabras fijadas y las disputas, tal como las exportó la base.",
+  },
+  {
+    href: "https://github.com/miguelgilurbina/curiana-radio/tree/main/proyecto-linguistico-caquet%C3%ADo/5-experimento/analisis",
+    label: "Los análisis",
+    desc: "La competencia por los nombres y las treinta reflexiones del Director.",
+  },
+];
+
 function H3({ children }: { children: React.ReactNode }) {
   return (
     <h3 className="sim-display mt-1 text-3xl font-semibold tracking-tight text-(--sim-ink) md:text-4xl">
@@ -42,6 +60,10 @@ function H3({ children }: { children: React.ReactNode }) {
 }
 
 // El experimento, era 2: la serie `era2-base`, dos brazos de treinta días.
+// En tres capas (Miguel, 2026-10-01: que no sobrecargue y que el lector
+// decida hasta dónde baja): a la vista lo esencial —el resultado, la gráfica,
+// los hallazgos en una línea, el mapa, cuatro nombres, los límites—; plegado
+// el dato y el método (Desplegable, Glosario); y al final, la madriguera.
 // Diseño: el manual de Kaketiana (design_handoff_kaketiana). Se entra por el
 // umbral —la placa clara del wiki que anochece— y del otro lado todo es el
 // Acto I en tinta profunda: lo que dice la simulación lleva ◉ canon-simulación
@@ -104,8 +126,6 @@ export default function ExperimentoPage() {
               />
             )}
 
-            <AbstractCientifico parrafos={abstract.abstract} />
-
             {serie && escena && control ? (
               <>
                 <Amanecer as="section" id="resultados" className="mt-14 scroll-mt-24">
@@ -113,11 +133,12 @@ export default function ExperimentoPage() {
                   <H3>
                     {escena.dias} días, {serie.brazos.length} brazos
                   </H3>
-                  <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-                    La misma comunidad, dos veces: una con el mapa de Paraguaná y el Capubana cada{" "}
-                    {serie.capubana.cada} días, y otra sin mapa, donde todos oyen a todos. La gráfica
-                    mide la distancia entre las maneras de hablar de los {serie.elenco?.total} personajes,
-                    día a día.
+                  <p className="mt-4 max-w-reading font-serif text-lg leading-relaxed text-(--sim-ink)">
+                    {abstract.resultado}
+                  </p>
+                  <p className="mt-3 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
+                    La gráfica mide cuánto se parecen las maneras de hablar de los {serie.elenco?.total}{" "}
+                    personajes, día a día: cuanto más baja, más parecido hablan.
                   </p>
                   <figure className="mt-6">
                     <SerieBrazosChart escena={escena.serie} control={control.serie} capubana={serie.capubana.dias} />
@@ -128,6 +149,20 @@ export default function ExperimentoPage() {
                   </figure>
                   <HallazgosSerie seed={serie} />
                 </Amanecer>
+
+              {/* La escena: el visor de repetición sobre el mapa real (decisión de
+                  Miguel 2026-09-17). Sólo los días exportados de ESTA serie. */}
+              {escenas.length > 0 && (
+                <Amanecer as="section" id="escena" className="mt-16 scroll-mt-24">
+                  <Overline>El mundo, turno a turno</Overline>
+                  <H3>Dónde estaba cada uno</H3>
+                  <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                    Cada personaje está en un sitio, a una hora, con quien esté ahí. Pincha un lugar para leer
+                    lo que se dijo en él.
+                  </p>
+                  <MapaDeEscena seeds={escenas} />
+                </Amanecer>
+              )}
 
                 <Amanecer as="section" id="nombres" className="mt-16 scroll-mt-24">
                   <Overline>Lo que la comunidad nombró</Overline>
@@ -144,27 +179,14 @@ export default function ExperimentoPage() {
               </div>
             )}
 
-            {/* La escena: el visor de repetición sobre el mapa real (decisión de
-                Miguel 2026-09-17). Sólo los días exportados de ESTA serie. */}
-            {escenas.length > 0 && (
-              <Amanecer as="section" id="escena" className="mt-16 scroll-mt-24">
-                <Overline>El mundo, turno a turno</Overline>
-                <H3>Dónde estaba cada uno</H3>
-                <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-                  Un personaje no vive en una etiqueta: está en un sitio, a una hora, con quien esté ahí.
-                  Esto no simula nada: lee la escena que el motor guardó, a cada uno en un lugar en cada
-                  momento del día, y la pone sobre Paraguaná. Lo que se dijo en un sitio se lee pinchando
-                  el sitio.
-                </p>
-                <MapaDeEscena seeds={escenas} />
-              </Amanecer>
-            )}
-
-            <Amanecer>
-              <Conceptos conceptos={abstract.conceptos} />
-            </Amanecer>
-            <Amanecer>
+            <Amanecer as="section" id="como-se-hizo" className="scroll-mt-24">
               <PipelineFlujo pasos={abstract.pipeline} />
+              <Desplegable abrir="[ el método, término a término ↓ ]" className="mt-6">
+                <AbstractCientifico parrafos={abstract.abstract} />
+                <div className="mt-10">
+                  <Glosario conceptos={abstract.conceptos} />
+                </div>
+              </Desplegable>
             </Amanecer>
 
             <Amanecer as="section" id="limites" className="mt-14 scroll-mt-24">
@@ -175,16 +197,31 @@ export default function ExperimentoPage() {
                   <li key={l}>{l}</li>
                 ))}
               </ul>
-              <p className="sim-display mt-8 text-xl font-semibold text-(--sim-ink)">Lo que sigue</p>
-              <ul className="mt-3 max-w-reading list-disc space-y-2 pl-5 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
-                {abstract.siguiente.map((l) => (
-                  <li key={l}>{l}</li>
-                ))}
-              </ul>
+              <Desplegable abrir="[ lo que sigue ↓ ]" className="mt-6">
+                <ul className="max-w-reading list-disc space-y-2 pl-5 font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">
+                  {abstract.siguiente.map((l) => (
+                    <li key={l}>{l}</li>
+                  ))}
+                </ul>
+              </Desplegable>
             </Amanecer>
 
             <footer className="mt-16 border-t border-(--sim-rule) pt-8">
-              <div className="max-w-reading">
+              <Overline>Más hondo</Overline>
+              <ul className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {MADRIGUERA.map((m) => (
+                  <li key={m.href}>
+                    <a href={m.href} className="group block" target="_blank" rel="noopener noreferrer">
+                      <span className="sim-display text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
+                        {m.label} ↗
+                      </span>
+                      <span className="mt-1 block font-sans text-sm leading-relaxed text-(--sim-ink-soft)">{m.desc}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-12 max-w-reading">
                 <Overline>Historia del motor</Overline>
                 <p className="sim-display mt-1 text-xl font-semibold text-(--sim-ink)">
                   La era 1: cómo se construyó el instrumento
