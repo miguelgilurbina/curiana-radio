@@ -6,7 +6,6 @@
 // del registro oscuro, y el degradado termina en el mismo #0f1621 del
 // laboratorio, sin corte. (El handoff pone la escala a media transición; aquí
 // va del lado oscuro para que todas las etiquetas se lean.)
-import Masthead from "@/components/simulador/Masthead";
 import Etiqueta from "@/components/kaketiana/Etiqueta";
 import type { AbstractContent } from "@/lib/abstract";
 
@@ -15,9 +14,6 @@ export default function Umbral({ umbral, destino }: { umbral: AbstractContent["u
   return (
     <section aria-label="El umbral del experimento">
       <div data-kk-dir="sal" className="kk-umbral-claro">
-        <div className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:px-8">
-          <Masthead />
-        </div>
         <div className="mx-auto flex max-w-[65ch] flex-col gap-4 px-4 pb-14 pt-8 sm:px-6 md:pt-14">
           <span className="kk-label text-(--sim-ink-soft)">{umbral.miga}</span>
           <h2 className="sim-display text-4xl font-semibold leading-[1.08] tracking-tight text-(--sim-ink) md:text-[2.6rem]">

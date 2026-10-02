@@ -23,12 +23,6 @@ export const metadata: Metadata = {
 // /kaketiana/lengua (decisión de Miguel, 2026-09-30: la portada estaba
 // sobrecargada). Las cifras se miden, no se escriben a mano (regla 1).
 
-const NAV = [
-  { href: "/kaketiana/pueblo", label: "El pueblo" },
-  { href: "/kaketiana/lengua", label: "La lengua" },
-  { href: "/kaketiana/bibliografia", label: "Bibliografía" },
-];
-
 function Cifra({ label, valor, sub }: { label: string; valor: number | string; sub: string }) {
   return (
     <div className="border-t border-(--sim-rule) pt-3">
@@ -79,31 +73,9 @@ export default function KaketianaPage() {
   const mapa = getMapa();
 
   return (
-    <div data-kk data-kk-dir="sal" className="min-h-screen bg-(--sim-paper)">
+    <div>
       {/* Corre antes de pintar el hero: ver SCRIPT_HERO */}
       <script dangerouslySetInnerHTML={{ __html: SCRIPT_HERO }} />
-
-      {/* La nav de la sección, en registro terminal */}
-      <nav className="border-b border-(--sim-rule)">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-7 gap-y-2 px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/kaketiana" className="sim-display text-xl font-semibold text-(--sim-ink)">
-            Kaketiana
-          </Link>
-          <span className="hidden flex-1 sm:block" />
-          {NAV.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="kk-label text-[0.66rem] text-(--sim-ink-soft) transition-colors hover:text-(--sim-rubrica)"
-            >
-              {n.label}
-            </Link>
-          ))}
-          <Link href="/kaketiana/experimento" className="kk-accion text-[0.66rem]">
-            [ EXPERIMENTO ]
-          </Link>
-        </div>
-      </nav>
 
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 md:pt-14 lg:px-8">
         <p className="kk-label text-(--sim-rubrica)">Un wiki de investigación · Golfete de Coro · s. XIV–XV</p>

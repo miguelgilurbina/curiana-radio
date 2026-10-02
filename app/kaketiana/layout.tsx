@@ -1,22 +1,27 @@
 import type { Metadata } from "next";
+import NavKaketiana from "@/components/kaketiana/NavKaketiana";
 
 export const metadata: Metadata = {
-  title: "Simulador — Emergencia Lingüística Caquetía | Curiana Radio",
+  title: "Kaketiana — el mundo del kaketío | Curiana Radio",
   description:
-    "Simulación multi-agente de la lengua Caquetío-Arahuaco · Golfete de Coro · Siglo XIV-XV",
+    "El wiki de investigación sobre el pueblo caquetío del Golfete de Coro (siglos XIV-XV) y la reconstrucción de su lengua, con un experimento de simulación. Cada afirmación con su fuente.",
 };
 
-// El layout solo pone el tema del cronista y el fondo de la sección; el
-// chrome (masthead + cronología) lo arma cada página: las interiores vía
-// SimShell, el landing por actos — el Acto I "laboratorio" va a sangre
-// completa y redefine los tokens --sim-* al registro oscuro.
-export default function SimuladorLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// El marco de toda la sección, del manual de Kaketiana (design_handoff_
+// kaketiana): la placa 6b «Sal y almagre» (data-kk-dir="sal", que gana sobre
+// el pergamino del cronista porque se declara después en globals.css), los
+// micro-labels del manual (data-kk) y una sola navegación para todas las
+// páginas. El experimento redefine sus tramos a la tinta del laboratorio
+// (data-sim-acto="laboratorio"): esa inversión es la firma del Acto I.
+export default function KaketianaLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div data-sim-theme="cronista" className="min-h-screen bg-(--sim-paper) animate-fade-in">
+    <div
+      data-sim-theme="cronista"
+      data-kk
+      data-kk-dir="sal"
+      className="min-h-screen bg-(--sim-paper) animate-fade-in"
+    >
+      <NavKaketiana />
       {children}
     </div>
   );

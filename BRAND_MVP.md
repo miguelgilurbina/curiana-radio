@@ -376,7 +376,15 @@ componentes del cronista.
   **El canon manda sobre el handoff** en la etimología: la glosa 'lugar de' de
   *-ana* se retiró (#109) y *kaketiana* es un compuesto nuestro, así que la
   palabra va ◇ hipotética (sin asterisco), no ◆.
-- **Pendiente:** el wiki entero en 6b (hoy sigue en el pergamino 6a del
-  cronista, también las páginas de las puertas), artículo de pueblo (65ch,
-  capitular) y de lengua (referencia, ancho completo), bibliografía con
-  anclas, y los experimentales §07–09.
+- **Aplicado (2026-10-02): el marco de toda la sección.** `app/kaketiana/layout.tsx`
+  pone la placa 6b y los micro-labels del manual (`data-kk`) a todas las
+  páginas, y una sola navegación (`components/kaketiana/NavKaketiana.tsx`):
+  «Kaketiana» · El pueblo · La lengua · Bibliografía en salina ·
+  `[ EXPERIMENTO ]` en rúbrica · 88.8 FM; la sección actual con la Rúbrica fija;
+  en móvil «Kaketiana · 88.8 · `[ ≡ ]`» (44px). Se retiraron el masthead de la
+  era 1 y la cronología lateral de las páginas interiores (`SimShell`); la
+  cronología queda sólo en `/kaketiana/experimento/era-1`, que es donde cuenta.
+- **Pendiente:** el artículo de pueblo (65ch, capitular, miga con progreso,
+  sumario, citas en serif), el de lengua (referencia, ancho completo, tablas →
+  fichas), la bibliografía con anclas, separar lectura de cuaderno de trabajo,
+  el marco de imagen, el modo oscuro de lectura y los experimentales §07–09.

@@ -85,17 +85,17 @@ export default function HeroPalabra() {
       <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:gap-x-5">
         <span {...p("piezas")} className="flex flex-col gap-1.5">
           <span className="kk-forma text-5xl leading-none md:text-6xl">kaketio</span>
-          <span className="flex items-center gap-2">
+          <span className="flex flex-col items-start gap-1">
             <span className="font-sans text-xs text-(--sim-ink-soft)">el nombre del pueblo</span>
             <Etiqueta grado="atest" corta />
           </span>
         </span>
-        <span {...p("signos")} aria-hidden="true" className="sim-display text-4xl leading-none text-(--sim-ink-soft) sm:pb-6 md:text-5xl">
+        <span {...p("signos")} aria-hidden="true" className="sim-display text-4xl leading-none text-(--sim-ink-soft) sm:pb-11 md:text-5xl">
           +
         </span>
         <span {...p("ana")} className="flex flex-col gap-1.5">
           <span className="kk-forma text-5xl leading-none md:text-6xl">-ana</span>
-          <span className="flex items-center gap-2">
+          <span className="flex flex-col items-start gap-1">
             <span className="font-sans text-xs text-(--sim-ink-soft)">en Paraguaná, Curiana, Jayana…</span>
             <Etiqueta grado="atest" corta />
           </span>

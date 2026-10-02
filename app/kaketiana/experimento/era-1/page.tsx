@@ -7,7 +7,6 @@ import { getResumen } from "@/lib/resumen";
 import { getAllPersonajes } from "@/lib/personajes";
 import { getRunsIndex, getParejaExperimento } from "@/lib/runs";
 import { getGlosasPorManaure, getGlosasPorEvento } from "@/lib/glosas";
-import Masthead from "@/components/simulador/Masthead";
 import Timeline from "@/components/simulador/Timeline";
 import Umbral from "@/components/simulador/Umbral";
 import ManaureVoice from "@/components/simulador/ManaureVoice";
@@ -67,7 +66,6 @@ export default function EraUnoPage() {
     <>
       <div data-sim-acto="laboratorio" className="bg-(--sim-paper)">
         <div className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-          <Masthead />
 
           <div className="mx-auto max-w-[820px]">
             <header>
