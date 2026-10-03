@@ -7,6 +7,16 @@ import { getFicha, getFichas, getFichasSeed, getVecinasFicha } from "@/lib/ficha
 import { CAPA } from "@/lib/sim-theme";
 import { Overline } from "@/components/simulador/ui";
 import { CapaSello } from "@/components/simulador/capa";
+import FormaCaquetia from "@/components/kaketiana/Forma";
+
+// El filete de la cabecera con el trazo de la capa: la certeza es la solidez
+// del trazo (manual de Kaketiana).
+const TRAZO: Record<string, string> = {
+  atestiguado: "border-(--sim-ink)",
+  reconstruido: "border-(--sim-fuego)",
+  hipotetico: "border-dashed border-(--sim-ink-faint)",
+  retroabstraido: "border-dotted border-(--sim-ink-faint)",
+};
 
 // La ficha de una palabra: se lee en diez segundos y se comparte sola. Arriba
 // la voz, su glosa y cómo la sabemos; debajo, de dónde sale. Todo viene de
@@ -84,10 +94,12 @@ export default async function FichaPage({ params }: FichaProps) {
       </Link>
 
       {/* ── La voz ─────────────────────────────────────────────────── */}
-      <header className="mt-6 border-t-[3px] pt-5" style={{ borderColor: capa.color }}>
+      {/* La voz como la escribe el comparatista (Forma.tsx), bajo un filete con
+          el trazo de su capa: lleno, firme, discontinuo o punteado (manual). */}
+      <header className={`mt-6 border-t-[3px] pt-5 ${TRAZO[f.capa]}`}>
         <CapaSello capa={f.capa} tamano="lg" />
-        <h1 className="mt-3 break-words sim-display text-6xl font-semibold leading-none tracking-tight text-(--sim-ink) md:text-7xl">
-          {f.forma}
+        <h1 className="mt-3 break-words text-6xl leading-none tracking-tight md:text-7xl">
+          <FormaCaquetia forma={f.forma} capa={f.capa} />
         </h1>
         <p className="mt-4 font-serif text-2xl leading-snug text-(--sim-ink) md:text-[1.7rem]">{f.glosa}</p>
         <p className="mt-2 font-sans text-sm text-(--sim-ink-faint)">
@@ -197,13 +209,13 @@ export default async function FichaPage({ params }: FichaProps) {
       {/* ── Qué quiere decir la etiqueta ────────────────────────────── */}
       {info && (
         <p className="mt-6 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
-          <strong className="font-semibold" style={{ color: capa.color }}>
+          <strong className="font-semibold text-(--sim-ink)">
             {capa.label.charAt(0).toUpperCase() + capa.label.slice(1)}.
           </strong>{" "}
           {info.que_es} <em>Lo incierto:</em> {info.incierto.charAt(0).toLowerCase() + info.incierto.slice(1)}{" "}
           <Link
             href={`/kaketiana/lexicon?capa=${f.capa}`}
-            className="whitespace-nowrap text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)"
+            className="whitespace-nowrap text-(--kk-extra) transition-colors hover:text-(--sim-rubrica)"
           >
             Ver las {capa.plural} →
           </Link>

@@ -401,8 +401,18 @@ componentes del cronista.
   nombran salían de 0 a 5 por ensayo, y eso mide el formato, no la certeza.
   Tampoco se cuentan «citas» por obra: los ensayos citan en prosa y enlazan cada
   obra una vez o ninguna.
-- **Pendiente:** el artículo de lengua (referencia, ancho completo, tablas →
-  fichas), la bibliografía con anclas, separar lectura de cuaderno de trabajo
+- **Aplicado (2026-10-03): la lengua** (Vistas §03, móvil en Sistema §06).
+  `/kaketiana/lengua` es el **compendio** (`CompendioLengua.tsx`): el diccionario
+  con sus voces por capa, los topónimos con su mapa y los artículos de
+  referencia. El artículo (`ArticuloReferencia.tsx`) va a ancho completo, sin
+  capitular, con la miga «REFERENCIA · SE CONSULTA, NO SE LEE» y el sumario
+  plegado. En todo el wiki: **la forma caquetía como la escribe el comparatista**
+  (`Forma.tsx`: itálica en fuego, `*` para lo no documentado —◆ y ◇—, `~` para
+  el habla viva, lo atestiguado limpio) y **las tablas son fichas bajo 640px**,
+  sin scroll horizontal. El diccionario filtra con la fila «TODO ▮ ◆ ◇ ~» de
+  44px y cada voz cierra con su etiqueta. **Un solo sistema de etiquetas**: los
+  círculos de `CapaGlifo`/`CapaSello` pasan a la escala del manual.
+- **Pendiente:** la bibliografía con anclas, separar lectura de cuaderno de trabajo
   (las líneas de sesión, rutas y hojas de fuentes del vault siguen en los
   ensayos), el marco de imagen, el modo oscuro de lectura, el índice de certeza
   (pide etiquetar las afirmaciones en el vault) y los experimentales §07–09.
