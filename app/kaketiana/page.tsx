@@ -86,7 +86,7 @@ export default function KaketianaPage() {
 
           <div className="flex flex-col gap-5">
             {mapa && mapa.puntos.length > 0 && (
-              <figure>
+              <figure id="mapa" className="scroll-mt-8">
                 <div className="relative h-[300px] overflow-hidden border border-(--sim-rule) bg-(--sim-paper-deep) md:h-[380px]">
                   <MapaKaketiana puntos={mapa.puntos} />
                   {/* La etiqueta y la marca van dentro del marco (manual) */}

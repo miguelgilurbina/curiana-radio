@@ -2,13 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getWikiPorSeccion } from "@/lib/wiki";
-import { getFichasSeed } from "@/lib/fichas";
+import CompendioLengua from "@/components/kaketiana/CompendioLengua";
 import { SECCIONES_WIKI, type SeccionWiki } from "@/types/wiki";
 import { Overline } from "@/components/simulador/ui";
 
 // Las dos puertas de la portada (manual de Kaketiana): el pueblo es ensayo,
 // la lengua es obra de consulta. La portada ya no lista los artículos — los
-// lista aquí, cada sección con su densidad.
+// lista aquí, cada sección con su densidad. La lengua es además el compendio:
+// el diccionario y los topónimos entran por su puerta (CompendioLengua).
 
 interface SeccionProps {
   params: Promise<{ seccion: string }>;
@@ -42,8 +43,8 @@ export default async function SeccionPage({ params }: SeccionProps) {
   const { seccion } = await params;
   if (!esSeccion(seccion)) notFound();
   const lista = getWikiPorSeccion(seccion);
+  if (seccion === "lengua") return <CompendioLengua articulos={lista} />;
   const info = SECCIONES_WIKI[seccion];
-  const fichas = seccion === "lengua" ? getFichasSeed() : null;
 
   return (
     <article className="mx-auto max-w-[760px]">
@@ -62,15 +63,6 @@ export default async function SeccionPage({ params }: SeccionProps) {
         </h2>
         <p className="mt-3 max-w-reading font-sans text-[0.95rem] leading-relaxed text-(--sim-ink-soft)">{info.desc}</p>
       </header>
-
-      {fichas && fichas.n > 0 && (
-        <p className="mt-6 font-sans text-sm text-(--sim-ink-soft)">
-          <Link href="/kaketiana/lexicon" className="font-medium text-(--sim-fuego) hover:text-(--sim-rubrica)">
-            El diccionario →
-          </Link>{" "}
-          {fichas.n} voces, cada una con cómo la sabemos.
-        </p>
-      )}
 
       <ul className="mt-8">
         {lista.map((p) => (

@@ -23,6 +23,12 @@ export function textoPlano(md: string): string {
     .trim();
 }
 
+/** La pregunta del artículo (frontmatter `pregunta`), si la tiene. */
+export function preguntaDe(p: { frontmatter: Record<string, unknown> } | null): string | null {
+  const q = p?.frontmatter.pregunta;
+  return typeof q === "string" && q.trim() ? q.trim() : null;
+}
+
 /** El ancla de un título: sin tildes, en minúsculas, con guiones. */
 export function slugTitulo(texto: string): string {
   return texto

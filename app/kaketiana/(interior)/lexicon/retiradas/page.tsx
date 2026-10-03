@@ -89,7 +89,7 @@ export default function RetiradasPage() {
                             {s.slug ? (
                               <Link
                                 href={`/kaketiana/lexicon/${s.slug}`}
-                                className="sim-display text-sm font-semibold text-(--sim-fuego) transition-colors hover:text-(--sim-rubrica)"
+                                className="kk-forma text-sm underline decoration-(--sim-rule) underline-offset-2 transition-colors hover:decoration-(--sim-fuego)"
                               >
                                 {s.forma}
                               </Link>

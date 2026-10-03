@@ -4,13 +4,22 @@ import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import type { Capa, CapaInfo, FichaIndice } from "@/types/fichas";
 import { CAPAS_EPISTEMICAS } from "@/lib/sim-theme";
-import { CapaGlifo } from "@/components/simulador/capa";
 import { EmptyState } from "@/components/simulador/ui";
+import Etiqueta, { GRADO_DE_CAPA, glifoDe } from "@/components/kaketiana/Etiqueta";
+import FormaCaquetia from "@/components/kaketiana/Forma";
 
 // El índice del diccionario: las voces caquetías, cada una con su capa, en
 // orden alfabético y agrupadas por letra. La leyenda de capas ES el filtro.
 // El filtro vive en la URL (?capa=reconstruido) para que se pueda compartir;
 // se lee con useSyncExternalStore y se escribe con replaceState, sin efectos.
+//
+// Desde el 2026-10-03 con el manual de Kaketiana (Vistas §03, Sistema §06): el
+// filtro es la fila «TODO ▮ ◆ ◇ ~» de controles de 44px, la descripción de la
+// capa aparece al elegirla, y cada voz va como forma del comparatista con su
+// etiqueta cerrando la fila.
+
+// El orden de la escala del manual: ▮ ◆ ◇ ~.
+const ESCALA = ["atestiguado", "reconstruido", "hipotetico", "retroabstraido"] as const;
 
 const DIACRITICOS = /[̀-ͯ]/g;
 
@@ -24,6 +33,7 @@ function sinAcentos(t: string): string {
 }
 
 const CLAVES = new Set<string>(CAPAS_EPISTEMICAS.map((c) => c.key));
+const CAPA_PLURAL = Object.fromEntries(CAPAS_EPISTEMICAS.map((c) => [c.key, c.plural])) as Record<Capa, string>;
 
 function capaDeLaUrl(): Capa | null {
   try {
@@ -75,6 +85,10 @@ export default function DiccionarioVivo({
     else grupos.push({ letra, fichas: [f] });
   }
 
+  const elegirTodo = () => {
+    if (capa !== null) elegir(capa);
+  };
+
   const elegir = (c: Capa) => {
     const nueva = capa === c ? null : c;
     setCapaElegida(nueva);
@@ -90,42 +104,50 @@ export default function DiccionarioVivo({
 
   return (
     <div>
-      {/* La leyenda: cómo sabemos cada palabra. Pinchar una capa filtra. */}
-      <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        {CAPAS_EPISTEMICAS.map((c) => {
-          const activa = capa === c.key;
-          const info = capas[c.key];
+      {/* El filtro: cómo sabemos cada palabra. La fila es la leyenda. */}
+      <ul className="flex flex-wrap gap-2" aria-label="Filtrar por cómo la sabemos">
+        <li>
+          <button
+            type="button"
+            onClick={() => elegirTodo()}
+            aria-pressed={capa === null}
+            className={`sim-mono inline-flex min-h-11 cursor-pointer items-center rounded-[2px] border px-3.5 text-[0.62rem] uppercase tracking-[0.14em] transition-colors ${
+              capa === null
+                ? "border-(--sim-ink) bg-(--sim-ink) text-(--sim-paper)"
+                : "border-(--sim-rule) text-(--sim-ink-soft) hover:border-(--sim-rubrica)"
+            }`}
+          >
+            Todo · {fichas.length}
+          </button>
+        </li>
+        {ESCALA.filter((c) => (conteo[c] ?? 0) > 0).map((c) => {
+          const activa = capa === c;
+          const grado = GRADO_DE_CAPA[c];
           return (
-            <li key={c.key}>
+            <li key={c}>
               <button
                 type="button"
-                onClick={() => elegir(c.key)}
+                onClick={() => elegir(c)}
                 aria-pressed={activa}
-                className="group flex h-full w-full flex-col justify-start rounded-md border px-3.5 py-3 text-left transition-colors"
-                style={{
-                  borderColor: activa ? c.color : "var(--sim-rule)",
-                  background: activa ? "var(--sim-paper-deep)" : "transparent",
-                }}
+                className={`sim-mono inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-[2px] border px-3.5 text-[0.62rem] uppercase tracking-[0.14em] transition-colors ${
+                  activa
+                    ? "border-(--sim-ink) bg-(--sim-ink) text-(--sim-paper)"
+                    : "border-(--sim-rule) text-(--sim-ink-soft) hover:border-(--sim-rubrica)"
+                }`}
               >
-                <span className="flex items-baseline justify-between gap-3">
-                  <span className="inline-flex items-center gap-2 font-sans text-sm font-semibold" style={{ color: c.color }}>
-                    <CapaGlifo capa={c.key} size={12} />
-                    {c.plural}
-                  </span>
-                  <span className="sim-mono text-xs tabular-nums text-(--sim-ink-faint)">
-                    {conteo[c.key] ?? 0}
-                  </span>
-                </span>
-                {info && (
-                  <span className="mt-1 block font-sans text-xs leading-relaxed text-(--sim-ink-soft)">
-                    {info.que_es}
-                  </span>
-                )}
+                <span aria-hidden="true">{glifoDe(grado)}</span>
+                {CAPA_PLURAL[c]} · {conteo[c]}
               </button>
             </li>
           );
         })}
       </ul>
+      {capa && capas[capa] && (
+        <p className="mt-3 max-w-reading font-sans text-sm leading-relaxed text-(--sim-ink-soft)">
+          <Etiqueta grado={GRADO_DE_CAPA[capa]} corta className="mr-2 align-[0.1em]" />
+          {capas[capa]?.que_es}
+        </p>
+      )}
 
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <label className="sr-only" htmlFor="buscar-voz">
@@ -161,17 +183,17 @@ export default function DiccionarioVivo({
                 <li key={f.slug} className="border-t border-(--sim-rule) first:border-t-0">
                   <Link
                     href={`/kaketiana/lexicon/${f.slug}`}
-                    className="group flex items-baseline gap-2.5 py-2"
+                    className="group flex min-h-11 items-baseline gap-3 py-2.5"
                   >
-                    <span className="self-center">
-                      <CapaGlifo capa={f.capa} size={10} />
-                    </span>
-                    <span className="sim-display shrink-0 text-lg font-semibold text-(--sim-ink) transition-colors group-hover:text-(--sim-fuego)">
-                      {f.forma}
-                    </span>
-                    <span className="min-w-0 font-sans text-sm leading-snug text-(--sim-ink-soft)">
+                    <FormaCaquetia
+                      forma={f.forma}
+                      capa={f.capa}
+                      className="shrink-0 text-[1.1rem] underline decoration-transparent underline-offset-2 transition-colors group-hover:decoration-(--sim-fuego)"
+                    />
+                    <span className="min-w-0 flex-1 font-sans text-sm leading-snug text-(--sim-ink-soft)">
                       {f.glosa}
                     </span>
+                    <Etiqueta grado={GRADO_DE_CAPA[f.capa]} corta className="shrink-0 self-center" />
                   </Link>
                 </li>
               ))}

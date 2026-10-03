@@ -10,14 +10,20 @@ import type { SeccionDelArticulo } from "@/lib/articulo";
 // más», que el lector abre si quiere. En móvil se pliega a una barra sobre el
 // texto, «EN ESTE ARTÍCULO · N ▾», con un botón de 44px. Debajo, en
 // escritorio, lo que el artículo mide de sí mismo (los children).
+//
+// `plegado`: la obra de consulta (la lengua, Vistas §03) va a ancho completo
+// y sin columna lateral, así que el sumario es la barra plegada en todos los
+// tamaños; abierta, en dos columnas desde 640px.
 
 const VISIBLES = 8;
 
 export default function Sumario({
   secciones,
+  plegado = false,
   children,
 }: {
   secciones: SeccionDelArticulo[];
+  plegado?: boolean;
   children?: ReactNode;
 }) {
   const [actual, setActual] = useState<string | null>(null);
@@ -89,8 +95,12 @@ export default function Sumario({
 
   return (
     <>
-      {/* < 1024px: la barra plegada, a sangre completa bajo la miga */}
-      <div className="-mx-4 border-b border-(--sim-rule) bg-(--sim-paper-deep) sm:-mx-6 lg:hidden">
+      {/* < 1024px (o siempre, si va plegado): la barra, a sangre completa en móvil */}
+      <div
+        className={`-mx-4 border-b border-(--sim-rule) bg-(--sim-paper-deep) sm:-mx-6 ${
+          plegado ? "lg:mx-0 lg:border-x lg:border-t" : "lg:hidden"
+        }`}
+      >
         <button
           type="button"
           aria-expanded={abierto}
@@ -108,14 +118,16 @@ export default function Sumario({
         <ol
           id={idMovil}
           hidden={!abierto}
-          className="kk-desplegable-cuerpo flex flex-col border-t border-(--sim-rule) px-4 py-2 text-[0.85rem] leading-snug sm:px-6"
+          className={`kk-desplegable-cuerpo flex flex-col border-t border-(--sim-rule) px-4 py-2 text-[0.85rem] leading-snug sm:px-6 ${
+            plegado ? "sm:grid sm:grid-cols-2 sm:gap-x-8" : ""
+          }`}
         >
           {secciones.map((s) => entrada(s, () => setAbierto(false)))}
         </ol>
       </div>
 
-      {/* ≥ 1024px: la columna */}
-      <div className="hidden flex-col gap-2.5 lg:flex">
+      {/* ≥ 1024px: la columna (no en la obra de consulta) */}
+      <div className={plegado ? "hidden" : "hidden flex-col gap-2.5 lg:flex"}>
         <p className="kk-label text-[0.58rem] tracking-[0.22em] text-(--sim-ink-soft)">
           En este artículo · {secciones.length}
         </p>
