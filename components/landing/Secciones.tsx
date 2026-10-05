@@ -180,7 +180,7 @@ export function Aristas() {
               II · La crónica de Indias
             </span>
             <Cartel as="h3" className="text-[1.7rem]">
-              Simulador Caquetío
+              Kaketiana
             </Cartel>
             <p className="m-0 flex-1 text-sm leading-relaxed text-(--sim-ink-soft)">
               El proyecto lingüístico. Sobre pergamino y rúbrica, una lengua del golfo se reconstruye palabra a palabra

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { arrancarDisco, type MotorDisco } from "./disco-motor";
 import { medir } from "@/lib/analitica";
@@ -14,6 +15,17 @@ import { medir } from "@/lib/analitica";
 export const CLAVE_INTRO = "curiana:intro-v1";
 const DESTINO = "/inicio";
 const LOGO = "/marca/isotipo-espiral.png";
+
+// Las puertas de la radio, para quien no ve el disco: lectores de pantalla,
+// teclado, buscadores y agentes. Fuera de pantalla hasta que recibe foco
+// (como un «saltar al contenido»); la animación no cambia.
+const SECCIONES = [
+  { href: "/inicio", label: "Inicio" },
+  { href: "/archivo", label: "Archivo" },
+  { href: "/jai-sounds", label: "JAI Sounds" },
+  { href: "/galeria", label: "Galería" },
+  { href: "/kaketiana", label: "Kaketiana" },
+];
 const MARCAS_DIAL = Array.from({ length: 14 }, (_, i) => (i / 13) * 100);
 
 function yaVista(): boolean {
@@ -111,6 +123,16 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
       data-fase={fase}
       data-ok={ok ? "" : undefined}
     >
+      {/* Fuera de .intro-disco-ui a propósito: la UI está en opacidad 0 hasta
+          que el disco carga, y este menú tiene que poder verse antes. Entrar
+          por aquí cuenta como haber pasado la puerta. */}
+      <nav aria-label="Secciones de Curiana Radio" className="intro-disco-secciones intro-disco-mono">
+        {SECCIONES.map((s) => (
+          <Link key={s.href} href={s.href} onClick={marcarVista}>
+            {s.label}
+          </Link>
+        ))}
+      </nav>
       <canvas ref={lienzo} className="intro-disco-lienzo" aria-hidden="true" />
 
       <div className="intro-disco-ui">

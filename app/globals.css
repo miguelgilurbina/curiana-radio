@@ -1059,6 +1059,45 @@
     opacity: 0;
     pointer-events: none;
   }
+  /* El menú de secciones: fuera de pantalla (como sr-only) hasta que el
+     teclado entra en él; entonces aparece arriba, en el registro de SALTAR. */
+  .intro-disco-secciones {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .intro-disco-secciones:focus-within {
+    top: 22px;
+    left: 50%;
+    z-index: 5;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: calc(100vw - 32px);
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid var(--noche-filete);
+    border-radius: 2px;
+    background: var(--noche-hondo);
+  }
+  .intro-disco-secciones a {
+    padding: 6px 10px;
+    color: var(--noche-hueso);
+    text-decoration: none;
+  }
+  .intro-disco-secciones a:hover,
+  .intro-disco-secciones a:focus-visible {
+    color: var(--color-frequency);
+    outline: 1px solid var(--color-frequency);
+  }
   /* El cursor del sistema se esconde sobre el lienzo: un anillo en hueso
      con el punto en frequency. Crece y se vuelve naranja al presionar. */
   .intro-disco-anillo {

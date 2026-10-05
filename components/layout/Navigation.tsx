@@ -100,21 +100,16 @@ export default function Navigation({ editionNumber }: NavigationProps) {
                 Galería
               </Link>
 
-              {/* Simulador Link */}
+              {/* Kaketiana (antes /simulador; ver los redirects de next.config.js) */}
               <Link
                 href="/kaketiana"
                 className={`shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/kaketiana")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
-                Simulador
+                Kaketiana
               </Link>
 
-              {/* About Link (optional) */}
-              <Link
-                href="/sobre"
-                className={`hidden md:block shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/sobre")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
-              >
-                Sobre
-              </Link>
+              {/* «Sobre» vuelve cuando exista /sobre: apuntaba a una página
+                  que nunca se hizo, y el enlace roto salía en todo el sitio. */}
             </div>
           </div>
         </div>

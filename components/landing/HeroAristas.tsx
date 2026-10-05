@@ -66,9 +66,9 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--jai-luz-soft) max-w-[46ch]",
     },
     {
-      nombre: "SIMULADOR",
+      nombre: "KAKETIANA",
       frecuencia: "88.3 · La crónica de Indias",
-      titulo: "Simulador Caquetío",
+      titulo: "Kaketiana",
       bajada: "Sobre pergamino y rúbrica, una lengua del golfo se reconstruye palabra a palabra.",
       cta: (
         <Link href="/kaketiana" className={`${enlaceMono} text-(--sim-ink)`}>
