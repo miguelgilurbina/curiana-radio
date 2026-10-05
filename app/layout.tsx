@@ -4,6 +4,8 @@ import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import ShellRadio from "@/components/layout/ShellRadio";
+import JsonLd from "@/components/seo/JsonLd";
+import { jsonLdSitio, SITIO, TARJETA_RADIO } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,15 +42,23 @@ const archivoBlack = Archivo_Black({
   display: "swap",
 });
 
+// La metadata base del sitio. Cada página declara la suya completa con
+// metadatos() (lib/seo.ts); esto es el respaldo de lo que no la declare. Sin
+// canonical aquí a propósito: se heredaría y toda página diría ser la portada.
 export const metadata: Metadata = {
-  title: "Curiana Radio - 88.8 FM",
-  description: "Transmisión Cultural desde Abya Yala - A cultural newsletter experience delivered as immersive web pages.",
-  metadataBase: new URL("https://curianaradio.com"), // Update with actual domain
+  metadataBase: new URL(SITIO.url),
+  title: `${SITIO.nombre} - ${SITIO.lema}`,
+  description: SITIO.descripcion,
+  applicationName: SITIO.nombre,
   openGraph: {
-    title: "Curiana Radio - 88.8 FM",
-    description: "Transmisión Cultural desde Abya Yala",
+    title: `${SITIO.nombre} - ${SITIO.lema}`,
+    description: SITIO.descripcion,
+    siteName: SITIO.nombre,
+    locale: SITIO.locale,
     type: "website",
+    images: [TARJETA_RADIO],
   },
+  twitter: { card: "summary_large_image" },
   // Favicon "la noche": espiral hueso sobre deep-900 (BRAND_MVP.md §8.1).
   // Los archivos viven en public/; no hay app/favicon.ico que los pise.
   icons: {
@@ -74,6 +84,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable} ${archivoBlack.variable}`}>
       <body className="font-sans antialiased">
+        <JsonLd datos={jsonLdSitio()} />
         <ShellRadio nav={<Navigation />} footer={<Footer />}>
           {children}
         </ShellRadio>

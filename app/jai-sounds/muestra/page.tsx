@@ -6,8 +6,12 @@ import PropuestaFichas from "@/components/jai-sounds/PropuestaFichas";
 
 // Ruta de trabajo: no debe indexarse ni aparecer en el sitemap. Los datos
 // son falsos y confundirlos con el catálogo real sería el peor resultado.
+// Maquetas con datos inventados: fuera de los buscadores (y del sitemap). Ya
+// no se bloquea en robots.txt: un rastreador bloqueado no llega a leer el
+// noindex, y la URL podía indexarse igual si alguien la enlazaba.
 export const metadata: Metadata = {
   title: "JAI Sounds — Propuestas (datos de muestra)",
+  alternates: { canonical: "/jai-sounds/muestra" },
   robots: { index: false, follow: false },
 };
 

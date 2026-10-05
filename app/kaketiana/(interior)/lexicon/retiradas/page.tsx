@@ -4,12 +4,15 @@ import type { Retirada } from "@/types/fichas";
 import { getRetiradas } from "@/lib/fichas";
 import { Overline, EmptyState } from "@/components/simulador/ui";
 import { CapaSello } from "@/components/simulador/capa";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Las voces retiradas — Kaketiana | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Las voces retiradas — Kaketiana | Curiana Radio",
+  descripcion:
     "Las palabras que estuvieron en el habla de la simulación y salieron de ella: cuál las sustituye y por qué. Archivar no es borrar.",
-};
+  ruta: "/kaketiana/lexicon/retiradas",
+  imagen: tarjeta("kaketiana/lexicon", "Kaketiana · el diccionario caquetío"),
+});
 
 // El archivo de FUERA_DEL_HABLA: lo que se retiró, con su capa intacta
 // («archivar no es borrar y tampoco es degradar»), la fecha, el motivo en una

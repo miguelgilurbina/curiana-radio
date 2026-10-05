@@ -2,17 +2,15 @@ import type { Metadata } from "next";
 import GaleriaGrid from "@/components/galeria/GaleriaGrid";
 import { Heading, BodyText } from "@/components/ui/Typography";
 import { getBlobBase, getObrasGrid, getSeries, getTags } from "@/lib/galeria";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Galería - Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Galería - Curiana Radio",
+  descripcion:
     "Experimentos visuales de Curiana Radio: imágenes generadas con IA sobre el desierto de Coro, la señal y la memoria caquetía.",
-  openGraph: {
-    title: "Galería - Curiana Radio",
-    description:
-      "Experimentos visuales de Curiana Radio: imágenes generadas con IA sobre el desierto de Coro, la señal y la memoria caquetía.",
-  },
-};
+  ruta: "/galeria",
+  imagen: tarjeta("galeria", "La galería de Curiana Radio"),
+});
 
 export default function GaleriaPage() {
   const obras = getObrasGrid();

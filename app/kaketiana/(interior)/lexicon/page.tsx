@@ -3,12 +3,15 @@ import type { Metadata } from "next";
 import { getFichasSeed, getIndiceFichas, getRetiradas } from "@/lib/fichas";
 import { Overline, EmptyState } from "@/components/simulador/ui";
 import DiccionarioVivo from "@/components/simulador/DiccionarioVivo";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "El diccionario — Kaketiana | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "El diccionario — Kaketiana | Curiana Radio",
+  descripcion:
     "Las voces del caquetío, una por una: qué significan, de qué fuente salen y cuán seguras son — atestiguadas, reconstruidas desde las lenguas hermanas, retroabstraídas del habla viva o hipotéticas.",
-};
+  ruta: "/kaketiana/lexicon",
+  imagen: tarjeta("kaketiana/lexicon", "Kaketiana · el diccionario caquetío"),
+});
 
 // El diccionario de la lengua viva: sólo voces caquetías, cada una con su
 // capa epistémica. Las comparandas (wayuu, lokono, achagua…) son el andamio

@@ -2,9 +2,11 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import type { CitaFicha } from "@/types/fichas";
+import type { CitaFicha, Ficha } from "@/types/fichas";
 import { getFicha, getFichas, getFichasSeed, getVecinasFicha } from "@/lib/fichas";
 import { CAPA } from "@/lib/sim-theme";
+import { jsonLdMigas, metadatos, tarjeta, urlAbsoluta } from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
 import { Overline } from "@/components/simulador/ui";
 import { CapaSello } from "@/components/simulador/capa";
 
@@ -33,11 +35,45 @@ export async function generateMetadata({ params }: FichaProps): Promise<Metadata
   const etiqueta = CAPA[f.capa].label;
   const fuente = f.citas[0] ? ` Fuente: ${citaCorta(f.citas[0])}.` : "";
   const description = `«${f.glosa}» — voz caquetía ${etiqueta}.${fuente}`;
-  return {
-    title: `${f.forma} — ${f.glosa} · Kaketiana | Curiana Radio`,
-    description,
-    openGraph: { title: `${f.forma} — «${f.glosa}»`, description },
-  };
+  return metadatos({
+    titulo: `${f.forma} — ${f.glosa} · Kaketiana | Curiana Radio`,
+    tituloSocial: `${f.forma} — «${f.glosa}»`,
+    descripcion: description,
+    ruta: `/kaketiana/lexicon/${f.slug}`,
+    imagen: tarjeta(`kaketiana/lexicon/${f.slug}`, `${f.forma}: «${f.glosa}», voz caquetía ${etiqueta}`),
+  });
+}
+
+/** La voz como DefinedTerm del diccionario. La capa epistémica no tiene campo
+ *  propio en schema.org: va en disambiguatingDescription, que es justo lo que
+ *  distingue esta voz de una afirmación sin matices. */
+function jsonLdVoz(f: Ficha, queEs: string) {
+  const ruta = `/kaketiana/lexicon/${f.slug}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      name: f.forma,
+      description: f.glosa,
+      disambiguatingDescription: `Voz caquetía ${CAPA[f.capa].label}: ${queEs}`,
+      url: urlAbsoluta(ruta),
+      inDefinedTermSet: {
+        "@type": "DefinedTermSet",
+        name: "Diccionario caquetío — Kaketiana",
+        url: urlAbsoluta("/kaketiana/lexicon"),
+      },
+      subjectOf: f.citas.map((c) => ({
+        "@type": "CreativeWork",
+        name: citaCorta(c),
+        ...(c.obra && c.enlace ? { url: urlAbsoluta(`/kaketiana/bibliografia#${c.obra}`) } : {}),
+      })),
+    },
+    jsonLdMigas([
+      ["Kaketiana", "/kaketiana"],
+      ["El diccionario", "/kaketiana/lexicon"],
+      [f.forma, ruta],
+    ]),
+  ];
 }
 
 /** «#41 (HB+E)» → «vía Adrián Hernández Baño y Juan Esteves», leyendo las
@@ -76,6 +112,7 @@ export default async function FichaPage({ params }: FichaProps) {
 
   return (
     <article className="mx-auto max-w-[680px]">
+      <JsonLd datos={jsonLdVoz(f, info.que_es)} />
       <Link
         href="/kaketiana/lexicon"
         className="font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"

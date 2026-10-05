@@ -3,12 +3,15 @@ import type { Metadata } from "next";
 import type { PreguntaAbierta } from "@/types/fichas";
 import { getNoSabemos } from "@/lib/fichas";
 import { Overline, EmptyState } from "@/components/simulador/ui";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Lo que no sabemos — Kaketiana | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Lo que no sabemos — Kaketiana | Curiana Radio",
+  descripcion:
     "Las preguntas que el proyecto caquetío no ha podido cerrar, con lo que hay medido hasta hoy y de dónde sale cada cifra.",
-};
+  ruta: "/kaketiana/no-sabemos",
+  imagen: tarjeta("kaketiana/no-sabemos", "Kaketiana · lo que no sabemos"),
+});
 
 // El borde de lo que sabemos. Las preguntas, su planteamiento y cada cifra
 // vienen de content/wiki/no-sabemos.json (export_no_sabemos_seed.py), que las

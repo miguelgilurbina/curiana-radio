@@ -5,6 +5,7 @@ import { getEditionBySlug, getAllEditionSlugs } from '@/lib/content';
 import { Heading, BodyText, Quote, SectionTitle } from '@/components/ui/Typography';
 import type { Metadata } from 'next';
 import type { ComponentProps } from 'react';
+import { metadatos, tarjeta } from '@/lib/seo';
 
 // MDX components mapping
 const components = {
@@ -43,22 +44,20 @@ export async function generateMetadata({ params }: EditionPageProps): Promise<Me
   const edition = await getEditionBySlug(slug);
 
   if (!edition) {
-    return {
-      title: 'Edition Not Found - Curiana Radio',
-    };
+    return { title: 'Edición no encontrada - Curiana Radio' };
   }
 
-  return {
-    title: `#${edition.metadata.number}: ${edition.metadata.title} - Curiana Radio`,
-    description: edition.metadata.description,
-    openGraph: {
-      title: `#${edition.metadata.number}: ${edition.metadata.title}`,
-      description: edition.metadata.description,
-      type: 'article',
-      publishedTime: edition.metadata.publishedAt,
-      images: edition.metadata.ogImage ? [edition.metadata.ogImage] : [],
-    },
-  };
+  // La tarjeta es la de /og: el ogImage del metadata.json apunta a
+  // /images/editions/…, que nunca existió en public/.
+  return metadatos({
+    titulo: `#${edition.metadata.number}: ${edition.metadata.title} - Curiana Radio`,
+    tituloSocial: `#${edition.metadata.number}: ${edition.metadata.title}`,
+    descripcion: edition.metadata.description,
+    ruta: `/${slug}`,
+    tipo: 'article',
+    publicado: edition.metadata.publishedAt,
+    imagen: tarjeta(slug, `Transmisión #${edition.metadata.number}: ${edition.metadata.title}`),
+  });
 }
 
 export default async function EditionPage({ params }: EditionPageProps) {

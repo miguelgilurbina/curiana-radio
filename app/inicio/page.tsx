@@ -9,13 +9,13 @@ import {
   Manifiesto,
   UltimaTransmision,
 } from "@/components/landing/Secciones";
+import { metadatos, SITIO } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Curiana Radio - 88.8 FM",
-  description:
-    "Emitimos desde una Paraguaná paralela, unos años después del Renacimiento de La Curiana. Una transmisión al mes: música, ensayo, una lengua que renace y el arte del camino.",
-  alternates: { canonical: "/inicio" },
-};
+export const metadata: Metadata = metadatos({
+  titulo: `${SITIO.nombre} - ${SITIO.lema}`,
+  descripcion: SITIO.descripcion,
+  ruta: "/inicio",
+});
 
 // La landing v1 · la noche: el marco que contiene todas las aristas. Llega
 // después de la intro El Disco (/), pero también se entra directo: quien

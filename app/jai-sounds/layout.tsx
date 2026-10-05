@@ -1,18 +1,5 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { SCRIPT_SEMILLA } from "@/lib/jai-rotacion";
-
-export const metadata: Metadata = {
-  title: "JAI Sounds — Curaduría musical | Curiana Radio",
-  description:
-    "La música es la huella humana de la vida vivida. Curaduría musical de Curiana Radio: un dial de estaciones que gira de color, no de canciones.",
-  openGraph: {
-    title: "JAI Sounds — Curaduría musical",
-    description:
-      "jay · caquetío · oír, escuchar. Un dial de estaciones desde Curiana Radio · 88.8 FM",
-    type: "website",
-  },
-};
 
 // La Fraunces de JAI: la misma familia del sitio, pero con los ejes que la
 // sección necesita y el resto no — opsz (la display vive en opsz 9, tripas

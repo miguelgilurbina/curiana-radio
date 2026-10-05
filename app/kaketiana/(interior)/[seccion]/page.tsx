@@ -5,6 +5,7 @@ import { getWikiPorSeccion } from "@/lib/wiki";
 import { getFichasSeed } from "@/lib/fichas";
 import { SECCIONES_WIKI, type SeccionWiki } from "@/types/wiki";
 import { Overline } from "@/components/simulador/ui";
+import { metadatos, tarjeta } from "@/lib/seo";
 
 // Las dos puertas de la portada (manual de Kaketiana): el pueblo es ensayo,
 // la lengua es obra de consulta. La portada ya no lista los artículos — los
@@ -32,10 +33,12 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: SeccionProps): Promise<Metadata> {
   const { seccion } = await params;
   if (!esSeccion(seccion)) return { title: "No encontrado | Curiana Radio" };
-  return {
-    title: `${SECCIONES_WIKI[seccion].label} — Kaketiana | Curiana Radio`,
-    description: SECCIONES_WIKI[seccion].desc,
-  };
+  return metadatos({
+    titulo: `${SECCIONES_WIKI[seccion].label} — Kaketiana | Curiana Radio`,
+    descripcion: SECCIONES_WIKI[seccion].desc,
+    ruta: `/kaketiana/${seccion}`,
+    imagen: tarjeta(`kaketiana/${seccion}`, `Kaketiana · ${SECCIONES_WIKI[seccion].label}`),
+  });
 }
 
 export default async function SeccionPage({ params }: SeccionProps) {

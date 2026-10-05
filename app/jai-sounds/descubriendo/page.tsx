@@ -10,18 +10,34 @@ import {
   PORTADA_DESCUBRIENDO,
   SPOTIFY_SHOW,
 } from "@/components/jai-sounds/estilos";
+import JsonLd from "@/components/seo/JsonLd";
+import { ID_ORGANIZACION, metadatos, urlAbsoluta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Descubriendo con Chocolate — JAI Sounds | Curiana Radio",
+export const metadata: Metadata = metadatos({
+  titulo: "Descubriendo con Chocolate — JAI Sounds | Curiana Radio",
+  tituloSocial: "Descubriendo con Chocolate",
+  descripcion:
+    "Acompáñame a descubrir sonidos pasados que movieron la piel de gente muy viva. El podcast de JAI Sounds, conducido por Chocolate.",
+  ruta: "/jai-sounds/descubriendo",
+  imagen: {
+    url: PORTADA_DESCUBRIENDO,
+    alt: "Portada de Descubriendo con Chocolate, el podcast de JAI Sounds",
+    width: 1333,
+    height: 1330,
+  },
+});
+
+const JSON_LD_PODCAST = {
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  name: "Descubriendo con Chocolate",
   description:
     "Acompáñame a descubrir sonidos pasados que movieron la piel de gente muy viva. El podcast de JAI Sounds, conducido por Chocolate.",
-  openGraph: {
-    title: "Descubriendo con Chocolate",
-    description:
-      "Acompáñame a descubrir sonidos pasados. Un podcast de JAI Sounds · Curiana Radio 88.8 FM",
-    type: "website",
-    images: [PORTADA_DESCUBRIENDO],
-  },
+  url: urlAbsoluta("/jai-sounds/descubriendo"),
+  image: urlAbsoluta(PORTADA_DESCUBRIENDO),
+  inLanguage: "es",
+  sameAs: [`https://open.spotify.com/show/${SPOTIFY_SHOW}`],
+  publisher: { "@id": ID_ORGANIZACION },
 };
 
 // Hereda el shell y la tipografía de JAI, pero su superficie sale de la
@@ -34,6 +50,7 @@ export default function DescubriendoPage() {
       data-descubriendo-theme="orbe"
       className="flex min-h-screen flex-col bg-(--orbe-fondo) text-(--orbe-texto)"
     >
+      <JsonLd datos={JSON_LD_PODCAST} />
       {/* sub-nav de JAI */}
       <nav
         aria-label="Migas"

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Canal from "@/components/jai-sounds/Canal";
@@ -16,6 +17,16 @@ import {
   getEdicionSintonizada,
   getPlaylists,
 } from "@/lib/jai-sounds";
+import { metadatos, tarjeta } from "@/lib/seo";
+
+export const metadata: Metadata = metadatos({
+  titulo: "JAI Sounds — Curaduría musical | Curiana Radio",
+  tituloSocial: "JAI Sounds — Curaduría musical",
+  descripcion:
+    "La música es la huella humana de la vida vivida. Curaduría musical de Curiana Radio: un dial de estaciones que gira de color, no de canciones.",
+  ruta: "/jai-sounds",
+  imagen: tarjeta("jai-sounds", "JAI Sounds, la curaduría musical de Curiana Radio"),
+});
 
 // El catálogo cambia cuando corre la ingesta, no cuando entra una visita.
 export const revalidate = 3600;

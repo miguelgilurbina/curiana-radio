@@ -3,12 +3,15 @@ import { getNeologismos } from "@/lib/neologismos";
 import { getAllPersonajes } from "@/lib/personajes";
 import { Overline, EmptyState } from "@/components/simulador/ui";
 import NeologismosCronologia from "@/components/simulador/NeologismosCronologia";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Neologismos — Simulador Caquetío | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Neologismos — Kaketiana | Curiana Radio",
+  descripcion:
     "Las palabras que los agentes inventaron, día a día: cuáles prendieron, cuáles murieron y quién las acuñó.",
-};
+  ruta: "/kaketiana/neologisms",
+  imagen: tarjeta("kaketiana/neologisms", "Kaketiana · neologismos del experimento"),
+});
 
 export default function NeologismsPage() {
   const neologismos = getNeologismos();
