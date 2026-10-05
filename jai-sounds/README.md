@@ -132,6 +132,10 @@ re-ingesta igual. `--dry-run` no escribe nada.
 
 ## El wiki: canción, álbum y artista
 
+La base es la **fuente**, no se lee en vivo: `curiana-produccion` es plan
+gratis y se pausa sola. Los scripts la cargan y `jai:exportar` deja el wiki
+como JSON en el repo; si la base se pausa, el sitio no se entera.
+
 Cada entidad del dial tiene su página, con dos voces que no se mezclan: la
 **reseña JAI** (de Miguel) y **«esto dice el internet»** (Wikipedia, citada).
 Debajo, el dato: Spotify más MusicBrainz. Todo vive en `jai`; la migración
@@ -146,6 +150,7 @@ En orden, con `source ~/.secrets/jai.env` antes:
 | 3 | `npm run jai:musicbrainz` | Géneros, primera edición, créditos, país, miembros, enlaces (~1 h la primera vez, 1 consulta/s) |
 | 4 | `npm run jai:wikipedia` | El primer párrafo de Wikipedia de artistas, álbumes y canciones |
 | 5 | `npm run jai:resenas` | Sube las reseñas `publicada` del vault de Obsidian |
+| 6 | `npm run jai:exportar` | Saca de la base SOLO lo publicado a `content/jai-sounds/wiki/`: de ahí se arman las páginas, estáticas |
 
 Las portadas (`npm run jai:portadas`) no necesitan base: bajan el arte de las
 estaciones a `public/jai/portadas/` y llenan `portada` en `playlists.json`.

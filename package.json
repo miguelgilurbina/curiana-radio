@@ -17,6 +17,7 @@
     "jai:wikipedia": "node jai-sounds/scripts/wikipedia.mjs",
     "jai:resenas": "node jai-sounds/scripts/resenas_obsidian.mjs",
     "jai:portadas": "node jai-sounds/scripts/portadas.mjs",
+    "jai:exportar": "node jai-sounds/scripts/exportar.mjs",
     "jai:test": "node --test jai-sounds/scripts/*.test.mjs"
   },
   "repository": {
