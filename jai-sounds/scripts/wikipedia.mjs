@@ -27,6 +27,11 @@ export function qid(url) {
   return url?.match(/wikidata\.org\/wiki\/(Q\d+)/)?.[1] ?? null;
 }
 
+/** La consulta liviana a Wikidata: solo los enlaces a eswiki y enwiki. */
+export function urlEnlacesWikidata(q) {
+  return `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${q}&props=sitelinks&sitefilter=${IDIOMAS.map((l) => `${l}wiki`).join("%7C")}&format=json`;
+}
+
 /** Idioma y título de una URL de Wikipedia. */
 export function deUrlWikipedia(url) {
   const m = url?.match(/^https?:\/\/([a-z-]+)\.wikipedia\.org\/wiki\/(.+)$/);
@@ -92,7 +97,10 @@ async function main() {
 
   const resumen = async (art) =>
     art ? [await get(`https://${art.idioma}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(art.titulo.replace(/ /g, "_"))}`), art.idioma] : [null, null];
-  const articuloDeQ = async (q) => (q ? articuloDeWikidata((await get(`https://www.wikidata.org/wiki/Special:EntityData/${q}.json`))?.entities?.[q]) : null);
+  // Solo los enlaces a Wikipedia: la entidad completa de Wikidata pesa ~100
+  // veces más y la caché se volvía de cientos de MB.
+  const articuloDeQ = async (q) =>
+    q ? articuloDeWikidata((await get(urlEnlacesWikidata(q)))?.entities?.[q]) : null;
   const filas = [];
 
   // ── Artistas ──
