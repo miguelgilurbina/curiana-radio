@@ -30,8 +30,12 @@ export async function generateStaticParams() {
   }));
 }
 
-// Enable dynamic params for editions not in generateStaticParams
-export const dynamicParams = true;
+// Las ediciones son archivos del repo: todas existen al compilar. Con
+// dynamicParams en false, cualquier otra ruta de un segmento (/lo-que-sea,
+// /llms.txt antes de existir) responde un 404 de verdad. En true respondía
+// 200 con un «Edition Not Found» — un soft 404 para los buscadores — y además
+// ponía a leer el disco con lo que trajera la URL.
+export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: EditionPageProps): Promise<Metadata> {
