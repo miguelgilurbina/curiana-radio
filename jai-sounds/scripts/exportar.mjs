@@ -193,12 +193,24 @@ export function armar(dial, t) {
   return { estaciones, canciones, albumes, artistas };
 }
 
-async function leerPorIds(db, tabla, columnas, campo, ids) {
+/**
+ * Todas las filas de `tabla` cuyo `campo` está en `ids`. De a 200 ids (la
+ * URL tiene tope) y, dentro de cada tanda, de a 1000 filas: PostgREST corta
+ * ahí sin avisar —23 playlists son 2.047 filas, y sin paginar el export
+ * salía con la mitad—. `orden` es la clave completa, para que las páginas
+ * no se pisen.
+ */
+async function leerPorIds(db, tabla, columnas, campo, ids, orden) {
   const out = [];
   for (const lote of trozos([...new Set(ids)].filter(Boolean), 200)) {
-    const { data, error } = await db.from(tabla).select(columnas).in(campo, lote);
-    if (error) throw new Error(`${tabla}: ${error.message}`);
-    out.push(...data);
+    for (let desde = 0; ; desde += 1000) {
+      let q = db.from(tabla).select(columnas).in(campo, lote);
+      for (const o of orden) q = q.order(o);
+      const { data, error } = await q.range(desde, desde + 999);
+      if (error) throw new Error(`${tabla}: ${error.message}`);
+      out.push(...data);
+      if (data.length < 1000) break;
+    }
   }
   return out;
 }
@@ -209,16 +221,16 @@ async function main() {
   const dial = [...playlists].sort((a, b) => (b.pistas ?? 0) - (a.pistas ?? 0));
 
   log("▸ leyendo la base…");
-  const playlist_tracks = await leerPorIds(db, "playlist_tracks", "playlist_id, track_id, position, added_at", "playlist_id", dial.map((p) => p.spotify_id));
+  const playlist_tracks = await leerPorIds(db, "playlist_tracks", "playlist_id, track_id, position, added_at", "playlist_id", dial.map((p) => p.spotify_id), ["playlist_id", "track_id"]);
   const ids = playlist_tracks.map((x) => x.track_id);
-  const tracks = await leerPorIds(db, "tracks", "id, name, slug, album_id, track_number, duration_ms, spotify_url", "id", ids);
-  const track_artists = await leerPorIds(db, "track_artists", "track_id, artist_id, position", "track_id", ids);
-  const albums = await leerPorIds(db, "albums", "id, name, slug, album_type, release_date, image_url", "id", tracks.map((x) => x.album_id));
-  const album_artists = await leerPorIds(db, "album_artists", "album_id, artist_id, position", "album_id", albums.map((a) => a.id));
-  const artists = await leerPorIds(db, "artists", "id, name, slug, mbid", "id", [...track_artists, ...album_artists].map((r) => r.artist_id));
-  const mb_recordings = await leerPorIds(db, "mb_recordings", "track_id, mbid, via, primera_edicion, generos, tags, creditos, obras, ediciones", "track_id", ids);
+  const tracks = await leerPorIds(db, "tracks", "id, name, slug, album_id, track_number, duration_ms, spotify_url", "id", ids, ["id"]);
+  const track_artists = await leerPorIds(db, "track_artists", "track_id, artist_id, position", "track_id", ids, ["track_id", "artist_id"]);
+  const albums = await leerPorIds(db, "albums", "id, name, slug, album_type, release_date, image_url", "id", tracks.map((x) => x.album_id), ["id"]);
+  const album_artists = await leerPorIds(db, "album_artists", "album_id, artist_id, position", "album_id", albums.map((a) => a.id), ["album_id", "artist_id"]);
+  const artists = await leerPorIds(db, "artists", "id, name, slug, mbid", "id", [...track_artists, ...album_artists].map((r) => r.artist_id), ["id"]);
+  const mb_recordings = await leerPorIds(db, "mb_recordings", "track_id, mbid, via, primera_edicion, generos, tags, creditos, obras, ediciones", "track_id", ids, ["track_id"]);
   const mbids = [...artists.map((a) => a.mbid), ...mb_recordings.flatMap((m) => (m.creditos ?? []).map((c) => c.mbid))];
-  const mb_artists = await leerPorIds(db, "mb_artists", "*", "mbid", mbids);
+  const mb_artists = await leerPorIds(db, "mb_artists", "*", "mbid", mbids, ["mbid"]);
   const internet = await todas(() => db.from("internet").select("entidad, entidad_id, titulo, extracto, url, idioma, licencia"));
   const resenas = await todas(() => db.from("resenas").select("entidad, entidad_id, cuerpo, estado, publicada_en").eq("estado", "publicada"));
 

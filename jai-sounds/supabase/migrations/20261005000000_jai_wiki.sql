@@ -132,3 +132,12 @@ create policy escritura_ingesta on jai.resenas
 
 grant select on jai.mb_recordings, jai.mb_artists, jai.internet, jai.resenas to anon, authenticated;
 grant select, insert, update, delete on jai.mb_recordings, jai.mb_artists, jai.internet, jai.resenas to jai_ingest;
+
+-- ── service_role: la llave de los scripts ────────────────────────────
+-- Los scripts escriben por la API con la service_role key. Esa llave se
+-- salta la RLS, pero NO los permisos: en un esquema propio (no `public`)
+-- Supabase no se los concede solo, y sin esto la primera escritura da
+-- «permission denied for schema jai».
+grant usage on schema jai to service_role;
+grant all on all tables in schema jai to service_role;
+alter default privileges in schema jai grant all on tables to service_role;
