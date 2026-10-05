@@ -5,7 +5,7 @@ fuente_de_verdad: curiana_sim/curiana_lexicon.py
 total: 5489
 familia_caquetia: 380
 sin_cita: 0
-medido: 2026-09-27
+medido: 2026-10-05
 ---
 
 # El lexicón

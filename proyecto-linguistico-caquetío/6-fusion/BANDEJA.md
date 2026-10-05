@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-01**.
+<!--GENERADO--> Generado el **2026-10-05**.
 
-**8050 ítems propuestos** en 158 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**8056 ítems propuestos** en 159 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -133,6 +133,7 @@ editar_a_mano: no
 | `paraguana_dos_clanes.yaml` | oliver-1989-cap3 | 5 |  |
 | `pendientes_en_alvarado_y_arcaya.yaml` | ? | 0 |  |
 | `perez_de_tolosa_1546_2026-09-23.yaml` | perez-de-tolosa-1546 | 15 |  |
+| `petroglifos_imagenes_2026-10-05.yaml` | ? | 6 |  |
 | `petroglifos_y_manaure.yaml` | moron-2012-petroglifos | 4 |  |
 | `polities_no_costeras_federmann.yaml` | ? | 16 |  |
 | `propuesta_d11_fase3_pronombres_aspectos_2026-09-23.yaml` | ? | 9 |  |

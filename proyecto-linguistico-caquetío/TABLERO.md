@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-02 01:03**.
+<!--GENERADO--> Generado el **2026-10-05 01:39**.
 
 ## ¿Vamos bien?
 
@@ -23,7 +23,7 @@ editar_a_mano: no
 | Hechos del corpus **con referencia** | **251 / 251** | — | 🟢 |
 | Tests del motor | **1129 en verde** | 0 rojos | 🟢 |
 | Gate para reanudar simulaciones | **7 de 9** condiciones | faltan 2 | 🔴 |
-| Decisiones esperando a Miguel | **9 abiertas** | 12 resueltas | 🟡 |
+| Decisiones esperando a Miguel | **10 abiertas** | 12 resueltas | 🟡 |
 
 **Ninguna condición del gate está en rojo.**
 Y 2 condición(es) que **nadie puede medir por script**: citas del corpus (F10) · exportador de runs.
@@ -143,24 +143,24 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**107 notas de obra.**
+**113 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
 | minado | 52 |
 | parcial | 26 |
 | no-disponible | 11 |
+| sin-minar | 7 |
 | minada-parcial | 7 |
 | segunda-mano | 5 |
 | puntual | 2 |
 | dictado-terminado | 1 |
 | en-curso | 1 |
-| sin-minar | 1 |
 | completo-con-reserva | 1 |
 
-**Prioridad ALTA sin minar (21):** [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[zavala-reyes-2015]] (`completo-con-reserva`).
+**Prioridad ALTA sin minar (24):** [[acasio-2023-capubana-calendario]] (`sin-minar`), [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[van-koolwijk-1882]] (`sin-minar`), [[zavala-reyes-2015-petroglifos]] (`sin-minar`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
-<details><summary>Las 107 notas, una por fila</summary>
+<details><summary>Las 113 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -186,6 +186,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[angleria-1892]] | parcial | alta | si | 0 | 0 | 1 |
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 1 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 14 | 1 |
+| [[acasio-2023-capubana-calendario]] | sin-minar | alta | si | 0 | 0 | 0 |
 | [[aguado-1581]] | parcial | media | si | 0 | 0 | 0 |
 | [[ampies-1526-carta]] | parcial | alta | si | 0 | 0 | 0 |
 | [[angulo-molina]] | no-disponible | alta | no | 0 | 3 | 0 |
@@ -224,6 +225,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[granberry-vescelius-2004]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[gumilla-1791]] | minada-parcial | baja | si | 0 | 0 | 0 |
 | [[haviser-1990]] | minado | media | si | 0 | 0 | 0 |
+| [[haviser-strecker-2006]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[knaf-2021]] | minado | baja | si | 0 | 0 | 0 |
 | [[laguna-guaranao-parque]] | minado | media | web | 0 | 0 | 0 |
 | [[las-casas-1875]] | minado | media | si | 0 | 5 | 0 |
@@ -267,8 +269,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[steward-1948-hsai-4]] | minada-parcial | media | si | 0 | 0 | 0 |
 | [[steward-1949]] | minada-parcial | baja | si | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | minado | alta | si | 0 | 0 | 0 |
+| [[van-koolwijk-1882]] | sin-minar | alta | si | 0 | 0 | 0 |
 | [[velasco-2015-resistencia]] | minado | alta | si | 0 | 0 | 0 |
+| [[wagenaar-hummelinck-1953]] | sin-minar | media | si | 0 | 0 | 0 |
+| [[wagenaar-hummelinck-1962]] | sin-minar | media | si | 0 | 0 | 0 |
 | [[wikipedia-es-fauna-marina]] | parcial | baja | web | 0 | 0 | 0 |
+| [[zavala-reyes-2015-petroglifos]] | sin-minar | alta | si | 0 | 0 | 0 |
 | [[zavala-reyes-2018]] | minado | alta | si | 0 | 221 | 0 |
 | [[zayas-1931]] | parcial | media | si | 0 | 0 | 0 |
 
@@ -335,6 +341,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | D13 | El hueco léxico de "tío materno": la palabra que le falta a la tesis central | 🔴 abierta | [#82](https://github.com/miguelgilurbina/curiana-radio/issues/82) |
 | D14 | Qué segunda polity se pone en escena | 🔴 abierta | [#83](https://github.com/miguelgilurbina/curiana-radio/issues/83) |
 | D15 | Qué nodo se simula primero: Coro, Paraguaná, o un par desde el principio | ✅ resuelta | [#90](https://github.com/miguelgilurbina/curiana-radio/issues/90) |
+| — | Curiana Radio como blog: que Miguel publique lo suyo en todas las aristas del imaginario | 🔴 abierta | [#248](https://github.com/miguelgilurbina/curiana-radio/issues/248) |
 | — | Decisión — Los nombres del elenco de la era 2: la campaña de antropónimos, el sistema declarado y el mapa viejo → nuevo | 🔴 abierta | [#129](https://github.com/miguelgilurbina/curiana-radio/issues/129) |
 | — | Decisión — El casting de la era 2: 61 agentes en cinco casas, con dossier por agente | ✅ resuelta | [#127](https://github.com/miguelgilurbina/curiana-radio/issues/127) |
 | — | Decisión — Era 2: la estructura social de Paraguaná antes del elenco (dos subgrupos por nodo decididos; quedan preguntas) | 🔴 abierta | [#126](https://github.com/miguelgilurbina/curiana-radio/issues/126) |
@@ -345,7 +352,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 | — | El lexicón responde "¿de qué lengua es esta palabra?" y lo usamos como si respondiera "¿la usaba un caquetío?" | ✅ resuelta | [#119](https://github.com/miguelgilurbina/curiana-radio/issues/119) |
 | — | `tara`: ¿venado o mariposa? — puede tumbar un argumento del corpus | 🔴 abierta | [#45](https://github.com/miguelgilurbina/curiana-radio/issues/45) |
 
-**9 abiertas** de 21. Medido contra el tablero, no contra una nota.
+**10 abiertas** de 22. Medido contra el tablero, no contra una nota.
 
 ---
 
@@ -353,7 +360,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1591 en 869 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1605 en 888 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 1129 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
