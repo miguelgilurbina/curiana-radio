@@ -11,11 +11,7 @@ import {
   CTA_LINEA,
   PORTADA_DESCUBRIENDO,
 } from "@/components/jai-sounds/estilos";
-import {
-  getCenso,
-  getEdicionSintonizada,
-  getPlaylists,
-} from "@/lib/jai-sounds";
+import { getCenso, getPlaylists } from "@/lib/jai-sounds";
 
 // El catálogo cambia cuando corre la ingesta, no cuando entra una visita.
 export const revalidate = 3600;
@@ -81,7 +77,6 @@ function Interludio({
 export default async function JaiSoundsPage() {
   const playlists = getPlaylists();
   const censo = await getCenso();
-  const edicion = getEdicionSintonizada("01");
   const totalPistas = playlists.reduce((s, p) => s + (p.pistas ?? 0), 0);
 
   return (
@@ -146,7 +141,11 @@ export default async function JaiSoundsPage() {
           portada: p.portada,
           spotify_id: p.spotify_id,
         }))}
-        edicion={edicion}
+        // Sin las cinco de la edición #01: ninguna está en Ruido de Chocolate
+        // (la playlist que la edición enlaza) y solo una — Richter — está en
+        // el dial, en El Pozo Instrumental. La reseña es de la canción, no de
+        // la estación: vuelve cuando el dial tenga ficha de pista.
+        edicion={null}
         totalPistas={totalPistas}
         artistas={censo.artistas}
         interludio={<Interludio parte="iii">{MUSICA.historia}</Interludio>}
