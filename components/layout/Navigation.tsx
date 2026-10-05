@@ -100,12 +100,12 @@ export default function Navigation({ editionNumber }: NavigationProps) {
                 Galería
               </Link>
 
-              {/* Simulador Link */}
+              {/* Kaketiana (antes Simulador) */}
               <Link
                 href="/kaketiana"
                 className={`shrink-0 whitespace-nowrap text-xs sm:text-sm font-sans ${tono("/kaketiana")} hover:text-frequency transition-colors tracking-normal sm:tracking-wide uppercase`}
               >
-                Simulador
+                Kaketiana
               </Link>
 
               {/* About Link (optional) */}

@@ -6,6 +6,7 @@ import FrequencyBadge from "@/components/ui/FrequencyBadge";
 import Cenefa from "@/components/ui/Cenefa";
 import Aparece from "./Aparece";
 import Suscripcion from "./Suscripcion";
+import SeguirLeyendo from "./SeguirLeyendo";
 
 // Las secciones 02–07 de la landing v1 · la noche. El orden, el copy y las
 // superficies vienen del handoff (design_handoff_landing/README.md); la
@@ -42,10 +43,7 @@ export function Manifiesto() {
           hace falta convencerte de nada: el cambio ya pasó. Esto no es propaganda para el cambio — es propaganda
           desde después del cambio, enviada a tu tiempo como quien deja una señal encendida en la costa.
         </p>
-        <details className="group">
-          <summary className="cursor-pointer list-none font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2) transition-colors duration-300 hover:text-frequency group-open:hidden [&::-webkit-details-marker]:hidden">
-            SEGUIR LEYENDO ↓
-          </summary>
+        <SeguirLeyendo>
           <p className="mb-6 text-body text-(--noche-hueso)">
             Lo que suena en esta frecuencia es un sincretismo: la tecnología biológica y social de los caquetíos — la
             reciprocidad de <em>la buena gente</em>, la escucha como instrumento, la espiral como mapa — conectada a
@@ -56,7 +54,7 @@ export function Manifiesto() {
             Cada mes, una transmisión: cinco pistas comentadas al oído, un ensayo híbrido entre lo ancestral y lo
             sintético, una lengua que se reconstruye palabra a palabra, y el arte que va quedando en el camino.
           </p>
-        </details>
+        </SeguirLeyendo>
         <blockquote className="mt-14 border-l-4 border-frequency/30 pl-6 font-serif text-[1.875rem] leading-relaxed italic text-(--noche-hueso)">
           La tecnología más antigua es la escucha.
           <cite className="mt-4 block font-sans text-sm tracking-[0.025em] not-italic text-(--noche-hueso-2)">
@@ -174,19 +172,20 @@ export function Aristas() {
           <Link
             href="/kaketiana"
             data-sim-theme="cronista"
+            data-kk-dir="sal"
             className={`${TARJETA} rounded-2xl border border-(--sim-rule) bg-(--sim-paper) hover:border-frequency hover:shadow-lg`}
           >
             <span className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-(--sim-rubrica)">
-              II · La crónica de Indias
+              II · Golfete de Coro · s. XIV–XV
             </span>
             <Cartel as="h3" className="text-[1.7rem]">
-              Simulador Caquetío
+              Kaketiana
             </Cartel>
             <p className="m-0 flex-1 text-sm leading-relaxed text-(--sim-ink-soft)">
-              El proyecto lingüístico. Sobre pergamino y rúbrica, una lengua del golfo se reconstruye palabra a palabra
-              — y el dato habla en mono.
+              El wiki de investigación: el pueblo caquetío del Golfete de Coro y su lengua, reconstruidos sin fingir saber
+              más de lo que se sabe. Cada afirmación, con su fuente.
             </p>
-            <span className="font-mono text-[0.72rem] tracking-[0.14em] text-(--sim-ink)">ABRIR EL CÓDICE →</span>
+            <span className="font-mono text-[0.72rem] tracking-[0.14em] text-(--sim-ink)">ENTRAR A KAKETIANA →</span>
           </Link>
 
           <Link
