@@ -48,8 +48,48 @@ obras:
     region: Aruba
     licencia: CC BY 4.0 (Biblioteca Nacional Aruba). Se puede reproducir citando
     paginas:
-      - {pdf: 12, tipo: lamina, prioridad: 1, muestra: "mitad izquierda de la lámina de figuras (figs. 1-3, 7-10, 14-15, 18-19)"}
-      - {pdf: 13, tipo: lamina, prioridad: 1, muestra: "mitad derecha: zigzag (figs. 4, 6), espirales (5a-b), rana (11), cara (12), ojos y cejas (13), cuadrados (15b, 17a); OJO: figs. 17b, 20 y 21 son vasijas, no signos rupestres"}
+      - {pdf: 12, tipo: lamina-ceramica, prioridad: 1, muestra: "mitad izquierda de la lámina (figs. 1, 2, 7, 8, 9, 14a-c, 17b-d, 17f, 18; la 3, la 10 y la 15a caen en el pliegue). ⚠️ CERÁMICA, no petroglifos: ver identificacion_por_el_texto"}
+      - {pdf: 13, tipo: lamina-ceramica, prioridad: 1, muestra: "mitad derecha (figs. 3-6, 10-13, 15b, 16, 17a, 17e, 19-21). ⚠️ CERÁMICA, no petroglifos: el zigzag, las espirales, la rana, la cara y los «ojos y cejas» son motivos de vasijas"}
+    # Minado el 2026-10-05 (6-fusion/van_koolwijk_1882_aruba_2026-10-05.yaml §lamina,
+    # leído en imagen): el texto de las pp. 223-224 identifica TODAS las figuras.
+    identificacion_por_el_texto:
+      veredicto: >-
+        Ninguna figura de la lámina es un signo rupestre. Son cerámica de los
+        campamentos de Santa Cruz y Savonet: motivos pintados en tiestos que el
+        autor compara con vasos griegos (1-10), ranas y cabezas de rana en
+        relieve (11-13), asas (14-18), un pico (19), una vasija con cabezas de
+        animal (20) y la forma de la urna funeraria (21). Las inscripciones de
+        las grutas las describe con palabras (pp. 225-226) pero no las dibuja.
+      para_claude_design: >-
+        Si la iconografía que se busca es SÓLO rupestre, esta lámina sale del
+        catálogo. Si es la iconografía de la Kaketiana en general, la rana en
+        relieve (11-13) y las cenefas pintadas (1-10) son motivos de la cerámica
+        arubana: se pueden usar, pero rotuladas como cerámica, «sin fechar · no
+        atribuido a los caquetíos». Lo decide Miguel (issue van-koolwijk-1882).
+      figuras:
+        - {figs: "1, 2", pagina_texto: 223, que_es: "greca de líneas rectas y ángulos rectos, pintada en tiestos"}
+        - {figs: "3", pagina_texto: 223, que_es: "trébol («klaverblad»), pintado en tiestos"}
+        - {figs: "4", pagina_texto: 223, que_es: "línea ondulante («kronkelende lijn»), pintada en tiestos"}
+        - {figs: "5a, 5b", pagina_texto: 223, que_es: "espiral («in zich keerende ronde lijn»), pintada en tiestos"}
+        - {figs: "6", pagina_texto: 223, que_es: "cenefa de triángulos, pintada en tiestos"}
+        - {figs: "7", pagina_texto: 223, que_es: "«grieksch kruis», pintada en tiestos"}
+        - {figs: "8", pagina_texto: 223, que_es: "semicírculo («halve cirkel»), pintado en tiestos"}
+        - {figs: "9, 10", pagina_texto: 223, que_es: "línea con puntos (la 10, un rombo con punto), pintada en tiestos"}
+        - {figs: "11, 12, 13", pagina_texto: 224, que_es: "ranas y cabezas de rana en relieve en las vasijas, a veces con orejas «ten onrechte toegevoegd»"}
+        - {figs: "14a-c", pagina_texto: 224, que_es: "asas: botones redondos y largos, rectos y curvos"}
+        - {figs: "15a, 15b", pagina_texto: 224, que_es: "asas-oreja redondas y cuadradas"}
+        - {figs: "16", pagina_texto: 224, que_es: "las dos clases de asa juntas"}
+        - {figs: "17a-f", pagina_texto: 224, que_es: "asas en el borde: botones, caras, anillos, hojas"}
+        - {figs: "18", pagina_texto: 224, que_es: "segunda asa más abajo"}
+        - {figs: "19", pagina_texto: 224, que_es: "pico de vasija, que la gente tomaba por pipa"}
+        - {figs: "20", pagina_texto: 224, que_es: "vasija con reborde bajo sujeto por cabezas de animal en forma de máscara"}
+        - {figs: "21", pagina_texto: 224, que_es: "forma de la urna funeraria de Santa Cruz (≈ 1 m)"}
+    sitios_con_inscripciones_en_el_texto:
+      - {sitio: "gruta de Fontein", pagina: 226, nota: "en caliza; inscripciones «talrijk» en la bóveda, donde llega la luz; ocre excavado allí (p. 223)"}
+      - {sitio: "Carachito", pagina: 226, nota: "cerro al sur del Hooiberg; la tercera gruta «bevat eenige opschriften». Probablemente el Seroe Canashito de Wagenaar Hummelinck 1953 (A 4-5): hipótesis del minador"}
+      - {sitio: "Parawana (norte de Aruba)", pagina: 222, nota: "una inscripción que el autor lee como un perezoso; es el «Paraguana» (A 30) de Wagenaar Hummelinck 1962, que lee otra cosa"}
+      - {sitio: "Seroe die Casjoe", pagina: 223, nota: "inscripción que el autor compara con la manta de las mujeres"}
+      - {sitio: "bajo los bloques de granito del suroeste", pagina: 226, nota: "rojo y pardo lo más común, blanco no raro, negro sólo dos veces; según la tradición, algunas figuras señalan a los antiguos dueños del sitio"}
 
   - obra: acasio-2023-capubana-calendario
     archivo: fuentes_caquetios/Acasio_2023_Capubana_Calendario.pdf

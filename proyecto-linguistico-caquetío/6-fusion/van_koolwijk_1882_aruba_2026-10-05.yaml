@@ -1,0 +1,2664 @@
+# ─────────────────────────────────────────────────────────────────────────
+# Van Koolwijk 1882, «De Indianen Caraïben van het eiland Aruba» — PROPUESTA
+# de minería (regla 5: minar propone, el humano fusiona). Nada de esto toca
+# el lexicón, el corpus ni el canon de topónimos.
+#
+# GENERADO por 6-fusion/scripts/minar_van_koolwijk_1882.py: la transcripción
+# (leída en imagen) y las propuestas viven en el script; los cruces y las
+# cifras los calcula él. No se edita a mano: se corrige el script y se corre
+# con --escribir. `--check` dice si este archivo está al día.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  obra: van-koolwijk-1882
+  minado: '2026-10-05'
+  encargo: 'Miguel, 2026-10-05: minarla «de una» (rama fuentes/arte-rupestre). Propuesta, no fusión (regla 5).'
+  generado_por: '6-fusion/scripts/minar_van_koolwijk_1882.py — no se edita a mano: se corrige el script y se regenera'
+  paginas:
+    articulo: pdf 4-11 = pp. impresas 222-229 (pdf + 218); lámina fuera de texto en pdf 12-13 («N° 7»)
+    sin_articulo:
+      1: tapa
+      2: guarda
+      3: guarda con la ficha de préstamo de la biblioteca
+      14: guarda en blanco
+      15: guarda en blanco
+      16: contratapa
+      17: hoja de licencia CC BY 4.0 de la Biblioteca Nacional Aruba
+  cobertura:
+    leido_en_imagen: 'pdf 4-13 enteros (las 8 páginas del artículo y las dos mitades de la lámina): la prosa por
+      medias columnas a 6×, las listas a resolución nativa y las dudas a 12-16×'
+    capa_de_texto: 'parcial: pdf 4 y 11-16 casi sin texto, y la p. 228 con las columnas corridas — por eso se leyó
+      en imagen y no se usó el .txt para nada que se cite'
+    conteos:
+      voces_aruba: 17
+      plantas_y_animales_aruba: 7
+      conjuros: 1
+      toponimos_por_lista:
+        lugares: 17
+        cerros: 20
+        grutas: 3
+      toponimos_menciones: 40
+      toponimos_formas_distintas: 36
+      toponimos_en_prosa: 11
+      caribe_surinam_entradas: 141
+      caribe_surinam_con_coincidencia_forma_y_glosa: 8
+      filas_de_la_lamina: 17
+      figuras_numeradas_en_la_lamina: 21
+      datos_de_mundo: 12
+  no_leido:
+  - 'van Koolwijk 1881 (Curazao, TAG 5 pp. 57-68) y 1885 («Indiaansche opschriften te Aruba», Études Leemans pp.
+    183-184): no están en el repo (Wagenaar Hummelinck 1953 los cita)'
+  - 'Pinart 1890 sobre Aruba: no está en el repo (Wagenaar Hummelinck tampoco lo encontró)'
+  - 'Hartog 1953/1968: no está en el repo; sólo llega por van Buurt'
+  lo_que_cambia_el_encargo: 'La lista larga (töna, wato, kwai, toëkoëwari, porkoe…; 141 entradas) es el kari''ña
+    de SURINAM (1870), no arubano: el autor la pone para mostrar que es otra lengua. Lo arubano son 17 voces y frases,
+    7 nombres de plantas y animales y un conjuro (p. 227). Y kwai es ''kalebas'', no ''pijl'': el par lo había corrido
+    pdftotext.'
+  convencion: 'forma_fuente copia el macrón y la breve donde caen; el macrón sobre el dígrafo «oe» (= /u/) se escribe
+    «ōe»; [corchetes] = letra rota. forma_llana quita los diacríticos. Los diacríticos se leyeron a resolución nativa,
+    pero en tipo de 9 pt pueden fallar letra a letra: antes de citar una forma como exacta, mirar la imagen.'
+independencia:
+  pregunta: ¿Van Koolwijk 1882 es una segunda atestación independiente de lo que ya dicen Gatschet 1885 (Pinart)
+    y van Buurt 2014?
+  fechas:
+    van_koolwijk: firmado «Aruba, 20 November 1881» (p. 227, verificado en imagen); publicado en 1882; el autor
+      llegó a Aruba el 20-XI-1880 (p. 222)
+    pinart: visitó las islas «in the summer of 1882» (Gatschet 1885 p. 300) — después de que van Koolwijk firmara
+    gatschet: leído el 18-VII-1884, publicado en 1885
+    contacto: 'Wagenaar Hummelinck 1953 (WagenaarHummelinck_1953_Rotstekeningen_I.txt, línea 287): Pinart es «door
+      VAN KOOLWIJK als een in oudheden belangstellende bezoeker van Aruba genoemd» — se conocían'
+  solape_de_topónimos:
+    lugares:
+      van_koolwijk: 17
+      gatschet: 14
+      de_gatschet_que_estan_en_van_koolwijk: 14
+      de_van_koolwijk_que_estan_en_gatschet: 14
+      solo_en_van_koolwijk:
+      - Arāsje
+      - Jāra
+      - Lacōn
+      solo_en_gatschet: []
+    cerros:
+      van_koolwijk: 20
+      gatschet: 14
+      de_gatschet_que_estan_en_van_koolwijk: 14
+      de_van_koolwijk_que_estan_en_gatschet: 14
+      solo_en_van_koolwijk:
+      - Barbakw̄a
+      - Hendjēkoe
+      - Joediti
+      - Jāra
+      - Oeratakka
+      - Parabostē
+      solo_en_gatschet: []
+    grutas:
+      van_koolwijk: 3
+      gatschet: 3
+      de_gatschet_que_estan_en_van_koolwijk: 3
+      de_van_koolwijk_que_estan_en_gatschet: 3
+      solo_en_van_koolwijk: []
+      solo_en_gatschet: []
+  solape_de_vocabulario:
+    voces_de_van_koolwijk: 24
+    con_pareja_en_gatschet: 16
+    sin_pareja:
+    - Takkitākki
+    - aboūssoe
+    - auw
+    - bouserānja
+    - kajappa
+    - marākka
+    - mimānta
+    - pekinini
+    nota: La pareja es una lectura del minador con las dos fuentes delante; el script comprueba que la voz existe
+      en lexicon_gatschet y mide el parecido (cruce.gatschet_1885.ratio de cada voz).
+  nombres_que_gatschet_no_trae:
+  - Arāsje
+  - Barbakw̄a
+  - Lacōn
+  - Parabostē
+  - Oeratakka
+  - Jāra
+  misma_anecdota: el entierro en urna con la cabeza fuera, contado por un viejo de Savonet / «Saboneta» (van Koolwijk
+    p. 224; Gatschet p. 300)
+  misma_formula: el conjuro de la iguana, palabra por palabra (ratio 0.95 sobre la clave fon)
+  confusiones_n_u:
+    pares:
+    - van_koolwijk: caula
+      gatschet: kanla
+      n_por_u: true
+    - van_koolwijk: Cautje
+      gatschet: kantie
+      n_por_u: true
+    - van_koolwijk: daūchikki
+      gatschet: danshikki
+      n_por_u: true
+    lectura: 3 veces donde la fuente impresa trae u, Gatschet trae n — y en una el propio Gatschet duda («kanla
+      (?kaula)»). Es la confusión típica de quien copia de un manuscrito, no de quien oye.
+  citas_de_koolwijk_en_el_repo:
+    Casale_et_al_2024_Geoarchaeology_Petrografia_Aruba_CCBY.txt: 1
+    Haviser_Strecker_2006_Rock_Art_Caribbean_Zona2.txt: 4
+    VanBuurt_2014_CaquetioWords_Papiamentu.txt: 2
+    WagenaarHummelinck_1953_Rotstekeningen_I.txt: 20
+    WagenaarHummelinck_1962_Rotstekeningen_III.txt: 2
+  van_buurt: 'Cita a van Koolwijk dos veces: (1) entre las listas de voces indígenas «in use in Aruba in the late
+    19th century» (junto a Pinart); (2) s.v. dabaruida: «In a list from 1880 with Indian words from Aruba made by
+    Father van Koolwijk we find dabaroida (Hartog, 1953)». Lo lee A TRAVÉS de Hartog. Y cita a Pinart (como «1890»)
+    para Wakubana, purantsi y la fórmula de las espinas. Su lista de topónimos (§7) no dice de dónde sale cada nombre.'
+  zayas_y_hartog: 'Zayas 1931 no cita a van Koolwijk (0 menciones en los dos tomos). Hartog 1953/1968 no está en
+    el repo: sólo llega citado por van Buurt.'
+  veredicto: 'Van Koolwijk 1882 NO es una segunda atestación independiente de lo que dicen Gatschet y van Buurt:
+    es la FUENTE PRIMARIA DE LA CADENA. Firmó en noviembre de 1881, antes de que Pinart pisara la isla; las listas
+    de topónimos de Gatschet son un subconjunto de las suyas (lugares: 14 de 14; cerros: 14 de 14; grutas: 3 de
+    3); la anécdota y la fórmula son las mismas; y 3 confusiones n/u delatan copia de un escrito. Van Buurt, a su
+    vez, lo lee vía Hartog y cita a Pinart. La cadena es van Koolwijk 1881 → Pinart 1882 / Gatschet 1885 → (Hartog
+    1953) → van Buurt 2014. Lo que sí es independiente: el mapa de 1825 (Wacobana), los nombres VIVOS que van Buurt
+    registra en el papiamento y en el mapa de hoy, y lo que sólo trae uno de los dos (Pinart: kafa, tomoi, sus plantas,
+    peces, aves e insectos y 5 fórmulas más; van Koolwijk: auw, mimānta, bouserānja, kajappa, marākka, aboūssoe,
+    pekinini, Takkitākki y 6 topónimos que Gatschet no trae en ninguna lista).'
+  consecuencias:
+  - 'karebe: sus DOS atestaciones independientes siguen siendo dos (Aruba y Paraguaná), pero la del lado arubano
+    es van Koolwijk 1882 p. 227; Gatschet es la misma cadena.'
+  - 'dabaraida (lexicon_gatschet.py): la «TRIPLE atestación independiente» es una cadena histórica más la forma
+    viva de van Buurt.'
+  - Toda voz o topónimo arubano que hoy se apoye en «Gatschet + van Buurt» como dos fuentes debe revisarse con esta
+    cadena delante.
+vocabulario_aruba:
+- id: vk-aru-01
+  pagina: 227
+  pdf: 9
+  forma_fuente: hida of hida meeuw
+  forma_llana: hida of hida meeuw
+  glosa_nl: Hoe gaat het?
+  glosa_es: ¿cómo estás? (saludo)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa:
+    - hidda [lokono; VOCABULARIO_BASE] 'así (y 1 acepción/es más)' (≈ hida, 1.0)
+    - ida [lokono; VOCABULARIO_BASE] 'piel, cuero' (≈ hida, 1.0)
+    lexicon_por_glosa: ninguna entrada con esa glosa
+    gatschet_1885:
+      pareja_leida: tida meo
+      ratio: 0.71
+      glosa_gatschet: good morning!
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva-en-el-repo-como-glosa (la forma ya estaba vía Gatschet)
+  propuesta: 'No entra al lexicón. Resuelve la lectura de Gatschet: «tida meo» (JSTOR) / «^ida meo» (BioStor) es
+    «hida meeuw»; y la glosa de la fuente primaria es «¿cómo estás?», no «good morning». La sospecha de Gatschet
+    minado (saludo en isla papiamentera) sigue en pie.'
+- id: vk-aru-02
+  pagina: 227
+  pdf: 9
+  forma_fuente: auw
+  forma_llana: auw
+  glosa_nl: Antw. Goed
+  glosa_es: bien (respuesta al saludo)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - cachumiguebeyi 'Bueno, pacifico hombre'
+      - caugisí 'Bueno está, ó basta'
+      - … y 11 más
+      caquetío-hipotético:
+      - paratü 'trueque, intercambio de bienes (raíz paa-)'
+      - saika 'bueno, bien, bello'
+      caquetío-reconstruido:
+      - anasa 'bueno, bien, bello (< anasü Wayunaiki)'
+      caquetío-retroabstraido:
+      - kachinare 'es creada por el pueblo para designar con ella el fruto del '
+      lokono:
+      - anikho 'pertenencias, bienes personales'
+      - nuddan 'verse bien, estar firme (verbo de buen aspecto)'
+      - … y 2 más
+      paraujano:
+      - anai 'bueno'
+      wayunaiki:
+      - anaa 'ser bueno, -na; estar bien'
+      - anamiaa 'ser bueno, -na; ser justo, -ta; ser bondadoso, -sa'
+      - … y 1 más
+    gatschet_1885: no está
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva
+  propuesta: 'No entra al lexicón: interjección de respuesta, la clase de menor rendimiento (protocolo §6). Sólo
+    la da van Koolwijk.'
+- id: vk-aru-03
+  pagina: 227
+  pdf: 9
+  forma_fuente: hafe dōbo danwajēte
+  forma_llana: hafe dobo danwajete
+  glosa_nl: Ga zitten («danwajēte moet stoel beteekenen»)
+  glosa_es: siéntate («danwajēte debe de significar silla», dice el autor)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa:
+    - hobo [lokono; VOCABULARIO_BASE] 'jobillo, ciruela de huesito (Spondias lutea)' (≈ dobo, 0.86)
+    lexicon_por_glosa:
+      achagua:
+      - jagiba 'Debajo (v.g. de la silla)'
+      - jarrusi 'Banco, Banca'
+      - … y 4 más
+      caribe:
+      - ture 'asiento pequeño de madera'
+      lokono:
+      - alla 'banco, asiento ceremonial (símbolo de autoridad)'
+      - baleta 'querer sentarse, desear (verbo desiderativo)'
+      - … y 2 más
+      taíno:
+      - dujo 'dujo, asiento de madera tallado del cacique'
+      wayunaiki:
+      - aikkalawaa 'sentarse'
+      - einase 'asiento'
+    gatschet_1885:
+      pareja_leida: aba dobo edan guayete
+      ratio: 0.85
+      glosa_gatschet: sit down!
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: 'nueva-como-lectura: resuelve una forma que Gatschet dejaba irreconstruible'
+  propuesta: 'No entra al lexicón. Resuelve «aba dobo edan guayete», que lexicon_gatschet registra «para que un
+    tercer testimonio la resuelva» (los dos OCR rotos en el mismo punto): la fuente primaria imprime «hafe dōbo
+    danwajēte» y segmenta distinto. Ojo: no es un testimonio INDEPENDIENTE (ver `independencia`), es el original.
+    La glosa ''silla'' es una inferencia del propio autor («moet … beteekenen»), no una traducción del informante.'
+- id: vk-aru-04
+  pagina: 227
+  pdf: 9
+  forma_fuente: Cautje baulēte
+  forma_llana: cautje baulete
+  glosa_nl: Geef mij te eten
+  glosa_es: dame de comer
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - cababaidauna 'Hartarse ó satisfacerse de comer'
+      - canai 'Buscar q.e comer'
+      - … y 10 más
+      caquetío-atestiguado:
+      - ako 'comida. Par, casal, pareja'
+      caquetío-reconstruido:
+      - aeke 'comer, alimentarse'
+      - arua 'alimento, comida, sustento (raíz de 'arawak')'
+      - … y 1 más
+      caquetío-retroabstraido:
+      - arifuke 'harina de maíz a la que se agregaba raspillo [?] de panela y'
+      - warupepe 'la auyama madura, cocida, mezclada con leche, que quedara es'
+      lokono:
+      - khesia 'comida (nominalización de comer)'
+      - khin 'comer'
+      - … y 2 más
+      wayunaiki:
+      - eküülü 'comida, alimento'
+      - iita 'recipiente para comida o'
+      - … y 1 más
+    gatschet_1885:
+      pareja_leida: kantie baulete
+      ratio: 0.8
+      glosa_gatschet: give me to eat!
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: 'confirma-lectura (Gatschet «kantie baulete»: n por u)'
+  propuesta: 'No entra al lexicón. Corrige la lectura de Gatschet: «kantie» es «Cautje» (confusión n/u de copista;
+    ver `independencia.confusiones_n_u`).'
+- id: vk-aru-05
+  pagina: 227
+  pdf: 9
+  forma_fuente: dat jē
+  forma_llana: dat je
+  glosa_nl: Ga weg
+  glosa_es: ¡vete!
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - nuaba ririgirrico 'Seguir, ir detras'
+      - nuginaidau ribami 'Perseguir, ir detras de el'
+      caquetío-atestiguado:
+      - jakuke 'regar, irrigar'
+      caquetío-hipotético:
+      - aiima 'rabia, ira, enojo'
+      - kunu 'ir, moverse hacia'
+      caquetío-reconstruido:
+      - jashichi 'rabia, ira, enojo (< jashichi Wayunaiki)'
+      - naa 'ir, moverse hacia'
+      lokono:
+      - cun-te 'ir'
+      - cunnu 'ir'
+      - … y 1 más
+      wayunaiki:
+      - apalaalajaa 'ir de compras'
+      - apantajawaa 'irse corriendo'
+      - … y 1 más
+    gatschet_1885:
+      pareja_leida: datie
+      ratio: 0.8
+      glosa_gatschet: be gone!
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma:
+    - date (0.89)
+  veredicto: confirma-lectura (Gatschet «datie»)
+  propuesta: 'No entra al lexicón. Dos palabras en la fuente primaria («dat jē»), una en Gatschet («datie»). Homógrafa
+    del neerlandés «dat je» (''que tú''): el autor la da por indígena, y reaparece dentro de la fórmula «para asustar
+    niños» de Pinart; se registra la homografía para que nadie la use como dato de filiación.'
+- id: vk-aru-06
+  pagina: 227
+  pdf: 9
+  forma_fuente: mimānta
+  forma_llana: mimanta
+  glosa_nl: Ik ben verschrokken
+  glosa_es: me asusté, estoy asustado
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - cabiquiaacacayiba 'Espantadiza cosa'
+      - carruicay 'Espanto'
+      - … y 11 más
+      caquetío-atestiguado:
+      - etamo 'feroz, feo, espanto'
+      caquetío-hipotético:
+      - mülia 'miedo, temor, espanto'
+      caquetío-retroabstraido:
+      - gatiao 'árbol cuyas ramas nuestros mayores utilizaron para espantar '
+      lokono:
+      - 'hamaru ''estar asustado (?) (p. 668: hamma-ru-ca bu «estás con miedo»'''
+      wayunaiki:
+      - eema 'miedo a'
+    gatschet_1885: no está
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva
+  propuesta: 'No entra al lexicón: sólo la da van Koolwijk, sin cognado medido. Registrada para que una segunda
+    fuente la pueda subir.'
+- id: vk-aru-07
+  pagina: 227
+  pdf: 9
+  forma_fuente: carēbe
+  forma_llana: carebe
+  glosa_nl: Een eetlepel
+  glosa_es: una cuchara (de comer)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: caquetío (por el lexicón)
+  escala_protocolo: A
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa:
+    - karebe [caquetío-atestiguado; VOCABULARIO_BASE] 'cuchara, cucharón de media tapara con mango de madera' (≈
+      carebe, 1.0)
+    lexicon_por_glosa:
+      achagua:
+      - biya 'Cuchara'
+      caquetío-atestiguado:
+      - karebe 'cuchara, cucharón de media tapara con mango de madera'
+    gatschet_1885:
+      pareja_leida: karebe
+      ratio: 1.0
+      glosa_gatschet: spoon
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: confirma-atestiguada (karebe) — pero es la MISMA cadena que Gatschet, no una tercera atestación
+  propuesta: 'karebe ya es caquetío-atestiguado con DOS atestaciones independientes: Aruba (Gatschet 1885) y Paraguaná
+    (Medina Colina 2013 p. 64). Van Koolwijk no suma una tercera: es la FUENTE PRIMARIA del lado arubano (fechada
+    el 20-XI-1881, antes de la visita de Pinart). Propuesta: añadir a `notas` que la atestación arubana es van Koolwijk
+    1882 p. 227 «carēbe ''eetlepel''» y que Gatschet 1885 repite esa cadena. No cambia ni glosa ni capa.'
+- id: vk-aru-08
+  pagina: 227
+  pdf: 9
+  forma_fuente: totoēmba of waidānga
+  forma_llana: totoemba of waidanga
+  glosa_nl: Een calbas om uit te eten
+  glosa_es: una totuma (tapara) para comer
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: 'totoēmba: castellano/caribe (totuma); waidānga: indeterminada'
+  escala_protocolo: totoēmba D · waidānga C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - cuirro 'Calabaza, uyama'
+      caquetío-atestiguado:
+      - arika 'árbol de jícara o totumo'
+      - karebe 'cuchara, cucharón de media tapara con mango de madera'
+      caribe:
+      - auyama 'auyama, calabaza (Cucurbita maxima)'
+      - baperon 'calabaza con cal'
+      - … y 1 más
+      wayunaiki:
+      - aliita 'totuma (especie de calabaza)'
+      - wüirü 'auyama, calabaza'
+    gatschet_1885:
+      pareja_leida: totumba · waidanga
+      ratio: 1.0
+      glosa_gatschet: water-gourd · water-gourd (variante)
+      nivel_en_la_mineria_de_gatschet: D · C
+    van_buurt_2014_por_forma: no está
+  veredicto: confirma-lectura (Gatschet «totumba, waidanga water-gourd»)
+  propuesta: 'No entra al lexicón. totoēmba es la «totuma» del castellano general (Gatschet minado ya la descartó,
+    D). waidānga: misma forma que Gatschet y que de Goeje 1939 p. 15 (que la toma de Gatschet; 6-fusion/kalinago_goeje_1939.yaml
+    §aruba). Con van Koolwijk la cadena es una sola: van Koolwijk → Pinart/Gatschet → de Goeje. Glosa de la fuente
+    primaria: ''para comer'', no ''water-gourd''.'
+- id: vk-aru-09
+  pagina: 227
+  pdf: 9
+  forma_fuente: daūchikki of dousēbou
+  forma_llana: dauchikki of dousebou
+  glosa_nl: Een zak
+  glosa_es: un saco, una bolsa
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - jumicaisí 'Bolsa'
+      - sucuanisí 'Saco'
+      wayunaiki:
+      - piyulu 'bolsa de malla'
+      - toleeka 'saco, costal'
+      - … y 1 más
+    gatschet_1885:
+      pareja_leida: danshikki · danshebu
+      ratio: 0.86
+      glosa_gatschet: sack, pouch · sack, pouch (variante de danshikki)
+      nivel_en_la_mineria_de_gatschet: C · C
+    van_buurt_2014_por_forma: no está
+  veredicto: 'confirma-lectura (Gatschet «danshikki, danshebu»: n por u)'
+  propuesta: 'No entra al lexicón. Corrige a Gatschet: «dan-» es «daū-» (n/u) y la segunda forma es «dousēbou»,
+    no «danshebu».'
+- id: vk-aru-10
+  pagina: 227
+  pdf: 9
+  forma_fuente: bouserānja
+  forma_llana: bouseranja
+  glosa_nl: Huismeubelen
+  glosa_es: los enseres de la casa
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa: ninguna entrada con esa glosa
+    gatschet_1885: no está
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva
+  propuesta: 'No entra al lexicón: sólo van Koolwijk.'
+- id: vk-aru-11
+  pagina: 227
+  pdf: 9
+  forma_fuente: caula
+  forma_llana: caula
+  glosa_nl: Een ding
+  glosa_es: una cosa
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa:
+    - kashüülaa [wayunaiki; VOCABULARIO_BASE] 'ser feo, fea; ser' (≈ caula, 0.91)
+    lexicon_por_glosa:
+      achagua:
+      - abananiayi 'Allanada cosa'
+      - api! 'Admirac.n de cosa horrorosa'
+      - … y 32 más
+      caquetío-reconstruido:
+      - 'tuhu ''ella, ello (3ra persona singular, no varón: mujer, animal, c'''
+      lokono:
+      - 'firobero ''tapir, danta (literalmente: la cosa grande)'''
+      - hamma-talli 'cosa'
+      - … y 3 más
+      wayunaiki:
+      - ka'lee 'ser grueso, -sa (de objetos'
+      - kerawaa 'estar terminado, -da; objeto)'
+      - … y 1 más
+    gatschet_1885:
+      pareja_leida: kanla
+      ratio: 0.8
+      glosa_gatschet: 'thing, object (el propio Gatschet duda: ''(?kaula)'')'
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: confirma-lectura (resuelve el «kanla (?kaula)» de Gatschet)
+  propuesta: 'No entra al lexicón (abstracto genérico). Resuelve la duda que el propio Gatschet imprimió: es «caula»,
+    con u.'
+- id: vk-aru-12
+  pagina: 227
+  pdf: 9
+  forma_fuente: adamōedoe
+  forma_llana: adamoedoe
+  glosa_nl: Regen
+  glosa_es: lluvia
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - dugidugiu cuita 'Lloverse la casa'
+      - riguagua uma 'Llover'
+      - … y 1 más
+      caquetío-hipotético:
+      - kayawara 'tormenta, lluvia con viento fuerte (kaya+wara)'
+      caquetío-reconstruido:
+      - kaya 'lluvia, agua del cielo'
+      - unia 'lluvia, agua del cielo'
+      lokono:
+      - oni 'lluvia'
+      paraujano:
+      - wiagha 'lluvia'
+      wayunaiki:
+      - iiwa 'primavera (tiempo de lluvias'
+    gatschet_1885:
+      pareja_leida: adamudu
+      ratio: 1.0
+      glosa_gatschet: rain
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: confirma-lectura (Gatschet «adamudu»)
+  propuesta: 'No entra al lexicón: misma voz que Gatschet, misma cadena; sin cognado medido (ver `cruce.lexicon_por_glosa`).'
+- id: vk-aru-13
+  pagina: 227
+  pdf: 9
+  forma_fuente: bāroe hāntoe wōu
+  forma_llana: baroe hantoe wou
+  glosa_nl: Gebed na het eten
+  glosa_es: oración (rezo) después de comer
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - emacasi 'Oracion (y 1 acepción/es más)'
+      - nusereda 'Rezar'
+    gatschet_1885:
+      pareja_leida: baru xantu uou
+      ratio: 0.95
+      glosa_gatschet: to ask for something to eat
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: conflicto-de-glosa con Gatschet («to ask for something to eat»)
+  propuesta: 'No entra al lexicón. Resuelve la última palabra que los OCR de Gatschet daban «uou»/«uqu»: es «wōu».
+    Y declara un CONFLICTO DE GLOSA: la fuente primaria dice ''oración después de comer'', Gatschet ''pedir algo
+    de comer''. Se registran las dos; no se elige (campana-toponimos §4, regla de Supí, aplicada a una voz).'
+- id: vk-aru-14
+  pagina: 227
+  pdf: 9
+  forma_fuente: kajappa
+  forma_llana: kajappa
+  glosa_nl: Arbeiders om te planten
+  glosa_es: trabajadores para sembrar (la cuadrilla de siembra)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - banacarí 'Sembradura, lo q[u]e se siembra'
+      - manarriurí 'Está en trabajos'
+      - … y 2 más
+      caquetío-atestiguado:
+      - duriwa 'hacer trabajos cortos'
+      - hueke 'sitio de trabajo'
+      - … y 5 más
+      caquetío-reconstruido:
+      - 'koa ''coa: palo de madera aguzado con que se abre el hueco de la s'''
+      - kono 'sembrar, plantar, cultivar'
+      lokono:
+      - dikki 'sembrar'
+      wayunaiki:
+      - apünajaa 'sembrar'
+    gatschet_1885: 'no está (mejor candidato por forma: kafa, ratio 0.6 — no es la misma voz)'
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva
+  propuesta: 'No entra al lexicón: sólo van Koolwijk. Es la única voz de la lista del campo de la siembra (trabajo
+    colectivo): candidata a corpus (transmisión / trabajo) si otra fuente la recoge.'
+- id: vk-aru-15
+  pagina: 227
+  pdf: 9
+  forma_fuente: marākka
+  forma_llana: marakka
+  glosa_nl: Een calbas met steenen om te ratelen
+  glosa_es: maraca (tapara con piedras para sonar)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: taíno / panantillana (la voz que el castellano difundió)
+  escala_protocolo: D
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa:
+    - amarracan [achagua; VOCABULARIO_BASE] 'Fin, acabam.to' (≈ marakka, 0.86)
+    - madarraca [achagua; VOCABULARIO_BASE] 'Borrasca, olage' (≈ marakka, 0.86)
+    - marradaca [achagua; VOCABULARIO_BASE] 'Fluxo, olage (y 1 acepción/es más)' (≈ marakka, 0.86)
+    lexicon_por_glosa:
+      wayunaiki:
+      - isira 'maraca'
+    gatschet_1885: 'no está (mejor candidato por forma: makura, ratio 0.67 — no es la misma voz)'
+    van_buurt_2014_por_forma: no está
+  veredicto: comparanda-de-la-esfera (no es dato caquetío)
+  propuesta: No entra como caquetío. La voz no está en el lexicón en ninguna capa (por glosa sólo sale la wayuu
+    isira 'maraca'), y Oliver 1989 cap. 2 (6-fusion/taino_en_la_esfera_2026-09-21.yaml) ya advierte que «maraca»
+    llegó probablemente con los españoles desde La Española. Reaparece en la nota 1 de la p. 224 («het ratelen der
+    marakka»). Si alguna vez se quiere como voz de la esfera, es decisión aparte (FORMA_DE_LA_ESFERA).
+- id: vk-aru-16
+  pagina: 227
+  pdf: 9
+  forma_fuente: aboūssoe
+  forma_llana: aboussoe
+  glosa_nl: Een maïskoek
+  glosa_es: una torta (arepa) de maíz
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - saco 'Bollo'
+      caquetío-atestiguado:
+      - amaka 'sitio de moler maíz, área de procesamiento'
+      - buriche 'licor fermentado, chicha de maíz'
+      - … y 2 más
+      caquetío-hipotético:
+      - kanawa 'amarillo, color del oro y del maíz seco'
+      caquetío-reconstruido:
+      - marisi 'maíz en mazorca, grano de cosecha'
+      caquetío-retroabstraido:
+      - arifuke 'harina de maíz a la que se agregaba raspillo [?] de panela y'
+      - budare 'palabra aceptada por la Real Academia; plato de barro o hier'
+      - … y 2 más
+      kalinago:
+      - marisi-kalinago 'maíz (Zea mays)'
+      lokono:
+      - malhisi 'maíz (forma alternativa Surinam)'
+      - mariti 'maíz (Zea mays)'
+      taíno:
+      - cazabi 'cazabe, pan de yuca, torta de mandioca'
+      - maisi 'maíz (Zea mays)'
+      - … y 1 más
+    gatschet_1885: no está
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva
+  propuesta: 'No entra al lexicón: sólo van Koolwijk. Candidata a corpus (alimentos) con la etiqueta retro-abstraido
+    si otra fuente la recoge; el maíz en Aruba está atestiguado arqueológicamente, la palabra no.'
+- id: vk-aru-17
+  pagina: 227
+  pdf: 9
+  forma_fuente: pekinini
+  forma_llana: pekinini
+  glosa_nl: Een kind
+  glosa_es: un niño
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: criollo (portugués «pequenino»; cf. el «pikin» del neger-engels que el autor conocía de Surinam)
+  escala_protocolo: D
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - curesí 'Hijo'
+      - irrairrimiusani quira 'Concebirse la criatura'
+      - … y 6 más
+      caquetío-atestiguado:
+      - dare 'diente; hijo (extensión metafórica)'
+      caquetío-reconstruido:
+      - buri 'hijo, hija, criatura, descendiente'
+      caquetío-retroabstraido:
+      - wanepe 'cesto para cargar niños'
+      lokono:
+      - aithi 'hijo (término de parentesco inalienable)'
+      - 'casa-lokono ''engendrar (p. 664: c-a-sa-n; m-a-sa-n «no tener hijos»)'''
+      - … y 2 más
+      wayunaiki:
+      - achon 'hijo, -ja'
+      - o'ulijaa 'cargar (a un niño)'
+      - … y 2 más
+    gatschet_1885: 'no está (mejor candidato por forma: kinikini, ratio 0.75 — no es la misma voz)'
+    van_buurt_2014_por_forma: no está
+  veredicto: criollo — descartada
+  propuesta: 'Descartada como indígena: es criollo. Se registra el descarte para que nadie la re-descubra (protocolo
+    §5).'
+- id: vk-aru-18
+  pagina: 227
+  pdf: 9
+  forma_fuente: Dabaroīda
+  forma_llana: dabaroida
+  glosa_nl: (boomen en planten)
+  glosa_es: (árbol o planta; sin glosa individual)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: 'indeterminada (voz viva en papiamento: dabaruida)'
+  escala_protocolo: A según Gatschet minado
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa: sin glosa individual en la fuente
+    gatschet_1885:
+      pareja_leida: dabaraida
+      ratio: 0.89
+      glosa_gatschet: a tree (sin taxón en la fuente)
+      nivel_en_la_mineria_de_gatschet: A
+    van_buurt_2014_por_forma:
+    - dabaroida (1.0)
+    - Dabaruida (0.89)
+    - dabaraida (0.89)
+  veredicto: confirma-lectura — y desmiente la «TRIPLE atestación independiente» de lexicon_gatschet
+  propuesta: 'lexicon_gatschet.py da a dabaraida «TRIPLE atestación independiente: van Koolwijk 1880, Pinart 1882,
+    van Buurt 2014». Medido: van Koolwijk y Pinart/Gatschet son UNA cadena (ver `independencia`), y van Buurt cita
+    a van Koolwijk vía Hartog 1953 y a Pinart. Lo que queda es una cadena histórica (1881-82) más la forma viva
+    del papiamento (van Buurt §6). Va en el issue.'
+- id: vk-aru-19
+  pagina: 227
+  pdf: 9
+  forma_fuente: Hoebădā
+  forma_llana: hoebada
+  glosa_nl: (boomen en planten)
+  glosa_es: (árbol o planta; sin glosa individual)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: 'indeterminada (voz viva: hubada, Acacia tortuosa, van Buurt §6)'
+  escala_protocolo: A según Gatschet minado
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa: sin glosa individual en la fuente
+    gatschet_1885:
+      pareja_leida: hubada
+      ratio: 1.0
+      glosa_gatschet: a tree (parte de 'hubada tarabada')
+      nivel_en_la_mineria_de_gatschet: A
+    van_buurt_2014_por_forma:
+    - Hubada (1.0)
+    - hubada (1.0)
+  veredicto: confirma-lectura (Gatschet «hubada»)
+  propuesta: 'Sin cambio de nivel: misma cadena que Gatschet; lo que la sostiene es la forma viva de van Buurt.'
+- id: vk-aru-20
+  pagina: 227
+  pdf: 9
+  forma_fuente: Tarabada
+  forma_llana: tarabada
+  glosa_nl: (boomen en planten)
+  glosa_es: (árbol o planta; sin glosa individual)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa: sin glosa individual en la fuente
+    gatschet_1885:
+      pareja_leida: tarabada
+      ratio: 1.0
+      glosa_gatschet: segundo elemento de 'hubada tarabada'
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma:
+    - Tarabana (0.88)
+    - Tarabara (0.88)
+    - tarabara (0.88)
+  veredicto: 'resuelve una duda de Gatschet: es un nombre de planta propio'
+  propuesta: 'lexicon_gatschet registra «hubada tarabada» y sospecha que tarabada sea «un epíteto o un error de
+    campo de Pinart». La fuente primaria la da como planta SEPARADA, entre comas, en una lista de cinco. Duda resuelta:
+    es un nombre propio de planta (sin identificar). Distinto del cerro Tarabana.'
+- id: vk-aru-21
+  pagina: 227
+  pdf: 9
+  forma_fuente: Takkitākki
+  forma_llana: takkitakki
+  glosa_nl: (boomen en planten)
+  glosa_es: (árbol o planta; sin glosa individual)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa: sin glosa individual en la fuente
+    gatschet_1885: 'no está (mejor candidato por forma: takamahak, ratio 0.67 — no es la misma voz)'
+    van_buurt_2014_por_forma: no está
+  veredicto: nueva (no está en Gatschet)
+  propuesta: 'No entra al lexicón: sólo van Koolwijk, sin identificar. Reduplicada, como lokkilokki: anotar en la
+    serie de reduplicación (lexicon_toponimos.REDUPLICACION) si se reabre.'
+- id: vk-aru-22
+  pagina: 227
+  pdf: 9
+  forma_fuente: Lokkilōkki
+  forma_llana: lokkilokki
+  glosa_nl: (boomen en planten)
+  glosa_es: (árbol o planta; sin glosa individual)
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: indeterminada
+  escala_protocolo: C
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa: sin glosa individual en la fuente
+    gatschet_1885:
+      pareja_leida: lokiloki
+      ratio: 1.0
+      glosa_gatschet: Mimosa unguiscata
+      nivel_en_la_mineria_de_gatschet: C
+    van_buurt_2014_por_forma: no está
+  veredicto: confirma-lectura (Gatschet «lokiloki», Mimosa unguiscata)
+  propuesta: Misma cadena que Gatschet; sin cambio.
+- id: vk-aru-23
+  pagina: 227 (y nota 1 de la p. 224)
+  pdf: 9
+  forma_fuente: Dori
+  forma_llana: dori
+  glosa_nl: 'Kikvorsch (y nota 1 de la p. 224: «inl. benaming: dori»)'
+  glosa_es: rana
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: 'voz del papiamento arubano (van Buurt §6: nace en Aruba, onomatopeya)'
+  escala_protocolo: A según Gatschet minado
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa:
+    - ori [lokono; VOCABULARIO_BASE] 'cerro, colina, montaña' (≈ dori, 0.86)
+    lexicon_por_glosa:
+      achagua:
+      - baduri 'Rana'
+      - ybarro 'Sapo'
+      wayunaiki:
+      - eperü'üi 'sapo'
+      - taataai 'rana'
+    gatschet_1885:
+      pareja_leida: dori
+      ratio: 1.0
+      glosa_gatschet: Rana (—?)
+      nivel_en_la_mineria_de_gatschet: A
+    van_buurt_2014_por_forma:
+    - Dori (1.0)
+    - dori (1.0)
+  veredicto: confirma-lectura (Gatschet «dori»)
+  propuesta: 'Misma cadena que Gatschet. Lo que la fuente añade es el contexto: la rana sólo vive en Aruba (no en
+    Curazao ni Bonaire, en 1881) y es el motivo de las vasijas (ver `mundo`). La anotación más antigua de la palabra
+    es ésta (1881).'
+- id: vk-aru-24
+  pagina: 227
+  pdf: 9
+  forma_fuente: Waltakka
+  forma_llana: waltakka
+  glosa_nl: Hagedis
+  glosa_es: lagartija
+  verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  lengua_propuesta: 'voz del papiamento arubano (van Buurt: waltaca, Anolis lineatus, sólo en Aruba)'
+  escala_protocolo: A según Gatschet minado
+  cruce:
+    lexicon_por_forma_sin_filtro_de_glosa: ninguna coincidencia
+    lexicon_por_glosa:
+      achagua:
+      - carisiari 'Lagarto'
+      - durru 'Lagartija'
+      caquetío-atestiguado:
+      - bisure 'lagartija'
+      caquetío-hipotético:
+      - kaiwa 'caimán, lagarto grande de río'
+      caquetío-reconstruido:
+      - iguana 'lagarto grande, iguana'
+      caquetío-retroabstraido:
+      - tukeke 'lagartija pequeña, gecko'
+    gatschet_1885:
+      pareja_leida: waltaka
+      ratio: 1.0
+      glosa_gatschet: lizard (sin taxón en la fuente)
+      nivel_en_la_mineria_de_gatschet: A
+    van_buurt_2014_por_forma:
+    - Waltaca (1.0)
+    - Waltaka (1.0)
+    - waltaca (1.0)
+  veredicto: confirma-lectura (Gatschet «waltaka»)
+  propuesta: Misma cadena que Gatschet; sin cambio.
+conjuro:
+  id: vk-aru-25
+  pagina: 227
+  pdf: 9
+  forma: sako den comanari marīa di watapōena fafa na douére sodji na ditiéri
+  nl: Eene bezwering, bij het vangen van de leguana in gebruik
+  es: un conjuro que se usa al cazar la iguana
+  lengua: 'mixta: papiamento («den», «di», «na») con voces sin traducir'
+  escala: 'R (fórmula ritual: no léxico)'
+  veredicto: confirma-lectura (Gatschet «Sako den komanari manadi watapuna fafa na douere sadii na ditieri»)
+  propuesta: 'No es léxico. La fuente primaria segmenta «marīa di watapōena» —en papiamento, «María de [el] watapana»—
+    donde Gatschet imprime «manadi watapuna». Con eso «watapuna» no es una voz suelta: es «watapōena», el árbol
+    watapana en grafía neerlandesa (oe = u). Va al corpus (creencia) como fórmula de caza, retro-abstraido, época
+    moderna; nunca al habla.'
+  verificado_en_imagen: 'sí — pdf 9 (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+  cruce:
+    gatschet_1885: Sako den komanari manadi watapuna fafa na douere sadii na ditieri (ratio 0.95)
+toponimos:
+  lugares:
+  - forma_fuente: Bedōēi
+    forma_llana: bedoei
+    lista: lugares
+    orden_en_la_lista: 1
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Bedui (1.0)
+      van_buurt_2014_s7:
+      - Budui (Boca) (0.8)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Damāri
+    forma_llana: damari
+    lista: lugares
+    orden_en_la_lista: 2
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Damari (1.0)
+      van_buurt_2014_s7:
+      - Daimari, Damari (Rooi, Boca) (1.0)
+      - Camari (0.83)
+    formantes:
+    - -ari / -ri — morfemas.yaml morfema-008 (sin glosa; van Buurt glosa rí 'duro' sólo en Casibari)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Antikōeri
+    forma_llana: antikoeri
+    lista: lugares
+    orden_en_la_lista: 3
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Antikuri (1.0)
+      van_buurt_2014_s7:
+      - Andicuri, Andicouri (0.88)
+      - Hadicuri (0.8)
+    formantes:
+    - -kuri / -curi — morfemas.yaml morfema-009 (sin glosa)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Kamakōeri
+    forma_llana: kamakoeri
+    lista: lugares
+    orden_en_la_lista: 4
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Kamakuri (1.0)
+      van_buurt_2014_s7:
+      - Camacuri (1.0)
+      - Camari (0.86)
+    formantes:
+    - -kuri / -curi — morfemas.yaml morfema-009 (sin glosa)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Webōeri
+    forma_llana: weboeri
+    lista: lugares
+    orden_en_la_lista: 5
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Weburi (1.0)
+      van_buurt_2014_s7:
+      - Weburi (1.0)
+    formantes:
+    - '-uri / -ure — morfemas.yaml morfema-002, conflicto: van Buurt §5 -ure/-uri ''raíz'' (Cruz Esteves)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Boebāri
+    forma_llana: boebari
+    lista: lugares
+    orden_en_la_lista: 6
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Cubari (0.83)
+      - Yabarubari (0.75)
+      van_buurt_2014_s7:
+      - Bubali (0.83)
+      - Jaburibari (Seru) (0.75)
+    formantes:
+    - '-bari — morfemas.yaml morfema-010 (sin glosa; «no es un afijo», van Buurt: bara/bari ''árbol'')'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Corrige el «Cubari» de Gatschet (OCR: B leída C). Es Bubali, nombre vivo en Aruba (van Buurt §7).
+      Afecta a morfemas.yaml: «Cubari» figura como ejemplo de -ari (morfema-008) y -bari (morfema-010). Va en el
+      issue.'
+  - forma_fuente: Wariroēri
+    forma_llana: wariroeri
+    lista: lugares
+    orden_en_la_lista: 7
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Wariruri (1.0)
+      - Warerukuri (0.78)
+      van_buurt_2014_s7:
+      - Wariruri (1.0)
+    formantes:
+    - '-uri / -ure — morfemas.yaml morfema-002, conflicto: van Buurt §5 -ure/-uri ''raíz'' (Cruz Esteves)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Arikoērāri
+    forma_llana: arikoerari
+    lista: lugares
+    orden_en_la_lista: 8
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Arikurari (1.0)
+      van_buurt_2014_s7:
+      - Avikurari (0.89)
+      - Hadicurari (0.89)
+    formantes:
+    - -ari / -ri — morfemas.yaml morfema-008 (sin glosa; van Buurt glosa rí 'duro' sólo en Casibari)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Arāsje
+    forma_llana: arasje
+    lista: lugares
+    orden_en_la_lista: 9
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7:
+      - Arashi (0.8)
+    formantes:
+    - -shi / -chi — morfemas.yaml morfema-007 (sin glosa)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado (sin cambio)
+    propuesta: 'Ya en el canon como Arashi (descartado, sin procedencia). Procedencia de la forma: van Koolwijk
+      1881. La hipótesis de van Buurt §8 (arashi ~ warashi ''macabí'') sigue siendo de van Buurt. Formante -shi
+      (morfema-007, sin glosa).'
+  - forma_fuente: Joudīti
+    forma_llana: jouditi
+    lista: lugares
+    orden_en_la_lista: 10
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - cerros
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Yuditi (1.0)
+      van_buurt_2014_s7:
+      - Juditi (1.0)
+      - Uditi (0.91)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Casjoēnti
+    forma_llana: casjoenti
+    lista: lugares
+    orden_en_la_lista: 11
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Kashiunti (0.93)
+      van_buurt_2014_s7:
+      - Cashunti (Baranca) (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Causjāti
+    forma_llana: causjati
+    lista: lugares
+    orden_en_la_lista: 12
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Kausheati (0.93)
+      van_buurt_2014_s7:
+      - Caushati (Sero) (1.0)
+      - Cadushi (Largo) (0.77)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Hendjēkoe
+    forma_llana: hendjekoe
+    lista: lugares
+    orden_en_la_lista: 13
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - cerros
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Hendieku (1.0)
+      van_buurt_2014_s7: no está
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Lugar y cerro a la vez. Gatschet sólo trae el lugar (Hendieku).
+  - forma_fuente: Lacōn
+    forma_llana: lacon
+    lista: lugares
+    orden_en_la_lista: 14
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7: no está
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Lugar que no está ni en Gatschet ni en van Buurt: sólo esta fuente. Podría no ser indígena; sin
+      más datos no se decide.'
+  - forma_fuente: Jāra
+    forma_llana: jara
+    lista: lugares
+    orden_en_la_lista: 15
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - cerros
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7:
+      - Yara (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Lugar y cerro a la vez en la fuente. No está en Gatschet; es «Yara» de van Buurt §7.
+  - forma_fuente: Cassibāri
+    forma_llana: cassibari
+    lista: lugares
+    orden_en_la_lista: 16
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos:
+      - toponimo-026 Casibari [C] (1.0)
+      gatschet_1885:
+      - Kassibari (1.0)
+      - Kasiaari (0.93)
+      van_buurt_2014_s7:
+      - Casibari (1.0)
+      - Kadiwari (0.75)
+    formantes:
+    - '-bari — morfemas.yaml morfema-010 (sin glosa; «no es un afijo», van Buurt: bara/bari ''árbol'')'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: C (sin cambio)
+    propuesta: 'Ya en el canon (toponimo-026, C, sin procedencia). Van Koolwijk da la atestación impresa más antigua
+      del NOMBRE (1881, como lugar). Propuesta, con el precedente de Paraguaná (T2b): procedencia para la FORMA,
+      no para la glosa ''hay rocas duras'', que sigue siendo de van Buurt §8.'
+  - forma_fuente: Boechiseribāni
+    forma_llana: boechiseribani
+    lista: lugares
+    orden_en_la_lista: 17
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Bushiribani (0.91)
+      van_buurt_2014_s7:
+      - Bushiribana (0.82)
+    formantes:
+    - -bani (¿variante de -bana?) — no está en el canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Es la Bushiribana viva (van Buurt §7; Gatschet «Bushiribani (?)»). La fuente primaria tiene una sílaba
+      más (bu-chi-se-ri-bani) y termina en -bāni; es un LUGAR, no un cerro.
+  cerros:
+  - forma_fuente: Behīca
+    forma_llana: behica
+    lista: cerros
+    orden_en_la_lista: 1
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Behika (1.0)
+      van_buurt_2014_s7:
+      - Behika, Behuko (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Handebirāri
+    forma_llana: handebirari
+    lista: cerros
+    orden_en_la_lista: 2
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Handebirari (1.0)
+      van_buurt_2014_s7:
+      - Avikurari (0.74)
+      - Hadicurari (0.74)
+    formantes:
+    - -ari / -ri — morfemas.yaml morfema-008 (sin glosa; van Buurt glosa rí 'duro' sólo en Casibari)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Oeratakka
+    forma_llana: oeratakka
+    lista: cerros
+    orden_en_la_lista: 3
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7:
+      - Urataka (Sero) (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Cerro que no está en Gatschet. Es «Urataka (Sero)» de van Buurt §7.
+  - forma_fuente: Jaboeroebāri
+    forma_llana: jaboeroebari
+    lista: cerros
+    orden_en_la_lista: 4
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Yabarubari (0.9)
+      - Shabururi (0.78)
+      van_buurt_2014_s7:
+      - Jaburibari (Seru) (0.9)
+      - Shabururi, Shabiburi (0.78)
+    formantes:
+    - '-bari — morfemas.yaml morfema-010 (sin glosa; «no es un afijo», van Buurt: bara/bari ''árbol'')'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Jamanōta
+    forma_llana: jamanota
+    lista: cerros
+    orden_en_la_lista: 5
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Yamanota (1.0)
+      van_buurt_2014_s7:
+      - Yamanota (Sero) (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Yamanota, nombre vivo del cerro (van Buurt §7, «Yamanota (Sero)»).
+  - forma_fuente: Codecodēctoe
+    forma_llana: codecodectoe
+    lista: cerros
+    orden_en_la_lista: 6
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Kodekodektu (1.0)
+      van_buurt_2014_s7:
+      - Kodekodectu (1.0)
+    formantes:
+    - reduplicación — lexicon_toponimos.REDUPLICACION
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Reduplicado (kode-kode-), como señala Gatschet de varios nombres arubanos; van Buurt «Kodekodectu».
+  - forma_fuente: Chirabāna
+    forma_llana: chirabana
+    lista: cerros
+    orden_en_la_lista: 7
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Shiribana (0.88)
+      - Tarabana (0.75)
+      van_buurt_2014_s7:
+      - Shiribana (0.88)
+      - Bushiribana (0.78)
+    formantes:
+    - '-bana ''cerro, sitio alto'' — TODAS_LAS_REGLAS[''-bana''] (D9, #38, aprobada 2026-08-30)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: C
+    propuesta: 'Cierra la MITAD de la ecuación: -bana ''cerro, sitio alto'' (D9) sobre un nombre que la fuente lista
+      entre los CERROS. La raíz chira- no tiene glosa. Sitio con arte rupestre (Wagenaar Hummelinck 1962, «Siribana»,
+      A 24-26).'
+  - forma_fuente: Ajō
+    forma_llana: ajo
+    lista: cerros
+    orden_en_la_lista: 8
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos:
+      - toponimo-205 hayo [B] (1.0)
+      gatschet_1885:
+      - Aiyo (0.86)
+      van_buurt_2014_s7:
+      - Ayo (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Ayo, la formación de bloques de diorita con pinturas (Wagenaar Hummelinck 1953, «Ajó», A 2). La
+      coincidencia con hayo (toponimo-205, Paraguaná) es SÓLO de forma —allí es un árbol, según Esteves—: no cuenta.'
+  - forma_fuente: Chaboerōoeri
+    forma_llana: chaboerooeri
+    lista: cerros
+    orden_en_la_lista: 9
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Shabururi (1.0)
+      van_buurt_2014_s7:
+      - Shabururi, Shabiburi (1.0)
+    formantes:
+    - '-uri / -ure — morfemas.yaml morfema-002, conflicto: van Buurt §5 -ure/-uri ''raíz'' (Cruz Esteves)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Shabururi, sitio con arte rupestre (Wagenaar Hummelinck 1962, A 22-23).
+  - forma_fuente: Cassiwāri
+    forma_llana: cassiwari
+    lista: cerros
+    orden_en_la_lista: 10
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos:
+      - toponimo-026 Casibari [C] (0.88)
+      gatschet_1885:
+      - Kasiaari (0.93)
+      - Kassibari (0.88)
+      van_buurt_2014_s7:
+      - Casibari (0.88)
+      - Kadiwari (0.88)
+    formantes:
+    - -ari / -ri — morfemas.yaml morfema-008 (sin glosa; van Buurt glosa rí 'duro' sólo en Casibari)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Cerro. Corrige el «Kasiaari»/«Kasinari» del OCR de Gatschet (la mesa lo cruzaba con «Kadiwari (?)»).
+      Distinto en la fuente de Cassibāri (lugar): b~w es permutación declarada, pero el autor los pone en listas
+      distintas y no se funden.'
+  - forma_fuente: Matibidīroe
+    forma_llana: matibidiroe
+    lista: cerros
+    orden_en_la_lista: 11
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - grutas
+    cruce:
+      canon_toponimos:
+      - toponimo-069 Matividiri [descartado] (0.9)
+      - toponimo-275 matividiro [descartado] (0.9)
+      gatschet_1885:
+      - Matividiri (0.9)
+      - Matividiri (cueva) (0.8)
+      van_buurt_2014_s7:
+      - Matividiri (0.9)
+    formantes:
+    - -iru / -iro — REGLAS_ESTEVES -iro 'diminutivo' (leído en topónimos)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado (sin cambio)
+    propuesta: 'Ya en el canon (toponimo-069, descartado, sin procedencia). Dos aportes: (1) procedencia de la forma,
+      van Koolwijk 1881, como cerro y como gruta; (2) la terminación de la fuente primaria, -roe (= -ru), está más
+      cerca del Matividiro de Paraguaná (toponimo-275, Esteves p. 51: «cerro de menos de 250 m y aldea») que el
+      -ri de Gatschet. Un nombre de cerro a los dos lados del mar: dato para la esfera, no glosa.'
+  - forma_fuente: Parabostē
+    forma_llana: paraboste
+    lista: cerros
+    orden_en_la_lista: 12
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7: no está
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Cerro que no está ni en Gatschet ni en van Buurt: sólo esta fuente.'
+  - forma_fuente: Joediti
+    forma_llana: joediti
+    lista: cerros
+    orden_en_la_lista: 13
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - lugares
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Yuditi (1.0)
+      van_buurt_2014_s7:
+      - Juditi (1.0)
+      - Uditi (0.91)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Cerro; el lugar de la misma lista se escribe Joudīti. Gatschet sólo trae el lugar (Yuditi). Cerro
+      que no está en Gatschet.
+  - forma_fuente: Tarabana
+    forma_llana: tarabana
+    lista: cerros
+    orden_en_la_lista: 14
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Tarabana (1.0)
+      van_buurt_2014_s7:
+      - Tarabana (1.0)
+      - Paraguana, Parawana (0.75)
+    formantes:
+    - '-bana ''cerro, sitio alto'' — TODAS_LAS_REGLAS[''-bana''] (D9, #38, aprobada 2026-08-30)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: C
+    propuesta: 'Ídem: -bana sobre un cerro; tara- sin glosa. No confundir con la planta Tarabada de la misma página.'
+  - forma_fuente: Boekoerōi
+    forma_llana: boekoeroi
+    lista: cerros
+    orden_en_la_lista: 15
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Cukuroi (0.86)
+      van_buurt_2014_s7:
+      - Boegoeroei, Bucurui (Sero) (0.86)
+      - Bucuti (0.77)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Corrige el «Cukuroi» de Gatschet (la mesa lo cruzaba con Kukurui). Es «Boegoeroei, Bucurui (Sero)»
+      de van Buurt. El parecido con Bucuruy (Paraguaná, toponimo de Esteves p. 24) es SÓLO de forma y Esteves da
+      aquel por castellano (de «buco»): no cuenta.'
+  - forma_fuente: Hendjēkoe
+    forma_llana: hendjekoe
+    lista: cerros
+    orden_en_la_lista: 16
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - lugares
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Hendieku (1.0)
+      van_buurt_2014_s7: no está
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Lugar y cerro a la vez. Gatschet sólo trae el lugar (Hendieku).
+  - forma_fuente: Barbakw̄a
+    forma_llana: barbakwa
+    lista: cerros
+    orden_en_la_lista: 17
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7:
+      - Barbacoa (0.88)
+    formantes:
+    - -bakoa 'bosque, arboleda' — morfemas.yaml morfema-001; REGLAS_TOPONIMICAS
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Es el Barbacoa que morfemas.yaml cita como apoyo insular sin glosa de -bacoa (morfema-001); van
+      Koolwijk da la forma más antigua (1881). Dos lecturas en pugna y ninguna cierra: bar- + -bakoa ''arboleda'',
+      o la voz «barbacoa» entera, que Oliver 1989 cap. 2 avisa que los españoles difundieron como «nativa». El macrón
+      cae sobre la w.'
+  - forma_fuente: Wakoebāna
+    forma_llana: wakoebana
+    lista: cerros
+    orden_en_la_lista: 18
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos:
+      - toponimo-005 guacaubana [A] (0.94)
+      gatschet_1885:
+      - Wakubana (1.0)
+      van_buurt_2014_s7:
+      - Wakubana, Wacobana (Sero) (1.0)
+    formantes:
+    - '-bana ''cerro, sitio alto'' — TODAS_LAS_REGLAS[''-bana''] (D9, #38, aprobada 2026-08-30)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: C
+    propuesta: '-bana sobre un cerro. Dos lecturas de la raíz, sin elegir: waka ''subterráneo'' (van Buurt §6 vía
+      Oliver; es la que usa toponimo-005 guacaubana, que ya cita a Wakubana como recurrencia insular) y waka ''ave,
+      cotorra'' (lexicón, caquetío-atestiguado). Van Koolwijk lo pone entre los CERROS, no entre las grutas. Atestaciones
+      de la forma: mapa de 1825 «Wacobana» (vía van Buurt), van Koolwijk 1881 «Wakoebāna», Gatschet 1885 «Wakubana»
+      — las dos últimas, una cadena.'
+  - forma_fuente: Kibāima
+    forma_llana: kibaima
+    lista: cerros
+    orden_en_la_lista: 19
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Kibaima (1.0)
+      van_buurt_2014_s7:
+      - Kimbaima, Kibaima (1.0)
+    formantes:
+    - '-aima ''abundancia'' — REGLAS_ZAVALA (Zavala #6, AM+PMA)'
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: C
+    propuesta: 'Hipótesis del proyecto, con las dos piezas ya atestiguadas por otras fuentes: kiba ''piedra'' (lexicón,
+      caquetío-atestiguado) + -aima ''abundancia'' (REGLAS_ZAVALA, Zavala #6) = ''el pedregal, donde abunda la piedra'',
+      y la fuente lo lista entre los CERROS. Sin glosa de fuente no sube de C: lo subiría una fuente que lo glose.
+      Va como `lecturas` tipo hipotesis, quien: proyecto.'
+  - forma_fuente: Jāra
+    forma_llana: jara
+    lista: cerros
+    orden_en_la_lista: 20
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - lugares
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885: no está
+      van_buurt_2014_s7:
+      - Yara (1.0)
+    formantes: ninguno del canon
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Lugar y cerro a la vez en la fuente. No está en Gatschet; es «Yara» de van Buurt §7.
+  grutas:
+  - forma_fuente: Wareroekōeri
+    forma_llana: wareroekoeri
+    lista: grutas
+    orden_en_la_lista: 1
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Warerukuri (1.0)
+      - Wariruri (0.78)
+      van_buurt_2014_s7:
+      - Warerikiri (0.8)
+      - Wariruri (0.78)
+    formantes:
+    - -kuri / -curi — morfemas.yaml morfema-009 (sin glosa)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: 'Sin glosa de fuente y sin morfema que alinee: descartado (= sin lectura, no «no existió»). Lo que
+      aporta es la forma fechada en 1881.'
+  - forma_fuente: Matibidiroe
+    forma_llana: matibidiroe
+    lista: grutas
+    orden_en_la_lista: 2
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    tambien_en:
+    - cerros
+    cruce:
+      canon_toponimos:
+      - toponimo-069 Matividiri [descartado] (0.9)
+      - toponimo-275 matividiro [descartado] (0.9)
+      gatschet_1885:
+      - Matividiri (0.9)
+      - Matividiri (cueva) (0.8)
+      van_buurt_2014_s7:
+      - Matividiri (0.9)
+    formantes:
+    - -iru / -iro — REGLAS_ESTEVES -iro 'diminutivo' (leído en topónimos)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado (sin cambio)
+    propuesta: La gruta del mismo nombre que el cerro (toponimo-069).
+  - forma_fuente: Waririkīri
+    forma_llana: waririkiri
+    lista: grutas
+    orden_en_la_lista: 3
+    pagina: 227
+    pdf: 9
+    verificado_en_imagen: 'sí — pdf 9 a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de página)'
+    cruce:
+      canon_toponimos: no está
+      gatschet_1885:
+      - Waririkiri (1.0)
+      - Wariruri (0.78)
+      van_buurt_2014_s7:
+      - Guadirikiri, Wadirikiri (Cueva) (0.9)
+      - Warerikiri (0.9)
+    formantes:
+    - -kiri / -diri — lexicon_gatschet.SUFIJOS_NO_CODIFICADOS (sin glosa)
+    glosa_de_la_fuente: ninguna (el autor sólo da la lista)
+    nivel_propuesto: descartado
+    propuesta: Gruta. Es la cueva de Guadirikiri/«Quadirikiri» (van Buurt §7; Wagenaar Hummelinck 1962, A 28, con
+      arte rupestre).
+toponimos_en_prosa:
+- forma: Parawana
+  pagina: 222
+  pdf: 4
+  clase: indígena (Paraguaná)
+  texto: «De nabijheid van de vaste kust van Venezuela (van Parawana) op vijf geographische mijlen afstand van Aruba…»;
+    y «aan de noordzijde van Aruba ter plaatse Parawana geheeten, een opschrift, waarop een luiaard … schijnt afgebeeld»
+  propuesta: 'DOS referentes con el mismo nombre en 1881: la península y un lugar del norte de Aruba. Para toponimo-018
+    (paraguaná): una `lecturas`/`observacion` con la forma «Parawana» (grafía neerlandesa) y la noticia de su homónimo
+    arubano, que es el sitio «Paraguana» (A 30) de Wagenaar Hummelinck 1962. No toca la glosa (#109).'
+- forma: Fontein
+  pagina: 226
+  pdf: 8
+  clase: neerlandés (la fuente de agua dulce que nace en la gruta)
+  texto: gruta en caliza, entrada alta y abovedada, galerías; «indiaansche opschriften zijn er talrijk aanwezig»;
+    de una galería «vloeit nog heden eene verfrisschende bron van zoet water, waaraan zij in latere tijden den naam
+    Fontein ontleend heeft»
+  propuesta: No es topónimo indígena. Va al catálogo de petroglifos (sitio con pinturas) y a `mundo` (agua dulce).
+- forma: Carachito
+  pagina: 226
+  pdf: 8
+  clase: indeterminada (¿castellano?)
+  texto: cerro al sur del Hooiberg, con cuatro grutas; una con huesos de ocho a diez personas y la tradición de
+    la matanza (ver `mundo`)
+  propuesta: 'Probablemente el actual Seroe Canashito (al sur del Hooiberg, con dos grutas en caliza y pinturas:
+    Wagenaar Hummelinck 1953 A 4-5). Identificación del minador, sin verificar: va como hipótesis.'
+- forma: Seroe die Casjoe
+  pagina: 223
+  pdf: 5
+  clase: papiamento ('cerro del merey')
+  texto: «Vergelijk indiaansch opschrift van den berg Seroe die Casjoe op Aruba»
+  propuesta: No es indígena. Sitio con inscripción (para el catálogo).
+- forma: Tunnel (berg)
+  pagina: 223
+  pdf: 5
+  clase: indeterminada
+  texto: «Op den berg Tunnel (zoo genaamd volgens de traditie naar een indiaansch opperhoofd) hebben de Indianen
+    eene roode verfaarde opgedolven»
+  propuesta: 'Tradición: el cerro lleva el nombre de un jefe indio. Dato para antroponimos_caquetios.yaml (retro-abstraido,
+    tradición oral de 1881), no para el canon de topónimos.'
+- forma: Santa Cruz (Santa Croes)
+  pagina: 223
+  pdf: 5
+  clase: castellano (papiamento entre paréntesis)
+  texto: campamento indio al SE del Hooiberg; tiestos pintados, conchas de Strombus, urnas
+  propuesta: No es indígena. Sitio arqueológico (ver `mundo` y `lamina`).
+- forma: Savonet
+  pagina: 225
+  pdf: 7
+  clase: indeterminada (es la Savaneta de hoy; Gatschet «Saboneta»)
+  texto: campamento junto a la Commandeursbaai, en una altura; entierros en vasijas «tot in het begin dezer eeuw»
+  propuesta: No es indígena. Sitio arqueológico.
+- forma: Hooiberg
+  pagina: 223
+  pdf: 5
+  clase: neerlandés
+  texto: «eenen der voornaamste bergen van Aruba»
+  propuesta: Referencia geográfica.
+- forma: Commandeursbaai
+  pagina: 225
+  pdf: 7
+  clase: neerlandés
+  texto: primer desembarcadero y residencia de los comandantes
+  propuesta: Referencia geográfica.
+- forma: Oranjestad
+  pagina: 223
+  pdf: 5
+  clase: neerlandés
+  texto: cerca hay tierra blanca para pintar
+  propuesta: Referencia geográfica.
+- forma: orua / oruba
+  pagina: 222
+  pdf: 4
+  clase: nombre de la isla
+  texto: 'nota 1: «In Spaansche handschriften van het midden der vorige eeuw: orua en oruba»'
+  propuesta: 'Para toponimo-051 (aruba → ''Oruba. Oruma. Oirubae'', descartado): añadir «orua» y «oruba» como formas
+    que el autor dice leer en manuscritos españoles de mediados del s. XVIII. No sube el nivel (no es una glosa).'
+caribe_surinam_1870:
+  que_es: 'kari''ña (caribe) de Surinam, ríos Tibiti y Wojambo, apuntado por el autor en 1870 (p. 227). NO es arubano
+    ni caquetío. Etiqueta propuesta: comparanda caribe continental, FUERA de la esfera (Surinam); no entra al lexicón.
+    Sirve para dos cosas: separar lo arubano de lo que no lo es, y como control caribe (como el jirajara de Jahn).'
+  pagina: 227-229 (pdf 9-11)
+  verificado_en_imagen: 'sí — las tres páginas a resolución nativa (8,35 px/pt: 2576 px de imagen sobre 309 pt de
+    página)'
+  nota_del_cruce: coincide_en_forma_y_glosa = una entrada del lexicón con la misma glosa y forma parecida (ratio
+    ≥ 0,75). Es un indicio de préstamo areal o de parentesco caribe, no una prueba (minar-fuente §2).
+  entradas:
+  - pagina: 227
+    glosa_nl: ik
+    forma_fuente: au
+    glosa_es: yo
+  - pagina: 227
+    glosa_nl: gij
+    forma_fuente: amōre
+    glosa_es: tú
+  - pagina: 227
+    glosa_nl: hij
+    forma_fuente: mosē
+    glosa_es: él
+  - pagina: 227
+    glosa_nl: wij
+    forma_fuente: ana
+    glosa_es: nosotros
+  - pagina: 227
+    glosa_nl: gij (pl.)
+    forma_fuente: kēko
+    glosa_es: vosotros
+  - pagina: 227
+    glosa_nl: zij
+    forma_fuente: kīko
+    glosa_es: ellos
+    duda: la k y la i van separadas por un blanco en la impresión («k īko»)
+  - pagina: 227
+    glosa_nl: God
+    forma_fuente: tamōesi
+    glosa_es: Dios
+  - pagina: 227
+    glosa_nl: een mensch
+    forma_fuente: kālīnān
+    glosa_es: una persona
+  - pagina: 227
+    glosa_nl: een goed mensch
+    forma_fuente: ōeme mānā
+    glosa_es: una persona buena
+  - pagina: 227
+    glosa_nl: een slecht mensch
+    forma_fuente: torokēne mānā
+    glosa_es: una persona mala
+  - pagina: 227
+    glosa_nl: een oud mensch
+    forma_fuente: tanpōko
+    glosa_es: un viejo
+  - pagina: 227
+    glosa_nl: eene oude vrouw
+    forma_fuente: nonpōko
+    glosa_es: una vieja
+  - pagina: 227
+    glosa_nl: een Indiaan
+    forma_fuente: kālīnan
+    glosa_es: un indio
+  - pagina: 227
+    glosa_nl: een Blanke
+    forma_fuente: planakīri
+    glosa_es: un blanco
+  - pagina: 227
+    glosa_nl: een Zwarte
+    forma_fuente: mēkōllo
+    glosa_es: un negro
+  - pagina: 227
+    glosa_nl: een opperhoofd
+    forma_fuente: wāpātōre
+    glosa_es: un jefe
+  - pagina: 227
+    glosa_nl: een dokter
+    forma_fuente: poejé, poejāsi, piaīman
+    glosa_es: un curandero, un chamán
+    coincide_en_forma_y_glosa:
+    - piayeman [lokono] 'curandero aprendiz, asistente del chamán'
+    lectura_de_la_coincidencia: 'real: el «piache» areal (lokono piayeman)'
+  - pagina: 227
+    glosa_nl: eene dienstmaagd
+    forma_fuente: emeāle
+    glosa_es: una criada
+  - pagina: 227
+    glosa_nl: de vader
+    forma_fuente: pāpa, joēmo
+    glosa_es: el padre
+  - pagina: 227
+    glosa_nl: de moeder
+    forma_fuente: tāta, husāna
+    glosa_es: la madre
+  - pagina: 227
+    glosa_nl: de grootmoeder
+    forma_fuente: pīpi
+    glosa_es: la abuela
+  - pagina: 227
+    glosa_nl: de broeder
+    forma_fuente: sērvo
+    glosa_es: el hermano
+  - pagina: 227
+    glosa_nl: de zuster (de jongste)
+    forma_fuente: m[ī]a
+    glosa_es: la hermana menor
+    duda: 'el tipo de la i está roto (pdf 9, recorte a 14×): se lee m-macrón-a; la i es conjetura'
+  - pagina: 227
+    glosa_nl: de vrouw
+    forma_fuente: wāwa
+    glosa_es: la mujer, la esposa
+    coincide_en_forma_y_glosa:
+    - nagua [caquetío-reconstruido] 'nagua, falda de algodón de mujer'
+    lectura_de_la_coincidencia: 'ruido: nagua ''falda'' no es ''mujer'''
+  - pagina: 227
+    glosa_nl: het kind
+    forma_fuente: kīen
+    glosa_es: el niño
+  - pagina: 228
+    glosa_nl: een klein kind
+    forma_fuente: pīto
+    glosa_es: un niño pequeño
+  - pagina: 228
+    glosa_nl: de ziel
+    forma_fuente: akălī
+    glosa_es: el alma
+  - pagina: 228
+    glosa_nl: het lichaam
+    forma_fuente: jāmoe
+    glosa_es: el cuerpo
+  - pagina: 228
+    glosa_nl: het hoofd
+    forma_fuente: joupōpe
+    glosa_es: la cabeza
+  - pagina: 228
+    glosa_nl: het hoofdhaar
+    forma_fuente: jousētte
+    glosa_es: el cabello
+  - pagina: 228
+    glosa_nl: de oogen
+    forma_fuente: ennōere
+    glosa_es: los ojos
+  - pagina: 228
+    glosa_nl: de neus
+    forma_fuente: mōre
+    glosa_es: la nariz
+  - pagina: 228
+    glosa_nl: de mond
+    forma_fuente: potāri
+    glosa_es: la boca
+  - pagina: 228
+    glosa_nl: de ooren
+    forma_fuente: panāri
+    glosa_es: las orejas
+  - pagina: 228
+    glosa_nl: de arm
+    forma_fuente: apōli
+    glosa_es: el brazo
+  - pagina: 228
+    glosa_nl: de handen
+    forma_fuente: jajāri
+    glosa_es: las manos
+  - pagina: 228
+    glosa_nl: de voeten
+    forma_fuente: papōroe
+    glosa_es: los pies
+  - pagina: 228
+    glosa_nl: de kuiten
+    forma_fuente: sēida
+    glosa_es: las pantorrillas
+  - pagina: 228
+    glosa_nl: de buik
+    forma_fuente: joewēmbo
+    glosa_es: el vientre
+  - pagina: 228
+    glosa_nl: de borst
+    forma_fuente: manāta
+    glosa_es: el pecho
+  - pagina: 228
+    glosa_nl: het kind de borst geven
+    forma_fuente: mana teke kepāko
+    glosa_es: dar el pecho al niño
+  - pagina: 228
+    glosa_nl: het kamp
+    forma_fuente: pataīaa
+    glosa_es: el campamento
+  - pagina: 228
+    glosa_nl: het huis
+    forma_fuente: hāfto
+    glosa_es: la casa
+  - pagina: 228
+    glosa_nl: ik ga naar huis
+    forma_fuente: hāfto a mī sa
+    glosa_es: voy a casa
+  - pagina: 228
+    glosa_nl: eene bank
+    forma_fuente: moelē
+    glosa_es: un banco
+  - pagina: 228
+    glosa_nl: een stoel
+    forma_fuente: stoeloe (neger-engelsch)
+    glosa_es: una silla
+    marca_del_autor: neger-engels (sranan)
+  - pagina: 228
+    glosa_nl: eene tafel
+    forma_fuente: tafla (neger-engelsch)
+    glosa_es: una mesa
+    marca_del_autor: neger-engels (sranan)
+  - pagina: 228
+    glosa_nl: eene vork
+    forma_fuente: sakka
+    glosa_es: un tenedor
+  - pagina: 228
+    glosa_nl: een mes
+    forma_fuente: mārīā
+    glosa_es: un cuchillo
+  - pagina: 228
+    glosa_nl: een houwer
+    forma_fuente: soubārā
+    glosa_es: un machete
+  - pagina: 228
+    glosa_nl: een geweer
+    forma_fuente: arakka poūssa
+    glosa_es: un fusil
+  - pagina: 228
+    glosa_nl: een pijl
+    forma_fuente: prīwa
+    glosa_es: una flecha
+  - pagina: 228
+    glosa_nl: een kalebas
+    forma_fuente: kwāi
+    glosa_es: una totuma, una calabaza
+  - pagina: 228
+    glosa_nl: vuur
+    forma_fuente: wāto
+    glosa_es: fuego
+    duda: '«visch» se imprime wāto, IGUAL que «vuur»: probable errata del impresor (en kari''ña el pez es otra palabra);
+      se copia como está'
+  - pagina: 228
+    glosa_nl: water
+    forma_fuente: tōna
+    glosa_es: agua
+    coincide_en_forma_y_glosa:
+    - tuna [taíno] 'agua, río'
+    lectura_de_la_coincidencia: 'real: tuna ''agua'' es voz caribe y taína a la vez (préstamo o areal antiguo);
+      NO dice nada de Aruba, porque tōna no es arubana'
+  - pagina: 228
+    glosa_nl: eene plaat voor cassave te bakken
+    forma_fuente: alīn jătoe
+    glosa_es: el budare (plancha para cocer el casabe)
+  - pagina: 228
+    glosa_nl: eene groote waterkan
+    forma_fuente: toēkoēwāri
+    glosa_es: una tinaja grande
+  - pagina: 228
+    glosa_nl: hout
+    forma_fuente: wēwĕ
+    glosa_es: leña, madera
+  - pagina: 228
+    glosa_nl: asch
+    forma_fuente: weroēno
+    glosa_es: ceniza
+  - pagina: 228
+    glosa_nl: vleesch
+    forma_fuente: tjāko
+    glosa_es: carne
+  - pagina: 228
+    glosa_nl: spek
+    forma_fuente: tenōme
+    glosa_es: tocino, grasa
+  - pagina: 228
+    glosa_nl: bakkeljaauw
+    forma_fuente: ăkĭtī
+    glosa_es: bacalao
+  - pagina: 228
+    glosa_nl: visch
+    forma_fuente: wāto
+    glosa_es: pescado
+    duda: '«visch» se imprime wāto, IGUAL que «vuur»: probable errata del impresor (en kari''ña el pez es otra palabra);
+      se copia como está'
+    coincide_en_forma_y_glosa:
+    - 'siwato [caquetío-reconstruido] ''siguato: desganado, apático, triste (oriente de la'''
+    lectura_de_la_coincidencia: 'ruido: siwato ''desganado'' no es ''pescado'' (y wāto ''pescado'' es probable errata)'
+  - pagina: 228
+    glosa_nl: eene krab
+    forma_fuente: koūssa
+    glosa_es: un cangrejo
+  - pagina: 228
+    glosa_nl: cassave
+    forma_fuente: arēpa
+    glosa_es: casabe
+  - pagina: 228
+    glosa_nl: bananne
+    forma_fuente: păroēre
+    glosa_es: plátano
+  - pagina: 228
+    glosa_nl: ananas
+    forma_fuente: nānā
+    glosa_es: piña
+    coincide_en_forma_y_glosa:
+    - nanana [achagua] 'Piña'
+    lectura_de_la_coincidencia: 'real: nana ''piña'', voz areal (achagua nanana)'
+  - pagina: 228
+    glosa_nl: papaia
+    forma_fuente: kapaīa
+    glosa_es: papaya
+  - pagina: 228
+    glosa_nl: een vogel
+    forma_fuente: krotōkko
+    glosa_es: un pájaro
+  - pagina: 228
+    glosa_nl: eene eend
+    forma_fuente: opōno
+    glosa_es: un pato
+  - pagina: 228
+    glosa_nl: eene slang
+    forma_fuente: ŏkŏjōe
+    glosa_es: una serpiente
+  - pagina: 228
+    glosa_nl: een varken
+    forma_fuente: porkoe (spaansch)
+    glosa_es: un cerdo
+    marca_del_autor: castellano
+  - pagina: 228
+    glosa_nl: een hond
+    forma_fuente: pēroe (spaansch)
+    glosa_es: un perro
+    coincide_en_forma_y_glosa:
+    - erü [wayunaiki] 'perro, -rra'
+    lectura_de_la_coincidencia: 'ruido: es el castellano «perro» (marca del autor); el wayuu erü es otra voz'
+    marca_del_autor: castellano
+  - pagina: 228
+    glosa_nl: geld
+    forma_fuente: plāta (spaansch)
+    glosa_es: dinero
+    coincide_en_forma_y_glosa:
+    - platta [lokono] 'dinero (y 1 acepción/es más)'
+    lectura_de_la_coincidencia: 'real pero castellana: el autor la marca «spaansch», y el lokono platta es el mismo
+      préstamo'
+    marca_del_autor: castellano
+  - pagina: 228
+    glosa_nl: een tijger
+    forma_fuente: katoēsi
+    glosa_es: un jaguar («tigre»)
+  - pagina: 228
+    glosa_nl: een kleine aap
+    forma_fuente: karapāne
+    glosa_es: un mono pequeño
+  - pagina: 228
+    glosa_nl: muskieten
+    forma_fuente: siwilīri
+    glosa_es: mosquitos
+  - pagina: 228
+    glosa_nl: eene vlieg
+    forma_fuente: wēre wēre
+    glosa_es: una mosca
+  - pagina: 228
+    glosa_nl: een wortel ook pees
+    forma_fuente: mīti
+    glosa_es: una raíz; también tendón
+  - pagina: 228
+    glosa_nl: roode verf
+    forma_fuente: koēsŏwē
+    glosa_es: pintura roja
+  - pagina: 228
+    glosa_nl: zwarte verf
+    forma_fuente: tapoērīpo
+    glosa_es: pintura negra
+  - pagina: 228
+    glosa_nl: cassave drank
+    forma_fuente: rookoe topāne
+    glosa_es: bebida de yuca
+  - pagina: 228
+    glosa_nl: roode drank
+    forma_fuente: casīri
+    glosa_es: bebida roja (cachirí)
+    coincide_en_forma_y_glosa:
+    - kasiri [lokono] 'chicha, bebida fermentada de yuca'
+    lectura_de_la_coincidencia: 'real: kasiri/cachirí, voz areal de la bebida de yuca (lokono, caribe)'
+  - pagina: 228
+    glosa_nl: zwarte drank
+    forma_fuente: pajouwāroe
+    glosa_es: bebida negra (payahuarú)
+  - pagina: 228
+    glosa_nl: de hemel
+    forma_fuente: kāpōu
+    glosa_es: el cielo
+  - pagina: 228
+    glosa_nl: de zon
+    forma_fuente: wĕjōu
+    glosa_es: el sol
+  - pagina: 228
+    glosa_nl: de maan
+    forma_fuente: nōuno
+    glosa_es: la luna
+  - pagina: 228
+    glosa_nl: de sterren
+    forma_fuente: serīko
+    glosa_es: las estrellas
+  - pagina: 228
+    glosa_nl: het onweer
+    forma_fuente: knomēro mōli
+    glosa_es: la tormenta
+  - pagina: 228
+    glosa_nl: de aardbeving
+    forma_fuente: tetēite
+    glosa_es: el terremoto
+  - pagina: 228
+    glosa_nl: de zee
+    forma_fuente: plāna
+    glosa_es: el mar
+  - pagina: 228
+    glosa_nl: de rivier
+    forma_fuente: rōne
+    glosa_es: el río
+  - pagina: 228
+    glosa_nl: de grond
+    forma_fuente: nōno
+    glosa_es: la tierra, el suelo
+  - pagina: 228
+    glosa_nl: het bosch
+    forma_fuente: ītĕrōen
+    glosa_es: el bosque
+  - pagina: 228
+    glosa_nl: een moeras
+    forma_fuente: tjāpo
+    glosa_es: un pantano
+  - pagina: 228
+    glosa_nl: zeebanken
+    forma_fuente: pōtrī
+    glosa_es: bancos de arena del mar
+  - pagina: 228
+    glosa_nl: de regen
+    forma_fuente: knōpo
+    glosa_es: la lluvia
+  - pagina: 228
+    glosa_nl: het regent
+    forma_fuente: kōnōpōnŏmē of knossa
+    glosa_es: llueve
+  - pagina: 228
+    glosa_nl: stelen
+    forma_fuente: mānāmŏmāna
+    glosa_es: robar
+  - pagina: 228
+    glosa_nl: een dief
+    forma_fuente: mŏnŏmān
+    glosa_es: un ladrón
+  - pagina: 228
+    glosa_nl: iemand die altijd steelt
+    forma_fuente: monameneman
+    glosa_es: el que siempre roba
+  - pagina: 228
+    glosa_nl: liefhebben, willen
+    forma_fuente: sĕwā
+    glosa_es: amar, querer
+  - pagina: 228
+    glosa_nl: ik wil
+    forma_fuente: sēwā
+    glosa_es: yo quiero
+  - pagina: 228
+    glosa_nl: zingen
+    forma_fuente: walé
+    glosa_es: cantar
+  - pagina: 228
+    glosa_nl: dansen
+    forma_fuente: dĭărōko
+    glosa_es: bailar
+  - pagina: 228
+    glosa_nl: een ander slaan
+    forma_fuente: iwōmāko
+    glosa_es: pegarle a otro
+  - pagina: 228
+    glosa_nl: iemand vermoorden
+    forma_fuente: ĭwĭāko
+    glosa_es: matar a alguien
+  - pagina: 228
+    glosa_nl: slapen
+    forma_fuente: onĕkō
+    glosa_es: dormir
+  - pagina: 228
+    glosa_nl: eten
+    forma_fuente: enāko
+    glosa_es: comer
+  - pagina: 228
+    glosa_nl: vechten
+    forma_fuente: kawāi
+    glosa_es: pelear
+  - pagina: 228
+    glosa_nl: schieten
+    forma_fuente: īpīŏkōkō
+    glosa_es: disparar
+  - pagina: 228
+    glosa_nl: hooren
+    forma_fuente: panāritan
+    glosa_es: oír
+  - pagina: 228
+    glosa_nl: schudden
+    forma_fuente: tĕkōtē kano
+    glosa_es: sacudir
+  - pagina: 228
+    glosa_nl: boomen vellen
+    forma_fuente: kūto
+    glosa_es: tumbar árboles
+  - pagina: 228
+    glosa_nl: kapt hem
+    forma_fuente: kutōko
+    glosa_es: ¡córtalo!
+  - pagina: 228
+    glosa_nl: zal ik hem kappen
+    forma_fuente: ams kētokan
+    glosa_es: ¿lo corto?
+  - pagina: 228
+    glosa_nl: ik ben
+    forma_fuente: manda
+    glosa_es: yo soy, yo estoy
+  - pagina: 228
+    glosa_nl: gij zijt
+    forma_fuente: mandŏman
+    glosa_es: tú eres
+  - pagina: 228
+    glosa_nl: wij zijn
+    forma_fuente: mandonāne
+    glosa_es: nosotros somos
+  - pagina: 228
+    glosa_nl: ik heb honger
+    forma_fuente: kamōra
+    glosa_es: tengo hambre
+  - pagina: 229
+    glosa_nl: het is goed
+    forma_fuente: doēpā
+    glosa_es: está bien
+  - pagina: 229
+    glosa_nl: God is goed
+    forma_fuente: tamōesi pāpōlĭman
+    glosa_es: Dios es bueno
+  - pagina: 229
+    glosa_nl: wij zijn zeer goed
+    forma_fuente: ana joe pāpōlĭman
+    glosa_es: somos muy buenos
+  - pagina: 229
+    glosa_nl: Ik ben een kind van God
+    forma_fuente: oŭtē tamōesi mepōli
+    glosa_es: soy hijo de Dios
+  - pagina: 229
+    glosa_nl: de zonde, het kwaad
+    forma_fuente: tālĭkī
+    glosa_es: el pecado, el mal
+  - pagina: 229
+    glosa_nl: waar zijt gij?
+    forma_fuente: koempoua?
+    glosa_es: ¿dónde estás?
+  - pagina: 229
+    glosa_nl: ik zal u laten zien
+    forma_fuente: konē takirāpa
+    glosa_es: te lo mostraré
+  - pagina: 229
+    glosa_nl: hij is ziek
+    forma_fuente: jētōmme
+    glosa_es: está enfermo
+  - pagina: 229
+    glosa_nl: waarom?
+    forma_fuente: ōtonōme
+    glosa_es: ¿por qué?
+  - pagina: 229
+    glosa_nl: daarenboven
+    forma_fuente: koeponāka
+    glosa_es: además
+  - pagina: 229
+    glosa_nl: het is vloed
+    forma_fuente: itjoumāi
+    glosa_es: hay marea alta
+  - pagina: 229
+    glosa_nl: het is ebbe
+    forma_fuente: tāpa
+    glosa_es: hay marea baja
+  - pagina: 229
+    glosa_nl: het water is gevallen
+    forma_fuente: eronēma tapāna
+    glosa_es: el agua bajó
+  - pagina: 229
+    glosa_nl: van daag
+    forma_fuente: ĕrōme
+    glosa_es: hoy
+  - pagina: 229
+    glosa_nl: morgen
+    forma_fuente: kolōppe
+    glosa_es: mañana
+  - pagina: 229
+    glosa_nl: overmorgen
+    forma_fuente: mōnĭngrōpo
+    glosa_es: pasado mañana
+  - pagina: 229
+    glosa_nl: Ja
+    forma_fuente: hahā
+    glosa_es: sí
+  - pagina: 229
+    glosa_nl: neen
+    forma_fuente: owā
+    glosa_es: 'no'
+  - pagina: 229
+    glosa_nl: ik weet het niet
+    forma_fuente: hŏhō
+    glosa_es: no sé
+  - pagina: 229
+    glosa_nl: wat wilt gij?
+    forma_fuente: ōtse kŏmān
+    glosa_es: ¿qué quieres?
+  - pagina: 229
+    glosa_nl: kom hier
+    forma_fuente: okonēto
+    glosa_es: ¡ven acá!
+  padrenuestro:
+    pagina: 229
+    texto: Ana Pāpa kapoutānĕ, ajēte kōlŏ santo nānjĕ; a kon de leri kōlō nonĕ, o se nōle kōlō nēnjĕ nōnŏ, koēpo
+      kāpoe tāno wāl, ĕlāpo eroēpa nānje āna, ĕlĕpāli īkō ĕrŏmē, āna wa pārdōn īkŏ ērŏ wālă erăpā; āna tāsa kāli
+      wa kēnītān; ŏlīkoē wīnjī nānā ĕmīmāko ōlīkoē wīnjŏ. Hēpŏlōme.
+    nota: kari'ña con préstamos («santo», «pardon», «Pāpa») y una frase que parece criolla («a kon de leri»)
+  diez_mandamientos:
+    pagina: 229
+    texto:
+    - Piēnjatākoe Tamōesie papolōto kontyōppo amkōlo ĕrŏpătōne.
+    - Ĕrŏnōme lōnge Tamoesi kōlo jātotōkko.
+    - (Neger-engelsch) Joe sa meki santa Tamoesi dei.
+    - Pīnja tāko pāpa sana mēratāta.
+    - Tēwo kolo ewanōme kōsi winkōlo.
+    - Jawāssi takōlo.
+    - Monawāi kōlo.
+    - Oūdrŏtēn sjatōkko.
+    - Ămŏlīri pāko te kolākte.
+    - Ham te kōn pāko kolākte.
+    nota: el 3.º lo marca el autor como neger-engels
+lamina:
+  veredicto: 'NINGUNA figura de la lámina es un signo rupestre. El texto (pp. 223-224) las identifica todas como
+    cerámica de los campamentos de Santa Cruz y Savonet: motivos pintados en tiestos (1-10, que el autor compara
+    con vasos griegos), ranas en relieve (11-13), asas (14-18), un pico (19), una vasija (20) y la urna (21). Las
+    inscripciones de las grutas las describe con palabras (pp. 225-226) pero no las dibuja. Las primeras figuras
+    publicadas de inscripciones arubanas son de Martin 1885 (Fontein y Canashito), según Wagenaar Hummelinck 1953;
+    no está en el repo.'
+  corrige: el catálogo 6-fusion/petroglifos_imagenes_2026-10-05.yaml, que leía zigzag, espirales, rana y cara como
+    signos rupestres
+  figuras:
+  - figs: 1, 2
+    donde_en_la_lamina: pdf 12
+    pagina_texto: 223
+    que_es: 'motivo pintado en tiestos: «eene uit rechte lijnen en rechte hoeken gevormde figuur» (greca de líneas
+      rectas y ángulos rectos)'
+    tipo: cerámica pintada
+  - figs: '3'
+    donde_en_la_lamina: pdf 12-13 (en el pliegue)
+    pagina_texto: 223
+    que_es: «eene afbeelding van het klaverblad» (trébol) en tiestos
+    tipo: cerámica pintada
+  - figs: '4'
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 223
+    que_es: «eene kronkelende lijn» (línea ondulante, el «zigzag») en tiestos
+    tipo: cerámica pintada
+  - figs: 5a, 5b
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 223
+    que_es: «eene in zich keerende ronde lijn» (espiral) en tiestos
+    tipo: cerámica pintada
+  - figs: '6'
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 223
+    que_es: «eene uit driehoeken bestaande randversiering» (cenefa de triángulos) en tiestos
+    tipo: cerámica pintada
+  - figs: '7'
+    donde_en_la_lamina: pdf 12
+    pagina_texto: 223
+    que_es: «een grieksch kruis» en tiestos
+    tipo: cerámica pintada
+  - figs: '8'
+    donde_en_la_lamina: pdf 12
+    pagina_texto: 223
+    que_es: «een halve cirkel» (semicírculos concéntricos) en tiestos
+    tipo: cerámica pintada
+  - figs: 9, 10
+    donde_en_la_lamina: pdf 12 (9) y 13 (10)
+    pagina_texto: 223
+    que_es: «eene met stippeltjes versierde lijn» (línea con puntos; la 10 es un rombo con punto) en tiestos
+    tipo: cerámica pintada
+  - figs: 11, 12, 13
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 224
+    que_es: 'ranas y cabezas de rana en relieve en las vasijas pintadas: «Somtijds zijn ten onrechte aan de koppen
+      der kikvorschen ooren toegevoegd: Plaat, fig. 11, 12 en 13» (la 11, la rana entera; la 12, la cabeza con orejas
+      que parece de mono; la 13, la cara de «ojos y cejas»)'
+    tipo: cerámica en relieve
+  - figs: 14a, 14b, 14c
+    donde_en_la_lamina: pdf 12
+    pagina_texto: 224
+    que_es: asas en forma de botones pequeños redondos y largos, rectos y curvos
+    tipo: 'cerámica: asas'
+  - figs: 15a, 15b
+    donde_en_la_lamina: pdf 12-13 (15a en el pliegue) y 13
+    pagina_texto: 224
+    que_es: «ronde en vierkante ooren» (asas-oreja redondas y cuadradas)
+    tipo: 'cerámica: asas'
+  - figs: '16'
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 224
+    que_es: las dos clases de asa juntas
+    tipo: 'cerámica: asas'
+  - figs: 17a-17f
+    donde_en_la_lamina: pdf 12 (17b, c, d, f) y 13 (17a, e)
+    pagina_texto: 224
+    que_es: asas puestas arriba, en el borde, en forma de botones, caras, anillos, hojas
+    tipo: 'cerámica: asas'
+  - figs: '18'
+    donde_en_la_lamina: pdf 12
+    pagina_texto: 224
+    que_es: una segunda asa añadida más abajo
+    tipo: 'cerámica: asas'
+  - figs: '19'
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 224
+    que_es: pico o vertedera, que «door het volk niet zelden voor indiaansche pijpen zijn gehouden»
+    tipo: 'cerámica: pico'
+  - figs: '20'
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 224
+    que_es: vasija con un reborde bajo de 2-3 cm sujeto por cabezas de animal en forma de máscara
+    tipo: 'cerámica: vasija'
+  - figs: '21'
+    donde_en_la_lamina: pdf 13
+    pagina_texto: 224
+    que_es: la forma de la urna funeraria de Santa Cruz (≈ 1 m de alto, borde ondulado), reconstruida de un fondo
+      que el autor vio
+    tipo: 'cerámica: urna'
+mundo:
+- id: vk-mundo-01
+  esfera: geografía política / esfera de interacción
+  pagina: 222
+  pdf: 4
+  dato: Un arubano que vivió cinco años en «Parawana» (Paraguaná) asegura que desde allí, con tiempo claro, se ven
+    muy bien los cerros principales de Aruba; la costa está a «vijf geographische mijlen».
+  etiqueta: atestiguado (testimonio de 1881)
+  epoca: moderna
+  propuesta: 'Para geografía política / esfera-de-interaccion.md: la intervisibilidad Aruba–Paraguaná, dicha por
+    un testigo. Proyectarla al s. XV es reconstruido (la geografía no cambió), y esa proyección la decide quien
+    fusione.'
+- id: vk-mundo-02
+  esfera: geografía política / esfera de interacción
+  pagina: 222
+  pdf: 4
+  dato: 'El autor deriva a los indios de Aruba de Parawana: por la cercanía, por la intervisibilidad y porque en
+    un lugar del norte de Aruba llamado Parawana hay una inscripción que parece un perezoso, animal de tierra firme
+    y no de la isla.'
+  etiqueta: hipotetico (lectura del autor, 1882)
+  epoca: —
+  propuesta: 'Es una LECTURA, no un dato: va con su autor. Choca con la lectura de Wagenaar Hummelinck 1962 del
+    mismo sitio («Paraguana», A 30: un pájaro, tortugas o iguanas). No se fusiona como hecho.'
+- id: vk-mundo-03
+  esfera: ecología / subsistencia
+  pagina: 223
+  pdf: 5
+  dato: Según la tradición, los primeros habitantes vivían en parte en grutas y bajo los bloques de granito, cultivaban
+    poco y se dedicaban más a la pesca «en veeteelt»; limpiaban y trabajaban la tierra con un gancho de madera y
+    sembraban al pie de los cerros o entre los bloques, donde se junta el agua.
+  etiqueta: retro-abstraido (tradición oral de 1881)
+  epoca: colonial/moderna
+  propuesta: 'Para ecología: la técnica (palo-gancho, siembra donde se junta el agua al pie del cerro) es plausible
+    precontacto y se puede proponer así. La «veeteelt» (ovejas y cabras) es colonial: NO se proyecta (regla 3).'
+- id: vk-mundo-04
+  esfera: ecología / alimentos
+  pagina: 223
+  pdf: 5
+  dato: En la seca comían mariscos, las semillas del totumo (Crescentia cujete), las hojas de la «Koeki di Indian»
+    (Agave) y los tallos de la «bringa mosa» (Janipha urens).
+  etiqueta: retro-abstraido (tradición oral de 1881)
+  epoca: colonial/moderna
+  propuesta: Para ecología (alimentos de seca, hambruna). Los taxones son del autor (1882); el nombre actual va
+    aparte, como en la política D7.
+- id: vk-mundo-05
+  esfera: cultura material / vivienda y vestido
+  pagina: 223
+  pdf: 5
+  dato: Los que no vivían bajo los bloques cubrían sus chozas con cañas de maíz u hojas de cocotero y pieles; las
+    mujeres vestían un manto largo («manta»), «dat nog door de Indianen op de vaste kust wordt gedragen».
+  etiqueta: retro-abstraido
+  epoca: colonial/moderna
+  propuesta: 'El cocotero es poscontacto: no se proyecta. La manta como prenda que en 1881 todavía llevaban los
+    indios de tierra firme es dato de la esfera (comparar con el vestido wayuu).'
+- id: vk-mundo-06
+  esfera: creencia / muerte
+  pagina: 224
+  pdf: 6
+  dato: 'Entierro en urna hasta comienzos del s. XIX: un anciano de Savonet vio de niño enterrar a una india en
+    cuclillas dentro de una urna, con la cabeza fuera; muchos invitados, se mataron ovejas y cabras. En Santa Cruz
+    la urna de abajo aparece a menudo tapada con otra, que protegía la cabeza. El carbón en la capa de arriba le
+    hace suponer al autor que se quemaban armas o enseres del muerto sobre la tumba. Nunca halló oro ni monedas
+    en las urnas.'
+  etiqueta: atestiguado (testigo, comienzos del s. XIX) / retro-abstraido para el s. XV
+  epoca: colonial
+  propuesta: 'Para creencia (ritos de muerte). ⚠️ Gatschet 1885 cuenta la MISMA anécdota (el viejo de «Saboneta»):
+    no es una segunda atestación. La quema de enseres es inferencia del autor: va como su lectura.'
+- id: vk-mundo-07
+  esfera: ecología / creencia
+  pagina: 224
+  pdf: 6
+  dato: 'Nota 1: la rana («dori») sólo vive en Aruba, no en Curazao ni en Bonaire. El autor supone que los indios
+    la preferían porque su croar sólo se oye en lluvias y anuncia la buena estación, y compara el croar con el sonido
+    de la marakka.'
+  etiqueta: atestiguado (la distribución, 1881) · hipotetico (la preferencia, lectura del autor)
+  epoca: moderna
+  propuesta: 'La distribución la confirma van Buurt (Pleurodema brachyops, llevada a Curazao en 1910 y a Bonaire
+    en 1928). La lectura simbólica es del autor: no se fusiona como hecho.'
+- id: vk-mundo-08
+  esfera: técnica / pigmentos
+  pagina: 223
+  pdf: 5
+  dato: 'Pinturas minerales: tierra parda (¿ocre?) excavada en la gruta de Fontein; tierra roja sacada del cerro
+    Tunnel, donde quedan hoyos rectangulares rellenos de piedra y muchas piedras trabajadas en cuña; tierra blanca
+    cerca de Oranjestad y en la costa norte; tierra amarilla en Santa Cruz. Una tradición dice que los caribes usaban
+    como aglutinante una savia viscosa de cactus. El negro pardo lo supone sacado de la tinta del calamar.'
+  etiqueta: atestiguado (las canteras y hallazgos, 1881) · retro-abstraido (la savia de cactus, tradición)
+  epoca: moderna
+  propuesta: 'Para transmisión/técnica o ecología: las canteras de pigmento con nombre de lugar. Lo del calamar
+    es conjetura del autor.'
+- id: vk-mundo-09
+  esfera: arte rupestre
+  pagina: 226
+  pdf: 8
+  dato: Las inscripciones están en grutas de caliza (Fontein, Carachito) o bajo bloques de granito (todas al suroeste).
+    Rojo y pardo son los colores más comunes, el blanco no es raro, el negro sólo lo vio dos veces. Según la tradición,
+    algunas figuras bajo los bloques señalan a los antiguos dueños o habitantes del sitio.
+  etiqueta: atestiguado (la observación, 1881) · retro-abstraido (lo de los dueños, tradición)
+  epoca: moderna
+  propuesta: 'Para el catálogo de petroglifos y para creencia/territorio: la tradición de que una figura marca al
+    dueño del lugar. La lectura del autor sobre el significado de los colores (rojo = indios, blanco = blancos,
+    negro = africanos) y el parentesco con los griegos y la Atlántida (p. 225) es especulación: se registra y no
+    se fusiona.'
+- id: vk-mundo-10
+  esfera: memoria / geografía política
+  pagina: 226
+  pdf: 8
+  dato: 'Tradición de Carachito: los indios se defendieron allí de los franceses; los últimos, escondidos en una
+    gruta más alta, fueron delatados por un perro que se quedó atrás y asesinados. En esa gruta circular hay huesos
+    de hombres y de niños: el autor calcula entre ocho y diez personas.'
+  etiqueta: retro-abstraido (tradición oral) · atestiguado (los huesos, 1881)
+  epoca: colonial
+  propuesta: Memoria oral de un episodio colonial. No es precontacto.
+- id: vk-mundo-11
+  esfera: lengua (sociolingüística)
+  pagina: 227
+  pdf: 9
+  dato: '«De Caraïbische taal wordt thans op Aruba niet meer gesproken»: la desplazó el papiamento. El autor sacó
+    las voces «met moeite» de unos viejos, y las comparó con el caribe de Surinam y con el guajiro de la costa:
+    «geheel verschilt» de los dos.'
+  etiqueta: atestiguado (el estado de la lengua, 1881)
+  epoca: moderna
+  propuesta: Para 2-lengua (historia externa). La comparación con el guajiro es de aficionado y no pesa como dato
+    de filiación; se registra porque es la primera que se hizo.
+- id: vk-mundo-12
+  esfera: población
+  pagina: 222
+  pdf: 4
+  dato: En 1880-81, sobre todo en el sureste de Aruba, el autor ve un tipo físico indio «vrij zuiver»; en Curazao
+    ha desaparecido y en Bonaire sólo se reconoce aquí y allá.
+  etiqueta: atestiguado (la observación de 1881, con el sesgo racial de su época)
+  epoca: moderna
+  propuesta: Contexto de la población, no dato del s. XV. Las valoraciones morales del autor (p. 222) no se fusionan.

@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-05**.
 
-**8056 ítems propuestos** en 159 propuestas, más **59 issue(s)/comentario(s) redactados sin publicar**.
+**8056 ítems propuestos** en 159 propuestas, más **60 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -199,6 +199,7 @@ Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 - `taino_oviedo_valdes_1851.yaml` — generado por `lectura del escriba (agente Opus 5) sobre la capa de texto del PDF local, con verificación por imagen de cada forma allí donde la página todavía tiene imagen (impresas 1-154).`
 - `toponimos_mapa_kaketiana.yaml` — generado por `curiana_sim/barrer_mapa.py`
 - `toponimos_por_fuente.yaml` — generado por `curiana_sim/juntar_toponimos.py`
+- `van_koolwijk_1882_aruba_2026-10-05.yaml` — generado por `6-fusion/scripts/minar_van_koolwijk_1882.py — no se edita a mano: se corrige el script y se regenera`
 
 ## Propuestas léxicas (`curiana_sim/lexicon_*.py` — indexadas en su sitio)
 
@@ -279,6 +280,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `taino2-prueba-linguistica-2026-09-22.md` | La prueba lingüística del contacto: cómo se distingue un préstamo de un cognado |
 | `taino2-vocabularios-2026-09-22.md` | T10 — Los vocabularios antillanos: la lista taína con cadena de custodia |
 | `toponimos-esteves-lote-2026-09-22.md` | La cola de Esteves, leída entera — y un Zavala que resulta ser Esteves |
+| `van-koolwijk-1882-2026-10-05.md` | Van Koolwijk 1882: la fuente que está detrás de Gatschet, y lo que eso mueve |
 | `vocabularios-antillanos-2-2026-09-22.md` | M5 — Los vocabularios antillanos que quedaron a medias |
 | `zayas-1931-en-la-lista-maestra-2026-09-23.md` | Zayas 1931 en la lista maestra del taíno: cómo engancharlo y qué mueve |
 
