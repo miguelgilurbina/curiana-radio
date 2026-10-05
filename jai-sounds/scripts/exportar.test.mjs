@@ -33,7 +33,7 @@ const tablas = () => ({
     { id: "A2", name: "Squarepusher", slug: "squarepusher", mbid: "mb-sq" },
   ],
   mb_recordings: [
-    { track_id: "T1", mbid: "r1", primera_edicion: "1966-01-17", generos: ["folk rock"], tags: [], creditos: [{ rol: "producer", atributos: [], nombre: "Tom Wilson", mbid: "mb-tw" }, { rol: "vocal", atributos: [], nombre: "Simon & Garfunkel", mbid: "mb-sg" }], obras: [], ediciones: [] },
+    { track_id: "T1", mbid: "r1", via: "isrc", primera_edicion: "1966-01-17", generos: ["folk rock"], tags: [], creditos: [{ rol: "producer", atributos: [], nombre: "Tom Wilson", mbid: "mb-tw" }, { rol: "vocal", atributos: [], nombre: "Simon & Garfunkel", mbid: "mb-sg" }], obras: [], ediciones: [] },
     { track_id: "T2", mbid: null, primera_edicion: null, generos: [], tags: [], creditos: [], obras: [], ediciones: [] },
   ],
   mb_artists: [{ mbid: "mb-sg", tipo: "Group", pais: "US", area: null, origen: null, inicio: "1963", fin: null, desambiguacion: null, generos: ["folk"], tags: [], miembros: [], integrante_de: [], wikipedia: null, wikidata: "https://www.wikidata.org/wiki/Q484918", discogs: null, bandcamp: null, web: null }],
@@ -69,12 +69,38 @@ test("cada canción sabe en qué estaciones suena, en qué puesto y desde cuánd
   assert.deepEqual(w.estaciones[0].pistas, ["the-sound-of-silence-simon-y-garfunkel", "goodnight-jade-squarepusher"]);
 });
 
+test("una coincidencia por título no le cambia el año al censo", () => {
+  const t = tablas();
+  t.mb_recordings[0].via = "busqueda";
+  assert.equal(armar(dial, t).estaciones[0].censo.desde, 1968); // el de Spotify
+});
+
 test("el censo usa la primera edición de MusicBrainz cuando la hay", () => {
   const c = armar(dial, tablas()).estaciones[0].censo;
   assert.equal(c.desde, 1966); // no 1968, que es lo que dice Spotify
   assert.equal(c.hasta, 1997);
   assert.equal(c.artistas, 2);
   assert.equal(c.ms, 485000);
+});
+
+test("«suena cerca de» premia al que suena al lado, no al alfabeto", () => {
+  const t = tablas();
+  // Cuatro pistas en P1: Simon & Garfunkel, Squarepusher, (Aphex), (Zappa)
+  t.tracks.push(
+    { id: "T3", name: "Avril 14th", slug: "avril-14th-aphex-twin", album_id: "AL2", track_number: 1, duration_ms: 1, spotify_url: null },
+    { id: "T4", name: "Peaches en Regalia", slug: "peaches-en-regalia-frank-zappa", album_id: "AL2", track_number: 2, duration_ms: 1, spotify_url: null }
+  );
+  t.artists.push({ id: "A3", name: "Aphex Twin", slug: "aphex-twin", mbid: null }, { id: "A4", name: "Frank Zappa", slug: "frank-zappa", mbid: null });
+  t.track_artists.push({ track_id: "T3", artist_id: "A3", position: 0 }, { track_id: "T4", artist_id: "A4", position: 0 });
+  t.playlist_tracks = [
+    { playlist_id: "P1", track_id: "T4", position: 0, added_at: null }, // Zappa, al lado de S&G
+    { playlist_id: "P1", track_id: "T1", position: 1, added_at: null }, // Simon & Garfunkel
+    { playlist_id: "P1", track_id: "T2", position: 2, added_at: null },
+    { playlist_id: "P1", track_id: "T3", position: 3, added_at: null }, // Aphex, a dos puestos
+  ];
+  const cerca = armar(dial, t).artistas["simon-y-garfunkel"].cerca.map(([a]) => a);
+  assert.equal(cerca[0] === "frank-zappa" || cerca[0] === "squarepusher", true);
+  assert.ok(cerca.indexOf("aphex-twin") > cerca.indexOf("frank-zappa"), "Aphex (a 2 puestos) va después de Zappa (al lado), aunque la «a» va antes que la «f»");
 });
 
 test("artistas con su ficha, sus voces y quién suena cerca", () => {

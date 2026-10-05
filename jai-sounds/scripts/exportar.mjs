@@ -84,6 +84,9 @@ export function armar(dial, t) {
       dial: enDial,
       // undefined: no se consultó · null: MusicBrainz no la tiene
       mb: mb === undefined ? undefined : !mb.mbid ? null : {
+        // isrc: la misma grabación · busqueda: por título y duración (puede ser
+        // otra edición): las páginas no le creen la fecha sin decirlo.
+        via: mb.via,
         f: mb.primera_edicion,
         g: mb.generos,
         tags: mb.tags,
@@ -134,25 +137,47 @@ export function armar(dial, t) {
     };
   }
 
-  // ── «suena cerca de»: quienes comparten estación, con la estación nombrada ──
-  const porEstacion = estaciones.map((e) => new Set(e.pistas.flatMap((s) => canciones[s].a)));
-  for (const [slug, ar] of Object.entries(artistas)) {
-    const cuenta = new Map();
-    porEstacion.forEach((set, i) => {
-      if (!set.has(slug)) return;
-      for (const otro of set) if (otro !== slug) {
-        const c = cuenta.get(otro) ?? { n: 0, e: i };
-        c.n++;
-        cuenta.set(otro, c);
+  // ── «suena cerca de»: quién suena AL LADO en la secuencia ──
+  // Compartir estación no basta (en una de 280 pistas todos la comparten):
+  // pesa quién suena a 1, 2 o 3 puestos, porque la secuencia es curaduría.
+  // Después, cuántas estaciones comparten; el nombre solo desempata.
+  const VENTANA = 3;
+  const cerca = new Map(); // artista → Map(otro → {w, n, e, ests})
+  estaciones.forEach((e) => {
+    e.pistas.forEach((s, p) => {
+      for (const a of canciones[s].a) {
+        const m = cerca.get(a) ?? cerca.set(a, new Map()).get(a);
+        for (let d = -VENTANA; d <= VENTANA; d++) {
+          const vecina = e.pistas[p + d];
+          if (!d || !vecina) continue;
+          for (const otro of canciones[vecina].a) {
+            if (otro === a) continue;
+            const c = m.get(otro) ?? { w: 0, e: e.i, wE: 0, ests: new Set() };
+            const peso = VENTANA + 1 - Math.abs(d);
+            c.w += peso;
+            c.ests.add(e.i);
+            if (peso > c.wE) {
+              c.wE = peso;
+              c.e = e.i;
+            }
+            m.set(otro, c);
+          }
+        }
       }
     });
-    ar.cerca = [...cuenta].sort((a, b) => b[1].n - a[1].n || a[0].localeCompare(b[0])).slice(0, 8).map(([a, c]) => [a, c.e]);
+  });
+  for (const [slug, ar] of Object.entries(artistas)) {
+    const m = cerca.get(slug) ?? new Map();
+    ar.cerca = [...m]
+      .sort((x, y) => y[1].w - x[1].w || y[1].ests.size - x[1].ests.size || x[0].localeCompare(y[0]))
+      .slice(0, 8)
+      .map(([a, c]) => [a, c.e]);
   }
 
   // ── el censo de cada estación ──
   for (const e of estaciones) {
     const cs = e.pistas.map((s) => canciones[s]);
-    const anios = cs.map((c) => anio(c.mb?.f) ?? anio(c.fecha)).filter(Boolean);
+    const anios = cs.map((c) => (c.mb?.via === "isrc" ? anio(c.mb.f) : null) ?? anio(c.fecha)).filter(Boolean);
     const cuenta = new Map();
     cs.forEach((c) => c.a.forEach((a) => cuenta.set(a, (cuenta.get(a) ?? 0) + 1)));
     e.censo = {
@@ -191,7 +216,7 @@ async function main() {
   const albums = await leerPorIds(db, "albums", "id, name, slug, album_type, release_date, image_url", "id", tracks.map((x) => x.album_id));
   const album_artists = await leerPorIds(db, "album_artists", "album_id, artist_id, position", "album_id", albums.map((a) => a.id));
   const artists = await leerPorIds(db, "artists", "id, name, slug, mbid", "id", [...track_artists, ...album_artists].map((r) => r.artist_id));
-  const mb_recordings = await leerPorIds(db, "mb_recordings", "track_id, mbid, primera_edicion, generos, tags, creditos, obras, ediciones", "track_id", ids);
+  const mb_recordings = await leerPorIds(db, "mb_recordings", "track_id, mbid, via, primera_edicion, generos, tags, creditos, obras, ediciones", "track_id", ids);
   const mbids = [...artists.map((a) => a.mbid), ...mb_recordings.flatMap((m) => (m.creditos ?? []).map((c) => c.mbid))];
   const mb_artists = await leerPorIds(db, "mb_artists", "*", "mbid", mbids);
   const internet = await todas(() => db.from("internet").select("entidad, entidad_id, titulo, extracto, url, idioma, licencia"));
