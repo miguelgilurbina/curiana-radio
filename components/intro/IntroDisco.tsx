@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { arrancarDisco, type MotorDisco } from "./disco-motor";
+import { medir } from "@/lib/analitica";
 
 // La intro v1 · El Disco. El visitante está obligado a interactuar: trazando
 // círculos alrededor de un disco de arena, los surcos del viento se ordenan
@@ -97,6 +98,7 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
     if (saliendo.current) return;
     saliendo.current = true;
     marcarVista();
+    medir("intro", { accion: "sintonizar" });
     const ir = () => router.push(DESTINO);
     if (motor.current) motor.current.salir(ir);
     else ir();
@@ -174,7 +176,10 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
           type="button"
           className="intro-disco-saltar"
           inert={ok}
-          onClick={() => motor.current?.afinado()}
+          onClick={() => {
+            medir("intro", { accion: "saltar" });
+            motor.current?.afinado();
+          }}
         >
           [ SALTAR → ]
         </button>

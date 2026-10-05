@@ -12,6 +12,7 @@ import type { EdicionSintonizada, PistaResenada } from "@/types/jai-sounds";
 import EstacionCard from "./EstacionCard";
 import JA from "./JA";
 import { CAJA, CTA } from "./estilos";
+import { medir } from "@/lib/analitica";
 
 export interface EstacionDial {
   slug: string;
@@ -139,6 +140,7 @@ export default function Dial({
 
   function sintonizar(i: number) {
     setActiva(i);
+    medir("estacion", { estacion: sintonias[i].nombre });
     const destino = sintonizada.current;
     if (!destino) return;
     // Con la parrilla entera la estación sintonizada queda abajo: sin

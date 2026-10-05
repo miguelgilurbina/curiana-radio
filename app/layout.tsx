@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import ShellRadio from "@/components/layout/ShellRadio";
 import JsonLd from "@/components/seo/JsonLd";
 import { jsonLdSitio, SITIO, TARJETA_RADIO } from "@/lib/seo";
+import Analitica from "@/components/analitica/Analitica";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,6 +89,7 @@ export default function RootLayout({
         <ShellRadio nav={<Navigation />} footer={<Footer />}>
           {children}
         </ShellRadio>
+        <Analitica />
       </body>
     </html>
   );

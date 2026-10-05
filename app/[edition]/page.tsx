@@ -6,6 +6,7 @@ import { Heading, BodyText, Quote, SectionTitle } from '@/components/ui/Typograp
 import type { Metadata } from 'next';
 import type { ComponentProps } from 'react';
 import { metadatos, tarjeta } from '@/lib/seo';
+import FinDeLectura from '@/components/analitica/FinDeLectura';
 
 // MDX components mapping
 const components = {
@@ -147,6 +148,7 @@ export default async function EditionPage({ params }: EditionPageProps) {
               </div>
             </section>
           )}
+          <FinDeLectura pagina={`/${slug}`} />
 
           {/* Navigation to Archive */}
           <div className="text-center pt-16 border-t border-earth-200">

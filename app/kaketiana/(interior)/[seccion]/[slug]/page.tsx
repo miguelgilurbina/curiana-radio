@@ -9,6 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Overline } from "@/components/simulador/ui";
 import { WikiProse } from "@/components/simulador/wiki-mdx";
 import ArticuloEnsayo from "@/components/kaketiana/ArticuloEnsayo";
+import FinDeLectura from "@/components/analitica/FinDeLectura";
 
 interface ArticuloProps {
   params: Promise<{ seccion: string; slug: string }>;
@@ -113,6 +114,7 @@ export default async function ArticuloPage({ params }: ArticuloProps) {
       <div className="mt-8">
         {/* Las voces caquetías que el artículo nombra enlazan a su ficha */}
         <WikiProse source={enlazarVoces(pagina.cuerpo)} />
+        <FinDeLectura pagina={`/kaketiana/${seccion}/${slug}`} />
       </div>
 
       {/* Sobre qué se sostiene — rescatado del preámbulo del ensayo */}
