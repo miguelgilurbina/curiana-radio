@@ -159,7 +159,7 @@ export function Aristas() {
             className={`${TARJETA} border-l-[3px] border-(--jai-senal) bg-(--jai-panel) hover:border-frequency hover:shadow-xl`}
           >
             <span className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-(--jai-luz-soft)">
-              I · jay · caquetío · oír, escuchar
+              I · jai · caquetío · oír, escuchar
             </span>
             <Cartel as="h3" className="text-[1.7rem]">
               Jai Sounds

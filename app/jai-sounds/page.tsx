@@ -86,7 +86,7 @@ export default async function JaiSoundsPage() {
         className={`${CAJA} grid min-h-[600px] grid-rows-[auto_1fr_auto] pt-7 md:min-h-[calc(100svh-4rem)]`}
       >
         <div className="jai-dato flex justify-between gap-4 text-[10px] text-(--jai-luz-faint)">
-          <span>jai sounds · jay · oír, escuchar</span>
+          <span>jai sounds · jai · oír, escuchar</span>
           <span className="hidden sm:inline">escrito fundacional</span>
         </div>
         <div className="flex flex-col justify-center gap-[26px] py-12">

@@ -17,9 +17,9 @@ trajo al mundo, el sentimiento que la sostiene), no por lo que es.
 
 - **jai** (caquetío) = **oír, escuchar**. Fuente: Zavala Reyes 2015, glosario
   #175, «Jai (AM): Oír, escuchar.» Nunca «ruido, sonido»: esa glosa estaba mal.
-  **Abierto:** el handoff anterior escribió el rótulo con *y* («jay · caquetío ·
-  oír, escuchar») y la fuente escribe **Jai**. Hasta que Miguel decida, usar
-  «jai».
+  **Decidido (Miguel, 2026-10-05):** se escribe **jai**, como la fuente. El
+  rótulo es «jai · caquetío · oír, escuchar»; la *y* del handoff anterior
+  queda descartada.
 - El dial son **23 estaciones** (playlists de Miguel en Spotify), cada una con
   **portada propia** de arte original. Las portadas son el alma visual: ver
   `assets/portadas-spotify.png` (adjunta).

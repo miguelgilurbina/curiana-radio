@@ -51,7 +51,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
     },
     {
       nombre: "JAI SOUNDS",
-      frecuencia: "88.1 · jay · caquetío · oír, escuchar",
+      frecuencia: "88.1 · jai · caquetío · oír, escuchar",
       titulo: "Jai Sounds",
       bajada: "La cabina de noche. Cinco pistas por emisión, reseñadas al oído; el dial rota su matiz con cada visita.",
       cta: (
