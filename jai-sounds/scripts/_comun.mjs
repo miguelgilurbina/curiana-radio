@@ -73,8 +73,9 @@ export async function idsDelDial(db) {
   if (dial.length === 0) {
     fatal("No hay estaciones marcadas en el dial. Correr antes:\n  node jai-sounds/scripts/ingest_spotify.mjs --sync --dial");
   }
+  // Con orden: paginar sin él puede saltarse o repetir filas entre páginas.
   const filas = await todas(() =>
-    db.from("playlist_tracks").select("track_id").in("playlist_id", dial.map((p) => p.id))
+    db.from("playlist_tracks").select("track_id").in("playlist_id", dial.map((p) => p.id)).order("playlist_id").order("track_id")
   );
   return [...new Set(filas.map((f) => f.track_id))];
 }
