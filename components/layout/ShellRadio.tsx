@@ -4,22 +4,39 @@ import type { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Background from "./Background";
 
-// El chrome de la radio (fondo animado, navegación y pie) envuelve todas las
-// páginas menos las que traen el suyo: la intro El Disco y la landing de la
-// noche, que tiene su barra en el hero y su colofón al pie.
-const PROPIAS = new Set(["/", "/intro", "/inicio"]);
+// El marco de cada página, según la ruta:
+// - la intro El Disco (/, /intro) va sin marco: trae el suyo;
+// - la noche —la landing, Señales y «Quién transmite»— lleva el shell La Noche
+//   (CabeceraNoche + PieNoche, BRAND_MVP §13);
+// - el resto del sitio sigue con el papel de la radio (Navigation + Footer)
+//   hasta que su vista entre a la noche.
+const SIN_MARCO = new Set(["/", "/intro"]);
+const esNoche = (ruta: string) =>
+  ruta === "/inicio" || ruta === "/sobre" || ruta === "/senales" || ruta.startsWith("/senales/");
 
 export default function ShellRadio({
   nav,
   footer,
+  cabeceraNoche,
+  pieNoche,
   children,
 }: {
   nav: ReactNode;
   footer: ReactNode;
+  cabeceraNoche: ReactNode;
+  pieNoche: ReactNode;
   children: ReactNode;
 }) {
   const ruta = usePathname();
-  if (PROPIAS.has(ruta)) return <main>{children}</main>;
+  if (SIN_MARCO.has(ruta)) return <main>{children}</main>;
+  if (esNoche(ruta))
+    return (
+      <>
+        {cabeceraNoche}
+        <main>{children}</main>
+        {pieNoche}
+      </>
+    );
   return (
     <Background>
       {nav}

@@ -1,4 +1,5 @@
 import FrequencyBadge from "@/components/ui/FrequencyBadge";
+import { REDES } from "@/lib/redes";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,6 +18,17 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex items-center space-x-6 text-sm font-sans">
+            {REDES.map((r) => (
+              <a
+                key={r.nombre}
+                href={r.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-deep-700 hover:text-frequency transition-colors"
+              >
+                {r.nombre}
+              </a>
+            ))}
             <a
               href="https://github.com/miguelgilurbina/curiana-radio"
               target="_blank"

@@ -59,6 +59,15 @@
   --noche-filete: #3a4b61; /* borde */
   --noche-filete-fuerte: #5a6d85; /* borde fuerte, puntos inactivos */
   --noche-oro: #e0bb66; /* el nombre de El Disco, junto al logo */
+  /* El acento de la noche (shell La Noche, 2a «oro de arena», elegido por
+     Miguel el 2026-10-05): reemplaza al naranja dentro de la noche — aguja,
+     punto en vivo, badge 88.8, CTA, hover. Sobre su relleno, texto
+     --noche-fondo (10.2:1). */
+  --noche-acento: #e6b43c;
+  /* la tinta del acento para hover, filete de cita y foco (Señales); en el
+     claro de la radio pasa a un oro legible sobre papel */
+  --noche-frecuencia-tinta: var(--noche-acento);
+  --noche-dato: #7e93aa; /* overlines y línea legal del shell: sólo mono pequeño (5.7:1) */
 
   /* Typography */
   --font-serif: var(--font-lora);
@@ -143,7 +152,7 @@
   --sim-rule: #d5c9b0;
   --sim-rubrica: #9c3a1d; /* almagre: lo editorial, «, subrayado */
   --sim-fuego: #b06a1c; /* ocre: la forma caquetía, ◆ */
-  --kk-extra: #3f7d74; /* salina: enlaces, datos vivos */
+  --kk-extra: #2e655c; /* salina: enlaces, datos vivos. Era #3f7d74 (4.1:1, no llegaba a AA); handoff senales_luces */
 }
 
 @layer components {
@@ -486,6 +495,12 @@
   --buc-ultramar: #2154c5;
   --buc-oro: #c9a05a;
   --buc-luz: #f3e6cf;
+  /* el cuerpo de un cuento (handoff senales_luces): secundario, oro legible,
+     enlace y placa, que el telón no tenía */
+  --buc-luz-2: #c9c3d9;
+  --buc-oro-tinta: #c9a05a;
+  --buc-enlace: #8fb0f0;
+  --buc-panel: #2d2c5e;
 }
 
 @layer components {
@@ -820,8 +835,11 @@
 /* ── La intro v1: El Disco ──────────────────────────────────────────────
    Pantalla de entrada (components/intro/IntroDisco.tsx). Un disco de arena
    en WebGL2: girando alrededor, los surcos del viento se ordenan en la
-   espiral del isotipo. Todo el texto va sobre placa sólida (≥ 11:1): nunca
-   texto sobre arena. Valores 1:1 del prototipo (Intro v1 El Disco.html). */
+   espiral del isotipo, y al afinar la arena se vuelve el sello. Todo el texto
+   va sobre la noche sólida (≈ 14:1): nunca texto sobre arena. Valores del
+   prototipo (Intro v1 El Disco.html, handoff 2026-10-05): el color sale del
+   logo, hueso sobre #0F1621; el acento es el oro de la noche (§13), no el
+   naranja del prototipo (decisión de Miguel, 2026-10-05). */
 @layer components {
   .intro-disco {
     position: fixed;
@@ -829,7 +847,7 @@
     z-index: 60;
     overflow: hidden;
     touch-action: none;
-    background: var(--noche-hondo);
+    background: var(--noche-fondo);
     color: var(--noche-hueso);
     font-family: ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;
   }
@@ -867,7 +885,29 @@
   }
   .intro-disco-tl b {
     font-weight: 400;
-    color: var(--noche-oro);
+    color: var(--color-arte-hueso);
+  }
+  /* la arena que se vuelve sello: los granos y el sello nítido. El motor les
+     da tamaño, lugar y opacidad (disco-motor.ts). */
+  .intro-disco-polvo {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .intro-disco-sello {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: 49% 38%;
+    will-change: opacity, transform;
+  }
+  .intro-disco :focus-visible {
+    outline-color: var(--noche-acento);
   }
   .intro-disco-tr {
     top: 26px;
@@ -877,32 +917,6 @@
   }
   .intro-disco-tr span {
     color: var(--noche-hueso);
-  }
-  /* El nombre va con el logo, como un lockup: aparece al afinar, al ritmo
-     del revelado de la espiral (rev sube en ~1.8 s), a la derecha del disco y
-     centrado en él. Nunca encima de la arena: sale del borde del disco, que
-     es min(32vh, 44vw) de radio con el centro 9vh arriba (disco-motor.ts). */
-  .intro-disco-nombre {
-    position: absolute;
-    z-index: 2;
-    left: calc(50% + min(32vh, 44vw) + clamp(22px, 2.6vw, 44px));
-    top: calc(50% - 9vh);
-    transform: translate(-10px, -50%);
-    text-align: left;
-    font-family: var(--font-lora), Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(22px, 2.6vw, 38px);
-    line-height: 1.05;
-    color: var(--noche-oro);
-    pointer-events: none;
-    opacity: 0;
-    transition:
-      opacity 1.8s ease-out,
-      transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .intro-disco[data-ok] .intro-disco-nombre {
-    opacity: 1;
-    transform: translate(0, -50%);
   }
   .intro-disco-pie {
     position: absolute;
@@ -974,7 +988,7 @@
     left: 0;
     width: 2px;
     height: 14px;
-    background: var(--color-frequency);
+    background: var(--noche-acento);
     transition: left 0.15s;
   }
   .intro-disco-final {
@@ -1001,7 +1015,7 @@
     height: 7px;
     margin-right: 9px;
     border-radius: 9999px;
-    background: var(--color-frequency);
+    background: var(--noche-acento);
     vertical-align: 1px;
     animation: noche-pulso 1.6s ease infinite;
   }
@@ -1011,7 +1025,7 @@
     padding: 15px 28px;
     border: 1px solid var(--noche-filete-fuerte);
     border-radius: 2px;
-    background: var(--noche-hondo);
+    background: var(--noche-fondo);
     color: var(--noche-hueso);
     font: inherit;
     font-size: 12px;
@@ -1024,8 +1038,8 @@
   }
   .intro-disco-sintonizar:hover,
   .intro-disco-sintonizar:focus-visible {
-    border-color: var(--color-frequency);
-    color: var(--color-frequency);
+    border-color: var(--noche-acento);
+    color: var(--noche-acento);
   }
   .intro-disco-proverbio {
     max-width: 34ch;
@@ -1043,7 +1057,7 @@
     padding: 10px 14px;
     border: 1px solid var(--noche-filete);
     border-radius: 2px;
-    background: var(--noche-hondo);
+    background: var(--noche-fondo);
     color: var(--noche-hueso);
     font: inherit;
     font-size: 10px;
@@ -1052,15 +1066,15 @@
   }
   .intro-disco-saltar:hover,
   .intro-disco-saltar:focus-visible {
-    color: var(--color-frequency);
-    border-color: var(--color-frequency);
+    color: var(--noche-acento);
+    border-color: var(--noche-acento);
   }
   .intro-disco[data-ok] .intro-disco-saltar {
     opacity: 0;
     pointer-events: none;
   }
   /* El cursor del sistema se esconde sobre el lienzo: un anillo en hueso
-     con el punto en frequency. Crece y se vuelve naranja al presionar. */
+     con el punto en el acento. Crece y se vuelve oro al presionar. */
   .intro-disco-anillo {
     position: absolute;
     z-index: 3;
@@ -1083,19 +1097,19 @@
     height: 2px;
     margin: -1px;
     border-radius: 9999px;
-    background: var(--color-frequency);
+    background: var(--noche-acento);
   }
   .intro-disco[data-baja] .intro-disco-anillo {
     width: 46px;
     height: 46px;
     margin: -23px 0 0 -23px;
-    border-color: var(--color-frequency);
+    border-color: var(--noche-acento);
   }
   .intro-disco-velo {
     position: absolute;
     inset: 0;
     z-index: 5;
-    background: var(--noche-hondo);
+    background: var(--noche-fondo);
     opacity: 0;
     pointer-events: none;
   }
@@ -1118,7 +1132,7 @@
     align-items: center;
     justify-content: center;
     gap: 28px;
-    background: var(--noche-hondo);
+    background: var(--noche-fondo);
   }
   .intro-disco-sin-js a {
     padding: 15px 28px;
@@ -1133,33 +1147,346 @@
     .intro-disco-punto {
       animation: none;
     }
-    .intro-disco-nombre {
-      transition: none;
-    }
   }
   @media (max-width: 640px) {
     .intro-disco-tr {
       display: none;
     }
   }
-  /* Vertical (el disco llena el ancho): al costado no cabe, así que el nombre
-     va debajo del disco, en una línea, antes del bloque final. */
-  @media (max-aspect-ratio: 1/1) {
-    .intro-disco-nombre {
-      left: 50%;
-      top: calc(50% - 9vh + min(32vh, 44vw) + 22px);
-      transform: translate(-50%, 8px);
-      text-align: center;
-      white-space: nowrap;
-      font-size: clamp(20px, 5.4vw, 30px);
-    }
-    .intro-disco[data-ok] .intro-disco-nombre {
-      transform: translate(-50%, 0);
-    }
-    .intro-disco-nombre-salto {
-      display: none;
-    }
-  }
+}
+
+/* ══ El shell La Noche (BRAND_MVP §13) ═══════════════════════════════════
+   Cabecera y pie comunes de la landing, Señales y «Quién transmite»: 1a «El
+   dial» con el acento 2a «oro de arena» (design_handoff_senales_luces/shell).
+   El shell va siempre de noche, aunque la página que enmarca esté en claro.
+   Sus filetes son un paso más hondos que los de la landing (SHELL.md). */
+.shell-noche {
+  --noche-filete: #2b3d52;
+  --noche-filete-fuerte: #3a4b61;
+  --shell-hueso: #f3ead4; /* el ítem activo y los titulares del shell */
+  color-scheme: dark;
+}
+/* el foco también es oro en la noche (el global es naranja, para el papel) */
+.shell-noche :focus-visible,
+[data-radio="noche"] :focus-visible {
+  outline-color: var(--noche-acento);
+}
+/* el rebote del scroll es noche también bajo el shell */
+html:has(.shell-noche) {
+  background: var(--noche-fondo);
+}
+
+/* ══ El motor de pieles de Señales (BRAND_MVP §12) ════════════════════════
+   Una plantilla, N pieles. Cada piel es datos: sus tokens de sección (los
+   mismos de su manual) y un MAPA a un juego común de alias --e-*, que es lo
+   único que lee la plantilla (app/senales/[slug], components/senales/).
+   La luz no cambia clases: html[data-luz] redefine los tokens de la piel, y
+   los alias, declarados en el mismo elemento, los toman solos.
+   Valores: design_handoff_senales_luces (senales-luces.css), con el acento
+   de la noche que eligió Miguel (2a, oro de arena). Una piel nueva = su
+   bloque de alias aquí + su ficha en components/senales/pieles/. */
+
+/* ── Los sellos de las aristas: un cuadro de 7px en las listas de la noche
+   (índice, landing). ≥ 3:1 como trazo en las dos luces. */
+:root {
+  --sello-radio: #ff6b35;
+  --sello-kaketiana: #b06a1c;
+  --sello-jai-sounds: oklch(0.8 0.15 212); /* la estación médano, fija */
+  --sello-galeria: #f0efec;
+  --sello-buchibe: #c9a05a;
+}
+
+/* ── Los alias de cada piel ─────────────────────────────────────────────── */
+[data-piel] {
+  /* lo común: la cabecera va en la superficie de la piel salvo que la piel
+     diga otra cosa (Buchibe la pone en el telón) */
+  --e-cabecera-fondo: var(--e-fondo);
+  --e-titulo: var(--e-texto);
+  --e-cabecera-texto: var(--e-texto);
+  --e-cabecera-texto-2: var(--e-texto-2);
+  --e-figura-max: 65ch;
+  --e-sum-peso: 400;
+  --e-foco: var(--e-riel);
+  background: var(--e-fondo);
+  color: var(--e-texto);
+}
+
+/* La radio · la noche — nativo oscuro */
+[data-piel="radio"] {
+  color-scheme: dark;
+  --e-fondo: var(--noche-fondo);
+  --e-placa: var(--noche-panel);
+  --e-texto: var(--noche-hueso);
+  --e-texto-2: var(--noche-hueso-2);
+  --e-filete: var(--noche-filete);
+  --e-enlace: var(--noche-hueso);
+  --e-enlace-hover: var(--noche-frecuencia-tinta);
+  --e-capitular: var(--noche-hueso);
+  --e-riel: color-mix(in srgb, var(--noche-frecuencia-tinta) 30%, transparent);
+  --e-foco: var(--noche-frecuencia-tinta);
+  --e-cita-fondo: transparent;
+  --e-cita-ancho: 2px;
+  --e-radio: 2px;
+  --e-radio-cita: 0;
+  --e-tit-familia: var(--font-lora), Georgia, serif;
+  --e-tit-peso: 600;
+  --e-tit-ejes: normal;
+  --e-h2-ejes: normal;
+  --e-sum-familia: var(--font-lora), Georgia, serif;
+  --e-sum-estilo: italic;
+  --e-sum-ejes: normal;
+  --e-cuerpo-familia: var(--font-inter), system-ui, sans-serif;
+  --e-cuerpo-tamano: 1.125rem;
+  --e-cuerpo-interlineado: 1.75;
+  --e-dato-tracking: 0.24em;
+  --e-dato-caja: uppercase;
+  --e-cita-familia: var(--font-lora), Georgia, serif;
+  --e-cita-estilo: italic;
+}
+
+/* Kaketiana · sal y almagre — nativo claro (sus tokens: [data-kk-dir="sal"]) */
+[data-piel="kaketiana"] {
+  color-scheme: light;
+  --e-fondo: var(--sim-paper);
+  --e-placa: var(--sim-paper-deep);
+  --e-texto: var(--sim-ink);
+  --e-texto-2: var(--sim-ink-soft);
+  --e-filete: var(--sim-rule);
+  --e-enlace: var(--kk-extra);
+  --e-enlace-hover: var(--sim-rubrica);
+  --e-capitular: var(--sim-rubrica);
+  --e-riel: var(--sim-rubrica);
+  --e-cita-fondo: var(--sim-paper-deep);
+  --e-cita-ancho: 3px;
+  --e-radio: 16px;
+  --e-radio-cita: 0 12px 12px 0;
+  --e-tit-familia: var(--font-fraunces), var(--font-lora), Georgia, serif;
+  --e-tit-peso: 600;
+  --e-tit-ejes: "SOFT" 0, "WONK" 1;
+  --e-h2-ejes: "SOFT" 0, "WONK" 1;
+  --e-sum-familia: var(--font-lora), Georgia, serif;
+  --e-sum-estilo: italic;
+  --e-sum-ejes: normal;
+  --e-cuerpo-familia: var(--font-inter), system-ui, sans-serif;
+  --e-cuerpo-tamano: 1.02rem;
+  --e-cuerpo-interlineado: 1.8;
+  --e-dato-tracking: 0.18em;
+  --e-dato-caja: uppercase;
+  --e-cita-familia: var(--font-lora), Georgia, serif;
+  --e-cita-estilo: italic;
+}
+
+/* JAI Sounds · el dial — nativo oscuro (sus tokens: [data-jai-theme="dial"]).
+   NUNCA el naranja frequency: ni en el foco. */
+[data-piel="jai-sounds"] {
+  color-scheme: dark;
+  --e-fondo: var(--jai-noche);
+  --e-placa: var(--jai-panel);
+  --e-texto: var(--jai-luz);
+  --e-texto-2: var(--jai-luz-soft);
+  --e-filete: var(--jai-rule);
+  --e-enlace: var(--jai-senal);
+  --e-enlace-hover: var(--jai-luz);
+  --e-capitular: var(--jai-luz);
+  --e-riel: var(--jai-senal);
+  --e-cita-fondo: transparent;
+  --e-cita-ancho: 3px;
+  --e-radio: 0;
+  --e-radio-cita: 0;
+  --e-tit-familia: var(--jai-display);
+  --e-tit-peso: 700;
+  --e-tit-ejes: "opsz" 72, "SOFT" 0, "WONK" 1;
+  --e-h2-ejes: "opsz" 36, "SOFT" 0, "WONK" 1;
+  --e-sum-familia: var(--jai-display);
+  --e-sum-estilo: normal;
+  --e-sum-peso: 500;
+  --e-sum-ejes: "opsz" 72, "SOFT" 30, "WONK" 1;
+  --e-cuerpo-familia: var(--font-inter), system-ui, sans-serif;
+  --e-cuerpo-tamano: 1.0625rem;
+  --e-cuerpo-interlineado: 1.7;
+  --e-dato-tracking: 0.3em;
+  --e-dato-caja: lowercase;
+  --e-cita-familia: var(--jai-display);
+  --e-cita-estilo: normal;
+}
+
+/* Galería · la sala neutra — nativo oscuro (sus tokens: [data-galeria-theme="sala"]).
+   R = G = B en todo; la imagen es lo único con color, y sale hasta 72rem. */
+[data-piel="galeria"] {
+  color-scheme: dark;
+  --e-fondo: var(--gal-sala);
+  --e-placa: var(--gal-placa);
+  --e-texto: var(--gal-luz);
+  --e-texto-2: var(--gal-luz-soft);
+  --e-filete: var(--gal-rule);
+  --e-enlace: var(--gal-luz);
+  --e-enlace-hover: var(--gal-luz-soft);
+  --e-capitular: var(--gal-luz);
+  --e-riel: var(--gal-luz-soft);
+  --e-cita-fondo: var(--gal-placa);
+  --e-cita-ancho: 2px;
+  --e-radio: 0;
+  --e-radio-cita: 0;
+  --e-figura-max: 72rem;
+  --e-tit-familia: var(--font-lora), Georgia, serif;
+  --e-tit-peso: 600;
+  --e-tit-ejes: normal;
+  --e-h2-ejes: normal;
+  --e-sum-familia: var(--font-lora), Georgia, serif;
+  --e-sum-estilo: italic;
+  --e-sum-ejes: normal;
+  --e-cuerpo-familia: var(--font-inter), system-ui, sans-serif;
+  --e-cuerpo-tamano: 1.0625rem;
+  --e-cuerpo-interlineado: 1.75;
+  --e-dato-tracking: 0.3em;
+  --e-dato-caja: uppercase;
+  --e-cita-familia: var(--font-lora), Georgia, serif;
+  --e-cita-estilo: italic;
+}
+
+/* Buchibe · el telón — nativo oscuro (sus tokens: [data-buchibe-theme="telon"]).
+   La cabecera va en el telón y NO cambia de luz: sus alias son fijos. */
+[data-piel="buchibe"] {
+  color-scheme: dark;
+  --e-fondo: var(--buc-noche);
+  --e-placa: var(--buc-panel);
+  --e-texto: var(--buc-luz);
+  --e-texto-2: var(--buc-luz-2);
+  --e-filete: var(--buc-panel);
+  --e-enlace: var(--buc-enlace);
+  --e-enlace-hover: var(--buc-luz);
+  --e-capitular: var(--buc-oro-tinta);
+  --e-riel: var(--buc-oro-tinta);
+  --e-cita-fondo: transparent;
+  --e-cita-ancho: 2px;
+  --e-radio: 0;
+  --e-radio-cita: 0;
+  --e-cabecera-fondo: #8c2b12; /* el telón */
+  --e-titulo: #c9a05a; /* oro sobre telón: 3.5:1, sólo título grande */
+  --e-cabecera-texto: #f3e6cf;
+  --e-cabecera-texto-2: #f3e6cf;
+  --e-tit-familia: var(--font-fraunces), var(--font-lora), Georgia, serif;
+  --e-tit-peso: 600;
+  --e-tit-ejes: "SOFT" 0, "WONK" 1;
+  --e-h2-ejes: "SOFT" 0, "WONK" 1;
+  --e-sum-familia: var(--font-lora), Georgia, serif;
+  --e-sum-estilo: italic;
+  --e-sum-ejes: normal;
+  --e-cuerpo-familia: var(--font-lora), Georgia, serif;
+  --e-cuerpo-tamano: 1.15rem;
+  --e-cuerpo-interlineado: 1.85;
+  --e-dato-tracking: 0.2em;
+  --e-dato-caja: uppercase;
+  --e-cita-familia: var(--font-lora), Georgia, serif;
+  --e-cita-estilo: italic;
+}
+/* la franja y el telón fijan sus valores nocturnos en cualquier luz */
+[data-piel="buchibe"] .buc-cabecera {
+  --buc-noche: #23224f;
+  --buc-luz: #f3e6cf;
+  --buc-luz-2: #f3e6cf;
+}
+
+/* ── La otra luz de cada piel (lib/luz.ts) ───────────────────────────────── */
+
+/* La radio en claro: el papel. La tinta del acento pasa al oro legible sobre
+   papel (#7E5A1E, 5.8:1, el --buc-oro-tinta del mismo handoff: el oro de
+   arena da 1.9:1) y el filete de la cita va al 100 %. */
+html[data-luz="claro"] [data-piel="radio"] {
+  color-scheme: light;
+  --noche-fondo: #f8f6f3;
+  --noche-panel: #ede8e1;
+  --noche-hueso: #0f1621;
+  --noche-hueso-2: #5f4a3f;
+  --noche-filete: #dcd2c3;
+  --noche-filete-fuerte: #b09880;
+  --noche-frecuencia-tinta: #7e5a1e;
+  --e-riel: var(--noche-frecuencia-tinta);
+  --sello-radio: #d9501c;
+  --sello-jai-sounds: oklch(0.5 0.13 212);
+  --sello-galeria: #2a2a2a;
+  --sello-buchibe: #8c2b12;
+}
+
+/* Kaketiana en oscuro: tinta parda, los mismos tokens invertidos (la noche
+   azul es del Acto I). Almagre y salina conservan su matiz, más claros. */
+html[data-luz="oscuro"] [data-piel="kaketiana"] {
+  color-scheme: dark;
+  --sim-paper: #1c1712;
+  --sim-paper-deep: #28211a;
+  --sim-ink: #f2ede3;
+  --sim-ink-soft: #cdbfa8;
+  --sim-ink-faint: #7d705c;
+  --sim-rule: #3b3127;
+  --sim-rubrica: #e79277;
+  --sim-fuego: #e8a95c;
+  --kk-extra: #7bc9b9;
+}
+
+/* JAI en claro: el papel blanco del handoff; la señal baja a L 0.50 / C 0.13
+   (peor matiz 4.9:1 sobre el panel: pasa como texto en toda la rueda). */
+html[data-luz="claro"] [data-piel="jai-sounds"] {
+  color-scheme: light;
+  --jai-noche: #ffffff;
+  --jai-panel: #f8f6f3;
+  --jai-luz: #0b1119;
+  --jai-luz-soft: #4f3e35;
+  --jai-luz-faint: #72584a;
+  --jai-rule: #dcd2c3;
+  --jai-senal: oklch(0.5 0.13 var(--jai-hue));
+  --jai-senal-tenue: oklch(0.95 0.03 var(--jai-hue));
+}
+
+/* La sala en positivo: gris sin matiz; no llega a blanco para que una obra
+   de fondo blanco no se pierda en la pared. */
+html[data-luz="claro"] [data-piel="galeria"] {
+  color-scheme: light;
+  --gal-sala: #f3f3f3;
+  --gal-placa: #e7e7e7;
+  --gal-rule: #d2d2d2;
+  --gal-luz: #111111;
+  --gal-luz-soft: #4b4b4b;
+  --gal-luz-faint: #8a8a8a;
+}
+
+/* Buchibe de día: sólo el cuerpo; el telón no se prende. */
+html[data-luz="claro"] [data-piel="buchibe"] {
+  color-scheme: light;
+  --buc-noche: #f5ecdd;
+  --buc-luz: #23224f;
+  --buc-luz-2: #4a3f5e;
+  --buc-oro-tinta: #7e5a1e;
+  --buc-enlace: #2154c5;
+  --buc-panel: #eadcc4;
+}
+
+/* ── Lo que la plantilla pinta con los alias ───────────────────────────── */
+[data-piel] :focus-visible {
+  outline-color: var(--e-foco);
+}
+/* el cuerpo de una señal: la columna de 65ch es el contenedor, medida con la
+   letra del cuerpo (un ch dentro de un h2 grande mediría el doble). Las
+   figuras salen de la columna hasta lo que diga su piel (--e-figura-max). */
+.senal-cuerpo {
+  max-width: 65ch;
+  margin-inline: auto;
+}
+.senal-cuerpo > figure {
+  position: relative;
+  left: 50%;
+  width: min(var(--e-figura-max), calc(100vw - 3rem));
+  transform: translateX(-50%);
+}
+/* la capitular de las pieles que la tienen (Kaketiana, Buchibe) */
+.senal-cuerpo[data-capitular] > p:first-of-type::first-letter {
+  float: left;
+  margin: 0.06em 0.1em 0 0;
+  font-family: var(--e-tit-familia);
+  font-variation-settings: var(--e-tit-ejes);
+  font-weight: 600;
+  font-size: 4.2em;
+  line-height: 0.82;
+  color: var(--e-capitular);
 }
 
 /* ── La landing v1 · la noche (/inicio) ─────────────────────────────────
@@ -1195,7 +1522,7 @@
     position: fixed;
     inset: 0;
     z-index: 70;
-    background: var(--noche-hondo);
+    background: var(--noche-fondo); /* la misma noche en la que se funde la intro */
     pointer-events: none;
     animation: noche-amanece 0.6s ease-out forwards;
   }

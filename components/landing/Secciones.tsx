@@ -2,10 +2,13 @@ import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import type { ArchiveItem } from "@/types/edition";
 import { Cartel } from "@/components/ui/Typography";
-import FrequencyBadge from "@/components/ui/FrequencyBadge";
 import Cenefa from "@/components/ui/Cenefa";
+import { fechaLarga, type SenalResumen } from "@/lib/senales-comun";
+import Etiquetas from "@/components/senales/Etiquetas";
+import { PORTAFOLIO } from "@/lib/redes";
 import Aparece from "./Aparece";
 import Suscripcion from "./Suscripcion";
+import SeguirLeyendo from "./SeguirLeyendo";
 
 // Las secciones 02–07 de la landing v1 · la noche. El orden, el copy y las
 // superficies vienen del handoff (design_handoff_landing/README.md); la
@@ -22,7 +25,7 @@ function Overline({ children }: { children: ReactNode }) {
 }
 
 const CTA_NARANJA =
-  "inline-block rounded-[2px] bg-frequency px-7 py-[15px] text-[0.78rem] font-semibold uppercase tracking-[0.2em] whitespace-nowrap text-white transition-all duration-300 hover:bg-(--noche-hueso) hover:text-(--noche-fondo)";
+  "inline-block rounded-[2px] bg-(--noche-acento) px-7 py-[15px] text-[0.78rem] font-semibold uppercase tracking-[0.2em] whitespace-nowrap text-(--noche-fondo) transition-all duration-300 hover:bg-(--noche-hueso) hover:text-(--noche-fondo)";
 
 // ── 02 · Manifiesto ───────────────────────────────────────────────────────
 export function Manifiesto() {
@@ -42,10 +45,7 @@ export function Manifiesto() {
           hace falta convencerte de nada: el cambio ya pasó. Esto no es propaganda para el cambio — es propaganda
           desde después del cambio, enviada a tu tiempo como quien deja una señal encendida en la costa.
         </p>
-        <details className="group">
-          <summary className="cursor-pointer list-none font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2) transition-colors duration-300 hover:text-frequency group-open:hidden [&::-webkit-details-marker]:hidden">
-            SEGUIR LEYENDO ↓
-          </summary>
+        <SeguirLeyendo>
           <p className="mb-6 text-body text-(--noche-hueso)">
             Lo que suena en esta frecuencia es un sincretismo: la tecnología biológica y social de los caquetíos — la
             reciprocidad de <em>la buena gente</em>, la escucha como instrumento, la espiral como mapa — conectada a
@@ -56,13 +56,135 @@ export function Manifiesto() {
             Cada mes, una transmisión: cinco pistas comentadas al oído, un ensayo híbrido entre lo ancestral y lo
             sintético, una lengua que se reconstruye palabra a palabra, y el arte que va quedando en el camino.
           </p>
-        </details>
-        <blockquote className="mt-14 border-l-4 border-frequency/30 pl-6 font-serif text-[1.875rem] leading-relaxed italic text-(--noche-hueso)">
+        </SeguirLeyendo>
+        <blockquote className="mt-14 border-l-4 border-(--noche-acento)/30 pl-6 font-serif text-[1.875rem] leading-relaxed italic text-(--noche-hueso)">
           La tecnología más antigua es la escucha.
           <cite className="mt-4 block font-sans text-sm tracking-[0.025em] not-italic text-(--noche-hueso-2)">
             {"// transmisión continua · el silicio es tierra"}
           </cite>
         </blockquote>
+      </Aparece>
+    </section>
+  );
+}
+
+// ── Quién transmite ──────────────────────────────────────────────────────
+// Después del Manifiesto, la ficción se dice como ficción: quién hace la radio
+// y desde dónde (Miguel, 2026-10-05: «una mini intro sobre Curiana Radio, y mi
+// persona, linkeando mi portafolio»). La página entera está en /sobre.
+const ACCION_NOCHE =
+  "font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2) transition-colors duration-300 hover:text-(--noche-acento)";
+
+export function QuienTransmite() {
+  return (
+    <section id="quien-transmite" aria-labelledby="quien-transmite-titulo" className="bg-(--noche-hondo) px-6 py-20">
+      <Aparece className="mx-auto flex max-w-[65ch] flex-col gap-5">
+        <div className="flex flex-wrap items-baseline gap-4">
+          <Cartel as="h2" className="text-[clamp(1.4rem,3vw,2rem)]">
+            <span id="quien-transmite-titulo">Quién transmite</span>
+          </Cartel>
+          <Overline>Fuera del aire</Overline>
+        </div>
+        <p className="m-0 text-body text-(--noche-hueso)">
+          Curiana Radio es el laboratorio creativo de Miguel Gil Urbina: una radio del futuro que se sintoniza desde
+          acá, con memoria donde casi nunca la hay. La ficción es el marco; la voz es suya.
+        </p>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <Link href="/sobre" className={ACCION_NOCHE}>
+            CONOCER LA RADIO →
+          </Link>
+          <a href={PORTAFOLIO.url} target="_blank" rel="noopener noreferrer" className={ACCION_NOCHE}>
+            {PORTAFOLIO.texto.toUpperCase()} ↗
+          </a>
+        </div>
+      </Aparece>
+    </section>
+  );
+}
+
+// ── Señales ──────────────────────────────────────────────────────────────
+// Lo que escribe Miguel desde acá (app/senales, lib/senales.ts): la radio
+// transmite desde después, y aquí aparece quién la sintoniza. La más reciente
+// va destacada; las otras dos, en tarjetas. Sin señales, la sección no sale.
+const MONO_META = "font-mono text-[0.7rem] tracking-[0.16em] text-(--noche-hueso-2)";
+
+function MetaSenal({ senal }: { senal: SenalResumen }) {
+  return (
+    <span className={`flex flex-wrap items-center gap-x-4 gap-y-1 ${MONO_META}`}>
+      <time dateTime={senal.fecha}>{fechaLarga(senal.fecha).toUpperCase()}</time>
+      <Etiquetas aristas={senal.aristas} enlazar={false} sello />
+    </span>
+  );
+}
+
+export function Senales({ senales }: { senales: SenalResumen[] }) {
+  if (!senales.length) return null;
+  const [destacada, ...resto] = senales;
+  return (
+    <section id="senales" aria-labelledby="senales-titulo" className="bg-(--noche-fondo) px-6 py-28">
+      <Aparece className="mx-auto max-w-[72rem]">
+        <div className="mb-12 flex flex-wrap items-baseline gap-4">
+          <Cartel as="h2" className="text-[clamp(1.6rem,3.4vw,2.5rem)]">
+            <span id="senales-titulo">Señales</span>
+          </Cartel>
+          <Overline>
+            Desde acá · escribe{" "}
+            <Link href="/sobre" className="underline-offset-4 transition-colors duration-300 hover:text-(--noche-acento) hover:underline">
+              Miguel Gil Urbina
+            </Link>
+          </Overline>
+        </div>
+
+        <Link
+          href={`/senales/${destacada.slug}`}
+          className={`group grid gap-10 border-t border-(--noche-filete) pt-10 ${destacada.portada ? "lg:grid-cols-[1.1fr_1fr] lg:items-center" : ""}`}
+        >
+          {destacada.portada && (
+            // eslint-disable-next-line @next/next/no-img-element -- Vercel Blob tal cual, como la galería
+            <img
+              src={destacada.portada.src}
+              alt={destacada.portada.alt}
+              loading="lazy"
+              decoding="async"
+              className="block aspect-[16/10] w-full bg-(--noche-panel) object-cover"
+            />
+          )}
+          <div className="flex max-w-[60ch] flex-col gap-4">
+            <MetaSenal senal={destacada} />
+            <h3 className="m-0 font-serif text-[clamp(1.9rem,4vw,2.8rem)] font-semibold leading-[1.12] text-(--noche-hueso) transition-colors duration-300 group-hover:text-(--noche-acento)">
+              {destacada.titulo}
+            </h3>
+            <p className="m-0 font-serif text-xl leading-relaxed italic text-(--noche-hueso-2)">{destacada.sumario}</p>
+            <span className="font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso)">
+              LEER LA SEÑAL · {destacada.minutos} MIN →
+            </span>
+          </div>
+        </Link>
+
+        {resto.length > 0 && (
+          <div className="mt-14 grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))]">
+            {resto.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/senales/${s.slug}`}
+                className="group flex flex-col gap-3 border-t border-(--noche-filete) pt-6"
+              >
+                <MetaSenal senal={s} />
+                <h3 className="m-0 font-serif text-[1.4rem] font-semibold leading-snug text-(--noche-hueso) transition-colors duration-300 group-hover:text-(--noche-acento)">
+                  {s.titulo}
+                </h3>
+                <p className="m-0 text-sm leading-relaxed text-(--noche-hueso-2)">{s.sumario}</p>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <Link
+          href="/senales"
+          className="mt-14 inline-block font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2) transition-colors duration-300 hover:text-(--noche-acento)"
+        >
+          TODAS LAS SEÑALES →
+        </Link>
       </Aparece>
     </section>
   );
@@ -156,7 +278,7 @@ export function Aristas() {
             href="/jai-sounds"
             data-jai-theme="dial"
             style={{ "--jai-hue": "212" } as CSSProperties}
-            className={`${TARJETA} border-l-[3px] border-(--jai-senal) bg-(--jai-panel) hover:border-frequency hover:shadow-xl`}
+            className={`${TARJETA} border-l-[3px] border-(--jai-senal) bg-(--jai-panel) hover:border-(--noche-acento) hover:shadow-xl`}
           >
             <span className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-(--jai-luz-soft)">
               I · jay · caquetío · oír, escuchar
@@ -174,25 +296,26 @@ export function Aristas() {
           <Link
             href="/kaketiana"
             data-sim-theme="cronista"
-            className={`${TARJETA} rounded-2xl border border-(--sim-rule) bg-(--sim-paper) hover:border-frequency hover:shadow-lg`}
+            data-kk-dir="sal"
+            className={`${TARJETA} rounded-2xl border border-(--sim-rule) bg-(--sim-paper) hover:border-(--noche-acento) hover:shadow-lg`}
           >
             <span className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-(--sim-rubrica)">
-              II · La crónica de Indias
+              II · Golfete de Coro · s. XIV–XV
             </span>
             <Cartel as="h3" className="text-[1.7rem]">
-              Simulador Caquetío
+              Kaketiana
             </Cartel>
             <p className="m-0 flex-1 text-sm leading-relaxed text-(--sim-ink-soft)">
-              El proyecto lingüístico. Sobre pergamino y rúbrica, una lengua del golfo se reconstruye palabra a palabra
-              — y el dato habla en mono.
+              El wiki de investigación: el pueblo caquetío del Golfete de Coro y su lengua, reconstruidos sin fingir saber
+              más de lo que se sabe. Cada afirmación, con su fuente.
             </p>
-            <span className="font-mono text-[0.72rem] tracking-[0.14em] text-(--sim-ink)">ABRIR EL CÓDICE →</span>
+            <span className="font-mono text-[0.72rem] tracking-[0.14em] text-(--sim-ink)">ENTRAR A KAKETIANA →</span>
           </Link>
 
           <Link
             href="/galeria"
             data-galeria-theme="sala"
-            className={`${TARJETA} border border-(--gal-rule) bg-(--gal-sala) hover:border-frequency hover:shadow-xl`}
+            className={`${TARJETA} border border-(--gal-rule) bg-(--gal-sala) hover:border-(--noche-acento) hover:shadow-xl`}
           >
             <span className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-(--gal-luz-soft)">
               III · La sala neutra
@@ -271,7 +394,7 @@ export function UltimaTransmision({ edicion }: { edicion: ArchiveItem }) {
             <Link href={`/${edicion.slug}`} className={CTA_NARANJA}>
               Sintonizar ahora →
             </Link>
-            <Link href="/archivo" className="text-sm text-(--noche-hueso-2) transition-colors duration-300 hover:text-frequency">
+            <Link href="/archivo" className="text-sm text-(--noche-hueso-2) transition-colors duration-300 hover:text-(--noche-acento)">
               Ver todas las transmisiones →
             </Link>
           </div>
@@ -296,9 +419,9 @@ export function ArchivoSuscripcion({ ediciones }: { ediciones: ArchiveItem[] }) 
             <Link
               key={e.slug}
               href={`/${e.slug}`}
-              className="flex items-center gap-5 rounded-lg border border-(--noche-filete) bg-(--noche-panel) px-6 py-5 transition-all duration-300 hover:border-frequency hover:shadow-lg"
+              className="flex items-center gap-5 rounded-lg border border-(--noche-filete) bg-(--noche-panel) px-6 py-5 transition-all duration-300 hover:border-(--noche-acento) hover:shadow-lg"
             >
-              <span className="font-mono text-[0.85rem] font-medium text-frequency">#{e.number}</span>
+              <span className="font-mono text-[0.85rem] font-medium text-(--noche-acento)">#{e.number}</span>
               <span className="flex flex-1 flex-col gap-0.5">
                 <span className="font-serif text-lg font-semibold text-(--noche-hueso)">{e.title}</span>
                 <span className="text-sm italic text-(--noche-hueso-2)">{e.theme}</span>
@@ -327,38 +450,6 @@ export function ArchivoSuscripcion({ ediciones }: { ediciones: ArchiveItem[] }) 
 }
 
 // ── 07 · Colofón ─────────────────────────────────────────────────────────
-const BURRO = String.raw`        _.-""-._
-      _/-.____.-'\_
-     /             \
-    (   _  _        )
-     \ ( \/ )      /
-      \ \  /      /
-       \/  \    //
-       /    \__//
-      /      \ /
-     /   _    |
-    (   / \   |
-     \_/   \_/
-~~~~~~~~~~~~~~~~~~~~~~~`;
-
-export function Colofon() {
-  return (
-    <footer id="colofon" className="bg-(--noche-hondo) px-6 pt-24 pb-16">
-      <Aparece className="mx-auto flex max-w-[56rem] flex-col items-center gap-8 text-center">
-        <pre aria-hidden="true" className="m-0 font-mono text-[11px] leading-[1.15] whitespace-pre text-(--noche-hueso-2)">
-          {BURRO}
-        </pre>
-        <p className="m-0 max-w-[44ch] font-serif text-lg italic text-(--noche-hueso)">
-          «El viento no borra, reescribe. Tu error es un nuevo borrador.»
-        </p>
-        <div className="border-l-4 border-frequency/30 pl-4 text-left font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2)">
-          {"// Hasta la próxima transmisión. — Curiana Radio"}
-        </div>
-        <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
-          <FrequencyBadge size="sm" variant="outline" />
-          <span className="text-sm text-(--noche-hueso-2)">88.8 FM — Siempre transmitiendo 📻</span>
-        </div>
-      </Aparece>
-    </footer>
-  );
-}
+// El colofón de la landing pasó al pie común de la noche (components/shell/
+// PieNoche.tsx, shell 1a): el sello, «El viento no borra, reescribe.», las
+// estaciones, la suscripción y la línea legal. El burro ASCII sigue en el 404.

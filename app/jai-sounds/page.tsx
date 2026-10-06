@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Canal from "@/components/jai-sounds/Canal";
+import SenalesDeArista from "@/components/senales/SenalesDeArista";
 import Dial from "@/components/jai-sounds/Dial";
 import Difuso from "@/components/jai-sounds/Difuso";
 import JA from "@/components/jai-sounds/JA";
@@ -218,6 +219,8 @@ export default async function JaiSoundsPage() {
           </Canal>
         </div>
       </section>
+
+      <SenalesDeArista arista="jai-sounds" className={`${CAJA} pt-14`} />
 
       <footer
         className={`${CAJA} flex flex-wrap items-center justify-between gap-5 pb-[72px] pt-14`}

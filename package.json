@@ -10,7 +10,8 @@
     "galeria:preparar": "node scripts/galeria-ingesta.mjs preparar",
     "galeria:subir": "node scripts/galeria-ingesta.mjs subir",
     "galeria:describir": "node scripts/galeria-describir.mjs enviar",
-    "galeria:recoger": "node scripts/galeria-describir.mjs recoger"
+    "galeria:recoger": "node scripts/galeria-describir.mjs recoger",
+    "senales:imagenes": "node scripts/senales-imagenes.mjs"
   },
   "repository": {
     "type": "git",

@@ -3,6 +3,7 @@ import { getAllEditions } from '@/lib/content';
 import { getAllPersonajes } from '@/lib/personajes';
 import { getSlugs } from '@/lib/galeria';
 import { getWikiIndice } from '@/lib/wiki';
+import { getSenales } from '@/lib/senales';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const editions = await getAllEditions();
@@ -24,6 +25,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
+      // quién transmite: la radio y su creador
+      url: `${baseUrl}/sobre`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/archivo`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -35,6 +43,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+  ];
+
+  // Señales: el blog. Los borradores no entran (sólo se ven fuera de producción).
+  const senalesPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/senales`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    ...getSenales()
+      .filter((s) => !s.borrador)
+      .map((s) => ({
+        url: `${baseUrl}/senales/${s.slug}`,
+        lastModified: new Date(s.fecha),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      })),
   ];
 
   // Edition pages
@@ -108,6 +134,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...senalesPages,
     ...editionPages,
     ...simuladorPages,
     ...personajePages,
