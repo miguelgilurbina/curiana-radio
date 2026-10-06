@@ -424,6 +424,7 @@
      lib/jai-rotacion.ts antes del primer pintado. Sin JS, el dial arranca
      en 40 y se lee igual. oklch da la vuelta solo: 400 es 40. */
   --jai-semilla: 40;
+  --jai-sector: calc(360 / 23); /* 23 estaciones en el dial */
   --jai-hue: var(--jai-semilla);
   --jai-senal: oklch(0.8 0.15 var(--jai-hue));
   --jai-senal-tenue: oklch(0.28 0.06 var(--jai-hue));
@@ -519,7 +520,7 @@
   .jai-orbe {
     font-family: var(--jai-display);
     font-style: italic;
-    font-weight: 700;
+    font-weight: 500;
     font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
   }
   /* Mono habla en datos: minúscula, tracking 0.3em (la cabina es más lenta
@@ -560,32 +561,28 @@
     100% { background-color: oklch(0.8 0.15 9); }
   }
 
-  /* ── El escrito, difuso ──────────────────────────────────────────────
-     El texto fundacional atraviesa la página: cada fragmento está borroso
-     mientras queda lejos y se enfoca al pasar por el centro de la pantalla
-     (components/jai-sounds/Difuso.tsx pone el atributo). Sin JS no hay
-     atributo, y el texto se lee nítido. */
-  .jai-difuso {
-    transition:
-      filter 0.9s ease-out,
-      opacity 0.9s ease-out;
+  /* La ficha de pista entra de lado; los esqueletos laten mientras llega
+     el dato. */
+  @keyframes jai-entra {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: none; }
   }
-  .jai-difuso[data-difuso="lejos"] {
-    filter: blur(6px);
-    opacity: 0.28;
+  @keyframes jai-latido {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 0.9; }
   }
+  .jai-entra { animation: jai-entra 300ms ease-out; }
+  .jai-latido { animation: jai-latido 1.6s ease-in-out infinite; }
 
   @media (prefers-reduced-motion: reduce) {
+    .jai-entra,
+    .jai-latido {
+      animation: none;
+    }
     .jai-ja:hover,
     .jai-ja-gatillo:hover .jai-ja {
       animation: none;
       background-color: var(--jai-senal, oklch(0.8 0.15 204));
-    }
-    .jai-difuso,
-    .jai-difuso[data-difuso="lejos"] {
-      transition: none;
-      filter: none;
-      opacity: 1;
     }
   }
 }

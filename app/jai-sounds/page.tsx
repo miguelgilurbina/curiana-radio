@@ -1,117 +1,48 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Batea from "@/components/jai-sounds/batea/Batea";
 import Canal from "@/components/jai-sounds/Canal";
-import Dial from "@/components/jai-sounds/Dial";
-import Difuso from "@/components/jai-sounds/Difuso";
-import JA from "@/components/jai-sounds/JA";
 import { MUSICA, VIAJE } from "@/components/jai-sounds/escrito";
-import {
-  CAJA,
-  CTA_LINEA,
-  PORTADA_DESCUBRIENDO,
-} from "@/components/jai-sounds/estilos";
-import { getCenso, getPlaylists } from "@/lib/jai-sounds";
+import { CTA_LINEA, PORTADA_DESCUBRIENDO } from "@/components/jai-sounds/estilos";
+import { datosEstacion, resumenEstaciones } from "@/lib/jai-wiki";
 
-// El catálogo cambia cuando corre la ingesta, no cuando entra una visita.
-export const revalidate = 3600;
-
-/** La columna del escrito: el rótulo § a la izquierda, el texto a 60ch. */
-function Parrafos({
-  id,
-  rotulo,
-  children,
-}: {
-  id?: string;
-  rotulo: ReactNode;
-  children: ReactNode;
-}) {
+/** Una sección del escrito: el rótulo § de 72px y el texto a 60ch. */
+function Seccion({ id, rotulo, children }: { id: string; rotulo: ReactNode; children: ReactNode }) {
   return (
     <section id={id} className="scroll-mt-16 border-t border-(--jai-rule)">
-      <div
-        className={`${CAJA} grid gap-4 py-14 md:grid-cols-[72px_minmax(0,1fr)] md:gap-6 md:py-20`}
-      >
-        <span className="jai-dato text-[10px] leading-[1.9] text-(--jai-luz-faint) md:pt-2">
-          {rotulo}
-        </span>
+      <div className="mx-auto grid max-w-[1120px] grid-cols-[repeat(auto-fit,minmax(min(100%,72px),max-content))] gap-x-6 gap-y-4 px-[clamp(16px,4vw,32px)] py-[clamp(56px,8vw,96px)]">
+        <span className="jai-dato w-[72px] pt-2 text-[10px] leading-[1.9] text-(--jai-luz-faint)">{rotulo}</span>
         <div className="flex max-w-[60ch] flex-col gap-[22px]">{children}</div>
       </div>
     </section>
   );
 }
 
-/**
- * Una frase del § 01 que sigue sonando más abajo, difusa hasta que pasa por
- * el centro de la pantalla. Llevan el número de su parte para que se lean
- * como un solo texto repartido, no como citas sueltas.
- */
-function Interludio({
-  parte,
-  cita = false,
-  children,
-}: {
-  parte: string;
-  cita?: boolean;
-  children: ReactNode;
-}) {
-  return (
-    <div
-      className={`${CAJA} grid gap-4 py-16 md:grid-cols-[72px_minmax(0,1fr)] md:gap-6 md:py-24`}
-    >
-      <span className="jai-dato text-[10px] leading-[1.9] text-(--jai-luz-faint) md:pt-3">
-        § 01
-        <br />
-        {parte} / v
-      </span>
-      <Difuso
-        className={`jai-manifiesto max-w-[34ch] text-[clamp(22px,2.6vw,32px)] leading-[1.35] text-(--jai-luz) ${
-          cita ? "border-l-3 border-(--jai-luz) pl-[18px] font-extrabold" : ""
-        }`}
-      >
-        {children}
-      </Difuso>
-    </div>
-  );
-}
+const PARRAFO = "m-0 text-[17px] leading-[1.75] text-pretty text-(--jai-luz-soft)";
+const GRANDE = "jai-manifiesto m-0 text-[clamp(24px,2.6vw,30px)] leading-[1.35] text-(--jai-luz)";
 
-export default async function JaiSoundsPage() {
-  const playlists = getPlaylists();
-  const censo = await getCenso();
-  const totalPistas = playlists.reduce((s, p) => s + (p.pistas ?? 0), 0);
+// El HTML inicial lleva solo las primeras filas de la primera estación (la
+// más grande tiene 282): el tracklist entero llega enseguida, ya estático.
+const FILAS_INICIALES = 30;
+
+export default function JaiSoundsPage() {
+  const estaciones = resumenEstaciones();
+  const primera = datosEstacion(0);
+  const inicial = primera && { ...primera, filas: primera.filas.slice(0, FILAS_INICIALES), parcial: primera.filas.length > FILAS_INICIALES };
 
   return (
     <>
-      {/* ── Hero: el escrito fundacional ──────────────────────────────── */}
-      <section
-        className={`${CAJA} grid min-h-[600px] grid-rows-[auto_1fr_auto] pt-7 md:min-h-[calc(100svh-4rem)]`}
-      >
-        <div className="jai-dato flex justify-between gap-4 text-[10px] text-(--jai-luz-faint)">
-          <span>jai sounds · jai · oír, escuchar</span>
-          <span className="hidden sm:inline">escrito fundacional</span>
-        </div>
-        <div className="flex flex-col justify-center gap-[26px] py-12">
-          <JA tamano="clamp(88px, 9vw, 128px)" />
-          <h1 className="jai-display text-[clamp(44px,7vw,96px)] leading-[0.94] text-balance text-(--jai-luz)">
-            la huella humana de la vida vivida
-          </h1>
-          <p className="max-w-[44ch] text-base leading-[1.65] text-(--jai-luz-soft)">
-            porque para crear hay que saber sentir, y para saber sentir hay que
-            vivir.
-          </p>
-        </div>
-        <div className="jai-dato flex justify-between gap-4 border-t border-(--jai-rule) pb-[22px] pt-4 text-[10px] text-(--jai-luz-faint)">
-          <span>§ 01 la música · el dial · § 02 el viaje</span>
-          <a
-            href="#la-musica"
-            className="shrink-0 transition-colors duration-300 hover:text-(--jai-luz)"
-          >
-            ↓ leer
-          </a>
-        </div>
-      </section>
+      {estaciones.length ? (
+        <Batea estaciones={estaciones} inicial={inicial} />
+      ) : (
+        <p className="mx-auto max-w-[1120px] px-8 py-24 text-(--jai-luz-faint)">
+          El dial todavía no está exportado: correr <code>npm run jai:exportar</code>.
+        </p>
+      )}
 
-      {/* ── § 01 la música: el mensaje va primero ─────────────────────── */}
-      <Parrafos
+      {/* Debajo de la música, una sola vez y entero. */}
+      <Seccion
         id="la-musica"
         rotulo={
           <>
@@ -121,43 +52,15 @@ export default async function JaiSoundsPage() {
           </>
         }
       >
-        <p className="jai-manifiesto text-2xl leading-[1.35] text-(--jai-luz)">
-          {MUSICA.entrada}
+        <p className={GRANDE}>{MUSICA.entrada}</p>
+        <p className={PARRAFO}>{MUSICA.ambiente}</p>
+        <p className={PARRAFO}>
+          {MUSICA.nota} {MUSICA.historia} {MUSICA.ventanas}
         </p>
-        <p className="text-base leading-[1.75] text-(--jai-luz-soft)">
-          {MUSICA.ambiente}
-        </p>
-      </Parrafos>
+        <p className={`${GRANDE} mt-3 border-l-3 border-(--jai-luz) pl-[18px] font-extrabold`}>{MUSICA.cita}</p>
+      </Seccion>
 
-      <Interludio parte="ii">{MUSICA.nota}</Interludio>
-
-      {/* ── El dial y la estación sintonizada ─────────────────────────── */}
-      <Dial
-        estaciones={playlists.map((p) => ({
-          slug: p.slug,
-          nombre: p.nombre,
-          descripcion: p.descripcion,
-          pistas: p.pistas,
-          portada: p.portada,
-          spotify_id: p.spotify_id,
-        }))}
-        // Sin las cinco de la edición #01: ninguna está en Ruido de Chocolate
-        // (la playlist que la edición enlaza) y solo una — Richter — está en
-        // el dial, en El Pozo Instrumental. La reseña es de la canción, no de
-        // la estación: vuelve cuando el dial tenga ficha de pista.
-        edicion={null}
-        totalPistas={totalPistas}
-        artistas={censo.artistas}
-        interludio={<Interludio parte="iii">{MUSICA.historia}</Interludio>}
-      />
-
-      <Interludio parte="iv">{MUSICA.ventanas}</Interludio>
-      <Interludio parte="v" cita>
-        {MUSICA.cita}
-      </Interludio>
-
-      {/* ── § 02 el viaje: la voz que entrega al podcast ──────────────── */}
-      <Parrafos
+      <Seccion
         id="el-viaje"
         rotulo={
           <>
@@ -167,46 +70,27 @@ export default async function JaiSoundsPage() {
           </>
         }
       >
-        <p className="text-base leading-[1.75] text-(--jai-luz-soft)">
+        <p className={PARRAFO}>
           {VIAJE.entrada} {VIAJE.sentir}
         </p>
-        <p className="text-base leading-[1.75] text-(--jai-luz-soft)">
+        <p className={PARRAFO}>
           {VIAJE.compartir} {VIAJE.acompaname}
         </p>
         <Link
           href="/jai-sounds/descubriendo"
-          className="grid grid-cols-[88px_minmax(0,1fr)] items-center gap-4 border border-(--jai-rule) p-3.5 transition-colors duration-300 hover:border-[#c9c8f5] sm:grid-cols-[120px_minmax(0,1fr)] sm:gap-5"
+          className="grid grid-cols-[clamp(88px,18vw,120px)_minmax(0,1fr)] items-center gap-5 border border-(--jai-rule) p-3.5 transition-colors duration-300 hover:border-[#c9c8f5]"
         >
-          <Image
-            src={PORTADA_DESCUBRIENDO}
-            alt="Descubriendo con Chocolate"
-            width={240}
-            height={240}
-            sizes="120px"
-            className="block aspect-square w-full object-cover"
-          />
+          <Image src={PORTADA_DESCUBRIENDO} alt="Descubriendo con Chocolate" width={240} height={240} sizes="120px" className="block aspect-square w-full object-cover" />
           <span className="flex flex-col gap-2">
-            <span className="jai-dato text-[10px] text-(--jai-luz-faint)">
-              esto es · podcast
-            </span>
-            <span className="jai-orbe text-[22px] leading-[1.1] text-(--jai-luz) sm:text-[26px]">
-              Descubriendo con Chocolate
-            </span>
-            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-(--jai-luz-soft)">
-              acompáñame →
-            </span>
+            <span className="jai-dato text-[10px] text-(--jai-luz-faint)">esto es · podcast</span>
+            <span className="jai-orbe text-[clamp(22px,2.4vw,28px)] leading-[1.1] text-(--jai-luz)">Descubriendo con Chocolate</span>
+            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-(--jai-luz-soft)">acompáñame →</span>
           </span>
         </Link>
-      </Parrafos>
+      </Seccion>
 
-      {/* ── Al final: el canal de Curiana Radio, con los episodios ──────
-          Es la voz de Chocolate, así que ya lleva el color del orbe. */}
-      <section
-        id="el-canal"
-        data-descubriendo-theme="orbe"
-        className="scroll-mt-16 border-t border-(--orbe-filete) bg-(--orbe-fondo)"
-      >
-        <div className={`${CAJA} py-16`}>
+      <section id="el-canal" data-descubriendo-theme="orbe" className="scroll-mt-16 border-t border-(--orbe-filete) bg-(--orbe-fondo)">
+        <div className="mx-auto max-w-[1120px] px-[clamp(16px,4vw,32px)] py-16">
           <Canal rotulo="al aire · el canal de curiana radio">
             <Link
               href="/jai-sounds/descubriendo"
@@ -218,16 +102,9 @@ export default async function JaiSoundsPage() {
         </div>
       </section>
 
-      <footer
-        className={`${CAJA} flex flex-wrap items-center justify-between gap-5 pb-[72px] pt-14`}
-      >
-        <span className="jai-dato text-[11px] text-(--jai-luz-faint)">
-          hasta la próxima transmisión. — curiana radio, 88.8 fm
-        </span>
-        <Link
-          href="/archivo"
-          className="font-sans text-xs uppercase tracking-[0.2em] text-(--jai-luz-soft) transition-colors duration-300 hover:text-(--jai-luz)"
-        >
+      <footer className="mx-auto flex max-w-[1120px] flex-wrap justify-between gap-5 px-[clamp(16px,4vw,32px)] pb-[72px] pt-14">
+        <span className="jai-dato text-[11px] text-(--jai-luz-faint)">hasta la próxima transmisión. — curiana radio, 88.8 fm</span>
+        <Link href="/archivo" className="font-sans text-xs uppercase tracking-[0.2em] text-(--jai-luz-soft) transition-colors duration-300 hover:text-(--jai-luz)">
           ver todas las transmisiones →
         </Link>
       </footer>
