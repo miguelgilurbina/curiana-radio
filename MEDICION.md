@@ -21,7 +21,7 @@ visita. Sin cookies: no hace falta banner de consentimiento.
 | `suscripcion` | el formulario del newsletter salió | `desde` | ¿la radio convierte visitas en audiencia propia? |
 | `lectura` | llegó al final de un artículo o edición y lleva ≥ 20 s en la página | `pagina` | ¿se lee o se hojea? qué textos se terminan |
 | `salida` | clic en cualquier enlace externo | `destino`, `desde` | ¿a Spotify (JAI), al repo, a las fuentes (archive.org…)? |
-| `estacion` | sintonizó una estación del dial de JAI Sounds | `estacion` | qué curaduría engancha |
+| `estacion` | pasó a otra estación de la batea de JAI Sounds | `estacion` | qué curaduría engancha |
 | `obra` | abrió una obra de la galería en grande | `obra` | qué piezas tienen demanda (licencia, print) |
 | `intro` | saltó el afinado o sintonizó en El Disco | `accion` | ¿la intro retiene o expulsa? |
 

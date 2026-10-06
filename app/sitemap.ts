@@ -5,6 +5,8 @@ import { getSlugs } from '@/lib/galeria';
 import { getWikiGenerado, getWikiIndice } from '@/lib/wiki';
 import { getFichas, getFichasSeed } from '@/lib/fichas';
 import { SITIO } from '@/lib/seo';
+import { conVozDeJai, wiki } from '@/lib/jai-wiki';
+import type { Voces } from '@/types/jai-wiki';
 
 // lastModified sólo donde hay una fecha de verdad (la de publicación de una
 // edición, la de la última exportación del vault para el wiki y el
@@ -80,7 +82,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  // JAI Sounds: la curaduría musical — la portada del dial y el podcast.
+  // JAI Sounds: la curaduría musical — la batea y el podcast.
   // Las páginas de mood entran cuando exista la taxonomía real.
   const jaiSoundsPages: MetadataRoute.Sitemap = [
     {
@@ -94,6 +96,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
   ];
+
+  // El wiki de JAI: sólo las fichas con reseña de JAI, que son las que llevan
+  // index (conVozDeJai en lib/jai-wiki.ts). Las demás se navegan pero no se
+  // anuncian: son datos de MusicBrainz y un extracto de Wikipedia.
+  const w = wiki();
+  const jaiWikiPages: MetadataRoute.Sitemap = (
+    [
+      ['canciones', w.canciones],
+      ['albumes', w.albumes],
+      ['artistas', w.artistas],
+    ] as const
+  ).flatMap(([tipo, fichas]) =>
+    Object.entries(fichas as Record<string, Voces>)
+      .filter(([, v]) => conVozDeJai(v))
+      .map(([slug, v]) => ({
+        url: `${baseUrl}/jai-sounds/${tipo}/${slug}`,
+        lastModified: fecha(v.resena?.publicada_en),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      })),
+  );
 
   // Fichas de obra de la galería.
   const galeriaPages: MetadataRoute.Sitemap = getSlugs().map((slug) => ({
@@ -126,6 +149,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...simuladorPages,
     ...personajePages,
     ...jaiSoundsPages,
+    ...jaiWikiPages,
     ...galeriaPages,
     ...wikiPages,
     ...vocesPages,

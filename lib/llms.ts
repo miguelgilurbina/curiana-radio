@@ -89,7 +89,7 @@ ${enlace("Personajes", "/kaketiana/personajes", "las voces de la simulación")}
 ${enlace("Inicio", "/inicio", SITIO.descripcion)}
 ${enlace("Archivo de transmisiones", "/archivo")}
 ${ediciones}
-${enlace("JAI Sounds", "/jai-sounds", "la curaduría musical: jay es «oír, escuchar» en caquetío")}
+${enlace("JAI Sounds", "/jai-sounds", "la curaduría musical: jai es «oír, escuchar» en caquetío. Cada canción, álbum y artista del dial tiene su ficha (/jai-sounds/canciones/…, /albumes/…, /artistas/…), con datos de MusicBrainz y el extracto de Wikipedia citado; la reseña, cuando la hay, es la voz de JAI")}
 ${enlace("Descubriendo con Chocolate", "/jai-sounds/descubriendo", "el podcast de JAI Sounds")}
 ${enlace("Galería", "/galeria", "experimentos visuales generados con IA, con su procedencia")}
 

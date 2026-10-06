@@ -49,7 +49,7 @@ async function registro(): Promise<Map<string, Dibujo>> {
     tarjetaNoche({
       rotulo: "Curiana Radio · curaduría musical",
       titulo: "JAI Sounds",
-      bajada: "jay · caquetío · oír, escuchar. Un dial de estaciones que gira de color, no de canciones.",
+      bajada: "jai · caquetío · oír, escuchar. Un dial de estaciones que gira de color, no de canciones.",
       pie: "curianaradio.com/jai-sounds",
     }),
   );

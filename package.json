@@ -10,7 +10,15 @@
     "galeria:preparar": "node scripts/galeria-ingesta.mjs preparar",
     "galeria:subir": "node scripts/galeria-ingesta.mjs subir",
     "galeria:describir": "node scripts/galeria-describir.mjs enviar",
-    "galeria:recoger": "node scripts/galeria-describir.mjs recoger"
+    "galeria:recoger": "node scripts/galeria-describir.mjs recoger",
+    "jai:dial": "node jai-sounds/scripts/ingest_spotify.mjs --sync --dial",
+    "jai:slugs": "node jai-sounds/scripts/slugs.mjs",
+    "jai:musicbrainz": "node jai-sounds/scripts/musicbrainz.mjs",
+    "jai:wikipedia": "node jai-sounds/scripts/wikipedia.mjs",
+    "jai:resenas": "node jai-sounds/scripts/resenas_obsidian.mjs",
+    "jai:portadas": "node jai-sounds/scripts/portadas.mjs",
+    "jai:exportar": "node jai-sounds/scripts/exportar.mjs",
+    "jai:test": "node --test jai-sounds/scripts/*.test.mjs"
   },
   "repository": {
     "type": "git",

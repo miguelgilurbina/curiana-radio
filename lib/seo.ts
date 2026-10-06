@@ -62,6 +62,7 @@ export function tarjeta(clave: string, alt: string): Imagen {
 }
 
 export const TARJETA_RADIO = tarjeta("curiana", "Curiana Radio · 88.8 FM — la espiral sobre la noche");
+export const TARJETA_JAI = tarjeta("jai-sounds", "JAI Sounds, la curaduría musical de Curiana Radio");
 
 /**
  * La metadata completa de una página. Existe porque Next fusiona openGraph

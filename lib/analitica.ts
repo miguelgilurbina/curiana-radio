@@ -20,7 +20,7 @@ type Eventos = {
   lectura: { pagina: string };
   /** Un enlace que sale del sitio: Spotify, el repo, una fuente. */
   salida: { destino: string; desde: string };
-  /** JAI Sounds: sintonizó una estación del dial. */
+  /** JAI Sounds: pasó a otra estación de la batea. */
   estacion: { estacion: string };
   /** La galería: abrió una obra en grande (interés por la pieza). */
   obra: { obra: string };

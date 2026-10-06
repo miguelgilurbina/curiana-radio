@@ -44,6 +44,8 @@ const csp = {
     BLOB,
     // las teselas de los mapas de Kaketiana (Leaflet)
     'https://tile.openstreetmap.org',
+    // las portadas de álbum del wiki de JAI Sounds (CDN de Spotify)
+    'https://i.scdn.co',
     esVistaPrevia && 'https://vercel.live',
     esVistaPrevia && 'https://vercel.com',
   ],
