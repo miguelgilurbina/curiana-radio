@@ -2,29 +2,29 @@
 
 import type { ReactNode } from "react";
 import { usePathname } from "next/navigation";
-import Background from "./Background";
 
-// El chrome de la radio (fondo animado, navegación y pie) envuelve todas las
-// páginas menos las que traen el suyo: la intro El Disco y la landing de la
-// noche, que tiene su barra en el hero y su colofón al pie.
-const PROPIAS = new Set(["/", "/intro", "/inicio"]);
+// El marco de cada página. La intro El Disco (/, /intro) va sin marco: trae
+// el suyo. Todo lo demás va en el shell La Noche (CabeceraNoche + PieNoche,
+// BRAND_MVP §13): desde el 2026-10-06 ya no queda el papel de la radio (la
+// nav, el pie y el fondo animado de antes se retiraron).
+const SIN_MARCO = new Set(["/", "/intro"]);
 
 export default function ShellRadio({
-  nav,
-  footer,
+  cabecera,
+  pie,
   children,
 }: {
-  nav: ReactNode;
-  footer: ReactNode;
+  cabecera: ReactNode;
+  pie: ReactNode;
   children: ReactNode;
 }) {
   const ruta = usePathname();
-  if (PROPIAS.has(ruta)) return <main>{children}</main>;
+  if (SIN_MARCO.has(ruta)) return <main>{children}</main>;
   return (
-    <Background>
-      {nav}
-      <main className="pt-16">{children}</main>
-      {footer}
-    </Background>
+    <>
+      {cabecera}
+      <main>{children}</main>
+      {pie}
+    </>
   );
 }

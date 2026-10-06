@@ -23,7 +23,7 @@ export default function SeguirLeyendo({ children }: { children: ReactNode }) {
         aria-expanded={abierto}
         aria-controls={id}
         onClick={() => setAbierto((a) => !a)}
-        className={`cursor-pointer font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2) transition-colors duration-300 hover:text-frequency ${abierto ? "mt-6" : ""}`}
+        className={`cursor-pointer font-mono text-[0.72rem] tracking-[0.14em] text-(--noche-hueso-2) transition-colors duration-300 hover:text-(--noche-acento) ${abierto ? "mt-6" : ""}`}
       >
         {abierto ? "LEER MENOS ↑" : "SEGUIR LEYENDO ↓"}
       </button>

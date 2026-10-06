@@ -5,7 +5,7 @@ import { Overline, Avatar, ScoreGauge, EmptyState } from "@/components/simulador
 import { getSerie } from "@/lib/serie";
 
 export const metadata: Metadata = {
-  title: "Personajes — Simulador Caquetío | Curiana Radio",
+  title: "Personajes — Kaketiana | Curiana Radio",
   description: "Las voces curadas de la Curiana: quiénes son y cómo cambió su lengua durante la historia.",
 };
 
