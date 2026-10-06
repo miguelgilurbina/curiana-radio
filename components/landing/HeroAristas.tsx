@@ -66,16 +66,17 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--jai-luz-soft) max-w-[46ch]",
     },
     {
-      nombre: "SIMULADOR",
-      frecuencia: "88.3 · La crónica de Indias",
-      titulo: "Simulador Caquetío",
-      bajada: "Sobre pergamino y rúbrica, una lengua del golfo se reconstruye palabra a palabra.",
+      nombre: "KAKETIANA",
+      frecuencia: "88.3 · Golfete de Coro · s. XIV–XV",
+      titulo: "Kaketiana",
+      bajada: "El pueblo caquetío del Golfete de Coro y su lengua, reconstruidos con cada fuente a la vista.",
       cta: (
         <Link href="/kaketiana" className={`${enlaceMono} text-(--sim-ink)`}>
-          ABRIR EL CÓDICE →
+          ENTRAR A KAKETIANA →
         </Link>
       ),
-      tema: { "data-sim-theme": "cronista" },
+      // la placa 6b «Sal y almagre» de Kaketiana (BRAND_MVP §11), no el pergamino del Simulador
+      tema: { "data-sim-theme": "cronista", "data-kk-dir": "sal" },
       clase: "bg-(--sim-paper)",
       claseFrecuencia: "text-[0.64rem] font-medium uppercase tracking-[0.2em] text-(--sim-rubrica)",
       claseBajada: "text-base leading-relaxed text-(--sim-ink-soft) max-w-[46ch]",

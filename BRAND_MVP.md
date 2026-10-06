@@ -322,6 +322,11 @@ prototipo dice papel, aquí manda el README del handoff.
   con `email`). Sin proveedor, el formulario se ve deshabilitado y lo dice.
 - **Buchibe** aún no tiene sección: su diapositiva y su tarjeta anuncian el
   telón ("CORRER EL TELÓN · PRONTO") sin enlazar.
+- **Kaketiana** (antes «Simulador Caquetío», 2026-10-05): la diapositiva, la
+  tarjeta y el menú global dicen Kaketiana, y la diapositiva y la tarjeta van en
+  su placa 6b (`data-kk-dir="sal"`, §11), no en el pergamino del Simulador.
+- **«Seguir leyendo»** del Manifiesto es `components/landing/SeguirLeyendo.tsx`
+  (botón con `aria-expanded`, abre y cierra), no un `<details>` nativo.
 - **Contraste** (requisito del cliente, ≥ 4.5:1): los `-faint` de sección se
   subieron a `-soft` en texto; el CTA y la etiqueta del telón van en
   `--buc-luz` (el oro sobre el telón da 3.5:1: vale para el título grande, no
