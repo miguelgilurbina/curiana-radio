@@ -11,6 +11,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Sello from "./Sello";
 import { ESTACIONES, estacionActiva } from "./estaciones";
+import { LIBERADA } from "@/lib/secciones";
 
 // La cabecera de la noche: shell 1a «El dial» (design_handoff_senales_luces/
 // shell/SHELL.md). La nav es una escala de sintonía y una aguja de acento
@@ -290,7 +291,7 @@ export default function CabeceraNoche({
           </nav>
           <div className="flex shrink-0 flex-col gap-3.5">
             <Link
-              href={`/${edicion.slug}`}
+              href={LIBERADA.archivo ? `/${edicion.slug}` : "/inicio"}
               className={`flex min-h-[52px] items-center justify-center bg-(--noche-acento) ${MONO} text-xs font-bold tracking-[0.24em] text-(--noche-fondo)`}
             >
               SINTONIZAR AHORA →

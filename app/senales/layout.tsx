@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Señales — Curiana Radio",
   description:
-    "Lo que escribe Miguel Gil Urbina, creador de Curiana Radio, sobre cada arista del imaginario: Kaketiana, JAI Sounds, la Galería, Buchibe.",
+    "Lo que escribe Miguel Gil Urbina, creador de Curiana Radio, sobre cada arista del imaginario: Kaketiana y JAI Sounds.",
   alternates: {
     canonical: "/senales",
     types: { "application/rss+xml": [{ url: "/senales/rss.xml", title: "Señales — Curiana Radio" }] },

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PersonajePageProps): Promise<
   const p = getPersonajeBySlug(slug);
   if (!p) return { title: "Personaje no encontrado | Curiana Radio" };
   return {
-    title: `${p.nombre} — Personajes del Simulador | Curiana Radio`,
+    title: `${p.nombre} — Personajes del experimento · Kaketiana | Curiana Radio`,
     description: p.rol_comunidad || p.descripcion.slice(0, 160),
   };
 }

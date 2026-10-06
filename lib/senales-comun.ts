@@ -1,14 +1,18 @@
 // Lo de Señales que no toca el disco: las aristas, los tipos y el formato
 // de fecha. Vive aparte de lib/senales.ts (que lee content/ con fs) para que
 // los componentes de cliente —el filtro del índice— puedan importarlo.
+import { LIBERADA } from "./secciones";
 
+// `liberada`: si la sección está al aire (lib/secciones.ts). Una señal puede
+// llevar una arista en el taller —y su piel—, pero su etiqueta no enlaza ni
+// se ofrece como filtro hasta que la sección salga.
 export const ARISTAS = {
-  kaketiana: { nombre: "Kaketiana", corto: "Kaketiana", href: "/kaketiana" },
-  "jai-sounds": { nombre: "JAI Sounds", corto: "JAI Sounds", href: "/jai-sounds" },
-  galeria: { nombre: "Galería", corto: "Galería", href: "/galeria" },
+  kaketiana: { nombre: "Kaketiana", corto: "Kaketiana", href: "/kaketiana", liberada: LIBERADA.kaketiana },
+  "jai-sounds": { nombre: "JAI Sounds", corto: "JAI Sounds", href: "/jai-sounds", liberada: LIBERADA["jai-sounds"] },
+  galeria: { nombre: "Galería", corto: "Galería", href: "/galeria", liberada: LIBERADA.galeria },
   // Buchibe todavía no tiene sección: la etiqueta existe, el enlace no.
-  buchibe: { nombre: "Cuentos de Buchibe", corto: "Buchibe", href: null },
-} as const satisfies Record<string, { nombre: string; corto: string; href: string | null }>;
+  buchibe: { nombre: "Cuentos de Buchibe", corto: "Buchibe", href: null, liberada: LIBERADA.buchibe },
+} as const satisfies Record<string, { nombre: string; corto: string; href: string | null; liberada: boolean }>;
 
 export type Arista = keyof typeof ARISTAS;
 

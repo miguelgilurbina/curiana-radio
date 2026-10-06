@@ -547,13 +547,24 @@ el flujo de publicación en la skill `publicar-entrada`.
 
 ## 13. El shell La Noche (cabecera y pie)
 
+> **Qué está al aire** (Miguel, 2026-10-06): por ahora sólo Curiana Radio
+> (la landing, Señales y «Quién transmite»), **Kaketiana** y **JAI Sounds**.
+> La Galería, Cuentos de Buchibe y el archivo de ediciones siguen en el
+> taller. Una sola fuente: `LIBERADA` en `lib/secciones.ts`, que leen la nav,
+> el pie, el hero y las aristas de la landing, «Quién transmite», las
+> etiquetas y los filtros de Señales, el pie de JAI y el sitemap. En
+> producción sus rutas (`/galeria`, `/archivo`, `/01`…) vuelven a `/inicio`
+> (`SIN_LIBERAR` en `next.config.js`); en local y en las vistas previas se
+> ven. Liberar una es cambiar su línea en los dos lugares.
+
 Handoff: `design_handoff_senales_luces/shell/` (SHELL.md y `Shell La Noche.dc.html`).
 El marco común de la landing (`/inicio`), Señales (`/senales`, `/senales/*`) y
 «Quién transmite» (`/sobre`): un mismo sello, un mismo fondo y un reparto de
 voces fijo: **el cartel grita** (Archivo Black), **el oráculo susurra** (Lora
 itálica), **el dato teclea** (mono). Lo elige `components/layout/ShellRadio.tsx`
-por ruta; el resto del sitio sigue en papel hasta que su vista entre a la noche,
-y la intro El Disco (`/`, `/intro`) va sin marco.
+para **todas las páginas** menos la intro El Disco (`/`, `/intro`), que va
+sin marco. El papel de la radio (la nav, el pie y el fondo animado de antes,
+y el badge naranja) se retiró el 2026-10-06.
 
 - **Decisiones de Miguel (2026-10-05):** la opción **1a · El dial**; el acento
   **2a · oro de arena** `#E6B43C` (10.2:1 sobre `#0F1621`); y **SEÑALES en la
@@ -566,8 +577,8 @@ y la intro El Disco (`/`, `/intro`) va sin marco.
   en el papel de la radio y en el sello de «la radio» del índice.
 - **Cabecera** (`components/shell/CabeceraNoche.tsx`): sticky, fondo sólido sin
   vidrio, se esconde al bajar y vuelve al subir. Desde `lg`: 92px; el sello de
-  56px; la nav MANIFIESTO · SEÑALES · JAI SOUNDS · KAKETIANA · GALERÍA ·
-  BUCHIBE · ARCHIVO en mono 11px .24em, repartida sobre la escala de sintonía,
+  56px; la nav MANIFIESTO · SEÑALES · JAI SOUNDS · KAKETIANA (y GALERÍA ·
+  BUCHIBE · ARCHIVO cuando se liberen) en mono 11px .24em, repartida sobre la escala de sintonía,
   con la **aguja** (2×46px, acento) en la estación activa, que se desliza al
   navegar (300ms; sin movimiento con `prefers-reduced-motion`); a la derecha
   AL AIRE con su pulso y el badge **88.8 FM**. La estación activa sale de la
@@ -596,8 +607,11 @@ y la intro El Disco (`/`, `/intro`) va sin marco.
 - **En la landing**, el shell reemplaza la barra propia del hero (isotipo,
   lockup, SINTONIZADO; el `<h1>` queda para lectores de pantalla) y el
   Colofón 07 (su proverbio pasa al pie; el burro ASCII sigue en el 404).
+- **Mientras el archivo esté en el taller:** la landing no muestra la
+  última edición ni el archivo (la suscripción vive en el pie), el CTA del
+  hero sintoniza el manifiesto, SINTONIZAR AHORA del menú lleva a `/inicio` y
+  la línea legal dice sólo «V1 LA NOCHE».
 - **Pendiente:** el sello de «la radio» en el índice sigue naranja y el de
-  Buchibe es oro, cerca del acento nuevo; la landing tiene dos formularios de
-  suscripción (la sección 06 y el pie); las vistas de papel (archivo,
-  ediciones, galería, el wiki, JAI) entran a la noche una por una.
+  Buchibe es oro, cerca del acento nuevo; las páginas en el taller (archivo,
+  ediciones, galería) llevan el shell pero su contenido sigue en papel.
 

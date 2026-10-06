@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Fraunces, Inter, Lora } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/layout/Navigation";
-import Footer from "@/components/layout/Footer";
 import ShellRadio from "@/components/layout/ShellRadio";
 import CabeceraNoche from "@/components/shell/CabeceraNoche";
 import PieNoche from "@/components/shell/PieNoche";
@@ -47,11 +45,12 @@ const archivoBlack = Archivo_Black({
 
 export const metadata: Metadata = {
   title: "Curiana Radio - 88.8 FM",
-  description: "Transmisión Cultural desde Abya Yala - A cultural newsletter experience delivered as immersive web pages.",
+  description:
+    "Una radio del futuro que se sintoniza desde acá. Kaketiana, el mundo y la lengua de los caquetíos; JAI Sounds, la curaduría musical; y Señales, lo que escribe su creador.",
   metadataBase: new URL("https://curianaradio.com"), // Update with actual domain
   openGraph: {
-    title: "Curiana Radio - 88.8 FM",
-    description: "Transmisión Cultural desde Abya Yala",
+    title: "Curiana Radio · 88.8 FM",
+    description: "Una radio del futuro que se sintoniza desde acá: Kaketiana, JAI Sounds y Señales.",
     type: "website",
   },
   // Favicon "la noche": espiral hueso sobre deep-900 (BRAND_MVP.md §8.1).
@@ -96,10 +95,8 @@ export default async function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <ShellRadio
-          nav={<Navigation />}
-          footer={<Footer />}
-          cabeceraNoche={<CabeceraNoche edicion={edicion} aristaDeSenal={aristaDeSenal} />}
-          pieNoche={<PieNoche edicion={edicion} />}
+          cabecera={<CabeceraNoche edicion={edicion} aristaDeSenal={aristaDeSenal} />}
+          pie={<PieNoche edicion={edicion} />}
         >
           {children}
         </ShellRadio>

@@ -4,6 +4,7 @@ import EscalaDial from "./EscalaDial";
 import LuzNativa from "./LuzNativa";
 import Suscripcion from "@/components/landing/Suscripcion";
 import { REDES } from "@/lib/redes";
+import { LIBERADA } from "@/lib/secciones";
 import { SPOTIFY_SHOW } from "@/components/jai-sounds/estilos";
 
 // El pie de la noche: shell 1a «El dial» (design_handoff_senales_luces/shell/
@@ -41,12 +42,16 @@ export default function PieNoche({ edicion }: { edicion: { numero: string } }) {
               <Link href="/kaketiana" className={ENLACE}>
                 Kaketiana
               </Link>
-              <Link href="/galeria" className={ENLACE}>
-                Galería · Prompt Maker
-              </Link>
-              <span className={`${ENLACE} text-(--noche-dato) hover:text-(--noche-dato)`}>
-                Cuentos de Buchibe<span className="sr-only"> (pronto)</span>
-              </span>
+              {LIBERADA.galeria && (
+                <Link href="/galeria" className={ENLACE}>
+                  Galería · Prompt Maker
+                </Link>
+              )}
+              {LIBERADA.buchibe && (
+                <span className={`${ENLACE} text-(--noche-dato) hover:text-(--noche-dato)`}>
+                  Cuentos de Buchibe<span className="sr-only"> (pronto)</span>
+                </span>
+              )}
             </nav>
 
             <nav aria-label="La emisora" className="flex flex-col lg:gap-3.5">
@@ -60,9 +65,11 @@ export default function PieNoche({ edicion }: { edicion: { numero: string } }) {
               <Link href="/sobre" className={ENLACE}>
                 Quién transmite
               </Link>
-              <Link href="/archivo" className={ENLACE}>
-                Ver todas las transmisiones →
-              </Link>
+              {LIBERADA.archivo && (
+                <Link href="/archivo" className={ENLACE}>
+                  Ver todas las transmisiones →
+                </Link>
+              )}
               <a
                 href={`https://open.spotify.com/show/${SPOTIFY_SHOW}`}
                 target="_blank"
@@ -91,7 +98,7 @@ export default function PieNoche({ edicion }: { edicion: { numero: string } }) {
         <div className={`flex flex-col gap-2 lg:flex-row lg:justify-between lg:gap-6 ${LEGAL}`}>
           <span>88.8 FM — SIEMPRE TRANSMITIENDO</span>
           <span className="hidden lg:inline">TRANSMISIÓN CULTURAL DESDE ABYA YALA</span>
-          <span>EDICIÓN #{edicion.numero} · V1 LA NOCHE</span>
+          <span>{LIBERADA.archivo ? `EDICIÓN #${edicion.numero} · ` : ""}V1 LA NOCHE</span>
         </div>
         <LuzNativa className={`${LEGAL} self-start transition-colors duration-300 hover:text-(--noche-acento)`} />
       </div>

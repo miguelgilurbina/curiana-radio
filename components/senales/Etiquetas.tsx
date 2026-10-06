@@ -42,14 +42,14 @@ export default function Etiquetas({
   return (
     <span className="flex flex-wrap gap-x-4 gap-y-1">
       {aristas.map((id) => {
-        const { nombre, href } = ARISTAS[id];
+        const { nombre, href, liberada } = ARISTAS[id];
         const contenido = (
           <>
             {sello && <Sello id={id} />}
             {nombre}
           </>
         );
-        return enlazar && href ? (
+        return enlazar && href && liberada ? (
           <Link
             key={id}
             href={href}

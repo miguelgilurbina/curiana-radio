@@ -4,6 +4,7 @@ import Link from "next/link";
 import Batea from "@/components/jai-sounds/batea/Batea";
 import Canal from "@/components/jai-sounds/Canal";
 import SenalesDeArista from "@/components/senales/SenalesDeArista";
+import { LIBERADA } from "@/lib/secciones";
 import { MUSICA, VIAJE } from "@/components/jai-sounds/escrito";
 import { CTA_LINEA, PORTADA_DESCUBRIENDO } from "@/components/jai-sounds/estilos";
 import { datosEstacion, resumenEstaciones } from "@/lib/jai-wiki";
@@ -110,8 +111,11 @@ export default function JaiSoundsPage() {
 
       <footer className="mx-auto flex max-w-[1120px] flex-wrap justify-between gap-5 px-[clamp(16px,4vw,32px)] pb-[72px] pt-14">
         <span className="jai-dato text-[11px] text-(--jai-luz-faint)">hasta la próxima transmisión. — curiana radio, 88.8 fm</span>
-        <Link href="/archivo" className="font-sans text-xs uppercase tracking-[0.2em] text-(--jai-luz-soft) transition-colors duration-300 hover:text-(--jai-luz)">
-          ver todas las transmisiones →
+        <Link
+          href={LIBERADA.archivo ? "/archivo" : "/inicio"}
+          className="font-sans text-xs uppercase tracking-[0.2em] text-(--jai-luz-soft) transition-colors duration-300 hover:text-(--jai-luz)"
+        >
+          {LIBERADA.archivo ? "ver todas las transmisiones →" : "volver a la radio →"}
         </Link>
       </footer>
     </>

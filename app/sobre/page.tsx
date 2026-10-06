@@ -5,6 +5,7 @@ import Redes from "@/components/senales/Redes";
 import InterruptorLuz from "@/components/senales/InterruptorLuz";
 import { radio } from "@/components/senales/pieles/radio";
 import { PORTAFOLIO } from "@/lib/redes";
+import { LIBERADA, type Seccion } from "@/lib/secciones";
 
 export const metadata: Metadata = {
   title: "Quién transmite — Curiana Radio",
@@ -24,15 +25,16 @@ const P = "m-0 text-body text-(--noche-hueso)";
 const ENLACE =
   "text-(--noche-hueso) underline decoration-(--noche-filete-fuerte) underline-offset-4 transition-colors duration-300 hover:text-(--noche-frecuencia-tinta) hover:decoration-(--noche-frecuencia-tinta)";
 
-const ARISTAS = [
+const ARISTAS: { nombre: string; href: string | null; texto: string; seccion?: Seccion }[] = [
   {
+    seccion: "kaketiana",
     nombre: "Kaketiana",
     href: "/kaketiana",
     texto: "reconstruye el mundo y la lengua de los caquetíos del Golfete de Coro, con cada fuente a la vista.",
   },
-  { nombre: "JAI Sounds", href: "/jai-sounds", texto: "es la curaduría musical, sin límites de género." },
-  { nombre: "La Galería", href: "/galeria", texto: "reúne las imágenes que van quedando en el camino." },
-  { nombre: "Cuentos de Buchibe", href: null, texto: "está por correr el telón." },
+  { seccion: "jai-sounds", nombre: "JAI Sounds", href: "/jai-sounds", texto: "es la curaduría musical, sin límites de género." },
+  { seccion: "galeria", nombre: "La Galería", href: "/galeria", texto: "reúne las imágenes que van quedando en el camino." },
+  { seccion: "buchibe", nombre: "Cuentos de Buchibe", href: null, texto: "está por correr el telón." },
   { nombre: "Señales", href: "/senales", texto: "es donde escribo yo." },
 ];
 
@@ -69,7 +71,7 @@ export default function Sobre() {
           </p>
           <p className={P}>La señal tiene varias frecuencias:</p>
           <ul className="m-0 flex list-none flex-col gap-3 p-0">
-            {ARISTAS.map((a) => (
+            {ARISTAS.filter((a) => !a.seccion || LIBERADA[a.seccion]).map((a) => (
               <li key={a.nombre} className="border-l-2 border-(--noche-filete) pl-4 text-body text-(--noche-hueso)">
                 {a.href ? (
                   <Link href={a.href} className={`font-semibold ${ENLACE}`}>

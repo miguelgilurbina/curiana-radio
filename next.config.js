@@ -1,3 +1,16 @@
+// Las secciones que siguen en el taller (Miguel, 2026-10-06): la Galería, el
+// archivo de ediciones y las ediciones mismas (/01…). En producción vuelven a
+// la radio; en local y en las vistas previas se ven, para seguir trabajándolas.
+// Va a la par de LIBERADA en lib/secciones.ts: al liberar una, sale de aquí.
+const SIN_LIBERAR =
+  process.env.VERCEL_ENV === 'production'
+    ? ['/galeria', '/galeria/:path*', '/archivo', '/:edicion(\\d{1,3})'].map((source) => ({
+        source,
+        destination: '/inicio',
+        permanent: false,
+      }))
+    : [];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -59,6 +72,7 @@ const nextConfig = {
         destination: '/kaketiana/:path*',
         permanent: true,
       },
+      ...SIN_LIBERAR,
     ];
   },
 };

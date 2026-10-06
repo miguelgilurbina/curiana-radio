@@ -1,23 +1,29 @@
+import { LIBERADA, type Seccion } from "@/lib/secciones";
+
 // Las estaciones de la nav de la noche (shell 1a «El dial», SHELL.md). El
 // diseño trae MANIFIESTO · JAI SOUNDS · KAKETIANA · GALERÍA · BUCHIBE ·
-// ARCHIVO; Miguel sumó SEÑALES (2026-10-05). Buchibe todavía no tiene
-// sección: está en el dial, pero no se puede sintonizar.
+// ARCHIVO; Miguel sumó SEÑALES (2026-10-05). Sólo salen las que están al aire
+// (lib/secciones.ts): hoy Galería, Buchibe y el archivo siguen en el taller.
 
 export interface Estacion {
   id: string;
+  /** si es una sección que se libera aparte */
+  seccion?: Seccion;
   nombre: string;
   href: string | null;
 }
 
-export const ESTACIONES: Estacion[] = [
-  { id: "manifiesto", nombre: "Manifiesto", href: "/inicio#manifiesto" },
-  { id: "senales", nombre: "Señales", href: "/senales" },
-  { id: "jai-sounds", nombre: "JAI Sounds", href: "/jai-sounds" },
-  { id: "kaketiana", nombre: "Kaketiana", href: "/kaketiana" },
-  { id: "galeria", nombre: "Galería", href: "/galeria" },
-  { id: "buchibe", nombre: "Buchibe", href: null },
-  { id: "archivo", nombre: "Archivo", href: "/archivo" },
-];
+export const ESTACIONES: Estacion[] = (
+  [
+    { id: "manifiesto", nombre: "Manifiesto", href: "/inicio#manifiesto" },
+    { id: "senales", nombre: "Señales", href: "/senales" },
+    { id: "jai-sounds", seccion: "jai-sounds", nombre: "JAI Sounds", href: "/jai-sounds" },
+    { id: "kaketiana", seccion: "kaketiana", nombre: "Kaketiana", href: "/kaketiana" },
+    { id: "galeria", seccion: "galeria", nombre: "Galería", href: "/galeria" },
+    { id: "buchibe", seccion: "buchibe", nombre: "Buchibe", href: null },
+    { id: "archivo", seccion: "archivo", nombre: "Archivo", href: "/archivo" },
+  ] satisfies Estacion[]
+).filter((e) => !e.seccion || LIBERADA[e.seccion]);
 
 const SECCIONES = ["kaketiana", "jai-sounds", "galeria", "archivo"];
 

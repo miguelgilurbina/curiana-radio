@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllEditions } from "@/lib/content";
 import { getSenales } from "@/lib/senales";
+import { LIBERADA } from "@/lib/secciones";
 import HeroAristas from "@/components/landing/HeroAristas";
 import {
   Aristas,
@@ -38,8 +39,10 @@ export default async function Inicio() {
       <Senales senales={senales} />
       <Interludio />
       <Aristas />
-      {ultima && <UltimaTransmision edicion={ultima} />}
-      <ArchivoSuscripcion ediciones={ediciones} />
+      {/* La última edición y el archivo vuelven cuando se libere el archivo
+          (lib/secciones.ts); la suscripción vive en el pie de la noche. */}
+      {LIBERADA.archivo && ultima && <UltimaTransmision edicion={ultima} />}
+      {LIBERADA.archivo && <ArchivoSuscripcion ediciones={ediciones} />}
     </div>
   );
 }

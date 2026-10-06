@@ -15,7 +15,8 @@ type Filtro = "todas" | "radio" | Arista;
 const OPCIONES: { id: Filtro; nombre: string }[] = [
   { id: "todas", nombre: "Todas" },
   { id: "radio", nombre: "La radio" },
-  ...(Object.keys(ARISTAS) as Arista[]).map((a) => ({ id: a, nombre: ARISTAS[a].corto })),
+  // sólo las aristas al aire (lib/secciones.ts)
+  ...(Object.keys(ARISTAS) as Arista[]).filter((a) => ARISTAS[a].liberada).map((a) => ({ id: a, nombre: ARISTAS[a].corto })),
 ];
 
 export default function FiltroSenales({ senales }: { senales: SenalResumen[] }) {

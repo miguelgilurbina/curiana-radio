@@ -5,7 +5,7 @@ import { Overline, EmptyState } from "@/components/simulador/ui";
 import NeologismosCronologia from "@/components/simulador/NeologismosCronologia";
 
 export const metadata: Metadata = {
-  title: "Neologismos — Simulador Caquetío | Curiana Radio",
+  title: "Neologismos — Kaketiana | Curiana Radio",
   description:
     "Las palabras que los agentes inventaron, día a día: cuáles prendieron, cuáles murieron y quién las acuñó.",
 };

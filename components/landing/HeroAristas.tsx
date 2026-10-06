@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { Cartel } from "@/components/ui/Typography";
+import { LIBERADA, type Seccion } from "@/lib/secciones";
 
 // 01 · Hero: el carrusel de aristas (opción 2a del handoff, fase 2). La intro
 // ya obligó a interactuar, así que aquí no hay "gira la espiral": el hero
@@ -15,6 +16,8 @@ const MONO = "font-mono";
 const AUTO_MS = 5000;
 
 interface Diapositiva {
+  /** la sección que anuncia: sale sólo si está al aire (lib/secciones.ts) */
+  seccion?: Seccion;
   nombre: string; // para la etiqueta "0X / 05 · NOMBRE"
   frecuencia: string;
   titulo: string;
@@ -30,18 +33,20 @@ interface Diapositiva {
 
 function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] {
   const enlaceMono = `${MONO} text-[0.72rem] tracking-[0.16em] transition-colors duration-300 hover:text-(--noche-acento)`;
-  return [
+  const todas: Diapositiva[] = [
     {
       nombre: "LA RADIO",
       frecuencia: "88.8 · EL MARCO",
       titulo: "La Radio",
       bajada: "Emitimos desde una Paraguaná paralela, después del Renacimiento de La Curiana.",
+      // con el archivo en el taller, sintonizar es entrar a la radio (el
+      // manifiesto), no a una edición
       cta: (
         <Link
-          href={`/${edicion.slug}`}
+          href={LIBERADA.archivo ? `/${edicion.slug}` : "#manifiesto"}
           className="mt-1.5 self-start rounded-[2px] bg-(--noche-acento) px-7 py-[15px] text-[0.78rem] font-semibold uppercase tracking-[0.2em] whitespace-nowrap text-(--noche-fondo) transition-all duration-300 hover:bg-(--noche-hueso) hover:text-(--noche-fondo)"
         >
-          Sintonizar #{edicion.numero} →
+          {LIBERADA.archivo ? `Sintonizar #${edicion.numero} →` : "Sintonizar →"}
         </Link>
       ),
       tema: {},
@@ -50,9 +55,10 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "font-serif italic text-lg leading-relaxed text-(--noche-hueso-2) max-w-[44ch]",
     },
     {
+      seccion: "jai-sounds",
       nombre: "JAI SOUNDS",
       frecuencia: "88.1 · jai · caquetío · oír, escuchar",
-      titulo: "Jai Sounds",
+      titulo: "JAI Sounds",
       bajada: "La cabina de noche. Cinco pistas por emisión, reseñadas al oído; el dial rota su matiz con cada visita.",
       cta: (
         <Link href="/jai-sounds" className={`${enlaceMono} text-(--jai-luz)`}>
@@ -66,6 +72,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--jai-luz-soft) max-w-[46ch]",
     },
     {
+      seccion: "kaketiana",
       nombre: "KAKETIANA",
       frecuencia: "88.3 · Golfete de Coro · s. XIV–XV",
       titulo: "Kaketiana",
@@ -82,6 +89,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--sim-ink-soft) max-w-[46ch]",
     },
     {
+      seccion: "galeria",
       nombre: "GALERÍA",
       frecuencia: "88.5 · LA SALA NEUTRA",
       titulo: "Galería · Prompt Maker",
@@ -97,6 +105,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--gal-luz-soft) max-w-[46ch]",
     },
     {
+      seccion: "buchibe",
       nombre: "BUCHIBE",
       frecuencia: "88.6 · EL TELÓN",
       titulo: "Cuentos de Buchibe",
@@ -109,6 +118,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--buc-luz) max-w-[46ch]",
     },
   ];
+  return todas.filter((d) => !d.seccion || LIBERADA[d.seccion]);
 }
 
 export default function HeroAristas({ edicion }: { edicion: { numero: string; slug: string } }) {

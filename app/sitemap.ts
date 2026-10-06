@@ -3,6 +3,7 @@ import { getAllEditions } from '@/lib/content';
 import { getAllPersonajes } from '@/lib/personajes';
 import { getSlugs } from '@/lib/galeria';
 import { getWikiIndice } from '@/lib/wiki';
+import { LIBERADA } from '@/lib/secciones';
 import { getSenales } from '@/lib/senales';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -31,19 +32,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-    {
-      url: `${baseUrl}/archivo`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/galeria`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
   ];
+  // Las secciones en el taller (lib/secciones.ts) no entran al sitemap.
+  if (LIBERADA.archivo)
+    staticPages.push({ url: `${baseUrl}/archivo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 });
+  if (LIBERADA.galeria)
+    staticPages.push({ url: `${baseUrl}/galeria`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 });
 
   // Señales: el blog. Los borradores no entran (sólo se ven fuera de producción).
   const senalesPages: MetadataRoute.Sitemap = [
@@ -135,11 +129,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticPages,
     ...senalesPages,
-    ...editionPages,
+    ...(LIBERADA.archivo ? editionPages : []),
     ...simuladorPages,
     ...personajePages,
     ...jaiSoundsPages,
-    ...galeriaPages,
+    ...(LIBERADA.galeria ? galeriaPages : []),
     ...wikiPages,
   ];
 }
