@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JAI Sounds — Curaduría musical",
     description:
-      "jay · caquetío · oír, escuchar. Un dial de estaciones desde Curiana Radio · 88.8 FM",
+      "jai · caquetío · oír, escuchar. Un dial de estaciones desde Curiana Radio · 88.8 FM",
     type: "website",
   },
 };

@@ -123,9 +123,60 @@ Modos de `--sync`:
 | `--sync <url\|id> …` | Solo esas |
 | `--sync --todas` | Todas las de la cuenta |
 | `--sync --guardadas` | Añade "Canciones que te gustan" (`/me/tracks`) |
+| `--sync --dial` | Las 23 estaciones de `playlists.json`, marcadas `en_dial` con su slug |
 
 Salta las playlists que no cambiaron comparando `snapshot_id`; `--force` las
 re-ingesta igual. `--dry-run` no escribe nada.
+
+---
+
+## El wiki: canción, álbum y artista
+
+La base es la **fuente**, no se lee en vivo: `curiana-produccion` es plan
+gratis y se pausa sola. Los scripts la cargan y `jai:exportar` deja el wiki
+como JSON en el repo; si la base se pausa, el sitio no se entera.
+
+Cada entidad del dial tiene su página, con dos voces que no se mezclan: la
+**reseña JAI** (de Miguel) y **«esto dice el internet»** (Wikipedia, citada).
+Debajo, el dato: Spotify más MusicBrainz. Todo vive en `jai`; la migración
+es `supabase/migrations/20261005000000_jai_wiki.sql`.
+
+En orden, con `source ~/.secrets/jai.env` antes:
+
+| Paso | Comando | Qué hace |
+|---|---|---|
+| 1 | `npm run jai:dial` | Ingesta las 23 estaciones y las marca en el dial |
+| 2 | `npm run jai:slugs` | Da URL a cada artista, álbum y canción (una vez, estable) |
+| 3 | `npm run jai:musicbrainz` | Géneros, primera edición, créditos, país, miembros, enlaces (~1 h la primera vez, 1 consulta/s) |
+| 4 | `npm run jai:wikipedia` | El primer párrafo de Wikipedia de artistas, álbumes y canciones |
+| 5 | `npm run jai:resenas` | Sube las reseñas `publicada` del vault de Obsidian |
+| 6 | `npm run jai:exportar` | Saca de la base SOLO lo publicado a `content/jai-sounds/wiki/`: de ahí se arman las páginas, estáticas |
+
+Las portadas (`npm run jai:portadas`) no necesitan base: bajan el arte de las
+estaciones a `public/jai/portadas/` y llenan `portada` en `playlists.json`.
+
+Las cachés de MusicBrainz y Wikipedia viven en `~/.cache/jai-sounds/`: correr
+de nuevo no repite consultas. La lógica de los scripts tiene pruebas:
+`npm run jai:test`.
+
+### Las reseñas
+
+Se escriben en Obsidian, en `OneDrive/Documents/Obsidian Vault/JAI Sounds/`,
+**fuera del repo** (que es público): un borrador no tiene por qué verse. Cada
+nota lleva el enlace de Spotify y su estado:
+
+```markdown
+---
+spotify: https://open.spotify.com/artist/…
+estado: publicada
+---
+La reseña, en markdown.
+```
+
+`npm run jai:resenas -- --nueva <enlace>` crea la nota con el nombre puesto;
+`-- --retirar` baja del sitio las que se despublicaron. Aunque un borrador
+llegara a la base, el público no lo ve: la RLS de `jai.resenas` solo deja
+leer las publicadas.
 
 ---
 
@@ -145,7 +196,10 @@ ajenas, no para ingestar un archivo propio.
 - [x] Login de usuario (Authorization Code) para leer privadas y `/me/*`
 - [x] Portada del dial en `/jai-sounds`
 - [x] Propuestas de UI sobre datos de muestra en `/jai-sounds/muestra`
+- [x] Portadas propias de las 23 estaciones en el repo
+- [x] Esquema y scripts del wiki: slugs, MusicBrainz, Wikipedia, reseñas desde Obsidian
+- [ ] Esquema del wiki aplicado y catálogo cargado en producción
+- [ ] `/jai-sounds` como la batea (espera el handoff de diseño, `BRIEF_DISENO_WIKI.md`)
+- [ ] Páginas de canción, álbum y artista
 - [ ] Taxonomía real (hoy hay seis moods de andamio, marcados `borrador`)
 - [ ] Páginas de mood `/jai-sounds/[mood]`
-- [ ] Fichas de artista y navegación por cruces de género
-- [ ] Notas curatoriales por pista (`jai_curation`)
