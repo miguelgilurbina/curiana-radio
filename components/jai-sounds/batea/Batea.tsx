@@ -11,6 +11,7 @@ import {
 } from "react";
 import { hueDeEstacion, semillaDeSesion } from "@/lib/jai-rotacion";
 import { empezarEn } from "@/lib/jai-rastro";
+import { medir } from "@/lib/analitica";
 import type { ResumenEstacion } from "@/lib/jai-wiki";
 import type { DatosEstacion } from "@/types/jai-wiki";
 import JA from "../JA";
@@ -94,8 +95,9 @@ export default function Batea({
         history.replaceState(null, "", `#${num(n)}`);
       } catch {}
       dispatchEvent(new Event(EVENTO));
+      medir("estacion", { estacion: estaciones[n].nombre });
     },
-    [N]
+    [N, estaciones]
   );
 
   // La actual y sus vecinas: pasar de disco no espera la red.

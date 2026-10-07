@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
+import { medir } from "@/lib/analitica";
 
 // El formulario de suscripción de la landing. El envío va al proveedor del
 // newsletter, que se configura con NEXT_PUBLIC_SUSCRIPCION_URL (un endpoint
@@ -43,6 +44,7 @@ export default function Suscripcion({
       // fetch lanza y se avisa.
       await fetch(PROVEEDOR, { method: "POST", body: datos, mode: "no-cors" });
       setEstado("listo");
+      medir("suscripcion", { desde: window.location.pathname });
     } catch {
       setEstado("error");
       setAviso("La señal no salió. Prueba otra vez en un momento.");

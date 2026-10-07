@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Fraunces, Inter, Lora } from "next/font/google";
 import "./globals.css";
 import ShellRadio from "@/components/layout/ShellRadio";
+import JsonLd from "@/components/seo/JsonLd";
+import { jsonLdSitio, SITIO, TARJETA_RADIO } from "@/lib/seo";
+import Analitica from "@/components/analitica/Analitica";
 import CabeceraNoche from "@/components/shell/CabeceraNoche";
 import PieNoche from "@/components/shell/PieNoche";
 import { getAllEditions } from "@/lib/content";
@@ -43,16 +46,23 @@ const archivoBlack = Archivo_Black({
   display: "swap",
 });
 
+// La metadata base del sitio. Cada página declara la suya completa con
+// metadatos() (lib/seo.ts); esto es el respaldo de lo que no la declare. Sin
+// canonical aquí a propósito: se heredaría y toda página diría ser la portada.
 export const metadata: Metadata = {
-  title: "Curiana Radio - 88.8 FM",
-  description:
-    "Una radio del futuro que se sintoniza desde acá. Kaketiana, el mundo y la lengua de los caquetíos; JAI Sounds, la curaduría musical; y Señales, lo que escribe su creador.",
-  metadataBase: new URL("https://curianaradio.com"), // Update with actual domain
+  metadataBase: new URL(SITIO.url),
+  title: `${SITIO.nombre} - ${SITIO.lema}`,
+  description: SITIO.descripcion,
+  applicationName: SITIO.nombre,
   openGraph: {
-    title: "Curiana Radio · 88.8 FM",
-    description: "Una radio del futuro que se sintoniza desde acá: Kaketiana, JAI Sounds y Señales.",
+    title: `${SITIO.nombre} · ${SITIO.lema}`,
+    description: SITIO.bajada,
+    siteName: SITIO.nombre,
+    locale: SITIO.locale,
     type: "website",
+    images: [TARJETA_RADIO],
   },
+  twitter: { card: "summary_large_image" },
   // Favicon "la noche": espiral hueso sobre deep-900 (BRAND_MVP.md §8.1).
   // Los archivos viven en public/; no hay app/favicon.ico que los pise.
   icons: {
@@ -94,12 +104,14 @@ export default async function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_LUZ }} />
       </head>
       <body className="font-sans antialiased">
+        <JsonLd datos={jsonLdSitio()} />
         <ShellRadio
           cabecera={<CabeceraNoche edicion={edicion} aristaDeSenal={aristaDeSenal} />}
           pie={<PieNoche edicion={edicion} />}
         >
           {children}
         </ShellRadio>
+        <Analitica />
       </body>
     </html>
   );

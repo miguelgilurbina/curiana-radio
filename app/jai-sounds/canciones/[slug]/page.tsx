@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import MarcoWiki from "@/components/jai-sounds/wiki/MarcoWiki";
 import { Datos, DosVoces, Generos, Riel, Rotulo, SiguePor, type Tarjeta } from "@/components/jai-sounds/wiki/piezas";
-import { album, artista, cancion, duracion, estaciones, nombreArtista, portada, vecinas } from "@/lib/jai-wiki";
+import { album, artista, cancion, conVozDeJai, duracion, estaciones, imagenSocial, nombreArtista, portada, vecinas } from "@/lib/jai-wiki";
+import { metadatos, TARJETA_JAI } from "@/lib/seo";
 
 // Una página por canción, generada la primera vez que alguien la visita y
 // servida estática desde ahí (son ~2.000: no se arman todas en el build).
@@ -21,10 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // transmitir, así el 404 llega como 404 y no como 200 con el aviso.
   if (!c) notFound();
   const de = c.a.map(nombreArtista).join(", ");
-  return {
-    title: `${c.t} — ${de} | JAI Sounds`,
-    description: `${c.t}, de ${de}, en el dial de JAI Sounds: dónde suena, qué suena antes y después, y lo que se sabe de ella.`,
-  };
+  return metadatos({
+    titulo: `${c.t} — ${de} | JAI Sounds`,
+    tituloSocial: `${c.t} — ${de}`,
+    descripcion: `${c.t}, de ${de}, en el dial de JAI Sounds: dónde suena, qué suena antes y después, y lo que se sabe de ella.`,
+    ruta: `/jai-sounds/canciones/${(await params).slug}`,
+    imagen: imagenSocial(c.img, `${c.t}, de ${de}`) ?? TARJETA_JAI,
+    noIndex: !conVozDeJai(c),
+  });
 }
 
 export default async function CancionPage({ params }: Props) {

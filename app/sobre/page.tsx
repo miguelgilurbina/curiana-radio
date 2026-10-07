@@ -6,13 +6,15 @@ import InterruptorLuz from "@/components/senales/InterruptorLuz";
 import { radio } from "@/components/senales/pieles/radio";
 import { PORTAFOLIO } from "@/lib/redes";
 import { LIBERADA, type Seccion } from "@/lib/secciones";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Quién transmite — Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Quién transmite — Curiana Radio",
+  descripcion:
     "Curiana Radio es el laboratorio creativo de Miguel Gil Urbina: una radio del futuro que se sintoniza desde acá, con memoria donde casi nunca la hay.",
-  alternates: { canonical: "/sobre" },
-};
+  ruta: "/sobre",
+  imagen: tarjeta("sobre", "Quién transmite: Curiana Radio y su creador"),
+});
 
 // «Quién transmite»: lo que hay detrás de la ficción. La radio transmite
 // desde después; aquí se dice quién la hace y desde dónde. Va en la piel de

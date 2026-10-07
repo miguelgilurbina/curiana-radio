@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import type { EditionMetadata, SectionType, SectionContent, Edition, ArchiveItem } from '@/types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'editions');
+const SLUG_VALIDO = /^[a-z0-9-]+$/i;
 
 /**
  * Get all edition numbers (folder names) from the content directory
@@ -31,6 +32,9 @@ export function getAllEditionSlugs(): string[] {
  * Get metadata for a specific edition
  */
 export async function getEditionMetadata(slug: string): Promise<EditionMetadata | null> {
+  // El slug llega de la URL y se vuelve ruta de disco: sólo letras, cifras y
+  // guiones, para que «..» o una barra codificada no salgan de content/.
+  if (!SLUG_VALIDO.test(slug)) return null;
   try {
     const metadataPath = path.join(CONTENT_DIR, slug, 'metadata.json');
     const metadataContent = fs.readFileSync(metadataPath, 'utf-8');
@@ -49,6 +53,7 @@ async function loadSection(
   slug: string,
   sectionName: string
 ): Promise<SectionContent | null> {
+  if (!SLUG_VALIDO.test(slug)) return null;
   try {
     const sectionPath = path.join(CONTENT_DIR, slug, `${sectionName}.mdx`);
 

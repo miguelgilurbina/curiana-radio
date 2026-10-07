@@ -6,6 +6,7 @@ import { getRunActivo } from "@/lib/editorial";
 import { Overline, Avatar, ScoreGauge } from "@/components/simulador/ui";
 import { DataAside } from "@/components/simulador/prose";
 import { EVENTO_TIPOS } from "@/lib/sim-theme";
+import { metadatos, tarjeta } from "@/lib/seo";
 
 interface PersonajePageProps {
   params: Promise<{ slug: string }>;
@@ -21,10 +22,13 @@ export async function generateMetadata({ params }: PersonajePageProps): Promise<
   const { slug } = await params;
   const p = getPersonajeBySlug(slug);
   if (!p) return { title: "Personaje no encontrado | Curiana Radio" };
-  return {
-    title: `${p.nombre} — Personajes del experimento · Kaketiana | Curiana Radio`,
-    description: p.rol_comunidad || p.descripcion.slice(0, 160),
-  };
+  return metadatos({
+    titulo: `${p.nombre} — Personajes del experimento · Kaketiana | Curiana Radio`,
+    tituloSocial: `${p.nombre} — personaje del experimento Kaketiana`,
+    descripcion: p.rol_comunidad || p.descripcion,
+    ruta: `/kaketiana/personajes/${p.slug}`,
+    imagen: tarjeta(`kaketiana/personajes/${p.slug}`, `${p.nombre}, personaje del experimento Kaketiana`),
+  });
 }
 
 export default async function PersonajePage({ params }: PersonajePageProps) {

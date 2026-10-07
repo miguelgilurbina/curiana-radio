@@ -4,9 +4,24 @@
     {
       "name": "curiana-radio",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3010,
       "autoPort": true
+    },
+    {
+      "name": "curiana-radio-build",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "start",
+        "--",
+        "-p",
+        "3011"
+      ],
+      "port": 3011
     }
   ]
 }

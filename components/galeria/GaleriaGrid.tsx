@@ -11,6 +11,7 @@ import {
   suscribirse,
 } from "@/lib/semilla-orden";
 import type { ObraGrid, Serie } from "@/types/galeria";
+import { medir } from "@/lib/analitica";
 
 interface GaleriaGridProps {
   obras: ObraGrid[];
@@ -157,7 +158,10 @@ export default function GaleriaGrid({
           key={firma}
           obras={visibles}
           blobBase={blobBase}
-          onAmpliar={setAbierta}
+          onAmpliar={(i) => {
+            setAbierta(i);
+            medir("obra", { obra: visibles[i].slug });
+          }}
         />
       ) : (
         <p className="py-16 text-center font-sans text-earth-600">

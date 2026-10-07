@@ -7,6 +7,7 @@ import type {
   DatosEstacion,
   EstacionWiki,
   FilaPista,
+  Voces,
 } from "@/types/jai-wiki";
 
 /**
@@ -73,6 +74,21 @@ export function portada(url: string | null, tam: 64 | 300 | 640): string | null 
 }
 
 export const num = (i: number) => String(i + 1).padStart(2, "0");
+
+/**
+ * Si una página del wiki va a los buscadores. Sólo con reseña de JAI: sin
+ * ella, la página son datos de MusicBrainz y un extracto de Wikipedia — útil
+ * para quien navega el rabbit hole, pero miles de páginas así le dicen a
+ * Google que el sitio es contenido armado en serie, y eso arrastra a
+ * Kaketiana. Al publicarse la reseña, la página entra sola (y al sitemap).
+ */
+export const conVozDeJai = (v: Voces) => Boolean(v.resena?.cuerpo);
+
+/** La portada como og:image (las de Spotify son cuadradas). */
+export function imagenSocial(url: string | null, alt: string) {
+  const u = portada(url, 640);
+  return u ? { url: u, alt, width: 640, height: 640 } : undefined;
+}
 
 // ── Consultas ────────────────────────────────────────────────────────
 

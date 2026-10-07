@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getWikiPagina, getWikiParams, getVecinos } from "@/lib/wiki";
+import { getWikiGenerado, getWikiPagina, getWikiParams, getVecinos } from "@/lib/wiki";
 import { enlazarVoces } from "@/lib/fichas";
-import { SECCIONES_WIKI, type SeccionWiki } from "@/types/wiki";
+import { ID_ORGANIZACION, jsonLdMigas, metadatos, recortar, tarjeta, urlAbsoluta } from "@/lib/seo";
+import { SECCIONES_WIKI, type SeccionWiki, type WikiPagina } from "@/types/wiki";
+import JsonLd from "@/components/seo/JsonLd";
 import { Overline } from "@/components/simulador/ui";
 import { WikiProse } from "@/components/simulador/wiki-mdx";
 import ArticuloEnsayo from "@/components/kaketiana/ArticuloEnsayo";
+import FinDeLectura from "@/components/analitica/FinDeLectura";
 
 interface ArticuloProps {
   params: Promise<{ seccion: string; slug: string }>;
@@ -27,10 +30,47 @@ export async function generateMetadata({ params }: ArticuloProps): Promise<Metad
   if (!esSeccion(seccion)) return { title: "No encontrado | Curiana Radio" };
   const p = getWikiPagina(seccion, slug);
   if (!p) return { title: "No encontrado | Curiana Radio" };
-  return {
-    title: `${p.titulo} — Kaketiana | Curiana Radio`,
-    description: p.resumen,
-  };
+  return metadatos({
+    titulo: `${p.titulo} — Kaketiana | Curiana Radio`,
+    tituloSocial: p.titulo,
+    descripcion: p.resumen,
+    ruta: `/kaketiana/${seccion}/${slug}`,
+    tipo: "article",
+    imagen: tarjeta(`kaketiana/${seccion}/${slug}`, p.titulo),
+  });
+}
+
+/** El artículo para buscadores y agentes: qué pregunta, de quién, y sobre
+ *  qué obras se sostiene (citation enlaza a la bibliografía, obra por obra). */
+function jsonLdArticulo(seccion: SeccionWiki, p: WikiPagina) {
+  const ruta = `/kaketiana/${seccion}/${p.slug}`;
+  const generado = getWikiGenerado();
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: p.titulo,
+      description: recortar(p.resumen),
+      url: urlAbsoluta(ruta),
+      image: urlAbsoluta(`/og${ruta}`),
+      inLanguage: "es",
+      ...(generado ? { dateModified: generado } : {}),
+      author: { "@id": ID_ORGANIZACION },
+      publisher: { "@id": ID_ORGANIZACION },
+      isPartOf: { "@type": "CreativeWork", name: "Kaketiana", url: urlAbsoluta("/kaketiana") },
+      about: { "@type": "Thing", name: "Pueblo caquetío" },
+      citation: p.fuentes.map((f) => ({
+        "@type": "CreativeWork",
+        name: f.titulo,
+        url: urlAbsoluta(`/kaketiana/bibliografia#${f.slug}`),
+      })),
+    },
+    jsonLdMigas([
+      ["Kaketiana", "/kaketiana"],
+      [SECCIONES_WIKI[seccion].label, `/kaketiana/${seccion}`],
+      [p.titulo, ruta],
+    ]),
+  ];
 }
 
 export default async function ArticuloPage({ params }: ArticuloProps) {
@@ -43,13 +83,20 @@ export default async function ArticuloPage({ params }: ArticuloProps) {
   // manual de Kaketiana (Vistas §02). `lengua` es material de referencia —20%
   // de sus líneas son tabla— y sigue aquí abajo hasta que le toque su vista
   // (Vistas §03: ancho completo, tablas que en móvil son fichas).
-  if (seccion === "pueblo") return <ArticuloEnsayo pagina={pagina} />;
+  if (seccion === "pueblo")
+    return (
+      <>
+        <JsonLd datos={jsonLdArticulo(seccion, pagina)} />
+        <ArticuloEnsayo pagina={pagina} />
+      </>
+    );
 
   const info = SECCIONES_WIKI[seccion];
   const { anterior, siguiente } = getVecinos(seccion, slug);
 
   return (
     <article className="mx-auto max-w-[860px]">
+      <JsonLd datos={jsonLdArticulo(seccion, pagina)} />
       <Link
         href="/kaketiana"
         className="font-sans text-sm text-(--sim-ink-soft) transition-colors hover:text-(--sim-fuego)"
@@ -67,6 +114,7 @@ export default async function ArticuloPage({ params }: ArticuloProps) {
       <div className="mt-8">
         {/* Las voces caquetías que el artículo nombra enlazan a su ficha */}
         <WikiProse source={enlazarVoces(pagina.cuerpo)} />
+        <FinDeLectura pagina={`/kaketiana/${seccion}/${slug}`} />
       </div>
 
       {/* Sobre qué se sostiene — rescatado del preámbulo del ensayo */}

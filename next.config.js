@@ -1,3 +1,102 @@
+// ── Cabeceras de seguridad ─────────────────────────────────────────────
+// El sitio es estático y no tiene sesiones ni formularios propios, así que lo
+// que se protege es al lector: que nadie meta la radio en un iframe ajeno, que
+// una inyección no pueda cargar scripts de otro dominio, que el navegador no
+// adivine tipos. La CSP lista a mano cada tercero que el sitio usa a
+// propósito; si se agrega uno (un proveedor, un embed), va aquí o el
+// navegador lo bloquea y lo dice en la consola.
+//
+// 'unsafe-inline' en script-src no es descuido: Next mete el payload de RSC
+// en <script> en línea y la única alternativa (nonces) obliga a renderizar
+// cada página por pedido, que este sitio 100% estático no necesita.
+const esDev = process.env.NODE_ENV !== 'production';
+// Las vistas previas llevan la barra de Vercel (comentarios), que carga de
+// vercel.live. Producción no la necesita.
+const esVistaPrevia = process.env.VERCEL_ENV === 'preview';
+
+function origen(url) {
+  try {
+    return url ? new URL(url).origin : null;
+  } catch {
+    return null;
+  }
+}
+// El newsletter postea a un proveedor configurable (Suscripcion.tsx).
+const suscripcion = origen(process.env.NEXT_PUBLIC_SUSCRIPCION_URL);
+
+const BLOB = 'https://*.public.blob.vercel-storage.com';
+const csp = {
+  'default-src': ["'self'"],
+  'script-src': [
+    "'self'",
+    "'unsafe-inline'",
+    esDev && "'unsafe-eval'",
+    // En desarrollo @vercel/analytics carga su script de depuración de aquí;
+    // en producción lo sirve el propio dominio (/_vercel/insights).
+    esDev && 'https://va.vercel-scripts.com',
+    esVistaPrevia && 'https://vercel.live',
+  ],
+  'style-src': ["'self'", "'unsafe-inline'", esVistaPrevia && 'https://vercel.live'],
+  'img-src': [
+    "'self'",
+    'data:',
+    'blob:',
+    BLOB,
+    // las teselas de los mapas de Kaketiana (Leaflet)
+    'https://tile.openstreetmap.org',
+    // las portadas de álbum del wiki de JAI Sounds (CDN de Spotify)
+    'https://i.scdn.co',
+    esVistaPrevia && 'https://vercel.live',
+    esVistaPrevia && 'https://vercel.com',
+  ],
+  'font-src': [
+    "'self'",
+    'data:',
+    esVistaPrevia && 'https://vercel.live',
+    esVistaPrevia && 'https://assets.vercel.com',
+  ],
+  'connect-src': [
+    "'self'",
+    suscripcion,
+    esDev && 'ws:',
+    esVistaPrevia && 'https://vercel.live',
+    esVistaPrevia && 'wss://ws-us3.pusher.com',
+  ],
+  'media-src': ["'self'", BLOB],
+  // los reproductores de JAI Sounds y de las ediciones, y los videos de
+  // Señales (youtube-nocookie: sin cookies hasta que alguien le da play)
+  'frame-src': [
+    'https://open.spotify.com',
+    'https://www.youtube-nocookie.com',
+    esVistaPrevia && 'https://vercel.live',
+  ],
+  'worker-src': ["'self'", 'blob:'],
+  'manifest-src': ["'self'"],
+  'object-src': ["'none'"],
+  'base-uri': ["'self'"],
+  'form-action': ["'self'", suscripcion],
+  'frame-ancestors': ["'none'"],
+};
+const politica = Object.entries(csp)
+  .map(([directiva, fuentes]) => [directiva, ...fuentes.filter(Boolean)].join(' '))
+  .join('; ');
+
+const cabecerasDeSeguridad = [
+  { key: 'Content-Security-Policy', value: politica },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  // strict-origin-when-cross-origin y no no-referrer: la política de uso de
+  // las teselas de OpenStreetMap pide un Referer válido.
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+  // Sólo lo que el sitio nunca usa. autoplay, encrypted-media y fullscreen
+  // quedan libres porque el embed de Spotify los pide.
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
+  },
+];
+
 // Las secciones que siguen en el taller (Miguel, 2026-10-06): la Galería, el
 // archivo de ediciones y las ediciones mismas (/01…). En producción vuelven a
 // la radio; en local y en las vistas previas se ven, para seguir trabajándolas.
@@ -14,6 +113,10 @@ const SIN_LIBERAR =
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  async headers() {
+    return [{ source: '/:path*', headers: cabecerasDeSeguridad }];
+  },
   images: {
     formats: ['image/webp', 'image/avif'],
     // La galería NO usa este optimizador: sus imágenes ya se sirven como

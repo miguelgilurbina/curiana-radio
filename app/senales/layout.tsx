@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Señales — Curiana Radio",
-  description:
+const base = metadatos({
+  titulo: "Señales — Curiana Radio",
+  descripcion:
     "Lo que escribe Miguel Gil Urbina, creador de Curiana Radio, sobre cada arista del imaginario: Kaketiana y JAI Sounds.",
+  ruta: "/senales",
+  imagen: tarjeta("senales", "Señales, el blog de Curiana Radio"),
+});
+
+// Cada señal declara su propia metadata y su tarjeta (opengraph-image.tsx).
+export const metadata: Metadata = {
+  ...base,
   alternates: {
-    canonical: "/senales",
+    ...base.alternates,
     types: { "application/rss+xml": [{ url: "/senales/rss.xml", title: "Señales — Curiana Radio" }] },
   },
 };

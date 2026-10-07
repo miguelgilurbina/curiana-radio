@@ -16,12 +16,15 @@ import { EvolucionTimeline, DiccionarioKoine } from "@/components/simulador/evol
 import { ExperimentoControl } from "@/components/simulador/experimento";
 import { Epoca, EventoItem, DataAside, Asterismo } from "@/components/simulador/prose";
 import { Overline, EmptyState } from "@/components/simulador/ui";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "La era 1 del experimento — cómo se construyó el motor | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "La era 1 del experimento — cómo se construyó el motor | Curiana Radio",
+  descripcion:
     "Las seis simulaciones de junio y julio de 2026 con las que se construyó el motor de Kaketiana: pruebas de desarrollo, no resultados, y el primer experimento de control.",
-};
+  ruta: "/kaketiana/experimento/era-1",
+  imagen: tarjeta("kaketiana/experimento", "Kaketiana · el experimento"),
+});
 
 // El copy de esta página era el del abstract de la era 1; queda aquí, fijo,
 // porque ya no cambia.

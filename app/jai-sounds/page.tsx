@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Batea from "@/components/jai-sounds/batea/Batea";
@@ -8,6 +9,16 @@ import { LIBERADA } from "@/lib/secciones";
 import { MUSICA, VIAJE } from "@/components/jai-sounds/escrito";
 import { CTA_LINEA, PORTADA_DESCUBRIENDO } from "@/components/jai-sounds/estilos";
 import { datosEstacion, resumenEstaciones } from "@/lib/jai-wiki";
+import { metadatos, tarjeta } from "@/lib/seo";
+
+export const metadata: Metadata = metadatos({
+  titulo: "JAI Sounds — Curaduría musical | Curiana Radio",
+  tituloSocial: "JAI Sounds — Curaduría musical",
+  descripcion:
+    "La música es la huella humana de la vida vivida. Curaduría musical de Curiana Radio: un dial de estaciones que gira de color, no de canciones.",
+  ruta: "/jai-sounds",
+  imagen: tarjeta("jai-sounds", "JAI Sounds, la curaduría musical de Curiana Radio"),
+});
 
 /** Una sección del escrito: el rótulo § de 72px y el texto a 60ch. */
 function Seccion({ id, rotulo, children }: { id: string; rotulo: ReactNode; children: ReactNode }) {

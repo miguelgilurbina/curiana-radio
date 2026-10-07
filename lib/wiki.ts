@@ -41,6 +41,11 @@ function leerManifest(): WikiManifest {
   return cacheManifest;
 }
 
+/** Fecha (AAAA-MM-DD) de la última exportación del vault: la del contenido. */
+export function getWikiGenerado(): string {
+  return leerManifest().generado;
+}
+
 /** Todos los artículos, en orden editorial. */
 export function getWikiIndice(): WikiIndiceEntry[] {
   return leerManifest().paginas;

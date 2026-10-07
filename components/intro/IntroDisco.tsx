@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { arrancarDisco, type MotorDisco } from "./disco-motor";
+import { medir } from "@/lib/analitica";
 
 // La intro v1 · El Disco. El visitante está obligado a interactuar: trazando
 // círculos alrededor de un disco de arena, los surcos del viento se ordenan
@@ -14,6 +16,18 @@ import { arrancarDisco, type MotorDisco } from "./disco-motor";
 export const CLAVE_INTRO = "curiana:intro-v1";
 const DESTINO = "/inicio";
 const LOGO = "/marca/isotipo-espiral.png";
+
+// Las puertas de la radio, para quien no ve el disco: lectores de pantalla,
+// teclado, buscadores y agentes. Fuera de pantalla hasta que recibe foco
+// (como un «saltar al contenido»); la animación no cambia. Sólo lo que está
+// al aire (lib/secciones.ts): lo del taller redirige a la radio.
+const SECCIONES = [
+  { href: "/inicio", label: "Inicio" },
+  { href: "/kaketiana", label: "Kaketiana" },
+  { href: "/jai-sounds", label: "JAI Sounds" },
+  { href: "/senales", label: "Señales" },
+  { href: "/sobre", label: "Quién transmite" },
+];
 // el sello de la noche (el mismo del shell): destino de los granos y el sello
 // nítido del final, servido en WebP pre-generado
 const SELLO = "/marca/sello-curiana-noche-300.webp";
@@ -106,6 +120,7 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
     if (saliendo.current) return;
     saliendo.current = true;
     marcarVista();
+    medir("intro", { accion: "sintonizar" });
     const ir = () => router.push(DESTINO);
     if (motor.current) motor.current.salir(ir);
     else ir();
@@ -118,6 +133,16 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
       data-fase={fase}
       data-ok={ok ? "" : undefined}
     >
+      {/* Fuera de .intro-disco-ui a propósito: la UI está en opacidad 0 hasta
+          que el disco carga, y este menú tiene que poder verse antes. Entrar
+          por aquí cuenta como haber pasado la puerta. */}
+      <nav aria-label="Secciones de Curiana Radio" className="intro-disco-secciones intro-disco-mono">
+        {SECCIONES.map((s) => (
+          <Link key={s.href} href={s.href} onClick={marcarVista}>
+            {s.label}
+          </Link>
+        ))}
+      </nav>
       <canvas ref={lienzo} className="intro-disco-lienzo" aria-hidden="true" />
       {/* La arena que se vuelve sello: los granos vuelan en este lienzo y el
           sello nítido entra al final, con su espiral sobre el disco. El motor
@@ -193,7 +218,10 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
           type="button"
           className="intro-disco-saltar"
           inert={ok}
-          onClick={() => motor.current?.afinado()}
+          onClick={() => {
+            medir("intro", { accion: "saltar" });
+            motor.current?.afinado();
+          }}
         >
           [ SALTAR → ]
         </button>
