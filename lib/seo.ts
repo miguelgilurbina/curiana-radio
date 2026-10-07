@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SPOTIFY_SHOW } from "@/components/jai-sounds/estilos";
+import { PORTAFOLIO, REDES } from "@/lib/redes";
 
 // ── La ficha del sitio para buscadores, redes y agentes ───────────────
 // Una sola fuente para lo que el sitio dice de sí mismo: la metadata de cada
@@ -12,14 +13,17 @@ export const SITIO = {
   locale: "es_VE",
   idioma: "es",
   lema: "88.8 FM",
+  // El copy de la casa (layout de #256, 2026-10-06): la larga para buscadores,
+  // la bajada para redes y tarjetas.
   descripcion:
-    "Emitimos desde una Paraguaná paralela, unos años después del Renacimiento de La Curiana. Una transmisión al mes: música, ensayo, una lengua que renace y el arte del camino.",
+    "Una radio del futuro que se sintoniza desde acá. Kaketiana, el mundo y la lengua de los caquetíos; JAI Sounds, la curaduría musical; y Señales, lo que escribe su creador.",
+  bajada: "Una radio del futuro que se sintoniza desde acá: Kaketiana, JAI Sounds y Señales.",
   repo: "https://github.com/miguelgilurbina/curiana-radio",
 } as const;
 
-// Perfiles verificados del proyecto (schema.org sameAs). Instagram y YouTube
-// (@curianaradio) entran cuando estén sus URLs confirmadas.
-export const PERFILES = [`https://open.spotify.com/show/${SPOTIFY_SHOW}`, SITIO.repo];
+// Los perfiles del proyecto (schema.org sameAs): las redes de lib/redes.ts,
+// el podcast y el repo.
+export const PERFILES = [...REDES.map((r) => r.url), `https://open.spotify.com/show/${SPOTIFY_SHOW}`, SITIO.repo];
 
 export function urlAbsoluta(ruta: string): string {
   return ruta.startsWith("http") ? ruta : `${SITIO.url}${ruta === "/" ? "" : ruta}`;
@@ -118,6 +122,8 @@ export function jsonLdSitio() {
         logo: urlAbsoluta("/icon-512.png"),
         description: SITIO.descripcion,
         sameAs: PERFILES,
+        // «Quién transmite» (/sobre): el laboratorio creativo de su creador
+        founder: { "@type": "Person", name: "Miguel Gil Urbina", url: PORTAFOLIO.url },
       },
       {
         "@type": "WebSite",

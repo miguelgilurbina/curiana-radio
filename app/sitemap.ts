@@ -2,16 +2,20 @@ import { MetadataRoute } from 'next';
 import { getAllEditions } from '@/lib/content';
 import { getAllPersonajes } from '@/lib/personajes';
 import { getSlugs } from '@/lib/galeria';
-import { getWikiGenerado, getWikiIndice } from '@/lib/wiki';
+import { getWikiIndice } from '@/lib/wiki';
+import { LIBERADA } from '@/lib/secciones';
+import { getSenales } from '@/lib/senales';
+import { getWikiGenerado } from '@/lib/wiki';
 import { getFichas, getFichasSeed } from '@/lib/fichas';
 import { SITIO } from '@/lib/seo';
 import { conVozDeJai, wiki } from '@/lib/jai-wiki';
 import type { Voces } from '@/types/jai-wiki';
 
 // lastModified sólo donde hay una fecha de verdad (la de publicación de una
-// edición, la de la última exportación del vault para el wiki y el
-// diccionario). Antes iba new Date() en todo: una fecha que cambia en cada
-// build le enseña a Google a ignorar el campo. Donde no hay fecha, no se pone.
+// edición o una señal, la de la última exportación del vault para el wiki y
+// el diccionario, la de la reseña en JAI). new Date() en todo —una fecha que
+// cambia en cada build— le enseña a Google a ignorar el campo. Donde no hay
+// fecha, no se pone.
 function fecha(iso: string | undefined | null): Date | undefined {
   return iso ? new Date(iso) : undefined;
 }
@@ -36,15 +40,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: `${baseUrl}/archivo`,
+      // quién transmite: la radio y su creador
+      url: `${baseUrl}/sobre`,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
+  ];
+  // Las secciones en el taller (lib/secciones.ts) no entran al sitemap.
+  if (LIBERADA.archivo)
+    staticPages.push({ url: `${baseUrl}/archivo`, changeFrequency: 'monthly', priority: 0.8 });
+  if (LIBERADA.galeria)
+    staticPages.push({ url: `${baseUrl}/galeria`, changeFrequency: 'monthly', priority: 0.8 });
+
+  // Señales: el blog. Los borradores no entran (sólo se ven fuera de producción).
+  const senalesPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/galeria`,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      url: `${baseUrl}/senales`,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
+    ...getSenales()
+      .filter((s) => !s.borrador)
+      .map((s) => ({
+        url: `${baseUrl}/senales/${s.slug}`,
+        lastModified: new Date(s.fecha),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      })),
   ];
 
   // Edition pages
@@ -82,7 +104,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  // JAI Sounds: la curaduría musical — la batea y el podcast.
+  // JAI Sounds: la curaduría musical — la portada del dial y el podcast.
   // Las páginas de mood entran cuando exista la taxonomía real.
   const jaiSoundsPages: MetadataRoute.Sitemap = [
     {
@@ -96,27 +118,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
   ];
-
-  // El wiki de JAI: sólo las fichas con reseña de JAI, que son las que llevan
-  // index (conVozDeJai en lib/jai-wiki.ts). Las demás se navegan pero no se
-  // anuncian: son datos de MusicBrainz y un extracto de Wikipedia.
-  const w = wiki();
-  const jaiWikiPages: MetadataRoute.Sitemap = (
-    [
-      ['canciones', w.canciones],
-      ['albumes', w.albumes],
-      ['artistas', w.artistas],
-    ] as const
-  ).flatMap(([tipo, fichas]) =>
-    Object.entries(fichas as Record<string, Voces>)
-      .filter(([, v]) => conVozDeJai(v))
-      .map(([slug, v]) => ({
-        url: `${baseUrl}/jai-sounds/${tipo}/${slug}`,
-        lastModified: fecha(v.resena?.publicada_en),
-        changeFrequency: 'monthly' as const,
-        priority: 0.6,
-      })),
-  );
 
   // Fichas de obra de la galería.
   const galeriaPages: MetadataRoute.Sitemap = getSlugs().map((slug) => ({
@@ -143,14 +144,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  // El wiki de JAI: sólo las fichas con reseña de JAI, que son las que llevan
+  // index (conVozDeJai en lib/jai-wiki.ts). Las demás se navegan pero no se
+  // anuncian: son datos de MusicBrainz y un extracto de Wikipedia.
+  const w = wiki();
+  const jaiWikiPages: MetadataRoute.Sitemap = (
+    [
+      ['canciones', w.canciones],
+      ['albumes', w.albumes],
+      ['artistas', w.artistas],
+    ] as const
+  ).flatMap(([tipo, fichas]) =>
+    Object.entries(fichas as Record<string, Voces>)
+      .filter(([, v]) => conVozDeJai(v))
+      .map(([slug, v]) => ({
+        url: `${baseUrl}/jai-sounds/${tipo}/${slug}`,
+        lastModified: fecha(v.resena?.publicada_en),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      })),
+  );
+
   return [
     ...staticPages,
-    ...editionPages,
+    ...senalesPages,
+    ...(LIBERADA.archivo ? editionPages : []),
     ...simuladorPages,
     ...personajePages,
     ...jaiSoundsPages,
     ...jaiWikiPages,
-    ...galeriaPages,
+    ...(LIBERADA.galeria ? galeriaPages : []),
     ...wikiPages,
     ...vocesPages,
   ];

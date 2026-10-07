@@ -1,4 +1,6 @@
 import { getAllEditions } from "@/lib/content";
+import { LIBERADA } from "@/lib/secciones";
+import { getSenales } from "@/lib/senales";
 import { getFichas, getFichasSeed } from "@/lib/fichas";
 import { CAPAS_EPISTEMICAS } from "@/lib/sim-theme";
 import { SITIO, urlAbsoluta } from "@/lib/seo";
@@ -24,7 +26,7 @@ function cabecera(): string {
   ).join("\n");
   return `# ${SITIO.nombre}
 
-> ${SITIO.nombre} (${SITIO.lema}) es un proyecto cultural venezolano: una transmisión al mes de música, ensayo, una lengua que renace y arte, emitida desde una Paraguaná paralela. Su eje de investigación es Kaketiana, un wiki sobre el pueblo caquetío del Golfete de Coro (siglos XIV–XV) y la reconstrucción de su lengua, que nadie habla desde hace unos cuatrocientos años.
+> ${SITIO.nombre} (${SITIO.lema}) es el laboratorio creativo de Miguel Gil Urbina, en Venezuela: ${SITIO.descripcion.charAt(0).toLowerCase()}${SITIO.descripcion.slice(1)} Su eje de investigación es Kaketiana, un wiki sobre el pueblo caquetío del Golfete de Coro (siglos XIV–XV) y la reconstrucción de su lengua, que nadie habla desde hace unos cuatrocientos años.
 
 ## Cómo leer y citar este sitio
 
@@ -36,7 +38,7 @@ ${capas}
 - Cada afirmación del wiki lleva su fuente con página; la bibliografía tiene cada obra con su ancla.
 - Las crónicas son posteriores al contacto (siglo XVI en adelante): describen el mundo colonial, no necesariamente el de antes. No tomes un dato colonial como norma precolombina salvo que el artículo lo proyecte.
 - **El experimento** es una simulación: agentes de IA que conversan en caquetío reconstruido. Sus neologismos y sus personajes son producto de la simulación, no datos históricos.
-- **La galería** son imágenes generadas con IA, y cada ficha lo declara con la herramienta y el prompt.
+${LIBERADA.galeria ? "- **La galería** son imágenes generadas con IA, y cada ficha lo declara con la herramienta y el prompt.\n" : ""}- **Señales** es el blog de su creador: opinión y crónica firmadas, no material de referencia.
 - Citar con enlace a la página de la voz o del artículo.
 `;
 }
@@ -53,6 +55,11 @@ export async function llmsTxt(): Promise<string> {
       .sort((a, b) => a.orden - b.orden)
       .map((p) => enlace(p.titulo, `/kaketiana/${s}/${p.slug}`))
       .join("\n");
+  // Señales publicadas (los borradores sólo existen fuera de producción).
+  const senales = getSenales()
+    .filter((s) => !s.borrador)
+    .map((s) => enlace(s.titulo, `/senales/${s.slug}`, s.sumario))
+    .join("\n");
   const ediciones = (await getAllEditions())
     .map((e) => enlace(`#${e.number}: ${e.title}`, `/${e.slug}`, e.description))
     .join("\n");
@@ -87,11 +94,14 @@ ${enlace("Personajes", "/kaketiana/personajes", "las voces de la simulación")}
 ## La radio
 
 ${enlace("Inicio", "/inicio", SITIO.descripcion)}
-${enlace("Archivo de transmisiones", "/archivo")}
+${enlace("Quién transmite", "/sobre", "quién hace la radio y desde dónde")}
+${enlace("Señales", "/senales", "el blog del creador de la radio, por arista (RSS en /senales/rss.xml)")}
+${senales}
+${LIBERADA.archivo ? `${enlace("Archivo de transmisiones", "/archivo")}
 ${ediciones}
-${enlace("JAI Sounds", "/jai-sounds", "la curaduría musical: jai es «oír, escuchar» en caquetío. Cada canción, álbum y artista del dial tiene su ficha (/jai-sounds/canciones/…, /albumes/…, /artistas/…), con datos de MusicBrainz y el extracto de Wikipedia citado; la reseña, cuando la hay, es la voz de JAI")}
+` : ""}${enlace("JAI Sounds", "/jai-sounds", "la curaduría musical: jai es «oír, escuchar» en caquetío. Cada canción, álbum y artista del dial tiene su ficha (/jai-sounds/canciones/…, /albumes/…, /artistas/…), con datos de MusicBrainz y el extracto de Wikipedia citado; la reseña, cuando la hay, es la voz de JAI")}
 ${enlace("Descubriendo con Chocolate", "/jai-sounds/descubriendo", "el podcast de JAI Sounds")}
-${enlace("Galería", "/galeria", "experimentos visuales generados con IA, con su procedencia")}
+${LIBERADA.galeria ? enlace("Galería", "/galeria", "experimentos visuales generados con IA, con su procedencia") : ""}
 
 ## Optional
 

@@ -2,17 +2,20 @@
 // (design_handoff_intro_v1_disco/Intro v1 El Disco.html). Un solo triángulo a
 // pantalla completa; todo el disco sale del fragment shader. Las capas, de
 // fondo a frente, están descritas en BRAND_MVP.md §9. Los valores del grano
-// están aprobados: no suavizar. Única desviación del prototipo, la costura de
-// atan en el radio izquierdo (2026-09-29): el antialias ya no la ve (era un
-// filete con la espiral hecha) y a medio armar se reparte en una cuña (era un
-// corte recto en los surcos). Con la espiral hecha el disco es idéntico.
+// están aprobados: no suavizar. Desde el handoff del 2026-10-05 el color sale
+// del logo: arena hueso sobre la noche #0F1621, sin oro; y uFund disuelve el
+// disco al fondo mientras la arena se vuelve sello (disco-motor.ts). Única
+// desviación del prototipo, la costura de atan en el radio izquierdo
+// (2026-09-29): el antialias ya no la ve (era un filete con la espiral hecha)
+// y a medio armar se reparte en una cuña (era un corte recto en los surcos).
+// Con la espiral hecha el disco es idéntico.
 
 export const VERTICE = `#version 300 es
 in vec2 a; void main(){ gl_Position = vec4(a,0.,1.); }`;
 
 export const FRAGMENTO = `#version 300 es
 precision highp float;
-uniform vec2 uRes; uniform float uT, uM, uRev, uExit, uDpr, uR;
+uniform vec2 uRes; uniform float uT, uM, uRev, uExit, uDpr, uR, uFund;
 uniform vec2 uC, uMouse; uniform float uPress;
 uniform vec4 uW[8];
 uniform sampler2D uLogo; uniform float uAsp;
@@ -28,8 +31,9 @@ void main(){
   vec2 px = floor(fc / uDpr);
   float grain = hash(px), g2 = hash(floor(fc/(2.*uDpr)) + 3.1);
   float clump = fbm(px*.05);
-  vec3 bg = vec3(.027,.035,.051), ink = vec3(.035,.03,.024);
-  vec3 gold = vec3(.902,.706,.235), bone = vec3(.933,.902,.831);
+  // la noche #0F1621, la tinta de los valles, la arena hueso y el hueso del lockup
+  vec3 bg = vec3(.059,.086,.129), ink = vec3(.035,.051,.078);
+  vec3 gold = vec3(.80,.77,.70), bone = vec3(.953,.918,.831);
   vec2 q = (p - uC) / uR;                 // disco unitario
   float dd = length(q);
   // borde de arena derramada
@@ -100,6 +104,8 @@ void main(){
     dc += bone*.05*lg*uRev*(.6 + .4*sin(uT*1.4));
     col = mix(col, dc, inDisc);
   }
+  // la arena se levanta hacia el sello: el disco se funde al fondo
+  col = mix(col, bg, uFund);
   col *= 1. - uExit;
   o = vec4(col, 1.);
 }`;

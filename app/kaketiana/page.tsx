@@ -10,6 +10,7 @@ import { SCRIPT_HERO } from "@/lib/kaketiana-hero";
 import MapaKaketiana from "@/components/kaketiana/MapaKaketiana";
 import Etiqueta from "@/components/kaketiana/Etiqueta";
 import { metadatos, tarjeta } from "@/lib/seo";
+import SenalesDeArista from "@/components/senales/SenalesDeArista";
 
 export const metadata: Metadata = metadatos({
   titulo: "Kaketiana — el mundo del kaketío | Curiana Radio",
@@ -184,6 +185,9 @@ export default function KaketianaPage() {
             la bibliografía
           </Link>
         </p>
+
+        {/* Lo que Miguel escribe con la arista Kaketiana: su voz, no el canon */}
+        <SenalesDeArista arista="kaketiana" className="mt-16" />
       </div>
 
       {/* La franja del experimento: ya es del otro lado del umbral */}

@@ -63,8 +63,13 @@ const csp = {
     esVistaPrevia && 'wss://ws-us3.pusher.com',
   ],
   'media-src': ["'self'", BLOB],
-  // los reproductores de JAI Sounds y de las ediciones
-  'frame-src': ['https://open.spotify.com', esVistaPrevia && 'https://vercel.live'],
+  // los reproductores de JAI Sounds y de las ediciones, y los videos de
+  // Señales (youtube-nocookie: sin cookies hasta que alguien le da play)
+  'frame-src': [
+    'https://open.spotify.com',
+    'https://www.youtube-nocookie.com',
+    esVistaPrevia && 'https://vercel.live',
+  ],
   'worker-src': ["'self'", 'blob:'],
   'manifest-src': ["'self'"],
   'object-src': ["'none'"],
@@ -91,6 +96,19 @@ const cabecerasDeSeguridad = [
     value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
   },
 ];
+
+// Las secciones que siguen en el taller (Miguel, 2026-10-06): la Galería, el
+// archivo de ediciones y las ediciones mismas (/01…). En producción vuelven a
+// la radio; en local y en las vistas previas se ven, para seguir trabajándolas.
+// Va a la par de LIBERADA en lib/secciones.ts: al liberar una, sale de aquí.
+const SIN_LIBERAR =
+  process.env.VERCEL_ENV === 'production'
+    ? ['/galeria', '/galeria/:path*', '/archivo', '/:edicion(\\d{1,3})'].map((source) => ({
+        source,
+        destination: '/inicio',
+        permanent: false,
+      }))
+    : [];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -157,6 +175,7 @@ const nextConfig = {
         destination: '/kaketiana/:path*',
         permanent: true,
       },
+      ...SIN_LIBERAR,
     ];
   },
 };

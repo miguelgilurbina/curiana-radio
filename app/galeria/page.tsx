@@ -3,6 +3,7 @@ import GaleriaGrid from "@/components/galeria/GaleriaGrid";
 import { Heading, BodyText } from "@/components/ui/Typography";
 import { getBlobBase, getObrasGrid, getSeries, getTags } from "@/lib/galeria";
 import { metadatos, tarjeta } from "@/lib/seo";
+import SenalesDeArista from "@/components/senales/SenalesDeArista";
 
 export const metadata: Metadata = metadatos({
   titulo: "Galería - Curiana Radio",
@@ -34,6 +35,8 @@ export default function GaleriaPage() {
             material, no un truco que esconder.
           </BodyText>
         </header>
+
+        <SenalesDeArista arista="galeria" className="mx-auto mb-14 max-w-5xl" />
 
         {obras.length > 0 ? (
           <GaleriaGrid

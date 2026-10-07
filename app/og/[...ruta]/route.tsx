@@ -26,7 +26,23 @@ async function registro(): Promise<Map<string, Dibujo>> {
     tarjetaNoche({
       rotulo: "88.8 FM · transmisión desde Abya Yala",
       titulo: "Curiana Radio",
-      bajada: "Una transmisión al mes: música, ensayo, una lengua que renace y el arte del camino.",
+      bajada: SITIO.bajada,
+    }),
+  );
+  r.set("senales", () =>
+    tarjetaNoche({
+      rotulo: "Curiana Radio · señales",
+      titulo: "Señales",
+      bajada: "Lo que escribe el creador de Curiana Radio sobre cada arista: Kaketiana y JAI Sounds.",
+      pie: "curianaradio.com/senales",
+    }),
+  );
+  r.set("sobre", () =>
+    tarjetaNoche({
+      rotulo: "Curiana Radio · quién transmite",
+      titulo: "Quién transmite",
+      bajada: "Una radio del futuro que se sintoniza desde acá, con memoria donde casi nunca la hay.",
+      pie: "curianaradio.com/sobre",
     }),
   );
   r.set("archivo", () =>

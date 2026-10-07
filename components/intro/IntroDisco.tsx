@@ -8,8 +8,9 @@ import { medir } from "@/lib/analitica";
 
 // La intro v1 · El Disco. El visitante está obligado a interactuar: trazando
 // círculos alrededor de un disco de arena, los surcos del viento se ordenan
-// en la espiral del isotipo. Afinado, aparece [ SINTONIZAR → ], que lleva a
-// la landing (/inicio). Se ve una vez por sesión en `/`; en /intro, siempre.
+// en la espiral del isotipo. Afinado, la arena se levanta y se vuelve el sello
+// de Curiana Radio, y aparece [ SINTONIZAR → ], que lleva a la landing
+// (/inicio). Se ve una vez por sesión en `/`; en /intro, siempre.
 // Spec completa en BRAND_MVP.md §9.
 
 export const CLAVE_INTRO = "curiana:intro-v1";
@@ -18,14 +19,19 @@ const LOGO = "/marca/isotipo-espiral.png";
 
 // Las puertas de la radio, para quien no ve el disco: lectores de pantalla,
 // teclado, buscadores y agentes. Fuera de pantalla hasta que recibe foco
-// (como un «saltar al contenido»); la animación no cambia.
+// (como un «saltar al contenido»); la animación no cambia. Sólo lo que está
+// al aire (lib/secciones.ts): lo del taller redirige a la radio.
 const SECCIONES = [
   { href: "/inicio", label: "Inicio" },
-  { href: "/archivo", label: "Archivo" },
-  { href: "/jai-sounds", label: "JAI Sounds" },
-  { href: "/galeria", label: "Galería" },
   { href: "/kaketiana", label: "Kaketiana" },
+  { href: "/jai-sounds", label: "JAI Sounds" },
+  { href: "/senales", label: "Señales" },
+  { href: "/sobre", label: "Quién transmite" },
 ];
+// el sello de la noche (el mismo del shell): destino de los granos y el sello
+// nítido del final, servido en WebP pre-generado
+const SELLO = "/marca/sello-curiana-noche-300.webp";
+const SELLO_SRCSET = [300, 600, 1200].map((t) => `/marca/sello-curiana-noche-${t}.webp ${t}w`).join(", ");
 const MARCAS_DIAL = Array.from({ length: 14 }, (_, i) => (i / 13) * 100);
 
 function yaVista(): boolean {
@@ -60,6 +66,8 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
   const patron = useRef<HTMLSpanElement>(null);
   const anillo = useRef<HTMLDivElement>(null);
   const velo = useRef<HTMLDivElement>(null);
+  const polvo = useRef<HTMLCanvasElement>(null);
+  const sello = useRef<HTMLImageElement>(null);
   const saltar = useRef<HTMLButtonElement>(null);
   const sintonizar = useRef<HTMLButtonElement>(null);
   const motor = useRef<MotorDisco | null>(null);
@@ -82,8 +90,10 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
         patron: patron.current!,
         anillo: anillo.current!,
         velo: velo.current!,
+        polvo: polvo.current!,
+        sello: sello.current!,
       },
-      { lento, logo: LOGO, onAfinado: () => setOk(true) },
+      { lento, logo: LOGO, sello: SELLO, onAfinado: () => setOk(true) },
     );
     motor.current = m;
     // Es el estado inicial que decide el cliente al montar (qué ve y si hay
@@ -134,6 +144,20 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
         ))}
       </nav>
       <canvas ref={lienzo} className="intro-disco-lienzo" aria-hidden="true" />
+      {/* La arena que se vuelve sello: los granos vuelan en este lienzo y el
+          sello nítido entra al final, con su espiral sobre el disco. El motor
+          los posiciona y les da opacidad. */}
+      <canvas ref={polvo} className="intro-disco-polvo" aria-hidden="true" />
+      {/* eslint-disable-next-line @next/next/no-img-element -- WebP pre-generado, tamaño y lugar los pone el motor */}
+      <img
+        ref={sello}
+        className="intro-disco-sello"
+        src={SELLO}
+        srcSet={SELLO_SRCSET}
+        sizes="300px"
+        alt=""
+        aria-hidden="true"
+      />
 
       <div className="intro-disco-ui">
         {sinGl && (
@@ -153,13 +177,9 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
           <br />
           patrón <span ref={patron}>surcos</span>
         </div>
-        {/* El nombre va con el logo: aparece cuando la espiral se revela, al
-            costado del disco (debajo en pantallas angostas), nunca encima de
-            la arena. Sigue en el DOM desde el principio: es el h1 de la página. */}
-        <h1 className="intro-disco-nombre m-0">
-          Curiana <br className="intro-disco-nombre-salto" />
-          Radio
-        </h1>
+        {/* El nombre visible es el sello, que la arena arma al afinar; el h1 de
+            la página queda para lectores de pantalla. */}
+        <h1 className="sr-only">Curiana Radio</h1>
 
         <div className="intro-disco-pie">
           <div className="intro-disco-pista" aria-hidden={ok}>
