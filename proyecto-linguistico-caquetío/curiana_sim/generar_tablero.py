@@ -195,13 +195,19 @@ def medir_quien_sostiene(lex):
     Los patrones de búsqueda **salen de las propias notas de fuente**
     (`autor` + `aliases`), no de una lista cableada: si mañana se añade una
     obra al vault, aparece sola en esta tabla.
+
+    El apellido solo es ambiguo cuando el autor tiene varias obras: cualquier
+    entrada que cite «Zavala Reyes» contaba para todas las suyas. Una nota
+    puede declarar `cita_por_apellido: false` y entonces se busca sólo por sus
+    `aliases` (2026-10-05: Zavala Reyes 2015 *petroglifos* se llevaba las 174
+    citas de *Palabras vivas*, del mismo autor y el mismo año).
     """
     patrones = []
     for slug, fm in notas_de_fuente():
         claves = set()
         autor = str(fm.get("autor", ""))
         apellido = autor.split(",")[0].strip()
-        if len(apellido) >= 4 and apellido.lower() != "varios":
+        if fm.get("cita_por_apellido", True) and len(apellido) >= 4 and apellido.lower() != "varios":
             claves.add(apellido)
         for alias in fm.get("aliases") or []:
             alias = str(alias).strip()

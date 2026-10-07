@@ -1,11 +1,29 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 107
-  en_repo: 72
+  obras: 113
+  en_repo: 78
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
 obras:
+- id: acasio-2023-capubana-calendario
+  obra: Decodificación de un calendario lunar metónico representado en un petroglifo geométrico de la
+    estación Capubana, en el Cerro de Santa Ana. Edo. Falcón. Venezuela
+  autor: Acasio, Enrique
+  anio: 2023
+  publicacion: Ciencia en Revolución (Mincyt), vol. 9, n.º 25, enero-junio 2023
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/Acasio_2023_Capubana_Calendario.pdf
+  paginas: 21
+  acceso: 'Libre en línea. Página: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/view/101
+    · PDF: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/download/101/122/206'
+  aliases:
+  - Acasio 2023
+  - estación Capubana
+  - calendario lunar metónico
+  - acasio-2023-capubana-calendario
+  en_repo: true
 - id: adam-1879
   obra: Du parler des hommes et du parler des femmes dans la langue caraïbe
   autor: Adam, Lucien
@@ -788,6 +806,21 @@ obras:
   - Haviser 1990
   - restos humanos Curazao
   en_repo: false
+- id: haviser-strecker-2006
+  obra: 'Zone 2: Caribbean Area and north-coastal South America'
+  autor: Haviser, Jay B.; Strecker, Matthias
+  anio: 2006
+  publicacion: 'En el estudio temático de ICOMOS sobre el arte rupestre de América Latina y el Caribe.
+    El año es estimado: el texto cita el archivo venezolano a octubre de 2005 y trabajos de 2006'
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/Haviser_Strecker_2006_Rock_Art_Caribbean_Zona2.pdf
+  paginas: 42
+  acceso: Libre — https://www.latinamericanstudies.org/ancient/caribbean-rock-art.pdf
+  aliases:
+  - Haviser y Strecker 2006
+  - Rock Art in the Caribbean, Zone 2
+  en_repo: true
 - id: jahn-1927
   obra: Los aborígenes del occidente de Venezuela
   autor: Jahn, Alfredo
@@ -1679,6 +1712,21 @@ obras:
   - Van Buurt 2014
   - Caquetío words in Papiamentu
   en_repo: true
+- id: van-koolwijk-1882
+  obra: De Indianen Caraïben van het eiland Aruba (West-Indië)
+  autor: Koolwijk, A. J. van
+  anio: 1882
+  publicacion: Artículo con una lámina de figuras. La copia es de la Biblioteca Nacional Aruba (Departamento
+    Arubiana-Caribiana)
+  genero: etnografia
+  local:
+  - fuentes_caquetios/vanKoolwijk_1882_Indianen_Caraiben_Aruba.pdf
+  paginas: 17
+  acceso: Libre, CC BY 4.0 — Internet Archive (BNADIGKOSTBARE0151)
+  aliases:
+  - van Koolwijk 1882
+  - Koolwijk 1882
+  en_repo: true
 - id: vansina-ong
   obra: Oral Tradition as History (Vansina 1985) · Orality and Literacy (Ong 1982)
   autor: Vansina, Jan · Ong, Walter J.
@@ -1705,6 +1753,34 @@ obras:
   - Historia de una Resistencia
   - Reinaldo Velasco
   en_repo: true
+- id: wagenaar-hummelinck-1953
+  obra: Rotstekeningen van Curaçao, Aruba en Bonaire, Deel I
+  autor: Wagenaar Hummelinck, P. (con A. D. Ringma)
+  anio: 1953
+  publicacion: West-Indische Gids XXXIV, pp. 173-209
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/WagenaarHummelinck_1953_Rotstekeningen_I.pdf
+  paginas: 43
+  acceso: Libre — Internet Archive (BNA-DIG-WESTINDISCHEGIDS-1952-173); Brill, free access
+  aliases:
+  - Wagenaar Hummelinck 1953
+  - Rotstekeningen I
+  en_repo: true
+- id: wagenaar-hummelinck-1962
+  obra: Rotstekeningen van Curaçao, Aruba en Bonaire, Deel III
+  autor: Wagenaar Hummelinck, P.
+  anio: 1962
+  publicacion: West-Indische Gids 42, pp. 83-126
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/WagenaarHummelinck_1962_Rotstekeningen_III.pdf
+  paginas: 60
+  acceso: Libre — Internet Archive (BNA-DIG-WESTINDISCHEGIDS-1961-083); Brill, free access
+  aliases:
+  - Wagenaar Hummelinck 1962
+  - Rotstekeningen III
+  en_repo: true
 - id: wikipedia-es-fauna-marina
   obra: Wikipedia en español — artículos de especie de la fauna marina del Caribe sur
   autor: Wikipedia en español (colaborativa)
@@ -1721,6 +1797,21 @@ obras:
   aliases:
   - Wikipedia es (fauna marina)
   en_repo: false
+- id: zavala-reyes-2015-petroglifos
+  obra: Registro y documentación de los petroglifos de la quebrada de Chirache-Buenevara, estado Falcón
+  autor: Zavala Reyes, Miguel
+  anio: 2015
+  publicacion: Boletín Antropológico, año 33, n.º 90, julio-diciembre 2015, pp. 37-51. Universidad de
+    Los Andes, Mérida
+  genero: arqueologia
+  local:
+  - fuentes_caquetios/ZavalaReyes_2015_Petroglifos_Chirache_Buenevara.pdf
+  paginas: 16
+  acceso: 'Libre — Redalyc: https://www.redalyc.org/articulo.oa?id=71243364003'
+  aliases:
+  - Zavala Reyes 2015 (petroglifos)
+  - Chirache-Buenevara
+  en_repo: true
 - id: zavala-reyes-2015
   obra: 'Palabras vivas de una lengua muerta: legado arawak-caquetío'
   autor: Zavala Reyes, Miguel Enrique

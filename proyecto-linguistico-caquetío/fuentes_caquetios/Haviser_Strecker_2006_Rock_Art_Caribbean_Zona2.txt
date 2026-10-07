@@ -1,0 +1,691 @@
+Zone 2: Caribbean Area and north-coastal South America
+Jay B. Haviser IACA President
+Matthias Strecker SIARB
+Table of Contents
+Introduction Site inventories Site locations History of rock art research Brief characterization of rock art for the zone Chronological contexts Observations on recording and research Conservation and management issues Conclusions References
+Appendixes: I-IX. Submissions by regional experts
+1 Introduction:
+This essay has been compiled by Jay B. Haviser and Matthias Strecker with significant reference to several publications by the late Cornelius N. Dubelaar, one of the pioneers of rock art research in the Caribbean region, as well as utilizing reports by numerous other colleagues. A further basis for this report was the data contributed by eleven regional experts who responded to an ICOMOS information form distributed in the region (see Annex I of the Thematic Study for the form itself, and Appendixes I-IX of this contribution for those submissions that arrived in digital format from Anguilla, Aruba, Curaçao/Bonaire, French Guyana, Guadeloupe, Grenada, Haiti, Martinique (not in digital format thus not presented here), St. Vincent, U.S. Virgin Islands and Venezuela (presented as a separate contribution).
+Our study region includes the Lesser and Greater Antilles and some parts of the northern South American continent (north of Venezuela, north of the Guianas: Guyana, Surinam, French Guyana) which share a common cultural history in so far as the Caribbean islands were primarily populated from the South American continent (some researchers do not exclude archaic immigrations from Central and North America, as well). Primarily via the Orinoco River mouth and the Guianas, Archaic and Ceramic Age people spread over Trinidad, the Lesser Antilles and the Greater Antilles, travelling in canoes from island to island. Other smaller migrations seem to have also occurred from the northwest Venezuelan
+43
+
+coast via the islands of Aruba, Bonaire and Curaçao, directly across the Caribbean sea to the Greater Antilles.
+Archaeologists have found Archaic Age (semi-nomadic, pre-agricultural/pre-ceramic groups) evidence on most of the Caribbean islands, indicating movements into the region from South America, Central America and perhaps North America, reaching the Greater Antilles at about 4000 B.P. (Before Present), with examples of South American starting points on Trinidad at about 6500 B.P., and on Curaçao at about 4500 B.P.
+The Ceramic Age (sedentary, agricultural/ceramic producing peoples) inhabitation of the islands is archaeologically divided into various migrations into the region, coming almost exclusively from the South American mainland, and primarily via the mouth of the Orinoco River. There are four major events recognized with these movements from South America to the Caribbean.
+a. Circa 5000 B.P., movements of proto-Arawakan speaking peoples moved downstream along the Orinoco River in Venezuela. At the mid-point of this river, in the confluence of the Apure River, a major settlement development of the population took place and large rock art sites were created with both rock engraving (petroglyphs) and rock painting techniques utilized. From the Apure River confluence, one group of northern Maipuran Arawakan speakers moved along the Apure River towards the northwest, eventually reaching the island of Curaçao at about 1500 B.P.. While another group of Maipuran Arawakan speakers continued to move downstream on the Orinoco River, reaching the island of Trinidad at the mouth at about 2500 B.P., before spreading into the islands. It has been suggested by some scholars, that other peoples were simultaneously moving along the South American northern coast from the east, across the Guianas, to also eventually spread into the Antilles, via Trinidad.
+b. The diffusion over the Antilles took place in basically three early waves, named after the pottery identified from the type-sites investigated. Subsequent to these waves, a period of localized cultural developments occurred within the region, having the most significant florescence with the formation of the Taino cultural sphere centered in the eastern Greater Antilles. The earliest of these first waves represent the Early Ceramic peoples (often referred to as Huecoid from the La Hueca site on Vieques), who began movement from the mainland about 500 B.C. and reached as far north as eastern Puerto Rico by 300 B.C.; the second wave is called the Saladoid (from the Saladeros site in Venezuela), who began from the mainland at about 300 B.C., eventually reaching the eastern Greater Antilles, and occupying the entire region until about 300 A.D. The third early wave of migrations from the mainland began about 300 A.D., and is referred to as Barrancoid (or Modified Saladoid), taking its name from the Barrancas site in Venezuela. The archaeological evidence of this wave is manifested in the region from about 300-600 A.D.
+c. After the above noted early migrations, a period of localized developments occurred across the region, with the definition of primary ceramic styles such as Troumassoid and Suazoid in the Lesser Antilles, Ostionoid and Elenoid in the Greater Antilles, and Dabajuroid on the southern Caribbean islands of Aruba to Bonaire. However, the greatest manifestation of this period was the formation of the Taino cultural sphere, with its center at the area of eastern Dominican Republic and western Puerto Rico; the florescence of the Taino cultural development eventually produced a ceramic type called Chicoid (from the Boca Chica site in the Dominican Republic). The Taino reached a very high level of
+44
+
+social-political and economic development from about 1200-1500A.D., which allowed them to create a cultural sphere that had its classic core in the area noted above, yet with extending domination-exchange into the regions as far as western Cuba and east into the northern Lesser Antilles (See Figure 1). The highly developed Taino also created complex religious centers, plazas, and sacred areas, where rock art was used as a central feature of expression. It was the complex network of chiefdoms of the Taino that the Europeans first encountered in the late 15th century.
+d. A late, and of far less magnitude, human movement occurred from the Guianas area of the mainland into the southern Lesser Antilles from about 1400 A.D. into the contact period, these were the Island Carib. Their pottery appears in the southern windward islands of the Lesser Antilles, and is related to the pottery of the Kalinago (Carib speakers) and Lokono (Arawakan speakers) of the South American continent.
+Most investigators who have dealt with the difficult question of dating Caribbean rock art assume that the Ceramic Age peoples created most of the petroglyphs and rock paintings in the area (see chapter 4). In classifying rock art of the region, most researchers have either dealt with rock art of the Antilles or rock art of the South American continent. The common origin of rock art manifestations in both regions has been scarcely investigated. Dubelaar (1992: 29-30) points out a few common motifs.
+Dubelaar distinguishes between rock art in two regions of the Antilles: the Lesser Antilles (the chain of islands connecting northeastern Venezuela with Puerto Rico including Trinidad and the Virgin islands) and the Greater Antilles (Cuba, Hispaniola (the Dominican Republic and Haiti), Puerto Rico, Jamaica, and the Cayman islands). Dubelaar originally excluded Aruba, Curaçao and Bonaire (ABC islands) from the Lesser Antilles arguing that rock art on the these islands related to the continent than to the rest of the Lesser Antilles. However, recent studies have shown a design/technique relationship between rock paintings on the three islands and those found on Cuba and the Dominican Republic, thus stressing a cultural unity of Caribbean rock art. Dubelaar tried to distinguish between the Lesser and Greater Antilles rock art by the dominating motifs among rock art, but recognized that Grenada (included in the Lesser Antilles) shares traits of both subregions. However, he did note that the Lesser Antilles was almost exclusively rock engraving techniques (petroglyphs), while the ABC islands and the Greater Antillean islands had far more emphasis on rock painting techniques. More recently, this phenomenon is seen as partially related to the variable origin of movements from the mainland into the region, nonetheless the manifestations of sacred functions for rock art are uniform over the region.
+2 Site inventories:
+Caribbean rock art consists of much more than one thousand sites across the region, with the greatest concentrations in the Greater Antilles and on the continent in Venezuela. Variable numbers of rock art sites are reported in the individual intermediate islands between these two concentrations.
+In the Greater Antilles, the largest site register exists on Puerto Rico where more than 550 sites of both rock painting and petroglyphs, have been registered (Dubelaar et al. 1999), followed by the Dominican Republic where some 480 sites have been found, mostly as rock painting sites (according to Adolfo López B., pers. comm.; Atiles 2005 mentions the existence of 455 caves with rock art), and including several spectacular cave sites with rock
+45
+
+art in the Parque del Este region (see Figure 4). In Cuba, 188 locations with rock art have been registered (Racso Fernández, pers. comm.), consisting of large numbers of rock painting sites. In Haiti, Hodges (1979, 1984) reported two petroglyph sites as well as referring to several other sites. A recent inventory of 17 rock art sites, consisting of both prehistoric (various sites noted by C. Moore), as well as prehistoric and/or historical origin sites (11), were reported by R. Beauvoir Dominique (2006). On Jamaica, 35 rock art sites in caves have been recorded (Atkinson 2003; 2006).
+In the Caribbean coastal South America area, Venezuela has a national archive of rock art sites administered by Ruby de Valencia and Jeannine Sujo Volsky, who published their preliminary survey in 1987. At present the archive includes data on 650 rock art sites (October 2005), with both rock painting and petroglyph sites noted (Scaramelli and Tarble 2006).
+Also in relation to the Caribbean coastal region, in the Guianas (Guyana, Suriname, French Guyana): Dubelaar (1986b) published an encyclopaedic inventory of petroglyphs of the three Guianas. According to this study some 60 sites exist in Guyana and Suriname. New investigations by archaeologists in French Guyana (Mazière 1997; Gassie 2006) have revealed 17 sites for that country. It is of importance to note here that rock painting sites are very rare in the Guianas region.
+As we move from the South American continent into the eastern Caribbean archipelago, the following islands are encountered in a northward direction, spreading out from the mouth of the Orinoco River.
+Trinidad: Only two rock art petroglyph sites were reported by Dubelaar (1995).
+Grenada: Dubelaar reports 6 rock art sites (1995), although the small number of sites is not reflective of less art, so that some 109 petroglyphs are recorded. Marquet has recently noted only 5 rock art sites for the island (2006).
+Barbados: Only one rock art site is reported for this island, which is rather distant from the other islands of the chain, by Dubelaar (1995).
+St. Vincent: 12 rock art petroglyph sites were reported by Dubelaar (1995) and reconfirmed by Martin (2006). The satellite island of Canouan also has one petroglyph site reported by Dubelaar (1995).
+St. Lucia: Dubelaar reported 6 rock art petroglyph sites for this island (1995).
+Martinique: Dubelaar reported 3 rock art petroglyph sites (1995), which was confirmed by Beuze (2006).
+Dominica: Until now, only one rock art petroglyph site has been reported for this island (Dubelaar 1995), however the size of the island and extensive water sources would suggest perhaps more are present but unrecorded.
+Guadeloupe: Dubelaar (1995) mentioned 419 engraved figures in 12 sites. However, a recent survey trebled the number of engravings: more than 1100 figures occur in 18 sites (Société d’Histoire de la Guadeloupe 1995; Richard 2002; Richard and Petitjean-Roget 2006) (see
+46
+
+Figure 2). The satellite island of Marie-Galante is where Dubelaar (1995) also noted one petroglyph site.
+St. Kitts: There are 4 rock art petroglyph sites reported by Dubelaar (1995), yet a large number of elements (65) for these few sites.
+Barbuda: Only one rock art petroglyph site noted by Dubelaar (1995).
+St. Martin-St. Maarten: There are 2 rock art petroglyph sites noted on the French side, still existing (Deschanez 2001), while on the Dutch side there was 1 cave site with rock art reported as destroyed in the 1960’s (Dubelaar 1995; Haviser 1988, 1991).
+Anguilla: There are only 2 rock art sites noted for the island, with one at a large cave site (Dubelaar 1995; Crock and Petersen 1999; Douglas 1990; Watters 1991).
+St. John, St. Croix (U.S.Virgin Islands): Dubelaar (1995) reports 3 rock art petroglyph sites on St. Johns, and 1 site on St. Croix, which is confirmed by Wild (2003; 2006).
+To the far northern end of the Antillean chain, in the Bahamas, apparently only a few sites have been registered, with 6 petroglyph sites identified (Hoffman 1972; Núñez Jiménez 1997).
+In the southern Caribbean region, there are various coastal islands which have rock art sites recorded, the most prominent of these are the Dutch islands of Aruba, Curaçao and Bonaire, off the northwest coast of Venezuela. Aruba has 19 rock art sites recorded (Hummelinck 1990; Ruiz 2003; Kelly 2006); Bonaire has 14 rock art sites reported (Hummelinck 1990; Haviser 1991, 2006) (see Figure 3); and Curaçao has 38 rock art sites reported (Hummelinck 1990; Haviser 1987, 1993, 2001; Rancuret 2006). It is important to stress here that, except for two sites on Curaçao where very few examples are noted, all of these rock art sites on Aruba, Bonaire and Curaçao are rock painting sites.
+For the sake of thoroughness, it should be noted here that the islands of the Lesser Antilles reported by Dubelaar (1995), as not having rock art sites, were: Antigua, Nevis, Montserrat, St. Thomas, Tortola, Anegada, Carriacou, St. Barthelemy, St. Eustatius, Saba, Beguia and Union Island among the other Grenadines. With the exception of Antigua, all of these islands noted as lacking rock art, are under 150 sq. km. in area (Dubelaar 1995).
+3 Site locations:
+According to Dubelaar (1992: 27) Lesser Antilles rock art is situated to a large extent along creeks or rivers; followed by locations along the coast; in river valleys or ravines; on top of low, wooded hills; in rock shelters; and only a small proportion in caves such as at Fountain Cavern in Anguilla. In the Greater Antilles, rock art is also found in those same locations, yet more significantly it abounds in the massive cave systems known on these much larger islands.
+A special location and context for petroglyphs in the Greater Antilles is the case of engraved vertically placed rock slabs bordering large ceremonial plazas at various Taino sites. On Puerto Rico, at least 79 prepared plaza areas are distributed among 72 archaeological sites, 18 plazas are aligned with engraved stone slabs (Dubelaar et al. 1999: 4). The most prominent
+47
+
+case is Plaza A of Caguana which presents 25 engraved slabs which have been analyzed and interpreted by Oliver (1989) among others (see Figure 5).
+On the mainland, in Venezuela and the Guianas, rock art sites are significantly more often situated in direct relation to water, either at rivers, lakes, springs, watersheds or sheltered areas.
+4 History of rock art research:
+Rock art research in the study region is indebted to the following pioneers:
+- Edgar Clerc who compiled early inventories of rock art of the French islands, - Irving Rouse and Jose M. Cruxent who from the very beginning of Caribbean Archaeology began to compile rock art data for the region, - C. N. Dubelaar who compiled and edited rock art inventories of the Guianas, the Lesser Antilles and Puerto Rico, - Antonio Núñez Jiménez who dedicated many years to the study of rock art in Cuba, - Dato Pagán Perdomo who promoted rock art research in the Dominican Republic, - Peter Wagenaar Hummelinck who compiled an inventory of rock art on the Dutch islands of Aruba, Bonaire and Curaçao.
+Listed below are some (but certainly not all) additional important rock art researchers in the Caribbean Area:
+in the Bahamas by Charles Hoffman and John Winter; in Cuba by Antonio Nunez Jiminez, José Ramón Alonso, Racso Fernández Ortega and Angel Graña; in Jamaica by James Lee, Lesley-Gail Atkinson and Phillip Allsworth-Jones; in Haiti by Clarke Moore, William Hodges and Rachel Beauvoir Dominique; in the Dominican Republic by Dato Pagan Perdomo, Domingo Abreu Collado, Gabriel Atiles and Adolfo López Belando; in Puerto Rico by Ricardo Alegria, Irving Rouse, Peter Roe, Jose Oliver, Michele Hayward, Michael Cinquino, Juan Jose Ortiz-Aguila, and Angel Rodríguez; in the Virgin Islands by Theodoor de Booy, Gudmund Hatt and Kenneth Wild; in Anguilla by David Watters, Nik Douglas, John Crock and Jim Petersen; in St. Martin - St. Maarten by Jay Haviser, Christophe Henocq, Christian Stouvenot and Isabelle Dechanez; in Grenada by Sofia Marquet and Henry Petitjean Roget; in St. Kitts by Gérard Richard and Henry Petitjean Roget; in Guadeloupe by Edgar Clerc, Alain Gilbert, Gérard Richard and Henry Petitjean Roget; in Dominica by Lennox Honeychurch and Henry Petitjean Roget; in Martinique by Mario Mattioni, Louis Allaire, and Henry Petitjean Roget; in St. Lucía by Ripley Bullen, Eric Brandford and Henry Petitjean Roget; in St. Vincent & Grenadines by Earl Kirby; in Aruba by P. Wagenaar-Hummelinck, Ep Boerstra, Aad Versteeg, Arminda Ruiz, Harold Kelly and Raymundo Dijkhoff; in Bonaire by P. Wagenaar-Hummelinck, Paul Brenneker, R. Nooyen and Jay Haviser; in Curaçao by Aad Ringma, Elis Juliana, Paul Brenneker, G. De Jong, P. WagenaarHummelinck, Jay Haviser and André Rancuret et al..
+48
+
+Sofia Jönsson Marquet’s broad regional study of petroglyphs in the Windward Islands group in the Lesser Antilles also deserves special mention. She has provided a contextual analysis and an approach to relative chronology (Marquet 2002).
+Rock art studies in Venezuela have been ongoing since the 19th century by Alexander von Humboldt, Gaspar Marcano and Bartolome Tavera-Acosta, yet a more technical and scientific research approach has been developed there since the 1950-60’s, with early work by Jose Cruxent, and important later work by Angelina Pollak-Eltz, Mario Sanoja, Jaime Vaz, Ruby de Valencia, Jeannine Sujo Volsky, Miguel Angel Parera, Kay Tarble, Franz Scaramelli and John Greer.
+With French Guyana, Guyana and Suriname, as well, the early studies began in the 19th century as with Alexander Winter, Charles Barrington Brown, Everard Im Thurn, and later emphasis on more scientific research in the 1970-80’s, by such investigators as: C. N. Dubelaar, Arie Boomert, Frans Bubberman and Aad Versteeg in Suriname; Huges PetitjeanRoget, Christian Toutouri, Guy & Marlene Maziere, Eric Gassies and Gérald Migeon in French Guyana; and C. N. Dubelaar, Edward Goodland, Ripley Bullen and Denis Williams in Guyana.
+5 Brief characterization of rock art of northern South America (Venezuela/Guianas), Lesser Antilles and Greater Antilles:
+The northern continental area of South America (Venezuela and the Guianas) has rock art characterized by extensive zoomorphic and anthropomorphic designs, and also geometric forms. These range from small concentrations of examples on boulders in river beds, to massive rock shelter settings where human burials are continued until the present, including huge mural designs that are up to 90 meters long. There are numerous design motifs in similarity to the Caribbean islands, however the shear size and quantity of art at Venezuelan sites is significant in contrast to the islands. In French Guyana as well, the size of the art is impressive, while the motifs have certain, yet fewer, similarities to styles in Venezuela and the Caribbean islands.
+Dubelaar recognized a comparatively homogenous corpus of petroglyphs at islands of the Lesser Antilles (excluding Aruba, Curaçao and Bonaire). He concluded that the overall majority of motifs consist of faces and anthropomorphic figures which are always stylized or schematic. These representations occur as isolated elements and rarely form complex scenes. As well, rarely do animal figures appear. Only rock engraving techniques occur in the Lesser Antilles. The one design motif that is most similar to the mainland and also among both the Lesser and Greater Antilles, is the “swaddled bodies” motif (see Figure 2), which some investigators interpret to represent a wrapped body in preparation for death rituals, thus accentuating the ancestor cult symbolism in rock art of the region. However, as this interpretation is not fully accepted, a more general denomination for the motif would be preferable.
+Rock art of the Greater Antilles show more complexity and different traditions than noted in the Lesser Antilles, as Adolfo López B. (2003) has pointed out for the Dominican Republic. There are both rock engraving petroglyphs and rock painting sites in the Greater Antilles, often with some of the same motives being used in both techniques, such as abstract or geometric designs. On Cuba and the Dominican Republic rock painting is widespread and most common, while on Puerto Rico there is a more balanced representation of both
+49
+
+engraving and painting. Within the large cave systems of the Dominican Republic enormous murals of rock paintings occur that depict human, animal, bird and fish forms (see Figure 4), and some cases of scenic compositions, as well as both negative and positive hand prints. The paint colors in the Greater Antilles are most often red, black, brown, and infrequently white.
+In the southern Caribbean islands of Aruba, Curaçao and Bonaire, rock art is almost exclusively painting in a rock shelter context, not in deeper caves, using primarily geometric designs (see Figure 3) and occasional zoomorphic or anthropomorphic forms, and positive hand prints are noted. The colors used for the rock painting have a distinctive relationship to the different islands, so that on the oldest occupied island of Curaçao only red painting occurs, on the adjacent later occupied island of Bonaire more complex designs appear and brown and black are added to the color range, while on Aruba, the island with closer ties to the mainland and latest occupations, the rock art designs are the most complex of the three islands, and include white with the other three colors, represented with scenic panels and more zoomorphic shapes. Many of the rock painting designs and techniques noted on the ABC islands also occur on Cuba and the Dominican Republic.
+6 Chronology:
+While for a long time, Caribbean rock art was considered not datable, recently several studies include chronological approaches. In general, most archaeologists of the region assume that the majority of the rock art in the Caribbean was made during the Ceramic Age, although there are recognized possibilities for incipient traditions in the Archaic Age.
+Esteban Maciques Sánchez (2004) has proposed a sequence of rock art traditions in Cuba. He tentatively suggests an initial abstract style in preceramic times, later figurative expressions in the ceramic period and finally colonial motifs executed after the Spanish conquest. Haviser has suggested potential trans-Caribbean connections between Aruba-Curaçao-Bonaire and Cuba during the late Archaic Age, using the rock painting art as a supportive argument (2003). Furthermore, the earlier-mentioned sequence of variable color use in relation to the occupation periods on the ABC islands can be seen as a rough chronological estimation for those islands specifically.
+Alain Gilbert has proposed a stylistic sequence for Martinique and Guadeloupe recognizing three phases (Richard 2002: 168-169, 172). In excavations at engraved boulders in Guadeloupe, a probable association between the petroglyphs and Saladoid ceramics was found (Société d’Histoire de la Guadeloupe 1995: 28).
+In Puerto Rico, Peter Roe (1991) suggests an association between petroglyphs and the first and second phases of the late ceramic period, between 600 and 1200 A.D. The engraved stone slabs aligning ceremonial plazas on the same island are considered traits of Taíno culture dating to approximately 1200-1500 A.D. Both Peter Roe for Puerto Rico and Adolfo Lopez B. for the Dominican Republic, have proposed specific motif classifications for the rock art, which could serve for general chronological ordering.
+The last expressions of rock art of the Caribbean islands are colonial human figures, for example in the Cuban site Cueva de los Generales, reported by Núñez Jiménez (1975: 403409), this is also a temporal marker.
+50
+
+7 Observations on Recording and Research:
+As noted from the eleven respondents to the ICOMOS information request form (see Appendixes I-IX), there seems to be basic levels of recording and research of rock art within the region. The concentrations of research are obviously focused on those areas where the larger quantities of sites occur, such as in Venezuela and on some of the Greater Antilles islands. However for other of the Greater Antilles islands (e.g. Cuba and Haiti) and most of the Lesser Antilles islands, economic pressures constrain the opportunities for extensive research. This is clearly evident in the case of the island of Hispaniola (Haiti and Dominican Republic), where vast numbers of sites are recorded in the Dominican Republic yet very few sites are recorded in Haiti.
+An overall review of the present state of documentation for the rock art sites of the region, indicates that most of the sites have been placed on local government archaeological site inventory registers, and have been photographed in print, slide and digital formats, as well as drawn sketches. Unfortunately, sometimes invasive recording methods such as chalking out of engravings are still practised. Some of the site locations have been identified by GPS and UTM locational programs. Three-dimensional digital documentation is still at an experimental stage in the region, with only some few studies begun in Puerto Rico.
+Other than some few attempts for a regional approach to data collection (see Dubelaar 1995; Marquet 2005), most of the site databases are restricted to local national facilities, and thus not linked to each other. As well, there is not at present a single common computer rock art registration program used in the region, and indeed the great variety of systems as well as languages being used, inhibits the potential for easy data exchange.
+8 Conservation and Management Issues:
+Again using the data provided from the questionnaires, it can be suggested that conservation and management issues need considerable further attention from the nations and communities where the rock art sites occur. The economic constraints for many of the countries are a significant factor in the national decisions regarding these matters, such as with the case of Haiti, among various others. As well, legislative infrastructures for rock art protection are quite varied across the region, with some countries having strong legal controls over sites protection, while most have some laws yet poor enforcement systems, and indeed several nations have no legal protection for rock art sites at all. Nonetheless, several experts of the region indicate the importance of proper public educational programs to deal with the protection and management of the rock art sites. As well, the community-based approach to site control is strongly suggested as a successful traditional method of site protection.
+Few countries of the region have clearly defined management plans for their rock art sites, which are most often lumped into existent general archaeological site plans. However, most of the countries do indicate that they have a national (and in some cases private) institution which is responsible for rock art sites. These institutions range from the rare full-scale rock art focused centers, as in Venezuela (Archivo Nacional de Arte Rupestre) to the more common system of simply incorporating rock art research, management and conservation through other agencies, such as governmental archaeology and environment departments or NGO cave exploration or heritage societies.
+51
+
+As to the physical conservation of rock art sites, there is clearly a distinction between those countries of the region which still have administrative-government ties to larger economic metropol nations as dependencies (e.g. French, Dutch, British and American islands), and those countries that are independent. The dependency territories have greater influences of metropol conservation expertise in the advice and application of advanced conservation techniques for the rock art sites; while the independent nations, often affected by their economic constraints, take what is available from local and visiting experts or do nothing for conservation. However, there are some independent nation initiatives for specific rock art conservation work, such as in Jamaica (Loubser 2005). Indeed the education argument is very strong here as well, in regards to creating a better understanding of the need for site conservation targeted at the decision-makers in the nations.
+Consistently, the primary threats to rock art sites across the region are the uniquely destructive circumstances relating to natural effects, with specific reference to earthquakes, volcanic eruptions and hurricanes, that periodically change the environment at coastlines and waterways. Yet also strongly emphasized by the regional experts, were the natural destructive forces of rock patination/peeling, chemical weathering, insects, vegetation/fungus, and dust, on the rock art. Furthermore, human land-use encroachment of the site locations, for both residential and economic reasons, is having a serious effect on the integrity of many of the sites. Indeed, the development of tourism in some rock art sites and their vicinities, when conducted without, or having inadequate management plans, results in severe destruction of the sites. Some of the more prominent of these types of site destructions are noted in the Dominican Republic, at the Borbon and Cueva de las Maravillas caves. However, there are also successful cases of development of tourism in rock art sites of the region, such as Parc Archéologique de Trois Rivières in Guadeloupe. Often the result of greater access to rock art sites through roads development, is manifested with increased destruction by vandalism and actual theft of the rock art. Again, the need for more effective educational programs about the importance of rock art protection is required to mitigate many of these human threats.
+Conclusions
+The rock art of the Caribbean and northern South American continent are clearly superb examples of the ancient, yet enduring, nature in human insight, creativity and expression. These images and sites link the cosmological and cultural views of the original inhabitants from the mainland into the island environments, and these sites continue to be recognized as icons of cultural identity for peoples of the region today.
+There is still considerable work that needs to be done in the region for the proper conservation, management, and research of these vital symbols for regional unity. One of the most important early steps should be the regional standardization of terms, research techniques and database systems. Furthermore, educational programs must be implemented in the schools, as well as in the broader community, to develop the awareness of the significance of these rock art sites for protection as cultural patrimony. Indeed, the decision-makers and community leaders of the Caribbean should also be involved in the educational process, to be informed of the potentials from these rock art sites, if properly managed and conserved, for inspiring cultural pride, as well as a compliment to heritage tourism with an emphasis on integrity and protection of local values. In many of the region’s nations, these important steps are now being taken, which provides the guidance and model for the others to follow, beyond language barriers and governments, towards a sense of Caribbean cultural linkage.
+52
+
+Based on a review of the rock art literature, our many years of experience, and the clear opinions expressed by the regional experts, it is suggested here that Amerindian Rock Art of the Caribbean has all of the necessary requirements to begin preparation for a UNESCO World Heritage nomination. It is further our opinion, that with the cooperation of regional organizations, such as the International Association for Caribbean Archaeology (IACA), among others, a viable infrastructure for the management and conservation of selected rock art sites across the region can be achieved, and thus the World Heritage nomination has a strong potential for success. Even if this nomination is not successful, the forward motion of this exercise in research unification and awareness development, will in itself significantly benefit the region, its people and its cultural heritage preservation.
+See illustrations Annexe IV: page 218
+53
+
+Bibliography
+
+Abreu Collado, Domingo 2003 El Arte Rupestre y la Historia Contada. In: Proceedings of the 20th International
+Congress for Caribbean Archaeology, p.633-638, Dominican Republic.
+
+Acosta Saignes, Miguel 1980 Introducción a un Analisis de los Petroglifos Venezolanos. En Estudios en Antropología,
+Sociología, Historia y Folclor. M. A. Saignes, ed. pp. 9-32. Caracas: Biblioteca de la Academia Nacional de Historia.
+
+Alonso, Enrique et al. 2004 Arte rupestre de Pinar Río. In: Memorias del II Taller Internacional de Arte Rupestre. CD. La
+Habana.
+
+Alonso, José Ramón
+
+1991 Arte Rupestre en Punta del Este, Cuba. El “motivo central” de un sistema ideográfico. In:
+
+Estudios
+
+Culturales.
+
+La
+
+Web
+
+de
+
+José
+
+Ramón
+
+Alonso,
+
+http://es.geocities.com/estudiosculturales2003/arterupestre/motivocentral.html
+
+2003 Las pinturas rupestres de Punta del Este: en torno a la interpretación y lectura simbólica de
+
+este
+
+arte.
+
+In:
+
+Rupestreweb,
+
+URL:
+
+http://es.geocities.com/
+
+estudiosculturales2003/arterupestre/arterupestre.html
+
+2004 Panorama histórico-crítico sobre el estudio del arte rupestre de Punta del Este, Cuba. In: Rupestreweb, URL: http://rupestreweb.tripod.com.puntadeleste.html
+
+Álvarez, Pedro 2003 Lineamientos para el desarrollo de un Sendero de Interpretación Arqueológica, en Peña Viva
+Bumbún, Zona de Interés Histórica Cultural del Parque Nacional Sierra Nevada, Estado Barinas. Trabajo Final de Grado. Universidad Central de Venezuela.
+
+Atiles, Gabriel 2003 El Arte Rupestre en la Republica Dominicana: Un Estudio a parir de las Cronicas. In:
+Proceedings of the 20th International Congress for Caribbean Archaeology, p. 603-612, Dominican Republic.
+
+2005 Arte rupestre dominicano. 98 p. Internet, URL: http://www.borbono.blogspot.com
+
+Atkinson, Lesley-Gail 2003 The status and preservation of Jamaican cave art. Paper held at the Fifth World
+Archaeological Congress, Washington, D.C. (June 21-26, 2003). 19 p.
+
+Aujoulat, Norbert 1997 Le site d’art rupestre de la Carapa. In: L’archéologie en Guyane: 131-142, CD. Edition
+APPAAG, Association pour la Protection du Patrimoine Archéologique et Architectural de la Guyane.
+
+Barrington Brown, Charles 1873 Indian Picture Writing in British Guyana. JAI 2:254-257.
+
+Beuze, Lyne-Rose; Cécile Celma n.d. (2006) ICOMOS Caribbean Rock Art information request form submission for Martinique.
+
+54
+
+Beauvior Dominique, Rachel n.d. (2006) ICOMOS Caribbean Rock Art information request form submission for Haiti.
+Boomert, Arie 1975 Indian Art in Suriname. Suralco Magazine 7:3:1-6, Paramaribo.
+De Booy, Theodoor 1917 Indian Petroglyphs in the Antilles. Forward 36:17-18, Philadelphia.
+Brenneker, Paul 1941 Zeven vindplaatsen van Indianentekeningen op Bonaire. Amigoe, July 9, Curaçao.
+Brites, Natasha 1993 Prácticas Funerarias Wóthuha y Wánai: Presente y Pasado. Resultados Recientes en
+Arqueología Regional de Venezuela", XLIII Convención Anual de AsoVAC, Mérida, 1993.
+Bubberman, Frans 1980 Petroglyphs in Suriname. Suralco Magazine 12:1:1-6-21.
+Bullen, Ripley 1971a Further comments on Antillean Petroglyphs. In: Proceedings of the International Congress of
+Americanists 4:65-67.
+1972a Petroglyphs in Guyana. In: Proceedings of the International Congress for Caribbean Archaeology, p. 65, St. Lucia.
+1972b Petroglyphs of the Virgin Islands and Puerto Rico. In: Proceedings of the Internatioanl Congress for Caribbean Archaeology, p. 13-16, St. Lucia.
+1973 Certain Petroglyphs of the Antilles. In: Proceedings of the International Congress of Americanists 5:94-109.
+Catalano, Francisco 2006 El Espacio en las Manifestaciones Rupestres de la Región Central: Casos Osma y Brasén.
+Trabajo Final de Grado. Universidad Central de Venezuela.
+Chaffanjon, Jean 1986 El Orinoco y el Caura. Relación de viajes realizados en 1886 y 1887 con 56 grabados y 2
+mapas. J. Lecoin, transl. Caracas: Editorial Croquis.
+Clerc, Edgar 1972 Petroglyphs on Guadeloupe. In: Proceedings of the Fourth International Congress
+for Caribbean Archaeology, p. 21-24, St. Lucia.
+Crevaux, J. 1988 Viajes por la America del Sur. En El Orinoco en Dos Direcciones. M. Á. Perera, ed. pp. 121-
+333. Caracas: Ediciones Edime.
+Crock, J.G. 2000 Interisland Interaction and the Development of Chiefdoms in the Eastern
+Caribbean. Unpublished Ph.D. dissertation, Department of Anthropology, University of Pittsburgh, Pittsburgh.
+Crock, John n.d. (2006) ICOMOS Caribbean Rock Art information request form submission.
+55
+
+Crock, J.G. and James B. Petersen 1999 A Long and Rich Cultural Heritage: The Anguilla Archaeology Project, 1992-1998. A report
+for the Anguilla Archaeological and Historical Society, The Valley.
+Cruxent, Jose M. 1946-47 Pinturas Rupestres de El Carmen, en el Rio Parguaza, Estado Bolivar, Venezuela. Acta
+Venezolana 2:83-90.
+1949 El Geoglipho de la Fila de Olivita. Memorias de la Sociedad de Ciencias Naturales de La Salle, Ano IX, no. 23, Caracas.
+1950 Archeology of Cotua Island, Amazonas Territory, Venezuela. American Antiquity 16(1):1016.
+1955 Petroglifos Venezolanos. Revista A2, Septembre, Caracas.
+1960 Pinturas rupestres del Cerro Papelon, Territorio Federal de Amazonas. Boletin Informativo del Departamento de Antropologia, IVIC 1:22-25.
+1967 Litos con Hoyuelos. Boletin Informativo IVIC 5:5.
+De Abate, John 1972 A key to the interpretation of the petroglyphs of the Orinoco. . In: Proceedings of
+the fourth International Congress for Caribbean Archaeology, p. 5-64, St. Lucia.
+Dechanez, Isabelle 2001 Les Roches Graves de Saint Martin. In: Proceedings of the 19th Congress of the
+International Association for Caribbean Archaeology, p. 281-289, Aruba.
+Delgado, Rafael 1977 Los Petroglifos Venezolanos. Caracas: Editorial Monte Ávila.
+Dubelaar, C. N. 1983 The Distribution of Im Thurn’s elaborate type petroglyphs in South America. In:
+Proceedings of the ninth International Congress for Caribbean Archaeology, p. 375-398, Dominican Republic.
+1985 A Comparison between petroglyphs of the Antilles and the northeastern South America. In: Proceedings of the Tenth International Congress for Caribbean Archaeology, p.421-435, Martinique.
+1986a South American and Caribbean Petroglyphs. 249 p. Foris Publications. Dordrecht – Holland, Riverton – USA.
+1986b The Petroglyphs in the Guianas and adjacent areas in Brazil and Venezuela: an inventory, with a comprehensive bibliography of South American and Antillean petroglyphs. 326 p. Monumenta Archaeologica, 12. The Institute of Archaeology, the University of California, Los Angeles.
+1992 Lesser Antilles rock art. In: International Newsletter on Rock Art I.N.O.R.A., Nº 1: 26-32. Foix, France.
+1993 Lesser Antillean Petroglyph Problems. In:Proceedings of the 14th International Congress for Caribbean Archaeology, p.612-617, Barbados.
+56
+
+1995 The Petroglyphs of the Lesser Antilles, the Virgin Islands and Trinidad. 492 p. Foundation for Scientific Research in the Caribbean Region: Publication 135. Amsterdam.
+
+Dubelaar, C. N.; Hayward, Michele H.; Cinquino, Michael A. 1999 Puerto Rican rock art. A resource guide. 165 p. Puerto Rico State Historic Preservation
+Office, San Juan.
+
+Douglas, Nik 1990 The Fountain: An Amerindian Ceremonial Cavern on Anguilla, Its Petroglyphs and
+other finds, Related to Surface Archaeology of Anguilla’s Major Beach Sites. In Proceedings of the Eleventh Congress of the International Association for Caribbean Archaeology, p. 141-151, Puerto Rico.
+
+Fernández Ortega, Racso; González Tendero, José B. 2001a El enigma de los petroglifos aborígenes de Cuba y el Caribe peninsular. La Habana.
+
+2001b Afectaciones antrópicas al arte rupestre aborigen en Cuba. In: Rupestre, 4: 16-21. GIPRI, Bogotá.
+
+2003 La Mitologia Aborigen y el Arte Rupestre de la Cueva de Patana, Maisi, Cuba. In: Proceedings of the 20th International Congress for Caribbean Archaeology, p. 581- 586, Dominican Republic.
+
+Fincham, Alan G. 1997 Jamaica Underground. Press, University of West Indies.
+
+Galarraga, Alicia 2004 Indicadores de estrés nutricional y patológicos en osarios del período Republicano
+correspondiente a abrigos rocosos del Orinoco Medio, Municipio Cedeño, Estudios de casos, Estado Bolívar (Venezuela). Trabajo final de grado para optar al titulo de Antropólogo. Universidad Central de Venezuela.
+
+García Fernández, E. 1991 Petroglifos, huellas en el tiempo. Caracas: Ediciones COBO.
+
+Gassie, Eric n.d. (2006)
+
+ICOMOS Caribbean Rock Art information request form submission for French Guyana.
+
+Gilbert, Alain and Eric Gassies 2001 Les gravures rupestres de la Pointe Marie Galante, Île Saint-Joseph, Îles du Salut Cayenne,
+Guyane française. In: Bulletin de la Société Préhistorique Française, T. 98, Nº 4 : 717-733. Paris. (Includes a chart explaining 6 phases of rock art in the Guianas.)
+
+Greer, John 1995 Rock art chronology in the Orinoco Basin of Southwestern Venezuela. Ph.D. dissertation,
+University of Missouri – Columbia. 442 p. UMI Dissertation Services, Ann Arbor, Michigan.
+
+1997 Arte rupestre del sur de Venezuela: una síntesis. In: Boletín, 11: 38-52. SIARB, La Paz, Bolivia.
+
+Guarch, José M. 1996 La muerte en Las Antillas. In: El Caribe Arqueológico, 1(1). Santiago de Cuba.
+
+57
+
+Gutiérrez, D. 2002 Sobre el Simbolismo y Funcionalidad del Numero en el Arte Rupestre de la Cueva de los
+Petroglifos, Viñales, Pinar del Rio, Cuba. In: El Caribe Arqueológico, 6, Santiago de Cuba.
+
+Gutiérrez, D.; Fernández, R.; González, J. B. 2003 Propuesta para un nuevo estilo ideográfico en el extremo más oriental de Cuba. In: Revista
+Catauro, 5 (8). La Habana.
+
+Haviser, Jay B. 1987 Amerindian Cultural Geography on Curaçao; Natuurwetenschappelijk Studiekring voor Suriname
+en de Nederlandse Antillen No. 120, Doctoral dissertation at the Rijksuniversiteit Leiden, Netherlands.
+
+1988 An Archeological Survey of St. Martin - St. Maarten; Reports of the Institute of Archaeology and Anthropology of the Netherlands Antilles, No.7, Curaçao.
+
+1991a The First Bonaireans; Reports of the Archaeological-Anthropological Institute of the Netherlands Antilles, No. 10, Curaçao.
+
+1991b Development of a Prehistoric Interaction Sphere in the Northern Lesser Antilles; Nieuwe West-Indische Gids, Vol. 65, No. 3-4, Leiden, Netherlands.
+
+1995 Test Excavations at the Savonet Rock Paintings Site, Curaçao, Netherlands Antilles. In: Procedings of the 15th International Congress for Caribbean Archaeology, edited by R. Alegria and M. Rodriguez, p. 571-580, Centro de Estudios Advanzados de Puerto Rico y la Caribe, San Juan, Puerto Rico.
+
+2000 Archaeological Excavations at the Savonet Rock Painting Site, Curaçao. Boletín de la Sociedad Venezolana de Espeleología 34:1-5.
+2001 New Radicarbon dates for the Archaic Age on Curaçao.In: Proceedings of the 19th International Congress for Caribbean Archaeology, pp. 110-122, Aruba.
+
+2006 Distinguishing authentic prehistoric from historical replication rock painting features at prehistoric sites on Bonaire. Paper presented at the 71st Society for American Archaeology
+annual meeting, San Juan, Puerto Rico, April 28.
+
+n.d. (2006)
+
+ICOMOS Caribbean Rock Art information request form submission for Bonaire and Curaçao.
+
+Hayward, Michele; Cinquino, Michael 2006 Rock art of Puerto Rico and the United States Virgin Islands. Ms.
+
+Hodges, William H. 1979 L’art rupestre précolombien en Haiti. Étude descriptive des gravures de la Roche à l’Inde à
+Camp Coq dans la Vallée du Limbé. In: Conjonction, Revue Franco-Haitienne, 143 : 5-34. Institut Français d’Haiti, Port-au-Prince.
+
+1984 Quelques réflexions sur la Roche Tampée. In: Bulletin du Bureau National d’Ethnologie, 1 : 39-47. Port-au-Prince.
+
+Hoffman, Charles 1972 Petroglyphs on Crooked Island, Bahamas. In: Proceedings of the International
+Congress for Caribbean Archaeology, p. 9-12, St. Lucia.
+
+58
+
+Humboldt, Alejandro 1985 Viaje a las Regiones Equinocciales del Nuevo Continente. 5 vols. Caracas: Monte Avila
+Editores.
+Instituto de Patrimonio Cultural 1997 Sitios Arqueológicos de Venezuela 1. Caracas: Gráficas ACEA.
+1999 Sitios Arqueológicos de Venezuela 2. Caracas: Editorial Arte.
+Jesse, C. 1972 Petroglyphs and rock-cut basins at Dauphin, St. Lucia. In: Proceedings of the International
+Congress for Caribbean Archaeology, p. 33-34, St. Lucia.
+Kelly, Harold n.d. (2006) ICOMOS Caribbean Rock Art information request form submission for Aruba.
+Kirby, Earl 1976 A Newly found Petroglyph Rock on St. Vincent. In: Proceedings of the
+International Congress for Caribbean Archaeology, p.214, Guadeloupe.
+Van Koolwijk, A.J. (1987) Indiaansche opschriften voorkomende op het eiland Aruba. 1881 Manuscript
+reproduced in Biblography of the Archaeology and Amerindians of the Netherlands Antilles and Aruba, edited by M. Coomans-Eustatia and H. Coomans, UNA Uitgrave no. 31, Curaçao.
+Laurie, Keith; Matheson, Duncan 1972 The Petroglyphs of St. Kitts, West Indies. In: Proceedings of the International
+Congress for Caribbean Archaeology, p. 17-20, St. Lucia.
+Lee, James W. 1981 Field trip to St. Elizabeth Petroglyphs. In: Archaeology Jamaica, 81: 7-8.
+1990 Petroglyphs of Jamaica. In: Proceedings of the Eleventh Congress of the International Association for Caribbean Archaeology, p.153-158, Puerto Rico.
+López Belando, Adolfo 2004 El Arte en la penumbra. Pictografías y Petroglifos del Parque Nacional del Este. 370 p. Santo
+Domingo.
+Loubser, Johannes 2005 Condition assessment, recording and grafitti renoval at the Warminster/Genus rock
+art shelter, St. Elizabeth Parish, Jamaica. Report submitted to the American Foundation for the University of the West Indies, New Cork, New South Associates, Georgia, USA, 17 p.
+Maciques Sánchez, Esteban 2004 El arte rupestre del Caribe insular: estilo y cronología. In: Rupestreweb,
+http://rupestreweb.tripod.com/maciques.html
+Martin, Kathy n.d. (2006) ICOMOS Caribbean Rock Art information request form submission for St. Vincent
+and Grenadines.
+59
+
+Marquet, Sofia Jönsson 2002 Les Pétroglyphes des Petites Antilles Méridionales. Contextes physique et culturel.
+371 p. Paris Monographs in American Archaeology, 11. BAR International Series, 1051. Archaeopress, Oxford.
+n.d. (2006) ICOMOS Caribbean Rock Art information request form submission for Grenada.
+Mattioni, Mario 1972 Communication sur les Petroglyphes de Martinique. In: Proceedings of the Fourth
+International Congress for Caribbean Archaeology, p. 25-32, St. Lucia.
+Mazière, Marlène 1997 L’art rupestre amérindien de Guyane. In: L’archéologie en Guyane: 99-130. Edition
+APPAAG, Association pour la Protection du Patrimoine Archéologique et Architectural de la Guyane.
+Novoa Alvarez, Pablo 1985 Pinturas Rupestres del Territorio Amazonas de Venezuela. Revista de Arqueología y
+Etnología (Habana) 6(55):36-45.
+1998 Arte Rupestre del Estado Barinas, Venezuela. Madrid: Monográfico Especial de Editorial Arqueohistoria.
+Núñez Jiménez, Antonio 1975 Cuba: dibujos rupestres. 507 p. Editorial de Ciencias Sociales, La Habana /
+Industrialgráfica S.A., Lima.
+1986 Arte rupestre de Cuba: las pictografías de las Cuevas del Indio y de los Portales en la Sierra de Cubitas. In: Bolletino del Centro Camuno di Studi Preistorici, 23: 123-132. Capo di Ponte, Valcamonica, Italy.
+1987 Arte rupestre de Cuba. Jaca Books, Milano, Italy.
+1991 Sinthesis del Arte Rupestre en Cuba. In: Proceedings of the Thirteenth International Congress for Caribbean Archaeology, p. 35-46, Curaçao.
+1997 El arte rupestre del Amazonas al Caribe: Bahamas. In: Espelunca, nueva época, 3(2): 6-72. La Habana, Cuba.
+Ortiz-Aguila, Juan Jose 1976 Aboriginal Antillean Pictographs: A new discovery. In: Proceedings of the
+Sixth International Congress for Caribbean Archaeology, p. 315, Guadeloupe.
+Oliver, José 1998 El Centro Ceremonial de Caguana, Puerto Rico: Simbolismo iconográfico, cosmovisión, y el
+poderío caciquil Taíno de Boriquén. BAR International Series No. 727, British Archaeological Reports, Archaeopress, Oxford.
+Padilla, R. 1957 De los petroglifos y otras expresiones primitives de América.Caracas: Talleres Gráficos
+Nacionales.
+60
+
+Pagan Perdomo, Dato 1980 Aspectos sobre del Arte Rupestre Prehispánico de Santo Domingo. In:
+Proceedings of the Tenth International Congress for Caribbean Archaeology, p. 437-448, Martinique.
+Perera, M. A. 1971 Contribución al Conocimiento de la Espeleología Histórica en Venezuela, Segunda parte. La
+Arqueología Hipogea del Orinoco Medio, Territorio Federal Amazonas. Boletín de la Sociedad Venezolana de Espeleología 3(2):151-163.
+1983 Sobre un cementerio Piaroa en el río Parguaza, Distrito Cedeño, Estado Bolívar. Boletín de la Sociedad Venezolana de Espeleología 20:29-38.
+1991a Contribución al Conocimiento de la Espeleología Histórica en Venezuela. II Parte. La Arqueología Hipogea del Orinoco Medio, Territorio Federal Amazonas. Boletín de la Sociedad Venezolana de Espeleología 3(2):151-163.
+1991b Cuevas y cerros en la tradición oral y ceremonial de los amerindios de Venezuela. Revista de Indias LII(93):607-630.
+Perera, M. A. and H. M. Moreno 1984 Pictografías y Cerámica de dos Localidades Hipogeas de la Penillanura del Norte T.F.A. y
+Dto. Cedeño, Estado Bolívar. Boletín de la Sociedad Venezolana de Espeleología 21:21-32.
+Perera, M. A., et al., 1988 Etnohistoria y Espeleología Histórica en el Area de Influencia Inmediata de Los Pijiguaos.
+Caracas: Proyecto de Arqueología y Espeleología Histórica en el Area de Influencia del Complejo Los Pijiguaos, Edo. Bolívar, Convenio MARNR/BAUXIVEN.
+Petersen, J.B., B. Cox, J. Crock and E. Coldwell 2003 Big Spring: A Ceremonial Petroglyph Sitein Anguilla, Lesser Antilles. In Proceedings of the
+20th International Congress for Caribbean Archaeology, pp. 835-842, edited by C. Tavarez Maria and M. García Arévelo. Museo del Hombre Dominicano, Santo Domingo.
+Petitjean Roget, Henry 1975 Contribution de l’étude de la préhistoire des Petites Antilles. Doctoral dissertation
+Ecole Pratique des Hautes Etudes, Paris.
+1976 Note sur Quelques Pétroglyphes des Antilles. In: Proceedings of the Sixth International Congress for Caribbean Archaeology, p. 215-220, Guadeloupe.
+1983 Mythes et origine des maladies chez les Tainos: les Zemis Bugia et Aiba. In: Proceedings of theTenth International Congress for Caribbean Archaeology, p. 472-474, Martinique.
+Petitjean Roget, Henry; Richard, Gérard 2005 Guadeloupe: les roches gravées des Petites Antilles, un patrimoine commun. In:
+UNESCO, Arqueología del Caribe y Convención del Patrimonio Mundial. Anexes (CD): 5962. París.
+Pinart, A.L. 1890 Note sur les pétroglyphes et antiquités des Grandes et Petites Antilles. 17 pp., Ms., Paris.
+61
+
+Pollak-Eltz, Angelina 1976 Venezuelan Petroglyphs: A Survey. In: Proceedings of the
+Sixth International Congress for Caribbean Archaeology, p. 221-231, Guadeloupe.
+Reichel-Dolmatoff, G. 1967 Paintings of the Vaupes: An essay of Interpretation. Folklore Americas, Vol.XXVII,
+No. 2, p. 107-113, Los Angeles.
+Richard, Gérard 1993 Au Sujet des Pétroglyphes de la Guadeloupe Découvertes Récentes. In: Proceedings of the
+Fourteenth International Congress for Caribbean Archaeology, p. 618-623, Barbados.
+2002 Pétroglyphes de Guadeloupe – nouvelle approche. In: Archéologie Précolombienne et Coloniale des Caraïbes, Actes des congrès nationaux des sociétés historiques et scientifiques, 123e Antilles-Guyane, 1998 (publ. 2002): 167-176.
+n.d. (2006) ICOMOS Caribbean Rock Art information request form submission for Guadeloupe.
+Rivas, P. 1990 Arqueología de Rescate en Caicara del Orinoco: Sub-proyecto Estudio de los Petroglifos de
+Punta Cedeño. Informe Final. En: Informe del Proyecto de Arqueología y Espeleología Histórica del Area de Influencia del Complejo Los Pijiguaos, Edo. Bolívar. Caracas: Convenio MARNR/BAUXIVEN.
+1993 Estudio preliminar de los petroglifos de Punta Cedeño, Caicara del Orinoco, estado Bolívar. En Contribuciones a la Arqueología Regional de Venezuela. F. J. Fernández and R. Gassón, eds. pp. 165-197. Caracas: Fondo Editorial Acta Científica Venezolana.
+Rodriguez, Angel Alvarez 1993 A Classification Scheme for the Puerto Rico Petroglyphs. In: Proceedings of the
+Fourteenth International Congress for Caribbean Archaeology, p. 637-671, Barbados.
+Roe, Peter G. a. Cross-Media Isomorphisms in Taíno Ceramics and Petroglyphs from Puerto Rico. In: Proceedings of the Congress of the International Association for Caribbean Archaeology 14: 637-671. Barbados.
+Romero, Alejandro 1997 El arte rupestre de la provincia de Sancti Spíritus, Cuba. In: Revista Espelunca, Época
+Nueva, 2(3), Sociedad Espeleológica de Cuba, La Habana.
+Rouse, Irving 1949 Petroglyphs. Handbook of South American Indians, Vol. 5, Bulletin 143, BAE, p.
+493-502, Washington.
+1989 Peoples and Cultures of the Saladoid Frontier in the Greater Antilles. In: Early Ceramic Population Lifeways and Adaptive Strategies in the Caribbean, ed. P. Siegel, pp. 383-404, BAR International Series 506, Oxford.
+1992 The Tainos. Yale University Press, New Haven.
+Ruiz, Arminda 2003 Management and preservation of pictographs and petroglyph sites in Aruba. Paper
+presented at Session 1 of the Fifth World Archaeological Congress, Washington. Ms., 14 p.
+62
+
+Sanoja, Mario and Iraida Vargas-Arenas 1970 La Cueva "El Elefante". Caracas: Universidad Central de Venezuela.
+Scaramelli, Franz 1992 Las Pinturas Rupestres en el Parguaza: Mito y Representación. Trabajo Final de Grado.
+Universidad Central de Venezuela.
+Scaramelli, Franz and Kay Tarble 1993a Las Pinturas Rupestres del Orinoco Medio, Edo. Bolívar: Nuevos Enfoques. Ponencia
+presentada en el simposio "Resultados Recientes en Arqueología Regional de Venezuela", XLIII Convención Anual de AsoVAC.
+1993b Las Pinturas Rupestres del Orinoco Medio, Venezuela: Contexto Arqueológico y Etnográfico. XV International Congress for Caribbean Archaeology, San Juan, Puerto Rico, 1993b, pp. 607-623. Centro de Estudios Avanzados de Puerto Rico y el Caribe.
+1996 Contenido arqueológico y etnográfico de los sitios de interés espeleohistórico del Orinoco medio, Bolívar, Venezuela. Boletín de la Sociedad Venezolana de Espeleología 30:20-32.
+n.d.(2006) ICOMOS Caribbean Rock Art information request form submission for Venezuela.
+Société d’Histoire de la Guadeloupe 1995 Signes Amérindiens. Les roches gravées en Guadeloupe. 32 p. Basse-Terre.
+Sujo Volsky, J. 1975 El Estudio del Arte Rupestre en Venezuela. Montalban, Universidad Catolica Andres Bello.
+Tarble, Kay 1991 Piedras y Potencia, Pintura y Poder: Estilos Sagrados en el Orinoco Medio. Antropologica 75-
+76:141-164.
+Tarble, Kay and Franz Scaramelli 1999 Style, Function, and Context in the Rock Art of the Middle Orinoco Area. Boletín de la
+Sociedad Venezolana de Espeleologia 33(diciembre):17-33.
+Tavera Acosta, B. 1956 Los Petroglifos de Venezuela. Caracas: Instituto de Antropología e Historia, Universidad
+Central de Venezuela.
+Urbani, Bernardo and Franco Urbani 2001 The Geoglyph of La Rueda del Indio, Chirgua, Venezuela. Rock Art Research 18(1):33-39.
+Valencia, Ruby de; Sujo Volsky, Jeannine 1987 El diseño de los petroglifos venezolanos. Le dessin dans les pétroglyphes vénézuéliens. Design
+in Venezuelan petroglyphs. 390 p. Fundación Pampero, Caracas.
+Vega, Bernardo 1976 Comparison of Newly found cave drawings in Santo Domingo with petroglyphs and
+pictographs in the Caribbean region. In: Proceedings of the Sixth International Congress for Caribbean Archaeology, p. 200-212, Guadeloupe.
+63
+
+Veloz Maggiolo, Marcio; Plinio Pina; Bernardo Vega 1972 Antillean Pictographs and Petroglyphs: Patterns and proceedures which can be applied in the
+study of their location in time. In: Proceedings of the Fourth International Congress for Caribbean Archaeology, p. 1-8, St. Lucia.
+
+Versteeg, Aad 1980 Petroglyph rescues in Suriname. Suralco Magazine 12:1:22-25.
+
+Wagenaar-Hummelinck, Peter 1953-1972 Rotstekeningen van Curaçao, Aruba en Bonaire. Natuurweteskappelijk
+Werkgroep Nederlandse Antillen (No. 2,6,13,21), Utrecht, Netherlands; and De West-Indische Gids (1953:173-209, 1957:93-126), Nieuwe West-Indische Gids (1972:1-66) Leiden, Netherlands.
+
+1979 The Caves of the Netherlands Antilles. Natuurweteschappelijk Studiekring Nederlandse Antillen en Suriname, No. 97, Utrecht, Netherlands.
+
+1991 De Rotstekeningen van Aruba. Uitgeverij Presse-Papier, Utrecht.
+
+1992 De Rotstekeningen van Bonaire en Curaçao. Uitgeverij Presse-Papier, Utrecht.
+
+Watters, D. R. 1991 Archaeology of Fountain Cavern, Anguilla, West Indies. Annals of Carnegie
+Museum 60(4):255-320.
+
+Weber, A. 1996 Los petroglifos de Cojedes. Valencia: Edit. Univ. de Carabobo.
+
+Wild, Kenneth 2003 Defining Petroglyphs from the archaeological record. In: Proceedings of the
+International Congress for Caribbean Archaeology 20:639-646, Santo Domingo.
+
+n.d. (2006)
+
+ICOMOS Caribbean Rock Art information request form submission for U.S. Virgin Islands.
+
+Williams, Denis 1985 Petroglyphs in the Prehistory of Northern Amazonia and the Antilles. Advances in World
+Archaeology 4:335-380.
+
+Winter, John 1991 Petroglyphs of the Bahamas. In: Proceedings of the Fourteenth Congress of the International Association for Caribbean Archaeology (A. Cummins & P. King, eds.): 672-680, Barbados.
+
+64
+
+APPENDIX I. ICOMOS Form for Anguilla
+Rock Art of Anguilla- British Dependent Territory Compiled by John G. Crock, Ph.D. University of Vermont
+Territory Description: Anguilla is a limestone island 55 sq km in size with a maximum elevation of 65 m located at the northern end of the Lesser Antilles.
+Significant Rock Art Sites: (2) Fountain Cavern (AL1-FC) and Big Spring (AL28-BS). Both sites have associated archaeological deposits.
+Documentation: The rock art within the Fountain Cavern and Big Spring sites has been inventoried and this information has been published. Other publications also have placed these sites in a regional cultural context and dated their use by Amerindians to between 400-1500 A.D. Documentation includes photography and detailed mapping. Photographs exist in color slides, black and white negatives, and digital formats. Documentation is located at the University of Vermont, Burlington, Vermont and the Anguilla National Trust, The Valley, Anguilla. All material can be made available to assist with comparative studies.
+Research: The research into the cultural affiliation of the rock art in Anguilla is extensive. It has been conducted as part of scientific research conducted for the Government of Anguilla by the Carnegie Museum of Natural History, and the University of Vermont, and as part of Ph.D. research (Crock) as well as for the preparation of a World Heritage nomination.
+Protection: The Fountain Cavern site lies within the 12 acre Fountain Cavern National Park, owned by the Government of Anguilla (GOA). The one entrance to the cave has been sealed with a locked grate for the 20 years since it was determined to be regionally significant. The Big Spring site also is owned by the GOA. The property is fenced and railings separate the public from the rock art within an open sinkhole. The site opened as a National Park in 2003. In 2001, the Anguilla National Trust (ANT) helped draft National Park and Protected Areas legislation. Presently, the draft legislation is on the priority list of the GOA. In 2004, the Ministry of Environment of the GOA secured funding to incorporate a comprehensive piece of environmental legislation which will include protected areas and national parks sections. The end date for successful completion of this legislation is March 2007.
+Conservation: The closing off of Fountain Cavern to the public with an iron grate has prevented unauthorized access to the site and vandalism for 20 years. This effort has preserved the site but also has created an issue for some Anguillians who had enjoyed free access to the site earlier on (historically the site was utilized as a water source on this low island). The Big Spring site has been fenced since its identification. This has prevented livestock from entering the site and has prevented illegal dumping of rubbish which occurred previously.
+Management: The main agencies involved include the GOA, the ANT, and the Anguilla Archaeological and Historical Society (AAHS). Long-term management plans for both sites are currently being updated. Access to Fountain Cavern by permission only via the GOA Director of Environment. Access to Big Spring coordinated via the ANT. The GOA presently lacks the resources to properly develop Fountain Cavern for public access.
+Main Threats: At Fountain Cavern, potential threats include roof fall, algae growth, and chemical weathering. At Big Spring, the open natural environment is contributing to severe erosion of the petroglyphs. At Big
+65
+
+Spring, given that the site is only protected by a chainlink fence, access and vandalism is possible at any time the site is not attended.
+
+APPENDIX II.
+
+ICOMOS Form for Aruba
+
+Rock Art of Aruba Compiled by Harold Kelly
+
+Profile of Zone: The Rock Art of Aruba consists of rock drawings in red, brown and white colors. Furthermore, the rock drawings occur both monochrome and polychrome in which the polychrome paintings consist of white and red colors. The rock paintings where dated by AMS (Accelerated Mass Spectrometry) which yielded a date of 1000 AD and so placing them in the Transitional period between the Preceramic Period (2500B.C.1000A.D.) and the Ceramic Period (1000-1515AD). The rock paintings are therefore ascribed to both the Preceramic and Ceramic Periods and thus show a very significant link in the development of the Aruban Amerindian cultures and the link between both periods. There is a very close relation between the rock paintings and documented archaeological sites occurring in the surrounding area of the Rock Art sites.
+
+Links with other zones: The Rock Art of Aruba is not only linked to the mainland of Venezuela and Colombia but is also linked to the continental islands of Bonaire and Curaçao. Research carried out by C.N. Dubelaar concerning South American and Caribbean Petroglyphs show that there is a clear link with zones 4 and 5 in the form of motifs such as the framed cross, ring and bar and concentric circles.
+
+Known sites: National Park Arikok is on the preliminary list.
+
+Documentation of significant Rock Art sites: - The sites of Fontein cave, Quadirikiri cave, Arikok rock boulders and Ayo rock formations have all been inventoried. - Detailed studies published in: The Rock Drawings of Aruba (W. Hummelinck, 1990). Physical records available previously published in: Reconstructing Brazilwood Island: The Archaeology and Landscape of Aruba (Versteeg & Ruiz, 1997). Detailed drawings of rock art. UTM coordinates of rock art sites available in digital format. Distribution of rock art sites is accurately pinpointed on a digital map of Aruba. - Digital photographic records of all rock drawings of the mentioned sites. - Digital documentation, UTM coordinates, distribution of sites and previously published research and detail studies available. - All the documentation is located at the Archaeological Museum Aruba. . Research: - AMS dating was carried out on 6 samples but only 2 were datable as a means to get insights in the relation between rock art and period of occupation. The AMS dating placed the rock art sites in the transitional period of the Preceramic Period and the Ceramic period. - Research concerning the possible spatial relation between all the rock art sites of Aruba. The research brought forth that there seems to be a linear relation (in a north south direction) between rock art sites occurring on the island and that the locations of the rock paintings were not randomly chosen but where chosen on specific locations which “linked” the rock painting sites to each other. - Research concerning the relation of rock art sites with surrounding archaeological sites as a means to get insights in how the Aruban Amerindians interacted with their environment and rock art sites has also been carried out. The rock art sites were of great significance for the Amerindians since they were considered as Religious, Ceremonial places wherein the Amerindians could communicate with the spirit world. Furthermore the rock art sites are closely related to temporary camps and large habitation sites.
+
+66
+
+Protection: The legal protection of all cultural heritage on Aruba has undergone a similar development as in the rest of the Caribbean region. Legislation from the motherland were adopted at the beginning and in the course of the 20th century with inadequate or no framework from which to implement these laws. These ordinances were never adapted to the developments which had taken place in the country and which had an impact, often negative, on the cultural heritage. The “Monument Ordinance” is the example of such a regulation in Aruba. Dating from the 1920’s it has not been implemented or adapted during the years. In an attempt to breathe some air into the protection of cultural heritage the Aruban Government instituted a ‘Monument Council’ and a “Monument Fund” in the 1990’s in accordance to this ordinance. An “Office of Monuments” was instituted which has documented all architectural monuments and which focuses on the protection of these. The protection of archeological heritage including the pictograph/petroglyph sites has been for years a main task of the AMA. In the absence of adequate legislation the efforts had been focused on creating a “protection network” by allying with Government and non-Government agencies responsible for “land-use” issues. For some specific areas e.g. Ayo and Arikok support has been given by the AMA to the materialization of protective legislation and policy regulation. Currently the National Park Arikok, an area which contains a significant number of pictographs, is protected by national legislation. Another pictograph site which is also important as cultural landscape namely “Ayo” is protected through policy regulation established by the Department of Public Works and supported by the AMA. The most significant development in the realization of protective legislation occurred recently with the adoption of the “Wet op de Ruimtelijke Ordenning” which contain some guidelines of the “Treaty of Malta”. In the future all construction or other land-use project will have to take into account the natural/cultural value of the area. Despite this positive development the lack of an adequate protective legislative framework is still a major handicap for preservation efforts.
+Conservation: Current conservation is in the form of iron bars erected in front of the Fontein cave, Arikok site and Ayo site and access to the paintings is not permitted, unless under strict supervision of park rangers of the National Park Arikok or the department of Public Works and in consultation with the Archaeological Museum of Aruba. The preventative conservation method is in the form of limiting the known location of sites to the general public such as the case for the Quadirikiri rock art site. Some practical conservation is carried out in the form of digital documentation of rock paintings during site controls. The pros of the conservation approaches is that the sites are conserved in the best manner possible with the means available and that access to the rock paintings is only granted under strict supervision. This dramatically reduces the chance of damage to the rock paintings by means of vandalism. Furthermore by abstaining to give the location of sites, these are automatically conserved. The con of this is that the cultural heritage in some cases is not accessible for the general public which impedes interaction.
+Management: The main agencies involved in management are, The National Park Arikok, Archaeological Museum Aruba and the Department of Public Works. The sites in the National Park Arikok are physically managed by the park rangers and the site of Ayo is managed by the Department of Public Works and the Scientific Department of the Archaeological Museum. The sites of Fontein cave and Arikok have active management in the form of park rangers posted on the sites 7 days a week which give guided tours to the visitors and the Ayo site has active management in the form of regular sites controls by the Scientific Department. There are management plans concerning the conservation of rock painting sites. Traditional management arrangements at Ayo include regular visits by personnel of the Department of Public Works in charge of the maintenance of the protection fence and the surroundings. The AMA makes regular survey visits to the Ayo site. The drawings in the Park are under permanent surveillance of rangers and are also regularly surveyed by the AMA. The surrounding community of the Ayo site protected the area long before physical management was in
+67
+
+place. Both the drawings in the National Park as those in Ayo are popular tourist attractions and are also frequently visited by the local population. Ayo lies in a natural landscape and is used as a park for recreation by the local population.
+
+The access to the rock painting sites is arranged by the park rangers of the National Park Arikok and the Department of Public Works. There is also a Limitation in resources present which inhibits the proper conservation of the rock painting sites. The limitation in resources is indeed a challenge as is the lack of a master plan for management and conservation.
+
+Main threats: The main threats are in the form of natural vegetation-clearing factors which results in a greater accumulation of dust on the rock paintings, termites, fungus, sun bleaching and peeling of rock surfaces. Also limitations in funding make it difficult to preserve and restore the rock drawings (for example, due to covering of fungus).
+
+Conclusions: The rock paintings of Aruba are considered as an important expression with aesthetic value of the Amerindian culture of Aruba, expressed in different motifs (anthropomorphic, zoomorphic and geometric) and colors (monochrome and polychrome). The rock paintings also represent the link between Aruba, the continent, the Caribbean and the other zones of South America. The documentation of the rock paintings of Aruba includes inventories, photographic documentation and detail studies. Problems with management and conservation include the lack of financial and personnel resources. Vandalism in the form of graffiti painting had been a problem in the past which is carefully repressed today. Good practices include community involvement and awareness of the protection of this heritage.
+
+The main threats to the rock paintings are mostly in the form of natural agents such as dust, termites, fungus, bleaching and peeling of rock surface which deteriorate the paintings. Pre-nomination support should include expertise on the assessment of the physical conditions of the drawings and their conservation. The rock paintings of Aruba have great potential to be included on the World Heritage List since they are protected by National legislation, have active management and are supported by the government of Aruba. Furthermore the rock paintings are a valuable artistic expression which have a clear link with the mainland and the Caribbean and the other zones and demonstrate the interaction of the Amerindians within this zone and the other zones expressed through the rock paintings. The protection of all the Aruban rock art sites should be a priority since they represent a totality of cultural expression and heritage. All sites contain different drawings and it is imperative not to neglect any site and risk the permanent loss of motifs and other characteristics inherent to these sites. Future nomination to the WH List efforts should include this philosophy. The rock paintings of Aruba at Ayo and Arikok are protected by legislative and Government administrative guidelines. The management is very effective and is being carried out by a network of AMA, National Arikok Park and Public Works. The rock painting sites have an outstanding cultural and aesthetic value and the research and documentation carried out are of great value. All these factors result in these sites having a very significant potential for nomination.
+
+APPENDIX III.
+
+ICOMOS Form for Bonaire/Curacao
+
+Rock Art of Curacao and Bonaire Compiled by Jay Haviser
+
+Profile of Zone: The prehistoric rock art of Curacao and Bonaire is distributed over each island in very specific locations associated with rock shelters and at the opening of shallow caves within the coastal limestone terraces. There is almost always an association of these rock art sites with either permanent water (springs, sinkholes), seasonal water sources, and also coastal areas. The rock art of these islands
+
+68
+
+is almost exclusively rock painting, with only two sites with rock engravings reported on Curacao, both being simple static faces. The paint colors used at these rock art sites are red and black on Curacao, with red, black and brown used on Bonaire. Suggestions have been made for a potential chronological distinction between the colors used and the earlier occupation of Curacao (circa 4500 BP) compared to the later occupation of Bonaire (circa 3500 BP). The designs of the rock art on these islands are primarily geometric shapes, with occasional zoomorphic and rare anthropomorphic forms, also noted on Bonaire are positive hand prints.
+Temporal estimations for these rock art sites are still unclear. Although it is strongly believed the majority of them were created in the Ceramic Age (500-1500 AD), the only radiocarbon dates associated have both Archaic Age and Ceramic Age readings (Haviser 1993), and thus suggestions have been made by Haviser for late Archaic incipient development of the rock art techniques (2003). Furthermore, similarities to rock painting designs and sites cultural contexts in Cuba and the Dominican Republic, have supported the hypothesis of trans-Caribbean human movement directly from the northwestern Venezuelan coast and ABC islands to the Greater Antilles of the Caribbean (Ibid.).
+Links with other Zones: The most direct associative links of the rock art on Curacao and Bonaire are with the central-upper Orinoco valley and northwestern Venezuela to the south, and with Cuba and the Dominican Republic to the north.
+Known Sites: There are 38 known rock art sites from Curacao and 14 known rock art sites from Bonaire. None of these sites are currently included on the World Heritage List, however several of the sites are included in the current Western Curacao World Heritage nomination preparation.
+The most significant sites on these two islands are: Onima (Bonaire) Spelonk (Bonaire) Roshikiri (Bonaire) Pos Calbas (Bonaire) Sta. Catherina (Curacao) Hato (Curacao) Savonet (Curacao) Ronde Klip (Curacao)
+Documentation and Research: All of the sites known have been recorded and inventoried, with documentation primarily as drawing sketches done in the 1950-70’s, and more recently with print, slide and digital photography of most of the Curacao sites and some of the Bonaire sites. The documentation is recorded with the National Archaeological Anthropological Museum (NAAM).
+The early documentation on Curacao in the 1940-50’s was done by A. Van Koolwijk, Aad Ringma, Elis Juliana, Paul Brenneker, and Peter Wagenaar-Hummelinck. Later documentation on Curacao was done by G. De Jong, Cees Dubelaar, Jay Haviser, Andre Rancuret, Jose Da Camara, Jos de Kok, Dolph te Linde, and the Curacao Rock Art Workgroup. The early documentation on Bonaire was done by A. Van Koolwijk, Paul Brenneker, R. Nooyen, and Peter Wagenaar-Hummelinck. Later documentation on Bonaire was done by Frans Booi, Cees Dubelaar, and Jay Haviser.
+There are various incidental publications which relate to the rock art of these two islands, however the primarily early works were done by A. Van Koolwijk in the 19th century, then by Ringma, Brenneker, Nooyen, and Wagenaar-Hummelinck in the 1940-50’s. The primary publications after that period are a reprint of Wagenaar-Hummelinck’s various published data into one volume in 1992, a listing of the sites in a larger volume by Dubelaar in 1995, and chapters dedicated to rock art in two books (one for
+69
+
+Curacao, one for Bonaire) by Haviser in 1987 and 1991. Haviser also published the results of excavations conducted by himself, Andre Rancuret and Jose Da Camara, at the Savonet rock painting site on Curacao (1995, 2000). More recently, Haviser has presented an article, to be published, which is critical of modern destruction and falsification of rock art on Bonaire (2006).
+
+Protection, Conservation and Management: The primary monuments legislation which applies to rock art sites consists of laws dealing with archaeological sites protection. Only sites that are listed on the individual island monuments list can be protected under this law. Currently only three sites on Curacao are listed on such a monuments list, and two on Bonaire.
+
+The management and protection of these sites also relates to their location within recognized National Park areas, where security patrols watch the sites. Many of the Curacao sites are protected in this way, and the three most significant Bonaire sites (Spelonk, Roshikiri and Onima) are also protected through this National Park system.
+
+There are few conservation efforts made for the rock art sites on either island, with the exceptions being the placement of iron security bars at the Savonet and Hato sites on Curacao, and at the Onima site on Bonaire. Current investigations are being made into potential methods of eliminating the grafitti from several of the rock art sites on Bonaire, in cooperation with researchers from Aruba.
+
+Main Threats: The primary threats to the rock art sites of these two islands are natural effects such as rock face peeling, insects, fungus, and dust. However, the destruction by humans has taken a very significant toll, with vandalism having seriously affected some sites. The need for educational awareness for site protection is great, both for the general public and for the government leaders.
+
+Conclusions: I believe that all of these rock art sites are very important for the cultural heritage of Curacao and Bonaire, however I also recognize that only a few could qualify for inclusion in a serial transboundary consideration for World Heritage nomination. Those sites which could be considered, in my opinion, would be St. Catherina on Curacao, and Onima on Bonaire, based on the quality of the rock art at the sites and their potential for suitable protection, conservation, and management. Nonetheless, I do see the process of World Heritage preparation and involvement as a very important and positive direction for the future protection of rock art sites on our islands, due to an increase in public awareness about their value for our people and for humanity.
+
+APPENDIX IV.
+
+ICOMOS Form for French Guyana
+
+Réponses au questionnaire concernant la Guyane française Préparées par Eric Gassies
+
+Note : Dans la division de l’Amérique latine et des Caraïbes en 5 zones, il ne faut pas oublier de rajouter le plateau des Guyanes dans la Zone 2 – Les Caraïbes incluant Venezuela et Colombie.
+
+Caractéristiques générales : L’art rupestre guyanais se compose presque exclusivement de gravures puisque seul un site présente des peintures. A l’exception du nord-ouest et du centre du pays, les sites sont répartis sur tout le reste du territoire avec une forte concentration de gravures dans l’Ile de Cayenne. En l’état actuel des recherches, ces représentations rupestres ne sont pas rattachées aux complexes culturels archéologiques définis pour la Guyane française. Il n’y a pas encore de datations absolues disponibles sur ces sites.
+
+70
+
+Relations avec les zones voisines : Sans vouloir définir de synthèse régionale, des liens peuvent être établis avec d’autres zones : A l’est et dans le sud, les sites montrent un registre iconographique qui privilégie les représentations animales ou zoomorphiques, très proche de ce que l’on observe dans le bassin amazonien voisin. Ailleurs, la diversité typologique laisse transparaître en fonction de certains motifs, des éléments comparatifs mettant cet art rupestre en relation avec le Bas et le Moyen Orénoque, ainsi qu’avec les Iles des Petites et Grandes Antilles.
+Sites connus : 18 sites d’art rupestre sont actuellement connus dont : - 16 sites en plein air - 1 site d’abris-sous-roche (peintures) - 1 site constitué d’alignements de roches.
+Documentation : - Parmi les sites recensés, 14 ont fait l’objet d’études détaillées.
+2 sont classés Monument Historique - M.H. (roches de La Carapa à Kourou, de La Crique Pavé à Rémire-Montjoly). 12 sont inscrits à l’Inventaire supplémentaire des monuments historiques (I.S.M.H.). - Il n’existe pas de fiche normalisée pour chaque figure, mais chaque site protégé a fait l’objet d’un relevé, effectué directement sur la roche par calque ou par relevé photogrammétrique. - Des photographies, argentiques et numériques ont été prises. - La documentation est disponible au service régional de l’archéologie (SRA) de la Direction Régionale des Affaires Culturelles (DRAC) de la Guyane à Cayenne. - Des études comparatives peuvent être faites à partir des dossiers réalisés dans le cadre de la protection des sites, de l’article paru dans le Bulletin de la Société Préhistorique Française, du catalogue d’exposition l’Archéologie en Guyane.
+Les recherches : Les populations amérindiennes actuelles manifestent un intérêt certain pour ces sites dont l’origine est également évoquée à travers des récits véhiculés par la tradition orale.
+Protection des sites : Loi du 31 décembre 1913 sur les Monuments historiques. Loi du 27 septembre 1941 réglementant les fouilles. L’ensemble de la réglementation concernant l’archéologie et le patrimoine a été regroupé en 2004 dans le Code du patrimoine.
+Conservation : - Des études physico-chimiques (L.R.M.H.) sur les problèmes de conservation ont été effectuées sur deux des principaux sites (Carapa et Favard). - Des structures couvrantes (bois et métal) ont été installées sur les deux mêmes sites et celui de la Crique Pavé a fait l’objet d’une application de produits fongicides. - Les tentatives de protection des roches par mise hors d’eau réalisées par le service des monuments historiques ont connu des fortunes diverses. Il semble que le « parapluie » métallique installé au début des années 1990 au dessus de la roche Favard, ait pour conséquence de favoriser le développement de champignons et de micro-organismes susceptibles à terme de provoquer des desquamations de la roche et la même remarque peut être faite pour le site de la Carapa à Kourou.
+Gestion : - Les principaux services impliqués dans l’étude et la gestion des sites sont : Le service régional de l’archéologie (SRA) de la Direction Régionale des Affaires Culturelles de la Guyane (DRAC), la conservation régionale des monuments historiques (CRMH), l’architecte en chef des monuments historiques (ACMH) et l’architecte des bâtiments de France (ABF), le service départemental de
+71
+
+l’architecture et du patrimoine (SDAP) et le laboratoire de conservation des monuments historiques (LRMH). - Il n’existe pas de plans actifs de gestion des sites. Le site de la Carapa à Kourou fait actuellement l’objet d’une mise en valeur par l’ACMH, qui devrait comprendre prochainement un plan de gestion. - Des accès privilégiés existent pour un certain nombre de sites littoraux. - Il n’y a pas, en dehors de l’Etat, d’implication des collectivités pour financer des projets de conservation et de mise en valeur.
+
+Menaces principales : - L’état de conservation des sites d’Art rupestre en Guyane française varie de manière notable mais le support rocheux est généralement fragile et érodé (roches précambriennes). - Les problèmes d’altérations anthropiques par le feu et les outils métalliques sont particulièrement visibles dans les zones faciles d’accès (situées sur le littoral ou à proximité des implantations humaines) et qui sont le plus souvent cultivées en abattis en utilisant la technique du brûlis. - En revanche, les sites de l’intérieur, qui ne sont qu’exceptionnellement fréquentés, sont eux, rapidement recouverts par la végétation. - Des problèmes de vandalisme ont été rencontrés sur les sites facilement accessibles. - On note une absence d’implication dans la gestion de la part des propriétaires.
+
+Conclusions : - Très peu de sites sont connus au regard de la superficie du territoire et des prospections qui ont été engagées sur ce thème. Le potentiel est donc largement sous évalué. - La documentation qui existe sur les sites recensés nécessiterait d’être complétée par des études approfondies in situ ; cela est particulièrement vrai pour les sites géographiquement éloignés de la bande littorale qui est habitée et accessible. - Les problèmes que l’on rencontre concernant l’étude, la conservation, la mise en valeur et la gestion prennent d’autant plus d’ampleur qu’il s’agit le plus souvent de sites difficilement accessibles et dispersés sur tout le territoire. - Les sites d’Art rupestre en Guyane française constituent un témoignage unique sur l’univers spirituel des différentes populations amérindiennes qui ont migré à travers le territoire au cours des temps et qui ont peuplé l’ensemble du bassin caribéen.
+
+APPENDIX V.
+
+ICOMOS Form for Grenada
+
+Rock art of Grenada Compiled by Sofia J. Marquet
+
+Profile of zone: The island of Grenada has 5 known sites that contain one or several boulders of engraved figures. The style of the representations is equivalent from site to site but could have been made during a long span of time. The sites are situated in the north and north-western part of the island, close to rivers or on the coast. Even though the zone is relatively hard to access because of the mountains, other archaeological sites are situated close to the rock art sites. They are less though than on the southern and south-eastern part of the island. The archaeological sites of the north have been chronologically time estimated to the late period of the pre-Columbian era, to around 900-1400 BC. The rock art site we would like to propose to the attention of ICOMOS and UNESCO is called Mount Rich situated in the parish of Saint Patrick. It is an inland site situated close to and in the river Saint Patrick.
+
+Links with other zones: The rock art sites of Grenada are situated close to the southern rock art sites of Saint Vincent. This island has a concentration of sites in the southern part of the island. The people who chose and engraved boulders on these islands could easily have been in contact or belonged to a homogenous and
+
+72
+
+cultural unity. The representations on the two islands share the same appearance and could have been done during the same period.
+Known sites: St Vincent has a site on the WH List; it is the natural site in the region Two Pitons. Grenada does not as far as I know, have any listed sites yet.
+Documentation: All the rock art sites of Granada have been inventoried by myself. Cornelis Dubelaar had inventoried them before 1993 but during my inventory I discovered one site and two more figures on the site Duquesne Bay that had not been documented before. I had access to a GPS on all sites except Mount Rich. I have tried to indicate the correct position of it on a map. I documented the sites on data sheets that were suitable to the Caribbean islands. They have all been integrated digitally in a database where all the information about the rock art (technique, boulders, figures, orientation, type of rock etc) and about the physical environment as on the close archaeological data was listed. I made photographs in colour and black and white slides. All the documentation has been published in the BAR series number 1051 2002 in “Les pétroglyphes des Petites Antilles méridionales; contextes physique et culturel”. This material is good to use as comparative material for other rock art studies in the area.
+Research: The rock art of Grenada is a complement to other archaeological data of this island that helps to affirm the occupation of the island from about 200 AC to Amerindian cultures. On the later dates of the archaeological data you can notice a local evolution due to external influence or intern sociological or economical changes.
+Protection: The Grenadian rock art sites are in a bad environment for protection. Most of the coastal sites are on private property and in one case under a dump station. The site of Mount Rich is in some way protected, the government is aware that it needs protection. For more information of official protection please contact Michael Jessamy, director of the National Museum of Grenada.
+Conservation: For practical conservation, one could establish a fence that would protect the area of access. As far as I know, no good method exists to protect the rock art. I think the protection starts in the information to people and to organise visits for the local population to inform them about what the rock art is and that it belongs to the state and the people of Grenada as a national heritage. With knowledge and awareness you are automatically eager to conserve the zone.
+Management: For the management (in the next paragraph as well) please contact Michael Jessamy.
+Main threats: The main threat at Mount Rich is the easy access and the village that lies just over the river. The biggest boulder seems to have been used to sit on. This boulder has fallen down from the hill about maybe 10 meters. So it is already not in its right position. Three other boulders are situated in the water but somewhat protected from the streams.
+Conclusion: The Grenadian rock art, and especially the site of Mount Rich, is exceptional in the figures and the amount of figures. There are three representations of felines that can be a sign of the memory of the bigger continental animals, where the evidence is very clear. There have been documentation of the rock art earlier but Dubelaar and my own work are the ones worth mentioning.
+73
+
+The problems with management are possible to solve. The threats are mostly the lack of information to the people. The pre-nomination support is needed from media; television and radio. A local archaeologist would be needed or other experts from other Caribbean islands or, even from further away. I believe the potential of nomination of this site is high and would be very good for Grenada. It could be a natural or cultural world heritage site. I recommend the management of the site and protection of it before the committee may visit the site.
+
+APPENDIX VI.
+
+ICOMOS Form for Guadeloupe
+
+Réponses au questionnaire concernant la Guadeloupe Préparées par Gérard Richard et Henry Petitjean Roget
+
+Caractéristiques générales : La Guadeloupe conserve le plus grand nombre de roches gravées de toutes les Petites Antilles (plus de la moitié selon Dubelaar). Elles sont concentrées au sud de la Basse Terre.
+
+Relations avec les zones voisines : Des similarités importantes existent avec Sainte Lucie, St Kitts. Le style général des gravures est partagé avec la plupart des Petites et des Grandes Antilles.
+
+Sites connus : Les roches gravées de Trois Rivières (trois grands complexes et douze stations) viennent d’être reconnues comme éligibles au Patrimoine mondial.
+
+Les sites principaux : Le parc archéologique des Trois Rivières avec la rivière du Petit Carbet, les pétroglyphes des Galets, l’abri Patate à Moule.
+
+Documentation : Kees Dubelaar, Alain Gilbert , Gérard Richard, Henry Petitjean Roget, Christian Stouvenot, Sofia Jonson Marquet, Corinne Hoffmann, Monique Roïg, et autres. - Quels sites on fait l’objet de description ? : Toutes les stations de pétroglyphes de la Guadeloupe. - Enregistrement des données : Publications, photographies, dessins, aquarelles, moulages, localisation GPS. - La documentation se trouve : Au service archéologique du conseil régional, au Musée Edgar Clerc, au service régional pour l’archéologie de la Direction Régionale des affaires culturelles, aux Archives départementales de Guadeloupe et au Musée d’Aix en Provence. - Quel matériel est disponible pour des études comparatives : Photos, extraits de publications, relevés graphiques, topographiques et photographiques, mobilier archéologique, rapports scientifiques spécifiques.
+
+Les Recherches : Les roches gravées de la Guadeloupe sont représentatives des productions de la culture des sociétés amérindiennes arawak qui ont occupé les Petites Antilles entre le début de l’ère chrétienne et leur disparition vers 1200 après J.C.
+
+Protection des sites : Il existe un Code du patrimoine qui rassemble toutes les mesures légales françaises de protection spécifiques des biens culturels nationaux, du classement au titre des Monuments Historiques, à l’inscription à l’inventaire, à l’archéologie préventive et à la protection des biens mobiliers.
+
+74
+
+Conservation : L’état de conservation des ensembles gravés de la Guadeloupe, Région des Trois Rivière est satisfaisant. En dehors des phénomènes naturels, on ne signale pas d’actes de vandalismes irréparables et des altérations anciennes par nettoyage des roches ont été stoppées. Conservation préventive, venue d’experts de France pour la préconisation de mesures de protection. Projet de partenariat avec l’Institut national du patrimoine de Paris et le laboratoire archéologique d’art rupestre de Périgueux.
+Information du public : Dans les écoles par des expositions itinérantes et visites de sites en particulier par le centre de ressources archéologiques du collège des roches gravées, information du voisinage, du milieu associatif, utilisation des médias pour expliquer l’importance des roches gravées et les faire respecter.
+Gestion : Les roches gravées sont en général la propriété de l’Etat. D’autres sont la propriété d’une collectivité publique territoriale, du Conseil général ou de privés. La protection des pierres est du ressort de l’Etat.
+Aménagements en cours : Parc des Roches gravées, d’autres ont été réalisés, Roches de du Plessis, Roches du Carbet, d’autres sont en projet La Coulisse. Il existe une réflexion sur la mise en valeur des ensembles gravés. Pas d’utilisation contemporaine des pierres gravées par la population locale.
+Conclusions : Les roches Gravées de la Guadeloupe font l’objet d’une prise de conscience collective quant à leur importance en tant que Patrimoine issu des temps précolombiens. Les inquiétudes liées au développement de l’urbanisation sont en partie levées par la mise en application de la loi sur l’archéologie préventive portant obligation pour les aménageurs de subir des diagnostics préalables. On peut regretter les lenteurs de l’administration à prendre des décisions de protection pour toutes les stations de pétroglyphes. La prolifération des stations de pétroglyphes de la basse Terre, dans la Région des Trois Rivières constitue une énigme archéologique et offre un aspect du développement de cet art rupestre qui ne se retrouve nulle part. Pour le futur, les recommandations les plus urgentes concernent la détermination de zones tampon ou d’un conservatoire pour protéger les roches.
+APPENDIX VII. ICOMOS Form for Haiti
+Rock Art of Haiti Compiled By Rachel Beauvoir Dominique
+Profile of Zone:
+The nation of Haiti, which occupies one-third of the island of Hispaniola, is known to have been originally populated by the archaic Guanahatabey as well as the Taïno people. The oldest artifacts from this country are of the Casimiroid of the lithic period. They are from the region of Cabaret where radiocarbon dating has indicated 3630 and 4160 B.C. respectively for the Vignier III camp site and the Duclos VII shell mound. This period is followed by Archaic Casimiroid sites (early, middle and late) with sites ranging from 2780 B.C. to 390 B.C. The present era includes Ostionoid sites at Fort Liberté from 600 to 900, Meilac sites from 900 to 1200 and finally Chicoid sites from 1200 to 1500. Following European settlement, Haitian rock art traditions also bear the mark of African slave marooning during the 16th and 17th centuries. Petroglyphs have been found throughout the country, although there is a definite concentration in the North and the Central Plateau. More research is necessary in the southern peninsula where the nation’s
+75
+
+most important caves are located, particularly in the South-East which nearly borders the Dominican Jaragua National Park caves that have many petroglyphs and pictographs.
+Links with other zones: Since the division between Haiti and the Dominican Republic only dates back two centuries, precolombian culture throughout the island is generally similar, featuring the same periods and traits. Both are a part, in fact, of the cultures of the Greater Antilles (with Cuba, Jamaica, Puerto Rico, in particular) in which Taino presence developed its most accomplished form.
+Known sites: • Parc National Historique, Milot, Haiti – Including Citadelle Laferrière, Sans-Souci and Ramier (World Heritage, 1980) • Jacmel Historical Center (WH Tentative List)
+Significant Rock Art Sites:
+1. Voûte à Minguet (cave in Dondon, North) 2. Roche à l’Inde (river bed in Camp-Coq, North) 3. Bassin Zim (cave near Hinche, Center) 4. Roche Tampée (river bed near Cerca Carvajal, Center) 5. Bohoc (cave near Pignon, Center) 6. Saint Francisque (cave near St. Michel de l’Attalaye, Center) and surrounding caves 7. La Tortue caves 8. Merger ball court 9. Camp Perrin cave 10. Marmelade cave 11. Grotte Moreau, Port-Salut 12. Grotte Anacaona, Léogane 13. Grotte aux Indes, Pestel 14. Grande Grotte, Port à Piment 15. Grotte nan Baryè, Grande Anse 16. Deux Têtes, Limbé 17. Dubedou, Gonaives
+Documentation: Throughout the past 20 years, inventory with surface collections have been carried out by Mr. Clark Moore (who initially began this task with Dr. Irving Rouse) in conjunction with the Bureau National d’Ethnologie, which is the national legal entity charged with this domain. Recently, Mr. Clark Moore was assisted by Mr. Nils Tremmel, an architect specialized in heritage preservation contracted through international cooperation, in order to digitalize the archeological inventory. In this way, an important database including some one thousand archeological sites was put together. Radiocarbon dating was also carried out on a number of sites, particularly with respect to those of the Archaic and Lithic periods, that are endangered. Amongst the sites listed above, the first seven have been inventoried, although often without the degree of precision/completion necessary. Numbers 7 through 17 require further investigation. Generally, the digitalized inventory form includes site name, precise location, latitude and longitude, dates, site type and culture, material collected, material observed, area of occupation, as well as photographs and sketches.
+Research: Since the 1940’s, when archeological investigation began in Haiti, the rock art sites have been researched and their association with present cultural practices has been constantly noted. My work, particularly, (Rachel Beauvoir-Dominique) as an anthropologist has highlighted this aspect. It remains that a thorough study of the rock art, specifically, with respect to present-day cultural practices, should be undertaken.
+76
+
+Protection: The law of 31 October 1941 formally states the following:
+« Article 1 - Il est créé un Bureau d’Ethnologie dont les attributions seront déterminées par Arrêté du Président de la République Art. 2.- Toutes les pièces archéologiques et ethnographiques trouvées en territoire haïtien sont déclarées propriété de la Nation et leurs possesseurs éventuels, après en avoir fait la déclaration au Bureau d’Ethnologie, seront autorisés à les conserver uniquement à titre de gardiens. Art 3.-Sont considérés comme objets archéologiques toute pièce fabriquée par les populations pré colombiennes de la République et ayant une importance scientifique ou artistique. Art.4- Aucune pièce archéologique ne pourra être exportée sans l’autorisation du Département de l’Intérieur après rapport préalable du Bureau d’Ethnologie, Art. 7- Aucune fouille archéologique ne pourra être faite sans l’autorisation du Secrétaire d’État de l’Intérieur qui accordera, sur recommandation du Bureau d’Ethnologie de la République d’Haïti, la permission nécessaire uniquement aux institutions du pays ou de l’Étranger qui jouissent d’une autorité scientifique reconnue et aux particuliers nationaux ou étrangers, qui représentent des institutions ou associations scientifiques dont la réputation est bien établie; Art. 8.-L’Etat se réserve le droit d’envoyer sur le champ de fouilles un représentant qui sera proposé par le Bureau d’Ethnologie de la République d’Haïti d’accord avec le Secrétaire d’État de l’Intérieur. »
+Further legislation includes the following elements: • Loi du 21 avril 1940 classant comme monuments historiques les immeubles dont la conservation présente un intérêt Public ; • Décret du 18 mars 1968 dénommant « Parcs nationaux ou Sites Naturels » toutes étendues de terres boisées ou pas sur lesquelles sont établis des monuments historiques ou sites naturels ; • Décret du 18 mars 1968 relatif aux Parcs nationaux et sites naturels ; • Loi du 5 septembre 1979 accordant à l’Etat le droit de pénétrer provisoirement sur les propriétés privées en vue de faciliter l’exécution de certains travaux urgents d’intérêt général ; • Décret du 15 oct. 1984 portant organisation du Bureau National d’Ethnologie ; • Décret du 4 avril 1983 énonçant diverses dispositions relatives à la gestion des Parcs Nationaux et Sites Naturels ; • Décret du 12 mars 1986 supprimant l’INAHCA et distribuant les différents services qui en dépendaient ; • Décret du 10 mai 1989 relatif au patrimoine national et aux biens culturels, créant un organisme autonome de consultation doté de la personnalité morale dénommée Commission Nationale du Patrimoine ; • August 1993 Law on classification.
+Archeological sites have not yet been included amongst the national heritage classification.
+Conservation: The conservation of archeological sites is still to be undertaken in Haiti, given the complex sociopolitical situation this country has been confronting for several decades, as well as the underdevelopment of this field nationally. While this is certainly negative, it also presents the advantage that most of the sites remain intact, subjected only to natural erosion. On the other hand, since these locations are considered as sanctuaries in Haitian traditional culture, they are generally watched over and maintained by local traditionalists.
+Management: The fact that up to now no official management plans exist for these sites is tragic. All the sites remain controlled only by local traditionalists who, while considering – as most Haitians do – these places as the collective property of the Haitian people, nevertheless often maintain a certain control on their access to prevent their damage. This is particularly true of cave locations.
+77
+
+A thorough study of the states of preservation, the necessary measures of conservation, as well as management is a very clear need Haiti must address.
+Main threats: It is known that rock art is intimately linked to its surrounding environment. In the case of Haiti, the latter has been submitted to intense changes during the past centuries. Deforestation and erosion are highly advanced, with the ensuing consequences for the rock art. Fortunately, a new and quite thorough series of measures have just passed as law for actively protecting the environment. This legislation will undoubtedly also be useful for archeological preservation. Also, a quick survey of the rock art several years ago revealed the very negative impact of modern graffiti in many caves (signing names). Other human threats include the search for guano in the recent past, as well as major gunfire particularly on Tortuga Island caves during the 1970’s, when Duvalier sought to annihilate political opponents. Presently, major limitations in funding and the need for overall administrative reform in this sector (currently being undertaken) have impeded the detailed identification of threats and measures to counteract them.
+Conclusions for the Zone: The superb work begun by Mangones and Maximilien in 1941 concerning Haitian archeology, including rock art (L'Art Précolombien d'Haïti, Catalogue de l'Exposition Précolombienne, IIIe Congrès des Caraïbes, Mangones, Edmond & Louis Maximilien, Port au Prince, Haïti) was added to by Antoine Salgado in 1968, with his major publication on the rock art (Haut lieu sacré dans le soussol d’Haïti, Les Ateliers Fardin, Haïti, 1968). Throughout the following twenty years, the work of the past William Hodges advanced our knowledge of riverbed rock art in particular (Roche à l’Inde, Roche Tampée) and was further investigated by Clark Moore’s extensive fieldwork. Recently, the digitalization of this work by Nilcke Tremmel and a widening of horizons through my own anthropological research (RBD) have aided in attaining a better understanding of the significance and prevalence of rock art in Haïti today.
+Undoubtedly, however, although our database on rock art is already large, the scope of this art form is much more extensive than that which is known to date. The Dominican development in this sector during the past three decades (though we began at the same time, during the 1970’s) confirms this fact.
+An essential overhaul of the sector is needed and presently being undertaken, thanks to the recently elected President Preval’s determination of its priority. With this, certainly, technical expertise, professional training and financial assistance will remain necessary – but the structural elements of solution, as well as political will, are expected to exist. In this sense, the Bureau National d’Ethnologie’s presence at major IACA and UNESCO meetings in the recent past have resulted in promising offers of various natures.
+The archeological inventory (“Carte Archéologique”) should be completed in priority, with attention paid to deterioration and management, mentioning the measures to be undertaken.
+Haiti has been called the “sleeping giant” of Caribbean Archeology: its repository of information on Casimiroid and Taino cultures is lacking for the entire region in its comparative studies. For Haiti, our position in the serial cross-boundary nomination, should be an element in the measures to be adopted.
+Complete Pre-Nomination support is needed to quickly conform to the established standards.
+78
+
+APPENDIX VIII. ICOMOS Form for St. Vincent and the Grenadines
+Rock Art of St. Vincent and the Grenadines Compiled by Kathy Martin
+Profile of Zone: The Rock Art of St. Vincent and the Grenadines (SVG) consists of a series of petroglyphs engraved into andesite basalts. Most are deeply incised and very well defined, a few are more delicate and appear to have been made by abrasion or rubbing. The sites are distributed coastally or along river valleys. They occur at a density of roughly 1 site per 25 km² over the country as a whole. They are distributed along the East, South and West of St. Vincent and one was found on Canouan in the Grenadines. None have been found so far in the still volcanically active North of the territory. Dating these sites is contentious. Some are believed to be relatively recent (1000 to 1500AD) while some conservative estimate dates back, according to contextual ceramic evidence, ca. 2000 years to the Saladoid. Some authorities believe they may be much older.
+Links with other sites: St Vincent has many small faces along with complex faces, anthropomorphs, zoomorphs and abstracts in keeping with the rest of the Lesser Antilles and the region as a whole. It also has some much larger glyphs, 2m long and more. This is reminiscent of the larger figures of Venezuela and the Guianas. The Yambou Petroglyph no. 2, glyph 1 is a large rayed head and is the only representative of the “Elaborate Type” Petroglyph in the Antilles according to Dubelaar. These designs occur in the Guyanas and in adjacent areas of Venezuela and Brazil. Swaddled figures such as found at Petit Bordel are also reminiscent of some on the continent. Some of the Vincentian Petroglyphs are entirely different from anything else in the region and may bear closer resemblance to glyphs in Africa particularly in relation to sun god images and scripts.
+Known Sites: Petit Bordel Barrouallie – Glebe Rock Barrouallie – Ogam Stone Peter’s Hope Mount Wynne Layou Buccament Lowman’s Bay Sharpes Stream Indian Bay Yambou Valley- 6 sites Colonarie Canouan
+Practically every beach has work stones or “polissoirs” (stationary mortars and sharpening stones) often at each end of it. They are also present in many of the river valleys. Cup holes are present in a number of locations, the most striking being the 13 stones on top of a ridge above Chateaubelair and below the Soufriere. One of these stones show signs of pecking and appears to be a geometric petroglyph.
+Documentation: Frederick A.Ober “Camps in the Caribbees”, Boston, USA 1880, Daniel G.Brinton “On a Petroglyph from the Island of St Vincent, W.I.” Proceedings of the Academy of Natural Sciences of Philadelphia, 1889, Alphonse L.Pinart « Note sur les Pétroglyphes et Antiquités des Grandes et Petites Antilles » 1890, (Manuscript copy in Rijksmuseum voor Volkenkunde, Leiden, The Netherlands).
+79
+
+Karl T.Sapper „St Vincent“ Globus Illustrirte Zeitung für Länder und Völkerkunde 84, Braunschweig,1903, J. Walter Fewkes “The Aborigines of Porto Rico and neighbouring islands” Annual Report of the Bureau of Ethnology to the Smithsonian Institute, Washington, 1907, St Vincent Handbooks 1911 onwards, Thomas Huckerby, “Petroglyphs of St Vincent, British West Indies”, American Anthropologist vol. xvi no.2 p. 238-48, 1914, W.N.Sands “A newly discovered petroglyph” West India Committee circular, 1915, Thurn 1915, Thomas A.Joyce 1916, Central American and West Indian Archaeology, London Froidvaux 1920, St.Vincent (Colonial) Reports 1938-1965, Van der Plas 1954, Anonymous in the “Bajan” 1959, I.A.Earle Kirby 1969, ‘Pre-Columbian Monuments in Stone’ Mario Mattioni 1971, Fred Olsen 1971,”Petroglyphs of the Caribbean Islands and Arawak deities” Proceedings of the International Congress for the study of Pre-Columbian Cultures in the Lesser Antilles. Leonardi 1972, Fred Olsen1974 “On the Trail of the Arawaks”, University of Oklahoma Press Henri Petitjean Roget 1975, I.A.Earle Kirby 1977, “Pre-Columbian Monuments in Stone” Ripley P. Bullen & Adelaide Bullen 1972, “Archaeological investigations in St Vincent and the Grenadines, West Indies” W.L Bryant Found. American Studies 8, Orlando, Ripley P. Bullen 1973, “Certain Petroglyphs of the Antilles” Proceedings of the International Congress for the study of Pre-Columbian Cultures in the Lesser Antilles. C.N.Dubelaar 1995, “The Petroglyphs of the Lesser Antilles The Virgin Island and Trinidad” Uitgaven Natuurwetenschappelijke Studiekring voor het Caraїbisch Gebied 135, Amsterdam Sofia Jönsson Marquet 2002 University of Paris Claudius Fergus 2003 “The “Carib” Work Stones of Chateaubelair: curio or calendar system?” All the known Petroglyphs have been photographed and are on file at the SVG National Trust headquarters. Kirby gives a complete record from the 1970s except for Peter’s Hope and Yambou 6.
+The Bullens’ and Dubelaar’s publications are available in SVG and Fergus publication is on the web.
+Jönssen Marquet produced data sheets but no copy has been lodged with the public institutions in SVG.
+Research: The archaeology of St.Vincent generated little interest during the colonial period to save the notes in reports that documented engraved stones existed. Some archaeological work was done as referenced above. Thomas Huckerby appears to have placed the most value on Vincentian petroglyphs, giving them pre-eminence in the whole of the Antilles (P239). During the 20th century the professional archaeologists largely confined themselves to work in the Greater Antilles. Research in the Lesser Antilles was done by amateur and self taught archaeologists. The first comprehensive survey of rock art in SVG was produced in the 1960s by Kirby. He presented it to the scientific community at the Third International Congress for the Study of Pre-Columbian Cultures of the Lesser Antilles (Grenada 1969) under the title “The Pre-Columbian Monuments of St Vincent, West Indies”. His publication followed shortly after. Several of the Vincentian petroglyphs are entirely different from those of the rest of the region. Kirby sought answers far and wide and eventually concurred with the ideas of Barry Fell that they were Amerindian copies of things they had learned at second or third hand from the Mediterranean. He recognised images of the sun god (especially on the Glebe stone and the Indian Bay rock) together with traces of Libyan, Punic and Cypro-Minoan scripts. This may well have been via free Africans who were known to have been so numerous in St. Vincent, as similarities with West and South African petroglyphs are marked. The Black Carib people, who gave rise to the World Heritage Listed
+80
+
+Garifuna culture, originated in St Vincent from the admixture of these free Africans with yellow Carib. Kirby also reported the significance of time and date with regard to the orientation of the Layou Petroglyph. At the winter solstice the last rays of the setting sun hit the rock with spectacular effect. The Yambou 2 and 3 sites also appear vividly on December 21st but at noon. The late Barry Fell of the California Epigraphic Society translated the writing on the Ogam stone as “Mab visited this remote Western Isle”. Mab is believed to be descended from the sea farers who ravaged the Mediterranean around 1200 BC., when St Vincent was inhabited by the Ciboney. Claudius Fergus’ work on the thirteen stones at Chateaubelair involved measurements. He related them to spirituality and astro-archaeological ideas in the Orinoco and to the work of Fred Olsen, who also studied the Glebe stone and saw it as the sun God, noting its uniqueness in the Caribbean.
+Protection: Legislation under consideration.
+Conservation: One site in SVG, and one only, has been painted. This site is Buccament and the paint was applied to the series of carvings there by a person with mental disabilities. It was decided that, as the base material is andesite agglomerate rather than massive andesite more harm than good would be done trying to remove the paint. The Indian Bay rock has had additions crudely scratched around the main glyph. The rock lies between two popular beaches and tourist police now patrol those beaches. The Canouan stone was moved during hotel development and has not yet been relocated. Historically two stones at Barrouallie were rescued from building sites and placed in the Yard of the Barrouallie Secondary School for protection. Students at the school are trained to give information about them to visitors. The SVG National Trust is negotiating with the International Airport Development Company over the future of one site which lies within the boundary for the planned new airport.
+Management: In keeping with a country which has been largely agricultural until the 1990s the management of rock art sites has been largely informal. Sites have been protected by laws of trespass on private property. Any infringements are reported through small community networks and people generally have taken a pride in “the Carib stones”. While we have not yet worked out how to measure the contribution of tourism to the economy it is clear that it is now playing a bigger role and is expected to increase substantially in the not too distant future. To facilitate the development of rock art sites to accommodate tourists and the visiting overseas based Vincentian diaspora, in addition to use of the sites in helping to define a national identity, formal management plans will need to be developed. The Layou site was purchased by Government in 2003. It has been fenced and signage erected. A gentleman is employed to maintain and monitor the use of the site. Visitors come mainly with tour guides, but this is not mandatory. Several of the sites are being cared for by local community groups. One of the sites is in use as a Shrine by the Roman Catholic Church.
+Main Threats: International Airport development. International Hotel development. Lack of awareness of the importance of some lesser sites by developers. Lack of Funding required to protect and manage sites when, even if entry charges are instituted, the visitor numbers in the short term would not be sufficient to maintain economic viability.
+Conclusions: SVG probably has the highest density of rock art per unit area in the entire region. It is an outstanding place of long term aboriginal habitation and bridges the petroglyph art between the Guiana plateau/Eastern Orinoco and the Northern Antilles. Its potential to contribute to a regional nomination to the WH List is out of all proportion to its size. Several sites are worthy of special mention.
+81
+
+SVG has a population of just 110,000 people. So far no native Vincentian has been trained in Archaeology so we still have to seek out technical advice from abroad. One visiting home owner became so fascinated by the sites here that she studied archaeology first to M.Sc. then to Ph.D.Level. She now advises the SVG National Trust.
+
+As tourism takes off it is becoming clear that several initiatives are required:
+
+1. Establishment of proper museum facilities/interpretation centres; 2. Send nationals for training in archaeology/museum curation, conservation; 3. Develop formal management plans for heritage sites like the more special rock art sites.
+
+APPENDIX IX.
+
+ICOMOS Form for U.S. Virgin Islands
+
+Rock Art of U.S. Virgin Islands Compiled by Kenneth Wild
+Profile of Zone: Archaeological research in the Virgin Islands National Park has determined that the rock art of this region was produced from 900 to 1500 AD. The art in this region is directly related in the social, political and religious development of the Taino culture.
+Links with other zones: The Rock Art in the Virgin Islands lies at a crossroads of cultural interaction between the Greater and Lesser Antilles. The art demonstrates characteristics of both regions and will be pivotal in defining interactions from South America, the Lesser Antilles and into the Greater Antilles.
+Known sites in the Virgin Islands: Reef Bay Petroglyph site. Congo Cay – one set of carvings Botany Bay – just two carvings Robins Bay, St. Croix – two badly eroded carvings
+Significant Rock Art Sites: Reef Bay, St. John, VI in the Virgin Islands National Park
+Documentation: The Reef Bay Petroglyph site has been inventoried in the National Park Service’s Archaeological Sites Management Information System (ASMIS) database. The site is also in the park’s GIS database system. The general UTM coordinate for the site is Easting 315746, Northing 2027749. The site is documented with film, digital photography and drawings. A comparative study of the rock art to other Caribbean sites and to the local archaeological recorded sites has produced significant information in understanding Pre-Columbian inhabitants of the region. This information can be obtained through the Virgin Islands National Park. Results of this research have been presented at the International Association of Caribbean Archaeology. The site is listed on the National Register (82001716). All Southeast Region Register Nominations are on file with the Park Service’s Regional Office in Atlanta or can be found on the National Register web page. The site is recorded in the territorial site files (12VAM2-09) which are kept by the Virgin Islands territorial SHPO.
+Research: Archaeological work conducted near the Reef Bay petroglyphs provided comparative data that have advanced an understanding of the petroglyphs at Reef Bay; why they were carved at this water source, what they represent, and how they play a significant role in the development of a hierarchy Taino culture. This Virgin Islands site, being located at the crossroads between the Greater and Lesser
+
+82
+
+Antilles with similarities in designs from both regions also provides clues to understanding cultural migration and interaction spheres.
+Protection: All sites owned by the territorial government of the Virgin Islands are protected under the Antiquities and Cultural Properties Act of 1998, which establishes certain procedures and standards in conformance with the National Historic Preservation Act (P.L. 89-665, as amended). All sites within the National Park are also protected under this territorial law and numerous federal laws as well as National Park protection policy and guidelines. The most active laws used to protect cultural sites include the 1906 Antiquities Act, and the Archeological Resource Protection Act or ARPA. ARPA is used in most U.S. criminal prosecution cases in the protection of cultural resources.
+Conservation: The rock art at Reef Bay is well preserved and monitored weekly by park rangers. Four groups of carvings have been inventoried at Reef Bay. At this time, there are no natural threats to the art so there has been no need to undertake any conservation work.
+Management: • The US National Park Service, Virgin Islands National Park manages this site. • The entire Reef Bay Valley in which the Reef Bay Rock Art site rests has been designated the most protected area of the park. There can be no development or paved roads. The area will remain in a natural state of preservation. • The park has two management plans; a general management plan that designates protected areas and the resource management plan that addresses both cultural and natural resources of the park. Both plans will be reviewed and updated this year to insure further protection of the ancient rock art site at Reef Bay. • Traditional management arrangements consist of organized ranger tours, monitoring, and law enforcement patrolling. • The local community uses the site in education. • Contemporary use of the rock art site consists of interpretation, education, and research. • To visit the site requires hiking approximately one hour from the center of the island and about thirty minutes if you hike in from the Reef Bay beach. • Limitations in resources: The site is difficult if not impossible to access by individuals with some physical handicaps.
+Main Threats: The only threat to the site is the sleight possibility of human degradation. The site is somewhat remote and maintaining ranger protection twenty-four hours would be impossible, however additional remote sensing detection could minimize this threat.
+83
+
+

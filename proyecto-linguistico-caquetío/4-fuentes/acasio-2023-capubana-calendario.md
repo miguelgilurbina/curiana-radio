@@ -5,11 +5,13 @@ autor: "Acasio, Enrique"
 anio: 2023
 publicacion: "Ciencia en Revolución (Mincyt), vol. 9, n.º 25, enero-junio 2023"
 genero: arqueologia
-local: ""
-paginas: "— (PDF no descargado; descarga a autorizar)"
+local: "fuentes_caquetios/Acasio_2023_Capubana_Calendario.pdf"
+paginas: 21
 acceso: "Libre en línea. Página: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/view/101 · PDF: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/download/101/122/206"
-capa_texto: pendiente
-estado_minado: propuesto
+capa_texto: si
+estado_minado: sin-minar
+descargado: 2026-10-05
+origen_digital: "https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/download/101/122/206"
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-09-16
@@ -54,17 +56,34 @@ Siraba (Esteves 1989, p. 60)? ¿Son la misma piedra?
   (almanaque / calendario); la geografía de Esteves (cerro de Siraba, al
   noreste del Santa Ana) hay que cotejarla con las coordenadas del artículo.
 
-## Qué no da
+## Qué tiene en imagen (visto el 2026-10-05, páginas del PDF)
 
-- Nada del texto: sólo el resumen y las palabras clave se han leído. Sin
-  el PDF no hay coordenadas, ni descripción del motivo, ni bibliografía.
-- Nada precontacto: la datación de los petroglifos no está en el resumen.
+Descargado con el ok de Miguel para localizar imágenes de petroglifos que
+pasar a Claude Design (catálogo: `6-fusion/petroglifos_imagenes_2026-10-05.yaml`).
+
+- **p. 5** · Figura 1: foto del soporte lítico con el calendario y los otros
+  petroglifos de alrededor.
+- **p. 6** · Figura 2: el petroglifo (trazo en negro) junto a otro tallado
+  «mucho más elaborado y del tipo al parecer también calendárico».
+- **p. 9** · Figura 3: **el diseño redibujado en limpio** («Diseño y
+  estructura calendárica del petroglifo»). Es la página que mejor se presta a
+  transcribir el motivo.
+- **pp. 14-19** · Figuras 4-8: el mismo diseño con la cuenta de lunaciones
+  superpuesta. Es la lectura del autor, no el motivo.
+
+## Qué no da (todavía)
+
+- El texto no se ha leído: sólo se localizaron las figuras. Faltan el sitio
+  exacto, el método y si nombra a Esteves o a Hernández Baño.
+- Nada precontacto: la lectura calendárica es una hipótesis del siglo XXI y
+  el grabado no tiene fecha (no hay datación absoluta de arte rupestre en
+  Venezuela continental: sesión 07 del rastreo documental).
 
 ## Deuda
 
-- Descargar el PDF (autorización de Miguel) y leer: sitio exacto, motivo,
-  método, y si nombra a Esteves o a Hernández Baño.
-- Cotejar con Caguao y Morón 2024 (`caguao-moron-2024-piedra-de-siraba`).
+- Leerlo (`minar-fuente`) con las preguntas de arriba.
+- Cotejar con Caguao y Morón 2024 (`caguao-moron-2024-piedra-de-siraba`), que
+  sigue sin descargar.
 
 ## Enlaces
 
