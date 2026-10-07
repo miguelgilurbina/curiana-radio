@@ -13,6 +13,28 @@ const GRADOS: Record<Grado, { glifo: string; largo: string; corto: string; clase
   canon: { glifo: "◉", largo: "canon-simulación", corto: "canon", clase: "kk-ep-c" },
 };
 
+/** La capa del lexicón (fichas.json) en la escala del manual. */
+export const GRADO_DE_CAPA: Record<string, Grado> = {
+  atestiguado: "atest",
+  reconstruido: "rec",
+  hipotetico: "hip",
+  retroabstraido: "retro",
+};
+
+export const glifoDe = (grado: Grado) => GRADOS[grado].glifo;
+export const nombreDe = (grado: Grado) => GRADOS[grado].largo;
+
+/**
+ * La marca delante de la forma, con la convención del comparatista que el
+ * manual hace sistema: el asterisco es lo que no está documentado (◆ y ◇), la
+ * virgulilla lo que viene del habla viva (~), y lo atestiguado va sin nada.
+ */
+export function marcaDeForma(grado: Grado | undefined): string {
+  if (grado === "rec" || grado === "hip") return "*";
+  if (grado === "retro") return "~";
+  return "";
+}
+
 export default function Etiqueta({
   grado,
   corta = false,

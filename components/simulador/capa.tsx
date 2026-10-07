@@ -1,53 +1,36 @@
 // La etiqueta epistémica: cómo sabemos cada palabra. Es la marca de la casa
 // y se pinta igual en todos los niveles — el índice, la ficha, el wiki, el
-// archivo de voces retiradas. Color (tokens --capa-*) + glifo + palabra: el
-// glifo va de lleno a vacío, de lo documentado a lo conjeturado, para que la
-// etiqueta no dependa sólo del color.
-import { CAPA, type CapaEpistemica } from "@/lib/sim-theme";
+// archivo de voces retiradas. Desde el 2026-10-03 es la escala del manual de
+// Kaketiana (components/kaketiana/Etiqueta.tsx): la certeza es la solidez del
+// trazo, ▮ atestiguado · ◆ reconstruido · ◇ hipotético · ~ retro-abstraído.
+// Antes eran círculos de lleno a vacío en los colores --capa-*; la idea es la
+// misma —que la etiqueta no dependa sólo del color— con un solo sistema.
+import Etiqueta, { GRADO_DE_CAPA, glifoDe, nombreDe } from "@/components/kaketiana/Etiqueta";
+import type { CapaEpistemica } from "@/lib/sim-theme";
 
+const TINTA: Record<string, string> = {
+  atest: "text-(--sim-ink)",
+  rec: "text-(--sim-fuego)",
+  hip: "text-(--sim-ink-soft)",
+  retro: "text-(--sim-ink-soft)",
+};
+
+/** El glifo solo, para ir en línea junto a una forma o una cifra. */
 export function CapaGlifo({ capa, size = 12 }: { capa: CapaEpistemica; size?: number }) {
-  const color = CAPA[capa].color;
+  const grado = GRADO_DE_CAPA[capa];
   return (
-    <svg
+    <span
       aria-hidden="true"
-      width={size}
-      height={size}
-      viewBox="0 0 12 12"
-      className="inline-block shrink-0 align-[-0.1em]"
+      title={nombreDe(grado)}
+      className={`inline-block shrink-0 leading-none ${TINTA[grado]}`}
+      style={{ fontSize: size }}
     >
-      {capa === "atestiguado" && <circle cx="6" cy="6" r="5.25" fill={color} />}
-      {capa === "reconstruido" && (
-        <>
-          <circle cx="6" cy="6" r="4.75" fill="none" stroke={color} strokeWidth="1.5" />
-          <path d="M6 1.25 A4.75 4.75 0 0 0 6 10.75 Z" fill={color} />
-        </>
-      )}
-      {capa === "retroabstraido" && (
-        <>
-          <circle cx="6" cy="6" r="4.75" fill="none" stroke={color} strokeWidth="1.5" />
-          <circle cx="6" cy="6" r="2" fill={color} />
-        </>
-      )}
-      {capa === "hipotetico" && (
-        <circle cx="6" cy="6" r="4.75" fill="none" stroke={color} strokeWidth="1.5" strokeDasharray="2.2 1.5" />
-      )}
-    </svg>
+      {glifoDe(grado)}
+    </span>
   );
 }
 
-/** Glifo + palabra, en el color de la capa. `lg` para la cabecera de la ficha. */
+/** El chip del manual. `lg` para la cabecera de la ficha; `sm`, abreviado. */
 export function CapaSello({ capa, tamano = "sm" }: { capa: CapaEpistemica; tamano?: "sm" | "lg" }) {
-  const info = CAPA[capa];
-  const grande = tamano === "lg";
-  return (
-    <span
-      className={`inline-flex items-center gap-1.5 font-sans font-semibold uppercase ${
-        grande ? "text-xs tracking-[0.16em]" : "text-[0.65rem] tracking-[0.12em]"
-      }`}
-      style={{ color: info.color }}
-    >
-      <CapaGlifo capa={capa} size={grande ? 14 : 10} />
-      {info.label}
-    </span>
-  );
+  return <Etiqueta grado={GRADO_DE_CAPA[capa]} corta={tamano === "sm"} />;
 }
