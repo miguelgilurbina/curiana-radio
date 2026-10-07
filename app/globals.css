@@ -289,6 +289,41 @@
     transform: scaleX(1);
   }
 
+  /* El Ancla (manual, Movimiento): la obra de la bibliografía a la que se
+     llegó desde una cita queda resaltada —contorno en rúbrica y papel
+     hundido— y respira una vez, 1,2 s. Es orientación y no ornamento: el
+     manual la deja viva con prefers-reduced-motion. La marca data-ancla la
+     pone components/kaketiana/BibliografiaViva.tsx desde el hash. */
+  .kk-obra[data-ancla] {
+    background: var(--sim-paper-deep);
+    outline: 2px solid var(--sim-rubrica);
+    outline-offset: -2px;
+    animation: kk-respira 1.2s var(--kk-curva) 1;
+  }
+  .kk-obra[data-ancla]::before {
+    content: "· llegaste desde una cita ·";
+    position: absolute;
+    top: -0.55rem;
+    left: 1rem;
+    padding: 0 0.5rem;
+    background: var(--sim-paper-deep);
+    color: var(--sim-rubrica);
+    font-family: var(--sim-mono);
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  @keyframes kk-respira {
+    0% {
+      outline-color: transparent;
+      outline-offset: 6px;
+    }
+    45% {
+      outline-color: var(--sim-rubrica);
+      outline-offset: 3px;
+    }
+  }
+
   /* La capitular del ensayo (Vistas §02): la primera letra del primer párrafo
      de la prosa, en display WONK y almagre, colgada a la izquierda. Sólo el
      párrafo de primer nivel: las citas y las notas no la llevan. Si el primero

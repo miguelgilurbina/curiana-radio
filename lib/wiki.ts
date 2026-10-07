@@ -118,6 +118,80 @@ export function generoLegible(genero: string | null): string | null {
     .join(" ");
 }
 
+// Los grupos del filtro de la bibliografía (manual de Kaketiana, Vistas §04):
+// cada `genero` del vault cae en uno. El que no esté aquí va a «otras», así
+// que un género nuevo nunca desaparece del filtro: se ve sin clasificar.
+export const GRUPOS_BIBLIO = [
+  { clave: "cronicas", label: "Crónicas" },
+  { clave: "etnohistoria", label: "Etnohistoria y etnografía" },
+  { clave: "lengua", label: "Lengua" },
+  { clave: "arqueologia", label: "Arqueología y ciencia" },
+  { clave: "otras", label: "Sin clasificar" },
+] as const;
+
+export type GrupoBiblio = (typeof GRUPOS_BIBLIO)[number]["clave"];
+
+const GRUPO_DE_GENERO: Record<string, GrupoBiblio> = {
+  cronica: "cronicas",
+  "cronica-regional": "cronicas",
+  "cronica-historia-regional": "cronicas",
+  etnohistoria: "etnohistoria",
+  etnologia: "etnohistoria",
+  etnografia: "etnohistoria",
+  "etnografia-misionera": "etnohistoria",
+  "etnografia-normativa": "etnohistoria",
+  historiografia: "etnohistoria",
+  "antropologia-religion": "etnohistoria",
+  academico: "etnohistoria",
+  resenia: "etnohistoria",
+  "marco-teorico": "etnohistoria",
+  linguistica: "lengua",
+  "linguistica-comparativa": "lengua",
+  "arqueo-linguistica": "lengua",
+  glosario: "lengua",
+  "glosario-alimentario": "lengua",
+  "glosario-etnohistoria": "lengua",
+  gramatica: "lengua",
+  vocabulario: "lengua",
+  "etnohistoria-vocabulario": "lengua",
+  "etnografia-vocabularios": "lengua",
+  "diccionario-colonial": "lengua",
+  "diccionario-dialectal": "lengua",
+  "lexico-regional": "lengua",
+  arqueologia: "arqueologia",
+  arqueometria: "arqueologia",
+  genetica: "arqueologia",
+  "ciencia-natural": "arqueologia",
+  botanica: "arqueologia",
+  datos: "arqueologia",
+  inventario: "arqueologia",
+};
+
+export function grupoDeGenero(genero: string | null): GrupoBiblio {
+  return (genero && GRUPO_DE_GENERO[genero]) || "otras";
+}
+
+// El autor y el año para la entrada de la bibliografía salen del `titulo`
+// curado del vault («Oliver 1989, cap. 3 — Etnohistoria…»), no del campo
+// `autor`: ése trae los nombres en formatos muy distintos (varios autores,
+// notas entre paréntesis, «et al.») y no se deja invertir sin romper alguno.
+const prefijoDe = (o: ObraBiblio) => o.titulo.split(" — ")[0];
+
+/** «Oliver 1989, cap. 3» → «Oliver, cap. 3»; «Las Casas 1875 [c. 1561]» → «Las Casas»;
+ *  «Breton 1665-1667» → «Breton». */
+export function autorCortoDe(o: ObraBiblio): string {
+  return prefijoDe(o)
+    .replace(/\s*\[[^\]]*\]/g, "")
+    .replace(/\s*\b\d{4}(?:\s*[-–]\s*\d{2,4})?\b/g, "")
+    .replace(/\s+,/g, ",")
+    .trim();
+}
+
+/** El año de la obra: el del frontmatter o, si falta, el del título. */
+export function anioDe(o: ObraBiblio): string | null {
+  return o.anio ?? /\b\d{4}\b/.exec(prefijoDe(o))?.[0] ?? null;
+}
+
 /** Cifras medidas para la portada. Ninguna se escribe a mano (regla 1). */
 export function getCifrasWiki(): { articulos: number; obras: number; conLectura: number } {
   const obras = getBibliografia();
