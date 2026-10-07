@@ -9,7 +9,9 @@ import {
   getSlugs,
   getVecinas,
 } from "@/lib/galeria";
-import { urlVariante } from "@/types/galeria";
+import { urlVariante, type Obra } from "@/types/galeria";
+import JsonLd from "@/components/seo/JsonLd";
+import { ID_ORGANIZACION, metadatos, tarjeta, urlAbsoluta } from "@/lib/seo";
 
 interface ObraPageProps {
   params: Promise<{ slug: string }>;
@@ -27,18 +29,44 @@ export async function generateMetadata({
   const { slug } = await params;
   const obra = getObra(slug);
   if (!obra) return { title: "Obra no encontrada | Curiana Radio" };
-  const blobBase = getBlobBase();
+  return metadatos({
+    titulo: `${obra.titulo} — Galería | Curiana Radio`,
+    tituloSocial: `${obra.titulo} — Galería de Curiana Radio`,
+    descripcion: obra.concepto || obra.alt,
+    ruta: `/galeria/${obra.slug}`,
+    imagen: imagenObra(obra) ?? tarjeta("galeria", "La galería de Curiana Radio"),
+  });
+}
+
+/** La variante mayor en Blob, con sus medidas: la propia obra es su tarjeta. */
+function imagenObra(obra: Obra) {
   const mayor = obra.anchos[obra.anchos.length - 1];
-  const og = mayor ? urlVariante(blobBase, obra.slug, mayor) : null;
-  const descripcion = (obra.concepto || obra.alt).slice(0, 160);
+  const url = mayor ? urlVariante(getBlobBase(), obra.slug, mayor) : null;
+  if (!url) return null;
   return {
-    title: `${obra.titulo} — Galería | Curiana Radio`,
-    description: descripcion,
-    openGraph: {
-      title: `${obra.titulo} — Galería | Curiana Radio`,
-      description: descripcion,
-      images: og ? [{ url: og, alt: obra.alt }] : undefined,
-    },
+    url,
+    alt: obra.alt,
+    ...(obra.w && obra.h ? { width: obra.w, height: obra.h } : {}),
+  };
+}
+
+/** schema.org de la obra. digitalSourceType declara que es imagen generada
+ *  con IA (IPTC), lo mismo que la ficha dice a la vista. */
+function jsonLdObra(obra: Obra) {
+  const imagen = imagenObra(obra);
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    name: obra.titulo,
+    description: obra.concepto || obra.alt,
+    caption: obra.alt,
+    url: urlAbsoluta(`/galeria/${obra.slug}`),
+    ...(imagen ? { contentUrl: imagen.url, width: imagen.width, height: imagen.height } : {}),
+    dateCreated: String(obra.anio),
+    digitalSourceType: "https://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+    creator: { "@id": ID_ORGANIZACION },
+    copyrightHolder: { "@id": ID_ORGANIZACION },
+    creditText: "Curiana Radio",
   };
 }
 
@@ -54,6 +82,7 @@ export default async function ObraPage({ params }: ObraPageProps) {
 
   return (
     <article className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <JsonLd datos={jsonLdObra(obra)} />
       <Link
         href="/galeria"
         className="font-sans text-sm text-earth-600 transition-colors hover:text-frequency"

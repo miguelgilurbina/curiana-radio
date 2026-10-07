@@ -5,6 +5,8 @@ import { getEditionBySlug, getAllEditionSlugs } from '@/lib/content';
 import { Heading, BodyText, Quote, SectionTitle } from '@/components/ui/Typography';
 import type { Metadata } from 'next';
 import type { ComponentProps } from 'react';
+import { metadatos, tarjeta } from '@/lib/seo';
+import FinDeLectura from '@/components/analitica/FinDeLectura';
 
 // MDX components mapping
 const components = {
@@ -30,8 +32,12 @@ export async function generateStaticParams() {
   }));
 }
 
-// Enable dynamic params for editions not in generateStaticParams
-export const dynamicParams = true;
+// Las ediciones son archivos del repo: todas existen al compilar. Con
+// dynamicParams en false, cualquier otra ruta de un segmento (/lo-que-sea,
+// /llms.txt antes de existir) responde un 404 de verdad. En true respondía
+// 200 con un «Edition Not Found» — un soft 404 para los buscadores — y además
+// ponía a leer el disco con lo que trajera la URL.
+export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: EditionPageProps): Promise<Metadata> {
@@ -39,22 +45,20 @@ export async function generateMetadata({ params }: EditionPageProps): Promise<Me
   const edition = await getEditionBySlug(slug);
 
   if (!edition) {
-    return {
-      title: 'Edition Not Found - Curiana Radio',
-    };
+    return { title: 'Edición no encontrada - Curiana Radio' };
   }
 
-  return {
-    title: `#${edition.metadata.number}: ${edition.metadata.title} - Curiana Radio`,
-    description: edition.metadata.description,
-    openGraph: {
-      title: `#${edition.metadata.number}: ${edition.metadata.title}`,
-      description: edition.metadata.description,
-      type: 'article',
-      publishedTime: edition.metadata.publishedAt,
-      images: edition.metadata.ogImage ? [edition.metadata.ogImage] : [],
-    },
-  };
+  // La tarjeta es la de /og: el ogImage del metadata.json apunta a
+  // /images/editions/…, que nunca existió en public/.
+  return metadatos({
+    titulo: `#${edition.metadata.number}: ${edition.metadata.title} - Curiana Radio`,
+    tituloSocial: `#${edition.metadata.number}: ${edition.metadata.title}`,
+    descripcion: edition.metadata.description,
+    ruta: `/${slug}`,
+    tipo: 'article',
+    publicado: edition.metadata.publishedAt,
+    imagen: tarjeta(slug, `Transmisión #${edition.metadata.number}: ${edition.metadata.title}`),
+  });
 }
 
 export default async function EditionPage({ params }: EditionPageProps) {
@@ -144,6 +148,7 @@ export default async function EditionPage({ params }: EditionPageProps) {
               </div>
             </section>
           )}
+          <FinDeLectura pagina={`/${slug}`} />
 
           {/* Navigation to Archive */}
           <div className="text-center pt-16 border-t border-earth-200">

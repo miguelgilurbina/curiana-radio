@@ -7,6 +7,7 @@ import { WikiProse } from "@/components/simulador/wiki-mdx";
 import Sumario from "@/components/kaketiana/Sumario";
 import MigaArticulo from "@/components/kaketiana/MigaArticulo";
 import { obrasCitadas, SeguirLeyendo, SobreQueSeSostiene } from "@/components/kaketiana/PieDeArticulo";
+import FinDeLectura from "@/components/analitica/FinDeLectura";
 
 // El artículo de la lengua, del manual de Kaketiana (Vistas §03; móvil en
 // Sistema §06): obra de consulta, «se consulta, no se lee». Ancho completo,
@@ -45,6 +46,7 @@ export default function ArticuloReferencia({ pagina }: { pagina: WikiPagina }) {
         )}
 
         <WikiProse source={cuerpo} variante="referencia" className="mt-10" />
+        <FinDeLectura pagina={`/kaketiana/lengua/${pagina.slug}`} />
 
         <div className="max-w-reading">
           <SobreQueSeSostiene obras={obras} className="mt-16" />

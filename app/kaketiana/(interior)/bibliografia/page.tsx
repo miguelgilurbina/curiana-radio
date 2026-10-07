@@ -6,12 +6,15 @@ import type { ObraBiblio } from "@/types/wiki";
 import type { FichaIndice } from "@/types/fichas";
 import { Overline, EmptyState } from "@/components/simulador/ui";
 import { CapaGlifo } from "@/components/simulador/capa";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Bibliografía — Kaketiana | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Bibliografía — Kaketiana | Curiana Radio",
+  descripcion:
     "Las obras sobre las que se sostiene todo lo demás: crónicas del siglo XVI, glosarios, arqueología y lingüística comparada, con dónde leer cada una.",
-};
+  ruta: "/kaketiana/bibliografia",
+  imagen: tarjeta("kaketiana/bibliografia", "Kaketiana · bibliografía"),
+});
 
 // ⚠️ ANDAMIO — funcional, sin diseñar. Ver el brief de secciones.
 // El id del <li> es el ancla a la que llegan las citas de los artículos

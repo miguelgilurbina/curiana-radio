@@ -3,11 +3,14 @@ import type { Metadata } from "next";
 import { getAllPersonajes, type Personaje } from "@/lib/personajes";
 import { Overline, Avatar, ScoreGauge, EmptyState } from "@/components/simulador/ui";
 import { getSerie } from "@/lib/serie";
+import { metadatos, tarjeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Personajes — Simulador Caquetío | Curiana Radio",
-  description: "Las voces curadas de la Curiana: quiénes son y cómo cambió su lengua durante la historia.",
-};
+export const metadata: Metadata = metadatos({
+  titulo: "Personajes — Kaketiana | Curiana Radio",
+  descripcion: "Las voces curadas de la Curiana: quiénes son y cómo cambió su lengua durante la historia.",
+  ruta: "/kaketiana/personajes",
+  imagen: tarjeta("kaketiana/personajes", "Kaketiana · personajes del experimento"),
+});
 
 // Índice editorial — dramatis personae de la edición, no un grid de cards.
 // El tier del seed ordena por protagonismo en el run curado.

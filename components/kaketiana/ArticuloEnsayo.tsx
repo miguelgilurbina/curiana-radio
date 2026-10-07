@@ -7,6 +7,7 @@ import { WikiProse } from "@/components/simulador/wiki-mdx";
 import Sumario from "@/components/kaketiana/Sumario";
 import MigaArticulo from "@/components/kaketiana/MigaArticulo";
 import { obrasCitadas, SeguirLeyendo, SobreQueSeSostiene } from "@/components/kaketiana/PieDeArticulo";
+import FinDeLectura from "@/components/analitica/FinDeLectura";
 
 // El artículo de fondo del pueblo, del manual de Kaketiana (design_handoff_
 // kaketiana, Vistas §02; móvil en Sistema §06): la miga con el progreso, el
@@ -99,6 +100,7 @@ export default function ArticuloEnsayo({ pagina }: { pagina: WikiPagina }) {
             variante="ensayo"
             className={`mt-10 ${abreConCursiva(cuerpo) ? "kk-capitular-2" : "kk-capitular"}`}
           />
+          <FinDeLectura pagina={`/kaketiana/pueblo/${pagina.slug}`} />
 
           <SobreQueSeSostiene obras={obras} className="mt-16" />
 

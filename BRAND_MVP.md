@@ -120,6 +120,9 @@ lectura ≥ 4.5:1, apuntando a ≥ 7:1.
 | `--noche-hueso-2` | `#C6CFD9` | texto secundario, overlines, metadatos (≈ 10:1); **nunca más tenue** |
 | `--noche-filete` · `--noche-filete-fuerte` | `#3A4B61` · `#5A6D85` | bordes; puntos inactivos |
 | `--noche-oro` | `#E0BB66` | el nombre de El Disco, junto al logo |
+| `--noche-acento` | `#E6B43C` | **el acento de la noche** (2a oro de arena, §13): aguja, en vivo, badge, CTA (con tinta `--noche-fondo`, 10.2:1), hover; reemplaza al naranja en la noche |
+| `--noche-frecuencia-tinta` | = acento | hover, riel de cita y foco en la piel de la radio (§12); en su claro, `#7E5A1E` |
+| `--noche-dato` | `#7E93AA` | overlines y línea legal del shell, sólo mono pequeño (5.7:1) |
 | gradiente | `#0F1621 → #1F2C3E → #131C28 → #2F425B` | `.noche-gradiente`, 15 s a 135° |
 
 **Superficies de sección** (tokens scoped por atributo, como `data-sim-theme`
@@ -256,9 +259,11 @@ las otras tres opciones por si se cambia la decisión.
 El visitante llega a un **disco de arena** sobre la noche y está obligado a
 interactuar: trazando círculos alrededor del disco, los surcos horizontales
 del viento se reorganizan desde el centro hasta formar la espiral del isotipo.
-Afinado, la espiral original aparece en hueso y se habilita
-**[ SINTONIZAR → ]**, que lleva a la landing (`/inicio`). Handoff:
-`design_handoff_intro_v1_disco/` (en disco, fuera de git).
+Afinado, la espiral original aparece en hueso, **la arena se levanta y se
+vuelve el sello de Curiana Radio**, y se habilita **[ SINTONIZAR → ]**, que
+lleva a la landing (`/inicio`). Handoff: `design_handoff_intro_v1_disco/` (en
+disco, fuera de git), rehecho el 2026-10-05 para que la intro esté en sintonía
+con el look inicial de la radio: el color sale del logo.
 
 - **Rutas.** `/` es la intro; una vez por sesión (`sessionStorage`
   `curiana:intro-v1 = "visto"`): quien vuelve pasa directo a `/inicio` sin ver
@@ -268,26 +273,42 @@ Afinado, la espiral original aparece en hueso y se habilita
   (presionando, ×1.4; cada toque suma 3 %). La frecuencia sube de 87.5 a 88.8
   y la aguja recorre el dial; el patrón pasa de surcos a remolino (>15 %),
   vórtice (>60 %) y espiral. El viento (km/h y rumbo) sale del puntero real.
-- **Salida.** 1.7 s smoothstep: los surcos se comprimen al centro, velo negro
-  desde el 55 %, y la landing amanece desde `#07090D` en 600 ms.
+- **La arena se vuelve sello** (handoff 2026-10-05). Con la espiral a medio
+  revelar, 9.400 granos se levantan del disco en un lienzo 2D sobre el shader
+  y viajan 3.2 s hacia el sello: 3.200 salen de la espiral de arena y van a la
+  espiral del sello; 6.200 salen del resto del disco y van al marco y las
+  letras (los de afuera despegan primero, retardo = radio · 0.22). Trayecto
+  `easeInOutCubic` con un remolino alrededor del centro y ±5 px de viento. El
+  disco se funde al fondo en el primer 28 % (`uFund`) y el sello nítido entra
+  entre el 84 % y el 100 %, con su espiral sobre el centro del disco. Los
+  destinos salen de la imagen del sello (`sello-curiana-noche`, el mismo del
+  shell, §13) en una grilla de 256²; el sello del final es su WebP (300, 600
+  y 1200 px). El nombre visible es el sello: el `<h1>` queda para lectores de
+  pantalla.
+- **Salida.** 1.7 s smoothstep: los surcos se comprimen al centro, el sello
+  crece un 25 % y se apaga, velo `#0F1621` desde el 55 %, y la landing amanece
+  desde la misma noche en 600 ms.
 - **Shader** (WebGL2, un triángulo a pantalla completa, DPR ≤ 2), de fondo a
   frente: noche con granos dorados sueltos → borde de arena derramada (nunca un
   círculo perfecto) → campo de surcos (viento → espiral ovalada `q·(.9, 1.15)`,
   la proporción del isotipo) → ondas de toque y bulto bajo el cursor → domo y
   manchas → **grano aprobado** (fino ±.15, medio ±.11, 2.5 % brillantes, 4 %
   oscuros: no suavizar) → revelado con el PNG como alfa a 0.95R.
-- **Paleta.** `--noche-hondo` de fondo; arena oro `#E6B43C` sobre tinta
-  `#090806`; texto en hueso/hueso-2 sobre placa sólida (≥ 11:1), **nunca texto
-  sobre arena**; el nombre en `--noche-oro`; aguja, punto y cursor en frequency.
+- **Paleta** (handoff 2026-10-05: «la arena es hueso sobre noche, sin oro»).
+  Fondo `#0F1621`; arena hueso `vec3(.80,.77,.70)` sobre la tinta azulada de
+  los valles `vec3(.035,.051,.078)`; el lockup, la espiral revelada y el texto
+  en hueso (≈ 14:1), **nunca texto sobre arena**. La aguja, el punto en vivo,
+  los hover, el foco y el cursor van en el **acento de la noche**, el oro de
+  arena (§13): el prototipo traía el naranja `#FF6B35` y Miguel decidió el
+  oro en toda la noche, intro incluida (2026-10-05).
 - **Accesibilidad.** `prefers-reduced-motion`: el tiempo se congela, arranca
   afinado y SINTONIZAR navega sin transición. Botones reales en el orden
   SALTAR → SINTONIZAR (el foco pasa solo al segundo); "señal encontrada" se
   anuncia con `aria-live`. Sin WebGL2: el isotipo en hueso con el bloque final
   ya visible.
-- **El nombre va con el logo** (Miguel, 2026-09-29). «Curiana Radio» ya no es
-  una firma de esquina: aparece al afinar, al ritmo del revelado de la espiral,
-  como lockup — a la derecha del disco y centrado en él; en pantallas
-  verticales, debajo del disco y en una línea. Nunca sobre la arena.
+- **El nombre es el sello.** Desde el 2026-10-05 «Curiana Radio» no aparece
+  como texto al costado del disco (la versión del 2026-09-29): lo arma la
+  arena, como el sello oficial (marco hueso, espiral original y type 3c).
 - **Móvil (< 640 px).** Se oculta el bloque de datos de arriba a la derecha.
 
 ---
@@ -301,13 +322,15 @@ prototipo dice papel, aquí manda el README del handoff.
 
 | # | Sección | Superficie |
 |---|---|---|
-| 01 | Hero · carrusel de aristas | barra (isotipo + lockup en hueso + "88.8 FM · SINTONIZADO") y 5 diapositivas en su superficie |
+| 01 | Hero · carrusel de aristas | 5 diapositivas en su superficie; la barra de arriba es la cabecera de la noche (§13) |
 | 02 | Manifiesto | gradiente noche + grano; capitular, bloque expandible, blockquote |
+| — | Quién transmite | `--noche-hondo`; la ficción dicha como ficción: quién hace la radio, enlace a `/sobre` y al portafolio de Miguel |
+| — | Señales (§12) | noche; la última señal destacada y dos más; no sale sin señales |
 | 03 | Interludio de arte | sala `#101010`; 3 obras que reservan su color dominante |
 | 04 | Las aristas | noche; 4 tarjetas, cada una en su registro |
 | 05 | Última transmisión | gradiente noche + grano; portada en `Cenefa` |
 | 06 | Archivo y suscripción | noche; ediciones + formulario |
-| 07 | Colofón | `--noche-hondo`; burro ASCII, proverbio, badge outline |
+| 07 | Pie de la noche | el pie común del shell (§13): sello, proverbio, estaciones, suscripción, línea legal |
 
 - **El hero** arranca sintonizado (la intro ya obligó a interactuar): auto-avance
   cada 5 s que se pausa con hover o foco y **se detiene** al tocar flechas,
@@ -322,11 +345,16 @@ prototipo dice papel, aquí manda el README del handoff.
   con `email`). Sin proveedor, el formulario se ve deshabilitado y lo dice.
 - **Buchibe** aún no tiene sección: su diapositiva y su tarjeta anuncian el
   telón ("CORRER EL TELÓN · PRONTO") sin enlazar.
+- **Kaketiana** (antes «Simulador Caquetío», 2026-10-05): la diapositiva, la
+  tarjeta y el menú global dicen Kaketiana, y la diapositiva y la tarjeta van en
+  su placa 6b (`data-kk-dir="sal"`, §11), no en el pergamino del Simulador.
+- **«Seguir leyendo»** del Manifiesto es `components/landing/SeguirLeyendo.tsx`
+  (botón con `aria-expanded`, abre y cierra), no un `<details>` nativo.
 - **Contraste** (requisito del cliente, ≥ 4.5:1): los `-faint` de sección se
   subieron a `-soft` en texto; el CTA y la etiqueta del telón van en
   `--buc-luz` (el oro sobre el telón da 3.5:1: vale para el título grande, no
-  para texto chico). **Pendiente de decisión:** el botón naranja con texto
-  blanco que pide el handoff da 2.8:1.
+  para texto chico). El botón naranja con texto blanco (2.8:1) quedó resuelto
+  con el acento de la noche (§13): oro de arena con tinta de fondo, 10.2:1.
 - Arte en `public/landing/` como WebP pre-generado (480/960 px; portada 640),
   con `<img srcset>` como la galería, sin el optimizador de Next.
 
@@ -416,3 +444,184 @@ componentes del cronista.
   (las líneas de sesión, rutas y hojas de fuentes del vault siguen en los
   ensayos), el marco de imagen, el modo oscuro de lectura, el índice de certeza
   (pide etiquetar las afirmaciones en el vault) y los experimentales §07–09.
+
+---
+
+## 12. Señales (`/senales`)
+
+El blog: lo que Miguel escribe desde acá, firmado, sobre cada arista (issue
+#248). La radio transmite desde después; las señales salen del presente. Es
+**un solo blog**: cada entrada lleva sus aristas y cada arista muestra las
+suyas. Contenido en `content/senales/<slug>.mdx`, lectura en `lib/senales.ts`,
+el flujo de publicación en la skill `publicar-entrada`.
+
+- **El motor de pieles** (`components/senales/pieles/` + `globals.css`, «El
+  motor de pieles»). Miguel, 2026-10-04: la página es «una máquina estética de
+  conceptos». Una plantilla y N pieles: toda señal tiene la misma estructura
+  (miga e interruptor, borrador, título, sumario, dato, portada, cuerpo a
+  65ch, firma, nota, pie) y la **piel** decide la superficie, las voces, la
+  tinta y lo que va sobre la cabecera. **La arista dice dónde aparece una
+  señal; la piel, cómo se ve.** Cada arista trae su piel por defecto (la de su
+  primera arista; sin arista, la radio) y una señal puede pedir otra con
+  `piel:` en el frontmatter: una señal de Kaketiana puede vestirse de telón.
+- **Una piel es datos** (design_handoff_senales_luces, 2026-10-05). Su tinta y
+  sus voces son un bloque de CSS que mapea los tokens de su sección a un juego
+  común de alias `--e-*` (fondo, placa, texto, texto-2, filete, enlace,
+  capitular, riel, cita, radios, ancho de figura, familias y ejes de título,
+  sumario, cuerpo y cita, tracking y caja del dato, cabecera). La plantilla
+  (`app/senales/[slug]`, `components/senales/senal-mdx.tsx`, `voces.ts`) sólo
+  lee los alias: ninguna clase nombra una piel. La ficha TS de cada piel dice
+  lo que el CSS no puede: concepto, manual, luz nativa, atributos de tema,
+  capitular, `Antetitulo`, fuentes y scripts. La columna de 65ch es el
+  contenedor del cuerpo, medida con la letra del cuerpo (un `ch` dentro de un
+  h2 grande mediría el doble); las figuras salen de ella hasta `--e-figura-max`.
+
+  | Piel | Superficie | Voces |
+  |---|---|---|
+  | la radio (sin arista) | la noche (§3.1, §10) | Lora 600 / Lora itálica / Inter 1.125rem / dato .24em |
+  | Kaketiana | la placa 6b «Sal y almagre» (§11) | Fraunces WONK; Inter 1.02rem/1.8; capitular y riel de cita (3px, papel hundido, radio 0 12 12 0) en almagre; enlaces en salina; figuras con radio 16px; dato .18em |
+  | JAI Sounds | el dial (`--jai-noche`) | la Fraunces de JAI (700 opsz 72 · 500 opsz 72 SOFT 30); Inter 17/1.7; enlaces y riel en la señal; dato .3em en minúscula; radios 0; **sin naranja, ni en el foco** |
+  | Galería | la sala acromática | Lora e Inter sin color; cita sobre la placa; las figuras salen hasta 72rem; dato .3em |
+  | Buchibe | cabecera en el telón con «Curiana Radio presenta» (fija, no cambia de luz), el cuento en la noche ultramar | Fraunces en oro sólo en el título; cuerpo en Lora 1.15/1.85; capitular y riel en `--buc-oro-tinta`; enlaces `--buc-enlace` |
+
+  La fuente de JAI vive en `app/jai-sounds/fraunces-jai.ts` para que la usen
+  su sección y sus señales.
+- **Crear una piel** (por ejemplo «Noticias Manifiesto», que Miguel tiene en
+  mente): (1) nombrarla en `PIELES_IDS` (`lib/senales-comun.ts`); (2) en
+  `globals.css`, sus tokens bajo su atributo de tema y su bloque
+  `[data-piel="<id>"]` con TODOS los alias `--e-*` (copiar uno vecino); su
+  otra luz en `html[data-luz="…"] [data-piel="<id>"]`; (3) su ficha en
+  `components/senales/pieles/`; (4) registrarla en `pieles/index.ts`
+  (TypeScript no compila mientras falte); (5) una fila en las tablas de aquí,
+  con el contraste medido. Una piel nueva necesita su fuente de diseño: el
+  motor la recibe, no la inventa. El build falla si una señal pide una piel que
+  no existe.
+- **Claro y oscuro** (design_handoff_senales_luces, 2026-10-05). Cada vista
+  **arranca en su luz nativa** (la identidad de su arista) y **no** sigue
+  `prefers-color-scheme`. El lector cambia con el interruptor
+  (`components/senales/InterruptorLuz.tsx`): un solo `<button aria-pressed>`
+  con las dos luces a la vista, la activa primero, subrayada y en el color del
+  texto; los glifos llevan el selector de texto U+FE0E para que iOS no los
+  pinte como emoji; 44px de objetivo. La elección vale para todo el sitio
+  (`localStorage curiana:luz` → `html[data-luz]`, publicada en el `<head>`
+  antes del primer pintado, `lib/luz.ts`) y se borra con «volver a la luz de
+  cada sección», en el pie de la noche (`components/shell/LuzNativa.tsx`). La
+  otra luz no cambia clases: redefine los tokens de la piel, y los alias los
+  toman solos.
+
+  | Piel | Nativo | La otra luz (valores del handoff) |
+  |---|---|---|
+  | la radio | oscuro | claro: el papel `#F8F6F3` / `#0F1621`; la tinta del acento pasa a `#7E5A1E` (5.8:1) y el riel de cita al 100 % |
+  | Kaketiana | claro | oscuro: **tinta parda** `#1C1712` (no la noche azul, que es del Acto I); almagre `#E79277` y salina `#7BC9B9` con su matiz, más claros |
+  | JAI Sounds | oscuro | claro: papel blanco; la señal `oklch(0.50 0.13 h)` pasa como texto en toda la rueda (peor matiz 4.9:1) |
+  | Galería | oscuro | claro: la sala en positivo, R = G = B, `#F3F3F3` (no blanco, para que una obra blanca no se pierda) |
+  | Buchibe | oscuro | claro: sólo el cuerpo (`#F5ECDD`); el telón no se prende |
+
+  Cambios que salen de este handoff y tocan más que Señales: `--kk-extra` en la
+  placa 6b pasa de `#3F7D74` (4.1:1, no llegaba a AA) a `#2E655C` en todo
+  Kaketiana; Buchibe gana `--buc-luz-2`, `--buc-oro-tinta`, `--buc-enlace` y
+  `--buc-panel`; la noche gana `--noche-frecuencia-tinta` (hover, riel de cita
+  y foco; en la noche es el acento, §13). El foco de cada piel va en su propia
+  tinta (`--e-foco`), nunca naranja dentro de JAI. El claro de la radio usa
+  `#7E5A1E` (el oro legible sobre papel del mismo handoff) en vez del
+  `#B4441A` que el handoff proponía cuando el acento todavía era naranja.
+- **El índice va en la piel de la radio** y sigue la luz del lector: miga
+  «Curiana Radio / Señales» e interruptor; «Señales» en Lora 600; los filtros
+  *Todas · la radio · Kaketiana · JAI Sounds · Galería · Buchibe* (mono, 36px,
+  radio 2px, cada uno con su sello; vacíos dicen que no hay señales todavía);
+  cada entrada con el **sello** de su arista alineado a la primera línea, el
+  título en Lora 600, el sumario en Lora itálica y el dato en mono. Los sellos
+  (`--sello-*`, cuadros de 7px, ≥ 3:1 como trazo) son: radio `#FF6B35`,
+  Kaketiana `#B06A1C`, JAI `oklch(0.80 0.15 212)`, Galería `#F0EFEC`, Buchibe
+  `#C9A05A`; sobre papel, radio `#D9501C`, JAI `oklch(0.50 0.13 212)`, Galería
+  `#2A2A2A`, Buchibe `#8C2B12`.
+- **Dónde aparece:** el índice `/senales`; la landing, después del Manifiesto (la última destacada y
+  dos más; sin entradas, la sección no sale); y dentro de cada arista
+  (`components/senales/SenalesDeArista.tsx`), en el registro de su superficie:
+  la placa de Kaketiana, el dial de JAI (sin naranja: §JAI), el papel de la
+  Galería. Buchibe tiene etiqueta pero no sección.
+- **Kaketiana:** una señal con esa arista lleva al pie que es la voz de su
+  autor y enlaza a la investigación. Lo que diga de los caquetíos no es canon.
+- **Para compartir:** cada señal genera su tarjeta (`opengraph-image.tsx`,
+  1200×630: noche, isotipo, título en Lora, firma, filete en el acento oro). Fuentes
+  woff de @fontsource en `app/senales/fuentes/` (next/og no lee woff2).
+- **Imágenes** en Vercel Blob (`npm run senales:imagenes`), videos de YouTube
+  incrustados con `youtube-nocookie`. Nada de media en el repo.
+- **Borradores** (`borrador: true`): se ven en local y en las vistas previas
+  de Vercel, nunca en producción (`VERCEL_ENV`).
+- **Redes** (`lib/redes.ts`): Instagram y YouTube, @curianaradio, en el pie
+  de la noche (§13), el pie de papel, el índice y el pie de cada señal.
+- **RSS:** `/senales/rss.xml`.
+
+---
+
+## 13. El shell La Noche (cabecera y pie)
+
+> **Qué está al aire** (Miguel, 2026-10-06): por ahora sólo Curiana Radio
+> (la landing, Señales y «Quién transmite»), **Kaketiana** y **JAI Sounds**.
+> La Galería, Cuentos de Buchibe y el archivo de ediciones siguen en el
+> taller. Una sola fuente: `LIBERADA` en `lib/secciones.ts`, que leen la nav,
+> el pie, el hero y las aristas de la landing, «Quién transmite», las
+> etiquetas y los filtros de Señales, el pie de JAI y el sitemap. En
+> producción sus rutas (`/galeria`, `/archivo`, `/01`…) vuelven a `/inicio`
+> (`SIN_LIBERAR` en `next.config.js`); en local y en las vistas previas se
+> ven. Liberar una es cambiar su línea en los dos lugares.
+
+Handoff: `design_handoff_senales_luces/shell/` (SHELL.md y `Shell La Noche.dc.html`).
+El marco común de la landing (`/inicio`), Señales (`/senales`, `/senales/*`) y
+«Quién transmite» (`/sobre`): un mismo sello, un mismo fondo y un reparto de
+voces fijo: **el cartel grita** (Archivo Black), **el oráculo susurra** (Lora
+itálica), **el dato teclea** (mono). Lo elige `components/layout/ShellRadio.tsx`
+para **todas las páginas** menos la intro El Disco (`/`, `/intro`), que va
+sin marco. El papel de la radio (la nav, el pie y el fondo animado de antes,
+y el badge naranja) se retiró el 2026-10-06.
+
+- **Decisiones de Miguel (2026-10-05):** la opción **1a · El dial**; el acento
+  **2a · oro de arena** `#E6B43C` (10.2:1 sobre `#0F1621`); y **SEÑALES en la
+  nav**. «Quién transmite» va en el pie, en «La emisora».
+- **El acento** (`--noche-acento`) reemplaza al naranja **en toda la noche**: la
+  aguja, el punto en vivo, el badge 88.8, los CTA (con tinta `--noche-fondo`
+  encima: el naranja con texto blanco daba 2.8:1 y queda resuelto), los hover,
+  el filete de la cita del Manifiesto, los puntos del carrusel y el `#01` del
+  archivo. `--noche-frecuencia-tinta` apunta a él. El naranja `#FF6B35` sigue
+  en el papel de la radio y en el sello de «la radio» del índice.
+- **Cabecera** (`components/shell/CabeceraNoche.tsx`): sticky, fondo sólido sin
+  vidrio, se esconde al bajar y vuelve al subir. Desde `lg`: 92px; el sello de
+  56px; la nav MANIFIESTO · SEÑALES · JAI SOUNDS · KAKETIANA (y GALERÍA ·
+  BUCHIBE · ARCHIVO cuando se liberen) en mono 11px .24em, repartida sobre la escala de sintonía,
+  con la **aguja** (2×46px, acento) en la estación activa, que se desliza al
+  navegar (300ms; sin movimiento con `prefers-reduced-motion`); a la derecha
+  AL AIRE con su pulso y el badge **88.8 FM**. La estación activa sale de la
+  ruta; en una señal, la de su arista (sin arista, Señales). Buchibe está en el
+  dial pero no se sintoniza (sin sección: va en `--noche-dato`, «pronto»).
+  Móvil: 72px, el sello de 48px, el badge y `[ DIAL ]`, que abre el menú a
+  pantalla completa (Archivo Black 32px sobre la escala vertical, la aguja
+  horizontal de 22×2px en la activa, `[ CERRAR × ]` en acento, SINTONIZAR
+  AHORA → a la última edición, AL AIRE · 88.8 FM). El menú cierra con Escape,
+  devuelve el foco y va fuera de la cabecera (su translate haría de bloque
+  contenedor para un `fixed`).
+- **Pie** (`components/shell/PieNoche.tsx`): el sello de 150px (96 en móvil) y
+  «El viento no borra, reescribe.»; ESTACIONES, LA EMISORA (Manifiesto,
+  Señales, Quién transmite, Ver todas las transmisiones →, Spotify, Instagram,
+  YouTube) y LA SEÑAL, CADA MES (`Suscripcion` en su variante del pie); la
+  escala del dial con la aguja al 52 %; la línea legal (88.8 FM — SIEMPRE
+  TRANSMITIENDO · TRANSMISIÓN CULTURAL DESDE ABYA YALA · EDICIÓN #NN · V1 LA
+  NOCHE) y, si el lector eligió una luz, «volver a la luz de cada sección».
+- **Tokens del shell** (`.shell-noche` en `globals.css`): filetes un paso más
+  hondos que los de la landing (`#2B3D52`, `#3A4B61`), `--shell-hueso`
+  `#F3EAD4` para el activo, `--noche-dato` `#7E93AA` (5.7:1) sólo para mono
+  pequeño. El shell va siempre de noche, aunque la página que enmarca esté en
+  claro.
+- **El sello** (`components/shell/Sello.tsx`): el PNG del handoff (2048px,
+  450 KB) servido como WebP de 112, 192, 300, 600 y 1200px (`public/marca/sello-curiana-noche-*.webp`); el mismo sello que arma la arena en la intro (§9).
+- **En la landing**, el shell reemplaza la barra propia del hero (isotipo,
+  lockup, SINTONIZADO; el `<h1>` queda para lectores de pantalla) y el
+  Colofón 07 (su proverbio pasa al pie; el burro ASCII sigue en el 404).
+- **Mientras el archivo esté en el taller:** la landing no muestra la
+  última edición ni el archivo (la suscripción vive en el pie), el CTA del
+  hero sintoniza el manifiesto, SINTONIZAR AHORA del menú lleva a `/inicio` y
+  la línea legal dice sólo «V1 LA NOCHE».
+- **Pendiente:** el sello de «la radio» en el índice sigue naranja y el de
+  Buchibe es oro, cerca del acento nuevo; las páginas en el taller (archivo,
+  ediciones, galería) llevan el shell pero su contenido sigue en papel.
+

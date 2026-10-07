@@ -15,13 +15,17 @@ import { HallazgosSerie, NombresDeLaSerie } from "@/components/simulador/serie";
 import MapaDeEscena from "@/components/simulador/MapaDeEscena";
 import { DataAside } from "@/components/simulador/prose";
 import { Overline, EmptyState } from "@/components/simulador/ui";
+import { metadatos, tarjeta } from "@/lib/seo";
 
 export function generateMetadata(): Metadata {
   const { pitch } = getAbstract();
-  return {
-    title: "El experimento — una lengua hablada de nuevo | Kaketiana · Curiana Radio",
-    description: pitch.bajada,
-  };
+  return metadatos({
+    titulo: "El experimento — una lengua hablada de nuevo | Kaketiana · Curiana Radio",
+    tituloSocial: "El experimento — una lengua hablada de nuevo",
+    descripcion: pitch.bajada,
+    ruta: "/kaketiana/experimento",
+    imagen: tarjeta("kaketiana/experimento", "Kaketiana · el experimento"),
+  });
 }
 
 const ANEXOS = [

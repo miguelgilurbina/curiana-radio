@@ -9,12 +9,17 @@ import HeroPalabra from "@/components/kaketiana/HeroPalabra";
 import { SCRIPT_HERO } from "@/lib/kaketiana-hero";
 import MapaKaketiana from "@/components/kaketiana/MapaKaketiana";
 import Etiqueta from "@/components/kaketiana/Etiqueta";
+import { metadatos, tarjeta } from "@/lib/seo";
+import SenalesDeArista from "@/components/senales/SenalesDeArista";
 
-export const metadata: Metadata = {
-  title: "Kaketiana — el mundo del kaketío | Curiana Radio",
-  description:
+export const metadata: Metadata = metadatos({
+  titulo: "Kaketiana — el mundo del kaketío | Curiana Radio",
+  tituloSocial: "Kaketiana — el mundo del kaketío",
+  descripcion:
     "Qué sabemos del pueblo caquetío del Golfete de Coro, siglos XIV-XV: cómo vivían, en qué creían, y cómo suena una lengua que nadie habla desde hace cuatrocientos años. Cada afirmación con su fuente.",
-};
+  ruta: "/kaketiana",
+  imagen: tarjeta("kaketiana", "Kaketiana: qué sabemos del pueblo caquetío del Golfete de Coro"),
+});
 
 // La portada del manual de Kaketiana (design_handoff_kaketiana, Vistas §01 y
 // hero 1a): placa clara 6b «Sal y almagre», la etimología como hero, el mapa
@@ -180,6 +185,9 @@ export default function KaketianaPage() {
             la bibliografía
           </Link>
         </p>
+
+        {/* Lo que Miguel escribe con la arista Kaketiana: su voz, no el canon */}
+        <SenalesDeArista arista="kaketiana" className="mt-16" />
       </div>
 
       {/* La franja del experimento: ya es del otro lado del umbral */}

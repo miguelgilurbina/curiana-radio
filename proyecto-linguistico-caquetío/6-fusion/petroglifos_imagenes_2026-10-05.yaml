@@ -1,0 +1,153 @@
+# ─────────────────────────────────────────────────────────────────────────
+# Dónde están las imágenes de petroglifos y pictografías en las fuentes del
+# repo — para que Miguel las pase a Claude Design y se transcriban los
+# símbolos (iconografía de Kaketiana, ruta del 2026-10-02 §3).
+#
+# Localizado el 2026-10-05: las páginas se encontraron con hojas de contacto
+# y los pies de figura se leyeron de la capa de texto. Las de prioridad 1 se
+# miraron además en imagen a buena resolución. Las páginas son las del PDF.
+#
+# ⚠️ Lo que vale para TODOS los motivos:
+#   - Sin fechar. No existe ninguna datación absoluta publicada de arte rupestre
+#     en Venezuela continental, ni en las ABC (rastreo documental, sesión 07,
+#     2026-08-14).
+#   - No atribuido a los caquetíos. La filiación es, como mucho, una inferencia
+#     por la cerámica cercana (Zavala Reyes 2015) o una reclasificación
+#     etnológica posterior (Wagenaar Hummelinck). Cada motivo transcrito lleva
+#     la nota «sin fechar · no atribuido a los caquetíos».
+#   - Se redibuja, no se reproduce. La transcripción es un dibujo propio con su
+#     procedencia (obra, página, figura, sitio). Las fotos y las láminas de
+#     otros no se publican, salvo van Koolwijk 1882, que es CC BY 4.0 y se
+#     puede reproducir citando la fuente.
+#   - Las lecturas de los autores (la «rana fértil», el calendario metónico, el
+#     «trance») son interpretación, no dato. Se pueden contar como lectura.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-10-05'
+  estado: localizado  # las fuentes están en el repo; las transcripciones, por hacer
+  para: transcribir símbolos con Claude Design (iconografía del sitio)
+  prioridad: >-
+    1 = empezar por aquí (motivos ya limpios: tabla digitalizada, lámina o
+    redibujo); 2 = dibujos de campo de las ABC; 3 = fotos (sirven para
+    comprobar el dibujo, no para calcar).
+
+obras:
+
+  - obra: zavala-reyes-2015-petroglifos
+    archivo: fuentes_caquetios/ZavalaReyes_2015_Petroglifos_Chirache_Buenevara.pdf
+    region: Paraguaná (quebrada de Chirache-Buenevara)
+    licencia: acceso abierto (Redalyc); los derechos son del autor y la revista
+    paginas:
+      - {pdf: 11, impresa: 46, tipo: tabla-de-motivos, prioridad: 1, muestra: "8 diseños digitalizados, rocas Ω (1-6) y α (7-8), con orientación y medidas en cm. Antropomorfos, la figura que el autor lee como «rana fértil» (n.º 1) y la figura «en cuclillas» (n.º 2)"}
+      - {pdf: 10, impresa: 45, tipo: foto, prioridad: 3, muestra: roca signada}
+      - {pdf: 12, impresa: 47, tipo: foto, prioridad: 3, muestra: roca signada}
+      - {pdf: 9, impresa: 44, tipo: foto, prioridad: 3, muestra: los bloques}
+
+  - obra: van-koolwijk-1882
+    archivo: fuentes_caquetios/vanKoolwijk_1882_Indianen_Caraiben_Aruba.pdf
+    region: Aruba
+    licencia: CC BY 4.0 (Biblioteca Nacional Aruba). Se puede reproducir citando
+    paginas:
+      - {pdf: 12, tipo: lamina-ceramica, prioridad: 1, muestra: "mitad izquierda de la lámina (figs. 1, 2, 7, 8, 9, 14a-c, 17b-d, 17f, 18; la 3, la 10 y la 15a caen en el pliegue). ⚠️ CERÁMICA, no petroglifos: ver identificacion_por_el_texto"}
+      - {pdf: 13, tipo: lamina-ceramica, prioridad: 1, muestra: "mitad derecha (figs. 3-6, 10-13, 15b, 16, 17a, 17e, 19-21). ⚠️ CERÁMICA, no petroglifos: el zigzag, las espirales, la rana, la cara y los «ojos y cejas» son motivos de vasijas"}
+    # Minado el 2026-10-05 (6-fusion/van_koolwijk_1882_aruba_2026-10-05.yaml §lamina,
+    # leído en imagen): el texto de las pp. 223-224 identifica TODAS las figuras.
+    identificacion_por_el_texto:
+      veredicto: >-
+        Ninguna figura de la lámina es un signo rupestre. Son cerámica de los
+        campamentos de Santa Cruz y Savonet: motivos pintados en tiestos que el
+        autor compara con vasos griegos (1-10), ranas y cabezas de rana en
+        relieve (11-13), asas (14-18), un pico (19), una vasija con cabezas de
+        animal (20) y la forma de la urna funeraria (21). Las inscripciones de
+        las grutas las describe con palabras (pp. 225-226) pero no las dibuja.
+      para_claude_design: >-
+        Si la iconografía que se busca es SÓLO rupestre, esta lámina sale del
+        catálogo. Si es la iconografía de la Kaketiana en general, la rana en
+        relieve (11-13) y las cenefas pintadas (1-10) son motivos de la cerámica
+        arubana: se pueden usar, pero rotuladas como cerámica, «sin fechar · no
+        atribuido a los caquetíos». Lo decide Miguel (issue van-koolwijk-1882).
+      figuras:
+        - {figs: "1, 2", pagina_texto: 223, que_es: "greca de líneas rectas y ángulos rectos, pintada en tiestos"}
+        - {figs: "3", pagina_texto: 223, que_es: "trébol («klaverblad»), pintado en tiestos"}
+        - {figs: "4", pagina_texto: 223, que_es: "línea ondulante («kronkelende lijn»), pintada en tiestos"}
+        - {figs: "5a, 5b", pagina_texto: 223, que_es: "espiral («in zich keerende ronde lijn»), pintada en tiestos"}
+        - {figs: "6", pagina_texto: 223, que_es: "cenefa de triángulos, pintada en tiestos"}
+        - {figs: "7", pagina_texto: 223, que_es: "«grieksch kruis», pintada en tiestos"}
+        - {figs: "8", pagina_texto: 223, que_es: "semicírculo («halve cirkel»), pintado en tiestos"}
+        - {figs: "9, 10", pagina_texto: 223, que_es: "línea con puntos (la 10, un rombo con punto), pintada en tiestos"}
+        - {figs: "11, 12, 13", pagina_texto: 224, que_es: "ranas y cabezas de rana en relieve en las vasijas, a veces con orejas «ten onrechte toegevoegd»"}
+        - {figs: "14a-c", pagina_texto: 224, que_es: "asas: botones redondos y largos, rectos y curvos"}
+        - {figs: "15a, 15b", pagina_texto: 224, que_es: "asas-oreja redondas y cuadradas"}
+        - {figs: "16", pagina_texto: 224, que_es: "las dos clases de asa juntas"}
+        - {figs: "17a-f", pagina_texto: 224, que_es: "asas en el borde: botones, caras, anillos, hojas"}
+        - {figs: "18", pagina_texto: 224, que_es: "segunda asa más abajo"}
+        - {figs: "19", pagina_texto: 224, que_es: "pico de vasija, que la gente tomaba por pipa"}
+        - {figs: "20", pagina_texto: 224, que_es: "vasija con reborde bajo sujeto por cabezas de animal en forma de máscara"}
+        - {figs: "21", pagina_texto: 224, que_es: "forma de la urna funeraria de Santa Cruz (≈ 1 m)"}
+    sitios_con_inscripciones_en_el_texto:
+      - {sitio: "gruta de Fontein", pagina: 226, nota: "en caliza; inscripciones «talrijk» en la bóveda, donde llega la luz; ocre excavado allí (p. 223)"}
+      - {sitio: "Carachito", pagina: 226, nota: "cerro al sur del Hooiberg; la tercera gruta «bevat eenige opschriften». Probablemente el Seroe Canashito de Wagenaar Hummelinck 1953 (A 4-5): hipótesis del minador"}
+      - {sitio: "Parawana (norte de Aruba)", pagina: 222, nota: "una inscripción que el autor lee como un perezoso; es el «Paraguana» (A 30) de Wagenaar Hummelinck 1962, que lee otra cosa"}
+      - {sitio: "Seroe die Casjoe", pagina: 223, nota: "inscripción que el autor compara con la manta de las mujeres"}
+      - {sitio: "bajo los bloques de granito del suroeste", pagina: 226, nota: "rojo y pardo lo más común, blanco no raro, negro sólo dos veces; según la tradición, algunas figuras señalan a los antiguos dueños del sitio"}
+
+  - obra: acasio-2023-capubana-calendario
+    archivo: fuentes_caquetios/Acasio_2023_Capubana_Calendario.pdf
+    region: Paraguaná (estación Capubana, falda del cerro Santa Ana)
+    licencia: acceso abierto (revista del Mincyt); los derechos son del autor
+    paginas:
+      - {pdf: 9, tipo: redibujo, prioridad: 1, muestra: "Figura 3: el petroglifo geométrico redibujado en limpio (rectángulos encadenados)"}
+      - {pdf: 5, tipo: foto, prioridad: 3, muestra: "Figura 1: el soporte lítico y los petroglifos de alrededor"}
+      - {pdf: 6, tipo: foto, prioridad: 3, muestra: "Figura 2: el petroglifo junto a otro tallado más elaborado"}
+      - {pdf: 14-19, tipo: esquema, prioridad: 3, muestra: "Figuras 4-8: el mismo diseño con la cuenta lunar superpuesta (la lectura del autor)"}
+
+  - obra: wagenaar-hummelinck-1953
+    archivo: fuentes_caquetios/WagenaarHummelinck_1953_Rotstekeningen_I.pdf
+    region: islas ABC
+    licencia: acceso abierto (Internet Archive / Brill free access); los derechos son del autor y la revista
+    paginas:
+      - {pdf: 8, tipo: dibujos, prioridad: 2, muestra: "fig. 3: signos en rojo pardo (cuatro puntos en negro)"}
+      - {pdf: 10, tipo: dibujos, prioridad: 2, muestra: "fig. 4: signos rojizos o azulados de la costa norte"}
+      - {pdf: 20-21, tipo: dibujos, prioridad: 2, isla: Curaçao, muestra: "figs. 16-17: Tafelberg de Santa Barbara (C 1) y Ronde Klip (C 2)"}
+      - {pdf: 22-23, tipo: dibujos, prioridad: 2, isla: Curaçao, muestra: "figs. 18-21: Hato (C 3-4, 7) y Rooi Rincón (C 6); un rostro con tocado (fig. 21)"}
+      - {pdf: 24-25, tipo: dibujos, prioridad: 2, isla: Curaçao, muestra: "figs. 23-24: Seroe di Cueba (C 10), «el cerdo» y «el pájaro»"}
+      - {pdf: 29-31, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "figs. 27-29: Seroe Canashito (A 4-5)"}
+      - {pdf: 32, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "figs. 30-31: Piedra Plat (A 3)"}
+      - {pdf: 33, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "fig. 32: Ajó (A 2), pintura blanca"}
+      - {pdf: 36, tipo: dibujos, prioridad: 2, isla: Bonaire, muestra: "fig. 33: Piedra di Compañuru, Fontein (B 5), y una tabla de signos"}
+      - {pdf: 5-6, tipo: foto, prioridad: 3, muestra: "figs. 1, 9-10: paisaje, Tafelberg y «el pájaro» de la Seroe di Cueba"}
+      - {pdf: 15-18, tipo: foto, prioridad: 3, muestra: "figs. 11-14, 36: Seroe Canashito, Ajó, Pos Calbas (Bonaire)"}
+
+  - obra: wagenaar-hummelinck-1962
+    archivo: fuentes_caquetios/WagenaarHummelinck_1962_Rotstekeningen_III.pdf
+    region: islas ABC (catálogo de 30 sitios)
+    licencia: acceso abierto (Internet Archive / Brill free access); los derechos son del autor y la revista
+    paginas:
+      - {pdf: 5-7, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "figs. 2-4: dibujos de Feriz (1949)"}
+      - {pdf: 21-22, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "Arikok (A 10-11) y Babijn (A 13)"}
+      - {pdf: 23-25, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "Boca Grandi (A 15) y Paradera (A 16-19): la «rana» de tres dedos y el «sol»"}
+      - {pdf: 26, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "fig. 16: Casibari (A 20). El sitio coincide con el topónimo «hay rocas duras»"}
+      - {pdf: 27, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "fig. 17: Shabururi (A 22-23), «cabezas de conejo» en blanco"}
+      - {pdf: 28-29, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "figs. 18-19: Siribana (A 24-26), estrella y puntas de flecha"}
+      - {pdf: 30-32, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "figs. 20-22: Quadirikiri (A 28)"}
+      - {pdf: 34-35, tipo: dibujos, prioridad: 2, isla: Aruba, muestra: "figs. 25-26: «Paraguana» (A 30), un sitio de ARUBA y no la península: un pájaro, tortugas o iguanas, concéntricos"}
+      - {pdf: 36, tipo: dibujos, prioridad: 2, isla: Curaçao, muestra: "figs. 27-28: Hato (C 4), en estalactita"}
+      - {pdf: 38-40, tipo: dibujos, prioridad: 2, isla: Curaçao, muestra: "figs. 32-35: Santa Martha (C 11-12) y St. Jan (C 13)"}
+      - {pdf: 42, tipo: dibujos, prioridad: 2, isla: Curaçao, muestra: "fig. 38: estalagmita de Koraal Tabak (C 14), con una cara de «ojos de grano de café»"}
+      - {pdf: 43-58, tipo: foto, prioridad: 3, muestra: "figs. 39-67: láminas de fotos de Arikok, Babijn, Paradera, Casibari, Shabururi, Quadirikiri, Macuarima, «Paraguana», Hato, Santa Martha y Koraal Tabak"}
+
+  - obra: velasco-2015-resistencia
+    archivo: fuentes_caquetios/Velasco_2015_Historia_de_una_Resistencia.pdf
+    region: Falcón (El Mestizo)
+    licencia: edición digital del autor, distribución libre no comercial
+    paginas:
+      - {pdf: 52, tipo: foto, prioridad: 3, muestra: "«Petroglifos en El Mestizo»: círculos concéntricos y una espiral con un motivo en abanico. Baja resolución (615×231 px). Velasco los atribuye a los caquetíos; el proyecto no"}
+
+sin_imagenes:
+  - {obra: moron-2012-petroglifos, nota: "sólo texto; sirve como inventario de estaciones (El Supí, Adícora, El Mestizo, Piedra Pintada, Cerro Frío, la sierra de San Luis…)"}
+  - {obra: haviser-strecker-2006, nota: "sólo texto; es el contexto y la fuente más cauta"}
+  - {obra: antolinez-1946-hacia-el-indio, nota: "sus «grabados en linóleo» son obra gráfica del propio Antolínez, de motivos wayuu; NO son petroglifos"}
+
+pendientes:
+  - {obra: caguao-moron-2024-piedra-de-siraba, nota: "la Piedra de Siraba, en Google Drive; descarga sin autorizar"}
+  - {obra: "Morón 2008, «Escrito en la roca»", nota: "rupestreweb.info/moron.html; añade Taratara y La Cuiba; sin revisar si trae imágenes"}

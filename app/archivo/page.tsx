@@ -2,15 +2,14 @@ import { getAllEditions } from '@/lib/content';
 import EditionCard from '@/components/archive/EditionCard';
 import { Heading, BodyText } from '@/components/ui/Typography';
 import type { Metadata } from 'next';
+import { metadatos, tarjeta } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Archivo - Curiana Radio',
-  description: 'Todas las transmisiones de Curiana Radio. Explora ediciones pasadas, descubre nuevas frecuencias.',
-  openGraph: {
-    title: 'Archivo - Curiana Radio',
-    description: 'Todas las transmisiones de Curiana Radio. Explora ediciones pasadas, descubre nuevas frecuencias.',
-  },
-};
+export const metadata: Metadata = metadatos({
+  titulo: 'Archivo - Curiana Radio',
+  descripcion: 'Todas las transmisiones de Curiana Radio. Explora ediciones pasadas, descubre nuevas frecuencias.',
+  ruta: '/archivo',
+  imagen: tarjeta('archivo', 'Archivo de transmisiones de Curiana Radio'),
+});
 
 export default async function ArchivoPage() {
   const editions = await getAllEditions();

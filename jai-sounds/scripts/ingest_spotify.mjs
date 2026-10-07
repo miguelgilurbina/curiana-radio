@@ -10,6 +10,8 @@
  *   --sync               Las playlists declaradas en moods.json.
  *   --sync <url|id> …    Solo esas.
  *   --sync --todas       Todas las playlists de la cuenta.
+ *   --sync --dial        Las estaciones del dial (playlists.json): las marca
+ *                        con en_dial y su slug, y desmarca las que salieron.
  *   --sync --guardadas   "Canciones que te gustan" (/me/tracks).
  *
  * Flags: --dry-run (no escribe)  --force (ignora snapshot_id)
@@ -56,6 +58,7 @@ import {
 const AQUI = path.dirname(fileURLToPath(import.meta.url));
 const RAIZ = path.resolve(AQUI, "..", "..");
 const TAXONOMIA = path.join(RAIZ, "content", "jai-sounds", "moods.json");
+const DIAL = path.join(RAIZ, "content", "jai-sounds", "playlists.json");
 
 const API = "https://api.spotify.com/v1";
 const LOTE_UPSERT = 500;
@@ -269,6 +272,14 @@ function escritorSupabase(db) {
       }
       log(`  · ${tabla}: ${filas.length}`);
     },
+    async marcarDial(ids) {
+      const lista = `(${ids.join(",")})`;
+      const fuera = await jai().from("playlists").update({ en_dial: false }).not("id", "in", lista);
+      if (fuera.error) fatal(`Desmarcar el dial: ${fuera.error.message}`);
+      const dentro = await jai().from("playlists").update({ en_dial: true }).in("id", ids);
+      if (dentro.error) fatal(`Marcar el dial: ${dentro.error.message}`);
+      log(`  · dial: ${ids.length} estaciones`);
+    },
     async consultarSnapshot(id) {
       const { data } = await jai()
         .from("playlists")
@@ -326,6 +337,12 @@ function escritorSQL(ruta) {
       }
       log(`  · ${tabla}: ${filas.length}`);
     },
+    async marcarDial(ids) {
+      salida.write(
+        `update ${ESQUEMA}.playlists set en_dial = (id in (${ids.map(lit).join(", ")}));\n`
+      );
+      log(`  · dial: ${ids.length} estaciones`);
+    },
     cerrar() {
       return new Promise((res, rej) => {
         salida.write("commit;\n");
@@ -364,7 +381,7 @@ async function listar(token, miId) {
   log("\n(~ = seguida, no tuya)\n");
 }
 
-async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
+async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut, dial }) {
   const db =
     dryRun ? null
     : sqlOut ? escritorSQL(sqlOut)
@@ -433,6 +450,8 @@ async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
           colaborativa: meta.collaborative ?? null,
           publica: meta.public ?? null,
           es_propia: miId ? meta.owner?.id === miId : null,
+          // Solo con --dial: así otra ingesta no pisa el slug con null.
+          ...(dial ? { slug: dial.get(meta.id) ?? null } : {}),
         },
       ],
       "id"
@@ -444,6 +463,9 @@ async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
     );
   }
 
+  // Al final y con la lista entera: una estación que salió de playlists.json
+  // queda desmarcada aunque su sincronización se haya saltado.
+  if (dial && db) await db.marcarDial([...dial.keys()]);
   await db?.cerrar();
   if (sqlOut) log(`\n· SQL escrito en ${sqlOut}`);
 
@@ -451,6 +473,13 @@ async function sincronizar(fuentes, token, { dryRun, force, miId, sqlOut }) {
 }
 
 // ── Entrada ──────────────────────────────────────────────────────────
+
+/** Las estaciones del dial: id de Spotify → slug, desde playlists.json. */
+function estacionesDelDial() {
+  if (!fs.existsSync(DIAL)) fatal(`No encuentro ${DIAL}`);
+  const { playlists } = JSON.parse(fs.readFileSync(DIAL, "utf-8"));
+  return new Map(playlists.map((p) => [p.spotify_id, p.slug]));
+}
 
 function playlistsDeLaTaxonomia() {
   if (!fs.existsSync(TAXONOMIA)) fatal(`No encuentro ${TAXONOMIA}`);
@@ -519,7 +548,11 @@ async function main() {
   if (modo === "--listar") return listar(token, miId);
 
   let fuentes;
-  if (flags.has("--todas")) {
+  const dial = flags.has("--dial") ? estacionesDelDial() : null;
+  if (dial) {
+    fuentes = [...dial.keys()];
+    log(`· ${fuentes.length} estaciones del dial.`);
+  } else if (flags.has("--todas")) {
     fuentes = (await misPlaylists(token, miId)).map((p) => p.id);
     log(`· ${fuentes.length} playlists en la cuenta.`);
   } else if (sueltos.length > 0) {
@@ -536,6 +569,7 @@ async function main() {
     force: flags.has("--force"),
     miId,
     sqlOut,
+    dial,
   });
 }
 

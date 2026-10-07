@@ -1,9 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Fraunces, Inter, Lora } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/layout/Navigation";
-import Footer from "@/components/layout/Footer";
 import ShellRadio from "@/components/layout/ShellRadio";
+import JsonLd from "@/components/seo/JsonLd";
+import { jsonLdSitio, SITIO, TARJETA_RADIO } from "@/lib/seo";
+import Analitica from "@/components/analitica/Analitica";
+import CabeceraNoche from "@/components/shell/CabeceraNoche";
+import PieNoche from "@/components/shell/PieNoche";
+import { getAllEditions } from "@/lib/content";
+import { getSenales } from "@/lib/senales";
+import { SCRIPT_LUZ } from "@/lib/luz";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,15 +46,23 @@ const archivoBlack = Archivo_Black({
   display: "swap",
 });
 
+// La metadata base del sitio. Cada página declara la suya completa con
+// metadatos() (lib/seo.ts); esto es el respaldo de lo que no la declare. Sin
+// canonical aquí a propósito: se heredaría y toda página diría ser la portada.
 export const metadata: Metadata = {
-  title: "Curiana Radio - 88.8 FM",
-  description: "Transmisión Cultural desde Abya Yala - A cultural newsletter experience delivered as immersive web pages.",
-  metadataBase: new URL("https://curianaradio.com"), // Update with actual domain
+  metadataBase: new URL(SITIO.url),
+  title: `${SITIO.nombre} - ${SITIO.lema}`,
+  description: SITIO.descripcion,
+  applicationName: SITIO.nombre,
   openGraph: {
-    title: "Curiana Radio - 88.8 FM",
-    description: "Transmisión Cultural desde Abya Yala",
+    title: `${SITIO.nombre} · ${SITIO.lema}`,
+    description: SITIO.bajada,
+    siteName: SITIO.nombre,
+    locale: SITIO.locale,
     type: "website",
+    images: [TARJETA_RADIO],
   },
+  twitter: { card: "summary_large_image" },
   // Favicon "la noche": espiral hueso sobre deep-900 (BRAND_MVP.md §8.1).
   // Los archivos viven en public/; no hay app/favicon.ico que los pise.
   icons: {
@@ -66,17 +80,38 @@ export const viewport: Viewport = {
   themeColor: "#0F1621",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // lo que el shell de la noche necesita saber: la última edición (para
+  // «sintonizar ahora») y la arista de cada señal (la aguja marca la estación
+  // de la arista cuando se lee una señal)
+  const ultima = (await getAllEditions())[0];
+  const edicion = { numero: String(ultima?.number ?? "01"), slug: ultima?.slug ?? "01" };
+  const aristaDeSenal = Object.fromEntries(getSenales().map((s) => [s.slug, s.aristas[0] ?? null]));
+
   return (
-    <html lang="es" className={`${inter.variable} ${lora.variable} ${fraunces.variable} ${archivoBlack.variable}`}>
+    // suppressHydrationWarning: SCRIPT_LUZ pone data-luz en <html> antes de
+    // hidratar (la luz que eligió el lector, lib/luz.ts); no es un desajuste.
+    <html
+      lang="es"
+      className={`${inter.variable} ${lora.variable} ${fraunces.variable} ${archivoBlack.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_LUZ }} />
+      </head>
       <body className="font-sans antialiased">
-        <ShellRadio nav={<Navigation />} footer={<Footer />}>
+        <JsonLd datos={jsonLdSitio()} />
+        <ShellRadio
+          cabecera={<CabeceraNoche edicion={edicion} aristaDeSenal={aristaDeSenal} />}
+          pie={<PieNoche edicion={edicion} />}
+        >
           {children}
         </ShellRadio>
+        <Analitica />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { Cartel } from "@/components/ui/Typography";
+import { LIBERADA, type Seccion } from "@/lib/secciones";
 
 // 01 · Hero: el carrusel de aristas (opción 2a del handoff, fase 2). La intro
 // ya obligó a interactuar, así que aquí no hay "gira la espiral": el hero
@@ -15,6 +16,8 @@ const MONO = "font-mono";
 const AUTO_MS = 5000;
 
 interface Diapositiva {
+  /** la sección que anuncia: sale sólo si está al aire (lib/secciones.ts) */
+  seccion?: Seccion;
   nombre: string; // para la etiqueta "0X / 05 · NOMBRE"
   frecuencia: string;
   titulo: string;
@@ -29,19 +32,21 @@ interface Diapositiva {
 }
 
 function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] {
-  const enlaceMono = `${MONO} text-[0.72rem] tracking-[0.16em] transition-colors duration-300 hover:text-frequency`;
-  return [
+  const enlaceMono = `${MONO} text-[0.72rem] tracking-[0.16em] transition-colors duration-300 hover:text-(--noche-acento)`;
+  const todas: Diapositiva[] = [
     {
       nombre: "LA RADIO",
       frecuencia: "88.8 · EL MARCO",
       titulo: "La Radio",
       bajada: "Emitimos desde una Paraguaná paralela, después del Renacimiento de La Curiana.",
+      // con el archivo en el taller, sintonizar es entrar a la radio (el
+      // manifiesto), no a una edición
       cta: (
         <Link
-          href={`/${edicion.slug}`}
-          className="mt-1.5 self-start rounded-[2px] bg-frequency px-7 py-[15px] text-[0.78rem] font-semibold uppercase tracking-[0.2em] whitespace-nowrap text-white transition-all duration-300 hover:bg-(--noche-hueso) hover:text-(--noche-fondo)"
+          href={LIBERADA.archivo ? `/${edicion.slug}` : "#manifiesto"}
+          className="mt-1.5 self-start rounded-[2px] bg-(--noche-acento) px-7 py-[15px] text-[0.78rem] font-semibold uppercase tracking-[0.2em] whitespace-nowrap text-(--noche-fondo) transition-all duration-300 hover:bg-(--noche-hueso) hover:text-(--noche-fondo)"
         >
-          Sintonizar #{edicion.numero} →
+          {LIBERADA.archivo ? `Sintonizar #${edicion.numero} →` : "Sintonizar →"}
         </Link>
       ),
       tema: {},
@@ -50,9 +55,10 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "font-serif italic text-lg leading-relaxed text-(--noche-hueso-2) max-w-[44ch]",
     },
     {
+      seccion: "jai-sounds",
       nombre: "JAI SOUNDS",
-      frecuencia: "88.1 · jay · caquetío · oír, escuchar",
-      titulo: "Jai Sounds",
+      frecuencia: "88.1 · jai · caquetío · oír, escuchar",
+      titulo: "JAI Sounds",
       bajada: "La cabina de noche. Cinco pistas por emisión, reseñadas al oído; el dial rota su matiz con cada visita.",
       cta: (
         <Link href="/jai-sounds" className={`${enlaceMono} text-(--jai-luz)`}>
@@ -66,21 +72,24 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--jai-luz-soft) max-w-[46ch]",
     },
     {
-      nombre: "SIMULADOR",
-      frecuencia: "88.3 · La crónica de Indias",
-      titulo: "Simulador Caquetío",
-      bajada: "Sobre pergamino y rúbrica, una lengua del golfo se reconstruye palabra a palabra.",
+      seccion: "kaketiana",
+      nombre: "KAKETIANA",
+      frecuencia: "88.3 · Golfete de Coro · s. XIV–XV",
+      titulo: "Kaketiana",
+      bajada: "El pueblo caquetío del Golfete de Coro y su lengua, reconstruidos con cada fuente a la vista.",
       cta: (
         <Link href="/kaketiana" className={`${enlaceMono} text-(--sim-ink)`}>
-          ABRIR EL CÓDICE →
+          ENTRAR A KAKETIANA →
         </Link>
       ),
-      tema: { "data-sim-theme": "cronista" },
+      // la placa 6b «Sal y almagre» de Kaketiana (BRAND_MVP §11), no el pergamino del Simulador
+      tema: { "data-sim-theme": "cronista", "data-kk-dir": "sal" },
       clase: "bg-(--sim-paper)",
       claseFrecuencia: "text-[0.64rem] font-medium uppercase tracking-[0.2em] text-(--sim-rubrica)",
       claseBajada: "text-base leading-relaxed text-(--sim-ink-soft) max-w-[46ch]",
     },
     {
+      seccion: "galeria",
       nombre: "GALERÍA",
       frecuencia: "88.5 · LA SALA NEUTRA",
       titulo: "Galería · Prompt Maker",
@@ -96,6 +105,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--gal-luz-soft) max-w-[46ch]",
     },
     {
+      seccion: "buchibe",
       nombre: "BUCHIBE",
       frecuencia: "88.6 · EL TELÓN",
       titulo: "Cuentos de Buchibe",
@@ -108,6 +118,7 @@ function diapositivas(edicion: { numero: string; slug: string }): Diapositiva[] 
       claseBajada: "text-base leading-relaxed text-(--buc-luz) max-w-[46ch]",
     },
   ];
+  return todas.filter((d) => !d.seccion || LIBERADA[d.seccion]);
 }
 
 export default function HeroAristas({ edicion }: { edicion: { numero: string; slug: string } }) {
@@ -167,24 +178,19 @@ export default function HeroAristas({ edicion }: { edicion: { numero: string; sl
   const actual = lista[activa];
   const etiqueta = `${String(activa + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")} · ${actual.nombre}`;
   const flecha =
-    "hidden sm:inline-block cursor-pointer rounded-[2px] border border-(--noche-filete-fuerte) px-4 py-[9px] text-[0.8rem] text-(--noche-hueso) transition-colors duration-300 hover:border-frequency hover:text-frequency";
+    "hidden sm:inline-block cursor-pointer rounded-[2px] border border-(--noche-filete-fuerte) px-4 py-[9px] text-[0.8rem] text-(--noche-hueso) transition-colors duration-300 hover:border-(--noche-acento) hover:text-(--noche-acento)";
 
   return (
-    <section id="hero" aria-label="Curiana Radio y sus aristas" className="flex h-[min(100svh,760px)] flex-col bg-(--noche-fondo)">
-      {/* Barra superior: isotipo + lockup en hueso, y la señal en vivo */}
-      <div className="flex items-center gap-[18px] border-b border-(--noche-filete) px-6 py-5 sm:px-11">
-        {/* eslint-disable-next-line @next/next/no-img-element -- los PNG de marca van tal cual */}
-        <img src="/marca/isotipo-hueso.png" alt="" width={44} height={44} className="h-11 w-11" />
-        <h1 className="m-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/marca/lockup-hueso.png" alt="Curiana Radio" width={130} height={130} className="h-auto w-24 sm:w-[130px]" />
-        </h1>
-        <span className="flex-1" />
-        <span className={`${MONO} flex items-center gap-2 text-[0.66rem] tracking-[0.26em] text-(--noche-hueso-2)`}>
-          <span aria-hidden="true" className="noche-pulso inline-block h-[7px] w-[7px] rounded-full bg-frequency" />
-          88.8 FM<span className="hidden sm:inline"> · SINTONIZADO</span>
-        </span>
-      </div>
+    // la cabecera de la noche (72px en móvil, 92px desde lg) va encima: el hero ocupa el resto
+    <section
+      id="hero"
+      aria-label="Curiana Radio y sus aristas"
+      className="flex h-[min(calc(100svh-72px),680px)] flex-col bg-(--noche-fondo) lg:h-[min(calc(100svh-92px),668px)]"
+    >
+      {/* La barra de arriba (sello, nombre, 88.8 en vivo) es ahora la cabecera
+          común de la noche, CabeceraNoche (shell 1a, BRAND_MVP §13). El h1 de
+          la página queda aquí, para lectores de pantalla. */}
+      <h1 className="sr-only">Curiana Radio · 88.8 FM</h1>
 
       {/* La pista */}
       <div
@@ -250,7 +256,7 @@ export default function HeroAristas({ edicion }: { edicion: { numero: string; sl
               <span
                 aria-hidden="true"
                 className={`block h-2 rounded-full transition-all duration-300 ${
-                  i === activa ? "w-7 bg-frequency" : "w-2 bg-(--noche-filete-fuerte)"
+                  i === activa ? "w-7 bg-(--noche-acento)" : "w-2 bg-(--noche-filete-fuerte)"
                 }`}
               />
             </button>

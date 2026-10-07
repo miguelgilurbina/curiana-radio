@@ -1,10 +1,10 @@
 import { FRAGMENTO, VERTICE } from "./disco-shader";
 
 // El motor de El Disco: WebGL2, el puntero y los estados (reposo → afinando →
-// afinado → salida). Es un port directo del script del prototipo; el
-// componente (IntroDisco) solo lo monta y escucha sus avisos. El DOM que
-// cambia en cada frame (frecuencia, aguja, viento, patrón) se toca aquí
-// directo, sin pasar por React.
+// afinado → la arena se vuelve sello → salida). Es un port directo del script
+// del prototipo; el componente (IntroDisco) solo lo monta y escucha sus
+// avisos. El DOM que cambia en cada frame (frecuencia, aguja, viento, patrón,
+// el polvo y el sello) se toca aquí directo, sin pasar por React.
 
 export interface ElementosDisco {
   raiz: HTMLElement;
@@ -15,6 +15,10 @@ export interface ElementosDisco {
   patron: HTMLElement;
   anillo: HTMLElement;
   velo: HTMLElement;
+  /** el lienzo 2D donde vuelan los granos, sobre el shader */
+  polvo: HTMLCanvasElement;
+  /** el sello nítido, que entra al final del viaje */
+  sello: HTMLImageElement;
 }
 
 export interface OpcionesDisco {
@@ -22,6 +26,9 @@ export interface OpcionesDisco {
   lento: boolean;
   /** la máscara del isotipo: el PNG original, dimensiones intactas */
   logo: string;
+  /** el sello de la noche (marco, espiral original y type 3c): el destino de
+   *  los granos sale de su imagen */
+  sello: string;
   onAfinado: () => void;
 }
 
@@ -34,6 +41,65 @@ export interface MotorDisco {
 
 const COMPAS = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"];
 const CENTRO: [number, number] = [0, 0.09]; // el disco sube 0.09·H
+// La arena se vuelve sello (handoff 2026-10-05): 3.200 granos de la espiral
+// van a la espiral del sello; 6.200 del resto del disco, al marco y las letras.
+const GRANOS_ESPIRAL = 3200;
+const GRANOS_RESTO = 6200;
+const VIAJE = 3.2; // s
+
+type Punto = [number, number];
+interface Grano {
+  sx: number;
+  sy: number;
+  dx: number;
+  dy: number;
+  del: number;
+  giro: number;
+  ruido: number;
+  t: number;
+}
+
+const suave = (a: number, b: number, x: number) => {
+  const k = Math.min(1, Math.max(0, (x - a) / (b - a)));
+  return k * k * (3 - 2 * k);
+};
+const easeInOutCubic = (k: number) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);
+
+/** Los destinos de los granos: los píxeles hueso del sello, en una grilla de
+ *  256², separados en la espiral (dentro del marco, arriba de las letras) y
+ *  el resto (marco y letras). Mismo corte que el prototipo. */
+async function mascaraDelSello(url: string): Promise<{ espiral: Punto[]; resto: Punto[] }> {
+  const bmp = await createImageBitmap(await (await fetch(url)).blob());
+  const c = document.createElement("canvas");
+  c.width = c.height = 256;
+  const x = c.getContext("2d", { willReadFrequently: true })!;
+  x.drawImage(bmp, 0, 0, 256, 256);
+  const d = x.getImageData(0, 0, 256, 256).data;
+  const espiral: Punto[] = [], resto: Punto[] = [];
+  for (let y = 0; y < 256; y++)
+    for (let xx = 0; xx < 256; xx++) {
+      if (d[(y * 256 + xx) * 4] < 128) continue;
+      const u = (xx + 0.5) / 256, v = (y + 0.5) / 256;
+      const marco = u < 0.047 || u > 0.953 || v < 0.047 || v > 0.953;
+      (!marco && v < 0.64 ? espiral : resto).push([u, v]);
+    }
+  return { espiral, resto };
+}
+
+/** Los orígenes de la espiral de arena: el alfa del isotipo a 170 de ancho. */
+function espiralDeArena(lc: HTMLCanvasElement): Punto[] {
+  const n = 170, nh = Math.round((n * lc.height) / lc.width);
+  const m = document.createElement("canvas");
+  m.width = n;
+  m.height = nh;
+  const mx = m.getContext("2d", { willReadFrequently: true })!;
+  mx.drawImage(lc, 0, 0, n, nh);
+  const md = mx.getImageData(0, 0, n, nh).data;
+  const puntos: Punto[] = [];
+  for (let y = 0; y < nh; y++)
+    for (let x = 0; x < n; x++) if (md[(y * n + x) * 4 + 3] > 128) puntos.push([(x + 0.5) / n, (y + 0.5) / nh]);
+  return puntos;
+}
 
 // El PNG del isotipo → alfa: tinta oscura opaca, papel transparente, recortado
 // a su caja. Mismo cálculo que el favicon y el prototipo.
@@ -110,19 +176,35 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
   gl.uniform1f(U("uAsp"), 1);
 
   let vivo = true;
+  let asp = 1; // ancho/alto del isotipo
+  let arenaEsp: Punto[] = [];
   mascaraDelLogo(op.logo)
     .then((lc) => {
       if (!vivo) return;
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, lc);
       gl.generateMipmap(gl.TEXTURE_2D);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
-      gl.uniform1f(U("uAsp"), lc.width / lc.height);
+      asp = lc.width / lc.height;
+      gl.uniform1f(U("uAsp"), asp);
+      arenaEsp = espiralDeArena(lc);
     })
     .catch(() => {
       // sin logo el disco sigue funcionando: se revela la espiral de arena
     });
+  let selloEsp: Punto[] = [], selloResto: Punto[] = [];
+  mascaraDelSello(op.sello)
+    .then((m) => {
+      selloEsp = m.espiral;
+      selloResto = m.resto;
+    })
+    .catch(() => {
+      // sin máscara los granos van al centro del sello y el sello entra igual
+    });
 
+  const px2 = el.polvo.getContext("2d")!;
   let dpr = 1, W = 0, H = 0, R = 0.32;
+  // el sello: su lado y su esquina, con su espiral sobre el centro del disco
+  let SL = 0, SX = 0, SY = 0;
   function encajar() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = window.innerWidth;
@@ -131,6 +213,17 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
     el.lienzo.height = Math.round(H * dpr);
     gl!.viewport(0, 0, el.lienzo.width, el.lienzo.height);
     R = Math.min(0.32, (0.44 * W) / H);
+    // el sello, tan grande como quepa entre la esquina de arriba y el bloque
+    // final (que va a 6vh del borde), sin pasar del tamaño del revelado
+    const cyL = H / 2 - CENTRO[1] * H;
+    const finTop = H - 150 - 0.06 * H;
+    SL = Math.max(120, Math.min((0.95 * R * H) / 0.59, (cyL - 70) / 0.38, (finTop - 18 - cyL) / 0.62));
+    SX = W / 2 + CENTRO[0] * H - 0.49 * SL;
+    SY = cyL - 0.38 * SL;
+    Object.assign(el.sello.style, { width: SL + "px", height: SL + "px", left: SX + "px", top: SY + "px" });
+    el.sello.sizes = Math.round(SL) + "px";
+    el.polvo.width = Math.round(W * dpr);
+    el.polvo.height = Math.round(H * dpr);
   }
   encajar();
   const aDisco = (cx: number, cy: number): [number, number] => [
@@ -141,6 +234,7 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
   const cY = () => H / 2 - CENTRO[1] * H;
 
   let M = 0, Mt = 0, rev = 0, ok = false, salida = 0, tAcc = 0, ultimo = performance.now();
+  let morph = 0, granos: Grano[] | null = null;
   let mouse: [number, number] = [9, 9], press = 0, pressT = 0;
   let lastAng: number | null = null, lastW = 0, vel = 0, dir = 45;
   let lpx: number | null = null, lpy: number | null = null;
@@ -206,6 +300,66 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
   window.addEventListener("pointercancel", alSubir);
   window.addEventListener("resize", encajar);
 
+  // La arena se levanta y se reordena en el sello: la espiral viaja a la
+  // espiral; el resto del disco, al marco y las letras. Los de afuera
+  // despegan primero (retardo = radio · 0.22).
+  function sembrarGranos() {
+    const cx = cX(), cy = cY(), g: Grano[] = [];
+    const elegir = (a: Punto[]) => a[(Math.random() * a.length) | 0];
+    const aPantalla = (u: number, v: number): Punto => [
+      W / 2 + (CENTRO[0] + (u - 0.5) * 0.95 * R) * H,
+      H / 2 - (CENTRO[1] + ((0.5 - v) * 0.95 * R) / asp) * H,
+    ];
+    for (let i = 0; i < GRANOS_ESPIRAL + GRANOS_RESTO; i++) {
+      let s: Punto, d: Punto;
+      if (i < GRANOS_ESPIRAL && arenaEsp.length && selloEsp.length) {
+        const a = elegir(arenaEsp);
+        s = aPantalla(a[0], a[1]);
+        d = elegir(selloEsp);
+      } else {
+        const r = Math.sqrt(Math.random()) * R * H, th = Math.random() * Math.PI * 2;
+        s = [cx + Math.cos(th) * r, cy - Math.sin(th) * r];
+        d = selloResto.length ? elegir(selloResto) : [0.5, 0.5];
+      }
+      const rs = Math.hypot(s[0] - cx, s[1] - cy) / (R * H);
+      g.push({
+        sx: s[0],
+        sy: s[1],
+        dx: SX + d[0] * SL,
+        dy: SY + d[1] * SL,
+        del: i < GRANOS_ESPIRAL ? 0.12 + Math.random() * 0.2 : rs * 0.22 + Math.random() * 0.14,
+        giro: (i < GRANOS_ESPIRAL ? 0.6 : 1.6) * (0.7 + Math.random() * 0.6),
+        ruido: Math.random() * 6.28,
+        t: Math.random() < 0.12 ? 1.8 : 1.15,
+      });
+    }
+    granos = g;
+  }
+  function dibujarGranos() {
+    const cx = cX(), cy = cY();
+    px2.setTransform(dpr, 0, 0, dpr, 0, 0);
+    px2.clearRect(0, 0, W, H);
+    if (morph >= 1 || !granos) {
+      granos = [];
+      return;
+    }
+    const fin = 1 - suave(0.9, 1, morph);
+    px2.fillStyle = "rgba(243,234,212," + 0.92 * fin + ")";
+    for (const p of granos) {
+      const k = easeInOutCubic(Math.min(1, Math.max(0, (morph - p.del) / 0.6)));
+      let x = p.sx + (p.dx - p.sx) * k, y = p.sy + (p.dy - p.sy) * k;
+      // remolino: el viento hace girar la arena alrededor del centro y la suelta al llegar
+      const th = p.giro * Math.sin(Math.PI * k), ox = x - cx, oy = y - cy;
+      const c = Math.cos(th), sn = Math.sin(th);
+      x = cx + ox * c - oy * sn;
+      y = cy + ox * sn + oy * c;
+      const j = Math.sin(Math.PI * k) * 5;
+      x += Math.sin(p.ruido + morph * 9) * j;
+      y += Math.cos(p.ruido * 1.3 + morph * 7) * j;
+      px2.fillRect(x, y, p.t, p.t);
+    }
+  }
+
   function afinado() {
     if (ok) return;
     ok = true;
@@ -216,6 +370,7 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
 
   const uRes = U("uRes"), uDpr = U("uDpr"), uR = U("uR"), uC = U("uC"), uT = U("uT"), uM = U("uM");
   const uRev = U("uRev"), uExit = U("uExit"), uMouse = U("uMouse"), uPress = U("uPress"), uW = U("uW");
+  const uFund = U("uFund");
 
   function frame(ahora: number) {
     const dt = Math.min(0.05, (ahora - ultimo) / 1000);
@@ -224,6 +379,17 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
     M += (Mt - M) * Math.min(1, dt * 2.2);
     if (M > 0.985 && !ok) afinado();
     if (ok) rev = Math.min(1, rev + dt * 0.55);
+    // con la espiral a medio revelar, la arena se levanta y viaja al sello
+    if (rev > 0.55 && morph < 1) {
+      if (!granos) sembrarGranos();
+      morph = Math.min(1, morph + dt / VIAJE);
+      dibujarGranos();
+    }
+    // el disco se funde al fondo en el primer 28 % del viaje; el sello nítido
+    // entra entre el 84 % y el 100 %, mientras los granos se apagan
+    const fundido = suave(0, 0.28, morph);
+    el.sello.style.opacity = String(suave(0.84, 1, morph) * (1 - salida));
+    el.sello.style.transform = "scale(" + (1 + salida * 0.25) + ")";
     pressT += ((press ? 1 : 0) - pressT) * Math.min(1, dt * 8);
     const k = Math.min(1, M / 0.985);
     el.frecuencia.textContent = (87.5 + 1.3 * k).toFixed(1);
@@ -238,6 +404,7 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
     gl!.uniform1f(uM, M);
     gl!.uniform1f(uRev, rev);
     gl!.uniform1f(uExit, salida);
+    gl!.uniform1f(uFund, fundido);
     gl!.uniform2f(uMouse, mouse[0], mouse[1]);
     gl!.uniform1f(uPress, pressT);
     gl!.uniform4fv(uW, ondas);
@@ -246,8 +413,10 @@ export function arrancarDisco(el: ElementosDisco, op: OpcionesDisco): MotorDisco
   }
 
   if (op.lento) {
+    // sin movimiento: arranca afinado, con el sello ya hecho
     M = Mt = 1;
     rev = 1;
+    morph = 1;
     afinado();
   }
   raf = requestAnimationFrame(frame);
