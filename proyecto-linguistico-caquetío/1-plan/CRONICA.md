@@ -13,10 +13,12 @@ editar_a_mano: no
 > python curiana_sim/generar_cronica.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-02**. **231 cambios** en main, del 2025-11-30 al 2026-10-02.
+<!--GENERADO--> Generado el **2026-10-07**. **233 cambios** en main, del 2025-11-30 al 2026-10-04.
 
-## 2026-10 — 4 cambio(s)
+## 2026-10 — 6 cambio(s)
 
+- **2026-10-04** `9a3ac3d` Merge pull request #250 from miguelgilurbina/claude/jai-edicion-fuera-del-dial
+- **2026-10-02** `459af71` Merge pull request #247 from miguelgilurbina/web/kaketiana-articulo-pueblo
 - **2026-10-02** `d89b714` Merge pull request #246 from miguelgilurbina/web/kaketiana-marco
 - **2026-10-02** `78c244b` Merge pull request #245 from miguelgilurbina/web/experimento-capas
 - **2026-10-02** `a13b48c` Merge pull request #244 from miguelgilurbina/docs/cierre-version-2026-10-01

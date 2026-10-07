@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-05 01:39**.
+<!--GENERADO--> Generado el **2026-10-07 00:16**.
 
 ## ¿Vamos bien?
 
@@ -147,18 +147,18 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 | `estado_minado` | n |
 |---|---|
-| minado | 52 |
+| minado | 53 |
 | parcial | 26 |
 | no-disponible | 11 |
-| sin-minar | 7 |
 | minada-parcial | 7 |
+| sin-minar | 6 |
 | segunda-mano | 5 |
 | puntual | 2 |
 | dictado-terminado | 1 |
 | en-curso | 1 |
 | completo-con-reserva | 1 |
 
-**Prioridad ALTA sin minar (24):** [[acasio-2023-capubana-calendario]] (`sin-minar`), [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[van-koolwijk-1882]] (`sin-minar`), [[zavala-reyes-2015-petroglifos]] (`sin-minar`), [[zavala-reyes-2015]] (`completo-con-reserva`).
+**Prioridad ALTA sin minar (23):** [[acasio-2023-capubana-calendario]] (`sin-minar`), [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[zavala-reyes-2015-petroglifos]] (`sin-minar`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
 <details><summary>Las 113 notas, una por fila</summary>
 
@@ -269,7 +269,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[steward-1948-hsai-4]] | minada-parcial | media | si | 0 | 0 | 0 |
 | [[steward-1949]] | minada-parcial | baja | si | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | minado | alta | si | 0 | 0 | 0 |
-| [[van-koolwijk-1882]] | sin-minar | alta | si | 0 | 0 | 0 |
+| [[van-koolwijk-1882]] | minado | alta | si | 0 | 0 | 0 |
 | [[velasco-2015-resistencia]] | minado | alta | si | 0 | 0 | 0 |
 | [[wagenaar-hummelinck-1953]] | sin-minar | media | si | 0 | 0 | 0 |
 | [[wagenaar-hummelinck-1962]] | sin-minar | media | si | 0 | 0 | 0 |
@@ -360,7 +360,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1605 en 888 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 1606 en 891 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 1129 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
