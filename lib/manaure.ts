@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import { leerFrontmatter } from "./frontmatter";
 
 // La voz de Manaure: fragmentos MDX curados en content/simulador/manaure/.
 // Cada archivo trae dos voces — el narrador (frontmatter, 3ª persona) y
@@ -23,7 +23,7 @@ export interface ManaureFragment {
 
 function parseFragment(filePath: string): ManaureFragment {
   const id = path.basename(filePath, ".mdx");
-  const { data, content } = matter(fs.readFileSync(filePath, "utf-8"));
+  const { data, content } = leerFrontmatter(fs.readFileSync(filePath, "utf-8"));
 
   // Un fragmento sin tipo válido rompe la marca de honestidad intelectual:
   // mejor fallar el build que publicar voz sin etiqueta.

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { entidadDeSpotify, leerNota, plan } from "./resenas_obsidian.mjs";
+import { entidadDeSpotify, frontmatter, leerNota, plan } from "./resenas_obsidian.mjs";
 
 const ID = "4NHQUGzhtTLFvgF5SZesLK"; // 22 caracteres, como los de Spotify
 
@@ -39,4 +39,14 @@ test("el plan sube solo publicadas, avisa duplicados y retira lo despublicado", 
   assert.equal(p.errores.length, 1);
   assert.match(p.errores[0], /duplicada/);
   assert.deepEqual(p.retirar, [{ entidad: "cancion", entidad_id: "B".repeat(22) }]);
+});
+
+test("el frontmatter se lee como lo leía gray-matter, y uno sin cierre es ilegible", () => {
+  const fm = frontmatter(`﻿---\r\nspotify: spotify:track:${ID}\r\nfecha: 2026-10-08\r\n---\r\nTexto.\r\n`);
+  assert.equal(fm.data.spotify, `spotify:track:${ID}`);
+  assert.ok(fm.data.fecha instanceof Date);
+  assert.equal(fm.content, "Texto.\r\n");
+  assert.deepEqual(frontmatter("Sin frontmatter."), { data: {}, content: "Sin frontmatter." });
+  assert.deepEqual(frontmatter("---\n---\nCuerpo."), { data: {}, content: "Cuerpo." });
+  assert.match(leerNota(`---\nspotify: spotify:artist:${ID}\nTexto sin cierre.`, "a.md").error, /frontmatter ilegible/);
 });

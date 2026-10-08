@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import { leerFrontmatter } from "./frontmatter";
 import {
   ARISTAS,
   PIEL_DE_ARISTA,
@@ -36,7 +36,7 @@ const MOSTRAR_BORRADORES = process.env.VERCEL_ENV !== "production";
 
 export const AUTOR = "Miguel Gil Urbina";
 
-/** gray-matter convierte `fecha: 2026-10-03` en Date; lo devolvemos a texto. */
+/** El YAML convierte `fecha: 2026-10-03` en Date; lo devolvemos a texto. */
 function fechaISO(valor: unknown, archivo: string): string {
   const texto = valor instanceof Date ? valor.toISOString().slice(0, 10) : String(valor ?? "");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(texto)) {
@@ -57,7 +57,7 @@ function leer(archivo: string): Senal {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`content/senales/${archivo}: el nombre del archivo es el slug y va en minúsculas con guiones`);
   }
-  const { data, content } = matter(fs.readFileSync(path.join(DIR, archivo), "utf-8"));
+  const { data, content } = leerFrontmatter(fs.readFileSync(path.join(DIR, archivo), "utf-8"));
 
   const aristas = (Array.isArray(data.aristas) ? data.aristas : []).map(String);
   const desconocida = aristas.find((a) => !esArista(a));
