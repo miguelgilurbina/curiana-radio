@@ -2,9 +2,9 @@ import { track } from "@vercel/analytics";
 
 // ── Los eventos de engagement (Vercel Web Analytics) ──────────────────
 // Las visitas por página las cuenta Vercel solo. Esto es lo que una visita no
-// dice: si alguien leyó hasta el final, si se suscribió, a dónde se fue, qué
-// obra quiso ver en grande. Es la base para decidir qué arista puede
-// sostenerse (ver MEDICION.md).
+// dice: por dónde se entra a cada arista, si alguien leyó hasta el final, si
+// se suscribió, a dónde se fue, qué obra quiso ver en grande. Es la base para
+// decidir qué arista puede sostenerse (ver MEDICION.md, con el embudo).
 //
 // Los eventos propios sólo se registran en el plan Pro (hasta 2 propiedades
 // por evento). Van apagados hasta que NEXT_PUBLIC_ANALITICA_EVENTOS=1 esté en
@@ -12,11 +12,22 @@ import { track } from "@vercel/analytics";
 // lleva el correo ni nada que identifique, y las rutas de /suscripcion/ (que
 // pueden llevar el token del enlace de confirmación) no salen nunca enteras.
 
+/** Las aristas que se miden al entrar. Galería entra cuando se libere
+ *  (lib/secciones.ts): la cabecera y el pie ya la enlazan ese día. */
+export const ARISTAS_MEDIDAS = ["kaketiana", "jai-sounds", "senales", "sobre", "galeria"] as const;
+export type AristaMedida = (typeof ARISTAS_MEDIDAS)[number];
+
+/** Desde qué elemento de navegación se entra (atributo `data-desde`). */
+export const DESDES = ["cabecera", "pie", "landing", "intro"] as const;
+export type Desde = (typeof DESDES)[number];
+
 type Eventos = {
   /** El formulario del newsletter salió (no-cors: el proveedor no confirma). */
   suscripcion: { desde: string };
   /** La intro El Disco: saltó el afinado o sintonizó. */
   intro: { accion: "saltar" | "sintonizar" };
+  /** Entró a una arista desde un elemento de navegación (el oyente de Analitica.tsx). */
+  arista: { arista: AristaMedida; desde: Desde };
   /** Llegó al final de un texto largo y se quedó un rato antes. */
   lectura: { pagina: string };
   /** Un enlace que sale del sitio: Spotify, el repo, una fuente. */
@@ -89,4 +100,40 @@ export function antesDeEnviar<E extends { type: string; url: string }>(envio: E)
     if (!clave.startsWith("utm_")) url.searchParams.delete(clave);
   }
   return { ...envio, url: url.toString() };
+}
+
+// ── La arista de un enlace ────────────────────────────────────────────
+
+const esArista = (v: string | undefined): v is AristaMedida =>
+  (ARISTAS_MEDIDAS as readonly string[]).includes(v ?? "");
+const esDesde = (v: string | undefined): v is Desde => (DESDES as readonly string[]).includes(v ?? "");
+
+/** La arista a la que lleva una ruta del sitio, o null si no es una arista. */
+export function aristaDeRuta(ruta: string): AristaMedida | null {
+  const primera = ruta.split("/")[1] ?? "";
+  return esArista(primera) ? primera : null;
+}
+
+/**
+ * Si un clic en un enlace interno es una entrada a una arista desde un
+ * elemento de navegación, qué arista y desde dónde.
+ *
+ * - `desde`: el `data-desde` del enlace o del contenedor más cercano que lo
+ *   tenga (la nav de la cabecera, el pie, la nav de la intro). En la landing,
+ *   todo enlace sin contenedor marcado cuenta como `landing`: la landing
+ *   entera es navegación hacia las aristas.
+ * - `arista`: el `data-arista` del enlace, si lo tiene (para un CTA cuya ruta
+ *   no la nombra); si no, sale de la ruta (/kaketiana/… → kaketiana).
+ */
+export function entradaAArista(
+  enlace: HTMLAnchorElement,
+  destino: URL,
+  rutaActual: string,
+): Eventos["arista"] | null {
+  const marcado = enlace.closest<HTMLElement>("[data-desde]")?.dataset.desde;
+  const desde = marcado ?? (rutaActual === "/inicio" ? "landing" : undefined);
+  if (!esDesde(desde)) return null;
+  const pedida = enlace.dataset.arista;
+  const arista = esArista(pedida) ? pedida : aristaDeRuta(destino.pathname);
+  return arista ? { arista, desde } : null;
 }

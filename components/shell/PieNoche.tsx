@@ -11,7 +11,8 @@ import { SPOTIFY_SHOW } from "@/components/jai-sounds/estilos";
 // SHELL.md). El sello grande con el proverbio, tres columnas —las
 // estaciones, la emisora y la señal de cada mes—, la escala del dial con su
 // aguja y la línea legal. Es el colofón común de la landing, Señales y
-// «Quién transmite».
+// «Quién transmite». `data-desde="pie"`: el oyente de Analitica.tsx cuenta
+// como `arista` desde el pie cada enlace de aquí que lleve a una.
 
 const OVERLINE = "font-mono text-[0.625rem] tracking-[0.3em] text-(--noche-dato)";
 const ENLACE =
@@ -20,7 +21,7 @@ const LEGAL = "font-mono text-[0.625rem] tracking-[0.24em] text-(--noche-dato)";
 
 export default function PieNoche({ edicion }: { edicion: { numero: string } }) {
   return (
-    <footer className="shell-noche border-t border-(--noche-filete) bg-(--noche-fondo) px-4 pt-12 pb-7 lg:px-10 lg:pt-[72px] lg:pb-8">
+    <footer data-desde="pie" className="shell-noche border-t border-(--noche-filete) bg-(--noche-fondo) px-4 pt-12 pb-7 lg:px-10 lg:pt-[72px] lg:pb-8">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-8 lg:gap-14">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))] lg:gap-12">
           {/* el sello y el proverbio */}
