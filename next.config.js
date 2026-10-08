@@ -106,6 +106,9 @@ const SIN_LIBERAR =
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Next 16.3 escribe AGENTS.md y CLAUDE.md en la raíz cada vez que arranca
+  // `next dev`. El repo ya tiene su CLAUDE.md y no quiere el otro.
+  agentRules: false,
   async headers() {
     return [{ source: '/:path*', headers: cabecerasDeSeguridad }];
   },

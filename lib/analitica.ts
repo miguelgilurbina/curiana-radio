@@ -25,9 +25,9 @@ export const DESDES = ["cabecera", "pie", "landing", "intro"] as const;
 export type Desde = (typeof DESDES)[number];
 
 type Eventos = {
-  /** La suscripción al newsletter. Va en la página de confirmación, no en el
-   *  envío del formulario (MEDICION.md; hasta que el newsletter confirme, lo
-   *  dispara Suscripcion.tsx al enviar). `desde` nunca lleva el token. */
+  /** Se confirmó la suscripción al newsletter (el segundo paso del doble
+   *  opt-in, en /suscripcion/confirmar). `desde` es el tema elegido —
+   *  `edicion` o `senales`—, nunca el token ni el correo. */
   suscripcion: { desde: string };
   /** La intro El Disco: saltó el afinado o sintonizó. */
   intro: { accion: "saltar" | "sintonizar" };
