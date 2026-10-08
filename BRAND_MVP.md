@@ -341,8 +341,13 @@ prototipo dice papel, aquí manda el README del handoff.
   El logo de la nav del resto del sitio lleva a `/inicio`.
 - **La edición** viene del contenido: `portada`, `sinopsis` y `ficha` en el
   `metadata.json` de cada edición; la landing muestra la última.
-- **Suscripción**: envía a `NEXT_PUBLIC_SUSCRIPCION_URL` (POST de formulario
-  con `email`). Sin proveedor, el formulario se ve deshabilitado y lo dice.
+- **Suscripción** (desde el 2026-10-08, [`NEWSLETTER.md`](NEWSLETTER.md)):
+  Resend con doble opt-in. Arriba del correo, el tema en un selector segmentado
+  en mono: LA EDICIÓN, CADA MES (por defecto) / CADA SEÑAL, en hueso el
+  elegido. Postea a `/api/suscripcion` y dice lo que pasó: «Revisa tu correo:
+  te mandamos un enlace para confirmar», «La señal no salió…» o «Demasiados
+  intentos…». Sin las variables de Resend en Vercel, el formulario se ve
+  deshabilitado y dice LA SUSCRIPCIÓN ABRE PRONTO.
 - **Buchibe** aún no tiene sección: su diapositiva y su tarjeta anuncian el
   telón ("CORRER EL TELÓN · PRONTO") sin enlazar.
 - **Kaketiana** (antes «Simulador Caquetío», 2026-10-05): la diapositiva, la
