@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import IntroDisco from "@/components/intro/IntroDisco";
+import { haySenales } from "@/lib/senales";
 import { metadatos } from "@/lib/seo";
 
 export const metadata: Metadata = metadatos({
@@ -13,5 +14,5 @@ export const metadata: Metadata = metadatos({
 // La intro, siempre. En / solo se ve una vez por sesión; aquí se puede volver
 // a ver. Al sintonizar, va a la landing.
 export default function IntroPage() {
-  return <IntroDisco siempre />;
+  return <IntroDisco siempre haySenales={haySenales()} />;
 }

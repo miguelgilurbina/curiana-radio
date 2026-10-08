@@ -1443,6 +1443,18 @@ html[data-luz="claro"] [data-piel="radio"] {
   --sello-galeria: #2a2a2a;
   --sello-buchibe: #8c2b12;
 }
+/* Lo que es del shell se queda de noche aunque caiga dentro de la radio en
+   claro (§13: «el shell va siempre de noche»): la placa de la suscripción en
+   el Señales vacío. Los valores de :root; los filetes ya los pone
+   .shell-noche en el propio elemento. */
+html[data-luz="claro"] [data-piel="radio"] .shell-noche {
+  color-scheme: dark;
+  --noche-fondo: #0f1621;
+  --noche-panel: #131c28;
+  --noche-hueso: #eee6d4;
+  --noche-hueso-2: #c6cfd9;
+  --noche-frecuencia-tinta: var(--noche-acento);
+}
 
 /* Kaketiana en oscuro: tinta parda, los mismos tokens invertidos (la noche
    azul es del Acto I). Almagre y salina conservan su matiz, más claros. */
@@ -1512,6 +1524,41 @@ html[data-luz="claro"] [data-piel="buchibe"] {
   left: 50%;
   width: min(var(--e-figura-max), calc(100vw - 3rem));
   transform: translateX(-50%);
+}
+/* Señales vacío (components/senales/SenalesVacia.tsx): la aguja del dial
+   busca la primera estación una sola vez y se queda cerca, sin llegar. Se
+   mueve con `left` (2px, nada que repintar alrededor): una caja trasladada
+   del ancho de la escala desbordaba la página. En claro va en la tinta del
+   acento sobre papel. */
+.senales-aguja {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: 38%;
+  width: 2px;
+  margin-left: -1px;
+  pointer-events: none;
+  background: var(--noche-frecuencia-tinta);
+  animation: senales-busca 4.5s var(--kk-curva) both;
+}
+@keyframes senales-busca {
+  from {
+    left: 4%;
+  }
+  35% {
+    left: 62%;
+  }
+  70% {
+    left: 31%;
+  }
+  to {
+    left: 38%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .senales-aguja {
+    animation: none;
+  }
 }
 /* la capitular de las pieles que la tienen (Kaketiana, Buchibe) */
 .senal-cuerpo[data-capitular] > p:first-of-type::first-letter {

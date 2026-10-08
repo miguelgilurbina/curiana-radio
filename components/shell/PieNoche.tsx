@@ -18,7 +18,14 @@ const ENLACE =
   "flex min-h-11 items-center text-[0.9375rem] text-(--noche-hueso-2) transition-colors duration-300 hover:text-(--noche-acento) lg:min-h-0";
 const LEGAL = "font-mono text-[0.625rem] tracking-[0.24em] text-(--noche-dato)";
 
-export default function PieNoche({ edicion }: { edicion: { numero: string } }) {
+export default function PieNoche({
+  edicion,
+  haySenales,
+}: {
+  edicion: { numero: string };
+  /** sin señales que mostrar, el enlace a Señales no sale (lib/senales.ts) */
+  haySenales: boolean;
+}) {
   return (
     <footer className="shell-noche border-t border-(--noche-filete) bg-(--noche-fondo) px-4 pt-12 pb-7 lg:px-10 lg:pt-[72px] lg:pb-8">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-8 lg:gap-14">
@@ -59,9 +66,11 @@ export default function PieNoche({ edicion }: { edicion: { numero: string } }) {
               <Link href="/inicio#manifiesto" className={ENLACE}>
                 Manifiesto
               </Link>
-              <Link href="/senales" className={ENLACE}>
-                Señales
-              </Link>
+              {haySenales && (
+                <Link href="/senales" className={ENLACE}>
+                  Señales
+                </Link>
+              )}
               <Link href="/sobre" className={ENLACE}>
                 Quién transmite
               </Link>

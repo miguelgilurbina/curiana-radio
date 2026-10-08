@@ -20,7 +20,8 @@ const LOGO = "/marca/isotipo-espiral.png";
 // Las puertas de la radio, para quien no ve el disco: lectores de pantalla,
 // teclado, buscadores y agentes. Fuera de pantalla hasta que recibe foco
 // (como un «saltar al contenido»); la animación no cambia. Sólo lo que está
-// al aire (lib/secciones.ts): lo del taller redirige a la radio.
+// al aire (lib/secciones.ts): lo del taller redirige a la radio. Señales,
+// sólo si hay señales que mostrar (haySenales, lib/senales.ts).
 const SECCIONES = [
   { href: "/inicio", label: "Inicio" },
   { href: "/kaketiana", label: "Kaketiana" },
@@ -50,7 +51,14 @@ function marcarVista() {
   }
 }
 
-export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
+export default function IntroDisco({
+  siempre = false,
+  haySenales,
+}: {
+  siempre?: boolean;
+  /** sin señales que mostrar, Señales no sale en el menú accesible */
+  haySenales: boolean;
+}) {
   const router = useRouter();
   // "decide": el servidor y la hidratación todavía no saben si la sesión ya
   // la vio; mientras tanto solo se ve la noche (sin interfaz que parpadee).
@@ -137,7 +145,7 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
           que el disco carga, y este menú tiene que poder verse antes. Entrar
           por aquí cuenta como haber pasado la puerta. */}
       <nav aria-label="Secciones de Curiana Radio" className="intro-disco-secciones intro-disco-mono">
-        {SECCIONES.map((s) => (
+        {SECCIONES.filter((s) => haySenales || s.href !== "/senales").map((s) => (
           <Link key={s.href} href={s.href} onClick={marcarVista}>
             {s.label}
           </Link>
