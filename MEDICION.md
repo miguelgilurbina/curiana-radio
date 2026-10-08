@@ -25,7 +25,7 @@ el límite de Pro):
 | `intro` | saltó el afinado o sintonizó en El Disco | `accion`: `saltar` · `sintonizar` | `components/intro/IntroDisco.tsx` | ¿la intro retiene o expulsa? |
 | `arista` | clic en un enlace de navegación que lleva a una arista | `arista`: `kaketiana` · `jai-sounds` · `senales` · `sobre` (y `galeria` cuando se libere); `desde`: `cabecera` · `pie` · `landing` · `intro` | el oyente de clics de `Analitica.tsx` (ver «Cómo se marca un enlace») | ¿qué puerta funciona: la cabecera, el pie, el carrusel y las tarjetas de la landing, la intro? |
 | `lectura` | llegó al final de un texto y lleva ≥ 20 s en la página | `pagina` | `components/analitica/FinDeLectura.tsx`: ediciones, Kaketiana (pueblo y lengua), Señales, ficha de canción de JAI **con reseña** | ¿se lee o se hojea? qué textos se terminan |
-| `suscripcion` | **se confirmó** la suscripción al newsletter | `desde` | la página de confirmación (ver abajo) | ¿la radio convierte visitas en audiencia propia? |
+| `suscripcion` | **se confirmó** la suscripción al newsletter (el segundo paso del doble opt-in) | `desde` = el tema elegido: `edicion` · `senales` | `app/suscripcion/confirmar` ([`NEWSLETTER.md`](NEWSLETTER.md)) | ¿la radio convierte visitas en audiencia propia? ¿qué frecuencia eligen? |
 | `salida` | clic en cualquier enlace externo | `destino`, `desde` | el oyente de clics de `Analitica.tsx` | ¿a Spotify (JAI), al repo, a las fuentes (archive.org…)? |
 | `estacion` | pasó a otra estación de la batea de JAI Sounds | `estacion` | `components/jai-sounds/batea/Batea.tsx` | qué curaduría engancha |
 | `obra` | abrió una obra de la galería en grande | `obra` | `components/galeria/GaleriaGrid.tsx` | qué piezas tienen demanda (licencia, print) |
@@ -209,7 +209,7 @@ mirar para saber si vale la pena construirla, no la decisión.
 
 | Arista | Vía plausible | La señal | Cuándo se mira |
 |---|---|---|---|
-| **La radio** (ediciones, Señales, newsletter) | apoyo de la audiencia: membresía o donación recurrente | `suscripcion` ÷ visitas a `/inicio`; `lectura` de ediciones y señales | cuando el newsletter confirme suscripciones |
+| **La radio** (ediciones, Señales, newsletter) | apoyo de la audiencia: membresía o donación recurrente | `suscripcion` ÷ visitas al sitio (el formulario está en el pie de todas las páginas); `lectura` de ediciones y señales | cuando Miguel configure Resend ([`NEWSLETTER.md`](NEWSLETTER.md)); hasta entonces el formulario está cerrado |
 | **Kaketiana** | patrocinio cultural, fondos de patrimonio y de lenguas indígenas, universidades; a la larga, el diccionario impreso | `lectura` de artículos; voces más visitadas; `arista` → `kaketiana`; `salida` hacia fuentes; **referentes chatgpt.com, perplexity.ai, claude.ai, bing.com** | a los 3 meses de difusión. Un fondo pide alcance demostrable: esto es esa evidencia |
 | **JAI Sounds** | patrocinio de la curaduría; curaduría por encargo | `estacion`; `arista` → `jai-sounds`; `salida` → open.spotify.com; `lectura` de reseñas | a los 3 meses |
 | **Galería** | licencias primero, print después (decidido en [`GALERIA_PLAN.md`](GALERIA_PLAN.md) §1.1) | `obra` (las más ampliadas son el catálogo a licenciar); visitas a `/galeria/[slug]` desde buscadores de imágenes | cuando haya licencias publicadas |

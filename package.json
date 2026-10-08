@@ -20,7 +20,8 @@
     "jai:portadas": "node jai-sounds/scripts/portadas.mjs",
     "jai:exportar": "node jai-sounds/scripts/exportar.mjs",
     "jai:test": "node --test jai-sounds/scripts/*.test.mjs",
-    "senales:imagenes": "node scripts/senales-imagenes.mjs"
+    "senales:imagenes": "node scripts/senales-imagenes.mjs",
+    "newsletter:test": "node --test lib/newsletter/*.test.mjs"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,8 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "recharts": "^2.15.4",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "resend": "^6.29.0"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

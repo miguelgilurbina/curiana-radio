@@ -1,7 +1,8 @@
 // ── Cabeceras de seguridad ─────────────────────────────────────────────
-// El sitio es estático y no tiene sesiones ni formularios propios, así que lo
-// que se protege es al lector: que nadie meta la radio en un iframe ajeno, que
-// una inyección no pueda cargar scripts de otro dominio, que el navegador no
+// El sitio es estático y no tiene sesiones; su único formulario (el newsletter)
+// postea al mismo origen (/api/suscripcion). Lo que se protege es al lector:
+// que nadie meta la radio en un iframe ajeno, que una inyección no pueda cargar
+// scripts de otro dominio ni mandar datos a otro lado, que el navegador no
 // adivine tipos. La CSP lista a mano cada tercero que el sitio usa a
 // propósito; si se agrega uno (un proveedor, un embed), va aquí o el
 // navegador lo bloquea y lo dice en la consola.
@@ -13,16 +14,6 @@ const esDev = process.env.NODE_ENV !== 'production';
 // Las vistas previas llevan la barra de Vercel (comentarios), que carga de
 // vercel.live. Producción no la necesita.
 const esVistaPrevia = process.env.VERCEL_ENV === 'preview';
-
-function origen(url) {
-  try {
-    return url ? new URL(url).origin : null;
-  } catch {
-    return null;
-  }
-}
-// El newsletter postea a un proveedor configurable (Suscripcion.tsx).
-const suscripcion = origen(process.env.NEXT_PUBLIC_SUSCRIPCION_URL);
 
 const BLOB = 'https://*.public.blob.vercel-storage.com';
 const csp = {
@@ -56,8 +47,9 @@ const csp = {
     esVistaPrevia && 'https://assets.vercel.com',
   ],
   'connect-src': [
+    // el newsletter postea a /api/suscripcion y Resend se llama desde el
+    // servidor: el navegador no habla con ningún proveedor de correo
     "'self'",
-    suscripcion,
     esDev && 'ws:',
     esVistaPrevia && 'https://vercel.live',
     esVistaPrevia && 'wss://ws-us3.pusher.com',
@@ -74,7 +66,7 @@ const csp = {
   'manifest-src': ["'self'"],
   'object-src': ["'none'"],
   'base-uri': ["'self'"],
-  'form-action': ["'self'", suscripcion],
+  'form-action': ["'self'"],
   'frame-ancestors': ["'none'"],
 };
 const politica = Object.entries(csp)
