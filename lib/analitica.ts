@@ -24,6 +24,10 @@ type Eventos = {
   estacion: { estacion: string };
   /** La galería: abrió una obra en grande (interés por la pieza). */
   obra: { obra: string };
+
+  // ── web/landing-carrusel ──
+  /** Entró a una arista desde un CTA (el carrusel de la landing: desde "landing"). */
+  arista: { arista: string; desde: string };
 };
 
 export type NombreEvento = keyof Eventos;
