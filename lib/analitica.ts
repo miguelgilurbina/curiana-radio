@@ -36,6 +36,8 @@ type Eventos = {
   estacion: { estacion: string };
   /** La galería: abrió una obra en grande (interés por la pieza). */
   obra: { obra: string };
+  /** Cambió la luz con el interruptor (Señales, «Quién transmite»): la luz que eligió. */
+  luz: { luz: "claro" | "oscuro" };
 };
 
 export type NombreEvento = keyof Eventos;
