@@ -5,6 +5,7 @@ pregunta: "¿Cómo sabía el caquetío lo que sabía?"
 moc: mapa-transmision
 corpus: [transmision.yaml]
 fuentes: [jahn-1927, amodio-perez-2006, angleria-1892, guerra-curvelo-palabrero, vansina-ong, las-casas-1875, gilij-1780-1783, oviedo-y-valdes-1851]
+descripcion: "Una sociedad oral guarda su saber en cuerpos mortales. Qué aprendía un caquetío a cada edad, y qué formas de transmitir resisten el olvido."
 ---
 
 # 04 — Cómo sabía el caquetío lo que sabía: la transmisión oral del saber

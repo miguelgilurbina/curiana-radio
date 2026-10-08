@@ -6,6 +6,7 @@ diseño: 03_descomposicion_toponimica
 toponimos_glosados: 74
 control_sin_glosa: 244
 medido: 2026-08-04
+descripcion: "Los nombres de lugar de Paraguaná y Coro guardan piezas del caquetío. Cómo se descomponen para recuperar morfemas que ninguna crónica registró."
 ---
 
 # La toponimia como fuente de morfemas

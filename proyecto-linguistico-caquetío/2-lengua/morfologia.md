@@ -5,6 +5,7 @@ fuente_de_verdad: curiana_sim/curiana_lexicon.py (TODAS_LAS_REGLAS, REGLAS_ZAVAL
 propuestas: [lexicon_van_buurt.py, lexicon_gatschet.py, lexicon_toponimos.py]
 medido: 2026-09-20 (6-fusion/scripts/auditar_morfologia.py)
 decidido: 2026-09-21 (6-fusion/decisiones_tanda_2026-09-21.yaml); 2026-09-23 (6-fusion/decisiones_tanda_final_2026-09-23.yaml); 2026-09-24, sólo documentación (6-fusion/decisiones_222_documentacion_2026-09-24.yaml)
+descripcion: "Cómo se arma una palabra en caquetío: el orden básico, los pronombres, los morfemas y los afijos atestiguados, y qué parte es reconstrucción."
 ---
 
 # La morfología

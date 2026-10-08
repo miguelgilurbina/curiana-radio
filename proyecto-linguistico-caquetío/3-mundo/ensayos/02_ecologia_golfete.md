@@ -6,6 +6,7 @@ moc: mapa-ecologia
 corpus: [ecologia.yaml]
 fuentes: [camacho-2011, antczak-2015-las-aves, rouse-cruxent-1963, alvarado-1921, jahn-1927]
 version: v2
+descripcion: "El mundo físico y el territorio del caquetío: el Golfete de Coro, Paraguaná, Aruba, Curazao y otros territorios; el conuco, las salinas y el manglar."
 ---
 
 # ¿Dónde existía el caquetío?

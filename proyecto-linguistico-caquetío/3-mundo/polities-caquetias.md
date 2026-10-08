@@ -6,6 +6,7 @@ polities: 5   # 4 atestiguadas + occidental (esfera futura, 2026-09-07)
 polity_simulada: costera
 fuentes: [oliver-1989-cap3, jahn-1927, antczak-2017-cariban, oviedo-y-banos, arcaya-1920]
 medido: 2026-09-07
+descripcion: "Los caquetíos hablaban una lengua pero no formaban una sola sociedad: al menos cuatro formaciones políticas distintas, y cuál simula Kaketiana."
 ---
 
 # Las polities caquetías — y cuál es la nuestra

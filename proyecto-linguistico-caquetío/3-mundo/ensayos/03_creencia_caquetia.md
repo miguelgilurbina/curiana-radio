@@ -5,6 +5,7 @@ pregunta: "¿En qué creía el caquetío?"
 moc: mapa-creencia
 corpus: [creencia.yaml]
 fuentes: [arcaya-1920, oviedo-y-valdes-1851, jahn-1927, paz-reverol-2017-2018, perrin-1992-1995, maria-lionza-culto, zavala-reyes-2015, gilij-1780-1783, las-casas-1875]
+descripcion: "Qué dicen las crónicas de la religión caquetía, y dos vías para reconstruir el resto: la cosmovisión wayuu y el culto vivo de María Lionza."
 ---
 
 # ¿En qué creía el caquetío?

@@ -37,6 +37,11 @@ export default function ArticuloReferencia({ pagina }: { pagina: WikiPagina }) {
           <h1 className="sim-display mt-3 max-w-[30ch] text-[1.9rem] font-semibold leading-[1.05] tracking-tight text-(--sim-ink) sm:text-[2.6rem]">
             {pagina.titulo}
           </h1>
+          {pagina.descripcion && (
+            <p className="mt-5 max-w-reading font-sans text-base leading-relaxed text-(--sim-ink-soft) md:text-lg">
+              {pagina.descripcion}
+            </p>
+          )}
         </header>
 
         {secciones.length > 0 && (

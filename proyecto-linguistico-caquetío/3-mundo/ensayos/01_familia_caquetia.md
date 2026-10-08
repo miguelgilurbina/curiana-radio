@@ -6,6 +6,7 @@ moc: mapa-familia
 corpus: [parentesco.yaml, genealogia.yaml]
 fuentes: [oliver-1989-cap3, oliver-1989-cap2, jahn-1927, arcaya-1920, adam-1879, keegan-1989, las-casas-1875]
 decisiones: [D1, D4]
+descripcion: "Ningún cronista de Coro describió la familia caquetía. Lo que se sabe y se intuye: clanes, avunculado, la sucesión del Manaure, y cómo se reconstruye el resto."
 ---
 
 # ¿Cómo era la familia caquetía?

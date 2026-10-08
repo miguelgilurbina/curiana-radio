@@ -6,6 +6,7 @@ cognados_curados: 37
 pares_validacion: 18
 candidatas_aisladas: 441
 medido: 2026-08-04
+descripcion: "Cómo se reconstruye una palabra caquetía cuando no hay dato caquetío: el método comparativo con las lenguas arahuacas hermanas, y por qué falla tanto."
 ---
 
 # El método comparativo

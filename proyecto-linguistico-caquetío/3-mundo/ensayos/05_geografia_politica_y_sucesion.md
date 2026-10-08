@@ -6,6 +6,7 @@ moc: mapa-geografia-politica
 corpus: [geografia_politica.yaml, parentesco.yaml]
 fuentes: [oliver-1989-cap3, zavala-reyes-2015, van-buurt-2014, arcaya-1920, ramos-perez-1978, oviedo-y-banos]
 decisiones: [D2, D4]
+descripcion: "Quién era el Manaure, qué era un diao, hasta dónde llegaba su poder —Paraguaná, las islas ABC, un puesto en la Guajira— y qué pueblo real reconstruimos."
 ---
 
 # La geografía política de Manaure: quién era un diao, y qué asentamiento reconstruimos

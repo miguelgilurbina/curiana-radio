@@ -6,6 +6,7 @@ total: 5489
 familia_caquetia: 380
 sin_cita: 0
 medido: 2026-10-05
+descripcion: "Cuántas palabras tiene el caquetío reconstruido, de qué lenguas salen y con qué certeza."
 ---
 
 # El lexicón

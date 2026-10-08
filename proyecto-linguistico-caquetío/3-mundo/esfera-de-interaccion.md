@@ -3,6 +3,7 @@ tipo: nota
 pregunta: "¿Qué era la sociedad que llamamos caquetía, y qué unidad hay que simular?"
 medido: 2026-08-08
 abre: la fase 2 del experimento
+descripcion: "«Caquetío» es pariente del lokono kakitho, «gente»: no nombraba una etnia sino una red de pueblos. Qué definimos como la Gran Curiana y por qué importa."
 ---
 
 # La esfera de interacción — por qué «caquetío» no nombra una etnia
