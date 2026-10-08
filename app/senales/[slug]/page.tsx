@@ -8,6 +8,7 @@ import Etiquetas from "@/components/senales/Etiquetas";
 import InterruptorLuz from "@/components/senales/InterruptorLuz";
 import { PIELES } from "@/components/senales/pieles";
 import { VOZ } from "@/components/senales/voces";
+import FinDeLectura from "@/components/analitica/FinDeLectura";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -138,6 +139,8 @@ export default async function SenalPagina({ params }: Props) {
 
       <div className="px-6 pt-12 sm:pt-14">
         <SenalMdx source={senal.cuerpo} capitular={piel.capitular} />
+        {/* el final del cuerpo: aquí cuenta la lectura completa (MEDICION.md) */}
+        <FinDeLectura pagina={`/senales/${senal.slug}`} />
 
         <div className={`mx-auto mt-[22px] flex max-w-[65ch] flex-col gap-[22px] ${VOZ.cuerpo}`}>
           {/* la firma de Miguel lleva a «Quién transmite» */}
