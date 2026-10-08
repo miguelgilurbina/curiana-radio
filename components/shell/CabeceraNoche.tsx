@@ -157,6 +157,7 @@ export default function CabeceraNoche({
           <nav
             ref={nav}
             aria-label="Estaciones"
+            data-desde="cabecera"
             className="relative flex flex-1 items-center justify-between self-stretch px-2"
             style={{
               background: `${ESCALA} left bottom 24px / 100% 7px no-repeat`,
@@ -247,6 +248,7 @@ export default function CabeceraNoche({
           </div>
           <nav
             aria-label="Estaciones"
+            data-desde="cabecera"
             className="flex flex-1 flex-col justify-center gap-1 overflow-y-auto pl-7"
             style={{
               background: `${ESCALA_VERTICAL} 0 0 / 8px 100% no-repeat`,

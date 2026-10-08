@@ -135,8 +135,9 @@ export default function IntroDisco({ siempre = false }: { siempre?: boolean }) {
     >
       {/* Fuera de .intro-disco-ui a propósito: la UI está en opacidad 0 hasta
           que el disco carga, y este menú tiene que poder verse antes. Entrar
-          por aquí cuenta como haber pasado la puerta. */}
-      <nav aria-label="Secciones de Curiana Radio" className="intro-disco-secciones intro-disco-mono">
+          por aquí cuenta como haber pasado la puerta (y, para la analítica,
+          como `arista` desde la intro). */}
+      <nav aria-label="Secciones de Curiana Radio" data-desde="intro" className="intro-disco-secciones intro-disco-mono">
         {SECCIONES.map((s) => (
           <Link key={s.href} href={s.href} onClick={marcarVista}>
             {s.label}
