@@ -322,7 +322,7 @@ prototipo dice papel, aquí manda el README del handoff.
 
 | # | Sección | Superficie |
 |---|---|---|
-| 01 | Hero · carrusel de aristas | 5 diapositivas en su superficie; la barra de arriba es la cabecera de la noche (§13) |
+| 01 | Hero · carrusel de aristas | una diapositiva por arista al aire (hoy la radio, Kaketiana y JAI), cada una en su superficie; la barra de arriba es la cabecera de la noche (§13) |
 | 02 | Manifiesto | gradiente noche + grano; capitular, bloque expandible, blockquote |
 | — | Quién transmite | `--noche-hondo`; la ficción dicha como ficción: quién hace la radio, enlace a `/sobre` y al portafolio de Miguel |
 | — | Señales (§12) | noche; la última señal destacada y dos más; no sale sin señales |
@@ -332,10 +332,38 @@ prototipo dice papel, aquí manda el README del handoff.
 | 06 | Archivo y suscripción | noche; ediciones + formulario |
 | 07 | Pie de la noche | el pie común del shell (§13): sello, proverbio, estaciones, suscripción, línea legal |
 
-- **El hero** arranca sintonizado (la intro ya obligó a interactuar): auto-avance
-  cada 5 s que se pausa con hover o foco y **se detiene** al tocar flechas,
-  puntos, teclado (←/→) o swipe. Diapositivas inactivas `inert`. Con
-  movimiento reducido: sin auto-avance y fundido de 200 ms.
+- **El hero** arranca sintonizado (la intro ya obligó a interactuar) y pasa
+  solo de una arista a la otra cada **7 s** (Miguel, 2026-10-08: en el móvil
+  ocupa toda la pantalla y las otras aristas quedaban detrás de un gesto). El
+  orden alterna las superficies: la noche → la sal de Kaketiana → la noche de
+  JAI. **Cada cambio es una vuelta del dial**: la aguja del shell (2px, el
+  acento) cruza la pista en 900 ms con `--kk-curva`, en el sentido del cambio
+  (a la derecha al ir a la siguiente, a la izquierda al volver), y detrás de
+  ella amanece la superficie de la arista que entra; el texto de la que se va
+  se apaga en 300 ms y el nuevo entra en tinta, línea por línea (600 ms, 80 ms
+  entre líneas). El barrido es sólo `translate` (la ventana entra y su lienzo
+  la compensa), en el compositor como la aguja: un `clip-path` se pintaba en
+  el hilo principal y la aguja se le adelantaba en el móvil.
+  - **El tiempo al aire** es el punto activo, una barra de 40px que se llena
+    en el acento; al llenarse (su `animationend`), cambia. Las pausas
+    congelan el relleno donde va: el ratón encima, el foco de **teclado**
+    dentro (un clic en un punto no deja el carrusel quieto) y la pestaña
+    oculta (`visibilitychange`). Tocarlo en el móvil o `[ PAUSA ]` lo
+    detienen hasta `[ SEGUIR ]`. Sin JS el punto va lleno y no avanza.
+  - **Accesibilidad:** región `aria-roledescription="carrusel"` enfocable
+    (←/→ desde cualquier lugar dentro), diapositivas `role="group"` con
+    `aria-roledescription="diapositiva"` y las inactivas `inert`; anterior y
+    siguiente (44px, desde `sm`; en el móvil se desliza: pointer events, 50px
+    en horizontal), puntos con `aria-current`. Un `aria-live="polite"` aparte
+    anuncia sólo los cambios que pidió el lector; el avance solo no se
+    anuncia. Si el foco estaba en el CTA de la que se va, pasa al de la que
+    entra. Con movimiento reducido no avanza solo, no hay aguja ni entrada
+    del texto y el cambio es un fundido de 200 ms; `[ PAUSA ]` no sale.
+  - **La primera diapositiva llega en el HTML tal como se ve**: quieta, sin
+    barrido ni entrada; las demás, apiladas debajo y ocultas. Sin salto de
+    layout: todas comparten la celda y el alto del hero no cambia.
+  - **Los CTA** llevan `data-arista` (`radio`, `kaketiana`, `jai-sounds`…) y
+    `data-desde="landing"`, y miden `arista` (`lib/analitica.ts`).
 - **Sin nav ni pie globales**: la landing y la intro traen los suyos
   (`components/layout/ShellRadio.tsx` los omite en `/`, `/intro`, `/inicio`).
   El logo de la nav del resto del sitio lleva a `/inicio`.
@@ -540,6 +568,22 @@ el flujo de publicación en la skill `publicar-entrada`.
   (`components/senales/SenalesDeArista.tsx`), en el registro de su superficie:
   la placa de Kaketiana, el dial de JAI (sin naranja: §JAI), el papel de la
   Galería. Buchibe tiene etiqueta pero no sección.
+- **Sin señales no se anuncia** (Miguel, 2026-10-08). Mientras no haya
+  ninguna que mostrar (`haySenales()` en `lib/senales.ts`: en producción, una
+  publicada; en local y en las vistas previas, también un borrador, para
+  revisarlo), SEÑALES no sale en la cabecera, el pie, el menú accesible de la
+  intro ni «Quién transmite». `/senales` sigue existiendo por URL, pero sin
+  ninguna publicada (`hayPublicadas()`) va con `noindex` y queda fuera del
+  sitemap y de `llms.txt`.
+- **El índice vacío** (`components/senales/SenalesVacia.tsx`) es una vista,
+  no una línea: en la piel de la radio y con el idioma del shell. La escala
+  del dial con su aguja buscando la estación (una vez, 4.5 s, y se queda
+  cerca del 88.8 sin llegar; quieta con movimiento reducido), el sello, «La
+  primera señal se está afinando.» en Lora 600 y una nota de Miguel en Lora
+  itálica con el riel de cita (borrador en la voz de `/sobre`), las redes y
+  el RSS como filas de estaciones y la suscripción del pie en una **placa de
+  noche**: es del shell y se queda de noche aunque el lector pase la radio a
+  claro (`html[data-luz="claro"] [data-piel="radio"] .shell-noche`).
 - **Kaketiana:** una señal con esa arista lleva al pie que es la voz de su
   autor y enlaza a la investigación. Lo que diga de los caquetíos no es canon.
 - **Para compartir:** cada señal genera su tarjeta (`opengraph-image.tsx`,
@@ -588,7 +632,7 @@ y el badge naranja) se retiró el 2026-10-06.
 - **Cabecera** (`components/shell/CabeceraNoche.tsx`): sticky, fondo sólido sin
   vidrio, se esconde al bajar y vuelve al subir. Desde `lg`: 92px; el sello de
   56px; la nav MANIFIESTO · SEÑALES · JAI SOUNDS · KAKETIANA (y GALERÍA ·
-  BUCHIBE · ARCHIVO cuando se liberen) en mono 11px .24em, repartida sobre la escala de sintonía,
+  BUCHIBE · ARCHIVO cuando se liberen; SEÑALES, sólo con señales: §12) en mono 11px .24em, repartida sobre la escala de sintonía,
   con la **aguja** (2×46px, acento) en la estación activa, que se desliza al
   navegar (300ms; sin movimiento con `prefers-reduced-motion`); a la derecha
   AL AIRE con su pulso y el badge **88.8 FM**. La estación activa sale de la
@@ -602,7 +646,7 @@ y el badge naranja) se retiró el 2026-10-06.
   contenedor para un `fixed`).
 - **Pie** (`components/shell/PieNoche.tsx`): el sello de 150px (96 en móvil) y
   «El viento no borra, reescribe.»; ESTACIONES, LA EMISORA (Manifiesto,
-  Señales, Quién transmite, Ver todas las transmisiones →, Spotify, Instagram,
+  Señales —sólo con señales, §12—, Quién transmite, Ver todas las transmisiones →, Spotify, Instagram,
   YouTube) y LA SEÑAL, CADA MES (`Suscripcion` en su variante del pie); la
   escala del dial con la aguja al 52 %; la línea legal (88.8 FM — SIEMPRE
   TRANSMITIENDO · TRANSMISIÓN CULTURAL DESDE ABYA YALA · EDICIÓN #NN · V1 LA

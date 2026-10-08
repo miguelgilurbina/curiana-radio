@@ -124,6 +124,21 @@ export function getSenales({ arista, limite }: { arista?: Arista; limite?: numbe
   return limite ? lista.slice(0, limite) : lista;
 }
 
+/** Si este entorno muestra alguna señal: en producción, una publicada; en
+ *  local y en las vistas previas, también un borrador, para revisarlo. Decide
+ *  si Señales sale en la cabecera, el pie, la intro y «Quién transmite»
+ *  (Miguel, 2026-10-08: no anunciar una sección vacía). /senales sigue
+ *  existiendo por URL. */
+export function haySenales(): boolean {
+  return todas().length > 0;
+}
+
+/** Si hay alguna señal publicada (no borrador), en cualquier entorno: decide
+ *  si /senales se indexa y entra al sitemap y a llms.txt. */
+export function hayPublicadas(): boolean {
+  return todas().some((s) => !s.borrador);
+}
+
 export function getSenal(slug: string): Senal | null {
   return todas().find((s) => s.slug === slug) ?? null;
 }

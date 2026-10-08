@@ -58,12 +58,16 @@ function Badge() {
 export default function CabeceraNoche({
   edicion,
   aristaDeSenal,
+  haySenales,
 }: {
   edicion: { numero: string; slug: string };
   aristaDeSenal: Record<string, string | null>;
+  /** sin señales que mostrar, SEÑALES no sale en el dial (lib/senales.ts) */
+  haySenales: boolean;
 }) {
   const ruta = usePathname();
   const activa = estacionActiva(ruta, aristaDeSenal);
+  const estaciones = haySenales ? ESTACIONES : ESTACIONES.filter((e) => e.id !== "senales");
 
   // se esconde al bajar, vuelve al subir (como la nav del resto del sitio)
   const [visible, setVisible] = useState(true);
@@ -163,7 +167,7 @@ export default function CabeceraNoche({
               background: `${ESCALA} left bottom 24px / 100% 7px no-repeat`,
             }}
           >
-            {ESTACIONES.map((e) =>
+            {estaciones.map((e) =>
               e.href ? (
                 <Link
                   key={e.id}
@@ -254,7 +258,7 @@ export default function CabeceraNoche({
               background: `${ESCALA_VERTICAL} 0 0 / 8px 100% no-repeat`,
             }}
           >
-            {ESTACIONES.map((e) => {
+            {estaciones.map((e) => {
               const activo = activa === e.id;
               const clase = `relative font-(family-name:--font-archivo-black) text-[2rem] leading-[1.5] ${
                 e.href

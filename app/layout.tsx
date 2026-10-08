@@ -8,7 +8,7 @@ import Analitica from "@/components/analitica/Analitica";
 import CabeceraNoche from "@/components/shell/CabeceraNoche";
 import PieNoche from "@/components/shell/PieNoche";
 import { getAllEditions } from "@/lib/content";
-import { getSenales } from "@/lib/senales";
+import { getSenales, haySenales } from "@/lib/senales";
 import { SCRIPT_LUZ } from "@/lib/luz";
 
 const inter = Inter({
@@ -86,11 +86,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   // lo que el shell de la noche necesita saber: la última edición (para
-  // «sintonizar ahora») y la arista de cada señal (la aguja marca la estación
-  // de la arista cuando se lee una señal)
+  // «sintonizar ahora»), la arista de cada señal (la aguja marca la estación
+  // de la arista cuando se lee una señal) y si hay señales que anunciar (sin
+  // ninguna, Señales no sale en la cabecera ni en el pie)
   const ultima = (await getAllEditions())[0];
   const edicion = { numero: String(ultima?.number ?? "01"), slug: ultima?.slug ?? "01" };
   const aristaDeSenal = Object.fromEntries(getSenales().map((s) => [s.slug, s.aristas[0] ?? null]));
+  const conSenales = haySenales();
 
   return (
     // suppressHydrationWarning: SCRIPT_LUZ pone data-luz en <html> antes de
@@ -106,8 +108,8 @@ export default async function RootLayout({
       <body className="font-sans antialiased">
         <JsonLd datos={jsonLdSitio()} />
         <ShellRadio
-          cabecera={<CabeceraNoche edicion={edicion} aristaDeSenal={aristaDeSenal} />}
-          pie={<PieNoche edicion={edicion} />}
+          cabecera={<CabeceraNoche edicion={edicion} aristaDeSenal={aristaDeSenal} haySenales={conSenales} />}
+          pie={<PieNoche edicion={edicion} haySenales={conSenales} />}
         >
           {children}
         </ShellRadio>

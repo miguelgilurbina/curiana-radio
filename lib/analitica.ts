@@ -12,9 +12,12 @@ import { track } from "@vercel/analytics";
 // lleva el correo ni nada que identifique, y las rutas de /suscripcion/ (que
 // pueden llevar el token del enlace de confirmación) no salen nunca enteras.
 
-/** Las aristas que se miden al entrar. Galería entra cuando se libere
- *  (lib/secciones.ts): la cabecera y el pie ya la enlazan ese día. */
-export const ARISTAS_MEDIDAS = ["kaketiana", "jai-sounds", "senales", "sobre", "galeria"] as const;
+/** Las aristas que se miden al entrar. Galería y Buchibe entran cuando se
+ *  liberen (lib/secciones.ts): la cabecera, el pie y el carrusel ya las
+ *  enlazan ese día. «radio» es el CTA de la propia radio en el carrusel de
+ *  la landing (lleva al manifiesto): se mide con `data-arista`, porque su
+ *  ruta no la nombra. */
+export const ARISTAS_MEDIDAS = ["radio", "kaketiana", "jai-sounds", "senales", "sobre", "galeria", "buchibe"] as const;
 export type AristaMedida = (typeof ARISTAS_MEDIDAS)[number];
 
 /** Desde qué elemento de navegación se entra (atributo `data-desde`). */
