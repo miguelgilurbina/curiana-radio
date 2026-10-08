@@ -53,7 +53,8 @@ export async function llmsTxt(): Promise<string> {
     getWikiIndice()
       .filter((p) => p.seccion === s)
       .sort((a, b) => a.orden - b.orden)
-      .map((p) => enlace(p.titulo, `/kaketiana/${s}/${p.slug}`))
+      // el resumen es la descripción que escribió Miguel (export_wiki_seed.py)
+      .map((p) => enlace(p.titulo, `/kaketiana/${s}/${p.slug}`, p.resumen))
       .join("\n");
   // Señales publicadas (los borradores sólo existen fuera de producción).
   const senales = getSenales()

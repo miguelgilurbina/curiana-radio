@@ -4,6 +4,7 @@ pregunta: "¿Se puede cerrar la forma de la palabra para que el modelo no rellen
 medido: 2026-08-09
 herramienta: curiana_sim/curiana_fonotactica.py
 base: las 234 formas caquetío-atestiguado del lexicón
+descripcion: "¿Se puede fijar la forma de una palabra caquetía para que la IA no la invente? El intento falló, y este resultado negativo explica por qué igual vale."
 ---
 
 # La fonotáctica — un resultado negativo, y por qué vale

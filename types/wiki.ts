@@ -45,6 +45,12 @@ export interface WikiManifest {
 /** El artículo completo — solo se lee en servidor. */
 export interface WikiPagina extends WikiIndiceEntry {
   frontmatter: Record<string, unknown>;
+  /**
+   * La bajada del artículo: el `descripcion:` del frontmatter, escrito por
+   * Miguel para un lector. Es también el `resumen` (índice, Google, redes).
+   * null si la nota no la tiene.
+   */
+  descripcion?: string | null;
   /** Markdown con los `[[wikilinks]]` del vault ya resueltos a rutas reales. */
   cuerpo: string;
   /**

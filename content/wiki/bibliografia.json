@@ -1,6 +1,18 @@
 {
-  "n": 104,
+  "n": 113,
   "obras": [
+    {
+      "slug": "acasio-2023-capubana-calendario",
+      "titulo": "Acasio 2023 — el petroglifo geométrico de la estación Capubana",
+      "obra": "Decodificación de un calendario lunar metónico representado en un petroglifo geométrico de la estación Capubana, en el Cerro de Santa Ana. Edo. Falcón. Venezuela",
+      "autor": "Acasio, Enrique",
+      "anio": "2023",
+      "publicacion": "Ciencia en Revolución (Mincyt), vol. 9, n.º 25, enero-junio 2023",
+      "genero": "arqueologia",
+      "aporta": "¿Existe una lectura publicada de las «Piedras del Almanaque» del cerro de Siraba (Esteves 1989, p. 60)? ¿Son la misma piedra?",
+      "acceso": "Libre en línea. Página: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/view/101 · PDF: https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/download/101/122/206",
+      "lectura_url": "https://cienciaenrevolucion.com.ve/index.php/cienciaenrevolucion/article/view/101"
+    },
     {
       "slug": "adam-1879",
       "titulo": "Adam 1879 — El habla de los hombres y el habla de las mujeres en caribe",
@@ -11,6 +23,18 @@
       "genero": "linguistica-comparativa",
       "aporta": "El estudio clásico del doble registro kalinago (caribe insular): un léxico masculino y uno femenino dentro de la misma lengua. Para este proyecto es la fuente del kalinago-caribe-overlay y del par…",
       "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "aguado-1581",
+      "titulo": "Aguado — Historia de Venezuela (c. 1581), tomo I",
+      "obra": "Historia de Venezuela (Recopilación historial, segunda parte), tomo I",
+      "autor": "Aguado, fray Pedro de",
+      "anio": "1581",
+      "publicacion": "Escrita hacia 1581. Ed. de Jerónimo Bécker, Madrid, Real Academia de la Historia (Establecimiento tipográfico de Jaime Ratés), 1918, 2 tomos",
+      "genero": "cronica",
+      "aporta": "Fray Pedro de Aguado escribió hacia 1581 la Recopilación historial; su segunda parte es la historia de la gobernación de Venezuela desde Ampíes y los Welser. Bécker, en el prólogo de la edición de…",
+      "acceso": "Dominio público: texto de 1581, edición de 1918; archive.org lo marca NOT_IN_COPYRIGHT y Project Gutenberg lo distribuye como dominio público en EE. UU. Se guarda con su cabecera y su licencia de Gutenberg, sin tocar",
       "lectura_url": null
     },
     {
@@ -35,6 +59,18 @@
       "genero": "etnografia",
       "aporta": "La fuente más específica de toda la sesión 4, con una ventaja metodológica poco común: sus datos fueron validados en talleres con hombres y mujeres wayuu, no solo observados. Monografía de la…",
       "acceso": "PDF público (guao.org) — descargado y leído completo en la sesión 4; NO archivado en el repo",
+      "lectura_url": null
+    },
+    {
+      "slug": "ampies-1526-carta",
+      "titulo": "Ampíes, carta al Rey (c. 1525-1526)",
+      "obra": "Carta del Factor Juan de Ampíes al Rey, desde Santo Domingo",
+      "autor": "Ampíes, Juan de (Factor de la Corona en La Española)",
+      "anio": "1526",
+      "publicacion": "Publicada por Cesáreo Fernández Duro en el apéndice documental de Oviedo y Baños, *Historia de la conquista y población de la provincia de Venezuela*, t. II, Madrid, Luis Navarro, 1885 (Biblioteca de los Americanistas), pp. 209-213. Copiada en parte por Arcaya 1920, pp. 160-161, que dice tomarla de Fernández Duro. El manuscrito está en el AGI; Velasco 2015 lo cita como «Folio 14»",
+      "genero": "documento",
+      "aporta": "Hasta el 2026-09-24 la carta se citaba de tres maneras —«Arcaya pp. 160-161», «Fernández Duro t. II p. 209», «Velasco, Folio 14»— y ninguna era una clave de la bibliografía: la carta vivía dentro de…",
+      "acceso": null,
       "lectura_url": null
     },
     {
@@ -263,6 +299,18 @@
       "genero": "ciencia-natural",
       "aporta": "La fuente estrella de mapa-ecologia: 13 páginas de geomorfología del Istmo de los Médanos que le dan al mundo de la Curiana su suelo, su clima y su viento con números. Es —junto a oliver-1989-cap3 y…",
       "acceso": null,
+      "lectura_url": null
+    },
+    {
+      "slug": "carvajal-1892",
+      "titulo": "Carvajal 1892 [1648] — Relación del descubrimiento del río Apure",
+      "obra": "Relación del descubrimiento del río Apure hasta su ingreso en el Orinoco",
+      "autor": "Carvajal, Jacinto de (fray, O.P.)",
+      "anio": "1892",
+      "publicacion": "León, Diputación Provincial, 1892 (escrita en 1648)",
+      "genero": "cronica",
+      "aporta": "Fray Jacinto de Carvajal baja el Apure en 1647-1648. Los caquetíos de los que habla son los de la laguna de Caranaca (la grafía oscila: Carannaca, Caranacca, Garanaca, Garannaca), en los llanos de…",
+      "acceso": "Dominio público: impreso en León en 1892 (texto de 1648); archive.org lo marca NOT_IN_COPYRIGHT. Descargado el 2026-09-24 por dp.3.05 H de #222 («Ok a todo», Miguel): PDF 13.459.362 bytes, sha256 a181411df3025f4a89190b675cbb5dcc0cd08964e829a33a0d7e046657115bd4; OCR 632.325 bytes, sha256 11be56c6d71706ecac68a0f553ca2456eb3282ee4b91fabe0222fc75d7889df9. Hay otro ítem en archive.org de 2020 (subido por un particular) que no se bajó.",
       "lectura_url": null
     },
     {
@@ -552,6 +600,18 @@
       "aporta": "El PDF no dice de qué congreso sale. Las páginas impresas son 224-237. fernandes-2020 cita «Tacoma, J. Skeletal remains from de Savaan Region, Curaçao. In Proceedings of the XI International Congress…",
       "acceso": "Libre en la University of Florida Digital Collections: https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/00343/11-21.pdf Descargado el 2026-09-22 (1.308.271 bytes, sha256 2f6e8c59b9e365edcb611382b793744538e6be8e3ec4f9e1512e9a808063d8b2). Sin declaración de derechos en el propio PDF → se guarda en disco, **no en el repo** (política de Miguel, 2026-09-22).",
       "lectura_url": "https://ufdcimages.uflib.ufl.edu/AA/00/06/19/61/00343/11-21.pdf"
+    },
+    {
+      "slug": "haviser-strecker-2006",
+      "titulo": "Haviser y Strecker 2006 — el arte rupestre del Caribe (zona 2)",
+      "obra": "Zone 2: Caribbean Area and north-coastal South America",
+      "autor": "Haviser, Jay B.; Strecker, Matthias",
+      "anio": "2006",
+      "publicacion": "En el estudio temático de ICOMOS sobre el arte rupestre de América Latina y el Caribe. El año es estimado: el texto cita el archivo venezolano a octubre de 2005 y trabajos de 2006",
+      "genero": "arqueologia",
+      "aporta": "El capítulo de la zona Caribe y costa norte de Sudamérica del estudio temático de ICOMOS. Lo acompañan los apéndices de expertos regionales: Aruba, Curaçao y Bonaire, y Venezuela por separado.",
+      "acceso": "Libre — https://www.latinamericanstudies.org/ancient/caribbean-rock-art.pdf",
+      "lectura_url": "https://www.latinamericanstudies.org/ancient/caribbean-rock-art.pdf"
     },
     {
       "slug": "jahn-1927",
@@ -1178,6 +1238,18 @@
       "lectura_url": "https://tiboko.com/wp-content/uploads/2023/07/Final-version-GvB-Papiamentu-book.pdf"
     },
     {
+      "slug": "van-koolwijk-1882",
+      "titulo": "Van Koolwijk 1882 — Los indios de Aruba",
+      "obra": "De Indianen Caraïben van het eiland Aruba (West-Indië)",
+      "autor": "Koolwijk, A. J. van",
+      "anio": "1882",
+      "publicacion": "Artículo con una lámina de figuras. La copia es de la Biblioteca Nacional Aruba (Departamento Arubiana-Caribiana)",
+      "genero": "etnografia",
+      "aporta": "El artículo del párroco van Koolwijk sobre los indígenas de Aruba, en el Tijdschrift van het Aardrijkskundig Genootschap VI, pp. 222-229, con una lámina fuera de texto (n.º 7). Llegó a Aruba el 20 de…",
+      "acceso": "Libre, CC BY 4.0 — Internet Archive (BNADIGKOSTBARE0151)",
+      "lectura_url": null
+    },
+    {
       "slug": "vansina-ong",
       "titulo": "Vansina 1985 y Ong 1982 — el marco teórico de la oralidad",
       "obra": "Oral Tradition as History (Vansina 1985) · Orality and Literacy (Ong 1982)",
@@ -1202,6 +1274,30 @@
       "lectura_url": null
     },
     {
+      "slug": "wagenaar-hummelinck-1953",
+      "titulo": "Wagenaar Hummelinck 1953 — Rotstekeningen I",
+      "obra": "Rotstekeningen van Curaçao, Aruba en Bonaire, Deel I",
+      "autor": "Wagenaar Hummelinck, P. (con A. D. Ringma)",
+      "anio": "1953",
+      "publicacion": "West-Indische Gids XXXIV, pp. 173-209",
+      "genero": "arqueologia",
+      "aporta": "La primera parte del corpus clásico del arte rupestre de las islas ABC. Registra los sitios de Curaçao (C), Aruba (A) y Bonaire (B) con fotos y con dibujos del autor y de Ringma. Está en neerlandés,…",
+      "acceso": "Libre — Internet Archive (BNA-DIG-WESTINDISCHEGIDS-1952-173); Brill, free access",
+      "lectura_url": null
+    },
+    {
+      "slug": "wagenaar-hummelinck-1962",
+      "titulo": "Wagenaar Hummelinck 1962 — Rotstekeningen III",
+      "obra": "Rotstekeningen van Curaçao, Aruba en Bonaire, Deel III",
+      "autor": "Wagenaar Hummelinck, P.",
+      "anio": "1962",
+      "publicacion": "West-Indische Gids 42, pp. 83-126",
+      "genero": "arqueologia",
+      "aporta": "El catálogo de 30 sitios de las islas ABC, con el sistema de códigos A1-A30 y C1-C14. Da la ubicación, fotos, esquemas, técnica y pigmentos. No da fechas: lo llama «precolombino» por inferencia y lo…",
+      "acceso": "Libre — Internet Archive (BNA-DIG-WESTINDISCHEGIDS-1961-083); Brill, free access",
+      "lectura_url": null
+    },
+    {
       "slug": "wikipedia-es-fauna-marina",
       "titulo": "Wikipedia en español — la fauna marina, descrita",
       "obra": "Wikipedia en español — artículos de especie de la fauna marina del Caribe sur",
@@ -1212,6 +1308,18 @@
       "aporta": "Qué es. Enciclopedia colaborativa: capa moderna y de segunda mano. Se usó sólo para lo que no cambia en 600 años y no necesita autoridad —el color de un caparazón, la forma de una aleta, el chorro de…",
       "acceso": "Libre en línea. Se leyeron los artículos en español de Chelonia mydas, Eretmochelys imbricata, Caretta caretta, Dermochelys coriacea, Lepidochelys olivacea, Tursiops truncatus, Sotalia guianensis, Balaenoptera edeni, Megaptera novaeangliae, Trichechus manatus y Haemulidae, y en inglés Haemulidae y Alpheidae (para el sonido); los de invertebrados en español quedaron sin leer (la API cortó por exceso de consultas)",
       "lectura_url": null
+    },
+    {
+      "slug": "zavala-reyes-2015-petroglifos",
+      "titulo": "Zavala Reyes 2015 — Los petroglifos de Chirache-Buenevara",
+      "obra": "Registro y documentación de los petroglifos de la quebrada de Chirache-Buenevara, estado Falcón",
+      "autor": "Zavala Reyes, Miguel",
+      "anio": "2015",
+      "publicacion": "Boletín Antropológico, año 33, n.º 90, julio-diciembre 2015, pp. 37-51. Universidad de Los Andes, Mérida",
+      "genero": "arqueologia",
+      "aporta": "El registro de un sitio de petroglifos en Paraguaná: la quebrada de Chirache-Buenevara. Trae mediciones hechas en el sitio, registro fotográfico, los motivos digitalizados, la técnica y el estado de…",
+      "acceso": "Libre — Redalyc: https://www.redalyc.org/articulo.oa?id=71243364003",
+      "lectura_url": "https://www.redalyc.org/articulo.oa?id=71243364003"
     },
     {
       "slug": "zavala-reyes-2015",

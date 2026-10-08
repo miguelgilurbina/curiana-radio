@@ -1,7 +1,7 @@
 {
-  "generado": "2026-09-24",
+  "generado": "2026-10-08",
   "n": 15,
-  "n_biblio": 104,
+  "n_biblio": 113,
   "paginas": [
     {
       "slug": "lexico",
@@ -9,7 +9,7 @@
       "orden": 0,
       "tipo": "nota-viva",
       "titulo": "El lexicón",
-      "resumen": "El lexicón activo es VOCABULARIOBASE en curianasim/curianalexicon.py. Esta nota lo describe; no lo define. Las cifras de los bloques generados las mide y las escribe curianasim/tablalexicon.py con las mismas funciones…"
+      "resumen": "Cuántas palabras tiene el caquetío reconstruido, de qué lenguas salen y con qué certeza."
     },
     {
       "slug": "morfologia",
@@ -17,7 +17,7 @@
       "orden": 1,
       "tipo": "nota-viva",
       "titulo": "La morfología",
-      "resumen": "⚠️ La tanda final (2026-09-23) cambió el núcleo — D11 fase 3. Lo que abajo figura como «reconstruido desde el wayuu» y deuda de D11 ya no se enseña: los pronombres son dai, bui, lihi/tuhu, waya, naya (de lokono, taíno y…"
+      "resumen": "Cómo se arma una palabra en caquetío: el orden básico, los pronombres, los morfemas y los afijos atestiguados, y qué parte es reconstrucción."
     },
     {
       "slug": "toponimia",
@@ -25,7 +25,7 @@
       "orden": 2,
       "tipo": "nota-viva",
       "titulo": "La toponimia como fuente de morfemas",
-      "resumen": "El método que abrió Miguel en F11, y el mejor rendimiento por unidad de esfuerzo que ha tenido el proyecto. El diseño completo está en 03descomposiciontoponimica; esta nota es la lectura corta. La idea El proyecto venía…"
+      "resumen": "Los nombres de lugar de Paraguaná y Coro guardan piezas del caquetío. Cómo se descomponen para recuperar morfemas que ninguna crónica registró."
     },
     {
       "slug": "metodo-comparativo",
@@ -33,7 +33,7 @@
       "orden": 3,
       "tipo": "nota-viva",
       "titulo": "El método comparativo",
-      "resumen": "Cómo se reconstruye una palabra caquetía cuando no hay dato caquetío. Es la Capa 2 del proyecto, y la que más ha fallado — por buenas razones que conviene tener escritas. Las piezas curianasim/arahuacocomparative.py:…"
+      "resumen": "Cómo se reconstruye una palabra caquetía cuando no hay dato caquetío: el método comparativo con las lenguas arahuacas hermanas, y por qué falla tanto."
     },
     {
       "slug": "fonotactica",
@@ -41,7 +41,7 @@
       "orden": 4,
       "tipo": "nota",
       "titulo": "La fonotáctica — un resultado negativo, y por qué vale",
-      "resumen": "1. Lo que se quería y lo que salió HALLAZGOSFASE1 §3.1 nombró la amenaza principal de la fase 1: los agentes son modelos que ya saben español y ya conocen patrones arahuacos, así que cuando producen una forma bien…"
+      "resumen": "¿Se puede fijar la forma de una palabra caquetía para que la IA no la invente? El intento falló, y este resultado negativo explica por qué igual vale."
     },
     {
       "slug": "vida-cotidiana",
@@ -49,7 +49,7 @@
       "orden": 0,
       "tipo": "articulo",
       "titulo": "La vida en La Curiana",
-      "resumen": "1. Cosmología arahuaca La cosmovisión caquetía es arahuaca: comparte una matriz profunda con los Wayuu de la Guajira, los Lokono de las Guayanas y los Taínos de las Antillas. No es una religión de templos y dogmas, sino…"
+      "resumen": "Cómo se vivía en La Curiana, la tierra de los caquetíos: cosmología arahuaca, ciclo ritual, intercambio, jerarquía y un día cualquiera."
     },
     {
       "slug": "familia",
@@ -57,7 +57,7 @@
       "orden": 1,
       "tipo": "ensayo",
       "titulo": "¿Cómo era la familia caquetía?",
-      "resumen": "1. Lo que dicen las crónicas de Coro — y lo poco que dicen Empecemos por el vacío, porque es honesto reconocerlo primero: ningún cronista temprano de Coro describió en detalle la institución familiar caquetía. Arcaya lo…"
+      "resumen": "Ningún cronista de Coro describió la familia caquetía. Lo que se sabe y se intuye: clanes, avunculado, la sucesión del Manaure, y cómo se reconstruye el resto."
     },
     {
       "slug": "ecologia",
@@ -65,7 +65,7 @@
       "orden": 2,
       "tipo": "ensayo",
       "titulo": "¿Dónde existía el caquetío?",
-      "resumen": "La ecología, la geografía, la hidrología y la fauna del mundo de la Curiana Sesión 2 del programa «corpus cultural». Investigación y redacción, siglos XIV–XV, Golfete de Coro, noroccidente de Venezuela. (v2 — amplía la…"
+      "resumen": "El mundo físico y el territorio del caquetío: el Golfete de Coro, Paraguaná, Aruba, Curazao y otros territorios; el conuco, las salinas y el manglar."
     },
     {
       "slug": "creencia",
@@ -73,7 +73,7 @@
       "orden": 3,
       "tipo": "ensayo",
       "titulo": "¿En qué creía el caquetío?",
-      "resumen": "El problema y el método Los caquetíos no dejaron escritura, y las crónicas coloniales los describen —cuando lo hacen— ya en guerra con los españoles, no rezando. Al comenzar esta sesión, el inventario de datos duros…"
+      "resumen": "Qué dicen las crónicas de la religión caquetía, y dos vías para reconstruir el resto: la cosmovisión wayuu y el culto vivo de María Lionza."
     },
     {
       "slug": "transmision",
@@ -81,7 +81,7 @@
       "orden": 4,
       "tipo": "ensayo",
       "titulo": "¿Cómo sabía el caquetío lo que sabía?",
-      "resumen": "Sesión 4 de 4 del programa \"corpus cultural\" de Curiana. Cierra el ciclo: familia es la estructura por la que viaja el saber; ecología es su contenido; creencia es su marco; esta sesión es el mecanismo — cómo el…"
+      "resumen": "Una sociedad oral guarda su saber en cuerpos mortales. Qué aprendía un caquetío a cada edad, y qué formas de transmitir resisten el olvido."
     },
     {
       "slug": "geografia-politica",
@@ -89,7 +89,7 @@
       "orden": 5,
       "tipo": "ensayo",
       "titulo": "La geografía política de Manaure: quién era un diao, y qué asentamiento reconstruimos",
-      "resumen": "Sesión 5 del programa \"corpus cultural\" — Curiana, Golfete de Coro, siglos XIV-XV. Surge de una conversación con Miguel (2026-07-13 a 2026-07-20) sobre la sucesión de Manaure y la escala real del mundo caquetío. No…"
+      "resumen": "Quién era el Manaure, qué era un diao, hasta dónde llegaba su poder —Paraguaná, las islas ABC, un puesto en la Guajira— y qué pueblo real reconstruimos."
     },
     {
       "slug": "polities",
@@ -97,7 +97,7 @@
       "orden": 6,
       "tipo": "nota",
       "titulo": "Las polities caquetías — y cuál es la nuestra",
-      "resumen": "\"To say that the Caquetío are a Theocratic Chiefdom […] explains absolutely nothing, and blurs the differences that make a difference.\" — Oliver 1989, cap. 3, p. 278 La respuesta en una frase Los caquetíos hablaban una…"
+      "resumen": "Los caquetíos hablaban una lengua pero no formaban una sola sociedad: al menos cuatro formaciones políticas distintas, y cuál simula Kaketiana."
     },
     {
       "slug": "esfera-de-interaccion",
@@ -105,7 +105,7 @@
       "orden": 7,
       "tipo": "nota",
       "titulo": "La esfera de interacción — por qué «caquetío» no nombra una etnia",
-      "resumen": "1. El nombre ya lo decía Oliver 1989, capítulo 3, nota al pie 3: el término Caquetío /kaketío/ es cognado del lokono kakitho, que significa 'persona, gente' — y por eso hay razón para creer que los españoles designaron…"
+      "resumen": "«Caquetío» es pariente del lokono kakitho, «gente»: no nombraba una etnia sino una red de pueblos. Qué definimos como la Gran Curiana y por qué importa."
     },
     {
       "slug": "horizonte-de-contacto",
@@ -113,7 +113,7 @@
       "orden": 8,
       "tipo": "nota",
       "titulo": "El horizonte de contacto — hasta dónde llegaba su mundo",
-      "resumen": "Aviso de estado. Esto es prospección, no minería. Ninguna de las obras citadas está en fuentescaquetios/ todavía: son el mapa de qué conseguir y por qué. Nada de aquí debe fusionarse al corpus hasta leer el original. La…"
+      "resumen": "¿Hasta dónde llegaron los caquetíos? Las tres esferas de contacto del mundo caquetío y su alcance."
     },
     {
       "slug": "cronista",
@@ -121,7 +121,7 @@
       "orden": 9,
       "tipo": "nota",
       "titulo": "El cronista — contar desde dentro sin inventar",
-      "resumen": "python curianasim/curianacronista.py --glosario · --check verifica la tabla contra el lexicón y la bibliografía. El problema, y no es ideológico Todo lo que sabemos del caquetío llega en la lengua y las categorías de…"
+      "resumen": "Todo lo que sabemos del caquetío llegó de parte de quien conquistó su territorio. Cómo contar su historia desde una perspectiva originaria."
     }
   ]
 }

@@ -1,3 +1,7 @@
+---
+descripcion: "Cómo se vivía en La Curiana, la tierra de los caquetíos: cosmología arahuaca, ciclo ritual, intercambio, jerarquía y un día cualquiera."
+---
+
 # CULTURA CAQUETÍA — La Curiana del Golfete de Coro
 
 *Guía etnohistórica para la simulación multi-agente. Vida precolonial, siglos XIV–XV.*

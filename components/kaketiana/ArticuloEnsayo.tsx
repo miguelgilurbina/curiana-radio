@@ -93,6 +93,11 @@ export default function ArticuloEnsayo({ pagina }: { pagina: WikiPagina }) {
             <h1 className="sim-display mt-4 text-[1.9rem] font-semibold leading-[1.08] tracking-tight text-(--sim-ink) sm:text-[2.9rem] sm:leading-[1.05]">
               {pregunta ?? pagina.titulo}
             </h1>
+            {pagina.descripcion && (
+              <p className="mt-5 max-w-reading font-sans text-base leading-relaxed text-(--sim-ink-soft) md:text-lg">
+                {pagina.descripcion}
+              </p>
+            )}
           </header>
 
           <WikiProse

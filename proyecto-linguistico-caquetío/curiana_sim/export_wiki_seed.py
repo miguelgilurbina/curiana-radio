@@ -311,6 +311,11 @@ def emitir(dry_run=False):
         fuentes = [{"slug": s, "titulo": id_map[s][2]} for s in art["citadas"]
                    if s in id_map and id_map[s][0] == "bibliografia"]
 
+        # La `descripcion` del frontmatter la escribe Miguel para un lector:
+        # el índice de la sección, Google, la tarjeta al compartir y la bajada
+        # del artículo. Sin ella, el resumen es el arranque del cuerpo — prosa
+        # del vault, no un sumario.
+        descripcion = _limpiar(art["fm"]["descripcion"]) if art["fm"].get("descripcion") else None
         pagina = {
             "slug": art["slug"],
             "seccion": art["seccion"],
@@ -319,7 +324,8 @@ def emitir(dry_run=False):
             "titulo": art["titulo"],
             "frontmatter": _json_seguro(art["fm"]),
             "cuerpo": escapar_para_mdx(cuerpo.strip()),
-            "resumen": texto_plano(cuerpo),
+            "descripcion": descripcion,
+            "resumen": descripcion or texto_plano(cuerpo),
             "fuentes": fuentes,
         }
         indice.append({k: pagina[k] for k in

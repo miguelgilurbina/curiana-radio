@@ -3,6 +3,7 @@ tipo: nota
 pregunta: "¿Hasta dónde llegaba el mundo de un caquetío? ¿Pudo tocar a los mayas?"
 medido: 2026-08-06
 estado: prospección bibliográfica — ninguna fuente nueva en el repo todavía
+descripcion: "¿Hasta dónde llegaron los caquetíos? Las tres esferas de contacto del mundo caquetío y su alcance."
 ---
 
 # El horizonte de contacto — hasta dónde llegaba su mundo

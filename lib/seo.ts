@@ -30,8 +30,8 @@ export function urlAbsoluta(ruta: string): string {
 }
 
 /** Recorta en el último espacio antes de `max` y cierra con «…». Para las
- *  descripciones: Google corta hacia los 155 caracteres y las redes antes. */
-export function recortar(texto: string, max = 155): string {
+ *  descripciones: Google corta hacia los 155-160 caracteres. */
+export function recortar(texto: string, max = 160): string {
   const limpio = texto.replace(/\s+/g, " ").trim();
   if (limpio.length <= max) return limpio;
   const corte = limpio.slice(0, max - 1);
