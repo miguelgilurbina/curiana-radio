@@ -18,7 +18,7 @@ visita. Sin cookies: no hace falta banner de consentimiento.
 
 | Evento | Cuándo | Propiedades | Qué pregunta responde |
 |---|---|---|---|
-| `suscripcion` | el formulario del newsletter salió | `desde` | ¿la radio convierte visitas en audiencia propia? |
+| `suscripcion` | alguien confirmó su correo (el segundo paso del doble opt-in, en `/suscripcion/confirmar`) | `desde` = el tema: `edicion` o `senales` | ¿la radio convierte visitas en audiencia propia? ¿qué frecuencia eligen? |
 | `lectura` | llegó al final de un artículo o edición y lleva ≥ 20 s en la página | `pagina` | ¿se lee o se hojea? qué textos se terminan |
 | `salida` | clic en cualquier enlace externo | `destino`, `desde` | ¿a Spotify (JAI), al repo, a las fuentes (archive.org…)? |
 | `estacion` | pasó a otra estación de la batea de JAI Sounds | `estacion` | qué curaduría engancha |
@@ -61,7 +61,7 @@ mirar para saber si vale la pena construirla, no la decisión.
 
 | Arista | Vía plausible | La señal | Cuándo se mira |
 |---|---|---|---|
-| **La radio** (ediciones, newsletter) | apoyo de la audiencia: membresía o donación recurrente | `suscripcion` ÷ visitas a `/inicio`; `lectura` de ediciones | al tener proveedor de newsletter (hoy el formulario está apagado: falta `NEXT_PUBLIC_SUSCRIPCION_URL`) |
+| **La radio** (ediciones, newsletter) | apoyo de la audiencia: membresía o donación recurrente | `suscripcion` ÷ visitas al sitio (el formulario está en el pie de todas las páginas); `lectura` de ediciones | cuando Miguel configure Resend ([`NEWSLETTER.md`](NEWSLETTER.md)); hasta entonces el formulario está cerrado |
 | **Kaketiana** | patrocinio cultural, fondos de patrimonio y de lenguas indígenas, universidades; a la larga, el diccionario impreso | `lectura` de artículos; voces más visitadas; `salida` hacia fuentes; **referentes chatgpt.com, perplexity.ai, claude.ai, bing.com** | a los 3 meses de difusión. Un fondo pide alcance demostrable: esto es esa evidencia |
 | **JAI Sounds** | patrocinio de la curaduría; curaduría por encargo | `estacion`; `salida` → open.spotify.com | a los 3 meses |
 | **Galería** | licencias primero, print después (decidido en [`GALERIA_PLAN.md`](GALERIA_PLAN.md) §1.1) | `obra` (las más ampliadas son el catálogo a licenciar); visitas a `/galeria/[slug]` desde buscadores de imágenes | cuando haya licencias publicadas |
