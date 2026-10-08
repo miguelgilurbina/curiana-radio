@@ -1,20 +1,13 @@
-import { createClient } from "@supabase/supabase-js";
-
-// Fallback build-safe: si las env vars no están (p. ej. deploy antes de conectar
-// la integración Supabase), no rompemos el build — el simulador muestra estado
-// vacío hasta que NEXT_PUBLIC_SUPABASE_URL / _ANON_KEY existan en el entorno.
-const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
-const supabaseAnonKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "public-anon-placeholder";
-
-export const supabaseConfigured = Boolean(
-  process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-);
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-// ── Tipos de las tablas Supabase ───────────────────────────────────────
+/**
+ * Simulador — la forma de las tablas de Supabase donde el experimento de
+ * Kaketiana registra cada run.
+ *
+ * El sitio ya no le habla a Supabase: es 100 % estático y lee los JSON que el
+ * exportador deja en content/simulador/ (lib/resumen.ts, lib/runs.ts…). Estos
+ * tipos describen esas filas tal como salen de la base. Vivían en
+ * lib/supabase.ts junto a un cliente que ninguna página usaba; el cliente se
+ * borró en la segunda revisión de seguridad (2026-10-08).
+ */
 
 export interface SimulationRun {
   id: string;
@@ -97,7 +90,3 @@ export interface LanguageDriftRow {
   avg_score: number;
   agents_active: number;
 }
-
-// ── Colores canónicos por lengua ──────────────────────────────────────
-// Fuente única de verdad: lib/sim-theme.ts
-export { LANG_COLORS } from "./sim-theme";
