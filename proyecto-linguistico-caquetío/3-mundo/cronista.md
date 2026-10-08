@@ -4,7 +4,7 @@ pregunta: "¿Se puede contar esto desde dentro sin inventarlo?"
 motor: curiana_sim/curiana_cronista.py
 sustituciones: 8
 medido: 2026-08-06
-descripcion: "Todo lo que sabemos del caquetío llegó de parte de quien conquistó su territorio. Cómo contar su historia desde una perspectiva originaria."
+descripcion: "Todo lo que sabemos del caquetío llegó de quien ocupó su territorio e invisibilizó su cultura. ¿Cómo contar su historia desde una perspectiva originaria sin inventarla?"
 ---
 
 # El cronista — contar desde dentro sin inventar
