@@ -3,11 +3,14 @@
 #
 # Regla 5: esto PROPONE. No toca 3-mundo/etnias.yaml, 3-mundo/corpus/,
 # 2-lengua/, curiana_lexicon.py ni lexicon_*.py.
-# Regla 4: todo lo de los xaguas es de la polity de BARQUISIMETO (y, en la
-# colonia, de la encomienda de Coro), nunca de la costera.
-# Regla 3: casi todo es de 1530-1579; lo de Pedregal, Utaquire y Paraguaná es
-# de encomienda (s. XVI tardío-XVIII).
-# BORRADOR EN CURSO: el primer commit se hizo antes de cerrar la búsqueda web.
+# Regla 4: lo de los xaguas de 1530-1579 es de la polity de BARQUISIMETO
+# (vecinos de sus caquetíos), nunca de la costera. Lo de Pedregal, Pecaya,
+# Utaquire y Paraguaná es de la ENCOMIENDA de Coro (s. XVI tardío-XVIII).
+# Regla 3: nada de esto es precontacto. Lo más temprano es de octubre de 1530.
+# Las cifras (sondas, azar, distancias) las emite
+# 6-fusion/scripts/medir_xaguas_2026-10-09.py en
+# 6-fusion/medicion_xaguas_achaguas_2026-10-09.yaml; aquí se citan, no se
+# calculan (regla 1).
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-10-09'
@@ -15,6 +18,8 @@ meta:
   quien: 'minero de los xaguas (Claude Opus 5.5), rama vault/xaguas-falcon'
   bitacora: 4-fuentes/sesiones/11_xaguas_achaguas_falcon.md
   issue_borrador: 6-fusion/issues-pendientes/xaguas-achaguas-falcon-2026-10-09.md
+  medicion: 6-fusion/medicion_xaguas_achaguas_2026-10-09.yaml
+  script: 6-fusion/scripts/medir_xaguas_2026-10-09.py
   pregunta: >-
     Miguel (2026-10-09): «he encontrado que habían achaguas también en la zona
     de ahora Falcón, más que todo cerca de lo que es Mitare, más hacia el lado
@@ -33,47 +38,692 @@ meta:
     - aguado-1581
     - rivero-1883
     - urbina-jimenez-2007-2011
+    - esteves-1989
     - nueva-segovia-1579
     - osm-kaketiana
   cobertura:
     federmann-1916: >-
       cap. VII entero («La nación de los Xaguas», pp. 53-58, con la nota (a) de
       Arcaya, pp. 53-54, y las notas (b)-(d)), el arranque del cap. VIII
-      (pp. 58-60) y la p. 63 (los cuatro enemigos de los caquetíos de
-      Barquisimeto); cotejado con el alemán de Klüpfel 1859 pp. 32-36 (folios
-      [41]-[46] de 1557) en su capa de texto.
+      (pp. 58-60), la p. 63 (los cuatro enemigos de los caquetíos de
+      Barquisimeto) y la nota (a) del cap. IV (p. 29-30, jirajaras y ajaguas);
+      cotejado con el alemán: Klüpfel 1859 pp. 32-36 en su capa de texto y el
+      original de 1557, folios [44] y [45], vistos en imagen (imágenes 54 y 55
+      del PDF).
     oliver-1989-cap3-vecinos: >-
       §3.3.1, tesis pp. 243-247 (pdf 270-274), en el OCR guardado
-      (fuentes_caquetios/Oliver_1989_cap3_s33_falcon_lara.ocr.txt).
+      (fuentes_caquetios/Oliver_1989_cap3_s33_falcon_lara.ocr.txt), y p. 231
+      (la orografía: Baragua, Siruma).
     oliver-1989-cap3: >-
-      la edición DOC (2006): pp. 239 (el mismo pasaje de los xaguas), 272
-      (cuentas de concha) y 287-288 (achaguas, «Jaguas carniceros» de 1535,
-      Barraguá), en la capa de texto del PDF.
+      la edición DOC (2006), capa de texto nativa: pp. 225 (orografía), 239
+      (los xaguas, el mismo pasaje que la tesis p. 245), 253-254 (el censo de
+      Martí, 1773-1782; la p. 254 vista en imagen), 272 (cuentas de concha) y
+      287-288 (los achaguas, los «Jaguas carniceros» de 1535, Barraguá).
     jahn-1927: >-
       pp. 6-7 (Párraga y Oramas), 52 (las «tierras pobres» de Carora), 207-227
       (cap. IV, «Los Caquetíos y Achaguas»), 254-256 (los jirajaras de Ciruma
-      y los xaguas «de Carora y Baragua») y 273-275 (Oramas y la filiación),
-      en pdftotext; p. 255 vista en imagen.
+      y los xaguas «de Carora y Baragua»; la p. 255 vista en imagen) y 273-275
+      (Oramas y la filiación), en pdftotext.
     arcaya-1920: >-
-      cap. I pp. 8-25 (la orografía: Pedregal, Mitare, Siruma, Empalado), cap.
-      II pp. 31-61 (los aborígenes: el territorio ajagua, la identidad con el
-      achagua, Pérez de Tolosa, las Relaciones de 1579), pp. 73-83 (la
-      filiación lingüística), 93-94 (pueblos ajaguas), 102 (sol y luna de los
-      axaguas), 117 (la «xagua» tinte), 230-232 (indios libres e indios de
-      encomienda), 279 (Cariagua, Mapiare…) y 326-328 (Paraguaná, Mitare), en
-      pdftotext.
+      cap. I pp. 8-25 (la orografía: Pedregal, río de los Mitares, Siruma,
+      Empalado), cap. II pp. 31-61 (los aborígenes: el territorio ajagua, la
+      identidad con el achagua, Pérez de Tolosa, las Relaciones de 1579),
+      pp. 73-75 y 83 (la filiación lingüística), 91-94 (pueblos), 101-102
+      (Capu y el sol y la luna de los axaguas), 117 (la «xagua» tinte),
+      230-232 (indios libres e indios de encomienda), 278-279 (Cariagua,
+      Mapiare…) y 326-328 (Paraguaná, Mitare), en pdftotext (impresa = pdf − 8).
     perez-de-tolosa-1546: 'Fernández Duro t. II p. 232 (pdf 243), vista en imagen.'
     aguado-1581: >-
-      búsqueda de «xagua» (4 aciertos) leída en contexto: lib. II caps. XI y
-      XXI, lib. III cap. XVI (el texto de Gutenberg no conserva la página).
-    rivero-1883: 'pp. 27-35 (pdf 48-57): Barragua, Airico, los «Tamudes».'
+      las 4 apariciones de «xagua/axagua» leídas en contexto: lib. II caps. XI
+      y XXI, lib. III cap. XVI (el texto de Gutenberg no conserva la página).
+    rivero-1883: 'pp. 27-35 (pdf 48-57): Barragua, Airico, los «Tamudes»; sólo para la trampa de homonimia.'
     urbina-jimenez-2007-2011: 'Urbina 2011 pp. 21-22 (pdf 25-26): el complejo Guacoa.'
-    osm-kaketiana: 'coordenadas de Mitare, Pedregal, Acurigua, Quiragua y los ríos Mitare, Pedregal y Baragua.'
+    esteves-1989: >-
+      Parte II, las entradas Acurigua (p. 84), Autaquire (p. 86), Avaria y
+      Baragua (p. 87), Carazao y Cariagua (p. 98; el OCR lee «Cariacua»), Mapiare (p. 121), Mitare
+      (p. 123), Quiragua (p. 130), Siburúa (p. 131), Tupure (p. 136) y
+      Utaquire (p. 138), en el OCR guardado (sin verificar en imagen).
+    nueva-segovia-1579: 'sólo la ficha (la Relación no está en el repo: se lee por Arcaya y Oliver).'
+    osm-kaketiana: 'coordenadas de Mitare, Pedregal, Acurigua y Quiragua; el resto, por Nominatim (mismo OSM), con su id en la medición.'
   no_leido:
-    - 'Arcaya 1977 (3.ª ed. de la Historia del Estado Falcón, t. I), que es la que cita Oliver (pp. 37, 41-42): se lee la 1.ª ed. de 1920, la del repo; los números de página no coinciden.'
-    - 'Arcaya, «Los aborígenes del Estado Falcón» (el estudio donde dice haber «demostrado» la identidad): no está en el repo.'
-    - 'Oramas 1916 (o 1915), «Materiales para el estudio de los dialectos Ayamán, Gayón, Jirajara, Ajagua»: no está en el repo.'
-    - 'Las Relaciones de Nueva Segovia y de El Tocuyo de 1579 (Arellano Moreno 1964): no están en el repo; se leen por Arcaya y Jahn.'
-    - 'Useche Losada 1987 (los «xaguas carniceros» del bajo Meta, 1535): sólo por Oliver.'
-  sondas:
-    nota: 'conteos de pdftotext, sin distinguir mayúsculas, sobre las variantes que medir-antes-de-contar exige (minar-fuente §2).'
+    - 'Arcaya 1977 (3.ª ed. de la Historia del Estado Falcón, t. I), que es la que cita Oliver (pp. 37, 41-42 ss.): se leyó la 1.ª ed. de 1920, la del repo. El pasaje que Oliver discute («[A]xagua» = achagua) está en la de 1920 en las pp. 35, 55-60 y 73-74, y en la nota (a) de Arcaya a Federmann 1916 pp. 53-54; no se puede jurar que la 3.ª ed. no añada nada.'
+    - 'El estudio de Arcaya sobre «los Aborígenes del Estado Falcón» donde dice haber «demostrado» la identidad (Federmann 1916 p. 53, nota a): no localizado ni en el repo ni en la web (búsqueda 2026-10-09).'
+    - 'Oramas 1916 (WALS lo fecha en 1915), «Materiales para el estudio de los dialectos Ayamán, Gayón, Jirajara, Ajagua»: no está en el repo ni se halló copia en la web.'
+    - 'Las Relaciones de Nueva Segovia, El Tocuyo y Carora de 1579 (Arellano Moreno 1964): no están en el repo; se leen por Arcaya, Jahn y Oliver.'
+    - 'Martí 1969 (la visita pastoral de 1773-1782): sólo por Oliver DOC p. 254.'
+    - 'Useche Losada 1987 (los «xaguas/jaguas carniceros» del bajo Meta, 1535; la primera mención segura del achagua, 1583): sólo por Oliver DOC pp. 287-288.'
+  sondas: >-
+    En la medición (§sondas): cada grafía del etnónimo (xagua, axagua, ajagua
+    —con su partición «aj agua» de pdftotext—, achagua —con «achaga»—, jagua,
+    achagual) y cada lugar de la pregunta, por obra. Lo que decide: Klüpfel
+    1859 sólo escribe «Xaguas»; Pérez de Tolosa sólo «Axaguas» (en el tomo de
+    Fernández Duro, el «ajagua» y un «achagua» son el índice del editor, que
+    ya en 1885 junta «Achaguas ó Ajaguas», y el otro «achagua» es una nota
+    suya sobre los caribes); Rivero, «achagua» y nunca xagua; Esteves no trae
+    el etnónimo: su único «jagua» es el n.º 240 de su índice de topónimos,
+    sin entrada en el cuerpo (la p. 118, vista en imagen, pasa de «Jadagua»
+    a «Jajatal»). Y la sonda «mitare» da
+    cero aciertos que pongan a un xagua o un achagua en Mitare (ver
+    `lugares.mitare`).
+
+# ═════════════════════════════════════════════════════════════════════════
+# 1 · LAS PALABRAS XAGUAS
+# ═════════════════════════════════════════════════════════════════════════
+palabras_xaguas:
+  lo_que_dice_oliver: >-
+    «it is not possible to determine the linguistic affiliation of the Xagua,
+    and the few words recorded by the chroniclers have no relationship to
+    either Jirajaran or Caquetio» (tesis p. 245; DOC p. 239). Oliver NO
+    enumera esas palabras ni dice de qué crónica salen, y no hay nota al pie.
+  lo_que_se_hallo_en_el_repo: >-
+    Ninguna palabra xagua con glosa. Lo único que una crónica del repo pone
+    en boca o en tierra de los xaguas son DOS NOMBRES DE ALDEA, de Federmann,
+    sin significado. Arcaya (1920 pp. 73-75 y 83) clasifica el «dialecto» ajagua
+    como nuarhuaco sin citar una sola voz: «Partiendo de la identidad de los
+    Ajaguas […] con los Achaguas […], punto que creemos haber dejado
+    establecido, no hay duda alguna de que su dialecto pertenecía a dicha
+    familia» (p. 73-74). La filiación sale de la identidad, no de la lengua.
+  probable_origen_de_las_few_words: >-
+    Hipótesis, no dato: los dos nombres de aldea de Federmann (los únicos que
+    el repo tiene) y, quizá, los «antiguos apellidos ajaguas» que Oramas 1916
+    dice haber visto (Jahn p. 274: «También en los antiguos apellidos ajaguas,
+    gayones, etc., se nota el origen aruaco»). Sin Arcaya 1977 ni Oramas no se
+    puede decidir.
+  formas:
+    - forma: Coary
+      glosa: null
+      que_es: 'nombre de la aldea xagua donde Federmann acampó y recibió a los caciques (25 de octubre de 1530)'
+      fuente: federmann-1916
+      pagina: '56 (trad. de Arcaya); 1557 [44]; Klüpfel 1859 p. 34'
+      cita_1557: '«in den Pueblo oder flecken / da sie / die außgesandten / gefangen worden / vnd Coary gehaissen ist»'
+      verificado_en_imagen: true
+      imagen: 'Federmann_1557_Indianische_Historia.pdf, imagen 54'
+    - forma: Cacaridi
+      glosa: null
+      que_es: '«la última [aldea] de esta nación», a 73 leguas de Coro y a 3 leguas del fin de la sierra; llegada el 31 de octubre de 1530'
+      fuente: federmann-1916
+      pagina: '57 (trad. de Arcaya, que fecha «el 3 de octubre»); 1557 [45]; Klüpfel 1859 p. 34'
+      cita_1557: '«auff den letsten tag gemelts monats Octobris / ihn einen Pueblo oder flecken Ca-caridi / gehaissen / welchs der letste flecken diser Nation ist»'
+      verificado_en_imagen: true
+      imagen: 'Federmann_1557_Indianische_Historia.pdf, imagen 55'
+      erratas: >-
+        La traducción de 1916 dice «el 3 de octubre»: el alemán dice «el último
+        día del dicho mes de octubre», y Oliver (p. 246) da el 31. Y Arcaya
+        1920 p. 56 escribe «Cocaride», que no está en ninguna edición de
+        Federmann: es error suyo.
+  el_nombre_del_pueblo: 'ver `el_nombre`'
+
+# ═════════════════════════════════════════════════════════════════════════
+# 2 · EL CRUCE CON NEIRA Y RIBERO
+# ═════════════════════════════════════════════════════════════════════════
+cruce_con_neira:
+  metodo: >-
+    El del cruce del 09-13 (6-fusion/scripts/cruzar_achagua_caquetio.py):
+    sólo cuenta un par si coincide la GLOSA, y el parecido de forma se pone
+    contra un modelo nulo. Aquí no hay ni una palabra xagua con glosa, así
+    que el cruce por concepto tiene CERO conceptos: no se puede hacer.
+  conceptos_cruzables: 0
+  lo_que_si_se_midio: >-
+    El control del azar, sin cruce. Los dos nombres de aldea xaguas se
+    pusieron contra las entradas de Neira con forma comparable y, al lado,
+    13 nombres de aldea de los OTROS pueblos de la misma crónica (jirajara,
+    ayamán, caquetíos de Barquisimeto, los Llanos y la costa), con el mismo
+    instrumento (fon, copista, radicales y umbrales importados del script del
+    09-13). Cifras en la medición, §azar_nombres_de_aldea.
+  resultado: >-
+    Coary y Cacaridi tienen un «mejor parecido» con alguna voz achagua
+    (Coary ~ «Cari» 'barro'; Cacaridi ~ «Cacaribi») que cae DENTRO del rango
+    del control y por debajo de su máximo: los nombres caquetíos Mitare y
+    Miraca se «parecen» al achagua más que los xaguas, y casi todos los
+    nombres del control tienen alguna voz de Neira por encima del umbral de
+    cognado. Con 4.000 entradas en el pajar, cualquier nombre encuentra su
+    aguja. `xaguas_por_encima_del_maximo_del_control` sale vacía.
+  veredicto: >-
+    NO MEDIBLE por concepto (0 glosas) y SIN SEÑAL por forma (los xaguas no se
+    distinguen del control). Es un negativo bien medido: no prueba que el
+    xagua no fuera achagua; prueba que el repo no tiene con qué decidirlo, y
+    que un parecido de Coary o Cacaridi con Neira no debe leerse como indicio
+    (minar-fuente §2).
+
+# ═════════════════════════════════════════════════════════════════════════
+# 3 · EL NOMBRE
+# ═════════════════════════════════════════════════════════════════════════
+el_nombre:
+  grafias_con_fecha:
+    - {forma: Xaguas, anio: '1530 (impreso 1557)', donde: 'entre Bobare y el valle de Barquisimeto', obra: federmann-1916, pagina: '1557 [41]-[46]; 1916 pp. 53-63', verificado_en_imagen: true}
+    - {forma: Axaguas, anio: 1546, donde: 'montes junto a la sabana de Carora', obra: perez-de-tolosa-1546, pagina: 'Fernández Duro t. II p. 232', verificado_en_imagen: true}
+    - {forma: axaguas, anio: 'c. 1581 (hechos de c. 1539-1540)', donde: 'en el camino de la sierra a Barquisimeto', obra: aguado-1581, pagina: 'lib. II cap. XXI'}
+    - {forma: Axaguas, anio: 1579, donde: 'Nueva Segovia y El Tocuyo', obra: nueva-segovia-1579, pagina: 'vía Arcaya 1920 pp. 56-57 y 102; Oliver tesis p. 244 («axaguas», Arellano 1964: 182)'}
+    - {forma: 'Jaguas (carniceros)', anio: 1535, donde: 'boca del Meta', obra: oliver-1989-cap3, pagina: 'DOC p. 288 (Useche 1987: 23); Oliver la llama «dubious»'}
+    - {forma: Achaguas, anio: 1583, donde: 'cabeceras del Aripopo, Meta', obra: oliver-1989-cap3, pagina: 'DOC p. 288 (Useche 1987: 201): «the earliest mention of true Achagua»'}
+    - {forma: Achagua, anio: 'c. 1736', donde: 'Casanare, Meta, Airico', obra: rivero-1883, pagina: '21 ss.'}
+    - {forma: 'Ajaguas', anio: 's. XVII-XVIII (según Arcaya)', donde: 'Coro y Barquisimeto', obra: arcaya-1920, pagina: '35: «Predominó en Coro y Barquisimeto la forma "Ajaguas", y en los llanos […] la de "Achagua"»'}
+  la_fonologia_de_la_grafia: >-
+    En el castellano del s. XVI «x» es /ʃ/ y «ch» es /tʃ/: Xagua, Axagua y
+    Achagua eran tres grafías distintas para un escribano de 1546. Que
+    «Axagua» pase a «Ajagua» en los documentos coloniales tardíos es el cambio
+    del castellano (/ʃ/ → /x/, escrito «j», cumplido hacia el s. XVII), no
+    otro nombre indígena: Ajagua es Axagua puesta al día. Lo que separa al
+    xagua del achagua de verdad son dos cosas: la a- inicial (que ya varía en
+    Falcón-Lara: Xaguas en Federmann, Axaguas en Tolosa) y /ʃ/ frente a /tʃ/,
+    que un oído castellano pudo repartir de las dos maneras ante una
+    africada o fricativa indígena. Conclusión: los nombres PUEDEN ser el
+    mismo etnónimo mal oído; nada lo exige.
+  la_cadena_de_la_identidad: >-
+    Medido: la identidad xagua = achagua NO tiene cuatro apoyos sino uno
+    repetido. (1) El índice de Fernández Duro (1885) ya junta «Achaguas ó
+    Ajaguas, Indios»; (2) Arcaya la afirma en su nota a Federmann (1916
+    pp. 53-54) y en 1920 (pp. 35, 55-60, 73-74), con tres argumentos: el
+    parecido del nombre, la «constante vecindad de los Caquetíos, los
+    Jirajaras y los Ajaguas» en Falcón-Lara y en los Llanos (p. 55), y una
+    etimología guajira (achiagua 'aconsejar', Uterga; o «Jagua de una palma,
+    tótem quizás», p. 35); (3) Jahn 1927 pp. 223-227 la copia de Arcaya —cita
+    la nota de las pp. 53-54, las mismas frases de Rivero, el mismo Carvajal
+    p. 197 y los mismos Documentos del Libertador—; (4) el Tesoro de los
+    diccionarios históricos de la RAE (entrada «achagua», que según los
+    buscadores recoge «achagua, ajagua, axagua; xagua» citando a Jahn: la
+    página dio 403 y no se leyó). En `pendientes_en_alvarado_y_arcaya.yaml`
+    §el_achagua_en_falcon, «Tres fuentes diciendo lo mismo» es una
+    corroboración falsa (minar-fuente §8): Jahn y Arcaya no son
+    independientes. Oliver (tesis p. 245) es el único que la examina, y la
+    rechaza: «the only thing in common that these two groups have is their
+    similarity in the names».
+  la_cronologia_contra_la_identidad: >-
+    Oliver (DOC pp. 287-288, con Useche 1987): la primera mención segura del
+    achagua es de 1583 y está en el alto Meta; la expansión achagua por los
+    Llanos es TARDÍA y desde el sur (Gran Airico), cuando los caquetíos de
+    los Llanos ya menguaban. Los xaguas de Federmann están en Lara en 1530,
+    cincuenta años antes y a varios cientos de kilómetros al norte. No es
+    imposible (pudo haber achaguas tempranos más al norte), pero la identidad
+    obliga a suponerlo sin dato. Y los «Jaguas carniceros» de 1535 en la boca
+    del Meta, que serían el puente, Oliver los da por dudosos: no se sabe si
+    son achaguas, xaguas o caribes.
+  la_homonimia_xagua_tinte: >-
+    Segunda trampa, medida: en el castellano de Indias «xagua» es el TINTE
+    negro de Genipa americana (voz taína). Aguado escribe «xaguas» tres veces
+    para el tinte (lib. II cap. XI: «el çumo de çiertas mançanas que en comun
+    llaman xaguas»; lib. III cap. XVI: «zumo de xaguas») y una sola para el
+    pueblo (lib. II cap. XXI). Y en Coro el tinte tenía otro nombre: «bixa y
+    de xagua que allí llaman busera» (Oviedo, vía Arcaya 1920 p. 117; ya en
+    6-fusion/oliver1989_lexico_restante_2026-09-22.yaml). Una «xagua» en una
+    crónica no es un xagua hasta que el pasaje lo dice. Que el etnónimo sea
+    un apodo castellano tomado del tinte es una hipótesis (Arcaya la roza con
+    su «Jagua […] tótem»); no hay fuente que lo diga.
+  la_trampa_baragua_barragua: >-
+    Tres lugares y no dos. (1) BARAGUA de Lara: el río Baragua, las «Baragua
+    Highlands» de Oliver (tesis p. 231) y hoy el pueblo de Baragua, capital
+    de la PARROQUIA XAGUAS del municipio Urdaneta (OSM, relation 11073231);
+    Esteves p. 87 da además un río Baragua que nace en el sur de Capatárida y
+    corre hacia Lara. (2) La BARRAGUA de Rivero (pp. 27-35): «una serranía y
+    monte grande, distante de la ciudad de Pore trece ó catorce días», en el
+    Airico, entre el Vichada y el Guaviare, con 21 pueblos achaguas y «otra
+    Nación que los Achaguas llaman Tamudes y los españoles Caquetíos»
+    (p. 29). (3) El Barraguán o Barraguá del bajo Meta-Vichada, junto al
+    Orinoco, que Oliver (DOC p. 287) separa expresamente del de Rivero, y que
+    Tavera Acosta (vía Arcaya 1920 p. 47) proponía como lectura de Rivero.
+    Medido: ni Arcaya ni Jahn las confunden. Arcaya usa la Barragua de
+    Rivero sólo para los caquetíos de los Llanos (p. 47) y la Baragua de Lara
+    sólo para los jirajaras (p. 50); Jahn sólo nombra la de Lara (p. 255;
+    «Barragua»: 0 en todo el libro). La trampa está en el paralelo, no en los
+    autores: «achaguas y caquetíos en Barragua» (Rivero, s. XVIII) y «xaguas
+    junto a los caquetíos, hacia Baragua» (Lara, s. XVI) parecen el mismo par
+    étnico en el mismo sitio, y no lo son: el sitio es otro, y el par se
+    repite porque el caquetío estaba en las dos regiones. Y un detalle: la
+    Baragua de 1546 es de Oliver (p. 246) y de Jahn (p. 255), no de Tolosa,
+    cuyo texto dice sólo «junto á esta sabana, en unos montes» (FD t. II
+    p. 232, visto en imagen). El nombre vivo de la parroquia apoya que los
+    xaguas estuvieron en Baragua; no dice cuándo.
+  veredicto_del_nombre: >-
+    Parecido, no identidad demostrada. Xagua/Axagua/Ajagua son un mismo
+    nombre (Ajagua = Axagua tras el cambio castellano). Xagua y Achagua
+    pueden serlo, pero el único argumento es la forma, la cadena que lo
+    afirma es una sola (Fernández Duro → Arcaya → Jahn → RAE), y la
+    cronología del achagua juega en contra.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 4 · DÓNDE
+# ═════════════════════════════════════════════════════════════════════════
+lugares:
+  nota_coordenadas: >-
+    lat/lon y distancias a Mitare y a Pedregal en la medición (§lugares),
+    con el id OSM de cada punto. Un nombre vivo dice dónde está el nombre hoy
+    (osm-kaketiana: «prueba que el nombre está vivo en 2026 y dónde, nada
+    más»).
+  sabana_de_carora:
+    lo_que_dicen:
+      - 'Pérez de Tolosa 1546 (FD t. II p. 232): sabanas «entre las sierras de Coro y las que confinan en el valle de Bariquisimeto»; «en tiempos pasados había ciertos pueblos; hanse despoblado por causa de los españoles», y «junto á esta sabana, en unos montes, hay cierta cantidad de indios de nación Axaguas».'
+      - 'Oliver tesis p. 231 n. 159 (DOC p. 225 n. 67): «It is known as Sabana de Carora, although there is no savanna there». Y p. 246: los xaguas vivían antes en la sabana de Carora y hacia 1546 algunos en las alturas de Baragua.'
+      - 'Jahn p. 223: los xaguas «poblaban las sabanas de Carora hasta Pedregal en el Estado Falcón».'
+    coordenada: 'Carora (ciudad), en la medición; la «sabana» no es un punto.'
+  ruta_de_federmann:
+    lo_que_dicen:
+      - 'Federmann 1916 pp. 53-57: cuatro días por el agua de un arroyo entre dos montañas desde el último pueblo gayón; cinco días en tierra xagua (Coary → Cacaridi); la sierra acaba tres leguas después de Cacaridi y empieza el valle de Barquisimeto.'
+      - 'Arcaya (notas a-d, pp. 53-57): de Bobare al suroeste, por la quebrada de Menecabra (sitio Borote), hacia las sierras del municipio Río Tocuyo, Saroche y el camino de Carora a Barquisimeto.'
+      - 'Oliver p. 243 lo discute: Arcaya llevaba a Federmann al oeste «because of the presence of Xagua (Jagua), who in the 1550''s were reported near the village of Río Tocuyo»; Oliver (con Friede 1958) prefiere una ruta al sur por las alturas de Bobare.'
+    coordenada: 'Río Tocuyo (pueblo), en la medición, como referencia de la lectura de Arcaya; Coary y Cacaridi no tienen sitio.'
+  baragua:
+    lo_que_dicen:
+      - 'Oliver tesis pp. 231 y 246 («Baragua Highlands»).'
+      - 'Jahn p. 255 (visto en imagen): los jirajaras tenían «Por el Oeste […] sus vecinos los indios Xaguas, pobladores de las tierras de Carora y Baragua».'
+      - 'Hoy: Baragua es la capital de la parroquia Xaguas, municipio Urdaneta, Lara (OSM).'
+    coordenada: 'en la medición (pueblo y centroide de la parroquia).'
+  pedregal:
+    lo_que_dicen:
+      - 'Arcaya 1920 p. 35: «Ocupaban los Ajaguas la sección meridional de los Distritos Buchivacoa y Democracia y algo de la occidental del Distrito Federación […] intercaladas con otras de los Jirajaras, pero los Ajaguas predominaban en las montañas de Pedregal», con la prueba en «documentos inéditos […] en los archivos de Coro y Caracas» (nota 5), sin signatura.'
+      - 'Arcaya 1920 p. 94: los ajaguas de Falcón «tendrían sin duda sus aldeas hacia Tupure, Autaquire o Utaquire y Pedregal, donde después estuvieron en Encomiendas y con sus descendientes se constituyeron los dos últimos pueblos nombrados».'
+      - 'Arcaya, nota a Federmann 1916 p. 53: «una tribu aislada, viniéndose por las montañas del Norte de Carora se situó en terreno correspondiente al Municipio Abaría del Distrito Democracia de Falcón». Es la misma pluma diciendo dos cosas: en 1920 los ajaguas son pobladores del suroeste de Falcón «al tiempo del descubrimiento» (p. 31); en 1916, una tribu que LLEGÓ.'
+      - 'Martí 1773-1782, vía Oliver DOC p. 254 (visto en imagen): «Axagua Indians were said to be mostly "nomadic" and inhabiting the mountains around Pedregal and Pecaya areas. They, however, regularly came down to the settled villages of Pedregal, Pecaya, Siquisique and Aregue».'
+      - 'Urbina 2011 pp. 21-22: el complejo cerámico Guacoa, un solo sitio en la serranía de La Guacoa, cerca de El Pedregal; corazonada de Oliver (comunicación personal 2011) de que fuera de los xaguas «forced into a wandering lifestyle (what the Spaniards called "alzados")».'
+      - 'Esteves pp. 86, 87, 136, 138: Autaquire, «extinta comunidad indígena […] a 30 kilómetros al Sur de la población de Pedregal (Quire, en ayamán, es color)»; Avaria, municipio con capital en Tupure; Utaquire, caserío del municipio Urumaco. Esteves NO nombra a los ajaguas.'
+      - 'Wikipedia (es), «Pedregal (Falcón)», leída por un espejo (kiddle): San Nicolás de Tolentino de Pedregal fundado en 1691 «en tierras de los Ajaguas», primero en Autaquire y luego en un «Pueblo Viejo». Fuente moderna, sin cita, no independiente de Arcaya: no es dato.'
+    coordenada: 'Pedregal, Pecaya, Agua Clara y el centroide de la parroquia Avaria, en la medición.'
+  sierra_de_ciruma_o_empalado:
+    lo_que_dicen:
+      - 'Jahn p. 223: los xaguas «se extendían al Oeste hasta la sierra de Ciruma o Empalado, donde vivía otro grupo de Jirajaras»; p. 255, ese grupo jirajara de Ciruma lindaba «por el Este» con «los ya citados Xaguas, de las tierras de Carora» (p. 256).'
+      - 'Arcaya 1920 pp. 8-12: la serranía de Siruma y el Empalado, en el lindero Falcón-Zulia-Lara, divisoria de aguas entre el lago y el Tocuyo.'
+      - 'Oliver tesis p. 231: «The Sierra of Siruma (a Guajiro noun that glosses as ''cloud'')».'
+    coordenada: 'sin punto en OSM (Nominatim no la halla); la frontera Falcón-Zulia-Lara al oeste de Avaria.'
+  la_lista_de_arcaya:
+    cita: >-
+      «Los Jirajaras y Ajaguas se mostraban tranquilos, sujetos a sus
+      Encomenderos […]. Se habían formado con ellos pequeños grupos en
+      Cariagua, Mapiare, Siburua, Utaquire, Acurigua, Quiragua y otros puntos,
+      donde trabajaban en las plantaciones o hatos de los españoles» (Arcaya
+      1920 p. 279, años de Arias de Villasinda, h. 1550-1556). Y a fines del
+      s. XVI: «Siburúa, Quiragua, Curimagua, Cariagua, Mapiare, Maguay»
+      (p. 327).
+    lectura: >-
+      Es una lista de ENCOMIENDA mixta (jirajaras y ajaguas), sin decir quién
+      estaba dónde, y casi toda está en la Sierra de San Luis y al sur de
+      Coro, territorio jirajara según el propio Arcaya. Dice dónde los
+      pusieron los españoles, no dónde vivían los xaguas (regla 3).
+    cada_lugar:
+      Cariagua: 'Esteves p. 98, río que cruza San Luis (Distrito Bolívar); Oliver DOC p. 254, «San Luis Cariagua», pueblo de la sierra de San Luis con Acurigua (267 indios en el censo de Martí, «most probably the remnants of the Jirajara»). Coordenada: San Luis.'
+      Mapiare: 'Esteves p. 121: «Lugar de Churuguara […]. Otrora fue una comunidad indígena que desapareció. Hoy es sitio arqueológico». Coordenada aproximada: Churuguara.'
+      Siburúa: 'Arcaya p. 15, uno de los tres riachuelos que forman el río de Coro; Esteves p. 131, «pueblo y manantial en el municipio Guzmán Guillermo, Distrito Miranda». Sin punto en OSM.'
+      Utaquire: 'Esteves p. 138, caserío del municipio Urumaco (Democracia); Arcaya p. 94 lo iguala con Autaquire. Sin punto en OSM.'
+      Acurigua: 'Esteves p. 84, población y río del Distrito Colina, afluente del Ricoa; OSM (volcado).'
+      Quiragua: 'Esteves p. 130 da tres aldeas de ese nombre (Jacura, Puerto Cumarebo, Guzmán Guillermo); Arcaya p. 94 pone ahí la primera aldea jirajara de Federmann. El punto del volcado es una de ellas, sin saber cuál es la de Arcaya.'
+  mitare:
+    lo_que_dicen:
+      - 'Arcaya 1920 p. 230: un documento del protector de indios del s. XVI nombra «los pueblos de abaxo desta cibdad que son mitare, caracho, cococida, capatarida con sus yndios e yndias dellos», «libres y cristianos vasallos de su magestad amigos de los españoles»: Mitare es CAQUETÍO y libre.'
+      - 'Arcaya 1920 pp. 93 y 328: Mitare es «probablemente el llamado Carao en los días de la conquista», y a fines del s. XVI «Progresaba el de Mitare» entre los caquetíos del occidente, con el cacique general don Sancho de Uriacoa.'
+      - 'Oliver DOC p. 254 (Martí, 1773-1782): Mitare tiene 374 indios caquetíos; y DOC p. 262: Mitare, Zazárida, Capatárida y Borojó son las aldeas caquetías mayores de la costa occidental (Casicure).'
+      - 'Arcaya 1920 pp. 14 y 17: el río Pedregal se une al «de San Luis o de los Mitares» cerca de Agua Clara, y desde ahí el río se llama «de Agua Clara, Sabaneta y Mitare» hasta el Golfete. Y p. 20: en esa costa están «las principales» salinas, «las de Mitare».'
+    sonda: >-
+      Ninguna fuente leída pone xaguas, axaguas, ajaguas ni achaguas EN Mitare
+      ni en su costa: la sonda «mitare» da 7 aciertos en Arcaya, 5 en el DOC de
+      Oliver, 1 en la tesis, 5 en Urbina y 11 en Esteves (medición §sondas), y
+      todos son el pueblo caquetío, el río o la salina. Jahn: 0.
+    la_lectura_posible_de_la_pista_de_miguel: >-
+      Lo más cerca de Mitare que una fuente pone a los ajaguas es PEDREGAL y
+      su sierra, en la CABECERA del mismo río: Pedregal está a unos 37 km del
+      pueblo de Mitare y Agua Clara, la confluencia, a unos 22 (medición
+      §lugares). Arcaya (nota a Federmann 1916 pp. 29-30) dice además que
+      jirajaras y ajaguas compartían «el dominio del macizo montañoso que se
+      extiende entre Carora al sur, el litoral occidental de Coro al norte y
+      el lago de Maracaibo al oeste». Si la pista de Miguel es «la cuenca del
+      Mitare», encaja con Arcaya y con Martí (s. XVIII, de encomienda); si es
+      «el pueblo de Mitare», ninguna fuente la sostiene y las que hay lo dan
+      por caquetío. La pista necesita su fuente: ¿dónde lo leyó?
+    un_rumor_de_la_web: >-
+      Un resumen de buscador atribuyó a la «Caracterización del Pueblo
+      Achagua» del Ministerio de Cultura de Colombia que los achaguas
+      abarcaron «los estados de Falcón, Aragua y Coro»; la página dio 404 y
+      otra búsqueda no lo confirmó. No se leyó: no es dato. Si fuera ésa la
+      fuente de Miguel, sería moderna y heredera de Codazzi (los «Axaguas» en
+      Aragua, vía Arcaya p. 57 y Jahn p. 227) y de Jahn.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 5 · LO QUE SE SABE DE LOS XAGUAS EN SÍ
+# ═════════════════════════════════════════════════════════════════════════
+# Etiquetas: atestiguado = lo dice una fuente de la época (aunque nos llegue
+# por otra); reconstruido = lectura de un historiador sin el documento a la
+# vista; hipotetico = conjetura. Polity: con quién de los caquetíos tenía que
+# ver el hecho (regla 4). Ninguno es de la costera.
+hechos:
+  - id: xg-01
+    tema: asentamiento
+    hecho: >-
+      En octubre de 1530 los xaguas vivían en ALDEAS, al sur-suroeste de los
+      gayones y a la entrada del valle de Barquisimeto: Federmann cruzó su
+      tierra en cinco días, desde Coary («no muy grande») hasta Cacaridi, «la
+      última de esta nación». A Coary llegaron «varios caciques de los
+      alrededores con cerca de ochocientas personas, hombres y mujeres, que
+      moraban en dos o tres leguas a la redonda».
+    etiqueta: atestiguado
+    procedencia: {obra: federmann-1916, pagina: '55-57; 1557 [43]-[45] (imágenes 54-55)'}
+    verificado_en_imagen: true
+    epoca: contacto-temprano (1530)
+    polity: barquisimeto
+  - id: xg-02
+    tema: diplomacia
+    hecho: >-
+      Para la paz llegaban «Todos desarmados y no portaban sino delgados
+      garrotes como es su costumbre cuando se presentan con disposiciones
+      pacíficas» (1557: «mit stecklin sonder ainige gewehre […] wie sie zu
+      bezeügnus der freündtschafft zu thun im gebrauch haben»), y traían oro,
+      víveres y caza. Federmann retuvo al cacique como rehén. El alemán y la
+      traducción no coinciden en el resto: 1557 dice que soltó a cinco de los
+      cautivos y se quedó con los principales y el cacique; la de 1916 (sobre
+      la francesa), que soltó a casi todos y se quedó con cinco.
+    etiqueta: atestiguado
+    procedencia: {obra: federmann-1916, pagina: '56-57; 1557 [44] (imagen 54)'}
+    verificado_en_imagen: true
+    epoca: contacto-temprano (1530)
+    polity: barquisimeto
+  - id: xg-03
+    tema: guerra
+    hecho: >-
+      Gayones y xaguas eran enemigos: para no dejar rastro caminaban por el
+      agua de los arroyos —«observan la costumbre de marchar por el agua para
+      que no puedan seguírseles las huellas»— y «no vivan tranquilos y
+      descuidados sino cuando las aguas están muy crecidas». Federmann dice
+      que los dos comían carne humana; Arcaya (pp. 56-57) y Jahn (p. 226)
+      sostienen que la antropofagia era invención de los primeros
+      expedicionarios, porque las Relaciones de 1579 no la mencionan.
+    etiqueta: atestiguado
+    aviso: 'la antropofagia es la palabra del conquistador, no un hecho (Oliver cap. 3 §3.2.4: «caribe» como categoría política)'
+    procedencia: {obra: federmann-1916, pagina: '53-54; 1557 [41]-[42]'}
+    epoca: contacto-temprano (1530)
+    polity: barquisimeto
+  - id: xg-04
+    tema: lengua
+    hecho: >-
+      Su lengua era otra que la caquetía, la jirajara, la ayamana y la gayona:
+      Federmann necesitó dos intérpretes con los xideharas, tres con los
+      ayamanes, cuatro con los gayones y CINCO con los xaguas, y sólo «dos
+      prisioneros Gayones» sabían la lengua xagua. La cadena dice que había
+      cinco lenguas en el camino; no dice nada de parentesco (el achagua y el
+      caquetío, parientes, también necesitarían intérprete).
+    etiqueta: atestiguado
+    procedencia: {obra: federmann-1916, pagina: '55, 58; 1557 [43], [46]'}
+    epoca: contacto-temprano (1530)
+    polity: barquisimeto
+  - id: xg-05
+    tema: comercio
+    hecho: >-
+      Comercio de SAL con los caquetíos de Barquisimeto aun siendo enemigos:
+      los xaguas de las últimas aldeas «viven en paz con las tribus Caquetías
+      […] y con ellas tienen comercio de sal»; y desde el otro lado, los
+      caquetíos, «Aunque hacen comercio de sal con varias aldeas de los
+      Xaguas, que tocan con su territorio, son sin embargo enemigos de este
+      pueblo». No se dice de dónde venía la sal.
+    etiqueta: atestiguado
+    procedencia: {obra: federmann-1916, pagina: '60, 63; Oliver tesis p. 247'}
+    epoca: contacto-temprano (1530)
+    polity: barquisimeto
+  - id: xg-06
+    tema: relacion-con-caquetios
+    hecho: >-
+      Los xaguas le nombraron a Federmann a los caquetíos de Barquisimeto
+      —«Este nombre nos sorprendió mucho cuando lo oímos a los Xaguas»— y le
+      confirmaron que eran «numerosos y guerreros»; él mandó como emisarios a
+      un caquetío de Coro y a «algunos Xaguas» de la última aldea. Según
+      Federmann, los caquetíos habían obligado a todos sus vecinos, xaguas
+      incluidos, a vivir en las montañas para quedarse con las llanuras.
+    etiqueta: atestiguado
+    aviso: 'el «los obligaron» es la explicación de Federmann, no algo que viera'
+    procedencia: {obra: federmann-1916, pagina: '58-60; Oliver tesis pp. 246-247'}
+    epoca: contacto-temprano (1530)
+    polity: barquisimeto
+  - id: xg-07
+    tema: asentamiento
+    hecho: >-
+      En 1546 los «Axaguas» estaban «junto á esta sabana [de Carora], en unos
+      montes»: «es gente que comen carne humana; son tan bellacos, que por
+      ninguna vía con ellos se ha podido hacer paz; pelean con arcos y
+      flechas y macanas; no tienen pueblos poblados». La sabana, que «en
+      tiempos pasados» tuvo pueblos, se había despoblado «por causa de los
+      españoles».
+    etiqueta: atestiguado
+    aviso: 'Oliver (p. 246 n. 173, vía Arellano 1964) lee «belicosos» donde Fernández Duro imprime «bellacos»; y la «Baragua» de su paráfrasis no está en el texto'
+    procedencia: {obra: perez-de-tolosa-1546, pagina: 'Fernández Duro t. II p. 232'}
+    verificado_en_imagen: true
+    epoca: colonial-temprano (1546)
+    polity: barquisimeto
+  - id: xg-08
+    tema: asentamiento
+    hecho: >-
+      El «no tienen pueblos poblados» de 1546 no es nomadismo de origen: en
+      1530 Federmann los había visto en aldeas; la dispersión es efecto de las
+      entradas españolas (Oliver, y antes Arcaya p. 56).
+    etiqueta: reconstruido
+    nota_etiqueta: 'lectura de Oliver que compara dos atestaciones (xg-01 y xg-07)'
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '246'}
+    epoca: contacto-temprano → colonial-temprano
+    polity: barquisimeto
+  - id: xg-09
+    tema: asentamiento
+    hecho: >-
+      Hacia 1539-1540 el doctor Navarro, camino de Barquisimeto y El Tocuyo,
+      estuvo «metido[s] en vna poblazon de yndios llamados los axaguas».
+    etiqueta: atestiguado
+    procedencia: {obra: aguado-1581, pagina: 'lib. II cap. XXI'}
+    epoca: colonial-temprano (c. 1540)
+    polity: barquisimeto
+  - id: xg-10
+    tema: creencia
+    hecho: >-
+      La Relación de Nueva Segovia (1579) dice de los axaguas: «Esta
+      generación adora al sol y a la luna», y cuando falta el agua sacrifican
+      a una muchacha «de diez años para arriba» a orillas del río, degollada
+      con una piedra, porque «la quieren dar al sol por su muger […] porque
+      llueva»; «después que poblamos lo hacen, más hacenlo de escondidas».
+      Ya está en el vault como dato axagua, NO caquetío (nueva-segovia-1579;
+      hsai_caquetios hda-21/22).
+    etiqueta: atestiguado
+    aviso: 'de segunda mano (Arcaya cita la Relación sin página) y colonial declarado (regla 3)'
+    procedencia: {obra: arcaya-1920, pagina: '102 (cita la Relación de Nueva Segovia, 1579)'}
+    epoca: colonial (1579)
+    polity: barquisimeto
+  - id: xg-11
+    tema: territorio
+    hecho: >-
+      En 1579 los axaguas «se extendían desde cuatro o cinco leguas de la
+      ciudad [Nueva Segovia] hacia los Llanos»; y la misma Relación pone en
+      la sierra a tres leguas al norte de la ciudad a «algunos indios
+      naturales de nación gayones, y algunos axaguas y xidaharas, y de nación
+      camagos, y todos éstos diferentes en lenguas [en] cada nación».
+    etiqueta: atestiguado
+    aviso: 'de segunda mano: Arcaya p. 57 y Jahn p. 226 para lo primero; Oliver tesis p. 244 n. 170 (Arellano 1964: 182) para lo segundo'
+    procedencia: {obra: oliver-1989-cap3-vecinos, pagina: '244 (Relación de Nueva Segovia 1579, Arellano 1964: 182); Arcaya 1920 p. 57'}
+    epoca: colonial (1579)
+    polity: barquisimeto
+  - id: xg-12
+    tema: comida-bebida
+    hecho: >-
+      La Relación de El Tocuyo (1579) cuenta a los axaguas entre los indios
+      de su jurisdicción y dice de todos ellos que comían maíz y raíces que
+      cultivaban, venado, puerco de monte, aves, pescado de río «y hasta […]
+      culebras, ratones, murciélagos y gusanos», sin mencionar antropofagia.
+    etiqueta: atestiguado
+    aviso: 'de segunda mano y dicho de TODOS los indios de El Tocuyo, no de los axaguas en particular'
+    procedencia: {obra: arcaya-1920, pagina: '56-57 (paráfrasis de la Relación de El Tocuyo, 1579)'}
+    epoca: colonial (1579)
+    polity: barquisimeto
+  - id: xg-13
+    tema: encomienda
+    hecho: >-
+      En la gobernación de Coro los caquetíos quedaron como indios libres (y
+      luego de Real Corona) y los jirajaras y ajaguas como indios de
+      ENCOMIENDA, después tributarios. Hacia 1550-1556 los encomenderos
+      habían formado con jirajaras y ajaguas «pequeños grupos en Cariagua,
+      Mapiare, Siburua, Utaquire, Acurigua, Quiragua»; y a fines del s. XVI
+      habían trasladado «algunos Ajaguas y Jirajaras de la serranía» a
+      PARAGUANÁ.
+    etiqueta: reconstruido
+    nota_etiqueta: 'Arcaya lee documentos que no identifica; en duda, degradar (regla 2)'
+    procedencia: {obra: arcaya-1920, pagina: '232, 279, 327'}
+    epoca: colonial (1550-1600)
+    polity: costera-colonial
+    nota_polity: 'es la encomienda de Coro, no la polity costera precontacto: lo de Paraguaná es gente traída, no gente de allí'
+  - id: xg-14
+    tema: asentamiento
+    hecho: >-
+      Los ajaguas de Falcón tendrían sus aldeas hacia Tupure, Autaquire o
+      Utaquire y Pedregal, donde estuvieron en encomienda; de sus
+      descendientes salieron los pueblos de Utaquire y Pedregal. Y en el
+      s. XVIII, «a pesar de llevar dos siglos reducidos a Encomienda primero y
+      a Pueblo tributario después», los de Pedregal andaban «vagando en
+      pequeñas partidas, prefiriendo la caza a la agricultura».
+    etiqueta: reconstruido
+    nota_etiqueta: 'Arcaya, con «un documento de la época» sin identificar'
+    procedencia: {obra: arcaya-1920, pagina: '58-59, 94'}
+    epoca: colonial (s. XVII-XVIII)
+    polity: costera-colonial
+  - id: xg-15
+    tema: asentamiento
+    hecho: >-
+      El censo del obispo Martí (1773-1782): los axaguas, «mostly
+      "nomadic"», vivían en las montañas de Pedregal y Pecaya y bajaban a los
+      pueblos de Pedregal, Pecaya, Siquisique y Aregue; en Aregue había
+      mezcla de axagua y gayón.
+    etiqueta: atestiguado
+    aviso: 'de segunda mano (Oliver resume a Martí 1969 sin cita literal)'
+    procedencia: {obra: oliver-1989-cap3, pagina: 'DOC p. 254 (Martí 1969)'}
+    verificado_en_imagen: true
+    epoca: colonial (1773-1782)
+    polity: costera-colonial
+    nota_polity: 'Pedregal y Pecaya, Falcón; Siquisique y Aregue, Lara'
+  - id: xg-16
+    tema: comercio
+    hecho: >-
+      Los jirajaras y los xaguas valoraban las cuentas de concha marina como
+      medio de intercambio, como los achaguas y otros pueblos de los Llanos.
+    etiqueta: reconstruido
+    nota_etiqueta: 'generalización de Oliver; el pasaje de Federmann sobre conchas compradas es de los AYAMANES (tesis p. 243), y en el cap. VII (xaguas) no hay conchas'
+    procedencia: {obra: oliver-1989-cap3, pagina: 'DOC p. 272 n. 122'}
+    epoca: contacto-temprano
+    polity: barquisimeto
+  - id: xg-17
+    tema: arqueologia
+    hecho: >-
+      El complejo Guacoa (un sitio en la serranía de La Guacoa, cerca de El
+      Pedregal: cerámica tosca lisa con punteado grande y redondo, como el de
+      Túcua, 800-1200 d. C.) sería de los xaguas «alzados».
+    etiqueta: hipotetico
+    nota_etiqueta: 'corazonada de Oliver en comunicación personal, recogida por Urbina'
+    procedencia: {obra: urbina-jimenez-2007-2011, pagina: 'Urbina 2011 pp. 21-22'}
+    epoca: sin fecha (el punteado de Túcua, 800-1200 d. C.)
+    polity: ninguna
+  - id: xg-18
+    tema: nombre-vivo
+    hecho: >-
+      El etnónimo sigue vivo como nombre de lugar: la parroquia Xaguas del
+      municipio Urdaneta (Lara), con capital en Baragua.
+    etiqueta: atestiguado
+    nota_etiqueta: 'atestigua el NOMBRE en 2026 (OSM), no al pueblo ni su época'
+    procedencia: {obra: osm-kaketiana, pagina: 'Nominatim 2026-10-09, relation 11073231 y node 5334941552 (fuera del volcado del repo)'}
+    epoca: actual
+    polity: ninguna
+
+# ═════════════════════════════════════════════════════════════════════════
+# 6 · LO QUE CAMBIARÍA EN etnia-018 (no se toca: lo decide Miguel)
+# ═════════════════════════════════════════════════════════════════════════
+propuesta_para_etnia_018:
+  se_queda:
+    - 'familia_linguistica: desconocida. La identidad con el achagua no se sostiene con lo que hay (§cruce_con_neira, §el_nombre), y la decisión de Miguel del 2026-10-09 («el achagua es una línea maipuriana aparte de los caquetíos») es sobre el achagua de los Llanos y de Neira: no se traslada al xagua de Carora.'
+    - 'polity_caquetia: barquisimeto, polity_nota: NO la costera.'
+  se_corrige_o_se_anade:
+    variantes: '[axagua, ajagua, jagua] — «ajagua» falta y es la forma colonial de Coro y Barquisimeto (Arcaya p. 35); «achagua» NO entra como variante: sería dar la identidad por hecha.'
+    aviso_familia_ampliado: >-
+      Añadir a la cita de Oliver: Arcaya 1916/1920 y Jahn 1927 los
+      identifican con los achaguas sólo por el nombre y la vecindad, y Jahn
+      copia a Arcaya (una sola fuente, no dos); Arcaya clasifica su «dialecto»
+      como nuarhuaco DEDUCIÉNDOLO de esa identidad, sin una sola voz
+      (6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml).
+    donde: >-
+      «hacia 1530, aldeas entre las alturas de Bobare y el valle de Barquisimeto
+      (Federmann); en 1546, montes junto a la sabana de Carora (Tolosa); en
+      1579, desde 4-5 leguas de Nueva Segovia hacia los Llanos y en la sierra
+      al norte de la ciudad; en el s. XVIII, montañas de Pedregal y Pecaya
+      (Falcón), en encomienda (Arcaya, Martí vía Oliver)». Y la nota: la
+      Baragua es de Oliver y Jahn, no del texto de Tolosa.
+    contacto_nota: 'añadir el comercio de sal visto desde los dos lados (Federmann 1916 pp. 60 y 63) y que fueron los xaguas quienes le nombraron los caquetíos a Federmann.'
+    procedencia: '{obra: oliver-1989-cap3-vecinos, pagina: "244-247"} + federmann-1916 pp. 53-63 + perez-de-tolosa-1546 p. 232 (FD t. II)'
+  una_entrada_que_choca:
+    lexicon_ajagua: >-
+      curiana_lexicon.py tiene `ajagua` como «grupo Jirajaroide (Jirajaroid
+      menor)», «cuarto grupo de la familia Jirajaroide», fuente `jirajaroide`,
+      citando a Oramas 1916. Es una TERCERA filiación para el mismo pueblo
+      (etnias.yaml: desconocida; Jahn/Arcaya: arahuaca), y su único apoyo es
+      que el título de Oramas pone «Ajagua» junto al ayamán, el gayón y el
+      jirajara. Oliver (p. 245) dice expresamente que las pocas voces no se
+      relacionan con el jirajarano. Propuesta: re-glosar como «etnónimo de un
+      pueblo de Carora-Pedregal de filiación desconocida (xagua/axagua)» y
+      sacarlo de la capa jirajaroide, o archivarlo. Decide Miguel.
+  la_entrada_de_pendientes: >-
+    6-fusion/pendientes_en_alvarado_y_arcaya.yaml §el_achagua_en_falcon dice
+    «Tres fuentes diciendo lo mismo» y «El puente entre el caquetío y una
+    lengua arahuaca bien documentada tiene, por fin, un anclaje geográfico
+    citado». Medido hoy: Jahn copia a Arcaya, y el anclaje es de un pueblo
+    cuya filiación nadie ha medido. Propuesta: anotar allí este YAML como su
+    resolución (sin borrar la entrada).
+
+# ═════════════════════════════════════════════════════════════════════════
+# 7 · FUENTES A BUSCAR (no se descargó nada: descargar lo decide Miguel)
+# ═════════════════════════════════════════════════════════════════════════
+fuentes_a_buscar:
+  - obra: 'Arcaya, Historia del Estado Falcón, t. I, 3.ª ed. (Caracas, 1977), pp. 37-45'
+    url: 'sin copia libre localizada; la 1.ª ed. (1920) es la del repo (archive.org historiadelestad01arca)'
+    licencia: 'con derechos (edición de 1977)'
+    responderia: '¿qué son las «few words» de Oliver? Oliver discute la p. 42 ss. de esta edición; si trae voces xaguas, ahí están.'
+  - obra: 'Arcaya, estudio sobre «los Aborígenes del Estado Falcón» (anterior a 1916)'
+    url: 'no localizado (búsqueda 2026-10-09)'
+    licencia: 'dominio público si es anterior a 1931 y se halla'
+    responderia: 'los «documentos inéditos» con que dice probar la identidad y la presencia ajagua en Abaría y Pedregal.'
+  - obra: 'Oramas, Luis R., Materiales para el estudio de los dialectos Ayamán, Gayón, Jirajara, Ajagua (Caracas, 1916; WALS: 1915)'
+    url: 'sin copia en la web hallada; buscar en la Biblioteca Nacional de Venezuela y la Academia Nacional de la Historia'
+    licencia: 'dominio público en EE. UU. (anterior a 1931)'
+    responderia: '¿registró voces o apellidos ajaguas (los «padrones» del Archivo Arzobispal de Caracas que publica)? Es la única vía a algo con glosa.'
+  - obra: 'Arellano Moreno (ed.), Relaciones geográficas de Venezuela (Caracas, ANH, 1964): Relaciones de Nueva Segovia, El Tocuyo y Carora (1579) y Pérez de Tolosa (p. 10)'
+    url: 'HathiTrust, sólo búsqueda: https://babel.hathitrust.org/cgi/pt?id=wu.89057098766 (ver la ficha nueva-segovia-1579)'
+    licencia: 'con derechos'
+    responderia: 'el texto primario de lo axagua de 1579 (creencia, territorio, lenguas), y si Tolosa en esa edición dice «belicosos» o «bellacos» y nombra Baragua.'
+  - obra: 'Martí, Mariano, Documentos relativos a su visita pastoral de la Diócesis de Caracas 1771-1784 (Caracas, ANH, 1969), entradas de Pedregal, Pecaya, Siquisique y Aregue'
+    url: 'no localizado en abierto (búsqueda 2026-10-09)'
+    licencia: 'con derechos (edición de 1969); el manuscrito es de 1771-1784'
+    responderia: 'la cita literal de los «axaguas» de Pedregal y Pecaya, si hablaban su lengua en 1773 y cómo la llamaba Martí.'
+  - obra: 'Useche Losada, Mariano, El proceso colonial en el Alto Orinoco-Río Negro (siglos XVI a XVIII) (Bogotá, FIAN-Banco de la República, 1987), pp. 23 y 201'
+    url: 'registro en https://descubridor.uniclaretiana.edu.co/vufind/Record/31278; sin PDF hallado'
+    licencia: 'con derechos'
+    responderia: 'el documento de 1535 de los «xaguas/jaguas carniceros» del bajo Meta y la mención de 1583: si el etnónimo de los Llanos y el de Lara se cruzan en algún documento temprano.'
+  - obra: 'La fuente de Miguel sobre «achaguas cerca de Mitare»'
+    url: 'preguntar a Miguel'
+    licencia: '—'
+    responderia: 'si dice Mitare (el pueblo, caquetío en todas las fuentes) o la cuenca del Mitare (Pedregal), y de quién lo toma.'
+
+# ═════════════════════════════════════════════════════════════════════════
+# 8 · VEREDICTO
+# ═════════════════════════════════════════════════════════════════════════
+veredicto:
+  xagua_es_achagua: >-
+    NO SE SOSTIENE con lo que hay, y tampoco se refuta. No hay una sola
+    palabra xagua con glosa en el repo, y los dos nombres de aldea que hay
+    (Coary, Cacaridi) no se parecen al achagua de Neira más que los nombres
+    caquetíos del control. La identidad descansa en el parecido del nombre y
+    en una cadena que es una sola voz (Fernández Duro 1885 → Arcaya 1916/1920
+    → Jahn 1927 → RAE), y la cronología del achagua (primera mención segura
+    en 1583, en el alto Meta; expansión tardía) juega en contra. Oliver la
+    rechaza por las mismas razones. Etiqueta, si alguna vez entra: hipotético.
+  el_nombre: >-
+    Xagua, Axagua y Ajagua son un mismo etnónimo (Ajagua es Axagua tras el
+    cambio castellano /ʃ/ → /x/). Xagua y Achagua son un parecido que puede
+    ser un mismo nombre, no una prueba de pueblo. Ojo a dos homonimias:
+    «xagua» = el tinte de Genipa (Aguado escribe tres de cuatro «xaguas» por
+    el tinte), y Baragua (Lara, hoy parroquia Xaguas) ≠ Barragua (Rivero,
+    Airico) ≠ Barraguán (bajo Meta). Nadie de los leídos las confundió, pero
+    el paralelo invita.
+  mitare: >-
+    Ninguna fuente pone xaguas ni achaguas en Mitare: el pueblo es caquetío
+    en el s. XVI (libre, Arcaya p. 230) y en 1773 (374 caquetíos, Martí vía
+    Oliver). Lo más cercano son las montañas de Pedregal, en la cabecera del
+    mismo río, a unos 37 km, donde Arcaya pone ajaguas en encomienda y Martí
+    axaguas «nómadas» en el s. XVIII. La pista de Miguel necesita su fuente.
+  lo_que_si_queda: >-
+    Un vecino bien documentado de la polity de Barquisimeto: aldeas en 1530,
+    diplomacia con bastones, guerra de emboscada con los gayones, una lengua
+    propia, sal con los caquetíos aun siendo enemigos, culto al sol y la luna
+    en 1579, encomienda en la sierra de Coro y Paraguaná después. Eso alimenta
+    etnias.yaml y la esfera; la filiación, no.
