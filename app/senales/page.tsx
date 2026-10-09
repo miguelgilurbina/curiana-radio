@@ -1,14 +1,22 @@
 import Link from "next/link";
-import { getSenales } from "@/lib/senales";
+import type { Metadata } from "next";
+import { getSenales, hayPublicadas } from "@/lib/senales";
 import FiltroSenales from "@/components/senales/FiltroSenales";
 import InterruptorLuz from "@/components/senales/InterruptorLuz";
+import SenalesVacia from "@/components/senales/SenalesVacia";
 import { radio } from "@/components/senales/pieles/radio";
 import { VOZ } from "@/components/senales/voces";
 import { REDES } from "@/lib/redes";
 
+// Mientras no haya ninguna publicada, el índice existe por URL pero no se
+// indexa (ni entra al sitemap ni se enlaza desde el shell: lib/senales.ts).
+// El resto de la metadata la pone el layout.
+export const metadata: Metadata = hayPublicadas() ? {} : { robots: { index: false, follow: true } };
+
 // El índice de Señales (design_handoff_senales_luces, «Índice de Señales»):
 // siempre en la piel de la radio y siguiendo el interruptor global. Lee los
-// alias --e-* de esa piel, como la plantilla de una entrada.
+// alias --e-* de esa piel, como la plantilla de una entrada. Sin señales, la
+// vista de espera (SenalesVacia).
 export default function Senales() {
   const senales = getSenales();
   const dato = `${VOZ.dato} text-(--e-texto-2)`;
@@ -26,33 +34,25 @@ export default function Senales() {
           <p className="m-0 max-w-[46ch] font-serif text-[clamp(1.05rem,2.2vw,1.3rem)] leading-[1.5] italic text-(--e-texto-2)">
             La radio transmite desde después. Las señales se escriben desde acá.
           </p>
-          <p className={`m-0 mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 ${dato}`}>
-            <Link href="/sobre" className={VOZ.accion}>
-              Escribe Miguel Gil Urbina →
-            </Link>
-            {REDES.map((r) => (
-              <a key={r.nombre} href={r.url} target="_blank" rel="noopener noreferrer" className={VOZ.accion}>
-                {r.nombre}
+          {/* sin señales, la firma, las redes y el RSS van en la vista de espera */}
+          {senales.length > 0 && (
+            <p className={`m-0 mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 ${dato}`}>
+              <Link href="/sobre" className={VOZ.accion}>
+                Escribe Miguel Gil Urbina →
+              </Link>
+              {REDES.map((r) => (
+                <a key={r.nombre} href={r.url} target="_blank" rel="noopener noreferrer" className={VOZ.accion}>
+                  {r.nombre}
+                </a>
+              ))}
+              <a href="/senales/rss.xml" className={VOZ.accion}>
+                RSS
               </a>
-            ))}
-            <a href="/senales/rss.xml" className={VOZ.accion}>
-              RSS
-            </a>
-          </p>
+            </p>
+          )}
         </header>
 
-        {senales.length > 0 ? (
-          <FiltroSenales senales={senales} />
-        ) : (
-          <div className="border-t border-(--e-filete) py-12">
-            <p className="m-0 font-serif text-xl italic text-(--e-texto-2)">
-              Todavía no hay señales. La primera se está afinando.
-            </p>
-            <Link href="/inicio" className={`mt-6 inline-block ${dato} ${VOZ.accion}`}>
-              ← Volver a la radio
-            </Link>
-          </div>
-        )}
+        {senales.length > 0 ? <FiltroSenales senales={senales} /> : <SenalesVacia />}
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import type { LanguageDriftRow } from "@/lib/supabase";
+import type { LanguageDriftRow } from "@/types/simulador";
 import { LANGS } from "@/components/simulador/ui";
 
 interface Props {

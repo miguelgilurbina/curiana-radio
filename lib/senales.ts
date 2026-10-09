@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import { leerFrontmatter } from "./frontmatter";
 import {
   ARISTAS,
   PIEL_DE_ARISTA,
@@ -36,7 +36,7 @@ const MOSTRAR_BORRADORES = process.env.VERCEL_ENV !== "production";
 
 export const AUTOR = "Miguel Gil Urbina";
 
-/** gray-matter convierte `fecha: 2026-10-03` en Date; lo devolvemos a texto. */
+/** El YAML convierte `fecha: 2026-10-03` en Date; lo devolvemos a texto. */
 function fechaISO(valor: unknown, archivo: string): string {
   const texto = valor instanceof Date ? valor.toISOString().slice(0, 10) : String(valor ?? "");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(texto)) {
@@ -57,7 +57,7 @@ function leer(archivo: string): Senal {
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) {
     throw new Error(`content/senales/${archivo}: el nombre del archivo es el slug y va en minúsculas con guiones`);
   }
-  const { data, content } = matter(fs.readFileSync(path.join(DIR, archivo), "utf-8"));
+  const { data, content } = leerFrontmatter(fs.readFileSync(path.join(DIR, archivo), "utf-8"));
 
   const aristas = (Array.isArray(data.aristas) ? data.aristas : []).map(String);
   const desconocida = aristas.find((a) => !esArista(a));
@@ -122,6 +122,21 @@ export function getSenales({ arista, limite }: { arista?: Arista; limite?: numbe
     .filter((s) => !arista || s.aristas.includes(arista))
     .map(resumen);
   return limite ? lista.slice(0, limite) : lista;
+}
+
+/** Si este entorno muestra alguna señal: en producción, una publicada; en
+ *  local y en las vistas previas, también un borrador, para revisarlo. Decide
+ *  si Señales sale en la cabecera, el pie, la intro y «Quién transmite»
+ *  (Miguel, 2026-10-08: no anunciar una sección vacía). /senales sigue
+ *  existiendo por URL. */
+export function haySenales(): boolean {
+  return todas().length > 0;
+}
+
+/** Si hay alguna señal publicada (no borrador), en cualquier entorno: decide
+ *  si /senales se indexa y entra al sitemap y a llms.txt. */
+export function hayPublicadas(): boolean {
+  return todas().some((s) => !s.borrador);
 }
 
 export function getSenal(slug: string): Senal | null {

@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "pruebas": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/pruebas/*.test.mjs",
     "galeria:preparar": "node scripts/galeria-ingesta.mjs preparar",
     "galeria:subir": "node scripts/galeria-ingesta.mjs subir",
     "galeria:describir": "node scripts/galeria-describir.mjs enviar",
@@ -19,7 +20,8 @@
     "jai:portadas": "node jai-sounds/scripts/portadas.mjs",
     "jai:exportar": "node jai-sounds/scripts/exportar.mjs",
     "jai:test": "node --test jai-sounds/scripts/*.test.mjs",
-    "senales:imagenes": "node scripts/senales-imagenes.mjs"
+    "senales:imagenes": "node scripts/senales-imagenes.mjs",
+    "newsletter:test": "node --test lib/newsletter/*.test.mjs"
   },
   "repository": {
     "type": "git",
@@ -33,21 +35,23 @@
   },
   "homepage": "https://github.com/miguelgilurbina/curiana-radio#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^2.58.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.3.2",
     "leaflet": "^1.9.4",
     "next": "^16.3.8",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "recharts": "^2.15.4",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "resend": "^6.29.0"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.116.0",
+    "@supabase/supabase-js": "^2.58.0",
     "@tailwindcss/postcss": "^4.1.17",
+    "@types/js-yaml": "^4.0.9",
     "@types/leaflet": "^1.9.22",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",

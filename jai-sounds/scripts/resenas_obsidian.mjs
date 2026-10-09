@@ -28,7 +28,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import matter from "gray-matter";
+import { load } from "js-yaml";
 import { conectar, esPrincipal, fatal, log, slugificar, todas, upsert } from "./_comun.mjs";
 
 export const VAULT = process.env.JAI_VAULT ?? path.join(os.homedir(), "OneDrive", "Documents", "Obsidian Vault", "JAI Sounds");
@@ -43,11 +43,30 @@ export function entidadDeSpotify(ref) {
   return m ? { entidad: TIPOS[m[1]], id: m[2] } : null;
 }
 
+/**
+ * El frontmatter y el cuerpo de una nota: {data, content}. Las mismas reglas
+ * que lib/frontmatter.ts (que reemplazó a gray-matter en el sitio); se copia
+ * porque un script de Node no importa TypeScript.
+ */
+export function frontmatter(fuente) {
+  const texto = fuente.charCodeAt(0) === 0xfeff ? fuente.slice(1) : fuente;
+  const apertura = /^---[ \t]*\r?\n/.exec(texto);
+  if (!apertura) return { data: {}, content: texto };
+  const resto = texto.slice(apertura[0].length);
+  const cierre = /^---[ \t]*$/m.exec(resto);
+  if (!cierre) throw new Error("el frontmatter abre con «---» y no tiene «---» de cierre");
+  const content = resto.slice(cierre.index + cierre[0].length).replace(/^\r?\n/, "");
+  const data = load(resto.slice(0, cierre.index));
+  if (data == null) return { data: {}, content };
+  if (typeof data !== "object" || Array.isArray(data)) throw new Error("el frontmatter tiene que ser un mapa clave: valor");
+  return { data, content };
+}
+
 /** Lee una nota. Devuelve la reseña o el motivo por el que no sirve. */
 export function leerNota(texto, ruta) {
   let fm;
   try {
-    fm = matter(texto);
+    fm = frontmatter(texto);
   } catch (e) {
     return { ruta, error: `frontmatter ilegible: ${e.message}` };
   }
