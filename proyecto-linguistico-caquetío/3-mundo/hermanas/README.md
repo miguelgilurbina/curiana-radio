@@ -153,8 +153,9 @@ en las sesiones 1 y 5.
    copian); con una sola, `hipotetico`; si sólo ilumina un hecho caquetío ya
    atestiguado, `lectura`; la capa caribe o lo que sirve a un personaje de la
    esfera, `comparanda-esfera`; la capa colonial o el nombre que no se
-   caquetiza, `no-proyecta`. El validador exige dos pueblos en `hermanas` para
-   `reconstruido`. Lo wayuu de la Vía A se queda como comparanda y se audita en
+   caquetiza, `no-proyecta`. El validador exige, para `reconstruido`, al menos una
+   entrada de OTRO pueblo en `hermanas` (el hecho es la primera tradición; la
+   hermana, la segunda). Lo wayuu de la Vía A se queda como comparanda y se audita en
    `via_a`.
 4. **Independencia.** Du Tertre, Breton y Rochefort no son tres testigos
    (misión compartida y copia); Jahn que cita a Oviedo no es un segundo
