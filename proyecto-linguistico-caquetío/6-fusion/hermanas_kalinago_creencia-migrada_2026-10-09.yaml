@@ -1,0 +1,1328 @@
+# ─────────────────────────────────────────────────────────────────────────
+# MIGRACIÓN — la creencia kalinago (minería 1) al esquema único de hermanas
+# (3-mundo/hermanas/README.md §3). Propuesta: nada fusionado, nada descargado.
+#
+# Origen: 6-fusion/creencia_kalinago_2026-10-09.yaml (21 hechos ck09-NN).
+# Traslado campo a campo desde el origen, sin releer fuentes. Los huecos y las
+# decisiones de migración están en meta.huecos_de_migracion. Lo que no es hecho
+# (tamiz, auditoría Vía A, hallazgo lateral, negativas, pendiente, meta origen)
+# va al final, sin cambios.
+# ─────────────────────────────────────────────────────────────────────────
+
+meta:
+  pueblo: kalinago
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: migración al esquema de hermanas (Claude Haiku 5.5), rama vault/hermanas-kalinago-migracion
+  origen: 6-fusion/creencia_kalinago_2026-10-09.yaml
+  plan: 4-fuentes/sesiones/09_creencia_kalinago_mineria.md
+  fuentes_leidas:
+  - breton-1665
+  - goeje-1939
+  - steward-1948-hsai-4
+  - pane-c1498
+  - oviedo-y-valdes-1852-1855
+  cobertura:
+    breton_1665_en_imagen:
+    - 8
+    - 9
+    - 10
+    - 21
+    - 40
+    - 41
+    - 56
+    - 83
+    - 96
+    - 135
+    - 148
+    - 167
+    - 216
+    - 217
+    - 218
+    - 221
+    - 237
+    - 238
+    - 271
+    - 283
+    - 284
+    - 286
+    - 307
+    - 341
+    - 342
+    - 370
+    - 424
+    breton_1666_en_imagen:
+    - 17
+    - 52
+    - 68
+    - 103
+    - 118
+    - 144
+    - 158
+    - 211
+    - 268
+    - 312
+    goeje_1939_en_imagen:
+    - 7
+    - 18
+    - 37
+    - 38
+    - 39
+    rouse_hsai_en_imagen:
+    - 559
+    - 562
+    - 563
+    rouse_hsai_capa_de_texto:
+    - 532
+    - 535
+    - 537
+    - 545
+    - 558
+    - 561
+    - 564
+    - 565
+    - Steward p. 26
+    oviedo_t2_en_imagen:
+    - 298
+    - 299
+    breton_solo_capa_de_texto: 1665 pp. 46, 130, 255, 408 (pistas; no se citan como texto verificado)
+    como: pdftotext -enc UTF-8 de cada PDF al scratchpad para localizar (grafías de §4.2 de la nota 08,
+      llanas y sin diacríticos); cada pasaje que se cita, recortado en bandas a 220-300 ppp y leído en
+      imagen.
+  no_leido:
+  - 'Los ~400 pares h/f del tomo de 1666 enteros: sólo las entradas religiosas listadas.'
+  - 'Breton 1667 (Grammaire) y el Catéchisme: no se abrieron.'
+  - 'Rochefort 1658, Du Tertre 1667 t. II, La Borde 1674, la edición crítica de Breton 1999: fuera del
+    repo; esperan K1-K3.'
+  hechos_origen: 21
+  hechos_migrados: 21
+  huecos_de_migracion:
+  - 'epoca: ck09-18 queda «sin fechar» y ck09-20 queda «1684» (sigla De la Borde 1684 del propio origen).
+    No se aplicó el default 1635-1654 del traslado: no es la fecha de esas fuentes. Ver epoca_nota.'
+  - 'epoca: ck09-17 mantiene el texto del origen («s. XVII, según las fuentes francesas que Rouse mezcla»);
+    no es un año.'
+  - 'testigo: «compilado» (ck09-17, 18, 20) → tercera-mano, y por eso etiqueta hipotetico (regla de la
+    hermana).'
+  - 'testigo: «visto y oído» (05, 06), «visto…» (14, 15, 16) → vio; se pierde el «oído» de 05 y 06. «oído»
+    (02, 03, 04, 08, 09, 10, 11, 19) → oyo. Ver origen.'
+  - 'procedencia_extra: Goeje-1939 se añade en 01, 04, 07, 09, 10, 11, 12, 13 con independiente: FALSE.
+    El traslado pedía true; el origen dice que Goeje es tamiz de siglas y no testigo (meta_origen.independencia).
+    Con true la hermana declararía un segundo testigo que el origen niega. Cambiar a true sólo si Miguel
+    decide otra lectura.'
+  - 'procedencia_extra: las citas de Rouse/Steward dentro de pagina (p. ej. ck09-08 «Rouse en steward-1948-hsai-4
+    p. 563») se quedan en procedencia.pagina; el esquema sólo pide extra para Goeje.'
+  - 'via_a: ck09-03, id creencia-012, traía «corrobora-reformulado» (fuera del vocabulario). Se mapea
+    a corrobora-en-parte (la versión amplia tiene dos hermanas; el mecanismo es caribe) y el texto queda
+    en via_a_nota.'
+  - 'caquetio: ck09-12 trae «barsure» (léxico, no es id de creencia): no entra en caquetio, queda en caquetio_relacion.
+    ck09-05: Oviedo t. II p. 298 (fuera del corpus) junto a creencia-024 y -025: sólo los ids entran en
+    caquetio; el texto, en caquetio_relacion. ck09-08: el origen dice «ninguno del corpus»: caquetio ausente.'
+  - 'donde: sólo donde el epoca del origen lo dice (01 Guadalupe y Dominica; 05, 14, 16 Dominica). El
+    resto queda sin donde.'
+  - 'hermanas: sólo donde el origen tiene el campo `hermana` (02, 03, 04, 05, 08). ck09-09, ck09-17 y
+    otros citan a Pané en sustrato_nota sin campo `hermana`: no se inventa la entrada.'
+  - 'tema: ningún tema propuesto. El mapoya (10, 11) y el espíritu de 21 quedan en un tema cerrado con
+    tema_duda: creencia no tiene un tema de espíritus malos. Si Miguel quiere uno, va en meta.temas_propuestos.'
+  - 'tema_duda: escrito en 02, 06, 08, 10, 11, 15, 16, 17, 18, 19, 21 donde el hecho cabe en dos temas.'
+  - 'como_se_escribio e implicacion_simulacion no existen en el origen: no se crean.'
+  - 'campos extra conservados (no están en el esquema): pregunta, registro, sigla_goeje, divergencia,
+    sustrato_nota.'
+  - 'dominios: asignados por el traslado (libres).'
+  - 'verificado_en_imagen: «si» si la página lleva «(imagen)», que es el criterio pedido.'
+  - 'L1 (hallazgo_lateral_caqueti) no es un hecho kalinago: se copia sin cambios, no se migra; el origen
+    propone creencia.yaml (decide Miguel).'
+  - meta.plan es la nota 09 (la de este traslado); la nota 08 del origen queda en meta_origen.plan.
+hechos:
+- id: kalinago-creencia-001
+  id_origen: ck09-01
+  pregunta: P1
+  esfera: creencia
+  tema: espiritu-tutelar
+  contenido: 'El espíritu tutelar tiene nombre de hombres y nombre de mujeres. En el tomo francés-caribe:
+    «Dieu, Icheíri Iouloúca, f. Chemiin», «il a vn Dieu, kicheíriti, kayouloúcati, f. Kechemérati». En
+    el caribe-francés, «chemijn, ou çemíjn, nechémeracou, Dieu, mon Dieu», plural «cheméignum», sin marca
+    de registro, y Breton avisa de que la mayoría pronuncia esa ç como ch y «les autres çemijn, çemeignum».'
+  grafia: h. Icheíri, Iouloúca; f. Chemiin, Kechemérati; sin marca chemijn / çemíjn, chemeignum
+  registro: h. y f. (1666); sin marca (1665)
+  sigla_goeje: f. šeme «f 2 am 10», A seme-he; h. išeiri «hK?» (K ise «vouloir, désirer, aimer»); h. iuluka
+    «hK» (A (h)ialoko, K yoroka)
+  pueblo: kalinago
+  donde: Guadalupe y Dominica
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: lexico
+  procedencia:
+    obra: breton-1665
+    pagina: 1666 p. 118 (imagen); 1665 pp. 96, 135 (imagen); goeje-1939 p. 38 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  capa_colonial: 'Las dos palabras traducen «Dieu» y Breton catequiza con ellas: «La crainte de Dieu est
+    le commencement de la sagesse» con Ichéiri (1665 p. 41, imagen), «la Divinité de IESUS-CHRIST, Lichéirigoni-Christê»
+    (1666 p. 103, imagen), «Dieu s’est incarné, ebechouaàli chemiin ouekélli» (1666 p. 211, imagen). Que
+    sean «Dios» es glosa del misionero.'
+  sustrato: arahuaco
+  sustrato_nota: 'La forma de MUJERES (chemiin/çemijn) es la arahuaca: Goeje la filia al lokono seme-he
+    y es la del cemí taíno. Las dos de HOMBRES las filia al kalina (ichéiri con duda). El par mide la
+    palabra: no dice que las mujeres creyeran otra cosa.'
+  proyeccion:
+    capa: no-proyecta
+    nota: 'El nombre no se caquetiza. Va a lengua-cognados como CANDIDATO chemiin ~ cemí ~ seme-he (forma
+      y glosa casan: espíritu tutelar), con el aviso de que la glosa «Dieu» es colonial. El contenido
+      va en ck09-02/03.'
+  verificado_en_imagen: si
+  dominios:
+  - espiritus
+  - lenguaje-religioso
+- id: kalinago-creencia-002
+  id_origen: ck09-02
+  pregunta: P1
+  esfera: creencia
+  tema: iniciacion-especialista
+  tema_duda: espiritu-tutelar
+  contenido: El ichéiri es el espíritu PROPIO DEL BOYÉ y se transmite en su iniciación. Quien quiere ser
+    boyé ayuna, y el boyé que lo forma «fait descendre son Dieu pretendu qui luy en donne vn»; si el espíritu
+    es hombre es un dios, si es mujer una diosa. «On ne dit pas ce Dieu est le Dieu des Sauvages, mais
+    le Dieu d’vn tel boyé». No tienen nombre para la oración. Un boyé, hablando de otro que hizo boyé,
+    dice «Nichiguiénli iouloúcayem lóne, ie luy ay donné vn Dieu».
+  cita: «Les Boyés font les autres boyés» (1665 p. 283)
+  grafia: Ichéiricou, Ichéiri; iouloúcayem
+  registro: h.
+  sigla_goeje: išeiri hK?; iuluka hK
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 283, 286 (imagen)
+  capa_colonial: '«Dieu pretendu», «ou pour mieux dire vn diable qui se fait paroistre» (p. 283): la categoría
+    Dios/diablo es de Breton.'
+  sustrato: arahuaco
+  sustrato_nota: El contenido —el especialista tiene su espíritu, que habla con él y que se gana con ayuno—
+    está en el taíno (el behique habla con sus cemíes tras la cohoba, Pané cap. XV; el ayuno de cinco
+    o seis días para ver a los cemíes, cap. XXV). El nombre es de hombres y caribe.
+  divergencia: 'Rouse p. 562 (de Rochefort y Du Tertre) dice que CADA caribe tenía su ichieri, y llama
+    maboya al espíritu del boyé. Breton lo contradice dos veces: el ichéiri es «le Dieu d’vn tel boyé»
+    y «il est inoüy parmy eux qu’on aye offert des Sacrifices à mapoya» (p. 283). Breton es el testigo;
+    Rouse, tercera mano.'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: caps. XV, XIX, XXV
+    que: el behique y el cacique hablan con sus cemíes tras la cohoba y el ayuno
+  caquetio:
+  - creencia-025
+  - creencia-004
+  - creencia-002
+  caquetio_relacion: 'los boratios ven y hablan al espíritu que pintan (Oviedo t. II p. 298); el kalinago
+    dice de quién es ese espíritu: del especialista'
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina creencia-025 y creencia-004 (el piache se forma ayunando): el espíritu que ve el boratio
+      sería el suyo propio, ganado al formarse. No crea hecho nuevo.'
+  via_a:
+    creencia-002: corrobora-en-parte
+  verificado_en_imagen: si
+  dominios:
+  - boye
+  - iniciacion
+- id: kalinago-creencia-003
+  id_origen: ck09-03
+  pregunta: P1
+  esfera: creencia
+  tema: espiritu-tutelar
+  contenido: 'Qué hacen esos espíritus. No hay fiesta de bebida sin ofrenda para ellos, porque creen haber
+    recibido la salud por su medio, o que hacen crecer la yuca y se les deben las primicias, o por miedo.
+    Los espíritus tienen hijos y nietos que traen a beber las ofrendas; «l’vn se dit auoir esté autrefois
+    Arroüagues, l’autre d’vne autre nation»; los hay jóvenes y viejos, hombres y mujeres; hacen los huracanes,
+    dan males como la gota que los demás no pueden curar y mandan a los boyés tomar tales hierbas para
+    tales males. Se les teme más de lo que se los ama. Ciertos pájaros que se posan en las casas «appartiennent
+    aux Dieux des boyez»: si los matan, esos dioses los harían morir.'
+  grafia: Kichéiritina «i’ay vn Dieu»; Ichéiri
+  registro: h.
+  sigla_goeje: išeiri hK?
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 283-284, 271, 341 (imagen)
+  capa_colonial: «Dieux des Boyez», «vrays diables» y «Sacrifices» son categorías de Breton.
+  sustrato: arahuaco
+  sustrato_nota: 'Contenido con hermana taína primaria: cemíes «donde tienen los huesos de su padre, de
+    su madre … hay algunos que hablan; otros que hacen nacer las cosas de comer; otros que hacen llover,
+    y otros que hacen correr los vientos» (Pané cap. XV); el cemí que manda enfermedad si no se le lleva
+    yuca (cap. XX); Guabancex, cemí mujer que hace correr el viento y el agua (cap. XXIII). Que los espíritus
+    kalinago digan haber sido arahuacos es, como mucho, una pista de que el mundo de los espíritus guarda
+    el sustrato; no se usa como prueba.'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: caps. XV, XX, XXIII; cap. XI (Boinayel y Maroya, cemíes de la lluvia)
+    que: espíritus (algunos con huesos de antepasados, alguno mujer) que hacen llover, soplar el viento,
+      nacer la comida y que mandan enfermedad si no se les da de comer
+  caquetio:
+  - creencia-013
+  - creencia-023
+  - creencia-012
+  - creencia-008
+  caquetio_relacion: 'el díao «da los temporales» (atestiguado): el poder sobre el tiempo pasa por el
+    especialista; aquí, por sus espíritus'
+  proyeccion:
+    capa: reconstruido
+    nota: 'CANDIDATO (dos hermanas): los espíritus del especialista son gente que fue —hombres y mujeres,
+      jóvenes y viejos—, mandan el viento fuerte y el temporal, hacen crecer la planta, mandan y curan
+      enfermedades y piden comida. Para el caquetío, sólo la ESTRUCTURA: sin nombres y sin yuca (el rito
+      caquetío atestiguado es de maíz, creencia-023). Lee además creencia-013 (lectura).'
+  via_a:
+    creencia-012: corrobora-en-parte
+    creencia-008: corrobora
+  via_a_nota:
+    creencia-012: el origen dice «corrobora-reformulado», fuera del vocabulario cerrado; ver auditoria_via_a
+      (sección copiada sin cambios)
+  verificado_en_imagen: si
+  dominios:
+  - espiritus
+  - enfermedad
+  - clima
+- id: kalinago-creencia-004
+  id_origen: ck09-04
+  pregunta: P1
+  esfera: creencia
+  tema: ofrenda-fiesta
+  contenido: 'La ofrenda: «Nataguérguetiem nimatoútou loúbara, ie pose deuant luy mon Matoútou chargé
+    de cassaue», y la glosa de Breton: cuando el boyé hace bajar a su espíritu y se le presenta porque
+    se cree que devolvió la salud o hizo crecer la yuca, «c’est vn sacrifice, & vne idolatrie». En el
+    tomo de 1666, «ie presente vne offrande, vn sacrifice, nátoubiénli téleli libónam Icheíri, f. nataguérguêtiem
+    ànacri lone chemijn».'
+  grafia: ataguérgati, ataguérguétenni «offrande, sacrifice»; matoútou (la mesa); f. ànacri
+  registro: h. y f. (1666 p. 312)
+  sigla_goeje: offrande anakri «—» (sin origen)
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 56; 1666 p. 312 (imagen); goeje-1939 p. 38
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  capa_colonial: 'En la misma entrada Breton pone la frase de catecismo «Mataguergátibá nháone mapoyanum,
+    ne sacrifie pas aux diables» (1665 p. 56): prohíbe ofrecer a los «mapoyanum» lo que en p. 283 dice
+    que se ofrece al ichéiri. El misionero rebautiza al ichéiri como mapoya.'
+  sustrato: arahuaco
+  sustrato_nota: 'Hermana taína: «Si algún día solemne llevan mucho de comer … ponen todo en la casa del
+    cemí, para que coma de ello el ídolo» (Pané cap. XVI). Es también la hipótesis de Steward 1948 p.
+    26 («A reflection of Arawakan religion is seen in offerings made to guardian spirits»), que aquí se
+    pone a prueba y pasa.'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: cap. XVI
+    que: comida puesta en la casa del cemí
+  caquetio:
+  - creencia-023
+  - creencia-003
+  proyeccion:
+    capa: reconstruido
+    nota: 'CANDIDATO (dos hermanas): al espíritu del especialista se le pone comida y bebida. En el caquetío,
+      si entra, con mazamorra o maçato (creencia-023), no con casabe.'
+  via_a:
+    creencia-003: corrobora
+  verificado_en_imagen: si
+  dominios:
+  - ofrenda
+- id: kalinago-creencia-005
+  id_origen: ck09-05
+  pregunta: P5
+  esfera: creencia
+  tema: especialista
+  contenido: 'La sesión del boyé, contada por Breton en primera persona. Se le llama para la guerra o
+    para un enfermo; la ofrenda va al fondo de la casa redonda, con una hamaca colgada; los asistentes
+    a lo largo de la casa. El boyé (a veces con un segundo) entona una canción, uno de los dos echa humo
+    de tabaco hacia arriba «au lieu d’encens» y así baja el espíritu, que cae «comme vn sac de farine»;
+    el boyé le ofrece la hamaca para sentarse y la ofrenda para comer y beber. El espíritu no quiere luz:
+    se apaga el fuego, se tapan las entradas de luz, y se hace siempre de noche. Breton quiso entrar con
+    un tizón «& les femmes m’arresterent». Una vez se acercó con la estola y el Santísimo y oyó caer a
+    la «deesse pretendue (c’estoit vne femme qui estoit boyée …)», llorar y gritar un cuarto de hora.
+    Tiene nombre la canción («Lerèmericani, chanson pour les faire descendre») y el ayudante («Lerèmeri
+    aconum, le sous-chantre du Boyé»).'
+  grafia: Leremericayem bóye loúbara aráli racaútiũ «le boyé chante pour faire descendre ses Dieux»; Lerèmericani;
+    Lerèmeri aconum
+  registro: comun
+  sigla_goeje: chant de l’h. m. eremi «K»; hochet h malaga «hKTuA» (K, A maraka; tupí maraka)
+  pueblo: kalinago
+  donde: Dominica
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 216-218 (imagen); 1666 p. 68 (imagen)
+  capa_colonial: 'Breton lo cierra con «bien certifié que c’estoit vn vray diable, la boyée vne magicienne,
+    sa chanson, son pacte, que ie n’ay iamais voulu ny entendre, ny écrire» (p. 218): el misionero NO
+    transcribió las canciones a propósito. El hueco del canto ritual kalinago es una censura, no un cero
+    de la fuente.'
+  sustrato: arahuaco
+  sustrato_nota: 'El contenido (noche, casa cerrada, canto, humo o polvo de tabaco, el espíritu que baja
+    y habla, y la comida que se le da) está en el taíno: cohoba, canto y casa cerrada a la que sólo entran
+    los principales (Pané caps. XV, XVI, XIX). Las voces de la canción y la sonaja son caribes o compartidas
+    (eremi K; maraka hKTuA): el nombre no decide.'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: caps. XV, XIX
+    que: sesión de cohoba con canto en casa cerrada; el cemí habla al behique o al señor
+  caquetio:
+  - creencia-024
+  - creencia-025
+  - creencia-003
+  caquetio_relacion: 'los boratios «se ençierran en un buhío solo: y allí se echan unas ahumadas que llaman
+    tabacos», uno, dos y tres días, y salen con la respuesta del espíritu (Oviedo t. II p. 298, imagen)'
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina lo que Oviedo ya atestigua del boratio (encierro, humo de tabaco, consulta con el espíritu).
+      Diferencia que hay que conservar: el boratio caquetío se encierra SOLO y días; la sesión kalinago
+      es de una noche, con gente dentro.'
+  via_a:
+    creencia-003: corrobora
+  verificado_en_imagen: si
+  dominios:
+  - boye
+  - sesion-ritual
+- id: kalinago-creencia-006
+  id_origen: ck09-06
+  pregunta: P5
+  esfera: creencia
+  tema: especialista
+  tema_duda: roles-de-genero
+  contenido: 'Hubo mujeres boyé: la «deesse pretendue» que bajó en la sesión que Breton espió «estoit
+    vne femme qui estoit boyée», y él la llama «la boyée vne magicienne». Y fueron las mujeres quienes
+    le cerraron el paso a la sesión.'
+  grafia: boyée (en el francés de Breton)
+  registro: comun
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 217-218 (imagen)
+  capa_colonial: '«magicienne», «pacte»: categorías del misionero.'
+  sustrato: sin-decidir
+  sustrato_nota: Pané no da behiques mujeres (cero en su texto); la oütshii wayuu, que sí es mujer, es
+    vecina desde D11 y no cuenta como hermana. Rouse p. 562 (tercera mano) añade que el espíritu habla
+    a veces por boca de una anciana. Una sola hermana.
+  caquetio:
+  - creencia-011
+  caquetio_relacion: el canon tiene a Buio-sha como aprendiz mujer; ninguna fuente caquetía la atestigua
+  proyeccion:
+    capa: hipotetico
+    nota: 'Una boratia sería hipotética (una sola hermana). El elenco de la era 2 ya la tiene (la boratia
+      de Carirubana): esto no la sube de capa.'
+  via_a:
+    creencia-011: no-toca
+  verificado_en_imagen: si
+  dominios:
+  - boye
+  - genero
+- id: kalinago-creencia-007
+  id_origen: ck09-07
+  pregunta: P5
+  esfera: creencia
+  tema: especialista
+  contenido: 'El nombre del especialista: «boyáicou, bóye, niboyeíri, medecin, prestre des Sauuages, ou
+    pour mieux dire, magicien»; «Manboyéiriti, il n’est point boyé». En el francés-caribe, «Boyé, le Prestre
+    & le Medecin des Caraibes, boyáïcou, mon Boyé iboyéiri», SIN forma de mujeres. «Bóye» es además una
+    mosca con dos lucecitas bajo la cola.'
+  grafia: boyáicou, bóye, niboyeíri; boyáhicou (1666 p. 313)
+  registro: h. o común; NO hay forma f.
+  sigla_goeje: '«KTu»: kalina puye, tupí paje (p. 37); y bajo «Caribe des Iles, 15e et 16e siècle»: «homme-médecin
+    behiko (à Haïti, selon Las Casas), C boyahiku, boye, K(aliña) püyei» (p. 18)'
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: lexico
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 83; 1666 p. 52 (imagen); goeje-1939 pp. 18, 37 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: pp. 18, 37 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  capa_colonial: «prestre», «magicien»
+  sustrato: caribe
+  sustrato_nota: 'El nombre es caribe-tupí y no tiene forma de mujeres (negativa medida en 1666 p. 52).
+    La institución, en cambio, tiene contenido arahuaco (ck09-02, 05, 08): el nombre no vuelve caribe
+    a la institución.'
+  caquetio:
+  - creencia-001
+  proyeccion:
+    capa: comparanda-esfera
+    nota: 'El nombre boyé no se proyecta: el caquetío tiene boratio atestiguado (creencia-001). Sirve
+      a Marokoto-ni. Y desarma la nota del lexicón de `bejique` (ver el issue).'
+  verificado_en_imagen: si
+  dominios:
+  - boye
+  - nombre
+- id: kalinago-creencia-008
+  id_origen: ck09-08
+  pregunta: P5
+  esfera: creencia
+  tema: enfermedad-cura
+  tema_duda: especialista
+  contenido: 'La cura por succión: los boyés, llamados para un dolor en las rodillas u otras coyunturas,
+    «succent le mal, & tirent, & attirent à force de succer (à ce qu’ils disent) tantost des pierres»,
+    otras veces puntas de flecha o colas de raya.'
+  grafia: Kachoulacátiti bóye
+  registro: comun
+  sigla_goeje: guérir h atoma «hK»
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 167 (imagen); Rouse en steward-1948-hsai-4 p. 563 (tercera mano)
+  sustrato: arahuaco
+  sustrato_nota: 'Hermana taína: el behique «sorbe al enfermo por el cuello, el estómago …», escupe en
+    la mano y saca «piedra o hueso o carne» (Pané cap. XVI). Y el caquetío lo tiene ATESTIGUADO: ver caquetio.'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: cap. XVI
+    que: succión y extracción del objeto; antes, el soplo que despide el mal («Vete luego a la montaña,
+      o al mar»)
+  caquetio:
+  - creencia-006
+  - creencia-007
+  caquetio_relacion: 'el boratio «chúpale con la boca aquel miembro ó lugar del dolor» y muestra «la espina
+    ó piedra ó palo»: «Cata aqui lo que te mataba»'
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina un hecho caquetío atestiguado que el corpus no tiene todavía (hallazgo lateral). Tres
+      pueblos, el mismo modelo: el mal es algo que entró y se saca.'
+  via_a:
+    creencia-006: contradice
+    creencia-007: corrobora-en-parte
+  verificado_en_imagen: si
+  dominios:
+  - boye
+  - enfermedad
+  - cura
+- id: kalinago-creencia-009
+  id_origen: ck09-09
+  pregunta: P4
+  esfera: creencia
+  tema: enfermedad-cura
+  contenido: 'De dónde viene el mal: «Les Sauuages reiettent les causes de tous leur maux sur les Dieux
+    des Boyez, sur les mapoya, ou sur les sorciers»; temen a los primeros más de lo que los aman, odian
+    a los segundos y se vengan de los terceros. Y del menor mal dicen que es un maleficio o «vn mal donné
+    de mapoya, ou des sorciers», «ce n’est pas à dire qu’ils les ayent battus, mais qu’ils leurs ont enuoyez,
+    ou procurés ces maux».'
+  grafia: nharomán mapoyanum; kinharoüátiti «grand sorcier»; línharonê «sort»
+  registro: comun (f. inharo «sortilège», Goeje p. 38)
+  sigla_goeje: sortilège f inharo «f 2 am 45 ?»
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 271, 342 (imagen); goeje-1939 p. 38
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  sustrato: arahuaco
+  sustrato_nota: El mal ENVIADO por un espíritu o un brujo está en el taíno (el cemí lo pone, Pané caps.
+    XVI y XX). La voz de mujeres para «maleficio» lleva sigla am con duda.
+  caquetio:
+  - creencia-008b
+  - creencia-006
+  caquetio_relacion: 'atestiguado (Arcaya pp. 104-108): la muerte se atribuía a conjuros y los muertos
+    obedecen los conjuros del hechicero'
+  proyeccion:
+    capa: lectura
+    nota: 'Corrobora creencia-008b (paso 0 del tamiz): no cambia su capa.'
+  via_a:
+    creencia-006: contradice
+  verificado_en_imagen: si
+  dominios:
+  - enfermedad
+  - espiritus
+- id: kalinago-creencia-010
+  id_origen: ck09-10
+  pregunta: P4
+  esfera: creencia
+  tema: enfermedad-cura
+  tema_duda: espiritu-tutelar
+  contenido: 'El mapoya en lo que los kalinago cuentan, quitando la catequesis: es «esprit malin» (plural
+    mápoyanum); se le teme, junto a los oumécou; a él no se le ofrece nada («il est inoüy parmy eux qu’on
+    aye offert des Sacrifices à mapoya»); se come la luna en el eclipse —«disent que le mapoya l’a mangé,
+    dansent pendant cette nuit là, & n’osent en desister quand ils ont vne fois commencé»—; manda enfermedades;
+    y las pesadillas son «comme s’ils estoient aux prises auec máboya». Sin forma de mujeres en el tomo
+    de 1666.'
+  grafia: Mápoya, mápoyanum (1665 p. 424); máboya (p. 341); «Diable, mápoya» (1666 p. 118)
+  registro: sin marca; 1666 no da f.
+  sigla_goeje: '«fam?»: diable mapoya, garífuna mafuiya, mafuia, mafia «(sans-âme ?)» (p. 38)'
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 21, 283, 341, 342, 370, 424; 1666 p. 118 (imagen); goeje-1939 p. 38 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  capa_colonial: 'FUERTE. Breton: «quand ie leurs ay voulu faire comprendre ce que c’est que le Diable,
+    ie me suis serui de ce mot» (1665 p. 424); el catecismo usa mapoyanum para «diables» (p. 56); y el
+    francés de las islas ya llamaba «maboya» a un lagarto (p. 8: «acacámoulou, lezard appellé maboya»).
+    Breton además desmiente el tópico «que le Diable les bat» y lo atribuye a la melancolía y al bazo
+    (p. 341): la pesadilla-mapoya llega filtrada por su medicina humoral.'
+  sustrato: arahuaco
+  sustrato_nota: 'POR EL NOMBRE y con duda: Goeje le pone sigla fam? y lo lee ma-poya «sin-alma», es decir,
+    el privativo ma- con la raíz de opoyem «espíritu» (ck09-13). En Breton está el positivo de esa raíz:
+    «Kapoyénti nyáim, il y a là vn esprit» (1665 p. 424). Es una LECTURA morfológica, no una prueba. El
+    contenido (el eclipse que se come la luna, la pesadilla) no está en ninguna otra hermana medida.'
+  caquetio:
+  - creencia-005
+  proyeccion:
+    capa: hipotetico
+    nota: 'No se proyecta sin K4; si se proyecta, hipotético y sin el nombre. En ningún caso equivale
+      al buio caquetío (ver el issue): el buio del canon es el animal del piache, y el mapoya es justo
+      lo que el boyé NO sirve.'
+  via_a:
+    creencia-005: no-toca
+  verificado_en_imagen: si
+  dominios:
+  - mapoya
+  - eclipse
+  - enfermedad
+- id: kalinago-creencia-011
+  id_origen: ck09-11
+  pregunta: P4
+  esfera: creencia
+  tema: enfermedad-cura
+  tema_duda: espiritu-tutelar
+  contenido: 'Los otros espíritus malos: «esprit malin, diable, mápoya, oumécou, couloúbi». A los oumécou
+    los temen con los mapoyas y le han contado a Breton «bien des contes, que i’ay pris fables».'
+  grafia: oumécou (1666 p. 158); ouméçou (1665 p. 424); couloúbi
+  registro: sin f.
+  sigla_goeje: Umeku, Umoku «K?» (esprit qui cause les naufrages; K Semuye, Penard); Kulubi «KTu» (K Kurupi,
+    tupí Kurupira)
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 424; 1666 p. 158 (imagen); goeje-1939 p. 38 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  capa_colonial: «diable»
+  sustrato: caribe
+  sustrato_nota: Kulubi es el Kurupira tupí; Umeku, kalina con duda. Ninguno tiene forma de mujeres ni
+    hermana arahuaca.
+  proyeccion:
+    capa: comparanda-esfera
+    nota: Esfera (Marokoto-ni). Ya dicho, para el mar, en cosmovision_marina_2026-09-24.yaml cm24-c-k08.
+  verificado_en_imagen: si
+  dominios:
+  - espiritus
+  - naufragios
+- id: kalinago-creencia-012
+  id_origen: ck09-12
+  pregunta: P2
+  esfera: creencia
+  tema: alma
+  contenido: 'El alma del vivo. «Ame, nacáli, nioüanni. f. nánichi. Il a vn ame, kiecáliti, kioüánnêti»
+    (1666). En el caribe-francés: «ioüánni, cœur, ame, vie, courage»; «ánichi, cœur, ame», que con verbo
+    dice ganas, voluntad, deseo; «acáli, ame, forme, figure». Y el pulso es «noúcabo ánichi … l’ame de
+    la main (disent les Sauuages)».'
+  grafia: h. ioüánni, nioüanni, acáli/nacáli; f. ánichi/nánichi
+  registro: h. y f.
+  sigla_goeje: h iuani «hK» (K esp yevan); h aka-li «hK» (K aka); f aniši «fT?» … «âme T goeiz»
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: lexico
+  procedencia:
+    obra: breton-1665
+    pagina: 1666 p. 17; 1665 pp. 9, 40-41, 307 (imagen); goeje-1939 p. 38 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  capa_colonial: '«anichicóni … Sagesse. Lanichícale atátobou linonoúbouli Ichéiri. La crainte de Dieu
+    est le commencement de la sagesse» (1665 p. 41): la misma raíz sirve al catecismo.'
+  sustrato: arahuaco
+  sustrato_nota: La forma de MUJERES (ánichi) es la que Goeje pone junto al goeiz taíno, con interrogación.
+    Las de hombres, al kalina. Que el alma sea el latido («l’ame de la main») es contenido sólo kalinago.
+  caquetio:
+  - creencia-005
+  - creencia-006
+  caquetio_relacion: el caquetío tiene su voz para el alma; la hermana no la sustituye
+  proyeccion:
+    capa: hipotetico
+    nota: 'El alma como latido (pulso) es hipotética (una sola hermana; Rouse p. 561 lo amplía a «varias
+      almas» desde Rochefort y Du Tertre, tercera mano). ánichi ~ goeiz NO va a cognados: la forma no
+      casa; es una lectura de Goeje.'
+  via_a:
+    creencia-005: no-toca
+    creencia-006: no-toca
+  verificado_en_imagen: si
+  dominios:
+  - alma
+- id: kalinago-creencia-013
+  id_origen: ck09-13
+  pregunta: P2
+  esfera: creencia
+  tema: alma
+  contenido: 'El espíritu: «esprit, acanſáncou, acámbouée, f. opoyem» y «il y a là vn esprit, Kacanſángouti
+    nyáim, Kacamboueéti» (1666); en el caribe-francés «oúpoyem, ou, opoyem, esprit» y «Kapoyénti nyáim,
+    il y a là vn esprit» (sin marca), y «acámbouée, acanſáncou, esprit», que viene justo después de «acámbaca,
+    entendre, sçauoir».'
+  grafia: h. acámbouée, acanſáncou; f. opoyem, oúpoyem; Kapoyénti
+  registro: h. y f. (1666 p. 158)
+  sigla_goeje: 'f opoyem, upoyem «fam?»: «esprit, âme de mort», con T hupia y garífuna ufuia, gubida;
+    h akambue «hK» (K oka-tombo «âme de mort»)'
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: lexico
+  procedencia:
+    obra: breton-1665
+    pagina: 1666 p. 158; 1665 pp. 9, 424 (imagen); goeje-1939 p. 38 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 38 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  sustrato: arahuaco
+  sustrato_nota: 'La de mujeres (opoyem) es arahuaca según Goeje, que la pone junto a la opía taína. PERO
+    Breton glosa sólo «esprit»: lo de «âme de mort» es de Goeje, que no dice de dónde lo saca (el garífuna,
+    probablemente). Del lado taíno la distinción es nítida: «Mientras vive una persona llaman al alma
+    goeiz, y después de muerta la denominan opia» (Pané cap. XIII).'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: cap. XIII
+    que: goeiz (alma del vivo) frente a opia (del muerto)
+  caquetio:
+  - creencia-005
+  - creencia-009
+  proyeccion:
+    capa: hipotetico
+    nota: 'DEGRADADO. Que el alma del vivo y la del muerto tengan nombres distintos lo dice con claridad
+      sólo el taíno; el kalinago de Breton da dos palabras (alma ≠ espíritu) pero no dice que el espíritu
+      sea el del muerto. Si Rochefort o Du Tertre lo dicen (K1/K2), sube a reconstruido. A cognados, como
+      candidato con aviso: opoyem ~ opía (la forma casa; la glosa, sólo por Goeje).'
+  via_a:
+    creencia-005: no-toca
+    creencia-009: no-toca
+  verificado_en_imagen: si
+  dominios:
+  - alma
+  - muerto
+- id: kalinago-creencia-014
+  id_origen: ck09-14
+  pregunta: P8
+  esfera: creencia
+  tema: muerte-entierro
+  contenido: El funeral, visto por Breton. Al morir, los pintan de rojo, los peinan y, si son considerables,
+    los envuelven en una buena hamaca de algodón; abren en medio de la casa un hoyo redondo, hondo según
+    la postura que les dan, «qui est celle qu’ils auoiet dans le ventre de leur mere»; los bajan sobre
+    una tabla, los tapan con otra y echan tierra; lloran cantando en tono lúgubre, y vuelven a hacerlo
+    tarde en la noche y antes del alba; ponen pan y bebida sobre las fosas y hacen fuego alrededor. «Au
+    bout de l’an ils retournent pleurer, leuent les planches, iettent la terre sur les corps consommez,
+    la foullent aux pieds, boiuent le reste du iour & de la nuict, & quelquefois quittent les maisons,
+    & habitations, comme ie l’ay veu apres la mort d’Henri Comte leur Capitaine.»
+  grafia: enterrement, lonámouli, lachonamoínrouni, f. labonàchouni, labonácali; ie l’enterre, nachónamoinroyénli,
+    f. nabónacayénli (1666 p. 144)
+  registro: h. y f. para «enterrar»
+  pueblo: kalinago
+  donde: Dominica
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 237-238; 1666 p. 144 (imagen)
+  capa_colonial: 'Breton abre la escena con su lectura: «car croyans l’immortalité de l’ame, il se mesfient
+    des peines qui sont deuës & suiuront leur coulpes» (p. 237). Ver ck09-15.'
+  sustrato: arahuaco
+  sustrato_nota: 'Los igneri (los arahuacos de las Antillas Menores) enterraban «either primary or secondary»
+    (Rouse p. 545, arqueología). Del taíno: casa quemada con el muerto dentro, cadáver envuelto en algodón,
+    huesos que se recogen después, cantos de 15 a 20 días (Rouse p. 532, que lee a Oviedo y Las Casas:
+    no es hermana primaria aquí).'
+  caquetio:
+  - creencia-010
+  - creencia-010b
+  - creencia-010c
+  - creencia-027
+  - creencia-010d
+  caquetio_relacion: 'atestiguado: el llanto de noche cantando las hazañas, la casa del díao que nadie
+    vuelve a habitar, el segundo tiempo con bebida al cabo de años'
+  proyeccion:
+    capa: lectura
+    nota: 'Corrobora lo atestiguado —llanto cantado de noche, comida y bebida para el muerto, casa dejada,
+      un segundo tiempo con bebida— y no cambia su capa. NO corrobora beber los huesos: en Breton se bebe
+      sobre la fosa, no al muerto.'
+  via_a:
+    creencia-010d: corrobora
+  verificado_en_imagen: si
+  dominios:
+  - funeral
+- id: kalinago-creencia-015
+  id_origen: ck09-15
+  pregunta: P8
+  esfera: creencia
+  tema: muerte-entierro
+  tema_duda: alma
+  contenido: 'La inmortalidad del alma y el castigo: «si la mort est terrible aux hommes, i’en ay veu
+    parmy eux a qui elle sembloit plus que terrible, sont ceux a qui la cõſcience remord du mal qu’ils
+    connoissent auoir fait, car croyans l’immortalité de l’ame, il se mesfient des peines».'
+  grafia: hilára, nhilárouba «mourir, ie mourray»; Lhilároni «son decés, sa mort»
+  registro: comun
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 237 (imagen)
+  capa_colonial: todo el porqué
+  sustrato: colonial
+  sustrato_nota: Conciencia, culpa y pena son categorías del confesor. Lo observado es el miedo del moribundo;
+    el porqué es de Breton.
+  caquetio:
+  - creencia-009
+  proyeccion:
+    capa: no-proyecta
+    nota: 'No sirve para medir creencia-009 («sin premio ni castigo»): ni lo sostiene ni lo tumba.'
+  via_a:
+    creencia-009: no-toca
+  verificado_en_imagen: si
+  dominios:
+  - alma
+  - muerte
+- id: kalinago-creencia-016
+  id_origen: ck09-16
+  pregunta: P7
+  esfera: creencia
+  tema: ofrenda-fiesta
+  tema_duda: muerte-entierro
+  contenido: 'El canibalismo kalinago es de ENEMIGOS: «Eremericaba lâo eroútou, chante, danse, resiouys
+    toy par ce qu’on mangera de l’Arroüague»; Breton cuenta que su huésped, el capitán Baron, trajo de
+    tierra firme un arahuaco muerto y dio a cada mujer un trozo para cocerlo en su olla, y que de noche
+    cantaron, bailaron y aullaron. En 1666: «les Caraibes chantent en mangeant leurs ennemis».'
+  grafia: Eremericaba; nheremericayem boyé nhabara
+  registro: comun
+  pueblo: kalinago
+  donde: Dominica
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 216; 1666 p. 68 (imagen)
+  sustrato: caribe
+  sustrato_nota: Exocanibalismo guerrero. Es la lógica contraria del caquetío, que bebe los huesos de
+    SU muerto honrado (creencia-010).
+  proyeccion:
+    capa: comparanda-esfera
+    nota: No corrobora beber al muerto. Para Marokoto-ni; nunca para el caquetío.
+  verificado_en_imagen: si
+  dominios:
+  - canibalismo
+  - guerra
+- id: kalinago-creencia-017
+  id_origen: ck09-17
+  pregunta: P6
+  esfera: creencia
+  tema: segundo-entierro
+  tema_duda: muerte-entierro
+  contenido: 'Los huesos y el pelo de los antepasados guardados por el boyé, en calabazas o envueltos
+    en algodón, como sede de un espíritu que da respuestas: lo dice Rouse, no Breton.'
+  cita: «Some shamans kept in their houses the hair or bones of their ancestors, which were supposed to
+    contain maboya» (Rouse p. 562, imagen)
+  pueblo: kalinago
+  epoca: s. XVII, según las fuentes francesas que Rouse mezcla
+  etiqueta: hipotetico
+  testigo: tercera-mano
+  procedencia:
+    obra: steward-1948-hsai-4
+    pagina: pp. 562-563 (imagen); p. 26 (Steward)
+  sustrato: arahuaco
+  sustrato_nota: 'Hermana taína PRIMARIA: cemíes «donde tienen los huesos de su padre, de su madre, de
+    los parientes y de otros sus antepasados … hay algunos que hablan» (Pané cap. XV); los huesos de Yayael
+    en una calabaza colgada del techo (cap. IX); piedras envueltas en algodón en cestillas, a las que
+    dan de comer (cap. XVI). En Breton, cero en la capa de texto (os, ossemens, cheveux, calebasse en
+    contexto funerario): el cero mide la capa, no la obra.'
+  caquetio:
+  - creencia-010b
+  - creencia-010d
+  caquetio_relacion: el díao desecado y guardado años en su casa, en hamaca renovada (atestiguado)
+  proyeccion:
+    capa: lectura
+    nota: Da el PORQUÉ posible de creencia-010b —el muerto guardado es sede de un espíritu que habla—
+      con el taíno primario; la parte kalinago queda pendiente de Du Tertre o Rochefort (K1/K2).
+  via_a:
+    creencia-010d: corrobora-en-parte
+  verificado_en_imagen: si
+  dominios:
+  - huesos
+  - antepasados
+- id: kalinago-creencia-018
+  id_origen: ck09-18
+  pregunta: P7
+  esfera: creencia
+  tema: muerte-entierro
+  tema_duda: segundo-entierro
+  contenido: '«In the case of a chief the Carib sometimes burned the corpse and mixed its ashes into a
+    drink» (Rouse p. 559, imagen), sin nota de fuente. En Breton no aparece: «cendre» sale sólo en usos
+    de cocina y de tabaco en la capa de texto, y la bebida del segundo tiempo es sobre la fosa, no del
+    muerto (ck09-14).'
+  pueblo: kalinago
+  epoca: sin fechar
+  epoca_nota: el origen no da época; Rouse p. 559 compila sin fuente. No se aplica el default 1635-1654
+    (es la fecha de Breton, no de este dato)
+  etiqueta: hipotetico
+  testigo: tercera-mano
+  procedencia:
+    obra: steward-1948-hsai-4
+    pagina: p. 559 (imagen)
+  sustrato: sin-decidir
+  sustrato_nota: Sin primaria localizada no se sabe si es kalinago, caribe de tierra firme o un rasgo
+    amazónico que Rouse arrastra. Si fuera caribe, no cuenta como sustrato.
+  caquetio:
+  - creencia-010
+  proyeccion:
+    capa: no-proyecta
+    nota: Pendiente de Rochefort, Du Tertre o La Borde (K1/K2). Hoy no corrobora creencia-010.
+  verificado_en_imagen: si
+  dominios:
+  - cenizas
+  - muerte
+- id: kalinago-creencia-019
+  id_origen: ck09-19
+  pregunta: P8
+  esfera: creencia
+  tema: tabu
+  tema_duda: muerte-entierro
+  contenido: 'No nombrar: lo que Breton registra es la TECNONIMIA de los vivos, no el silencio sobre los
+    muertos. «Les Caraibes mariez, & leur femmes mesmes sont rarement appellé de leur nõ, car il semble
+    que ce soit vn crime d’y penser»; dicen sólo las primeras sílabas, y en ausencia; usan «le Pere d’vn
+    tel».'
+  grafia: éti, léti «nom, son nom»
+  pueblo: kalinago
+  epoca: 1635-1654
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 p. 221 (imagen)
+  sustrato: sin-decidir
+  sustrato_nota: El «they feared the dead and never mentioned their names» de Rouse (p. 558) no tiene
+    nota y no está en Breton (no leído entero).
+  proyeccion:
+    capa: no-proyecta
+    nota: No mide «no nombrar al muerto». Queda para Rochefort/Du Tertre.
+  verificado_en_imagen: si
+  dominios:
+  - tabu
+  - nombres
+- id: kalinago-creencia-020
+  id_origen: ck09-20
+  pregunta: P9
+  esfera: creencia
+  tema: cosmos-origen
+  contenido: 'Louquo, el primer hombre, no está en Breton: 0 en la capa de texto de los dos tomos con
+    cinco variantes (louqu, lucuo, lukuo, loucouo, loüqu). Goeje lo toma de La Borde: «le premier homme,
+    demi-dieu 1 bo lukuo», donde «1 bo» es su sigla de De la Borde 1684 (p. 19), con sigla de origen «A?»
+    por el lokono loko «homme» y (h)ialoko «esprit».'
+  grafia: lukuo (Goeje); Louquo (Rouse p. 564)
+  sigla_goeje: «A?»
+  pueblo: kalinago
+  epoca: '1684'
+  epoca_nota: el origen no da época; la sigla «1 bo» de Goeje es De la Borde 1684 (p. 19), según el propio
+    origen. No se aplica el default 1635-1654
+  etiqueta: hipotetico
+  testigo: tercera-mano
+  procedencia:
+    obra: goeje-1939
+    pagina: p. 39 (imagen); p. 19 (clave de siglas, capa de texto)
+  sustrato: sin-decidir
+  sustrato_nota: La pista arahuaca es sólo el nombre, y con interrogación. El mito (sale del ombligo,
+    trae la yuca) es de Rouse p. 564, tercera mano.
+  proyeccion:
+    capa: no-proyecta
+    nota: El caquetío sigue sin mito de origen atestiguado. Pendiente de La Borde (fuera del repo).
+  verificado_en_imagen: si
+  dominios:
+  - origen
+  - mito
+- id: kalinago-creencia-021
+  id_origen: ck09-21
+  pregunta: P1
+  esfera: creencia
+  tema: espiritu-tutelar
+  tema_duda: cosmos-origen
+  contenido: 'La capa colonial como hecho de método: Breton enseña el catecismo con las voces nativas.
+    Además de las de ck09-01, 04 y 10: «Tatateli ouago, chicabouiali icheiri oubecou aca monha, au commencement
+    Dieu crea le Ciel & la terre» (1665 p. 130, capa de texto); y en Goeje, «le Saint-Esprit sankt akansan-ku»
+    (K), «enfer turali (III marmite)», y el préstamo español «les dieux des Indiens (Dios) 1 riose» (pp.
+    38-39).'
+  pueblo: kalinago
+  epoca: 1635-1667
+  etiqueta: atestiguado
+  testigo: lexico
+  procedencia:
+    obra: breton-1665
+    pagina: 1665 pp. 41, 56, 424 (imagen), 130 (capa de texto); 1666 pp. 103, 211, 312 (imagen); goeje-1939
+      pp. 38-39 (imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: pp. 38-39 (imagen)
+    independiente: false
+    nota: el tamiz de siglas, no un segundo testigo del hecho
+  sustrato: colonial
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Regla de lectura para toda la campaña: donde Breton glosa Dieu, diable, sacrifice, prière,
+      âme immortelle, peine, hay que separar lo que los kalinago decían de lo que él les enseñaba a decir.
+      Las «riose» (de Dios) para «los dioses de los indios» muestran que hasta el plural de los espíritus
+      pasó por el castellano.'
+  verificado_en_imagen: si
+  dominios:
+  - catecismo
+  - colonial
+trasladado_sin_cambios:
+- tamiz
+- auditoria_via_a
+- hallazgo_lateral_caqueti
+- negativas
+- pendiente
+- meta_origen
+tamiz:
+  P1:
+    veredicto: reconstruido-candidato (estructura) + lectura
+    hechos:
+    - ck09-01
+    - ck09-02
+    - ck09-03
+    - ck09-04
+    dice: El espíritu es del especialista, se gana ayunando, come lo que se le pone, manda viento, temporal,
+      crecimiento y enfermedad. Dos hermanas (Breton + Pané). Lee creencia-025 y 013. El nombre no se
+      caquetiza.
+  P2:
+    veredicto: hipotetico
+    hechos:
+    - ck09-12
+    - ck09-13
+    dice: 'Degradado: el taíno separa alma del vivo y del muerto; el kalinago de Breton sólo separa alma
+      y espíritu. opoyem ~ opía, candidato a cognados con aviso.'
+  P3:
+    veredicto: hipotetico
+    hechos:
+    - ck09-12
+    dice: Breton sólo da el pulso como «alma de la mano». Las varias almas son de Rouse (Rochefort/Du
+      Tertre). Los destinos monte y orilla corroboran creencia-008b sólo por esa tercera mano.
+  P4:
+    veredicto: hipotetico, con capa colonial fuerte
+    hechos:
+    - ck09-09
+    - ck09-10
+    - ck09-11
+    dice: 'mapoya no es «el diablo»: es el espíritu del eclipse, la pesadilla y el mal enviado, al que
+      no se ofrece. Goeje: fam? (ma-poya «sin-alma»), lectura no prueba. No equivale al buio.'
+  P5:
+    veredicto: lectura (contenido) + comparanda-esfera (nombre) + hipotetico (mujeres)
+    hechos:
+    - ck09-05
+    - ck09-06
+    - ck09-07
+    - ck09-08
+    dice: 'Sesión nocturna con tabaco y canto, cura por succión: el caquetío ya lo tiene atestiguado en
+      Oviedo t. II pp. 298-299. Boyé es KTu. Hubo boyés mujeres: una sola hermana.'
+  P6:
+    veredicto: lectura
+    hechos:
+    - ck09-17
+    dice: El porqué de guardar al muerto (sede de un espíritu que habla) sale del taíno primario; lo kalinago,
+      sólo por Rouse.
+  P7:
+    veredicto: sin-decidir / comparanda
+    hechos:
+    - ck09-16
+    - ck09-18
+    dice: Breton da exocanibalismo de enemigos (caribe) y bebida sobre la fosa, no beber al muerto. Las
+      cenizas en bebida de Rouse p. 559 no tienen fuente.
+  P8:
+    veredicto: lectura
+    hechos:
+    - ck09-14
+    - ck09-15
+    - ck09-19
+    dice: 'Breton vio un funeral de dos tiempos (al año, con bebida, casa dejada): corrobora 010/010b/010c
+      y la estructura de 010d. No da «no nombrar al muerto» (p. 221 es tecnonimia de vivos).'
+  P9:
+    veredicto: negativa medida
+    hechos:
+    - ck09-20
+    dice: 'Louquo: 0 en Breton; es de La Borde. Pendiente.'
+  P10:
+    veredicto: comparanda
+    hechos:
+    - ck09-10
+    dice: El mapoya se come la luna y se baila toda la noche (1665 pp. 21, 370). El caquetío no tiene
+      dato de eclipse.
+auditoria_via_a:
+  creencia-002:
+    veredicto: corrobora-en-parte
+    dice: 'El espíritu auxiliar que revela causa y remedio tiene dos hermanas: los espíritus «ordonnent
+      aux Boyez de prendre de telles herbes pour tels maux» (Breton 1665 p. 284) y los cemíes dicen al
+      behique «de dónde provino la enfermedad» tras la cohoba (Pané cap. XV). El SUEÑO como lugar de la
+      cura: no toca; las dos lo hacen en sesión nocturna o con cohoba, no soñando.'
+  creencia-003:
+    veredicto: corrobora
+    dice: 'Tabaco, canto, casa cerrada y a oscuras, de noche: Breton 1665 pp. 216-217 (visto) y Pané caps.
+      XV, XVI y XIX. Y más: Oviedo t. II p. 298 ya lo ATESTIGUA del boratio («se ençierran en un buhío
+      solo: y allí se echan unas ahumadas que llaman tabacos») y dice que se le paga con «alguna joya
+      de oro». El espíritu-serpiente: sólo taíno (los cemíes «en forma de culebras», Pané cap. XVIII);
+      en Breton el espíritu cae «comme vn sac de farine».'
+  creencia-005:
+    veredicto: no-toca
+    dice: 'Ni Breton ni Rouse dicen que el alma salga al soñar. Las pesadillas son ataque de fuera: «comme
+      s’ils estoient aux prises auec máboya» (Breton 1665 p. 341, con su lectura humoral), «nightmares»
+      de los maboya (Rouse p. 562).'
+  creencia-006:
+    veredicto: contradice
+    dice: 'Las dos hermanas antillanas dan el mal ENVIADO o INTRODUCIDO y la cura por SUCCIÓN y extracción
+      (Breton 1665 pp. 167, 271, 342; Pané caps. XVI y XX), no el alma que se aleja. Y el caquetío lo
+      atestigua igual: Oviedo t. II p. 299, el boratio chupa y saca «la espina ó piedra ó palo». La única
+      palabra «alma» de ese pasaje —«diçe que le allega el alma á un cabo, y despues çierra el puño y
+      sóplale … Allá yras mal»— es ambigua y se parece más al soplo que despide el mal de Pané cap. XVI
+      que a traer de vuelta un alma perdida.'
+  creencia-007:
+    veredicto: corrobora-en-parte
+    dice: 'La división entre males que curan las hierbas y males de los espíritus: los espíritus dan males
+      «que les autres ne peuvent guarir» (Breton 1665 p. 284) y las mujeres curan con hierbas (Rouse p.
+      563, tercera mano). La semejanza como CURA: no toca; en Breton la semejanza es causa de daño (el
+      tabú del manatí, p. 275).'
+  creencia-008:
+    veredicto: corrobora
+    dice: 'La ambivalencia: los espíritus que fueron gente curan, dan de comer y mandan enfermedad y huracán;
+      se les teme más de lo que se los ama (Breton 1665 pp. 271, 283-284). Taíno: las opías nocturnas
+      temidas (Pané cap. XIII) y los cemíes de huesos de antepasados que ayudan (cap. XV). Que roben el
+      alma de los niños: no toca.'
+  creencia-009:
+    veredicto: no-toca
+    dice: 'Breton no da tierra de los muertos con nombre. «Sin premio ni castigo»: Breton habla de «peines
+      … coulpes» (p. 237), lectura de confesor; Rouse p. 561 n. 10 pone un paraíso sólo para guerreros
+      (tercera mano). Ninguno sirve para medir. La tierra con nombre la da el taíno (Coaibai, Pané cap.
+      XII): es del minero taíno.'
+  creencia-010d:
+    veredicto: corrobora
+    dice: 'La ESTRUCTURA de dos tiempos con bebida, con fuente vista: «au bout de l’an ils retournent
+      pleurer, leuent les planches … boiuent le reste du iour & de la nuict, & quelquefois quittent les
+      maisons» (Breton 1665 pp. 237-238). El porqué (el alma individual que se funde con los mayores):
+      no toca. El taíno de Pané da otro porqué posible: el hueso guardado es sede de un espíritu que habla
+      (cap. XV).'
+  creencia-011:
+    veredicto: no-toca
+    dice: Nadie en Breton manipula huesos con tabúes. Las mujeres aparecen como guardianas de la sesión
+      y como boyé (p. 217), no como exhumadoras.
+  creencia-012:
+    veredicto: corrobora-reformulado
+    dice: 'Lo que sí tiene dos hermanas es la versión amplia: los espíritus de gente que fue hacen el
+      huracán y crecer la yuca (Breton 1665 pp. 56, 284) y los cemíes con huesos de antepasados hacen
+      llover, soplar el viento y nacer la comida (Pané caps. XI, XV, XXIII). El mecanismo cenizas o huesos
+      → nubes de la referencia (Civrieux, cumanagotos) es CARIBE de tierra firme: por el tamiz, a comparanda
+      de esfera.'
+hallazgo_lateral_caqueti:
+- id: ck09-L1
+  contenido: 'La cura del boratio, entera. Llamado por un enfermo que no se levanta de la hamaca, pregunta
+    qué le duele, si quiere sanar y si sabe que él lo puede sanar; si dice que no, se va. Si dice que
+    sí, manda ayunar a toda la casa (lo que ya está en creencia-023). Luego, con las manos cerrándolas
+    y abriéndolas por encima, «como quien quiere juntar otra cosa, diçe que le allega el alma á un cabo,
+    y despues çierra el puño y sóplale con la boca diçiendo: Allá yras mal», con tantas voces y aullidos
+    que queda ronco; si el dolor sigue, «chúpale con la boca aquel miembro ó lugar del dolor, escupiendo
+    de rato en rato», y a los cinco o seis días se mete en la boca una espina, piedra o palo, chupa y
+    lo muestra: «Cata aqui lo que te mataba y causó el mal que tenias». Le pagan.'
+  fuente: atestiguado
+  procedencia:
+    obra: oviedo-y-valdes-1852-1855
+    pagina: t. II, impresa 299 (imagen)
+  capa_colonial: 'Oviedo lo cuenta como fraude («y con todas ellas los fraudes, que el Plinio diçe») y
+    lo encaja en Plinio: el qué es dato, el juicio es suyo.'
+  limite: 'Época: contacto (Oviedo escribe 1535-1548). Polity: «los indios de Veneçuela», la gobernación
+    (regla 4): no es exclusivo de la costa.'
+  lectura: '«le allega el alma á un cabo» es ambiguo: el alma de quién, y para qué. Con el soplo y el
+    «Allá yras mal» que siguen, se lee como juntar y despedir el mal (Pané cap. XVI: «Vete luego a la
+    montaña, o al mar … y da un soplo como si despidiese una paja»), no como traer de vuelta un alma perdida.
+    No se decide aquí.'
+  hermanas: 'kalinago (Breton 1665 p. 167) y taíno (Pané cap. XVI): el mismo modelo en tres pueblos.'
+  destino: 'creencia.yaml, como hecho atestiguado nuevo (lo decide Miguel). El elenco de la era 2 ya usa
+    el encierro con tabaco de la p. 298 como atestiguado; la cura de la p. 299 no está en ninguna parte
+    del repo (grep de hoy: «chúpa», «cata aqu», «allega el alma» = 0).'
+negativas:
+- 'Breton NO da forma de mujeres para el chamán: «Boyé … boyáïcou, mon Boyé iboyéiri», sin f. (1666 p.
+  52, imagen).'
+- 'Breton NO da forma de mujeres para el espíritu malo: «Diable, mápoya, les Diables, mápoyanum», sin
+  f. (1666 p. 118, imagen). Goeje le pone igualmente sigla fam? (p. 38).'
+- 'Varias almas: no en Breton. Sí «l’ame de la main» (el pulso, 1665 p. 41). Las almas del corazón y de
+  las arterias son de Rouse p. 561.'
+- 'Louquo: 0 en la capa de texto de 1665 y 1666 con cinco variantes; Goeje lo atribuye a La Borde (p.
+  39, «1 bo»). Mide la capa, no la obra.'
+- 'akamboue como «espíritus buenos» que suben con el alma (Rouse p. 561): en Breton acámbouée es sólo
+  «esprit», de hombres (1665 p. 9; 1666 p. 158).'
+- 'Huesos de antepasados guardados por el boyé: 0 en la capa de texto de Breton (os, ossemens, cheveux,
+  calebasse junto a muerte o boyé).'
+- 'Cenizas del jefe en bebida: 0 en la capa de texto de Breton («cendre» sólo en cocina y tabaco).'
+- 'Canciones del boyé: Breton se negó a escribirlas (1665 p. 218). Es una ausencia deliberada.'
+- 'Una tierra de los muertos con nombre: no en las páginas leídas de Breton.'
+pendiente:
+- 'K1/K2 (Rochefort 1658, Du Tertre 1667 t. II): verifican ck09-13 (opoyem = alma del muerto), ck09-17
+  (huesos), ck09-18 (cenizas), ck09-19 (no nombrar al muerto), y la iniciación de cinco meses que Rouse
+  p. 562 atribuye a Du Tertre t. II pp. 365-366.'
+- 'La Borde 1674/1684 (fuera del repo): Louquo y la teogonía.'
+- Cruzar ck09-03 y ck09-04 con el minero lokono (seme-he en Goeje p. 38) por si el lokono da una tercera
+  hermana.
+- 'K4 sigue abierta: sin ella, lo marcado reconstruido aquí es candidato, no capa.'
+meta_origen:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: minero kalinago de la campaña de creencia (Claude Opus 5.5), en worktree propio; rama vault/creencia-mineria-kalinago
+  plan: 4-fuentes/sesiones/08_creencia_kalinago_que-minar.md
+  decision_de_miguel: '2026-10-09, opción C: lo NUEVO entra con la regla estricta del lexicón (reconstruido
+    sólo con dos tradiciones arahuacas independientes; con una sola, hipotetico; si sólo ilumina un hecho
+    caquetío ya atestiguado, lectura). Lo wayuu de la Vía A se QUEDA como comparanda y se audita con lo
+    que encuentre esta minería (sección auditoria_via_a).'
+  reglas_propias_de_lo_kalinago:
+  - 'El par hombres/mujeres mide PALABRAS, no creencias: en cada hecho se separa el sustrato arahuaco
+    (comparable) de la capa caribe (va a comparanda de esfera, no al caquetío).'
+  - 'Breton confiesa (1665 p. 424) que usó «mapoya» para explicar el Diablo, y catequiza con «Ichéiri»
+    y «chemiin» (1665 p. 41; 1666 pp. 103, 211): la capa colonial está dentro de las glosas. Cada hecho
+    que la tenga lo dice en `capa_colonial`.'
+  capas_de_esta_propuesta:
+    reconstruido: 'NUEVO para el caquetío y con DOS tradiciones arahuacas independientes citadas (aquí:
+      kalinago de Breton + taíno de Pané). Es candidato: necesita K4.'
+    hipotetico: NUEVO con UNA sola tradición (o con la segunda sólo vía un compilador de tercera mano).
+    lectura: ilumina un hecho caquetío YA atestiguado; no crea hecho nuevo (opción C).
+    comparanda-esfera: 'capa CARIBE: sirve a un personaje de la esfera (Marokoto-ni), nunca al caquetío.'
+    no-proyecta: 'capa COLONIAL, o léxico que no se caquetiza (decisión 5 del ensayo: los nombres de la
+      hermana se citan, no se caquetizan).'
+  sustrato_valores:
+    arahuaco: el CONTENIDO está en otra hermana arahuaca con fuente propia (o la forma es de mujeres con
+      sigla am/A en Goeje y el contenido acompaña)
+    caribe: nombre de hombres con sigla K/KTu en Goeje y contenido sin hermana arahuaca, o rasgo propio
+      del caribe de tierra firme
+    colonial: la glosa o el hecho es del misionero (catequesis, categorías cristianas)
+    sin-decidir: 'el tamiz no alcanza: ni otra hermana ni el kalina medido. Se declara, no se fuerza'
+  fuentes:
+    primaria: 'breton-1665 (los tres libros: 1665 caraïbe-français, 1666 français-caraïbe). PDF en OneDrive
+      (D8), leídos en imagen con pymupdf; desfases medidos en la ficha: 1665 impresa = pdf − 22; 1666
+      impresa = pdf − 8.'
+    tamiz: 'goeje-1939 pp. 37-39 (pdf − 1), en imagen con la columna de siglas. Copyright (Goeje †1955):
+      sólo forma, glosa corta y sigla.'
+    indice: 'steward-1948-hsai-4, Rouse «The Carib» pp. 545-565 (el desfase deriva: pdf 697 = p. 545,
+      pdf 716 = p. 564, pdf 723 = p. 565) y resumen de Steward p. 26 (pdf 50). Tercera mano: un reconstruido
+      nunca se apoya sólo en él.'
+    hermana_taina: pane-c1498 (texto de Wikisource en el repo, capítulos), primaria de 1494-1498, cadena
+      castellano ← italiano (Ulloa 1571) ← perdido. Independiente de Breton.
+    lado_caqueti: oviedo-y-valdes-1852-1855, t. II pp. 298-300 (vistas en imagen hoy), y los ids de 3-mundo/corpus/creencia.yaml
+      (leídos, no editados).
+  cobertura:
+    breton_1665_en_imagen:
+    - 8
+    - 9
+    - 10
+    - 21
+    - 40
+    - 41
+    - 56
+    - 83
+    - 96
+    - 135
+    - 148
+    - 167
+    - 216
+    - 217
+    - 218
+    - 221
+    - 237
+    - 238
+    - 271
+    - 283
+    - 284
+    - 286
+    - 307
+    - 341
+    - 342
+    - 370
+    - 424
+    breton_1666_en_imagen:
+    - 17
+    - 52
+    - 68
+    - 103
+    - 118
+    - 144
+    - 158
+    - 211
+    - 268
+    - 312
+    goeje_1939_en_imagen:
+    - 7
+    - 18
+    - 37
+    - 38
+    - 39
+    rouse_hsai_en_imagen:
+    - 559
+    - 562
+    - 563
+    rouse_hsai_capa_de_texto:
+    - 532
+    - 535
+    - 537
+    - 545
+    - 558
+    - 561
+    - 564
+    - 565
+    - Steward p. 26
+    oviedo_t2_en_imagen:
+    - 298
+    - 299
+    breton_solo_capa_de_texto: 1665 pp. 46, 130, 255, 408 (pistas; no se citan como texto verificado)
+    como: pdftotext -enc UTF-8 de cada PDF al scratchpad para localizar (grafías de §4.2 de la nota 08,
+      llanas y sin diacríticos); cada pasaje que se cita, recortado en bandas a 220-300 ppp y leído en
+      imagen.
+  no_leido:
+  - 'Los ~400 pares h/f del tomo de 1666 enteros: sólo las entradas religiosas listadas.'
+  - 'Breton 1667 (Grammaire) y el Catéchisme: no se abrieron.'
+  - 'Rochefort 1658, Du Tertre 1667 t. II, La Borde 1674, la edición crítica de Breton 1999: fuera del
+    repo; esperan K1-K3.'
+  independencia: 'Breton, Du Tertre y Rochefort no son tres testigos (nota 08 §3.1). Aquí sólo cuenta
+    Breton como testigo kalinago; Rouse los mezcla a todos y Goeje los lee. Del lado taíno, Pané es independiente
+    de Breton. Del lado caquetío, Oviedo describe también al taíno: donde un paralelo caquetío-taíno sólo
+    lo cuenta Oviedo, puede ser su manera de contar — aquí el paralelo taíno sale de Pané, no de Oviedo.'
