@@ -369,3 +369,36 @@ halló** el manatí criado (Matum): Oviedo sólo discute la etimología de Márt
 434).
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A1 de [[08_creencia_taino_que-minar]]): ¿es el lib. V la
+plantilla con la que Oviedo escribió el rito de Venezuela (t. II lib. XXV cap.
+IX)? Se leyeron enteros los caps. I-III (impresas 124-140) en la copia íntegra,
+y se sondó el tomo entero por huesos, desecación, entierro y Plinio. El test de
+bigramas lo hace `6-fusion/scripts/medir_plantilla_oviedo.py`.
+
+**Se halló** (✅ en imagen):
+
+- **El çemi figurado** en el `duho`, las joyas, los moscadores y la frente
+  (pp. 125-126).
+- **La excusa del adivino que falla:** «el Çemi avia mudado consejo» (p. 126).
+- **El buhití**, que sólo es «grandes hervolarios», sin cura descrita (p. 126).
+- **Plinio**, sobre la medicina y el arte mágico (pp. 126-127).
+- **El oráculo en «lugares diputados é obscuros»** (pp. 138-139): un indio viejo
+  dice «el dia que habia de llover» y, tras los tabacos, si se hace la guerra.
+- **El tabaco como nombre del INSTRUMENTO**, no de la hierba (p. 131).
+- **La «brasa sin llama» debajo de la hamaca**, para calentarse (p. 132).
+- **El entierro del cacique** (p. 134): mujeres enterradas vivas, o el cacique
+  fajado en algodón, en un hoyo con bóveda de palos, sentado en el duho, con
+  quince o veinte días de endechas.
+
+**No se halló** desecación de un cacique ni çemi con huesos en todo el tomo. Los
+únicos huesos de un señor son de Cozumel (p. 506). Los cuerpos «asados en
+barbacoa» son de la Florida (p. 561).
+
+**Desfase:** el pdf 245, contado desde 1, es la impresa 125.
+
+El veredicto y el detalle están en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` (§oviedo_dos_orillas, ct-t02 y
+ct-t03). Es COMPARANDA, no dato caquetío.

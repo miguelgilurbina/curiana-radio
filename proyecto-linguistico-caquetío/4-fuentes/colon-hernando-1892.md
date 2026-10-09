@@ -142,3 +142,28 @@ Sin sitio: es la costa entera de Paria al cabo de la Vela. Va a la clave
 
 [[angleria-1892]] · [[las-casas-1875]] · [[navarrete-1829-viages-menores]] ·
 [[pane-c1498]]
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A2 de [[08_creencia_taino_que-minar]]): ¿qué parte de la
+Escritura de fray Román trae el vol. 2? Se leyeron enteras las pp. 1-12, que
+van desde el final del cap. XIX hasta el XXV.
+
+**Se halló:**
+
+- **P. 4:** «su señor es el primero que hace la Cogioba».
+- **P. 5:** la Cogioba se da también «como á los cadáveres, que hemos dicho
+  arriba».
+- **P. 6:** Braidama manda enfermedades.
+- **P. 7:** la casa de Guamorete se quemó en una guerra con su cemí dentro.
+  Wikisource no trae la quema.
+- **Pp. 8-9:** Guabancex y sus dos ayudantes.
+- **Pp. 10-11:** el ayuno y Jocawaghama.
+
+**No está en este volumen:** los caps. XI-XVII, es decir, la cueva de la lluvia,
+los muertos, los cemíes con huesos y el médico. Están en el vol. 1, que no está
+en el repo. Ese vol. 1 (B3) es también la candidata a primaria del cacique
+«dried over the fire» de Rouse 1948 p. 532, sin verificar.
+
+El detalle está en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` (§cotejo_pane y §rouse_a_primarias).

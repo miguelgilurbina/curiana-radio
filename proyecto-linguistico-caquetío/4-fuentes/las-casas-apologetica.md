@@ -243,3 +243,36 @@ del mar antillano, y no por hueco del cronista: del Perú escribe que los
 pescadores «tenían por dios á la mar» (pp. 334-335).
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A2 de [[08_creencia_taino_que-minar]]) qué extracta Las Casas
+de Pané sobre los huesos, los muertos, el médico, el tiempo y la cohoba, y qué
+dice por su cuenta. Se leyó el cap. CXX (pp. 320-323), los caps. CLXVI-CLXVII
+(pp. 444-447) y la p. 535.
+
+**Qué se halló:**
+
+- **P. 321 (✅ imagen).** Las estatuas de madera huecas con los huesos de los
+  señores, «y éstas llamaban del nombre de la persona cuyos huesos allí
+  encerraban». La fuente es una **carta de Colón a los Reyes**, no Pané.
+- **P. 535 (✅ imagen), por su cuenta:**
+  - el miedo a «los fantasmas de noche … hupías», y «hupía no era otra cosa
+    sino el ánima del hombre»;
+  - a los enfermos graves los sacan al monte con agua y comida;
+  - a los muertos los entierran lejos de la casa, por miedo a las fantasmas;
+  - los behicos curan estregando y soplando, para echar el mal fuera.
+- **Pp. 445-446.** La cohoba, vista por él: el señor la toma el primero, y es
+  polvo.
+- **P. 447.** Declara que omite lo demás de Pané, por «confusas y de poca
+  sustancia».
+
+La p. 535 es del cap. CCIV (la cabecera, en la p. 534), no del CCIII como
+decía i04 de `taino2_las_casas_apologetica.yaml`.
+
+**Qué no se halló:** ni Coaibai, ni el par goeiz/opia, ni el muerto sobre
+ascuas, ni la venganza contra el médico.
+
+El detalle está en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` (ct-t01, ct-t04, ct-t06, ct-t08 y
+ct-t14). Es COMPARANDA, no dato caquetío.

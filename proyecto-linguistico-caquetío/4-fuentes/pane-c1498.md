@@ -192,3 +192,37 @@ Maorocoti» está en el proemio, sin glosa. **No se halló:** ningún cemí del 
 «huracán» 0 (la tormenta es Guabancex).
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A2 de [[08_creencia_taino_que-minar]]): ¿qué rasgo de los
+huesos, los muertos, el médico, el tiempo y la cohoba sobrevive en cada cadena
+de transmisión? Se leyeron los caps. IX-XXV y se cotejaron con Las Casas,
+Anglería y Colón 1892 vol. 2.
+
+**Sobrevive en varias cadenas:**
+
+- los muertos de noche, en los caminos y sin ombligo (también en Anglería, y
+  por su cuenta en Las Casas p. 535);
+- la cura, con el soplo que despide el mal y la succión (Anglería; Las Casas
+  p. 535);
+- la cohoba como polvo, y el señor que la toma el primero;
+- Guabancex;
+- el cemí desatendido que manda el mal.
+
+**Sólo está en Wikisource:**
+
+- `Coaibai`/`Soraya`;
+- el par `goeiz`/`opia` (Las Casas, por su cuenta, da `hupía` = el ánima);
+- el muerto sobre ascuas;
+- la LLUVIA de Boinayol y Maroya (Anglería p. 347 da la cueva por el sol y la
+  luna);
+- las culebras que sueldan al médico.
+
+**Los cemíes con huesos (cap. XV) tienen otro testimonio, que no es Pané:** la
+carta de Colón que copia Las Casas (p. 321). Esa carta añade que la estatua
+lleva el nombre del muerto.
+
+El detalle está en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` (§cotejo_pane). Es COMPARANDA, no dato
+caquetío, y ninguna forma pasa al lexicón.

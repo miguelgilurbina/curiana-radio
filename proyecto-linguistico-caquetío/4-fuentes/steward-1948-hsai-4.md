@@ -225,3 +225,46 @@ láminas, pdf 723 = p. 565. El de Steward p. 26 es pdf 50.
 **No se halló.** El capítulo de Rouse no da ninguna cita de página dentro de
 las secciones de muerte y religión, salvo la nota de la iniciación. Por eso
 nada de lo que es sólo suyo se usa como hermana.
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A3 de [[08_creencia_taino_que-minar]]):
+
+- de las «certain specific resemblances» entre caquetíos y taínos (Steward
+  p. 21, ✅ imagen), ¿cuál sobrevive al bajar a la primaria de cada lado?
+- en «The Arawak» de Rouse («Life cycle», «Religion», «Shamanism», pp.
+  531-538), ¿qué primaria tiene cada afirmación?
+
+**Se halló:**
+
+- **Sobrevive un solo paralelo específico con primaria en las dos orillas:**
+  la imagen de madera del muerto principal, con el destino contrario.
+  - El caquetío la pone bajo el díao y la quema con él (Oviedo t. II p. 300).
+  - El taíno mete en ella los huesos y le pone el nombre del muerto (carta de
+    Colón vía Las Casas p. 321).
+- **Sobreviven como paralelos regionales:**
+  - el trance para consultar a los espíritus, con sustancia distinta;
+  - la secuencia de la cura.
+- **Sobrevive, pero no es específica:** la hamaca o la litera, que Steward
+  mismo pone «to complete the parallel with Colombia» (p. 24).
+- **Caen:**
+  - el poder del jefe sobre el tiempo (en lo taíno está en los cemíes);
+  - beber las cenizas;
+  - el adoratorio;
+  - la ceniza de tabaco;
+  - los ídolos en cada casa;
+  - el sacrificio, que es axagua; y Steward mismo, en la p. 24, se lo niega a
+    los arahuacos antillanos.
+- **Rouse p. 532 (✅ imagen):** el cacique «disemboweled and dried over the
+  fire» y las cabezas en cestas **no tienen primaria en el repo**. Lo que sí
+  la tiene:
+  - el abandono con agua y comida, en Las Casas p. 535;
+  - el entierro fajado, el ajuar y los quince o veinte días de cantos, en
+    Oviedo t. I p. 134.
+
+Rouse declara sus fuentes en la p. 520. Equivalencia de páginas: pdf 676 = p.
+532.
+
+El detalle está en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` (§steward_auditado y
+§rouse_a_primarias).
