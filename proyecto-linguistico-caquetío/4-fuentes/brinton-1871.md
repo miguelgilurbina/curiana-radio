@@ -160,3 +160,36 @@ y extiende el mito a «all the waters of the world». `Bagua, the sea. Ar. bara`
 (p. 11).
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+**Qué se preguntó** ([[08_creencia_lokono_que-minar]], pregunta 2): qué trae
+Brinton de Orehu, Yawahu/Yauhahu, semi-chichi y Aiomun Kondi, con su grafía, y
+qué más hay de creencia lokona en la parte etnológica. Bitácora en
+[[09_creencia_lokono_mineria]]; propuesta en
+`6-fusion/creencia_lokono_2026-10-09.yaml` (`lok-04`, `lok-09`, `lok-L1`,
+`lok-L2`, `lok-L5`). Desfase pdf − 8; todo visto en imagen.
+
+**Qué dio:**
+
+- **p. 18 (de Brett 1868, nota 49):** *Yauwahu or Yauhahu*, «a supreme
+  spiritual being»; «Pain and sickness are the invisible shafts he shoots at
+  men, *yauhahu simaira* the arrows of Yauhahu, and he it is whom the priests
+  invoke». *Orehu* da a *Arawanili* el *semeci* y la *maraka*, «the holy
+  calabash containing white pebbles». El «supreme» es marco del misionero.
+- **p. 13:** «Semi, the divinities […] Ar. *semeti* sorcerers, diviners,
+  priests». **p. 12:** «Goeiz, the spirit of the living (Pane, p. 444) […]
+  Ar. *akkuyaha*, the spirit of a living animal».
+- **p. 9:** la lista de Trinidad de 1598 frente al arawak de 1800: luna
+  *cattehel* / *katsi*, sol *adaly* / *hadalli*, flechas *symare* / *semaara*.
+  Es el lokono más antiguo del repo, y sostiene el puente *kati* ~ *kathi*.
+- **p. 8:** *haikahu* 'death, the passing away', de *haikan* 'to pass by':
+  etimología de Brinton, no creencia descrita.
+
+**Qué no dio:** Aiomun Kondi, Kururumanni, Aluberi/Alubiri, semi-chichi,
+semicici: 0 con todas las variantes. Nada de la luna como creencia, del sueño
+ni de los muertos.
+
+**Dos citas del lexicón que no casan con esta obra** (anotadas, no
+corregidas): `akkicyaha` dice citar a Brinton, que escribe *akkuyaha*; y
+`semett`, que escribe *semeti*.

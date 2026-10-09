@@ -58,7 +58,7 @@ vino de maíz, tras años de desecación. Lo demás se reconstruye desde el wayu
 | [[perrin-1992-1995]] | 6 hechos, **de segunda mano** | citado vía Paz Reverol; los originales no se consultaron |
 | [[maria-lionza-culto]] | 4 hechos `retro-abstraido` | Ferrándiz 1999, Fernández Quintana 2016, Pollak-Eltz vía citas |
 | [[zavala-reyes-2015]] | puntual | *Yaracuy* / *Tabicure* (entradas 284 y 232) |
-| [[gilij-1780-1783]] | **sin minar** | la comparanda más rica de religión arahuaca del Orinoco; sin capa de texto (verificado) |
+| [[gilij-1780-1783]] | **minado** (t. III libro I, 2026-10-09 → [[09_creencia_achagua_mineria]]) | la comparanda más rica de religión arahuaca del Orinoco; con capa de texto desde 2026-09-23 |
 | [[las-casas-1875]] | nulo | behique/cemí/areíto sin coincidencias en el vol. 1 |
 
 ## Decisión de uso registrada (2026-07-15)
@@ -73,8 +73,8 @@ Registrado en el encabezado de `creencia.yaml` y en la decisión 6 del ensayo.
 - **Oviedo t. II y el apéndice de voces caquetías (t. IV) en copia legible** —
   hoy todo el material caquetío de esta sesión llega **citado por terceros**.
   Es la deuda documental más grande del dominio. → F9.
-- [[gilij-1780-1783]]: 3 volúmenes, 1.323 páginas, **sin capa de texto** (se
-  verificó: las páginas interiores extraen 0 caracteres). Requiere OCR externo.
+- [[gilij-1780-1783]]: 3 volúmenes, 1.323 páginas, **con capa de texto desde 2026-09-23** (el OCR
+  está en el repo; el t. III se minó para creencia el 2026-10-09).
 - Originales de Perrin 1992/1995 y Pollak-Eltz 1972/2004.
 - **La caquetización de los términos wayuu se deja sin resolver a propósito**:
   es tarea de la simulación, no del corpus. Solo *boratio* y *díao* entran como

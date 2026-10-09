@@ -15,12 +15,13 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8070 ítems propuestos** en 160 propuestas, más **60 issue(s)/comentario(s) redactados sin publicar**.
+**8148 ítems propuestos** en 166 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
+| `acasio_capubana_2026-10-09.yaml` | acasio-2023-capubana-calendario | 12 |  |
 | `achagua_arte_neira_ribero_2026-09-22.yaml` | neira-ribero-1762 | 7 |  |
 | `adam_1879_arrouague_caraibe.yaml` | ? | 79 |  |
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
@@ -43,6 +44,10 @@ editar_a_mano: no
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml` | ? | 7 |  |
 | `cosmovision_marina_2026-09-24.yaml` | ? | 14 |  |
+| `creencia_achagua_2026-10-09.yaml` | rivero-1883 · neira-ribero-1762 · gilij-1780-1783 | 27 |  |
+| `creencia_kalinago_2026-10-09.yaml` | ? | 9 |  |
+| `creencia_lokono_2026-10-09.yaml` | ? | 8 |  |
+| `creencia_taino_2026-10-09.yaml` | ? | 14 |  |
 | `cronicas_contacto_costa_occidental_2026-09-22.yaml` | ? | 20 |  |
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
@@ -85,6 +90,7 @@ editar_a_mano: no
 | `gbif_fauna_tierra_paraguana_2026-09-22.yaml` | ? | 56 |  |
 | `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
+| `hermanas_lokono_creencia-migrada_2026-10-09.yaml` | ? | 8 |  |
 | `hermanas_taino_creencia-migrada_2026-10-09.yaml` | ? | 14 |  |
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
 | `inventario_nucleo_fundacional_2026-09-23.yaml` | ? | 36 |  |
@@ -227,6 +233,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `achagua-arte-morfologia-2026-09-22.md` | El arte achagua, leído: qué le aporta a D11 una hermana arahuaca del norte que no es wayuu |
 | `ampies-como-dios-o-como-digo-2026-09-23.md` | Ampíes sobre Manaure: «se hace adorar como Dios» o «como digo» |
 | `arqueologia-insular-falcon-2026-09-22.md` | La arqueología de las islas y de Falcón: sitios, fauna, movimiento y mar (M8) |
+| `capubana-nombre-acasio-2026-10-09.md` | Capubana en Acasio 2023: el nombre de una estación de la falda, no del cerro |
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
 | `correo-boletin-antropologico-zavala-2026-09-24.md` | Correo — al Boletín Antropológico (ULA), para Miguel Enrique Zavala Reyes: de dónde salen  |
@@ -256,6 +263,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `gumilla-cacatia-y-achagua-2026-09-23.md` | Gumilla 1791: los «Cacatia» de los Llanos y lo que aporta al achagua |
 | `habla-llanos-coro-perez-de-tolosa-2026-09-23.md` | «Aunque algo difieren en la habla á los de Coro» — ¿a dónde va este testigo? |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
+| `lexicon-maboya-bejique-sin-respaldo-2026-10-09.md` | Lexicón: `maboya` «equivalente al buio» y `bejique` «cognado de piache» no tienen respaldo |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |

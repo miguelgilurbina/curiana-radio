@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 113
-  en_repo: 78
+  obras: 121
+  en_repo: 86
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -305,6 +305,29 @@ obras:
   - Inventario preliminar de la fauna del Cerro Santa Ana
   - bisbal-1990
   en_repo: false
+- id: bourne-1906
+  obra: Columbus, Ramon Pané, and the beginnings of American anthropology
+  autor: Bourne, Edward Gaylord (1860-1908)
+  anio: 1906
+  publicacion: 'Worcester (Mass.), 1906: separata con portadilla propia («Worcester 1906»). Según la nota
+    de decisión de la minería taína (08), el texto apareció en Proceedings of the American Antiquarian
+    Society; volumen y páginas sin verificar'
+  edicion_del_ejemplar: ejemplar de la Library of Congress digitalizado por Internet Archive (id columbusramonpan00bour;
+    metadatos «from old catalog»)
+  genero: academico
+  local:
+  - fuentes_caquetios/Bourne_1906_Columbus_Ramon_Pane.pdf
+  - fuentes_caquetios/Bourne_1906_Columbus_Ramon_Pane.txt
+  paginas: '48 pp. de PDF: portadillas y ficha de catálogo al principio (pdf 1-3), texto impreso 1-41,
+    pies de archivo al final. Impresa = pdf − 2, medido al descargar en pdf 5, 25, 33 y 43. Ojo: pdf 36
+    y pdf 40 traen un «84» y un «88» que parecen 34 y 38 leídos mal por el OCR'
+  acceso: Dominio público (1906; Bourne † 1908). Descargado el 2026-10-09 con la autorización de Miguel
+    dada en el chat de esa sesión. PDF sha256 148c6b8df3f44d92f5f3ae1d767f649b33e5f0c352162cd73d978d7ca5de3ab3,
+    3.178.246 bytes, en git. Texto _djvu.txt, 112.875 bytes.
+  aliases:
+  - Bourne 1906
+  - Edward Gaylord Bourne
+  en_repo: true
 - id: breton-1665
   obra: Dictionaire caraibe-françois (1665) · Dictionaire françois-caraibe (1666) · Grammaire caraibe
     (1667)
@@ -322,6 +345,48 @@ obras:
   - Breton 1665
   - Breton 1666
   - Breton 1667
+  en_repo: true
+- id: brett-1868
+  obra: 'The Indian Tribes of Guiana: their condition and habits; with researches into their past history,
+    superstitions, legends, antiquities, languages, &c.'
+  autor: Brett, W. H. (William Henry, 1818-1886)
+  anio: 1868
+  publicacion: London, Bell & Daldy, 1868
+  edicion_del_ejemplar: 'ejemplar de archive.org (indiantribesofgu00bret; 572 imágenes en la metadata).
+    Otra copia: cu31924021107192. La de 1852 (b24868589) es otra edición, anterior'
+  genero: etnografia-misionera
+  local:
+  - fuentes_caquetios/Brett_1868_Indian_Tribes_Guiana.pdf
+  - fuentes_caquetios/Brett_1868_Indian_Tribes_Guiana.txt
+  paginas: '566 pp. de PDF (la metadata cuenta 572 imágenes). Desfase pdf→impresa medido en la capa de
+    texto: pdf 40 = p. 18 (impresa = pdf − 22); pdf 150 = p. 124; pdf 300 = p. 260 (pdf − 40); pdf 501
+    = p. 445 (pdf − 56). El desfase sube con las láminas: leer el número impreso'
+  acceso: 'Dominio público (publicada en 1868). PDF: 33.604.059 bytes, sha256 ebd16adf56779b402df62f2858ce82f651fa25778117059d2b0a6263a4e4b40f.
+    Texto: el _djvu.txt del mismo ítem, 915.860 bytes, sha256 43e33b1ea37e919ee6919ba1b267d683746d35794bc73e4a7a6ebe80413cd1c6.
+    Bajado el 2026-10-09 con autorización de Miguel. Pesa 33,6 MB, menos de 100 MB: el PDF va a git.'
+  aliases:
+  - Brett 1868
+  - W. H. Brett
+  en_repo: true
+- id: brett-1880
+  obra: Legends and Myths of the Aboriginal Indians of British Guiana
+  autor: Brett, W. H. (William Henry, 1818-1886)
+  anio: 1880
+  publicacion: London, Williams Wells Gardner, 1880 (editor según la metadata de archive.org)
+  edicion_del_ejemplar: ejemplar de archive.org (cu31924020443218; 226 imágenes)
+  genero: folklore
+  local:
+  - fuentes_caquetios/Brett_1880_Legends_Myths_British_Guiana.pdf
+  - fuentes_caquetios/Brett_1880_Legends_Myths_British_Guiana.txt
+  paginas: '226 pp. de PDF. Desfase pdf→impresa medido en la capa de texto: pdf 40 = p. 26, pdf 80 = p.
+    66 y pdf 220 = p. 206 (+14 en los tres). En pdf 200 la capa lee «180», que por continuidad debería
+    ser 186: no verificado en imagen'
+  acceso: 'Dominio público (publicada en 1880). PDF: 4.144.128 bytes, sha256 144ae36fbbcbef4cd8904a8861c8cd4be8881bd509c407604284c69b52ad34a8.
+    Texto: el _djvu.txt del mismo ítem, 210.322 bytes, sha256 b14484441e42c5c5577ec9028b9a902f960eedcebc514eb326a2d20b9a719697.
+    Bajado el 2026-10-09 con autorización de Miguel. Pesa menos de 100 MB: el PDF va a git.'
+  aliases:
+  - Brett 1880
+  - Legends and Myths
   en_repo: true
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
@@ -484,8 +549,11 @@ obras:
     Archive, id historiadelalmir02col
   genero: cronica
   local:
+  - fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol1.pdf
+  - fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol1.txt
   - fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt
-  paginas: vol. 2 (la obra completa son 2 vols.)
+  paginas: 'vol. 1: 320 pp. de PDF; impresa = pdf − 12 (medido al descargar, sin leer, en pdf 40, 60,
+    80, 200, 260 y 300). vol. 2: la obra completa son 2 vols.'
   aliases:
   - Hernando Colón
   - Fernando Colón
@@ -506,6 +574,32 @@ obras:
   - Cook y Forrest 2005
   - sonidos de la tortuga laúd
   en_repo: false
+- id: davies-1666
+  obra: The History of the Caribby-Islands, viz. Barbados, St Christophers, St Vincents, Martinico, Dominico,
+    Barbouthos, Monserrat, Mevis, Antego, &c. in all XXVIII. In two books
+  autor: Davies, John (traductor); Rochefort, Charles de (autor)
+  anio: 1666
+  publicacion: Londres, J. M. for Thomas Dring and John Starkey, 1666. Traducción inglesa de Rochefort
+    1658
+  edicion_del_ejemplar: 'PDF: ejemplar de la John Carter Brown Library en archive.org (historyofcaribb00roch).
+    Texto: transcripción EEBO-TCP A57484 (Text Creation Partnership, CC0), convertida a texto plano con
+    marcas de página'
+  genero: cronica
+  local:
+  - fuentes_caquetios/Davies_1666_History_Caribby_Islands.pdf
+  - fuentes_caquetios/Davies_1666_History_Caribby_Islands.txt
+  - fuentes_caquetios/Davies_1666_History_Caribby_Islands_TCP.txt
+  paginas: 406 pp. de PDF. Desfase pdf→impresa −32, constante en tres puntos (pdf 200 = p. 168, 250 =
+    218, 300 = 268). El TCP marca la página impresa como [p. N]
+  acceso: 'Dominio público (1666); la transcripción TCP es CC0. Descargado el 2026-10-09 con la autorización
+    de Miguel. PDF: 44.707.189 bytes, sha256 283e59d9c967663e367beac84d4d390ff41afc01c80d57183830c611bdcd51c8.
+    TXT (OCR de archive.org): 1.014.542 bytes. TCP (texto plano, 394 marcas de página): 1.065.799 bytes,
+    sha256 095ffe16902754c3997c628e9132cf1850a5a8e571b9e2f2ca074d277e543ca6.'
+  aliases:
+  - Davies 1666
+  - History of the Caribby-Islands
+  - davies-1666
+  en_repo: true
 - id: dijkhoff-1997
   obra: 'Tanki Flip / Henriquez: an Early Urumaco Site in Aruba'
   autor: Dijkhoff, Raymundo A. C. F.
@@ -523,6 +617,31 @@ obras:
   - Dijkhoff 1997
   - Tanki Flip
   en_repo: false
+- id: du-tertre-1667
+  obra: 'Histoire générale des Antilles habitées par les François, tome II: contenant l''histoire naturelle'
+  autor: Du Tertre, Jean-Baptiste
+  anio: 1667
+  publicacion: París, Thomas Iolly, 1667-1671, 4 tomos. El t. II (1667) contiene la historia natural y
+    el «Traité des Sauvages» (los caribes)
+  edicion_del_ejemplar: ejemplar de la Wellcome Collection en archive.org (b33275944_0002, metadato «Vol.
+    2»). Las seis copias JCB histoiregenerale00dute_0 a _5 no dicen en sus metadatos qué tomo son
+  genero: cronica
+  local:
+  - fuentes_caquetios/DuTertre_1667_Histoire_Generale_Antilles_t2.txt
+  paginas: '610 pp. de PDF (en el PDF en línea). Desfase pdf→impresa NO constante por las láminas: −28
+    (pdf 100 = p. 72), −48 (pdf 300 = p. 252), −64 (pdf 560 = p. 496): leer el número impreso. Las pp.
+    365-366 (la iniciación del boyé que cita Rouse) caen hacia pdf 415-420'
+  acceso: 'Dominio público (1667). Descargado el 2026-10-09 con la autorización de Miguel. Sólo el TXT
+    va a git: 1.102.497 bytes, sha256 71c211ec81d557d832d35dd393db41d6a173ed0263000d406afa5201dde169ae.
+    El PDF (236.194.737 bytes, sha256 beaf57df47fa5b154c40dbd79a5cb6899301439517ace6fb7f3252b2a51846cc)
+    se bajó para medir el desfase y se borró del scratchpad: PDF SOLO EN ONEDRIVE, no en git (D8), si
+    Miguel lo baja de https://archive.org/download/b33275944_0002/b33275944_0002.pdf'
+  aliases:
+  - Du Tertre 1667
+  - Du Tertre t. II
+  - Histoire générale des Antilles
+  - du-tertre-1667
+  en_repo: true
 - id: esteves-1989
   obra: esteves-1989
   autor: Juan de la Cruz Esteves
@@ -686,9 +805,16 @@ obras:
   genero: etnografia-misionera
   local:
   - fuentes_caquetios/Gilij_1780_Saggio_Storia_Americana_vol1.pdf
+  - fuentes_caquetios/Gilij_1781_Saggio_Storia_Americana_t2.pdf
+  - fuentes_caquetios/Gilij_1781_Saggio_Storia_Americana_t2.txt
   - fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.pdf
+  - fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt
+  - fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3_pp30-31.pdf
+  - fuentes_caquetios/Gilij_1782_Saggio_Storia_Americana_vol3_pp30-31.txt
   - fuentes_caquetios/Gilij_1783_Saggio_Storia_Americana_vol4.pdf
-  paginas: 414 + 457 + 452 = 1323
+  paginas: 't. I 414 + t. II 436 (PDF de archive.org; desfase pdf→impresa −26/−27: pdf 100 = p. 74, pdf
+    250 = p. 223) + t. III 457 + t. IV 452. Las pp. 30-31 del t. III, que faltan en el escaneo del repo,
+    están aparte (vol3_pp30-31.pdf = pdf 50-51 del ejemplar en línea)'
   acceso: 'Libre — Internet Archive, los 4 tomos: https://archive.org/details/saggiodistoriaam03gili (tomo
     III, el lingüístico) · t.I https://archive.org/details/saggiodistoriaa01giligoog · t.II https://archive.org/details/saggiodistoriaam02gili
     · t.IV https://archive.org/details/saggiodistoriaam04gili. Verificado en el rastreo de 2026-08-14.'
@@ -1540,6 +1666,28 @@ obras:
   - Juan Rivero
   - Historia de las Misiones de los Llanos
   en_repo: true
+- id: rochefort-1658
+  obra: Histoire naturelle et morale des îles Antilles de l'Amérique
+  autor: Rochefort, Charles de
+  anio: 1658
+  publicacion: 'Rotterdam, Arnould Leers, 1658 (1.ª ed., anónima). Libro I: historia natural; libro II:
+    historia moral (los caribes)'
+  edicion_del_ejemplar: ejemplar de la John Carter Brown Library en archive.org (histoirenaturell02roch,
+    «copia 2»); hay otro JCB más liviano, histoirenaturell00roch_0 (61,3 MB)
+  genero: cronica
+  local:
+  - fuentes_caquetios/Rochefort_1658_Histoire_Naturelle_Morale_Antilles.pdf
+  - fuentes_caquetios/Rochefort_1658_Histoire_Naturelle_Morale_Antilles.txt
+  paginas: '564 pp. de PDF. Desfase pdf→impresa medido al descargar en un solo punto limpio (pdf 250 =
+    p. 230, −20); las cabeceras del OCR son ruidosas y hay láminas: leer el número impreso'
+  acceso: 'Dominio público (impreso en 1658). Descargado el 2026-10-09 con la autorización de Miguel.
+    PDF: 69.504.928 bytes, sha256 f5a9c9fe59b66ee21004356c41cee2df31ede386c8e35354936a334ecb86d40c. TXT
+    (OCR de archive.org): 1.230.347 bytes, sha256 611c23938e045dbdb7d497f06775230edc8a1395f552467f09455de6f41bcb93.'
+  aliases:
+  - Rochefort 1658
+  - Histoire naturelle et morale des îles Antilles
+  - rochefort-1658
+  en_repo: true
 - id: romero-mayayo-agudo-1991
   obra: Los cetáceos recientes de Venezuela
   autor: Romero, Aldemaro; Mayayo, Ana y Agudo, Ignacio
@@ -1573,6 +1721,27 @@ obras:
   aliases:
   - Rondón-Médicci 2013
   - tortugas de Paraguaná
+  en_repo: true
+- id: roth-1915
+  obra: An Inquiry into the Animism and Folk-lore of the Guiana Indians
+  autor: Roth, Walter E.
+  anio: 1915
+  publicacion: 30th Annual Report of the Bureau of American Ethnology (1908-1909), Washington, 1915
+  edicion_del_ejemplar: 'ejemplar de Cornell en archive.org (cu31924104074665; 332 imágenes). Otra copia:
+    gri_33125013314659 (Getty). El informe entero: 30thirtiethannua0000unse. HathiTrust: 008974013'
+  genero: etnografia
+  local:
+  - fuentes_caquetios/Roth_1915_Animism_Folklore_Guiana.pdf
+  - fuentes_caquetios/Roth_1915_Animism_Folklore_Guiana.txt
+  paginas: '332 pp. de PDF. Desfase pdf→impresa medido en la capa de texto: pdf 20 = p. 118, pdf 40 =
+    p. 138 y pdf 100 = p. 198 (+98); pdf 200 = p. 296 (+96). Leer el número impreso de la cabecera de
+    cada página'
+  acceso: 'Dominio público (publicada en 1915). PDF: 18.889.820 bytes, sha256 1d4bf6587590aaebb0f47af3de1e2cafbf9ee9adcb9b9b19799094226c5ce960.
+    Texto: el _djvu.txt del mismo ítem, 1.185.056 bytes, sha256 ef70db0d68504f1acb9e6bfe267c0aaaa1019c75e81268cf404eda13d3bb930a.
+    Bajado el 2026-10-09 con autorización de Miguel. Pesa menos de 100 MB: el PDF va a git.'
+  aliases:
+  - Roth 1915
+  - Walter E. Roth
   en_repo: true
 - id: rouse-cruxent-1963
   obra: Venezuelan Archaeology
@@ -1675,6 +1844,30 @@ obras:
   - Steward 1949
   - Handbook of South American Indians
   - HSAI
+  en_repo: true
+- id: ulloa-1571
+  obra: Historie del S.D. Fernando Colombo
+  autor: Colón, Hernando (trad. italiana de Alfonso de Ulloa)
+  anio: 1571
+  publicacion: 'Venecia, Francesco de'' Franceschi, 1571. Traducción italiana de la biografía de Hernando
+    Colón, que incluye la «Scrittura di fra Roman»: la relación de Ramón Pané'
+  edicion_del_ejemplar: ejemplar digitalizado por Internet Archive (id historiedelsdfer00coln, copia de
+    la John Carter Brown Library). Hay otra copia en archive.org (bub_gb_qOHnTmUJTxQC, 37 MB) que no se
+    bajó
+  genero: cronica
+  local:
+  - fuentes_caquetios/Ulloa_1571_Historie_Fernando_Colombo.pdf
+  - fuentes_caquetios/Ulloa_1571_Historie_Fernando_Colombo.txt
+  paginas: 548 pp. de PDF. Se citan FOLIOS (hojas), no páginas. En el recto, folio = (pdf − 45) / 2 en
+    pdf 241 (f. 98), 245 (f. 100), 247 (f. 101) y 335 (f. 145). Una segunda serie en pdf 443-533 numera
+    99-144 (f. = (pdf − 245) / 2) y repite el f. 100 (pdf 245 y pdf 445). Ver «Cómo se lee»
+  acceso: Dominio público (1571). Descargado el 2026-10-09 con la autorización de Miguel dada en el chat
+    de esa sesión. PDF sha256 164f214d620f54dfc24a33418ac3344c22b44be97b6d54a5066113922b456cd7, 55.340.973
+    bytes, en git (bajo 100 MB). Texto _djvu.txt, 872.151 bytes.
+  aliases:
+  - Ulloa 1571
+  - Alfonso de Ulloa
+  - Scrittura di fra Roman
   en_repo: true
 - id: urbina-jimenez-2007-2011
   obra: 'El Carrizal: cambios en el uso del espacio a través del tiempo (2007) · An Archaeological Survey

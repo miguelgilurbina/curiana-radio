@@ -450,3 +450,44 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** El mar no entra en ningún rito de los çaquitios. Los tres ritos del libro se hacen con MAÍZ: el ayuno que el boratio impone a la casa del enfermo («no coman sino magamorra rala de mahiz que ellos llaman caça», p. 299), el ayuno antes de la guerra o de «sacrificar» (p. 329) y los dos funerales, con los huesos molidos en `maçato` (pp. 297 y 300). Al boratio se le pregunta «si lloverá ó si el año será seco ó abundante, ó si deben yr á la guerra» (p. 298): cielo y guerra. La pesca sale una sola vez, en la adivinación DOMÉSTICA con tabaco, en la misma lista que caminar, sembrar, cazar y el amor de la mujer (p. 298): una faena más, no un dominio aparte. Y la figura del «diablo» se pinta «en sus joyas y en madera de relieve y en todas las cosas y partes que mas estiman» (p. 298), sin decir qué forma tiene. Los onotos del lago de Maracaibo viven de la pesca y la venden a «gaquitios é bubures» (p. 300): el pescado entra en la vida caquetía por el trueque, no por el rito.
 
 **No se halló:** Ni un ser, ni una ofrenda, ni un tabú del mar. Las ventanas creencia × mar restantes son de españoles (tormentas, navíos) o de la Nueva Granada.
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A1 de [[08_creencia_taino_que-minar]]): ¿calca el cap. IX del
+lib. XXV la plantilla de La Española del t. I? Se releyó entero (impresas
+296-302). Los controles son del mismo tomo: los piaches de Camanagoto (lib. XXIV
+cap. XII, p. 255) y la entrada de Espira (lib. XXV cap. X).
+
+**Veredicto: no calca el texto, pero sí el marco.** El cap. IX comparte con La
+Española los mismos bigramas que el capítulo caribe de control
+(`6-fusion/scripts/medir_plantilla_oviedo.py`). Lo que sí repite es el marco:
+
+- Plinio, que aquí se alega «en el preçedente libro», es decir, la p. 255, para
+  los piaches;
+- la escena del encierro con el diablo;
+- las fórmulas «ahumadas que llaman tabacos» y «brasa sin llama».
+
+**Se halló** (✅ en imagen):
+
+- **La efigie del díao** (p. 300). Va bajo la hamaca desde el día de la muerte y
+  se quema con el cuerpo al final del ciclo.
+- **La cura del boratio con el alma** (p. 299): «diçe que le allega el alma á un
+  cabo … *Allá yras mal*».
+- **La consulta del boratio** (p. 298). Hay uno «en cada pueblo prinçipal»,
+  distinto del díao, y se le pregunta incluso «si los chripstianos son buenos».
+- **El único puente con La Española** del capítulo es el tabaco de los negros
+  (p. 298).
+- **Beber los huesos** es costumbre de Tierra Firme, y Oviedo la compara con
+  Artemisia (p. 297).
+- **Los pemenos curaban con «bramar y soplar y echar taco»** (p. 293).
+
+**Correcciones:**
+
+- El cap. IX no declara informante. Bastidas es el informante del cap. XXII (p.
+  328).
+- La impresa 255 trae el folio «525», por errata.
+- Desfase: el pdf 311, contado desde 1, es la impresa 297.
+
+El detalle está en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` (ct-c01, ct-c02, ct-c03 y
+§oviedo_dos_orillas).
