@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8169 ítems propuestos** en 167 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
+**8196 ítems propuestos** en 168 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -90,6 +90,7 @@ editar_a_mano: no
 | `gbif_fauna_tierra_paraguana_2026-09-22.yaml` | ? | 56 |  |
 | `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
+| `hermanas_achagua_creencia-migrada_2026-10-09.yaml` | ? | 27 |  |
 | `hermanas_kalinago_creencia-migrada_2026-10-09.yaml` | ? | 21 |  |
 | `hermanas_lokono_creencia-migrada_2026-10-09.yaml` | ? | 8 |  |
 | `hermanas_taino_creencia-migrada_2026-10-09.yaml` | ? | 14 |  |
