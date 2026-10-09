@@ -101,7 +101,7 @@ Reglas que salen de ahí, y que valen para toda minería futura:
 
 | Fuente | Problema | Ruta de salida |
 |---|---|---|
-| [[gilij-1780-1783]] | **sin capa de texto** (1323 pp. en 3 vols., verificado) | OCR externo, o la traducción de Tovar 1965 |
+| [[gilij-1780-1783]] | con capa de texto (OCR en el repo desde 2026-09-23); t. III minado para creencia el 2026-10-09 | t. II por descargar; pp. 30-31 del t. III faltan en el escaneo |
 | [[oviedo-y-valdes-1851]] | **PDF corrupto** — y además es el volumen equivocado (el material está en t. II y t. IV) | F9 · **la deuda documental mayor** |
 | [[rouse-cruxent-1963]] | **0 bytes** | F9 |
 | [[fernandes-2020]] | **0 bytes** | recuperable (Nature / PMC) |

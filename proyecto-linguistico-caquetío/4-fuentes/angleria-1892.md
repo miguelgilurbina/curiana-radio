@@ -279,3 +279,29 @@ areíto se cita en `transmision-018` y en esta ficha como «vol. 4, p. 236», qu
 la página del PDF: la impresa es **228**.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+**Se preguntó** (A2 de [[08_creencia_taino_que-minar]]): qué trae de Pané sobre
+los huesos, los muertos, el médico, el tiempo y la cohoba. Se leyó entero el
+vol. 1, Déc. I lib. IX (pp. 339-360).
+
+**Se halló:**
+
+- **P. 345 (✅ imagen).** El hijo de Jaia MUERE, mientras que en Pané lo mata el
+  padre, y él «lo metió á modo de sepulcro en una calabaza».
+- **P. 347 (✅ imagen).** La cueva con los dos zemes, `Binthaitel` y `Maroho`,
+  venerada porque de ella salieron el sol y la luna. Sin la lluvia de Pané.
+- **Pp. 348-349 (✅ imagen de la 349).** Los muertos sin ombligo y por los
+  caminos. Por miedo a ellos, «muchos enferman y se quedan lelos».
+- **Pp. 350-351 (✅ imagen de la 351).** Los `boicios`: el ayuno y la purga, el
+  polvo, y la cura con las manos entrelazadas que se sacuden en la puerta.
+- **P. 352.** La venganza contra el médico.
+- **Pp. 354-355.** Los caciques y la cohobba.
+- **Pp. 357-358.** El zeme hembra de la tormenta.
+
+**No se halló:** ni zemes con huesos, ni Coaibai, ni los nombres del alma.
+
+El detalle está en [[09_creencia_taino_mineria]] y en
+`6-fusion/creencia_taino_2026-10-09.yaml` §cotejo_pane. Es COMPARANDA, no dato
+caquetío.

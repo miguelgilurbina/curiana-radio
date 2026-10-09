@@ -59,7 +59,7 @@ desaparece entero**.
 | [[guerra-curvelo-palabrero]] | 4 hechos | el pütchipü'üi; abrió [[PROGRAMA_WAYUU]] |
 | [[vansina-ong]] | 2 hechos, marco teórico | **ambos de segunda mano** (reseñas, no texto completo) |
 | [[las-casas-1875]] | nulo | 613 pp. barridas: apologética de Colón y catequesis, no pedagogía indígena |
-| [[gilij-1780-1783]] | cero coincidencias | patrones en español sobre texto italiano **sin capa de texto** |
+| [[gilij-1780-1783]] | cero coincidencias (barrido anterior al OCR) | patrones en español sobre texto italiano; con capa de texto desde 2026-09-23: repetir el barrido |
 | [[oviedo-y-valdes-1851]] | no procesable | contiene el dato de la *puna* que Jahn cita; PDF corrupto |
 
 ## El experimento que este MOC le pide al motor

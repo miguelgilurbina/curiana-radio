@@ -154,3 +154,43 @@ primeros peces flechados en los ríos (p. 104). El panteón de p. 113 no trae di
 del agua ni del mar. Rito de pesca, sí; de río.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+Minería del plan [[08_creencia_achagua_que-minar]] (1º). Bitácora en
+[[09_creencia_achagua_mineria]]; propuesta en
+`6-fusion/creencia_achagua_2026-10-09.yaml` (hechos `ach-cr-*` y `fx-*`).
+
+**Qué se preguntó.** Qué creían y hacían los achaguas con sus dioses, sus
+especialistas, sus muertos y sus fiestas, y qué de eso corrobora lo que el
+caquetío atestigua o lo que el canon reconstruye desde el wayuu.
+
+**Qué se leyó.** El libro II caps. VI-VIII (pp. 102-118) entero, con el OCR
+para localizar (desfase pdf − 21) y la imagen para citar: pp. 104-108,
+110-113, 115-116 y 118. Fuera del tramo, buscando el segundo entierro en el
+OCR entero, las pp. 198 y 211, vistas en imagen.
+
+**Qué dio.** Sin culto a los dioses (p. 104, 113); Cuaygerri, «el que todo lo
+sabe» (p. 112: la imagen dice *Cuaygerri* las dos veces; *Cuoygerri* es del
+OCR); los dioses con dominio (p. 113); la yopa (pp. 104-105); los sueños
+contados al alba por cada casa, empezando por el cacique (p. 105); la Chuvay
+(p. 106); el hechizo y la venganza entre parcialidades (p. 106; la oruga es
+*barbarí*, no «barban»); la bebezón mayor y la berría (pp. 107-110); la agonía
+con las armas al lado (p. 111); el llanto que va «refiriendo sus virtudes» del
+muerto, que corrobora el de Oviedo para el caquetío (pp. 111-112); el entierro
+en la casa con ajuar «para el camino de la otra vida» (p. 112); Catana
+(p. 113). El cap. VIII separa lo achagua de lo llanero general (girara y
+airicos).
+
+**Lo que salió sin buscarlo.** El segundo entierro y las cenizas bebidas de
+los **sálivas** (p. 211), la comparanda regional más cercana al rito del
+díao; y una carta del Superior de 1665 (p. 198) que da cerros, pájaros,
+estrellas y el sol por dioses de «dicho pueblo», que puede ser Pauto (de
+«Cacatíos de nación», p. 54) o el Puerto achagua: queda por fijar.
+
+**Qué NO.** Ningún segundo entierro achagua, ningún beber de huesos, ninguna
+tierra de los muertos con nombre, nada del mar. La exclusión de las mujeres de
+la Chuvay que da Hernández de Alba no está en estas páginas.
+
+**Deuda.** La carta de 1665 entera (pp. 197-201); los pasajes de creencia de
+otras naciones (p. 56, tunebos y tame, sólo OCR).

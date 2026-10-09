@@ -9,9 +9,9 @@ capa_texto: mala
 descargado: 2026-09-23
 origen_digital: "Internet Archive, digitalización de la John Carter Brown Library (dictionairecarai00bret, dictionairefranc00bret, grammairecaraibe00bret); dominio público"
 estado_minado: parcial
-cobertura: "2026-09-24 (campaña cosmovisión marina): el mar, los seres, los tabúes, el lambi, el caracoli y la muerte en los tres libros, por la capa de texto por página y unas 40 páginas en imagen. Sin leer: los ~400 pares hombre/mujer del françois-caraïbe, que siguen pendientes"
-verificado: 2026-09-24
-minado: 2026-09-24
+cobertura: "2026-09-24 (campaña cosmovisión marina): el mar, los seres, los tabúes, el lambi, el caracoli y la muerte en los tres libros, por la capa de texto por página y unas 40 páginas en imagen. 2026-10-09 (creencia kalinago): las entradas religiosas de 1665 y 1666 —ichéiri/chemiin, mapoya, opoyem, ioüanni/ánichi, boyé y su sesión, el funeral— en imagen (lista en 6-fusion/creencia_kalinago_2026-10-09.yaml meta.cobertura). Sin leer: los ~400 pares hombre/mujer del françois-caraïbe enteros, la Grammaire y el Catéchisme"
+verificado: 2026-10-09
+minado: 2026-10-09
 prioridad: media
 aliases: ["Breton 1665", "Breton 1666", "Breton 1667"]
 ---
@@ -120,3 +120,57 @@ funciones es de La Borde 1674 vía Antolínez: tercera mano, fuera del repo.
 **Deuda:** la nota de `barana` en el lexicón («cognado de CQ para») contradice
 a Goeje p. 55, que la da como forma de HOMBRES filiada con el kalina/tupí
 `parana`; se deja para quien fusione (la propuesta lo levanta).
+
+## 2026-10-09 — Minado para creencia
+
+**Se preguntó** lo de la Minería 1 de [[08_creencia_kalinago_que-minar]]:
+para cada concepto religioso, qué dice Breton, en qué registro (h., f. o
+común), si lo vio o lo oyó, y qué sigla de origen le pone Goeje 1939
+pp. 37-39. La regla de capa es la opción C de Miguel (2026-10-09). La nota
+de sesión, con la auditoría de la Vía A, es
+[[09_creencia_kalinago_mineria]]. Los datos van en
+`6-fusion/creencia_kalinago_2026-10-09.yaml` (ck09-01 a 21 y ck09-L1).
+
+**Cómo.** Primero `pdftotext` de los PDF de OneDrive al scratchpad, para
+localizar. Después, cada pasaje citado se leyó en imagen, en bandas a 220-300
+ppp. Son 27 páginas de 1665 y 10 de 1666 (lista en `meta.cobertura`). Los
+desfases de esta ficha se confirmaron al leer.
+
+**Se halló:**
+- **El espíritu tutelar, h. y f.** «Dieu, Icheíri Iouloúca, f. Chemiin»
+  (1666 p. 118). Otros dicen `çemijn` (1665 p. 96).
+- **El ichéiri es del boyé.** Se da en la iniciación tras el ayuno: «Les
+  Boyés font les autres boyés» (1665 pp. 283, 286).
+- **Qué hacen esos espíritus.** Son hombres y mujeres, jóvenes y viejos, y
+  uno «se dit auoir esté autrefois Arroüagues». Hacen los huracanes y crecer
+  la yuca, dan males y mandan qué hierbas tomar (pp. 283-284).
+- **La ofrenda.** Casabe sobre el `matoútou` (p. 56; h./f. en 1666 p. 312).
+- **El mapoya.** Es «esprit malin», sin forma f. (1666 p. 118). Nadie le
+  ofrece nada (p. 283). Se come la luna en el eclipse (pp. 21, 370). Breton
+  lo usó para el Diablo (p. 424).
+- **El alma y el espíritu.** Alma: «nacáli, nioüanni, f. nánichi» (1666
+  p. 17). Espíritu: «acámbouée, f. opoyem» (1666 p. 158). El pulso es
+  «l’ame de la main» (1665 p. 41).
+- **La sesión del boyé, en primera persona** (pp. 216-218). Hubo una mujer
+  boyé, y las mujeres le cerraron el paso a Breton. Él se negó a escribir
+  las canciones.
+- **La cura por succión** (p. 167).
+- **El funeral en dos tiempos, «au bout de l’an», con bebida y casa dejada**
+  (pp. 237-238, visto).
+- **El canibalismo de enemigos arahuacos** (p. 216): caribe, a la esfera.
+
+**La capa colonial está en las glosas.** Ichéiri y chemiin sirven para el
+Dios del catecismo (1665 p. 41; 1666 pp. 103, 211), y el catecismo
+prohíbe ofrecer a los `mapoyanum` (p. 56).
+
+**No se halló:**
+- forma de mujeres para el boyé (1666 p. 52, imagen) ni para el mapoya;
+- Louquo (0 en la capa de texto de los dos tomos, con cinco variantes; es de
+  La Borde, según Goeje p. 39);
+- varias almas;
+- huesos del boyé o cenizas del jefe (0 en la capa de texto);
+- «no nombrar al muerto»: la p. 221 es la tecnonimia de los vivos.
+
+**Deuda.** Los ~400 pares h/f de 1666 enteros, la Grammaire y el Catéchisme.
+Además, el issue de `maboya` y `bejique`
+(`6-fusion/issues-pendientes/lexicon-maboya-bejique-sin-respaldo-2026-10-09.md`).
