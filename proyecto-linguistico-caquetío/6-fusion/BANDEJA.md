@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8429 ítems propuestos** en 174 propuestas, más **63 issue(s)/comentario(s) redactados sin publicar**.
+**8450 ítems propuestos** en 175 propuestas, más **63 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -157,6 +157,7 @@ editar_a_mano: no
 | `propuesta_nominalizador_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `referentes_era2.yaml` | ? | 15 |  |
+| `relacion_con_la_tierra_2026-10-09.yaml` | varias (el corpus caquetío y las propuestas de las hermanas) | 21 |  |
 | `rivero_1883_2026-09-23.yaml` | rivero-1883 | 12 |  |
 | `sigla_E_zavala_lectura_2026-09-23.yaml` | ? | 0 |  |
 | `sistema_de_nombres_era2.yaml` | ? | 8 |  |

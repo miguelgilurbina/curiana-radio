@@ -13,6 +13,24 @@ nota: generado — no se edita a mano
 > Fuente: canon de `3-mundo/hermanas/` + propuestas `6-fusion/hermanas_*.yaml`.
 > Entre paréntesis, qué es cada pueblo para el caquetío: hermana o prima.
 
+## ¿Cuál era su relación con la tierra?
+
+> La pregunta que se le hace a cada pueblo (Miguel, 2026-10-09). Cada celda:
+> los hechos que la responden, de cualquier esfera. La columna caquetío sale
+> de `6-fusion/relacion_con_la_tierra_*.yaml`, porque el corpus no se toca.
+
+| aspecto | caquetío | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |
+|---|---|---|---|---|---|---|
+| dueno-del-lugar | creencia-015, creencia-021 | 3 (creencia-107, creencia-108, creencia-011) | 3 (creencia-111, creencia-116, transmision-006) | 1 (creencia-003) | 2 (creencia-003, creencia-004) | — |
+| tenencia | — | 3 (parentesco-003, geografia_politica-005, geografia_politica-008) | — | 2 (parentesco-007, ecologia-008) | 2 (parentesco-001, ecologia-005) | 1 (geografia_politica-003) |
+| limite-de-uso | creencia-015, creencia-020, creencia-021 | 1 (creencia-109) | 6 (parentesco-008, creencia-111, creencia-112, creencia-115, creencia-116, transmision-006) | 4 (creencia-116, parentesco-011, ecologia-003, creencia-003) | 1 (ecologia-002) | — |
+| reciprocidad-ofrenda | creencia-016 | 1 (creencia-104) | — | 3 (creencia-106, creencia-003, creencia-004) | — | — |
+| lugar-sagrado | creencia-009, creencia-015, creencia-021, creencia-022 | 4 (creencia-104, creencia-105, creencia-107, creencia-005) | 2 (creencia-110, creencia-111) | 1 (creencia-112) | — | — |
+| calendario-del-medio | creencia-014, creencia-022, ecologia-010, ecologia-038, ecologia-094 | 1 (creencia-110) | 1 (creencia-113) | 2 (creencia-122, transmision-005) | 1 (creencia-103) | — |
+| saber-del-medio | creencia-004, ecologia-004, ecologia-008, ecologia-038, ecologia-080, ecologia-093, geografia_politica-004 | 1 (transmision-002) | 1 (transmision-003) | 6 (creencia-113, parentesco-006, ecologia-004, transmision-003, transmision-005, creencia-003) | 1 (creencia-009) | — |
+| muertos-y-tierra | creencia-008b, creencia-009, creencia-010, creencia-010b, creencia-012, creencia-028 | 5 (creencia-102, creencia-105, creencia-002, creencia-005, creencia-014) | 3 (creencia-106, creencia-108, creencia-006) | 4 (creencia-102, creencia-114, creencia-115, creencia-117) | 1 (creencia-102) | — |
+| origen-en-la-tierra | — | — | 2 (parentesco-002, creencia-109) | — | 1 (parentesco-002) | — |
+
 ## parentesco
 
 | tema | caquetío (tocado) | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |

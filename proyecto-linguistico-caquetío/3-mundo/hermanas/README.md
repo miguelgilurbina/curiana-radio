@@ -246,4 +246,4 @@ procedencia de la migración.
 
 ## Enlaces
 
-[[esfera-de-interaccion]] · [[mapa-creencia]] · [[mapa-familia]] · [[mapa-geografia-politica]] · `3-mundo/corpus/README.md` · `3-mundo/etnias.yaml` · `6-fusion/BANDEJA.md`
+[[esfera-de-interaccion]] · [[mapa-creencia]] · [[mapa-familia]] · [[mapa-geografia-politica]] · [[12_relacion_con_la_tierra]] (§4b, la primera vuelta) · `3-mundo/corpus/README.md` · `3-mundo/etnias.yaml` · `6-fusion/BANDEJA.md`
