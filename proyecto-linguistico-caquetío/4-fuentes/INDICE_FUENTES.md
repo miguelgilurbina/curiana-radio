@@ -101,7 +101,7 @@ Reglas que salen de ahí, y que valen para toda minería futura:
 
 | Fuente | Problema | Ruta de salida |
 |---|---|---|
-| [[gilij-1780-1783]] | con capa de texto (OCR en el repo desde 2026-09-23); t. III minado para creencia el 2026-10-09 | t. II por descargar; pp. 30-31 del t. III faltan en el escaneo |
+| [[gilij-1780-1783]] | **ya no está bloqueada** (2026-10-09): OCR del t. III en el repo, t. II con capa de texto y las pp. 30-31 del t. III recuperadas de otro ejemplar | minar el t. II y las pp. 30-31 (creencia, minería 2) |
 | [[oviedo-y-valdes-1851]] | **PDF corrupto** — y además es el volumen equivocado (el material está en t. II y t. IV) | F9 · **la deuda documental mayor** |
 | [[rouse-cruxent-1963]] | **0 bytes** | F9 |
 | [[fernandes-2020]] | **0 bytes** | recuperable (Nature / PMC) |
@@ -359,6 +359,48 @@ aparece en todo el sitio público. Lo que se retira es el respaldo de la glosa.
 | **caribe-continental** *(nueva)* | **4** |
 | kalinago-caribe-overlay | 4 |
 | **español-colonial** *(nueva)* | **2** |
+
+## La tanda de descargas del 2026-10-09 (creencia: taíno, lokono, kalinago, achagua)
+
+Lo que las cuatro notas de decisión `08_creencia_*_que-minar` pidieron bajar y
+Miguel autorizó («descarguemos esos»). Todo dominio público; todo medido al
+descargar y **sin leer**: la minería 2 empieza por aquí.
+
+| Obra | Para quién | Qué entró | Desfase pdf→impresa |
+|---|---|---|---|
+| [[colon-hernando-1892]] | taíno | vol. 1, PDF + txt | −12, constante |
+| [[bourne-1906]] | taíno | PDF + txt | −2 |
+| [[ulloa-1571]] | taíno | PDF + txt | se cita por **folio**: f = (pdf − 45) / 2; Pané ≈ pdf 297-335 |
+| [[roth-1915]] | lokono | PDF + txt | **+98** (el PDF empieza en la p. 99 de la memoria del BAE) |
+| [[brett-1868]] | lokono | PDF + txt | −22 → −56: sube con las láminas |
+| [[brett-1880]] | lokono | PDF + txt | +14 |
+| [[rochefort-1658]] | kalinago | PDF + txt | −20 en un solo punto limpio; cabeceras ruidosas |
+| [[davies-1666]] | kalinago | PDF + txt + **transcripción TCP** | −32, constante; el TCP marca `[p. N]` |
+| [[du-tertre-1667]] | kalinago | **sólo txt** (el PDF pesa 236 MB: D8) | −28 → −64 por las láminas |
+| [[gilij-1780-1783]] | achagua | t. II (PDF + txt, con capa) y pp. 30-31 del t. III | t. II: −26/−27; es otro ejemplar que los tt. III-IV del repo |
+
+Lo que esta tanda enseñó:
+
+- **El desfase no es un número, es una curva.** Donde hay láminas (Brett
+  1868, Du Tertre) el desfase crece a lo largo del libro: se mide en tres
+  puntos como mínimo y se escribe el tramo, y la cita lleva siempre el número
+  impreso de la cabecera. Un desfase medido en un ejemplar no se traslada a
+  otro escaneo de la misma obra (Gilij t. II).
+- **Una transcripción limpia vale más que un OCR.** Para el francés del XVII
+  de Rochefort, lo que localiza es el inglés de Davies en la transcripción
+  EEBO-TCP (CC0), y de ahí se va al francés en imagen. Buscar con las dos
+  grafías (`ſoul` y `soul`).
+- **Más de 100 MB no va a git (D8).** Du Tertre entra sólo como texto; el PDF
+  se bajó para medir, se borró y se deja anotado de dónde volver a bajarlo.
+- **Un ejemplar en línea puede tener lo que al del repo le falta.** Las pp.
+  30-31 del t. III de Gilij —la religión de los orinoquenses, que la minería
+  de creencia no pudo leer— estaban en el PDF de archive.org: se extrajeron
+  solas, 108 KB, en vez de volver a bajar el tomo.
+- **Descargar lo decide Miguel, y los agentes lo respetan de más.** Dos
+  agentes (Haiku 4.5) se negaron a bajar aun con la autorización transmitida
+  por la sesión principal; esas descargas las hizo la sesión principal con la
+  autorización directa del chat. Y dos commits llegaron firmados por un
+  modelo que no existe («Haiku 5.5»): se corrigió el trailer al integrar.
 
 ## Convención de estas notas
 

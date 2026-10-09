@@ -251,7 +251,10 @@ Miguel decida si entra a `creencia.yaml`. Dos avisos:
 - **K1 y K2** (Rochefort 1658, Du Tertre 1667 t. II). Verifican si `opoyem`
   es el alma del muerto (P2 subiría a `reconstruido`), los huesos del boyé,
   las cenizas del jefe y «no nombrar al muerto», y la iniciación de cinco
-  meses que Rouse atribuye a Du Tertre t. II pp. 365-366.
+  meses que Rouse atribuye a Du Tertre t. II pp. 365-366. **Descargados el
+  2026-10-09**: [[rochefort-1658]], [[du-tertre-1667]] (sólo el texto va a
+  git: el PDF pesa 236 MB) y [[davies-1666]] (la traducción inglesa, con la
+  transcripción TCP para localizar). Medidos, sin leer: esperan la minería 2.
 - **La Borde** (fuera del repo): Louquo y la teogonía.
 - **El cruce con el minero lokono**: `seme-he` y la ofrenda al espíritu
   tutelar, por si el lokono da una tercera hermana.
