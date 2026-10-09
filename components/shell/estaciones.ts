@@ -4,6 +4,8 @@ import { LIBERADA, type Seccion } from "@/lib/secciones";
 // diseño trae MANIFIESTO · JAI SOUNDS · KAKETIANA · GALERÍA · BUCHIBE ·
 // ARCHIVO; Miguel sumó SEÑALES (2026-10-05). Sólo salen las que están al aire
 // (lib/secciones.ts): hoy Galería, Buchibe y el archivo siguen en el taller.
+// SEÑALES sale mientras haya señales que mostrar: la cabecera la quita sin
+// ninguna (haySenales, lib/senales.ts; Miguel, 2026-10-08).
 
 export interface Estacion {
   id: string;

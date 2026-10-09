@@ -4,7 +4,7 @@ import { getAllPersonajes } from '@/lib/personajes';
 import { getSlugs } from '@/lib/galeria';
 import { getWikiIndice } from '@/lib/wiki';
 import { LIBERADA } from '@/lib/secciones';
-import { getSenales } from '@/lib/senales';
+import { getSenales, hayPublicadas } from '@/lib/senales';
 import { getWikiGenerado } from '@/lib/wiki';
 import { getFichas, getFichasSeed } from '@/lib/fichas';
 import { SITIO } from '@/lib/seo';
@@ -52,13 +52,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (LIBERADA.galeria)
     staticPages.push({ url: `${baseUrl}/galeria`, changeFrequency: 'monthly', priority: 0.8 });
 
-  // Señales: el blog. Los borradores no entran (sólo se ven fuera de producción).
+  // Señales: el blog. Los borradores no entran (sólo se ven fuera de
+  // producción), y el índice tampoco mientras no haya ninguna publicada: vacío
+  // va con noindex (app/senales/page.tsx).
   const senalesPages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/senales`,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
+    ...(hayPublicadas()
+      ? [{ url: `${baseUrl}/senales`, changeFrequency: 'weekly' as const, priority: 0.9 }]
+      : []),
     ...getSenales()
       .filter((s) => !s.borrador)
       .map((s) => ({

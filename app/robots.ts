@@ -44,7 +44,9 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       // /jai-sounds/muestra ya no va aquí: lleva noindex, y para que un
-      // buscador lea el noindex tiene que poder rastrearla.
+      // buscador lea el noindex tiene que poder rastrearla. Lo mismo
+      // /suscripcion/confirmar (noindex, fuera del sitemap). /api/suscripcion
+      // sólo responde a POST: un rastreador recibe un 405.
       { userAgent: '*', allow: '/' },
       { userAgent: BUSCADORES_IA, allow: '/' },
       { userAgent: ENTRENAMIENTO_IA, disallow: '/' },

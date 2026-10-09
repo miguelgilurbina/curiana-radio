@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MarcoWiki from "@/components/jai-sounds/wiki/MarcoWiki";
+import FinDeLectura from "@/components/analitica/FinDeLectura";
 import { Datos, DosVoces, Generos, Riel, Rotulo, SiguePor, type Tarjeta } from "@/components/jai-sounds/wiki/piezas";
 import { album, artista, cancion, conVozDeJai, duracion, estaciones, imagenSocial, nombreArtista, portada, vecinas } from "@/lib/jai-wiki";
 import { metadatos, TARJETA_JAI } from "@/lib/seo";
@@ -155,7 +156,13 @@ export default async function CancionPage({ params }: Props) {
         })}
       </section>
 
-      <DosVoces voces={c} cosa="esta canción" nombre={`${c.t} ${nombreArtista(c.a[0])}`} />
+      {/* Con reseña, el final de las dos voces cuenta como lectura (MEDICION.md).
+          El div no es diseño: deja la marca dentro del mismo hueco del marco,
+          sin sumar un gap entre secciones. */}
+      <div>
+        <DosVoces voces={c} cosa="esta canción" nombre={`${c.t} ${nombreArtista(c.a[0])}`} />
+        {conVozDeJai(c) && <FinDeLectura pagina={`/jai-sounds/canciones/${slug}`} />}
+      </div>
 
       <section aria-label="Ficha técnica" className="flex flex-col gap-[22px]">
         <Rotulo derecha={mb && !exacta ? "musicbrainz · por título" : "musicbrainz"}>ficha técnica</Rotulo>

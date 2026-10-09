@@ -7,6 +7,7 @@ import { radio } from "@/components/senales/pieles/radio";
 import { PORTAFOLIO } from "@/lib/redes";
 import { LIBERADA, type Seccion } from "@/lib/secciones";
 import { metadatos, tarjeta } from "@/lib/seo";
+import { haySenales } from "@/lib/senales";
 
 export const metadata: Metadata = metadatos({
   titulo: "Quién transmite — Curiana Radio",
@@ -73,7 +74,8 @@ export default function Sobre() {
           </p>
           <p className={P}>La señal tiene varias frecuencias:</p>
           <ul className="m-0 flex list-none flex-col gap-3 p-0">
-            {ARISTAS.filter((a) => !a.seccion || LIBERADA[a.seccion]).map((a) => (
+            {/* Señales, sólo si hay señales que leer (lib/senales.ts) */}
+            {ARISTAS.filter((a) => (a.seccion ? LIBERADA[a.seccion] : a.href !== "/senales" || haySenales())).map((a) => (
               <li key={a.nombre} className="border-l-2 border-(--noche-filete) pl-4 text-body text-(--noche-hueso)">
                 {a.href ? (
                   <Link href={a.href} className={`font-semibold ${ENLACE}`}>

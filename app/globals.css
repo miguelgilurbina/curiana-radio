@@ -1443,6 +1443,18 @@ html[data-luz="claro"] [data-piel="radio"] {
   --sello-galeria: #2a2a2a;
   --sello-buchibe: #8c2b12;
 }
+/* Lo que es del shell se queda de noche aunque caiga dentro de la radio en
+   claro (§13: «el shell va siempre de noche»): la placa de la suscripción en
+   el Señales vacío. Los valores de :root; los filetes ya los pone
+   .shell-noche en el propio elemento. */
+html[data-luz="claro"] [data-piel="radio"] .shell-noche {
+  color-scheme: dark;
+  --noche-fondo: #0f1621;
+  --noche-panel: #131c28;
+  --noche-hueso: #eee6d4;
+  --noche-hueso-2: #c6cfd9;
+  --noche-frecuencia-tinta: var(--noche-acento);
+}
 
 /* Kaketiana en oscuro: tinta parda, los mismos tokens invertidos (la noche
    azul es del Acto I). Almagre y salina conservan su matiz, más claros. */
@@ -1512,6 +1524,41 @@ html[data-luz="claro"] [data-piel="buchibe"] {
   left: 50%;
   width: min(var(--e-figura-max), calc(100vw - 3rem));
   transform: translateX(-50%);
+}
+/* Señales vacío (components/senales/SenalesVacia.tsx): la aguja del dial
+   busca la primera estación una sola vez y se queda cerca, sin llegar. Se
+   mueve con `left` (2px, nada que repintar alrededor): una caja trasladada
+   del ancho de la escala desbordaba la página. En claro va en la tinta del
+   acento sobre papel. */
+.senales-aguja {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: 38%;
+  width: 2px;
+  margin-left: -1px;
+  pointer-events: none;
+  background: var(--noche-frecuencia-tinta);
+  animation: senales-busca 4.5s var(--kk-curva) both;
+}
+@keyframes senales-busca {
+  from {
+    left: 4%;
+  }
+  35% {
+    left: 62%;
+  }
+  70% {
+    left: 31%;
+  }
+  to {
+    left: 38%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .senales-aguja {
+    animation: none;
+  }
 }
 /* la capitular de las pieles que la tienen (Kaketiana, Buchibe) */
 .senal-cuerpo[data-capitular] > p:first-of-type::first-letter {
@@ -1589,14 +1636,174 @@ html[data-luz="claro"] [data-piel="buchibe"] {
     opacity: 0;
     transform: translateY(10px);
   }
-  /* El carrusel de aristas del hero */
+  /* El carrusel de aristas del hero (components/landing/HeroAristas.tsx).
+     Las diapositivas se apilan en la misma celda. Cada cambio es una vuelta
+     del dial: la aguja (2px, el acento) cruza la pista en el sentido del
+     cambio y detrás de ella amanece la superficie de la arista que entra; la
+     que se va se queda debajo con su texto apagándose. El texto nuevo entra
+     en tinta, línea por línea. La curva es la de Kaketiana: la tinta seca, no
+     rebota. El barrido es sólo de `translate` (la ventana de la diapositiva
+     entra y su lienzo la compensa): va en el compositor, como la aguja, y por
+     eso el borde y la aguja no se separan aunque el hilo principal esté
+     ocupado. Un clip-path animado se pinta en el hilo principal y se
+     quedaba atrás en el móvil. */
   .hero-pista {
-    display: flex;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    --hero-cambio: 900ms; /* lo que tarda la aguja en cruzar */
+    display: grid;
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   }
   .hero-diapositiva {
-    flex: 0 0 100%;
+    grid-area: 1 / 1;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .hero-diapositiva[data-estado] {
+    visibility: visible;
+  }
+  .hero-diapositiva[data-estado="quieta"],
+  .hero-diapositiva[data-estado="entra"] {
+    z-index: 2;
+  }
+  .hero-diapositiva[data-estado="sale"] {
+    z-index: 1;
+  }
+  /* la ventana entra desde el lado de donde viene la aguja; el lienzo se
+     corre lo mismo al revés y queda quieto: sólo se mueve el borde */
+  .hero-pista[data-sentido="adelante"] .hero-diapositiva[data-estado="entra"] {
+    --hero-desde: -100%;
+  }
+  .hero-pista[data-sentido="atras"] .hero-diapositiva[data-estado="entra"] {
+    --hero-desde: 100%;
+  }
+  .hero-pista .hero-diapositiva[data-estado="entra"] {
+    animation: hero-ventana var(--hero-cambio) var(--kk-curva) both;
+  }
+  .hero-pista .hero-diapositiva[data-estado="entra"] > .hero-lienzo {
+    animation: hero-compensa var(--hero-cambio) var(--kk-curva) both;
+  }
+  @keyframes hero-ventana {
+    from {
+      translate: var(--hero-desde) 0;
+    }
+    to {
+      translate: 0 0;
+    }
+  }
+  @keyframes hero-compensa {
+    from {
+      translate: calc(var(--hero-desde) * -1) 0;
+    }
+    to {
+      translate: 0 0;
+    }
+  }
+  /* el texto: se anima `translate`, no `transform`, que en el cartel es su
+     compresión (scaleX) */
+  .hero-pista {
+    --hero-paso: 16px;
+  }
+  .hero-pista[data-sentido="atras"] {
+    --hero-paso: -16px;
+  }
+  .hero-texto > :nth-child(2) {
+    --i: 1;
+  }
+  .hero-texto > :nth-child(3) {
+    --i: 2;
+  }
+  .hero-texto > :nth-child(4) {
+    --i: 3;
+  }
+  .hero-diapositiva[data-estado="entra"] .hero-texto > * {
+    animation: hero-tinta var(--kk-t-tinta) var(--kk-curva) calc(200ms + var(--i, 0) * 80ms) both;
+  }
+  .hero-diapositiva[data-estado="sale"] .hero-texto > * {
+    animation: hero-borra var(--kk-t-rapido) ease-in both;
+  }
+  @keyframes hero-tinta {
+    from {
+      opacity: 0;
+      translate: calc(var(--hero-paso) * -1) 0;
+    }
+  }
+  @keyframes hero-borra {
+    to {
+      opacity: 0;
+      translate: var(--hero-paso) 0;
+    }
+  }
+  /* la aguja: ocupa la pista y su borde izquierdo es la línea; viaja su
+     propio ancho con la misma curva que el recorte, así va sobre el borde */
+  .hero-aguja {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .hero-aguja::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    width: 2px;
+    background: var(--noche-acento);
+    box-shadow: 0 0 16px 1px color-mix(in srgb, var(--noche-acento) 45%, transparent);
+  }
+  .hero-pista[data-sentido="adelante"] .hero-aguja {
+    animation:
+      hero-aguja-adelante var(--hero-cambio) var(--kk-curva) both,
+      hero-aguja-apaga var(--hero-cambio) linear both;
+  }
+  .hero-pista[data-sentido="atras"] .hero-aguja {
+    animation:
+      hero-aguja-atras var(--hero-cambio) var(--kk-curva) both,
+      hero-aguja-apaga var(--hero-cambio) linear both;
+  }
+  @keyframes hero-aguja-adelante {
+    from {
+      translate: 0 0;
+    }
+    to {
+      translate: 100% 0;
+    }
+  }
+  @keyframes hero-aguja-atras {
+    from {
+      translate: 100% 0;
+    }
+    to {
+      translate: 0 0;
+    }
+  }
+  @keyframes hero-aguja-apaga {
+    70% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  /* el tiempo que le queda a la arista al aire: el punto activo se llena en
+     --hero-ciclo (lo pone el componente) y, al llenarse, cambia. Sin JS o
+     antes de hidratar el punto va lleno y quieto. Las pausas congelan el
+     relleno donde va. */
+  .hero-relleno {
+    transform-origin: left;
+  }
+  .hero-carrusel[data-listo] .hero-relleno {
+    animation: hero-llenar var(--hero-ciclo, 7s) linear both;
+  }
+  .hero-carrusel[data-pausa] .hero-relleno {
+    animation-play-state: paused;
+  }
+  @keyframes hero-llenar {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
   }
   @keyframes hero-fundido {
     from {
@@ -1614,12 +1821,22 @@ html[data-luz="claro"] [data-piel="buchibe"] {
     .noche-aparece {
       transition: none;
     }
-    /* sin desplazamiento: el cambio de diapositiva es un fundido de 200 ms */
-    .hero-pista {
-      transition: none;
+    /* el carrusel no avanza solo (el punto no se llena) y el cambio es un
+       fundido de 200 ms, sin aguja ni texto que entra */
+    .hero-pista .hero-diapositiva[data-estado="entra"] {
+      animation: hero-fundido 0.2s ease-out both;
     }
-    .hero-diapositiva[data-activa] {
-      animation: hero-fundido 0.2s ease-out;
+    .hero-pista .hero-diapositiva[data-estado="entra"] > .hero-lienzo {
+      animation: none;
+    }
+    .hero-diapositiva[data-estado] .hero-texto > * {
+      animation: none;
+    }
+    .hero-aguja {
+      display: none;
+    }
+    .hero-carrusel[data-listo] .hero-relleno {
+      animation: none;
     }
   }
 }

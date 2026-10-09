@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { idYouTube } from "@/lib/youtube";
 import { VOZ } from "./voces";
 
 // La prosa de una señal. Ninguna clase nombra una piel: todo sale de los
@@ -48,19 +49,31 @@ export function Figura({ src, alt, pie }: { src: string; alt: string; pie?: Reac
   );
 }
 
-/** El id de un video de YouTube, venga como id o como cualquiera de sus URL. */
-function idYouTube(valor: string): string {
-  const m = valor.match(/(?:youtu\.be\/|v=|embed\/|shorts\/|live\/)([\w-]{11})/);
-  return m ? m[1] : valor;
-}
+// El aviso de un <Video> que no es de YouTube se ve en local y en las vistas
+// previas del PR, donde Miguel revisa la señal; en producción la señal sale
+// sin esa figura.
+const AVISAR = process.env.NODE_ENV !== "production" || process.env.VERCEL_ENV === "preview";
 
 export function Video({ id, titulo = "Video de Curiana Radio" }: { id: string; titulo?: string }) {
+  const video = idYouTube(id);
+  if (!video) {
+    console.warn(`<Video>: «${String(id)}» no es un id ni una URL de YouTube; la señal sale sin el video`);
+    return AVISAR ? (
+      <div
+        role="note"
+        className="w-full rounded-(--e-radio) border border-dashed border-(--e-filete) bg-(--e-placa) px-4 py-3 font-mono text-xs leading-relaxed text-(--e-texto-2)"
+      >
+        &lt;Video&gt;: «{String(id)}» no es un id ni una URL de YouTube. Así no se incrusta: en producción esta
+        figura no sale.
+      </div>
+    ) : null;
+  }
   return (
     <figure className="m-0 w-full">
       <div className="relative aspect-video overflow-hidden rounded-(--e-radio) border border-(--e-filete) bg-(--e-placa)">
         {/* youtube-nocookie: el video no deja cookies hasta que alguien le da play */}
         <iframe
-          src={`https://www.youtube-nocookie.com/embed/${idYouTube(id)}`}
+          src={`https://www.youtube-nocookie.com/embed/${video}`}
           title={titulo}
           loading="lazy"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

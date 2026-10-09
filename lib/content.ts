@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
+import { leerFrontmatter } from './frontmatter';
 import type { EditionMetadata, SectionType, SectionContent, Edition, ArchiveItem } from '@/types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'editions');
@@ -63,7 +63,7 @@ async function loadSection(
     }
 
     const fileContent = fs.readFileSync(sectionPath, 'utf-8');
-    const { content, data } = matter(fileContent);
+    const { content, data } = leerFrontmatter(fileContent);
 
     // Return raw MDX content for RSC rendering
     return {

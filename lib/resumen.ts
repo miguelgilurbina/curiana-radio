@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import type { LanguageDriftRow } from "@/lib/supabase";
+import type { LanguageDriftRow } from "@/types/simulador";
 
 const SEED_PATH = path.join(process.cwd(), "content", "simulador", "resumen.json");
 
