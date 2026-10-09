@@ -19,7 +19,10 @@ acceso: >-
   _djvu.txt del mismo ítem, 210.322 bytes, sha256
   b14484441e42c5c5577ec9028b9a902f960eedcebc514eb326a2d20b9a719697. Bajado el
   2026-10-09 con autorización de Miguel. Pesa menos de 100 MB: el PDF va a git.
-estado_minado: sin-minar
+estado_minado: minado-parcial
+minado: 2026-10-09
+cobertura: "2026-10-09 (minería 2, esferas lokonas): pp. 18-21 (Arawanili y el Orehu) y 178-179 (las familias Ebesoana, Demaréna, Korobohána); el resto por sondas"
+verificado: 2026-10-09
 aliases: ["Brett 1880", "Legends and Myths"]
 ---
 
@@ -34,7 +37,7 @@ algo.
 
 ## Estado
 
-Bajada el 2026-10-09. **Sin leer.** Lo que sigue se midió al descargar, sobre el
+Bajada el 2026-10-09 y minada en parte ese mismo día (sección «Minería 2» al final). Lo que sigue se midió al descargar, sobre el
 `.txt` completo, con búsqueda de subcadena sin distinguir mayúsculas (**medido al
 descargar, sin leer todavía**):
 
@@ -77,3 +80,33 @@ La nota 08 no le hace preguntas propias a esta obra. Se le pregunta sólo lo que
   va a la capa misional y se degrada (nota 08 §3.2).
 
 Enlaces: [[brett-1868]] · [[brinton-1871]] · [[roth-1915]].
+
+## Minería 2 — esferas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). Propuesta:
+`6-fusion/hermanas_lokono_2026-10-09.yaml`.
+
+**Qué se preguntó.** Sólo lo que [[brett-1868]] no trae (B3, B4) y las
+familias lokonas (parentesco).
+
+**Desfase.** El de la ficha (pdf − 14) vale para las pp. 178-179 (pdf
+192-193, vistas en imagen). En la p. 18 (pdf 32) la capa lee «8»: es el «1»
+perdido, no otro desfase.
+
+**Qué dio:**
+
+| Dato | Página | Tema | Hecho |
+|---|---|---|---|
+| Los Ebesoana toman el nombre de *Ebesōtu*, la hija del piache cambiada en perra; «The names of those families all descend in the female line» | 178, nota ✅ | descendencia, linaje-clan | parentesco-001, 002 |
+| Los Demaréna, de un hombre y una muchacha *Demaredu* de bajo la tierra o el agua; «in ancient days» se casaban sólo con la familia del padre, los Korobohána, que bajaron del cielo y se volvieron loros (*Koriouka*) | 179, nota ✅ | linaje-clan, matrimonio | parentesco-002, 003 |
+| Arawanili «chief of Kaieri»; la Orehu le da también el tabaco; «"high above," […] Rests Arawanili» | 18-21 (texto) | cosmos-origen | creencia-110 (procedencia extra, no independiente) |
+
+**No es segunda atestación** del mito de 1868: mismo autor, mismo informante
+(1841). El tabaco es un añadido del verso. Las notas sobre las familias, en
+cambio, son datos que 1868 no trae. Roth (p. 318) no pudo confirmar la regla
+Demaréna-Korobohána.
+
+**Qué no dio:** `semecihi` 0 (escribe otras grafías en verso), ningún dato de
+jefatura ni de guerra que 1868 no tenga.
+
+**Deuda.** El resto del libro, sólo por sondas.

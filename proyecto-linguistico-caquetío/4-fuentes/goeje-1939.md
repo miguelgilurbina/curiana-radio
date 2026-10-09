@@ -10,10 +10,10 @@ capa_texto: si
 descargado: 2026-09-22
 origen_digital: "Biblioteca Digital Curt Nimuendajú (etnolinguistica.org), espejo del PDF abierto de Persée"
 estado_minado: parcial
-cobertura: "el vocabulario TAÍNO entero (pp. 6-17; T10); las 23 voces kalinago del lexicón cruzadas con el vocabulario kalinago, cada una leída en imagen, y el «dialecte de Aruba» localizado (M5, 2026-09-23); vocabulario kalinago transcrito en pp. 31-34, 44-48, 68-69, 85-93 y 102. Sin transcribir: pp. 35-43, 49-67 (animales y plantas), 70-84, 94-101, 103-118"
+cobertura: "el vocabulario TAÍNO entero (pp. 6-17; T10); las 23 voces kalinago del lexicón cruzadas con el vocabulario kalinago, cada una leída en imagen, y el «dialecte de Aruba» localizado (M5, 2026-09-23); vocabulario kalinago transcrito en pp. 31-34, 44-48, 68-69, 85-93 y 102. Sin transcribir: pp. 35-43, 49-67 (animales y plantas), 70-84, 94-101, 103-118; 2026-10-09 (minería 2, lokono): pp. 42-43 (parentesco y «chef» de la columna A) en imagen"
 prioridad: alta
-verificado: 2026-09-23
-minado: 2026-09-23
+verificado: 2026-10-09
+minado: 2026-10-09
 aliases: ["Goeje 1939", "de Goeje 1939"]
 ---
 
@@ -246,3 +246,13 @@ cause les naufrages *Umeku, Umoku*», con el kalina de Penard *Semuye* y «K?»
 (p. 38, imagen): Goeje no dice de quién toma la glosa marina.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minería 2 — esferas lokonas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). Se miraron en
+imagen las pp. 42-43 (pdf 43-44), el parentesco y los títulos de la columna
+A: *augi-ti* / *augi-tu* 'hermano / hermana menor', *iti* 'padre',
+*kubakadi* 'antepasados' y **«chef, prince […] A *afudi*»** (p. 43). Van en
+`lokono-parentesco-007` y `lokono-geografia_politica-003`, y *afudi* en
+`para_el_lexicon`. Goeje compila de su Arawak de 1928: no cuenta como testigo
+independiente de [[brett-1868]].

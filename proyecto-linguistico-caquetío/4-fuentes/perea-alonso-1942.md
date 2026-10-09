@@ -10,9 +10,9 @@ capa_texto: si
 estado_minado: minado
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-08
-minado: 2026-09-12
-cobertura: "Parte I (Fraseario, pp. 1-541) vaciada por script; 173 raíces con dos o más atestaciones fusionadas el 2026-09-11 (D11 fase 1). Parte II (Compendio, pp. 545-684) vaciada ENTERA: la gramática a mano (2026-09-08) y el verbo con su vocabulario de Schumann, 239 voces (2026-09-12, D11 fase 1b). Fuera de alcance: la Introducción rioplatense (pp. I-CX) — medido: 0 menciones de achagua, taíno o caquetío, 3 de maipure/baniva — y las 486 raíces del Fraseario con una sola atestación, que son cola."
+verificado: 2026-10-09
+minado: 2026-10-09
+cobertura: "Parte I (Fraseario, pp. 1-541) vaciada por script; 173 raíces con dos o más atestaciones fusionadas el 2026-09-11 (D11 fase 1). Parte II (Compendio, pp. 545-684) vaciada ENTERA: la gramática a mano (2026-09-08) y el verbo con su vocabulario de Schumann, 239 voces (2026-09-12, D11 fase 1b). Fuera de alcance: la Introducción rioplatense (pp. I-CX) — medido: 0 menciones de achagua, taíno o caquetío, 3 de maipure/baniva — y las 486 raíces del Fraseario con una sola atestación, que son cola. 2026-10-09 (minería 2, lokono): p. 556 releída en imagen para el parentesco"
 aliases: ["Perea Alonso 1942", "Perea y Alonso 1942", "Filología comparada arawak"]
 ---
 
@@ -339,3 +339,16 @@ cielo-tierra-mar es la fórmula de Hechos 4, 24. **No se halló** ningún mito n
 rito: Orehu, Yauhahu, semeci, piache, maraca, 0.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minería 2 — esferas lokonas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). Se volvió a
+la **p. 556** (pdf 778, vista en imagen) por la terminología de parentesco:
+*a-buki-ti* 'hermano mayor de varón', *a-ttilliki-tti* 'hermano de mujer',
+*u-yurda-tu* 'hermana de varón', *ittilla-tu* 'hermana mayor de mujer'. Son
+las mismas raíces que da [[brett-1868]] p. 117 (*d'abugíci*, *d'aciligíci*,
+*d'aiyūradātu*, *d'atilātu*), recogidas medio siglo después y sin relación
+con los moravos: dos registros independientes del mismo pueblo
+(`lokono-parentesco-007`). Y el par *hia-ru* / *wadi-li* explica las
+terminaciones *-ro* / *-li* de los nombres de niña y de niño de
+[[roth-1915]] p. 305.

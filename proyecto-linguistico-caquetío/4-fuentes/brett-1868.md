@@ -20,7 +20,10 @@ acceso: >-
   43e33b1ea37e919ee6919ba1b267d683746d35794bc73e4a7a6ebe80413cd1c6. Bajado el
   2026-10-09 con autorización de Miguel. Pesa 33,6 MB, menos de 100 MB: el PDF
   va a git.
-estado_minado: sin-minar
+estado_minado: minado-parcial
+minado: 2026-10-09
+cobertura: "2026-10-09 (minería 2, esferas lokonas): cap. VI «The Arawaks or Lokono» entero, caps. III, V, IX (Maquarri), parte II caps. IX-X (supersticiones y leyendas), la nota de lenguas (pp. 404-419) y el cap. XIII (historia, pp. 480-495); 25 páginas vistas en imagen; el resto por sondas `Arawak`. Detalle en 6-fusion/hermanas_lokono_2026-10-09.yaml → meta.cobertura"
+verificado: 2026-10-09
 aliases: ["Brett 1868", "W. H. Brett"]
 ---
 
@@ -41,7 +44,7 @@ capa misional** y se degrada (nota 08 §3.2).
 
 ## Estado
 
-Bajada el 2026-10-09. **Sin leer.** Lo que sigue se midió al descargar, sobre el
+Bajada el 2026-10-09 y minada en parte ese mismo día (sección «Minería 2» al final). Lo que sigue se midió al descargar, sobre el
 `.txt` completo, con búsqueda de subcadena sin distinguir mayúsculas (**medido al
 descargar, sin leer todavía**):
 
@@ -114,3 +117,67 @@ Preguntas de la nota 08 §4 («Brett 1868») para esta obra.
 
 Enlaces: [[brinton-1871]] · [[brett-1880]] (mismas leyendas en verso, no es una
 segunda atestación) · [[roth-1915]] · [[gumilla-1791]].
+
+## Minería 2 — esferas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). Propuesta:
+`6-fusion/hermanas_lokono_2026-10-09.yaml` (ids `lokono-<esfera>-NNN`).
+
+**Qué se preguntó.** Las cinco esferas lokonas, tema a tema (README de
+`3-mundo/hermanas/` §4), y lo que la nota [[08_creencia_lokono_que-minar]]
+dejó para esta obra: B1 (yauhahu, semecici, maraca, Orehu), B2 (el capítulo
+«The Arawaks or Lokono»), B3 (las tradiciones arawak, con el molde bíblico
+marcado) y B4 (la página de Orehu y Arawanili, para cerrar `cm24-c-l01`).
+
+**Cómo se leyó.** Texto por página con pymupdf (la capa del PDF es la del
+`_djvu.txt`, con el número de página que el `.txt` no trae). Toda cita, vista
+en imagen. Desfase leído en la cabecera: impresa = pdf − 24 (pp. 58-110), − 26
+(pp. 111-120), − 30 (pp. 155-168), − 34 (pp. 201-202), − 40 (p. 261), − 42 (p. 302),
+− 46 (pp. 311-319), − 50 (p. 347), − 52 (pp. 352-367), − 54 (pp. 377-430),
+− 58 (pp. 483-493). Las láminas lo hacen subir. Brett escribe *Arawâk* con
+circunflejo y la capa lo da `Arawak`; la capa lee «Arawcinili» por
+*Arawânili*.
+
+**Qué dio** (página impresa; ✅ = vista en imagen):
+
+| Dato | Página | Tema | Hecho |
+|---|---|---|---|
+| Familias con nombre (Siwidi, Karuafudi, Onisidi) que «all descend in the female line»; exogamia del nombre; se puede casar en la familia del padre | 98 ✅ | descendencia, matrimonio | parentesco-001, 003 |
+| Sin boda: el yerno trabaja para el suegro y vive con él | 101 ✅ | residencia | parentesco-004 |
+| Tres hermanas arawak con sus maridos en una aldea; echan a la segunda esposa | 352 ✅ | residencia, matrimonio | parentesco-004, 005 |
+| Covada observada | 101 ✅, 355 | infancia-nombre | parentesco-008 |
+| Términos de hermano y hermana según el sexo de quien habla | 117 ✅ | terminologia (propuesto) | parentesco-007 |
+| El Maquarri lo da el hermano de la muerta; tras la danza el viudo deja de tener lazo con su familia | 156 ✅, 158 ✅ | matrimonio; muerte-entierro | parentesco-006; creencia-107 |
+| Capitanes nombrados por el gobernador; «The power of the ancient cacique has perished with the title»; Waramaraka, Sabaiko | 103 ✅, 87 ✅, 155 ✅, 158 ✅ | jefatura | geografia_politica-001 |
+| Ifili «the great», Adaiahu «the governor» | 367 ✅ | jerarquia-rango | geografia_politica-003 |
+| Guerras con los caribes por tradición oral: un solo jefe en la emergencia, casa-fuerte, flechas de un año, juicio de los viejos al jefe caribe, «never conquered» | 486-493 ✅ (487, 490, 492, 493) | guerra | geografia_politica-004 |
+| Ley del talión: al culpable lo mata su hermano | 104-105 | justicia-norma | geografia_politica-006 |
+| «Lokono … literally means "the people"»; aldeas a menos de cien millas del mar; origen «at Kaieri», isla al norte | 97 ✅, 58 ✅, 402 ✅ | territorio-asentamiento | geografia_politica-007 |
+| Yauhahu, en plural, causan enfermedad y muerte; «yauhahu simaira, the evil spirit's arrow»; la succión de la espina | 361-362 ✅, 365 ✅ | enfermedad-cura | creencia-101 |
+| Iniciación con agua de tabaco (para «an Indian»: areal) | 362 ✅ | iniciacion-especialista | creencia-104 |
+| Ataúd de tronco o media canoa; la muerta enterrada en la casa | 103 ✅, 156 ✅ | muerte-entierro | creencia-106 |
+| Wa'cinaci, Aiomun Kondi; creación de corteza de ceiba; fuego y diluvio | 58 ✅, 377, 398 ✅ | cosmos-origen | creencia-109 (no-proyecta) |
+| **B4:** Maraka-kore cuenta en 1841 cómo la Orehu dio a Arawânili el totumo, las piedras blancas y «the mysteries of semecihi»; «he went up, and did not die»; «at Kaieri» | 400-402 ✅ | cosmos-origen | creencia-110 |
+| El Orehu: mujer del agua, caprichosa; su sitio en un barranco del Pomeroon | 367-368 ✅ | espiritu-tutelar | creencia-111 |
+| El origen del piache, un saber que «none were willing, or dared» contar | 400 | saber-restringido | transmision-002 |
+| La danza de los látigos y el Owiarri; canto con cuatro gemidos | 154-157 ✅, 201-202 | canto-baile | transmision-008 |
+| *bohio* < *bawhu-yuho* «house-many»; *siba* 'piedra' | 484 ✅ | vivienda; lexicón | ecologia-001 |
+| Los cangrejos del mar; la *sapakana*; remeros y nadadores | 88, 97 ✅, 110-111 | pesca, objetos, navegación | ecologia-002, 004, 005 |
+| El dicho «unless his mother were one of the lokono»; los numerales | 416 ✅, 417 ✅ | lengua-registro; lexicón | transmision-005 |
+
+**B4 cerrado.** Lo que [[brinton-1871]] (p. 18) contaba de Orehu y Arawanili
+está en las pp. 400-402. Y una corrección: Brinton escribe «a supreme
+spiritual being Yauwahu or Yauhahu»; **Brett nunca lo dice**: para él los
+yauhahu son demonios, en plural («Yauhahu or Demons», cap. IX). El «supreme»
+es de Brinton.
+
+**Qué no dio** (sonda medida en el texto por página): sucesión del jefe
+(`succe`, `nephew`, `heir`, `uncle`: ningún caso lokono); tributo (`tribute`:
+0 lokono); tratamiento de huesos (`bones` 42, `disinter` 2: los huesos son de
+los montículos de conchas, que «no tribe» reconocía, p. 430); petroglifos
+(`Timehri` 7: «former Indian inhabitants», sin pueblo); casa de hombres (0).
+Ningún mito de la luna (está en Roth).
+
+**Deuda.** Las partes I caps. VII-VIII y X-XII y la parte II caps. I-VIII se
+leyeron sólo por sondas `Arawak`. Hilhouse (las 27 familias) no está en el
+repo.
