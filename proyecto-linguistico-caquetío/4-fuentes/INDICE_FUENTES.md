@@ -397,10 +397,15 @@ Lo que esta tanda enseñó:
   de creencia no pudo leer— estaban en el PDF de archive.org: se extrajeron
   solas, 108 KB, en vez de volver a bajar el tomo.
 - **Descargar lo decide Miguel, y los agentes lo respetan de más.** Dos
-  agentes (Haiku 4.5) se negaron a bajar aun con la autorización transmitida
+  agentes (Haiku 5.5) se negaron a bajar aun con la autorización transmitida
   por la sesión principal; esas descargas las hizo la sesión principal con la
-  autorización directa del chat. Y dos commits llegaron firmados por un
-  modelo que no existe («Haiku 5.5»): se corrigió el trailer al integrar.
+  autorización directa del chat. Y el modelo que firma un commit hay que
+  comprobarlo: el agente de lokono firmó «Haiku 4.5» (el id que CLAUDE.md da
+  a los agentes de la simulación), el de achagua «Haiku 5.5», y la sesión
+  principal, creyendo que 5.5 no existía, unificó a 4.5. Miguel lo corrigió
+  el mismo día: **los agentes de esta tanda corrieron con Haiku 5.5**, y los
+  trailers de sus commits quedan mal escritos porque la rama ya estaba
+  publicada y no se reescribe.
 
 ## Convención de estas notas
 
