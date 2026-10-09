@@ -22,12 +22,13 @@ acceso: >-
   ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto:
   `pdftotext -enc UTF-8`, 1,58 MB.
 estado_minado: minada-parcial
-cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura"
+cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura — 2026-10-09: las atribuciones de Rouse «The Carib» (pp. 545, 558-562) cotejadas contra Rochefort y Du Tertre en imagen"
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-10-09
 aliases: ["HSAI 4", "Handbook vol. 4", "Circum-Caribbean Tribes", "Hernández de Alba 1948", "Kirchhoff 1948"]
+minado: 2026-10-09
 ---
 
 # HSAI 4 (1948) — *The Circum-Caribbean Tribes*
@@ -268,3 +269,24 @@ Rouse declara sus fuentes en la p. 520. Equivalencia de páginas: pdf 676 = p.
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§steward_auditado y
 §rouse_a_primarias).
+
+## 2026-10-09 — Minería 2 kalinago: lo que Rouse atribuye, contra sus primarias
+
+Rouse «The Carib» no se releyó: se comprobaron contra Rochefort 1658 y Du
+Tertre 1667 (en imagen) las afirmaciones que la minería 1 dejó pendientes.
+Sesión: [[10_hermanas_kalinago_esferas]].
+
+| Rouse | Primaria | Veredicto |
+|---|---|---|
+| Varias almas por los latidos (p. 561) | Du Tertre p. 372 (tres almas), Rochefort p. 429 | **se sostiene** |
+| La del corazón al cielo; las otras, maboyas del bosque y oumékou de la orilla (pp. 561-562) | Rochefort p. 429; Du Tertre p. 372 | se sostiene (la orilla, sólo Rochefort) |
+| Algunos boyés guardaban en casa el pelo o los huesos de sus antepasados (p. 562) | Du Tertre p. 369; Rochefort pp. 418, 424: huesos de UN muerto sacados del sepulcro y envueltos en algodón, que dan oráculos | **se sostiene a medias**: ni antepasados, ni pelo, ni calabazas, ni en casa |
+| Iniciación con cinco meses de ayuno, Du Tertre t. II pp. 365-366 (p. 562 n. 11) | Du Tertre 1667 pp. 365-366 en imagen: «apres avoir long temps jeûné» | **no se sostiene** en la ed. de 1667 |
+| El jefe quemado y sus cenizas en bebida (p. 559) | 0 en Rochefort y Du Tertre; Rochefort p. 448 lo dice de los TAPUYAS | **no se sostiene** en el grupo |
+| No nombraban a los muertos (p. 558) | 0; sólo la tecnonimia de los vivos | **no se sostiene** en el grupo |
+| Ídolos de algodón de los igneri en cuevas (p. 545) | Du Tertre pp. 369-370 (du Parquet, Martinica) | se sostiene |
+| El espíritu habla a veces por boca de una mujer (p. 562) | Rochefort p. 418 | se sostiene |
+
+Regla que sale: Rouse mezcla a La Borde (fuera del repo) con el grupo
+Breton-Du Tertre-Rochefort sin decir de quién es cada cosa; lo que no está en
+el grupo es candidato a ser de La Borde.
