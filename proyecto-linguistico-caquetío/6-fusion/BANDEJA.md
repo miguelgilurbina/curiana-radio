@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8126 ítems propuestos** en 164 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
+**8134 ítems propuestos** en 165 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -90,6 +90,7 @@ editar_a_mano: no
 | `gbif_fauna_tierra_paraguana_2026-09-22.yaml` | ? | 56 |  |
 | `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
+| `hermanas_lokono_creencia-migrada_2026-10-09.yaml` | ? | 8 |  |
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
 | `inventario_nucleo_fundacional_2026-09-23.yaml` | ? | 36 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
