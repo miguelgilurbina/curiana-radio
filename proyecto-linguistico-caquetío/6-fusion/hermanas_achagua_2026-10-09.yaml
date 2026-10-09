@@ -311,7 +311,9 @@ hechos:
     cita: >-
       «Hermano maior mio = Nubecanata. pl. Nubecanatanay. Hermano mio = Nuberri.
       pl. Nuberrinay. Si habla con él = tay. Hermana = Nuicherro… Hermano de un vientre
-      — Nugiacaberri. Hermana tal — Nugiacabetua» (67 der., imagen).
+      — Nugiacaberri. Hermana tal — Nugiacabetua» (67 der., imagen). El vocativo cambia
+      con el sexo de quien habla: al hermano, «si habla con él = tay», «si habla con
+      ella = tau».
     grafia: 'Nubecanata, Nuberri, Nuicherro, Numerrerri, Richerro, Ruerraí, Ruchamiminí, Nugiacaberri, Nugiacabetua, Jnirrirri, Nunirarí, Nunirro, Nudetuarro, Nuibiu, Enagerri'
     pueblo: achagua
     donde: Casanare-Meta
@@ -319,7 +321,7 @@ hechos:
     etiqueta: atestiguado
     testigo: lexico
     procedencia: {obra: neira-ribero-1762, pagina: 'pliegos 67 der. (imagen), 69 izq., 74 der., 78 izq., 85 izq., 92 izq. (transcripción)'}
-    verificado_en_imagen: 'en parte: 67 der. sí'
+    verificado_en_imagen: 'en parte: 67 der. sí (el «Hermano menor de ella» se lee Ruchamini ruerri)'
     como_se_escribio: >-
       Lemas castellanos elegidos por el misionero: lo que falta (los tíos) puede ser
       laguna del jesuita, no de la lengua.
@@ -951,9 +953,9 @@ hechos:
       vuelven hachas, machetes y anzuelos, y «la nación Achagua [es] escala y reclamo para
       otras muchas». Los yaruros les venden pescado por tabaco y caña de flecha; los
       maibas labran quiripa para comprar maíz, plátano y yuca. El vocabulario tiene
-      «Mercado, donde se vende = Benidacarrusí», «Mercader… = Ybenidérri», «Sarta de
+      «Mercado donde se vende — Benidacarrun» (así en la imagen; el YAML de la transcripción dice Benidacarrusí), «Mercader el q.e vende — Ibenidérri», «Sarta de
       quiripa = Abacua».
-    grafia: 'quiripa; Abacua (sarta); Benicai (comprar), Nubenidau (vender), Ybenidérri (mercader), Benidacarrusí (mercado), Benisimí (precio)'
+    grafia: 'quiripa; Abacua (sarta); Benicai (comprar), Nubenidau (vender), Ibenidérri (mercader), Benidacarrun (mercado; YAML Benidacarrusí), Benisimí (precio)'
     pueblo: achagua
     donde: 'puerto de San Salvador de Casanare; Meta; Orinoco'
     epoca: 'c. 1660-1736'
@@ -1842,7 +1844,7 @@ para_el_lexicon:
   - {forma: mude, glosa: 'primo (saludo al huésped)', lengua: achagua, obra: rivero-1883, pagina: 'p. 420 (imagen)', nota: 'ya en parentesco-021; Neira «Prima = Nudetuarro» (85 izq.); Gilij t. II p. 201: los sálivas dicen «nude» (cugino) al saludar a los parientes menos cercanos'}
   - {forma: Nugiacaberri, glosa: hermano de un vientre (uterino), lengua: achagua, obra: neira-ribero-1762, pliego: '67 der. (imagen)', nota: '«Hermana tal — Nugiacabetua»'}
   - {forma: Richerro / Ruerraí, glosa: 'hermana de él / hermana de ella', lengua: achagua, obra: neira-ribero-1762, pliego: '69 izq. (transcripción)', nota: 'términos por sexo del hablante'}
-  - {forma: Benidacarrusí, glosa: 'mercado, donde se vende', lengua: achagua, obra: neira-ribero-1762, pliego: '75 der. (imagen)', nota: '«Mercader el q.e vende — Ybenidérri»; raíz beni-, «comprar, precio»'}
+  - {forma: Benidacarrun, glosa: 'mercado, donde se vende', lengua: achagua, obra: neira-ribero-1762, pliego: '75 der. (imagen)', nota: 'el YAML de la transcripción dice Benidacarrusí: la imagen da -carrun; «Mercader el q.e vende — Ibenidérri»; raíz beni-, «comprar, precio»'}
   - {forma: Chunisay, glosa: 'amo principal; principal, causa', lengua: achagua, obra: neira-ribero-1762, pliego: '34 der., 85 der. (transcripción)'}
   - {forma: Vnuma, glosa: convite para la labranza, lengua: achagua, obra: neira-ribero-1762, pliego: '49 izq. (transcripción)'}
   - {forma: Isirri, glosa: murciélago (de ahí Isirriberrenais, una parcialidad), lengua: achagua, obra: rivero-1883, pagina: 'p. 326 (Mimbela)'}

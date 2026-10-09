@@ -20,13 +20,13 @@ acceso: >-
   43bcb5c8dfda33b632e96599a4e575eef503b4b1bce231f434f509bfde92ef91. Hay una
   reedición de 1956 en archive.org (historiadelasmis00rive) que NO se bajó:
   su aparato editorial de 1956 puede tener derechos.
-estado_minado: parcial
-cobertura: "minado 2026-09-23: todas las menciones de caquetíos (raíz medida, 12 aciertos, leídos en contexto) y los pasajes de lengua, variación e intérpretes; voces achaguas con glosa (4 vistas en imagen, 8 sólo OCR). FALTA: fauna y flora del Libro I (pp. 1-20), el resto de la etnografía achagua (pp. 102-118) por esferas, y ver en imagen las 8 voces OCR"
+estado_minado: minado-parcial
+cobertura: "2026-09-23: menciones de caquetíos, lengua e intérpretes, voces achaguas con glosa. 2026-10-09 (minería 1, creencia): lib. II caps. VI-VIII. 2026-10-09 (minería 2, esferas): lib. I caps. VI-XIII (pp. 16-43), lib. II caps. VI-VIII y XVI (pp. 102-118, 155-158), lib. V caps. II-V (pp. 315-330, Mimbela 1696), lib. VI caps. VIII-XI (pp. 414-427, Rivero 1725-1726) leídos en el OCR, y búsquedas medidas en todo el texto; citas vistas en imagen (lista en 6-fusion/hermanas_achagua_2026-10-09.yaml). FALTA: fauna y flora del lib. I (pp. 1-15), lib. III (Atanarí, pp. 214-247) y lib. VI caps. I-VII sólo por búsqueda, la p. 156 (escaneo dañado) y las 8 voces OCR de 2026-09-23"
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-23
-minado: 2026-09-23
+verificado: 2026-10-09
+minado: 2026-10-09
 aliases: ["Rivero 1883", "Juan Rivero", "Historia de las Misiones de los Llanos"]
 ---
 
@@ -194,3 +194,67 @@ la Chuvay que da Hernández de Alba no está en estas páginas.
 
 **Deuda.** La carta de 1665 entera (pp. 197-201); los pasajes de creencia de
 otras naciones (p. 56, tunebos y tame, sólo OCR).
+
+## Minería 2 — esferas (2026-10-09)
+
+Minería de [[10_hermanas_achagua_esferas]]; propuesta en
+`6-fusion/hermanas_achagua_2026-10-09.yaml` (ids `achagua-*`).
+
+**Qué se preguntó.** Lo que los caps. VI-VIII (pp. 102-118) y el resto del libro
+dicen del gobierno, el matrimonio, la casa, la guerra, la esclavitud, el comercio
+y la enseñanza de los achaguas, por la lista de temas del README de
+`3-mundo/hermanas/`. Se leyeron enteros, en el OCR, el lib. I caps. VI-XIII
+(pp. 16-43), el lib. II caps. VI-VIII y XVI (pp. 102-118, 155-158), el lib. V
+caps. II-V (pp. 315-330, la relación de **Mateo Mimbela** de 1696, que Rivero
+copia) y el lib. VI caps. VIII-XI (pp. 414-427, la entrada del propio Rivero al
+Airico, 1725-1726, en primera persona). El resto, por búsqueda medida.
+
+**Testigos.** Rivero mismo (pp. 414-427: lo vio), Mimbela (pp. 315-330: otro
+jesuita, otro viaje) y la gentilidad recordada (pp. 102-118). Neira y Rivero
+siguen siendo un testigo.
+
+**Qué dio:**
+
+| Dato | Página | Tema | Etiqueta | Pueblo |
+|---|---|---|---|---|
+| Poliginia de 3-4 (6-8), mujeres iguales, cada una con su labranza | p. 107 (imagen) | matrimonio | atestiguado | achagua |
+| Parcialidades de la culebra (*Amarizán*) y del murciélago (*Isirriberrenais*), y la «chanza» | p. 326 (imagen) | linaje-clan | atestiguado | achagua |
+| Consanguinidad sagrada «aunque el grado sea muy remoto»; repudio de los dos | p. 326 (imagen) | matrimonio | atestiguado | achagua |
+| El cacique quisaniva se casa en el pueblo de la mujer | p. 320 (imagen) | residencia | atestiguado | achagua |
+| El hijo de Chacuamare se dice achagua por la madre | pp. 40-41 (imagen) | descendencia | atestiguado | achagua |
+| Hilar es de mujeres; la hacienda del hombre, la caza | pp. 31, 103, 112 | roles-de-genero | atestiguado | achagua |
+| Capitán que remite al Cacique de otro pueblo | pp. 417-418 (imagen) | jerarquia-rango | atestiguado | achagua |
+| Caciques y nobles en asientos bajos en la bebezón | p. 108 (imagen) | jerarquia-rango | atestiguado | achagua |
+| Lengua achagua «tan general» | pp. 316, 325 (imagen) | alianza-intercambio | atestiguado | achagua |
+| 17 pueblos y 1.700 almas en el Airico (1696); 21 en Barragua | pp. 35, 325 (imagen) | escala-poblacion | atestiguado | achagua |
+| Achaguas que venden niñas a los sálivas para revender | p. 391 (imagen) | cautivos-esclavitud | atestiguado | achagua |
+| Paz con los chiricoas por simulacro de pelea y bebezón | pp. 41-42 (imagen) | guerra | atestiguado | achagua |
+| Venganza entre parcialidades; los viejos repiten los agravios | pp. 106, 326 | justicia-norma | atestiguado | achagua |
+| Quiripa: 2 reales en Casanare, 4 en Guayana, 8 en Trinidad | pp. 155, 157 (imagen) | comercio-rutas | atestiguado | achagua |
+| Agua de ají sin sal; salina que no labran | pp. 107, 158, 328 | comida-bebida | atestiguado | achagua |
+| Rallo, bolsa de cañitas, budare | pp. 109-110 | tecnologia-objetos | atestiguado | achagua |
+| La casa redonda de Irrijirre, para 500 | p. 419 (imagen) | vivienda | atestiguado | achagua |
+| El mirray: oración aprendida desde niños | pp. 419-421 (imagen) | lengua-registro | atestiguado | achagua |
+| El arco desde los dos o tres años | p. 102 (imagen) | curriculo-edad | atestiguado | achagua |
+| «Cuando pusiesen huevos las tortugas. Este es su calendario» | p. 421 (imagen) | tiempo-calendario | atestiguado | achagua |
+| *Guabaimi*, 'duendes': así llaman a los blancos (Mimbela) | p. 320 (imagen) | alma | atestiguado | achagua |
+| Memoria de las entradas, de padres a hijos | pp. 22, 426 | narracion-mito | atestiguado | achagua |
+
+**Qué no dio (con sonda).** Sucesión del cacicazgo achagua: «hereda|herencia|
+heredero|sucesor|tocaba el Cacicazgo» da 20 aciertos y ninguno achagua (sálivas
+pp. 34 y 439; chiricoas p. 401; un pueblo sáliva p. 391). Regla de descendencia:
+ningún pasaje. Navegación: canoas y balsas sólo de paso (pp. 28, 317). La «casa
+de los hombres» (*daury*) y la palisada de Hernández de Alba (HSAI pp. 402, 405)
+no salen en Rivero: «daur» da cero en Rivero y en Gumilla.
+
+**Correcciones para quien integre.** `parentesco-022` (corpus) cita
+«etnografía secundaria» para los linajes con nombre de animal y las esposas
+iguales con conuco propio: la primaria es esta, pp. 107 y 326. Y la cita de la
+p. 105 del capitán: «su Cacique ó Capitán», que la minería 1 usó, se confirma
+como pareja de cargos en las pp. 417-418.
+
+**Deuda.** La p. 156 (OCR ilegible; la imagen de este ejemplar tiene un pliegue y la
+tinta corrida, y sólo deja leer que la quiripa es «la moneda con que compran otras
+cosas»); el lib.
+III (las guerras de Atanarí, pp. 214-247) y el lib. VI caps. I-VII, sólo por
+búsqueda; ver en imagen las pp. 106, 109-110, 155, 158, 328, 426.
