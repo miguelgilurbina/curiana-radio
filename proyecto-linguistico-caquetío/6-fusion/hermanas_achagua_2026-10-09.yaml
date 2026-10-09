@@ -1,0 +1,1850 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Las cinco esferas de lo ACHAGUA (y lo MAIPURE de Gilij), en el
+# esquema único de 3-mundo/hermanas/README.md §3. Minería 2, 2026-10-09.
+#
+# Regla 5: esto PROPONE. No toca 3-mundo/, 2-lengua/, curiana_lexicon.py ni
+# lexicon_*.py. La creencia de la minería 1 (6-fusion/creencia_achagua_2026-10-09.yaml)
+# la migra otro agente (ids achagua-creencia-001…022, maipure-creencia-001…005):
+# aquí la creencia empieza en 101 y sólo trae lo que la minería 1 no tenía.
+# Regla 3: nada de esto es dato caquetío. Es achagua (Casanare, Meta, Airico,
+# 1660-1736) o maipure (Orinoco medio, 1749-1767), colonial y misional.
+# Validar: python curiana_sim/compilar_hermanas.py --check
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  pueblo: achagua
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero achagua, minería 2 «esferas de las hermanas» (Claude Opus 5.5), rama vault/hermanas-achagua'
+  plan: 4-fuentes/sesiones/08_creencia_achagua_que-minar.md
+  bitacora: 4-fuentes/sesiones/10_hermanas_achagua_esferas.md
+  fuentes_leidas: [gilij-1780-1783, rivero-1883, neira-ribero-1762, gumilla-1791, steward-1948-hsai-4]
+  cobertura:
+    gilij-1780-1783: >-
+      t. II (1781), leído en la capa de texto del PDF (pdftotext, una página por hoja):
+      libro II caps. XVI-XX (pp. 86-110, médicos, piaches, muerte y luto), libro III
+      caps. V-VI y XII (pp. 126-133 y 162-164), libro IV entero (pp. 190-361: régulos,
+      trato, nombres, habitaciones, poblaciones, enseres, tiempos, conocimientos,
+      eclipses, matrimonio, repudio, poligamia, casadas, juegos, bailes, ballo Queti,
+      bebidas, pan, trabajos, pesca, comercio, contar, labranza, guerra, curare,
+      esclavos) y el índice de cosas notables. Vistas en imagen: pp. 43, 45, 86, 87,
+      89, 90, 93, 95, 103, 105, 108, 109, 133, 192, 194, 195, 199, 202, 204, 205, 206, 207,
+      212, 218, 222 (nota), 226, 227, 229, 232, 234 (nota), 235 (nota), 241, 245, 246, 253,
+      254, 255, 260, 284, 286, 287, 288, 293, 348, 357, 358. t. III pp. 30-31 (el pdf
+      aparte), leídas enteras y vistas en imagen. Desfase medido en la cabecera de cada
+      página citada: − 22 en el libro II (pdf 65 = p. 43, pdf 67 = p. 45), − 26 hacia el
+      pdf 100 y − 28 en el libro IV (pdf 220 = p. 192, pdf 250 = p. 222, pdf 389 = p. 357):
+      hay láminas intercaladas, y la ficha da mal el pdf 250 (es la p. 222, no la 223).
+    rivero-1883: >-
+      OCR de archive.org, leído para localizar: lib. I caps. VI-XIII (pp. 16-43),
+      lib. II caps. VI-VIII (pp. 102-118, ahora por sus esferas sociales), lib. II
+      cap. XVI (pp. 155-158), lib. V caps. II-V (pp. 315-330, relación de Mimbela de
+      1696), lib. VI caps. VIII-XI (pp. 414-427, la entrada del propio Rivero al Airico,
+      1725-1726), y búsquedas medidas en todo el texto (casamiento, poligamia, suegro,
+      sobrino, herencia, caney, quiripa, macos, mude, mirray, parcialidad). Vistas en
+      imagen: pp. 40, 41, 102, 107, 108, 157, 320, 325, 326, 391, 418, 419, 420, 421. La p. 156 es ilegible en el OCR
+      y la imagen de este ejemplar está manchada: no se cita.
+    neira-ribero-1762: >-
+      el vocabulario transcrito (6-fusion/achagua_neira_ribero_1762.yaml), consultado por
+      parentesco, rango, oficios, guerra, comercio, casa y comida con un script de
+      consultas sobre `castellano`. Vistos en imagen (JPG de OneDrive, factor 4,167
+      px/pt): pliegos 60 der. (esclavo), 67 der. (hermanos), 68 izq. (hidalgo, noble),
+      75 der. (mercado).
+    gumilla-1791: >-
+      búsqueda medida de «Achag-» en los dos tomos (16 + 12 aciertos), leídos en
+      contexto. Vistas en imagen: t. I p. 200 (tumba de capitanes) y t. II p. 92 (los
+      achaguas no son gente de guerra).
+    steward-1948-hsai-4: >-
+      Hernández de Alba, pp. 402-408 (organización social, ciclo de vida, guerra),
+      sólo como mapa de afirmaciones que hay que buscar en la primaria.
+  no_leido:
+    - 'Gilij t. II libro I (pp. 1-50: tierra, aguas, cielo, estaciones) y libro II caps. I-XV (fisonomía, enfermedades y remedios): no se leyeron enteros; sólo los aciertos de «Maip-».'
+    - 'Gilij t. II libro III salvo los caps. V, VI y XII; y las «Note e schiarimenti» (pp. 362-395) salvo los aciertos de «Maip-».'
+    - 'Rivero lib. II caps. IX-XV y XVII-XXV, lib. III (las guerras de los achaguas de Atanarí, pp. 214-247), lib. IV y lib. VI caps. I-VII y XII-XIV: sólo por búsqueda.'
+    - 'Neira: el arte (pliegos 7-27) no se consultó para esta minería; los siete lados sin transcribir que señaló la minería 1 siguen sin transcribir.'
+    - 'Gumilla: sólo los pasajes con «Achag-»; no el resto de sus capítulos de costumbres.'
+  ceros:
+    - tema: sucesion-politica
+      pueblo: achagua
+      sonda: >-
+        Rivero, regex «hereda|herencia|heredero|sucesor|tocaba el Cacicazgo» sobre el
+        OCR entero: 20 aciertos, ninguno de sucesión achagua (son sálivas, p. 34 y
+        p. 439: el cacicazgo pasa al hijo; chiricoas, p. 401; y un pueblo sáliva cuyo
+        cacique lo es «por herencia de su difunto padre», p. 391). Neira: ningún lema
+        «heredar/heredero» con voz de oficio. Gilij no dice cómo se hereda el régulo.
+    - tema: descendencia
+      pueblo: achagua
+      sonda: >-
+        Ni Rivero ni Neira ni Gumilla dicen por qué línea se cuenta el linaje achagua.
+        Lo único es un caso (el hijo de Chacuamare se dice achagua por su madre, Rivero
+        p. 41: ver achagua-parentesco-005). Hernández de Alba (HSAI p. 404) escribe
+        «seemingly divided into patrilineal sibs» sin citar pasaje: es su inferencia
+        («the data… strongly suggest»), tercera mano.
+    - tema: terminologia (tío materno / paterno)
+      pueblo: achagua
+      sonda: >-
+        Neira, regex «\bt[ií][oa]s?\b|suegr|cu[ñn]ad|padre» sobre `castellano`:
+        no hay lema para tío, tía, suegro, suegra ni cuñado; «padre» sólo sale en «Sin
+        Padre = Masaricanayisa» (92 izq.). El vocabulario no deja medir la bifurcación
+        de los tíos (parentesco-011).
+    - tema: segundo-entierro
+      pueblo: maipure
+      sonda: >-
+        Gilij t. II pp. 104-109 (muerte, funerales, luto) leídas enteras: entierro en la
+        choza, quema de enseres y fin del luto con fiesta; el depósito de huesos en
+        vasijas o cestas lo da de «altri» y de los aturi (p. 107), no de los maipures.
+    - tema: navegacion
+      pueblo: achagua
+      sonda: >-
+        Rivero: canoas angostas y balsas de palos atados (pp. 28, 317) como medio de
+        paso, sin descripción de cómo se hacen ni de quién; Neira da «Navegar =
+        Nusirraunau», «Remar = Nuteniayu», «Barco largo = Canani bariayi». Nada más.
+    - tema: escritura-marca
+      pueblo: achagua
+      sonda: >-
+        Rivero pp. 103 y 114: pintura corporal de pies a cabeza «como con telas de
+        rayadillo» y el cabello teñido de rojo, sin significado de linaje ni de rango.
+        Ningún petroglifo achagua en las tres obras.
+  fuentes_que_faltan:
+    - 'Meléndez Lozano 2011, Diccionario achagua-español (Uniandes): para ver si «mude», «Guabaimi», «Macogerri», «Nugiacaberri» siguen vivos (retro-abstraído como mucho).'
+    - 'Karsten 1926 (citado por HSAI p. 407): circuncisión y escarificación en tributarios del Meta. No está en el repo.'
+    - 'La relación de Neira sobre las Amazonas que Rivero resume (p. 17): el manuscrito no está en el repo.'
+    - 'Otra edición de Rivero 1883 (o la de 1956) para la p. 156, ilegible en este ejemplar (quién labra la quiripa y cómo cautivan los chiricoas a los achaguas por ella).'
+  temas_propuestos:
+    parentesco: [terminologia]
+  regla_de_etiqueta_maipure: >-
+    Gilij habla «degli Orinochesi» y pone casi siempre el ejemplo tamanaco (caribe).
+    Un hecho sale `pueblo: maipure` con `etiqueta: atestiguado` sólo si el pasaje
+    nombra a los maipures (o a una nación de la lengua matriz maipure, que se dice en
+    `donde`). Si el pasaje generaliza «gli Orinochesi» sin nombrarlos, el hecho sale
+    `hipotetico` con `dominios: [areal-orinoco]`: es lo que Gilij dice de todos, y no
+    sabemos cuánto vio entre los maipures.
+  regla_de_capa: >-
+    Opción C de Miguel. Mientras Miguel no decida si achagua y maipure son una tradición
+    o dos (09 §7), un hecho que sólo tenga achagua + maipure sale `hipotetico`, con la
+    nota «sube a reconstruido si son dos». Sale `reconstruido` sólo si la segunda
+    tradición es otro pueblo (wayuu de la Vía A, lokono) con página.
+  independencia: >-
+    Neira y Rivero son un testigo (Juan Ribero = Juan Rivero). Mimbela (relación de 1696
+    que Rivero copia, pp. 315-321) es otro observador jesuita del mismo medio: cuenta
+    como testigo distinto de Rivero para lo que él vio en el Airico. Gumilla trató a
+    los achaguas en Casanare y leyó a Rivero (t. II p. 14 cuenta lo que Rivero le
+    refirió): independiente sólo en lo que dice haber visto. Gilij leyó a Gumilla
+    (el «Ciavinavi» de t. II p. 205 está ya en Gumilla t. I p. 112).
+
+hechos:
+
+# ═══ PARENTESCO ═══════════════════════════════════════════════════════════
+
+  - id: achagua-parentesco-001
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      Poliginia como norma de la gentilidad: «tres y cuatro suelen ser las ordinarias que
+      tienen, y muchos de ellos ha habido que tienen seis y ocho»; a las mujeres «las
+      tratan con igualdad», pero cada una tiene su labranza, partida «con estacas, y
+      otras señales, para que unas no lleguen á disfrutar las labranzas de las otras»,
+      aunque estén contiguas. El cacique Irrijirre del Guaviare, viejo, «sustentaba á sus
+      expensas muchas mujeres», y una era «la principal de todas».
+    cita: >-
+      «á éstas comunmente las tratan con igualdad, aunque en las labranzas que hacen
+      tienen sus diferencias, y ponen sus divisiones con estacas» (Rivero p. 107).
+    pueblo: achagua
+    donde: 'Casanare y Meta (cap. VII); Airico, río Guaviare (Irrijirre)'
+    epoca: 'gentilidad recordada hasta c. 1660 (p. 107: «cuando entraron los nuestros, no había alguno que no las tuviese multiplicadas», p. 111); Irrijirre, 1725'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 107 (pdf 128, imagen), 111; 419 y 421 (imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Jesuita que llama a la poliginia «bajío formidable» de la conversión y celebra que
+      ya no se use en los pueblos reducidos: describe lo que combatía.
+    caquetio: [parentesco-015, parentesco-022, parentesco-030]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina parentesco-015 (poligamia cacical, atestiguada para Manaure). Y corrige
+        la procedencia de parentesco-022: «esposas jurídicamente iguales, cada una con
+        conuco propio» no es de «portales etnográficos»: es Rivero p. 107.
+    hermanas:
+      - {pueblo: maipure, id: maipure-parentesco-002}
+    dominios: [poliginia, labranza]
+
+  - id: achagua-parentesco-002
+    esfera: parentesco
+    tema: linaje-clan
+    contenido: >-
+      Las parcialidades achaguas se nombran por un animal o una cosa de la que dicen
+      descender: los Amarizanes, de la culebra «Amarizan»; los Isirriberrenais, del
+      murciélago («Isirri»); otros del tigre, del zorro, de otros animales y pájaros
+      (Mimbela, 1696); los Aycubaverrenais se dicen hijos de los troncos y los
+      Univerrenais, de los ríos (Gumilla). Mimbela añade que «no todos» lo creen: el
+      nombre se usa «por modo de bufonada ó chanza», y para saber de qué parcialidad es
+      uno «se les pregunta cuál es su chanza».
+    cita: >-
+      «otros que los murciélagos, y los llaman Isirriberrenais, porque Isirri significa
+      el murciélago en el idioma de esta Nación» (Rivero p. 326).
+    grafia: 'Amarizán, Isirri, Isirriberrenais, Cuisáunasí (chanza); Aycuhaverrenais, Univerrenais (Gumilla)'
+    pueblo: achagua
+    donde: 'Airico (Etarí, río Guaviare); Casanare'
+    epoca: '1696 (Mimbela); 1715-1738 (Gumilla)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'p. 326 (pdf 345, imagen), relación de Mateo Mimbela'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. I p. 114 (pdf 138)', independiente: true, nota: 'otro jesuita, otros informantes (Casanare); da troncos y ríos, no animales'}
+      - {obra: steward-1948-hsai-4, pagina: 'p. 404', independiente: false, nota: 'Hernández de Alba resume a Rivero y Gumilla y lo llama «totemic groups»'}
+    verificado_en_imagen: 'en parte: Rivero p. 326 sí; Gumilla del OCR'
+    como_se_escribio: >-
+      Mimbela y Gumilla lo cuentan como «desatino»; Mimbela matiza que el nombre es a
+      veces broma entre parcialidades, no creencia.
+    caquetio: [parentesco-022, parentesco-014]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        parentesco-022 (reconstruido) se apoya hoy en etnografía secundaria; su primaria
+        es esta página, y dice menos: nombres de animal y de cosa, sí; «una casa comunal
+        por linaje» y «exogamia de linaje», no (la exogamia achagua es de
+        consanguinidad, achagua-parentesco-003). Una tradición: hipotético para el
+        caquetío. El mapa de la familia («un fuego con nombre de animal») descansa en
+        esto.
+    dominios: [parcialidad, nombre-colectivo]
+
+  - id: achagua-parentesco-003
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      La consanguinidad es «tan sagrada entre los Achaguas, que aunque el grado sea muy
+      remoto, por ningún caso se mezclan con sus parientes, aunque para casarse tengan
+      que ir á pueblos muy distantes»; la afinidad no se respeta: se casan «á un tiempo
+      con dos hermanas, y con madre é hija». El repudio vale para los dos: «no sólo es
+      permitido á los varones… sino también á las mujeres», con decir «te dejo libre».
+    pueblo: achagua
+    donde: Airico (Amarizanes)
+    epoca: '1696'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'p. 326 (pdf 345, imagen), relación de Mimbela'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      En la lista de «dificultades» para la fe: la sensualidad y el repudio. La regla de
+      consanguinidad la da como virtud que admira.
+    caquetio: [parentesco-008, parentesco-030]
+    via_a: {parentesco-008: corrobora-en-parte}
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        Que el matrimonio sea exógamo y obligue a buscar cónyuge fuera es ahora de dos
+        tradiciones: wayuu (parentesco-008, Jahn p. 172: mujer de otra parcialidad) y
+        achagua (esta). Lo que no se proyecta es la forma: la wayuu es exogamia de
+        clan, la achagua de consanguinidad «aunque el grado sea muy remoto» y de pueblo.
+    hermanas:
+      - {pueblo: wayuu, obra: jahn-1927, pagina: '172', que: 'ley de matrimonio exógamo: la mujer de una parcialidad distinta a la del marido'}
+    dominios: [exogamia, repudio, sororato]
+
+  - id: achagua-parentesco-004
+    esfera: parentesco
+    tema: residencia
+    contenido: >-
+      Un caso: el cacique de los Quisanivas, «indio Achagua de Quirasiveni», contó a
+      Neira que «hallándose sin mujer fué á dicho pueblo Chanapé á buscar con quien
+      casarse, y allí se casó, pero muerta la mujer fué á buscar otra al pueblo donde
+      ahora asiste». El hombre se va al pueblo de la mujer, y de nación ajena.
+    pueblo: achagua
+    donde: 'Airico, río Ariari (Quisanivas)'
+    epoca: '1695-1696'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'p. 320 (pdf 339, imagen), relación de Mimbela'}
+    verificado_en_imagen: si
+    como_se_escribio: Anécdota de viaje, contada al paso para explicar una alianza.
+    caquetio: [parentesco-016, parentesco-023]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Un caso no es una norma. Junto a la uxorilocalidad maipure (maipure-parentesco-001)
+        dibuja el mismo movimiento (el hombre va a la casa o al pueblo de la mujer), pero
+        achagua + maipure es una tradición mientras Miguel no diga dos.
+    hermanas:
+      - {pueblo: maipure, id: maipure-parentesco-001}
+    dominios: [matrimonio-interetnico]
+
+  - id: achagua-parentesco-005
+    esfera: parentesco
+    tema: descendencia
+    contenido: >-
+      El hijo del cacique chiricoa Chacuamare y de la achagua Catalina, «por tener sangre
+      suya los miraba á todos como parientes», y le dice al padre: «mira que soy Achagua,
+      y esta mujer también, y que persigues mi sangre». El hijo de padre chiricoa se
+      cuenta achagua por la madre, y hace las paces entre las dos naciones.
+    pueblo: achagua
+    donde: 'río Meta (chiricoas) y Casanare (achaguas)'
+    epoca: 'antes de 1660 («muchos años antes de que entrasen nuestros misioneros á Casanare», p. 42)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'pp. 40-41 (pdf 61-62, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Rivero cuenta la paz de los chiricoas con su moraleja: la sangre de la madre
+      enternece al hijo. El discurso entre comillas es reconstruido por el cronista.
+    caquetio: [parentesco-017, parentesco-005]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Un caso de pertenencia por la madre en un matrimonio entre naciones: es la forma
+        que parentesco-017 supone para Wata-ni (hijo de padre guaycarí y madre caquetía).
+        No prueba descendencia matrilineal achagua (cero declarado en meta). Y contradice
+        a Hernández de Alba, que da sibs patrilineales sin pasaje.
+    dominios: [matrimonio-interetnico, pertenencia]
+
+  - id: achagua-parentesco-006
+    esfera: parentesco
+    tema: terminologia
+    tema_duda: descendencia
+    contenido: >-
+      El vocabulario distingue al hermano mayor (`Nubecanata`) del menor (`Numerrerri`),
+      la hermana del hombre (`Richerro`, «mi hermana» `Nuicherro`) de la hermana de la
+      mujer (`Ruerraí`, `Ruchamiminí`), y tiene voz propia para el «Hermano de un
+      vientre» (`Nugiacaberri`) y la «Hermana tal» (`Nugiacabetua`). Marido es
+      `Jnirrirri` y yerno `Nunirarí`, de la misma raíz; la prima es `Nudetuarro` (el
+      saludo «mude» 'primo' de Rivero p. 420). No hay lema para tío, tía, suegro ni
+      cuñado.
+    cita: >-
+      «Hermano maior mio = Nubecanata. pl. Nubecanatanay. Hermano mio = Nuberri.
+      pl. Nuberrinay. Si habla con él = tay. Hermana = Nuicherro… Hermano de un vientre
+      — Nugiacaberri. Hermana tal — Nugiacabetua» (67 der., imagen). El vocativo cambia
+      con el sexo de quien habla: al hermano, «si habla con él = tay», «si habla con
+      ella = tau».
+    grafia: 'Nubecanata, Nuberri, Nuicherro, Numerrerri, Richerro, Ruerraí, Ruchamiminí, Nugiacaberri, Nugiacabetua, Jnirrirri, Nunirarí, Nunirro, Nudetuarro, Nuibiu, Enagerri'
+    pueblo: achagua
+    donde: Casanare-Meta
+    epoca: 'vocabulario trasuntado en 1762 (copia de 1788) del achagua de las misiones de fines del XVII'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: neira-ribero-1762, pagina: 'pliegos 67 der. (imagen), 69 izq., 74 der., 78 izq., 85 izq., 92 izq. (transcripción)'}
+    verificado_en_imagen: 'en parte: 67 der. sí (el «Hermano menor de ella» se lee Ruchamini ruerri)'
+    como_se_escribio: >-
+      Lemas castellanos elegidos por el misionero: lo que falta (los tíos) puede ser
+      laguna del jesuita, no de la lengua.
+    caquetio: [parentesco-011, parentesco-012, parentesco-021]
+    via_a: {parentesco-011: no-toca}
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Los términos por sexo del hablante y el «de un vientre» son materia para la
+        terminología de la tanda de las hermanas, no para el corpus: van a
+        `para_el_lexicon`. «Hermano de un vientre» separa a los hermanos uterinos, que es
+        lo que una regla matrilineal necesita nombrar; pero el vocabulario no dice si
+        hay otro término para los de un padre.
+    dominios: [terminologia, hermanos-uterinos]
+
+  - id: achagua-parentesco-007
+    esfera: parentesco
+    tema: roles-de-genero
+    contenido: >-
+      Hilar es de mujeres y los varones lo desdeñan «aun los bárbaros» (en los obrajes
+      de algodón obligaban a hilar a todos); las mujeres hacen el cazabe y la berría y
+      el llanto alaba en la difunta «aquellas manos que hacían tan buen cazabe»; el
+      hombre caza y pesca, y llama a eso su hacienda: «nos ha dado otra hacienda que son
+      las dantas y los monos, venados, aves y peces que flechamos».
+    pueblo: achagua
+    donde: Casanare
+    epoca: 'c. 1620-1736 (los obrajes de Santiago de la Atalaya y la gentilidad recordada)'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 31, 103, 110, 112'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Rivero lo dice al denunciar los obrajes: el hilado de los varones es parte del agravio.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Con la maipure (las mujeres siembran el maíz y los hombres plantan la yuca,
+        Gilij p. 344) es la división de la casa de la hermana. Hipotético: una tradición.
+    hermanas:
+      - {pueblo: maipure, obra: gilij-1780-1783, pagina: 't. II p. 344', que: 'las mujeres siembran el maíz con el bastón; plantar la yuca «tocca agli uomini»'}
+    dominios: [hilado, cazabe, caza]
+
+  - id: maipure-parentesco-001
+    esfera: parentesco
+    tema: residencia
+    contenido: >-
+      El yerno se va a la casa del suegro: «Le donne… non vanno a marito; vanno a moglie…
+      gli uomini». Lleva su chinchorro y sus armas, «lavora pel suocero, pesca per lui,
+      dipende in tutto da lui»; los hijos van «alle altrui case», las hijas se quedan en
+      la de los padres; muerto el suegro puede volver con su mujer a la casa paterna. No
+      hay dote: el suegro cobra en servicio, y los maipures lo dicen con una fórmula:
+      «Sapàni nutaà piche pianìtu… in paga di averti dato la moglie». Caravàna, régulo
+      maipure, dio a su hija a Maurizio Manàcu porque era «un gran lavoratore di cese,
+      un buon pescatore, e cacciatore»; «il servì infatti egregiamente fino alla morte».
+    cita: >-
+      «Sapàni nutaà piche pianìtu, dicono i Maipùri nell' esigere i doveri de' generi;
+      cioè, in paga di averti dato la moglie» (t. II p. 246, imagen).
+    grafia: 'Sapàni nutaà piche pianìtu'
+    pueblo: maipure
+    donde: 'La Encaramada (Orinoco medio); el régulo Caravàna'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 244-246 (pdf 274-276; imagen 245-246)'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Gilij lo cuenta de «gli Orinochesi» y lo ilustra con la fórmula y el caso maipures;
+      llama al suegro «Labano» y al yerno «Giacobbe»: lo lee con la Biblia, pero describe.
+    caquetio: [parentesco-016, parentesco-023, parentesco-005]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que el hombre se vaya a la casa de la mujer y sirva al suegro tiene aquí su primera
+        primaria arahuaca con página. La lokona (parentesco-023, residencia matrilocal) se
+        apoya en «etnografía secundaria» sin página, y la achagua es un solo caso
+        (achagua-parentesco-004): no hay segunda tradición citable, y achagua + maipure es
+        una mientras Miguel no diga dos. Si la lokona se ancla en una primaria, sube.
+    hermanas:
+      - {pueblo: achagua, id: achagua-parentesco-004}
+    dominios: [uxorilocalidad, servicio-de-novio]
+    tema_duda: matrimonio
+
+  - id: maipure-parentesco-002
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      Poliginia de los mayores: entre los maipures «eravi chi ne avea infino a tre; e
+      questi era il buon regolo Caravàna». Y entre maipures y avanis «le donne… sono ben
+      poche», de modo que «i regoluzzi, e gli più attempati della nazione le prendon tutte
+      per sè medesimi, con dire a' giovani, che bisogna lavorare, e meritarsele con la
+      fatica». A los régulos se suman las cautivas de guerra y las huérfanas. Entre
+      guipunavis y caveris (de la misma lengua matriz) la poliginia es rarísima.
+    cita: >-
+      «perocchè i regoluzzi, e gli più attempati della nazione le prendon tutte per sè
+      medesimi, con dire a' giovani, che bisogna lavorare, e meritarsele con la fatica»
+      (t. II p. 254, imagen).
+    pueblo: maipure
+    donde: 'La Encaramada; maipures y avanis (Caravàna)'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 253-255 (pdf 283-285, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Capítulo «Della poligamìa», que abre con «eccoci… alle tenebre».'
+    caquetio: [parentesco-030, parentesco-015, parentesco-029]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Es la primera base arahuaca del cuello de botella matrimonial (parentesco-030),
+        que hoy sólo tiene antropología comparada no arahuaca: aquí son los régulos y los
+        viejos los que acaparan, y el joven tiene que trabajar para ganarse mujer. Con
+        la achagua (achagua-parentesco-001) es la misma hermana mientras Miguel no diga
+        dos.
+    hermanas:
+      - {pueblo: achagua, id: achagua-parentesco-001}
+    dominios: [poliginia, gerontocracia, escasez-de-mujeres]
+
+  - id: maipure-parentesco-003
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      En el Orinoco la afinidad pesa poco y la consanguinidad mucho: no repugna tener por
+      mujeres a dos hermanas; se toma a la viuda del hermano (y la del padre, salvo la
+      propia madre); los primos «vegnenti da fratello e sorella» se casan, los hijos de
+      dos hermanos casi nunca; la sobrina hija de hermana, con el tío materno, entre los
+      tamanacos. Gilij lo dice de «gli Orinochesi» con ejemplos tamanacos.
+    pueblo: maipure
+    donde: 'Orinoco medio (generalización de Gilij)'
+    epoca: '1749-1767'
+    etiqueta: hipotetico
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 250-252 (pdf 280-282)'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Gilij discute el «rito ebraico» del levirato con Gumilla; los ejemplos con nombre son tamanacos.'
+    caquetio: [parentesco-009, parentesco-008]
+    via_a: {parentesco-009: corrobora-en-parte}
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        El levirato del Orinoco (la viuda al hermano) es la forma del parentesco-009 wayuu,
+        pero en Gilij es general y sin maipure nombrado: no sube nada. El matrimonio de
+        primos cruzados contradice la regla achagua «aunque el grado sea muy remoto»
+        (achagua-parentesco-003): las dos hermanas no casan aquí.
+    dominios: [areal-orinoco, levirato, sororato, primos-cruzados]
+
+  - id: maipure-parentesco-004
+    esfera: parentesco
+    tema: infancia-nombre
+    contenido: >-
+      Los nombres propios se heredan de los antepasados y se renuevan al nacer los hijos;
+      los pone el padre «in privato, e senza veruna formalità». Nombres maipures de
+      varón: Vacarinumà, Univàri, Jamaivacà, Sanasàri, Surùi, Manàcu; Levi o Revi es
+      frecuente; de mujer: Ucariperru, Univàca, Jamicavà. «Il regolo de' Maipùri
+      Caravana, ad eccezione universale dell' uso, mise il nome al suo figlio in un ballo
+      pubblico.» No hay nombre de familia.
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 203, 206-207 (pdf 231, 234-235; imagen 206-207)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij compara con los «contadini» italianos: sin apellido, con apodos.'
+    caquetio: [transmision-021]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El nombre del régulo en un baile público es la excepción que confirma el uso privado. Una tradición.'
+    dominios: [nombre-propio, baile-de-nombre]
+
+  - id: maipure-parentesco-005
+    esfera: parentesco
+    tema: sociedades-masculinas
+    tema_duda: saber-restringido
+    contenido: >-
+      El «ballo Queti» (queti 'animal'): los maipures fingen que unas serpientes vienen
+      al pueblo con bebida y bailan con los hombres, y les dicen a las mujeres que las
+      serpientes se las comen. Lo que suena son dos flautas largas de palma aràcu, una
+      grave y una aguda, y trompas de corteza de màrano; la chicha de moriche la hacen en secreto
+      los hombres, que solos la beben. Se bailó en casa del régulo Caravàna, y los
+      maipures le pidieron a Gilij «di tener celati i selvaggi misterj, e di nulla
+      dirne alle donne». Cuando Gilij lo hizo público, el régulo Chirrivàna le dijo que
+      a la nación no le placía que se hiciese común un baile que, «giusta l'antico stile
+      de' nostri vecchi, non è permesso di vedere alle donne».
+    cita: >-
+      «Non piace alla nostra nazione… che tu renda pubblico un ballo, il quale giusta
+      l'antico stile de' nostri vecchi, non è permesso di vedere alle donne» (t. II p. 293).
+    grafia: 'Queti (maipure); Casimejè (avani); Tèvita (chicha de moriche); Acchèi-naterì (el baile tamanaco parecido)'
+    pueblo: maipure
+    donde: 'La Encaramada (Caravàna; Chirrivàna)'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 284-288, 290-293 (pdf 314-318, 320-323; imagen 284, 286, 287, 288, 293)'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Gilij lo vio, lo sospechó «superstizione ed incontinenza» y lo extirpó: hizo tocar
+      las flautas en público por un cavere. Lo describe para justificar la extirpación.
+    caquetio: [parentesco-031, creencia-014]
+    proyeccion:
+      capa: no-proyecta
+      nota: >-
+        Es el complejo de las flautas sagradas del noroeste amazónico (Kuwai/Yuruparí):
+        sin rastro costero. Responde a la pregunta de la ficha (el «ballo Queti» es un
+        baile, y queti es 'animal') y explica, quizá, la «exclusión de las mujeres» que
+        HSAI (p. 410) atribuye a la Chuvay achagua sin pasaje: en Gilij es maipure y es
+        otro baile.
+    dominios: [flautas-sagradas, secreto-de-hombres]
+
+# ═══ GEOGRAFÍA POLÍTICA ═══════════════════════════════════════════════════
+
+  - id: achagua-geografia_politica-001
+    esfera: geografia_politica
+    tema: jerarquia-rango
+    contenido: >-
+      Dos escalones: el Capitán Camuibay, del primer pueblo del Airico, no decide la
+      salida y «remitióse al parecer y voto de su Cacique llamado Irrijirre, que vivía en
+      un pueblo, á la otra banda del río Guaviare, como á un día de camino». El Cacique
+      hospeda con ceremonia en su casa, que es la mayor; otro pueblo achagua (los
+      Masanavenis) tiene su Cacique y de él sale «un Capitán con una pequeña tropa». En
+      1696, cuatro «Caciques de otros tantos pequeños pueblos» vienen juntos a ver al
+      misionero.
+    cita: >-
+      «remitióse al parecer y voto de su Cacique llamado Irrijirre, que vivía en un
+      pueblo, á la otra banda del río Guaviare, como á un día de camino» (p. 418, imagen).
+    pueblo: achagua
+    donde: 'Airico, río Guaviare (Amarizanes)'
+    epoca: '1725 (Rivero, testigo); 1696 (Mimbela)'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 417-418 (pdf 437, imagen), 419, 425; p. 321 (Mimbela)'}
+    verificado_en_imagen: 'en parte: p. 418 sí'
+    como_se_escribio: >-
+      «Capitán» y «Cacique» son las categorías de la misión y de la encomienda, no voces
+      achaguas (Neira no tiene lema para ninguna de las dos). Lo que se lee es el
+      escalón: uno remite al otro.
+    capa_colonial: 'Los nombres de los cargos; el escalón es lo que se observa.'
+    caquetio: [parentesco-034, parentesco-035, parentesco-037]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina la pareja atestiguada apopo / diao (parentesco-034/035): un jefe de pueblo
+        que remite a otro de varios pueblos. No dice nada de cómo se llega al cargo
+        (cero de sucesión en meta).
+    hermanas:
+      - {pueblo: maipure, id: maipure-geografia_politica-001}
+    dominios: [capitan-cacique, dos-niveles]
+
+  - id: achagua-geografia_politica-002
+    esfera: geografia_politica
+    tema: jerarquia-rango
+    contenido: >-
+      El vocabulario da un léxico de rango: «Amo, señor = Guacaresí», «Señores =
+      Guacarrinasí», «Señora = Guacarrusí», «Amo principal = Chunisay» (la misma voz que
+      «Principal, causa»), «Hidalgo, noble = Cabaunicayi, Cacuisaunacay», «Governar,
+      mandar = Nubanacareu» y «Criado = Ribanacariarru» (de la raíz de mandar), «Rico =
+      Cabarruanicayi», «Pobre = Manumatecaisa». Y en la bebezón mayor se sientan «en unos
+      asientos bajos que ocupan los Caciques y nobles», servidos por «los mozos del
+      pueblo».
+    grafia: 'Guacaresí, Guacarrinasí, Guacarrusí, Chunisay, Cabaunicayi, Cacuisaunacay, Nubanacareu, Ribanacariarru, Ruibanacariarrugetua'
+    pueblo: achagua
+    donde: Casanare-Meta
+    epoca: 'vocabulario de 1762; la bebezón, gentilidad y pueblos de misión hasta c. 1736'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: neira-ribero-1762, pagina: 'pliegos 34 der., 51 izq., 65 der., 68 izq., 84 izq., 85 der., 89 der., 91 izq. (transcripción)'}
+    procedencia_extra:
+      - {obra: rivero-1883, pagina: 'p. 108 (pdf 129, imagen)', independiente: false, nota: 'mismo autor que el vocabulario'}
+    verificado_en_imagen: 'en parte: Neira 68 izq. (hidalgo, noble) y Rivero p. 108'
+    como_se_escribio: >-
+      Lemas pedidos por un misionero que necesitaba decir «Señor» en el Credo (Rivero
+      p. 32 cuenta que un intérprete achagua le pidió a Neira borrar «amo» del Credo).
+      «Amo» puede ser del trato colonial; «noble», «criado» y «mandar» con raíz propia
+      no lo parecen.
+    capa_colonial: '«Amo, señor» pudo nombrar al encomendero; por eso no se lee como rango precontacto sin más.'
+    caquetio: [parentesco-034, parentesco-035, parentesco-036]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina el vocabulario de rango atestiguado del caquetío (diao, apopo, boratio): la hermana también nombraba noble, criado y señor.'
+    mineria_1: [ach-cr-18]
+    hermanas:
+      - {pueblo: maipure, id: maipure-geografia_politica-001}
+    dominios: [lexico-de-rango, nobles, criados]
+
+  - id: achagua-geografia_politica-003
+    esfera: geografia_politica
+    tema: alianza-intercambio
+    contenido: >-
+      La lengua achagua es lengua general del llano: los blancos confunden pueblos sálivas
+      con achaguas «por ser tan general la lengua Achagua», un cacique de otra nación
+      hace su discurso de recibimiento en achagua «sólo de los infinitivos é
+      impersonales», y un capitán chiricoa le habla a Gumilla en achagua («Nu saricaná
+      ribarinaú matata», 'mi padre se muere aprisa'). Gumilla: en la maipure «se hallan
+      muchas palabras Achaguas, son introducidas por el comercio».
+    pueblo: achagua
+    donde: 'Airico y Meta; Orinoco (maipures)'
+    epoca: '1696 (Mimbela); 1715-1738 (Gumilla)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'pp. 316, 325 (pdf 335, 344; imagen 325), relación de Mimbela'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. II pp. 18 y 32 (pdf 26, 40)', independiente: true, nota: 'lo que Gumilla oyó y su juicio sobre el maipure'}
+    verificado_en_imagen: 'en parte: Rivero p. 325'
+    como_se_escribio: 'Misioneros que necesitaban una lengua de doctrina: les interesa que una lengua «corra».'
+    caquetio: [geografia_politica-020]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina geografia_politica-020 (el caquetío, lengua extendida de la costa a los
+        llanos, con intérpretes): las dos hermanas del llano y del Orinoco también eran
+        lenguas francas (maipure-geografia_politica-006). La tesis de Gumilla (préstamo
+        por comercio) es la contraria de la de Gilij (dialecto): entra en la decisión de
+        Miguel (una o dos tradiciones).
+    hermanas:
+      - {pueblo: maipure, id: maipure-geografia_politica-006}
+    dominios: [lengua-franca]
+
+  - id: achagua-geografia_politica-004
+    esfera: geografia_politica
+    tema: escala-poblacion
+    contenido: >-
+      «Más de veinte Naciones ó Provincias» bajo una lengua, de cerca de Barinas a San
+      Juan de los Llanos (p. 21); reducidas por los cautiverios españoles y las guerras de
+      chiricoas y guahibos a «parcialidades tan cortas». En el Airico, en 1696, diecisiete
+      pueblos «pequeños todos» con unas 1.700 almas; en Barragua, 21 pueblos (1701); en
+      1741 Gumilla cuenta toda la nación en menos de tres mil.
+    pueblo: achagua
+    donde: 'Llanos del Casanare, Meta y Airico'
+    epoca: '1606-1741'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'pp. 21, 35, 325 (pdf 42, 56, 344; imagen 325)'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. II p. 55 (pdf 63)', independiente: true, nota: 'cifra de 1741'}
+    verificado_en_imagen: 'en parte: p. 325'
+    como_se_escribio: 'Cifras de misioneros que pedían recursos y denunciaban a los encomenderos.'
+    caquetio: [geografia_politica-005]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina el colapso atestiguado de la Curiana (geografia_politica-005): la misma curva, un siglo después, en la hermana del llano.'
+    dominios: [colapso-demografico, pueblos-pequenos]
+
+  - id: achagua-geografia_politica-005
+    esfera: geografia_politica
+    tema: cautivos-esclavitud
+    contenido: >-
+      El esclavo tiene voz achagua: «Esclavo = Macogerri. El mío = Numacumí»,
+      «Esclava = Macagetua», «Esclavitud = Macunaican»; de ahí el «maco» de los llanos.
+      Los achaguas fueron presa (de españoles, chiricoas, guahibos y caribes, que los
+      vendían como macos) y también tratantes: unos sálivas les «habían comprado dos
+      niñas de tierna edad á los Achaguas de Guanapalo… en donde pensaban revenderlas á
+      los holandeses ó á los Caribes». Para hacer la paz, el chiricoa Chacuamare les
+      regaló «cuatro Macos».
+    cita: >-
+      «Esclavo — Macogerri. El mio = Numacumí. Esclava — Macagetua. Esclavitud —
+      Macunaican» (Neira 60 der., imagen).
+    grafia: 'Macogerri, Numacumí, Macagetua, Macunaican; macos (castellano de los llanos)'
+    pueblo: achagua
+    donde: 'Casanare, Meta, Guanapalo'
+    epoca: 'c. 1606-1730'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: neira-ribero-1762, pagina: 'pliego 60 der. (imagen)'}
+    procedencia_extra:
+      - {obra: rivero-1883, pagina: 'pp. 31-32, 41 (imagen), 391 (imagen)', independiente: false, nota: 'mismo autor que el vocabulario'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Rivero escribe contra el cautiverio español y la trata holandesa; la voz achagua es lo indígena.'
+    capa_colonial: 'La trata a holandeses y caribes y el maco para el obraje son coloniales.'
+    caquetio: [geografia_politica-014, geografia_politica-021, geografia_politica-022]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que el cautivo tenga nombre de categoría propio y circule como regalo de paz es de
+        la hermana; con la maipure (maipure-geografia_politica-005: el cautivo, «mero»,
+        tratado como yerno) dibuja una esclavitud de casa. El comercio con europeos no se
+        proyecta.
+    hermanas:
+      - {pueblo: maipure, id: maipure-geografia_politica-005}
+    dominios: [maco, trata, regalo-de-paz]
+
+  - id: achagua-geografia_politica-006
+    esfera: geografia_politica
+    tema: guerra
+    contenido: >-
+      Los achaguas «no son… gente de guerra; y dicen que ni sus mayores lo fueron»: no
+      pasan los exámenes de azotes con que otras naciones hacen capitanes (Gumilla). Se
+      defienden envenenando los caminos (contra Lázaro de la Cruz, Rivero p. 24) y, para
+      vengarse, toman más yopa «á fin de que trastornada la razón, obre solamente el
+      rencor» (p. 326). La paz con los chiricoas se asentó con un simulacro de pelea: dos
+      filas de hombres se dan con las macanas de plano recitando agravios, las mujeres se
+      azotan y arañan, y al fin se palmean las espaldas y acaban en «una solemne bebezón».
+    cita: >-
+      «no se cuentan, ni entran los de las Naciones Achagua y Saliva: no son éstas gente de
+      guerra; y dicen que ni sus mayores lo fueron» (Gumilla t. II p. 92, imagen).
+    pueblo: achagua
+    donde: 'Casanare, Meta, Airico'
+    epoca: 'c. 1606-1741'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gumilla-1791, pagina: 't. II p. 92 (pdf 100, imagen)'}
+    procedencia_extra:
+      - {obra: rivero-1883, pagina: 'pp. 24, 41-42 (pdf 45, 62; 41 en imagen), 326', independiente: true, nota: 'otro observador; la paz con los chiricoas la cuenta de oídas'}
+    verificado_en_imagen: 'en parte: Gumilla t. II p. 92 y Rivero p. 41'
+    como_se_escribio: >-
+      Los dos jesuitas presentan al achagua como el «dócil» frente al chiricoa y al caribe:
+      el retrato sirve a la misión. La autodescripción («ni sus mayores lo fueron») es lo
+      que más pesa.
+    caquetio: [geografia_politica-013, creencia-004b]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Contrasta con la hermana maipure (exámenes de azotes en los bailes,
+        maipure-transmision-005) y con el guipunavi guerrero. La paz por simulacro de
+        pelea y bebida es forma llanera (chiricoa y achagua juntos): no se proyecta sola.
+    hermanas:
+      - {pueblo: maipure, id: maipure-geografia_politica-004}
+    dominios: [paz-ritual, veneno, yopa]
+
+  - id: achagua-geografia_politica-007
+    esfera: geografia_politica
+    tema: justicia-norma
+    contenido: >-
+      No hay castigo de un poder: hay venganza entre parcialidades. Toda muerte se achaca
+      al «Moján ó hechicero» y de ahí «las disenciones y discordias que ocurren entre las
+      parcialidades» (p. 106); los odios «pasan de padres á hijos, y suelen los ancianos
+      repetir frecuentemente los motivos de las disensiones, para hacer casi imposible la
+      reconciliación» (p. 326); los padres apenas impidieron que los amarizanes mataran a
+      ocho visitantes sospechosos de haber hechizado a dos mozos.
+    pueblo: achagua
+    donde: 'Casanare; Airico (Etarí)'
+    epoca: 'gentilidad recordada; 1696'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 106 (pdf 127), 326 (pdf 345)'}
+    verificado_en_imagen: no
+    como_se_escribio: 'El misionero atribuye el hechizo al demonio; la institución (sospecha, venganza, memoria del agravio) la describe.'
+    caquetio: [creencia-008b]
+    mineria_1: [ach-cr-13]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-008b (la muerte atribuida a conjuro, atestiguada en Coro): en la hermana eso es también el motor del conflicto entre parcialidades.'
+    hermanas:
+      - {pueblo: maipure, id: maipure-geografia_politica-002}
+    dominios: [venganza, feudo, hechizo]
+
+  - id: maipure-geografia_politica-001
+    esfera: geografia_politica
+    tema: jefatura
+    contenido: >-
+      Cada nación tiene sus régulos: «I Maipùri ebbero per capo il Caravàna, gli Avani il
+      Jàmari, e il Chirrivàna». Los maipures llaman al régulo «Pecanàti», voz que Gilij
+      cree primitiva, y ser hijo de régulo es la mayor gloria: «Pecanàti ani canà, cioè, io
+      son figlio di regolo». Hay «e plebei, e nobili»; en paz cada población tiene un solo
+      jefe, y para la guerra se juntan los régulos con todos los nobles, callando los
+      plebeyos, y eligen a uno «purchè dalla schiatta de' nobili». Mandan poco: la orden
+      del régulo es «come quello di un padre di famiglia».
+    cita: >-
+      «oppure un Maipùre: Pecanàti ani canà, cioè, io son figlio di regolo» (t. II
+      pp. 194-195, imagen).
+    grafia: 'Pecanàti; Pecanàti ani canà'
+    pueblo: maipure
+    donde: 'La Encaramada (maipures, avanis)'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 191-199 (pdf 219-227; imagen 192, 194, 195, 199)'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Gilij escribe contra los viajeros que niegan a los «selvaggi» todo gobierno: le
+      interesa mostrar jefes y nobleza. Los ejemplos del mando flojo son tamanacos.
+    caquetio: [parentesco-034, parentesco-035, parentesco-037, parentesco-038]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina el sistema de rango atestiguado del caquetío: también la hermana del
+        Orinoco tenía nobles y plebeyos, un jefe por pueblo y una asamblea de nobles para
+        la guerra. Lo débil del mando no se proyecta: el caquetío de Coro era un cacicazgo
+        fuerte (parentesco-037).
+    hermanas:
+      - {pueblo: achagua, id: achagua-geografia_politica-001}
+    dominios: [regolo, nobles-plebeyos, asamblea-de-guerra]
+
+  - id: maipure-geografia_politica-002
+    esfera: geografia_politica
+    tema: tributo-trabajo
+    contenido: >-
+      Los régulos «da' loro sudditi non esigono verun tributo»; pero en el desmonte para
+      sembrar el suyo va primero: «quella del regolo è sempre la prima a terminarsi», «non
+      senza spesa e di vitto, e di bevanda pe' lavoratori». La tala se hace entre muchos,
+      convidados con chicha («per cajàpa»). No hay justicia ni penas fijas: «Tutte le
+      deliberazioni sono tumultuarie… e le decisioni più serie vengon fatte tralle
+      ubbriachezze, e tra' balli».
+    pueblo: maipure
+    donde: 'Orinoco medio (generalización); La Encaramada'
+    epoca: '1749-1767'
+    etiqueta: hipotetico
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 194 (pdf 222, imagen), 340 (pdf 372)'}
+    verificado_en_imagen: 'en parte: p. 194'
+    como_se_escribio: 'Generalización de los «Orinochesi»; Gilij no nombra aquí a los maipures.'
+    caquetio: [geografia_politica-004]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina el buco (geografia_politica-004, 4-5 mil trabajadores): la hermana pagaba
+        el trabajo para el jefe con comida y bebida, sin tributo. La escala no se proyecta.
+    hermanas:
+      - {pueblo: achagua, obra: neira-ribero-1762, pagina: '49 izq. (transcripción)', que: '«Convite p.a Labranza = Vnuma»: el convite de trabajo tiene nombre'}
+    dominios: [areal-orinoco, convite-de-trabajo, sin-tributo]
+
+  - id: maipure-geografia_politica-003
+    esfera: geografia_politica
+    tema: territorio-asentamiento
+    contenido: >-
+      Cada nación tiene su territorio, común: los caciques y nobles «non hanno delle terre
+      private». Quien escoge un trozo de selva lo marca cortando ramas y desde entonces es
+      suyo: «Così vidi più volte tra' Tamanachi, e Maipùri». El dominio dura lo que da el
+      campo y no pasa a los hijos, salvo que quede yuca o batata; los platanales duran más.
+      Los maipures de La Encaramada miraban con desprecio la tierra tamanaca: «Non sono di
+      questa fatta… i nostri monti».
+    cita: >-
+      «Così vidi più volte tra' Tamanachi, e Maipùri; così credo, che facciasi da per tutto»
+      (t. II p. 212, imagen).
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 209-212 (pdf 237-240; imagen 212)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij arma una teoría de la propiedad («ecco quanto poco ci vuole…») sobre lo que vio.'
+    caquetio: [geografia_politica-007, ecologia-029]
+    proyeccion:
+      capa: hipotetico
+      nota: 'La tierra común con usufructo por el trabajo es de una tradición. No toca la herencia de cargos.'
+    dominios: [tierra-comun, usufructo, herencia-de-campos]
+
+  - id: maipure-geografia_politica-004
+    esfera: geografia_politica
+    tema: guerra
+    contenido: >-
+      Los maipures, «avvezzi a' frequenti assalti de' Guipunavi», se duermen al anochecer
+      para estar en pie dos o tres horas antes del día, cuando llega el enemigo, y velan
+      tocando flautas con los ojos en los caminos. Su empalizada del río Tuàpu (vista por
+      Forneri) tenía puerta que se cerraba con troncos apilados, cañaverales de guadua a
+      los lados y detrás un cerro con cuevas y pasos subterráneos para huir. Gilij da a
+      guipunavis, parenis y caveris (de la misma lengua matriz) por los únicos
+      antropófagos del Orinoco, y a maipures y avanis por sus amigos o criados entre ellos.
+    pueblo: maipure
+    donde: 'La Encaramada; río Tuàpu; guipunavis del Inírida'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 220-221 (pdf 248-249), 227 (pdf 255, imagen); 45 (pdf 67, imagen)'}
+    verificado_en_imagen: 'en parte: pp. 45 y 227'
+    como_se_escribio: >-
+      La empalizada la cuenta de oídas (el ex misionero Forneri). La antropofagia es
+      acusación de misionero sin testigo: degrada todo lo que la toca.
+    caquetio: []
+    proyeccion:
+      capa: no-proyecta
+      nota: 'La guerra de asalto al alba y la empalizada son del Orinoco y de su medio; nada costero las sostiene. La antropofagia no se proyecta.'
+    dominios: [asalto-al-alba, empalizada]
+
+  - id: maipure-geografia_politica-005
+    esfera: geografia_politica
+    tema: cautivos-esclavitud
+    contenido: >-
+      Al pueblo vencido le queman las casas y le talan la yuca y los plátanos; los hombres
+      van atados y las mujeres con los niños detrás; los cautivos se reparten «tra loro
+      amici, e congiunti» para que no se junten y huyan. Se llaman pòiti (voz caribe);
+      «I Maipùri dan loro il nome di mero». El trato es suave: les mandan sólo lo que se
+      manda a los yernos, y si son trabajadores les dan a sus hijas por mujeres. Antes de
+      1749 los portugueses sacaron por medio de los guipunavis más de cinco mil.
+    cita: '«I Maipùri dan loro il nome di mero» (t. II p. 357).'
+    grafia: 'mero (maipure); pòiti (caribe); cini (voz «degl'' Inchi», en castellano chinos); Machi, en castellano macos (tamanacos, Casanare y Meta)'
+    pueblo: maipure
+    donde: 'Orinoco medio; alto Orinoco (guipunavis)'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 357-360 (pdf 389-392; imagen 357-358)'}
+    verificado_en_imagen: 'en parte: pp. 357-358'
+    como_se_escribio: 'Gilij defiende la ley española de los diez años de servicio y acusa a holandeses y portugueses.'
+    capa_colonial: 'La venta a europeos.'
+    caquetio: [geografia_politica-022]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El cautivo que acaba de yerno en la casa que lo tomó es de una tradición (con la achagua, la misma hermana mientras Miguel no diga dos).'
+    hermanas:
+      - {pueblo: achagua, id: achagua-geografia_politica-005}
+    dominios: [cautivo-yerno, reparto]
+
+  - id: maipure-geografia_politica-006
+    esfera: geografia_politica
+    tema: alianza-intercambio
+    contenido: >-
+      Los maipures son los más afables con los forasteros, «appena trovasi in Orinoco una
+      nazione, in cui non siavi qualche Maipùre», y su lengua, fácil, «è divenuta tra gli
+      Orinochesi una lingua di moda… la parlano quasi tutti». Al volver de viaje entran
+      alegres y saludan con «bare nau», un saludo guipunavi que usan «per festevole
+      imitazione»; los otros responden «pinuà nicà?» ('¿has venido?') y oyen el relato.
+    grafia: 'bare nau (guipunavi); pinuà nicà'
+    pueblo: maipure
+    donde: 'Orinoco medio'
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 43 (pdf 65, imagen), 202 (pdf 230, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij fue misionero de maipures y los quiere: «spiccano i Maipùri per l''affabilità».'
+    caquetio: [geografia_politica-020]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina geografia_politica-020: una lengua arahuaca como lengua franca de un río entero.'
+    hermanas:
+      - {pueblo: achagua, id: achagua-geografia_politica-003}
+    dominios: [lengua-franca, hospitalidad]
+
+# ═══ ECOLOGÍA ═════════════════════════════════════════════════════════════
+
+  - id: achagua-ecologia-001
+    esfera: ecologia
+    tema: comercio-rutas
+    contenido: >-
+      La quiripa (plaquitas de caracol ensartadas) es la moneda del llano: los achaguas
+      la cambian a los caribes que suben del Orinoco con hachas; una sarta vale «dos
+      reales de plata» en el puerto de Casanare, «cuatro» en Guayana y «ocho» en la isla
+      de Trinidad, donde caribes y araucas la estiman y «no la hacen ellos»; con ella
+      vuelven hachas, machetes y anzuelos, y «la nación Achagua [es] escala y reclamo para
+      otras muchas». Los yaruros les venden pescado por tabaco y caña de flecha; los
+      maibas labran quiripa para comprar maíz, plátano y yuca. El vocabulario tiene
+      «Mercado donde se vende — Benidacarrun» (así en la imagen; el YAML de la transcripción dice Benidacarrusí), «Mercader el q.e vende — Ibenidérri», «Sarta de
+      quiripa = Abacua».
+    grafia: 'quiripa; Abacua (sarta); Benicai (comprar), Nubenidau (vender), Ibenidérri (mercader), Benidacarrun (mercado; YAML Benidacarrusí), Benisimí (precio)'
+    pueblo: achagua
+    donde: 'puerto de San Salvador de Casanare; Meta; Orinoco'
+    epoca: 'c. 1660-1736'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 19, 38, 155, 157 (pdf 40, 59, 176, 178; imagen 157)'}
+    procedencia_extra:
+      - {obra: neira-ribero-1762, pagina: 'pliegos 34 izq., 49 der., 75 der. (imagen), 90 der.', independiente: false, nota: 'mismo autor'}
+    verificado_en_imagen: 'en parte: Rivero p. 157 y Neira 75 der. (mercado, mercader)'
+    como_se_escribio: 'Rivero escribe para mostrar que Casanare es plaza; los precios son de la economía colonial.'
+    capa_colonial: 'Los precios en reales y las herramientas de hierro.'
+    caquetio: [ecologia-105, geografia_politica-011, geografia_politica-018]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina ecologia-105 (la concha vale lejos del mar y es moneda en Coro): en la
+        hermana del llano la cuenta de caracol sube de valor con cada escala hacia el mar.
+        «Mercado» en Neira contradice a Gilij («non essendovi tra essi né piazze»): el
+        lema pudo pedirse para el mercado español.
+    hermanas:
+      - {pueblo: maipure, id: maipure-ecologia-002}
+    dominios: [quiripa, moneda-de-concha, escala]
+
+  - id: achagua-ecologia-002
+    esfera: ecologia
+    tema: comida-bebida
+    contenido: >-
+      La comida diaria es el agua de ají: seis u ocho ajíes hervidos «sin sal, porque no la
+      tienen», en la que mojan el cazabe, «el sustento cotidiano de los Achaguas». En el
+      Airico no se saca sal y hay una salina que no labran «inducidos de un vano temor de
+      que les ha de costar la vida». En invierno, sin pesca, comen iguanas, tortugas,
+      monos, hormigas, gusanos y ratones de monte.
+    grafia: 'Pimiento ó agi = Jiaria; Sal = Ybidūma; Con sal = Guaisí; Desalado = Mabayisa (Neira)'
+    pueblo: achagua
+    donde: 'Casanare (Aritagua); Airico'
+    epoca: 'c. 1668-1736'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 107, 117, 158, 327-328 (pdf 128, 138, 179, 346-347)'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Rivero lo cuenta como penitencia del misionero que vive de agua de ají.'
+    caquetio: [ecologia-009]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        El plato de ají con cazabe es de las dos hermanas (la Tevàca maipure,
+        maipure-ecologia-001). La falta de sal de los llanos contrasta con la sal de la
+        costa (ecologia-009): da sentido a un comercio de sal hacia el interior, que
+        ninguna fuente documenta.
+    hermanas:
+      - {pueblo: maipure, id: maipure-ecologia-001}
+    dominios: [aji, sin-sal]
+
+  - id: achagua-ecologia-003
+    esfera: ecologia
+    tema: tecnologia-objetos
+    contenido: >-
+      El cazabe de yuca brava: rallo de tabla con piedrecitas clavadas y pegadas con
+      resina, que dura «ocho y diez años»; la bolsa tejida de cañitas, de dos varas, que
+      la india exprime sentada en una palanca; el cedazo de caña y el budare de barro
+      sobre tres piedras. El jugo venenoso, cocido, da bebida y vinagre. De las tortas
+      enmohecidas sale la berría.
+    grafia: 'Yuca brava = Alirrí; Yuca mansa = Quenirro; Rallo = Ata; Budare = Juari; Casabe = Berrí (Neira)'
+    pueblo: achagua
+    donde: Casanare
+    epoca: 'c. 1660-1736'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 109-110 (pdf 130-131)'}
+    procedencia_extra:
+      - {obra: neira-ribero-1762, pagina: 'pliegos 44 izq., 46 der., 71 izq., 87 der. (transcripción)', independiente: false, nota: 'mismo autor'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Descripción técnica del misionero.'
+    caquetio: [ecologia-028]
+    mineria_1: [ach-cr-19]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        El caquetío cultivaba yuca (ecologia-028) y el cazabe es voz de la esfera; que lo
+        hiciera con este utillaje es de las dos hermanas del llano y del Orinoco (Gilij
+        t. II pp. 304-308, el sibucàno y el budare). Hipotético: el medio decide la yuca
+        brava.
+    hermanas:
+      - {pueblo: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 304-309', que: 'rallo de piedrecitas, sibucàno, budare; el casàve se llama Ussi en maipure (nota p. 309)'}
+    dominios: [cazabe, yuca-brava, rallo, sebucan]
+
+  - id: achagua-ecologia-004
+    esfera: ecologia
+    tema: vivienda
+    contenido: >-
+      La casa del cacique Irrijirre, en el Guaviare: «Era redonda, como si hubieran trazado
+      la planta con un compás; toda ella parecía una media naranja», cabían en ella «500
+      hombres», «su casa de respeto, donde vivía con su familia, que era mucha», con
+      «cocina aparte». En ella se recibe a los huéspedes. Al mudarse queman los pueblos y
+      rompen las vasijas grandes que no pueden cargar.
+    pueblo: achagua
+    donde: 'Airico, río Guaviare'
+    epoca: '1725'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 419 (pdf 438, imagen), 427'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Rivero, en primera persona, la compara con una cúpula y un navío: lo admira.'
+    caquetio: [geografia_politica-006]
+    proyeccion:
+      capa: hipotetico
+      nota: 'La casa grande redonda del jefe es de las dos hermanas (las chozas «sublimi e tonde» de los maipures, maipure-ecologia-003). Hipotético.'
+    hermanas:
+      - {pueblo: maipure, id: maipure-ecologia-003}
+    dominios: [casa-redonda, casa-del-jefe]
+
+  - id: achagua-ecologia-005
+    esfera: ecologia
+    tema: caza-recoleccion
+    contenido: >-
+      Arqueros certeros que «dan en un mismo punto del objeto»; su hacienda «son las dantas
+      y los monos, venados, aves y peces que flechamos». Cazan la danta imitando su
+      reclamo y la matan con flecha de curare; gustan del mono amarillo y del ratón de
+      monte. Pescan con flecha en las corrientes, con barbacoa y garlito, y con barbasco
+      («Barbasco de raiz = Cuna»).
+    pueblo: achagua
+    donde: 'Casanare, Meta, Airico'
+    epoca: 'c. 1660-1741'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 102-103, 117 (pdf 123-124, 138; 102 en imagen)'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. I pp. 260, 264-266 (pdf 294, 298-300)', independiente: true, nota: 'la caza de la danta, vista'}
+      - {obra: neira-ribero-1762, pagina: 'pliegos 40 der., 44 izq., 83 izq.', independiente: false, nota: 'mismo autor que Rivero'}
+    verificado_en_imagen: 'en parte: Rivero p. 102'
+    como_se_escribio: 'Los dos jesuitas admiran la destreza.'
+    caquetio: [ecologia-019, ecologia-033]
+    proyeccion:
+      capa: no-proyecta
+      nota: 'La fauna del llano y del monte no es la del cardonal (ecologia-033): no se proyecta.'
+    dominios: [arco, danta, barbasco]
+
+  - id: achagua-ecologia-006
+    esfera: ecologia
+    tema: cultivo
+    contenido: >-
+      Labranzas de roza y quema: «Labranza = Cagina», «Labranza de mais = Currucabe»,
+      «Labranza quemada = Cataray», «Rozar labranza = Nusiayu»; el trabajo de la roza se
+      hace con convite («Convite p.a Labranza = Vnuma»). Gumilla cuenta a achaguas y
+      sálivas entre las pocas naciones «dadas al cultivo de los campos»; las tierras del
+      Airico «les dan con abundancia el sustento» con poco trabajo. Cada mujer del polígamo
+      tiene su labranza.
+    grafia: 'Cagina, Currucabe, Cataray, Nusiayu, Vnuma'
+    pueblo: achagua
+    donde: 'Casanare-Meta; Airico'
+    epoca: 'c. 1660-1741'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: neira-ribero-1762, pagina: 'pliegos 49 izq., 71 der., 90 izq. (transcripción)'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. I p. 105 (pdf 129)', independiente: true, nota: 'juicio del misionero'}
+      - {obra: rivero-1883, pagina: 'pp. 107, 328', independiente: false, nota: 'mismo autor que el vocabulario'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Para el misionero, la labranza fija al indio y lo hace doctrinable (Gumilla lo dice así).'
+    caquetio: [ecologia-029, ecologia-028]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina el conuco atestiguado (ecologia-029) y la labranza de maíz y yuca (ecologia-028): la hermana nombra la roza, la quema y el convite de trabajo.'
+    hermanas:
+      - {pueblo: maipure, id: maipure-ecologia-004}
+    dominios: [roza-y-quema, convite]
+
+  - id: maipure-ecologia-001
+    esfera: ecologia
+    tema: comida-bebida
+    contenido: >-
+      Al alba las mujeres maipures cuecen la Tevàca para el marido y los hijos: «un denso
+      decotto di peperone, e di sugo di juca», que llaman en broma su chocolate, y en él
+      mojan el cazabe. No beben chicha de maíz: con maipures, caveris y guipunavis va el
+      cazabe tostado, y su bebida fuerte es el jaràchi, de tortas de cazabe tostadas «che
+      sembran carbone», fermentadas; la de moriche (Tèvita) es la del ballo Queti.
+    cita: >-
+      «Lo stile de' Maipùri porta altrimenti, ed è necessario, che le donne alzatesi su per
+      tempo cuocano la Tevàca pe' lor mariti e figliuoli» (t. II p. 226, imagen).
+    grafia: 'Tevàca; jaràchi (OCR: Karachi); Tèvita; Jucùtapetì (cazabe desleído en agua)'
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 226 (pdf 254, imagen), 287, 297-300 (pdf 317, 327-330)'}
+    verificado_en_imagen: 'en parte: p. 226'
+    como_se_escribio: 'Gilij encuentra la Tevàca «schifosissima»; describe con precisión.'
+    caquetio: [creencia-023]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        El caldo de ají con cazabe es de las dos hermanas (achagua-ecologia-002). Las
+        cervezas de cazabe no se proyectan: la bebida caquetía atestiguada es de maíz
+        (creencia-023, el vino de maíz de Oviedo).
+    hermanas:
+      - {pueblo: achagua, id: achagua-ecologia-002}
+    dominios: [aji, cazabe, chicha-de-cazabe]
+
+  - id: maipure-ecologia-002
+    esfera: ecologia
+    tema: comercio-rutas
+    contenido: >-
+      Todos los orinoquenses son mercaderes, sin moneda ni plaza: permuta privada. Cada
+      nación tiene su especialidad y presume de ella: los maipures del cazabe («Noi non
+      siam pigri… lavoriamo la terra: noi mangiamo, come l'uomo far debbe, il Casàve»,
+      y llaman 'morrocoyes' a los tamanacos), los guipunavis de sus platos pintados y sus
+      ralladores, los piaroas del curare y la cica, los otomacos de la chirìpa de caracol
+      que vale por moneda y se mide por brazas. «Rico» en maipure, camiapèchinì, viene de
+      miapeti 'cosas'; sólo un maipure, Sana, guardaba dinero.
+    grafia: 'camiapèchinì (rico), miapeti (robas, cosas)'
+    pueblo: maipure
+    donde: Orinoco medio
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 164 (pdf 192), 321, 328-331 (pdf 353, 360-363)'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Gilij discute la «riqueza» europea: le interesa mostrar un comercio sin oro.'
+    caquetio: [ecologia-105, geografia_politica-011]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina geografia_politica-011 (el mercado del lago: pescadores que no siembran, agricultores) y ecologia-105: naciones especializadas que se cambian lo suyo.'
+    hermanas:
+      - {pueblo: achagua, id: achagua-ecologia-001}
+    dominios: [especialidad-por-nacion, permuta]
+
+  - id: maipure-ecologia-003
+    esfera: ecologia
+    tema: vivienda
+    contenido: >-
+      Las chozas de sálivas, maipures y guipunavis son las más acabadas, techadas enteras;
+      las de los sálivas largas, «e così sono per ordinario quelle de' Maipùri», altas y
+      redondas («subblimi e tonde»). Una población del Orinoco son cuatro o cinco chozas, y
+      bajo un techo duermen muchos. La hamaca se dice en maipure amaca.
+    cita: >-
+      «Chi ama di formarle subblimi e tonde, e così sono per ordinario quelle de' Maipùri»
+      (t. II p. 218, imagen).
+    grafia: 'Amaca (hamaca, «In Maipùre Amaca», p. 222 nota)'
+    pueblo: maipure
+    donde: Orinoco medio
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 216-218, 222 nota (pdf 244-246, 250; imagen 218 y 222)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij gradúa la «civiltà» de cada nación por sus casas.'
+    caquetio: [geografia_politica-006]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Casa redonda y alta: con la del cacique achagua (achagua-ecologia-004), la misma hermana mientras Miguel no diga dos.'
+    hermanas:
+      - {pueblo: achagua, id: achagua-ecologia-004}
+    dominios: [casa-redonda, hamaca]
+
+  - id: maipure-ecologia-004
+    esfera: ecologia
+    tema: cultivo
+    contenido: >-
+      La roza («cese») es universal en el Orinoco, «così i Maipùri adoperano»: el monte se
+      tala en diciembre entre muchos convidados con chicha («per cajàpa»), se seca y se
+      quema; antiguamente con hachitas de piedra y fuego al pie. Los hombres plantan la
+      yuca con azada en montoncitos; las mujeres siembran el maíz con un bastón, de a
+      cuatro o cinco granos por hoyo. La tierra se cansa a los dos o tres años y se abre
+      otra roza.
+    grafia: 'Meniti (cesa, en maipure; nota p. 339)'
+    pueblo: maipure
+    donde: Orinoco medio
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 339-344 (pdf 371-376)'}
+    verificado_en_imagen: no
+    como_se_escribio: 'Gilij describe para un lector italiano que ara; mide la «pigrizia».'
+    caquetio: [ecologia-029, ecologia-030]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina el conuco atestiguado (ecologia-029) y añade la división del trabajo: yuca de hombres, maíz de mujeres.'
+    hermanas:
+      - {pueblo: achagua, id: achagua-ecologia-006}
+    dominios: [roza-y-quema, convite, division-sexual]
+
+# ═══ CREENCIA (101+; lo de la minería 1 lo migra otro agente) ═════════════
+
+  - id: achagua-creencia-101
+    esfera: creencia
+    tema: alma
+    contenido: >-
+      A los blancos los llaman como al alma del muerto que anda: unos pescadores
+      amarizanes, al ver a Neira y su gente, gritaron «Guabaimi, Guabaimi, que quiere decir
+      Duendes; así llaman los Achaguas á los blancos». Lo cuenta Mimbela (1696), otro
+      observador que el vocabulario («Blanco Español — Guabaymi… Así llaman los Duendes»).
+      En maipure, el blanco es Vavèmi: el cirujano europeo era «Vavèmi-marirrè», el piache
+      de los blancos.
+    cita: >-
+      «Guabaimi, Guabaimi, que quiere decir Duendes, Duendes; así llaman los Achaguas á
+      los blancos» (Rivero p. 320).
+    grafia: 'Guabaimi (Mimbela), Guabaymi (Neira 42 izq.); Vavèmi, Uavèmi (maipure, Gilij)'
+    pueblo: achagua
+    donde: 'Airico, río Guaviare'
+    epoca: '1695-1696'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rivero-1883, pagina: 'p. 320 (pdf 339, imagen), relación de Mimbela'}
+    procedencia_extra:
+      - {obra: neira-ribero-1762, pagina: '42 izq. (transcripción)', independiente: true, nota: 'el vocabulario es de Neira y Rivero; Mimbela es otro testigo'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Anécdota de llegada, contada por quien la oyó.'
+    capa_colonial: 'Es la categoría indígena aplicada al europeo: dato del contacto.'
+    caquetio: [creencia-008]
+    mineria_1: [ach-cr-12]
+    proyeccion:
+      capa: no-proyecta
+      nota: >-
+        No es dato para el caquetío (es el contacto), pero da a ach-cr-12 un segundo
+        observador dentro de la achagua y, con el maipure Vavèmi 'blancos' (Gilij t. II
+        pp. 87 y 235), una correspondencia de forma y de sentido entre las dos hermanas:
+        va a `para_el_lexicon`.
+    hermanas:
+      - {pueblo: maipure, obra: gilij-1780-1783, pagina: 't. II p. 87 (pdf 113) y nota de p. 235 (imagen)', que: 'Vavèmi-marirrè, «il Piace de'' Bianchi»; «In Maip. Uavèmi» los españoles'}
+    dominios: [blancos, duende]
+
+  - id: achagua-creencia-102
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      La tumba distingue el rango: los achaguas gentiles entierran con todas sus armas y
+      sin que caiga tierra sobre el cuerpo (cañizo y hojas de plátano) «únicamente con sus
+      Capitanes y Caciques», y la tapa de barro la resanan «todas las mañanas por largo
+      tiempo»: «esto hacemos para que no entren las hormigas á inquietar al difunto».
+    cita: >-
+      «Los Achaguas Gentiles usan el mismo rito; pero es únicamente con sus Capitanes y
+      Caciques» (Gumilla t. I p. 200, imagen).
+    pueblo: achagua
+    donde: Casanare
+    epoca: '1715-1738'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gumilla-1791, pagina: 't. I p. 200 (pdf 230, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gumilla pregunta y anota la respuesta de los achaguas; el rito lo compara con el aruaca.'
+    caquetio: [creencia-010, creencia-010b]
+    mineria_1: [ach-cr-16]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina creencia-010b: el caquetío también separa el funeral del jefe del del común.
+        Gumilla es testigo independiente de Rivero, que da el entierro en la casa para
+        todos (ach-cr-16).
+    dominios: [rango, tumba]
+
+  - id: achagua-creencia-103
+    esfera: creencia
+    tema: tiempo-calendario
+    contenido: >-
+      El cacique Irrijirre promete salir al Meta «cuando pusiesen huevos las tortugas.
+      Este es su calendario, y el modo con que se gobiernan y distinguen los tiempos». El
+      año se cuenta por los hechos del río, no por meses con nombre.
+    cita: >-
+      «cuando pusiesen huevos las tortugas. Este es su calendario, y el modo con que se
+      gobiernan y distinguen los tiempos» (Rivero p. 421, imagen).
+    pueblo: achagua
+    donde: 'Airico, río Guaviare'
+    epoca: '1725-1726'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'p. 421 (pdf 440, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Rivero en primera persona; al año siguiente se lo recuerda al cacique con las mismas palabras (p. 425).'
+    caquetio: [creencia-014, ecologia-094]
+    via_a: {creencia-014: corrobora-en-parte}
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        Que el tiempo se cuente por los hechos del medio (la postura de las tortugas, la
+        llegada de las lluvias) y no por meses con nombre es de tres pueblos: achagua
+        (esta), maipure (los meses por «l'uova di tartaruga», el año por el verano,
+        Gilij t. II pp. 228-229) y wayuu (creencia-014, Jahn p. 384, rito estacional).
+        Lo que sube es la forma; el calendario caquetío (aves, ecologia-094) ya lo tenía.
+    hermanas:
+      - {pueblo: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 228-229 (imagen 229)', que: 'meses lunares nombrados por la ocupación (cuando ponen las tortugas); el año maipure es Camotì, el verano'}
+      - {pueblo: wayuu, obra: jahn-1927, pagina: '384', que: 'la Bajada del Ches en enero, rito estacional'}
+    dominios: [tortugas, estaciones]
+
+  - id: maipure-creencia-101
+    esfera: creencia
+    tema: especialista
+    contenido: >-
+      El piache maipure es Marirri («I Maipùri gli chiamano Marirri»); el europeo que sangraba era «Vavèmi-marirrè». Los
+      piaches cantan sobre el enfermo «de' versi, i quali essi soli capiscono», tocan la
+      maraca, chupan y sacan piedrecillas y espinas, sahuman con tabaco. Entre los
+      maipures «non mancan mai», y aunque son «d'indole amabilissima» se les odia por
+      envenenadores: los maipures de la reducción acusaron al piache Chirrùpa y le
+      quemaron sus ollitas de ungüentos. Caveris y guipunavis, «sì come valorosissimi»,
+      aborrecen el arte y quizá no los tienen.
+    grafia: 'Marirri (la imagen; el OCR dice «Marini»), Vavèmi-marirrè; tamanaco Pciàci, de donde el castellano «piache»'
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 86-90, 98 (pdf 112-116, 126; imagen 86, 87, 89, 90)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Para Gilij el piache es médico y «stregone»: odia su influencia y la dice.'
+    caquetio: [creencia-001, creencia-003, creencia-008b]
+    via_a: {creencia-003: corrobora-en-parte}
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        El especialista que cura cantando versos que sólo él entiende y sahumando con
+        tabaco: maipure (esta), achagua (Neira 61 izq. «Numariu, curar cantando»; Rivero
+        p. 105) y wayuu (creencia-003). La minería 1 ya lo subió con el achagua (ach-cr-06);
+        el maipure es un tercer testigo con otro misionero. Licor, urari y serpiente
+        siguen sin hermana.
+    mineria_1: [ach-cr-06]
+    hermanas:
+      - {pueblo: achagua, obra: neira-ribero-1762, pagina: '61 izq.', que: '«Encantar, curar cantando — Numariu»'}
+      - {pueblo: wayuu, obra: perrin-1992-1995, pagina: 'sin página en el corpus', que: 'tabaco y canto del piache (creencia-003)'}
+    dominios: [canto, tabaco, succion, envenenador]
+
+  - id: maipure-creencia-102
+    esfera: creencia
+    tema: especialista
+    tema_duda: adivinacion
+    contenido: >-
+      Los piaches maipures adivinan con una figurita: según el joven maipure Veniamàri,
+      tienen «una statuetta di Cica, il cui nome è Minaritì», que ponen en la palma de la
+      mano y le preguntan por los forasteros: «Vacàu pare nuà camonèe?», '¿de dónde viene
+      la gente?'. Y el régulo Caravàna le decía a Gilij que los piaches, cantando
+      versos «come tu nel dire l'uffizio», saltan el infierno y pasan al otro lado.
+    grafia: 'Minaritì; Vacàu pare nuà camonèe'
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 95, 103 (pdf 123, 131, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij lo da como prueba de que los piaches son «stregoni»; el informante es maipure y tiene nombre.'
+    caquetio: [creencia-025, creencia-008c]
+    mineria_1: [ach-cr-05]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina creencia-025 (el espíritu de los boratios se pinta en joyas y madera) y
+        matiza creencia-008c: la hermana tenía figura, de pintura roja, y era instrumento
+        del piache, no ídolo de la tribu. Es lo mismo que la minería 1 vio en la Chuvay
+        (ídolo = máscara del baile).
+    dominios: [figurita, adivinacion, cica]
+
+  - id: maipure-creencia-103
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      Tamanacos y maipures «non han tante nenie»: las parientas recuerdan la pérdida y
+      luego, llorando y cantando, sólo repiten el nombre del muerto, seis veces seguidas,
+      con cadencia, y empiezan de nuevo; los hombres lloran aparte, sentados en el suelo y
+      callados. De los orinoquenses en general: se canta lo que el muerto cazó y pescó, se
+      rompen y queman sus enseres, se le entierra en la choza, encogido en su hamaca, con
+      sus cosas.
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 104-107 (pdf 132-135; imagen 105)'}
+    verificado_en_imagen: 'en parte: p. 105'
+    como_se_escribio: 'Gilij compara con el llanto italiano y lo halla más sincero.'
+    caquetio: [creencia-010]
+    mineria_1: [ach-cr-15, ach-cr-16]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina creencia-010 (llorar cantando lo que hizo): el general del Orinoco canta las
+        presas del muerto como el caquetío y el achagua (ach-cr-15); el maipure, en cambio,
+        repite el nombre, lo que no casa con el miedo a nombrar a los muertos que Gilij da
+        para los tamanacos (maipure-transmision-003).
+    dominios: [llanto, nombre-del-muerto]
+
+  - id: maipure-creencia-104
+    esfera: creencia
+    tema: ofrenda-fiesta
+    tema_duda: muerte-entierro
+    contenido: >-
+      El luto maipure es dejarse crecer el pelo (al revés que los tamanacos, que se lo
+      cortan) y quitarse las pinturas; para acabarlo hay que cortarse el pelo en una
+      fiesta: se preparan bebidas, «mandasi in giro un Indiano», que convida a todos a
+      beber, bailar y asistir al corte, y vienen todos, también los que nada tuvieron con
+      el muerto, y lloran «da burla».
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 108-109 (pdf 136-137, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij se burla del llanto de encargo («funzione ridicolissima»).'
+    caquetio: [creencia-010c]
+    via_a: {creencia-010d: no-toca}
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina la forma del segundo tiempo caquetío (creencia-010c): un convocante que va
+        por las casas y una fiesta de bebida que cierra el duelo. En el maipure no hay
+        huesos: el segundo tiempo es del pelo. 010d sigue sin hermana arahuaca.
+    dominios: [fin-del-luto, convocatoria, pelo]
+
+  - id: maipure-creencia-105
+    esfera: creencia
+    tema: alma
+    tema_duda: cosmos-origen
+    contenido: >-
+      Las pp. 30-31 del t. III: algunos orinoquenses distinguen un lugar de delicias y uno
+      de tormento, «ma non ho mai inteso veruno, il quale mi dicesse, che al delizioso
+      vanno… quei che non rubano, che non ammazzano, che non adulterano»; los tamanacos
+      mandan a todos a Europa, buenos o malos; «I Maipùri dicono, che i loro Piaci si
+      sottraggono al fuoco col cantare de' versi, non colle buone opere fatte in vita».
+      Al demonio le dan algún culto por miedo; al ser supremo, admiración y ningún culto.
+    cita: >-
+      «I Maipùri dicono, che i loro Piaci si sottraggono al fuoco col cantare de' versi, non
+      colle buone opere fatte in vita» (t. III p. 31).
+    pueblo: maipure
+    donde: Orinoco medio
+    epoca: '1749-1767; publicado 1782'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: gilij-1780-1783, pagina: 't. III pp. 30-31 (pdf 50-51 del ejemplar en línea; Gilij_1782_…vol3_pp30-31.pdf; imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Gilij escribe para los «increduli»: que el ser supremo no se tema prueba, para él,
+      que la religión no nace del miedo. La observación sobre el más allá va contra su
+      interés (le habría gustado un premio moral) y por eso pesa.
+    caquetio: [creencia-009]
+    via_a: {creencia-009: corrobora-en-parte}
+    mineria_1: [mai-cr-03, mai-cr-05]
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        Corrige la lectura de mai-cr-03 («premio y castigo», contra creencia-009): los
+        dos lugares maipures no dependen de la conducta, y el piache se salva cantando.
+        «El destino del alma no depende de la conducta moral» es así de dos tradiciones,
+        wayuu (creencia-009, Jahn p. 184, Jepira) y maipure. La tierra con topónimo sigue
+        sólo wayuu.
+    hermanas:
+      - {pueblo: wayuu, obra: jahn-1927, pagina: '184', que: 'Jepira, la tierra de los muertos guajira, sin premio ni castigo (creencia-009)'}
+    dominios: [mas-alla, sin-premio-moral]
+
+  - id: maipure-creencia-106
+    esfera: creencia
+    tema: especialista
+    tema_duda: tiempo-calendario
+    contenido: >-
+      Los piaches del Orinoco presumen de traer y alejar las lluvias: cuando el cielo se
+      cubre se ponen a soplar hacia las nubes «finchè ve ne sono»; Gilij vio de los parecas
+      un rosario de raíces olorosas, colgado del cuello hasta las rodillas, para encantar
+      las lluvias. Dicen también que hacen temblar la tierra y que la luna se eclipsa
+      herida por ellos.
+    pueblo: maipure
+    donde: 'Orinoco medio (generalización; el rosario es pareca)'
+    epoca: '1749-1767'
+    etiqueta: hipotetico
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 92-93 (pdf 118, 121; imagen 93)'}
+    verificado_en_imagen: 'en parte: p. 93'
+    como_se_escribio: 'Lo da entre las «inezie» y «millanterie» de los piaches; los parecas son de otra lengua.'
+    caquetio: [creencia-013, creencia-001b]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina creencia-013 (el cacique de Coro «da los temporales», atestiguado): en el
+        Orinoco el poder sobre la lluvia es del piache. Areal y sin maipure nombrado:
+        no añade capa.
+    dominios: [areal-orinoco, lluvia]
+
+# ═══ TRANSMISIÓN ══════════════════════════════════════════════════════════
+
+  - id: achagua-transmision-001
+    esfera: transmision
+    tema: lengua-registro
+    tema_duda: curriculo-edad
+    contenido: >-
+      El mirray, de «numerraidary, que significa perorar», es «cierta oración retórica,
+      compuesta en estilo elevado que estudian desde niños y la enseñan con mucho cuidado
+      los padres», con el tono de la voz y la postura de la cabeza y las manos. Recibido el
+      huésped (lo saludan en fila «mude», 'primo', y él responde «cha», 'pues'), el orador,
+      sentado, cabizbajo, los codos en las rodillas y las armas en la izquierda, recita
+      «con velocidad suma como cosa estudiada», en muchas partes, cada una rematada «con
+      tono de lamentación»; responde aquel a quien se dedica y alternan «cerca de hora y
+      media… como si rezaran á coros». El asunto es la bienvenida, dicha «de mil modos».
+    cita: >-
+      «cierta oración retórica, compuesta en estilo elevado que estudian desde niños y la
+      enseñan con mucho cuidado los padres, y esta es su cortesía con los huéspedes»
+      (Rivero p. 420, imagen).
+    grafia: 'mirray, mirraye; numerraidary; mude; cha'
+    pueblo: achagua
+    donde: 'Airico, río Guaviare (pueblo de Irrijirre)'
+    epoca: '31 de diciembre de 1725'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 419-421 (pdf 438-440, imagen)'}
+    procedencia_extra:
+      - {obra: rivero-1883, pagina: 'pp. 316-317, 322 (relación de Mimbela, 1696)', independiente: true, nota: 'Mimbela: discursos de recibimiento y juntas con mirrayes en el Airico'}
+    verificado_en_imagen: si
+    como_se_escribio: >-
+      Rivero, que lo vivió como huésped, lo compara con el catecismo y la epístola cantada;
+      le aburre el contenido y no lo transcribe.
+    caquetio: [transmision-022, transmision-023, parentesco-021]
+    via_a: {transmision-016: matiza}
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Es la prueba de la tesis del mapa de la transmisión en una hermana: una forma fija
+        (tono, postura, partes) aprendida desde niño de los padres, y no de un
+        especialista (lo que matiza el jayeechi wayuu de transmision-016). Pero el
+        discurso de recibimiento es de todo el llano (chiricoas, Rivero p. 39; «cada
+        Nación sermonea en la suya», p. 317): una tradición arahuaca, hipotético.
+    dominios: [oratoria, hospitalidad, formula]
+
+  - id: achagua-transmision-002
+    esfera: transmision
+    tema: curriculo-edad
+    contenido: >-
+      El arco se enseña desde los dos o tres años: los padres hacen a los hijos «sus
+      arquillos y flechuelas proporcionadas á la pequeñez de sus brazos», y los niños se
+      entretienen «flechando lagartijas, pájaros y otras sabandijas pequeñas»; un niño de
+      diez años flechó de noche una lechuza que le pidió el misionero.
+    cita: >-
+      «enseñan este primor á sus hijos desde su tierna edad, de dos ó tres años,
+      haciéndoles sus arquillos y flechuelas proporcionadas á la pequeñez de sus brazos»
+      (Rivero p. 102, imagen).
+    pueblo: achagua
+    donde: Casanare
+    epoca: 'c. 1660-1736'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 102-103 (pdf 123-124; 102 en imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Rivero lo cuenta como destreza que admira.'
+    caquetio: [transmision-020, transmision-025]
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        Que el niño aprenda el arma de los hombres desde muy pequeño, jugando, con un arco a
+        su medida, es de dos tradiciones: wayuu (transmision-020, Jahn pp. 208-211:
+        «desde temprana edad», arco y flecha) y achagua (esta, con la edad: dos o tres
+        años). Gilij lo da también para el Orinoco (t. II p. 267).
+    hermanas:
+      - {pueblo: wayuu, obra: jahn-1927, pagina: '208-211', que: 'el adiestramiento masculino guajiro en arco y flecha empieza desde temprana edad'}
+      - {pueblo: maipure, obra: gilij-1780-1783, pagina: 't. II p. 267', que: 'los padres hacen flechas pequeñas a los niños para que se acostumbren a la caza (orinoquenses en general)'}
+    dominios: [arco, juego, nino]
+
+  - id: achagua-transmision-003
+    esfera: transmision
+    tema: narracion-mito
+    contenido: >-
+      La memoria se hereda: el creador Cuaygerri «esto enseñan á sus hijos», el diluvio es
+      «tradición derivada de padres á hijos», los dioses menores, «tradición y fábula que
+      les contaban sus viejos»; los ancianos repiten los motivos de las disensiones para
+      que no haya reconciliación; y en el Airico «todavía están vivas las memorias» de las
+      entradas españolas de ciento veinte años antes: el capitán Camuibay tenía el horror
+      a los españoles «por el que les tenía su padre», que «lo traspasó á las venas de su
+      hijo en las conversaciones domésticas desde sus primeros años». Los achaguas cuentan,
+      por tradición «venida de padres á hijos», que pelearon con las Amazonas de una isla
+      entre el Meta y el Orinoco.
+    pueblo: achagua
+    donde: 'Casanare; Airico'
+    epoca: 'c. 1606-1726'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rivero-1883, pagina: 'pp. 17, 22, 112-113, 326, 426 (pdf 38, 43, 133-134, 345, 445)'}
+    verificado_en_imagen: no
+    como_se_escribio: >-
+      Rivero quiere mostrar a la vez una «disposición» para la fe (la tradición del creador)
+      y el daño de los conquistadores (la memoria del agravio). Las Amazonas son su marco
+      clásico sobre un relato achagua que Neira recogió.
+    capa_colonial: 'La memoria de las entradas y el nombre de «Amazonas».'
+    caquetio: [transmision-006, transmision-022]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        La transmisión por los viejos y en la conversación de casa es la forma que el canon
+        pone en Bana-mana (transmision-006). Con el maipure (maipure-transmision-002) es la
+        misma hermana mientras Miguel no diga dos.
+    hermanas:
+      - {pueblo: maipure, id: maipure-transmision-002}
+    dominios: [memoria-del-agravio, viejos, amazonas]
+
+  - id: maipure-transmision-001
+    esfera: transmision
+    tema: especialista-formacion
+    contenido: >-
+      El piache se forma desde niño: un piache famoso escoge a los muchachos que le parecen
+      aptos «per l'accortezza, o malizia» y les da lecciones «in cupe selve, lontano sempre
+      dall' altrui vista»; al cabo de unos años son piaches. Los delata la mirada grave, la
+      vida solitaria y el pelo largo. Saben las tradiciones, la creación del mundo, y
+      hablan mejor que nadie la lengua.
+    pueblo: maipure
+    donde: 'Orinoco medio (generalización)'
+    epoca: '1749-1767'
+    etiqueta: hipotetico
+    testigo: oyo
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 90, 95 (pdf 116, 123; imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: '«e Dio sa con quali diabolici mezzi»: lo que no vio lo supone.'
+    caquetio: [creencia-004, transmision-001, transmision-017]
+    via_a: {transmision-017: matiza}
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Matiza transmision-017 (wayuu: la vocación llega por un sueño): en el Orinoco el
+        maestro escoge al aprendiz. El canon (transmision-001: el llamado no se elige) va
+        con el wayuu. Generalización sin maipure nombrado: hipotético.
+    dominios: [areal-orinoco, aprendizaje-secreto]
+
+  - id: maipure-transmision-002
+    esfera: transmision
+    tema: narracion-mito
+    contenido: >-
+      Los viejos son el único archivo: «essi soli sono i conservatori delle notizie
+      Indiane, essi soli i parlatori, essi soli i loro libri». «Seppi già molto dal regolo
+      de' Maipùri Caravàna; ma sopraggiuntagli nel meglio delle mie curiose domande la
+      morte, dovetti senza rimedio soffrirne la perdita, essendo giovani tutti gli altri»:
+      a los jóvenes no les quedaban «che mere fole intorno alle stelle».
+    cita: >-
+      «Seppi già molto dal regolo de' Maipùri Caravàna; ma sopraggiuntagli… la morte,
+      dovetti senza rimedio soffrirne la perdita, essendo giovani tutti gli altri»
+      (t. II p. 232, imagen).
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II p. 232 (pdf 260, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij como etnógrafo que pierde a su informante.'
+    caquetio: [transmision-006, transmision-014]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Es, atestiguado en una hermana, el punto único de falla del mapa de la transmisión
+        («lo que no tiene heredero no se degrada, desaparece entero»): muerto el régulo,
+        el saber se fue con él. Con el achagua (achagua-transmision-003), la misma hermana
+        mientras Miguel no diga dos.
+    hermanas:
+      - {pueblo: achagua, id: achagua-transmision-003}
+    dominios: [viejos, perdida-del-saber]
+
+  - id: maipure-transmision-003
+    esfera: transmision
+    tema: nombre-propio
+    tema_duda: saber-restringido
+    contenido: >-
+      No hay genealogías: «Io ho molta pratica e di Tamanàchi, e di Maipùri. Eppure non mi
+      darebbe l'animo di formare una giusta genealogia delle lor case»; con mucho trabajo
+      sacaba el nombre del padre muerto «e forse forse del nonno, ma niente di più».
+      Preguntar por los antepasados incomoda: los tamanacos responden «vegetcanènu», 'temo
+      verlo en sueños', y por ese miedo a nombrar a los muertos «in poco tempo
+      dimentichino i loro antenati».
+    cita: >-
+      «Io ho molta pratica e di Tamanàchi, e di Maipùri. Eppure non mi darebbe l'animo di
+      formare una giusta genealogia delle lor case» (t. II p. 204, imagen).
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 203-204 (pdf 231-232, imagen 204)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij lo da como prueba de «rozzezza»; el miedo a nombrar es tamanaco en el ejemplo.'
+    caquetio: [transmision-021, transmision-006, parentesco-010]
+    via_a: {parentesco-010: matiza}
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Matiza dos cosas del canon: el respeto wayuu a no nombrar al muerto
+        (parentesco-010, transmision-021) aparece en el Orinoco como miedo de verlo en
+        sueños, no como ofensa a los parientes; y el canon de la simulación da a Bana-mana
+        genealogías largas (transmision-006), que la hermana no tenía: dos generaciones.
+    dominios: [genealogia, nombrar-al-muerto]
+
+  - id: maipure-transmision-004
+    esfera: transmision
+    tema: curriculo-edad
+    contenido: >-
+      «La prima volta, che alle giovani Maipùri viene il periodico flusso, le tengono a
+      digiuno, finchè lor dura, in una piccola capanna, chiamata Quita, la quale
+      edificano in vicinanza della popolazione»; las tamanacas lo pasan en un rincón de la
+      casa, colgadas en alto en sus hamacas. En la misma Quita pare la mujer maipure.
+    cita: >-
+      «le tengono a digiuno, finchè lor dura, in una piccola capanna, chiamata Quita, la
+      quale edificano in vicinanza della popolazione» (t. II p. 133, imagen).
+    grafia: 'Quita (choza de la menarquia y del parto)'
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 133 (pdf 161, imagen), 260 (pdf 290, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Entre las «superstizioni»; Gilij no dice qué se enseña en el encierro.'
+    caquetio: [transmision-028, creencia-014, transmision-008]
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        El encierro de la muchacha en su primera regla, con ayuno, es de dos tradiciones:
+        wayuu (transmision-028, Amodio y Pérez pp. 44-45; Jahn pp. 208-211) y maipure
+        (esta, con choza propia junto al pueblo). Lo que se le enseña en el encierro sigue
+        siendo sólo wayuu.
+    hermanas:
+      - {pueblo: wayuu, obra: amodio-perez-2006, pagina: '44-45', que: 'el encierro puberal femenino (püülüjütü)'}
+    dominios: [menarquia, encierro, choza-del-parto]
+
+  - id: maipure-transmision-005
+    esfera: transmision
+    tema: curriculo-edad
+    tema_duda: sociedades-masculinas
+    contenido: >-
+      La prueba de valor de los jóvenes: en los bailes, los maipures atan a los mozos a un
+      palo delante de las casas y los azotan con el manacapì, un látigo de cuerdas de
+      curaguate empegadas con resina, hasta dejarles la espalda, el pecho y el vientre
+      «orribilmente malmenato»; se hace sólo con los adultos y es «di sommo onore»,
+      y presumen de las marcas.
+    grafia: 'manacapì'
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II p. 348 (pdf 380, imagen)'}
+    verificado_en_imagen: si
+    como_se_escribio: 'Gilij lo pone junto a la prueba tamanaca de las hormigas como «barbara invenzione».'
+    caquetio: [creencia-004b, creencia-014]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Contrasta con el achagua, que no hace exámenes de valor (achagua-geografia_politica-006).
+        La forma (prueba dolorosa en el baile) es del Orinoco y del llano (sálivas, Rivero
+        p. 211; caribes). Hipotético.
+    dominios: [prueba-de-valor, azotes]
+
+  - id: maipure-transmision-006
+    esfera: transmision
+    tema: canto-baile
+    contenido: >-
+      Los bailes maipures son alegres: unos frente a otros, se encuentran, ríen y miran a
+      todas partes, al revés de la gravedad tamanaca; su canto se entiende en la lengua
+      común, salvo «Mariè marìje-jà», que dicen tomado de los guipunavis: «Vaca, peca
+      purenàmi», 'hemos comido: come tú las sobras', basta para divertirlos días enteros.
+      Serios son los maipures en los bailes de difuntos. Hay bailes para cada asunto: para
+      los muertos, para quitar el luto, para curar, para poner nombre a los niños, para la
+      guerra; y los indios guardan con tenacidad el secreto de lo que cantan.
+    grafia: 'Vaca, peca purenàmi; Mariè marìje-jà (guipunavi)'
+    pueblo: maipure
+    donde: La Encaramada
+    epoca: '1749-1767'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 279-281, 289-290 (pdf 309-311, 319-320; imagen 280)'}
+    verificado_en_imagen: 'en parte: p. 280'
+    como_se_escribio: 'Gilij compara con la métrica europea y busca versos; sospecha superstición en todos los bailes.'
+    caquetio: [transmision-007, transmision-018, creencia-014]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Bailes con función (luto, cura, nombre, guerra) y secreto sobre la letra: una tradición; el areíto taíno (transmision-018) es comparanda de esfera, no hermana de esta forma.'
+    dominios: [baile, secreto-del-canto]
+
+# ═══ PARA EL LEXICÓN (formas, no hechos) ══════════════════════════════════
+para_el_lexicon:
+  - {forma: Macogerri, glosa: esclavo (Numacumí 'mi esclavo'; Macagetua 'esclava'; Macunaican 'esclavitud'), lengua: achagua, obra: neira-ribero-1762, pliego: '60 der. (imagen)', nota: 'origen del «maco» de los llanos (Rivero pp. 31, 41; Gilij t. II p. 357 «Machi, Macos» en Casanare y Meta)'}
+  - {forma: mero, glosa: 'esclavo, cautivo', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 357 (imagen)'}
+  - {forma: Guabaimi, glosa: 'duende; blanco español', lengua: achagua, obra: rivero-1883, pagina: 'p. 320 (Mimbela)', nota: 'con Neira 42 izq. Guabaymi; cf. maipure Vavèmi/Uavèmi «blancos» (Gilij t. II pp. 87, 235): forma y sentido casan (blancos); en achagua además «duende»'}
+  - {forma: Uavèmi, glosa: 'los españoles, los blancos', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 235, nota 3 (imagen)', nota: 'también Vavèmi en Vavèmi-marirrè, el piache de los blancos (p. 87)'}
+  - {forma: Paràna, glosa: mar, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 234, nota 2 (imagen)', nota: '«In Taman. Paràva. In Maip. Paràna»; Europa «Paràna ipuntà», la otra parte del mar (p. 235). Para cognados con el `para` caquetío (geografia_politica-025, Zavala #190-191): mismo sentido'}
+  - {forma: Amaca, glosa: hamaca, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 222, nota (imagen)', nota: '«In Maipùre Amaca»; la voz de la esfera (taíno hamaca) tiene gemela maipure'}
+  - {forma: Pecanàti, glosa: 'régulo, jefe', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 194-195, 199 (imagen)', nota: '«Pecanàti ani canà», «soy hijo de régulo»'}
+  - {forma: Marirri, glosa: 'piache, médico', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 86 (imagen)', nota: 'el OCR dice «Marini»; «Vavèmi-marirrè» (p. 87), el piache de los blancos'}
+  - {forma: Minaritì, glosa: figurita de cica con que adivinan los piaches, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 103 (imagen)'}
+  - {forma: manacapì, glosa: látigo de la prueba de valor, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 348 (imagen)'}
+  - {forma: Queti, glosa: animal; el baile secreto de las flautas, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 284 (imagen)', nota: 'los avanis lo llaman Casimejè'}
+  - {forma: Cabaunicayi, glosa: 'hidalgo, noble (también Cacuisaunacay)', lengua: achagua, obra: neira-ribero-1762, pliego: '68 izq. (imagen)'}
+  - {forma: Quita, glosa: choza de la menarquia y del parto, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 133, 260 (imagen)'}
+  - {forma: Camotì, glosa: 'el verano; el año', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 229 (imagen)', nota: 'el tamanaco cuenta el año por el invierno (Canepò); «veve», «mucho tiempo»'}
+  - {forma: Tevàca, glosa: caldo de ají y jugo de yuca, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 226 (imagen)'}
+  - {forma: Sapàni nutaà piche pianìtu, glosa: 'en pago de haberte dado la mujer (lo dice el suegro al yerno)', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 246 (imagen)'}
+  - {forma: Nuàni-chivacanè, glosa: mi marido, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 241 (imagen)', nota: '«Nuanìtu (mia moglie)»'}
+  - {forma: mude, glosa: 'primo (saludo al huésped)', lengua: achagua, obra: rivero-1883, pagina: 'p. 420 (imagen)', nota: 'ya en parentesco-021; Neira «Prima = Nudetuarro» (85 izq.); Gilij t. II p. 201: los sálivas dicen «nude» (cugino) al saludar a los parientes menos cercanos'}
+  - {forma: Nugiacaberri, glosa: hermano de un vientre (uterino), lengua: achagua, obra: neira-ribero-1762, pliego: '67 der. (imagen)', nota: '«Hermana tal — Nugiacabetua»'}
+  - {forma: Richerro / Ruerraí, glosa: 'hermana de él / hermana de ella', lengua: achagua, obra: neira-ribero-1762, pliego: '69 izq. (transcripción)', nota: 'términos por sexo del hablante'}
+  - {forma: Benidacarrun, glosa: 'mercado, donde se vende', lengua: achagua, obra: neira-ribero-1762, pliego: '75 der. (imagen)', nota: 'el YAML de la transcripción dice Benidacarrusí: la imagen da -carrun; «Mercader el q.e vende — Ibenidérri»; raíz beni-, «comprar, precio»'}
+  - {forma: Chunisay, glosa: 'amo principal; principal, causa', lengua: achagua, obra: neira-ribero-1762, pliego: '34 der., 85 der. (transcripción)'}
+  - {forma: Vnuma, glosa: convite para la labranza, lengua: achagua, obra: neira-ribero-1762, pliego: '49 izq. (transcripción)'}
+  - {forma: Isirri, glosa: murciélago (de ahí Isirriberrenais, una parcialidad), lengua: achagua, obra: rivero-1883, pagina: 'p. 326 (Mimbela)'}

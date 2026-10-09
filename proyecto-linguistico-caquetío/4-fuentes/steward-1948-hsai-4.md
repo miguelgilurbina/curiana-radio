@@ -21,9 +21,9 @@ acceso: >-
   bytes, sha256
   ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto:
   `pdftotext -enc UTF-8`, 1,58 MB.
-estado_minado: minada-parcial
+estado_minado: minado-parcial
 minado: 2026-10-09
-cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura; 2026-10-09 (minería 2, lokono): Kirchhoff sobre el Aruacay, pp. 481-490; 2026-10-09 (minería 2, kalinago): las atribuciones de Rouse «The Carib» (pp. 545, 558-562) cotejadas contra Rochefort y Du Tertre en imagen; 2026-10-09 (minería 2, taíno): Rouse, «Social and political organization» y «Life cycle» (pp. 528-531), auditado contra las primarias"
+cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura; 2026-10-09 (minería 2, lokono): Kirchhoff sobre el Aruacay, pp. 481-490; 2026-10-09 (minería 2, kalinago): las atribuciones de Rouse «The Carib» (pp. 545, 558-562) cotejadas contra Rochefort y Du Tertre en imagen; 2026-10-09 (minería 2, taíno): Rouse, «Social and political organization» y «Life cycle» (pp. 528-531), auditado contra las primarias; . 2026-10-09 (minería 2 achagua): Hernández de Alba, Achagua and neighbors, pp. 402-408 (organización social, ciclo de vida, guerra), sólo como mapa de afirmaciones que se buscaron en la primaria (6-fusion/hermanas_achagua_2026-10-09.yaml)"
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
@@ -312,7 +312,7 @@ Regla que sale: Rouse mezcla a La Borde (fuera del repo) con el grupo
 Breton-Du Tertre-Rochefort sin decir de quién es cada cosa; lo que no está en
 el grupo es candidato a ser de La Borde.
 
-## Minería 2 — esferas (2026-10-09): Rouse a sus primarias
+## Minería 2 — esferas taínas (2026-10-09): Rouse a sus primarias
 
 **Qué se preguntó** ([[10_hermanas_taino_esferas]]): ¿de qué primaria sale cada afirmación de Rouse
 sobre la jefatura, el rango, la sucesión y el matrimonio taínos? Tercera mano:
@@ -336,3 +336,24 @@ nada de aquí entra sin su primaria.
   de [[colon-hernando-1892]] cap. LXI; las «cestas» son caribes de Guadalupe.
 
 **Deuda:** las secciones de economía y vida material de Rouse, sin auditar.
+
+## Minería 2 — esferas achaguas (2026-10-09)
+
+Usado como mapa para la minería achagua de [[10_hermanas_achagua_esferas]]
+(propuesta `6-fusion/hermanas_achagua_2026-10-09.yaml`): Hernández de Alba,
+«The Achagua and their neighbors», pp. 402-408. Tercera mano: cada afirmación se
+buscó en la primaria.
+
+| Afirmación de HSAI | Página | En la primaria |
+|---|---|---|
+| «seemingly divided into patrilineal sibs» y «some evidence points to patrilocal residence» | p. 404 | Sin pasaje: es inferencia suya («the data… strongly suggest»). Rivero da un caso de pertenencia por la madre (pp. 40-41) y uno de un hombre casado en el pueblo de la mujer (p. 320) |
+| Grupos «totémicos» (Amarizán, Isirriberrenais, troncos, ríos) | p. 404 | Sí: Rivero p. 326 (Mimbela) y Gumilla t. I p. 114 |
+| Poliginia, mujeres iguales, campo propio con estacas; repudio de los dos | p. 404 | Sí: Rivero pp. 107 y 326 |
+| Casa de los hombres *daury*, palisada con entrada alta | pp. 402, 405 | No: «daur» da cero en Rivero y Gumilla; fuente no localizada |
+| Muchachas «vestales» de los jefes, achaguas y píritus | p. 405 | No localizada en lo leído |
+| El mirray, «mude», «cha» | p. 405 | Sí: Rivero pp. 419-421, y bien resumido |
+| La paz por simulacro de batalla | p. 408 | Sí: Rivero pp. 41-42, pero entre chiricoas y achaguas |
+| Encierro de la menarquia con hormigas en la hamaca | p. 407 | El párrafo mezcla píritus: no atribuible a los achaguas |
+
+**Deuda.** Localizar la fuente del *daury* (¿Karsten 1926? ¿Gumilla en otro
+capítulo?) antes de usarlo.
