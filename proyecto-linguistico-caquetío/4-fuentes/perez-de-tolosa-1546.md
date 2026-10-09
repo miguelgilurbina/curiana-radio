@@ -257,3 +257,20 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** La carta de Ampíes (p. 212) es la otra primaria del poder del señor caquetío, y es de cielo: «se hace adorar como Dios, dando á entender á los indios que él da los temporales», y vive «diez leguas la tierra adentro». La misma carta dice que un «D. Juan Baracoica, que está en las islas», es «su pariente y deudo»: el mar une parientes. Pérez de Tolosa: «viciosos de comida de carne y pescado» (caquetíos de los llanos, no de la costa).
 
 **No se halló:** Cero creencia del mar: las ventanas son de la conquista de Caracas (caracoles y fotutos de guerra de Guaicaipuro, regla 4) y de capitulaciones.
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Qué dice exactamente de los axaguas, y nombra
+Baragua? Vista en imagen la p. 232 de Fernández Duro t. II.
+
+**Qué se halló.** «junto á esta sabana [de Carora], en unos montes, hay cierta
+cantidad de indios de nación Axaguas; es gente que comen carne humana; son
+tan bellacos, que por ninguna vía con ellos se ha podido hacer paz; pelean
+con arcos y flechas y macanas; no tienen pueblos poblados». La sabana había
+tenido pueblos y se había despoblado «por causa de los españoles».
+
+**Qué NO.** Ni «Baragua» (es de Oliver) ni «belicosos» (Oliver, vía Arellano
+1964). Y el índice de Fernández Duro ya junta «Achaguas ó Ajaguas» en 1885:
+es el primer eslabón de la identidad.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

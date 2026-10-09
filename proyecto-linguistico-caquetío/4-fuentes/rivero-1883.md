@@ -258,3 +258,16 @@ tinta corrida, y sólo deja leer que la quiripa es «la moneda con que compran o
 cosas»); el lib.
 III (las guerras de Atanarí, pp. 214-247) y el lib. VI caps. I-VII, sólo por
 búsqueda; ver en imagen las pp. 106, 109-110, 155, 158, 328, 426.
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** Sólo la trampa de homonimia: ¿la Barragua de Rivero
+es la Baragua de los xaguas? Leídas pp. 27-35.
+
+**Qué se halló.** No: Barragua es «una serranía y monte grande, distante de la
+ciudad de Pore trece ó catorce días», en el Airico, con 21 pueblos achaguas y
+los «Tamudes», que los españoles llamaban caquetíos (p. 29). La Baragua de los
+xaguas está en Lara. El paralelo (achaguas y caquetíos en Barragua; xaguas y
+caquetíos hacia Baragua) es el que no hay que leer como identidad.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

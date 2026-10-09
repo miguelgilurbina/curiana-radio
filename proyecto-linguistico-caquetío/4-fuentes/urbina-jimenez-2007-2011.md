@@ -208,3 +208,15 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** Entierros entre conchas en El Carrizal y la distribución de conchales y enterramientos en la costa (Urbina 2011 §5.1.1): dato de ajuar y de sitio, no de creencia (ya en arqueologia_insular_falcon §en_la_creencia).
 
 **No se halló:** Cero.
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Qué dice de los xaguas en Falcón? Urbina 2011
+pp. 21-22.
+
+**Qué se halló.** El complejo Guacoa (un sitio en la serranía de La Guacoa,
+cerca de El Pedregal) y la corazonada de Oliver, en comunicación personal, de
+que fuera de los xaguas «alzados». Hipótesis, no dato; y Mitare sólo como río
+y cuenca de prospección.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

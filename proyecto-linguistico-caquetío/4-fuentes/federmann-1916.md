@@ -296,3 +296,28 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** El dato más fino del barrido: los AYAMANES del interior «no se adornan sino con pequeñas piedras negras y brillantes […] y también de conchas marítimas que compran a otras naciones y que son raras en este pueblo tan lejano del mar que no lo conocen ni a sus orillas se han aproximado nunca» (p. 45). La concha vale lejos del mar: es un bien de prestigio que la costa exporta (regla 4: ayamán; la costa es el origen). El «botuto» de guerra de la p. 35 es del interior y es palabra de Arcaya, el traductor.
 
 **No se halló:** Cero creencia del mar en la costa (cap. I Paraguaná, II-III Coro).
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Qué dice de los xaguas, y registra alguna palabra suya?
+Se leyó el cap. VII entero (pp. 53-58), el arranque del VIII (pp. 58-60) y la
+p. 63, cotejados con Klüpfel 1859 pp. 32-36 y con 1557 [44]-[45] en imagen
+(imágenes 54-55).
+
+**Qué se halló.** Aldeas en 1530 (Coary, «no muy grande»; Cacaridi, la
+última, a 73 leguas de Coro); 800 personas de dos o tres leguas que llegan a
+la paz con «delgados garrotes» (1557: «stecklin»); enemistad con los gayones,
+con la marcha por el agua para no dejar rastro; cinco intérpretes y sólo dos
+gayones que sabían xagua; comercio de sal con los caquetíos de Barquisimeto
+visto desde los dos lados (pp. 60 y 63); los xaguas le nombraron a Federmann
+a los caquetíos (p. 58). La nota (a) de Arcaya (pp. 53-54) es el origen
+escrito de «xagua = achagua».
+
+**Qué NO.** Ninguna palabra xagua con glosa: sólo los dos nombres de aldea.
+
+**Erratas de 1916 (sobre la francesa).** Cacaridi «el 3 de octubre»: 1557 dice
+«auff den letsten tag gemelts monats Octobris» (el 31). Y los rehenes al revés:
+1557 suelta a cinco y retiene a los principales con el cacique; 1916 suelta a
+casi todos y retiene a cinco.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

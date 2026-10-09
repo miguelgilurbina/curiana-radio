@@ -402,3 +402,21 @@ p. 270 de una y en la 283-284 de la otra.
 
 [[oliver-1989-cap3]] · [[oliver-1989-apendice-a]] · [[jahn-1927]] ·
 [[esteves-1989]] · [[esfera-de-interaccion]] · [[polities-caquetias]]
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Cuáles son las «few words recorded by the
+chroniclers» de la p. 245, y en qué se apoya el rechazo de la identidad con el
+achagua? Releídas pp. 231 y 243-247 en el OCR guardado.
+
+**Qué se halló.** Oliver no enumera las palabras ni dice de qué crónica salen
+(no hay nota). Su rechazo es de método: «the only thing in common that these
+two groups have is their similarity in the names». La «Baragua» de 1546
+(p. 246) es su lectura del «en unos montes» de Pérez de Tolosa, no palabra de
+Tolosa; y donde Fernández Duro imprime «bellacos», Oliver (vía Arellano 1964)
+traduce «bellicose».
+
+**Qué NO.** Ni rastro de Mitare para los xaguas: la única «Mitare» del OCR es
+el río en la p. 252.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

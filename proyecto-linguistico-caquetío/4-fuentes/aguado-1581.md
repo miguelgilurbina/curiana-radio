@@ -66,3 +66,16 @@ la costa?
   apéndice de Bécker).
 - La paginación de la edición: Gutenberg no la conserva. Para citar página
   hace falta el facsímil (archive.org `historiadevenezu01agua`, 1918).
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Nombra a los xaguas? Leídas las cuatro
+apariciones de «xagua/axagua».
+
+**Qué se halló.** Una sola es el pueblo: «vna poblazon de yndios llamados los
+axaguas» en el camino del doctor Navarro hacia Barquisimeto (lib. II cap. XXI,
+c. 1539-1540). Las otras tres son el TINTE de Genipa («çiertas mançanas que en
+comun llaman xaguas», lib. II cap. XI; «zumo de xaguas», lib. III cap. XVI):
+una «xagua» en una crónica no es un xagua hasta que el pasaje lo dice.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

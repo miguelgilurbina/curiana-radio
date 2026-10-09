@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8411 ítems propuestos** en 172 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
+**8429 ítems propuestos** en 174 propuestas, más **63 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -132,6 +132,7 @@ editar_a_mano: no
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
 | `medicion_tanda_final_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
+| `medicion_xaguas_achaguas_2026-10-09.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -190,6 +191,7 @@ editar_a_mano: no
 | `tura_la_tesis_de_miguel.yaml` | ? | 0 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 | `voces_de_miguel_2026-09-10.yaml` | ? | 7 |  |
+| `xaguas_achaguas_falcon_2026-10-09.yaml` | ? | 18 |  |
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
@@ -297,6 +299,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `toponimos-esteves-lote-2026-09-22.md` | La cola de Esteves, leída entera — y un Zavala que resulta ser Esteves |
 | `van-koolwijk-1882-2026-10-05.md` | Van Koolwijk 1882: la fuente que está detrás de Gatschet, y lo que eso mueve |
 | `vocabularios-antillanos-2-2026-09-22.md` | M5 — Los vocabularios antillanos que quedaron a medias |
+| `xaguas-achaguas-falcon-2026-10-09.md` | Los xaguas de Carora y Pedregal: ¿achaguas? — y qué hacer con la pista de Mitare |
 | `zayas-1931-en-la-lista-maestra-2026-09-23.md` | Zayas 1931 en la lista maestra del taíno: cómo engancharlo y qué mueve |
 
 ---

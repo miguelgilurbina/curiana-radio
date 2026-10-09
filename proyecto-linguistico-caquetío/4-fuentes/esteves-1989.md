@@ -1680,3 +1680,20 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** Las leyendas de Esteves son de tierra: la cueva de Jague donde se asfixiaron los indios de las levas de Federmann (memoria colonial), las ánimas de músicos, el Capó del cerro. Del mar: atalayas de cardúmenes (Sarabón, Suriquiba), el nombre Paraguaná (p. 56).
 
 **No se halló:** Cero sirenas, encantos o seres del mar en el gazeteer.
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Trae el etnónimo o los lugares de la pregunta?
+Leídas en el OCR las entradas Acurigua (p. 84), Autaquire (p. 86), Avaria y
+Baragua (p. 87), Cariagua (p. 98), Mapiare (p. 121), Mitare (p. 123), Quiragua
+(p. 130), Siburúa (p. 131), Tupure (p. 136) y Utaquire (p. 138).
+
+**Qué se halló.** Esteves no nombra a los ajaguas. Autaquire: «Extinta
+comunidad indígena […] a 30 kilómetros al Sur de la población de Pedregal,
+(Quire, en ayamán, es color)»; Mapiare: comunidad indígena desaparecida, hoy
+sitio arqueológico; Baragua: un río que nace en el sur de Capatárida y corre
+a Lara. Su «Jagua» es el n.º 240 del índice y no tiene entrada en el cuerpo
+(p. 118, vista en imagen). Y de paso, en la misma p. 118: «ITOWA — Antiguo
+nombre indígena de Churuguara», que puede ser la Hittova de Federmann.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].
