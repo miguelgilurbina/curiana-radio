@@ -1,0 +1,171 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — ¿Cuál era su relación con la tierra? El lado caquetío.
+#
+# La pregunta de 3-mundo/hermanas/README.md §4b, hecha al corpus caquetío.
+# El corpus es canon y no se toca (regla 5): aquí se propone qué hechos del
+# corpus RESPONDEN y con qué aspecto, uno por entrada {id, tierra, nota}. El
+# validador (curiana_sim/compilar_hermanas.py) comprueba que cada id exista
+# en 3-mundo/corpus/ y que los aspectos sean del vocabulario cerrado, y la
+# matriz (COMPARADA.md) los pone en la primera columna.
+#
+# Las hermanas y primas responden en sus propias propuestas: el campo
+# `tierra` de cada hecho de 6-fusion/hermanas_*.yaml, puesto en la misma
+# sesión. La lectura de cada pueblo, con sus fuentes, está en
+# 4-fuentes/sesiones/12_relacion_con_la_tierra.md.
+#
+# No se minó nada nuevo: se le hizo la pregunta a lo que ya estaba minado.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'sesión «relación con la tierra» (Claude Opus 5.5), rama vault/relacion-con-la-tierra'
+  obra: 'varias (el corpus caquetío y las propuestas de las hermanas)'
+  bitacora: 4-fuentes/sesiones/12_relacion_con_la_tierra.md
+  pregunta: >-
+    Miguel, 2026-10-09: «la Kaketiana dejó de ser solamente sobre los
+    caquetíos, sino sobre la filosofía que ellos tenían con su relación con
+    la tierra […] qué es lo que podemos realmente aprender de ellos»; «puede
+    ser una pregunta a cada pueblo: cuál era su relación con la tierra.
+    Nuestro centro es el de los caquetíos, pero es importante darle voz a
+    cada pueblo».
+  criterio: >-
+    Responde el hecho que dice algo de cómo ESE pueblo se relaciona con la
+    tierra, el monte, el agua, los animales o el lugar: quién es su dueño, de
+    quién es, qué no se toma, qué se devuelve, qué lugar pesa, cómo se cuenta
+    el tiempo con el medio, qué se sabe de él, adónde van los muertos, de
+    dónde sale la gente. No basta con mencionar un cultivo, una técnica o un
+    animal; tampoco basta con describir el medio sin la gente. En duda, no se
+    etiqueta. Un hecho reconstruido, retro-abstraído o hipotético responde,
+    pero con su capa, y la nota la dice.
+  capas: >-
+    La etiqueta del corpus (`fuente`) no cambia: la nota de cada entrada dice
+    de qué capa viene la respuesta. Una respuesta atestiguada es un testigo
+    del contacto (s. XVI), no del s. XIV-XV (regla 3); una retro-abstraída o
+    hipotética es tradición viva del s. XX.
+  fuera:
+    - que: 'el canon de la simulación (`fuente: canon-simulacion`)'
+      ids: [transmision-004, transmision-009, transmision-010, transmision-011]
+      por_que: >-
+        Responden —la planta que cura y la que mata, «la tierra no perdona la
+        prisa», la semilla guardada que no se come aunque haya hambre, el niño
+        que «ya sabe cuándo regar … leyendo la tierra»— pero son el diseño del
+        elenco, no una fuente. Contarlos sería medir lo que el motor enseña
+        (lo que emerge es el producto; lo que se escribió, no).
+    - que: 'hechos del corpus caquetío cuyo contenido es de otro pueblo (Vía A, comparanda)'
+      ids: [parentesco-022, transmision-025, transmision-028, transmision-032]
+      por_que: >-
+        Dicen algo de la tierra, pero de los achaguas (cada esposa con su
+        conuco) o de los wayuu (las plantas medicinales que la muchacha deja en
+        herencia; la lluvia Juyaa que fecunda a la tierra Mma). Darlos como
+        respuesta caquetía convertiría al vecino en variante del caquetío; la
+        voz achagua está en sus propias propuestas, y la wayuu no tiene
+        todavía hechos en el esquema de las hermanas.
+    - que: 'el medio sin la gente'
+      ids: [ecologia-001, ecologia-002, ecologia-005, ecologia-007, ecologia-020, ecologia-033, ecologia-082, ecologia-083]
+      por_que: >-
+        Describen el clima, el suelo, el agua o la fauna (algunas con autor
+        moderno que lee el paisaje, como Arcaya con el cují), no lo que el
+        caquetío hacía o creía de ellos. Son el escenario de la respuesta, no
+        la respuesta.
+    - que: 'la lluvia en la persona del señor'
+      ids: [creencia-013]
+      por_que: >-
+        Es la respuesta caquetía atestiguada más fuerte a la pregunta —el gran
+        cacique de Coro «da á entender á los indios que él da los temporales»
+        (carta de Ampíes, c. 1526)— y no cabe en ningún aspecto: no es un dueño
+        del lugar (es un hombre), ni un saber, ni un calendario. Se propone el
+        aspecto que falta (abajo); no se fuerza.
+  aspectos_propuestos:
+    - aspecto: quien-da-la-lluvia
+      pregunta: '¿Quién da la lluvia y el temporal: un espíritu, una piedra, el señor, el piache?'
+      por_que: >-
+        Es la diferencia más nítida que deja la pregunta y no tiene casilla.
+        El taíno guarda el tiempo en cemíes y piedras que posee el cacique; el
+        lokono le habla a la lluvia como a un jefe; el caquetío lo pone en la
+        persona del señor, y el maipure en la del piache. Hoy los dos primeros
+        entran por `dueno-del-lugar` (hay un ser o un objeto) y los dos últimos
+        no entran en ninguno.
+      candidatos: [creencia-013, taino-creencia-011, taino-creencia-107, taino-creencia-108, lokono-creencia-116, maipure-creencia-106, kalinago-creencia-003, achagua-creencia-003, achagua-creencia-021]
+    - aspecto: nombre-de-la-tierra
+      pregunta: '¿Se llama la gente como su tierra, o la tierra como su agua?'
+      por_que: >-
+        Pané: la isla «si chiamaua Aiti, & così si chiamano gli habitatori»;
+        Paraguaná, de `para` 'mar', y «pararuañú», la gente de la orilla;
+        Curiana, nombre de un territorio y no de un pueblo; los lokono, «Loko»,
+        la gente, y Kaieri, la isla del origen del piache. Ninguno de los nueve
+        aspectos lo recoge.
+      candidatos: [taino-geografia_politica-012, geografia_politica-025, geografia_politica-007, lokono-geografia_politica-007]
+    - aspecto: origen-del-sustento
+      pregunta: '¿De dónde vienen las plantas que se comen, y quién las dio?'
+      por_que: >-
+        `origen-en-la-tierra` pregunta por la gente, no por la yuca. El kalinago
+        la recibe de un hombre que baja del cielo y le enseña a plantarla; el
+        lokono, el primer totumo, de la Orehu que sale del agua; el achagua
+        tiene un dios de las labranzas. Hoy van a `saber-del-medio`,
+        `lugar-sagrado` o `dueno-del-lugar`, que no es lo que dicen.
+      candidatos: [kalinago-creencia-113, lokono-creencia-110, achagua-creencia-003]
+
+caquetio:
+  - id: creencia-004
+    tierra: [saber-del-medio]
+    nota: 'El aprendiz de piache aprende «reconociendo plantas junto al piache mayor». Atestiguado sólo el ayuno, y en Nueva Segovia, no en la costa (Arcaya 1920 p. 101); lo de las plantas se apoya en Perrin (wayuu): responde con esa capa.'
+  - id: creencia-008b
+    tierra: [muertos-y-tierra]
+    nota: 'El alma se queda un tiempo junto a la sepultura o la choza, o «recorriendo el bosque y la sabana» (Arcaya 1920 pp. 104-108, síntesis de crónicas de Coro): el muerto se queda en el paisaje antes de irse. Atestiguado, de segunda mano.'
+  - id: creencia-009
+    tierra: [muertos-y-tierra, lugar-sagrado]
+    nota: 'Una tierra de los muertos con topónimo propio, donde la vida sigue. Reconstruido desde dos tradiciones (wayuu Jepira, Jahn 1927 p. 184; taíno Coaibai): ni el nombre ni el lugar son caquetíos, y la única voz caquetía dice abajo (creencia-028).'
+  - id: creencia-010
+    tierra: [muertos-y-tierra]
+    nota: 'Responde por la negativa: el muerto común no vuelve a la tierra; se quema, los huesos se muelen entre dos piedras y se beben en mazamorra de maíz (Oviedo t. II pp. 299-300). Atestiguado, Tierra Firme del contacto.'
+  - id: creencia-010b
+    tierra: [muertos-y-tierra]
+    nota: 'El díao desecado se queda en su hamaca, en su casa, y «en aquella casa no ha de vivir ninguno» (Oviedo t. II p. 300): el muerto se queda con un lugar que los vivos dejan. Atestiguado.'
+  - id: creencia-012
+    tierra: [muertos-y-tierra]
+    nota: 'Huesos y cenizas de los muertos ligados a las nubes y a la lluvia que hace germinar. Reconstruido por analogía regional (cumanagotos, Civrieux vía Paz Reverol 2018): no hay testigo caquetío.'
+  - id: creencia-014
+    tierra: [calendario-del-medio]
+    nota: 'El rito sigue las dos estaciones del viento y del agua, y a las primeras lluvias se les pide que caigan buenas. Reconstruido: las estaciones son del canon y el rito estacional es paralelo de pueblos vecinos (Jahn 1927 p. 384).'
+  - id: creencia-015
+    tierra: [dueno-del-lugar, limite-de-uso, lugar-sagrado]
+    nota: 'Un accidente del paisaje es un dueño-espíritu que veda la caza, el cultivo o el sexo en su recinto (la montaña de Sorte). Retro-abstraído del culto de María Lionza (Ferrándiz 1999), tradición del s. XX: responde con esa capa.'
+  - id: creencia-016
+    tierra: [reciprocidad-ofrenda]
+    nota: 'A los muertos y a los espíritus se los alimenta con ofrendas para que sigan favorables. Retro-abstraído (Ferrándiz 1999), convergente con el wayuu; la fuente no dice que esos espíritus sean los de la tierra.'
+  - id: creencia-020
+    tierra: [limite-de-uso]
+    nota: 'Al conejo y al venado echados no se les tira, porque «era matarlos a traición» (fray Pedro Simón vía Arcaya 1920 p. 42). La única norma de caza caquetía atestiguada: del contacto, y moral, no técnica.'
+  - id: creencia-021
+    tierra: [dueno-del-lugar, limite-de-uso, lugar-sagrado]
+    nota: 'El cerro de Capuhana tiene un dueño, Capó, que con una serpiente emplumada impide cortar sus árboles (Esteves 1989 p. 26; Antolínez 1946 vía Tamayo). Tradición viva del s. XX, retro-abstraída: hipotético.'
+  - id: creencia-022
+    tierra: [lugar-sagrado, calendario-del-medio]
+    nota: '«Las Piedras del Almanaque», petroglifos del cerro Siraba pegado al Capubana (Esteves 1989 p. 60): el único objeto que la tradición liga a un calendario. El nombre es local y moderno: hipotético.'
+  - id: creencia-028
+    tierra: [muertos-y-tierra]
+    nota: 'La tierra de los muertos está abajo: sawaka, «the underworld», y «baha na sawaka», morir (van Buurt 2014 p. 35). La única voz atribuida al caquetío, por el papiamento: reconstruido.'
+  - id: ecologia-004
+    tierra: [saber-del-medio]
+    nota: 'Distinguir la duna viva, que camina, de la duna vieja, fijada por el cují. Reconstruido desde la geomorfología (Camacho et al. 2011): ninguna fuente dice que el caquetío la leyera así.'
+  - id: ecologia-008
+    tierra: [saber-del-medio]
+    nota: 'El agua dulce es lo que manda, y la comunidad la captura en el pulso húmedo y la administra en la seca (buko, jaguey, jacuque, voces atestiguadas). Reconstruido: el clima está medido, el manejo se infiere.'
+  - id: ecologia-010
+    tierra: [calendario-del-medio]
+    nota: 'La sal se cosecha cuando la seca y el alisio secan las charcas: el año de la sal es el del viento. Reconstruido desde el proceso actual de Las Cumaraguas.'
+  - id: ecologia-038
+    tierra: [calendario-del-medio, saber-del-medio]
+    nota: 'Las aves marcan el año y delatan dónde está el pescado. Reconstruido desde la avifauna de Cuare y una práctica pesquera general: no hay testigo caquetío.'
+  - id: ecologia-080
+    tierra: [saber-del-medio]
+    nota: 'Sarabón y Suriquiba, puntos de la costa que sirvieron «de atalaya a los pescadores para avistar (columbrar) los cardúmenes» (Esteves 1989 pp. 58, 61): leer el mar desde un lugar con nombre. Atestiguado el uso, sin fecha: Esteves lo pone en pasado.'
+  - id: ecologia-093
+    tierra: [saber-del-medio]
+    nota: 'Las aves del monte y de la orilla tienen nombre caquetío que imita su canto (dara, wakoa, chuchubi, warawara): la lengua nombra lo que se oye. Reconstruido sobre voces atestiguadas (Zavala 2015, Alvarado 1921 p. 143, van Buurt 2014).'
+  - id: ecologia-094
+    tierra: [calendario-del-medio]
+    nota: 'El año se oye y se ve en las aves migratorias de Paraguaná. Medido hoy en GBIF y proyectado al s. XV por la antigüedad de las rutas: reconstruido.'
+  - id: geografia_politica-004
+    tierra: [saber-del-medio]
+    nota: 'En tiempos antiguos los indios hicieron el buco, represa con canal de dos leguas, y cada temporada de lluvias lo reparaban entre miles (Ballesteros 1550 vía Oliver 1989 pp. 273-274). Atestiguado, y ya colonial en la carta: la obra es anterior, el uso que se describe no.'
