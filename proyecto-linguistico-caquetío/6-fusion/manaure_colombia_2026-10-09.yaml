@@ -1,21 +1,654 @@
 # ─────────────────────────────────────────────────────────────────────────
 # PROPUESTA — Los Manaure de Colombia: ¿homenaje o herencia? 2026-10-09.
-# BORRADOR EN CURSO (commit de resguardo). Se completa en esta misma sesión.
 #
 # Regla 5: esto PROPONE. No toca 3-mundo/, 2-lengua/toponimos.yaml,
 # curiana_lexicon.py, lexicon_*.py ni curiana_polities.py.
+# Regla 4: Manaure (La Guajira) y Manaure Balcón del Cesar caen en la esfera
+# OCCIDENTAL (estado `futura`), no en la costera que se simula.
+# Regla 3: nada de lo que nombra a estos dos pueblos es precontacto. Lo más
+# temprano que se pudo leer sobre la región es de 1526-1534; lo más temprano
+# que se pudo leer con el NOMBRE de estos dos lugares es de 1948 (La Guajira)
+# y de la tradición de fundación de 1874-1875 (Cesar).
+# Regla 2: cada versión del origen del nombre lleva su etiqueta; en duda, se
+# degradó.
+# Las cifras (sondas, aciertos, familia -aure, distancias) las emite
+# 6-fusion/scripts/medir_manaure_colombia_2026-10-09.py en
+# 6-fusion/medicion_manaure_colombia_2026-10-09.yaml; aquí se citan (regla 1).
+# No se descargó nada: lo que falta va a `fuentes_a_buscar`.
 # ─────────────────────────────────────────────────────────────────────────
 meta:
   recogido: '2026-10-09'
   estado: sin-fusionar
   quien: 'minero de los Manaure de Colombia (Claude Opus 5.5), rama vault/manaure-colombia'
+  bitacora: 4-fuentes/sesiones/13_manaure_colombia.md
+  issue_borrador: 6-fusion/issues-pendientes/manaure-colombia-2026-10-09.md
+  medicion: 6-fusion/medicion_manaure_colombia_2026-10-09.yaml
+  script: 6-fusion/scripts/medir_manaure_colombia_2026-10-09.py
   pregunta: >-
     Miguel (2026-10-09): «hay un pueblo que tengo entendido que está también
-    en la frontera, que se llama Manaure, en Colombia… podríamos investigar
-    más sobre esos Manaure de Colombia».
-  hallado_hasta_ahora:
-    - 'Esteves 1989 p. 121: MANAURE, cerro donde nace el río Ricoa (OCR «Ricos») — un Manaure toponímico en Falcón'
-    - 'Carvajal 1647-48 (ed. 1892): «cataures y manaures muy labrados» — Alvarado 1921: «Carvajal escribe incorrectamente manaure» por manare (tamiz)'
-    - 'Carvajal ed. 1892, índice: el gran cacique Manaure «soberano de las naciones índicas … de la laguna de Maracaybo» (nota del editor)'
-    - 'Steward 1948 (HSAI vol. 4, The Goajiro): «During the salt season the Indians of the interior flock to Manaure»'
-    - 'Morón 2012: «Arco Manare o Arco Manaure», halo lunar, en las montañas merideñas y la cuenca del lago de Maracaibo'
+    en la frontera, que se llama Manaure, en Colombia, lo cual me parece muy
+    interesante… podríamos investigar más sobre esos Manaure de Colombia».
+    Cuatro preguntas, en orden: (1) ¿desde cuándo existe cada topónimo?
+    (2) ¿homenaje moderno al cacique de Coro o herencia colonial temprana?
+    (3) ¿alguna fuente une un «Manaure» con los bubures y buredes del Perijá?
+    (4) ¿hay otros topónimos en -aure en el oeste?
+  lo_que_ya_sabia_el_vault:
+    - '4-fuentes/antolinez-1944-manaure.md y comentario-32-dossier-d1.md: Manaure es TÍTULO, no nombre (cuatro testigos)'
+    - '6-fusion/antroponimos_caquetios.yaml: manaure (título) y el formante -aure (Adaure, Timaure, Yaraure, Chunaure, Manaure, Anaure, Naure)'
+    - '3-mundo/polities-caquetias.md §La quinta y curiana_polities.py «occidental»: la Guajira, Cabo de la Vela, Punta Espada–Chichibacoa, Juruara; «very little is known»'
+    - '3-mundo/etnias.yaml etnia-004 bubure, etnia-005 burede, etnia-010 coanao, etnia-011 wanebucán'
+    - '4-fuentes/esteves-1989.md: Manaure, apellido vivo de dos informantes (Misaray, El Vínculo)'
+    - '6-fusion/esteves_parte2_falcon.yaml: MANAURE, «cerro donde nace el río Ricoa» (Esteves p. 121)'
+    - '6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml: sal de los xaguas con los caquetíos de Barquisimeto'
+  fuentes_consultadas:
+    repo:
+      - {obra: oviedo-y-valdes-1852-1855, que: 't. II, lib. XXV cap. VIII p. 295 (Mapaure), vista en imagen; t. II pp. 271-272 (buredes); la lámina I del t. II (el mapa del lago y el Valle), vista en imagen; t. II p. 210 (Paralaure), t. II p. 217 y t. IV p. 538 (Parataure/Harataure)'}
+      - {obra: jahn-1927, que: 'pp. 32, 36, 38, 41 (Axuduara, Mapaure = Moporo, Bobures, la carta de Chaves) y p. 75 (los motilones), en pdftotext'}
+      - {obra: oliver-1989-cap3, que: 'edición DOC: pp. 201 (Parepi y Chorna), 203-205, 220-222 (bubures, pemenos) y 270 (Manaure «casado con hijas de caribes», 1526), en capa de texto'}
+      - {obra: perez-de-tolosa-1546, que: 'Fernández Duro t. II p. 248, la «Tercera carta»: «un cacique llamado Manaore»'}
+      - {obra: carvajal-1892, que: 'pp. 147, 168 y 317 del texto (OCR de archive.org, sin imagen) y la nota del editor en los «Apuntes biográficos» (p. 408 según el OCR)'}
+      - {obra: alvarado-1921, que: 'MANARE, pp. 199-200 (pdf 229)'}
+      - {obra: moron-2012-petroglifos, que: 'p. 167 (pdf 7): «Arco Manare o Arco Manaure»'}
+      - {obra: steward-1948-hsai-4, que: 'p. 374 (Armstrong y Métraux, «The Goajiro»): «flock to Manaure»'}
+      - {obra: esteves-1989, que: 'p. 13 (la serie de apellidos), p. 71 (los informantes Manaure), p. 121 (MANAURE, cerro) y el índice, en el OCR'}
+      - {obra: aguado-1581, que: '«Managuare, el cacique de Coro»; Perataure (Meta) y «el del Guayaure o Paria» (el Orinoco); el texto de Gutenberg no da página'}
+      - {obra: oviedo-y-banos, que: 'Baraure (ed. Ayacucho, pdf 111) y, en el t. II de Fernández Duro 1885, Urimaure (p. 50) y el índice de Manaure (I 36; II 248, 266)'}
+      - {obra: castellanos-elegias, que: '«Mauaure» (dos veces, OCR del 1857) por Manaure, Elegías p. 183'}
+      - {obra: antolinez-1946-hacia-el-indio, que: '«soberanía feudal de los manaure», «el Manaure único»'}
+      - 'barrido de los 106 textos de fuentes_caquetios/ (los .txt y los PDF con capa por pdftotext): ver la medición'
+    web:
+      - {fecha: '2026-10-09', url: 'https://es.wikipedia.org/wiki/Manaure_(La_Guajira)', que: 'municipio por ordenanza 015 de 1973, vigente desde el 1-X-1974; «primeros indicios de habitantes de origen europeo y mestizo … 1723 aproximadamente»; nombre «del Cacique Manaure» según la tradición oral; cita a la alcaldía'}
+      - {fecha: '2026-10-09', url: 'https://en.wikipedia.org/wiki/Manaure,_La_Guajira', que: 'infobox «Founded 1723» sin cita; la historia empieza en los coanaos y la sal industrial en los años 1920; cita a Aguilera Díaz 2004 (BanRep)'}
+      - {fecha: '2026-10-09', url: 'https://es.wikipedia.org/wiki/Manaure_Balcón_del_Cesar', que: 'fundada en 1875 por Buenaventura Maya; municipio por ordenanza 019 de 1980; nombre de «un prestigioso y noble cacique de la región del Occidente Venezolano … más allá de la costa oriental del Lago de Maracaibo», sin cita'}
+      - {fecha: '2026-10-09', url: 'https://en.wikipedia.org/wiki/Manaure,_Cesar', que: '1-I-1874, Buenaventura Maya; «named the village in honor of the Cacique Manaure which ruled Maracaibo» (cita «Cesar 30 Años de Progreso», Gobernación del Cesar, 1997); los «Bohures … descendants of the Caribs … crossing the Serranía del Perijá» (cita SINIC); corregimiento de Los Robles La Paz en 1913; ordenanza 28 del 28-XI-1980'}
+      - {fecha: '2026-10-09', url: 'https://www.ecured.cu/Manaure_Balc%C3%B3n_del_Cesar_(Colombia)', que: 'las dos tradiciones: «indios bobures o boredes» con su cacique Manaure, y «sabana donde mana la ubre»; cita «Nuestro municipio», alcaldía'}
+      - {fecha: '2026-10-09', url: 'https://www.universocentro.com/NUMERO90/Salinas.aspx', que: 'Camilo Alzate 2017: Mosquera 1862 (salinas guajiras para «la civilización de los indígenas»); una cédula real que reconoce a los wayuu las salinas de Manaure y Sorshimana, SIN fecha ni fuente; el cacique Manaure «habitó en dominios de lo que hoy es Venezuela»'}
+      - {fecha: '2026-10-09', url: 'https://www.las2orillas.co/el-tesoro-de-las-salinas-de-manaure-en-la-guajira-que-el-congreso-ya-ordeno-revivir/', que: '«Ya en 1777, se otorgaban concesiones para explotar las salinas», sin fuente y sin decir que la salina fuera la de Manaure'}
+      - {fecha: '2026-10-09', url: 'https://guajiranews.com/destacadas/las-salinas-de-manaure-y-su-historia/', que: 'columna de 2024: las fechas empiezan en 1835; cita IGAC 1977'}
+      - {fecha: '2026-10-09', url: 'https://fr.wikisource.org/wiki/Voyage_%C3%A0_la_Nouvelle-Grenade/03', que: 'Reclus 1860, cap. III (Rio-Hacha y los goajiros), leído entero: NO nombra Manaure'}
+      - {fecha: '2026-10-09', url: 'https://overpass.kumi.systems/api/interpreter', que: 'las dos consultas de la caja occidental (8.5,-74.5,12.6,-70.9), literal en la medición'}
+      - {fecha: '2026-10-09', url: 'https://nominatim.openstreetmap.org/', que: 'coordenadas de Coro, Yaracal, Bobures, Cabo de la Vela y La Paz (ids en la medición); «Moporo» no devuelve nada'}
+  sondas: >-
+    Medidas por el script (medición §sondas): 106 textos leídos, 4 PDF sin
+    capa o dañados (Fernandes 2020 Nature, Oviedo t. I sin la copia íntegra,
+    Ramos Pérez 1978, Rouse y Cruxent 1963). Grafías del nombre: manaure 163,
+    manavre 1 (Carvajal), manaore 1 (Pérez de Tolosa, FD t. II p. 248),
+    managuare 1 (Aguado), managuanare/managuarire 2 (Palabras vivas), mauaure
+    2 (OCR de Castellanos 1857), manahure 0. La homógrafa «manare» se cuenta
+    aparte (39, casi todas el cernidor de Alvarado y de Fabo). De los 17
+    aciertos con una palabra del oeste a menos de 600 caracteres (medición
+    §oeste), leídos uno a uno: UNO es el Manaure de la Guajira (Steward 1948);
+    dos atan el nombre al oeste sin ser lugar (la nota de 1892 del editor de
+    Carvajal y el «Arco Manaure» de Morón); uno es el cernidor («manaures muy
+    labrados», Carvajal); el resto es el Manaure de Coro con Coquibacoa,
+    Maracaibo o la Guajira cerca por azar del texto. Ningún libro de fuentes
+    del repo nombra un LUGAR Manaure en la Guajira, el Perijá, el Valle de
+    Upar o Maracaibo antes de 1948.
+  no_hallado:
+    - 'Ningún «Manaure» como lugar en la Guajira o el Cesar antes del s. XIX en lo que se pudo leer (repo + web). La primera mención LEÍDA es de 1948 (La Guajira) y la tradición de fundación de 1874-1875 (Cesar).'
+    - 'Ningún «Manaure» en la lámina del t. II de Oviedo (el mapa del lago, la Sierra de los Bubures y El Valle): vista en imagen.'
+    - 'Ningún «Manaure» en Reclus 1860 (Rio-Hacha y los goajiros), leído entero en Wikisource.'
+    - 'La fuente de la versión «el resplandor de un indígena de gran abolengo» (Manaure, La Guajira), citada en la pregunta: no localizada en la web (búsqueda 2026-10-09).'
+    - 'Ninguna fuente que una a un Manaure con los bubures o los buredes, ni con el Perijá.'
+    - 'Ninguna etimología wayuunaiki con diccionario detrás: sólo un sitio de nombres de bebé (venere.it), sin fuente.'
+    - 'La fecha de creación del municipio Cacique Manaure (Falcón): no verificada.'
+  no_descargado: >-
+    Nada. Las fuentes que responderían la pregunta 1 son PDF o escaneos
+    (Aguilera Díaz 2004, la edición de Unimagdalena de Julián 1787, Narváez y
+    la Torre 1778, el Derrotero de 1810/1820, Simons 1885 con su mapa,
+    Candelier 1893, Felipe Pérez 1863/1868, la Carta corográfica del
+    Magdalena de 1864): van a `fuentes_a_buscar`.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 1 · LOS TOPÓNIMOS
+# ═════════════════════════════════════════════════════════════════════════
+toponimos:
+
+  - id: manaure-guajira
+    nombre: 'Manaure (La Guajira, Colombia), también «Salinas de Manaure»'
+    ubicacion:
+      lat: 11.7771128
+      lon: -72.4469366
+      origen: 'OSM node 313909383 (place=town), consulta Overpass del 2026-10-09; costa caribe de la Media Guajira'
+      distancias_medidas: 'a Coro 305,5 km; al Cabo de la Vela 55,9 km (medición §donde)'
+    municipio_desde: >-
+      1-X-1974 (ordenanza 015 de 1973), según la alcaldía vía es.wikipedia.
+      deuda: sin-procedencia.
+    primera_mencion:
+      fecha: '1948 (publicación); describe el s. XX'
+      fuente: 'steward-1948-hsai-4, p. 374 (Armstrong y Métraux, «The Goajiro»)'
+      cita: '«During the salt season the Indians of the interior flock to Manaure, where they are paid for loading sacks of salt into the warehouse and onto ships.»'
+      url: 'https://archive.org/details/bulletin14341948smit'
+      verificado: 'sí, en la capa de texto del repo; no en imagen'
+      reserva: >-
+        Es la primera que esta sesión pudo LEER, no la primera que existe. La
+        página siguiente (p. 375) cita a Simons 1885 para los clanes: un
+        viajero de 1885 con mapa de la península, que muy probablemente
+        nombra el lugar (fuentes_a_buscar).
+    menciones_anteriores_sin_verificar:
+      - fecha: '1864'
+        dicho: '«La producción de sal en La Guajira era conocida desde 1864 cuando se encontraban activas las salinas de Chimare (Uribia), Manaure y Navio Quebrado (Riohacha)»'
+        de_donde: 'resumen de un buscador (2026-10-09); la página de origen no se identificó. Probablemente Aguilera Díaz 2004 (BanRep), que es la fuente de la historia en en.wikipedia'
+        etiqueta: 'sin verificar — no entra como hecho'
+      - fecha: '1777'
+        dicho: '«Ya en 1777, se otorgaban concesiones para explotar las salinas»'
+        de_donde: 'las2orillas.co, sin fuente; no dice que la salina fuera la de Manaure'
+        etiqueta: 'sin verificar — no entra'
+      - fecha: '1723'
+        dicho: '«los primeros indicios de habitantes de origen europeo y mestizo se remontan al año 1723 aproximadamente»'
+        de_donde: 'alcaldía de Manaure vía es.wikipedia; en.wikipedia lo convierte en «Founded 1723»'
+        etiqueta: 'sin verificar; no es mención del NOMBRE, es una fecha de poblamiento sin documento'
+      - fecha: 's. XVIII (sin año)'
+        dicho: 'una cédula real que reconoce a los wayuu la propiedad de las salinas de Manaure y Sorshimana'
+        de_donde: 'Alzate 2017 (Universo Centro), sin fecha, rey ni signatura'
+        etiqueta: 'sin verificar — no entra'
+    menciones_posteriores:
+      - '1862: Mosquera destina las salinas marítimas de la Guajira a «la civilización de los indígenas» (Alzate 2017; no nombra Manaure en lo citado)'
+      - 'c. 1920-1922: concesiones a particulares en Manaure; Luis Cotes (columnas de prensa, sin fuente primaria)'
+      - '1941: el Banco de la República toma la concesión de las salinas marítimas (prensa; Aguilera Díaz 2004 por leer)'
+      - '1948: Steward, HSAI vol. 4, p. 374 (arriba)'
+      - '1974: municipio'
+    origen_del_nombre:
+      - version: 'del «Cacique Manaure»'
+        etiqueta: tradicion-oral
+        de_donde: 'alcaldía vía es.wikipedia («según la tradición oral»)'
+      - version: 'homenaje al cacique caquetío de Coro, bautizado en 1527'
+        etiqueta: 'divulgación sin documento (homenaje no fechado)'
+        de_donde: 'es.wikipedia y textos turísticos; uno de ellos lo hace «asesinado en 1821», fecha imposible para el cacique del contacto'
+      - version: '«el resplandor de un indígena de gran abolengo»'
+        etiqueta: tradicion-oral
+        de_donde: 'citada en la pregunta de Miguel; la fuente no se localizó'
+      - version: 'voz wayuunaiki que «evoca fortaleza y liderazgo»'
+        etiqueta: etimologia-popular
+        de_donde: 'venere.it (sitio de nombres de bebé), sin diccionario ni raíz'
+      - version: >-
+          eco de un TÍTULO caquetío en la esfera occidental: Martín (1534)
+          pone «coanaos e caquetíos» en Coquibacoa y el Cabo de la Vela, y el
+          Cabo está a 55,9 km
+        etiqueta: hipotetico
+        de_donde: 'proyecto (esta sesión). Lo haría subir: un documento colonial que nombre «Manaure» (lugar o persona) en la Guajira. Lo hunde: que la primera mención sea del s. XIX'
+      - version: 'la homógrafa «manare» (cernidor, aro de mimbre)'
+        etiqueta: hipotetico
+        de_donde: >-
+          proyecto. Se anota como CAUTELA, no como propuesta: Carvajal (1648)
+          ya escribe «manaures» por manares (Alvarado 1921 p. 199), así que en
+          la pluma colonial los dos nombres pueden confundirse. Ningún
+          indicio de que el topónimo guajiro venga de ahí.
+    regla_3: 'nada de esto es precontacto; la sal guajira sí es antigua (arqueología por mirar), el NOMBRE no tiene fecha antes del s. XIX en lo leído'
+
+  - id: manaure-cesar
+    nombre: 'Manaure Balcón del Cesar (Cesar, Colombia); y el Río Manaure'
+    ubicacion:
+      lat: 10.3910411
+      lon: -73.0270699
+      origen: 'OSM node 468769318 (place=town), Overpass 2026-10-09; vertiente occidental de la Serranía del Perijá, sobre el valle del Cesar (el Valle de Upar)'
+      rio: 'Río Manaure: OSM ways 279294636 y 871531038 (waterway=river)'
+      distancias_medidas: 'a La Paz 15,7 km; a Bobures (Zulia) 240,1 km; a Coro 383,7 km; a Manaure de la Guajira 166,6 km (medición §donde)'
+    fundacion: >-
+      1-I-1874 (en.wikipedia, citando a la Gobernación del Cesar 1997) o 1875
+      (alcaldía vía es.wikipedia), por Buenaventura Maya, ganadero de La Paz.
+      Corregimiento de Los Robles La Paz en 1913; municipio por ordenanza 28
+      del 28-XI-1980 (019 de 1980 según es.wikipedia). deuda: sin-procedencia.
+    primera_mencion:
+      fecha: '1874-1875 (tradición de fundación)'
+      fuente: 'alcaldía de Manaure Balcón del Cesar, «Historia» (vía en/es.wikipedia y EcuRed); Gobernación del Cesar, Cesar 30 años de progreso (1997)'
+      url: 'https://en.wikipedia.org/wiki/Manaure,_Cesar'
+      verificado: 'no: ningún documento del s. XIX visto. La «sabana de Manaure» sería anterior a la fundación según las dos tradiciones'
+    origen_del_nombre:
+      - version: 'los «indios bobures o boredes», caribes venidos de Venezuela por el Perijá, se asentaron en las colinas de la sabana con su cacique Manaure, y la sabana se quedó con su nombre'
+        etiqueta: tradicion-oral
+        de_donde: 'alcaldía vía EcuRed («según nuestros antepasados»); en.wikipedia (SINIC) dice «Bohures»'
+        lo_que_tiene_de_documentado: >-
+          Los DOS etnónimos son del s. XVI y están en el canon (etnia-004
+          bubure, etnia-005 burede); la lámina del t. II de Oviedo pone a los
+          «Buredes coronados» en EL VALLE (el de Upar) y a los «Bubures» al pie
+          de la «Sierra de los Bubures», vista en imagen. El cacique Manaure de
+          esa tradición, no: ninguna fuente lo pone allí.
+      - version: '«sabana donde mana la ubre», contraída en Manaure'
+        etiqueta: etimologia-popular
+        de_donde: 'EcuRed (alcaldía)'
+      - version: 'Buenaventura Maya lo llamó así en honor del «Cacique Manaure which ruled Maracaibo» / «del Occidente Venezolano … más allá de la costa oriental del Lago de Maracaibo»'
+        etiqueta: 'homenaje (divulgación, sin documento)'
+        de_donde: 'en.wikipedia (Gobernación del Cesar 1997) y es.wikipedia'
+        nota: >-
+          La idea de un Manaure señor de Maracaibo ya circulaba impresa en
+          1892: el editor de Carvajal lo hace «soberano de las naciones índicas
+          que habitaban las inmediaciones de la laguna de Maracaybo» (hecho
+          manaure-col-007). Ninguna crónica del s. XVI del repo lo pone allí;
+          el Manaure documentado es de Coro.
+    regla_3: 'la fundación es de la segunda mitad del s. XIX; los etnónimos son del s. XVI; nada es precontacto'
+
+  - id: cacique-manaure-falcon
+    nombre: 'Municipio Cacique Manaure (Falcón, Venezuela), cabecera Yaracal'
+    ubicacion: {lat: 10.974934, lon: -68.5452435, origen: 'Nominatim: way 1426715582 (Yaracal); a 131,5 km de Coro (medición)'}
+    primera_mencion: {fecha: 'moderna (no verificada)', fuente: 'deuda: sin-procedencia', verificado: false}
+    origen_del_nombre:
+      - {version: 'homenaje al cacique de Coro', etiqueta: 'homenaje moderno (así lo da la pregunta; no se verificó la fecha)'}
+
+  - id: cerro-manaure-falcon
+    nombre: 'MANAURE, «Cerro donde nace el río Ricoa» (el OCR lee «Ricos»; el Ricoa nace en el Distrito Petit, Esteves p. 6 del tomo 6 del OCR, entrada RICOA)'
+    ubicacion: 'Sierra de San Luis / Distrito Petit (Falcón); sin coordenada'
+    primera_mencion: {fecha: '1989 (Esteves)', fuente: 'esteves-1989 p. 121', verificado: 'OCR, no imagen'}
+    nota: 'ya registrado en 6-fusion/esteves_parte2_falcon.yaml; se nombra aquí porque es el único Manaure-lugar dentro de la Kaketiana que dan las fuentes del repo, y tampoco tiene fecha antigua'
+
+  - id: mapaure-juruara
+    nombre: 'Mapaure, «tierra de Xuduara» (Juruara), orilla sur-sureste del lago de Maracaibo'
+    ubicacion: >-
+      Sin coordenada: Jahn (1927 pp. 32 y 41) lo identifica con «Moporo», y
+      Nominatim no devuelve «Moporo» (sí Tomoporo de Agua, node 5300664018,
+      9.6227, -71.0600, que NO se iguala aquí). Es la provincia donde Oliver
+      pone la aldea caquetía de Parepi entre bubures (DOC p. 201).
+    primera_mencion:
+      fecha: '29 de agosto de 1533'
+      fuente: 'oviedo-y-valdes-1852-1855, t. II, lib. XXV, cap. VIII, p. 295'
+      cita: '«Allí supieron que los chripstianos de Maracaybo estaban en Mapaure, tierra de Xuduara, çerca de allí, donde estaban haçiendo haçer caçabi y mahiz para la provission del pueblo de Maracaybo» … «desde donde toparon á aquel Françisco Martin hasta Mapaure, donde los chripstianos estaban»'
+      url: 'https://archive.org/details/historiageneral01fernguat'
+      verificado: 'sí, en imagen (pdf 309)'
+    por_que_importa: >-
+      Es el ÚNICO nombre en -aure de la esfera occidental documentado en el
+      s. XVI que dan las fuentes del repo. Y está en la provincia de los
+      bubures y los pemenos, «que hablan como los bubures» (la misma página),
+      no en la Guajira ni en el Cesar.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 2 · LA FAMILIA -AURE EN EL OESTE
+# ═════════════════════════════════════════════════════════════════════════
+familia_aure_occidental:
+  pregunta: '¿hay una familia de nombres en -aure en la Guajira, el Perijá, Maracaibo o el Cesar, como la hay en Paraguaná (Adaure, Timaure, Yaraure, Chunaure, Manaure; Esteves p. 13)?'
+  hoy_mapa_vivo: >-
+    Medido en OSM (Overpass, 2026-10-09, caja 8.5,-74.5,12.6,-70.9: la
+    Guajira, el Cesar, el Magdalena oriental, el norte de Norte de Santander
+    y casi todo el Zulia): sólo
+    TRES nombres llevan una palabra en -aure, y los tres son Manaure:
+    Manaure (La Guajira), Manaure Balcón del Cesar y el Río Manaure (medición
+    §donde.overpass_oeste). Los demás aciertos de la sonda son «Laurel(es)»,
+    «Mauren», «Cashaurechon», «Atasure», «Merrure». Ojo: OSM sólo tiene lo
+    que alguien cartografió; un cero de OSM mide el mapa, no el habla.
+  en_las_fuentes_del_repo: >-
+    El barrido de toda palabra X-aure en los 106 textos (medición
+    §familia_aure) da un solo nombre de lugar occidental del s. XVI:
+    MAPAURE (1533, Juruara). Los demás aciertos con contexto occidental son el
+    Manaure de Coro, voces comunes (cataure 'cesta', maure 'faja', ambas
+    de Carvajal en los Llanos), o Paraguaná (Adaure, Chunaure en el índice de
+    Esteves).
+  fuera_de_la_kaketiana: >-
+    El final -aure no es caquetío por sí mismo. Las mismas crónicas lo dan en
+    tierras caribes y ajenas: Paralaure, cacique de Cainorocabo, en Trinidad
+    (Oviedo t. II p. 210); Parataure/Harataure, isla en la boca del Orinoco
+    (Oviedo t. II p. 217, t. IV p. 538); Perataure, en el Meta, y el
+    Guayaure, nombre del Orinoco («el del Guayaure o Paria», Aguado);
+    Urimaure, cacique de los tarmas, en la provincia de Caracas (Oviedo y
+    Baños, ed. Fernández Duro t. II p. 50); la provincia de Baraure o Boraure,
+    «en el principio de los llanos» (Oviedo y Baños; Aguado). Y Mapaure, entre pemenos y
+    bubures de lengua caribe. Una terminación que reaparece de Trinidad al
+    lago no prueba filiación caquetía.
+  veredicto: >-
+    No hay familia -aure en el oeste: hay UN Manaure por pueblo, más un río
+    con el mismo nombre que su pueblo, y un Mapaure del s. XVI en Juruara.
+    Eso NO reproduce el patrón de Paraguaná (cinco apellidos en serie) y, por
+    lo que se ve en Trinidad y el Orinoco, aunque lo reprodujera no sería
+    prueba de caquetío. Los dos Manaure colombianos se explican mejor como
+    nombres sueltos que como restos de una serie.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 3 · BUBURES Y BUREDES
+# ═════════════════════════════════════════════════════════════════════════
+bubures_buredes:
+  lo_documentado:
+    - 'Martín 1534 (vía Oliver DOC p. 201): «Arrededor de la laguna ay tanbien caquetios y bugures y los pemones».'
+    - 'Pesquisa contra los Welser, 1538 (Ponce y Vaccari 1977, vía Oliver DOC p. 201): Alfinger saqueó Parepi, «pueblo de indios caquetios … amigos de cristianos», en Juruara; y «dos pueblos, uno de caquetios y otro de bobures en la provincia de Chorna [Juruara]» fueron herrados y enviados a Santo Domingo.'
+    - 'Oviedo t. II pp. 271-272: «Los Buredes ocupaban las sierras altas de sabanas donde nace el río Comití (Macomiti). Son coronados» (vía Jahn 1927 p. 38; el pasaje está en la p. 272 del ejemplar).'
+    - 'La lámina I del t. II de Oviedo (litografía de 1852 de un dibujo del códice; Jahn la atribuye al cosmógrafo Alonso de Chaves), vista en imagen: «Bubures» al occidente de «Maracaybo», al pie de la «Sierra de los Bubures»; «Buredes coronados» en «EL VALLE», entre esa sierra y la «Sierra Nevada»; Pauxoto, Xiriguanas y Pacabuyes más al sur; Coquibacoa, Cabo de la Vela y la Ramada en la costa. Ningún Manaure.'
+    - 'Jahn 1927 p. 36: el nombre de los bubures «se ha conservado en la floreciente población de Bobures», en la costa sur del lago, con Oviedo y Baños (los llanos de San Pedro, «asiento de los Bobures, nación afable y poco belicosa»). Jahn p. 75: pemenos, quiriquires, bobures y buredes «ha[n] quedado reducida[s] a la tribu de los Motilones» del Perijá; Oliver hace a los buredes ancestros de los yukpa (etnia-005).'
+  manaure_y_los_caribes: >-
+    El único puente documental entre el Manaure de Coro y gente «caribe» es de
+    1526: en la carta al Rey de AGI Santo Domingo (29-VIII-1526), Manaure
+    «esta confederado y casado con hijas de caribes», y el testigo Acero
+    «oyo decir quel dicho cacique de Coro es casado con una hija de un
+    cacique de los caribes» (Ramos Pérez 1978: 236-237, vía Oliver DOC
+    p. 270). Oliver lee que esas «caribes» eran casi seguro jirajaras de la
+    Sierra de San Luis, y sólo «no puede descartar» mujeres de lengua caribe
+    de verdad porque había aldeas caquetías entre los bubures de Juruara
+    (Parepi). Es una posibilidad declarada, no un dato.
+  lo_que_no_hay: >-
+    Ninguna fuente —ni el repo, ni la web leída— une un «Manaure» (persona,
+    título o lugar) con los bubures o los buredes, ni pone a un Manaure en el
+    Perijá o el Valle de Upar. La tradición del Cesar acierta en los dos
+    etnónimos y en el lugar de los buredes (lo que dice el mapa del s. XVI),
+    y no tiene apoyo en el cacique.
+  lectura: >-
+    Dos explicaciones caben y no se pueden separar con lo que hay: (a) la
+    tradición conserva memoria local de los pueblos del Perijá (los yukpa
+    siguen allí), y el nombre del cacique se le pegó después; (b) la
+    tradición es erudita: bubures y buredes están en Oviedo, Castellanos,
+    Jahn y en el nombre del pueblo de Bobures, y el «Manaure de Maracaibo»
+    estaba impreso desde 1892. Las dos piden lo mismo: el primer papel del
+    s. XIX que diga «sabana de Manaure».
+  contacto_con_los_caqueties_segun_oliver: >-
+    Con los bubures, «more than a simple trade partnership» y aldeas caquetías
+    dentro de su provincia (corresidencia, intensidad alta: etnia-004). Con
+    los buredes, ninguno documentado salvo que el intérprete de Martín, que
+    sabía caquetío, se entendía con coanaos y buredes (etnia-010; Oliver
+    p. 218). El canon ya lo dice; esta sesión añade la cita de Castillo
+    (dos pueblos vecinos, uno caquetío y otro bobure, en Chorna) y la lámina.
+
+# ═════════════════════════════════════════════════════════════════════════
+# 4 · HECHOS (esquema del corpus; ids provisionales)
+# ═════════════════════════════════════════════════════════════════════════
+hechos:
+
+  - id: manaure-col-001
+    contenido: >-
+      En agosto de 1533 los cristianos de Maracaibo tenían sementeras de
+      cazabe y maíz en Mapaure, «tierra de Xuduara» (Juruara), en la orilla
+      sur-sureste del lago; la misma jornada pasó por pueblos de pemenos «que
+      hablan como los bubures» (Roromoni, Aypiare, Uriri, Araburuco, Mahaboro,
+      Carerehota, Ayanoboto, Huahuovano, Guaruruma, Huracara, Aracay, Horoco).
+      Es el único nombre en -aure de la esfera occidental del s. XVI en las
+      fuentes del repo.
+    fuente: atestiguado
+    polity: occidental
+    epoca: contacto-temprano (1533)
+    referencia: 'Oviedo y Valdés, Historia general y natural, t. II (1852), lib. XXV, cap. VIII, p. 295; visto en imagen'
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: 't. II, 295'}
+    esfera: lengua — toponimos (como nombre); geografia_politica (como lugar)
+
+  - id: manaure-col-002
+    contenido: >-
+      Jahn identifica Mapaure con Moporo, «el principal poblado de
+      Axuduara», y pone Axuduara en las tierras planas del lago desde la punta
+      de Misoa hasta cerca de Garcitas. La identificación es suya.
+    fuente: hipotetico
+    polity: occidental
+    referencia: 'Jahn 1927, pp. 32 y 41 (pdftotext, sin imagen)'
+    procedencia: {obra: jahn-1927, pagina: '32, 41'}
+
+  - id: manaure-col-003
+    contenido: >-
+      El mapa que acompaña la Historia de Oviedo (t. II, lámina I; Jahn lo
+      atribuye a Alonso de Chaves) pone a los «Bubures» al occidente de
+      Maracaibo, al pie de la «Sierra de los Bubures», y a los «Buredes
+      coronados» en «El Valle» —el de Upar— entre esa sierra y la Sierra
+      Nevada. No nombra ningún Manaure.
+    fuente: atestiguado
+    polity: occidental
+    epoca: contacto-temprano (c. 1530-1548)
+    referencia: 'Oviedo y Valdés, t. II (1852), lámina I (pdf 533), vista en imagen; Jahn 1927 p. 38 para la atribución'
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: 't. II, lámina I'}
+    implicacion: 'refuerza etnia-005 (burede): su «donde» ya dice Perijá y Ranchería; el mapa añade el Valle de Upar'
+
+  - id: manaure-col-004
+    contenido: >-
+      En 1526 el Manaure de Coro estaba «confederado y casado con hijas de
+      caribes» y, según un testigo, «casado con una hija de un cacique de los
+      caribes». Oliver lee que eran jirajaras de la Sierra de San Luis y sólo
+      no descarta mujeres de lengua caribe por las aldeas caquetías entre los
+      bubures de Juruara.
+    fuente: atestiguado
+    polity: costera
+    epoca: contacto-temprano (1526)
+    referencia: 'AGI Santo Domingo, 29-VIII-1526, en Ramos Pérez 1978: 236-237, vía Oliver 1989 cap. 3, DOC p. 270 y n. 118-119'
+    procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 270'}
+    reserva: 'la identidad de esas «caribes» es lectura de Oliver; con bubures, sólo una posibilidad (regla 2)'
+
+  - id: manaure-col-005
+    contenido: >-
+      La «Tercera carta» del tomo de Pérez de Tolosa escribe el nombre
+      «Manaore»: «en la comarca de la ciudad de Coro residía un cacique llamado
+      Manaore, el mayor principal que en la gente caquetía se hallaba, y
+      andando el tiempo, por malos tratamientos, se ausentó do murió». Una
+      grafía más para las sondas (regla 6).
+    fuente: atestiguado
+    polity: costera
+    epoca: contacto (c. 1529-1546)
+    referencia: 'Fernández Duro 1885, t. II p. 248'
+    procedencia: {obra: perez-de-tolosa-1546, pagina: '248 (FD t. II)'}
+
+  - id: manaure-col-006
+    contenido: >-
+      En 1647 el recuerdo del «gran Manavre» de Coro estaba «muy fresco» en
+      los llanos del Apure: se decía que se retiró con mucha gente por las dos
+      bandas del Apure hasta la laguna de Caranaca. Es la tradición del
+      Manaure que se va hacia el sur, no hacia el oeste.
+    fuente: atestiguado
+    polity: llanos
+    epoca: colonial (1647)
+    referencia: 'Carvajal 1648, ed. 1892, pp. 147 y 317 (OCR de archive.org, sin imagen)'
+    procedencia: {obra: carvajal-1892, pagina: '147, 317'}
+
+  - id: manaure-col-007
+    contenido: >-
+      En 1892, la nota del editor de Carvajal hace al «gran cacique Manaure»
+      «soberano de las naciones índicas que habitaban las inmediaciones de la
+      laguna de Maracaybo». Lo atestiguado es que esa leyenda circulaba
+      impresa a fines del s. XIX; que Manaure gobernara Maracaibo no lo dice
+      ninguna crónica del s. XVI del repo.
+    fuente: atestiguado
+    polity: occidental
+    epoca: s. XIX (1892)
+    referencia: 'Carvajal, ed. de León 1892, «Apuntes biográficos», p. 408 según el OCR (sin imagen)'
+    procedencia: {obra: carvajal-1892, pagina: '408 (apéndice del editor)'}
+
+  - id: manaure-col-008
+    contenido: >-
+      «Manare» es el harnero o tamiz de caña tejida para cerner la harina de
+      yuca; «en Occ. y la Cord.», un aro de mimbre colgado del techo; voz
+      caribe, chaima y cumanagota, «en aruaco, manali»; y Carvajal la escribe
+      «incorrectamente manaure» («cataures y manaures muy labrados», 1647).
+      En la pluma colonial, Manaure y manare pueden confundirse.
+    fuente: atestiguado
+    polity: llanos
+    referencia: 'Alvarado 1921, pp. 199-200 (MANARE); Carvajal 1892 p. 168 (OCR)'
+    procedencia: {obra: alvarado-1921, pagina: '199-200'}
+
+  - id: manaure-col-009
+    contenido: >-
+      En las montañas merideñas y en la cuenca del lago de Maracaibo los
+      campesinos llaman «Arco Manare» o «Arco Manaure» al halo luminoso
+      alrededor de la Luna, y recomiendan cuidarse de su influjo (Morón, con
+      Alvarado y Clarac).
+    fuente: atestiguado
+    polity: ninguna (folclore moderno andino y lacustre)
+    epoca: s. XX
+    referencia: 'Morón 2012, p. 167 (pdf 7)'
+    procedencia: {obra: moron-2012-petroglifos, pagina: '167'}
+
+  - id: manaure-col-010
+    contenido: >-
+      «Arco Manaure» se explica mejor por el «manare» —el aro de mimbre que
+      Alvarado documenta «en Occidente y la Cordillera»— que por el cacique:
+      un halo es un aro. Morón lo lee como el título del sacerdote-rey; esa
+      lectura no se adopta.
+    fuente: hipotetico
+    referencia: 'proyecto (esta sesión), sobre Alvarado 1921 pp. 199-200 y Morón 2012 p. 167'
+    procedencia: {obra: alvarado-1921, pagina: '199-200'}
+    lo_haria_subir: 'una atestación de «arco manare» como nombre del halo en un vocabulario andino o zuliano'
+
+  - id: manaure-col-011
+    contenido: >-
+      A mediados del s. XX, en la temporada de la sal, los guajiros del
+      interior acudían a Manaure, donde se les pagaba por cargar los sacos al
+      almacén y a los barcos: los hombres llenaban los sacos, las mujeres los
+      cargaban.
+    fuente: atestiguado
+    polity: ninguna (wayuu, s. XX)
+    epoca: s. XX (1948)
+    referencia: 'Armstrong y Métraux, «The Goajiro», en Steward (ed.) 1948, HSAI vol. 4, p. 374'
+    procedencia: {obra: steward-1948-hsai-4, pagina: '374'}
+    nota: 'la primera mención del lugar que esta sesión pudo leer'
+
+  - id: manaure-col-012
+    contenido: >-
+      Manaure (La Guajira) es municipio desde el 1 de octubre de 1974
+      (ordenanza 015 de 1973); la alcaldía remonta los primeros habitantes
+      europeos y mestizos a 1723 «aproximadamente» y atribuye el nombre, por
+      tradición oral, a un «Cacique Manaure».
+    fuente: hipotetico
+    referencia: 'alcaldía de Manaure vía es.wikipedia (consultada 2026-10-09)'
+    deuda: sin-procedencia
+    url: 'https://es.wikipedia.org/wiki/Manaure_(La_Guajira)'
+
+  - id: manaure-col-013
+    contenido: >-
+      Manaure Balcón del Cesar se funda en 1874 o 1875 por Buenaventura Maya,
+      ganadero de La Paz; corregimiento de Los Robles La Paz en 1913 y
+      municipio en 1980. La Gobernación del Cesar (1997) dice que Maya le dio
+      el nombre en honor de un cacique Manaure «que gobernó Maracaibo».
+    fuente: hipotetico
+    referencia: 'en.wikipedia y es.wikipedia (alcaldía; Gobernación del Cesar 1997), consultadas 2026-10-09'
+    deuda: sin-procedencia
+    url: 'https://en.wikipedia.org/wiki/Manaure,_Cesar'
+
+  - id: manaure-col-014
+    contenido: >-
+      Tradición oral del Cesar: la sabana de Manaure la habitaban «indios
+      bobures o boredes», caribes venidos de Venezuela por el Perijá, nómadas,
+      cazadores, pescadores y de agricultura incipiente, con un cacique
+      Manaure; al irse la tribu, la sabana se quedó con su nombre. Los dos
+      etnónimos son del s. XVI (bubure, burede); el cacique no tiene
+      documento.
+    fuente: hipotetico
+    tipo: tradicion-oral
+    referencia: 'alcaldía de Manaure Balcón del Cesar, «Nuestro municipio», vía EcuRed (consultada 2026-10-09)'
+    deuda: sin-procedencia
+    url: 'https://www.ecured.cu/Manaure_Balc%C3%B3n_del_Cesar_(Colombia)'
+
+  - id: manaure-col-015
+    contenido: 'Etimología popular del Cesar: «sabana donde mana la ubre», contraída en Manaure.'
+    fuente: hipotetico
+    tipo: etimologia-popular
+    referencia: 'EcuRed (alcaldía), consultada 2026-10-09'
+    deuda: sin-procedencia
+    url: 'https://www.ecured.cu/Manaure_Balc%C3%B3n_del_Cesar_(Colombia)'
+
+  - id: manaure-col-016
+    contenido: >-
+      Hoy, en la Guajira, el Cesar, el Magdalena oriental, el norte de Norte
+      de Santander y casi todo el Zulia, sólo tres nombres del mapa (OSM)
+      llevan una palabra en -aure, y
+      los tres son Manaure (el pueblo guajiro, el del Cesar y su río). No hay
+      serie -aure en el oeste como la de Paraguaná.
+    fuente: atestiguado
+    referencia: 'OpenStreetMap vía Overpass, 2026-10-09 (consultas y respuesta literal en la medición §donde.overpass_oeste)'
+    deuda: sin-procedencia
+    url: 'https://overpass.kumi.systems/api/interpreter'
+    nota: 'la capa osm-kaketiana de la bibliografía es la de Falcón; esta caja no está en el repo'
+
+  - id: manaure-col-017
+    contenido: >-
+      El final -aure aparece en las crónicas lejos de los caquetíos: Paralaure,
+      cacique de Cainorocabo en Trinidad; Parataure o Harataure, isla en la
+      boca del Orinoco; Urimaure, cacique de los tarmas; Perataure, en el
+      Meta, y Guayaure, nombre del Orinoco; Mapaure, entre pemenos y bubures.
+      No es marca caquetía por sí solo.
+    fuente: atestiguado
+    referencia: 'Oviedo t. II pp. 210 y 217, t. IV p. 538; Oviedo y Baños ed. Fernández Duro t. II p. 50; Aguado, Historia de Venezuela (texto de Gutenberg, sin página)'
+    procedencia: {obra: oviedo-y-valdes-1852-1855, pagina: 't. II 210, 217; t. IV 538'}
+    implicacion: 'para 6-fusion/antroponimos_caquetios.yaml §formantes (-aure): el formante es de nombre de persona en Paraguaná, pero la terminación recurre en tierras caribes; el «atestiguado» del formante no debe leerse como «exclusivo»'
+
+  - id: manaure-col-018
+    contenido: >-
+      En Juruara, en 1538, la pesquisa contra los Welser habla de «dos
+      pueblos, uno de caquetios y otro de bobures en la provincia de Chorna»,
+      saqueados por Luis de Leiva y enviados herrados a Santo Domingo: aldeas
+      caquetías y bubures vecinas, no mezcladas.
+    fuente: atestiguado
+    polity: occidental
+    epoca: contacto-temprano (1529-1538)
+    referencia: 'testimonio de Hernando del Castillo, Ponce y Vaccari 1977: 171, vía Oliver 1989 cap. 3, DOC p. 201 y n. 32'
+    procedencia: {obra: oliver-1989-cap3, pagina: 'DOC 201'}
+    implicacion: 'refuerza geografia_politica-009 y etnia-004 con una segunda cita, independiente de la de Parepi'
+
+# ═════════════════════════════════════════════════════════════════════════
+# 5 · FUENTES A BUSCAR (no se descargó nada: descargar lo decide Miguel)
+# ═════════════════════════════════════════════════════════════════════════
+fuentes_a_buscar:
+  - obra: 'Aguilera Díaz, María M., Aspectos históricos y socioeconómicos de las salinas de Manaure (Banco de la República, Riohacha, 14-X-2004); y Salinas de Manaure: tradición wayuú y modernización (DTSER 35, 2003)'
+    url: 'https://web.archive.org/web/20070626115435/http://www.banrep.gov.co/documentos/publicaciones/pdf/salinas.pdf · https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/DTSER35-Salinas.pdf'
+    licencia: 'publicación institucional del Banco de la República, de libre acceso; con derechos'
+    responderia: 'la «reseña histórica»: de dónde sale el 1864 (Chimare, Manaure, Navío Quebrado), si cita un documento colonial con el nombre, y los coanaos con que en.wikipedia abre la historia'
+  - obra: 'Simons, F. A. A., «An exploration of the Goajira peninsula, U. S. of Colombia», Proceedings of the Royal Geographical Society, n. s., 7 (1885), pp. 781-796, con mapa'
+    url: 'ficha: https://d-place.org/sources/simons1885 · JSTOR / archive.org (Proceedings RGS 1885)'
+    licencia: 'dominio público (1885)'
+    responderia: '¿nombra Manaure (lugar, salina o ranchería) en 1885? Steward p. 375 lo usa para los clanes; su mapa sería la primera cartografía con el nombre'
+  - obra: 'Derrotero de las islas Antillas, de las costas de Tierra Firme y de las del Seno Mexicano (Dirección de Trabajos Hidrográficos, Madrid 1810; 2.ª ed. 1820; ed. 1826 y 1849)'
+    url: 'https://bdh.bne.es/bnesearch/detalle/bdh0000119159 (1810) · https://www.cervantesvirtual.com/obra/derrotero-de-las-islas-antillas-de-la-costa-de-tierra-firme-y-del-seno-mejicano--formado-en-la-direccion-de-trabajos-hidrograficos/ (1820)'
+    licencia: 'dominio público'
+    responderia: 'la descripción de la costa entre Riohacha y el Cabo de la Vela: si ya hay una «punta» o «salina de Manaure» a comienzos del s. XIX'
+  - obra: 'Julián, Antonio, La perla de la América, provincia de Santa Marta (Madrid, Sancha, 1787); ed. Unimagdalena con descarga libre'
+    url: 'https://libros.unimagdalena.edu.co/la-perla-de-america-provincia-de-santa-marta-reconocida-observada-y-expuesta-en-discursos-historicos-dothr.html'
+    licencia: 'la obra de 1787, dominio público; la edición moderna, con derechos y descarga gratuita'
+    responderia: 'el jesuita misionó en la Guajira: si nombra la salina o la ranchería'
+  - obra: 'Narváez y la Torre, Antonio de, Relación o informe de la provincia de Santa Marta y Río Hacha (19-V-1778), en Escritos de dos economistas coloniales (Banco de la República)'
+    url: 'https://repositorio.banrep.gov.co/bitstreams/d42d4683-ef05-481b-8d57-c6ed6b6f9f30/download'
+    licencia: 'el texto de 1778, dominio público; la edición, del BanRep'
+    responderia: 'las salinas de la provincia de Riohacha en 1778 y si alguna se llama Manaure'
+  - obra: 'Pérez, Felipe, Jeografía física i política del Estado del Magdalena (Bogotá, Imprenta de la Nación, 1863 o 1868)'
+    url: 'ficha EAFIT: https://hdl.handle.net/10784/32925'
+    licencia: 'dominio público'
+    responderia: 'las aldeas y caseríos del Valle de Upar y la lista de salinas guajiras hacia 1863: si «Manaure» existe antes de la fundación de 1874'
+  - obra: 'Ponce de León, Manuel y Paz, Manuel María, Carta corográfica del Estado del Magdalena (1864); y el Atlas de los Estados Unidos de Colombia (1865)'
+    url: 'Biblioteca Nacional de Colombia / Biblioteca Luis Ángel Arango; David Rumsey (el buscador bloquea el acceso automático)'
+    licencia: 'dominio público'
+    responderia: 'si el mapa de la Comisión Corográfica pone Manaure en la Guajira, en la sabana del Perijá o en el río (Codazzi murió en 1859 en Espíritu Santo, a pocos kilómetros)'
+  - obra: 'Candelier, Henri, Rio-Hacha et les Indiens Goajires (París, 1893)'
+    url: 'Gallica (el buscador SRU rechaza la consulta automática); citado por Alzate 2017'
+    licencia: 'dominio público'
+    responderia: 'Manaure y la sal hacia 1890'
+  - obra: 'Díaz Pushaina, L. E., Villa, E. y Villa, W., «Referencias cosmogónicas y prácticas del buen vivir según el pensamiento de los wayú de Manaure», Tabula Rasa 24 (2016)'
+    url: 'https://www.revistatabularasa.org/numero-24/ (11villa.pdf)'
+    licencia: 'acceso abierto (CC)'
+    responderia: 'un resumen de buscador le atribuye que Manaure «pertenecía al cacique de Coro»: ver qué dice y de dónde lo toma'
+  - obra: 'Gobernación del Cesar, Cesar 30 años de progreso (1997); y la «Historia» de la alcaldía de Manaure Balcón del Cesar (archivada en 2012)'
+    url: 'citadas por https://en.wikipedia.org/wiki/Manaure,_Cesar'
+    licencia: 'con derechos'
+    responderia: 'de dónde sacan el «cacique que gobernó Maracaibo» y la fecha de 1874'
+  - obra: 'Archivo General de la Nación (Bogotá), fondos Colonia y República, Gobernaciones-Riohacha y Salinas'
+    url: 'https://www.archivogeneral.gov.co/'
+    licencia: 'archivo'
+    responderia: 'la primera mención documental; es trabajo de archivo, no de lectura'
+
+# ═════════════════════════════════════════════════════════════════════════
+# 6 · VEREDICTO
+# ═════════════════════════════════════════════════════════════════════════
+veredicto:
+  desde_cuando: >-
+    La Guajira: la primera mención del LUGAR que se pudo leer es de 1948
+    (Steward, HSAI vol. 4, p. 374); hay una noticia sin verificar de 1864
+    (salinas de Chimare, Manaure y Navío Quebrado) que probablemente viene de
+    Aguilera Díaz 2004, y nada colonial con el nombre. Cesar: la tradición
+    de fundación (1874-1875) es lo más viejo; ningún papel del s. XIX visto.
+    En las fuentes coloniales del repo —Oviedo, Castellanos, Aguado, Pérez de
+    Tolosa, Carvajal, Oviedo y Baños— el único Manaure es el de Coro, y el
+    mapa del s. XVI de la esfera occidental no tiene ninguno.
+  homenaje_o_herencia: >-
+    Lo más probable, en los dos casos, es un nombre del s. XIX: homenaje o
+    eco del Manaure de Coro, que la erudición del siglo ya había mudado al
+    lago de Maracaibo (nota del editor de Carvajal, 1892) y que el Cesar
+    repite («el cacique que gobernó Maracaibo»). Lo apoyan: la primera
+    mención tardía, la falta de serie -aure en el oeste, que las tradiciones
+    de los dos pueblos remiten al cacique venezolano y no a un pueblo local,
+    y que ninguna crónica del s. XVI ponga un Manaure al oeste del golfo.
+    Lo que impide cerrarlo: no se han leído los papeles del s. XVIII-XIX que
+    decidirían (Aguilera 2004, Simons 1885, el Derrotero de 1810, Felipe
+    Pérez 1863, la Carta del Magdalena de 1864). Si uno de ellos trae
+    «Manaure» antes de 1850, el veredicto se reabre. Hoy: homenaje
+    probable, herencia no documentada.
+  y_si_fuera_titulo: >-
+    Que Manaure fuera título (Antolínez y tres testigos más) haría posible un
+    «Manaure» en la esfera occidental —había caquetíos en el Cabo de la Vela
+    y en Juruara—, pero posible no es documentado: nadie lo registra allí.
+    Lo único del oeste del s. XVI que se le parece es Mapaure, y Mapaure está
+    entre pemenos y bubures, no entre caquetíos.
+  bubures_y_buredes: >-
+    La tradición del Cesar nombra bien a dos pueblos del s. XVI y pone a los
+    buredes donde los pone el mapa de Oviedo (El Valle); el cacique Manaure
+    de esa tradición no tiene documento. El único puente entre el Manaure de
+    Coro y gente caribe es el matrimonio con «hijas de caribes» de 1526, que
+    Oliver lee como jirajaras.
+  para_la_era_2: >-
+    Nada de esto entra en la simulación costera (regla 4): es esfera
+    occidental, futura, y casi todo es del s. XIX-XX (regla 3). Lo que sí
+    vale para el canon: Mapaure (un topónimo occidental de 1533), la lámina
+    de los buredes en El Valle, la cita de Castillo sobre Chorna, la grafía
+    Manaore y la cautela de manare.
