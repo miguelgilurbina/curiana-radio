@@ -188,3 +188,40 @@ tips». Las «Strombus tips» son una clase de artefacto de 1943 sin describir:
 no son una bocina. Nada de concha DENTRO de las urnas de Coro.
 
 Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §arqueologia.
+
+## 2026-10-09 — Minado para creencia (Rouse, «The Carib»)
+
+**Se preguntó.** Se usó el capítulo como índice de temas de la creencia
+kalinago, para la Minería 1 de [[08_creencia_kalinago_que-minar]]. Sólo es
+índice: un `reconstruido` nunca se apoya sólo en Rouse. La nota de sesión es
+[[09_creencia_kalinago_mineria]], y los datos van en
+`6-fusion/creencia_kalinago_2026-10-09.yaml`.
+
+**Desfase en este tramo.** pdf 697 = p. 545, pdf 716 = p. 564 y, pasadas las
+láminas, pdf 723 = p. 565. El de Steward p. 26 es pdf 50.
+
+**Se leyó.**
+- En la capa de texto: las pp. 545 (igneri), 558-564 (muerte, religión,
+  chamanismo, mitología), la p. 532 («The Arawak», la muerte taína), las
+  pp. 535 y 537 (espíritus y cemíes taínos) y el resumen de Steward en p. 26.
+- En imagen: las pp. 559, 562 y 563.
+
+**Lo que da como índice, y lo que Breton le discute:**
+- Rouse dice que cada caribe tenía su `ichieri` y llama maboya al espíritu
+  del chamán (p. 562). Breton dice que el ichéiri es «le Dieu d’vn tel boyé»
+  y que a mapoya nadie le ofrece nada (1665 p. 283). Manda el testigo.
+- **Los huesos y el pelo de los antepasados en calabazas o algodón** (p. 562)
+  y **las cenizas del jefe en bebida** (p. 559) no tienen nota de fuente y no
+  salen en la capa de texto de Breton. Quedan pendientes de Du Tertre o
+  Rochefort (K1/K2).
+- **Las almas del corazón y de las arterias** (p. 561) amplían lo único que
+  Breton da: el pulso es «l’ame de la main».
+- **La iniciación de cinco meses** (p. 562, n. 11) la atribuye a Du Tertre
+  t. II pp. 365-366, y dice que La Borde lo cuenta distinto.
+- **La hipótesis de Steward** (p. 26): «A reflection of Arawakan religion is
+  seen in offerings made to guardian spirits». Puesta a prueba con Breton
+  (1665 p. 56) y Pané (cap. XVI), **pasa**.
+
+**No se halló.** El capítulo de Rouse no da ninguna cita de página dentro de
+las secciones de muerte y religión, salvo la nota de la iniciación. Por eso
+nada de lo que es sólo suyo se usa como hermana.
