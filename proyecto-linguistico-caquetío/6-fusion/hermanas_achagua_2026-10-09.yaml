@@ -26,10 +26,14 @@ meta:
       trato, nombres, habitaciones, poblaciones, enseres, tiempos, conocimientos,
       eclipses, matrimonio, repudio, poligamia, casadas, juegos, bailes, ballo Queti,
       bebidas, pan, trabajos, pesca, comercio, contar, labranza, guerra, curare,
-      esclavos) y el índice de cosas notables. Vistas en imagen: pp. 133, 192, 194, 195,
-      199, 202, 204, 205, 206, 207, 212, 218, 222 (nota), 226, 227, 229, 232, 234 (nota),
-      235 (nota), 241, 245, 246, 253, 254, 255, 260. t. III pp. 30-31 (pdf aparte),
-      leídas en el texto del PDF en línea.
+      esclavos) y el índice de cosas notables. Vistas en imagen: pp. 43, 45, 86, 87,
+      89, 90, 93, 95, 103, 105, 108, 109, 133, 192, 194, 195, 199, 202, 204, 205, 206, 207,
+      212, 218, 222 (nota), 226, 227, 229, 232, 234 (nota), 235 (nota), 241, 245, 246, 253,
+      254, 255, 260, 284, 286, 287, 288, 293, 348, 357, 358. t. III pp. 30-31 (el pdf
+      aparte), leídas enteras y vistas en imagen. Desfase medido en la cabecera de cada
+      página citada: − 22 en el libro II (pdf 65 = p. 43, pdf 67 = p. 45), − 26 hacia el
+      pdf 100 y − 28 en el libro IV (pdf 220 = p. 192, pdf 250 = p. 222, pdf 389 = p. 357):
+      hay láminas intercaladas, y la ficha da mal el pdf 250 (es la p. 222, no la 223).
     rivero-1883: >-
       OCR de archive.org, leído para localizar: lib. I caps. VI-XIII (pp. 16-43),
       lib. II caps. VI-VIII (pp. 102-118, ahora por sus esferas sociales), lib. II
@@ -37,13 +41,14 @@ meta:
       1696), lib. VI caps. VIII-XI (pp. 414-427, la entrada del propio Rivero al Airico,
       1725-1726), y búsquedas medidas en todo el texto (casamiento, poligamia, suegro,
       sobrino, herencia, caney, quiripa, macos, mude, mirray, parcialidad). Vistas en
-      imagen: pp. 40, 41, 102, 391, 418, 419, 420, 421. La p. 156 es ilegible en el OCR
+      imagen: pp. 40, 41, 102, 107, 108, 157, 320, 325, 326, 391, 418, 419, 420, 421. La p. 156 es ilegible en el OCR
       y la imagen de este ejemplar está manchada: no se cita.
     neira-ribero-1762: >-
       el vocabulario transcrito (6-fusion/achagua_neira_ribero_1762.yaml), consultado por
       parentesco, rango, oficios, guerra, comercio, casa y comida con un script de
       consultas sobre `castellano`. Vistos en imagen (JPG de OneDrive, factor 4,167
-      px/pt): pliegos 60 der. (esclavo), 67 der. (hermanos), 75 der. (mercado).
+      px/pt): pliegos 60 der. (esclavo), 67 der. (hermanos), 68 izq. (hidalgo, noble),
+      75 der. (mercado).
     gumilla-1791: >-
       búsqueda medida de «Achag-» en los dos tomos (16 + 12 aciertos), leídos en
       contexto. Vistas en imagen: t. I p. 200 (tumba de capitanes) y t. II p. 92 (los
@@ -148,8 +153,8 @@ hechos:
     epoca: 'gentilidad recordada hasta c. 1660 (p. 107: «cuando entraron los nuestros, no había alguno que no las tuviese multiplicadas», p. 111); Irrijirre, 1725'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: rivero-1883, pagina: 'pp. 107 (pdf 128), 111; 419 y 421 (imagen)'}
-    verificado_en_imagen: 'en parte: pp. 419 y 421 sí; la p. 107 se cita del OCR'
+    procedencia: {obra: rivero-1883, pagina: 'pp. 107 (pdf 128, imagen), 111; 419 y 421 (imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: >-
       Jesuita que llama a la poliginia «bajío formidable» de la conversión y celebra que
       ya no se use en los pueblos reducidos: describe lo que combatía.
@@ -178,17 +183,17 @@ hechos:
     cita: >-
       «otros que los murciélagos, y los llaman Isirriberrenais, porque Isirri significa
       el murciélago en el idioma de esta Nación» (Rivero p. 326).
-    grafia: 'Amarizan, Isirri, Isirriberrenais, Cuisáunasí (chanza; OCR dudoso); Aycuhaverrenais, Univerrenais (Gumilla)'
+    grafia: 'Amarizán, Isirri, Isirriberrenais, Cuisáunasí (chanza); Aycuhaverrenais, Univerrenais (Gumilla)'
     pueblo: achagua
     donde: 'Airico (Etarí, río Guaviare); Casanare'
     epoca: '1696 (Mimbela); 1715-1738 (Gumilla)'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: rivero-1883, pagina: 'p. 326 (pdf 345), relación de Mateo Mimbela'}
+    procedencia: {obra: rivero-1883, pagina: 'p. 326 (pdf 345, imagen), relación de Mateo Mimbela'}
     procedencia_extra:
       - {obra: gumilla-1791, pagina: 't. I p. 114 (pdf 138)', independiente: true, nota: 'otro jesuita, otros informantes (Casanare); da troncos y ríos, no animales'}
       - {obra: steward-1948-hsai-4, pagina: 'p. 404', independiente: false, nota: 'Hernández de Alba resume a Rivero y Gumilla y lo llama «totemic groups»'}
-    verificado_en_imagen: 'no (OCR de Rivero y de Gumilla); pendiente'
+    verificado_en_imagen: 'en parte: Rivero p. 326 sí; Gumilla del OCR'
     como_se_escribio: >-
       Mimbela y Gumilla lo cuentan como «desatino»; Mimbela matiza que el nombre es a
       veces broma entre parcialidades, no creencia.
@@ -218,8 +223,8 @@ hechos:
     epoca: '1696'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: rivero-1883, pagina: 'p. 326 (pdf 345), relación de Mimbela'}
-    verificado_en_imagen: no
+    procedencia: {obra: rivero-1883, pagina: 'p. 326 (pdf 345, imagen), relación de Mimbela'}
+    verificado_en_imagen: si
     como_se_escribio: >-
       En la lista de «dificultades» para la fe: la sensualidad y el repudio. La regla de
       consanguinidad la da como virtud que admira.
@@ -249,8 +254,8 @@ hechos:
     epoca: '1695-1696'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: rivero-1883, pagina: 'p. 320 (pdf 339), relación de Mimbela'}
-    verificado_en_imagen: no
+    procedencia: {obra: rivero-1883, pagina: 'p. 320 (pdf 339, imagen), relación de Mimbela'}
+    verificado_en_imagen: si
     como_se_escribio: Anécdota de viaje, contada al paso para explicar una alianza.
     caquetio: [parentesco-016, parentesco-023]
     proyeccion:
@@ -492,7 +497,7 @@ hechos:
       El «ballo Queti» (queti 'animal'): los maipures fingen que unas serpientes vienen
       al pueblo con bebida y bailan con los hombres, y les dicen a las mujeres que las
       serpientes se las comen. Lo que suena son dos flautas largas de palma aràcu, una
-      grave y una aguda, y trompas de corteza; la chicha de moriche la hacen en secreto
+      grave y una aguda, y trompas de corteza de màrano; la chicha de moriche la hacen en secreto
       los hombres, que solos la beben. Se bailó en casa del régulo Caravàna, y los
       maipures le pidieron a Gilij «di tener celati i selvaggi misterj, e di nulla
       dirne alle donne». Cuando Gilij lo hizo público, el régulo Chirrivàna le dijo que
@@ -507,8 +512,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 284-288, 290-293 (pdf 314-318, 320-323)'}
-    verificado_en_imagen: 'no (texto del PDF); pendiente'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 284-288, 290-293 (pdf 314-318, 320-323; imagen 284, 286, 287, 288, 293)'}
+    verificado_en_imagen: si
     como_se_escribio: >-
       Gilij lo vio, lo sospechó «superstizione ed incontinenza» y lo extirpó: hizo tocar
       las flautas en público por un cavere. Lo describe para justificar la extirpación.
@@ -581,8 +586,8 @@ hechos:
     testigo: lexico
     procedencia: {obra: neira-ribero-1762, pagina: 'pliegos 34 der., 51 izq., 65 der., 68 izq., 84 izq., 85 der., 89 der., 91 izq. (transcripción)'}
     procedencia_extra:
-      - {obra: rivero-1883, pagina: 'p. 108 (pdf 129)', independiente: false, nota: 'mismo autor que el vocabulario'}
-    verificado_en_imagen: no
+      - {obra: rivero-1883, pagina: 'p. 108 (pdf 129, imagen)', independiente: false, nota: 'mismo autor que el vocabulario'}
+    verificado_en_imagen: 'en parte: Neira 68 izq. (hidalgo, noble) y Rivero p. 108'
     como_se_escribio: >-
       Lemas pedidos por un misionero que necesitaba decir «Señor» en el Credo (Rivero
       p. 32 cuenta que un intérprete achagua le pidió a Neira borrar «amo» del Credo).
@@ -613,10 +618,10 @@ hechos:
     epoca: '1696 (Mimbela); 1715-1738 (Gumilla)'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: rivero-1883, pagina: 'pp. 316, 325 (pdf 335, 344), relación de Mimbela'}
+    procedencia: {obra: rivero-1883, pagina: 'pp. 316, 325 (pdf 335, 344; imagen 325), relación de Mimbela'}
     procedencia_extra:
       - {obra: gumilla-1791, pagina: 't. II pp. 18 y 32 (pdf 26, 40)', independiente: true, nota: 'lo que Gumilla oyó y su juicio sobre el maipure'}
-    verificado_en_imagen: no
+    verificado_en_imagen: 'en parte: Rivero p. 325'
     como_se_escribio: 'Misioneros que necesitaban una lengua de doctrina: les interesa que una lengua «corra».'
     caquetio: [geografia_politica-020]
     proyeccion:
@@ -645,10 +650,10 @@ hechos:
     epoca: '1606-1741'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: rivero-1883, pagina: 'pp. 21, 35, 325 (pdf 42, 56, 344)'}
+    procedencia: {obra: rivero-1883, pagina: 'pp. 21, 35, 325 (pdf 42, 56, 344; imagen 325)'}
     procedencia_extra:
       - {obra: gumilla-1791, pagina: 't. II p. 55 (pdf 63)', independiente: true, nota: 'cifra de 1741'}
-    verificado_en_imagen: no
+    verificado_en_imagen: 'en parte: p. 325'
     como_se_escribio: 'Cifras de misioneros que pedían recursos y denunciaban a los encomenderos.'
     caquetio: [geografia_politica-005]
     proyeccion:
@@ -867,8 +872,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 220-221 (pdf 248-249), 227 (pdf 255, imagen); 47 (pdf 67)'}
-    verificado_en_imagen: 'en parte: p. 227'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 220-221 (pdf 248-249), 227 (pdf 255, imagen); 45 (pdf 67, imagen)'}
+    verificado_en_imagen: 'en parte: pp. 45 y 227'
     como_se_escribio: >-
       La empalizada la cuenta de oídas (el ex misionero Forneri). La antropofagia es
       acusación de misionero sin testigo: degrada todo lo que la toca.
@@ -889,14 +894,14 @@ hechos:
       manda a los yernos, y si son trabajadores les dan a sus hijas por mujeres. Antes de
       1749 los portugueses sacaron por medio de los guipunavis más de cinco mil.
     cita: '«I Maipùri dan loro il nome di mero» (t. II p. 357).'
-    grafia: 'mero (maipure); pòiti (caribe); macos/machi (Casanare, Meta)'
+    grafia: 'mero (maipure); pòiti (caribe); cini (voz «degl'' Inchi», en castellano chinos); Machi, en castellano macos (tamanacos, Casanare y Meta)'
     pueblo: maipure
     donde: 'Orinoco medio; alto Orinoco (guipunavis)'
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 357-360 (pdf 389-392)'}
-    verificado_en_imagen: no
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 357-360 (pdf 389-392; imagen 357-358)'}
+    verificado_en_imagen: 'en parte: pp. 357-358'
     como_se_escribio: 'Gilij defiende la ley española de los diez años de servicio y acusa a holandeses y portugueses.'
     capa_colonial: 'La venta a europeos.'
     caquetio: [geografia_politica-022]
@@ -922,8 +927,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 45 (pdf 65), 202 (pdf 230, imagen)'}
-    verificado_en_imagen: 'en parte: p. 202'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 43 (pdf 65, imagen), 202 (pdf 230, imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: 'Gilij fue misionero de maipures y los quiere: «spiccano i Maipùri per l''affabilità».'
     caquetio: [geografia_politica-020]
     proyeccion:
@@ -954,10 +959,10 @@ hechos:
     epoca: 'c. 1660-1736'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: rivero-1883, pagina: 'pp. 19, 38, 155, 157 (pdf 40, 59, 176, 178)'}
+    procedencia: {obra: rivero-1883, pagina: 'pp. 19, 38, 155, 157 (pdf 40, 59, 176, 178; imagen 157)'}
     procedencia_extra:
       - {obra: neira-ribero-1762, pagina: 'pliegos 34 izq., 49 der., 75 der. (imagen), 90 der.', independiente: false, nota: 'mismo autor'}
-    verificado_en_imagen: 'en parte: Neira 75 der. (mercado, mercader)'
+    verificado_en_imagen: 'en parte: Rivero p. 157 y Neira 75 der. (mercado, mercader)'
     como_se_escribio: 'Rivero escribe para mostrar que Casanare es plaza; los precios son de la economía colonial.'
     capa_colonial: 'Los precios en reales y las herramientas de hierro.'
     caquetio: [ecologia-105, geografia_politica-011, geografia_politica-018]
@@ -1252,10 +1257,10 @@ hechos:
     epoca: '1695-1696'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: rivero-1883, pagina: 'p. 320 (pdf 339), relación de Mimbela'}
+    procedencia: {obra: rivero-1883, pagina: 'p. 320 (pdf 339, imagen), relación de Mimbela'}
     procedencia_extra:
       - {obra: neira-ribero-1762, pagina: '42 izq. (transcripción)', independiente: true, nota: 'el vocabulario es de Neira y Rivero; Mimbela es otro testigo'}
-    verificado_en_imagen: no
+    verificado_en_imagen: si
     como_se_escribio: 'Anécdota de llegada, contada por quien la oyó.'
     capa_colonial: 'Es la categoría indígena aplicada al europeo: dato del contacto.'
     caquetio: [creencia-008]
@@ -1337,21 +1342,21 @@ hechos:
     esfera: creencia
     tema: especialista
     contenido: >-
-      El piache maipure es marirri; el europeo que sangraba era «Vavèmi-marirrè». Los
+      El piache maipure es Marirri («I Maipùri gli chiamano Marirri»); el europeo que sangraba era «Vavèmi-marirrè». Los
       piaches cantan sobre el enfermo «de' versi, i quali essi soli capiscono», tocan la
       maraca, chupan y sacan piedrecillas y espinas, sahuman con tabaco. Entre los
       maipures «non mancan mai», y aunque son «d'indole amabilissima» se les odia por
       envenenadores: los maipures de la reducción acusaron al piache Chirrùpa y le
       quemaron sus ollitas de ungüentos. Caveris y guipunavis, «sì come valorosissimi»,
       aborrecen el arte y quizá no los tienen.
-    grafia: 'marirri (OCR «Marini»), Vavèmi-marirrè'
+    grafia: 'Marirri (la imagen; el OCR dice «Marini»), Vavèmi-marirrè; tamanaco Pciàci, de donde el castellano «piache»'
     pueblo: maipure
     donde: La Encaramada
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 86-90, 98 (pdf 112-116, 126)'}
-    verificado_en_imagen: 'no; pendiente (p. 86 para la grafía de marirri)'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 86-90, 98 (pdf 112-116, 126; imagen 86, 87, 89, 90)'}
+    verificado_en_imagen: si
     como_se_escribio: 'Para Gilij el piache es médico y «stregone»: odia su influencia y la dice.'
     caquetio: [creencia-001, creencia-003, creencia-008b]
     via_a: {creencia-003: corrobora-en-parte}
@@ -1375,18 +1380,18 @@ hechos:
     tema_duda: adivinacion
     contenido: >-
       Los piaches maipures adivinan con una figurita: según el joven maipure Veniamàri,
-      tienen «una statuetta di Cica, il cui nome è Minanti(?)», que ponen en la palma de
-      la mano y le preguntan por los forasteros: «Vacàu pare una camonìe?», '¿de dónde
-      viene la gente?'. Y el régulo Caravàna le decía a Gilij que los piaches, cantando
+      tienen «una statuetta di Cica, il cui nome è Minaritì», que ponen en la palma de la
+      mano y le preguntan por los forasteros: «Vacàu pare nuà camonèe?», '¿de dónde viene
+      la gente?'. Y el régulo Caravàna le decía a Gilij que los piaches, cantando
       versos «come tu nel dire l'uffizio», saltan el infierno y pasan al otro lado.
-    grafia: 'Minanti (OCR, sin ver); Vacàu pare una camonìe'
+    grafia: 'Minaritì; Vacàu pare nuà camonèe'
     pueblo: maipure
     donde: La Encaramada
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 95, 103 (pdf 123, 131)'}
-    verificado_en_imagen: 'no; pendiente (el nombre de la figurita)'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 95, 103 (pdf 123, 131, imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: 'Gilij lo da como prueba de que los piaches son «stregoni»; el informante es maipure y tiene nombre.'
     caquetio: [creencia-025, creencia-008c]
     mineria_1: [ach-cr-05]
@@ -1414,8 +1419,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 104-107 (pdf 132-135)'}
-    verificado_en_imagen: 'no; pendiente (p. 105)'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 104-107 (pdf 132-135; imagen 105)'}
+    verificado_en_imagen: 'en parte: p. 105'
     como_se_escribio: 'Gilij compara con el llanto italiano y lo halla más sincero.'
     caquetio: [creencia-010]
     mineria_1: [ach-cr-15, ach-cr-16]
@@ -1443,8 +1448,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 108-109 (pdf 136-137)'}
-    verificado_en_imagen: 'no; pendiente'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 108-109 (pdf 136-137, imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: 'Gilij se burla del llanto de encargo («funzione ridicolissima»).'
     caquetio: [creencia-010c]
     via_a: {creencia-010d: no-toca}
@@ -1475,8 +1480,8 @@ hechos:
     epoca: '1749-1767; publicado 1782'
     etiqueta: atestiguado
     testigo: oyo
-    procedencia: {obra: gilij-1780-1783, pagina: 't. III pp. 30-31 (pdf 50-51 del ejemplar en línea; Gilij_1782_…vol3_pp30-31.pdf)'}
-    verificado_en_imagen: no
+    procedencia: {obra: gilij-1780-1783, pagina: 't. III pp. 30-31 (pdf 50-51 del ejemplar en línea; Gilij_1782_…vol3_pp30-31.pdf; imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: >-
       Gilij escribe para los «increduli»: que el ser supremo no se tema prueba, para él,
       que la religión no nace del miedo. La observación sobre el más allá va contra su
@@ -1511,8 +1516,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: hipotetico
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 92-93 (pdf 118, 121)'}
-    verificado_en_imagen: no
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 92-93 (pdf 118, 121; imagen 93)'}
+    verificado_en_imagen: 'en parte: p. 93'
     como_se_escribio: 'Lo da entre las «inezie» y «millanterie» de los piaches; los parecas son de otra lengua.'
     caquetio: [creencia-013, creencia-001b]
     proyeccion:
@@ -1650,8 +1655,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: hipotetico
     testigo: oyo
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 90, 95 (pdf 116, 123)'}
-    verificado_en_imagen: no
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 90, 95 (pdf 116, 123; imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: '«e Dio sa con quali diabolici mezzi»: lo que no vio lo supone.'
     caquetio: [creencia-004, transmision-001, transmision-017]
     via_a: {transmision-017: matiza}
@@ -1777,8 +1782,8 @@ hechos:
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II p. 348 (pdf 380)'}
-    verificado_en_imagen: 'no; pendiente'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II p. 348 (pdf 380, imagen)'}
+    verificado_en_imagen: si
     como_se_escribio: 'Gilij lo pone junto a la prueba tamanaca de las hormigas como «barbara invenzione».'
     caquetio: [creencia-004b, creencia-014]
     proyeccion:
@@ -1795,19 +1800,19 @@ hechos:
     contenido: >-
       Los bailes maipures son alegres: unos frente a otros, se encuentran, ríen y miran a
       todas partes, al revés de la gravedad tamanaca; su canto se entiende en la lengua
-      común, salvo «Marie marì-jajò», que dicen tomado de los guipunavis: «Vaca, peca
+      común, salvo «Mariè marìje-jà», que dicen tomado de los guipunavis: «Vaca, peca
       purenàmi», 'hemos comido: come tú las sobras', basta para divertirlos días enteros.
       Serios son los maipures en los bailes de difuntos. Hay bailes para cada asunto: para
       los muertos, para quitar el luto, para curar, para poner nombre a los niños, para la
       guerra; y los indios guardan con tenacidad el secreto de lo que cantan.
-    grafia: 'Vaca, peca purenàmi; Marie marì-jajò (guipunavi)'
+    grafia: 'Vaca, peca purenàmi; Mariè marìje-jà (guipunavi)'
     pueblo: maipure
     donde: La Encaramada
     epoca: '1749-1767'
     etiqueta: atestiguado
     testigo: vio
-    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 279-281, 289-290 (pdf 309-311, 319-320)'}
-    verificado_en_imagen: 'no; pendiente'
+    procedencia: {obra: gilij-1780-1783, pagina: 't. II pp. 279-281, 289-290 (pdf 309-311, 319-320; imagen 280)'}
+    verificado_en_imagen: 'en parte: p. 280'
     como_se_escribio: 'Gilij compara con la métrica europea y busca versos; sospecha superstición en todos los bailes.'
     caquetio: [transmision-007, transmision-018, creencia-014]
     proyeccion:
@@ -1818,13 +1823,17 @@ hechos:
 # ═══ PARA EL LEXICÓN (formas, no hechos) ══════════════════════════════════
 para_el_lexicon:
   - {forma: Macogerri, glosa: esclavo (Numacumí 'mi esclavo'; Macagetua 'esclava'; Macunaican 'esclavitud'), lengua: achagua, obra: neira-ribero-1762, pliego: '60 der. (imagen)', nota: 'origen del «maco» de los llanos (Rivero pp. 31, 41; Gilij t. II p. 357 «Machi, Macos» en Casanare y Meta)'}
-  - {forma: mero, glosa: esclavo, cautivo, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 357', nota: 'sin ver en imagen'}
+  - {forma: mero, glosa: 'esclavo, cautivo', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 357 (imagen)'}
   - {forma: Guabaimi, glosa: 'duende; blanco español', lengua: achagua, obra: rivero-1883, pagina: 'p. 320 (Mimbela)', nota: 'con Neira 42 izq. Guabaymi; cf. maipure Vavèmi/Uavèmi «blancos» (Gilij t. II pp. 87, 235): forma y sentido casan (blancos); en achagua además «duende»'}
   - {forma: Uavèmi, glosa: 'los españoles, los blancos', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 235, nota 3 (imagen)', nota: 'también Vavèmi en Vavèmi-marirrè, el piache de los blancos (p. 87)'}
   - {forma: Paràna, glosa: mar, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 234, nota 2 (imagen)', nota: '«In Taman. Paràva. In Maip. Paràna»; Europa «Paràna ipuntà», la otra parte del mar (p. 235). Para cognados con el `para` caquetío (geografia_politica-025, Zavala #190-191): mismo sentido'}
   - {forma: Amaca, glosa: hamaca, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 222, nota (imagen)', nota: '«In Maipùre Amaca»; la voz de la esfera (taíno hamaca) tiene gemela maipure'}
   - {forma: Pecanàti, glosa: 'régulo, jefe', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 194-195, 199 (imagen)', nota: '«Pecanàti ani canà», «soy hijo de régulo»'}
-  - {forma: marirri, glosa: 'piache, médico', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 86', nota: 'OCR «Marini»; la grafía sale de «Vavèmi-marirrè» (p. 87); sin ver en imagen'}
+  - {forma: Marirri, glosa: 'piache, médico', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 86 (imagen)', nota: 'el OCR dice «Marini»; «Vavèmi-marirrè» (p. 87), el piache de los blancos'}
+  - {forma: Minaritì, glosa: figurita de cica con que adivinan los piaches, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 103 (imagen)'}
+  - {forma: manacapì, glosa: látigo de la prueba de valor, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 348 (imagen)'}
+  - {forma: Queti, glosa: animal; el baile secreto de las flautas, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 284 (imagen)', nota: 'los avanis lo llaman Casimejè'}
+  - {forma: Cabaunicayi, glosa: 'hidalgo, noble (también Cacuisaunacay)', lengua: achagua, obra: neira-ribero-1762, pliego: '68 izq. (imagen)'}
   - {forma: Quita, glosa: choza de la menarquia y del parto, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 133, 260 (imagen)'}
   - {forma: Camotì, glosa: 'el verano; el año', lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 229 (imagen)', nota: 'el tamanaco cuenta el año por el invierno (Canepò); «veve», «mucho tiempo»'}
   - {forma: Tevàca, glosa: caldo de ají y jugo de yuca, lengua: maipure, obra: gilij-1780-1783, pagina: 't. II p. 226 (imagen)'}
@@ -1835,6 +1844,5 @@ para_el_lexicon:
   - {forma: Richerro / Ruerraí, glosa: 'hermana de él / hermana de ella', lengua: achagua, obra: neira-ribero-1762, pliego: '69 izq. (transcripción)', nota: 'términos por sexo del hablante'}
   - {forma: Benidacarrusí, glosa: 'mercado, donde se vende', lengua: achagua, obra: neira-ribero-1762, pliego: '75 der. (imagen)', nota: '«Mercader el q.e vende — Ybenidérri»; raíz beni-, «comprar, precio»'}
   - {forma: Chunisay, glosa: 'amo principal; principal, causa', lengua: achagua, obra: neira-ribero-1762, pliego: '34 der., 85 der. (transcripción)'}
-  - {forma: Cabaunicayi, glosa: 'hidalgo, noble', lengua: achagua, obra: neira-ribero-1762, pliego: '68 izq. (transcripción)'}
   - {forma: Vnuma, glosa: convite para la labranza, lengua: achagua, obra: neira-ribero-1762, pliego: '49 izq. (transcripción)'}
   - {forma: Isirri, glosa: murciélago (de ahí Isirriberrenais, una parcialidad), lengua: achagua, obra: rivero-1883, pagina: 'p. 326 (Mimbela)'}
