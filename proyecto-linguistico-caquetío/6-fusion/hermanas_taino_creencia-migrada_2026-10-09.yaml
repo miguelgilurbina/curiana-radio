@@ -159,6 +159,7 @@ hechos:
     nota: 'Nada. Es la negativa que delimita el rito caquetío: beber los huesos (creencia-010) no tiene par taíno
       en ninguna de las cuatro primarias, y el propio Oviedo lo da por costumbre de TIERRA FIRME («en esta Tierra-
       Firme, de que tractamos, muchos las tragan», t. II p. 297, imagen), con Artemisia y no con La Española.'
+  tierra: [muertos-y-tierra]
   via_a:
     creencia-010: no-toca
     creencia-010d: corrobora
@@ -304,6 +305,7 @@ hechos:
       en un extremo, donde la vida sigue—: el wayuu (Jepira, el Cabo de la Vela; Jahn 1927 p. 184) y el taíno (Coaibai).
       Eso sostiene creencia-009 como `reconstruido`. NO autoriza ningún nombre (ni Jepira ni Coaibai) ni el lugar:
       la única voz atribuida al caquetío dice ABAJO (creencia-028, `sawaka`), y ese contraste se conserva.'
+  tierra: [muertos-y-tierra, lugar-sagrado]
   via_a:
     creencia-009: corrobora
     creencia-028: no-toca
@@ -637,6 +639,7 @@ hechos:
       corpus puede DECIRLO —el taíno tiene el tiempo en cemíes que posee el cacique; el caquetío, en el señor— y
       no importa nada. La capa de 013 no cambia. Y lo que sí se parece, que el especialista PREDIGA la lluvia (t.
       I p. 139; t. II p. 298), lo dice el mismo Oviedo con la misma escena: no cuenta (§oviedo_dos_orillas).'
+  tierra: [dueno-del-lugar]
   via_a:
     creencia-012: matiza
     creencia-013: no-toca
@@ -793,6 +796,7 @@ hechos:
     nota: 'Ilumina creencia-010b por contraste: en las dos orillas el vivo y el muerto no comparten casa, por caminos
       opuestos. El taíno saca al moribundo y entierra lejos; el caquetío deja la casa al díao muerto, «y en aquella
       casa no ha de vivir ninguno de allí adelante» (Oviedo t. II p. 300, imagen). La capa de 010b no cambia.'
+  tierra: [muertos-y-tierra]
   via_a:
     creencia-008: corrobora
     creencia-010b: no-toca

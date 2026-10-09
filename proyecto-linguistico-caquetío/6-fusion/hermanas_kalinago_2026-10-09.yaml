@@ -191,6 +191,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina creencia-008b (atestiguado, Arcaya pp. 104-108): el alma que «recorre el bosque y la sabana» y los muertos temidos. La orilla del mar como morada de muertos que vuelcan canoas es sólo kalinago (Oumékou, caribe): no se proyecta.'
+    tierra: [muertos-y-tierra]
     via_a: {creencia-008: corrobora-en-parte}
     mineria_1: [ck09-10, ck09-11]
     dominios: [creencia, muerte]
@@ -328,6 +329,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'Corrobora ck09-04 (candidato a reconstruido) sin sumar tradición: Rochefort no es independiente de Breton. La restricción de las sobras es de una sola hermana.'
+    tierra: [reciprocidad-ofrenda]
     mineria_1: [ck09-04]
     dominios: [creencia, comida]
 
@@ -533,6 +535,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'Figuras de espíritus en algodón, guardadas aparte en cuevas: una sola tradición y de oídas. Lee creencia-025 (el espíritu se figura en joyas y madera) y matiza creencia-008c (sin culto comunal de ídolos ni templos: esto no es templo, es depósito temido).'
+    tierra: [lugar-sagrado]
     dominios: [creencia, arqueologia]
 
   - id: kalinago-creencia-113
@@ -566,6 +569,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'El caquetío no tiene mito de origen atestiguado; una sola tradición, con capa colonial posible. Si entra, sin el hombre blanco.'
+    tierra: [saber-del-medio]
     mineria_1: [ck09-20]
     dominios: [creencia, cultivo]
 
@@ -595,6 +599,7 @@ hechos:
     proyeccion:
       capa: comparanda-esfera
       nota: 'Para Marokoto-ni. Louquo sigue en 0 (meta.ceros).'
+    tierra: [muertos-y-tierra]
     mineria_1: [ck09-20]
     dominios: [creencia, origen]
 
@@ -626,6 +631,7 @@ hechos:
     proyeccion:
       capa: comparanda-esfera
       nota: 'No se proyecta. Contra la Vía A (creencia-009, «sin premio ni castigo»): aquí hay premio por el valor, pero caribe. Y la dirección (arriba, cielo, islas) es la contraria del sawaka caquetío, abajo (creencia-028).'
+    tierra: [muertos-y-tierra]
     via_a: {creencia-009: matiza}
     mineria_1: [ck09-15]
     dominios: [creencia, guerra]
@@ -658,6 +664,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'Una sola tradición; y ya en retirada en la década de 1650.'
+    tierra: [limite-de-uso]
     dominios: [creencia, comida]
 
   - id: kalinago-creencia-117
@@ -687,6 +694,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina creencia-010b (la casa del díao que nadie vuelve a habitar). Y el dato caquetío de Curazao (kl10-L1) lo atestigua para gente caquetía, aunque colonial y bautizada.'
+    tierra: [muertos-y-tierra]
     mineria_1: [ck09-14]
     dominios: [creencia, vivienda]
 
@@ -846,6 +854,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'Que el saber de los astros lo guarden capitanes, especialistas y viejos va a transmision (kalinago-transmision-005). El eclipse sigue sin dato caquetío.'
+    tierra: [calendario-del-medio]
     mineria_1: [ck09-10]
     dominios: [creencia, astronomia]
 
@@ -1162,6 +1171,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'El reparto es general; el tabú de tocar el trabajo femenino es sólo kalinago.'
+    tierra: [saber-del-medio]
     dominios: [parentesco, trabajo, medicina]
 
   - id: kalinago-parentesco-007
@@ -1194,6 +1204,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina parentesco-015 (la poligamia de Manaure como estrategia de alianza, atestiguada): casas separadas y huertos dispersos es lo que la hermana añade. La poliginia sororal no se proyecta (una sola tradición).'
+    tierra: [tenencia]
     dominios: [parentesco, alianza]
 
   - id: kalinago-parentesco-008
@@ -1320,6 +1331,7 @@ hechos:
         al nacer el hijo, como si él pariera. Para el caquetío, sólo el núcleo
         (hamaca, dieta, tabú de comidas que dañarían al niño); la escarificación
         con ají y la sangre para el valor quedan como capa caribe.
+    tierra: [limite-de-uso]
     dominios: [parentesco, ciclo-de-vida, creencia]
 
   - id: kalinago-parentesco-012
@@ -1796,6 +1808,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina ecologia-079 (la pesca con veneno vegetal en aguas quietas, atestiguada): la hermana añade una norma de uso, sólo en necesidad.'
+    tierra: [limite-de-uso]
     dominios: [ecologia, pesca, norma]
 
   - id: kalinago-ecologia-004
@@ -1826,6 +1839,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina ecologia-031 (la canoa de un solo tronco, atestiguada) y el horizonte marítimo (geografia_politica-015): navegación de costa y estrellas.'
+    tierra: [saber-del-medio]
     dominios: [ecologia, navegacion, astronomia]
 
   - id: kalinago-ecologia-005
@@ -1939,6 +1953,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina ecologia-036 (el mar como despensa verdadera frente a la tierra pobre): en islas pequeñas, la dieta de la hermana es de mar y lagarto.'
+    tierra: [tenencia]
     dominios: [ecologia, comida]
 
 # ═════════════════════════════════════════════════════════════════════════
@@ -2039,6 +2054,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'El saber guardado por las mujeres (veneno y contraveneno) conviene con la tesis 4 del mapa-transmision (se restringe lo peligroso) pero es de una sola tradición; transmision-004 es canon de la simulación, no atestiguado.'
+    tierra: [saber-del-medio]
     via_a: {creencia-003: corrobora-en-parte}
     dominios: [transmision, medicina, mujeres]
 
@@ -2105,6 +2121,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'El saber del cielo en manos de jefes, especialistas y viejos: una sola tradición. Las estrellas de viento y de mar, en la campaña del mar (Breton).'
+    tierra: [saber-del-medio, calendario-del-medio]
     dominios: [transmision, astronomia]
 
   - id: kalinago-transmision-006

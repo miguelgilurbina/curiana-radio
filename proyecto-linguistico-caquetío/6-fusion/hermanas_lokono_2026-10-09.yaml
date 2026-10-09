@@ -227,6 +227,7 @@ hechos:
         un antepasado no humano— es muy general en la Amazonía, y la mitad
         lokona choca con la negativa de Roth sobre el tótem. En duda,
         degradar.
+    tierra: [origen-en-la-tierra]
     filtro: 'Con el filtro y sin él, `hipotetico`: el rasgo es demasiado amplio para la regla C (precedente: lok-03 de la minería 1).'
     verificado_en_imagen: si
     dominios: [especifico-lokono, linaje, mito-de-origen]
@@ -445,6 +446,7 @@ hechos:
         La covada es de toda la Guayana (Brett la da también de akawaio y
         caribes, p. 355): con el filtro, comparanda para un personaje de la
         esfera, no rasgo caquetío.
+    tierra: [limite-de-uso]
     filtro: 'Sin el filtro, una sola hermana: hipotético.'
     verificado_en_imagen: parcial
     dominios: [areal-guayana, covada, alma-del-niño]
@@ -1064,6 +1066,7 @@ hechos:
         su casa (010b). Que el lokono entierre dentro de la casa —en el
         s. XVI y en el XIX— es el dato nuevo, pero el caquetío común no
         tiene hecho de lugar de entierro: queda como lectura de 008c.
+    tierra: [muertos-y-tierra]
     via_a:
       creencia-008: corrobora-en-parte
       creencia-010d: no-toca
@@ -1165,6 +1168,7 @@ hechos:
         muertos abajo desde la palabra waka. La palabra lokona es un dato
         léxico; la creencia lokona, de tercera mano, va al revés. Lo decide
         Miguel; ninguna de las dos fuentes es caquetía.
+    tierra: [muertos-y-tierra]
     via_a: {creencia-009: matiza}
     via_a_nota:
       creencia-009: 'hay un destino del alma, pero arriba y sin topónimo, y en el s. XIX condicionado a la conducta (quizás prestado); el wayuu da un lugar con nombre (Jepira) y sin premio ni castigo'
@@ -1202,6 +1206,7 @@ hechos:
     proyeccion:
       capa: no-proyecta
       nota: 'Es la lista de lo que NO se proyecta (R5 de la nota 08): ser supremo y diluvio como castigo.'
+    tierra: [origen-en-la-tierra]
     verificado_en_imagen: si
     dominios: [especifico-lokono, capa-misional, ser-supremo]
 
@@ -1251,6 +1256,7 @@ hechos:
         detalle más —Guabonito da «cibas», piedras, y la Orehu da piedras
         blancas—, pero el contenido no (sonajero frente a adornos). No hace
         sagrado el mar caquetío (cc.10).
+    tierra: [lugar-sagrado]
     verificado_en_imagen: si
     dominios: [especifico-lokono, origen-del-piache, mujer-del-agua]
 
@@ -1288,6 +1294,7 @@ hechos:
         El dueño del agua es pan-guayanés (warao, caribe). No reabre cc.10
         (cero dueños del mar caquetíos) ni hace sagrado el mar: es la
         comparanda de un pueblo de canoas de río y de costa baja.
+    tierra: [dueno-del-lugar, lugar-sagrado, limite-de-uso]
     verificado_en_imagen: parcial
     dominios: [areal-guayana, espiritu-del-agua, canoa]
 
@@ -1327,6 +1334,7 @@ hechos:
         puente léxico kati ~ kathi (para_el_lexicon lok-L1 de la minería 1):
         una práctica lunar en la lengua hermana que dice la misma palabra
         para 'luna'. Una sola hermana: hipotético.
+    tierra: [limite-de-uso]
     verificado_en_imagen: si
     dominios: [especifico-lokono, eclipse, luna]
 
@@ -1366,6 +1374,7 @@ hechos:
         Pléyades es de toda la región: areal. Es, con todo, el mito lunar
         lokono que la nota 08 echaba en falta (el «mito de incesto» de
         Rybka está ya en Roth 1915).
+    tierra: [calendario-del-medio]
     filtro: 'Sin el filtro, el mito de la luna sería hipotético (una sola hermana).'
     verificado_en_imagen: parcial
     dominios: [areal-guayana, mito-lunar, estrellas]
@@ -1437,6 +1446,7 @@ hechos:
     proyeccion:
       capa: comparanda-esfera
       nota: 'Tabúes menudos de un pueblo; ninguno tiene par caquetío. Sirven para un personaje, no para el canon.'
+    tierra: [limite-de-uso]
     verificado_en_imagen: parcial
     dominios: [especifico-lokono, tabu]
 
@@ -1472,6 +1482,7 @@ hechos:
         Ilumina, de lejos, creencia-013 (al cacique se le atribuye poder
         sobre las lluvias), pero lo lokono es de todos, no del jefe: areal y
         de otro tipo.
+    tierra: [dueno-del-lugar, limite-de-uso]
     via_a: {creencia-012: no-toca}
     via_a_nota:
       creencia-012: 'la lluvia lokona no se liga a los muertos ni a sus huesos: se hace con la camudi, con el kurri-kurri o se pide al Uni-shidu'
@@ -1744,6 +1755,7 @@ hechos:
     proyeccion:
       capa: lectura
       nota: 'Ilumina creencia-004 (atestiguado: el piache se forma con ayuno prolongado). Lo del abuelo y las mujeres es de un solo pueblo y de época tardía.'
+    tierra: [saber-del-medio]
     via_a:
       transmision-017: contradice
       transmision-030: contradice
@@ -1860,6 +1872,7 @@ hechos:
       nota: >-
         Que en la canoa caquetía hubiera palabras que no se dicen y se
         rodean sería hipotético (una hermana; la forma del uso es colonial).
+    tierra: [dueno-del-lugar, limite-de-uso]
     via_a: {transmision-021: corrobora-en-parte}
     via_a_nota:
       transmision-021: 'el nombre del muerto no se dice (Roth p. 305, general): también en la Guayana; y en la canoa lokona tampoco se dicen ciertas palabras'

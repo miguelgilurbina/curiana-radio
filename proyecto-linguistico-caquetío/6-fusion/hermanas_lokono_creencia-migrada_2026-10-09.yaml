@@ -250,6 +250,7 @@ hechos:
   proyeccion:
     capa: lectura
     nota: 'Ninguna nueva. Si se quisiera la fosa con cañizo para el muerto común caquetío sería hipotético (para el común sólo hay una hermana), y la arqueología de la costa da urnas secundarias, no fosas (creencia-027): no se recomienda.'
+  tierra: [muertos-y-tierra]
   ilumina: 'creencia-010b (atestiguado): el díao tiene un funeral distinto del común, como el capitán achagua; y en los dos casos el cuerpo del jefe no queda bajo tierra (el díao, en hamaca dentro de su casa). Y creencia-008c (atestiguado): el muerto va con sus enseres.'
   via_a:
     creencia-009: no-toca

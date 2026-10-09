@@ -165,6 +165,7 @@ hechos:
         Ilumina parentesco-015 (poligamia cacical, atestiguada para Manaure). Y corrige
         la procedencia de parentesco-022: «esposas jurídicamente iguales, cada una con
         conuco propio» no es de «portales etnográficos»: es Rivero p. 107.
+    tierra: [tenencia]
     hermanas:
       - {pueblo: maipure, id: maipure-parentesco-002}
     dominios: [poliginia, labranza]
@@ -207,6 +208,7 @@ hechos:
         consanguinidad, achagua-parentesco-003). Una tradición: hipotético para el
         caquetío. El mapa de la familia («un fuego con nombre de animal») descansa en
         esto.
+    tierra: [origen-en-la-tierra]
     dominios: [parcialidad, nombre-colectivo]
 
   - id: achagua-parentesco-003
@@ -856,6 +858,7 @@ hechos:
     proyeccion:
       capa: hipotetico
       nota: 'La tierra común con usufructo por el trabajo es de una tradición. No toca la herencia de cargos.'
+    tierra: [tenencia]
     dominios: [tierra-comun, usufructo, herencia-de-campos]
 
   - id: maipure-geografia_politica-004
@@ -1005,6 +1008,7 @@ hechos:
         maipure-ecologia-001). La falta de sal de los llanos contrasta con la sal de la
         costa (ecologia-009): da sentido a un comercio de sal hacia el interior, que
         ninguna fuente documenta.
+    tierra: [limite-de-uso]
     hermanas:
       - {pueblo: maipure, id: maipure-ecologia-001}
     dominios: [aji, sin-sal]
@@ -1091,6 +1095,7 @@ hechos:
     proyeccion:
       capa: no-proyecta
       nota: 'La fauna del llano y del monte no es la del cardonal (ecologia-033): no se proyecta.'
+    tierra: [tenencia]
     dominios: [arco, danta, barbasco]
 
   - id: achagua-ecologia-006
@@ -1305,6 +1310,7 @@ hechos:
         Ilumina creencia-010b: el caquetío también separa el funeral del jefe del del común.
         Gumilla es testigo independiente de Rivero, que da el entierro en la casa para
         todos (ach-cr-16).
+    tierra: [muertos-y-tierra]
     dominios: [rango, tumba]
 
   - id: achagua-creencia-103
@@ -1335,6 +1341,7 @@ hechos:
         (esta), maipure (los meses por «l'uova di tartaruga», el año por el verano,
         Gilij t. II pp. 228-229) y wayuu (creencia-014, Jahn p. 384, rito estacional).
         Lo que sube es la forma; el calendario caquetío (aves, ecologia-094) ya lo tenía.
+    tierra: [calendario-del-medio]
     hermanas:
       - {pueblo: maipure, obra: gilij-1780-1783, pagina: 't. II pp. 228-229 (imagen 229)', que: 'meses lunares nombrados por la ocupación (cuando ponen las tortugas); el año maipure es Camotì, el verano'}
       - {pueblo: wayuu, obra: jahn-1927, pagina: '384', que: 'la Bajada del Ches en enero, rito estacional'}

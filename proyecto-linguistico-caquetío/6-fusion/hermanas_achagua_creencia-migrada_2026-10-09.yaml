@@ -142,6 +142,7 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: nuevo
+  tierra: [dueno-del-lugar]
   via_a_nota: no toca
   dominios:
   - dioses-con-dominio
@@ -187,6 +188,7 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: ruta-arahuaca:creencia-015 (parcial)
+  tierra: [dueno-del-lugar]
   via_a_nota: no toca
   dominios:
   - sufijo-minari
@@ -390,6 +392,7 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: nuevo (el agüero por pájaros y por animales encontrados; el del pez flechado es de río y no se proyecta)
+  tierra: [saber-del-medio]
   via_a_nota: no toca
   dominios:
   - adivinacion

@@ -245,6 +245,7 @@ hechos:
     nota: >-
       Que el conuco sea herencia y no sólo uso es nuevo para el caquetío y lo
       da una sola tradición: hipotético. No dice por qué línea se hereda.
+  tierra: [tenencia]
   verificado_en_imagen: si
   dominios: [parentesco, cultivo, herencia]
 
@@ -607,6 +608,7 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: 'El señor como granero y repartidor es nuevo para el caquetío y lo da una sola tradición, idealizada: hipotético.'
+  tierra: [tenencia]
   verificado_en_imagen: si
   dominios: [politica, redistribucion, trabajo]
 
@@ -693,6 +695,7 @@ hechos:
       La tipología —territorio de caza y pesca, y alianza matrimonial rota— es
       la más cercana documentada para un conflicto entre nodos, pero es de una
       sola tradición: hipotético.
+  tierra: [tenencia]
   verificado_en_imagen: si
   dominios: [guerra, territorio, alianza, armas]
 
@@ -944,6 +947,7 @@ hechos:
       el taíno, a veces, quema la casa con el muerto dentro. En las dos orillas
       la casa del muerto deja de ser de los vivos. Quemar el cuerpo existe
       también en La Española; beber los huesos, no.
+  tierra: [muertos-y-tierra]
   via_a: {creencia-010d: matiza}
   mineria_1: [ct-t02, ct-t14]
   mineria_1_nota: >-
@@ -1030,6 +1034,7 @@ hechos:
       ídolos ni templos): la casa de imágenes del señor taíno no tiene par en la
       fuente caquetía. El robo de cemíes entre pueblos es un dato de rivalidad
       que el corpus no tiene.
+  tierra: [lugar-sagrado, reciprocidad-ofrenda]
   verificado_en_imagen: si
   dominios: [cemi, casa, rivalidad, poder]
 
@@ -1067,6 +1072,7 @@ hechos:
       extremo»: eso era la retraducción de Wikisource, y Caonabó la pone en la
       tierra de cada cacique. Ningún nombre pasa al caquetío; el `sawaka`
       («abajo», creencia-028) no se toca.
+  tierra: [muertos-y-tierra, lugar-sagrado]
   via_a: {creencia-009: corrobora}
   mineria_1: [ct-t05]
   mineria_1_nota: >-
@@ -1137,6 +1143,7 @@ hechos:
   proyeccion:
     capa: lectura
     nota: 'Ilumina por contraste creencia-013: el poder sobre la lluvia está en un objeto que se visita, no en el señor. Nada se proyecta.'
+  tierra: [lugar-sagrado, dueno-del-lugar]
   mineria_1: [ct-t11]
   mineria_1_nota: 'corrige ct-t11: la lluvia de la cueva no está «sólo en Wikisource»; la trae la cadena Colón/Ulloa. Sólo Anglería la cambia por el sol y la luna'
   verificado_en_imagen: si
@@ -1166,6 +1173,7 @@ hechos:
   proyeccion:
     capa: no-proyecta
     nota: 'Sin ancla caquetía (los zemi «NO entran al corpus» hasta atestiguarlos, eth-02). Se registra; y explica las «cestillas» que Rouse convierte en cestas de cabezas.'
+  tierra: [dueno-del-lugar]
   verificado_en_imagen: si
   dominios: [piedras, parto, ofrenda]
 
@@ -1192,6 +1200,7 @@ hechos:
       Ilumina creencia-004b (atestiguado: ayuno de toda la casa antes de la
       guerra o de una cosa de importancia): en las dos orillas una empresa
       grave se prepara con ayuno. La abstinencia sexual no tiene par caquetío.
+  tierra: [limite-de-uso]
   verificado_en_imagen: si
   dominios: [ayuno, abstinencia, oro]
 
@@ -1213,6 +1222,7 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: 'Una regla lunar de siembra sería nueva para el caquetío, de una sola tradición y de amplitud muy grande (también es castellana): hipotético.'
+  tierra: [calendario-del-medio]
   verificado_en_imagen: si
   dominios: [siembra, luna, calendario]
 
@@ -1281,6 +1291,7 @@ hechos:
       Ilumina creencia-010 (atestiguado): el canto fúnebre caquetío dice «lo
       que hizo mientras vivió» el muerto; el areito taíno es la misma memoria
       de hechos, hecha institución. La capa de 010 no cambia.
+  tierra: [saber-del-medio]
   audita_corpus: {transmision-018: corrobora}
   mineria_1: [ct-t03]
   mineria_1_nota: 'corrobora ct-t03 (las endechas que se vuelven areytos) con el capítulo general del areito'
