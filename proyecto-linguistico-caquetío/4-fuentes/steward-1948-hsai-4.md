@@ -22,12 +22,13 @@ acceso: >-
   ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto:
   `pdftotext -enc UTF-8`, 1,58 MB.
 estado_minado: minada-parcial
-cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura"
+cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura; 2026-10-09 (minería 2, lokono): Kirchhoff sobre el Aruacay, pp. 481-490"
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-10-09
 aliases: ["HSAI 4", "Handbook vol. 4", "Circum-Caribbean Tribes", "Hernández de Alba 1948", "Kirchhoff 1948"]
+minado: 2026-10-09
 ---
 
 # HSAI 4 (1948) — *The Circum-Caribbean Tribes*
@@ -268,3 +269,24 @@ Rouse declara sus fuentes en la p. 520. Equivalencia de páginas: pdf 676 = p.
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§steward_auditado y
 §rouse_a_primarias).
+
+## Minería 2 — esferas lokonas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). **Qué se
+preguntó:** si el volumen dice algo de los lokono. Medido: `Arawak` 246,
+`Lokono` 0, `Pomeroon` 0, `Essequibo` 0: el «Arawak» de Rouse es el taíno.
+Lo único lokono es el **Aruacay** del bajo Orinoco en Kirchhoff («probably
+Arawakan», p. 481), del s. XVI y de tercera mano. Desfase pdf − 136.
+
+| Dato | Página | Tema | Hecho |
+|---|---|---|---|
+| Un cacique principal y nueve subjefes, uno por barrio; al principal lo distingue la barba | 487 ✅ | jerarquia-rango | lokono-geografia_politica-002 |
+| Pueblo de 200 casas grandes | 483 | escala-poblacion | lokono-geografia_politica-008 |
+| Entierro dentro de la casa, en tumba de barro con figura encima; casabe y chicha; una conmemoración después | 488 | muerte-entierro | lokono-creencia-106, 107 |
+| Dos hombres se retan a aguantar seis latigazos en la borrachera | 490 ✅ | canto-baile | lokono-creencia-107, lokono-transmision-008 |
+| Escudos y yelmo; las mujeres también siembran; maíz en la chicha | 489, 486, 482-483 | guerra, roles, comida | lokono-geografia_politica-004, lokono-parentesco-009, lokono-ecologia-003 |
+
+Es el único lokono de la época del contacto que hay en el repo, junto con
+Navarrete (por [[roth-1915]]). Si el Aruacay era lokono, el reto del látigo y
+el Maquarri de [[brett-1868]] son la misma institución a tres siglos de
+distancia. Todo va como `hipotetico` (tercera mano).
