@@ -15,12 +15,13 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8114 ítems propuestos** en 163 propuestas, más **61 issue(s)/comentario(s) redactados sin publicar**.
+**8126 ítems propuestos** en 164 propuestas, más **62 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
+| `acasio_capubana_2026-10-09.yaml` | acasio-2023-capubana-calendario | 12 |  |
 | `achagua_arte_neira_ribero_2026-09-22.yaml` | neira-ribero-1762 | 7 |  |
 | `adam_1879_arrouague_caraibe.yaml` | ? | 79 |  |
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
@@ -230,6 +231,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `achagua-arte-morfologia-2026-09-22.md` | El arte achagua, leído: qué le aporta a D11 una hermana arahuaca del norte que no es wayuu |
 | `ampies-como-dios-o-como-digo-2026-09-23.md` | Ampíes sobre Manaure: «se hace adorar como Dios» o «como digo» |
 | `arqueologia-insular-falcon-2026-09-22.md` | La arqueología de las islas y de Falcón: sitios, fauna, movimiento y mar (M8) |
+| `capubana-nombre-acasio-2026-10-09.md` | Capubana en Acasio 2023: el nombre de una estación de la falda, no del cerro |
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
 | `correo-boletin-antropologico-zavala-2026-09-24.md` | Correo — al Boletín Antropológico (ULA), para Miguel Enrique Zavala Reyes: de dónde salen  |
