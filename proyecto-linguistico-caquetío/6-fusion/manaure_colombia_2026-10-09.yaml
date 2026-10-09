@@ -1,0 +1,21 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Los Manaure de Colombia: ¿homenaje o herencia? 2026-10-09.
+# BORRADOR EN CURSO (commit de resguardo). Se completa en esta misma sesión.
+#
+# Regla 5: esto PROPONE. No toca 3-mundo/, 2-lengua/toponimos.yaml,
+# curiana_lexicon.py, lexicon_*.py ni curiana_polities.py.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero de los Manaure de Colombia (Claude Opus 5.5), rama vault/manaure-colombia'
+  pregunta: >-
+    Miguel (2026-10-09): «hay un pueblo que tengo entendido que está también
+    en la frontera, que se llama Manaure, en Colombia… podríamos investigar
+    más sobre esos Manaure de Colombia».
+  hallado_hasta_ahora:
+    - 'Esteves 1989 p. 121: MANAURE, cerro donde nace el río Ricoa (OCR «Ricos») — un Manaure toponímico en Falcón'
+    - 'Carvajal 1647-48 (ed. 1892): «cataures y manaures muy labrados» — Alvarado 1921: «Carvajal escribe incorrectamente manaure» por manare (tamiz)'
+    - 'Carvajal ed. 1892, índice: el gran cacique Manaure «soberano de las naciones índicas … de la laguna de Maracaybo» (nota del editor)'
+    - 'Steward 1948 (HSAI vol. 4, The Goajiro): «During the salt season the Indians of the interior flock to Manaure»'
+    - 'Morón 2012: «Arco Manare o Arco Manaure», halo lunar, en las montañas merideñas y la cuenca del lago de Maracaibo'
