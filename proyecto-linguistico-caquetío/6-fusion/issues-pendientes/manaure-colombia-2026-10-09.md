@@ -22,10 +22,10 @@ descargar. Todo el detalle, con cita, página y etiqueta, está en
    (salinas activas de Chimare, Manaure y Navío Quebrado) sale sólo en un
    resumen de buscador, sin página de origen. El del Cesar no tiene nada más
    viejo que su tradición de fundación (**1874 o 1875**, Buenaventura Maya).
-2. **Ningún Manaure colonial al oeste del golfo.** En Oviedo, Castellanos,
-   Aguado, Pérez de Tolosa, Carvajal y Oviedo y Baños el único Manaure es el
-   de Coro. El mapa del lago que acompaña a Oviedo (t. II, lámina I, visto en
-   imagen) no tiene ninguno.
+2. **Ningún Manaure colonial al oeste del golfo.** En Castellanos, Aguado,
+   Pérez de Tolosa, Carvajal y Oviedo y Baños el único Manaure es el de
+   Coro; Oviedo y Valdés no nombra a ninguno, y el mapa del lago que
+   acompaña su t. II (lámina I, visto en imagen) tampoco.
 3. **La leyenda que lo muda al lago es del s. XIX.** En 1892 el editor de
    Carvajal ya imprimía que el gran cacique Manaure era «soberano de las
    naciones índicas que habitaban las inmediaciones de la laguna de

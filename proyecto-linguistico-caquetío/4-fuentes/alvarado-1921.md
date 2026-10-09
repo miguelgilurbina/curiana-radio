@@ -400,4 +400,13 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 
 **Se halló:** BOTUTO (p. 32): «Antigua trompeta sagrada de algunas tribus orinocenses, descrita por el P. Gumilla y Humboldt» y, aparte, el Strombus «Gran caracol de las costas del mar Caribe. Táñenlo a modo de trompa los carreteros». La trompeta SAGRADA es del Orinoco; la de caracol, de uso profano. Lo mismo que Medina para la guarura (s. XX).
 
+## Los Manaure de Colombia (2026-10-09)
+
+**Se halló:** MANARE (pp. 199-200, pdf 229): harnero o tamiz de caña; «en
+Occ. y la Cord.», un aro de mimbre colgado del techo; voz caribe, chaima y
+cumanagota, «en aruaco, manali»; y «Carvajal escribe incorrectamente
+manaure». Es la homógrafa que hay que contar aparte cuando se sondea
+*Manaure*, y la lectura más económica del «Arco Manaure» (el halo lunar) que
+recoge [[moron-2012-petroglifos]]. Detalle en [[13_manaure_colombia]].
+
 **No se halló:** Cero.

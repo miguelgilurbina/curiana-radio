@@ -60,8 +60,9 @@ lexicón.
    (Gobernación del Cesar, 1997).
 3. **Ningún Manaure colonial al oeste.** En las crónicas del repo el único
    Manaure es el de Coro, también como *Manaore* ([[perez-de-tolosa-1546]],
-   Fernández Duro t. II p. 248) y *Managuare* ([[aguado-1581]]). El mapa del
-   t. II de [[oviedo-y-valdes-1852-1855]] no tiene ninguno.
+   Fernández Duro t. II p. 248) y *Managuare* ([[aguado-1581]]).
+   [[oviedo-y-valdes-1852-1855]] no nombra a ninguno en sus cuatro tomos, y
+   el mapa de su t. II tampoco.
 4. **La leyenda que lo lleva al lago es del s. XIX.** La nota del editor de
    [[carvajal-1892]] lo hace «soberano de las naciones índicas … de la
    laguna de Maracaybo». Carvajal mismo (1647) cuenta otra cosa: que el gran
