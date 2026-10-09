@@ -1,0 +1,1489 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — La creencia ACHAGUA (y la maipure de Gilij) como tercera vía
+# del ensayo «¿En qué creía el caquetío?». Minería del 2026-10-09.
+#
+# Plan: 4-fuentes/sesiones/08_creencia_achagua_que-minar.md (las tres
+# minerías en su orden: Rivero 1883, Neira y Ribero 1762, Gilij t. III).
+# Bitácora: 4-fuentes/sesiones/09_creencia_achagua_mineria.md.
+#
+# Regla 5: esto PROPONE. No toca 3-mundo/corpus/, curiana_lexicon.py, el
+# ensayo, los índices ni el YAML de la transcripción de Neira.
+# Regla 1: el censo del vocabulario (bloque `censo_neira`, al final) lo
+# escribe 6-fusion/scripts/censo_creencia_neira_ribero.py --escribir; el
+# mismo script, sin bandera, valida este archivo (ids, campos, `fuente` en
+# 4-fuentes/bibliografia.yaml, valores de `medio` y `capa`).
+# Regla 3: cada hecho dice qué describe y cómo se escribió (`describe`).
+# Nada de aquí es dato caquetío: es achagua o maipure, colonial, de los
+# Llanos y del Orinoco.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  obra: rivero-1883 · neira-ribero-1762 · gilij-1780-1783
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: minero de fuentes (Claude Opus 5.5), rama vault/creencia-mineria-achagua
+  pregunta: >-
+    ¿Qué creían y hacían los achaguas con sus dioses, sus especialistas, sus
+    muertos y sus fiestas; qué dice Gilij de los maipures como segundo
+    observador; y qué de eso es un gesto que el caquetío ya atestigua, que el
+    canon sólo reconstruye desde el wayuu (Vía A) o que sólo sostiene María
+    Lionza (Vía B)?
+  decision_de_miguel: >-
+    Opción C (2026-10-09). Lo NUEVO entra con la regla estricta del lexicón:
+    `reconstruido` sólo con dos tradiciones arahuacas independientes; con una
+    sola, `hipotetico`; si sólo ilumina un hecho caquetío ya atestiguado,
+    `lectura`. Lo wayuu de la Vía A se queda como comparanda y se audita con
+    lo que aquí se encontró (sección `auditoria_via_a`).
+  campos_de_cada_hecho:
+    capa: >-
+      la capa que el hecho tendría AL PROYECTARSE al canon caquetío
+      (reconstruido / hipotetico / lectura / no-se-proyecta). El hecho
+      achagua o maipure en sí es atestiguado para su pueblo y su época, nunca
+      dato caquetío.
+    fuente: id de 4-fuentes/bibliografia.yaml (una o varias).
+    pagina: página impresa (y del PDF o pliego), con lo visto en imagen.
+    verificado_en_imagen: sí / en parte / no. La cita que decide una capa se vio en imagen.
+    pueblo: achagua, maipure o los dos.
+    describe: qué describe la fuente (gentilidad recordada, misión presente) y cómo se escribió.
+    medio: >-
+      proyectable / no-proyectable. No-proyectable = lo decide el medio de los
+      Llanos (río, laguna, yuca brava, planta de sabana) y no se lleva a la
+      costa seca.
+    proyeccion: >-
+      corrobora:<id> · segunda-hermana:<id> · ruta-arahuaca:<id> · nuevo ·
+      no-se-proyecta:<motivo> (el vocabulario del plan 08 §4).
+    via_a: >-
+      qué hace con los hechos de la Vía A (creencia-002, 003, 005-009, 010d,
+      011, 012): corrobora / contradice / matiza / no toca.
+    toca_canon: hechos del canon que no son de la Vía A (atestiguados o Vía B).
+  las_fuentes:
+    rivero-1883:
+      que_es: >-
+        Juan Rivero S.J. (1681-1736), Historia de las Misiones de los Llanos
+        de Casanare, escrita hacia 1736, impresa en Bogotá en 1883. Libro II
+        caps. VI-VIII (pp. 102-118) leídos enteros: el OCR de archive.org para
+        localizar y la imagen para citar (desfase pdf − 21 en el tramo).
+      como_lee: >-
+        Misionero del XVIII, «averiguado por larga experiencia de los
+        fundadores de estos pueblos, y lo que se ha ido notando y averiguando
+        después» (p. 102): mezcla la gentilidad recordada del XVII con los
+        pueblos de misión de su tiempo. Todo rito es «trato con el demonio»;
+        el creador es «á su modo el verdadero Dios»; el diluvio, Noé. Y avisa
+        él mismo (p. 113) que «toda la gentilidad de los Llanos» se parece
+        tanto que lo de unos vale para otros.
+    neira-ribero-1762:
+      que_es: >-
+        Arte y vocabulario achagua de Alonso de Neira y Juan Ribero,
+        trasuntado en 1762, copia de 1788 (RB II/2910). Se le preguntó por la
+        creencia sobre el YAML de la transcripción por visión
+        (6-fusion/achagua_neira_ribero_1762.yaml) y se vio en imagen cada voz
+        que se cita (los JPG, sólo en OneDrive, fuentes_caquetios/neira_ribero_1762/).
+      como_lee: >-
+        Un vocabulario castellano → achagua hecho por jesuitas: el lema lo
+        elige el misionero, muchas veces para la doctrina («Criar de nada»,
+        «Dar el alma», «Resucitar»). La voz achagua es lo indígena; el lema,
+        no siempre. Juan Ribero ES Juan Rivero: Neira y Rivero cuentan como
+        UN testigo, y una coincidencia entre los dos no es una segunda
+        atestación.
+    gilij-1780-1783:
+      que_es: >-
+        Filippo Salvatore Gilij S.J., Saggio di Storia Americana t. III
+        (Roma, 1782), libro I «Della religione antica degli Orinochesi»,
+        pp. 1-34 (pdf 22-53), leído entero en el OCR del repo y en imagen.
+        Gilij fue misionero en La Encaramada (Orinoco medio) de 1749 a 1767;
+        sus informantes maipures tienen nombre (el regolo Caravàna).
+      como_lee: >-
+        Otro observador, con otros informantes y otro pueblo: los maipures,
+        no los achaguas. Pero (1) para él el achagua es «un dialetto del
+        Maipùre» (t. III p. 205): dos observadores de UNA tradición, no de
+        dos; (2) supo del manuscrito de Rivero y leyó a Gumilla; (3) escribe
+        en Roma para refutar a los «increduli»: busca en cada mito la verdad
+        revelada y lo dice (la costilla, «parola per parola nel Genesi»).
+  independencia: >-
+    Rivero y Neira y Ribero: un testigo. Gilij: otro observador del ramo
+    maipure (achagua y maipure son, para él, una lengua con dialectos).
+    Hernández de Alba (HSAI 4, pp. 399-412) resume a Rivero, Gumilla y
+    Karsten y no cuenta. Si achagua y maipure valen como dos tradiciones para
+    la regla de opción C es DECISIÓN DE MIGUEL; esta propuesta los cuenta
+    como una, y por eso casi todo lo nuevo sale `hipotetico`.
+  respuesta_corta: >-
+    El achagua corrobora, con un observador independiente de otro pueblo
+    arahuaco, tres gestos que el caquetío ya atestigua: el llanto que canta
+    las virtudes y hazañas del muerto (creencia-010), el ajuar «para el
+    camino de la otra vida» (008c) y la muerte atribuida al hechizo (008b);
+    y la ausencia de culto a los dioses (008c), con un matiz: el vocabulario
+    sí tiene voz para «ídolo», y es la máscara de la danza (chubay). Da una
+    segunda hermana arahuaca a tres hechos de la Vía A: el especialista que
+    cura con tabaco y canto (003), el alma que sale del cuerpo y vuelve
+    (005/006) y el muerto como ser temido (008). NO corrobora el segundo
+    entierro, el beber los huesos, la tierra de los muertos con nombre ni a
+    la exhumadora (010d, 011, 012). Lo nuevo —un creador sabio sin culto,
+    dioses con dominio, el sueño contado al alba por el cacique, las
+    estrellas como personas— sale `hipotetico`, porque achagua y maipure son
+    una sola tradición mientras Miguel no diga otra cosa.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Los hechos. ach-cr = achagua (Rivero y Neira); mai-cr = maipure (Gilij).
+# ─────────────────────────────────────────────────────────────────────────
+hechos:
+
+  - id: ach-cr-01
+    contenido: >-
+      Los achaguas no adoran ídolos ni a sus dioses: al creador lo conocen
+      «pero no por eso le adoran, como á ninguno otro de los dioses», y a los
+      dioses menores los reconocían «no para adorar en ellos, sino como una
+      pura tradición y fábula que les contaban sus viejos». Gilij dice lo
+      mismo de todo el Orinoco: «non hanno tempj, nè sagrifizj, non riti
+      alcuni di religione».
+    cita: >-
+      «No adoran ídolos los Achaguas, ni se ha conocido este despeñadero en
+      las demás Naciones que tenemos» (Rivero p. 104); «no para adorar en
+      ellos, sino como una pura tradición y fábula» (p. 113).
+    grafia: []
+    fuente: [rivero-1883, gilij-1780-1783]
+    pagina: 'Rivero pp. 104 (pdf 125), 107, 112-113 (pdf 133-134); Gilij t. III pp. 10 y 29 (pdf 31, 50)'
+    verificado_en_imagen: sí
+    pueblo: achagua (Gilij, Orinoco en general)
+    describe: >-
+      La gentilidad recordada y la de los pueblos nuevos, por un misionero que
+      buscaba idolatría para extirparla y no la encontró. Gilij generaliza
+      para todos los orinoquenses y cita a Gumilla.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-008c
+    via_a: no toca ningún hecho de la Vía A
+    toca_canon:
+      creencia-008c: >-
+        corrobora «no había culto comunal de ídolos ni templos» con un pueblo
+        arahuaco más; matiz en ach-cr-05: el vocabulario sí tiene voz para
+        «ídolo».
+
+  - id: ach-cr-02
+    contenido: >-
+      Un creador sabio, sin culto. Los achaguas reconocen «un Supremo Señor
+      que lo crió todo», Cuaygerri, «que quiere decir el que todo lo sabe»;
+      «esto enseñan á sus hijos», y cuando hablan de quién creó el cielo
+      «dicen que fué el mismo Cuaygerri quien lo crió»; pero no le adoran.
+      El maipure de Gilij tiene la misma figura: Purrùnaminàri, que hizo al
+      hombre y al que no se le rinde culto (mai-cr-01).
+    cita: >-
+      «un Supremo Señor que lo crió todo, á quien llaman Cuaygerri en su
+      lengua, que quiere decir el que todo lo sabe, y esto enseñan á sus
+      hijos» (Rivero p. 112).
+    grafia: [Cuaygerri]
+    fuente: rivero-1883
+    pagina: 'pp. 112-113 (pdf 133-134)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Lo que los achaguas decían en su gentilidad, filtrado por un jesuita que
+      lo lee como noticia natural del Dios cristiano («Bajo este nombre
+      conocen á su modo al verdadero Dios», p. 112). El vocabulario del mismo
+      autor traduce el lema doctrinal «Criador» con otras voces
+      (`Yquenuederrí, Ymanuderrí`, 51 izq.), no con Cuaygerri: el nombre del
+      dios y la palabra de catecismo no se mezclaron.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo
+    via_a: no toca (la Vía A no tiene un hecho del creador)
+    toca_canon: {}
+    implicacion_simulacion: >-
+      Un agente puede hablar de «el que lo hizo todo y lo sabe todo» sin
+      rezarle. El nombre no se caquetiza; si hace falta, lo acuña un agente.
+    lectura: >-
+      Una sola tradición (achagua + maipure) y con la huella doctrinal más
+      fuerte de toda la minería: es el hecho que más se parece a lo que el
+      misionero buscaba. Por eso `hipotetico` y no más.
+
+  - id: ach-cr-03
+    contenido: >-
+      Dioses menores con dominio y con nombre, que no se adoran: uno de las
+      labranzas, uno de las riquezas, uno del fuego, el que causa los
+      temblores, un «dios tonto», y «así iban haciendo un catálogo de dioses
+      y diosas, que omito». El vocabulario del mismo autor añade un flechero,
+      uno de las tempestades, el de los truenos (`Eno`) y un «Dios signo del
+      cielo», y diosas: la criadora de los achaguas, la madre del lucero de la
+      tarde y una estrella. Qué nombre va con qué dominio en el vocabulario
+      está corrido un escalón (sección `panteon_neira_56`).
+    cita: >-
+      «á los dioses particulares de los Achaguas los llamaban así:
+      Jurrana-minari, al de las labranzas; Baraca, al de las riquezas;
+      Cuisiabirri, al del fuego; Pruvisana, al causador de los temblores;
+      Achacató, dios tonto» (Rivero p. 113).
+    grafia: [Jurrana-minari, Baraca, Cuisiabirri, Pruvisana, Achacató, 'Neira: Jurruna minari, Varaca, Cuisiaberri, Prubisana, Apichabirri, tarrari, Eno, Achacato, Amaribaca Vreca, capurraye; diosas tabaminarro, Vrumadua, Jarrutua, Jumenirro']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 113 (pdf 134); Neira pliego 56 izq.'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      «Una pura tradición y fábula que les contaban sus viejos» (p. 113): el
+      saber de los viejos, no un culto, recogido por el mismo autor en la
+      crónica y en el vocabulario (un solo testigo).
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo
+    via_a: no toca
+    toca_canon:
+      creencia-013: >-
+        lectura: el trueno es un dominio con dios propio (ach-cr-21); nada de
+        esto da a un jefe humano el poder sobre el tiempo que el Manaure
+        reclama.
+      creencia-015: 'ruta-arahuaca parcial: ver ach-cr-04.'
+    implicacion_simulacion: >-
+      Los seres con dominio (la labranza, el fuego, el temblor, el trueno)
+      son forma, no nombres: no se caquetizan los nombres achaguas.
+    lectura: >-
+      Una sola tradición con nombres de dominio; el maipure sólo coincide en
+      el trueno-cielo (`Eno`). `hipotetico`.
+
+  - id: ach-cr-04
+    contenido: >-
+      «Dueño» (`-minari`) es en achagua un sufijo de uso general, y además el
+      de algunos seres: `Debi minari` 'médico' (de `Debe` 'medicina'), `Jda
+      minari` 'patrón de la nao', `Cagina minarí` 'labrador' (de `Cagina`
+      'labranza'), `Cuitaminarí` 'amo de casa', `Eriminari` 'dueño del
+      cielo', `Ecunai minarí` 'idólatra'; pero también 'pacífico', 'parlero',
+      'astuto', 'bárbaro', 'compasivo', y en una página sin transcribir
+      `Inaminari` 'dado a mujeres'. Uno de los dioses de Rivero lo lleva
+      (`Jurrana-minari`, el de las labranzas) y el ser supremo maipure
+      también: Gilij lo parte en `minàri`, «la quale vuol dire padrone».
+    cita: >-
+      «Dueño del cielo = minari. Eriminari» (Neira 57 izq.); «Medico — Debi
+      minari» (74 der.); Gilij p. 6: «della voce minàri, la quale vuol dire
+      padrone».
+    grafia: ['-minari', '-minarí', '-minarro (fem., tabaminarro)', 'maipure minàri']
+    fuente: [neira-ribero-1762, gilij-1780-1783]
+    pagina: 'Neira 57 izq., 74 der., 52 izq. (sin transcribir), 56 izq.; el censo entero en `censo_neira.minari`; Gilij t. III p. 6 (pdf 27)'
+    verificado_en_imagen: sí
+    pueblo: achagua y maipure
+    describe: >-
+      Léxico de dos vocabularios jesuitas (Neira) y una etimología del propio
+      misionero (Gilij: los maipures no sabían qué significaba el nombre,
+      «morti i loro vecchi»).
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: ruta-arahuaca:creencia-015 (parcial)
+    via_a: no toca
+    toca_canon:
+      creencia-015: >-
+        la categoría «dueño de un dominio» aplicada a seres divinos está en
+        el achagua y en el maipure (una tradición); el «accidente del paisaje
+        que es dueño y veda» que 015 toma de Sorte NO aparece en lo achagua
+        leído (el único indicio, cerros tenidos por dioses en 1665, es de un
+        pueblo sin fijar: fx-05). No alcanza para sacar a 015 de
+        `retro-abstraido`.
+      creencia-021: no toca (el dueño del cerro del s. XX no tiene paralelo achagua leído).
+    lectura: >-
+      El plan 08 decía «los dioses achaguas son dueños». Medido: `-minari` es
+      el sufijo de 'el que tiene X / el dado a X', y la mayoría de las voces
+      que lo llevan no son de creencia (`censo_neira.minari`). Lo religioso
+      es un uso del sufijo, no su sentido.
+
+  - id: ach-cr-05
+    contenido: >-
+      La fiesta a los dioses es una danza de máscaras, la Chuvay, y el
+      vocabulario llama «ídolo» a lo mismo: `Ydolo = Chuai, Chubay`, e
+      «idolatrar» es `Nuchubaidau`. Rivero: «se ha visto llevarlos ya en
+      procesión tal vez, y hacer fiesta á sus dioses, la cual se reduce á una
+      danza, en que se disfrazan todos á manera de matachines»; la última,
+      «no há dos años», en un pueblo nuevo y en ausencia del Padre, sin que se
+      pudiera averiguar «que sacasen ídolos».
+    cita: '«llaman Chuvay» (Rivero p. 106); «Ydolo — Chuai, Chubay. Ydolatrar — Nuchubaidau» (Neira 69 izq.)'
+    grafia: [Chuvay, Chuai, Chubay, Nuchubaidau]
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 106 (pdf 127); Neira 69 izq.'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Un rito vivo en la misión hacia 1734, que el jesuita trata de
+      idolatría. Hernández de Alba (HSAI 4 p. 410) dice que las mujeres
+      quedaban excluidas «lest they die»: eso NO está en Rivero pp. 102-118
+      (leídas enteras) ni sale en Gumilla por búsqueda; sin fuente localizada.
+    medio: proyectable
+    capa: no-se-proyecta
+    proyeccion: no-se-proyecta:complejo de máscaras del Orinoco y la Amazonía noroeste sin rastro costero (plan 08 §2.3)
+    via_a: no toca
+    toca_canon:
+      creencia-008c: >-
+        matiza: «no adoran ídolos» convive con una voz para «ídolo» que nombra
+        la máscara de la danza. Si el canon dice «no había ídolos», el
+        achagua avisa que el misionero llamaba ídolo a otra cosa.
+      creencia-025: no toca (el espíritu pintado en joyas y madera es caquetío atestiguado; aquí es máscara).
+
+  - id: ach-cr-06
+    contenido: >-
+      El especialista cura con el canto y el soplo, y con humo de tabaco. El
+      vocabulario lo dice con una raíz: `Numariu` 'encantar, curar cantando',
+      `Maricai` 'encanto' y 'brujería' («curar con ella = Numariu»),
+      `Camaricacayi` 'encantador' y `Camaricacay` 'brujo', y, en una página
+      que el YAML no transcribió, «Soplar à los enfermos — Numariuni» y
+      «Soplam.to tal — Chabicuri», que es también 'ensalmo' y 'cura tal'.
+      Rivero: el piache «sirviéndole su propia boca de incensario, va
+      incensando... con ciertos ensalmos», y a los moribundos los parientes
+      «más humanos» los soplan y sahúman «con humo de tabaco».
+    cita: >-
+      «Encantar, curar cantando — Numariu, nutaimariu» (Neira 61 izq.);
+      «Brugeria — Maricai. Curar con ella = Numariu» (43 der.); «Soplar à los
+      enfermos — Numariuni» (92 der.); «va incensando poco á poco con muchas
+      ceremonias y gestos y con ciertos ensalmos» (Rivero p. 105).
+    grafia: [Numariu, nutaimariu, Maricai, Camaricacayi, Camaricacay, Numariuni, Chabicuri, Nugiayu 'curar soplando', 'Debi minari médico', chema 'tabaco']
+    fuente: [neira-ribero-1762, rivero-1883]
+    pagina: 'Neira 43 der., 61 izq., 74 der., 52 izq. y 92 der. (sin transcribir); Rivero pp. 105 (pdf 126) y 111 (pdf 132)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      El léxico del oficio (lemas pedidos por el misionero, voces achaguas) y
+      dos escenas: la chaca (rito de río, ya en cosmovision_marina
+      cm24-c-a01, no se duplica) y la agonía. Un testigo.
+    medio: proyectable
+    capa: reconstruido
+    proyeccion: segunda-hermana:creencia-003
+    via_a:
+      creencia-003: >-
+        corrobora EN PARTE con una segunda tradición arahuaca: tabaco (humo,
+        incienso soplado) y canto (curar cantando) están en el achagua; la
+        aspersión de licor, el urari como medicina del piache y el
+        espíritu-serpiente del trance NO (el curare achagua es de flechas,
+        p. 102). El resto de 003 sale de Jahn (ayomán y timote, no
+        arahuacos).
+      creencia-002: no toca (el achagua no dice que el especialista cure por el sueño).
+    toca_canon:
+      creencia-001: 'lectura: el oficio tiene voz propia en cada lengua (ach-cr-07).'
+    lectura: >-
+      La regla estricta, parte por parte: el TABACO del especialista tiene dos
+      tradiciones arahuacas (wayuu, por Perrin en 003, y achagua) y es
+      `reconstruido`; el CANTO que cura sólo tiene la achagua, porque 003 lo
+      toma de Jahn (pueblos no arahuacos) y no cita canto wayuu: por sí solo
+      sería `hipotetico`. El soplo sobre el enfermo, también sólo achagua.
+
+  - id: ach-cr-07
+    contenido: >-
+      «Piache» y «mohán» no son palabras achaguas: son la lengua de la región
+      y de la misión. Rivero escribe «su sacerdote, á quien llaman Piache» y
+      «Moján ó hechicero», pero el vocabulario del mismo autor no los trae
+      como voz achagua: para 'brujo' da `Camaricacay` y para 'médico' `Debi
+      minari`. Gilij: «Piàce» es 'médico' y la voz «viene dalla lingua
+      Caribe».
+    cita: >-
+      «il nome Piàce compete a soli medici» y «l'una, e l'altra vengono dalla
+      lingua Caribe» (Gilij p. 9).
+    grafia: [Piache, Moján, Mojan, Piàce, Piaye]
+    fuente: [rivero-1883, neira-ribero-1762, gilij-1780-1783]
+    pagina: 'Rivero pp. 105-106, 118; Neira 43 der., 74 der.; Gilij t. III p. 9 (pdf 30)'
+    verificado_en_imagen: sí
+    pueblo: achagua y maipure
+    describe: >-
+      Voces de misión. Rivero usa «Mojan» para la mezcla del hechizo (p. 106)
+      y «Moján» para el curandero airico (p. 118): la palabra es regional.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-001
+    via_a:
+      creencia-003: >-
+        matiza: el «piache-mohán» de 003 es nombre regional de misión, no un
+        rasgo de un pueblo; lo arahuaco del oficio es la voz propia
+        (achagua `Camaricacayi`, caquetío `boratio`).
+    toca_canon:
+      creencia-001: >-
+        corrobora la regla de 001 por el lado achagua: cada lengua tiene su
+        voz para el oficio y la de la región es préstamo.
+
+  - id: ach-cr-08
+    contenido: >-
+      La yopa: adivinación colectiva antes de una guerra o un viaje. Se
+      convoca a muchos, se toma por la nariz, y si «la evacuación» sale por
+      la ventana derecha es buen presagio, por la izquierda malo, y por las
+      dos «queda indecisa la materia»; pasan el día gritando cada uno a
+      solas, «que muestran hablar con el demonio á quien piden consejo».
+    cita: '«llaman á estos polvos yopa, con los cuales hacen ellos sus adivinanzas» (Rivero p. 104)'
+    grafia: [yopa]
+    fuente: rivero-1883
+    pagina: 'pp. 104-105 (pdf 125-126)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Práctica «casi apagada del todo» en los pueblos viejos cuando escribe
+      Rivero (p. 105), a fuerza de quebrar los instrumentos. Es de todo el
+      llano: los airicos «usan también éstos de la yopa como los Achaguas»
+      (p. 116) y la usaban los de la serranía de Tame (p. 56, pdf 77, sólo
+      OCR).
+    medio: no-proyectable
+    capa: no-se-proyecta
+    proyeccion: no-se-proyecta:la yopa (Anadenanthera) es planta del llano y ninguna fuente del repo la pone en la costa seca
+    via_a: no toca (la yopa no es tabaco)
+    toca_canon:
+      creencia-024: >-
+        lectura: misma función (preguntar si saldrá bien una empresa), otro
+        medio: el caquetío pregunta al tabaco, y cada uno es su boratio.
+
+  - id: ach-cr-09
+    contenido: >-
+      Agoreros: se adivina «por el canto de los pájaros, ya por el encuentro
+      de animales terrestres, y ya por los peces que flechan» (los primeros
+      peces dicen cómo irá la pesquería). El vocabulario separa el agüero que
+      se busca del que llega: `Cayubacaybe` 'agüero voluntario', `Emimay`
+      'agüero fortuito', y «saber por agüeros» tiene verbo.
+    cita: '«agoreros sí tienen muchos, y adivinadores de los sucesos futuros» (Rivero p. 104)'
+    grafia: [Cayubacaybe, Emimay, 'Nuayurena Caiubacaibeyu']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 104 (pdf 125); Neira 32 izq. (no vista en imagen esta vez)'
+    verificado_en_imagen: en parte
+    pueblo: achagua
+    describe: Gentilidad descrita por el misionero; el vocabulario es transcripción por visión del 2026-09-12.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo (el agüero por pájaros y por animales encontrados; el del pez flechado es de río y no se proyecta)
+    via_a: no toca
+    toca_canon:
+      creencia-024: 'lectura: la adivinación caquetía atestiguada es con tabaco; ésta es por señales del monte.'
+
+  - id: ach-cr-10
+    contenido: >-
+      El sueño es asunto público y se cuenta cada mañana: «su primera
+      distribución por la mañana al rayar el día ha de ser ir refiriendo
+      todos cuantos disparates han soñado, y esto en cada caney ó casa,
+      empezando el primero de todos su Cacique ó Capitán; van contando el
+      sueño en tono de lamentación muy á la larga, con un sonsonete tan
+      triste y melancólico, que pone en confusión á todo el pueblo». El
+      vocabulario tiene `Masiu numaca` 'soñar', `Dasuisi` 'sueño' y, aparte,
+      «Soñar, tener pesadillas — Carrunata numayu», con la raíz de 'miedo'
+      (`Carrunicaí`).
+    cita: '«empezando el primero de todos su Cacique ó Capitán; van contando el sueño en tono de lamentación» (Rivero p. 105)'
+    grafia: ['Masiu numaca', Dasuisi, 'Nudasuni (el mío; lectura dudosa)', 'Carrunata numayu']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 105 (pdf 126); Neira 92 der. (página sin transcribir en el YAML, leída hoy)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Costumbre de los pueblos de misión que Rivero da por sabida («Ya se
+      sabe»), en la misma frase que la chaca: «extiéndese esta creencia hasta
+      á sus mismos sueños». Gilij pone a los viejos «parlatori», los más
+      nobles, a contar las tradiciones «l'aurora» (t. III p. 18): la hora es
+      la misma, el asunto no.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: segunda-hermana:creencia-005 (sólo el núcleo «lo soñado pesa como lo vivido»); nuevo para el relato al alba
+    via_a:
+      creencia-005: >-
+        corrobora el núcleo: lo soñado pesa tanto que se cuenta en público
+        cada día y conmueve al pueblo. NO corrobora la teoría del alma que
+        viaja de noche (Rivero no la da; ver ach-cr-11 para el alma).
+      creencia-002: >-
+        matiza: el sueño achagua no es terreno del especialista; lo cuenta
+        cada casa y lo abre el cacique. Nada de diagnóstico ni de cura.
+    toca_canon:
+      creencia-001b: >-
+        lectura: el jefe abre el relato de los sueños; casa con el díao que
+        es a la vez jefe y boratio, sin probarlo.
+    lectura: >-
+      Para `reconstruido` faltaría una segunda tradición que cuente los sueños
+      al alba. El wayuu de Paz Reverol 2017 podría tenerlo, pero el artículo
+      no está en el repo y su ficha no lo dice: queda por verificar.
+
+  - id: ach-cr-11
+    contenido: >-
+      El alma está dentro del cuerpo o fuera de él, y vuelve. «Ánima en el
+      cuerpo — Gabasí. Fuera d[e] él = Guabasimi»; «Revivir — Guabasi
+      esuayua» y «Bolver en sí — Ribaba esua», con el mismo `esua-` de
+      «Bolver à mi lugar — Nuesuayua»: revivir y volver en sí es que el alma
+      (o el corazón, `-baba`) vuelve a su lugar. Y desmayarse se dice con
+      ella: «Desmayarse = Nubaba decuayu», «Parasismo = Guabasí». `Guabasí`
+      es a la vez alma, corazón y estómago, y entra en gemir, suspirar,
+      alegrarse y el albedrío: una sede de la vida en el pecho y el vientre.
+    cita: >-
+      «Anima en el Cuerpo — Gabasí. fuera d[e]l = Guabasimi» (Neira 35 der.);
+      «Revivir — Guabasi esuayua» (89 der.); «Bolver en sí — Ribaba esua»
+      (42 der.).
+    grafia: [Gabasí, Guabasí, Guabasimi, 'Guabasi esuayua', 'Ribaba esua', Nuesuayua, 'Nubaba decuayu']
+    fuente: neira-ribero-1762
+    pagina: 'Neira 35 der., 42 der., 89 der., 62 izq. (vistas); 34 izq., 50 der., 55 izq., 62 der., 80 der. (transcripción, sin ver hoy)'
+    verificado_en_imagen: en parte
+    pueblo: achagua
+    describe: >-
+      Léxico. Los lemas «Ánima en el cuerpo / fuera de él» y «Resucitar» son
+      de catecismo (la doctrina necesita el alma separada); lo indígena es la
+      forma en `-mi` (la del difunto y el antepasado) y el verbo de volver a
+      su lugar, que no es un calco obvio. «Volver en sí» SÍ puede ser calco
+      del castellano.
+    medio: proyectable
+    capa: reconstruido
+    proyeccion: segunda-hermana:creencia-005 y segunda-hermana:creencia-006 (en su núcleo «el alma sale del cuerpo y vuelve»)
+    via_a:
+      creencia-005: >-
+        corrobora que el alma sale del cuerpo (segunda tradición: wayuu
+        aa'in + achagua guabasí, las dos con sede en el pecho). No dice que
+        salga en el sueño.
+      creencia-006: >-
+        corrobora con reservas: desmayarse y revivir se dicen con el alma que
+        se va y vuelve a su lugar; NO dice que la enfermedad sea el alma que
+        vaga, ni que el especialista negocie su regreso, ni lo del niño.
+    toca_canon: {}
+
+  - id: ach-cr-12
+    contenido: >-
+      El alma del muerto anda como un ser, y se la teme. El duende es
+      `Guabaimi` (el alma con el `-mi` de lo que ya fue), y a los españoles
+      los llaman igual: «Blanco Español — Guabaymi. Guabaymigerrai. Así
+      llaman los Duendes». Hay «Ojos p.a ver almas = Guabaimi tuibabare». El
+      demonio de los jesuitas es `tanasimi`. En el maipure, Gilij encuentra
+      que alma separada y demonio se confunden, y que el demonio (`Vasùri`)
+      son sólo las almas de los muertos en guerra o en pleito (mai-cr-04).
+    cita: >-
+      «Duende — Guabaimi, cata; Gubaimigerru» (Neira 57 izq.); «Blanco
+      Español — Guabaymi. Guabaymigerrai. Asi llaman los Duendes» (42 izq.);
+      «Ojos p.a ver almas = Guabaimi tuibabare» (78 der.); «Demonio Diablo —
+      tanasimi» (53 izq.).
+    grafia: [Guabaimi, Guabaymi, Guabaymigerrai, Guabaimegetua, 'Guabaimi tuibabare', tanasimi]
+    fuente: [neira-ribero-1762, gilij-1780-1783]
+    pagina: 'Neira 42 izq., 53 izq., 57 izq., 78 der.; Gilij t. III pp. 14-15 (pdf 35-36)'
+    verificado_en_imagen: sí
+    pueblo: achagua y maipure
+    describe: >-
+      Léxico (Neira) y conversación de Gilij con informantes maipures. Que el
+      español se llame «duende» es dato COLONIAL: dice cómo se nombró al
+      recién llegado con una categoría vieja, no cómo era la categoría antes.
+    medio: proyectable
+    capa: reconstruido
+    proyeccion: segunda-hermana:creencia-008
+    via_a:
+      creencia-008: >-
+        corrobora que el muerto es un ser con agencia y peligroso (segunda
+        tradición arahuaca: wayuu yoluja + achagua guabaimi; el maipure,
+        mismo ramo). MATIZA: en el maipure lo que vuelve peligroso al muerto
+        es la muerte violenta, no lo reciente; y nada dice que los muertos
+        antiguos protejan y avisen.
+    toca_canon:
+      creencia-008b: 'lectura: corrobora el temor a los muertos que Arcaya atestigua para Coro.'
+    lectura: >-
+      `tanasimi` admite tres cortes y ninguno se decide sin el arte: `tana-`
+      'sombra' (`tanari, Nutana`, 92 izq.), `tana` 'jagua' (71 izq.) o
+      `Tanasí` 'convite, honras del difunto' (42 izq., 68 izq.), más `-mi`.
+      La sombra del muerto y el convite del muerto llevan las dos al mismo
+      sitio; el parecido no decide.
+
+  - id: ach-cr-13
+    contenido: >-
+      La muerte se atribuye siempre al hechizo, y de ahí la venganza entre
+      parcialidades. El hechizo a distancia junta una prenda del ausente
+      («cabellos, saliva») con polvos de chica en un calabacito, mezcla que
+      «llaman Carrage, Mojan ú Camerico», y el hechicero invoca a voces;
+      «aunque muera el indio de otra cosa... han de decir que fué Moján ó
+      hechicero el que lo mató». El vocabulario dice «Hechizar (dicen
+      cocinarle) = Nuchanaum», con el verbo de encender el fuego.
+    cita: '«Esta suele ser la raíz de las disenciones y discordias que ocurren entre las parcialidades» (Rivero p. 106)'
+    grafia: [Carrage, Mojan, Camerico, Chica, Nuchanaum, 'Marra (hechizo del bien querer)']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 106 (pdf 127); Neira 67 izq. y der. (no vistas hoy)'
+    verificado_en_imagen: en parte
+    pueblo: achagua
+    describe: >-
+      Gentilidad y misión («pocos días há» mataron a un gentil por una
+      sospecha así). El veneno de pelos de la oruga `barbarí` (no «barban»,
+      como da el OCR) que usan los viejos es otro medio, «sin pacto con el
+      demonio», y es animal del llano: no se proyecta.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-008b
+    via_a: no toca
+    toca_canon:
+      creencia-008b: >-
+        corrobora «la muerte misma se atribuía a menudo a conjuros mágicos»
+        con un pueblo arahuaco más, y añade la consecuencia: la sospecha
+        lleva a la venganza entre parcialidades.
+
+  - id: ach-cr-14
+    contenido: >-
+      Al moribundo le ponen al lado el arco, las flechas y la macana «para que
+      se defienda de la muerte y de la enfermedad», y muchas veces lo dejan
+      solo; los «más humanos» lo soplan y lo sahúman con tabaco, y la hija
+      mayor o la mujer lo peina «aunque el miserable doliente esté rabiando
+      de dolores».
+    cita: '«Estas armas le ponen allí cerca, para que se defienda de la muerte y de la enfermedad» (Rivero p. 111)'
+    grafia: []
+    fuente: rivero-1883
+    pagina: 'p. 111 (pdf 132)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: Costumbre que el misionero ve «en sus enfermedades y entierros» y llama abuso; gentilidad y pueblos nuevos.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo
+    via_a:
+      creencia-006: >-
+        matiza: aquí la muerte y la enfermedad son algo de lo que el
+        moribundo se defiende con sus armas, no (o no sólo) un alma que se
+        aleja.
+    toca_canon: {}
+    implicacion_simulacion: 'En una agonía, las armas del muerto junto a él y una mujer de la casa que lo peina.'
+
+  - id: ach-cr-15
+    contenido: >-
+      El llanto que canta lo que el muerto hizo. Un pregonero «que sirve de
+      campana» convoca desde la puerta; en media hora están todos y lloran
+      en comunidad; luego, uno a uno, «diciéndole sus requiebros al muerto,
+      preguntándole que para qué se murió y los dejó solos, besándole las
+      manos, haciendo memoria de su valentía, y de que jugaba bien con ellos
+      el arco y flecha y macana; y descienden también á los pies, alabando
+      su ligereza, que corría bien, que seguía mucho la caza, y así le van
+      refiriendo sus virtudes»; a la mujer, «aquellas manos que hacían tan
+      buen cazabe, que sazonaban tan buena bebida». Tres o cuatro días «de
+      cuerpo presente», con chicha, hasta «una solemne borrachera».
+    cita: '«y así le van refiriendo sus virtudes, y repitiéndolas muchas veces con terribles lamentos y aullidos» (Rivero p. 112)'
+    grafia: []
+    fuente: rivero-1883
+    pagina: 'pp. 111-112 (pdf 132-133)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Lo que el misionero vio en los pueblos. Ojo: los girara tienen en sus
+      entierros «los mismos ritos que los Achaguas» (p. 115): el funeral
+      puede ser del llano entero, no sólo achagua. Lo propio que Rivero da
+      para los achaguas es el detalle del llanto.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-010
+    via_a: no toca
+    toca_canon:
+      creencia-010: >-
+        CORROBORA, con un observador independiente de otro pueblo arahuaco,
+        el gesto que Oviedo atestigua para el caquetío común: lo lloran
+        «cantando, y diciendo en aquel cantar lo que hizo mientras vivió».
+        Lo que sigue al llanto es distinto: el achagua entierra, el caquetío
+        quema y bebe los huesos.
+      creencia-010c: 'lectura: la convocatoria (pregonero / llamamiento general) es la misma forma.'
+    implicacion_simulacion: >-
+      El canto fúnebre de Bana-mana puede alabar el cuerpo del muerto parte
+      por parte (las manos que tiraban bien, los pies que corrían); el de una
+      mujer, sus manos de cocina, con maíz y no con cazabe.
+
+  - id: ach-cr-16
+    contenido: >-
+      Se entierra en un hoyo en medio de la casa, con la macana, el arco, las
+      flechas, la rodela, la hamaca, cazabe, comida y todos sus trastes
+      («caracoles, cuentas de vidrio y baratijas»), y cada cosa tiene su
+      porqué: las armas, «para que en el camino de la otra vida tengan con qué
+      defenderse, si encontraren enemigos»; la comida, «su matalotaje y
+      provisión»; los trastes y la hamaca, «para tener de qué servirse en el
+      otro mundo». El vocabulario: «Enterrar = Nuayu nirri irrico», 'lo pongo
+      dentro de la sepultura'.
+    cita: '«para que en el camino de la otra vida tengan con qué defenderse, si encontraren enemigos» (Rivero p. 112)'
+    grafia: [nirri, 'Nuayu nirri irrico']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 112 (pdf 133); Neira 59 der. y 91 der. (transcripción)'
+    verificado_en_imagen: en parte
+    pueblo: achagua
+    describe: >-
+      Lo visto por el misionero. Que de ahí se colija «la inmortalidad de las
+      almas» es inferencia de Rivero (p. 112), no palabra achagua. Las
+      cuentas de vidrio son colonia.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-008c; segunda-hermana:creencia-009 (en parte)
+    via_a:
+      creencia-009: >-
+        corrobora EN PARTE: hay un camino a la otra vida, con enemigos, y allá
+        sirven las mismas cosas de acá (la vida allí prolonga la terrenal).
+        NO da tierra de los muertos con nombre, ni dice nada de premio o
+        castigo (el maipure sí: mai-cr-03).
+      creencia-010d: >-
+        no toca: el achagua de Rivero no exhuma ni redeposita; ningún segundo
+        tiempo en lo leído.
+    toca_canon:
+      creencia-008c: >-
+        corrobora el ajuar «para que no le falte nada en la otra vida» con un
+        observador de otro pueblo arahuaco. Aviso para quien fusione: 008c
+        (Arcaya, entierro con enseres) y 010 (Oviedo, el caquetío común se
+        quema y se bebe) conviven en el canon sin decir para quién vale cada
+        uno; el achagua se parece a 008c.
+
+  - id: ach-cr-17
+    contenido: >-
+      Las honras del difunto son un convite, con su ofrenda. El vocabulario
+      da «Honras de Dif.to — Tanasí / ofrenda tal = Yrrubaydacasí», y
+      «Convite p.a Labranza — Vnuma. P.a honras de muerto = Tanasí», que es la
+      misma voz que «Boda, convite». Aparte: «Ofrenda de difuntos =
+      Jrrubaidacasi, vel, Jrrubaidamicain».
+    cita: >-
+      «Ofrenda de difuntos = Jrrubaidacasi, vel, Jrrubaidamicain» (Neira 78
+      der.); «Honras de Dif.to — Tanasí / ofrenda tal = Yrrubaydacasí» (68
+      izq.).
+    grafia: ['Tanasí (la mayúscula del copista se lee T o J: el YAML trae Janasi en 49 izq.)', Yrrubaydacasí, Jrrubaidacasi, Jrrubaidamicain, Vnuma]
+    fuente: neira-ribero-1762
+    pagina: 'Neira 42 izq., 49 izq., 68 izq., 78 der.'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Léxico. «Ofrenda de difuntos» es también una práctica católica que el
+      catequista necesitaba nombrar: el lema puede ser de doctrina. Lo que
+      parece indígena es que las honras se digan con la palabra del convite
+      y de la boda. Rivero, del mismo autor, sólo describe la comida en la
+      tumba y los tres o cuatro días de chicha; ninguna ofrenda periódica.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: ruta-arahuaca:creencia-016 (con cautela)
+    via_a: no toca
+    toca_canon:
+      creencia-016: >-
+        ruta arahuaca posible, todavía no suficiente: el achagua da una
+        ofrenda y unas honras con nombre (lema quizá doctrinal); con la
+        reciprocidad wayuu de Paz Reverol 2018 serían dos tradiciones, pero
+        ninguna de las dos describe en el repo el gesto de alimentar al
+        muerto. 016 se queda `retro-abstraido` hasta que una fuente lo
+        describa.
+      creencia-010c: 'lectura: las honras son un convite, como el llamamiento para beber los huesos del díao.'
+
+  - id: ach-cr-18
+    contenido: >-
+      La bebezón solemne es la fiesta mayor: «Es función muy plausible y
+      deseada de todos la de este día, como el mayor del año; de éste hablan,
+      y en éste sueñan mucho tiempo antes». Todo el pueblo, pintados «así
+      hombres como mujeres», al caney a las siete de la mañana; flautillas;
+      la chicha en canoas; sentados «por su orden», los caciques y nobles en
+      asientos bajos, y sirven los mozos del pueblo hasta la noche; unos
+      ríen, otros lloran, cantan y «se repiten sus agravios».
+    cita: '«como el mayor del año; de éste hablan, y en éste sueñan mucho tiempo antes» (Rivero p. 107)'
+    grafia: [Muriques, 'Neira: Bebeson = Berria; Borrachera = Camaybacay; Flauta = Jba; Danza = Ybabedacasi']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero pp. 107-108 (pdf 128-129); Neira 41 izq., 43 izq., 64 izq., 52 izq. (Danza, sin transcribir)'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: >-
+      Fiesta viva en la misión, que los padres «permiten» por no perderlo
+      todo (p. 109). Rivero no dice en qué estación cae.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-010c (la forma)
+    via_a: no toca
+    toca_canon:
+      creencia-010c: >-
+        lectura: la forma de la gran reunión —todos, pintados, sentados por
+        rango, servidos por los jóvenes— es la del llamamiento para beber los
+        huesos del díao. La bebida no (ach-cr-19).
+      creencia-014: 'no toca: Rivero no fecha la bebezón mayor en una estación.'
+
+  - id: ach-cr-19
+    contenido: >-
+      La bebida de la fiesta es la berría, chicha de cazabe enmohecido:
+      «Llámase berría esta bebida en su lengua, y se deriva de la palabra
+      berri que significa cazabe... y á la misma bebezón llaman también
+      berría»; con ella se preparan para la guerra, celebran los casamientos
+      y reciben a los parientes de otras tierras.
+    cita: '«Llámase berría esta bebida en su lengua, y se deriva de la palabra berri que significa cazabe» (Rivero p. 110)'
+    grafia: [berría, berri, 'Neira: Bebeson = Berria; Casabe = Berrí']
+    fuente: [rivero-1883, neira-ribero-1762]
+    pagina: 'Rivero p. 110 (pdf 131); Neira 41 izq.'
+    verificado_en_imagen: sí
+    pueblo: achagua
+    describe: Descripción técnica del misionero (la yuca brava, el sebucán, el budare).
+    medio: no-proyectable
+    capa: no-se-proyecta
+    proyeccion: no-se-proyecta:chicha de yuca brava; la bebida ritual caquetía atestiguada es de maíz
+    via_a: no toca
+    toca_canon:
+      creencia-023: 'contraste: la comida y la bebida del rito caquetío son de maíz (Oviedo).'
+
+  - id: ach-cr-20
+    contenido: >-
+      El diluvio. Los achaguas tienen tradición «derivada de padres á hijos»
+      de una inundación, `Catana`, hecha «con aguacero muy grande», de la que
+      uno de los antiguos abuelos escapó con su familia subiendo a un monte
+      muy alto. Los maipures la llaman `Veni murràre` y dicen que sus
+      antepasados se salvaron «in Canòe».
+    cita: '«se anegó el mundo antiguamente con aguacero muy grande que cubrió la tierra» (Rivero p. 113)'
+    grafia: [Catana, 'Veni murràre (maipure)']
+    fuente: [rivero-1883, gilij-1780-1783]
+    pagina: 'Rivero p. 113 (pdf 134); Gilij t. III p. 20 (pdf 41)'
+    verificado_en_imagen: sí
+    pueblo: achagua y maipure
+    describe: >-
+      Tradición recogida por misioneros que leen en ella a Noé («así llaman á
+      Noé», p. 113). Gilij insiste en que no les llegaba nuevo cuando se lo
+      predicaban (p. 18).
+    medio: no-proyectable
+    capa: no-se-proyecta
+    proyeccion: no-se-proyecta:diluvio de llanura y huella doctrinal (Noé); plan 08 §2.3
+    via_a: no toca
+    toca_canon: {}
+
+  - id: ach-cr-21
+    contenido: >-
+      El trueno y el cielo son dominio divino en las dos hermanas. En achagua
+      `Eno` es el trueno («Rayo, el trueno = Eno siya, vel, Eno»; «Relámpago =
+      Eno saberrum») y el nombre de un dios del pliego 56 (el de las
+      tempestades en la copia, el de los truenos si se corre el escalón). En
+      maipure, `Eno` es el cielo, y Gilij: los maipures «attribuiscono al
+      Cielo... qualche divinità. Dicesi in Maipùre Eno, la qual voce
+      significa similmente il tuono, e lo schioppo».
+    cita: '«Dicesi in Maipùre Eno, la qual voce significa similmente il tuono, e lo schioppo» (Gilij p. 21)'
+    grafia: ['Eno (achagua: trueno; maipure: cielo y trueno)']
+    fuente: [neira-ribero-1762, gilij-1780-1783]
+    pagina: 'Neira 56 izq. (vista), 87 der. y 96 izq. (transcripción); Gilij t. III pp. 21 (pdf 42) y 159 (pdf 174, «Cielo — Eno»)'
+    verificado_en_imagen: en parte
+    pueblo: achagua y maipure
+    describe: Léxico y una línea de Gilij; dos observadores, una tradición.
+    medio: proyectable
+    capa: lectura
+    proyeccion: corrobora:creencia-013 (sólo como lectura del dominio)
+    via_a: no toca
+    toca_canon:
+      creencia-013: >-
+        lectura: el dominio que el Manaure reclama —lluvias, truenos, los
+        temporales— es en las hermanas un dominio divino con nombre. Ninguna
+        hermana se lo da a un jefe humano: no prueba que «señor de las
+        tormentas» sea un título, y no lo contradice.
+
+  - id: ach-cr-22
+    contenido: >-
+      Las estrellas son personas y tienen parientes. Entre las diosas
+      achaguas hay una «Madre del Lucero de la tarde» y «Una estrella»
+      (eso no cambia aunque los nombres estén corridos); y el vocabulario
+      nombra en achagua las Cabrillas (`Jbinai`), el Camino de Santiago
+      (`Besibami`), el Carro (`Ebatare`), el Crucero (`Edatarí`), el lucero de
+      la tarde (`Carruyi`) y el de la mañana (`Quisari`), el cometa
+      (`Cunicasiyayi`). Los maipures decían que las estrellas «fossero già
+      state in terra, come ora vi stanno gli uomini», y que ahora son
+      inmortales.
+    cita: >-
+      «Madre del lucero de la tarde = Jarrutua. Vna estrella = Jumenirro»
+      (Neira 56 izq.); «Credean essi, che le stelle... fossero già state in
+      terra» (Gilij p. 17).
+    grafia: [Jarrutua, Jumenirro, Jbinai, Besibami, Ebatare, Edatarí, Carruyi, Quisari, Cunicasiyayi, 'Pittinitì (maipure, las estrellas)']
+    fuente: [neira-ribero-1762, gilij-1780-1783]
+    pagina: 'Neira 56 izq. y 49 izq. (vistas); 44 der., 45 der., 46 der., 51 der., 73 izq. (transcripción); Gilij t. III pp. 17-18 (pdf 38-39)'
+    verificado_en_imagen: en parte
+    pueblo: achagua y maipure
+    describe: >-
+      Lemas con nombre europeo de constelación (los pidió el jesuita) y voces
+      achaguas; el dicho maipure lo da el regolo Caravàna. Gilij ve en ello
+      «un qualche abbozzo degli angeli».
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo
+    via_a: no toca
+    toca_canon: {}
+    lectura: >-
+      Una tradición (achagua + maipure). Las estrellas kalinago que dan viento
+      y se zambullen en el mar (6-fusion/cosmovision_marina_2026-09-24.yaml,
+      Breton) podrían ser la segunda: no se cotejó en esta sesión.
+
+  # ── maipure (Gilij t. III, libro I) ──
+
+  - id: mai-cr-01
+    contenido: >-
+      El ser supremo maipure es `Purrùnaminàri`. Gilij lo parte en `minàri`
+      'padrone' y una forma vieja, supuesta por él, de `ununà` 'todo':
+      «Purrùnaminàri sarebbe, il padrone del tutto»; los maipures no sabían
+      qué quería decir, porque habían muerto los viejos que «fan le veci de'
+      libri», y «non dispiaceva loro la mia interpetrazione». Hizo al hombre,
+      no se le rinde culto, y los misioneros evitaron usar el nombre por no
+      «imbrattare con Indiche fole» los misterios.
+    cita: '«e in questo senso Purrùnaminàri sarebbe, il padrone del tutto» (Gilij p. 7)'
+    grafia: [Purrùnaminàri, 'ununà (tutto)', 'Vnunà-minàri']
+    fuente: gilij-1780-1783
+    pagina: 't. III pp. 6-7 (pdf 27-28), 9, 23, 29'
+    verificado_en_imagen: sí
+    pueblo: maipure
+    describe: >-
+      Conversación con informantes maipures en la misión (1749-1767), escrita
+      en Roma en 1782. La etimología es del misionero. Lo que él mismo marca
+      como eco del Génesis —la costilla, la luz antes que el sol (p. 23)— no
+      se proyecta, aunque Gilij argumenta que Caravàna no sabía castellano.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: 'nuevo (junto con ach-cr-02, un creador sin culto)'
+    via_a: no toca
+    toca_canon: {}
+    lectura: >-
+      ¿Es `Jurruna/Jurrana-minari` el `Purrùnaminàri` maipure? Sigue siendo
+      una pregunta: Rivero lo hace dios de las labranzas y Gilij ser
+      supremo; la «etimología» `purrùna` 'todo' es conjetura de Gilij, y en
+      Neira 'todo' es `Maqueni` (95 izq.) y `purruna-` es 'anegar' (35 der.).
+
+  - id: mai-cr-02
+    contenido: >-
+      La madre divina maipure, `Tapanimarru`: «una donna immortale... la qual
+      era bellissima, e vergine», que fue madre de `Sìsiri` sólo por el deseo
+      de Purrùnaminàri; los otomacos cuentan que una mujer encinta sin
+      varón voló sobre el Orinoco y parió al primer otomaco, «eccola la
+      Tapanimarru de' Maipuri». Su nombre se parece a la diosa achagua
+      `tabaminarro` del pliego 56 de Neira.
+    cita: '«figlio di una donna immortale chiamata Tapanimarru, la qual era bellissima, e vergine» (Gilij p. 7)'
+    grafia: [Tapanimarru, Sìsiri, 'tabaminarro (achagua, Neira 56 izq.)']
+    fuente: [gilij-1780-1783, neira-ribero-1762]
+    pagina: 'Gilij t. III pp. 7 (pdf 28), 24 (pdf 45), 29 (pdf 50); Neira 56 izq.'
+    verificado_en_imagen: sí
+    pueblo: maipure (y achagua por el nombre)
+    describe: >-
+      Gilij lee aquí la Trinidad (p. 29); los propios maipures identificaron a
+      Sìsiri con Jesucristo «per la similitudine del nome» (p. 7). La virgen
+      madre es la huella doctrinal más clara del libro.
+    medio: proyectable
+    capa: no-se-proyecta
+    proyeccion: no-se-proyecta:huella doctrinal (la virgen madre del hijo); sirve para leer el panteón de Neira
+    via_a: no toca
+    toca_canon: {}
+
+  - id: mai-cr-03
+    contenido: >-
+      El más allá maipure tiene premio y castigo. El alma es `Amitàminè`; a
+      los buenos les toca «un luogo di delizie», a los malos «un pozzo, in
+      cui ardevi perpetuamente il fuoco», que los piaches creían poder pasar
+      «cantando de' versi, che grati fossero a' Purrùnaminàri»; y los malos
+      van «alla casa... del Demonio Vasùri».
+    cita: '«e a’ cattivi un pozzo, in cui ardevi perpetuamente il fuoco» (Gilij p. 13)'
+    grafia: [Amitàminè, Vasùri]
+    fuente: gilij-1780-1783
+    pagina: 't. III pp. 13 (pdf 34) y 33 (pdf 52, sin OCR)'
+    verificado_en_imagen: sí
+    pueblo: maipure
+    describe: >-
+      Gilij escribe para probar que los «selvaggi» conocen el infierno (pp.
+      32-34) y acusa a los piaches de esconderlo: su relato está motivado, y
+      el pozo de fuego puede ser eco doctrinal tras un siglo de misiones en el
+      Orinoco.
+    medio: proyectable
+    capa: no-se-proyecta
+    proyeccion: no-se-proyecta:huella doctrinal probable
+    via_a:
+      creencia-009: >-
+        contradice EN PARTE «no hay premio ni castigo»: el maipure de Gilij
+        los tiene. Con la cautela de arriba, no basta para cambiar 009; el
+        achagua de Rivero no dice nada de esto.
+    toca_canon: {}
+
+  - id: mai-cr-04
+    contenido: >-
+      En el maipure, el demonio (`Vasùri`) son las almas de los muertos
+      violentamente: «non chiaman Demonio tutte l'anime separate, ma quelle
+      sole, che furono di persone uccise in guerra, o in private contese»
+      («Macàpu-minè Vasùrenàmi», el diablo o el alma del difunto Macàpu, que
+      mataron los maipures); el que muere de muerte natural es
+      `amitàminè`, alma («Caravàna-minè amitàmicanàmi»).
+    cita: '«ma quelle sole, che furono di persone uccise in guerra, o in private contese» (Gilij p. 15)'
+    grafia: [Vasùri, 'Macàpu-minè Vasùrenàmi', 'Caravàna-minè amitàmicanàmi', 'mavànateni (palabra de Gilij para «espíritu»)']
+    fuente: gilij-1780-1783
+    pagina: 't. III pp. 14-15 (pdf 35-36)'
+    verificado_en_imagen: sí
+    pueblo: maipure
+    describe: >-
+      Lo que Gilij oyó y no entendió («non rendendone essi veruna ragione»).
+      Su `mavànateni` 'senza corpo' es una palabra que él acuñó para predicar:
+      doctrina, no dato.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo (el criterio de la muerte violenta)
+    via_a:
+      creencia-008: 'matiza (ver ach-cr-12): el peligro del muerto depende de cómo murió, no de cuándo.'
+    toca_canon: {}
+
+  - id: mai-cr-05
+    contenido: >-
+      Las estrellas fueron gente. «Credean essi, che le stelle, le quali
+      risplendono in Cielo, fossero già state in terra, come ora vi stanno gli
+      uomini», le decía el regolo Caravàna, y «adesso sono immortali».
+    cita: '«dicesi, che le stelle sieno state quì in terra: adesso sono immortali» (Gilij p. 18)'
+    grafia: [Pittinitì]
+    fuente: gilij-1780-1783
+    pagina: 't. III pp. 17-18 (pdf 38-39)'
+    verificado_en_imagen: sí
+    pueblo: maipure
+    describe: Dicho de un informante con nombre; Gilij lo lee como esbozo de los ángeles.
+    medio: proyectable
+    capa: hipotetico
+    proyeccion: nuevo (junto con ach-cr-22)
+    via_a: no toca
+    toca_canon: {}
+
+# ─────────────────────────────────────────────────────────────────────────
+# El panteón del pliego 56: la copia de Neira y la p. 113 de Rivero, vistas
+# las dos en imagen el 2026-10-09.
+# ─────────────────────────────────────────────────────────────────────────
+panteon_neira_56:
+  imagenes:
+    neira: 'pliego 56 izq. (056.jpg), recortes a 4,2 px/pt y la palabra Prubisana a 9 px/pt'
+    rivero: 'p. 113 (pdf 134), a 2,6 px/pt'
+  la_copia_dice: >-
+    «Dioses de los Achaguas = Jurruna minari. El de las Labranzas = Varaca.
+    El de las riquezas = Cuisiaberri. El del fuego [=] Prubisana. El
+    causador de temblores = Apichabirri. Flechero = tarrari. De las
+    tempestades = Eno. De los truenos [=] Achacato. Dios tonto = Amaribaca
+    Vreca, capurraye Dios signo del cielo.» (Los «=» tras «fuego» y
+    «truenos» caen en el lomo y no se ven.)
+  rivero_dice: >-
+    «Jurrana-minari, al de las labranzas; Baraca, al de las riquezas;
+    Cuisiabirri, al del fuego; Pruvisana, al causador de los temblores;
+    Achacató, dios tonto»
+  leida_sin_correr: 'ninguno de los cinco pares de Rivero casa; Eno queda en «las tempestades».'
+  leida_corrida_un_escalon:
+    - 'Jurruna minari — el de las labranzas (Rivero: Jurrana-minari)'
+    - 'Varaca — el de las riquezas (Rivero: Baraca)'
+    - 'Cuisiaberri — el del fuego (Rivero: Cuisiabirri)'
+    - 'Prubisana — el causador de temblores (Rivero: Pruvisana)'
+    - 'Apichabirri — flechero'
+    - 'tarrari — de las tempestades'
+    - 'Eno — de los truenos (el vocabulario: «Rayo, el trueno = Eno»)'
+    - 'Achacato — dios tonto (Rivero: Achacató)'
+    - 'Amaribaca Vreca, capurraye — Dios signo del cielo (sin «=»: conserva el orden nombre, glosa)'
+  por_que_correrlo:
+    - 'casan los cinco pares de Rivero, que es el mismo autor;'
+    - '`Eno` cae en «los truenos», que es lo que dice el vocabulario (87 der., 96 izq.);'
+    - >-
+      la copia se lee como la frase de Rivero —«Nombre, glosa; Nombre,
+      glosa»— con los «=» puestos al estilo del vocabulario («glosa =
+      voz»): cada glosa quedó pegada al nombre que la seguía. El último
+      ítem, «Amaribaca Vreca, capurraye Dios signo del cielo», no tiene «=»
+      y conserva el orden nombre-glosa: es el resto del orden original;
+    - 'indicio débil: «Rico = Cabarruanicayi / Riqueza = Guarrua» (89 der., visto) suena a Varaca/Baraca.'
+  lo_que_queda_abierto:
+    - >-
+      «Dioses de los Achaguas = Jurruna minari» y «Diosas = tabaminarro»
+      forman un par -minari / -minarro (m. / f.): sin correr, serían los dos
+      nombres genéricos; corriendo, son los primeros nombres de cada lista.
+      Las dos lecturas lo explican.
+    - >-
+      Las diosas: «Diosas = tabaminarro. Criadora de los Achaguas = Vrumadua.
+      Madre del lucero de la tarde = Jarrutua. Vna estrella = Jumenirro». A
+      favor de correr: `tabaminarro` se parece a `Tapanimarru`, la madre
+      maipure (mai-cr-02), y daría «tabaminarro, criadora de los Achaguas».
+      En contra: `Jarrutua` lleva `-tua` 'madre' («Madre... mía = Nutua»,
+      73 der.) y casa sin correr con «Madre del lucero de la tarde». No se
+      decide. Lo robusto: entre las diosas hay una madre del lucero
+      vespertino y una estrella.
+  grafia: >-
+    La imagen dice `Prubisana` (P + la r del copista + ubisana), no
+    `Purubisana` como trae el YAML de la transcripción. Rivero imprime
+    `Pruvisana`.
+  quien_lo_corrige: >-
+    No se toca aquí el YAML de Neira: genera lexicon_achagua.py, que importa
+    el motor. Lo corrige quien fusione, con esta sección delante.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Fuera del encargo: no son hermanas arahuacas, pero separan lo achagua de
+# lo llanero general, o son la comparanda regional de un hecho caquetío.
+# ─────────────────────────────────────────────────────────────────────────
+fuera_del_encargo:
+
+  - id: fx-01
+    contenido: >-
+      SÁLIVA: un segundo entierro con los huesos bebidos. «Con sus difuntos
+      tienen un rito particular»: los entierran como las demás naciones y
+      celebran su «cabo de año ó aniversario»: convocan a parientes y
+      vecinos, «desentierran los huesos del difunto, y poniéndolos en medio
+      de la casa, se sientan al rededor», los velan «cuatro, seis y ocho días
+      con sus noches», y al fin ponen la osamenta en una pira y beben las
+      cenizas con la bebida, «en lo cual les parece que beben toda la
+      valentía y propiedades del difunto á quien celebran».
+    fuente: rivero-1883
+    pagina: 'pp. 210-211 (pdf 231-232), vista en imagen la p. 211'
+    pueblo: sáliva (familia sáliba-piaroa, no arahuaca)
+    para_que_sirve: >-
+      Es la comparanda REGIONAL del caquetío que bebe los huesos
+      (creencia-010, 010c), mucho más cerca de él que el wayuu que los
+      redeposita, y trae su propio porqué: beber la valentía del muerto. No es
+      hermana: no puede subir ninguna capa. Pero pesa en la auditoría de
+      010d.
+
+  - id: fx-02
+    contenido: >-
+      GIRARA Y AIRICOS (Rivero cap. VIII): «Toda la gentilidad de los Llanos
+      y del río Orinoco es tan parecida en sus abusos y ritos... que lo que se
+      dice de los unos se puede aplicar á los otros». En los entierros, «los
+      mismos ritos que los Achaguas»; la viuda airica llora nueve días al
+      amanecer en el arroyo, se corta el pelo y se pinta de negro; el ajuar
+      (totumas, bebidas, bollos, arco, flechas, hacha); nadie usa las cosas
+      del muerto y su maíz se deja perder; usan la yopa «como los Achaguas»;
+      dos dioses hermanos (el mayor creó y mandó el diluvio, el menor bajó y
+      mueve la tierra con el brazo), la lluvia es el vino que derraman los
+      dioses borrachos, viven en las estrellas; los mojanes airicos curan
+      soplando, y ponen «Moján» en el pecho de las madres.
+    fuente: rivero-1883
+    pagina: 'pp. 113-118 (pdf 134-139), vistas en imagen las pp. 113, 115-116 y 118'
+    pueblo: girara y airicos (vecinos del piedemonte, no achaguas según Rivero)
+    para_que_sirve: >-
+      Separa lo achagua de lo llanero general: el funeral con ajuar, la yopa,
+      el mohán que sopla y el temor a las cosas del muerto son del llano
+      entero; el panteón con nombres, Cuaygerri, el relato de sueños al alba,
+      la Chuvay, la chaca, la berría de cazabe y el llanto que alaba las
+      virtudes los da Rivero como achaguas.
+
+  - id: fx-03
+    contenido: >-
+      OTOMACOS: lloran a sus muertos «due ore innanzi dell'aurora», en casa,
+      cantando: «i tali ci recavano de' pesci, e delle testuggini per
+      alimentarci. Ora non abbiam più veruno, che ci nudrisca. Oh quanto
+      foste mai buoni verso noi! Ma alcun dì ci rivedremo nel luogo del
+      vostro riposo».
+    fuente: gilij-1780-1783
+    pagina: 't. III p. 402 (pdf 423), notas; Gilij cita a otro ex-misionero'
+    pueblo: otomaco (lengua aislada, no arahuaca)
+    para_que_sirve: >-
+      Tercer pueblo de la región con el llanto que recita lo que el muerto
+      hacía por los suyos (con el caquetío de Oviedo y el achagua de
+      Rivero). Regional, no hermana; y otra vez el alba.
+
+  - id: fx-04
+    contenido: >-
+      TAMANACOS: a Mavàri, «genio infesto», «in certi balli gli fanno offerte
+      di bevande, e di cibi, affinchè non sia loro molesto»; «Mavàri
+      sac-matepù», «facciamo così per rallegrare Mavàri, acciocchè non ci
+      nuoca».
+    fuente: gilij-1780-1783
+    pagina: 't. III pp. 16-17 (pdf 37-38); Gilij cita a Gumilla t. I cap. X'
+    pueblo: tamanaco (caribe)
+    para_que_sirve: >-
+      Ofrenda de comida y bebida a un ser temido, para que no dañe: la forma
+      de creencia-016, pero en un pueblo caribe. No es hermana: no sirve de
+      ruta arahuaca.
+
+  - id: fx-05
+    contenido: >-
+      La carta del Superior de las misiones a la Real Audiencia (1665), que
+      Rivero copia: «Hallamos en dicho pueblo los indios sin noticia de Dios,
+      tan metidos en sus ritos y supersticiones antiguas... Mojanes,
+      muchísimos, todos Yoperos y supersticiosos; unos reconocían á los cerros
+      por sus dioses, otros á los pájaros, otros á las estrellas, muchos al
+      Sol».
+    fuente: rivero-1883
+    pagina: 'p. 198 (pdf 219), vista en imagen'
+    pueblo: 'SIN FIJAR: «dicho pueblo» puede ser Pauto (la doctrina que la Compañía tomó, de «Cacatíos de nación», p. 54) o el Puerto de Casanare (achagua), el último nombrado'
+    para_que_sirve: >-
+      Es el testimonio más viejo de todo lo leído (1665, antes que el texto de
+      Rivero) y el único que pone CERROS como dioses en los Llanos. Si «dicho
+      pueblo» es Pauto, sería la única noticia de la creencia de un grupo
+      caquetío, el de los Llanos (regla 4: comparanda interna, nunca dato
+      costero); si es el Puerto, sería achagua. Fijar el antecedente pide
+      leer la carta entera (pp. 197-201): queda para quien integre o para
+      Miguel. Toca creencia-015 (el dueño del paisaje) más que nada de lo
+      leído.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Lo que se buscó y no está (regla 6: cada cero dice qué se leyó).
+# ─────────────────────────────────────────────────────────────────────────
+lo_que_no_hay:
+  - >-
+    SEGUNDO ENTIERRO ACHAGUA: ninguno. Leídos enteros los caps. VI-VIII de
+    Rivero (pp. 102-118) y leídas en contexto todas las páginas del OCR
+    entero con `huesos`, `calavera`, `difunt` o `entierr`: el único segundo
+    entierro del libro es el sáliva (fx-01). Neira tiene el lema «Desenterrar
+    = Numichedau, masicanimí» (54 der.), sin ejemplo que diga para qué.
+  - >-
+    BEBER LOS HUESOS: sólo el sáliva (fx-01). Ni achaguas, ni girara, ni
+    airicos en Rivero; ni maipures en el libro I de Gilij.
+  - >-
+    TIERRA DE LOS MUERTOS CON NOMBRE: ni en Rivero (sólo «el camino de la
+    otra vida») ni en Neira (los ejemplos con «Infierno» son de doctrina, 65
+    der.). El maipure tiene lugares para buenos y malos, sin topónimo.
+  - >-
+    LA EXHUMADORA Y SUS TABÚES (creencia-011): nada en los tres.
+  - >-
+    HUESOS O CENIZAS Y LLUVIA (creencia-012): nada en los tres. La lluvia como
+    vino derramado por los dioses es girara/airica (fx-02), no achagua.
+  - >-
+    EL MAR: ningún ser ni rito del mar en lo leído (ya medido en
+    cosmovision_marina; se confirma).
+  - >-
+    LAS MUJERES EXCLUIDAS DE LA CHUVAY «lest they die» (HSAI 4 p. 410): no
+    está en Rivero pp. 102-118; `grep` de `chuv|pruvis|tanasu|mueran` sobre
+    el texto de Gumilla: sin acierto. Hernández de Alba trae además
+    «Tanafimi and Tanasuri», Pruvisana que «holds up the earth» y el culto a
+    las lagunas: nada de eso en Rivero. La fuente queda sin localizar
+    (¿Karsten 1926?).
+  - >-
+    DUEÑO DE UN LUGAR (un cerro, un manantial que veda): no en lo achagua
+    leído (ach-cr-04). Un solo indicio en el libro: la carta de 1665 (fx-05),
+    «unos reconocían á los cerros por sus dioses», de un pueblo que no se
+    puede fijar. La laguna de la p. 98 (pdf 119) donde Satanás habla en forma
+    de serpiente es de los tunebos (chibchas), no achagua.
+  - >-
+    QUETI: no es un ser. En maipure es 'animal': Gilij pone `Purrunaminàri,
+    Vasùri, Queti` junto a las voces tamanacas del ser supremo, el demonio
+    y el animal (t. III p. 159). El «ballo Queti» del t. II sería un baile
+    del animal; el t. II no está en el repo.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Correcciones que esta minería deja para quien integre (no se editaron).
+# ─────────────────────────────────────────────────────────────────────────
+correcciones:
+  - que: 'plan 08 §1.2 y §4 1º: «Rivero escribe Cuaygerri y Cuoygerri en la misma página»'
+    medido: 'la imagen de la p. 112 dice Cuaygerri las dos veces; «Cuoygerri» es del OCR.'
+  - que: 'plan 08 §1.3 y §3 C: páginas de Gilij t. III'
+    medido: >-
+      Purrùnaminàri está en las pp. 6-7, no 8-9; la costilla en la p. 23, no
+      25; Queti y el demonio maipure en la p. 159, no 155. Las cifras del plan
+      eran el marcador «impresa» del OCR (pdf − 19), y en el libro I el
+      desfase es − 21 hasta el pdf 50. El demonio es `Vasùri` (imagen pp. 14,
+      15, 33, 159), no «Vasìtri». El índice da «Tapanimarru, chi sia? 6»; el
+      texto está en la p. 7.
+  - que: 'el PDF del t. III de Gilij'
+    medido: >-
+      salta las pp. 30-31 (pdf 50 = p. 29, pdf 51 = p. 32): faltan dos páginas
+      del cap. VII «Riflessioni». Desde ahí el desfase es − 19.
+  - que: 'Rivero p. 106, el OCR'
+    medido: 'la oruga del veneno es `barbarí`, no «barban».'
+  - que: 'YAML de Neira (6-fusion/achagua_neira_ribero_1762.yaml)'
+    medido: >-
+      (1) `Purubisana` → `Prubisana` (56 izq.). (2) «Espíritu, alma =
+      Guabasi, Guabauimi» (62 izq.): la imagen parece `Guabaimi`; verificar a
+      2-3×. (3) SIETE PÁGINAS SIN TRANSCRIBIR: 32 der., 40 izq., 41 der., 52
+      izq., 72 izq., 79 der., 92 der. (medido por lado en
+      `censo_neira.lados_sin_entradas`; las siete se vieron en imagen y tienen
+      entradas). El ensamblador mide los huecos por pliego y no los ve. Dos
+      traen creencia: 52 izq. («Curar = Nuidebeayu, numeda ridebe», «Curar
+      soplando = Nugiayu», «Cura tal = Chabicuri», «Danza = Ybabedacasi»,
+      «Dado á mugeres = Inaminari») y 92 der. («Soñar = Masiu numaca», «Sueño
+      = Dasuisi», «Soñar, tener pesadillas = Carrunata numayu», «Soplar à los
+      enfermos = Numariuni», «Soplam.to tal = Chabicuri»): leídas aquí por
+      visión, para la creencia; el resto de esas páginas sigue sin
+      transcribir.
+  - que: 'ficha neira-ribero-1762 y plan 08 §1.1: «No queda ninguna página por leer en imagen»'
+    medido: 'no es cierto: quedan las siete páginas de arriba.'
+  - que: 'notas que dicen que Gilij no tiene capa de texto'
+    medido: >-
+      el t. III tiene OCR desde el 2026-09-23 y su libro I está minado aquí.
+      Lo dicen: 3-mundo/ensayos/03_creencia_caquetia.md línea 20;
+      3-mundo/mapa-creencia.md líneas 61 y 76; 3-mundo/mapa-transmision.md
+      línea 62; 4-fuentes/INDICE_FUENTES.md línea 104;
+      4-fuentes/sesiones/03_creencia.md líneas 169 y 177.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Auditoría de la Vía A (creencia.yaml no se edita): qué hace lo achagua y
+# maipure con cada hecho reconstruido desde el wayuu.
+# ─────────────────────────────────────────────────────────────────────────
+auditoria_via_a:
+  creencia-002: 'no toca / matiza: el sueño achagua lo cuenta cada casa y lo abre el cacique, no el especialista (ach-cr-10). Se queda con una sola tradición (wayuu): señalado para revisión, no degradado.'
+  creencia-003: 'corrobora en parte: tabaco y canto en el oficio de curar (ach-cr-06), segunda tradición arahuaca; licor, urari y espíritu-serpiente sin apoyo achagua; «piache-mohán» es voz regional (ach-cr-07).'
+  creencia-005: 'corrobora el núcleo: el alma sale del cuerpo y vuelve (ach-cr-11) y lo soñado pesa (ach-cr-10); el viaje nocturno del alma en el sueño sigue siendo sólo wayuu.'
+  creencia-006: 'corrobora con reservas: desmayarse y revivir son el alma que se va y vuelve a su lugar (ach-cr-11); que la enfermedad sea eso y que el especialista negocie el regreso, no; matiza con las armas contra la muerte (ach-cr-14).'
+  creencia-007: 'no toca: ni la división de males comunes y del espíritu ni la cura por semejanza aparecen en lo leído.'
+  creencia-008: 'corrobora: el muerto es un ser temido con nombre propio (guabaimi; maipure vasùri) (ach-cr-12); matiza: en el maipure el peligro lo da la muerte violenta; nada de los antiguos que protegen.'
+  creencia-009: 'corrobora en parte (el camino a la otra vida, allá sirven las mismas cosas: ach-cr-16); no da topónimo; contradice en parte el «sin premio ni castigo» por el lado maipure, con sospecha de eco doctrinal (mai-cr-03).'
+  creencia-010d: 'no toca: ni achaguas ni maipures exhuman ni redepositan. La comparanda regional que SÍ bebe los huesos es sáliva (fx-01) y da otro porqué —beber la valentía del muerto—, no la fusión con los ancestros del wayuu: 010d queda sin hermana arahuaca y con un vecino que lo lee distinto.'
+  creencia-011: 'no toca: ninguna exhumadora ni tabú en los tres. Sigue siendo sólo wayuu.'
+  creencia-012: 'no toca: nada de huesos y lluvia; la lluvia como vino de los dioses es girara/airica (fx-02). Sigue siendo sólo wayuu-cumanagoto.'
+
+# >>> censo_neira (generado por 6-fusion/scripts/censo_creencia_neira_ribero.py; no se edita a mano)
+censo_neira:
+  fuente: 6-fusion/achagua_neira_ribero_1762.yaml, `vocabulario` (transcripción por visión, 2026-09-12)
+  generado_por: 6-fusion/scripts/censo_creencia_neira_ribero.py
+  como_se_lee: 'Cada lema va a un solo campo (el primero que casa). La marca doctrina/indigena/dudoso
+    es una regla escrita en el script, no un juicio entrada por entrada. Las formas son las del YAML de
+    la transcripción: las que cita la propuesta se vieron en imagen y, donde la imagen difiere, lo dice
+    el hecho.'
+  vocabulario_entradas: 4276
+  lados_sin_entradas:
+    que_mide: páginas (lado izq/der de cada JPG) del tramo del vocabulario sin ninguna entrada en el YAML.
+      El 28 izq es el final del arte y el 98 der está en blanco (meta.estructura_del_manuscrito_medida);
+      las demás son páginas sin transcribir.
+    lados:
+    - 28 izq
+    - 32 der
+    - 40 izq
+    - 41 der
+    - 52 izq
+    - 72 izq
+    - 79 der
+    - 92 der
+    - 98 der
+  por_campo:
+    dioses_y_seres:
+      lemas: 25
+      doctrina: 14
+      indigena: 6
+      dudoso: 5
+    alma_y_persona:
+      lemas: 12
+      doctrina: 6
+      indigena: 5
+      dudoso: 1
+    especialista:
+      lemas: 23
+      doctrina: 0
+      indigena: 19
+      dudoso: 4
+    muerte:
+      lemas: 23
+      doctrina: 0
+      indigena: 10
+      dudoso: 13
+    fiesta_y_ayuno:
+      lemas: 14
+      doctrina: 0
+      indigena: 10
+      dudoso: 4
+    cielo:
+      lemas: 30
+      doctrina: 0
+      indigena: 19
+      dudoso: 11
+    sueno:
+      lemas: 1
+      doctrina: 0
+      indigena: 0
+      dudoso: 1
+  lemas_de_creencia: 128
+  minari:
+    entradas: 26
+    de_ellas_en_lemas_de_creencia: 6
+    lista:
+    - 40 der · Barbaro = Abacaminari
+    - 46 izq · Carnal, lascivo = Cabecayi, Cabeyi, ibesiminari
+    - 46 der · Casero, dueño de casa = Cuitaminari, Cuitaibacare
+    - 48 der · Clemente = Catuisirrumicacayi, tuisirrumica minari
+    - 49 der · Compasivo = tuisirrumica minari, catuisirrumicacayi
+    - 56 izq · Dioses de los Achaguas = Jurruna minari
+    - 56 izq · Diosas = tabaminarro
+    - 56 der · Dominar, ser dueño del Reyno = Reyno minari uyuna
+    - 57 izq · Dueño del cielo = minari, Eriminari
+    - 61 izq · Enagenar = Nucaminariquedau
+    - 62 der · Estraño, ageno = Caminaricayi
+    - 65 der · Gentil = Magidenacaisa, Ecunai minari
+    - 78 izq · Novelero = Jcain minari
+    - 74 der · Medico = Debi minari
+    - 81 izq · Patron de la Nao = Jda minari
+    - 81 der · Pacifico = Chunai minari
+    - 81 der · Pedernal de sacar candela = Sichai minari
+    - 32 izq · Ageno = Caminaricayi
+    - 34 der · Amo de casa = Cuitaminarí
+    - 38 izq · Arrebatado hombre = Bare minarí
+    - 38 der · Astuto = [E]baniminarí
+    - 69 izq · Ydolatra = Ecunai minarí
+    - 70 der · Ynteresable = Benisimí minarí
+    - 71 der · Labrador, Labrancero = Cagina minarí
+    - 75 der · Miedo = Carrunicaí, ibaominarí
+    - 80 der · Parlero = Yaisí minarí, v[e]l. Cachuanicay
+  entradas:
+    dioses_y_seres:
+    - 28 der · A Dios = Dios yagicha · dudoso
+    - 49 der · Confiar en Dios = Nunemida Dios naco · doctrina
+    - 53 izq · Demonio, Diablo = tanasimi · doctrina
+    - 56 izq · Dios = Dios · doctrina
+    - 56 izq · Dioses de los Achaguas = Jurruna minari · indigena
+    - 56 izq · Diosas = tabaminarro · indigena
+    - 56 izq · Dios te gue = Dios inemidabitausi · doctrina
+    - 56 der · Donde està Dios = tariani Dios · dudoso
+    - 57 izq · Duende = Guabaimi, cata; Gubaimigerru · indigena
+    - 65 der · Gentil = Magidenacaisa, Ecunai minari · doctrina
+    - 65 der · Gentilidad = Ecunaicasi · doctrina
+    - 66 izq · Grande Dios = Dios manucaicayi · dudoso
+    - 78 izq · No tener nombre, ser gentil = Magidenã · doctrina
+    - 35 der · Angel = Angelerrí, vel, Angeligerrí · doctrina
+    - 42 izq · Blanco Español = Guabaymí, Guabaymigeraí · indigena
+    - 42 izq · Blanca Española = Guabaimegetua · indigena
+    - 51 izq · Criador = Yquenuederrí, Ymanuderrí · doctrina
+    - 51 izq · Criar de nada = Nuquenoedau, Numanudau · doctrina
+    - 69 izq · Ydolo = Chuai, Chubay · indigena
+    - 69 izq · Ydolatrar = Nuchubaidau · doctrina
+    - 69 izq · Ydolatria = Ecunaicasí · doctrina
+    - 69 izq · Ydolatra = Ecunai minarí · doctrina
+    - 84 der · Por temor de Dios = Dios ibao nina · dudoso
+    - 86 izq · Pajaro, Dios te de = chase · dudoso
+    - 91 der · Ser Dios, ò Dios es = Dios vyuní · doctrina
+    alma_y_persona:
+    - 52 der · Dar el Alma = Nuinudau nubaba · doctrina
+    - 62 izq · Espiritu, aliento = Careran · doctrina
+    - 62 izq · Espiritu, alma = Guabasi, Guabauimi · doctrina
+    - 89 der · Resucitar = Nubaba esua · doctrina
+    - 89 der · Resucitarle = Nuesuedau ribaba, nucabiayuni · doctrina
+    - 89 der · Revivir = Guabasi esuayua · indigena
+    - 92 izq · Sombra = tanari, Nutana · dudoso
+    - 34 izq · Alma = Guabasí · doctrina
+    - 35 der · Anima en el Cuerpo = Gabasí · indigena
+    - 42 der · Bolver en si = Ribabaesua · indigena
+    - 55 izq · Desmayarse = Nubaba decuayu · indigena
+    - 80 der · Parasismo = Guabasí, ducuacare · indigena
+    especialista:
+    - 30 izq · Abuso, aguero = Cayubacaibe, vel Ybirriu nubaba · indigena
+    - 61 izq · Encantar, curar cantando = Numariu, nutaimariu · indigena
+    - 61 izq · Encanto tal = Maricai · indigena
+    - 61 izq · Encantador = Camaricacayi · indigena
+    - 63 izq · Ensalmo = Chabicuri · indigena
+    - 65 izq · Fuerte tabaco = Jjuiyi chema · indigena
+    - 67 izq · Hechizar (dicen cocinarle) = Nuchanaum · indigena
+    - 67 der · Hechizo del bien querer = Marra · indigena
+    - 74 der · Medicina = Debe · dudoso
+    - 74 der · Medico = Debi minari · indigena
+    - 83 der · Picante tabaco = Jjuiyi · indigena
+    - 32 izq · Aguero voluntario = Cayubacaybe · indigena
+    - 32 izq · Aguero fortuito = Emimay · indigena
+    - 32 izq · Agurar, saber por agueros = Nuayurena Caiubacaibeyu · indigena
+    - 43 der · Brujo = Camaricacay · indigena
+    - 43 der · Brugeria = Maricaí · indigena
+    - 50 izq · Contaminar el veneno = Risacayu · dudoso
+    - 69 izq · Yerbatero = Camanecayi · indigena
+    - 90 izq · Sahumar = Numutumutuayu guarruma · indigena
+    - 91 izq · Semilla de tabaco = chema ibí · indigena
+    - 93 izq · tabaco = Chema · indigena
+    - 97 izq · Veneno = Manemí · dudoso
+    - 97 izq · Venenoso = Cananecayi · dudoso
+    muerte:
+    - 45 izq · Caer muerto = Numenuba · dudoso
+    - 47 izq · Cadaver = Nucuirri · dudoso
+    - 56 izq · Difunto = Mucuiarimi · dudoso
+    - 56 izq · Difunto, cadaver = Masicasimi · dudoso
+    - 58 izq · Enviudar = Nuichegiayua · dudoso
+    - 59 der · Enternecido llorando = Camaayecayi · dudoso
+    - 59 der · Enterrar = Nuayu nirri irrico · indigena
+    - 67 izq · Hacer del muerto = Numeda ibarro eba · dudoso
+    - 78 der · Ofrenda de difuntos = Jrrubaidacasi, vel Jrrubaidamicain · indigena
+    - 73 izq · Llanto = Jchacasi · indigena
+    - 73 der · Llorar = Nuichau · indigena
+    - 73 der · Lloron = Catuibi, camaoyecayi, catuicayi · indigena
+    - 35 der · Andar llorando = Nuichadaidau · dudoso
+    - 36 izq · Antepasado = Bainacusamí · indigena
+    - 54 izq · Desconcertarse un hueso = Ribetuna yagesí · dudoso
+    - 54 der · Desencasarles los huesos = Nubetunaidau yagerrí · dudoso
+    - 54 der · Desenterrar = Numichedau, masicanimí · indigena
+    - 68 izq · Honras de Dif[un]to = Tanasí · indigena
+    - 68 der · Hueso = Jagesí · dudoso
+    - 76 der · Muerto = Mucurrí · dudoso
+    - 76 der · Muerte = Barinacaren · dudoso
+    - 91 der · Sepultura = Nirrí · indigena
+    - 91 der · Sepultar = Nuayu nirrí irrico · indigena
+    fiesta_y_ayuno:
+    - 29 der · Abstinencia, ayuno = Dacãiba · dudoso
+    - 29 der · Abstenerse, ayunar = Nuidagua · dudoso
+    - 41 izq · Bebeson = Berria · indigena
+    - 49 izq · Convite p.a Labranza = Vnuma · indigena
+    - 56 izq · Disfrasar = Numachaanidauba · dudoso
+    - 58 izq · Emborracharse = Nucamau · indigena
+    - 64 izq · Flauta = Jba · indigena
+    - 33 izq · Ayuno tal = Munirí · indigena
+    - 33 izq · Ayuno, carestia de pan = Maguasa · dudoso
+    - 42 izq · Boda, Convite = Tanasí · indigena
+    - 42 der · Borracho = Camaigerrí · indigena
+    - 42 der · Borracha = Camaybegetua · indigena
+    - 43 izq · Borrachera = Camaybacay · indigena
+    - 76 der · Mudanza, baile = Ybabedacasí · indigena
+    cielo:
+    - 29 der · Abrirse el cielo = Rimecuba · dudoso
+    - 44 der · Cabrillas del cielo = Jbinai, Jbiyai · indigena
+    - 45 der · Camino de Santiago = Besibami · indigena
+    - 46 der · Carro del cielo = Ebatare · indigena
+    - 48 izq · Cielo = Erri · indigena
+    - 49 izq · Cometa = Cunicasiyayi · indigena
+    - 56 izq · [D]este diluvio = Catana · indigena
+    - 57 izq · Dueño del cielo = minari, Eriminari · indigena
+    - 57 der · Echar rayos = Camarrauna · dudoso
+    - 57 der · Eclipsarse la Luna = Riayu, richarebaguerri · dudoso
+    - 57 der · Eclipse = Querri ichareba · indigena
+    - 62 der · Estrella = Ybiyai · indigena
+    - 73 izq · Luna = Querri · indigena
+    - 73 izq · Lucero de la tarde = Carruyi · indigena
+    - 92 izq · Sol = Erri · indigena
+    - 88 der · Relampago = Eno saberrum · indigena
+    - 88 der · Relampaguear = Berruberrutau · dudoso
+    - 34 der · Alumbrar relampagueando = Berruberrutau · dudoso
+    - 36 der · Anublarse el cielo = Cataimareum · dudoso
+    - 37 der · Arco del cielo = Arrabare · dudoso
+    - 38 izq · Arrebolado cielo = Errí quirramenicayi · dudoso
+    - 51 izq · Crecer la Luna = Querriamium · dudoso
+    - 51 der · Crucero del cielo = Edatarí · indigena
+    - 75 izq · Menguante de Luna = Querri ibarinacagirre · dudoso
+    - 87 der · Rayo del sol = Errí camarra · indigena
+    - 87 der · Rayo, el trueno = Eno siya, vel, Eno · indigena
+    - 93 der · temblor = Ycurrucasiba · dudoso
+    - 93 der · tempestad de aire = Caurrí · indigena
+    - 96 izq · trueno = Eno, ybitama · indigena
+    - 97 der · Virason, ó tempestad de agua y viento = Vniacaurrí · indigena
+    sueno:
+    - 56 der · Dormirse, tener sueño = Cadasoniuna · dudoso
+# <<< censo_neira
