@@ -6,8 +6,11 @@ anio: "1892 [c. 1539]"
 genero: cronica
 publicacion: "Colección de Libros Raros ó Curiosos que tratan de América, tomo VI. Madrid, Impr. de T. Minuesa, 1892. Reimpresión de la traducción castellana (de la Historie italiana de Ulloa, Venecia 1571). El original castellano de Hernando Colón se perdió"
 edicion_del_ejemplar: "Madrid 1892 (Libros Raros ó Curiosos, t. VI) — ejemplar digitalizado por Internet Archive, id historiadelalmir02col"
-local: "fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt"
-paginas: "vol. 2 (la obra completa son 2 vols.)"
+local:
+  - "fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol1.pdf"
+  - "fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol1.txt"
+  - "fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt"
+paginas: "vol. 1: 320 pp. de PDF; impresa = pdf − 12 (medido al descargar, sin leer, en pdf 40, 60, 80, 200, 260 y 300). vol. 2: la obra completa son 2 vols."
 capa_texto: si
 estado_minado: parcial
 cobertura: "el tercer viaje (caps. LXIX-LXXIII) y el cuarto (Cariai, Veragua), preguntados por el guanín y por la lengua — 2026-09-22, campaña del taíno 2, T7 + barrido por la COSTA OCCIDENTAL y lectura del cap. LXXXIV (Hojeda en La Española, 1499) — 2026-09-23, minería 3, M2"
@@ -16,7 +19,7 @@ sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-09-23
 minado: 2026-09-23
 descargado: 2026-09-22
-origen_digital: "archive.org/details/historiadelalmir02col — texto OCR (historiadelalmir02col_djvu.txt), 448.515 bytes, sha256 252028b564a6fd3c241db1b1cc4daf7a3ab2e8e514bcd17cd2964750dfbbd5eb. Dominio público (ed. 1892; autor † 1539). Descargado el 2026-09-22 con la autorización de Miguel de esta campaña"
+origen_digital: "archive.org/details/historiadelalmir02col — texto OCR (historiadelalmir02col_djvu.txt), 448.515 bytes, sha256 252028b564a6fd3c241db1b1cc4daf7a3ab2e8e514bcd17cd2964750dfbbd5eb. Dominio público (ed. 1892; autor † 1539). Descargado el 2026-09-22 con la autorización de Miguel de esta campaña. Vol. 1: archive.org/details/historiadelalmir01col — PDF 12.936.024 B (sha256 66ca2b6ad79343595d3bfd58f7c3541871de4eaa1b87324dc1a158e29a676bb8) y _djvu.txt 382.349 B; descargado el 2026-10-09 con la autorización de Miguel"
 aliases: ["Hernando Colón", "Fernando Colón", "Historia del Almirante", "Colón 1892"]
 ---
 
@@ -131,12 +134,54 @@ Sin sitio: es la costa entera de Paria al cabo de la Vela. Va a la clave
 
 ## Qué falta
 
-- El **volumen 1** (archive.org, id `historiadelalmir01col`, 1892): trae el
-  primer y segundo viaje y el capítulo donde Hernando reproduce a Pané. No se
-  bajó porque la parcela T7 no lo necesitaba; T2 sí lo querría.
+- El **volumen 1** (archive.org, id `historiadelalmir01col`, 1892) se bajó el
+  2026-10-09: ver la sección de abajo. Sin leer todavía.
 - Cotejar los caps. LXIX-LXXIII con la *Relación del tercer viaje* de Colón,
   que **no está en el repo** (ver [[navarrete-1859-viages-colon]], que tampoco
   la trae en esta edición).
+
+## 2026-10-09 — vol. 1 descargado (sin leer todavía)
+
+Descargado con la autorización de Miguel dada el 2026-10-09. Trae el primer y
+el segundo viaje, y la Escritura de fray Román hasta donde la sitúa el índice del
+vol. 2 (la p. 281).
+
+- `Colon_Hernando_1892_Historia_del_Almirante_vol1.pdf`: 12.936.024 bytes, 320
+  pp. de PDF, sha256 `66ca2b6ad79343595d3bfd58f7c3541871de4eaa1b87324dc1a158e29a676bb8`.
+  Va a git (bajo 100 MB).
+- `Colon_Hernando_1892_Historia_del_Almirante_vol1.txt`: el `_djvu.txt` de
+  archive.org, 382.349 bytes.
+
+### Qué preguntarle (vol. 1)
+
+Preguntas de la minería taína (nota 08 §2, nota 09 §5 y D-t3). Son para la
+Escritura de Pané, que el vol. 2 sólo trae desde el cap. XIX.
+
+- **¿Trae el vol. 1 los caps. XI-XVII de Pané?** El vol. 2 no los trae. Si los
+  trae, la tercera cadena de P1, P3 y P5 pasa de Anglería a Colón.
+- **La desecación del cacique (r3).** Rouse 1948 (p. 532) dice que el cacique se
+  secaba «over the fire» y que las cabezas se guardaban en cestas. Ninguna fuente
+  del repo lo da. Si aparece aquí, el paralelo pasa de imagen a imagen y
+  desecación.
+- **Los huesos (P1).** El cemí donde se guardan los huesos de los antepasados
+  (cap. XV), el muerto sobre ascuas (XVII) y los huesos de Yayael en la calabaza
+  (IX). ¿Cuáles trae el vol. 1, y con qué forma?
+
+### Cómo se lee (vol. 1)
+
+- **Desfase: impresa = pdf − 12.** Medido al descargar, sin leer todavía, en pdf
+  40 (28), 60 (48), 80 (68), 200 (188, el OCR lee `1 88`), 260 (248) y 300 (288).
+  Sin verificar en imagen.
+- **Cabeceras.** El número va en la cabecera («28 FERNANDO COLÓN»). Las
+  portadillas de capítulo no llevan número.
+- **Páginas sin texto útil.** El pdf 1 no tiene capa (portada). El pdf 10 y el pdf
+  161 traen caracteres basura antes del texto; probablemente láminas u
+  ornamentos, sin verificar.
+- **Idioma.** Castellano de 1892, con ortografía moderna y acentos. Es una
+  reimpresión de la traducción de Ulloa (ver [[ulloa-1571]]), así que una forma
+  indígena de aquí es cadena, no primaria.
+- **OCR.** Capa de archive.org, legible en el cuerpo. Las glosas de letra pequeña y
+  los nombres indígenas se miran en imagen antes de citarlos.
 
 ## Enlaces
 
