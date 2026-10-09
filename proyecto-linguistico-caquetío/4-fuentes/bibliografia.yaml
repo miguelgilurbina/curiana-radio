@@ -1,7 +1,7 @@
 meta:
   generado_por: curiana_sim/generar_bibliografia.py
-  obras: 113
-  en_repo: 78
+  obras: 116
+  en_repo: 81
   solo_citadas: 35
   nota: 'Generado desde el frontmatter de 4-fuentes/*.md. No editar a mano: se edita la nota y se regenera.
     El `id` es la clave que citan el corpus, el lexicón, los cognados y los topónimos.'
@@ -322,6 +322,48 @@ obras:
   - Breton 1665
   - Breton 1666
   - Breton 1667
+  en_repo: true
+- id: brett-1868
+  obra: 'The Indian Tribes of Guiana: their condition and habits; with researches into their past history,
+    superstitions, legends, antiquities, languages, &c.'
+  autor: Brett, W. H. (William Henry, 1818-1886)
+  anio: 1868
+  publicacion: London, Bell & Daldy, 1868
+  edicion_del_ejemplar: 'ejemplar de archive.org (indiantribesofgu00bret; 572 imágenes en la metadata).
+    Otra copia: cu31924021107192. La de 1852 (b24868589) es otra edición, anterior'
+  genero: etnografia-misionera
+  local:
+  - fuentes_caquetios/Brett_1868_Indian_Tribes_Guiana.pdf
+  - fuentes_caquetios/Brett_1868_Indian_Tribes_Guiana.txt
+  paginas: '566 pp. de PDF (la metadata cuenta 572 imágenes). Desfase pdf→impresa medido en la capa de
+    texto: pdf 40 = p. 18 (impresa = pdf − 22); pdf 150 = p. 124; pdf 300 = p. 260 (pdf − 40); pdf 501
+    = p. 445 (pdf − 56). El desfase sube con las láminas: leer el número impreso'
+  acceso: 'Dominio público (publicada en 1868). PDF: 33.604.059 bytes, sha256 ebd16adf56779b402df62f2858ce82f651fa25778117059d2b0a6263a4e4b40f.
+    Texto: el _djvu.txt del mismo ítem, 915.860 bytes, sha256 43e33b1ea37e919ee6919ba1b267d683746d35794bc73e4a7a6ebe80413cd1c6.
+    Bajado el 2026-10-09 con autorización de Miguel. Pesa 33,6 MB, menos de 100 MB: el PDF va a git.'
+  aliases:
+  - Brett 1868
+  - W. H. Brett
+  en_repo: true
+- id: brett-1880
+  obra: Legends and Myths of the Aboriginal Indians of British Guiana
+  autor: Brett, W. H. (William Henry, 1818-1886)
+  anio: 1880
+  publicacion: London, Williams Wells Gardner, 1880 (editor según la metadata de archive.org)
+  edicion_del_ejemplar: ejemplar de archive.org (cu31924020443218; 226 imágenes)
+  genero: folklore
+  local:
+  - fuentes_caquetios/Brett_1880_Legends_Myths_British_Guiana.pdf
+  - fuentes_caquetios/Brett_1880_Legends_Myths_British_Guiana.txt
+  paginas: '226 pp. de PDF. Desfase pdf→impresa medido en la capa de texto: pdf 40 = p. 26, pdf 80 = p.
+    66 y pdf 220 = p. 206 (+14 en los tres). En pdf 200 la capa lee «180», que por continuidad debería
+    ser 186: no verificado en imagen'
+  acceso: 'Dominio público (publicada en 1880). PDF: 4.144.128 bytes, sha256 144ae36fbbcbef4cd8904a8861c8cd4be8881bd509c407604284c69b52ad34a8.
+    Texto: el _djvu.txt del mismo ítem, 210.322 bytes, sha256 b14484441e42c5c5577ec9028b9a902f960eedcebc514eb326a2d20b9a719697.
+    Bajado el 2026-10-09 con autorización de Miguel. Pesa menos de 100 MB: el PDF va a git.'
+  aliases:
+  - Brett 1880
+  - Legends and Myths
   en_repo: true
 - id: brett-martinez-aquella-paraguana
   obra: Aquella Paraguaná
@@ -1573,6 +1615,27 @@ obras:
   aliases:
   - Rondón-Médicci 2013
   - tortugas de Paraguaná
+  en_repo: true
+- id: roth-1915
+  obra: An Inquiry into the Animism and Folk-lore of the Guiana Indians
+  autor: Roth, Walter E.
+  anio: 1915
+  publicacion: 30th Annual Report of the Bureau of American Ethnology (1908-1909), Washington, 1915
+  edicion_del_ejemplar: 'ejemplar de Cornell en archive.org (cu31924104074665; 332 imágenes). Otra copia:
+    gri_33125013314659 (Getty). El informe entero: 30thirtiethannua0000unse. HathiTrust: 008974013'
+  genero: etnografia
+  local:
+  - fuentes_caquetios/Roth_1915_Animism_Folklore_Guiana.pdf
+  - fuentes_caquetios/Roth_1915_Animism_Folklore_Guiana.txt
+  paginas: '332 pp. de PDF. Desfase pdf→impresa medido en la capa de texto: pdf 20 = p. 118, pdf 40 =
+    p. 138 y pdf 100 = p. 198 (+98); pdf 200 = p. 296 (+96). Leer el número impreso de la cabecera de
+    cada página'
+  acceso: 'Dominio público (publicada en 1915). PDF: 18.889.820 bytes, sha256 1d4bf6587590aaebb0f47af3de1e2cafbf9ee9adcb9b9b19799094226c5ce960.
+    Texto: el _djvu.txt del mismo ítem, 1.185.056 bytes, sha256 ef70db0d68504f1acb9e6bfe267c0aaaa1019c75e81268cf404eda13d3bb930a.
+    Bajado el 2026-10-09 con autorización de Miguel. Pesa menos de 100 MB: el PDF va a git.'
+  aliases:
+  - Roth 1915
+  - Walter E. Roth
   en_repo: true
 - id: rouse-cruxent-1963
   obra: Venezuelan Archaeology
