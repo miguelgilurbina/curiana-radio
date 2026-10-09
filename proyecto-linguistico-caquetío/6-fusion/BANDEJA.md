@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-09**.
 
-**8450 ítems propuestos** en 175 propuestas, más **63 issue(s)/comentario(s) redactados sin publicar**.
+**8468 ítems propuestos** en 177 propuestas, más **64 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -106,6 +106,7 @@ editar_a_mano: no
 | `kalinago_mujeres_goeje_2026-09-24.yaml` | ? | 302 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
+| `manaure_colombia_2026-10-09.yaml` | ? | 18 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_arte_achagua_2026-09-22.yaml` | ? | 33 |  |
@@ -120,6 +121,7 @@ editar_a_mano: no
 | `medicion_gbif_aves_paraguana_2026-09-22.yaml` | ? | 230 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
 | `medicion_kalinago_mujeres_2026-09-23.yaml` | ? | 0 |  |
+| `medicion_manaure_colombia_2026-10-09.yaml` | ? | 0 |  |
 | `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
 | `medicion_nominalizacion_emergente_2026-09-21.yaml` | ? | 92 |  |
 | `medicion_nominalizador_2026-09-21.yaml` | ? | 82 |  |
@@ -274,6 +276,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `lexicon-maboya-bejique-sin-respaldo-2026-10-09.md` | Lexicón: `maboya` «equivalente al buio» y `bejique` «cognado de piache» no tienen respaldo |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
+| `manaure-colombia-2026-10-09.md` | Los Manaure de Colombia: ¿homenaje o herencia? — y lo que sí deja la búsqueda |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `nominalizador-retroabstraccion-2026-09-21.md` | El nominalizador que no está: se buscó así, en esto, y no hay |

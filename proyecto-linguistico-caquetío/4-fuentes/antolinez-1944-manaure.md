@@ -162,3 +162,15 @@ que es justo lo que decide cuánto pesa.
 4. ¿Separa al Manaure histórico de Coro (el de Ampíes) del título genérico?
 
 Índice: [[INDICE_FUENTES]] · propuesta: `6-fusion/petroglifos_y_manaure.yaml`
+
+## 2026-10-09 — los Manaure de Colombia
+
+La pregunta de Miguel por Manaure (La Guajira) y Manaure Balcón del Cesar
+puso a prueba la tesis del título en la esfera occidental: si Manaure era
+cargo, pudo haber un Manaure al oeste del golfo. **Nadie lo registra allí.**
+La primera mención leída del lugar guajiro es de 1948 y lo más viejo del
+Cesar es su fundación de 1874-1875; lo que lleva a Manaure al lago de
+Maracaibo es una leyenda impresa en 1892 (el editor de [[carvajal-1892]]).
+Veredicto: homenaje probable, herencia no documentada. Y una cautela para
+las sondas: *manare* (el cernidor) se escribió «manaures» ya en 1647.
+Detalle en [[13_manaure_colombia]].
