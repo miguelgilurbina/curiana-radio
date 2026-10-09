@@ -11,10 +11,11 @@ nota: generado — no se edita a mano
 > La columna **caquetío** lista los hechos del corpus caquetío que esos
 > hechos tocan (`caquetio[]`): no es un censo del corpus, es el diálogo.
 > Fuente: canon de `3-mundo/hermanas/` + propuestas `6-fusion/hermanas_*.yaml`.
+> Entre paréntesis, qué es cada pueblo para el caquetío: hermana o prima.
 
 ## parentesco
 
-| tema | caquetío (tocado) | taino | lokono | kalinago | achagua | maipure |
+| tema | caquetío (tocado) | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |
 |---|---|---|---|---|---|---|
 | descendencia | parentesco-004, parentesco-005, parentesco-011, parentesco-012, parentesco-017, parentesco-023 | — | 1 (001) | 2 (002, 013) | 1 (005) | — |
 | residencia | parentesco-005, parentesco-016, parentesco-023 | — | 1 (004) | 1 (003) | 1 (004) | 1 (001) |
@@ -29,7 +30,7 @@ nota: generado — no se edita a mano
 
 ## creencia
 
-| tema | caquetío (tocado) | taino | lokono | kalinago | achagua | maipure |
+| tema | caquetío (tocado) | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |
 |---|---|---|---|---|---|---|
 | espiritu-tutelar | creencia-002, creencia-008, creencia-008c, creencia-010b, creencia-010c, creencia-012, creencia-013, creencia-015, creencia-021, creencia-023, creencia-025, creencia-028 | 4 (103, 107, 108, 011) | 2 (111, 003) | 5 (104, 105, 001, 003, 021) | 4 (001, 003, 004, 021) | — |
 | alma | creencia-005, creencia-006, creencia-008, creencia-008b, creencia-009, creencia-028 | 4 (105, 106, 004, 006) | 2 (105, 108) | 5 (101, 102, 103, 012, 013) | 3 (101, 011, 012) | 2 (105, 004) |
@@ -48,7 +49,7 @@ nota: generado — no se edita a mano
 
 ## ecologia
 
-| tema | caquetío (tocado) | taino | lokono | kalinago | achagua | maipure |
+| tema | caquetío (tocado) | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |
 |---|---|---|---|---|---|---|
 | cultivo | ecologia-028, ecologia-029, ecologia-030 | 1 (001) | — | 1 (001) | 1 (006) | 1 (004) |
 | pesca | ecologia-012, ecologia-015, ecologia-036, ecologia-079 | 1 (003) | 1 (002) | 1 (003) | — | — |
@@ -61,7 +62,7 @@ nota: generado — no se edita a mano
 
 ## transmision
 
-| tema | caquetío (tocado) | taino | lokono | kalinago | achagua | maipure |
+| tema | caquetío (tocado) | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |
 |---|---|---|---|---|---|---|
 | curriculo-edad | creencia-004b, creencia-014, transmision-008, transmision-020, transmision-025, transmision-028 | — | 1 (004) | 2 (004, 009) | 1 (002) | 2 (004, 005) |
 | especialista-formacion | creencia-004, transmision-001, transmision-017 | — | 1 (003) | 1 (006) | — | 1 (001) |
@@ -74,7 +75,7 @@ nota: generado — no se edita a mano
 
 ## geografia_politica
 
-| tema | caquetío (tocado) | taino | lokono | kalinago | achagua | maipure |
+| tema | caquetío (tocado) | taino (hermana) | lokono (hermana) | kalinago (hermana) | achagua (prima) | maipure (prima) |
 |---|---|---|---|---|---|---|
 | jefatura | creencia-001b, geografia_politica-003, parentesco-007, parentesco-027, parentesco-034, parentesco-035, parentesco-037, parentesco-038 | 3 (001, 003, 011) | 1 (001) | 1 (001) | — | 1 (001) |
 | jerarquia-rango | parentesco-014, parentesco-034, parentesco-035, parentesco-036, parentesco-037 | 1 (002) | 2 (002, 003) | 1 (003) | 2 (001, 002) | — |

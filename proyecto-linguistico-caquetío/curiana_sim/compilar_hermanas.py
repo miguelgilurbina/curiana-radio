@@ -62,6 +62,20 @@ COMPARADA = os.path.join(HERMANAS_DIR, "COMPARADA.md")
 # ── vocabularios cerrados (README §2-§4) ───────────────────────────────────
 PUEBLOS = ("taino", "lokono", "kalinago", "achagua", "maipure", "wayuu", "paraujano")
 ORDEN_PUEBLOS = ("caquetio",) + PUEBLOS
+# Qué es cada pueblo para el caquetío (Miguel, 2026-10-09). Hermanas: la línea
+# lokonoide de Oliver 1989 cap. 2 p. 150 (la 1.ª persona /dA-/ compartida).
+# Primas: otras ramas maipurianas — la guajiro-paraujana (innovó /tA-/) y la de
+# los Llanos y el Orinoco (conserva Nu-). Vecinas: otras familias de la esfera;
+# entran cuando se mine la primera (README §2). Sumar un pueblo es decisión.
+RELACION = {
+    "taino": "hermana", "lokono": "hermana", "kalinago": "hermana",
+    "achagua": "prima", "maipure": "prima", "wayuu": "prima", "paraujano": "prima",
+}
+LINEA = {
+    "taino": "lokonoide", "lokono": "lokonoide", "kalinago": "lokonoide",
+    "achagua": "orinoco-llanos", "maipure": "orinoco-llanos",
+    "wayuu": "guajiro-paraujana", "paraujano": "guajiro-paraujana",
+}
 ESFERAS = ("parentesco", "creencia", "ecologia", "transmision", "geografia_politica")
 TEMAS = {
     "parentesco": (
@@ -87,6 +101,17 @@ TEMAS = {
         "lengua-registro", "canto-baile", "escritura-marca", "nombre-propio",
     ),
 }
+# La pregunta a cada pueblo (Miguel, 2026-10-09): «¿cuál era su relación con la
+# tierra?». Atraviesa las cinco esferas: un hecho de creencia, de ecología o de
+# geografía política puede responderla. README §4b.
+TIERRA = (
+    "dueno-del-lugar", "tenencia", "limite-de-uso", "reciprocidad-ofrenda",
+    "lugar-sagrado", "calendario-del-medio", "saber-del-medio", "muertos-y-tierra",
+    "origen-en-la-tierra",
+)
+# El lado caquetío de la pregunta: el corpus es canon y no se toca, así que sus
+# respuestas se proponen aparte, id → aspectos.
+TIERRA_GLOB = "relacion_con_la_tierra_*.yaml"
 ETIQUETAS = ("atestiguado", "hipotetico")
 TESTIGOS = ("vio", "oyo", "lexico", "tercera-mano")
 SUSTRATOS = ("arahuaco", "caribe", "colonial", "sin-decidir")
@@ -417,7 +442,56 @@ def validar_hechos(archivos: list, obras, ids_corpus) -> list:
                     p.append(_error("via-a-no-resuelve", d, f"`{cid}` no está en 3-mundo/corpus/"))
                 if veredicto not in VIA_A:
                     p.append(_error("via-a-veredicto-ilegal", d, f"`{veredicto}`; vale {VIA_A}"))
+            # 7. la pregunta a cada pueblo
+            tierra = h.get("tierra")
+            if tierra is not None:
+                if not isinstance(tierra, list) or not tierra:
+                    p.append(_error("tierra-mal-formada", d, "`tierra` es una lista de aspectos (README §4b)"))
+                else:
+                    for asp in tierra:
+                        if asp not in TIERRA:
+                            p.append(_error("tierra-aspecto-ilegal", d, f"`{asp}`; vale {TIERRA}"))
     return p
+
+
+def tierra_caquetio(ids_corpus=None):
+    """Las respuestas caquetías a la pregunta de la tierra, propuestas en
+    `6-fusion/relacion_con_la_tierra_*.yaml` (sección `caquetio`, cada entrada
+    {id, tierra, nota}). Devuelve (entradas, problemas)."""
+    entradas, problemas = [], []
+    for ruta in sorted(glob.glob(os.path.join(FUSION_DIR, TIERRA_GLOB))):
+        rel = _rel(ruta)
+        try:
+            with open(ruta, encoding="utf-8") as fh:
+                datos = yaml.safe_load(fh) or {}
+        except (OSError, yaml.YAMLError) as e:
+            problemas.append(_error("yaml-invalido", rel, f"no se puede leer: {e}"))
+            continue
+        lista = datos.get("caquetio") if isinstance(datos, dict) else None
+        if lista is None:
+            continue
+        if not isinstance(lista, list):
+            problemas.append(_error("tierra-caquetio-mal-formada", rel, "`caquetio` es una lista"))
+            continue
+        for i, e in enumerate(lista):
+            donde = f"{rel} · caquetio[{i}]"
+            if not isinstance(e, dict) or not isinstance(e.get("id"), str):
+                problemas.append(_error("tierra-caquetio-sin-id", donde, "cada entrada es {id, tierra, nota}"))
+                continue
+            donde = f"{rel} · {e['id']}"
+            if ids_corpus is not None and e["id"] not in ids_corpus:
+                problemas.append(_error("tierra-caquetio-no-resuelve", donde, "no está en 3-mundo/corpus/"))
+            asp = e.get("tierra")
+            if not isinstance(asp, list) or not asp:
+                problemas.append(_error("tierra-mal-formada", donde, "`tierra` es una lista de aspectos"))
+            else:
+                for a in asp:
+                    if a not in TIERRA:
+                        problemas.append(_error("tierra-aspecto-ilegal", donde, f"`{a}`; vale {TIERRA}"))
+            if not e.get("nota"):
+                problemas.append(_aviso("tierra-caquetio-sin-nota", donde, "falta `nota`: por qué responde la pregunta"))
+            entradas.append(e)
+    return entradas, problemas
 
 
 def compilar(rutas_extra=()):
@@ -432,6 +506,7 @@ def compilar(rutas_extra=()):
     for a in archivos:
         problemas += validar_meta(a)
     problemas += validar_hechos(archivos, obras, ids_corpus)
+    problemas += tierra_caquetio(ids_corpus)[1]
     return archivos, problemas
 
 
@@ -461,6 +536,13 @@ def informe(archivos, problemas) -> None:
                   + ", ".join(f"{e} {n}" for e, n in sorted(esf.items()))
                   + " | " + ", ".join(f"{k} {v}" for k, v in sorted(etiq.items(), key=lambda kv: str(kv[0])))
                   + " | proyección: " + ", ".join(f"{k} {v}" for k, v in sorted(capas.items(), key=lambda kv: str(kv[0]))))
+    con_tierra = Counter(h.get("pueblo") for h in hechos if h.get("tierra"))
+    caq, _ = tierra_caquetio()
+    if caq or con_tierra:
+        print("  relación con la tierra: caquetío " + str(len(caq)) + " · "
+              + ", ".join(f"{p} {con_tierra[p]}" for p in PUEBLOS if con_tierra.get(p)))
+    else:
+        print("  relación con la tierra: ningún hecho etiquetado todavía")
     errores = [p for p in problemas if p.nivel == "error"]
     avisos = [p for p in problemas if p.nivel == "aviso"]
     if problemas:
@@ -498,15 +580,40 @@ def matriz(archivos) -> str:
         "> La columna **caquetío** lista los hechos del corpus caquetío que esos",
         "> hechos tocan (`caquetio[]`): no es un censo del corpus, es el diálogo.",
         "> Fuente: canon de `3-mundo/hermanas/` + propuestas `6-fusion/hermanas_*.yaml`.",
+        "> Entre paréntesis, qué es cada pueblo para el caquetío: hermana o prima.",
         "",
     ]
+    cab = [f"{p} ({RELACION.get(p, '?')})" for p in pueblos]
+    # La pregunta a cada pueblo va primero: es el centro de la Kaketiana.
+    caq, _ = tierra_caquetio()
+    con_tierra = [h for h in hechos if h.get("tierra")]
+    if caq or con_tierra:
+        lineas += [
+            "## ¿Cuál era su relación con la tierra?",
+            "",
+            "> La pregunta que se le hace a cada pueblo (Miguel, 2026-10-09). Cada celda:",
+            "> los hechos que la responden, de cualquier esfera. La columna caquetío sale",
+            "> de `6-fusion/relacion_con_la_tierra_*.yaml`, porque el corpus no se toca.",
+            "",
+            "| aspecto | caquetío | " + " | ".join(cab) + " |",
+            "|---|---|" + "|".join("---" for _ in pueblos) + "|",
+        ]
+        for asp in TIERRA:
+            ids_caq = sorted({e["id"] for e in caq if asp in (e.get("tierra") or [])})
+            celdas = []
+            for pueblo in pueblos:
+                mios = [h for h in con_tierra if h.get("pueblo") == pueblo and asp in h["tierra"]]
+                celdas.append(f"{len(mios)} ({', '.join(h.get('id', '?').split('-', 1)[1] for h in mios)})" if mios else "—")
+            if ids_caq or any(c != "—" for c in celdas):
+                lineas.append(f"| {asp} | {', '.join(ids_caq) if ids_caq else '—'} | " + " | ".join(celdas) + " |")
+        lineas.append("")
     for esfera in ESFERAS:
         sub = [h for h in hechos if h.get("esfera") == esfera]
         if not sub:
             continue
         lineas.append(f"## {esfera}")
         lineas.append("")
-        lineas.append("| tema | caquetío (tocado) | " + " | ".join(pueblos) + " |")
+        lineas.append("| tema | caquetío (tocado) | " + " | ".join(cab) + " |")
         lineas.append("|---|---|" + "|".join("---" for _ in pueblos) + "|")
         temas = list(TEMAS[esfera]) + sorted({h.get("tema") for h in sub if h.get("tema") not in TEMAS[esfera]})
         for tema in temas:

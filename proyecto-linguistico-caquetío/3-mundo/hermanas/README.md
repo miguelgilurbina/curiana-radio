@@ -50,6 +50,20 @@ Pueblos (`pueblo:`): `taino`, `lokono`, `kalinago`, `achagua`, `maipure`,
 traer hechos de otro (la minería achagua trae maipure de Gilij): cada hecho
 dice el suyo.
 
+**Qué es cada pueblo para el caquetío** (Miguel, 2026-10-09). El validador lo
+lleva en `RELACION` y `LINEA`, y la matriz lo escribe junto a cada pueblo.
+
+| Relación | Línea | Pueblos | Por qué |
+|---|---|---|---|
+| hermana | lokonoide | taíno, lokono, kalinago (su sustrato iñeri) | comparten con el caquetío la 1.ª persona /dA-/ (Oliver 1989 cap. 2 p. 150) |
+| prima | guajiro-paraujana | wayuu, paraujano (añú) | rama que innovó /tA-/: «prima lejana», de otra esfera cultural |
+| prima | orinoco-llanos | achagua, maipure | «una línea maipuriana aparte de los caquetíos»: conserva Nu- |
+| vecina | otras familias | jirajara, ayomán, gayón, caribes, guahibo… | entran cuando se mine el primero; cada una con sus cinco esferas |
+
+La regla para reconstruir hacia el caquetío con una prima (¿cuenta como
+segunda tradición o sólo como comparanda?) **sigue sin decidir**. Una vecina
+nunca reconstruye: se describe por sí misma.
+
 Esferas (`esfera:`): `parentesco` · `creencia` · `ecologia` · `transmision` ·
 `geografia_politica`. En la propuesta conviven en un archivo; al fusionar se
 reparten por esfera.
@@ -97,6 +111,7 @@ hechos:
       nota: >-
         Por qué esa capa (regla C, §5).
     via_a: {creencia-002: corrobora-en-parte}   # auditoría de los hechos wayuu del corpus
+    tierra: [dueno-del-lugar, limite-de-uso]   # si responde la pregunta de §4b (opcional)
     dominios: [creencia, medicina]  # libre
     id_origen: ck09-02              # si migra de una propuesta anterior
     implicacion_simulacion: >-      # opcional, como en el corpus caquetío
@@ -137,6 +152,44 @@ y el validador lo avisa, no lo acepta. `dominios` queda libre para lo demás.
 sucesión, guerra, cautivos): es el mismo reparto que hizo el corpus caquetío
 en las sesiones 1 y 5.
 
+## 4b. La pregunta a cada pueblo: ¿cuál era su relación con la tierra?
+
+> Miguel, 2026-10-09: «la Kaketiana dejó de ser solamente sobre los caquetíos,
+> sino sobre la filosofía que ellos tenían con su relación con la tierra […]
+> qué es lo que podemos realmente aprender de ellos»; y «puede ser una pregunta
+> a cada pueblo. Nuestro centro es el de los caquetíos, pero es importante
+> darle voz a cada pueblo».
+
+Es la pregunta que se le hace a **todos** los pueblos, y atraviesa las cinco
+esferas: la responde un hecho de creencia (el dueño del cerro), de geografía
+política (quién es dueño de la tierra), de ecología (qué no se caza) o de
+transmisión (cómo se aprende el monte). Por eso no es un `tema` más: es un
+campo aparte, `tierra`, con uno o varios aspectos de este vocabulario cerrado.
+
+| Aspecto | Qué pregunta | Un ejemplo ya minado |
+|---|---|---|
+| `dueno-del-lugar` | ¿Tienen dueño el monte, el cerro, el agua, los animales? | el Capo que no deja cortar los árboles del Capubana (creencia-021) |
+| `tenencia` | ¿De quién es la tierra: común, del jefe, de la casa? ¿Se hereda? | entre maipures, «non hanno delle terre private» (Gilij t. II p. 212) |
+| `limite-de-uso` | ¿Qué no se corta, no se caza, no se toma, y cuándo? | al venado echado no se le tira |
+| `reciprocidad-ofrenda` | ¿Qué se devuelve a la tierra o a sus espíritus? | la ofrenda de casabe al espíritu que da la yuca (kalinago) |
+| `lugar-sagrado` | ¿Qué lugares tienen valor ritual? | el Coaibai taíno, el cerro de los caquetíos |
+| `calendario-del-medio` | ¿Se cuenta el tiempo por lo que hace el medio? | «cuando pusiesen huevos las tortugas», el calendario achagua |
+| `saber-del-medio` | ¿Qué saber del medio se guarda y se enseña? | el cerro como aguja de marear |
+| `muertos-y-tierra` | ¿Vuelven los muertos a la tierra o al agua? | los huesos y la lluvia (creencia-012) |
+| `origen-en-la-tierra` | ¿Sale la gente de la tierra, de un árbol, de un río? | achaguas «hijos de los troncos» y «de los ríos» |
+
+Reglas:
+
+- **Darle voz a cada pueblo** quiere decir que la respuesta de un pueblo se
+  escribe con su fuente y en sus términos, no como variante de la caquetía.
+  Las etiquetas y la regla 3 valen igual: una tradición viva del s. XX
+  responde la pregunta, pero con su capa (`hipotetico` o retroabstraída).
+- **El lado caquetío** no se escribe en el corpus (es canon): se propone en
+  `6-fusion/relacion_con_la_tierra_<fecha>.yaml`, sección `caquetio`, una
+  entrada por hecho: `{id, tierra: [...], nota}`. El validador comprueba que el
+  id exista en el corpus y que los aspectos sean legales.
+- Un aspecto que falte se propone en la bandeja; no se fuerza.
+
 ## 5. Las reglas que no se rompen aquí
 
 1. **Regla 3 por fecha, en cada hecho.** `epoca` dice de cuándo es el
@@ -171,6 +224,9 @@ python curiana_sim/compilar_hermanas.py --check    # exit 1 si hay errores
 python curiana_sim/compilar_hermanas.py --matriz   # tema × pueblo, con el caquetío al lado
 python curiana_sim/compilar_hermanas.py --matriz --escribir   # reescribe COMPARADA.md
 ```
+
+La matriz abre con la pregunta de §4b: aspecto × pueblo, con el caquetío
+primero.
 
 Minar una hermana es `minar-fuente` con este esquema de salida: la pregunta
 sale de la nota `08_creencia_<pueblo>_que-minar` y de las fichas de sus
