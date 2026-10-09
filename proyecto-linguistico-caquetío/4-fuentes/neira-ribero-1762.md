@@ -597,3 +597,42 @@ transcripción del 2026-09-12): la palabra del mar es la de la laguna (Gumilla).
 Las entradas «marino» y «piélago» parecen pedidas para la doctrina.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+Minería del plan [[08_creencia_achagua_que-minar]] (2º). Bitácora en
+[[09_creencia_achagua_mineria]]; propuesta en
+`6-fusion/creencia_achagua_2026-10-09.yaml`; censo por script en
+`6-fusion/scripts/censo_creencia_neira_ribero.py` (bloque `censo_neira` de la
+propuesta).
+
+**Qué se preguntó.** Qué campo léxico de la creencia registra el vocabulario,
+qué lemas pidió el jesuita para la doctrina y cuáles nombran algo indígena, y
+qué orden tiene de verdad el panteón del pliego 56.
+
+**Cómo.** Consultas y un censo por script sobre el YAML de la transcripción,
+y cada voz citada vista en imagen (pliegos 35, 41-43, 49, 52-53, 56-57, 61-62,
+68-69, 74, 78-79, 89 y 92).
+
+**Qué dio.** `-minari` es un sufijo general ('el que tiene X / el dado a X'),
+no 'dios-dueño'; el especialista cura cantando y soplando (`Numariu`,
+`Maricai`, `Camaricacay`, «Soplar à los enfermos — Numariuni»); «piache» y
+«mohán» no son voces achaguas; el alma tiene forma dentro y fuera del cuerpo
+(«Anima en el Cuerpo — Gabasí. fuera d[e]l = Guabasimi») y revivir es que
+vuelve a su lugar; el duende es `Guabaimi` y así se llama al español; hay
+«Ojos p.a ver almas»; «Ydolo = Chuai, Chubay» nombra la máscara de la Chuvay
+de Rivero; las honras del difunto son un convite (`Tanasí`) con ofrenda.
+
+**El panteón del pliego 56**, visto otra vez junto a Rivero p. 113: el
+corrimiento de un escalón se confirma, con un argumento más (la copia es la
+frase de Rivero con los «=» del vocabulario puestos donde no van). La imagen
+dice `Prubisana`, no `Purubisana`. Las diosas quedan sin decidir. Detalle en
+`panteon_neira_56` de la propuesta.
+
+**⚠️ Lo que corrige a esta ficha.** No es cierto que no quede página por leer:
+**siete páginas del vocabulario no tienen ninguna entrada en el YAML** (32
+der., 40 izq., 41 der., 52 izq., 72 izq., 79 der., 92 der.), medido por lado
+con el script y comprobado en imagen (todas tienen entradas). El ensamblador
+mide los huecos por pliego y no las ve. De dos de ellas se leyeron hoy las
+líneas de creencia (52 izq.: curar, curar soplando, danza; 92 der.: soñar,
+sueño, pesadillas, soplar a los enfermos); el resto sigue por transcribir.
