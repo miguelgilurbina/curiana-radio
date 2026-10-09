@@ -141,3 +141,36 @@ general» (t. II pp. 6-7); unos se dicen hijos de los troncos y otros de los rí
 «madre del agua» del t. II es una boa de lagunas, y la da para jiraras y Quito.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minado para creencia (2026-10-09)
+
+**Qué se preguntó** (paso 0 de [[08_creencia_lokono_que-minar]]): qué dice
+Gumilla de los **Aruacas** —lokono del Orinoco bajo y de la costa hacia
+Cayena, que «viven entre» los caribes (t. I p. 154)— sobre el piache, la
+maraca, el entierro y el duelo, y qué los distingue de los achaguas.
+Bitácora entera en [[09_creencia_lokono_mineria]]; propuesta en
+`6-fusion/creencia_lokono_2026-10-09.yaml` (`lok-01` a `lok-08`).
+
+**Cómo se lee para esto.** Gumilla escribe *Aruaca(s)* en cursiva y el OCR
+lo rompe una vez («Nacion AriMca», p. 156). La maraca es *Maráca*; el piache,
+*Piache* o *Médico*. Desfase en estos capítulos: pdf − 24 (pp. 154-157), − 30
+(pp. 199-208), − 32 (p. 210 y p. 311). Todo lo citado se vio en imagen.
+
+**Qué dio** (t. I): la consulta del piache aruaca de noche en «casitas
+apartadas, pero á vista de las Poblaciones», con la *Maráca* —«un calabazo
+con mucho número de piedrecillas adentro»— y la voz mudada (p. 155); el
+espíritu propio del piache, «con quien hablaba todas las noches» (pp.
+156-157, de oídas); el entierro «con todas armas» y sin tierra sobre el
+cuerpo, que los achaguas hacen «únicamente con sus Capitanes y Caciques»
+(pp. 199-200); el médico que se lleva «casi todo lo que era del difunto» (pp.
+155 y 207); y «los Piaches Aruacas ni duermen, ni dexan dormir» (p. 210).
+
+**Lo que no es aruaca:** el ayuno de toda la parentela (p. 210) es de
+«todas quantas Naciones he tratado» (p. 208): areal. El sueño-aviso de la
+arenga de los caciques (p. 311) y las almas que «andan vagueando no léjos de
+sus sepulturas» (pp. 210-211), también.
+
+**Qué no dio:** de los aruacas, nada de tabaco, sueño, alma, tormentas,
+huesos ni iniciación. Los huesos guardados que da son warao (p. 199) y caribe
+(p. 201). Del t. II sólo se leyó el eclipse de los loláca y atabáca (p. 274) y
+la única mención aruaca (pdf 63).
