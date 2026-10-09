@@ -29,7 +29,6 @@ tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-10-09
 aliases: ["HSAI 4", "Handbook vol. 4", "Circum-Caribbean Tribes", "Hernández de Alba 1948", "Kirchhoff 1948"]
-minado: 2026-10-09
 ---
 
 # HSAI 4 (1948) — *The Circum-Caribbean Tribes*
