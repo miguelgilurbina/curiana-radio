@@ -1,0 +1,2335 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Las cinco esferas KALINAGO (minería 2, «esferas de las hermanas»)
+# Esquema: 3-mundo/hermanas/README.md. Valida: python curiana_sim/compilar_hermanas.py --check
+#
+# Regla 5: esto PROPONE. No toca 3-mundo/, 2-lengua/, el lexicón ni ningún
+#   índice compartido. Lo decide Miguel.
+# Regla 3: todo lo kalinago escrito es de 1635-1667, 140-170 años después del
+#   contacto, y la capa colonial está DENTRO de las glosas (Breton catequiza con
+#   estas palabras; Rochefort y Du Tertre escriben como confesores). `epoca` en
+#   cada hecho; proyectar al caquetío del s. XIV-XV espera K4.
+# Regla 4: los kalinago son esfera de contacto y hermana (D1: el habla de
+#   mujeres), nunca «lo que se hacía en la costa».
+# INDEPENDENCIA: Breton, Du Tertre y Rochefort NO son tres testigos. Du Tertre
+#   y Breton compartieron misión (Du Tertre cita a Breton palabra por palabra:
+#   1667 p. 361 = Breton 1665 pp. 229-230); Rochefort 1658 copia a Du Tertre
+#   1654 y usa papeles de Breton; Du Tertre 1667 le contesta a Rochefort. Lo
+#   que Rochefort trae de Monsieur du Montel (San Vicente) es un informante
+#   propio, pero llega por la misma pluma. `procedencia_extra[].independiente`
+#   es false entre ellos siempre; sólo cuenta como segunda tradición (regla C)
+#   otra hermana: taíno (Pané) o lokono (Brett, Gumilla).
+# Davies 1666 es Rochefort en inglés: sirvió para localizar; se cita el francés.
+#
+# La nota de sesión: 4-fuentes/sesiones/10_hermanas_kalinago_esferas.md
+# La migración de la minería 1 (ck09-01…21 → kalinago-creencia-001…021) la
+# hace otro agente; aquí `mineria_1:` apunta a los ids viejos ck09-NN.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  pueblo: kalinago
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero kalinago, minería 2 de las hermanas (Claude Opus 5.5), rama vault/hermanas-kalinago'
+  plan: 4-fuentes/sesiones/08_creencia_kalinago_que-minar.md
+  plan_previo: 4-fuentes/sesiones/09_creencia_kalinago_mineria.md
+  encargo: >-
+    Miguel, 2026-10-09: «no sólo bajemos las palabras sino también información
+    sobre estructura social, jerarquía, creencia y sociedad… tal cual como
+    armamos estas esferas para los caquetíos, deberíamos hacerlo para cada una
+    de sus hermanas». Las cinco esferas, con la lista cerrada de temas del
+    README §4 como lista de preguntas.
+  fuentes_leidas: [rochefort-1658, davies-1666, du-tertre-1667, breton-1665, goeje-1939]
+  fuentes_cotejadas: [pane-c1498, brett-1868, steward-1948-hsai-4, oviedo-y-valdes-1852-1855]
+  desfases:
+    rochefort-1658: 'libro II y vocabulario: impresa = pdf − 20, constante de pdf 345 a pdf 547 (comprobado en cada página vista)'
+    davies-1666: 'el TCP marca la página impresa del inglés como [p. N]; se usó sólo para localizar'
+    du-tertre-1667: 'en línea, archive.org b33275944_0002: impresa = n − 57 de p. 360 a p. 393 (n417-n450); tras la lámina «Visite des Sauvages aux François» (dos escaneos), impresa = n − 59 desde p. 395 (n454) hasta p. 412 (n471). La cabecera «397» que lee el OCR en el arranque de «Des Carbets» es la p. 395 (la tabla del tomo dice 395)'
+    breton-1665: 'impresa = pdf − 22; 1666: impresa = pdf − 8 (PDF sólo en el checkout principal, OneDrive)'
+    goeje-1939: 'impresa = pdf − 1'
+  cobertura:
+    rochefort-1658: >-
+      Libro II entero leído en la transcripción de Davies (TCP, caps. VII y
+      IX-XXIV + vocabulario) para localizar; en IMAGEN (pymupdf, 135 ppp, página
+      entera) las pp. 325, 327, 330, 390, 391, 394, 395, 396, 398, 412, 416,
+      417, 418, 419, 424, 427, 428, 429, 430, 437, 438, 439, 448, 451, 452, 456,
+      463, 464, 467, 480, 488, 489, 490, 492, 495, 497, 500, 501, 505, 506, 507,
+      511, 512, 513, 514, 517, 518, 527 (48 páginas).
+    du-tertre-1667: >-
+      Traité VII cap. I entero (pp. 356-418) leído en el OCR del repo; en
+      IMAGEN (archive.org, visor de página, 1000 px) las pp. 360, 361, 362, 365,
+      366, 368, 369, 371, 372, 373, 376, 377, 378, 383, 393, 395, 396, 399, 400,
+      401, 411, 412 (22 páginas). El resto se cita de la capa de texto y lo dice
+      (`verificado_en_imagen: no`).
+    davies-1666: 'caps. VII y IX-XXIV y el vocabulario de espíritus, en el TCP; sin imagen (no se cita como testigo).'
+    breton-1665: 'en imagen: 1665 pp. 230, 417; 1666 pp. 60, 92, 265. Capa de texto: 1665 p. 229 (la cita que Du Tertre copia, vista en Du Tertre p. 361) y el prefacio.'
+    goeje-1939: 'en imagen: pp. 41 (oncle yao, akatobu) y 43 (capitaine yubutuli / amaši, tamon, Kalinago / Kaliponam, Aluague); capa de texto pp. 3-4 (su tesis del iñeri).'
+  como: >-
+    Se localizó en la transcripción limpia de Davies (TCP) y en el OCR de Du
+    Tertre; se midió la ortografía antes de contar (Boyé/Boyez/Boyes,
+    Maboya/Mapoya/Mabouya, Icheiri/Ichéiri/Ichéiry, Chemiin/Chemijn/Chemyn,
+    Akamboué/Akamboüé, Opoyem/Oupoyem, Louquo/Lucuo/Loüqu/Lukuo, Calinago/
+    Callinago/Kalinago, Igneri/Ygneri/Tgneri/Texeri, Arouague/Aroüague/
+    Alloüague/Allouague, cendre, «cinq mois», Coraçao/Corassao); y cada pasaje
+    citado se leyó en imagen (Rochefort y Breton desde el PDF; Du Tertre en el
+    visor de archive.org, viendo la página sin descargar el libro).
+  no_leido:
+    - 'Rochefort libro I (historia natural) y caps. I-VI y VIII del libro II (colonos europeos y la digresión apalachita, que es de Brigstock y no de los kalinago).'
+    - 'Du Tertre t. II, traités I-VI (historia natural) y cap. II del traité VII (las colonias francesas); el traité VIII (esclavos) sólo por la sección «Desclaves Aroüagues» del índice, sin leer.'
+    - 'Rochefort pp. 431-436, 441-447, 449-450, 453-462, 465-479, 481-487, 491, 493-494, 496, 498-499, 502-504, 508-510: leídas en Davies, sin imagen (los hechos que salen de ahí lo declaran).'
+    - 'Breton 1665-1666: sólo las entradas sociales listadas en cobertura; los ~400 pares h/f siguen sin leer enteros (deuda de la minería 1).'
+    - 'Breton 1667 (Grammaire) y el Catéchisme: no se abrieron.'
+  ceros:
+    - tema: 'cosmos-origen (Louquo)'
+      sonda: 'Louquo, Loüqu, Lucuo, Lúcuo, Lukuo, Louqu en Rochefort (texto y TCP de Davies) y en Du Tertre (OCR): 0. El único mito de origen kalinago es el del primer padre Kalinago hecho pez (Du Tertre p. 360) y el de la yuca traída por el «homme blanc» (Rochefort pp. 427-428). Louquo sigue siendo de La Borde (Goeje p. 39, «1 bo»).'
+    - tema: 'muerte-entierro (cenizas del jefe en bebida, Rouse p. 559)'
+      sonda: '«cendre» en Rochefort libro II: la única ceniza de muerto es la de los TAPUYAS del Brasil, que «saupoudrent leurs viandes de la cendre des corps brûlez de leurs parens» (p. 448, imagen), dicha como comparación. En Du Tertre traité VII: «cendre» 0 en contexto funerario. En Breton: sólo cocina y tabaco (minería 1). La frase de Rouse no tiene primaria en el grupo Breton-Du Tertre-Rochefort; puede ser un traslado de los tapuyas o venir de La Borde.'
+    - tema: 'muerte-entierro («no nombrar al muerto», Rouse p. 558)'
+      sonda: 'Rochefort cap. X §§ 25-26 (p. 396, imagen) y Breton 1665 p. 221 dan la tecnonimia y el medio nombre de los VIVOS; Du Tertre: «ils n''ont point de surnoms» (p. 371-372). «nom»/«nommer» junto a «mort/défunt» en los dos: 0. El tabú de nombrar al muerto no está en el grupo; se queda como dato wayuu (transmision-021).'
+    - tema: 'iniciacion-especialista («cinco meses de ayuno», Rouse p. 562 n. 11, atribuido a Du Tertre t. II pp. 365-366)'
+      sonda: 'Du Tertre 1667 pp. 365-366, vistas en imagen: «apres avoir long temps jeûné»; «cinq mois» 0 en todo el traité VII (OCR) y 0 en Rochefort/Davies («five months» sólo en una tregua de la historia colonial, Davies p. 185). Rouse pudo leer la edición de 1654 o La Borde: no se sostiene en la de 1667.'
+    - tema: 'segundo-entierro (huesos de los ANTEPASADOS guardados en CASA por el boyé, en CALABAZAS, con el PELO; Rouse p. 562)'
+      sonda: 'Lo que hay (Du Tertre p. 369, Rochefort pp. 418, 424): huesos de UN muerto sacados del sepulcro y envueltos en algodón («marmousets de Cotton»), que dan oráculos. «cheveus/cheveux» junto a os/mort: 0; «callebasse/calebasse» junto a os: 0; «ancestres/ayeuls» en ese contexto: 0. Rouse amplía.'
+    - tema: 'descendencia (linajes o clanes matrilineales con nombre)'
+      sonda: 'famille/lignée/race/maison junto a mère/femme en Rochefort cap. XXII-XXIII y Du Tertre §IV: ningún grupo de filiación con nombre. Hay residencia uxorilocal (Du Tertre p. 378), custodia materna (p. 376) y terminología de primos cruzados; no hay descendencia matrilineal declarada. Los hijos de cautiva son libres por el padre (Rochefort p. 489).'
+    - tema: 'parentesco (autoridad del hermano de la madre)'
+      sonda: 'Hay término propio para el tío materno (h. Yao, f. Akátobou; Rochefort p. 517, Breton 1666 p. 265), distinto del paterno, que se llama «padre». Autoridad, herencia o educación por el tío materno: 0 en Rochefort y Du Tertre (oncle/neveu fuera del vocabulario: 0). La terminología es el dato; el avunculado no.'
+    - tema: 'tributo-trabajo'
+      sonda: 'tribut/redevance/corvée/hommage en Rochefort libro II (fuera de la digresión apalachita) y Du Tertre §§ V-XI: 0. Sólo el trabajo colectivo convidado (tumba de monte del vecino a cambio de bebida, Du Tertre p. 382, sin imagen), que va a ecologia/cultivo.'
+    - tema: 'medio-fisico'
+      sonda: 'No se minó lo kalinago sobre el medio: Rochefort libro I y Du Tertre traités I-VI describen las islas en la voz del europeo. Lo que los kalinago saben del medio (estrellas que dan viento, mar) ya lo sacó la campaña del mar de Breton (cosmovision_marina_2026-09-24.yaml).'
+    - tema: 'escritura-marca (petroglifos)'
+      sonda: 'roches gravées/caracteres/figures sur les rochers en el traité VII y el libro II: 0. Las marcas que hay son corporales (roucou, genipa) y de rango (caracolis, bottines de las libres).'
+  fuentes_que_faltan:
+    - 'La Borde 1674/1684, Relation de l''origine, mœurs, coustumes, religion… des Caraïbes (Recueil de divers voyages): Louquo y la teogonía; probable fuente de lo que Rouse atribuye sin nota (cenizas del jefe, cinco meses). archive.org recueildediversv00unkn, sin bajar.'
+    - 'Breton 1665, edición crítica de 1999 (IRD, Besada Paisa dir.): ayuda de lectura, no testigo.'
+    - 'Du Tertre 1654 (Histoire générale des isles…, cihm_34860): para fechar qué copió Rochefort y qué añadió Du Tertre en 1667; y para la «iniciación de cinco meses» si Rouse la tomó de ahí.'
+    - 'Anónimo de Carpentras (1618-1620, ed. Moreau 1987): el único testigo kalinago fuera del grupo Breton-Du Tertre-Rochefort; copyright, sin copia libre.'
+  temas_propuestos:
+    parentesco: [terminologia]
+  temas_propuestos_nota: >-
+    `terminologia` (cómo se llaman los parientes: cruzados/paralelos, vocativo y
+    referencial) no cabe limpio en `descendencia` ni en `linaje-clan`; aquí se
+    usó `descendencia` con `tema_duda`. Lo decide Miguel.
+  independencia: >-
+    Cada hecho dice en `procedencia_extra[].independiente` si el otro autor
+    copia. Regla práctica de esta minería: Rochefort 1658 = Du Tertre 1654 +
+    papeles de Breton + du Montel (San Vicente) + otros; Du Tertre 1667 = su
+    1654 + Breton (lo cita) + frère Charles + du Parquet + «un jeune homme qui
+    avoit esté long temps esclave parmi eux». Nada de eso es segunda tradición.
+  reglas_propias_de_lo_kalinago:
+    - 'El par hombres/mujeres mide PALABRAS, no creencias ni instituciones (D1). El contenido se compara con taíno y lokono.'
+    - 'La capa caribe (y lo que sirve al personaje Marokoto-ni) va a comparanda-esfera, nunca al caquetío.'
+    - '`capa_colonial` dice qué parte es del misionero o del compilador.'
+
+hechos:
+
+# ═════════════════════════════════════════════════════════════════════════
+# CREENCIA (101 en adelante; 001-021 son la migración de la minería 1)
+# ═════════════════════════════════════════════════════════════════════════
+
+  - id: kalinago-creencia-101
+    esfera: creencia
+    tema: alma
+    contenido: >-
+      Varias almas. Du Tertre: «chaque personne en a trois: une au cœur, une à
+      la teste, & l'autre au bras»; la del corazón, que se nota en el latido,
+      va al cielo; las de la cabeza y el brazo, que se notan en el pulso y las
+      arterias, «deviennent Maboyas, c'est à dire, esprits malins». Rochefort:
+      tantas almas «comme ils sentent en leurs corps de battemens d'arteres,
+      outre celuy du cœur», y la principal, la del corazón, sube al cielo con
+      su Icheiri o su Chemiin.
+    grafia: 'Maboyas; Icheiri, Chemiin; h. nïouânni, f. nánichi «cœur … mon ame» (Rochefort p. 516, capa de texto)'
+    pueblo: kalinago
+    donde: 'Guadalupe, Dominica, San Vicente'
+    epoca: '1640-1658 (Du Tertre en las islas; informantes de Rochefort)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 372 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 429 (imagen)', independiente: false, nota: 'Rochefort copia a Du Tertre 1654; añade el destino de las almas menores (kalinago-creencia-102)'}
+      - {obra: breton-1665, pagina: '1665 p. 41; 1666 p. 17 (minería 1, ck09-12)', independiente: false, nota: 'Breton sólo da «l''ame de la main», el pulso'}
+    verificado_en_imagen: si
+    registro: 'sin marca (las palabras del alma sí: h. iouanni / f. anichi)'
+    sigla_goeje: 'iuani hK; aniši fT? (minería 1)'
+    como_se_escribio: 'Du Tertre lo da como creencia general, sin informante; Rochefort lo hace teología («immortalité de l''ame»).'
+    capa_colonial: 'El marco «immortalité de l''âme … bien-heureuse» es del confesor; lo observado es la cuenta de almas por latidos.'
+    sustrato: sin-decidir
+    sustrato_nota: 'Ninguna otra hermana medida da varias almas por latido: Pané da un alma del vivo (goeiz) y otra del muerto (opia), no varias. El nombre de la del corazón es h. kalina, f. arahuaca con duda: no decide.'
+    caquetio: [creencia-008b]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición (kalinago). Sube P3 de «sólo Rouse» a atestiguado kalinago en dos primarias dependientes; para el caquetío sigue sin segunda hermana.'
+    via_a: {creencia-005: no-toca}
+    mineria_1: [ck09-12]
+    dominios: [creencia, cuerpo]
+
+  - id: kalinago-creencia-102
+    esfera: creencia
+    tema: alma
+    contenido: >-
+      Adónde van las almas menores: unas viven tras la muerte «sur le bord de
+      la mer, & que ce sont elles qui font tourner les vaisseaux», y se llaman
+      Ouménkou; las otras «vont demeurer dans les bois, & dans les forests, &
+      ils les nomment des Maboyas». Para Du Tertre son los espíritus malignos
+      «ausquels ils imputent tout ce qui leur arrive de sinistre & de funeste».
+    grafia: 'Ouménkou (Rochefort p. 429); Maboyas'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 429 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 372 (imagen)', independiente: false, nota: 'mismo grupo; Du Tertre no da la orilla ni el bosque, sólo que se vuelven maboyas'}
+    verificado_en_imagen: si
+    registro: 'sin marca'
+    sigla_goeje: 'Umeku «K?»; mapoya «fam?» (minería 1)'
+    sustrato: arahuaco
+    sustrato_nota: 'Por el CONTENIDO: el muerto como espíritu que anda de noche por el monte y se teme está en el taíno (Pané cap. XIII: los muertos «durante el día … están recluidos; por la noche van a recreo», y el goeiz que se aparece). Los nombres son caribes o dudosos: no deciden.'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XIII', que: 'los muertos salen de noche, se aparecen y se pelea con ellos; la opía es el alma del muerto'}
+    caquetio: [creencia-008b]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-008b (atestiguado, Arcaya pp. 104-108): el alma que «recorre el bosque y la sabana» y los muertos temidos. La orilla del mar como morada de muertos que vuelcan canoas es sólo kalinago (Oumékou, caribe): no se proyecta.'
+    via_a: {creencia-008: corrobora-en-parte}
+    mineria_1: [ck09-10, ck09-11]
+    dominios: [creencia, muerte]
+
+  - id: kalinago-creencia-103
+    esfera: creencia
+    tema: alma
+    contenido: >-
+      K1: ¿es opoyem el alma del muerto? No en Rochefort. «Ces bons Esprits
+      sont leurs Dieus. Et ils les appellent en general Akamboüé, qui est le mot
+      que disent les hommes: Et Opoyem, qui est celuy des femmes»; akamboüé
+      «signifie simplement un Esprit, & de là vient qu'il se dit aussi de
+      l'Esprit d'un homme». En el vocabulario: «Un Esprit, H. Akamboüé, F.
+      Opoyem. Ces noms sont généraus … parfois à l'Esprit de l'homme. Mais ils
+      sont donnez en particulier aus bons esprits».
+    grafia: 'h. Akamboüé, f. Opoyem; «L''Ame est exprimée par le même mot qui signifie le cœur» (p. 527)'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 416, 527 (imagen)'}
+    procedencia_extra:
+      - {obra: breton-1665, pagina: '1666 p. 158 (minería 1, ck09-13)', independiente: false, nota: 'Breton glosa sólo «esprit»; Rochefort añade que es el de los espíritus buenos y el del hombre'}
+      - {obra: davies-1666, pagina: 'pp. 278, vocabulario', independiente: false, nota: 'traducción: «A Spirit, Akambouë, M. Opoyem, W.»'}
+    verificado_en_imagen: si
+    registro: 'h. akamboüé / f. opoyem'
+    sigla_goeje: 'opoyem «fam?» glosado «esprit, âme de mort» (Goeje p. 38, minería 1)'
+    capa_colonial: '«leurs Dieus»: la equivalencia espíritus buenos = dioses es de Rochefort.'
+    sustrato: arahuaco
+    sustrato_nota: 'La forma de mujeres sigue siendo la que Goeje filia al arahuaco; pero la GLOSA del testigo es «espíritu (bueno), espíritu del hombre», no «alma del muerto». El «âme de mort» de Goeje no tiene apoyo en Breton ni en Rochefort.'
+    caquetio: [creencia-005]
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Léxico. P2 NO sube: la pareja taína goeiz/opía (vivo/muerto) no tiene correspondencia de glosa en opoyem. El candidato a cognado opoyem ~ opía se debilita (forma sí, glosa no).'
+    mineria_1: [ck09-13]
+    tema_duda: 'alma o espiritu-tutelar: la palabra cubre las dos'
+    dominios: [creencia, lengua]
+
+  - id: kalinago-creencia-104
+    esfera: creencia
+    tema: espiritu-tutelar
+    contenido: >-
+      ¿De quién es el espíritu? Rochefort: los espíritus buenos son muchos, «&
+      dans cette pluralité, chacun s'imagine en avoir un pour soy en
+      particulier»; cada uno dice «Ichéirikou» (h.) o «Nechemérakou» (f.), mi
+      dios. Du Tertre, contando la iniciación: «l'on ne dit pas parmy eux que ce
+      soient les Dieux des Sauvages, mais le Dieu d'un tel, ou la Déesse d'une
+      telle». Breton (minería 1) lo hacía del boyé; Rochefort, de cada persona.
+    grafia: 'h. Ichéirikou, f. Nechemérakou; Chemijn / Chemiignum'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 416 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 366 (imagen)', independiente: false, nota: 'Du Tertre repite a Breton 1665 p. 283 (el dios es del que se inicia)'}
+    verificado_en_imagen: si
+    registro: 'h. y f.'
+    sigla_goeje: 'išeiri hK?; šeme f 2 am 10 (minería 1)'
+    capa_colonial: '«que nous ne pouvons tourner que par celuy de Dieu» (Rochefort p. 416): la traducción por Dios es del autor, y él lo confiesa.'
+    sustrato: arahuaco
+    sustrato_nota: 'Que cada quien tenga su espíritu y le ponga comida está en el cemí taíno (Pané cap. XV: «todos o la mayor parte … tienen muchos cemíes»). Pero aquí la fuente está DIVIDIDA: Breton y Du Tertre (misioneros, testigos) lo dan del especialista; Rochefort (compilador) de cada uno.'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XV', que: 'la mayor parte de los indios de la Española tienen muchos cemíes'}
+    caquetio: [creencia-025]
+    proyeccion:
+      capa: hipotetico
+      nota: 'En duda, degradar: si el espíritu es de todos o del boratio lo dicen distinto dos autores del mismo grupo. Lee creencia-025 sin resolverla.'
+    mineria_1: [ck09-01, ck09-02]
+    dominios: [creencia]
+
+  - id: kalinago-creencia-105
+    esfera: creencia
+    tema: espiritu-tutelar
+    contenido: >-
+      El espíritu se hereda. Un boyé de Dominica decía tener un dios llamado
+      Yris, «un des plus méchans»; preguntado de dónde le venía, respondió «que
+      son pere en avoit deux, & qu'il luy avoit laissé celuy-cy comme par
+      heritage», y que también había dado una diosa a su mujer. Y que su dios
+      había entrado en una mujer y la había llevado «plusieurs fois par dessus
+      le Soleil», a tierras con fuentes, prometiéndole vivir allí tras su
+      muerte.
+    grafia: 'Yris'
+    pueblo: kalinago
+    donde: 'Dominica'
+    epoca: '1642-1654 (el frère Charles estuvo con Breton en Dominica)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 366 (imagen)'}
+    verificado_en_imagen: si
+    registro: 'sin marca'
+    como_se_escribio: 'De oídas en dos pasos: el boyé al frère Charles, Charles a Du Tertre. Du Tertre lo cierra con «C''est ainsi que le Diable abuse de ces pauvres malheureux».'
+    capa_colonial: '«ce Dieu ou ce Diable», «fable»'
+    sustrato: sin-decidir
+    sustrato_nota: 'La herencia del espíritu del padre al hijo no la he hallado en otra hermana medida en esta sesión. El viaje del alma «por encima del sol» choca con el abajo de la única voz caquetía de la tierra de los muertos (creencia-028).'
+    caquetio: [creencia-025, creencia-028]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición y un solo caso, de oídas.'
+    mineria_1: [ck09-02]
+    dominios: [creencia, transmision]
+
+  - id: kalinago-creencia-106
+    esfera: creencia
+    tema: ofrenda-fiesta
+    contenido: >-
+      La ofrenda (Anacri): casabe y primicias; cuando creen que el espíritu los
+      curó, un vino o festín con casabe y ouïcou. Va «à l'un des bouts de la
+      case», sobre uno o varios matoutous. «Chacun dans sa case peut faire ces
+      offrandes à son Dieu; mais quand c'est pour l'evoquer il faut un Boyé»; sin
+      adoración ni oración. Las sobras de la ofrenda son tan santas que sólo
+      «les vieillards, & les plus considerables» las prueban, y sólo con «une
+      certaine netteté de corps».
+    grafia: 'Anacri; Matoutou; Oüicou'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 417-419 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 365-366 (imagen)', independiente: false, nota: 'el matoutou con casabe y oüycou en calabazas nuevas, en la iniciación'}
+      - {obra: breton-1665, pagina: '1665 p. 56; 1666 p. 312 (minería 1, ck09-04)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'sin marca (f. ànacri en Breton 1666 p. 312)'
+    sigla_goeje: 'anakri «—» (minería 1)'
+    capa_colonial: '«Sacrifice», «adoration», «prieres» son las casillas del autor, que dice que no las llenan.'
+    sustrato: arahuaco
+    sustrato_nota: 'Comida puesta al espíritu en la casa: taíno (Pané cap. XVI). Lo nuevo de Rochefort —cualquiera ofrece en su casa; las sobras sólo para ancianos puros— no tiene hermana medida.'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XVI', que: 'comida puesta en la casa del cemí para que coma'}
+    caquetio: [creencia-023]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Corrobora ck09-04 (candidato a reconstruido) sin sumar tradición: Rochefort no es independiente de Breton. La restricción de las sobras es de una sola hermana.'
+    mineria_1: [ck09-04]
+    dominios: [creencia, comida]
+
+  - id: kalinago-creencia-107
+    esfera: creencia
+    tema: especialista
+    contenido: >-
+      Para qué se llama al boyé, «principalement en quatre occasions»: pedir
+      venganza contra quien les hizo mal; curarse y saber el desenlace de una
+      enfermedad; conocer «l'evenement de leurs guerres»; y que sus espíritus
+      echen al Maboya, «Mais jamais ils n'évoquent le Maboya luy même». Cuando
+      enferman creen que es «le Dieu d'un tel» —el de un enemigo— quien les
+      mandó el mal, y de ahí «des haines & des vengeances».
+    grafia: 'Boyez'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 417-419 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 403 (capa de texto)', independiente: false, nota: 'se consulta al diablo por medio de un boyé antes de partir a la guerra'}
+      - {obra: breton-1665, pagina: '1665 pp. 271, 342 (minería 1, ck09-09)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'sin marca'
+    capa_colonial: '«Prêtres, ou pour mieus dire … Magiciens»; «Diablerie».'
+    sustrato: arahuaco
+    sustrato_nota: 'Consultar a los espíritus por el especialista sobre la victoria y la enfermedad: taíno (Pané cap. XIX, la cohoba para saber si alcanzarán victoria) y lokono (el piache encerrado consulta toda la noche, lokono-creencia-001).'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'caps. XV, XIX', que: 'la cohoba para saber de la enfermedad y de la victoria'}
+      - {pueblo: lokono, id: lokono-creencia-001}
+    caquetio: [creencia-024, creencia-001]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina lo atestiguado del boratio (creencia-001) y la adivinación con tabaco (creencia-024): consultar sobre guerra, enfermedad y faena. El mal enviado por el espíritu de un enemigo corrobora creencia-008b.'
+    via_a: {creencia-002: corrobora-en-parte, creencia-006: contradice}
+    mineria_1: [ck09-09]
+    dominios: [creencia, guerra, medicina]
+
+  - id: kalinago-creencia-108
+    esfera: creencia
+    tema: enfermedad-cura
+    contenido: >-
+      La cura del boyé, de noche y sin fuego. Rochefort: con un cabo de tabaco
+      encendido, golpea la tierra con el pie izquierdo, «il souffle cinq ou six
+      fois en haut la fumée» y el espíritu sacude el techo y responde. Du
+      Tertre: si el enfermo ha de sanar, boyé y espíritu «tastent, pressent, &
+      manient … la partie affligée, souflant tousjours dessus», sacan «des épines
+      de Palmiste … de petits os, des dents de serpent & des éclats de bois», y
+      «souvent ils succent la partie malade» y salen a vomitar el veneno. Sanado,
+      hay festín y le ennegrecen el cuerpo con genipa.
+    grafia: 'Ichéiry (el festín, Du Tertre p. 368); Genipa'
+    pueblo: kalinago
+    donde: 'Guadalupe, Dominica, San Vicente'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 367-368 (p. 368 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 507-508 (p. 507 en imagen)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 p. 167 (minería 1, ck09-08)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'sin marca'
+    capa_colonial: '«le maistre & le valet, c''est à dire, le Boyé & le Dieu pretendu»; «Diable de Medecin».'
+    sustrato: arahuaco
+    sustrato_nota: 'Succión y extracción del objeto: taíno (Pané cap. XVI, el behique «sorbe» y saca piedra o hueso; y se tizna la cara con hollín antes de ir: aquí se tizna al enfermo). Y el caquetío lo tiene atestiguado (Oviedo t. II p. 299, ck09-L1), aún fuera del corpus.'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XVI', que: 'el behique se ennegrece la cara, chupa y saca huesecillos o piedra'}
+    caquetio: [creencia-023]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina la cura del boratio que Oviedo atestigua (t. II pp. 298-299; en el corpus sólo el ayuno de la casa, creencia-023). Tres pueblos, el mismo modelo: el mal es algo que entró y se saca.'
+    via_a: {creencia-006: contradice, creencia-007: corrobora-en-parte}
+    mineria_1: [ck09-08]
+    dominios: [creencia, medicina]
+
+  - id: kalinago-creencia-109
+    esfera: creencia
+    tema: especialista
+    contenido: >-
+      El espíritu habla por boca de mujeres y riñe con otros espíritus. «Ces
+      Diables entrent aussi quelquefois dans les corps des femmes, & parlent par
+      elles»; y cuando varios boyés llaman juntos a los suyos, «ces Dieus …
+      s'injurient & querellent, s'attribuant l'un à l'autre la cause des maus
+      de quelcun». Du Tertre: un espíritu de boyé, descrito a un muchacho
+      francés cautivo, era «si vieil qu'il estoit tout courbé».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 418 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 368 (imagen)', independiente: false, nota: 'los espíritus de varios boyés se pelean «pire que la diablerie de Chaumont»'}
+    verificado_en_imagen: si
+    registro: 'sin marca'
+    capa_colonial: '«Diables», «possession» a la europea'
+    sustrato: sin-decidir
+    sustrato_nota: 'Que el espíritu hable por una mujer completa el dato de la mujer boyé de Breton (ck09-06). Ninguna hermana medida lo da.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición.'
+    mineria_1: [ck09-06]
+    dominios: [creencia, mujeres]
+
+  - id: kalinago-creencia-110
+    esfera: creencia
+    tema: segundo-entierro
+    contenido: >-
+      K2: los huesos del muerto hablan. «Les diables se nichent quelquefois
+      encore dans les os d'un mort, qu'on tire de son sepulcre, & qu'on enuelope
+      dans du coton, il rend des oracles de ces os quand on l'interroge, & dit
+      que c'est l'âme du mort qui parle.» Con esos huesos y algo del enemigo
+      (restos de su comida) se le embruja hasta que muere de languidez; Breton
+      vio un caso, una venganza que mató a un inocente.
+    cita: '«Ces Demons se nichent souvent dans des os de mort, tirez du sepulcre, & envelopez de Cotton, & rendent par là des oracles, disant que c''est l''ame du mort» (Rochefort p. 418); «ces marmousets de Cotton, dans lesquels ils envelopent les os vermoulus de quelque malheureus cadavre qu''ils ont tiré de son sepulcre» (p. 424)'
+    grafia: 'marmousets de coton (francés de los autores)'
+    pueblo: kalinago
+    donde: 'Guadalupe y Dominica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 369 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 418, 424 (imagen)', independiente: false, nota: 'copia de Du Tertre 1654: «souvent» donde Du Tertre 1667 dice «quelquefois»'}
+      - {obra: steward-1948-hsai-4, pagina: 'p. 562', independiente: false, nota: 'Rouse amplía a «hair or bones of their ancestors» guardados en casa (ver meta.ceros)'}
+    verificado_en_imagen: si
+    registro: 'sin marca'
+    como_se_escribio: 'Du Tertre lo da como costumbre y añade el caso que «Nostre Pere Raymond en a veu».'
+    capa_colonial: '«les diables se nichent»: el porqué del confesor. Lo que los kalinago dicen está en la cláusula final: es el alma del muerto la que habla.'
+    sustrato: arahuaco
+    sustrato_nota: 'Hermana taína primaria e independiente: cemíes «donde tienen los huesos de su padre, de su madre, de los parientes y de otros sus antepasados … hay algunos que hablan» (Pané cap. XV); los bohutis «hacen creer que hablan con los muertos» (cap. XIV); los huesos de Yayael en una calabaza (cap. IX).'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'caps. IX, XIV, XV', que: 'huesos de los muertos guardados como cemí que habla; el especialista habla con los muertos'}
+    caquetio: [creencia-010b, creencia-010c]
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        CANDIDATO (espera K4). El QUÉ caquetío ya está atestiguado: el díao
+        desecado y guardado años en su casa (010b) y sus huesos bebidos (010c).
+        Lo nuevo es el PORQUÉ, y lo dan dos tradiciones independientes con
+        primaria: el muerto guardado es sede de un alma que habla y responde
+        (kalinago, Du Tertre p. 369; taíno, Pané cap. XV). Hoy ese porqué lo pone
+        sólo el wayuu (creencia-010d). Sin el «antepasados en calabazas» de Rouse.
+    via_a: {creencia-010d: matiza}
+    mineria_1: [ck09-17]
+    dominios: [creencia, muerte, especialista]
+
+  - id: kalinago-creencia-111
+    esfera: creencia
+    tema: especialista
+    contenido: >-
+      Adivinar el viaje por mar con figuras de algodón: tienen «certains
+      marmousets de coton, par la bouche desquels à ce qu'ils disent, le diable
+      leur parle»; los echan al agua cuando quieren viajar: si se hunden, es
+      señal de tempestad y riesgo; si flotan, «un pronostique asseuré de beau
+      temps».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Guadalupe y Dominica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 369 (imagen)'}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: '«le diable»'
+    sustrato: sin-decidir
+    sustrato_nota: 'Sin hermana medida para la figura que se echa al agua.'
+    caquetio: [creencia-024]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-024 (atestiguado: la pesca y el camino se adivinan con tabaco, cada uno su adivino): la faena del mar se pregunta antes. La técnica concreta no se proyecta.'
+    dominios: [creencia, navegacion]
+
+  - id: kalinago-creencia-112
+    esfera: creencia
+    tema: lugar-sagrado
+    contenido: >-
+      Los dioses de los Igneri. Du Parquet le contó a Du Tertre que los kalinago
+      de Martinica habían hallado en unas cavernas «certaines idoles de coton en
+      forme d'hommes, ayant des grains de savonettes au lieu d'yeux» y un casco
+      de algodón: «ils asseuroient que c'estoient les Dieux des Ygneris qu'ils
+      avoient massacrez»; ningún kalinago se atrevía a entrar y temblaban al
+      acercarse.
+    grafia: 'Ygneris'
+    pueblo: kalinago
+    donde: 'Martinica'
+    epoca: '1640-1658 (du Parquet gobernó Martinica 1637-1658)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 369-370 (p. 369 en imagen)'}
+    procedencia_extra:
+      - {obra: steward-1948-hsai-4, pagina: 'p. 545', independiente: false, nota: 'Rouse: ídolos de algodón en cuevas de los igneri (tercera mano)'}
+    verificado_en_imagen: si
+    registro: null
+    como_se_escribio: 'Du Tertre lo oye a du Parquet, que mandó sacar las figuras; termina en una anécdota con la Inquisición.'
+    sustrato: arahuaco
+    sustrato_nota: 'Los Igneri son, en la propia tradición kalinago, los naturales arahuacos de las islas antes de la conquista (kalinago-transmision-001; Du Tertre p. 361). Lo que los kalinago temen en la cueva son los espíritus figurados del SUSTRATO, no los suyos.'
+    caquetio: [creencia-025, creencia-008c]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Figuras de espíritus en algodón, guardadas aparte en cuevas: una sola tradición y de oídas. Lee creencia-025 (el espíritu se figura en joyas y madera) y matiza creencia-008c (sin culto comunal de ídolos ni templos: esto no es templo, es depósito temido).'
+    dominios: [creencia, arqueologia]
+
+  - id: kalinago-creencia-113
+    esfera: creencia
+    tema: cosmos-origen
+    contenido: >-
+      El origen de la yuca, «la seule» tradición que Rochefort recoge. Los
+      antepasados vivían como bestias en el monte; un viejo lloraba su miseria
+      «Mais sur cela un homme blanc s'apparut à luy descendant du Ciel», le
+      enseñó a cortar árboles con piedras afiladas de la orilla y a techar con
+      palmas, y le trajo «une racine excellente» para hacer pan: rompió su bastón
+      en tres o cuatro trozos para plantar, le enseñó a rallar la raíz con una
+      piedra áspera de la orilla y a apartar el jugo como veneno. A las nueve
+      lunas el viejo halló las raíces; si hubiera mirado a los tres días, dicen
+      los de Dominica, la yuca tardaría tres días y no nueve lunas.
+    grafia: 'Manioc'
+    pueblo: kalinago
+    donde: 'Dominica (los que cuentan la última parte)'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 427-428 (imagen)'}
+    procedencia_extra:
+      - {obra: davies-1666, pagina: 'pp. 287-288', independiente: false, nota: 'Davies traduce «un homme blanc» por «a Man all in white»: un hombre blanco pasa a ser un hombre vestido de blanco'}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: 'FUERTE y doble: Rochefort la lee como resto de una «Puissance Superieure» olvidada y como Ceres de los paganos; el «homme blanc descendant du Ciel» puede ser ya del contacto. Davies lo vuelve angélico («all in white»).'
+    sustrato: sin-decidir
+    sustrato_nota: 'Héroe que trae la yuca y enseña el rallado: no se cotejó con el lokono ni con el taíno en esta sesión.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: 'El caquetío no tiene mito de origen atestiguado; una sola tradición, con capa colonial posible. Si entra, sin el hombre blanco.'
+    mineria_1: [ck09-20]
+    dominios: [creencia, cultivo]
+
+  - id: kalinago-creencia-114
+    esfera: creencia
+    tema: cosmos-origen
+    contenido: >-
+      El primer padre Kalinago. Todos creen descender de los Galibis de tierra
+      firme; algunos cuentan que «leur premier pere nommé Kalinago», cansado de
+      su nación, se embarcó con su familia y se estableció en Dominica, y que sus
+      hijos lo envenenaron y él «changea seulement de figure, & devint un
+      poisson épouventable, qu'ils appellent Atraioman», que vive aún en el río.
+      «Cette metamorphose n'est approuvée que des plus simples».
+    grafia: 'Kalinago; Atraioman'
+    pueblo: kalinago
+    donde: 'Dominica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 360 (imagen)'}
+    verificado_en_imagen: si
+    registro: 'h. (Kalinago es el nombre de los hombres; el de las mujeres es Calliponan, Rochefort p. 325)'
+    sigla_goeje: 'Kalinago h, Kalina K; Kaliponam f (Goeje p. 43, imagen)'
+    sustrato: caribe
+    sustrato_nota: 'Origen galibi (kalina de tierra firme) y antepasado epónimo de los hombres: la capa caribe de la tradición.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Para Marokoto-ni. Louquo sigue en 0 (meta.ceros).'
+    mineria_1: [ck09-20]
+    dominios: [creencia, origen]
+
+  - id: kalinago-creencia-115
+    esfera: creencia
+    tema: cosmos-origen
+    contenido: >-
+      Tras la muerte. Unos dicen que los más valientes van «en des Iles
+      fortunées, où ils ont toutes choses à souhait, & que les Arouâgues y sont
+      leurs Esclaves»; que los cobardes van a servir a los arahuacos «au de-là
+      des montagnes», en tierras desiertas; los más ladinos, que irán al cielo
+      donde «leurs dévanciers sont déja arrivez»; otros no piensan en ello. Du
+      Tertre: el alma del corazón va al cielo «pour y estre bien-heureuse».
+    grafia: 'Arouâgues'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 430 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 366, 372 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: 'El cielo de los «plus polis» puede ser ya catequesis; Rochefort lo nota él mismo.'
+    sustrato: caribe
+    sustrato_nota: 'El premio por el valor con los arahuacos de esclavos es ideología guerrera caribe: el enemigo arahuaco está dentro del más allá.'
+    caquetio: [creencia-009, creencia-028]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'No se proyecta. Contra la Vía A (creencia-009, «sin premio ni castigo»): aquí hay premio por el valor, pero caribe. Y la dirección (arriba, cielo, islas) es la contraria del sawaka caquetío, abajo (creencia-028).'
+    via_a: {creencia-009: matiza}
+    mineria_1: [ck09-15]
+    dominios: [creencia, guerra]
+
+  - id: kalinago-creencia-116
+    esfera: creencia
+    tema: tabu
+    contenido: >-
+      Lo que no se come. Du Tertre: «l'abstinence qu'ils font de sel, de la
+      chair de Porc, de Tortuë, de Lamentins, de graisse, d'œufs». Rochefort da
+      las razones: el cerdo y el manatí darían ojos pequeños; la tortuga, su
+      pereza y su torpeza; y que hacia 1650 ya los comían en Dominica y
+      Martinica y se reían de la abstinencia.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Guadalupe, Dominica, Martinica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 371 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 327, 448 (imagen); pp. 413-414 (Davies pp. 273-274)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 p. 275 (campaña del mar)', independiente: false, nota: 'el manatí'}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: 'Ambos lo comparan con la ley de Moisés y discuten un origen judío; lo descartan.'
+    sustrato: sin-decidir
+    sustrato_nota: 'Tabú por contagio de cualidades del animal: sin hermana medida.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición; y ya en retirada en la década de 1650.'
+    dominios: [creencia, comida]
+
+  - id: kalinago-creencia-117
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      Dejar la casa del muerto. Cambian a menudo de morada, y a veces «la mort
+      de quelcun de la maison, qui leur faisant apprehender d'y mourir de même,
+      les oblige à se retirer ailleurs»; los caribes de tierra firme queman la
+      casa. Tras el entierro, «D'autres, quittent les Cases & la place où ils ont
+      enterré quelcun de leurs parens, & vont demeurer ailleurs». Breton lo vio
+      tras la muerte de Henri Comte.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores; tierra firme'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 437, 513-514 (imagen)'}
+    procedencia_extra:
+      - {obra: breton-1665, pagina: '1665 pp. 237-238 (minería 1, ck09-14)', independiente: false, nota: 'Breton lo vio'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'Rochefort pone en la misma página a los indios de Curazao —caquetíos— haciendo lo mismo (hallazgo_lateral_caqueti, kl10-L1): el rasgo cruza la frontera caribe/arahuaco.'
+    caquetio: [creencia-010b]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-010b (la casa del díao que nadie vuelve a habitar). Y el dato caquetío de Curazao (kl10-L1) lo atestigua para gente caquetía, aunque colonial y bautizada.'
+    mineria_1: [ck09-14]
+    dominios: [creencia, vivienda]
+
+  - id: kalinago-creencia-118
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      El entierro, visto. Las mujeres lavan, pintan de roucou, peinan y aceitan
+      al muerto y lo envuelven en una hamaca nunca usada; la fosa se hace en la
+      misma casa o en una construida a propósito, «car ils n'enterrent jamais
+      leurs morts à découvert». Un capitán de Dominica, «avec sa famille composée
+      de trente ou trente cinq personnes», enterró a un niño en una casita del
+      convento: fosa redonda de tres o cuatro pies, sentado sobre los talones,
+      los codos en las rodillas y la cabeza en las palmas; las mujeres alrededor,
+      con un canto lúgubre y gritos mirando al cielo; los maridos detrás,
+      consolándolas; un hombre tapa la fosa con una tabla, las mujeres echan la
+      tierra, y se queman sobre ella los bienes del muerto.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Guadalupe (convento dominico); familia de Dominica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 411-412 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 510-513 (pp. 511-513 en imagen)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 pp. 237-238 (minería 1, ck09-14)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'La tabla que separa al muerto de la tierra tiene hermana lokona: el muerto aruaca va «con todas armas» y sin que le caiga tierra encima, bajo un cañizo (lokono-creencia-006, Gumilla).'
+    hermanas:
+      - {pueblo: lokono, id: lokono-creencia-006}
+    caquetio: [creencia-010]
+    proyeccion:
+      capa: lectura
+      nota: 'Corrobora el llanto nocturno y cantado del funeral caquetío común (creencia-010); el muerto sentado y la tabla son detalle de las hermanas, no del caquetío.'
+    mineria_1: [ck09-14]
+    dominios: [creencia, muerte]
+
+  - id: kalinago-creencia-119
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      El llanto dice las hazañas y se le da de comer al muerto. Cantando y
+      llorando: «Hé pourquoy es tu mort? Tu avois tant de bon Manioc, de bonnes
+      Patates…»; y si es hombre: «Tu étois si vaillant & si génereus … Tu nous
+      as fait manger tant d'Arouâgues». Antes, durante unos diez días, dos veces
+      al día, los parientes iban a la fosa abierta con comida y bebida —«Ne dis
+      pas au moins que nous t'ayons refusé dequoy vivre»— y se la ponían en la
+      cabeza; hoy la tapan antes.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658, con lo de «autrefois» anterior'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 511-512 (imagen)'}
+    verificado_en_imagen: si
+    registro: null
+    como_se_escribio: 'Rochefort lo da entre comillas, como fórmula; Du Tertre (p. 412) sólo dice que el canto es «lugubre & lamentable».'
+    sustrato: arahuaco
+    sustrato_nota: 'El contenido —llanto cantado que cuenta lo que el muerto hizo— lo atestigua el propio caquetío (creencia-010, Oviedo). Comer al arahuaco es la capa caribe del mismo canto.'
+    caquetio: [creencia-010]
+    proyeccion:
+      capa: lectura
+      nota: 'Corrobora creencia-010 (lloran de noche «en tono alto y cantando» las hazañas): la forma del canto es la misma; el contenido guerrero es caribe y no se proyecta.'
+    via_a: {creencia-010d: corrobora-en-parte}
+    dominios: [creencia, muerte, canto]
+
+  - id: kalinago-creencia-120
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      El luto y los esclavos del muerto. Si muere un jefe de familia, «ses
+      femmes & ses enfans se coupent les cheveux, les portans courts comme les
+      esclaves l'espace d'un an entier», y ayunan una luna a pan y agua: no por
+      el alma, sino porque si no se les debilitaría la vista, temblarían y
+      caerían en manos de sus enemigos. Si tenía esclavos, sus parientes los
+      matan, si no huyen; Rochefort: para que sirvan al muerto en el otro
+      mundo, y los esclavos se escapan a otra isla.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 412 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 429, 512-513 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'El corte de pelo y el ayuno de los deudos no los cotejé con el taíno ni el lokono. Matar a los esclavos del muerto es de una sociedad con cautivos (capa caribe probable).'
+    caquetio: [creencia-010b]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Luto con pelo corto y ayuno: una sola tradición. La muerte de los esclavos no se proyecta.'
+    dominios: [creencia, muerte, cautivos]
+
+  - id: kalinago-creencia-121
+    esfera: creencia
+    tema: segundo-entierro
+    contenido: >-
+      El segundo tiempo, en Rochefort: «Quand le corps est à peu pres pourry,
+      ils font encore une assemblée, & aprés avoir visité & foulé aus pieds le
+      sepulcre en soupirant, ils vont faire la débauche, & noyer leur douleur
+      dans le Ouïcou. Ainsi la Ceremonie est achevée». Es el «au bout de l'an»
+      que Breton vio.
+    grafia: 'Ouïcou'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 514 (imagen)'}
+    procedencia_extra:
+      - {obra: breton-1665, pagina: '1665 pp. 237-238 (minería 1, ck09-14)', independiente: false, nota: 'Rochefort no añade testigo; Du Tertre 1667 no lo cuenta'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'Arqueología igneri: entierro primario o secundario (Rouse p. 545, tercera mano).'
+    caquetio: [creencia-010c]
+    proyeccion:
+      capa: lectura
+      nota: 'Corrobora la estructura de dos tiempos con bebida (010c); no corrobora beber los huesos.'
+    via_a: {creencia-010d: corrobora-en-parte}
+    mineria_1: [ck09-14]
+    dominios: [creencia, muerte]
+
+  - id: kalinago-creencia-122
+    esfera: creencia
+    tema: tiempo-calendario
+    contenido: >-
+      El cielo y el tiempo. En el eclipse de luna «ils s'imaginent que Maboya la
+      mange»: danzan toda la noche jóvenes y viejos, hombres y mujeres, saltando
+      con los pies juntos, una mano en la cabeza y otra en la nalga, sin cantar
+      pero con gritos lúgubres, y no pueden parar hasta el alba; una muchacha
+      sacude una calabaza con piedrecitas. Los capitanes, los boyés y los
+      viejos, por tradición de sus antepasados, conocen algunos astros: cuentan
+      los meses por lunas y «les années par Poussinières».
+    grafia: 'Poussinières (las Pléyades, en el francés de las islas)'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 371 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 396, 412 (imagen)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 pp. 21, 370 (minería 1, ck09-10)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'Año por las Pléyades: sin hermana medida en esta sesión.'
+    caquetio: [creencia-014]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Que el saber de los astros lo guarden capitanes, especialistas y viejos va a transmision (kalinago-transmision-005). El eclipse sigue sin dato caquetío.'
+    mineria_1: [ck09-10]
+    dominios: [creencia, astronomia]
+
+  - id: kalinago-creencia-123
+    esfera: creencia
+    tema: ofrenda-fiesta
+    contenido: >-
+      Cuándo se bebe y cuándo se ayuna. Hacen «Ouïcou» (desde los franceses,
+      «Vin»): para los consejos de guerra, al volver de una expedición, al nacer
+      el primer hijo varón, al cortar el pelo a los niños, cuando un muchacho
+      llega a la edad de ir a la guerra, al tumbar monte para un huerto, al
+      botar una canoa nueva y al sanar. Y ayunan: al entrar en la adolescencia,
+      al hacerlos capitanes, a la muerte del padre o la madre, a la del cónyuge,
+      y al matar un arahuaco, «jusne qui leur tourne à grand honneur». Du Tertre:
+      el ayuno más solemne es el de los recién casados cuyo primer hijo es varón.
+    grafia: 'Ouïcou; Vin'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 456 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 371, 386-387 (p. 371 en imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'El ayuno como preparación de lo importante: taíno (Pané cap. XXV, cinco o seis días sin comer para saber de la victoria). La fiesta de bebida mascada, lokono (paiwari, Brett 1868 p. 102).'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XXV', que: 'ayuno de cinco o seis días en honor de los cemíes para saber de la victoria'}
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 102', que: 'el paiwari de casabe mascado por las mujeres, con fiesta hasta acabarlo'}
+    caquetio: [creencia-004b]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-004b (atestiguado, Oviedo t. II p. 329: se ayunaba antes de la guerra o de «hacer alguna cosa de mucha importancia»). El ayuno por matar a un arahuaco es caribe y no se proyecta.'
+    dominios: [creencia, fiesta, ciclo-de-vida]
+
+  - id: kalinago-creencia-124
+    esfera: creencia
+    tema: sueno-vision
+    contenido: >-
+      El Maboya que pega de noche y su figura. Se quejan de que el Maboya «les
+      bat»; algunas personas «de merite» lo atribuyen a la melancolía y al bazo
+      hinchado, «des songes affreus & terribles». Contra él «ils portent pandue à
+      leurs cous … une petite effigie relevée en bosse, qui represente quelcun de
+      ces maudits Esprits, en la plus hydeuse posture qu'il leur est autréfois
+      apparu», y lo pintan en lo más visible de sus piraguas. Du Tertre: estatuitas
+      de madera de los maboyas que se les aparecieron, colgadas al cuello.
+    grafia: 'Maboya; Pyraugues'
+    pueblo: kalinago
+    donde: 'Antillas Menores; San Vicente'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 419, 424 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 370 (capa de texto)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 p. 341 (minería 1, ck09-10)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: 'La lectura humoral (bazo, melancolía) es de los franceses; la contraria —que el diablo pega de verdad y que el bautismo lo impide— también es de ellos (Rochefort pp. 420-423, Davies pp. 281-283).'
+    sustrato: arahuaco
+    sustrato_nota: 'Figurar al espíritu tal como se apareció: taíno (Pané cap. XIX, el árbol que habla le dice al buhitihu «la forma en que quiere que lo haga»).'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XIX', que: 'el cemí se talla en la forma que el espíritu aparecido pide'}
+    caquetio: [creencia-025]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-025 (atestiguado: el espíritu que ven los boratios se pinta en sus joyas y en madera de relieve). Que la figura proteja contra el espíritu malo es kalinago.'
+    via_a: {creencia-005: no-toca}
+    mineria_1: [ck09-10]
+    dominios: [creencia, arte]
+
+  - id: kalinago-creencia-125
+    esfera: creencia
+    tema: especialista
+    contenido: >-
+      La capa colonial, medida en los tres autores y en el traductor.
+      Rochefort: Chemiin, «que nous ne pouvons tourner que par celuy de Dieu»;
+      «Boyez, c'est à dire de leurs Prêtres, ou pour mieus dire de leurs
+      Magiciens»; «Rioches» para sus dioses viene del español. Du Tertre le
+      reprocha llamarlos «Prestres» y llamar «Caciques» a sus capitanes, «quoy
+      que ny des Sauvages, ny mesme la plupart des François n'ayent jamais
+      entendu parler de ce nom». Davies, al traducir, mueve el francés: «un
+      homme blanc» → «a Man all in white»; los huesos que hablan «souvent» →
+      «sometimes»; «tirer le poisson avec la flèche» → «with the Dart»; y omite
+      «les enfans leur Pere» en la venganza.
+    grafia: 'Rioches (de Dios); Cacique'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1658-1667 (los libros)'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 416-418, 427, 451, 467 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 365, 400 (imagen)', independiente: false}
+      - {obra: davies-1666, pagina: 'pp. 278-280, 287, 305, 317', independiente: false, nota: 'la traducción; no es testigo'}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: 'Todo el hecho es capa colonial: es la regla de lectura.'
+    sustrato: colonial
+    sustrato_nota: 'Respuesta a la pregunta propia de Davies: donde traduce un término caribe por una palabra cristiana (God, Devil, Priest) casi siempre la palabra ya está en el francés de Rochefort; lo que Davies cambia está en otros sitios (el hombre blanco, la frecuencia, el arma).'
+    caquetio: []
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Regla de lectura: donde dicen Dieu, Diable, Prêtre, Cacique o Sacrifice, separar lo dicho de lo enseñado; y no citar a Davies sin el francés.'
+    mineria_1: [ck09-21]
+    tema_duda: 'no es un tema de creencia: es método; va aquí porque casi todo el vocabulario afectado es religioso'
+    dominios: [metodo, colonial]
+
+# ═════════════════════════════════════════════════════════════════════════
+# PARENTESCO
+# ═════════════════════════════════════════════════════════════════════════
+
+  - id: kalinago-parentesco-001
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      Las primas se tienen por derecho. Cuando quieren casarse «ils ont droit de
+      prendre toutes leurs Cousines germaines, & n'ont qu'à dire qu'ils les
+      prenent pour leurs femmes, elles leur sont naturellement aquises», sin otra
+      ceremonia; el primo llama a la prima «Youëlleri, c'est à dire proprement,
+      ma femelle, ou mon accordée». Du Tertre precisa: las «Cousines germaines qui
+      décendent de ligne feminine» son «acquise de droit»; a otra muchacha se la
+      piden a su padre.
+    grafia: 'Youëlleri «ma femelle, ou ma promise» (h.), Youëllou (f.); Breton 1666: cousin iapatáganum, f. nígatou; cousine niouelle átonum; Rochefort: «Le Cousin non marié à la Cousine, Yapataganum»'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658; Rochefort lo da como costumbre ya en retroceso'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 327, 396, 488-489, 518 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 371, 377 (imagen)', independiente: false, nota: 'añade «de ligne feminine»'}
+      - {obra: breton-1665, pagina: '1666 p. 92 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'h. y f.'
+    capa_colonial: 'Los dos autores lo leen como pista de un origen judío y lo descartan.'
+    sustrato: sin-decidir
+    sustrato_nota: 'La hermana lokona es exógama por familia matrilineal y permite casarse «into the family of their father» (Brett 1868 p. 98): compatible con el matrimonio entre primos cruzados, no lo prescribe.'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 98', que: 'familias matrilineales exógamas; pueden casarse en la familia del padre'}
+    caquetio: [parentesco-008]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El matrimonio preferente con la prima cruzada es kalinago; el lokono sólo lo permite. En duda, degradar.'
+    via_a: {parentesco-008: matiza}
+    dominios: [parentesco, alianza]
+
+  - id: kalinago-parentesco-002
+    esfera: parentesco
+    tema: descendencia
+    contenido: >-
+      Cómo se llaman los parientes. Los tíos y tías colaterales son padres y
+      madres: el tío paterno es «Baba», como el padre; la tía materna, «Bibi»,
+      como la madre. El tío materno tiene nombre propio, «H. Yáo, F. Akátobou»,
+      y la tía paterna también, «Naheupouli». Los hijos de dos hermanos se
+      llaman hermanos y hermanas, «les enfans des deus sœurs, tout de même»; el
+      primo «de mère» se llama como el cuñado. Breton: el tío se llama baba si
+      los hijos son de dos hermanos, «iáo, acàtobou» si son de una hermana y un
+      hermano.
+    grafia: 'Baba, Bibi; h. Yáo, f. Akátobou; Naheupouli; h. Ibámouï, f. Nikeliri (beau-frère y «Cousin de mère»); vocativo/referencial: Baba/Youmáan, Bibi/Ichánum'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1635-1658'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 396, 517-518 (imagen)'}
+    procedencia_extra:
+      - {obra: breton-1665, pagina: '1666 p. 265 (imagen)', independiente: false}
+      - {obra: du-tertre-1667, pagina: 'p. 371 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'h. y f.'
+    sigla_goeje: 'oncle (frère de ma mère) yao «hK» (kalina yawo); akatobu «—»; tante paternelle ahöpu «K» (Goeje p. 41, imagen)'
+    sustrato: sin-decidir
+    sustrato_nota: 'La ESTRUCTURA (paralelos = hermanos; cruzados aparte; tío materno con nombre propio) es la que acompaña al matrimonio entre primos cruzados (kalinago-parentesco-001). La palabra del tío materno es caribe (hK): el par h/f mide la palabra, no la estructura.'
+    caquetio: [parentesco-011, parentesco-012]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición para la estructura entera. Corrobora que el tío materno se distingue en la lengua (parentesco-011, wayuu).'
+    via_a: {parentesco-011: corrobora}
+    tema_duda: 'terminología: propuesto `terminologia` en meta.temas_propuestos'
+    dominios: [parentesco, lengua]
+
+  - id: kalinago-parentesco-003
+    esfera: parentesco
+    tema: residencia
+    contenido: >-
+      El yerno se va a casa del suegro; la nuera del capitán, al revés. «Si une
+      fille épouse un Capitaine, ou le fils d'un Capitaine, elle est conduite chez
+      son mary par son Pere & sa Mere», le lleva la comida y comen juntos en el
+      suelo de la casa; «Si ce n'est pas un Capitaine qui espouse une fille, il
+      quitte sa demeure … & demeure dans le logis de son beau-pere».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 378 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 489 (imagen)', independiente: false, nota: 'Rochefort dice lo contrario para el caso común: concedida la muchacha por sus padres, «ils les enménent chez eus»'}
+    verificado_en_imagen: si
+    registro: null
+    como_se_escribio: 'Du Tertre lo sabe de «un jeune homme, qui avoit esté long temps esclave parmi eux» (p. 378).'
+    sustrato: arahuaco
+    sustrato_nota: 'Hermana lokona primaria e independiente: «The wife''s father expects the bridegroom to work for him … and the young couple often remain with him until an increasing family renders a separate establishment necessary» (Brett 1868 p. 101).'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 101', que: 'servicio del novio al suegro y residencia con el padre de la novia'}
+    caquetio: [parentesco-016, parentesco-023]
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        CANDIDATO (K4). El corpus ya tiene la residencia matrilocal como
+        reconstruida (parentesco-016, -023), pero apoyada en etnografía
+        secundaria; aquí la dan dos primarias de dos tradiciones (kalinago Du
+        Tertre; lokono Brett). La excepción del capitán —la novia va a su casa—
+        es sólo kalinago (hipotética) y conviene con la poliginia del díao
+        (parentesco-015). Rochefort contradice para el caso común: en duda, el
+        candidato se queda en la regla de Du Tertre, que tiene informante.
+    dominios: [parentesco, residencia]
+
+  - id: kalinago-parentesco-004
+    esfera: parentesco
+    tema: hogar-casa
+    contenido: >-
+      Cada familia, su caserío. «Chaque famille compose son hameau; car le Pere
+      de famille a sa Case, où il reside avec ses enfans qui ne sont pas mariez,
+      & avec ses femmes, tous les autres enfans qui sont mariez, ont chacun leur
+      ménage & leur Case à part, autour de celle du Pere de famille»; en medio,
+      el carbet común. El jefe de ese caserío es el «Capitaine de Carbet, ou de
+      Village … Tiouboutouli hauthe», que es el mismo nombre que el «Père de
+      famille».
+    grafia: 'Tiouboutouli hauthe / authe «Capitaine de Famille, ou de maisons»; «Un Pére de famille, Tioubou-touli authe»'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 395 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 463, 518 (imagen)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 p. 417 (imagen): «Tioüboutouli aute, Capitaine d''un Carbet»', independiente: false}
+    verificado_en_imagen: si
+    registro: 'h.'
+    sigla_goeje: 'yubutuli «hK» (Goeje p. 43, imagen)'
+    sustrato: sin-decidir
+    sustrato_nota: 'Con la residencia de kalinago-parentesco-003, el caserío reúne al padre, sus hijos solteros y sus yernos: lectura mía, no de la fuente. Sin hermana medida para el caserío como unidad.'
+    caquetio: [parentesco-022, parentesco-025, parentesco-035]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El caserío de familia extensa con su casa común y su cabeza es una sola tradición. Ver kalinago-geografia_politica-001 para la lectura del apopo.'
+    dominios: [parentesco, vivienda]
+
+  - id: kalinago-parentesco-005
+    esfera: parentesco
+    tema: sociedades-masculinas
+    contenido: >-
+      El carbet es la casa de los hombres. Es la casa común en ovalo, de
+      sesenta u ochenta pies, oscura, con una puerta tan baja que hay que
+      agacharse; «Les garçons ont le soin de le nettoyer», las muchachas y
+      mujeres barren las casitas; y tiene al costado «une petite porte
+      particuliere, par laquelle ils pretendent que le Diable entre quand leur
+      Boyé l'a appelé». Allí se reúnen a decidir lo público; los hombres comen
+      aparte en el gran carbet y las mujeres y niños en sus casitas.
+    grafia: 'Carbet'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 390, 396 (p. 396 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 467 (imagen)', independiente: false, nota: '«le Carbet, qui est la maison où l''on s''assemble pour prendre les resolutions sur toutes les affaires publiques»'}
+    verificado_en_imagen: si
+    registro: 'h. carbet inobo «—»; f. rabui, itabui (Goeje p. 44, capa de texto)'
+    sustrato: sin-decidir
+    sustrato_nota: 'La casa de los hombres no la cotejé con el lokono ni el taíno.'
+    caquetio: [parentesco-031]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición. Rochefort (Davies p. 303) dice que hacia 1650 las mujeres ya iban más al carbet que antes: el dato es de una costumbre que cambiaba.'
+    dominios: [parentesco, vivienda, especialista]
+
+  - id: kalinago-parentesco-006
+    esfera: parentesco
+    tema: roles-de-genero
+    contenido: >-
+      El trabajo de las mujeres y la vergüenza del hombre. Las mujeres guisan,
+      cultivan con un palo puntiagudo, arrancan y rallan la yuca, hacen el casabe
+      y el ouïcou, tejen las hamacas, exprimen los aceites, peinan y pintan a sus
+      maridos; «il faut observer que ce seroit une infamie à un homme d'avoir
+      touché le travail d'une femme». Por cuidar enfermos y heridos «elles ont
+      acquis une connoissance merveilleuse des simples». Los hombres tumban
+      monte, construyen, pescan y cazan. Du Tertre corrige a Rochefort: no es
+      verdad que ellas vayan a buscar la caza al monte.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 382-383 (p. 383 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 438-439, 451 (imagen)', independiente: false, nota: 'Rochefort: las mujeres «étoyent autrefois obligées» de ir a buscar la caza; Du Tertre lo niega'}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: '«plutôt des esclaves que des compagnes» (Rochefort p. 439): el juicio es del autor.'
+    sustrato: sin-decidir
+    sustrato_nota: 'Las niñas que trabajan pronto con las mujeres y las mujeres más ocupadas que los hombres: lokono (Brett 1868 p. 102); no basta para el tabú del trabajo femenino.'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 102', que: 'las niñas ayudan a las mujeres, cuyo tiempo está mucho más ocupado que el de los hombres'}
+    caquetio: [parentesco-020]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El reparto es general; el tabú de tocar el trabajo femenino es sólo kalinago.'
+    dominios: [parentesco, trabajo, medicina]
+
+  - id: kalinago-parentesco-007
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      La poliginia. Casi todos tienen varias mujeres, «quelquefois jusqu'à six
+      ou sept»; los capitanes «font gloire d'avoir une famille nombreuse, pour
+      avoir plus de credit». Cada mujer tiene su casa, a veces en islas distintas
+      para cuidar los huertos dispersos; el marido pasa una luna con cada una, y
+      «il ne paroît aucune sorte de jalousie entre elles». Es común tener a dos
+      hermanas, y a veces a la madre y a la hija. La de la luna le hace el pan,
+      lo pinta, lo peina y lo acompaña en sus viajes.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 378-379 (p. 378 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 488, 490, 492 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'La poliginia del hombre de rango está en la hermana lokona («except where polygamy is practised», Brett 1868 p. 98) y en el taíno del corpus (parentesco-027, secundaria).'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 98', que: 'poliginia practicada entre los aruacos'}
+    caquetio: [parentesco-015]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina parentesco-015 (la poligamia de Manaure como estrategia de alianza, atestiguada): casas separadas y huertos dispersos es lo que la hermana añade. La poliginia sororal no se proyecta (una sola tradición).'
+    dominios: [parentesco, alianza]
+
+  - id: kalinago-parentesco-008
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      La mujer como premio del valor, «autrefois». Al volver de la guerra, el
+      capitán alababa a los jóvenes valientes y los padres con hijas en edad «se
+      empressoient à faire l'aquisition de tels gendres»: el que más enemigos
+      había matado apenas podía recibir una sola, tantos la ofrecían; «Mais les
+      poltrons & les lâches ne trouvoient personne»; «une femme chez cette
+      Nation, étoit alors un prix qui ne se donnoit qu'à la generosité».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: 'anterior a 1650, según «les plus anciens de cette Nation»'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 489-490 (imagen)'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: caribe
+    sustrato_nota: 'Matrimonio como premio guerrero: la ideología del guerrero caribe.'
+    caquetio: [parentesco-029]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Para Marokoto-ni. Da materia a la hipótesis parentesco-029 (dos ideologías: pacto entre linajes contra mujer ganada en la guerra) sin probarla.'
+    dominios: [parentesco, guerra]
+
+  - id: kalinago-parentesco-009
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      La evitación de los suegros. Las mujeres hablan con quien quieren, «mais le
+      mary n'ose s'entretenir avec les parens de sa femme, s'il n'en est
+      dispensé, ou par leur bas âge, ou par leur yvrognerie»: dan grandes rodeos
+      para no cruzarse y, si no pueden evitarlo, el interpelado vuelve la cara.
+      Los esposos cambian de nombre al casarse.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 378 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 489 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    como_se_escribio: '«Cette estrange coustume m''a esté rapportée par un jeune homme, qui avoit esté long temps esclave parmi eux.»'
+    sustrato: sin-decidir
+    sustrato_nota: 'Sin hermana medida.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición.'
+    dominios: [parentesco]
+
+  - id: kalinago-parentesco-010
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      El adulterio, contado distinto. Rochefort: antes no lo castigaban porque
+      «il ne regnoit pas parmy eus» antes de los cristianos; ahora el marido mata
+      a la mujer y el suegro lo aprueba y le ofrece otra hija. Du Tertre: el
+      marido «pardonne quelquefois à la femme, mais jamais à celuy qui l'a faite
+      tomber en faute»; y si son hijas de capitán, los padres amenazan con
+      quitárselas.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 379 (capa de texto)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 492-493 (p. 492 en imagen)', independiente: false, nota: 'contradice a Du Tertre en la pena'}
+    verificado_en_imagen: no
+    registro: null
+    capa_colonial: 'Rochefort moraliza (el adulterio como vicio importado); la contradicción entre los dos impide fijar la norma.'
+    sustrato: sin-decidir
+    caquetio: []
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Dos autores del mismo grupo dicen cosas opuestas: no hay dato estable.'
+    dominios: [parentesco, justicia]
+
+  - id: kalinago-parentesco-011
+    esfera: parentesco
+    tema: infancia-nombre
+    contenido: >-
+      La covada. Al nacer el hijo, la mujer vuelve al trabajo y el marido se
+      acuesta en una hamaca alta «comme malade»: cinco días sin comer ni beber,
+      hasta el décimo sólo ouïcou, y un mes entero sólo el centro del casabe,
+      guardando los bordes para el festín de los cuarenta días. Ese día los
+      parientes le sajan la piel con dientes de agutí y le lavan las heridas con
+      agua de sesenta u ochenta granos de ají machacados, sin que se queje; y
+      durante seis meses no come aves ni pescado, porque el hijo se volvería
+      sordo como la tortuga o de ojos chicos como el manatí. Rochefort: el rigor
+      es sólo con el primogénito; a los demás, cuatro o cinco días; y la sangre
+      del padre se le unta al hijo en la cara para hacerlo valiente.
+    grafia: '«faire la couvade» (el francés de Rochefort)'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 372-374 (p. 373 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 494-496 (p. 495 en imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: '«une superstition», «extravagance»: el juicio; la descripción es detallada y coincide en los dos.'
+    sustrato: arahuaco
+    sustrato_nota: 'Hermana lokona primaria e independiente: «On the birth of a child, the ancient Indian etiquette requires the father to take to his hammock, where he remains for some days as if he were sick … carefully and respectfully attended by the women, while the mother … was cooking» (Brett 1868 p. 101, que lo vio). La escarificación y la sangre al niño (Rochefort) son el remate guerrero.'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 101', que: 'el padre se echa en la hamaca como enfermo al nacer el hijo, atendido por las mujeres'}
+    caquetio: []
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        CANDIDATO NUEVO (K4): la covada no está en el corpus caquetío. Dos
+        tradiciones independientes con primaria: el padre guarda cama y dieta
+        al nacer el hijo, como si él pariera. Para el caquetío, sólo el núcleo
+        (hamaca, dieta, tabú de comidas que dañarían al niño); la escarificación
+        con ají y la sangre para el valor quedan como capa caribe.
+    dominios: [parentesco, ciclo-de-vida, creencia]
+
+  - id: kalinago-parentesco-012
+    esfera: parentesco
+    tema: infancia-nombre
+    contenido: >-
+      El nombre y los padrinos. A los doce o quince días (Rochefort) o a los seis
+      meses y ocho días (Du Tertre) se llama a un hombre y una mujer como
+      padrino y madrina, que le cortan un poco de pelo y le perforan las orejas,
+      el labio de abajo y el tabique; el nombre sale de un antepasado, de un
+      árbol o de algo que le pasó al padre: una niña de Dominica se llamó
+      «Ouliem-banna, c'est à dire feüille de Raisinier»; otro, «General», por el
+      buen trato del gobernador. A los dos años, corte de pelo con fiesta.
+    grafia: 'Ouliem-banna'
+    pueblo: kalinago
+    donde: 'Dominica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 496-497 (p. 497 en imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 374-375 (capa de texto)', independiente: false, nota: 'discrepa en el plazo'}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: '«Parrain», «Maraine»: la palabra es del bautismo cristiano; la institución (dos padrinos que perforan y nombran) parece propia.'
+    sustrato: sin-decidir
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición. El nombre propio del adulto, en kalinago-transmision-007.'
+    dominios: [parentesco, ciclo-de-vida]
+
+  - id: kalinago-parentesco-013
+    esfera: parentesco
+    tema: descendencia
+    contenido: >-
+      Con quién se quedan los hijos, y quién es libre. «S'il arrive que le mary
+      quite sa femme, elle retient tous les enfans»; los hijos abandonados
+      sostienen a su madre. Crecidos, los varones siguen al padre y comen con él
+      y las hijas a la madre. Pero de la cautiva hecha esposa, «bien que les
+      enfans qui en naissent soyent libres: elles sont toujours tenuës pour
+      esclaves quant à elles»: la libertad del hijo viene del padre.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 376 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 480, 489 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'La custodia materna conviene con la hermana lokona matrilineal (Brett 1868 p. 98: «these all descend in the female line»); la libertad del hijo por el padre, no. Goeje (pp. 3-4) lo explica así: los hijos de las cautivas arahuacas fueron de la tribu del padre y «la loi du matriarcat n''a pas trouvé application» (hipótesis de Goeje).'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 98', que: 'familias que descienden por línea femenina'}
+    caquetio: [parentesco-005]
+    proyeccion:
+      capa: hipotetico
+      nota: 'MATIZA el cúmulo del mapa-familia (tesis 3), que cuenta al kalinago entre los matrilineales: las crónicas dan residencia uxorilocal y custodia materna, no descendencia matrilineal (ver meta.ceros).'
+    via_a: {parentesco-005: matiza}
+    tema_duda: 'descendencia o hogar-casa'
+    dominios: [parentesco, cautivos]
+
+# ═════════════════════════════════════════════════════════════════════════
+# GEOGRAFÍA POLÍTICA
+# ═════════════════════════════════════════════════════════════════════════
+
+  - id: kalinago-geografia_politica-001
+    esfera: geografia_politica
+    tema: jefatura
+    contenido: >-
+      Las clases de capitán. Rochefort: capitán de carbet o de pueblo,
+      «Tiouboutouli hauthe», el hombre de familia numerosa que se aparta con
+      ella, levanta casas y un carbet; capitán de piragua, «Tiouboutouli
+      Canáoa»; almirante, «Nhalené»; y el gran capitán, «Ouboutou, & au plurier
+      Ouboutounum», «le même que les Espagnols nomment Cacique». Breton da para
+      «Capitaine» la voz de hombres oúboutou y la de mujeres «amachi». Du Tertre
+      reduce a tres: dueños de canoas, dueños de habitaciones y los elegidos por
+      sufragio o por valor.
+    grafia: 'Tiouboutouli hauthe; Tiouboutouli Canáoa; Nhalené; Ouboutou / Ouboutounum; Ouboutou mali arici «la trace du Capitaine» (lugarteniente); f. amachi, iamáchiri «mon Capitaine»'
+    pueblo: kalinago
+    donde: 'Antillas Menores; Dominica'
+    epoca: '1635-1658'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 463-464 (imagen)'}
+    procedencia_extra:
+      - {obra: breton-1665, pagina: '1665 p. 417; 1666 p. 60 (imagen)', independiente: false}
+      - {obra: du-tertre-1667, pagina: 'p. 399 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'h. ouboutou / f. amachi'
+    sigla_goeje: 'capitaine h yubutuli «hK» (kalina yopoto-li); id. f amaši «1 am 31» (arawak-maipure); chef, prince (h)abuti «A» (Goeje p. 43, imagen)'
+    sustrato: sin-decidir
+    sustrato_nota: 'El nombre de hombres es caribe y el de mujeres, según Goeje, arahuaco: el jefe tiene nombre arahuaco en la boca de las mujeres. El par mide la palabra; la institución (jefe de caserío, jefe de canoa) no se decide con eso.'
+    caquetio: [parentesco-035, parentesco-037]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina parentesco-035 (atestiguado, Zavala: apopo, «jefe de parcialidad pequeña»): en la hermana, la cabeza de un caserío de familia extensa con su casa común es un capitán con nombre propio (Tiouboutouli hauthe). La escala de los títulos no se proyecta.'
+    dominios: [geografia_politica, parentesco, lengua]
+
+  - id: kalinago-geografia_politica-002
+    esfera: geografia_politica
+    tema: sucesion-politica
+    contenido: >-
+      El gran capitán se elige. «On parvient à cette charge par election», y
+      sólo si ha matado varios arahuacos o un jefe; «Les fils ne succedent pas
+      plutôt que les autres à la charge de leurs Peres, s'ils n'en sont dignes».
+      Antes había pruebas: carreras, nado y buceo, una carga que nadie más
+      aguantara y sajaduras en hombros y pechos con dientes de agutí, sonriendo.
+      Du Tertre: nunca eligen a jóvenes, «quoy qu'ils soient fils de leurs
+      Capitaines», sino a gente mayor por la madurez de sus consejos, y los
+      viejos dimiten con honra; su poder «est pourtant limitée, parce qu'ils ne
+      commandent que dans les affaires de la guerre».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores; dos capitanes en Dominica'
+    epoca: '1640-1658; las pruebas, «autrefois»'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 463-465 (pp. 463-464 en imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 399-400 (imagen)', independiente: false, nota: 'Du Tertre corrige a Rochefort: «Caciques», «Generaux», «Amiraux» no son nombres que los kalinago conozcan; no menciona las pruebas'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: caribe
+    sustrato_nota: 'Jefatura de guerra, por méritos contra el enemigo arahuaco, sin herencia: la capa caribe.'
+    caquetio: [creencia-001b, creencia-013, parentesco-038]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Para Marokoto-ni. Es el contraste con el díao caquetío, que es a la vez boratio y media con el cielo (creencia-001b, -013): el capitán kalinago no tiene poder religioso ni fuera de la guerra.'
+    dominios: [geografia_politica, guerra]
+
+  - id: kalinago-geografia_politica-003
+    esfera: geografia_politica
+    tema: jerarquia-rango
+    contenido: >-
+      Iguales, con marcas de rango. Du Tertre: «ils sont tous égaux, sans que
+      l'on connoisse presque aucune sorte de superiorité ny de servitude». Pero
+      el gran capitán sale acompañado de toda su casa y «Ceus qui ont le plus de
+      suite sont les plus considerez»; nadie habla si él no habla, tiene la
+      primera y mejor parte del festín y puede pegar a quien no lo respete. Y
+      los caracolis son «la livrée, ou le collier qui distingue les Capitaines &
+      leur enfans, d'entre les hommes du commun».
+    grafia: 'Caracolis'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 391, 463-464 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 357 (capa de texto), 393 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [parentesco-014, parentesco-034]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Rango sin estamentos, marcado por el séquito y el metal: una sola tradición. El metal, en kalinago-geografia_politica-005.'
+    dominios: [geografia_politica]
+
+  - id: kalinago-geografia_politica-004
+    esfera: geografia_politica
+    tema: sucesion-politica
+    contenido: >-
+      La memoria de los reyes. Los capitanes de Dominica le dijeron a Breton que
+      habían tenido reyes, que «abouyou» era el nombre de los que los llevaban
+      sobre los hombros, y que los kalinago con carbet al pie de la Soufrière, más
+      allá de Amichon, descendían de ellos; Breton no preguntó cuándo cesó esa
+      realeza. Rochefort: el que tocó Dominica en el reparto de la conquista «se
+      disoit Ouboutou-timani, c'est à dire Roy, & se faisoit porter sur les
+      épaules» de los Labouyou, «serviteurs».
+    grafia: 'Oúboutou tîmani «Roy» (Breton 1665 p. 417); abouyou / Labouyou'
+    pueblo: kalinago
+    donde: 'Dominica (al pie de la Soufrière)'
+    epoca: 'memoria contada hacia 1640-1654 de un tiempo sin fecha'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: breton-1665, pagina: '1665 pp. 229-230 (p. 230 en imagen), 417 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 330 (imagen)', independiente: false}
+      - {obra: du-tertre-1667, pagina: 'p. 361 (imagen)', independiente: false, nota: 'cita a Breton palabra por palabra'}
+    verificado_en_imagen: si
+    registro: 'h.'
+    sigla_goeje: 'serviteur abuyuku «—» (Goeje p. 43, imagen)'
+    sustrato: sin-decidir
+    sustrato_nota: 'Un jefe hereditario llevado en hombros por servidores: es lo que la memoria kalinago pone en la conquista, contra la jefatura electiva de su presente. Sin hermana medida en esta sesión (el cacique taíno en andas no se cotejó con primaria).'
+    caquetio: [parentesco-034]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición; útil para saber que la propia memoria kalinago recordaba rango hereditario.'
+    dominios: [geografia_politica, memoria]
+
+  - id: kalinago-geografia_politica-005
+    esfera: geografia_politica
+    tema: alianza-intercambio
+    contenido: >-
+      El caracolí, metal de los enemigos. Du Tertre: es «une sorte d'or de bas
+      aloy» que no se oxida; sólo los capitanes o sus hijos lo llevan; no viene
+      de La Española: lo obtienen de sus enemigos los Alloüagues «par le moyen de
+      quelques intelligences qu'ils pratiquent parmy ceux de cette nation, qui
+      leur en font present, en reconnoissance de ceux qu'ils reçoivent
+      reciproquement d'eux», y los arahuacos dicen que se los dan sus dioses, que
+      viven en peñas y montañas; «ils les apportent de la terre ferme».
+      Rochefort: es el botín más raro de las incursiones anuales a tierra
+      arahuaca, y se hereda: hay quien guarda el de su abuelo.
+    grafia: 'Caracolis, Coullouceli; calloucouli (Breton)'
+    pueblo: kalinago
+    donde: 'Antillas Menores ↔ tierra firme (Guayanas)'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 393 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 391 (imagen)', independiente: false, nota: 'botín, no regalo: los dos autores difieren en el modo'}
+      - {obra: breton-1665, pagina: '1665 p. 106 (campaña del mar)', independiente: false, nota: '«pour un calloucouli vous auriez d''eux un esclave»'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'El metal viene de los arahuacos de tierra firme y circula por socios de intercambio aun entre enemigos: es la cadena del guanín (oro bajo en media luna) que el corpus ya tiene del lado taíno.'
+    caquetio: [geografia_politica-018, geografia_politica-019]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Refuerza geografia_politica-018 (el guanín circulaba de Tierra Firme a las Antillas) con un testimonio de 1640-1658 de las Antillas Menores; no prueba geografia_politica-019 (que la esfera caquetía estuviera en ese circuito).'
+    dominios: [geografia_politica, comercio, metal]
+
+  - id: kalinago-geografia_politica-006
+    esfera: geografia_politica
+    tema: cautivos-esclavitud
+    contenido: >-
+      Los cautivos. De los arahuacos apresados, los hombres se matan y se comen;
+      «Ils ne destinent qu'à l'esclavage les filles & les femmes prises en
+      guerre», y no comen a los hijos de las cautivas, «moins encore les enfans
+      qu'ils ont eus d'elles: mais ils les élevent avec leurs autres enfans». La
+      cautiva casada lleva el pelo corto como un muchacho y no lleva las
+      bottines de las libres. Tienen esclavos negros, «Tamons, c'est à dire
+      Esclaves», y servidores, Labouyou.
+    grafia: 'Tamons; Labouyou / Nabouyou «serviteur»; Taman «serviteur esclave» (vocabulario)'
+    pueblo: kalinago
+    donde: 'Antillas Menores; San Vicente y Dominica (los negros)'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 439, 480, 489 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 379, 394, 405 (capa de texto)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sigla_goeje: 'tamon «K?» (Goeje p. 43, imagen)'
+    sustrato: caribe
+    sustrato_nota: 'La guerra de captura contra el arahuaco y la cautiva como esposa-esclava son la capa caribe; es el relato de origen del habla de mujeres visto desde su presente.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Para Marokoto-ni.'
+    dominios: [geografia_politica, guerra, parentesco]
+
+  - id: kalinago-geografia_politica-007
+    esfera: geografia_politica
+    tema: guerra
+    contenido: >-
+      Cómo se decide la guerra. En una asamblea de bebida, las viejas ya
+      borrachas cuentan los agravios —una el marido muerto, otra el padre
+      comido— hasta mover a todos a la venganza; entonces el capitán arenga
+      «mais d'un langage si relevé entre eux, que les femmes & les enfans n'y
+      entendent rien», recuerda a los padres degollados y fija la partida. Si no
+      hay asamblea, manda un delegado a cada dueño de carbet, que decide si va:
+      «ils n'y forcent jamais personne». No toman tierras: la guerra es sólo
+      venganza.
+    grafia: 'Caramémo (Du Tertre, de las quejas de las viejas)'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 401-402, 405 (p. 401 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 469-471 (Davies pp. 318-319)', independiente: false, nota: 'Rochefort: una vieja pide audiencia y recita los agravios contra los arahuacos'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: caribe
+    sustrato_nota: 'La guerra de venganza contra el arahuaco es la capa caribe; las mujeres viejas como memoria del agravio son el dato fino.'
+    caquetio: [geografia_politica-013]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Para Marokoto-ni. La memoria de los agravios en boca de las viejas va también a transmision (kalinago-transmision-008).'
+    dominios: [geografia_politica, guerra, mujeres]
+
+  - id: kalinago-geografia_politica-008
+    esfera: geografia_politica
+    tema: justicia-norma
+    contenido: >-
+      La justicia es venganza de parientes. «La Justice, chez les Caraïbes, n'est
+      point exercée par le Capitaine, ni par aucun Magistrat»: el ofendido toma
+      la satisfacción que puede, y si no se venga «il est méprisé de tous»; «Un
+      Frere venge son Frere & sa Sœur, un Mary sa Femme, un Pere ses enfans, les
+      enfans leur Pere». El que mata se va a otra isla. Du Tertre: las querellas
+      se zanjan en duelo a maza, y el matador debe dejar el país o pelear tantas
+      veces como parientes tenga el muerto, «si ce n'est qu'à force de presens il
+      les adoucisse».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 467-468 (p. 467 en imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 407 (capa de texto)', independiente: false, nota: 'añade la compensación con regalos'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'La hermana lokona «followed strictly the law of retaliation» en el homicidio (Brett 1868 p. 104). La compensación por regalos que aplaca a los parientes (Du Tertre) es la misma lógica que el wayuu atestigua (transmision-019), que es vecino y no hermana.'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 104', que: 'ley del talión estricta en el homicidio'}
+    caquetio: [transmision-034]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Venganza por parientes con salida por compensación: dos tradiciones en la venganza, una sola (kalinago) en la compensación. El corpus caquetío no tiene hecho propio de justicia; lo que hay es wayuu. En duda, degradar.'
+    dominios: [geografia_politica, parentesco]
+
+  - id: kalinago-geografia_politica-009
+    esfera: geografia_politica
+    tema: territorio-asentamiento
+    contenido: >-
+      Sin pueblos, con caseríos que se mudan. «Bien qu'ils n'ayent point de
+      villages … ils changent assez souvent de demeure, selon que les y porte
+      leur caprice», sin pedir permiso a su capitán: por creer que estarán más
+      sanos en otra parte, por una suciedad hecha en la casa o por una muerte.
+      Du Tertre: cada familia forma su caserío con su carbet; hay dos capitanes
+      en Dominica «fort éloignez l'un de l'autre». Un capitán de Dominica viaja
+      con una familia de treinta o treinta y cinco personas.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Dominica, San Vicente y demás islas'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 437 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 395, 400, 411 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: 'Rochefort se contradice: en la p. 432 (Davies p. 291) dice que las casas se disponen «à la manière d''un Village». La escala militar (mil o mil quinientos atacantes, Du Tertre p. 404; mil quinientos hombres en una isla, Davies p. 310) es estimación francesa.'
+    sustrato: sin-decidir
+    caquetio: [geografia_politica-006, geografia_politica-005]
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Asentamiento disperso y móvil de una sociedad insular de guerra; el caquetío costero tiene pueblos nucleados y represas (geografia_politica-004, -006). Contraste, no proyección.'
+    dominios: [geografia_politica, escala]
+
+  - id: kalinago-geografia_politica-010
+    esfera: geografia_politica
+    tema: alianza-intercambio
+    contenido: >-
+      Dar sin vender, y el huésped. «Ils n'ont entre eux aucune sorte de
+      commerce, ne vendent ny n'achetent rien, s'entredonnant fort liberalement»
+      lo que pueden. Al huésped lo recibe en cada carbet uno encargado,
+      «Niouakaiti»; le cuelgan una hamaca, le traen de comer, y el casabe
+      doblado o extendido le dice si debe dejar o llevarse lo que sobre; luego
+      todos lo saludan, «Halea-tibou», sé bienvenido. Con los amigos se cambian
+      el nombre y lo recuerdan diez años después.
+    grafia: 'Niouakaiti / Tiouákaiti «celuy qui a la charge de recevoir les hôtes»; Halea-tibou; En Bouekra «voici ton lit»'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 383-384, 390 (p. 383 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 457-460, 519 (Davies pp. 309-313)', independiente: false}
+    verificado_en_imagen: no
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'El intercambio de nombres es también taíno (guaitiao), pero no lo cotejé con primaria en esta sesión.'
+    caquetio: [geografia_politica-017]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición medida.'
+    dominios: [geografia_politica, hospitalidad, nombre]
+
+# ═════════════════════════════════════════════════════════════════════════
+# ECOLOGÍA
+# ═════════════════════════════════════════════════════════════════════════
+
+  - id: kalinago-ecologia-001
+    esfera: ecologia
+    tema: cultivo
+    contenido: >-
+      Los huertos. «Tous leurs jardins où ils plantent leurs vivres sont dans les
+      bois separez de leur demeure ordinaire»; los hombres tumban el monte en
+      grupo y beben el resto del día; las mujeres plantan y cultivan «avec un
+      gros baston pointu». En los huertos, yuca, batata, frijoles y habas, maíz,
+      mijo, melones, auyamas y la «Chous Caraïbes»; el ananás, el más cuidado;
+      en los bordes, ají y plantas medicinales.
+    grafia: 'Manioc, Mais, Ananas, Chous Caraïbes'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 382-383, 396 (pp. 383, 396 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 437, 492 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'Conuco de tala y palo de cavar con yuca y maíz: el complejo arahuaco antillano.'
+    caquetio: [ecologia-029]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina ecologia-029 (el conuco, atestiguado). El reparto (hombres tumban, mujeres siembran) va con kalinago-parentesco-006.'
+    dominios: [ecologia, trabajo]
+
+  - id: kalinago-ecologia-002
+    esfera: ecologia
+    tema: comida-bebida
+    contenido: >-
+      El casabe y el ouïcou. El casabe se ralla —antes de los ralladores de
+      hierro, con piedras ásperas de la orilla—, se exprime en una manga de
+      junco, se tamiza y se cuece en una plancha de barro o de piedra. El
+      ouïcou se hace de casabe cocido en agua y «maschée par de vieilles … femmes»
+      para que fermente; el maby, de batata. Sin sal; una salsa general de ají con
+      agua de yuca hervida; mucho cangrejo y pescado, poca carne. Las mujeres
+      comen después que los maridos.
+    grafia: 'Cassave, Oüicou / Ouïcou, Maby, Taumali, Matoutou'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 388-389 (capa de texto)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 441-447 (Davies pp. 297-302); p. 428 (imagen) para el rallado con piedra', independiente: false}
+    verificado_en_imagen: no
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'La bebida de casabe mascado por las mujeres para la fiesta es lokona (paiwari, Brett 1868 p. 102).'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 102', que: 'paiwari: casabe tostado, mascado por las mujeres, fermentado para la fiesta'}
+    caquetio: [creencia-010, creencia-023]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El caquetío atestiguado bebe vino de maíz (maçato) y come mazamorra de maíz en el rito (creencia-010, -023): la bebida mascada de casabe es de las hermanas; para el caquetío, si acaso, la técnica (mascar para fermentar), y como hipótesis.'
+    dominios: [ecologia, comida]
+
+  - id: kalinago-ecologia-003
+    esfera: ecologia
+    tema: pesca
+    contenido: >-
+      Cómo pescan. Con anzuelo y con flecha —tras tirar, se lanzan al agua a
+      coger la presa—, con paciencia de medio día; buceando junto a las rocas
+      para sacar el pez de su cueva; las langostas, bajando con una piedra en las
+      manos. Y con un palo machacado que echan en estanques o donde el mar está
+      quieto, «comme une momie souveraine», pero «Mais ils ont cette prudence de
+      ne se point servir de ce dernier artifice, que dans la necessité, pour ne
+      pas faire un trop grand dégast».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 451-452 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 381 (capa de texto)', independiente: false, nota: 'añade aves adiestradas para pescar y los anzuelos de carey antes del hierro (p. 384)'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'El barbasco es panamericano; la restricción por no esquilmar es el dato de la fuente.'
+    caquetio: [ecologia-079]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina ecologia-079 (la pesca con veneno vegetal en aguas quietas, atestiguada): la hermana añade una norma de uso, sólo en necesidad.'
+    dominios: [ecologia, pesca, norma]
+
+  - id: kalinago-ecologia-004
+    esfera: ecologia
+    tema: navegacion
+    contenido: >-
+      Piraguas y canoas. La piragua, de un solo árbol vaciado —antes de las
+      hachas de hierro, a fuego y con hachas de piedra, años de trabajo—,
+      realzada con tablas cosidas con fibra de mahot; unos cuarenta pies, hasta
+      cincuenta personas, a vela y a remo; la canoa no pasa de veinte pies y la
+      más chica es para pescar. «Ils n'ont ny Boussole, ny Aiman»: no se alejan
+      mucho de tierra y, si la pierden de vista, se guían de noche por las
+      estrellas y de día por el sol. El que emprende el viaje se llama capitán y
+      gobierna la piragua, «sans pourtant qu'il en soit plus consideré».
+    grafia: 'Pirogue / Piraugue; Canot, Couliala; Ajoupa'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 397-399 (p. 399 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 452 (imagen); pp. 476-477 (Davies pp. 319-320)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'canot: h. oucounni, f. coulialla (Breton 1666 p. 60, imagen)'
+    sustrato: sin-decidir
+    caquetio: [ecologia-031, ecologia-032, geografia_politica-015]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina ecologia-031 (la canoa de un solo tronco, atestiguada) y el horizonte marítimo (geografia_politica-015): navegación de costa y estrellas.'
+    dominios: [ecologia, navegacion, astronomia]
+
+  - id: kalinago-ecologia-005
+    esfera: ecologia
+    tema: vivienda
+    contenido: >-
+      La casa y sus cosas. Casas en ovalo con el techo hasta el suelo, de hojas
+      de latanier o de caña; dos o tres cuartos (comer, dormir y recibir); un
+      cuartito para los «Caconnes», sus bienes —arcos, flechas, boutous, hachas,
+      cuchillos, cestas, espejos, collares—; ollas de barro (canaris) y vasijas
+      de calabaza (couis), banquitos de una pieza y mesitas de junco (matoutou).
+      Duermen en hamacas de algodón y «font toujours du feu sous leurs licts»,
+      contra el frío, los mosquitos «mais sur tout … des Maboyas».
+    grafia: 'Caconnes, Cannaris, Coüy, Matoutou, Amac'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 395-397 (pp. 395-396 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 433-436 (Davies pp. 291-293)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [geografia_politica-006]
+    proyeccion:
+      capa: hipotetico
+      nota: 'La hamaca y el fuego debajo son de toda la región; el fuego «contra los maboyas» es de la hermana.'
+    dominios: [ecologia, vivienda, creencia]
+
+  - id: kalinago-ecologia-006
+    esfera: ecologia
+    tema: tecnologia-objetos
+    contenido: >-
+      Lo que hacen con las manos. Hamacas tejidas en telar —una mujer tarda a
+      veces un año en una—; el algodón se hila sobre la rodilla; cestas de junco
+      y hierba de colores, tamices (hibichets), catolis para cargar, vasijas
+      pintadas «de mille grotesques», ollas y planchas de barro cocido; y sobre
+      todo las armas: arcos, flechas emponzoñadas con leche de manzanillo o con
+      espina de raya, y el boutou, maza de madera dura grabada y rellena de harina
+      blanca de yuca.
+    grafia: 'Amacs, Hibichets, Catolis, Boutou'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: rochefort-1658, pagina: 'p. 452 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 396, 402 (p. 396 en imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [ecologia-014, ecologia-025]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Oficios de toda la región; el caquetío tiene su cerámica atestiguada (dabajuroide).'
+    dominios: [ecologia, tecnologia]
+
+  - id: kalinago-ecologia-007
+    esfera: ecologia
+    tema: comercio-rutas
+    contenido: >-
+      Lo que traen a cambiar. A los franceses les llevan hamacas, tortugas,
+      cerdos, lagartos, pescado, gallinas, loros, frutas, arcos, cestas y
+      carey, «qui est la meilleure marchandise», y lo que roban a sus enemigos,
+      «& quelques pierres vertes»; piden cuchillos, hachas, anzuelos, agujas y
+      cuentas, y valoran por necesidad: por una tortuga no dan dos hachas si
+      necesitan un cuchillo. Antes del contacto tenían hachas de piedra y
+      anzuelos de carey.
+    grafia: 'Caret'
+    pueblo: kalinago
+    donde: 'Guadalupe, Martinica'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 384-386 (capa de texto)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 437 (imagen); Davies p. 293 (los canaris que venden en Martinica)', independiente: false}
+    verificado_en_imagen: no
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'Las piedras verdes tomadas a los enemigos arahuacos son, como el caracolí, un bien que viene de tierra firme.'
+    caquetio: [ecologia-105, ecologia-017]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Comercio colonial; lo útil para la esfera son las piedras verdes y el carey como bienes de valor.'
+    dominios: [ecologia, comercio]
+
+  - id: kalinago-ecologia-008
+    esfera: ecologia
+    tema: caza-recoleccion
+    contenido: >-
+      Casi no cazan. «Comme en leurs repas particuliers, ils ne se servent
+      d'aucune chair, s'ils n'ont des Etrangers à leur table, aussi ne vont ils
+      pour l'ordinaire qu'à la chasse de Lezards»; otra caza, para agasajar a
+      europeos o cambiar con ellos. La caza no distingue rangos: es libre «au plus
+      petit d'entr'eus, qu'au plus grand».
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 451 (imagen)'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [ecologia-036]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina ecologia-036 (el mar como despensa verdadera frente a la tierra pobre): en islas pequeñas, la dieta de la hermana es de mar y lagarto.'
+    dominios: [ecologia, comida]
+
+# ═════════════════════════════════════════════════════════════════════════
+# TRANSMISIÓN
+# ═════════════════════════════════════════════════════════════════════════
+
+  - id: kalinago-transmision-001
+    esfera: transmision
+    tema: lengua-registro
+    contenido: >-
+      El habla de mujeres, en Rochefort. «Les hommes ont beaucoup d'expressions
+      qui leur sont propres, que les femmes entendent bien, mais qu'elles ne
+      prononcent jamais: Et les femmes ont aussi leurs mots & leurs frases, dont
+      les hommes n'usent point, à moins que de se faire moquer.» Las madres la
+      enseñan a las hijas; los varones entienden la de sus madres y hermanas,
+      pero «se façonnent à leur Langage, dés l'âge de cinq ou six ans», al de los
+      padres. Se dice que hay «quelque conformité» con la de los arahuacos de
+      tierra firme, y que los caribes del continente hablan una sola lengua.
+    cita: 'El origen, en la voz de los de Dominica: las islas «étoient occupées par une Nation d''Arouägues, qu''ils détruisirent entierement, à la reserve des femmes qu''ils épouserent» (Rochefort p. 394); los Galibis «avoit exterminé tous les naturels du pais à la reserve des femmes, qui ont tousiours gardé quelque chose de leur langue» (Breton 1665 p. 229, copiado por Du Tertre p. 361); «combatre les Ygneris, qui estoient les naturels du pays» (Du Tertre p. 361).'
+    grafia: 'Calinago «le nom des Hommes», Calliponan «celuy des femmes» (Rochefort p. 325); Ygneris (Du Tertre)'
+    pueblo: kalinago
+    donde: 'Dominica y demás islas'
+    epoca: '1635-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 325, 330, 394-395 (imagen)'}
+    procedencia_extra:
+      - {obra: breton-1665, pagina: '1665 pp. 229-230 (p. 230 en imagen)', independiente: false}
+      - {obra: du-tertre-1667, pagina: 'pp. 361-362 (imagen)', independiente: false, nota: 'cita a Breton y añade los Igneri y el rumor de Igneri que quedaban en las montañas de Guadalupe, que Breton supo que eran esclavos arahuacos huidos'}
+      - {obra: goeje-1939, pagina: 'pp. 3-4', independiente: false, nota: 'su tesis: la lengua de base es el iñeri con palabras kalina sustituidas; las voces de hombres son de origen kalina (paráfrasis; copyright)'}
+    verificado_en_imagen: si
+    registro: 'h. y f.'
+    sigla_goeje: 'Kalinago h; Kaliponam f; Aluague f «Indien Arawak» (Goeje p. 43, imagen)'
+    sustrato: arahuaco
+    sustrato_nota: 'Es el sustrato arahuaco dicho por la propia tradición kalinago, que además lo nombra: Ygneri, «les naturels du pays».'
+    caquetio: [transmision-035]
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Hecho kalinago que el corpus ya tiene como tal (transmision-035, que no se proyecta). Lo nuevo de Rochefort: el cambio de los varones a los cinco o seis años y la burla al hombre que habla como mujer.'
+    dominios: [transmision, lengua, genero]
+
+  - id: kalinago-transmision-002
+    esfera: transmision
+    tema: lengua-registro
+    contenido: >-
+      Otros registros. Los viejos tienen términos y giros propios «qui n'ont
+      point d'usage en la bouche des jeunes gens». Hay una lengua de guerra, «un
+      baragoin fort difficile», que las mujeres, las muchachas y los jóvenes no
+      conocen hasta que han dado pruebas de valor, «afin que leurs desseins ne
+      soient pas découvers»; Du Tertre oyó la arenga de guerra del capitán en un
+      lenguaje tan elevado que mujeres y niños no entienden nada. Se habla
+      distinto a la persona y de la persona: «Baba, mon Pere, en parlant à luy:
+      Et Youmáan, en parlant de luy».
+    grafia: 'Baba / Youmáan; Bibi / Ichánum'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 395-396 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'p. 401 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: 'h. (la de guerra y la de los viejos)'
+    sustrato: sin-decidir
+    sustrato_nota: 'Sin hermana medida para la lengua de guerra.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: 'Registros por edad y por iniciación: una sola tradición.'
+    dominios: [transmision, lengua, guerra]
+
+  - id: kalinago-transmision-003
+    esfera: transmision
+    tema: saber-restringido
+    contenido: >-
+      Lo que no se enseña a los de fuera. «Ils sont fort soigneus de ne point
+      communiquer leur langue, de crainte que les secrets de leurs guerres ne
+      soient découverts», y aun los bautizados «ne veulent pas reveler le fonds
+      de cette Langue»; con los cristianos usan una jerga con palabras
+      españolas y francesas. Y la medicina: «Les Caraïbes sont extrémement jalous
+      de leurs secrets en la Medecine, sur tout leurs femmes qui sont fort
+      intelligentes en toutes ces cures»; nunca dieron el remedio contra las
+      flechas envenenadas, aunque curan a los franceses cuando hace falta.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 394, 506 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 383, 410 (p. 383 en imagen)', independiente: false, nota: 'las mujeres saben más de plantas que los hombres'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [transmision-004]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El saber guardado por las mujeres (veneno y contraveneno) conviene con la tesis 4 del mapa-transmision (se restringe lo peligroso) pero es de una sola tradición; transmision-004 es canon de la simulación, no atestiguado.'
+    via_a: {creencia-003: corrobora-en-parte}
+    dominios: [transmision, medicina, mujeres]
+
+  - id: kalinago-transmision-004
+    esfera: transmision
+    tema: curriculo-edad
+    contenido: >-
+      Qué se enseña y a quién. Los padres enseñan a pescar, a tirar con arco, a
+      nadar, a hacer cestitas y hamacas; Rochefort añade boutous, flechas,
+      cinturones y piraguas, y que el desayuno se les cuelga en una rama para que
+      lo bajen a flechazos, cada vez más alto. Crecidos, «si ce sont des garçons,
+      ils suivent le Pere & mangent avec luy, si ce sont des filles, ils suivent
+      la mere». Los jóvenes oyen a los viejos con gran respeto y se someten a su
+      parecer.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'p. 376 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 501 (imagen); pp. 498-499 (Davies p. 340)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    capa_colonial: '«ils ne leur apprennent ny civilité, ny honneur»: el juicio del confesor.'
+    sustrato: arahuaco
+    sustrato_nota: 'La hermana lokona: los niños se entrenan pronto en pescar y remar y van con los hombres; las niñas trabajan con las mujeres (Brett 1868 p. 102).'
+    hermanas:
+      - {pueblo: lokono, obra: brett-1868, pagina: 'p. 102', que: 'niños a pescar y remar con los hombres; niñas con las mujeres'}
+    caquetio: [transmision-020, transmision-025]
+    proyeccion:
+      capa: reconstruido
+      nota: >-
+        CANDIDATO (K4): un currículo partido por sexo desde la niñez, el varón
+        con el padre y la niña con la madre, aprendiendo los oficios por imitación
+        (pesca, arco, cestería, remo), lo dan dos tradiciones independientes con
+        primaria. Hoy el corpus lo apoya sólo en el wayuu (transmision-020/025),
+        que desde D11 es vecino y no hermana. El arco con el desayuno colgado es
+        detalle kalinago.
+    dominios: [transmision, genero]
+
+  - id: kalinago-transmision-005
+    esfera: transmision
+    tema: saber-restringido
+    contenido: >-
+      Quién sabe de astros. «Les Capitaines, les Boyez, les Vieillards ont
+      l'esprit plus subtil que le commun, & par une longue experience jointe à la
+      traditive de leurs ancestres ils ont acquis une grossiere connoissance de
+      plusieurs astres»: cuentan los meses por lunas y los años por las
+      Pléyades. Fuera de eso no guardan memoria de su llegada a las islas ni de
+      su edad.
+    grafia: 'Poussinières'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'p. 412 (imagen)'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [transmision-006]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El saber del cielo en manos de jefes, especialistas y viejos: una sola tradición. Las estrellas de viento y de mar, en la campaña del mar (Breton).'
+    dominios: [transmision, astronomia]
+
+  - id: kalinago-transmision-006
+    esfera: transmision
+    tema: especialista-formacion
+    contenido: >-
+      Cómo se hace un boyé. Los padres «les destinent souvent à être Boyez», y los
+      mandan a uno de los más reputados; el muchacho debe estar consagrado «dés sa
+      plus tendre jeunesse par l'abstinence de plusieurs sortes de viandes, par des
+      jeusnes rigoureus», y para empezar se le saca sangre de todo el cuerpo con
+      diente de agutí, como a los soldados. Du Tertre: el maestro, tras ayunar
+      largo, hace bajar a su espíritu en el carbet y le pide otro para el
+      aprendiz, también purificado por ayunos; y el espíritu puede heredarse del
+      padre (kalinago-creencia-105).
+    grafia: 'Boyez'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 500-501 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 365-366 (imagen)', independiente: false, nota: 'repite a Breton 1665 p. 283; sin «cinq mois»'}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: arahuaco
+    sustrato_nota: 'El ayuno largo para ver o recibir al espíritu: taíno (Pané cap. XXV). Que el oficio lo elija el padre y no un sueño no lo da ninguna hermana medida.'
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XXV', que: 'ayuno de cinco o seis días para ver a los cemíes'}
+    caquetio: [creencia-004, transmision-001]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-004 (atestiguado: el piache se forma con ayuno prolongado). Contra la Vía A (transmision-017: la vocación se revela en sueño y no se elige): en la hermana, el padre destina al hijo y lo entrega a un maestro.'
+    via_a: {transmision-017: contradice}
+    mineria_1: [ck09-02]
+    dominios: [transmision, especialista]
+
+  - id: kalinago-transmision-007
+    esfera: transmision
+    tema: nombre-propio
+    contenido: >-
+      El nombre del adulto. Nunca dicen el nombre de alguien en su presencia, o
+      sólo la mitad (Mala por Malakaali, Hiba por Hibalomon); dicen «le Pere ou
+      la Mere d'un tel». No tienen apellidos: «un tel, fils d'un tel». Los
+      esposos cambian de nombre al casarse; los varones, al ser recibidos como
+      soldados, y quien mata a un jefe arahuaco «prend son nom pour marque
+      d'honneur»; en las fiestas piden un nombre nuevo. Con los amigos franceses
+      se cambian el nombre.
+    grafia: 'Mala / Malakaali; Hiba / Hibalomon'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 396, 497 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 359, 371-372, 378 (pp. 371-372, 378 en imagen)', independiente: false}
+      - {obra: breton-1665, pagina: '1665 p. 221 (minería 1, ck09-19)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    sustrato_nota: 'Tomar el nombre del enemigo muerto es caribe; la tecnonimia y el medio nombre no los cotejé.'
+    caquetio: [transmision-021]
+    proyeccion:
+      capa: hipotetico
+      nota: 'El tabú es sobre el nombre de los VIVOS en su presencia; del muerto, cero (meta.ceros). No corrobora transmision-021 (wayuu).'
+    mineria_1: [ck09-19]
+    dominios: [transmision, nombre]
+
+  - id: kalinago-transmision-008
+    esfera: transmision
+    tema: narracion-mito
+    contenido: >-
+      Cómo se recuerda. No tienen anales: sus tradiciones de origen las cuentan
+      «à l'aventure, & comme des gens qui reciteroient des songes», y se
+      contradicen. El capitán que conquistó las islas hizo llevar las cabezas de
+      los enemigos a las cuevas de la orilla «affin que les peres les fissent voir
+      à leur enfans & successivement à tous les autres qui descendroient de leur
+      posterité». Y en los consejos de guerra son las viejas las que recitan los
+      agravios: el marido muerto, el padre comido.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Dominica'
+    epoca: '1635-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: breton-1665, pagina: '1665 p. 230 (imagen)'}
+    procedencia_extra:
+      - {obra: du-tertre-1667, pagina: 'pp. 361, 401 (imagen)', independiente: false}
+      - {obra: rochefort-1658, pagina: 'p. 330 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: caribe
+    sustrato_nota: 'La memoria que se enseña aquí es la de la conquista y la del agravio: capa caribe. El soporte (un objeto que los padres muestran a los hijos) es el dato de método.'
+    caquetio: [transmision-006, transmision-018]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Para Marokoto-ni. Para el caquetío sólo el método: la memoria se ancla en un lugar y un objeto que el padre muestra.'
+    dominios: [transmision, memoria, guerra]
+
+  - id: kalinago-transmision-009
+    esfera: transmision
+    tema: curriculo-edad
+    contenido: >-
+      Las pruebas de edad. Al llegar a la pubertad, muchachos y muchachas ayunan
+      tres semanas o un mes y se les saja la piel con dientes de agutí. Para hacer
+      a un hijo soldado, el padre lo sienta en un banquito ante sus amigos, le
+      encarga vengar a la nación, le revienta en la cabeza un ave rapaz,
+      «Mansfenis», lo saja entero, lo frota con el ave empapada en ají, le da a
+      comer el corazón del ave y lo deja en una hamaca, en ayunas, hasta que no
+      puede más; algunos mueren. Desde entonces entra en las asambleas del carbet.
+    grafia: 'Mansfenis (Rochefort), Mancefenil (Du Tertre)'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 376-377 (imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'p. 500 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: caribe
+    sustrato_nota: 'La iniciación del guerrero es caribe. El ayuno y la sajadura de la pubertad para los dos sexos no los cotejé con una hermana.'
+    caquetio: [creencia-014]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'El rito del soldado, para Marokoto-ni. Que haya iniciación de jóvenes corrobora en parte creencia-014 (reconstruido), sin darle el calendario.'
+    via_a: {creencia-014: corrobora-en-parte}
+    dominios: [transmision, ciclo-de-vida, guerra]
+
+  - id: kalinago-transmision-010
+    esfera: transmision
+    tema: canto-baile
+    contenido: >-
+      Cantos, flautas y bailes. Las canciones son burlas amargas contra los
+      enemigos, o de pájaros, peces y mujeres; por la mañana tocan la flauta, a
+      veces hecha de huesos de enemigos; tambores de tronco y calabazas con
+      piedrecitas, con las que las mujeres calman a los niños. En las fiestas,
+      las viejas cantan el bajo cuando están borrachas y los jóvenes el tiple, una
+      muchacha marca con la maraca, y tres o cuatro bailan cubiertos de plumas
+      pegadas con goma.
+    grafia: null
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 386-387 (capa de texto)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 454-455 (Davies pp. 307-308); p. 390 (imagen): silbatos de hueso de enemigo al cuello', independiente: false}
+    verificado_en_imagen: no
+    registro: null
+    capa_colonial: 'Breton se negó a escribir los cantos del boyé (ck09-05): el repertorio religioso falta a propósito.'
+    sustrato: sin-decidir
+    caquetio: [creencia-010, transmision-018]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Una sola tradición para el repertorio profano.'
+    mineria_1: [ck09-05]
+    dominios: [transmision, musica]
+
+  - id: kalinago-transmision-011
+    esfera: transmision
+    tema: escritura-marca
+    contenido: >-
+      Lo que el cuerpo dice. Todos los días se pintan de rojo con roucou y aceite,
+      con círculos y bigotes negros de genipa; las mujeres, libres, llevan unas
+      medias bottines de algodón y junco que son «une marque infaillible de leur
+      liberté, d'où vient que les esclaves n'en portent jamais»; la cautiva
+      lleva el pelo corto; el caracolí marca al capitán y a sus hijos; los
+      hombres llevan al cuello silbatos de hueso de sus enemigos.
+    grafia: 'Roucou, Genipa, Caracolis'
+    pueblo: kalinago
+    donde: 'Antillas Menores'
+    epoca: '1640-1658'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: du-tertre-1667, pagina: 'pp. 391-394 (p. 393 en imagen)'}
+    procedencia_extra:
+      - {obra: rochefort-1658, pagina: 'pp. 390-391 (imagen)', independiente: false}
+    verificado_en_imagen: si
+    registro: null
+    sustrato: sin-decidir
+    caquetio: [parentesco-014]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina parentesco-014 (atestiguado, Arcaya: las diferencias de tatuaje podían marcar linaje o rango): en la hermana, el adorno marca libertad y rango, con nombre.'
+    dominios: [transmision, cuerpo, rango]
+
+# ═════════════════════════════════════════════════════════════════════════
+# HALLAZGO LATERAL — un dato CAQUETÍO que salió leyendo a Rochefort
+# (no es kalinago; se propone aparte para el corpus caquetío)
+# ═════════════════════════════════════════════════════════════════════════
+hallazgo_lateral_caqueti:
+  - id: kl10-L1
+    contenido: >-
+      Los indios de Curazao dejan la casa donde murió alguien. Tras decir que los
+      kalinago se mudan cuando muere alguien de la casa y que los caribes del
+      continente la queman, Rochefort: «Cette plaisante superstition se voit
+      aussi chez les Indiens de l'Ile de Coraçao, bien que ces pauvres gens ayent
+      reçeu le Saint Batême. Car Monsieur du Montel rapporte, qu'étant au grand
+      village de ces Indiens nommé l'Ascension, & ayant remarqué en deus ou trois
+      endroits, des maisons les unes desertes, quoy qu'elles fussent en leur
+      entier, & les autres absolument ruinées, il demanda pourquoy ces maisons
+      étoient ainsi abandonnées: Et le Cacique ou Capitaine, luy répondit, que
+      c'étoit parce qu'il étoit mort quelques personnes en ces lieus-là.»
+    fuente: atestiguado
+    procedencia: {obra: rochefort-1658, pagina: 'pp. 437-438 (imagen)'}
+    testigo: 'du Montel, que lo vio y lo preguntó al cacique; Rochefort lo transcribe'
+    epoca: 'hacia 1640-1655 (du Montel en Curazao, ya holandés, con los indios bautizados)'
+    limite: 'Colonial y post-bautismo: los indios de Curazao del s. XVII son los caquetíos que quedaron en la isla (geografia_politica-001, -014). Rochefort además cree que son refugiados de La Española (p. 327), lo que es error suyo.'
+    toca: 'creencia-010b (la casa del díao que nadie vuelve a habitar): aquí es la casa de cualquier muerto, y en un pueblo caquetío real con cacique.'
+    otro_dato_del_mismo_autor: 'p. 327 (imagen): los indios de Curazao «n''ont aucun mot de la langue Caraibe en la leur, ni aucune fasson de faire d''où l''on puisse recueillir qu''ils ayent jamais eu» trato con los caribes. Un juicio de oído del s. XVII, útil como negativa: ni léxico ni costumbre caribe en los caquetíos de Curazao.'
+    destino: 'creencia.yaml, como atestiguado colonial de Curazao (lo decide Miguel); y geografia_politica para el pueblo «l''Ascension» con su cacique hacia 1650.'
+
+# ═════════════════════════════════════════════════════════════════════════
+# PARA EL LEXICÓN — formas que esta minería saca y que merecen lexicón o
+# cognados (no se tocan aquí; las decide la fusión)
+# ═════════════════════════════════════════════════════════════════════════
+para_el_lexicon:
+  - {forma: amachi, glosa: 'capitán (habla de mujeres); iamáchiri «mi capitán»', lengua: kalinago, registro: f., sigla: '1 am 31 (Goeje p. 43)', obra: breton-1665, pagina: '1666 p. 60 (imagen)', nota: 'Voz de mujeres para el jefe, filiada al arahuaco por Goeje; la de hombres, ouboutou, es caribe (hK). Candidata a comparanda de la esfera y a cotejo con títulos caquetíos (apopo, diao).'}
+  - {forma: akátobou, glosa: 'tío materno (habla de mujeres; h. yáo)', lengua: kalinago, registro: f., sigla: '— (Goeje p. 41)', obra: rochefort-1658, pagina: 'p. 517 (imagen); Breton 1666 p. 265', nota: 'Sin origen en Goeje; el de hombres, yao, es kalina.'}
+  - {forma: opoyem, glosa: 'espíritu (en general; los buenos; el del hombre) — NO «alma del muerto»', lengua: kalinago, registro: f., sigla: 'fam? (Goeje p. 38)', obra: rochefort-1658, pagina: 'pp. 416, 527 (imagen)', nota: 'Corrige la glosa de Goeje para el cotejo opoyem ~ opía (la forma casa, la glosa no).'}
+  - {forma: 'Ouboutou tîmani', glosa: 'rey (el jefe de la conquista llevado en hombros)', lengua: kalinago, registro: h., sigla: null, obra: breton-1665, pagina: '1665 p. 417 (imagen)', nota: 'Rochefort p. 330: «Ouboutou-timani, c''est à dire Roy».'}
+  - {forma: Ygneri, glosa: 'los naturales arahuacos de las islas antes de los kalinago', lengua: 'kalinago (etnónimo)', registro: null, sigla: 'iñeri (Goeje pp. 3-4)', obra: du-tertre-1667, pagina: 'pp. 361-362, 369 (imagen)', nota: 'Etnónimo del sustrato; no es voz caquetía.'}
+  - {forma: Calliponan, glosa: 'nombre de los kalinago en boca de las mujeres', lengua: kalinago, registro: f., sigla: 'Kaliponam f (Goeje p. 43)', obra: rochefort-1658, pagina: 'p. 325 (imagen)', nota: 'Calinago es el de los hombres.'}
+  - {forma: Youëlleri, glosa: 'mi prima (cruzada): «ma femelle, ou mon accordée»; f. Youëllou', lengua: kalinago, registro: 'h. / f.', sigla: null, obra: rochefort-1658, pagina: 'pp. 396, 518 (imagen)', nota: 'Breton 1666 p. 92: «Cousine, niouelle àtonum».'}

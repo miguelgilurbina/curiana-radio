@@ -12,7 +12,7 @@ local:
   - "fuentes_caquetios/Davies_1666_History_Caribby_Islands_TCP.txt"
 paginas: "406 pp. de PDF. Desfase pdf→impresa −32, constante en tres puntos (pdf 200 = p. 168, 250 = 218, 300 = 268). El TCP marca la página impresa como [p. N]"
 capa_texto: si
-estado_minado: sin-minar
+estado_minado: minado-parcial
 descargado: 2026-10-09
 origen_digital: "Internet Archive — https://archive.org/details/historyofcaribb00roch · EEBO-TCP — https://github.com/textcreationpartnership/A57484 (A57484.xml)"
 acceso: >-
@@ -27,6 +27,8 @@ sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
 verificado: 2026-10-09
 propuesto_por: "nota de decisión 08_creencia_kalinago_que-minar (K1)"
 aliases: ["Davies 1666", "History of the Caribby-Islands", "davies-1666"]
+minado: 2026-10-09
+cobertura: "2026-10-09: libro II (caps. VII, IX-XXIV) y el vocabulario de espíritus en el TCP, para localizar en Rochefort; divergencias de traducción medidas"
 ---
 
 # Davies 1666 — Rochefort en inglés, con transcripción limpia
@@ -58,5 +60,33 @@ traducciones son capa colonial y hay que verlas en el original.
 
 ## Estado
 
-Medido al descargar, sin leer todavía. Entró el 2026-10-09 con la tanda de
+Medido al descargar el 2026-10-09; leído el mismo día por la minería 2 de las hermanas (sección «Minería 2 — esferas», abajo). Entró el 2026-10-09 con la tanda de
 descargas de la campaña de creencia.
+
+## Minería 2 — esferas (2026-10-09)
+
+**Para qué se usó.** Para localizar: el libro II (caps. VII y IX-XXIV) y el
+vocabulario de espíritus se leyeron enteros en el TCP, y cada pasaje se buscó
+y se citó en el francés de [[rochefort-1658]] en imagen. Davies no entra como
+testigo en ningún hecho; aparece en `procedencia_extra` sólo donde su
+traducción importa. Sesión: [[10_hermanas_kalinago_esferas]].
+
+**La pregunta propia: ¿dónde traduce Davies un término caribe por una palabra
+cristiana?** Casi nunca por su cuenta: «God», «Devil», «Priests, or … their
+Magicians», «which we cannot render otherwise than by that of God» ya están
+en el francés de Rochefort (pp. 416-418, imagen). Lo que Davies **sí** mueve,
+y obliga a citar del francés:
+
+| Francés (Rochefort) | Davies | Efecto |
+|---|---|---|
+| «un homme blanc s'apparut à luy descendant du Ciel» (p. 427) | «a Man all in white appear'd to him descending from Heaven» (p. 287) | el hombre blanco se vuelve un hombre vestido de blanco: angelical |
+| los demonios «se nichent **souvent** dans des os de mort» (p. 418) | «**sometimes**» (p. 280) | la frecuencia de los huesos que hablan baja |
+| «tirer le poisson avec la **flèche**» (p. 451) | «with the **Dart**» (p. 305) | cambia el arma |
+| «Un Frere venge son Frere & sa Sœur, un Mary sa Femme, un Pere ses enfans, **les enfans leur Pere**» (p. 467) | omite la última cláusula (p. 317) | se pierde la venganza de los hijos por el padre |
+| «Piraugues / Pyraugues» | «Piragas» | sólo grafía: medir las dos al buscar |
+
+**No dio**: Louquo, «five months» (sólo una tregua colonial, p. 185), cenizas
+del jefe (sólo los tapuyas, p. 302). Igual que el francés.
+
+**Deuda.** Ninguna propia: el TCP cumplió su papel. Cotejar el resto de
+divergencias si alguien cita a Davies en otra campaña.
