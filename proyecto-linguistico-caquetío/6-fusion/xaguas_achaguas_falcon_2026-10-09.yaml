@@ -1,0 +1,79 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Los xaguas de Carora y Pedregal: ¿son los achaguas? 2026-10-09.
+#
+# Regla 5: esto PROPONE. No toca 3-mundo/etnias.yaml, 3-mundo/corpus/,
+# 2-lengua/, curiana_lexicon.py ni lexicon_*.py.
+# Regla 4: todo lo de los xaguas es de la polity de BARQUISIMETO (y, en la
+# colonia, de la encomienda de Coro), nunca de la costera.
+# Regla 3: casi todo es de 1530-1579; lo de Pedregal, Utaquire y Paraguaná es
+# de encomienda (s. XVI tardío-XVIII).
+# BORRADOR EN CURSO: el primer commit se hizo antes de cerrar la búsqueda web.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero de los xaguas (Claude Opus 5.5), rama vault/xaguas-falcon'
+  bitacora: 4-fuentes/sesiones/11_xaguas_achaguas_falcon.md
+  issue_borrador: 6-fusion/issues-pendientes/xaguas-achaguas-falcon-2026-10-09.md
+  pregunta: >-
+    Miguel (2026-10-09): «he encontrado que habían achaguas también en la zona
+    de ahora Falcón, más que todo cerca de lo que es Mitare, más hacia el lado
+    occidental de Falcón… habría que buscar más información al respecto». Y su
+    decisión del mismo día: el achagua es «una línea maipuriana aparte de los
+    caquetíos» (prima, no hermana). Cuatro preguntas: (1) ¿xagua = achagua?
+    (2) ¿el nombre es el mismo o un parecido? (3) ¿dónde estaban, y alguna
+    fuente los pone cerca de Mitare? (4) ¿qué se sabe de los xaguas en sí?
+  fuentes_leidas:
+    - federmann-1916
+    - oliver-1989-cap3-vecinos
+    - oliver-1989-cap3
+    - jahn-1927
+    - arcaya-1920
+    - perez-de-tolosa-1546
+    - aguado-1581
+    - rivero-1883
+    - urbina-jimenez-2007-2011
+    - nueva-segovia-1579
+    - osm-kaketiana
+  cobertura:
+    federmann-1916: >-
+      cap. VII entero («La nación de los Xaguas», pp. 53-58, con la nota (a) de
+      Arcaya, pp. 53-54, y las notas (b)-(d)), el arranque del cap. VIII
+      (pp. 58-60) y la p. 63 (los cuatro enemigos de los caquetíos de
+      Barquisimeto); cotejado con el alemán de Klüpfel 1859 pp. 32-36 (folios
+      [41]-[46] de 1557) en su capa de texto.
+    oliver-1989-cap3-vecinos: >-
+      §3.3.1, tesis pp. 243-247 (pdf 270-274), en el OCR guardado
+      (fuentes_caquetios/Oliver_1989_cap3_s33_falcon_lara.ocr.txt).
+    oliver-1989-cap3: >-
+      la edición DOC (2006): pp. 239 (el mismo pasaje de los xaguas), 272
+      (cuentas de concha) y 287-288 (achaguas, «Jaguas carniceros» de 1535,
+      Barraguá), en la capa de texto del PDF.
+    jahn-1927: >-
+      pp. 6-7 (Párraga y Oramas), 52 (las «tierras pobres» de Carora), 207-227
+      (cap. IV, «Los Caquetíos y Achaguas»), 254-256 (los jirajaras de Ciruma
+      y los xaguas «de Carora y Baragua») y 273-275 (Oramas y la filiación),
+      en pdftotext; p. 255 vista en imagen.
+    arcaya-1920: >-
+      cap. I pp. 8-25 (la orografía: Pedregal, Mitare, Siruma, Empalado), cap.
+      II pp. 31-61 (los aborígenes: el territorio ajagua, la identidad con el
+      achagua, Pérez de Tolosa, las Relaciones de 1579), pp. 73-83 (la
+      filiación lingüística), 93-94 (pueblos ajaguas), 102 (sol y luna de los
+      axaguas), 117 (la «xagua» tinte), 230-232 (indios libres e indios de
+      encomienda), 279 (Cariagua, Mapiare…) y 326-328 (Paraguaná, Mitare), en
+      pdftotext.
+    perez-de-tolosa-1546: 'Fernández Duro t. II p. 232 (pdf 243), vista en imagen.'
+    aguado-1581: >-
+      búsqueda de «xagua» (4 aciertos) leída en contexto: lib. II caps. XI y
+      XXI, lib. III cap. XVI (el texto de Gutenberg no conserva la página).
+    rivero-1883: 'pp. 27-35 (pdf 48-57): Barragua, Airico, los «Tamudes».'
+    urbina-jimenez-2007-2011: 'Urbina 2011 pp. 21-22 (pdf 25-26): el complejo Guacoa.'
+    osm-kaketiana: 'coordenadas de Mitare, Pedregal, Acurigua, Quiragua y los ríos Mitare, Pedregal y Baragua.'
+  no_leido:
+    - 'Arcaya 1977 (3.ª ed. de la Historia del Estado Falcón, t. I), que es la que cita Oliver (pp. 37, 41-42): se lee la 1.ª ed. de 1920, la del repo; los números de página no coinciden.'
+    - 'Arcaya, «Los aborígenes del Estado Falcón» (el estudio donde dice haber «demostrado» la identidad): no está en el repo.'
+    - 'Oramas 1916 (o 1915), «Materiales para el estudio de los dialectos Ayamán, Gayón, Jirajara, Ajagua»: no está en el repo.'
+    - 'Las Relaciones de Nueva Segovia y de El Tocuyo de 1579 (Arellano Moreno 1964): no están en el repo; se leen por Arcaya y Jahn.'
+    - 'Useche Losada 1987 (los «xaguas carniceros» del bajo Meta, 1535): sólo por Oliver.'
+  sondas:
+    nota: 'conteos de pdftotext, sin distinguir mayúsculas, sobre las variantes que medir-antes-de-contar exige (minar-fuente §2).'
