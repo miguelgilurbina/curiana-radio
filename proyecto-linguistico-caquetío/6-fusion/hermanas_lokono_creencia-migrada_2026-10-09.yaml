@@ -1,0 +1,593 @@
+# Migración al esquema de 3-mundo/hermanas/README.md §3 de
+# 6-fusion/creencia_lokono_2026-10-09.yaml. Los hechos se trasladan campo a campo;
+# lo que no es hecho va al final, copiado tal cual del origen.
+meta:
+  pueblo: lokono
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: migración al esquema de hermanas (Claude Haiku 5.5), rama vault/hermanas-lokono-migracion
+  origen: 6-fusion/creencia_lokono_2026-10-09.yaml
+  plan: 4-fuentes/sesiones/09_creencia_lokono_mineria.md
+  hechos_origen: 8
+  hechos_migrados: 8
+  huecos_de_migracion:
+  - 'capa_colonial: el origen no tiene el campo. Lo colonial (el plátano y el sesgo del cronista de lokono 07; «de oídas» de lokono 03) va en como_se_escribio. No se inventó.'
+  - 'sustrato e implicacion_simulacion: el origen no los trae; no se completan (sustrato sólo aplica a kalinago).'
+  - 'donde: omitido en lokono 02, 03, 05, 07 y 09, porque ni epoca ni contenido nombran región. Sí en 01 (de epoca), 04 (de epoca: Guayana británica), 08 (de contenido: Orinoco).'
+  - 'procedencia_extra[].independiente: null (nota «sin declarar en el origen») en lokono 02 (Brinton y Goeje), 03 (Goeje) y 09 (Goeje p. 7). El origen no declara independencia entre Gumilla, Brinton y Goeje. No cambia la regla C: ningún hecho sale reconstruido.'
+  - 'Brett 1868 (lokono 04 y 09): el origen lo cita sólo como capítulo o nota de Brinton, sin página ni lectura. No se añadió como procedencia_extra; queda en procedencia.pagina. CONFLICTO sin resolver: lo_que_queda dice que Brett 1868 está sin descargar, y 4-fuentes/sesiones/09 §6 dice que se descargó el 2026-10-09. Se copia tal cual.'
+  - 'Pané (lokono 03, 04 y 09): va en hermanas con obra y «cap.», porque el texto de Wikisource no tiene página. El origen dice «sin páginas: se cita el capítulo».'
+  - 'creencia-001: lokono 04 lo nombra en ilumina, pero es el id de la propuesta taino2_oviedo_venezuela.yaml, no del corpus caquetío. Se excluye de caquetio.'
+  - 'via_a: el veredicto de cada hecho es lectura de su propio texto (lokono 01 creencia-003 = corrobora; lokono 02 creencia-003 = matiza). El global de creencia-003 en auditoria_via_a sigue siendo «corrobora en parte». El texto completo va en via_a_nota.'
+  - 'ilumina: lokono 02 y 09 no lo traen en el origen; no se inventó. lokono 02 sí trae proyeccion.'
+  - segunda_hermana (texto del origen) se conserva como segunda_hermana_origen; filtro se conserva como campo extra en 03, 04 y 09.
+  - 'tema_duda: en 01, 03, 05, 08 y 09 el origen no decide el tema; se eligió el principal y se deja el otro.'
+  - 'temas_propuestos: ninguno. Todos los temas caben en el vocabulario cerrado del README §4.'
+  - otras_fuentes_lokonas (origen) pasa a procedencia_extra con el mismo texto de página e independiente null.
+hechos:
+- id: lokono-creencia-001
+  id_origen: lok-01
+  titulo: 'La consulta del piache aruaca: de noche, en una casita apartada'
+  esfera: creencia
+  tema: especialista
+  tema_duda: enfermedad-cura
+  contenido: El piache aruaca consulta encerrado en una casita apartada, «pero á vista de las Poblaciones», toda la noche, a gritos y con la maraca; pregunta al espíritu y, «quando se le antoja, muda de voz, y finge las respuestas»; lo que se quiere saber es si el enfermo vivirá.
+  cita: «Para estas consultas tienen sus casitas apartadas, pero á vista de las Poblaciones; y encerrados en ellas los Médicos, se pasan toda la noche gritando, y sin dexar dormir á nadie, así por los gritos, como por la Maráca […] grita y pregunta al demonio el Piache (así llaman á los tales Médicos) y quando se le antoja, muda de voz, y finge las respuestas del demonio»
+  grafia: Piache, Médico, Maráca (cursiva), Aruacas (cursiva)
+  pueblo: lokono
+  donde: Orinoco bajo y costa hacia Cayena
+  epoca: Orinoco bajo y costa hacia Cayena; Gumilla trata con ellos en 1731 y publica en 1741 (ed. 1791)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: gumilla-1791
+    pagina: t. I, impresa 155 (pdf 179; vista en imagen)
+  como_se_escribio: 'Jesuita hostil: «embustero», «demonio», «todo es una pura mentira». Describe la forma (dónde, cuándo, con qué) y descree del contenido. Gumilla no fue misionero de los aruacas; el capítulo X es una «visita» de naciones.'
+  caquetio:
+  - creencia-002
+  - creencia-003
+  - creencia-025
+  proyeccion:
+    capa: lectura
+    nota: 'Ninguna nueva: el encierro ya es caquetío atestiguado. Lo lokono sólo dice que la consulta en casa aparte es también de la hermana.'
+  ilumina: 'Oviedo t. II p. 298 (caquetío ATESTIGUADO, visto en imagen): el boratio, para responder, «se ençierran en un buhío solo», con «ahumadas que llaman tabacos», «un día, y dos y tres, é á veçes mas». La forma —casa aparte, encierro, el espíritu que responde— es la misma. Ese encierro no tiene hecho propio en el corpus (creencia-025 cita la p. 298 sólo por la pintura del espíritu).'
+  via_a:
+    creencia-002: contradice
+    creencia-003: corrobora
+  via_a_nota:
+    creencia-002: 'contradice el sueño: la consulta lokona es de vigilia'
+    creencia-003: corrobora «cierra la casa para el rito»
+  verificado_en_imagen: si
+  dominios:
+  - especialista
+  - consulta-nocturna
+  - vigilia
+- id: lokono-creencia-002
+  id_origen: lok-02
+  titulo: 'La maraca: un calabazo con piedrecillas, invento que Gumilla da a los aruacas'
+  esfera: creencia
+  tema: especialista
+  contenido: 'Gumilla cree a los aruacas «los inventores de la Maráca, que se ha introducido tambien en otras Naciones»: un calabazo con muchas piedrecillas dentro, que el piache suena en la consulta nocturna. El mito de Brett, reescrito por Brinton, la llama «the holy calabash containing white pebbles», cuyo sonido «summons the beings of the unseen world». Goeje da la voz A maraka para el «hochet de l''homme-médecin», compartida con el tupí y lenguas caribes.'
+  cita: 'Gumilla: «aun creo que son los inventores de la Maráca, que se ha introducido tambien en otras Naciones» · «la Maráca, que es un calabazo con mucho número de piedrecillas adentro». Brinton: «the maraka, the holy calabash containing white pebbles which they rattle during their exorcisms». Goeje p. 37: «hochet de l''homme-médecin h malaga, K, A maraka (Tupi maraka)»; «id. f šišira, G yeirü».'
+  grafia: Maráca (Gumilla) · maraka (Brinton, Goeje) · el kalinago de mujeres dice šišira, no maraka
+  pueblo: lokono
+  epoca: Gumilla 1741; Brett 1868; Goeje 1939 (léxico)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: gumilla-1791
+    pagina: t. I, impresa 155 (pdf 179; imagen)
+  procedencia_extra:
+  - obra: brinton-1871
+    pagina: 18 (imagen); toma el mito de Brett 1868, nota 49
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: goeje-1939
+    pagina: 7 y 37 (imagen)
+    independiente: null
+    nota: sin declarar en el origen
+  como_se_escribio: Gumilla, de oídas y con desprecio; Brett, misionero, y Brinton, de tercera mano
+  segunda_hermana_origen: No la hay. El «hochet» taíno de Goeje p. 7 (maiohaua) es su lectura del mayohavau de Pané, que Pané describe como un instrumento de madera, cóncavo y largo, para cantar (cap. XIV), no como un calabazo con piedras. El habla de mujeres kalinago nombra el sonajero del piache con otra palabra (šišira), y su cultura no cuenta (th.4 / D4).
+  caquetio:
+  - creencia-003
+  proyeccion:
+    capa: hipotetico
+    nota: 'Que el boratio suene un calabazo con piedrecillas en la consulta de noche es hipotético: una hermana (dos observadores del mismo pueblo). La voz `maraka` no entra al habla: es lokono y además tupí-caribe, un objeto areal (minar-fuente §3). Oviedo no menciona sonajero en el rito del boratio (pp. 298-299, leídas en imagen).'
+  via_a:
+    creencia-003: matiza
+  via_a_nota:
+    creencia-003: añade lo que 003 no tiene (la maraca), con una sola hermana
+  verificado_en_imagen: si
+  dominios:
+  - especialista
+  - instrumento-ritual
+- id: lokono-creencia-003
+  id_origen: lok-03
+  titulo: El espíritu propio del piache, con el que habla cada noche
+  esfera: creencia
+  tema: espiritu-tutelar
+  tema_duda: especialista
+  contenido: Un piache aruaca le dice al flamenco Eglin que «su demonio, con quien hablaba todas las noches, era muy bravo»; para hablar con «el demonio de los Blancos» manda a su familia a otra casa. Goeje da para el lokono seme-he 'dieu, génie tutélaire', y para el taíno, el habla de mujeres kalinago y el lokono la misma raíz para los «dieux ou esprits qui leur apparaissent dans l'état de transe».
+  cita: 'Gumilla p. 156: «un Aruaca le dixo á éste, que su demonio, con quien hablaba todas las noches, era muy bravo». p. 157: «mandó á la familia, que se mudasen á otra, porque tenia que hablar con el demonio de los Blancos». Goeje p. 38: «dieu, Dieu f šeme, dieu, génie tutélaire A seme-he».'
+  grafia: Piache, Aruaca (Gumilla) · seme-he, seme(-he) (Goeje)
+  pueblo: lokono
+  epoca: 'Gumilla 1741 (la anécdota es de oídas: «esto me contó el tal Flamenco muchas veces»)'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: gumilla-1791
+    pagina: t. I, impresas 156-157 (pdf 180-181; imagen)
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: 7-8 y 38 (imagen)
+    independiente: null
+    nota: sin declarar en el origen
+  como_se_escribio: 'Anécdota de burla: el piache huye del bulto y «confesó de plano […] el embuste»'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: cap. XV (Wikisource, sin página)
+    que: el buhuitihu toma la cohoba y dice que hablan con los cemíes, y que éstos les han dicho de dónde provino la enfermedad
+  segunda_hermana_origen: 'Taíno, Pané cap. XV: el buhuitihu toma la cohoba y dice «que hablan con los cemíes, y que éstos les han dicho de dónde provino la enfermedad». Es independiente, pero el espíritu auxiliar del curandero es un rasgo pan-americano.'
+  filtro: 'dos hermanas, rasgo pan-americano: baja de reconstruido a hipotético (nota 08 §3.3; regla 2)'
+  caquetio:
+  - creencia-002
+  - creencia-025
+  proyeccion:
+    capa: hipotetico
+    nota: Lo que Oviedo no dice y lo lokono añade —que cada boratio tiene SU espíritu, con carácter propio («bravo», «manso»), y habla con él cada noche— entraría como hipotético.
+  ilumina: 'Oviedo t. II p. 298 (atestiguado): «el diablo, al qual diçen y afirman los boratios que le ven y hablan muchas veçes» — es creencia-025. Lo atestiguado no cambia.'
+  via_a:
+    creencia-002: corrobora-en-parte
+  via_a_nota:
+    creencia-002: corrobora los «espíritus auxiliares»; no toca el sueño
+  verificado_en_imagen: si
+  dominios:
+  - especialista
+  - espiritu-auxiliar
+- id: lokono-creencia-004
+  id_origen: lok-04
+  titulo: La enfermedad es una flecha que tira un espíritu
+  esfera: creencia
+  tema: enfermedad-cura
+  contenido: En el mito de Brett que Brinton reescribe, el dolor y la enfermedad son las flechas invisibles que el yauhahu tira a los hombres, y los piaches lo invocan en sus conjuros. La frase lokona usa la palabra de todos los días para 'flecha', que ya está en la lista de Trinidad de 1598 (symare; semaara en 1800).
+  cita: 'Brinton p. 18: «They tell of a supreme spiritual being Yauwahu or Yauhahu. Pain and sickness are the invisible shafts he shoots at men, yauhahu simaira the arrows of Yauhahu, and he it is whom the priests invoke in their incantations.» Brinton p. 9: «sagittæ, symare, semaara».'
+  grafia: Yauwahu, Yauhahu, yauhahu simaira (Brinton) · symare (1598), semaara (1800)
+  pueblo: lokono
+  donde: Guayana británica
+  epoca: Brett, Guayana británica, 1840-1860; Pané, La Española, c. 1498
+  etiqueta: hipotetico
+  testigo: tercera-mano
+  procedencia:
+    obra: brinton-1871
+    pagina: 18 y 9 (imagen); el mito lo toma de Brett 1868, Part II chap. x (nota 49)
+  como_se_escribio: 'Tercera mano (Brett → Brinton). «Supreme spiritual being» es el marco del misionero: el propio índice de Brett dice «Yauhahu or Demons», en plural (nota 08 §3.2). Se proyecta la flecha, no el ser supremo.'
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: cap. XVI (Wikisource, sin página)
+    que: el behique chupa y escupe lo que traía en la boca, y dice «mira cómo te lo he sacado del cuerpo, donde tu cemí te lo había puesto»
+  segunda_hermana_origen: 'Taíno, Pané cap. XVI: el behique chupa, escupe lo que traía en la boca y dice «mira cómo te lo he sacado del cuerpo, donde tu cemí te lo había puesto». Independiente (c. 1498) y del mismo sentido: un espíritu mete en el cuerpo lo que enferma.'
+  filtro: 'dos hermanas independientes (lokono y taíno), pero la enfermedad metida en el cuerpo por un ser invisible es pan-americana: baja a hipotético. Sin el filtro de especificidad de la nota 08 §3.3 sería `reconstruido`: lo decide Miguel.'
+  caquetio:
+  - creencia-006
+  - creencia-007
+  - creencia-008b
+  proyeccion:
+    capa: hipotetico
+    nota: 'Hipotético: lo que el boratio saca del cuerpo lo puso un espíritu. No se proyecta ni el nombre (yauhahu) ni el ser supremo. Convive con creencia-008b (atestiguado: la muerte por conjuros de hechiceros, a los que obedecen los muertos).'
+  ilumina: 'Oviedo t. II p. 299 (caquetío ATESTIGUADO, imagen): el boratio chupa el lugar del dolor, escupe, y al cabo de cinco o seis días saca de la boca «la espina ó piedra ó palo» y dice «Cata aqui lo que te mataba y causó el mal que tenias». Oviedo no dice QUIÉN puso la espina: ése es el hueco que llenan las hermanas. La cura entera no tiene hecho en el corpus; la propuso ya 6-fusion/taino2_oviedo_venezuela.yaml (creencia-001, «y_lo_que_se_gana»).'
+  via_a:
+    creencia-006: contradice
+    creencia-007: no-toca
+  via_a_nota:
+    creencia-006: 'contradice: las dos hermanas dan otra causa (algo metido en el cuerpo), no el alma que se aleja'
+    creencia-007: 'no toca: para Brett TODA enfermedad es flecha; no separa males comunes y del espíritu'
+  verificado_en_imagen: si
+  dominios:
+  - enfermedad
+  - etiologia
+  - flecha-espiritu
+- id: lokono-creencia-005
+  id_origen: lok-05
+  titulo: 'La cura aruaca es de vigilia: «ni duermen, ni dexan dormir»'
+  esfera: creencia
+  tema: enfermedad-cura
+  tema_duda: sueno-vision
+  contenido: 'Al hablar de los remedios de cada nación, Gumilla vuelve sobre los aruacas: sus piaches no duermen ni dejan dormir al enfermo ni a nadie. La cura lokona es ruido y vela, no sueño.'
+  cita: «Llegando á la práctica de los remedios, ya vimos, que los Piaches Aruacas ni duermen, ni dexan dormir, ni al enfermo, ni á otros»
+  grafia: Piaches Aruacas
+  pueblo: lokono
+  epoca: Gumilla, 1741
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: gumilla-1791
+    pagina: t. I, impresa 210 (pdf 242; imagen); remite a la p. 155
+  como_se_escribio: Lista de «desatinados remedios» de varias naciones; lo aruaca va con nombre propio
+  caquetio:
+  - creencia-002
+  proyeccion:
+    capa: lectura
+    nota: 'Ninguna nueva: corrobora el atestiguado.'
+  ilumina: 'Oviedo t. II p. 299 (atestiguado): el boratio «dá tantas voçes é ahullidos ençima del enfermo que queda ronco», «dos horas y mas», y vuelve cinco o seis días. La cura caquetía atestiguada también es de voz y de vela.'
+  via_a:
+    creencia-002: contradice
+  via_a_nota:
+    creencia-002: 'contradice: la hermana cura en vela, y la cura caquetía atestiguada también; ninguna dice que se cure en el sueño'
+  verificado_en_imagen: si
+  dominios:
+  - vigilia
+  - cura
+- id: lokono-creencia-006
+  id_origen: lok-07
+  titulo: El aruaca va a la sepultura con sus armas y sin tierra encima; el achagua, sólo si es jefe
+  esfera: creencia
+  tema: muerte-entierro
+  contenido: 'La nación aruaca entierra a sus muertos con muchas ceremonias, la principal que vaya «con todas armas» y que no le caiga tierra encima: un cañizo a un palmo sobre el cuerpo, hojas anchas de plátano, y la tierra pisada encima. Los achaguas gentiles hacen lo mismo, pero sólo con capitanes y caciques, y sellan con barro para que las hormigas no inquieten al difunto.'
+  cita: 'p. 199: «La Nacion Aruaca entierra sus muertos con muchas ceremonias; y la principal es, que vaya» p. 200: «con todas armas á la sepultura, y que en ella no le cayga encima tierra alguna: para lo qual, sobre el difunto, cosa de un palmo en alto, ponen un cañizo fuerte, y sobre éste muchas hojas anchas de Plátano, y sobre todo pisan la tierra. Los Achaguas Gentiles usan el mismo rito; pero es únicamente con sus Capitanes y Caciques»'
+  grafia: Aruaca, Achaguas Gentiles, Plátano
+  pueblo: lokono
+  epoca: Gumilla, 1741
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: gumilla-1791
+    pagina: t. I, impresas 199-200 (pdf 229-230; imagen); cap. XIV
+  como_se_escribio: '«Epilogo» de ritos funerarios de varias naciones, sin decir si lo vio. El plátano es cultivo llegado con los europeos: el rito, tal como se describe, ya es colonial en sus materiales.'
+  hermanas:
+  - pueblo: achagua
+    obra: gumilla-1791
+    pagina: t. I, impresa 200 (imagen)
+    que: el mismo rito, con armas y sin tierra encima, sólo para capitanes y caciques; sellan con barro para que no entren las hormigas
+  segunda_hermana_origen: achagua, en el mismo pasaje y del mismo observador (minar-fuente §8), y para otro grupo (sólo los jefes)
+  caquetio:
+  - creencia-008c
+  - creencia-009
+  - creencia-010b
+  - creencia-010d
+  - creencia-027
+  proyeccion:
+    capa: lectura
+    nota: 'Ninguna nueva. Si se quisiera la fosa con cañizo para el muerto común caquetío sería hipotético (para el común sólo hay una hermana), y la arqueología de la costa da urnas secundarias, no fosas (creencia-027): no se recomienda.'
+  ilumina: 'creencia-010b (atestiguado): el díao tiene un funeral distinto del común, como el capitán achagua; y en los dos casos el cuerpo del jefe no queda bajo tierra (el díao, en hamaca dentro de su casa). Y creencia-008c (atestiguado): el muerto va con sus enseres.'
+  via_a:
+    creencia-009: no-toca
+    creencia-010d: no-toca
+  via_a_nota:
+    creencia-009: 'no toca: Gumilla no dice para qué van las armas'
+    creencia-010d: 'no toca: de los huesos aruacas, nada (negativa medida)'
+  verificado_en_imagen: si
+  dominios:
+  - entierro
+  - armas
+  - jefes
+- id: lokono-creencia-007
+  id_origen: lok-08
+  titulo: El médico aruaca se lleva los bienes del muerto
+  esfera: creencia
+  tema: especialista
+  tema_duda: muerte-entierro
+  contenido: 'Al morir el enfermo, el piache aruaca cobra con «todo lo mejor del difunto, ménos lo que la pobre viuda pudo esconder». Gumilla lo da como la excepción aruaca a la norma del Orinoco, que es enterrar o quemar con el muerto sus armas y alhajas. Choca con su propia p. 200 («con todas armas»): o las armas van a la fosa y lo demás al médico, o Gumilla junta dos noticias distintas.'
+  cita: 'p. 155: «lo que cobra por su trabajo, despues que muere el enfermo, y es todo lo mejor del difunto, ménos lo que la pobre viuda pudo esconder». p. 207: «Es uso casi universal entre aquellas Naciones de Orinoco y sus vertientes, ó enterrar con el difunto sus armas y alhajas, ó quemarlas; ménos entre los Aruacas, en donde (como dixe) el Médico carga con casi todo lo que era del difunto.»'
+  grafia: Médico, Aruacas
+  pueblo: lokono
+  donde: Orinoco y sus vertientes (norma general; los aruacas son la excepción)
+  epoca: Gumilla, 1741
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: gumilla-1791
+    pagina: t. I, impresas 155 y 207 (pdf 179 y 237; imagen)
+  como_se_escribio: Denuncia del misionero contra el piache («hurto manifiesto»)
+  caquetio:
+  - creencia-008c
+  proyeccion:
+    capa: lectura
+    nota: 'Ninguna: contraste, no hueco.'
+  ilumina: 'creencia-008c (atestiguado, Arcaya): al muerto se le enterraba «con todos sus enseres». La norma areal del Orinoco lo acompaña; la hermana lokona, según Gumilla, se aparta.'
+  via_a: {}
+  verificado_en_imagen: si
+  dominios:
+  - especialista
+  - bienes-del-muerto
+- id: lokono-creencia-008
+  id_origen: lok-09
+  titulo: 'Orehu da a Arawanili la maraca y el semeci: el arte del piache viene del agua'
+  esfera: creencia
+  tema: iniciacion-especialista
+  tema_duda: cosmos-origen
+  contenido: 'En el mito de Brett, la mujer Orehu, espíritu de las aguas, sale de las olas y le enseña a Arawanili el semeci —la hechicería que agrada y domina al yauhahu— y le da la maraka; Arawanili «did not die, but went up». Pané cuenta algo del mismo molde: Guabonito, una mujer que Guahayona había dejado en el mar, lo cura en una guanara («lugar apartado») y le da guanines y cibas, y él pasa a llamarse Biberoci Guahayona; Goeje p. 7 lee ese nombre como el del behique tras la cura («initiation?»).'
+  cita: 'Brinton p. 18: «the spirit of the waters, the woman Orehu, rose from the waves and addressed him. She taught him the mysteries of semeci, the sorcery which pleases and controls Yauhahu, and presented him with the maraka». Pané cap. VI: «Llamábase esta mujer Guabonito, y Guahayona cambió de nombre, llamándose en lo sucesivo Biberoci Guahayona».'
+  grafia: Orehu, Arawanili, semeci, maraka, watra-mamma (Brinton) · Guabonito, Biberoci Guahayona, guanara (Pané, ed. Wikisource)
+  pueblo: lokono
+  epoca: Brett 1868; Pané c. 1498
+  etiqueta: hipotetico
+  testigo: tercera-mano
+  procedencia:
+    obra: brinton-1871
+    pagina: 18 (imagen), nota 49 → Brett 1868
+  procedencia_extra:
+  - obra: goeje-1939
+    pagina: p. 7 (imagen)
+    independiente: null
+    nota: sin declarar en el origen
+  como_se_escribio: El lokono, de tercera mano y de un misionero; las identificaciones Orehu = Atabeira y Yauhahu = Yocauna son de Brinton
+  hermanas:
+  - pueblo: taino
+    obra: pane-c1498
+    pagina: cap. VI (Wikisource, sin página)
+    que: Guabonito, mujer que Guahayona deja en el mar, lo cura en una guanara y le da guanines y cibas; el molde coincide, el contenido no
+  segunda_hermana_origen: Taíno, Pané cap. VI (pane-c1498; texto de Wikisource, sin página). El molde coincide (mujer del agua, héroe, objetos sagrados, cambio de condición); el contenido no (guanines y cibas, no maraca ni arte de curar).
+  filtro: 'la coincidencia es de molde, no de contenido, y el lado lokono es de tercera mano: en duda, degradar'
+  caquetio: []
+  proyeccion:
+    capa: hipotetico
+    nota: 'Ninguna por ahora: comparanda. Complementa cm24-c-l01 (6-fusion/cosmovision_marina_2026-09-24.yaml), no lo sustituye, y no reabre cc.10: no hace sagrado el mar caquetío ni da un dueño del mar. Si Brett se lee en primera mano (B4 de la nota 08) y la minería taína confirma la lectura iniciática de Guabonito, es el candidato mejor puesto para un origen reconstruido del arte del boratio.'
+  via_a: {}
+  verificado_en_imagen: si
+  dominios:
+  - mito
+  - iniciacion
+  - agua
+trasladado_sin_cambios:
+- para_el_lexicon
+- lo_que_no_se_proyecta
+- areal_no_cuenta
+- auditoria_via_a
+- lo_que_queda
+- meta_origen
+
+# ══════════════════════════════════════════════════════════════════
+# 2. PARA EL LEXICÓN — no son hechos de creencia; se dejan para quien
+#    fusione el lexicón (fusionar-propuesta). Nada se toca aquí.
+# ══════════════════════════════════════════════════════════════════
+para_el_lexicon:
+
+  - id: lok-L1
+    tema: 'luna: el puente kati ~ kathi, verificado'
+    caquetio: 'kati «luna», caquetío-atestiguado (Zavala Reyes 2015, glosario #71: «CATI: Luna»; clave `kati` de curiana_lexicon.py)'
+    lokono:
+      - {forma: cattehel, fecha: '1598 (Trinidad; lista de De Laet)', obra: brinton-1871, pagina: '9 (imagen)'}
+      - {forma: katsi, fecha: '1800 (moravos)', obra: brinton-1871, pagina: '9 (imagen)'}
+      - {forma: kathi, fecha: '—', obra: oliver-1989-apendice-a, pagina: 'Tabla A-2, fila 73 (vía lexicon_a2.py; no se volvió a ver)'}
+      - {forma: kači, fecha: '1939 (compilación)', obra: goeje-1939, pagina: '54 (imagen)'}
+      - {forma: 'kati u-bule «nouvelle lune»', fecha: '1939', obra: goeje-1939, pagina: '53 (imagen)'}
+    otra_hermana: 'habla de mujeres kalinago: kati (Goeje p. 54, imagen: «lune kati, 2 f kati»)'
+    sol: >-
+      No casa: lokono adaly (1598) / hadalli (1800), Brinton p. 9; el
+      caquetío kasi sólo lo comparte el kalinago de mujeres (kaši, Goeje p.
+      54). Coincide con lo que la nota 08 §1.3 ya decía.
+    veredicto: >-
+      Se sostiene: cinco grafías lokonas de 1598 a 1939, la más antigua de
+      época de contacto. `kati` sigue caquetío-atestiguado (la atestiguada
+      manda); lo lokono no cambia nada. La nota de `kati` («LK katsi […]
+      Brinton 1871») queda comprobada contra la imagen.
+    lo_que_no_hay: >-
+      Ningún mito, eclipse ni rito lunar LOKONO en el repo (Brinton: 0
+      «moon»; Goeje: sólo léxico; Gumilla: nada de los aruacas). Dos pistas
+      areales que no son hermanas: los loláca y atabáca de Gumilla t. II p.
+      274 («¿No vés, como se nos muere la Luna?», y esconden los tizones
+      porque «si la Luna muere, todo el fuego muere con ella»; imagen) y el
+      kalinago de HOMBRES de Goeje p. 80 («éclipse de lune h li-huesekebu-li
+      nonum», de uekebu 'mourir'; imagen). El mito lokono (la luna Kathi y el
+      eclipse como muerte o sueño) está en Rybka 2018 y Brett, fuera del
+      repo.
+
+  - id: lok-L2
+    tema: 'espíritu que se aparece en trance: la raíz seme-'
+    formas:
+      - {lengua: taíno, forma: semi, obra: goeje-1939, pagina: '7 (imagen)'}
+      - {lengua: 'kalinago, habla de mujeres', forma: šeme, obra: goeje-1939, pagina: '7 y 38 (imagen)'}
+      - {lengua: lokono, forma: 'seme(-he) / seme-he «dieu, génie tutélaire»', obra: goeje-1939, pagina: '7 y 38 (imagen)'}
+      - {lengua: lokono, forma: 'semeti «sorcerers, diviners, priests»', obra: brinton-1871, pagina: '13 (imagen)'}
+      - {lengua: lokono, forma: 'semeci «the sorcery»', obra: brinton-1871, pagina: '18 (imagen)'}
+    lectura: >-
+      En lokono la raíz nombra al espíritu (seme-he) y, derivada, al piache y
+      su arte (semeti, semeci; Roth escribe semi-chichi, fuera del repo).
+      Goeje alinea taíno, kalinago de mujeres y lokono en la misma entrada
+      («2 am 10»), y en la misma pone «doux I A seme»: homófono a vigilar.
+    capa_si_se_fusiona: >-
+      La forma de 'espíritu' tendría dos hermanas (lokono + taíno, más el
+      habla de mujeres): `reconstruido` por N1. Es un hueco: no hay voz
+      caquetía atestiguada para 'espíritu'. Pero el piache sigue siendo
+      `boratio` (atestiguado manda) y `cemi` taíno ya circula como voz de la
+      esfera (con `semi` propuesta en SIN_FORMA_DE_LA_ESFERA): decidir si una
+      reconstrucción *seme choca con ella es de quien fusione.
+    curacion: >-
+      La clave `semett` de curiana_lexicon.py cita a Brinton, que escribe
+      `semeti` (p. 13, imagen). La clave `seme` (Perea p. 62, «mágico, mago»)
+      es otra atestación lokona de la misma raíz, de 1802; no se volvió a ver.
+
+  - id: lok-L3
+    tema: 'remedio, hechizo y tinte: una sola palabra'
+    formas:
+      - {lengua: lokono, forma: ibina, obra: goeje-1939, pagina: '38 (imagen)'}
+      - {lengua: 'kalinago, habla de mujeres', forma: ibien, obra: goeje-1939, pagina: '38 (imagen)'}
+    cita: '«sortilège, remède, teinture ebene, f ibien, A ibina» (margen «1 am 137»)'
+    lectura: >-
+      Dos hermanas con la misma forma y la misma glosa triple. No se comprobó
+      si el lexicón tiene una voz caquetía para 'remedio'; queda como pista
+      léxica, no como hecho de creencia.
+
+  - id: lok-L4
+    tema: 'el sonajero del piache: las hermanas no coinciden'
+    formas:
+      - {lengua: lokono, forma: maraka, obra: goeje-1939, pagina: '7 y 37 (imagen)'}
+      - {lengua: 'kalinago, habla de mujeres', forma: šišira, obra: goeje-1939, pagina: '37 (imagen)'}
+    lectura: >-
+      maraka es tupí-caribe-lokono (areal); el habla de mujeres dice šišira,
+      que se parece al `isira` wayuu del lexicón (clave `isira`, fuente
+      wayunaiki). No hay dos hermanas con la misma forma: sin reconstrucción.
+
+  - id: lok-L5
+    tema: 'curación: dos claves lokonas que no dicen lo que Brinton dice'
+    hallazgo: >-
+      (1) `akkicyaha` («espíritu del ser vivo», cita Brinton 1871): Brinton
+      p. 12 escribe «Ar. akkuyaha, the spirit of a living animal» (imagen a
+      600 ppp). (2) La clave `akkuyaha` de curiana_lexicon.py guarda otra
+      cosa: «poder», fuente wayunaiki, con nota «Way. apülain». Parece una
+      colisión de claves. Se anota; no se toca (regla 5).
+
+# ══════════════════════════════════════════════════════════════════
+# 3. LO QUE NO SE PROYECTA (y por qué)
+# ══════════════════════════════════════════════════════════════════
+lo_que_no_se_proyecta:
+  - que: 'un ser supremo (Yauhahu como «supreme spiritual being»)'
+    por_que: >-
+      Es el marco de Brett/Brinton (p. 18). Aiomun Kondi y Kururumanni dan 0
+      en Brinton y en Goeje (sondas en la nota de sesión). La clave `Adajali`
+      del lexicón (lokono 'Dios/ser supremo', Pet 1987) es léxico misional:
+      su propia nota da «Adajali boko = Biblia».
+  - que: 'el origen en una isla del norte (Kairi = Trinidad)'
+    por_que: >-
+      Brinton p. 9 y p. 18. Es historia lokona, y Raleigh (1595) la
+      confirma; el caquetío no tiene mito de origen atestiguado y su norte es
+      el mar de las ABC, no Trinidad. Nada que proyectar.
+  - que: 'la muerte como «paso» (haikahu de haikan)'
+    por_que: >-
+      Brinton p. 8 (imagen): «from haikan to pass by, comes haikahu death,
+      the passing away». Es etimología de Brinton sobre léxico moravo, no
+      una creencia descrita.
+
+# ══════════════════════════════════════════════════════════════════
+# 4. AREAL — de la misma obra, sin nombre de hermana: no cuenta
+# ══════════════════════════════════════════════════════════════════
+areal_no_cuenta:
+  - id: lok-06   # areal: va aquí y no en `hechos` porque no es lokono
+    titulo: 'El ayuno de toda la parentela: general del Orinoco, no aruaca'
+    contenido: >-
+      La primera receta del piache, en «todas quantas Naciones» trató
+      Gumilla, es imponer ayuno al enfermo y a toda la parentela: nadie de la
+      casa come caliente, guisado ni pimentón. No es un dato aruaca: es la
+      respuesta a G2 de la nota 08.
+    cita: >-
+      p. 208: «(y aquí hablo de todas quantas Naciones he tratado)». p. 210:
+      «la primera receta es intimar un ayuno general al enfermo y á toda la
+      parentela: los mas de ellos mandan, que ninguno de la casa coma cosa
+      caliente ni guisada, ni pimentón; y prohibe lo que ellos mas desean
+      comer»
+    grafia: 'Piache, Médico'
+    pueblo: 'areal (naciones del Orinoco y el Meta; sin nombre)'
+    fuente: gumilla-1791
+    pagina: 't. I, impresas 208 y 210 (pdf 238 y 242; imagen)'
+    epoca: 'Gumilla, 1741'
+    como_se_escribio: 'Generalización del misionero sobre las naciones que trató'
+    capa: lectura
+    ilumina: >-
+      creencia-023 (atestiguado, Oviedo t. II p. 299): el boratio manda
+      ayunar «á todos los que hay en casa» con «maçamorra rala de mahiz que
+      ellos llaman caça». Pané cap. XV da otra variante taína: ayunan el
+      médico y el enfermo, no la casa.
+    proyeccion: 'Ninguna: es areal y no cuenta como hermana.'
+    via_a: {}
+
+  - dato: 'los guaraúnos (warao) limpian el esqueleto en el río y guardan los huesos en un canasto colgado del techo, junto a los de sus antepasados'
+    fuente: gumilla-1791
+    pagina: 't. I, impresa 199 (imagen)'
+    toca: 'creencia-010d (segundo tratamiento de los huesos), pero el warao no es arahuaco'
+  - dato: 'los caribes, al cabo del año, sacan los huesos del capitán y los cuelgan en una caja «para perpetua memoria»'
+    fuente: gumilla-1791
+    pagina: 't. I, impresa 201 (pdf 231; imagen)'
+    toca: 'creencia-010d; caribe, no hermana'
+  - dato: '«en algunas Naciones, que reconocen que las almas no mueren, piensan todos, que andan vagueando no lejos de sus sepulturas»'
+    fuente: gumilla-1791
+    pagina: 't. I, impresas 210-211 (imagen la 210)'
+    toca: 'creencia-008b (atestiguado: el alma ronda la sepultura), sin nombre de pueblo'
+  - dato: 'la viuda arranca las sementeras del difunto «para arrancar de su memoria al difunto» (casi universal en el Orinoco)'
+    fuente: gumilla-1791
+    pagina: 't. I, impresa 207 (imagen)'
+    toca: 'nada de la Vía A'
+  - dato: 'en su arenga de bienvenida (el «Mirray»), el cacique cuenta que «habia soñado» que llovía sobre sus sementeras marchitas, y que «todo aquello eran avisos» de la llegada del Padre; cada nación remata con sus palabras, y la achagua con «Taquetá, nude yaquetá»'
+    fuente: gumilla-1791
+    pagina: 't. I, impresa 311 (pdf 343; imagen)'
+    toca: 'creencia-005 («lo soñado puede traer un aviso»): el sueño-aviso es de la arenga de todas las naciones, no sólo aruaca'
+
+# ══════════════════════════════════════════════════════════════════
+# 5. AUDITORÍA DE LA VÍA A — un veredicto por id (el detalle, en la nota)
+# ══════════════════════════════════════════════════════════════════
+auditoria_via_a:
+  creencia-002:
+    veredicto: contradice
+    en_corto: >-
+      La hermana cura despierta (lok-01, lok-05) y la cura caquetía
+      atestiguada también (Oviedo pp. 298-299). Corrobora sólo el espíritu
+      auxiliar (lok-03). Ninguna fuente arahuaca del repo pone la cura en el
+      sueño.
+  creencia-003:
+    veredicto: corrobora en parte
+    en_corto: 'la casa cerrada y el cobro (lok-01, lok-08); añade la maraca (lok-02); no toca tabaco, licor, urari ni serpiente'
+  creencia-005:
+    veredicto: no toca
+    en_corto: 'cero sueño lokono en las tres obras; Brinton da akkuyaha «the spirit of a living animal» (p. 12), sin teoría del sueño'
+  creencia-006:
+    veredicto: contradice
+    en_corto: 'lokono (Brett vía Brinton p. 18) y taíno (Pané cap. XVI) dan intrusión, no alma perdida (lok-04); y Oviedo p. 299 tiene un gesto sobre el alma sin leer'
+  creencia-007:
+    veredicto: no toca
+    en_corto: 'Brett hace de toda enfermedad una flecha; Goeje da una sola palabra para remedio y hechizo (lok-L3)'
+  creencia-008:
+    veredicto: no toca
+    en_corto: 'nada lokono sobre los muertos que rondan o protegen'
+  creencia-009:
+    veredicto: no toca
+    en_corto: 'las armas en la fosa (lok-07) sin el porqué; el más allá lokono del repo es sólo waka (creencia-028)'
+  creencia-010d:
+    veredicto: no toca
+    en_corto: 'negativa medida: Gumilla no dice nada de los huesos aruacas; el segundo tratamiento que da es warao y caribe'
+  creencia-011:
+    veredicto: no toca
+    en_corto: 'sin segundo entierro lokono no hay exhumadora; el «ni duermen» es del piache en la cura, no del que toca los huesos'
+  creencia-012:
+    veredicto: no toca
+    en_corto: 'nada lokono une huesos, nubes y lluvia'
+
+# ══════════════════════════════════════════════════════════════════
+# 6. LO QUE QUEDA
+# ══════════════════════════════════════════════════════════════════
+lo_que_queda:
+  - 'Roth 1915 (caps. V, VI, XII, XIII, XVII, XX; §304 Navarrete) y Brett 1868 (Parte II; «The Arawaks or Lokono»): localizados en la nota 08 §3.2, sin descargar; esperan el «adelante» de Miguel. Son los que pueden subir lok-04 y lok-09 o tumbarlos.'
+  - 'Rybka 2018 (web, CC BY-NC): el mito lunar lokono; es lo único que haría de kati ~ kathi un puente de creencia y no sólo de léxico.'
+  - 'Navarrete (s. XVI) y Goeje 1942 (la iniciación del piache lokono): sin copia localizada.'
+  - 'El gesto del boratio sobre el alma (Oviedo t. II p. 299, «diçe que le allega el alma á un cabo») tiene dos lecturas —devolver el alma o juntar el mal para soplarlo— y decide si creencia-006 tiene apoyo caquetío. No es lokono: queda para Miguel.'
+  - 'Gumilla t. II no se barrió para creencia más allá del eclipse (p. 274) y de su única mención aruaca (pdf 63, la costa hacia Cayena).'
+
+meta_origen:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero lokono (Claude Opus 5.5)'
+  rama: vault/creencia-mineria-lokono
+  plan: 4-fuentes/sesiones/08_creencia_lokono_que-minar.md
+  nota_de_sesion: 4-fuentes/sesiones/09_creencia_lokono_mineria.md
+  pregunta: >-
+    ¿Qué dicen de la creencia lokona las obras que ya están en el repo
+    (Gumilla t. I, Brinton 1871, Goeje 1939), qué autoriza eso para el
+    caquetío con la regla estricta de Miguel, y qué le hace a la Vía A wayuu?
+  campos: >-
+    capa = la capa que tendría la PROYECCIÓN al caquetío (no la del dato
+    lokono en su obra). fuente + pagina = la obra lokona (clave de
+    4-fuentes/bibliografia.yaml) y su página impresa vista en imagen.
+    segunda_hermana = la otra tradición, si la hay. proyeccion = qué pasaría
+    al mundo caquetío y qué no. via_a = los ids de creencia.yaml que toca, con
+    su veredicto corto (el largo, en §auditoria_via_a). epoca y
+    como_se_escribio = la regla 3.
+  pueblo_y_epoca: >-
+    Lo lokono del repo es de TRES épocas, ninguna precontacto: la lista de
+    Trinidad de 1598 (sólo léxico, Brinton p. 9), los «Aruacas» de Gumilla
+    (Orinoco bajo y costa hacia Cayena, 1731-1741, jesuita) y el mito de Brett
+    1868 (Pomeroon, misionero anglicano) que Brinton reescribe en 1871. Goeje
+    1939 es un compilador: su columna A remite a su propio Arawak de 1928.
+  respuesta_corta: >-
+    El repo tiene poco de creencia lokona y casi todo de segunda o tercera
+    mano, pero lo que tiene apunta a otro sitio que la Vía A. El piache aruaca
+    de Gumilla cura DESPIERTO —consulta toda la noche en una casita apartada,
+    con la maraca, y «ni duermen, ni dexan dormir»— y tiene un espíritu
+    propio con el que habla cada noche; la enfermedad, en el mito de Brett,
+    es una flecha invisible del yauhahu, y el taíno de Pané dice lo mismo con
+    otras palabras (el cemí puso en el cuerpo lo que el behique saca). Eso
+    choca con la teoría wayuu del sueño (002) y del alma que se aleja (006), y
+    casa con lo que Oviedo ya atestigua del boratio: encierro en un buhío solo
+    (p. 298) y cura a gritos, chupando y sacando una espina (p. 299). Del
+    segundo entierro, los huesos y la lluvia (010d, 011, 012), lo lokono del
+    repo no dice nada. El puente kati ~ kathi se sostiene en cinco grafías
+    lokonas (1598-1939), pero no hay mito lunar lokono en el repo.
