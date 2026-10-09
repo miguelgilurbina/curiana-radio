@@ -17,7 +17,7 @@ descripcion: "Qué dicen las crónicas de la religión caquetía, y dos vías pa
 > **Vía A (reconstrucción wayuu)** · [[paz-reverol-2017-2018]] · [[perrin-1992-1995]]
 > **Vía B (retro-abstracción)** · [[maria-lionza-culto]] — *solo estética y patrones geográficos*
 > **Lo atestiguado** · [[arcaya-1920]] · [[oviedo-y-valdes-1851]] · [[jahn-1927]] · [[zavala-reyes-2015]]
-> **Sin minar** · [[gilij-1780-1783]] (sin capa de texto)
+> **Minado para creencia** (2026-10-09, t. III libro I; t. II por descargar) · [[gilij-1780-1783]] — ver [[09_creencia_achagua_mineria]]
 
 ---
 

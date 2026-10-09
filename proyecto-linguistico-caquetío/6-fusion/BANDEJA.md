@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-05**.
+<!--GENERADO--> Generado el **2026-10-09**.
 
-**8056 ítems propuestos** en 159 propuestas, más **60 issue(s)/comentario(s) redactados sin publicar**.
+**8114 ítems propuestos** en 163 propuestas, más **61 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -43,6 +43,10 @@ editar_a_mano: no
 | `computo_d11_2026-08-31.yaml` | ? | 4 |  |
 | `coro_colonial_castellanos_brito_gonzalez_2026-09-22.yaml` | ? | 7 |  |
 | `cosmovision_marina_2026-09-24.yaml` | ? | 14 |  |
+| `creencia_achagua_2026-10-09.yaml` | rivero-1883 · neira-ribero-1762 · gilij-1780-1783 | 27 |  |
+| `creencia_kalinago_2026-10-09.yaml` | ? | 9 |  |
+| `creencia_lokono_2026-10-09.yaml` | ? | 8 |  |
+| `creencia_taino_2026-10-09.yaml` | ? | 14 |  |
 | `cronicas_contacto_costa_occidental_2026-09-22.yaml` | ? | 20 |  |
 | `cruce_achagua_caquetio_2026-09-13.yaml` | neira-ribero-1762 | 188 |  |
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
@@ -255,6 +259,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `gumilla-cacatia-y-achagua-2026-09-23.md` | Gumilla 1791: los «Cacatia» de los Llanos y lo que aporta al achagua |
 | `habla-llanos-coro-perez-de-tolosa-2026-09-23.md` | «Aunque algo difieren en la habla á los de Coro» — ¿a dónde va este testigo? |
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
+| `lexicon-maboya-bejique-sin-respaldo-2026-10-09.md` | Lexicón: `maboya` «equivalente al buio» y `bejique` «cognado de piache» no tienen respaldo |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
