@@ -9,11 +9,11 @@ paginas: "460 + 492"
 capa_texto: si
 estado_minado: parcial
 prioridad: alta
-cobertura: "transmisión del saber, vol. 4 (sesión 4) + la costa y su red de intercambio, vol. 1 (2026-09-21, campaña del taíno T5) + la etnohistoria del contacto en los dos volúmenes (2026-09-22, campaña del taíno 2, T7) + la COSTA OCCIDENTAL y las dos Curianas, vol. 1 libro VIII releído y los dos volúmenes barridos (2026-09-23, minería 3, M2)"
+cobertura: "transmisión del saber, vol. 4 (sesión 4) + la costa y su red de intercambio, vol. 1 (2026-09-21, campaña del taíno T5) + la etnohistoria del contacto en los dos volúmenes (2026-09-22, campaña del taíno 2, T7) + la COSTA OCCIDENTAL y las dos Curianas, vol. 1 libro VIII releído y los dos volúmenes barridos (2026-09-23, minería 3, M2) + 2026-10-09 (minería 2 de hermanas, taíno): vol. 1 pp. 243-244 (Anacaona) y vol. 4 Déc. VII cap. I, pp. 73-81 (los lucayos)"
 desfase_pagina: "impresa = pdf − 64 en el vol. 1; impresa = pdf − 8 en el vol. 4 (medido 2026-09-22 sobre los folios que el escaneo conserva)"
 sostiene: {hechos_corpus: 1, entradas_lexicon: 0}
-verificado: 2026-09-23
-minado: 2026-09-23
+verificado: 2026-10-09
+minado: 2026-10-09
 aliases: ["Anglería 1892", "Pedro Mártir", "Décadas"]
 ---
 
@@ -305,3 +305,22 @@ vol. 1, Déc. I lib. IX (pp. 339-360).
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` §cotejo_pane. Es COMPARANDA, no dato
 caquetío.
+
+## Minería 2 — esferas (2026-10-09)
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): gobierno y parentesco de La Española y las
+Lucayas.
+
+**Qué dio** (propuesta: `6-fusion/hermanas_taino_2026-10-09.yaml`):
+
+| Dato | Página | Tema | Etiqueta |
+|---|---|---|---|
+| Anacaona «no tenía en el gobierno del reino de su hermano menos importancia y consejo que él mismo»; 32 régulos en la corte de Beuchío | vol. 1, 243-244 (imagen) | jefatura | atestiguado (taino-geografia_politica-001, 011) |
+| Lucayas: la menarquia se celebra «como si las fueran á casar»; el vestido marca el estado | vol. 4, 79 (imagen) | infancia-nombre | atestiguado (taino-parentesco-009) |
+| «mando que te tires»; el rey reparte el trabajo y la cosecha «según la familia de cada uno»; «teníase por ley el arbitrio del cacique» | vol. 4, 79-80 (imagen) | justicia-norma, tributo-trabajo | atestiguado (taino-geografia_politica-004, 005) |
+
+**Cómo se escribió:** la Déc. VII es de oídas, sobre lucayos ya deportados a
+La Española, y en clave de edad de oro. Los tributos de la p. 243 los había
+impuesto el Adelantado: la reunión es colonial.
+
+**Deuda:** Déc. III-VI (vol. 2-3 de la ed. 1892) no están en el repo.

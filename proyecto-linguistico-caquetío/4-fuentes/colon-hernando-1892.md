@@ -12,12 +12,12 @@ local:
   - "fuentes_caquetios/Colon_Hernando_1892_Historia_del_Almirante_vol2.txt"
 paginas: "vol. 1: 320 pp. de PDF; impresa = pdf − 12 (medido al descargar, sin leer, en pdf 40, 60, 80, 200, 260 y 300). vol. 2: la obra completa son 2 vols."
 capa_texto: si
-estado_minado: parcial
-cobertura: "el tercer viaje (caps. LXIX-LXXIII) y el cuarto (Cariai, Veragua), preguntados por el guanín y por la lengua — 2026-09-22, campaña del taíno 2, T7 + barrido por la COSTA OCCIDENTAL y lectura del cap. LXXXIV (Hojeda en La Española, 1499) — 2026-09-23, minería 3, M2"
+estado_minado: minado-parcial
+cobertura: "el tercer viaje (caps. LXIX-LXXIII) y el cuarto (Cariai, Veragua), preguntados por el guanín y por la lengua — 2026-09-22, campaña del taíno 2, T7 + barrido por la COSTA OCCIDENTAL y lectura del cap. LXXXIV (Hojeda en La Española, 1499) — 2026-09-23, minería 3, M2 + vol. 1: cap. LXI (impresas 275-281) y la Escritura de Pané caps. I-XVII (281-302) enteros, más los caps. XXIII y XXXI — 2026-10-09, minería 2 de hermanas (taíno)"
 prioridad: media
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-23
-minado: 2026-09-23
+verificado: 2026-10-09
+minado: 2026-10-09
 descargado: 2026-09-22
 origen_digital: "archive.org/details/historiadelalmir02col — texto OCR (historiadelalmir02col_djvu.txt), 448.515 bytes, sha256 252028b564a6fd3c241db1b1cc4daf7a3ab2e8e514bcd17cd2964750dfbbd5eb. Dominio público (ed. 1892; autor † 1539). Descargado el 2026-09-22 con la autorización de Miguel de esta campaña. Vol. 1: archive.org/details/historiadelalmir01col — PDF 12.936.024 B (sha256 66ca2b6ad79343595d3bfd58f7c3541871de4eaa1b87324dc1a158e29a676bb8) y _djvu.txt 382.349 B; descargado el 2026-10-09 con la autorización de Miguel"
 aliases: ["Hernando Colón", "Fernando Colón", "Historia del Almirante", "Colón 1892"]
@@ -212,3 +212,46 @@ en el repo. Ese vol. 1 (B3) es también la candidata a primaria del cacique
 
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§cotejo_pane y §rouse_a_primarias).
+
+## Minería 2 — esferas (2026-10-09)
+
+**Qué se preguntó** (minería 2 de las hermanas, [[10_hermanas_taino_esferas]]): las cinco esferas
+de lo taíno, y lo que [[09_creencia_taino_mineria]] dejó para el vol. 1 —la
+primaria de la desecación del cacique (r3, D-t3) y si el vol. 1 trae los caps.
+XI-XVII de Pané—. Se leyó el cap. LXI entero (impresas 275-281), la Escritura
+caps. I-XVII (281-302) y, por patrón, los caps. XXIII y XXXI.
+
+**Desfase comprobado:** impresa = pdf − 12 en las cabeceras de las pp. 279,
+280 y 285 (imagen).
+
+**Qué dio** (propuesta: `6-fusion/hermanas_taino_2026-10-09.yaml`):
+
+| Dato | Página | Tema | Etiqueta |
+|---|---|---|---|
+| «Abren al Cacique y le secan al fuego, para que se conserve entero» — **la primaria de la desecación** que Rouse resume | p. 279 (imagen) | muerte-entierro | atestiguado (taino-creencia-101) |
+| Cinco destinos del muerto: la cabeza, la cueva con agua y pan, la casa quemada con el muerto, el cacique ahogado antes de morir, la hamaca con agua y pan | pp. 279-280 (imagen) | muerte-entierro | atestiguado (taino-creencia-102) |
+| La estatua de madera lleva el nombre de un antepasado y **no lleva huesos**; los cemíes se roban entre pueblos; el que habla por una cerbatana | pp. 277-279 (imagen) | espiritu-tutelar, lugar-sagrado | atestiguado (taino-creencia-103, 104) |
+| Caonabó: los muertos van «á cierto valle, donde cada cacique principal cree que está en su tierra» | p. 280 (imagen) | alma | atestiguado (taino-creencia-105) |
+| El cacique decide si al enfermo grave se lo ahoga | p. 280 (imagen) | justicia-norma | atestiguado (taino-geografia_politica-004) |
+| Tres piedras: frutos, parto, agua y sol | p. 279 (imagen) | espiritu-tutelar | atestiguado (taino-creencia-108) |
+| El señor en andas, «aunque era muy mozo»; dos viejos hablan «con él y por él» | pp. 135-136 (imagen) | jefatura | atestiguado (taino-geografia_politica-003) |
+| Pintura del cuerpo en Guanahaní; canoa de 45; cicatrices de los que «venían á cautivarlos» | pp. 105-106 (imagen) | escritura-marca, navegacion, guerra | atestiguado |
+| Pané V: Ahiti y Bouhi; VI: orejas horadadas de niños | pp. 285, 287 (imagen) | territorio, escritura-marca | atestiguado |
+
+**Lo que corrige:**
+
+- **El vol. 1 SÍ trae los caps. I-XVII de Pané.** La sección «Minado para
+  creencia» de esta ficha decía que no estaban «en este volumen»: hablaba del
+  vol. 2. Desde hoy Colón 1892 es la tercera cadena de P1, P3 y P5.
+- **Las «cabezas en cestas» de Rouse no son taínas.** Los «cestos de huesos de
+  muerto» con «cabezas de hombres colgadas» son de las casas caribes de
+  Guadalupe, noviembre de 1493 (p. 209, imagen).
+- **Dos malas traducciones frente a Ulloa:** «llaman á la persona que está
+  viva, Goeiz» (p. 294) por «lo spirito», y «aprendiendo de los muchachos á
+  tocarle» (p. 296) por «da fanciulli». Para Pané manda [[ulloa-1571]].
+
+**Qué no dio** (sondas sobre el `.txt` del vol. 1): `nitay` 0, `nabor` 0,
+`behic` 0, `areit`/`ayto` 0, `conuco` 0 (`Conichis` 1), `yuca` 0, `herenc` 0.
+El vol. 1 no habla de la jerarquía ni del matrimonio taíno.
+
+**Deuda:** el resto del primer y segundo viaje sólo se barrió por patrón.
