@@ -9,11 +9,12 @@ local: "fuentes_caquetios/Pane_c1498_Relacion_Antiguedades_Indios_wikisource.txt
 paginas: "29 capítulos"
 capa_texto: si
 estado_minado: minado
-cobertura: "las 29 subpáginas, leídas enteras (2026-09-21)"
+minado: 2026-10-09
+cobertura: "las 29 subpáginas, leídas enteras (2026-09-21) + 2026-10-09: cotejada con Ulloa 1571 y Colón 1892 vol. 1 en los caps. V-XVII y XXV (minería 2 de hermanas)"
 prioridad: alta
 tareas: [D11-fase-2]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-21
+verificado: 2026-10-09
 descargado: 2026-09-12
 origen_digital: "es.wikisource.org; la OBRA es de dominio público pero la RETRADUCCIÓN no consta y Wikisource avisa que puede no serlo (verificado 2026-09-21). Marcado wiki retirado por script el 2026-09-12"
 aliases: ["Pané", "Ramón Pané", "Pané 1498", "Relación de Pané", "Antigüedades de los indios"]
@@ -226,3 +227,26 @@ lleva el nombre del muerto.
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§cotejo_pane). Es COMPARANDA, no dato
 caquetío, y ninguna forma pasa al lexicón.
+
+## Minería 2 — esferas (2026-10-09): el cotejo con Ulloa
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): ¿qué lecturas de esta retraducción no sostiene
+el testigo más antiguo, el italiano de [[ulloa-1571]]?
+
+**Qué dio:**
+
+- **«en un extremo de la isla, llamado Soraya» no está en 1571.** Ulloa:
+  «giace in una banda dell'Isola, che si chiama Soraia» (f. 132v, imagen);
+  Colón 1892 «á la parte»; Bourne «a part». El «extremo» es de esta
+  retraducción, y la minería 1 construyó sobre él el contraste «extremo frente
+  a abajo» (ct-t05).
+- **El doblete `goeiz`/`opia` sí está en 1571** («chiamano lo spirito Goeiz»,
+  f. 133r): no es ruido de la retraducción.
+- **«que aprenden a manejarlo desde niños» es fiel** («da fanciulli», f. 133v);
+  lo traduce mal Colón 1892, no Wikisource.
+- **«mujer de las del Coaibai»** es enmienda: Ulloa imprime «Comboi»
+  (f. 133r); Bourne atribuye la corrección a Bachiller y Morales.
+- La lluvia de Boinayel y Maroya está también en Ulloa (ff. 132r-v): no es
+  exclusiva de esta cadena, como suponía la minería 1.
+
+**Deuda:** la retraducción sigue sin identificar.

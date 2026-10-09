@@ -22,11 +22,12 @@ acceso: >-
   ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto:
   `pdftotext -enc UTF-8`, 1,58 MB.
 estado_minado: minada-parcial
-cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura"
+minado: 2026-10-09
+cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura + 2026-10-09 (minería 2 de hermanas, taíno): Rouse, «Social and political organization» y «Life cycle» (pp. 528-531), auditado contra las primarias"
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-10-09
 aliases: ["HSAI 4", "Handbook vol. 4", "Circum-Caribbean Tribes", "Hernández de Alba 1948", "Kirchhoff 1948"]
 ---
 
@@ -268,3 +269,28 @@ Rouse declara sus fuentes en la p. 520. Equivalencia de páginas: pdf 676 = p.
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§steward_auditado y
 §rouse_a_primarias).
+
+## Minería 2 — esferas (2026-10-09): Rouse a sus primarias
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): ¿de qué primaria sale cada afirmación de Rouse
+sobre la jefatura, el rango, la sucesión y el matrimonio taínos? Tercera mano:
+nada de aquí entra sin su primaria.
+
+**Qué dio** (detalle en `meta.rouse_a_primarias` de `6-fusion/hermanas_taino_2026-10-09.yaml`):
+
+- **La sucesión «eldest son of the eldest sister; failing sister's sons … a
+  brother; and only failing these … a son»** (pp. 529-530) no la dice así
+  ninguna primaria del repo: Las Casas da los hijos de las hermanas y confiesa
+  no entenderlo; Oviedo pone primero al hijo. El orden es de Rouse.
+- **«Residence seems to have been patrilocal»** (p. 531): sin nota, y cero de
+  residencia en las primarias.
+- **«exacted no tribute»** (p. 529): sin nota; la única frase sobre tributo es
+  la sospecha de Colón (p. 279).
+- **«Crimes were judged by the chief … theft … impaled»** (p. 530): es Oviedo
+  p. 139, que Las Casas contradice.
+- **«The chiefs gave their children to the wise men to be taught the origin
+  myths»** (p. 531): sin primaria en los tramos leídos.
+- Las afirmaciones de la p. 532 que la minería 1 dejó sin primaria salen todas
+  de [[colon-hernando-1892]] cap. LXI; las «cestas» son caribes de Guadalupe.
+
+**Deuda:** las secciones de economía y vida material de Rouse, sin auditar.

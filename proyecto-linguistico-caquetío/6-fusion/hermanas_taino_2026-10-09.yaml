@@ -42,7 +42,7 @@ meta:
   plan: 4-fuentes/sesiones/08_creencia_taino_que-minar.md
   bitacora: 4-fuentes/sesiones/10_hermanas_taino_esferas.md
   migracion_aparte: 'la creencia de la minería 1 (ct-t01…14) la migra otro agente a taino-creencia-001…014; aquí empiezan en 101'
-  fuentes_leidas: [colon-hernando-1892, ulloa-1571, bourne-1906, oviedo-y-valdes-1851, las-casas-apologetica, angleria-1892, pane-c1498, steward-1948-hsai-4]
+  fuentes_leidas: [colon-hernando-1892, ulloa-1571, bourne-1906, oviedo-y-valdes-1851, las-casas-apologetica, angleria-1892, pane-c1498, steward-1948-hsai-4, jahn-1927]
   cobertura:
     colon-hernando-1892: >-
       vol. 1: cap. LXI entero (impresas 275-281, el relato del Almirante sobre
@@ -63,18 +63,19 @@ meta:
       t. I copia íntegra: lib. V caps. I y III (impresas 127-140) releídos por
       parentesco, gobierno y justicia; lib. VI caps. I y IV-VI (163-174);
       lib. VII cap. I (264-267); lib. XVI cap. II (467) y lib. XVII (499-500).
-      En imagen: 128, 133, 134, 135, 136, 138, 139, 163, 170, 171, 173, 467,
-      499 y 500. Desfase impresa = pdf − 120 en este tramo
+      En imagen: 127, 128, 133, 134, 135, 136, 138, 139, 163, 164, 170, 171,
+      173, 265, 266, 467, 499 y 500. Desfase impresa = pdf − 120 en este tramo
     las-casas-apologetica: >-
       caps. CXCVI-CXCIX (impresas 514-523: los reyes, los nitaínos, el
       gobierno, la guerra, el matrimonio, la herencia) y CCIV-CCV (535-539:
       comida, pesca, canoas, bailes, Lucayos), por columnas con pymupdf. En
-      imagen: 115, 321, 445, 446, 515, 516, 520 y 521
+      imagen: 115, 321, 445, 446, 515, 516, 518, 520, 521, 537 y 538
     angleria-1892: >-
       vol. 1 Déc. I lib. V cap. III-IV (impresas 243-244, Anacaona y los
       régulos de Beuchío), en imagen; vol. 4 Déc. VII cap. I (impresas
       73-81, los lucayos), en imagen las 79-80
     pane-c1498: 'Wikisource caps. V-XVII y XXV, sólo para cotejar con Ulloa y Colón 1892 (sin página)'
+    jahn-1927: 'pp. 171-172 y 184 en imagen, sólo para anclar las hermanas wayuu de la sucesión, el precio de la novia y la tierra de los muertos'
     steward-1948-hsai-4: 'Rouse, «Social and political organization», «Life cycle» (impresas 528-531, capa de texto): sólo para auditar a qué primaria remite cada afirmación'
   no_leido:
   - 'Colón 1892 vol. 1, el resto del primer y segundo viaje: sólo se leyeron por patrón (cacique, canoa, Rey, andas, mujeres) los caps. XXIII y XXXI'
@@ -83,6 +84,7 @@ meta:
   - 'Oviedo t. I lib. VI caps. II (batey) y VII-L, lib. VII caps. II-XIV salvo el I, y los libros VIII-XV'
   - 'Las Casas, Apologética caps. CC-CCIII y el resto de la obra'
   - 'Anglería vol. 1 fuera de las pp. 243-244 y vol. 4 fuera de las 73-81'
+  ceros_script: 'python 6-fusion/scripts/sondas_hermanas_taino.py: mide cada sonda de abajo sobre los tramos leídos e imprime el contexto (las coincidencias no taínas se descartan leyéndolas)'
   ceros:
   - tema: residencia
     sonda: 'suegr-, «casa de su(s) padre(s)», «se iban a vivir», «moraba/vivía con», resid- — sobre Oviedo t. I pdf 240-399, Las Casas 320-325/444-448/514-540, Pané-Wikisource y Colón 1892 cap. LXI + Pané I-XVII'
@@ -98,7 +100,7 @@ meta:
     resultado: 'CERO sobre cómo se hace un buhuitihu: Pané (XV) dice que «enseñan» a la gente, no cómo aprenden ellos. Lo único de aprendizaje es el de los principales que aprenden «da fanciulli» a tocar y cantar (taino-transmision-001). La frase de Rouse (p. 531) «The chiefs gave their children to the wise men to be taught the origin myths» no tiene primaria en los tramos leídos'
   - tema: curriculo-edad
     sonda: 'niños, muchachos, fanciulli, «de poca edad»'
-    resultado: 'sólo tres datos sueltos: los principales aprenden a cantar desde niños (Ulloa f. 133v), las orejas se horadan de niños (f. 129v) y los muchachos guardan los maizales desde las barbacoas (Oviedo p. 265-266, capa de texto). No hay un currículo por edades'
+    resultado: 'sólo tres datos sueltos: los principales aprenden a cantar desde niños (Ulloa f. 133v), las orejas se horadan de niños (f. 129v) y los muchachos guardan los maizales desde las barbacoas (Oviedo pp. 265-266, imagen). No hay un currículo por edades'
   - tema: tributo-trabajo (La Española)
     sonda: 'tribut- — mismos tramos'
     resultado: 'una sola aparición precolombina, y es la lectura de Colón («sacaba á aquellos pueblos todos los tributos que le parecía», p. 279, imagen); los «tributos» de Anglería vol. 1 p. 243 los había impuesto el Adelantado (colonial). Rouse dice que los caciques «exacted no tribute»: sin nota'
@@ -161,7 +163,7 @@ hechos:
     razón las da para Panamá (p. 635, según taino2_las_casas_apologetica i01),
     que no es arahuaco: el argumento no es exclusivo de la familia.
   hermanas:
-  - {pueblo: wayuu, obra: jahn-1927, pagina: '172', que: 'la herencia del nombre y de la nacionalidad por la madre, «un definido matriarcado» (según parentesco-005; no releído en esta sesión)'}
+  - {pueblo: wayuu, obra: jahn-1927, pagina: '171-172 (imagen)', que: '«Antiguamente predominaba la familia materna y tenía la mayor importancia el tío materno, como que cuanto a la consanguinidad materna, no había lugar a dudas, en tanto que sí podían éstas existir con respecto al padre»; la herencia del nombre y la nacionalidad por la madre, «un definido matriarcado»'}
   caquetio: [parentesco-004, parentesco-005, parentesco-006, parentesco-007, parentesco-026]
   proyeccion:
     capa: reconstruido
@@ -171,7 +173,10 @@ hechos:
       (Jahn). No sostiene la forma fuerte («a su sobrino uterino … no a su
       propio hijo»): el otro testigo taíno, Oviedo, pone primero al hijo
       (taino-parentesco-002). En duda entre los dos testigos, la regla
-      exclusiva se degrada.
+      exclusiva se degrada. Y una advertencia: la RAZÓN (la certeza de la
+      maternidad) es la misma en Las Casas y en Jahn, pero Las Casas la da
+      también para Panamá, que no es arahuaco, y es un lugar común europeo:
+      la razón no cuenta como rasgo compartido; cuenta la regla.
   via_a: {parentesco-004: corrobora-en-parte, parentesco-005: corrobora-en-parte, parentesco-006: matiza}
   audita_corpus: {parentesco-007: corrobora-en-parte}
   verificado_en_imagen: si
@@ -354,6 +359,8 @@ hechos:
   testigo: oyo
   procedencia: {obra: las-casas-apologetica, pagina: 'caps. CXCVIII-CXCIX, pp. 520-521 (imagen)'}
   como_se_escribio: 'Las Casas confiesa no haber inquirido las ceremonias; el pago es lo único que da del rito'
+  hermanas:
+  - {pueblo: wayuu, obra: jahn-1927, pagina: '171-172 (imagen de la 171)', que: 'el novio paga la novia al padre; el valor de las otras hijas va a la madre o al tío materno; si la esposa es infiel el marido exige al padre que le devuelva el precio'}
   caquetio: [parentesco-013, parentesco-015, ecologia-017]
   proyeccion:
     capa: lectura
@@ -538,6 +545,8 @@ hechos:
       sola tradición: hipotético. Las andas tienen par caquetío fuera del
       corpus (Aguado vía Arcaya p. 115, la hamaca a hombros: steward_auditado
       r2 de la minería 1), y Steward mismo no lo da por específico.
+  via_a: {transmision-034: matiza}
+  via_a_nota: {transmision-034: 'en el cacicazgo de Marien la palabra del señor pasa por dos viejos: la mediación no vive sólo «dentro del jefe»'}
   verificado_en_imagen: si
   dominios: [politica, jefatura, protocolo]
 
@@ -567,6 +576,8 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: 'El señor que decide sobre la vida de los suyos sin otra ley que su arbitrio sería nuevo para el caquetío y lo da una sola tradición: hipotético.'
+  via_a: {transmision-034: corrobora-en-parte}
+  via_a_nota: {transmision-034: 'la hermana antillana es un cacicazgo con arbitrio del señor: la sociedad sin caciques es wayuu, no arahuaca general'}
   verificado_en_imagen: si
   dominios: [politica, justicia, jefatura]
 
@@ -617,13 +628,13 @@ hechos:
   testigo: oyo
   procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 139 (imagen); lib. XVII, p. 499 (capa de texto)'}
   procedencia_extra:
-  - {obra: las-casas-apologetica, pagina: 'cap. CXCVIII, p. 518 (capa de texto)', independiente: true, nota: 'contradice'}
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCVIII, p. 518 (imagen)', independiente: true, nota: 'contradice'}
   como_se_escribio: 'Oviedo busca la crueldad; Las Casas la inocencia: cada uno lee lo que su tesis pide. Pueden convivir —el robo raro porque se pagaba con la vida—, pero ninguno lo dice'
   caquetio: []
   proyeccion:
     capa: no-proyecta
     nota: 'Dos testigos opuestos y sin dato caquetío: no se proyecta.'
-  verificado_en_imagen: 'parcial: Oviedo p. 139 sí; Las Casas p. 518 no'
+  verificado_en_imagen: 'si (la repetición cubana de Oviedo, p. 499, en capa de texto)'
   dominios: [justicia, robo]
 
 - id: taino-geografia_politica-007
@@ -794,6 +805,8 @@ hechos:
       Ilumina geografia_politica-025 (Paraguaná da nombre a la tierra y a la
       gente, atestiguado): en La Española la gente también se nombra por su
       tierra. Es la autodenominación que el vault usa en vez de «taíno».
+  via_a: {geografia_politica-025: corrobora-en-parte}
+  via_a_nota: {geografia_politica-025: 'la gente se llama como su tierra (Aiti); el mar, no'}
   verificado_en_imagen: si
   dominios: [territorio, etnonimo]
 
@@ -1043,7 +1056,7 @@ hechos:
   - {obra: bourne-1906, pagina: 'pp. 18-19 (capa de texto)', independiente: false, nota: '«lies in a part of the island called Soraia»; la nota de Bachiller («Soraia means west») es de tercera mano'}
   como_se_escribio: 'dos noticias del mismo círculo (Colón y su encargado), pero de informantes distintos: Pané en Macorix y en la Vega, Colón de Caonabó'
   hermanas:
-  - {pueblo: wayuu, obra: jahn-1927, pagina: '184', que: 'Jepira, tierra de los muertos con topónimo propio (según creencia-009; no releído en esta sesión)'}
+  - {pueblo: wayuu, obra: jahn-1927, pagina: '184 (imagen)', que: '«Al morir un guajiro va a continuar otra vida en un lugar dotado de espléndidas sabanas con mucho ganado, a donde llega el alma del difunto, pasando por Jepirá, que es el nombre con que designan el Cabo de La Vela»'}
   caquetio: [creencia-009, creencia-028]
   proyeccion:
     capa: reconstruido
@@ -1194,13 +1207,13 @@ hechos:
   epoca: 'Oviedo 1515-1548 (sembró maíz en la isla 28 años)'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VII cap. I, p. 265 (capa de texto)'}
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VII cap. I, p. 265 (imagen)'}
   como_se_escribio: 'el cronista labrador; la creencia está dicha sin burla'
   caquetio: [ecologia-006]
   proyeccion:
     capa: hipotetico
     nota: 'Una regla lunar de siembra sería nueva para el caquetío, de una sola tradición y de amplitud muy grande (también es castellana): hipotético.'
-  verificado_en_imagen: 'no'
+  verificado_en_imagen: si
   dominios: [siembra, luna, calendario]
 
 # ═══════════════════════════ TRANSMISIÓN ═══════════════════════════
@@ -1235,6 +1248,7 @@ hechos:
       jayeechi wayuu (transmision-016) es memoria cantada de especialista y por
       inmersión, no de los principales: corrobora el canto, no el quién.
   via_a: {transmision-016: corrobora-en-parte}
+  via_a_nota: {transmision-016: 'memoria cantada sí; pero la llevan los principales, aprendida desde niños, no un especialista por inmersión'}
   verificado_en_imagen: si
   dominios: [canto, ley, elite, infancia]
 
@@ -1256,9 +1270,9 @@ hechos:
   epoca: 'Oviedo los vio en 1515; Las Casas 1502-1559'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. I, pp. 127-128 (imagen de la 128)'}
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. I, pp. 127-128 (imagen)'}
   procedencia_extra:
-  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 538 (capa de texto; en imagen por T9)', independiente: true}
+  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 538 (imagen)', independiente: true}
   como_se_escribio: 'Oviedo lo compara con los romances castellanos; es de los pocos pasajes donde no insulta'
   caquetio: [creencia-010, transmision-018]
   proyeccion:
@@ -1270,7 +1284,7 @@ hechos:
   audita_corpus: {transmision-018: corrobora}
   mineria_1: [ct-t03]
   mineria_1_nota: 'corrobora ct-t03 (las endechas que se vuelven areytos) con el capítulo general del areito'
-  verificado_en_imagen: 'parcial: p. 128 sí; p. 127 no'
+  verificado_en_imagen: si
   dominios: [canto, historia, genealogia, memoria]
 
 - id: taino-transmision-003
@@ -1289,7 +1303,7 @@ hechos:
   epoca: 'Las Casas 1502-1559; el areito de Anacaona, 1503'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, pp. 537-538 (capa de texto; en imagen por T9)'}
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 538 (imagen)'}
   procedencia_extra:
   - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. I, p. 128 (capa de texto)', independiente: true}
   como_se_escribio: 'Las Casas, testigo de vista y con agrado'
@@ -1297,7 +1311,7 @@ hechos:
   proyeccion:
     capa: hipotetico
     nota: 'Canto de trabajo de las mujeres y baile por sexos: nuevos para el caquetío y de una sola tradición: hipotético.'
-  verificado_en_imagen: 'no (en esta sesión)'
+  verificado_en_imagen: 'parcial: Las Casas p. 538 sí; el areito de Anacaona (Oviedo p. 128) en capa de texto'
   dominios: [canto, trabajo, mujeres, baile]
 
 - id: taino-transmision-004
@@ -1421,13 +1435,13 @@ hechos:
   epoca: 'Oviedo 1515-1548; sembró a la manera india 28 años'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VII cap. I, pp. 264-266 (capa de texto); lib. VI cap. I, p. 163 (imagen)'}
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VII cap. I, pp. 265-266 (imagen; la 264 en capa de texto); lib. VI cap. I, p. 163 (imagen)'}
   como_se_escribio: 'el cronista que sembró; lo encaja en Plinio y Teofrasto, pero describe'
   caquetio: [ecologia-029, ecologia-030]
   proyeccion:
     capa: lectura
     nota: 'Ilumina ecologia-029 (el conuco de tala y quema, atestiguado): la técnica de siembra en ala con palo y la guarda de los muchachos son de las Antillas; no se proyectan al cardonal.'
-  verificado_en_imagen: 'parcial: p. 163 sí; pp. 264-266 no'
+  verificado_en_imagen: si
   dominios: [maiz, conuco, trabajo, infancia]
 
 - id: taino-ecologia-002
@@ -1450,7 +1464,7 @@ hechos:
   procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. XXIII, p. 106 (imagen)'}
   procedencia_extra:
   - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. IV, pp. 170-171 (imagen)', independiente: true}
-  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (capa de texto): canoas de cincuenta y cien hombres', independiente: true}
+  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (imagen): canoas de cincuenta y cien hombres', independiente: true}
   como_se_escribio: 'tres testigos de vista'
   caquetio: [ecologia-031, geografia_politica-015]
   proyeccion:
@@ -1475,7 +1489,7 @@ hechos:
   epoca: 'Las Casas 1502-1559; Oviedo hasta 1548'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (capa de texto)'}
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (imagen)'}
   procedencia_extra:
   - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. XVII, p. 500 (imagen)', independiente: true}
   como_se_escribio: 'Las Casas por columnas con pymupdf: el texto se entrelaza y se reordenó a mano'
@@ -1483,7 +1497,7 @@ hechos:
   proyeccion:
     capa: lectura
     nota: 'Ilumina ecologia-036 (el mar como despensa): técnicas de pesca de las Antillas; ninguna se proyecta sin dato caquetío.'
-  verificado_en_imagen: 'parcial: Oviedo p. 500 sí; Las Casas p. 537 no'
+  verificado_en_imagen: si
   dominios: [pesca, caza, rio, mar]
 
 - id: taino-ecologia-004
@@ -1502,7 +1516,7 @@ hechos:
   epoca: 'Oviedo 1515-1548'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. I, pp. 163-164 (imagen de la 163)'}
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. I, pp. 163-164 (imagen de la 163 y de la col. izq. de la 164)'}
   procedencia_extra:
   - {obra: las-casas-apologetica, pagina: 'p. 445 (imagen)', independiente: true, nota: 'caney = casa grande del señor'}
   como_se_escribio: 'Oviedo dibuja el caney (lám. 1, fig. 9)'
@@ -1514,7 +1528,7 @@ hechos:
       «caney» cambia de cosa entre los dos testigos: para Oviedo es la casa
       redonda; para Las Casas, la del señor (y Rouse, p. 531, invierte a
       Oviedo).
-  verificado_en_imagen: 'parcial: p. 163 sí; p. 164 no'
+  verificado_en_imagen: 'parcial: el caney redondo sí (pp. 163-164 izq.); la casa a dos aguas (p. 164 der.) en capa de texto'
   dominios: [casa, rango]
 
 - id: taino-ecologia-005
@@ -1532,13 +1546,13 @@ hechos:
   epoca: 'Las Casas 1502-1559'
   etiqueta: atestiguado
   testigo: vio
-  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (capa de texto)'}
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (imagen)'}
   como_se_escribio: 'para probar su templanza frente a los griegos glotones'
   caquetio: [creencia-023]
   proyeccion:
     capa: no-proyecta
     nota: 'La comida caquetía del rito es de maíz (creencia-023); la taína es de yuca y ají: contraste, no proyección.'
-  verificado_en_imagen: 'no'
+  verificado_en_imagen: si
   dominios: [comida, dia, yuca]
 
 - id: taino-ecologia-006

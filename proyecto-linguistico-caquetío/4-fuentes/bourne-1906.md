@@ -15,7 +15,10 @@ descargado: 2026-10-09
 origen_digital: "Internet Archive — https://archive.org/details/columbusramonpan00bour (PDF 3.178.246 B; _djvu.txt 112.875 B). Metadatos: 1906, inglés, Bourne, Edward Gaylord, 1860-1908"
 acceso: >-
   Dominio público (1906; Bourne † 1908). Descargado el 2026-10-09 con la autorización de Miguel dada en el chat de esa sesión. PDF sha256 148c6b8df3f44d92f5f3ae1d767f649b33e5f0c352162cd73d978d7ca5de3ab3, 3.178.246 bytes, en git. Texto _djvu.txt, 112.875 bytes.
-estado_minado: sin-minar
+estado_minado: minado-parcial
+verificado: 2026-10-09
+cobertura: "pp. 3-8 (introducción y el cap. LXI de Colón traducido) y 18-21 (Pané caps. XI-XVI con sus notas), capa de texto, como control de la lectura de Ulloa — 2026-10-09, minería 2 de hermanas (taíno)"
+minado: 2026-10-09
 aliases: ["Bourne 1906", "Edward Gaylord Bourne"]
 ---
 
@@ -69,3 +72,29 @@ es una fuente de rasgos nueva: es el control del cotejo.
 ## Enlaces
 
 [[pane-c1498]] · [[ulloa-1571]] · [[colon-hernando-1892]] · [[angleria-1892]] · [[las-casas-apologetica]]
+
+## Minería 2 — esferas (2026-10-09)
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): ¿coincide la lectura de Ulloa que hace esta
+minería con la de Bourne? Se usó como **control**, no como fuente de rasgos.
+Leído en la capa de texto (pdf = impresa + 2), sin verificar en imagen.
+
+**Qué dio:**
+
+- **Coincide en los cuatro puntos donde Ulloa corrige a las otras cadenas:**
+  el Coaibai «lies in a part of the island called Soraia» (p. 18); «they call
+  the spirit Goeiz» (p. 19); «the principal men … who have learned from
+  childhood» (p. 20); y la desecación «They open the Cacique and dry him by
+  the fire» (p. 6), en el relato de Colón y no en Pané.
+- Bourne da los folios del cap. LXI, «Ed. 1571, folios 125-126» (p. 6, nota),
+  que la medición de hoy confirma.
+- Lee el cap. XV como **dos clases** de cemíes: «One has the bones of his
+  father and his mother … ; (and there are others) which are made of stone or
+  of wood» (p. 20). El paréntesis es suyo: el italiano es ambiguo.
+- Bourne cotejó a Pané con Anglería y con Las Casas (p. 8), pero su glosa de
+  `Soraia` como «west» es de Bachiller y Morales, tercera mano (p. 18, nota).
+
+**Qué no dio:** la desecación del cacique no la atribuye a Pané, y no habla
+de jerarquía, matrimonio ni herencia.
+
+**Deuda:** pp. 9-17 y 22-41 sin leer; nada visto en imagen.

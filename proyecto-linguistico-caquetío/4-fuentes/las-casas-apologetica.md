@@ -8,10 +8,11 @@ local: "fuentes_caquetios/LasCasas_Apologetica_NBAE13_Serrano_1909.pdf"
 paginas: 725
 capa_texto: si
 estado_minado: minado
-cobertura: "caps. X-XIII, XLIV, LXV, LXX, CXX-CXXI, CXXX, CLXVI-CLXVII, CXCVI-CXCIX, CCIII-CCV y CCXLI pasaje a pasaje; el tomo entero por patrón"
+minado: 2026-10-09
+cobertura: "caps. X-XIII, XLIV, LXV, LXX, CXX-CXXI, CXXX, CLXVI-CLXVII, CXCVI-CXCIX, CCIII-CCV y CCXLI pasaje a pasaje; el tomo entero por patrón + 2026-10-09 (minería 2 de hermanas, taíno): caps. CXCVII-CXCIX (515-521) y CCIV-CCV (535-539) releídos en imagen por las esferas"
 prioridad: alta
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-10-09
 aliases: ["Las Casas Apologética", "Apologética historia sumaria", "NBAE 13", "Historiadores de Indias tomo I"]
 ---
 
@@ -276,3 +277,38 @@ ascuas, ni la venganza contra el médico.
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (ct-t01, ct-t04, ct-t06, ct-t08 y
 ct-t14). Es COMPARANDA, no dato caquetío.
+
+## Minería 2 — esferas (2026-10-09)
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): los capítulos de gobierno, matrimonio y
+sucesión, que T9 leyó para la lengua (`taino2_las_casas_apologetica.yaml`
+§instituciones i01, i07, i08), pasados al esquema de las hermanas y
+verificados en imagen. Extraídos por columnas con pymupdf, porque pdftotext
+entrelaza las dos.
+
+**Qué dio** (propuesta: `6-fusion/hermanas_taino_2026-10-09.yaml`):
+
+| Dato | Página | Tema | Etiqueta |
+|---|---|---|---|
+| Los cinco reyes; Uxmatex con 16.000 hombres; Haniguayaba «rey libre por sí» | 515-516 (imagen) | jefatura | atestiguado (taino-geografia_politica-001) |
+| Caonabó, «de nacion Lucayo … llegó á ser rey» | 515 (imagen) | sucesion-politica | atestiguado (taino-geografia_politica-010) |
+| Nitaynos y los tres tratamientos | 516 (imagen) | jerarquia-rango | atestiguado (taino-geografia_politica-002) |
+| «No se sabia qué cosa fuese hurto»; la venganza es un insulto (`buticaco`) | 518 (imagen) | justicia-norma | atestiguado (contradice a Oviedo) |
+| Gobierno «manu regia … sin leyes»; tres causas de guerra; armas | 520 (imagen) | justicia-norma, guerra | atestiguado |
+| Ni hermana ni prima; una mujer el particular; no supo si el matrimonio era perpetuo | 520 (imagen) | matrimonio | atestiguado |
+| Herencia por los hijos de las hermanas, con su razón y con «no lo penetramos» | 521 (imagen) | sucesion-herencia | atestiguado (taino-parentesco-001) |
+| La novia se compra con `çibas` y hojas de guanín | 521 (imagen) | matrimonio | atestiguado (taino-parentesco-007) |
+| Sin esclavos en La Española; los `exbuneyes` de Cuba | 115 (imagen) | cautivos-esclavitud | atestiguado (taino-geografia_politica-009) |
+| La jornada, la caza, la pesca, las canoas de cien | 537 (imagen) | comida-bebida, pesca | atestiguado |
+| Bailes por sexos; canto de las mujeres que rallan yuca | 538 (imagen) | canto-baile | atestiguado (taino-transmision-003) |
+
+**Lo que corrige:** la «carta de Colón» de la p. 321 existe —es el cap. LXI
+de [[colon-hernando-1892]] y el f. 125r de [[ulloa-1571]]—, y en ella la
+estatua lleva el nombre del antepasado **pero no los huesos**. «Donde metian
+los huesos de sus padres» es de Las Casas, que parece fundir la carta con
+Pané cap. XV (taino-creencia-103).
+
+**Qué no dio:** linaje, residencia, sociedades de hombres, formación del
+behique: cero en los tramos leídos (sondas en `meta.ceros` de la propuesta).
+
+**Deuda:** caps. CC-CCIII sin releer.

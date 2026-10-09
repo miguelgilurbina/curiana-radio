@@ -10,13 +10,13 @@ local:
   - "fuentes_caquetios/Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf"
 paginas: "Cuerpo: impresas 1-614 (libros I-XIX); índice general 615-648. Copia íntegra (`_completo`): 776 pdf, desfase medido en `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.sondas_medidas.desfase_tomo_I_copia_integra`. Copia truncada: 766 pdf, impresa = pdf − 118 (− 117 hacia la 473)"
 capa_texto: si
-estado_minado: minada-parcial
-cobertura: "medida, no escrita a mano. T1 (voces taínas, 2026-09-21) y T7 (guanín): `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos` (`medir_taino_oviedo.py --check`). M3 (2026-09-22: libro XIX entero, historia natural XII-XIV, las frutas de Venezuela del VIII, VI y XI, el intercambio de nombres del XVI): `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.cobertura`, `meta.libros_leidos` y `meta.sondas_medidas` (`medir_oviedo_restante.py --check`)"
+estado_minado: minado-parcial
+cobertura: "medida, no escrita a mano. T1 (voces taínas, 2026-09-21) y T7 (guanín): `6-fusion/taino_oviedo_valdes_1851.yaml` → `meta.cobertura` y `meta.libros_leidos` (`medir_taino_oviedo.py --check`). M3 (2026-09-22: libro XIX entero, historia natural XII-XIV, las frutas de Venezuela del VIII, VI y XI, el intercambio de nombres del XVI): `6-fusion/oviedo_restante_2026-09-22.yaml` → `meta.cobertura`, `meta.libros_leidos` y `meta.sondas_medidas` (`medir_oviedo_restante.py --check`) + 2026-10-09 (minería 2 de hermanas, taíno): lib. V caps. I y III (127-140) releídos por parentesco, gobierno y justicia; lib. VI caps. I y IV-VI (163-174); lib. VII cap. I (264-267); lib. XVI cap. II (467); lib. XVII (499-500)"
 acceso: "Dos copias. La íntegra, del ítem de Internet Archive de la Biblioteca Ludwig von Mises (UFM), la misma colección de los tomos II-IV, `_completo.pdf`, se descargó el 2026-09-22 (https://archive.org/details/historiageneral00fernguat, dominio público — NOT IN COPYRIGHT; 55.449.811 B; sha1 e90c436186f5afd875a67078b11a6631875f09be = el del ítem; sha256 02e88f2beffea91494f34e48e8bbe294a8d46626bf8c2d0383accf9c9be2369a; commiteada, < 95 MB): pymupdf la abre sin reparar y renderiza TODAS las páginas. La vieja, de origen no documentado, está truncada (sin imagen desde la impresa 155), tiene otra paginación de PDF y otra capa OCR (lee `dalihao` donde la íntegra lee `datihao`); se conserva porque T1 cita su paginación. Los tomos II-IV: ver [[oviedo-y-valdes-1852-1855]]"
 prioridad: alta
 tareas: [F9]
-verificado: 2026-09-22
-minado: 2026-09-22
+verificado: 2026-10-09
+minado: 2026-10-09
 aliases: ["Oviedo y Valdés", "Oviedo 1851", "Historia general y natural", "Oviedo vol. I"]
 ---
 
@@ -402,3 +402,38 @@ barbacoa» son de la Florida (p. 561).
 El veredicto y el detalle están en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§oviedo_dos_orillas, ct-t02 y
 ct-t03). Es COMPARANDA, no dato caquetío.
+
+## Minería 2 — esferas (2026-10-09)
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): parentesco y geografía política de La Española
+y las islas, que la minería 1 (creencia) y T1 (lengua) no buscaron; y lo
+ecológico de los libros VI y VII. Copia íntegra; desfase impresa = pdf − 120
+en este tramo (cabeceras de las pp. 133-139, 163, 170-173 y 265).
+
+**Qué dio** (propuesta: `6-fusion/hermanas_taino_2026-10-09.yaml`):
+
+| Dato | Página | Tema | Etiqueta |
+|---|---|---|---|
+| Hereda el hijo mayor de cualquiera de las mujeres; si muere sin hijos, «al hijo ó hija de su hermana»; si no, por la línea de la que vino la hacienda | 136 (imagen) | sucesion-herencia | atestiguado (taino-parentesco-002) |
+| Una mujer el común, «tres é quatro é quantas querian» los caciques; Behechío treinta | 133 (imagen) | matrimonio | atestiguado (taino-parentesco-004) |
+| Una mujer principal; todas bajo un techo, junto a la cama del marido | 135 (imagen) | hogar-casa | atestiguado (taino-parentesco-005) |
+| Ni madre, ni hija, ni hermana; «muere mala muerte» quien lo hace | 136, 138 (imagen) | matrimonio | atestiguado (taino-parentesco-006) |
+| El que toma «ofiçio de muger é trae naguas» | 133 (imagen) | roles-de-genero | atestiguado (taino-parentesco-010) |
+| Anacaona, «absoluta señora» tras morir marido y hermano | 135 (imagen) | jefatura | atestiguado (taino-geografia_politica-011) |
+| Al ladrón «lo empalaban vivo» | 139 (imagen) | justicia-norma | atestiguado (taino-geografia_politica-006) |
+| Trocar, «el exerçiçio prinçipal» | 139 (imagen) | comercio-rutas | atestiguado (taino-ecologia-007) |
+| Veinte días sin mujer y en ayuno para coger oro | 135-136 (imagen) | tabu | atestiguado (taino-creencia-109) |
+| El areyto como historia: genealogías, temporales, «fixamente esculpidas en la memoria»; la guía y el corro | 127-128 (imagen) | narracion-mito | atestiguado (taino-transmision-002) |
+| Conucos «que assi llaman sus heredamientos»; batey en cada plaza; el caney redondo | 163-164 (imagen) | cultivo, vivienda | atestiguado |
+| Canoas de 40-50 hombres, para guerra, comercio entre islas y pesca | 170-171 (imagen) | navegacion | atestiguado (taino-ecologia-002) |
+| Sal cociendo agua de mar; salinas del Yaque; sierra de Baynoa | 173 (imagen) | tecnologia-objetos | atestiguado (taino-ecologia-006) |
+| Sembrar «al prinçipio de la luna»; los muchachos guardan los maizales desde las barbacoas | 265-266 (imagen) | tiempo-calendario, cultivo | atestiguado |
+| «quando toman nueva amistad, toman el nombre proprio del capitan» (San Juan) | 467 (imagen) | alianza-intercambio | atestiguado (taino-geografia_politica-013) |
+| Cuba: la novia y «Manicato»; dejaban las mujeres «por pequeñas causas, é las mas veçes ellas á ellos» | 499-500 (imagen) | matrimonio | atestiguado (taino-parentesco-008) |
+
+**Qué no dio** (sondas sobre pdf 240-399): `linaje`/`parcialidad` 0 taínos;
+residencia (`suegr-`, «vivía con») 0; `tribut-` 0 precolombino; `nitayn-` 0,
+como ya sabía T1. Oviedo no nombra la nobleza de La Española.
+
+**Deuda:** lib. VI caps. II (batey) y VII-L y lib. VII caps. II-XIV, sin
+leer por las esferas.
