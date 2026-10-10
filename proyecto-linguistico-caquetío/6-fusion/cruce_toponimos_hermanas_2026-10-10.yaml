@@ -1,0 +1,3104 @@
+# Generado por 6-fusion/scripts/cruzar_toponimos_hermanas.py — PROPUESTA (regla 5).
+# Lo leído a mano va en las constantes del script; lo contado lo cuenta el script.
+meta:
+  pregunta: 'Miguel, 2026-10-10: cruzar los topónimos caquetíos que no tienen lectura con las lenguas hermanas para
+    sacar candidatos a palabra o cognado; y ver qué hace -ana en los nombres de las hermanas —Guayana en el lokono,
+    los nombres taínos— para saber si se le puede devolver una glosa al -ana caquetío («hasta el día de hoy está
+    solamente en Chamuriana, Jayana, Curiana, Cujicana»).'
+  estado: 'PROPUESTA (regla 5): no toca 2-lengua/, curiana_sim/, 3-mundo/ ni ningún YAML generado'
+  quien: minero del cruce (Claude Opus 5.5), rama vault/cruce-toponimos
+  fuentes_leidas:
+    las-casas-apologetica: cap. VII p. 19 (Maguana); capa de texto, desfase constante pdf − 14
+    las-casas-1875: lib. I caps. XLIV (Cubanacan) y LVI (çabanas); citado por capítulo, el PDF es un ebook
+    oviedo-y-valdes-1851: vol. 1, Maguana como villa (sin glosa); capa de texto extraída al vuelo
+    goeje-1939: 'pp. 5 (los Guayana), 13 (magua / magüana, xagueye), 57 (habla de mujeres: šiba, šauai, balaua);
+      impresa = pdf − 1'
+    breton-1665: p. 416, entrada Ouâitoucoubouli (gentilicio -ri / -na); capa de texto
+    breton-1665 (Grammaire 1667): 'del género de los nombres, hoja signada G iij: «Les pluriers terminez en a»;
+      capa de texto'
+    brett-1880: pp. 178-179, notas (Ebesoana, Demaréna, Korobohána); ya vistas en imagen por la minería 2 (hermanas_lokono,
+      lokono-parentesco-002)
+    brett-1868: p. 98 (familias lokonas), p. 485 (anakabo 'in the midst' frente a nacan)
+    perea-alonso-1942: p. 561 (-coa-na), p. 647 (a-nnakù-di 'estar en medio'); Guayana sin etimología
+    bachiller-morales-1883: 'pp. 120-121 (Del Monte: -ana agrícola), p. 114 (Habana ''pradera''), p. 205 (nacan
+      / anaca), p. 277 s.v. Guainía (Guayana); impresa = pdf − 4'
+    coll-y-toste-1897: pp. 166-167 (Sibana, Sibanacán), 169 y 227 (Habana), 240 (Maguana) — vía 6-fusion/taino3_coll_y_toste_1897.yaml
+    zayas-1931: t. I s.v. Abayagua (Maguana 'vega menor'); t. I p. 34 s.v. Ana (contra Del Monte y Bachiller)
+    gumilla-1791: t. I, la Nación Guayana (sin etimología)
+    neira-ribero-1762: vocabulario entero, por 6-fusion/achagua_neira_ribero_1762.yaml (pliegos 42, 61, 69, 73,
+      80, 98)
+    fabo-1911: p. 101 (-are llanero; mánare 'morir')
+    alvarado-1921: pp. 199-200 s.v. MANARE (y avispa, culebra-sapa), p. 205 s.v. MAPANARE / MAPANARÍ
+    carvajal-1892: «cataures y manaures muy labrados» (la relación de 1647); capa de texto
+    oliver-1989-cap2: pp. 148-150 (los sufijos toponímicos caquetíos)
+    roth-1915: barrido de nombres en -ana; ninguno de lugar con glosa
+  sondas:
+    ana: voces y nombres terminados en -ana, -anna, -aná, -āna en cada fuente y en el lexicón; -na tras raíz en
+      -a se cuenta con ellas
+    guayana: Guayana, Guiana, Guyana, Guyane, Goyana, Wayana, Guajana, Oayana, Ouajana — y una regex ancha de etimología
+      (medida abajo)
+    cruce: 250 nombres de una palabra en nivel C o descartado (los de varias palabras con castellano dentro quedan
+      fuera)
+  controles:
+  - permutación de glosas dentro de cada lengua (la forma queda, el significado se baraja)
+  - permutación de referentes entre topónimos (cada lugar recibe lo que es otro)
+  - 'una voz por familia (misma lengua, mismos cuatro primeros fonemas del radical): el exceso, ¿es de pares o de
+    familias?'
+  - 'control positivo: el cruce tiene que encontrar lo que el canon ya lee (para ''mar'' en Paraguaná, kiba ''piedra''
+    en Cuiba y Tiquiba, kumarawa en Cumaraguas…)'
+  no_leido:
+  - 'Oviedo 1851-1855 sólo se barrió por Maguana y sabana: un -ana glosado en sus otros libros no se buscó'
+  - 'Gilij (maipure) no se leyó para -ana: la prima maipure queda sin medir'
+  - 'el capítulo de lenguas de Gumilla donde Goeje dice que el guayana es «apparentée au Kalina»: no se localizó
+    en t. I ni t. II'
+  - 'Breton 1666 (françois-caraïbe): la entrada «habitant» se vio en la capa de texto, sin página'
+  - las páginas de Breton 1665 y 1667 no se vieron en imagen
+  - el wayuu sólo como comparanda medida en el lexicón; Jahn 1927 no se leyó para topónimos en -ana
+  - 'Las Casas, Historia, vols. 2-5: no están en el repo'
+  fuentes_a_buscar:
+  - 'J. Williams 1923, «The name “Guiana”», Journal de la Société des Américanistes XV (Goeje 1939 p. 5 la cita:
+    es la discusión de la etimología)'
+  - C. H. de Goeje, «Guayana and Carib tribal names», Proceedings del XXI Congreso Internacional de Americanistas
+    (citado en Goeje 1939 p. 5)
+  - 'W. Hilhouse 1832/1834, Journal of the Royal Geographical Society: las 27 familias lokonas que Brett resume
+    (p. 98) — ¿cuántas en -ana y con qué glosa?'
+  - 'C. H. de Goeje 1928, The Arawak Language of Guiana, y W. Pet 1987: la fuente de lokono kabadaro ''jaguar''
+    que el lexicón cita'
+  - 'D. Taylor 1977, Languages of the West Indies: el gentilicio -ri / -na del caribe insular, con su estrato'
+  - A. Del Monte 1853, Historia de Santo Domingo, p. 370 (sólo se tiene por Bachiller)
+  - un diccionario de venezolanismos con etimología para mapanare (Alvarado 1921 no la da)
+  descargas: ninguna (lo decide Miguel)
+  fecha: '2026-10-10'
+  script: 6-fusion/scripts/cruzar_toponimos_hermanas.py
+  parametros:
+    umbral_parecido: 0.62
+    umbral_cognado: 0.75
+    min_fonemas: 3
+    replicas: 300
+    semilla: 20261010
+    gu_es_w: false
+    niveles:
+    - C
+    - descartado
+    sufijos_quitados:
+    - '-ubana: REGLAS_ZAVALA -ubana'
+    - '-bana: -bana, D9/#38'
+    - '-bakoa: morfema-001 / REGLAS_TOPONIMICAS'
+    - '-akoa: -bacoa con haplología (quibacoas)'
+    - '-koa: Oliver 1989 cap. 2 p. 148 (-coa)'
+    - '-oa: Oliver 1989 cap. 2 p. 149 / TODAS_LAS_REGLAS'
+    - '-kiba: kiba ''piedra'' (lexicón; Jadacaquiva, Tiquiba)'
+    - '-kiwa: quigua (kiwa) ''concha'''
+    - '-ebo: ebo ''camino'' (lexicón)'
+    - '-bo: Oliver 1989 p. 148 (e)-bo'
+    - '-are: morfema-002'
+    - '-ure: ure ''raíz'' (Esteves) / censo -re'
+    - '-ire: censo -re'
+    - '-ore: censo -re'
+    - '-re: censo -re'
+    - '-iana: -iana (Chamuriana, Curiana)'
+    - '-ana: morfema-011'
+    - '-na: -ná (Paraguaná)'
+    - '-gua: -wa / -gua (Oliver p. 148)'
+    - '-wa: -wa (TODAS_LAS_REGLAS)'
+    - '-aima: REGLAS_ZAVALA'
+    - '-ima: REGLAS_ZAVALA'
+    - '-iro: REGLAS_ESTEVES'
+    - '-uko: REGLAS_ESTEVES -uco'
+    - '-uto: -uto, variante de -uco'
+    - '-uru: REGLAS_ZAVALA'
+    - '-dito: -dito colectivo (Esteves)'
+    - '-dite: -dite (Cocodite)'
+    - '-si: -shi/-chi (morfema-007, fonemizado)'
+    - '-ri: -ari/-ri (morfema-008)'
+    - '-kuri: morfema-009'
+    - '-bari: morfema-010'
+    - '-al: colectivo castellano -al'
+    - '-ito: diminutivo castellano'
+    - '-itos: diminutivo castellano'
+    - '-s: plural castellano'
+    prefijos_quitados:
+    - 'a-: prótesis (adaure)'
+    - 'gua-: wa- (morfema-006)'
+    - 'wa-: wa- (morfema-006)'
+    - 'ka-: ka- atributivo'
+    - 'ma-: ma- privativo'
+    campos:
+      cerro:
+        referente: cerro loma lomas colina colinas serrania sierra montana morro penon cumbre cuesta cerros
+        glosa: cerro loma colina montana sierra pena cumbre hill mountain montagne morne
+      agua_dulce:
+        referente: laguna lagunas estanque jaguey pozo manantial aguada represa charca cienaga pantano agua
+        glosa: laguna lago charca pozo manantial fuente agua cienaga pantano lake pond spring water swamp eau etang
+          source marais
+      rio:
+        referente: rio quebrada cano arroyo riachuelo cauce vertiente desagua quebrajon
+        glosa: rio quebrada arroyo cano cauce river creek stream riviere ruisseau
+      mar_costa:
+        referente: punta cabo ensenada bahia playa costa costeno puerto golfete golfo mar orilla litoral isla islote
+          cayo
+        glosa: mar playa orilla costa punta cabo bahia isla sea beach shore coast island mer plage cote ile isle
+      salina:
+        referente: salina salinas salineta sal
+        glosa: sal salina salado salt sel sale
+      llano:
+        referente: sabana sabanas llano llanura llanos planicie vega
+        glosa: sabana llano llanura vega savanna plain plaine savane
+      monte:
+        referente: monte bosque boscoso frondoso arboleda
+        glosa: bosque monte selva arboleda forest wood woods foret bois
+      piedra:
+        referente: piedra piedras roca rocas rocoso pedregal pedruzco cristales cuarzo cueva caverna cavernosas
+          cavernoso
+        glosa: piedra roca pedregal cueva caverna stone rock cave pierre roche caverne grotte
+      arena:
+        referente: arena arenas arenal arenales arenoso medano medanos duna
+        glosa: arena arenal medano sand sable
+      barro:
+        referente: barro arcilla greda lodo
+        glosa: barro arcilla lodo clay mud argile boue
+      viento:
+        referente: viento ventoso ventarron brisa
+        glosa: viento ventarron wind vent
+      camino:
+        referente: camino paso sendero vereda
+        glosa: camino senda sendero path road chemin
+      arbol:
+        referente: arbol arboles arbusto arbustos planta palma palmera cardon cardonal cactus cardo yabo cuji guayacan
+        glosa: arbol arbusto planta palma palmera cactus cardon cardo tree shrub plant palm arbre arbuste plante
+          palmier
+      ave:
+        referente: ave aves pajaro paloma palomas palomita garza zamuro zamuros loro loros cotorra alcaravan flamenco
+          tortola gavilan lechuza
+        glosa: ave pajaro paloma garza zamuro loro cotorra gavilan lechuza buho bird dove pigeon parrot owl hawk
+          oiseau ramier perroquet tourterelle hibou
+      pez_marisco:
+        referente: pez peces pescado cangrejo cangrejos almeja almejas molusco moluscos concha conchas caracol tortuga
+          langosta pesquera
+        glosa: pez pescado cangrejo almeja molusco concha caracol tortuga fish crab clam shell turtle poisson crabe
+          coquille tortue
+      reptil:
+        referente: culebra serpiente lagarto lagartija iguana caiman vibora
+        glosa: culebra serpiente lagarto lagartija iguana caiman vibora snake serpent lizard couleuvre lezard
+      mamifero:
+        referente: venado cervido conejo zorro tigre mono baquiro cachicamo murcielago
+        glosa: venado ciervo conejo zorro tigre jaguar mono deer rabbit fox monkey cerf lapin singe
+      insecto:
+        referente: mosquito mosquitos abeja abejas avispa hormiga
+        glosa: mosquito abeja avispa hormiga bee wasp ant mouche abeille guepe fourmi
+      cultivo:
+        referente: conuco labranza cultivo siembra maizal maizales sembradio sementera
+        glosa: conuco cultivo siembra sembrar maiz field garden jardin champ
+  medido:
+    toponimos_cruzados: 250
+    toponimos_con_referente_util: 146
+    voces:
+      caquetío: 357
+      medina: 75
+      wayunaiki: 759
+      taíno: 54
+      lokono: 618
+      kalinago: 24
+      paraujano: 45
+      achagua: 3553
+      lokono (Perea, COMPARANDA_LOKONO): 294
+      taíno (lista maestra T10): 1013
+      kalinago-caribe (Goeje 1939): 294
+      kalinago (Goeje 1939): 559
+      kalinago (habla de mujeres, Goeje): 301
+    pares_de_forma: 33484
+ana:
+  estado_en_el_canon: 'morfema-011: forma atestiguada SIN glosa desde #109 (Miguel, 2026-09-07, opción B) y en el
+    prompt sin glosa desde d21.6. Casos caquetíos: Paraguaná, Curiana, Chamuriana, Cujicana, Jayana, Coria-na (La
+    Ramada, Castellanos p. 264 vía Oliver cap. 3 p. 211); en el canon también Cariguariana, Maracapana y Capana,
+    con el -ana dentro de la raíz.'
+  por_lengua:
+    taíno:
+      linea: hermana (lokonoide)
+      con_glosa:
+      - nombre: Maguana
+        lugar: provincia y vega de la Española (la de Caonabó)
+        glosa: «Llamaban los indios á la Vega grande Magua […] y á esta provincia decían con adición Maguana, cuasi
+          la Vega menor»
+        procedencia:
+          obra: las-casas-apologetica
+          pagina: 19 (cap. VII)
+          visto: capa de texto
+        que_hace_el_ana: 'la -na añadida a Magua ''la vega grande'' da ''la vega menor'': valor de MENOR / la otra,
+          más pequeña'
+        separable: 'sí: magua ''vega grande'' lo glosa el mismo Las Casas'
+        atestaciones: 'un cronista; Goeje 1939 p. 13 («la petite plaine»), Coll y Toste 1897 p. 240 y Zayas 1931
+          (s.v. Abayagua) lo copian: no son independientes'
+        nota: 'la lista maestra taína (T10) tenía maguana como ii-solo-secundaria por no haber visto el pasaje:
+          esta es su primaria'
+      - nombre: çabana / sabana
+        glosa: «campiñas llanas y rasas que […] ellos llaman en su lengua çabanas»
+        procedencia:
+          obra: las-casas-1875
+          pagina: lib. I cap. LVI
+        que_hace_el_ana: 'nada que se pueda aislar: no hay *çab- ni *sab- con glosa; es la palabra entera'
+        separable: 'no'
+      - nombre: Habana
+        glosa: «Sitio grande»; «Lo grande; ha, por gua, he aquí, lo; baña, grande»
+        procedencia:
+          obra: coll-y-toste-1897
+          pagina: 169 y 227
+        que_hace_el_ana: 'para su autor es -bana ''grande'', no -ana; sin cronista detrás (lista maestra: ii)'
+        separable: conjetura de compilador
+      - nombre: Sibana / Sibanacán
+        glosa: '''pedregoso'' / ''piedras muchas'''
+        procedencia:
+          obra: coll-y-toste-1897
+          pagina: 166-167 (su vocabulario inverso)
+        que_hace_el_ana: siba 'piedra' + -na 'abundante en'?; Sibanacán es topónimo cubano
+        separable: conjetura de compilador, sin cronista
+      contra:
+      - 'Del Monte 1853 (vía bachiller-morales-1883 pp. 120-121): «las terminaciones en ana son aplicables á la
+        agricultura, plantas, frutos y sus poseedores»; Bachiller la da por equivocada y Zayas 1931 t. I p. 34 la
+        llama arbitraria'
+      - 'Cubanacan no es -ana: es Cuba + nacan ''medio, en medio'' (las-casas-1875 lib. I cap. XLIV). Va a Paraguaná,
+        abajo'
+      sin_glosa: 'Bayaguana, Yaguana, Caguana, Guatapaná, Bucaná, Jácana: nombres con referente (Coll y Toste) y
+        sin significado'
+    lokono:
+      linea: hermana (lokonoide)
+      con_glosa:
+      - nombre: Ebesoana, Demaréna (y Korobohána)
+        glosa: «From the “Ebesoru” (changed or transformed), heroine of the above legend, the Ebesoana (Arawak family)
+          take their name»
+        procedencia:
+          obra: brett-1880
+          pagina: 178-179, notas
+          visto: imagen (minería 2, lokono-parentesco-002)
+        que_hace_el_ana: 'hace del nombre de la antepasada el nombre del LINAJE matrilineal: Ebesō-tu → Ebeso-ana,
+          Demare-du → Demaré-na: ''los de X, la gente que viene de X'''
+        separable: sí en los dos primeros (la antepasada está nombrada en la misma nota)
+      - nombre: -coa-na (no topónimo)
+        glosa: 'nombres de lugar e instrumento sobre verbo: a-ha-cuba-coa-na ''lugar de reposo'', lu-yaccada-coa-na
+          ''su cama'''
+        procedencia:
+          obra: perea-alonso-1942
+          pagina: '561'
+        que_hace_el_ana: nominalizador verbal; ya en 2-lengua/morfologia.md §8. No forma nombres de lugar sobre
+          nombres
+      guayana:
+        lo_que_dicen_las_fuentes_del_repo:
+        - obra: goeje-1939
+          pagina: '5'
+          dice: el nombre del país viene de un PUEBLO, los Guayana, que vivían junto a la desembocadura del Caroní
+            en el Orinoco; Gumilla dice que su lengua es pariente del kalina, y el vocabulario de Raleigh (1595)
+            y Keymis (1596) «confirme que c'était une langue de la famille caribe»
+        - obra: bachiller-morales-1883
+          pagina: 277 (s.v. Guainía)
+          dice: 'Guainía «es palabra también de los indios de Costa Firme de que han derivado los españoles la voz
+            Guiana ó Guayana», tras Dauxion Lavaysse: tercera mano'
+        - obra: gumilla-1791
+          pagina: t. I (la Nación Guayana)
+          dice: nombra a la nación Guayana, «de genio duro y belicoso», sin etimología
+        tierra_de_muchas_aguas: 'no aparece en ninguna fuente del repo (medido abajo, ana.medido.guayana): es etimología
+          que circula fuera'
+        veredicto: 'en el repo, Guayana es un ETNÓNIMO pasado al país, y de un pueblo de lengua caribe: no es un
+          -ana lokono ni dice nada del -ana arahuaco'
+      sin_glosa: 'los nombres en -ana de Brett 1868/1880, Roth 1915, Brinton 1871 y Perea 1942 son etnónimos (Wapisiana,
+        Ojana, Layana), personajes (Kororomana, Marerewana, Amanna) o -banna ''hoja'' (Yuri-banna ''hoja de tabaco'',
+        nombre de persona): ningún nombre de lugar en -ana con glosa'
+    kalinago:
+      linea: hermana (lokonoide, por el sustrato iñeri)
+      con_glosa:
+      - nombre: Ouâitoucoubouli-ri / Ouâitoucoubouli-na; caloucaera-ri / caloucaera-na; Liamaïga-ri / Liamaïga-na;
+          Kaérabou-ri / Kaéra-bona; balaourcou-ri / balaourcou-na; aichi-na
+        glosa: «vn sauuage ou habitant de la Dominique, les habitans de la Dominique. On forme des mots pareillement
+          sur le nom des autres Isles»
+        procedencia:
+          obra: breton-1665
+          pagina: 416 (s.v. Ouâitoucoubouli) y Grammaire 1667, hoja G iij («Les pluriers terminez en a, sont du
+            commun»)
+          visto: capa de texto
+        que_hace_el_ana: 'GENTILICIO: isla + -ri ''un habitante'' (masculino), isla + -na ''los habitantes'' (plural
+          común)'
+        separable: 'sí: el nombre de la isla queda entero (Ouâitoucoubouli ''Dominica'', Caloucaera ''Guadalupe'',
+          Liamaïga ''San Cristóbal'')'
+        sustrato: 'sin-decidir: Breton da la regla sin marcar registro de hombres o de mujeres'
+      sin_glosa: balanna 'mar' (Breton, femenino; Goeje f balaua) es palabra entera; ningún nombre de isla en -ana
+    achagua:
+      linea: 'prima (orinoco-llanos): comparanda, no reconstruye sola'
+      con_glosa:
+      - nombre: Casanare Numana 'Boca de Casanare' (pliego 42); Vní numāna 'Voca del Rio' (pliego 98)
+        que_hace_el_ana: 'numa ''boca'' (Numasí, pliego 42) + -na relacional: ''la boca (de)''. Abaca Numa ''Boca
+          del monte'' va sin -na. La nota del escriba de la transcripción («toponimo del Meta/Casanare con el locativo
+          -ana») no se sostiene: el -na es del sustantivo ''boca'', no del topónimo'
+        separable: sí, pero no es locativo
+      - nombre: Jarrun 'Lugar, sitio' (pliego 73) ~ Jarruna 'Espacio, sitio' (pliego 61)
+        que_hace_el_ana: '-na optativo sobre ''lugar'': la misma -na relacional'
+      fabo_1911: 'p. 101: el -are hidronímico llanero; del -ana no dice nada'
+    wayuu:
+      linea: 'prima (guajiro-paraujana): sólo comparanda'
+      medido: 'ver ana.medido.lexicon_por_lengua.wayunaiki: ninguna voz en -ana con glosa de lugar'
+    caquetio_mismo:
+      oliver_1989_cap2: 'pp. 148-149: los sufijos toponímicos caquetíos que lista son -bana, -coa, -oa, -kiva, -(e)bo
+        y -wa; -ana no está entre ellos'
+      oliver_1989_cap3: 'p. 211: «Coria-na» y «Paragua-nil», «suspiciously Caquetío», en La Ramada'
+  paraguana_en_medio:
+    por_que_aqui: Esteves p. 56 recoge «conuco en medio del mar» y al canon le falta el morfema de 'en medio'
+    lo_que_hay:
+    - 'taíno nacan ''medio, en medio'': «Cubanacan […] porque nacan quiere decir, en la lengua destas islas, medio
+      ó en medio» (las-casas-1875 lib. I cap. XLIV)'
+    - 'lokono annakan ''centro, punto medio'' (lexicón, Brinton 1871) y a-nnakù-di ''estar en medio, entre'' (perea-alonso-1942
+      p. 647, Schumann 1755); brett-1868 p. 485: «anakabo n signifying “in the midst”» frente a nacan'
+    lectura: paragua 'mar' + -ná como resto de *naka(n) 'en medio' daría 'en medio del mar', la tradición de Esteves
+    veredicto: 'DÉBIL: exige perder -kan sin un solo paralelo de ese recorte, y Paraguaná se imprime con -ná tónica,
+      no con -naka. Se deja como hipótesis'
+  veredicto:
+    lugar_de: 'ninguna línea —hermana ni prima— glosa un -ana como ''lugar de''. La retirada de #109 se confirma
+      desde fuera'
+    lo_que_recurre: '-(a)na como COLECTIVO DE GENTE, en dos hermanas lokonoides y con glosa de fuente primaria y
+      separable: el linaje matrilineal lokono (Brett 1880) y el gentilicio plural kalinago (Breton 1665 y 1667).
+      Guayana, el caso que trae Miguel, es lo mismo visto desde fuera —un pueblo cuyo nombre pasó al país, Goeje
+      p. 5—, pero ese pueblo hablaba caribe.'
+    lo_que_no_recurre: 'el taíno da un caso, Maguana ''la vega menor'' (Las Casas): -na sobre un nombre de lugar
+      con valor de ''menor''. Uno solo, y otra función'
+    candidato: '-ana ''los de X, la gente de X'' (colectivo de gente, gentilicio): el topónimo sería el nombre de
+      una gente pasado al lugar, como Guayana. Encaja con Curiana, que nombra «el pueblo» y «la costa» a la vez
+      (Arcaya p. 169), y con Coria-na y Paragua-nil como nombres de aldea en La Ramada (Castellanos p. 264).'
+    linea: 'hermana: lokono + kalinago (dos tradiciones lokonoides). El achagua no lo apoya (su -na es relacional);
+      el taíno lo contradice en su único caso'
+    capa_propuesta: 'hipotético, no reconstruido: el lado caquetío no tiene un solo -ana glosado y el paso de gentilicio
+      a topónimo es inferencia nuestra (regla 2: en duda, degradar)'
+    lo_que_lo_subiria: un -ana caquetío usado por una fuente como nombre de GENTE (no de lugar), o una de las 27
+      familias de Hilhouse en -ana con su epónimo
+    decide: 'Miguel (ver el borrador de issue): dejar sin glosa, adoptar el candidato como hipotético, o esperar
+      a Hilhouse y a Williams 1923'
+  medido:
+    lexicon_por_lengua:
+      lokono:
+        voces: 912
+        en_ana: 7
+        con_glosa_de_lugar: 0
+        ejemplos_de_lugar: []
+      taíno:
+        voces: 1067
+        en_ana: 42
+        con_glosa_de_lugar: 10
+        ejemplos_de_lugar:
+        - 'Habana ''Lugar de Cuba, donde vivía el cacique Yagua- cayo. ## Sitio grande'''
+        - 'Agüeybana ''stony, rocky, rough ## topónimos y antropónimos de la Española y San J'''
+        - Baya guana 'Lugar de Santo Domingo.'
+        - Bucaná 'Barrio y río de Ponce, Puerto Rico.'
+        - 'Higuana ''llámanla los indios desta isla Española iguana ## iguane ## Lagarto gr'''
+        - Caguana 'Río tributario del Grande de Arecibo; y ba- rrio de Untado, en Puerto '
+        - Guatapaná 'Río de Santo Domingo.'
+        - 'Macana ''a war club ## p.68: «Pelean con macanas los indios de esta isla, que s'''
+      kalinago:
+        voces: 884
+        en_ana: 15
+        con_glosa_de_lugar: 0
+        ejemplos_de_lugar: []
+      kalinago-caribe:
+        voces: 294
+        en_ana: 5
+        con_glosa_de_lugar: 0
+        ejemplos_de_lugar: []
+      achagua:
+        voces: 3553
+        en_ana: 47
+        con_glosa_de_lugar: 1
+        ejemplos_de_lugar:
+        - uní numāna 'Voca del Rio'
+      wayunaiki:
+        voces: 759
+        en_ana: 5
+        con_glosa_de_lugar: 0
+        ejemplos_de_lugar: []
+      paraujano:
+        voces: 45
+        en_ana: 0
+        con_glosa_de_lugar: 0
+        ejemplos_de_lugar: []
+      caquetío:
+        voces: 357
+        en_ana: 15
+        con_glosa_de_lugar: 3
+        ejemplos_de_lugar:
+        - curiana 'territorio de los caquetíos / lugar del cardón'
+        - kabana 'sabana'
+        - kapubana 'duende del cerro'
+      medina:
+        voces: 75
+        en_ana: 2
+        con_glosa_de_lugar: 2
+        ejemplos_de_lugar:
+        - urubana 'fue un frijol de color morado, sabor agradable, y que por llegar a Par'
+        - wariana 'arbusto halófilo, frailejón de la playa. Tabaco pescador'
+    achagua_neira_ribero:
+      entradas_del_vocabulario: 4276
+      formas_con_ana: 55
+      notas_de_toponimo_del_escriba:
+      - 'Boca de Casanare = Casanare Numana (pliego 42): toponimo del Meta/Casanare con el locativo -ana'
+      - 'Meta, Rio de Meta = Meda (pliego 75): TOPONIMO: el rio Meta tiene nombre achagua propio, `Meda`. Es el
+        rio de las misiones donde'
+      boca:
+      - Boca = Numasí (pliego 42)
+      - Boca de Casanare = Casanare Numana (pliego 42)
+      - Boca del Monte = Abaca Numa (pliego 42)
+      - Boca de Verano = Camuynumare, Numanau (pliego 42)
+      - Boca abajo = Nunumamiyuba (pliego 42)
+      - Voca = Numan (pliego 98)
+      - Voca del Rio = Vní numāna (pliego 98)
+      lugar:
+      - Espacio, sitio = Jarruna (pliego 61)
+      - Espacioso = Carramabi, Carraunacayi (pliego 61)
+      - Espacioso grande = Manusucuyu (pliego 61)
+      - Lugar, sitio = Jarrun (pliego 73)
+    guayana:
+      Aguado_1918_Historia_Venezuela_t1_gutenberg.txt:
+        grafias:
+          Guayana: 7
+        pasajes_con_aire_de_etimologia: 1
+      Bachiller_Morales_1883_Cuba_Primitiva.txt:
+        grafias:
+          Guayana: 14
+          Guiana: 2
+          Guyana: 5
+        pasajes_con_aire_de_etimologia: 1
+      Brett_1868_Indian_Tribes_Guiana.txt:
+        grafias:
+          Guiana: 125
+          Guyane: 3
+        pasajes_con_aire_de_etimologia: 5
+      Brett_1880_Legends_Myths_British_Guiana.txt:
+        grafias:
+          Guiana: 7
+        pasajes_con_aire_de_etimologia: 0
+      Brinton_1871_texto.txt:
+        grafias:
+          Guiana: 6
+        pasajes_con_aire_de_etimologia: 0
+      Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt:
+        grafias:
+          Guayana: 56
+          Guajana: 4
+        pasajes_con_aire_de_etimologia: 0
+      Castellanos_1857_Elegias_partes_I-II_texto.txt:
+        grafias:
+          Guayana: 6
+        pasajes_con_aire_de_etimologia: 0
+      Castellanos_1886_Historia_Nuevo_Reino_Granada_t1.txt:
+        grafias:
+          Guayana: 2
+        pasajes_con_aire_de_etimologia: 0
+      CollYToste_1897_Prehistoria_Puerto_Rico.ocr.txt:
+        grafias:
+          Guayana: 14
+          Guiana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Davies_1666_History_Caribby_Islands.txt:
+        grafias:
+          Guayana: 1
+          Guyana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Davies_1666_History_Caribby_Islands_TCP.txt:
+        grafias:
+          Guayana: 1
+          Guyana: 3
+        pasajes_con_aire_de_etimologia: 1
+      Esteves_1989_Toponimos_Paraguana_5.ocr.txt:
+        grafias:
+          Guayana: 2
+        pasajes_con_aire_de_etimologia: 0
+      Esteves_1989_Toponimos_Paraguana_6.ocr.txt:
+        grafias:
+          Guayana: 2
+        pasajes_con_aire_de_etimologia: 0
+      Fabo_1911_Idiomas_y_Etnografia_Region_Oriental_Colombia.txt:
+        grafias:
+          Guayana: 2
+        pasajes_con_aire_de_etimologia: 0
+      Gatschet_1885_Aruba_texto.txt:
+        grafias:
+          Guyana: 2
+        pasajes_con_aire_de_etimologia: 1
+      Gatschet_1885_biostor_texto.txt:
+        grafias:
+          Guyana: 2
+        pasajes_con_aire_de_etimologia: 1
+      Gilij_1782_Saggio_Storia_Americana_vol3.ocr.txt:
+        grafias:
+          Guajana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Goeje_1939_Nouvel_examen_langues_Antilles.txt:
+        grafias:
+          Guayana: 4
+          Guiana: 7
+          Guyana: 1
+          Guyane: 8
+          Oayana: 3
+        pasajes_con_aire_de_etimologia: 1
+      Gumilla_1791_Historia_Natural_Orinoco_t1.txt:
+        grafias:
+          Guayana: 29
+        pasajes_con_aire_de_etimologia: 0
+      Gumilla_1791_Historia_Natural_Orinoco_t2.txt:
+        grafias:
+          Guayana: 6
+        pasajes_con_aire_de_etimologia: 0
+      Haviser_Strecker_2006_Rock_Art_Caribbean_Zona2.txt:
+        grafias:
+          Guiana: 15
+          Guyana: 17
+          Guyane: 15
+        pasajes_con_aire_de_etimologia: 2
+      Navarrete_1829_Coleccion_Viages_t3_Viages_Menores_Vespucio.txt:
+        grafias:
+          Guayana: 3
+        pasajes_con_aire_de_etimologia: 0
+      Oliver_1989_cap3_s324_caribes.ocr.txt:
+        grafias:
+          Guayana: 6
+          Guiana: 1
+          Guyana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Oliver_1989_cap3_s33_falcon_lara.ocr.txt:
+        grafias:
+          Guayana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt:
+        grafias:
+          Guayana: 11
+        pasajes_con_aire_de_etimologia: 0
+      Perea_Alonso_1942_Filologia_Comparada_Arawak_TomoI.txt:
+        grafias:
+          Guayana: 23
+          Guiana: 2
+        pasajes_con_aire_de_etimologia: 0
+      Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.ocr.txt:
+        grafias:
+          Guayana: 2
+        pasajes_con_aire_de_etimologia: 0
+      Pichardo_1862_Diccionario_Provincial_Vozes_Cubanas.txt:
+        grafias:
+          Guayana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Rivero_1883_Historia_Misiones_Casanare.txt:
+        grafias:
+          Guayana: 59
+        pasajes_con_aire_de_etimologia: 0
+      Rochefort_1658_Histoire_Naturelle_Morale_Antilles.txt:
+        grafias:
+          Guayana: 1
+          Guyana: 1
+        pasajes_con_aire_de_etimologia: 1
+      Roth_1915_Animism_Folklore_Guiana.txt:
+        grafias:
+          Guayana: 3
+          Guiana: 92
+          Guyane: 1
+          Guajana: 1
+          Ouajana: 1
+        pasajes_con_aire_de_etimologia: 0
+      Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.txt:
+        grafias:
+          Guayana: 1
+          Guiana: 21
+          Guyane: 1
+        pasajes_con_aire_de_etimologia: 0
+      Steward_1949_HSAI_vol5_pp655-772_y_bibliografia.txt:
+        grafias:
+          Guiana: 57
+          Guyana: 2
+          Guyane: 4
+        pasajes_con_aire_de_etimologia: 0
+      VanBuurt_2014_CaquetioWords_Papiamentu.txt:
+        grafias:
+          Guyana: 2
+        pasajes_con_aire_de_etimologia: 0
+      WagenaarHummelinck_1953_Rotstekeningen_I.txt:
+        grafias:
+          Guyana: 1
+        pasajes_con_aire_de_etimologia: 0
+      WagenaarHummelinck_1962_Rotstekeningen_III.txt:
+        grafias:
+          Guyana: 1
+        pasajes_con_aire_de_etimologia: 1
+      Zayas_1931_Lexicografia_Antillana_2ed_t1.txt:
+        grafias:
+          Guayana: 4
+        pasajes_con_aire_de_etimologia: 0
+      Zayas_1931_Lexicografia_Antillana_2ed_t2.txt:
+        grafias:
+          Guayana: 5
+          Guajana: 1
+        pasajes_con_aire_de_etimologia: 0
+cruce:
+  azar_por_lengua:
+    achagua:
+      linea: prima (orinoco-llanos)
+      observados: 45
+      azar_permutando_glosas:
+        media: 27.43
+        p95: 36
+        max: 42
+        replicas_que_igualan_o_superan: 0.0
+      azar_permutando_referentes:
+        media: 29.83
+        p95: 36
+        max: 44
+        replicas_que_igualan_o_superan: 0.0
+      una_voz_por_familia:
+        voces: 1187
+        observados: 16
+        azar_permutando_glosas:
+          media: 11.06
+          p95: 17
+          max: 22
+          replicas_que_igualan_o_superan: 0.103
+      por_filtro:
+        paisaje: 36
+        clase-viva: 27
+    caquetío:
+      linea: la propia lengua
+      observados: 64
+      azar_permutando_glosas:
+        media: 46.67
+        p95: 55
+        max: 60
+        replicas_que_igualan_o_superan: 0.0
+      azar_permutando_referentes:
+        media: 51.94
+        p95: 59
+        max: 71
+        replicas_que_igualan_o_superan: 0.007
+      una_voz_por_familia:
+        voces: 297
+        observados: 58
+        azar_permutando_glosas:
+          media: 38.42
+          p95: 47
+          max: 54
+          replicas_que_igualan_o_superan: 0.0
+      por_filtro:
+        paisaje: 51
+        clase-viva: 57
+    kalinago:
+      linea: hermana (lokonoide, por el sustrato iñeri)
+      observados: 25
+      azar_permutando_glosas:
+        media: 14.89
+        p95: 22
+        max: 29
+        replicas_que_igualan_o_superan: 0.01
+      azar_permutando_referentes:
+        media: 17.99
+        p95: 23
+        max: 28
+        replicas_que_igualan_o_superan: 0.027
+      una_voz_por_familia:
+        voces: 598
+        observados: 16
+        azar_permutando_glosas:
+          media: 9.69
+          p95: 16
+          max: 22
+          replicas_que_igualan_o_superan: 0.057
+      por_filtro:
+        paisaje: 25
+        clase-viva: 6
+    kalinago-caribe:
+      linea: 'vecina (el estrato kalina —caribe— del caribe insular: Goeje lo marca K)'
+      observados: 2
+      azar_permutando_glosas:
+        media: 2.16
+        p95: 6
+        max: 11
+        replicas_que_igualan_o_superan: 0.543
+      azar_permutando_referentes:
+        media: 1.86
+        p95: 4
+        max: 6
+        replicas_que_igualan_o_superan: 0.597
+      una_voz_por_familia:
+        voces: 227
+        observados: 1
+        azar_permutando_glosas:
+          media: 1.62
+          p95: 5
+          max: 9
+          replicas_que_igualan_o_superan: 0.72
+      por_filtro:
+        paisaje: 2
+    lokono:
+      linea: hermana (lokonoide)
+      observados: 11
+      azar_permutando_glosas:
+        media: 9.37
+        p95: 16
+        max: 19
+        replicas_que_igualan_o_superan: 0.34
+      azar_permutando_referentes:
+        media: 9.39
+        p95: 14
+        max: 17
+        replicas_que_igualan_o_superan: 0.34
+      una_voz_por_familia:
+        voces: 458
+        observados: 8
+        azar_permutando_glosas:
+          media: 6
+          p95: 10
+          max: 17
+          replicas_que_igualan_o_superan: 0.273
+      por_filtro:
+        paisaje: 10
+        clase-viva: 3
+    medina:
+      linea: voz viva (Medina Colina, s. XX)
+      observados: 32
+      azar_permutando_glosas:
+        media: 20.65
+        p95: 27
+        max: 33
+        replicas_que_igualan_o_superan: 0.007
+      azar_permutando_referentes:
+        media: 21.36
+        p95: 27
+        max: 29
+        replicas_que_igualan_o_superan: 0.0
+      una_voz_por_familia:
+        voces: 69
+        observados: 32
+        azar_permutando_glosas:
+          media: 18.89
+          p95: 25
+          max: 28
+          replicas_que_igualan_o_superan: 0.0
+      por_filtro:
+        paisaje: 6
+        clase-viva: 37
+    paraujano:
+      linea: prima (guajiro-paraujana)
+      observados: 0
+      azar_permutando_glosas:
+        media: 1.05
+        p95: 3
+        max: 5
+        replicas_que_igualan_o_superan: 1.0
+      azar_permutando_referentes:
+        media: 0.06
+        p95: 1
+        max: 1
+        replicas_que_igualan_o_superan: 1.0
+      una_voz_por_familia:
+        voces: 45
+        observados: 0
+        azar_permutando_glosas:
+          media: 0.89
+          p95: 3
+          max: 5
+          replicas_que_igualan_o_superan: 1.0
+      por_filtro: {}
+    taíno:
+      linea: hermana (lokonoide)
+      observados: 68
+      azar_permutando_glosas:
+        media: 63.24
+        p95: 70
+        max: 80
+        replicas_que_igualan_o_superan: 0.163
+      azar_permutando_referentes:
+        media: 60.66
+        p95: 68
+        max: 73
+        replicas_que_igualan_o_superan: 0.06
+      una_voz_por_familia:
+        voces: 514
+        observados: 56
+        azar_permutando_glosas:
+          media: 49.01
+          p95: 57
+          max: 62
+          replicas_que_igualan_o_superan: 0.1
+      por_filtro:
+        paisaje: 63
+        clase-viva: 172
+    wayunaiki:
+      linea: prima (guajiro-paraujana)
+      observados: 4
+      azar_permutando_glosas:
+        media: 4.59
+        p95: 8
+        max: 16
+        replicas_que_igualan_o_superan: 0.613
+      azar_permutando_referentes:
+        media: 3.77
+        p95: 7
+        max: 9
+        replicas_que_igualan_o_superan: 0.537
+      una_voz_por_familia:
+        voces: 537
+        observados: 4
+        azar_permutando_glosas:
+          media: 3.89
+          p95: 8
+          max: 12
+          replicas_que_igualan_o_superan: 0.53
+      por_filtro:
+        clase-viva: 1
+        paisaje: 3
+  mejores:
+  - toponimo: toponimo-016
+    forma: capadare
+    nivel: C
+    par: lokono kabadaro 'jaguar, yaguareté'
+    referente: la glosa de fuente es «Diente de tigre» (Zavala; la atribución a Alvarado no se pudo verificar, censo_terminacion_re.yaml)
+    lectura: 'capadare podría ser la palabra entera para el jaguar (kabadaro ~ capadare: p~b, -o~-e) y «diente de
+      tigre» una relectura de -dare como dare ''diente''; conserva el ''tigre'' que la segmentación capa- + dare
+      dejaba sin morfema'
+    linea: 'hermana (lokono), con reserva: las notas del lexicón dicen que kabadaro es préstamo del caribe insular
+      en el lokono (Goeje 1928, Pet 1987; no están en el repo). Si viene del estrato caribe, la línea es VECINA'
+    por_que_es_debil: una sola lengua, y préstamo; el canon decía «el lexicón no tiene ninguna palabra para felino»
+      y sí la tenía, como comparanda lokona
+    medido:
+    - 'kapadare ~ kabadaro (lokono) ''jaguar, yaguareté'' 0.75 [clase-viva: mamifero]'
+  - toponimo: toponimo-285
+    forma: siraba
+    nivel: descartado
+    par: 'taíno ciba ''piedra'' (Pané, Las Casas: lista maestra, i-primaria) · lokono siba ''piedra, roca'' · kalinago
+      (habla de mujeres) šiba ''pierre'' (Goeje p. 57)'
+    referente: cerro cónico de unos 500 m unido al de Santa Ana, con los petroglifos «Las Piedras del Almanaque»
+      (Esteves p. 60)
+    lectura: 'si(ra)ba: la piedra en las tres hermanas, en un cerro de piedras grabadas; el caquetío atestigua kiba/quiva
+      ''piedra'' y van Buurt da siba en Aruba (Casibari)'
+    linea: hermana, en las tres
+    por_que_es_debil: queda un -ra- sin explicar; el parecido (0,8) lo hace la secuencia s-i-b-a, no un cognado
+      limpio
+    medido:
+    - 'siraba ~ siba (lokono) ''piedra, roca'' 0.8 [paisaje: piedra]'
+    - 'siraba ~ siba (taíno) ''piedra; las cibas, piedras como de mármol que se llevan colg'' 0.8 [paisaje: piedra]'
+    - 'siraba ~ Ciba (taíno) ''a stone ## pierre ## «La palabra siba en el lenguage de Hait'' 0.8 [paisaje: piedra]'
+    - 'siraba ~ šiba (kalinago) ''pierre'' 0.8 [paisaje: piedra]'
+    - 'siraba ~ Bosiba (taíno) ''Piedra grande.'' 0.667 [paisaje: piedra]'
+  - toponimo: toponimo-298
+    forma: cimiro
+    nivel: descartado
+    par: caquetío (reconstruido) sima 'cerro, elevación del terreno' + -iro diminutivo (REGLAS_ESTEVES)
+    referente: cerro, lindero en Moruy (Esteves p. 30)
+    lectura: sim(a)-iro 'cerrito'; Esteves escribió «No parece voz indígena»
+    linea: 'la propia lengua: no sale de una hermana (sima se declara por cognado lokono y por Barquisimeto, y ese
+      cognado no está en el lexicón)'
+    por_que_es_debil: las dos piezas son de capa baja (sima reconstruido, -iro leído en topónimos) y contradice
+      a la fuente
+    medido:
+    - 'sim ~ sima (caquetío) ''cerro, elevación del terreno'' 0.857 [paisaje: cerro]'
+  - toponimo: toponimo-090
+    forma: amuay
+    nivel: C
+    par: kalinago (habla de mujeres) šauai 'côte rocheuse, falaise, caverne' (Goeje p. 57; grotte šauai-roku)
+    referente: 'Esteves p. 16: «la voz da la idea de cavidad subterránea, haitón, cueva grande», y en las cercanías
+      hay cuevas naturales'
+    lectura: la cueva / el acantilado rocoso de la hermana para un sitio con cuevas
+    linea: hermana (kalinago, estrato arahuaco de las mujeres)
+    por_que_es_debil: m- frente a š- en el arranque no es correspondencia de nadie; y Amuay es ya C por el ETNÓNIMO
+      (Oliver cap. 3 pp. 275-276)
+    medido:
+    - 'amuai ~ šauai (kalinago) ''côte rocheuse, falaise, caverne'' 0.8 [paisaje: piedra]'
+  - toponimo: toponimo-264
+    forma: bajarigua
+    nivel: descartado
+    par: taíno bagua 'mar' (Oviedo; lista maestra i-primaria) · kalinago (mujeres) balaua 'la mer' (Goeje p. 55)
+    referente: fundo y salina al norte de El Vínculo, en una depresión bajo el nivel del mar (Esteves p. 19)
+    lectura: el mar de las hermanas en un salar costero; el caquetío ya tiene para/parawa 'mar' (atestiguado)
+    linea: hermana (taíno y kalinago)
+    por_que_es_debil: el parecido lo hacen b-a…g-u-a con un -jari- en medio sin explicar, y el campo 'mar' es el
+      que más pares da por azar
+    medido:
+    - 'bajarigua ~ bagua (taíno) ''mar'' 0.714 [paisaje: mar_costa]'
+    - 'bajarigua ~ Bagua (taíno) ''the sea ## «Llaman los indios de aquesta Isla Española á la '' 0.714 [paisaje:
+      mar_costa]'
+    - 'bajarigua ~ balaua (kalinago) ''la mer'' 0.667 [paisaje: mar_costa]'
+    - 'bajari ~ baraha (lokono) ''mar, agua extensa (forma Lokono)'' 0.667 [paisaje: mar_costa]'
+    - 'bajarigua ~ parawa (caquetío) ''mar'' 0.625 [paisaje: mar_costa]'
+  leido_al_pasar:
+  - toponimo: toponimo-234
+    forma: jagüe
+    nota: Goeje p. 13 junta taíno xagueye 'citerne naturelle' con kalinago šauai 'côte rocheuse, cavernes et grottes';
+      jagüey es voz de la esfera (taíno por el castellano) y el lugar tiene «una cueva grande». El canon lo lee
+      como el árbol andino jagüe (Alvarado p. 178). No pasa el filtro (cueva ≠ agua) y no se cuenta; se deja para
+      que la campaña lo mire
+  control_positivo:
+  - 'cumaraguas (toponimo-221): kumaragua ~ kumarawa (caquetío) ''caracol de las costas de Paraguaná'' 1.0'
+  - 'carirubana (toponimo-148): karir ~ kari (caquetío) ''orilla del mar, costa'' 0.889'
+  - 'cuiba (toponimo-112): kuiba ~ kiba (caquetío) ''piedra'' 0.889'
+  - 'cariguariana (toponimo-217): riguariana ~ wariana (medina) ''arbusto halófilo, frailejón de la playa. Tabaco
+    pe'' 0.889'
+  - 'paraguaná (toponimo-018): paragu ~ para (caquetío) ''mar, agua extensa (dulce o salada en gran cantidad'' 0.8'
+  - 'tiquiba (toponimo-258): tikiba ~ kiba (caquetío) ''piedra'' 0.8'
+  - 'cariguariana (toponimo-217): riguariana ~ waranao (caquetío) ''salado, ácido'' 0.778'
+  - 'curiana (toponimo-111): kuri ~ kari (caquetío) ''orilla del mar, costa'' 0.75'
+  - 'cumaraguas (toponimo-221): kumaragua ~ parawa (caquetío) ''mar'' 0.75'
+  - 'jurijurebo (toponimo-001): jurijur ~ juri (caquetío) ''viento, ventarrón'' 0.727'
+  - 'bajabaroa (toponimo-120): bajabar ~ baja (caquetío) ''caño'' 0.727'
+  - 'cariguariana (toponimo-217): kariguar ~ kari (caquetío) ''orilla del mar, costa'' 0.667'
+  - 'gisebo (toponimo-227): gisebo ~ ebo (caquetío) ''camino, paso, senda'' 0.667'
+  - 'curarí (toponimo-180): kurari ~ kurari (medina) ''árbol de roble, tecoma'' 1.0'
+  - 'guay (toponimo-150): guai ~ way (caquetío) ''árbol parecido a la ceiba'' 1.0'
+  - 'caseto (toponimo-088): kaseto ~ kaseto (medina) ''planta herbácea'' 1.0'
+  - 'maquigua (toponimo-240): kigua ~ kiwa (caquetío) ''concha de almeja y otros moluscos. Sitio del estad'' 1.0'
+  - 'matacán (toponimo-242): matakan ~ matakán (medina) ''venado matacán: el cérvido pequeño («de poca alzad'' 1.0'
+  - 'sibidigual (toponimo-123): sibidigual ~ sibidiwa (caquetío) ''arbusto euforbiaceo. Jatrofa Gossy Pifolia''
+    0.947'
+  - 'juderecal (toponimo-236): juderek ~ judereke (medina) ''árbol ramoso, parecido al chiguare'' 0.933'
+  - 'caujarito (toponimo-218): kaujar ~ kaujaro (medina) ''árbol de madera blanda, fruta mucilaginosa, del gé''
+    0.923'
+  - 'chujaro (toponimo-224): kujaro ~ kaujaro (medina) ''árbol de madera blanda, fruta mucilaginosa, del gé'' 0.923'
+  - 'tiguadare (toponimo-256): tiguad ~ tiwa (medina) ''árbol rutáceo'' 0.909'
+  - 'tacal (toponimo-253): tak ~ take (medina) ''árbol nucífero'' 0.857'
+  - 'imujo (toponimo-231): imujo ~ huaymujo (medina) ''pequeño cangrejo'' 0.833'
+  - 'araguan (toponimo-152): araguan ~ parawatan (caquetío) ''árbol maderable'' 0.824'
+  - 'bibuche (toponimo-119): bibuke ~ buche (caquetío) ''planta xerofita, melocato, cardo globoso, rastrero'' 0.8'
+  - 'adaure (toponimo-080): daure ~ chaure (caquetío) ''cegue. Lechuza que anida en cuevas de terrenos are'' 0.8'
+  - 'maquigua (toponimo-240): kigua ~ tiwa (medina) ''árbol rutáceo'' 0.8'
+  - 'tausabana (toponimo-254): tausa ~ tauta (medina) ''pequeña paloma de hábitos ictiófagos'' 0.8'
+  - 'guacuira (toponimo-117): guakuira ~ waka (caquetío) ''ave, cotorra'' 0.769'
+  - 'asaro (toponimo-126): saro ~ yaro (caquetío) ''bejuco. Planta venenosa'' 0.75'
+  - 'iticuna (toponimo-233): itikuna ~ kuna (medina) ''pez del golfete de Coro'' 0.727'
+  - 'tijuro (toponimo-257): tijuro ~ tijua (medina) ''paloma de canto onomatopéyico'' 0.727'
+  - 'guacuira (toponimo-117): guakuira ~ wakoa (caquetío) ''paloma'' 0.714'
+  - 'sabarigua (toponimo-122): sabarigua ~ sibidiwa (caquetío) ''arbusto euforbiaceo. Jatrofa Gossy Pifolia'' 0.667'
+  - 'baracara (toponimo-127): barakara ~ bara (caquetío) ''palo, árbol'' 0.667'
+  - 'baraived (toponimo-087): baraibed ~ bara (caquetío) ''palo, árbol'' 0.667'
+  - 'ticuí (toponimo-255): tikui ~ tigi (medina) ''pequeña paloma que se alimenta de peces'' 0.667'
+  candidatos_hermanas_y_primas:
+  - toponimo: toponimo-161
+    forma: sauca
+    nivel: descartado
+    raiz: sauka
+    se_quito: entero
+    lengua: kalinago-caribe
+    linea: 'vecina (el estrato kalina —caribe— del caribe insular: Goeje lo marca K)'
+    voz: šaka
+    glosa: saupoudrer de sel, de sucre
+    forma_comparada: saka
+    similitud: 0.889
+    filtro: paisaje
+    por:
+    - salina
+    control_positivo: false
+    referente: ' puerto y pueblo al norte de Píritu, Distrito Zamora; «hay salinas» — dato de comercio, de la misma
+      clase que el curubo para la cal'
+    ficha:
+      obra: goeje-1939
+      pagina: 102
+      origen_segun_goeje: kalina
+  - toponimo: toponimo-266
+    forma: carajaima
+    nivel: descartado
+    raiz: karaja
+    se_quito: -ima (REGLAS_ZAVALA)
+    lengua: lokono
+    linea: hermana (lokonoide)
+    voz: baraha
+    glosa: mar, agua extensa (forma Lokono)
+    forma_comparada: baraja
+    similitud: 0.833
+    filtro: paisaje
+    por:
+    - agua_dulce
+    control_positivo: false
+    referente: ciénaga del caserío San Pedro (Adícora); papeles de 1698 (linderos de Urupaguaduco) la escriben Caramajaima;
+      termina en -aima, afijo de REGLAS_ZAVALA sin glosa
+    ficha:
+      clave: baraha
+      capa: lokono
+      origen: VOCABULARIO_BASE
+      notas: Lokono bara (mar); cognado de para- caquetío. Distinto de 'bara' (río) ya presente en el lexicon
+  - toponimo: toponimo-148
+    forma: carirubana
+    nivel: C
+    raiz: karir
+    se_quito: -ubana (REGLAS_ZAVALA -ubana)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Carey
+    glosa: 'Especia de tortuga ( Chelonia imbricata). ## Tortuga de mar'
+    forma_comparada: karei
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' «Carirubana significa: orilla del peñón, la orilla del cerro. Cari: orilla. Bana: sitio alto.»'
+    ficha:
+      lema: karei
+      clase: i-primaria-del-XVI
+      cronistas: &id003
+      - Gómara
+      - Las Casas
+  - toponimo: toponimo-090
+    forma: amuay
+    nivel: C
+    raiz: amuai
+    se_quito: entero
+    lengua: kalinago
+    linea: hermana (lokonoide, por el sustrato iñeri)
+    voz: šauai
+    glosa: côte rocheuse, falaise, caverne
+    forma_comparada: sauai
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - piedra
+    control_positivo: false
+    referente: ' «la voz da la idea de cavidad subterránea, haitón, cueva grande. Y justamente en las cercanías
+      de Amuay hay unas cuevas naturales que debieron ser habituales residencias de los nativos»'
+    ficha:
+      obra: goeje-1939
+      pagina: 57
+      registro: f
+  - toponimo: toponimo-223
+    forma: chichibana
+    nivel: C
+    raiz: kiki
+    se_quito: -bana (-bana, D9/#38)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Calichi
+    glosa: 'Fuente de la montaña ## Quebrada de agua dulce'
+    forma_comparada: kaliki
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - cerro
+    control_positivo: false
+    referente: 'lugar cercano a El Vínculo (Pueblo Nuevo) «el cerro de los achechives. Achechive: arbusto asperifoliáceo»'
+    ficha:
+      lema: kalikhi
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-161
+    forma: sauca
+    nivel: descartado
+    raiz: sauka
+    se_quito: entero
+    lengua: kalinago
+    linea: hermana (lokonoide, por el sustrato iñeri)
+    voz: šauai
+    glosa: côte rocheuse, falaise, caverne
+    forma_comparada: sauai
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' puerto y pueblo al norte de Píritu, Distrito Zamora; «hay salinas» — dato de comercio, de la misma
+      clase que el curubo para la cal'
+    ficha:
+      obra: goeje-1939
+      pagina: 57
+      registro: f
+  - toponimo: toponimo-082
+    forma: charaima
+    nivel: descartado
+    raiz: kara
+    se_quito: -ima (REGLAS_ZAVALA)
+    lengua: kalinago
+    linea: hermana (lokonoide, por el sustrato iñeri)
+    voz: akaera
+    glosa: île, pays, patrie
+    forma_comparada: akaera
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide
+      en su Título de Composición; Esteves no sabe qué relación guarda con «el cacique Charaima de la Isla de Margarita,
+      el a'
+    ficha:
+      obra: goeje-1939
+      pagina: 56
+      registro: f
+  - toponimo: toponimo-285
+    forma: siraba
+    nivel: descartado
+    raiz: siraba
+    se_quito: entero
+    lengua: lokono
+    linea: hermana (lokonoide)
+    voz: siba
+    glosa: piedra, roca
+    forma_comparada: siba
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - piedra
+    control_positivo: false
+    referente: cerro cónico de unos 500 m unido al de Santa Ana; petroglifos «Las Piedras del Almanaque»
+    ficha:
+      clave: siba-lokono
+      capa: lokono
+      origen: VOCABULARIO_BASE
+      notas: 'Lok. siba; artículo to [NH]; siba-be ''piedras''; cognado con iba/kiba (Carib.); Brinton 1871; Goeje
+        1928 · CLAVE CAMBIADA 2026-09-23 (db.3): era `siba` a secas; '
+  - toponimo: toponimo-285
+    forma: siraba
+    nivel: descartado
+    raiz: siraba
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: siba
+    glosa: piedra; las cibas, piedras como de mármol que se llevan colgadas de brazos y cuello
+    forma_comparada: siba
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - piedra
+    control_positivo: false
+    referente: cerro cónico de unos 500 m unido al de Santa Ana; petroglifos «Las Piedras del Almanaque»
+    ficha:
+      clave: siba
+      capa: taíno
+      origen: VOCABULARIO_BASE
+      notas: 'Pané, Relación cap. VI (La Española; texto que llegó por la traducción italiana de Ulloa): «muchas
+        cibas, para que las llevara sujetas a los brazos, pues en aqu'
+  - toponimo: toponimo-285
+    forma: siraba
+    nivel: descartado
+    raiz: siraba
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Ciba
+    glosa: 'a stone ## pierre ## «La palabra siba en el lenguage de Haití significa piedra […] Cibao es un territorio
+      de la isla que se deriva de aquell'
+    forma_comparada: siba
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - piedra
+    control_positivo: false
+    referente: cerro cónico de unos 500 m unido al de Santa Ana; petroglifos «Las Piedras del Almanaque»
+    ficha:
+      lema: siba
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Las Casas
+      - Pané
+  - toponimo: toponimo-285
+    forma: siraba
+    nivel: descartado
+    raiz: siraba
+    se_quito: entero
+    lengua: kalinago
+    linea: hermana (lokonoide, por el sustrato iñeri)
+    voz: šiba
+    glosa: pierre
+    forma_comparada: siba
+    similitud: 0.8
+    filtro: paisaje
+    por:
+    - piedra
+    control_positivo: false
+    referente: cerro cónico de unos 500 m unido al de Santa Ana; petroglifos «Las Piedras del Almanaque»
+    ficha:
+      obra: goeje-1939
+      pagina: 57
+      registro: f
+  - toponimo: toponimo-256
+    forma: tiguadare
+    nivel: C
+    raiz: tiguada
+    se_quito: -re (censo -re)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Higuana
+    glosa: 'llámanla los indios desta isla Española iguana ## iguane ## Lagarto grande, que cazaban los indígenas
+      para comerlo.'
+    forma_comparada: iguana
+    similitud: 0.769
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: punto costeño de la ribera norte del Golfete, al este de Punta Cardón «Tigua es un árbol rutáceo.»
+    ficha:
+      lema: ikuana
+      clase: i-primaria-del-XVI
+      cronistas: &id001
+      - Colón
+      - Enciso
+      - Las Casas
+      - Oviedo
+  - toponimo: toponimo-141
+    forma: macolla
+    nivel: descartado
+    raiz: makola
+    se_quito: entero
+    lengua: achagua
+    linea: prima (orinoco-llanos)
+    voz: rinumacoa
+    glosa: termino orilla
+    forma_comparada: numakoa
+    similitud: 0.769
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' OSM 2026, lugar 12.090 -70.204 y Punta Macolla 12.083 -70.217: macolla es castellano, ''conjunto
+      de vástagos de un pie''; no es la Macola de la mesa'
+    ficha:
+      clave: rinumacoa
+      capa: achagua
+      origen: VOCABULARIO_BASE
+      notas: 'Neira y Ribero 1762 (copia de 1788, Real Biblioteca II/2910), vocabulario castellano→achagua: pliego
+        94 der, s.v. «termino orilla». Transcripción por VISIÓN (es'
+  - toponimo: toponimo-266
+    forma: carajaima
+    nivel: descartado
+    raiz: rajaima
+    se_quito: ka- (ka- atributivo)
+    lengua: wayunaiki
+    linea: prima (guajiro-paraujana)
+    voz: aja'itaa
+    glosa: recoger agua
+    forma_comparada: ajaita
+    similitud: 0.769
+    filtro: paisaje
+    por:
+    - agua_dulce
+    control_positivo: false
+    referente: ciénaga del caserío San Pedro (Adícora); papeles de 1698 (linderos de Urupaguaduco) la escriben Caramajaima;
+      termina en -aima, afijo de REGLAS_ZAVALA sin glosa
+    ficha:
+      clave: aja'itaa
+      capa: wayunaiki
+      origen: VOCABULARIO_BASE
+      notas: Way. aja'itaa; *ayaita (proto-caquetio); Captain & Captain 2005
+  - toponimo: toponimo-217
+    forma: cariguariana
+    nivel: C
+    raiz: riguariana
+    se_quito: ka- (ka- atributivo)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Higuana
+    glosa: 'llámanla los indios desta isla Española iguana ## iguane ## Lagarto grande, que cazaban los indígenas
+      para comerlo.'
+    forma_comparada: iguana
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: 'salineta cercana a Adícora; sal blanca, sin la coloración de la artemia «la playa de los tabacones…
+      Cari: orilla de mar. Guariana: tabaco pescador»'
+    ficha:
+      lema: ikuana
+      clase: i-primaria-del-XVI
+      cronistas: *id001
+  - toponimo: toponimo-237
+    forma: macama
+    nivel: C
+    raiz: kama
+    se_quito: ma- (ma- privativo)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Cai / cayo / cayco
+    glosa: 'an island ## île ## Isla'
+    forma_comparada: kaya
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: lugar al este de Punta Macoya (Jadacaquiva); Boca de Macama, donde desagua la quebrada homónima macambo,
+      «gentilicio despectivo» con que en Aruba y Curazao llaman a los holandeses
+    ficha:
+      lema: brio
+      clase: i-primaria-del-XVI
+      cronistas: &id002
+      - Las Casas
+  - toponimo: toponimo-156
+    forma: capana
+    nivel: descartado
+    raiz: kapa
+    se_quito: -na (-ná (Paraguaná))
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Cai / cayo / cayco
+    glosa: 'an island ## île ## Isla'
+    forma_comparada: kaya
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' Punta Capana, sitio costeño del Distrito Buchivacoa, en la desembocadura del río Borojó'
+    ficha:
+      lema: brio
+      clase: i-primaria-del-XVI
+      cronistas: *id002
+  - toponimo: toponimo-082
+    forma: charaima
+    nivel: descartado
+    raiz: kar
+    se_quito: -aima (REGLAS_ZAVALA)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Carey
+    glosa: 'Especia de tortuga ( Chelonia imbricata). ## Tortuga de mar'
+    forma_comparada: karei
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide
+      en su Título de Composición; Esteves no sabe qué relación guarda con «el cacique Charaima de la Isla de Margarita,
+      el a'
+    ficha:
+      lema: karei
+      clase: i-primaria-del-XVI
+      cronistas: *id003
+  - toponimo: toponimo-082
+    forma: charaima
+    nivel: descartado
+    raiz: kara
+    se_quito: -ima (REGLAS_ZAVALA)
+    lengua: lokono
+    linea: hermana (lokonoide)
+    voz: bara
+    glosa: mar
+    forma_comparada: bara
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide
+      en su Título de Composición; Esteves no sabe qué relación guarda con «el cacique Charaima de la Isla de Margarita,
+      el a'
+    ficha:
+      clave: bara-lokono
+      capa: lokono
+      origen: VOCABULARIO_BASE
+      notas: Perea Alonso 1942, Filología Comparada Arawak, tomo I — lokono de 1802 (Schultz), anterior al de Brett
+        1849 y al de Goeje. Raíz `bara` con 6 atestaciones; acepc
+  - toponimo: toponimo-082
+    forma: charaima
+    nivel: descartado
+    raiz: kara
+    se_quito: -ima (REGLAS_ZAVALA)
+    lengua: lokono
+    linea: hermana (lokonoide)
+    voz: bara
+    glosa: mar
+    forma_comparada: bara
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide
+      en su Título de Composición; Esteves no sabe qué relación guarda con «el cacique Charaima de la Isla de Margarita,
+      el a'
+    ficha:
+      obra: perea-alonso-1942
+      pagina: 65
+  - toponimo: toponimo-082
+    forma: charaima
+    nivel: descartado
+    raiz: kara
+    se_quito: -ima (REGLAS_ZAVALA)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Cai / cayo / cayco
+    glosa: 'an island ## île ## Isla'
+    forma_comparada: kaya
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' población entre Adícora y Baraived; censo 1881: 79 casas, 527 habitantes; nombre primitivo Charaide
+      en su Título de Composición; Esteves no sabe qué relación guarda con «el cacique Charaima de la Isla de Margarita,
+      el a'
+    ficha:
+      lema: brio
+      clase: i-primaria-del-XVI
+      cronistas: *id002
+  - toponimo: toponimo-110
+    forma: jayana
+    nivel: descartado
+    raiz: jaya
+    se_quito: -na (-ná (Paraguaná))
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Cai / cayo / cayco
+    glosa: 'an island ## île ## Isla'
+    forma_comparada: kaya
+    similitud: 0.75
+    filtro: paisaje
+    por:
+    - mar_costa
+    control_positivo: false
+    referente: ' antiguo fundo pecuario cerca de Amuaicito, hoy caserío del municipio Los Taques; con Adícora, único
+      puerto de Paraguaná con Resguardo Marítimo en la Colonia, habilitado en 1834 para exportar ganado en pie;
+      Esteves cree '
+    ficha:
+      lema: brio
+      clase: i-primaria-del-XVI
+      cronistas: *id002
+  - toponimo: toponimo-121
+    forma: pitajaya
+    nivel: C
+    raiz: pitajaya
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Pitajaya
+    glosa: 'Arbol frutal ( Cactus pitajaya). ## Fruta de la pitahaya'
+    forma_comparada: pitajaya
+    similitud: 1.0
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' «La Pitajaya, aldea de Buenavista. Doce casas y 71 vecinos registra en el censo de 1881. Pitajaya
+      es otro nombre indígena de nuestro susucure, cardo seudo-parásito que da una fruta de piel y pulpa roja»'
+    ficha:
+      lema: pitasaia
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Archivo de Indias
+      - Las Casas
+  - toponimo: toponimo-145
+    forma: guayacanal
+    nivel: descartado
+    raiz: guayakan
+    se_quito: -al (colectivo castellano -al)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guayacan / Guacían
+    glosa: 'Guayacán ## Arbol medicinal. ## Arbol medicinal'
+    forma_comparada: guayakan
+    similitud: 1.0
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea está más crecida»;
+      «la partícula -al colectiviza y españoliza la voz Guayacán, de origen taíno. Guayacán es un árbol zigofiliáceo
+      de m'
+    ficha:
+      lema: kuaiakan
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Las Casas
+      - Oviedo
+  - toponimo: toponimo-230
+    forma: güica
+    nivel: C
+    raiz: guika
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guayca
+    glosa: 'Planta silvestre. ## Carátula'
+    forma_comparada: guaika
+    similitud: 0.909
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: sabana y fundo del municipio Baraived «es otro nombre indígena que tiene el árbol que llamamos Yabo.»
+    ficha:
+      lema: kuaika
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-290
+    forma: yaguarima
+    nivel: descartado
+    raiz: yaguar
+    se_quito: -ima (REGLAS_ZAVALA)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Yagua
+    glosa: 'feuille de palmier employée pour faire des paquets ## Vagina de cada penca de palma real'
+    forma_comparada: yagua
+    similitud: 0.909
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: punto costeño del Golfete al este de Punta Cardón; termina en -ima, que Esteves glosa «húmedo» en
+      la p. 93 sin aplicarlo aquí
+    ficha:
+      lema: iakua
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-239
+    forma: manare
+    nivel: C
+    raiz: mana
+    se_quito: -re (censo -re)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: May na
+    glosa: Jardín
+    forma_comparada: maina
+    similitud: 0.889
+    filtro: clase-viva
+    por:
+    - cultivo
+    control_positivo: false
+    referente: 'lugar pecuario y de labranza en la aldea de Camunare (Baraived) «Manare es voz cumanagota que significa:
+      cesto de fibra.»'
+    ficha:
+      lema: maina
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-145
+    forma: guayacanal
+    nivel: descartado
+    raiz: guayakan
+    se_quito: -al (colectivo castellano -al)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guayabacán
+    glosa: Arbol.
+    forma_comparada: guayabakan
+    similitud: 0.889
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea está más crecida»;
+      «la partícula -al colectiviza y españoliza la voz Guayacán, de origen taíno. Guayacán es un árbol zigofiliáceo
+      de m'
+    ficha:
+      lema: kuaiabakan
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-294
+    forma: barbasco
+    nivel: descartado
+    raiz: barbasko
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Barbacoa
+    glosa: 'a loft for drying maize ## affût dans un arbre ## Piso alto de tablas de palma de yagua, para guardar
+      frutos, granos, etc.: servía también d'
+    forma_comparada: barbakoa
+    similitud: 0.875
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: nombre común de plantas usadas para embarbascar en la pesca
+    ficha:
+      lema: barbakoa
+      clase: i-primaria-del-XVI
+      cronistas: &id004
+      - Oviedo
+  - toponimo: toponimo-154
+    forma: aguaque
+    nivel: C
+    raiz: aguake
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Aguacate
+    glosa: Arbol frutal ( Persea gratíssima).
+    forma_comparada: aguakate
+    similitud: 0.857
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: fundo pecuario a dos leguas al norte de Pueblo Nuevo; lugar de nacimiento de la heroína Josefa Camejo,
+      declarado monumento histórico en junio de 1982 (lo que decía su descarte del dictado de 2026-09-10) «(Aguaque
+      viene d
+    ficha:
+      lema: akuakate
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-215
+    forma: camunare
+    nivel: C
+    raiz: muna
+    se_quito: ka- (ka- atributivo) y -re
+    lengua: lokono
+    linea: hermana (lokonoide)
+    voz: una
+    glosa: tinte negro (de una planta específica)
+    forma_comparada: una
+    similitud: 0.857
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: aldea del municipio Baraived; otro Camunare en Yaracuy «forma epentética de "camuare", un árbol de
+      madera blanda»
+    ficha:
+      clave: una
+      capa: lokono
+      origen: VOCABULARIO_BASE
+      notas: Lok. una; 'tinte negro'; de donde laimatun 'teñir de negro'; uso ritual en pintura corporal arahuacana;
+        Brinton 1871
+  - toponimo: toponimo-240
+    forma: maquigua
+    nivel: C
+    raiz: makigua
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Macagua
+    glosa: Arbol de Cuba (Pichardo).
+    forma_comparada: makagua
+    similitud: 0.857
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: 'aldea del municipio Baraived, muy poblada «Mora es un árbol caparidáceo… Quigua: concha de almeja
+      y otros moluscos.»'
+    ficha:
+      lema: makakua
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-246
+    forma: paguara
+    nivel: C
+    raiz: paguara
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Caguará
+    glosa: 'Una Conchita común de almeja para raspar la película externa de la yuca. ## Conchita de almeja'
+    forma_comparada: kaguara
+    similitud: 0.857
+    filtro: clase-viva
+    por:
+    - pez_marisco
+    control_positivo: false
+    referente: sitio del Istmo de Médanos, con Paguarita al lado; descanso de recuas; desembarco de Miranda en 1806
+      «Paguara es el nombre de un pez muy espinoso.»
+    ficha:
+      lema: kakuara
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-145
+    forma: guayacanal
+    nivel: descartado
+    raiz: yakanal
+    se_quito: gua- (wa- (morfema-006))
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Acana
+    glosa: Arbol silvestre ( Achras acana).
+    forma_comparada: akana
+    similitud: 0.833
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea está más crecida»;
+      «la partícula -al colectiviza y españoliza la voz Guayacán, de origen taíno. Guayacán es un árbol zigofiliáceo
+      de m'
+    ficha:
+      lema: akana
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-058
+    forma: guanajo
+    nivel: descartado
+    raiz: guanajo
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guana
+    glosa: Arbol de Cuba (Pichardo).
+    forma_comparada: guana
+    similitud: 0.833
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Cardón muy lanoso'
+    ficha:
+      lema: kuana
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-058
+    forma: guanajo
+    nivel: descartado
+    raiz: guanajo
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guano
+    glosa: Arbol.
+    forma_comparada: guano
+    similitud: 0.833
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Cardón muy lanoso'
+    ficha:
+      lema: kuano
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Chanca
+  - toponimo: toponimo-059
+    forma: guasare
+    nivel: descartado
+    raiz: guasa
+    se_quito: -re (censo -re)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guásima
+    glosa: 'Arbol meaicinai. ## Arbol para hacer fuego'
+    forma_comparada: guasima
+    similitud: 0.833
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Árbol cactáceo'
+    ficha:
+      lema: kuasima
+      clase: i-primaria-del-XVI
+      cronistas: &id006
+      - Las Casas
+      - Oviedo
+  - toponimo: toponimo-283
+    forma: sarabón
+    nivel: descartado
+    raiz: sarabon
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Arabo
+    glosa: Arbol silvestre de Cuba.
+    forma_comparada: arabo
+    similitud: 0.833
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: punto costeño al norte de Punta Cardón, atalaya de pescadores
+    ficha:
+      lema: arabo
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Pedro Mártir
+  - toponimo: toponimo-150
+    forma: guay
+    nivel: C
+    raiz: guai
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guayca
+    glosa: 'Planta silvestre. ## Carátula'
+    forma_comparada: guaika
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' árbol parecido a la ceiba'
+    ficha:
+      lema: kuaika
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-154
+    forma: aguaque
+    nivel: C
+    raiz: guake
+    se_quito: a- (prótesis (adaure))
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guaco
+    glosa: Planta medicinal.
+    forma_comparada: guako
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: fundo pecuario a dos leguas al norte de Pueblo Nuevo; lugar de nacimiento de la heroína Josefa Camejo,
+      declarado monumento histórico en junio de 1982 (lo que decía su descarte del dictado de 2026-09-10) «(Aguaque
+      viene d
+    ficha:
+      lema: kuako
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-240
+    forma: maquigua
+    nivel: C
+    raiz: maki
+    se_quito: -gua (-wa / -gua (Oliver p. 148))
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Macabí
+    glosa: 'Pez que tiene muchas espinas. ## Pez con muchas espinas'
+    forma_comparada: makabi
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - pez_marisco
+    control_positivo: false
+    referente: 'aldea del municipio Baraived, muy poblada «Mora es un árbol caparidáceo… Quigua: concha de almeja
+      y otros moluscos.»'
+    ficha:
+      lema: makabi
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-242
+    forma: matacán
+    nivel: C
+    raiz: takan
+    se_quito: ma- (ma- privativo)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Acana
+    glosa: Arbol silvestre ( Achras acana).
+    forma_comparada: akana
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: 'Punta de Matacán, en el Golfete de Coro al este de Punta Cardón; hoy aldea de pescadores «Matacán:
+      cérvido de poca alzada.»'
+    ficha:
+      lema: akana
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-145
+    forma: guayacanal
+    nivel: descartado
+    raiz: guayakan
+    se_quito: -al (colectivo castellano -al)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guayaba
+    glosa: '«Llámasse esta mançana ó poma guayaba, porque el árbol se llama guayabo: cada guayaba tiene una coronilla
+      de unas hojitas pequeñas que fáçil'
+    forma_comparada: guayaba
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea está más crecida»;
+      «la partícula -al colectiviza y españoliza la voz Guayacán, de origen taíno. Guayacán es un árbol zigofiliáceo
+      de m'
+    ficha:
+      lema: kuaiaba
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Oviedo
+  - toponimo: toponimo-145
+    forma: guayacanal
+    nivel: descartado
+    raiz: guayakan
+    se_quito: -al (colectivo castellano -al)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guayca
+    glosa: 'Planta silvestre. ## Carátula'
+    forma_comparada: guayika
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' caserío del municipio Jadacaquiva; censo de 1881: 3 casas, 23 vecinos, «hoy la aldea está más crecida»;
+      «la partícula -al colectiviza y españoliza la voz Guayacán, de origen taíno. Guayacán es un árbol zigofiliáceo
+      de m'
+    ficha:
+      lema: kuaika
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-059
+    forma: guasare
+    nivel: descartado
+    raiz: guasa
+    se_quito: -re (censo -re)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Cuaba
+    glosa: 'goyave ## Arbol de Cuba {Amyns sylvatica). ## Río que corre por el Cibao, Santo Domingo.'
+    forma_comparada: guaba
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Árbol cactáceo'
+    ficha:
+      lema: kuaiabo
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-059
+    forma: guasare
+    nivel: descartado
+    raiz: guasa
+    se_quito: -re (censo -re)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guama
+    glosa: 'Arbol frutal. ## Arbusto de Santo Domingo. ## Fruta del guamá'
+    forma_comparada: guama
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Árbol cactáceo'
+    ficha:
+      lema: kuama
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-059
+    forma: guasare
+    nivel: descartado
+    raiz: guasa
+    se_quito: -re (censo -re)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guana
+    glosa: Arbol de Cuba (Pichardo).
+    forma_comparada: guana
+    similitud: 0.8
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Árbol cactáceo'
+    ficha:
+      lema: kuana
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-116
+    forma: coabana
+    nivel: C
+    raiz: koabana
+    se_quito: entero
+    lengua: achagua
+    linea: prima (orinoco-llanos)
+    voz: nuabanao
+    glosa: Sembrar
+    forma_comparada: abanao
+    similitud: 0.769
+    filtro: clase-viva
+    por:
+    - cultivo
+    control_positivo: false
+    referente: ' «El topónimo es una voz compuesta que dice: el cerro de las cosas [sic: coas]. Coa es un tosco
+      instrumento de labranza, un palo aguzado para abrir el surco. Bana: cerro»'
+    ficha:
+      clave: nuabanao
+      capa: achagua
+      origen: VOCABULARIO_BASE
+      notas: 'Neira y Ribero 1762 (copia de 1788, Real Biblioteca II/2910), vocabulario castellano→achagua: pliego
+        91 izq, s.v. «Sembrar». Transcripción por VISIÓN (escriba O'
+  - toponimo: toponimo-240
+    forma: maquigua
+    nivel: C
+    raiz: makigua
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Baigua
+    glosa: 'liane à étourdir les poissons ## Cierta yerba usada por los indios para ador- mecer los peces y pescarlos
+      fácilmente.'
+    forma_comparada: baigua
+    similitud: 0.769
+    filtro: clase-viva
+    por:
+    - pez_marisco
+    control_positivo: false
+    referente: 'aldea del municipio Baraived, muy poblada «Mora es un árbol caparidáceo… Quigua: concha de almeja
+      y otros moluscos.»'
+    ficha:
+      lema: baikua
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Oviedo
+  - toponimo: toponimo-242
+    forma: matacán
+    nivel: C
+    raiz: matakan
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Manaca
+    glosa: 'palmier, prob. Euterpe oleracea ## La palma real ( Oreodoxia regia). ## Palma real'
+    forma_comparada: manaka
+    similitud: 0.769
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: 'Punta de Matacán, en el Golfete de Coro al este de Punta Cardón; hoy aldea de pescadores «Matacán:
+      cérvido de poca alzada.»'
+    ficha:
+      lema: manaka
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Oviedo
+  - toponimo: toponimo-150
+    forma: guay
+    nivel: C
+    raiz: guai
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guao
+    glosa: 'Arbusto. ## Arbol ponzoñoso'
+    forma_comparada: guao
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' árbol parecido a la ceiba'
+    ficha:
+      lema: kuao
+      clase: i-primaria-del-XVI
+      cronistas: &id005
+      - Las Casas
+  - toponimo: toponimo-151
+    forma: borobo
+    nivel: C
+    raiz: boro
+    se_quito: -bo (Oliver 1989 p. 148 (e)-bo)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: bohio
+    glosa: bohío, casa redonda de varas y palma
+    forma_comparada: boio
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' arbusto apocináceo de flores muy pequeñas'
+    ficha:
+      clave: bohio
+      capa: taíno
+      origen: VOCABULARIO_BASE
+      notas: 'Tno. bohío; cognado caquetío probable *kali · PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista
+        maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.y'
+  - toponimo: toponimo-127
+    forma: baracara
+    nivel: C
+    raiz: barakara
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Barbacoa
+    glosa: 'a loft for drying maize ## affût dans un arbre ## Piso alto de tablas de palma de yagua, para guardar
+      frutos, granos, etc.: servía también d'
+    forma_comparada: barbakoa
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' «Maracara se lee en el censo de 1881, pero Baracara es como está escrito en la historia de Paraguaná
+      del Dr. Pedro Manuel Arcaya, quien manejó documentos de primera mano»; Esteves la cuenta entre la toponimia
+      indígena d'
+    ficha:
+      lema: barbakoa
+      clase: i-primaria-del-XVI
+      cronistas: *id004
+  - toponimo: toponimo-016
+    forma: capadare
+    nivel: C
+    raiz: kapadare
+    se_quito: entero
+    lengua: lokono
+    linea: hermana (lokonoide)
+    voz: kabadaro
+    glosa: jaguar, yaguareté
+    forma_comparada: kabadaro
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - mamifero
+    control_positivo: false
+    referente: ' Diente de tigre'
+    ficha:
+      clave: kabadaro
+      capa: lokono
+      origen: VOCABULARIO_BASE
+      notas: Lok. kabadaro; 'jaguar'; artículo li [+masc fuerte]; préstamo del caribe insular en Lokono; Goeje 1928;
+        Pet 1987
+  - toponimo: toponimo-216
+    forma: caradacagua
+    nivel: C
+    raiz: karadaka
+    se_quito: -gua (-wa / -gua (Oliver p. 148))
+    lengua: achagua
+    linea: prima (orinoco-llanos)
+    voz: caracarà
+    glosa: Caracol de valor
+    forma_comparada: karakara
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - pez_marisco
+    control_positivo: false
+    referente: fundo pecuario al oeste de Pueblo Nuevo «reducción de Caramatacaigua… guairón de cal» (caramata carbón,
+      caigua almeja)
+    ficha:
+      clave: caracarà
+      capa: achagua
+      origen: VOCABULARIO_BASE
+      notas: 'Neira y Ribero 1762 (copia de 1788, Real Biblioteca II/2910), vocabulario castellano→achagua: pliego
+        46 izq, s.v. «Caracol de valor». Transcripción por VISIÓN ('
+  - toponimo: toponimo-218
+    forma: caujarito
+    nivel: C
+    raiz: ujar
+    se_quito: ka- (ka- atributivo) y -ito
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Ucar
+    glosa: Arbol para hacer canoas
+    forma_comparada: ukar
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: aldea del municipio Punta Cardón «Es diminutivo de Caujaro, árbol de madera liviana. (Cordia globosa).»
+    ficha:
+      lema: ukar
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-240
+    forma: maquigua
+    nivel: C
+    raiz: maki
+    se_quito: -gua (-wa / -gua (Oliver p. 148))
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: maíz
+    glosa: planta de maíz, grano principal
+    forma_comparada: mais
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: 'aldea del municipio Baraived, muy poblada «Mora es un árbol caparidáceo… Quigua: concha de almeja
+      y otros moluscos.»'
+    ficha:
+      clave: maíz
+      capa: taíno
+      origen: VOCABULARIO_BASE
+      notas: 'PROCEDENCIA (dp.3.03 de #222, 2026-09-24, desde la lista maestra de T10: 6-fusion/taino_lista_maestra_2026-09-22.yaml,
+        voz `mahis, mais, maisi`): clase i-primar'
+  - toponimo: toponimo-242
+    forma: matacán
+    nivel: C
+    raiz: matakan
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Maguacana
+    glosa: Planta silvestre.
+    forma_comparada: maguakana
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: 'Punta de Matacán, en el Golfete de Coro al este de Punta Cardón; hoy aldea de pescadores «Matacán:
+      cérvido de poca alzada.»'
+    ficha:
+      lema: makuakana
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-250
+    forma: sacuragua
+    nivel: C
+    raiz: sakuragua
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Macagua
+    glosa: Arbol de Cuba (Pichardo).
+    forma_comparada: makagua
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: aldea de Pueblo Nuevo, al oeste de Guacuira y al sur de Pueblo Nuevo «modificación de Susucure, cardo
+      de fruto rojo, la pi[tajaya]»
+    ficha:
+      lema: makakua
+      clase: ii-solo-secundaria
+  - toponimo: toponimo-059
+    forma: guasare
+    nivel: descartado
+    raiz: guas
+    se_quito: -are (morfema-002)
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guao
+    glosa: 'Arbusto. ## Arbol ponzoñoso'
+    forma_comparada: guao
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: ' Árbol cactáceo'
+    ficha:
+      lema: kuao
+      clase: i-primaria-del-XVI
+      cronistas: *id005
+  - toponimo: toponimo-290
+    forma: yaguarima
+    nivel: descartado
+    raiz: yaguarima
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Yagruma
+    glosa: Arbol ( Cecropia peltata).
+    forma_comparada: yagruma
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: punto costeño del Golfete al este de Punta Cardón; termina en -ima, que Esteves glosa «húmedo» en
+      la p. 93 sin aplicarlo aquí
+    ficha:
+      lema: iakruma
+      clase: i-primaria-del-XVI
+      cronistas:
+      - Herrera
+      - Las Casas
+      - Pedro Mártir
+  - toponimo: toponimo-290
+    forma: yaguarima
+    nivel: descartado
+    raiz: yaguarima
+    se_quito: entero
+    lengua: taíno
+    linea: hermana (lokonoide)
+    voz: Guásima
+    glosa: 'Arbol meaicinai. ## Arbol para hacer fuego'
+    forma_comparada: guasima
+    similitud: 0.75
+    filtro: clase-viva
+    por:
+    - arbol
+    control_positivo: false
+    referente: punto costeño del Golfete al este de Punta Cardón; termina en -ima, que Esteves glosa «húmedo» en
+      la p. 93 sin aplicarlo aquí
+    ficha:
+      lema: kuasima
+      clase: i-primaria-del-XVI
+      cronistas: *id006
+  toponimos_con_par_por_lengua:
+    lokono:
+    - toponimo-016
+    - toponimo-082
+    - toponimo-112
+    - toponimo-116
+    - toponimo-148
+    - toponimo-215
+    - toponimo-264
+    - toponimo-266
+    - toponimo-285
+    - toponimo-304
+    - toponimo-305
+    taíno:
+    - toponimo-018
+    - toponimo-058
+    - toponimo-059
+    - toponimo-077
+    - toponimo-082
+    - toponimo-087
+    - toponimo-092
+    - toponimo-093
+    - toponimo-103
+    - toponimo-104
+    - toponimo-110
+    - toponimo-111
+    - toponimo-112
+    - toponimo-116
+    - toponimo-117
+    - toponimo-120
+    - toponimo-121
+    - toponimo-122
+    - toponimo-124
+    - toponimo-126
+    - toponimo-127
+    - toponimo-128
+    - toponimo-130
+    - toponimo-132
+    - toponimo-145
+    - toponimo-148
+    - toponimo-150
+    - toponimo-151
+    - toponimo-152
+    - toponimo-154
+    - toponimo-156
+    - toponimo-165
+    - toponimo-166
+    - toponimo-167
+    - toponimo-168
+    - toponimo-169
+    - toponimo-170
+    - toponimo-180
+    - toponimo-215
+    - toponimo-216
+    - toponimo-217
+    - toponimo-218
+    - toponimo-221
+    - toponimo-223
+    - toponimo-230
+    - toponimo-234
+    - toponimo-235
+    - toponimo-237
+    - toponimo-238
+    - toponimo-239
+    - toponimo-240
+    - toponimo-242
+    - toponimo-243
+    - toponimo-245
+    - toponimo-246
+    - toponimo-249
+    - toponimo-250
+    - toponimo-253
+    - toponimo-256
+    - toponimo-264
+    - toponimo-266
+    - toponimo-283
+    - toponimo-285
+    - toponimo-288
+    - toponimo-290
+    - toponimo-294
+    - toponimo-304
+    - toponimo-305
+    kalinago:
+    - toponimo-018
+    - toponimo-059
+    - toponimo-082
+    - toponimo-090
+    - toponimo-093
+    - toponimo-110
+    - toponimo-111
+    - toponimo-112
+    - toponimo-120
+    - toponimo-148
+    - toponimo-156
+    - toponimo-161
+    - toponimo-217
+    - toponimo-221
+    - toponimo-234
+    - toponimo-237
+    - toponimo-242
+    - toponimo-246
+    - toponimo-263
+    - toponimo-264
+    - toponimo-266
+    - toponimo-283
+    - toponimo-285
+    - toponimo-304
+    - toponimo-305
+    achagua:
+    - toponimo-015
+    - toponimo-017
+    - toponimo-021
+    - toponimo-054
+    - toponimo-080
+    - toponimo-082
+    - toponimo-087
+    - toponimo-092
+    - toponimo-093
+    - toponimo-096
+    - toponimo-110
+    - toponimo-115
+    - toponimo-116
+    - toponimo-117
+    - toponimo-122
+    - toponimo-128
+    - toponimo-130
+    - toponimo-141
+    - toponimo-145
+    - toponimo-148
+    - toponimo-156
+    - toponimo-166
+    - toponimo-168
+    - toponimo-210
+    - toponimo-211
+    - toponimo-212
+    - toponimo-215
+    - toponimo-216
+    - toponimo-217
+    - toponimo-221
+    - toponimo-223
+    - toponimo-234
+    - toponimo-237
+    - toponimo-238
+    - toponimo-240
+    - toponimo-244
+    - toponimo-246
+    - toponimo-250
+    - toponimo-256
+    - toponimo-266
+    - toponimo-277
+    - toponimo-281
+    - toponimo-293
+    - toponimo-294
+    - toponimo-307
+    wayunaiki:
+    - toponimo-093
+    - toponimo-180
+    - toponimo-266
+    - toponimo-281
+    paraujano: []
+    kalinago-caribe:
+    - toponimo-093
+    - toponimo-161
+    caquetío:
+    - toponimo-001
+    - toponimo-018
+    - toponimo-054
+    - toponimo-058
+    - toponimo-059
+    - toponimo-080
+    - toponimo-082
+    - toponimo-087
+    - toponimo-088
+    - toponimo-092
+    - toponimo-093
+    - toponimo-110
+    - toponimo-111
+    - toponimo-112
+    - toponimo-115
+    - toponimo-116
+    - toponimo-117
+    - toponimo-119
+    - toponimo-120
+    - toponimo-122
+    - toponimo-123
+    - toponimo-126
+    - toponimo-127
+    - toponimo-128
+    - toponimo-131
+    - toponimo-132
+    - toponimo-145
+    - toponimo-148
+    - toponimo-150
+    - toponimo-152
+    - toponimo-154
+    - toponimo-156
+    - toponimo-159
+    - toponimo-170
+    - toponimo-171
+    - toponimo-180
+    - toponimo-215
+    - toponimo-216
+    - toponimo-217
+    - toponimo-218
+    - toponimo-220
+    - toponimo-221
+    - toponimo-223
+    - toponimo-227
+    - toponimo-230
+    - toponimo-235
+    - toponimo-237
+    - toponimo-240
+    - toponimo-242
+    - toponimo-245
+    - toponimo-246
+    - toponimo-250
+    - toponimo-254
+    - toponimo-258
+    - toponimo-259
+    - toponimo-263
+    - toponimo-264
+    - toponimo-266
+    - toponimo-290
+    - toponimo-294
+    - toponimo-298
+    - toponimo-304
+    - toponimo-305
+    - toponimo-307
+    medina:
+    - toponimo-018
+    - toponimo-058
+    - toponimo-059
+    - toponimo-088
+    - toponimo-111
+    - toponimo-117
+    - toponimo-123
+    - toponimo-124
+    - toponimo-126
+    - toponimo-131
+    - toponimo-145
+    - toponimo-148
+    - toponimo-150
+    - toponimo-154
+    - toponimo-180
+    - toponimo-215
+    - toponimo-217
+    - toponimo-218
+    - toponimo-224
+    - toponimo-231
+    - toponimo-233
+    - toponimo-235
+    - toponimo-236
+    - toponimo-240
+    - toponimo-242
+    - toponimo-250
+    - toponimo-253
+    - toponimo-254
+    - toponimo-255
+    - toponimo-256
+    - toponimo-257
+    - toponimo-290
+  ecos_onomasticos:
+    que_son: 'el mismo nombre en un lugar de la hermana o la prima (≥ 0,75): no son palabras y no se cuentan'
+    lista:
+    - toponimo: toponimo-239
+      forma: manare
+      lengua: taíno
+      nombre: Mana
+      glosa: 'Río tributario del Jaina, en Santo Domingo. ## Barrio del Corozal, en Puerto Rico. ## He aquí un vocablo,
+        que '
+      similitud: 1.0
+    - toponimo: toponimo-241
+      forma: maracapana
+      lengua: taíno
+      nombre: Maracapana
+      glosa: Lugar de indios Aruacas en Costa-Firme.
+      similitud: 1.0
+    - toponimo: toponimo-261
+      forma: tutubacoa
+      lengua: lokono
+      nombre: tutu
+      glosa: río, corriente de agua (forma Lokono)
+      similitud: 1.0
+    - toponimo: toponimo-074
+      forma: Cariatávo
+      lengua: taíno
+      nombre: Caribata
+      glosa: Región del cacicazgo de Marien, en Haytí.
+      similitud: 0.933
+    - toponimo: toponimo-153
+      forma: acaboa
+      lengua: taíno
+      nombre: Jacaboa
+      glosa: Barrio y río de Patillas, en Puerto Rico.
+      similitud: 0.923
+    - toponimo: toponimo-112
+      forma: cuiba
+      lengua: taíno
+      nombre: Cueyba
+      glosa: Región de Cuba, según la carta de Velazquez, de 1514.
+      similitud: 0.909
+    - toponimo: toponimo-109
+      forma: chamuriana
+      lengua: taíno
+      nombre: Camuy
+      glosa: Pueblo y río de Puerto Rico.
+      similitud: 0.909
+    - toponimo: toponimo-291
+      forma: yaima
+      lengua: taíno
+      nombre: Y arima
+      glosa: 'Lugar de limpieza. ## Ano ## Lugar de limpieza'
+      similitud: 0.909
+    - toponimo: toponimo-148
+      forma: carirubana
+      lengua: taíno
+      nombre: Caribana
+      glosa: Costas de Venezuela
+      similitud: 0.889
+    - toponimo: toponimo-112
+      forma: cuiba
+      lengua: taíno
+      nombre: Cuba
+      glosa: Nombre de la mayor de las islas del Archipiéla- go antillano.
+      similitud: 0.889
+    - toponimo: toponimo-026
+      forma: Casibari
+      lengua: taíno
+      nombre: Cacey
+      glosa: Río tributario del de Añasco, Puerto Rico.
+      similitud: 0.889
+    - toponimo: toponimo-026
+      forma: Casibari
+      lengua: taíno
+      nombre: Casey
+      glosa: Barrio de Añasco, en Puerto Rico.
+      similitud: 0.889
+    - toponimo: toponimo-109
+      forma: chamuriana
+      lengua: taíno
+      nombre: Camú
+      glosa: Río del territorio de Magua.
+      similitud: 0.889
+    - toponimo: toponimo-215
+      forma: camunare
+      lengua: taíno
+      nombre: Camú
+      glosa: Río del territorio de Magua.
+      similitud: 0.889
+    - toponimo: toponimo-237
+      forma: macama
+      lengua: taíno
+      nombre: Quamá
+      glosa: Una de las islas Turcas.
+      similitud: 0.889
+    - toponimo: toponimo-240
+      forma: maquigua
+      lengua: taíno
+      nombre: Higua
+      glosa: Monte de la sierra de San José de las Matas, en Santo Domingo.
+      similitud: 0.889
+    - toponimo: toponimo-092
+      forma: maragüey
+      lengua: taíno
+      nombre: Maragüay
+      glosa: Cacique aruaca de Costa rirme.
+      similitud: 0.875
+    - toponimo: toponimo-028
+      forma: baracoica
+      lengua: taíno
+      nombre: Baracoa
+      glosa: Puerto de Cuba.
+      similitud: 0.875
+    - toponimo: toponimo-058
+      forma: guanajo
+      lengua: taíno
+      nombre: Guanajibo
+      glosa: Río que corre por Sabana Grande, San Ger- mán y Hormigueros, en Puerto Rico.
+      similitud: 0.875
+    - toponimo: toponimo-152
+      forma: araguan
+      lengua: taíno
+      nombre: Naragua
+      glosa: La bahía de Enriquillo en Santo Domingo.
+      similitud: 0.857
+    - toponimo: toponimo-116
+      forma: coabana
+      lengua: taíno
+      nombre: Coahbina
+      glosa: El actual río Culebrinas de Aguada, en Puer- to Rico.
+      similitud: 0.857
+    - toponimo: toponimo-018
+      forma: paraguaná
+      lengua: taíno
+      nombre: Naragua
+      glosa: La bahía de Enriquillo en Santo Domingo.
+      similitud: 0.857
+    - toponimo: toponimo-026
+      forma: Casibari
+      lengua: taíno
+      nombre: Caybay
+      glosa: Lugar de penas.
+      similitud: 0.857
+    - toponimo: toponimo-026
+      forma: Casibari
+      lengua: taíno
+      nombre: cai
+      glosa: isla
+      similitud: 0.857
+    - toponimo: toponimo-153
+      forma: acaboa
+      lengua: taíno
+      nombre: Cancaboa
+      glosa: Barrio de Utuado, en Puerto Rico.
+      similitud: 0.857
+    - toponimo: toponimo-159
+      forma: macuare
+      lengua: taíno
+      nombre: Macuaque
+      glosa: Río tributario del Macorix, en Santo DoMacorí —Arbol silvestre (Cupania oppositifolial
+      similitud: 0.857
+    - toponimo: toponimo-159
+      forma: macuare
+      lengua: taíno
+      nombre: Cuba
+      glosa: Nombre de la mayor de las islas del Archipiéla- go antillano.
+      similitud: 0.857
+    - toponimo: toponimo-131
+      forma: guarama
+      lengua: taíno
+      nombre: Guay ama
+      glosa: Pueblo y río de Puerto Rico.
+      similitud: 0.857
+    - toponimo: toponimo-042
+      forma: iboa
+      lengua: taíno
+      nombre: Boa
+      glosa: Río grande
+      similitud: 0.857
+    - toponimo: toponimo-054
+      forma: aburí
+      lengua: taíno
+      nombre: Mabú
+      glosa: Barrio de Humacao, en Puerto Rico.
+      similitud: 0.857
+    - toponimo: toponimo-056
+      forma: alcaboa
+      lengua: taíno
+      nombre: Jacaboa
+      glosa: Barrio y río de Patillas, en Puerto Rico.
+      similitud: 0.857
+    - toponimo: toponimo-058
+      forma: guanajo
+      lengua: taíno
+      nombre: Guanaja
+      glosa: La isla que hoy se llama Isla de Finos y Colón denominó San }uan Evangelista.
+      similitud: 0.857
+    - toponimo: toponimo-064
+      forma: Arashi
+      lengua: taíno
+      nombre: Yara
+      glosa: 'Lugar, sitio ## Sitio'
+      similitud: 0.857
+    - toponimo: toponimo-116
+      forma: coabana
+      lengua: taíno
+      nombre: Habana
+      glosa: 'Lugar de Cuba, donde vivía el cacique Yagua- cayo. ## Sitio grande'
+      similitud: 0.833
+    - toponimo: toponimo-016
+      forma: capadare
+      lengua: taíno
+      nombre: Caparra
+      glosa: Nombre de la primera población de españo- les, año de 1508, en Puerto Rico.
+      similitud: 0.833
+    - toponimo: toponimo-226
+      forma: dibaragua
+      lengua: taíno
+      nombre: Jibara
+      glosa: Lugar y puerto de Cuba.
+      similitud: 0.833
+    - toponimo: toponimo-240
+      forma: maquigua
+      lengua: taíno
+      nombre: Qmnigua
+      glosa: Río de Santo Domingo, tributario del Yaque del Norte.
+      similitud: 0.833
+    - toponimo: toponimo-156
+      forma: capana
+      lengua: taíno
+      nombre: Caparra
+      glosa: Nombre de la primera población de españo- les, año de 1508, en Puerto Rico.
+      similitud: 0.833
+    - toponimo: toponimo-159
+      forma: macuare
+      lengua: taíno
+      nombre: Manacua
+      glosa: Comarca de la parte occidental de Santo Domingo.
+      similitud: 0.833
+    - toponimo: toponimo-172
+      forma: maparari
+      lengua: taíno
+      nombre: Caparra
+      glosa: Nombre de la primera población de españo- les, año de 1508, en Puerto Rico.
+      similitud: 0.833
+fauna_re:
+- voz: bisure
+  que_es: lagartija
+  forma_fonemica: bisure
+  por_lengua:
+    achagua:
+      mejor: durru 'Lagartija' (0.4)
+      voces_con_esa_glosa: 2
+      pasa_umbral: false
+    taíno:
+      mejor: 'Higuana ''llámanla los indios desta isla Española iguana ## iguane ## '' (0.33)'
+      voces_con_esa_glosa: 4
+      pasa_umbral: false
+- voz: chaure
+  que_es: lechuza
+  forma_fonemica: kaure
+  por_lengua:
+    achagua:
+      mejor: ibida 'Lechuza' (0.2)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    taíno:
+      mejor: 'Múcaru ''Ave de rapiña nocturna ## Buho'' (0.55)'
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    wayunaiki:
+      mejor: monkulonseerü 'búho' (0.35)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+- voz: chiriware
+  que_es: gavilán
+  forma_fonemica: kiriware
+  por_lengua:
+    kalinago:
+      mejor: anana 'épervier, esp.; vautour' (0.15)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    wayunaiki:
+      mejor: tüitüi 'halcón' (0.29)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+- voz: kerekere
+  que_es: ave pequeña
+  forma_fonemica: kerekere
+  por_lengua: {}
+- voz: bayure
+  que_es: abeja
+  forma_fonemica: bayure
+  por_lengua:
+    achagua:
+      mejor: mabayanirri 'Abeja' (0.5)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    wayunaiki:
+      mejor: mapase 'cera de abeja' (0.33)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+- voz: yakure
+  que_es: acacia, cují
+  forma_fonemica: yakure
+  por_lengua:
+    wayunaiki:
+      mejor: adoptivo 'árbol trupillo, cují' (0.14)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+- voz: naure
+  que_es: planta bejucosa
+  forma_fonemica: naure
+  por_lengua:
+    achagua:
+      mejor: acua 'Sarmiento, bejuco' (0.44)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    kalinago:
+      mejor: mibi 'liane, vigne' (0.0)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    taíno:
+      mejor: 'Baigua ''liane à étourdir les poissons ## Cierta yerba usada por los '' (0.36)'
+      voces_con_esa_glosa: 4
+      pasa_umbral: false
+- voz: chipare
+  que_es: matapalo
+  forma_fonemica: kipare
+  por_lengua:
+    achagua:
+      mejor: tucurí 'Higueron' (0.33)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+- voz: susukure
+  que_es: cardón
+  forma_fonemica: susukure
+  por_lengua:
+    taíno:
+      mejor: '46 nombres de árboles y plantas sin identificar ''entre ellos: anón *hanon*, patata *batata*, Heliconia
+        Bihai '' (0.09)'
+      voces_con_esa_glosa: 2
+      pasa_umbral: false
+- voz: watakare
+  que_es: árbol de fruto no comestible
+  forma_fonemica: watakare
+  por_lengua: {}
+- voz: yacare
+  que_es: caimán (y 'pueblo', morfema-005)
+  forma_fonemica: yakare
+  por_lengua:
+    lokono:
+      mejor: kaiman 'caimán (Caiman crocodilus)' (0.36)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    taíno:
+      mejor: hatmane 'caïman' (0.5)
+      voces_con_esa_glosa: 4
+      pasa_umbral: false
+- voz: asubure
+  que_es: sesuvio, vidrio (planta)
+  forma_fonemica: asubure
+  por_lengua:
+    achagua:
+      mejor: juisucun 'Antojos de vidrio' (0.4)
+      voces_con_esa_glosa: 2
+      pasa_umbral: false
+    taíno:
+      mejor: Maniharí 'La verdolaga ( Portulaca parviflora) . Dice Las Casas-, “a e' (0.29)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    wayunaiki:
+      mejor: maraaja 'vidrio' (0.31)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+- voz: camuare
+  que_es: árbol de madera blanda (Camunare)
+  forma_fonemica: kamuare
+  por_lengua: {}
+- voz: chamanare
+  que_es: —
+  forma_fonemica: kamanare
+  por_lengua:
+    kalinago:
+      mejor: iwana 'iguana (Iguana iguana)' (0.5)
+      voces_con_esa_glosa: 1
+      pasa_umbral: false
+    taíno:
+      mejor: iwana 'iguana (Iguana iguana)' (0.46)
+      voces_con_esa_glosa: 3
+      pasa_umbral: false
+lecturas_propuestas:
+- toponimo: toponimo-239
+  forma: manare
+  lecturas:
+  - tipo: testimonio-residente
+    lectura: Manare sería una culebra de ojos amarillos, «como de gemas»; y muchos nombres propios y de animales
+      terminan en -re (mapanare, Manaure)
+    quien: Miguel Gil Urbina
+    fecha: '2026-10-10'
+    eje: significado
+  - tipo: glosa-fuente
+    lectura: «CULEBRA-SAPA manare. Pequeña serpiente que suele hallarse a orillas de las vertientes y arroyos hecha
+      un rollo […] Es mui ponzoñosa» (E. Portuguesa); y «Avispa MANARE», amarilla, nombrada por su nido «a modo
+      de manare»
+    quien: Alvarado 1921
+    fecha: '2026-10-10'
+    eje: significado
+    procedencia:
+      obra: alvarado-1921
+      pagina: 200
+    veredicto: 'sin decidir. Da a la lectura de Miguel un referente documentado —hay una culebra llamada manare—,
+      pero en los Llanos y sin los ojos amarillos. El patrón de la entrada es nombrar por la forma del cedazo: la
+      avispa por su nido en disco; la culebra, por enroscarse en rollo, es inferencia nuestra (Alvarado no lo dice)'
+  contexto:
+  - 'la glosa del canon es «cesto de fibra», voz cumanagota según Esteves p. 50; Alvarado p. 199 s.v. MANARE: harnero,
+    «Voz car., ch. y cum. que existe asimismo en cal., gal., etc. En aruaco, mánali» — el cedazo tiene forma lokona
+    (mánali)'
+  - 'Alvarado p. 199: «Carvajal escribe incorrectamente manaure»; y en Carvajal (relación de 1647) se lee «cataures
+    y manaures muy labrados»: ahí manaure es el objeto tejido, no el título. Para la campaña de Manaure (rama vault/manaure-colombia)'
+  - en el achagua (Neira y Ribero 1762) chamanare es la iguana (pliego 69) y manari- da 'calamidad, perderse, arruinar'
+    (pliegos 31, 47, 82); Fabo 1911 p. 101 trae mánare 'morir' y un río Manare entre los hidrónimos llaneros en
+    -are
+mapanare:
+  pregunta: ¿alguna fuente del repo da el origen de «mapanare»?
+  respuesta: 'no'
+  lo_que_hay:
+  - 'alvarado-1921 p. 205 s.v. MAPANARE: la serpiente («Color amarillo o rosado en el lomo con una serie de manchas
+    pardas romboidales», y la especie más común «de un amarillo que degenera sensiblemente en blanco» por debajo),
+    la variante mapanarí (s.v. RABO-FRITO) y la frase «ser una mapanare»; NINGUNA etimología, cuando la entrada
+    vecina MAPÍRE sí la lleva («Del ch. mapiri») y MANARE dice «Voz car., ch. y cum.»'
+  - 'neira-ribero-1762, pliego 80: «Palma = Cusí, guerrarí, mapanarí, gigirrí» — en achagua mapanarí es una PALMA,
+    no la culebra: mismo nombre, otra cosa (el filtro de significado lo separa)'
+  - 'el resto del repo nombra la mapanare como fauna de Falcón (corpus de ecología, sin voz caquetía: hueco declarado
+    en 3-mundo/corpus/ecologia_lexicon_map.md)'
+  maparari: 'toponimo-172 sigue igual: la variante mapanarí de Alvarado acerca la forma pero el salto n~r interior
+    sigue sin permutación documentada; no se propone'
+  a_buscar: un diccionario de venezolanismos con etimología (fuentes_a_buscar)
+para_la_campana:
+- toponimo: toponimo-239
+  forma: manare
+  nivel_actual: C
+  nivel_propuesto: C
+  que: colgar las dos lecturas de lecturas_propuestas (Miguel y Alvarado p. 200); no cambia el nivel
+- toponimo: toponimo-016
+  forma: capadare
+  nivel_actual: C
+  nivel_propuesto: C
+  que: 'lectura tipo hipotesis (quien: proyecto): ~ lokono kabadaro ''jaguar'' (ver cruce.mejores); y corregir en
+    la razón «el lexicón no tiene ninguna palabra para felino»: la tiene como comparanda lokona'
+- toponimo: toponimo-285
+  forma: siraba
+  nivel_actual: descartado
+  nivel_propuesto: C si Miguel acepta media ecuación por el referente; si no, descartado con la lectura colgada
+  que: 'lectura tipo hipotesis: si(ra)ba ''piedra'' de las tres hermanas, en el cerro de los petroglifos'
+- toponimo: toponimo-298
+  forma: cimiro
+  nivel_actual: descartado
+  nivel_propuesto: C (cierra con dos piezas de capa baja; contra Esteves)
+  que: 'lectura tipo etimologia-analitica (quien: proyecto): sim(a) ''cerro'' + -iro ''diminutivo'' = ''cerrito'''
+- toponimo: toponimo-090
+  forma: amuay
+  nivel_actual: C
+  nivel_propuesto: C
+  que: 'lectura tipo hipotesis: kalinago šauai ''acantilado, caverne'' (débil, ver cruce.mejores)'
+- toponimo: toponimo-264
+  forma: bajarigua
+  nivel_actual: descartado
+  nivel_propuesto: descartado
+  que: 'lectura tipo hipotesis: bagua/balaua ''mar'' (débil)'
+- toponimo: toponimo-018
+  forma: paraguaná
+  nivel_actual: C
+  nivel_propuesto: C
+  que: 'lectura tipo hipotesis: -ná como resto de *naka(n) ''en medio'' (taíno nacan, Las Casas; lokono annakan):
+    la tradición de Esteves «en medio del mar» con morfema; DÉBIL (ana.paraguana_en_medio)'
+- toponimos:
+  - toponimo-111 curiana
+  - toponimo-109 chamuriana
+  - toponimo-110 jayana
+  - toponimo-268 cujicana
+  - toponimo-018 paraguaná
+  que: 'SÓLO si Miguel adopta el candidato de -ana: lectura tipo hipotesis ''los de X'' en cada uno (Curiana ''los
+    de Curi/Coro'', Paraguaná ''los del mar''). Sin la decisión, no se cuelga nada'
+para_el_lexicon:
+- forma: -ana
+  glosa_propuesta: los de X, la gente de X (colectivo de gente; gentilicio)
+  capa_propuesta: hipotético
+  linea: 'hermana: lokono (linaje, Brett 1880 pp. 178-179) + kalinago (gentilicio, Breton 1665 p. 416 y 1667)'
+  contra: taíno Maguana 'la vega menor' (otra función); achagua -na relacional (no apoya)
+  nota: 'es la glosa del morfema-011 en 2-lengua/morfemas.yaml y la del prompt (d21.6): cambiarla mueve canon y
+    motor, decisión de Miguel'
+- forma: nakan
+  glosa_propuesta: en medio, centro
+  capa_propuesta: 'reconstruido (regla de la tanda de las hermanas: dos hermanas = reconstruida)'
+  linea: 'hermana: taíno nacan ''medio, en medio'' (Las Casas, Historia lib. I cap. XLIV) + lokono annakan ''centro''
+    (Brinton 1871) / a-nnakù-di ''estar en medio'' (Perea p. 647)'
+  nota: hueco del caquetío (no hay voz para 'en medio'); no sale de un topónimo glosado —sólo la apoya débilmente
+    la tradición de Paraguaná— y la forma caquetía es nuestra (el segmento común), no de nadie
+- forma: (jaguar)
+  glosa_propuesta: —
+  capa_propuesta: no se propone
+  nota: 'capadare ~ kabadaro es una sola lengua y un préstamo: se queda como lectura del topónimo, no como palabra'
+veredicto:
+  ana: '-ana ''los de X, la gente de X'' (colectivo de gente, gentilicio): el topónimo sería el nombre de una gente
+    pasado al lugar, como Guayana. Encaja con Curiana, que nombra «el pueblo» y «la costa» a la vez (Arcaya p. 169),
+    y con Coria-na y Paragua-nil como nombres de aldea en La Ramada (Castellanos p. 264). Capa propuesta: hipotético,
+    no reconstruido: el lado caquetío no tiene un solo -ana glosado y el paso de gentilicio a topónimo es inferencia
+    nuestra (regla 2: en duda, degradar).'
+  guayana: 'en el repo, Guayana es un ETNÓNIMO pasado al país, y de un pueblo de lengua caribe: no es un -ana lokono
+    ni dice nada del -ana arahuaco. De las 38 obras del repo que escriben el nombre, 28 no traen nada con aire de
+    etimología; los pasajes de las demás se leyeron uno a uno y sólo Goeje (p. 5) y Bachiller (p. 277) dicen de
+    dónde viene.'
+  cruce:
+    hermanas:
+      lokono: '11 topónimos con par frente a 9.37 por azar (p95 16; réplicas que igualan o superan: 0.34); con una
+        voz por familia, 8 frente a 6 (réplicas que igualan o superan: 0.273)'
+      taíno: '68 topónimos con par frente a 63.24 por azar (p95 70; réplicas que igualan o superan: 0.163); con
+        una voz por familia, 56 frente a 49.01 (réplicas que igualan o superan: 0.1)'
+      kalinago: '25 topónimos con par frente a 14.89 por azar (p95 22; réplicas que igualan o superan: 0.01); con
+        una voz por familia, 16 frente a 9.69 (réplicas que igualan o superan: 0.057)'
+    primas:
+      achagua: '45 topónimos con par frente a 27.43 por azar (p95 36; réplicas que igualan o superan: 0.0); con
+        una voz por familia, 16 frente a 11.06 (réplicas que igualan o superan: 0.103)'
+      wayunaiki: '4 topónimos con par frente a 4.59 por azar (p95 8; réplicas que igualan o superan: 0.613); con
+        una voz por familia, 4 frente a 3.89 (réplicas que igualan o superan: 0.53)'
+      paraujano: '0 topónimos con par frente a 1.05 por azar (p95 3; réplicas que igualan o superan: 1.0); con una
+        voz por familia, 0 frente a 0.89 (réplicas que igualan o superan: 1.0)'
+    vecina_caribe: '2 topónimos con par frente a 2.16 por azar (p95 6; réplicas que igualan o superan: 0.543); con
+      una voz por familia, 1 frente a 1.62 (réplicas que igualan o superan: 0.72)'
+    propia_lengua_y_medina:
+      caquetío: '64 topónimos con par frente a 46.67 por azar (p95 55; réplicas que igualan o superan: 0.0); con
+        una voz por familia, 58 frente a 38.42 (réplicas que igualan o superan: 0.0)'
+      medina: '32 topónimos con par frente a 20.65 por azar (p95 27; réplicas que igualan o superan: 0.007); con
+        una voz por familia, 32 frente a 18.89 (réplicas que igualan o superan: 0.0)'
+    lectura: 'Ninguna hermana pasa del azar de forma limpia. El lokono y el taíno dan lo que da el azar. El kalinago
+      sale por encima con todas las voces y en el borde con una por familia, y lo que lo empuja son dos cognados
+      que el canon YA TIENE: la piedra (šiba ~ kiba) y el mar (balaua, barana ~ para). El achagua sale muy por encima
+      con todas las voces y vuelve al azar con una por familia: lo que se replica es que el achagua escribe muchas
+      entradas sobre una misma raíz del agua (numa ''boca'', uni ''agua''), no un cognado. El caquetío y las voces
+      de Medina salen por encima en las dos cuentas, y son el control positivo: los topónimos se nombran con las
+      voces que el propio canon sacó de ellos.'
+    candidatos: 499 pares (topónimo, voz) pasan el filtro de significado; 110 con parecido ≥ 0.75, 57 de ellos en
+      una hermana; 39 son control positivo (el canon ya leía esa pieza)
+  fauna_re: 'ninguna voz caquetía en -re de animal o planta tiene en una hermana o prima una voz con el mismo animal
+    y la misma raíz: todas quedan bajo el umbral (fauna_re)'
+  mapanare: ninguna fuente del repo da su origen; Alvarado la describe y no la etimologiza; en achagua mapanarí
+    es una palma. Sí hay una culebra llamada manare (Alvarado p. 200, Portuguesa)
+  lo_mejor_del_pase: de -ana, que dos hermanas glosan un -na de GENTE y ninguna un -na de lugar, y la primaria de
+    Maguana; del cruce, cinco candidatos débiles, ninguno por encima de C
