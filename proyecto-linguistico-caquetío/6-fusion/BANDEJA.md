@@ -13,14 +13,15 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-09**.
+<!--GENERADO--> Generado el **2026-10-10**.
 
-**8114 ítems propuestos** en 163 propuestas, más **61 issue(s)/comentario(s) redactados sin publicar**.
+**8483 ítems propuestos** en 179 propuestas, más **65 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
 | Archivo | Obra | Ítems | Aviso |
 |---|---|---|---|
+| `acasio_capubana_2026-10-09.yaml` | acasio-2023-capubana-calendario | 12 |  |
 | `achagua_arte_neira_ribero_2026-09-22.yaml` | neira-ribero-1762 | 7 |  |
 | `adam_1879_arrouague_caraibe.yaml` | ? | 79 |  |
 | `antolinez_1946_capo_y_ortografia.yaml` | antolinez-1946-hacia-el-indio | 3 |  |
@@ -52,6 +53,7 @@ editar_a_mano: no
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
 | `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
 | `cruce_taino_caquetio_2026-09-24.yaml` | ? | 174 |  |
+| `cruce_toponimos_hermanas_2026-10-10.yaml` | varias (ver fuentes_leidas) | 14 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
 | `decisiones_222_documentacion_2026-09-24.yaml` | ? | 11 |  |
 | `decisiones_222_mundo_2026-09-24.yaml` | ? | 0 |  |
@@ -70,6 +72,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-21.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-10-10.yaml` | ? | 0 |  |
 | `decisiones_tanda_final_2026-09-23.yaml` | ? | 0 |  |
 | `decisiones_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
@@ -89,6 +92,14 @@ editar_a_mano: no
 | `gbif_fauna_tierra_paraguana_2026-09-22.yaml` | ? | 56 |  |
 | `guaiqueries_manaure_dabajuroide_2026-09-23.yaml` | ? | 0 |  |
 | `gumilla_1791_2026-09-23.yaml` | gumilla-1791 | 10 |  |
+| `hermanas_achagua_2026-10-09.yaml` | ? | 53 |  |
+| `hermanas_achagua_creencia-migrada_2026-10-09.yaml` | ? | 27 |  |
+| `hermanas_kalinago_2026-10-09.yaml` | ? | 67 |  |
+| `hermanas_kalinago_creencia-migrada_2026-10-09.yaml` | ? | 21 |  |
+| `hermanas_lokono_2026-10-09.yaml` | ? | 47 |  |
+| `hermanas_lokono_creencia-migrada_2026-10-09.yaml` | ? | 8 |  |
+| `hermanas_taino_2026-10-09.yaml` | ? | 48 |  |
+| `hermanas_taino_creencia-migrada_2026-10-09.yaml` | ? | 14 |  |
 | `hsai_caquetios_2026-09-23.yaml` | ? | 24 |  |
 | `inventario_nucleo_fundacional_2026-09-23.yaml` | ? | 36 |  |
 | `jahn_vocabularios_comparados.yaml` | jahn-1927 | 4 |  |
@@ -97,6 +108,7 @@ editar_a_mano: no
 | `kalinago_mujeres_goeje_2026-09-24.yaml` | ? | 302 |  |
 | `lengua_toponimia_quibacoa.yaml` | ? | 3 |  |
 | `lokono_gramatica_perea_1942.yaml` | perea-alonso-1942 | 6 |  |
+| `manaure_colombia_2026-10-09.yaml` | ? | 18 |  |
 | `mapa_nombres_era2.yaml` | ? | 63 |  |
 | `matacan_venado_2026-09-14.yaml` | esteves-1989 (y alvarado-1921, jahn-1927, neira-ribero-1762 como comparanda) | 5 |  |
 | `medicion_arte_achagua_2026-09-22.yaml` | ? | 33 |  |
@@ -111,6 +123,7 @@ editar_a_mano: no
 | `medicion_gbif_aves_paraguana_2026-09-22.yaml` | ? | 230 |  |
 | `medicion_hispanismos_loanword_uses_2026-09-17.yaml` | ? | 0 |  |
 | `medicion_kalinago_mujeres_2026-09-23.yaml` | ? | 0 |  |
+| `medicion_manaure_colombia_2026-10-09.yaml` | ? | 0 |  |
 | `medicion_morfologia_2026-09-20.yaml` | ? | 24 |  |
 | `medicion_nominalizacion_emergente_2026-09-21.yaml` | ? | 92 |  |
 | `medicion_nominalizador_2026-09-21.yaml` | ? | 82 |  |
@@ -123,6 +136,7 @@ editar_a_mano: no
 | `medicion_tanda_base_2026-09-23.yaml` | ? | 11 |  |
 | `medicion_tanda_final_2026-09-23.yaml` | ? | 0 |  |
 | `medicion_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
+| `medicion_xaguas_achaguas_2026-10-09.yaml` | ? | 0 |  |
 | `medina_colina_dictado.yaml` | ? | 111 |  |
 | `migracion_lemas_fase2.yaml` | ? | 79 |  |
 | `nodos_oliver_apendice_e.yaml` | oliver-1989-cap4 | 134 |  |
@@ -147,6 +161,7 @@ editar_a_mano: no
 | `propuesta_nominalizador_2026-09-21.yaml` | ? | 4 |  |
 | `propuesta_nucleo_d11_fase3.yaml` | perea-alonso-1942 · neira-ribero-1762 · oliver-1989-cap2 · oliver-1989-apendice-a · zavala-reyes-2015 | 17 |  |
 | `referentes_era2.yaml` | ? | 15 |  |
+| `relacion_con_la_tierra_2026-10-09.yaml` | varias (el corpus caquetío y las propuestas de las hermanas) | 21 |  |
 | `rivero_1883_2026-09-23.yaml` | rivero-1883 | 12 |  |
 | `sigla_E_zavala_lectura_2026-09-23.yaml` | ? | 0 |  |
 | `sistema_de_nombres_era2.yaml` | ? | 8 |  |
@@ -181,6 +196,7 @@ editar_a_mano: no
 | `tura_la_tesis_de_miguel.yaml` | ? | 0 |  |
 | `velasco_primarios_agi.yaml` | velasco-2015-resistencia | 4 |  |
 | `voces_de_miguel_2026-09-10.yaml` | ? | 7 |  |
+| `xaguas_achaguas_falcon_2026-10-09.yaml` | ? | 18 |  |
 
 Vistas generadas en `6-fusion/` (no cuentan: juntan lo que ya está arriba):
 
@@ -216,7 +232,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 218 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 274 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 275 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 | `lexicon_perea.py` | perea-alonso-1942 | 173 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 
@@ -230,12 +246,14 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `achagua-arte-morfologia-2026-09-22.md` | El arte achagua, leído: qué le aporta a D11 una hermana arahuaca del norte que no es wayuu |
 | `ampies-como-dios-o-como-digo-2026-09-23.md` | Ampíes sobre Manaure: «se hace adorar como Dios» o «como digo» |
 | `arqueologia-insular-falcon-2026-09-22.md` | La arqueología de las islas y de Falcón: sitios, fauna, movimiento y mar (M8) |
+| `capubana-nombre-acasio-2026-10-09.md` | Capubana en Acasio 2023: el nombre de una estación de la falda, no del cerro |
 | `comentario-122-frase-cardinal-oliver.md` | Comentario para #122 — la frase cardinal de Oliver, releída en las dos ediciones |
 | `coro-colonial-2026-09-22.md` | La Coro colonial en Castellanos y González Batista — y lo que no se sostuvo |
 | `correo-boletin-antropologico-zavala-2026-09-24.md` | Correo — al Boletín Antropológico (ULA), para Miguel Enrique Zavala Reyes: de dónde salen  |
 | `correo-cihpma-arcaya-1995-p247-2026-09-24.md` | Correo — al CIHPMA (UNEFM, Coro): el escaneo de la p. 247 de Arcaya, *Obra inédita y dispe |
 | `cosmovision-marina-2026-09-24.md` | El mar caquetío: economía, moneda, camino, parientes y nombre, con fuente; creencia, ningu |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
+| `cruce-toponimos-hermanas-2026-10-10.md` | El cruce de los topónimos con las hermanas, y qué hace `-ana` fuera del caquetío |
 | `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
 | `d11-voces-wayuu-2026-09-23.md` | D11 · las voces wayuu que quedan en el habla — qué pasa con cada una |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
@@ -261,6 +279,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `la-clase-estativa-2026-09-20.md` | La clase estativa: declararla, que hoy se hereda por accidente |
 | `lexicon-maboya-bejique-sin-respaldo-2026-10-09.md` | Lexicón: `maboya` «equivalente al buio» y `bejique` «cognado de piache» no tienen respaldo |
 | `macana-etiqueta-2026-09-21.md` | `macana`: el apoyo achagua no existe — y la cita que la sostiene es de otra glosa |
+| `manaure-colombia-2026-10-09.md` | Los Manaure de Colombia: ¿homenaje o herencia? — y lo que sí deja la búsqueda |
 | `morfologia-revision-2026-09-20.md` | La morfología arahuaca, revisada entera |
 | `mundo-era2-sitios-y-clima.md` | El mundo de la era 2, atado a los nodos: sitios y clima |
 | `nominalizador-retroabstraccion-2026-09-21.md` | El nominalizador que no está: se buscó así, en esto, y no hay |
@@ -287,6 +306,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `toponimos-esteves-lote-2026-09-22.md` | La cola de Esteves, leída entera — y un Zavala que resulta ser Esteves |
 | `van-koolwijk-1882-2026-10-05.md` | Van Koolwijk 1882: la fuente que está detrás de Gatschet, y lo que eso mueve |
 | `vocabularios-antillanos-2-2026-09-22.md` | M5 — Los vocabularios antillanos que quedaron a medias |
+| `xaguas-achaguas-falcon-2026-10-09.md` | Los xaguas de Carora y Pedregal: ¿achaguas? — y qué hacer con la pista de Mitare |
 | `zayas-1931-en-la-lista-maestra-2026-09-23.md` | Zayas 1931 en la lista maestra del taíno: cómo engancharlo y qué mueve |
 
 ---

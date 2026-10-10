@@ -1,0 +1,1662 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Las cinco esferas de lo taíno (minería 2, «esferas de las
+# hermanas»), en el esquema de 3-mundo/hermanas/README.md §3.
+#
+# Encargo (Miguel, 2026-10-09): «no sólo bajemos las palabras sino también
+# información sobre estructura social, jerarquía, creencia y sociedad … tal
+# cual como armamos estas esferas para los caquetíos, deberíamos hacerlo para
+# cada una de sus hermanas». La lista de temas del README §4 es la lista de
+# preguntas; lo que una fuente no dice se declara en `meta.ceros` con su sonda.
+#
+# Prioridad seguida: (a) lo que la minería 1 dejó para las fuentes nuevas
+# (la desecación del cacique, el control de Pané con Bourne, `opia` frente a
+# `hupía` en Ulloa); (b) parentesco y geografía política, que nadie había
+# minado para lo taíno en este esquema; (c) creencia nueva de las fuentes
+# nuevas; (d) ecología y transmisión con lo ya leído.
+#
+# NO repite la propuesta de la minería 1 (6-fusion/creencia_taino_2026-10-09.yaml,
+# migrada por otro agente a taino-creencia-001…014): cuando un hecho de aquí
+# la corrobora, la corrige o la contradice, lo dice en `mineria_1`
+# (ids de origen ct-tNN) y en `mineria_1_nota`.
+#
+# Reglas: regla 3 (todo es 1492-1550 y casi todo ya colonial: cada hecho dice
+# su `epoca`); regla 4 («taíno» no es autodenominación: cada hecho dice
+# `donde`); regla 5 (esto PROPONE: no toca 3-mundo/, 2-lengua/ ni el
+# lexicón); regla 6 (los ceros llevan sonda); regla C de Miguel para
+# `proyeccion.capa`; en duda, degradar.
+#
+# Campos extra que el validador ignora: `verificado_en_imagen`, `mineria_1`,
+# `mineria_1_nota`, `tema_duda`, `audita_corpus` (veredicto sobre un hecho
+# del corpus caquetío que NO es de la Vía A wayuu: los taínos de
+# parentesco-007/026/027, por ejemplo).
+#
+# Copyright: de la retraducción de Wikisource (pane-c1498) sólo formas y
+# frases cortas. Colón 1892, Ulloa 1571, Bourne 1906, Oviedo 1851, Las Casas
+# 1909, Anglería 1892 y el Handbook son de dominio público.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  pueblo: taino
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero taíno, minería 2 (Claude Opus 5.5), rama vault/hermanas-taino'
+  plan: 4-fuentes/sesiones/08_creencia_taino_que-minar.md
+  bitacora: 4-fuentes/sesiones/10_hermanas_taino_esferas.md
+  migracion_aparte: 'la creencia de la minería 1 (ct-t01…14) la migra otro agente a taino-creencia-001…014; aquí empiezan en 101'
+  fuentes_leidas: [colon-hernando-1892, ulloa-1571, bourne-1906, oviedo-y-valdes-1851, las-casas-apologetica, angleria-1892, pane-c1498, steward-1948-hsai-4, jahn-1927]
+  cobertura:
+    colon-hernando-1892: >-
+      vol. 1: cap. LXI entero (impresas 275-281, el relato del Almirante sobre
+      la religión de La Española) y la Escritura de fray Román caps. I-XVII
+      (impresas 281-302), leídos en la capa de texto; en imagen las pp. 105,
+      106, 135, 136, 209, 277, 278, 279, 280, 285 y 287. Desfase impresa =
+      pdf − 12, comprobado en la cabecera de las pp. 279-280 y 285
+    ulloa-1571: >-
+      ff. 125r-126v (el cap. LXI) y la Scrittura ff. 126v-136r y 145v, en
+      imagen los ff. 125r, 126r, 126v, 128v, 129v, 131r, 132r, 132v, 133r,
+      133v, 134r, 135v y 145v; folios leídos en la cabecera de 13 rectos (ver
+      `correcciones` sobre las hojas trocadas del escaneo)
+    bourne-1906: >-
+      pp. 3-8 (introducción y cap. LXI traducido) y 18-21 (Pané caps. XI-XVI
+      con sus notas), capa de texto, como control de la lectura de Ulloa; no
+      verificado en imagen
+    oviedo-y-valdes-1851: >-
+      t. I copia íntegra: lib. V caps. I y III (impresas 127-140) releídos por
+      parentesco, gobierno y justicia; lib. VI caps. I y IV-VI (163-174);
+      lib. VII cap. I (264-267); lib. XVI cap. II (467) y lib. XVII (499-500).
+      En imagen: 127, 128, 133, 134, 135, 136, 138, 139, 163, 164, 170, 171,
+      173, 265, 266, 467, 499 y 500. Desfase impresa = pdf − 120 en este tramo
+    las-casas-apologetica: >-
+      caps. CXCVI-CXCIX (impresas 514-523: los reyes, los nitaínos, el
+      gobierno, la guerra, el matrimonio, la herencia) y CCIV-CCV (535-539:
+      comida, pesca, canoas, bailes, Lucayos), por columnas con pymupdf. En
+      imagen: 115, 321, 445, 446, 515, 516, 518, 520, 521, 537 y 538
+    angleria-1892: >-
+      vol. 1 Déc. I lib. V cap. III-IV (impresas 243-244, Anacaona y los
+      régulos de Beuchío), en imagen; vol. 4 Déc. VII cap. I (impresas
+      73-81, los lucayos), en imagen las 79-80
+    pane-c1498: 'Wikisource caps. V-XVII y XXV, sólo para cotejar con Ulloa y Colón 1892 (sin página)'
+    jahn-1927: 'pp. 171-172 y 184 en imagen, sólo para anclar las hermanas wayuu de la sucesión, el precio de la novia y la tierra de los muertos'
+    steward-1948-hsai-4: 'Rouse, «Social and political organization», «Life cycle» (impresas 528-531, capa de texto): sólo para auditar a qué primaria remite cada afirmación'
+  no_leido:
+  - 'Colón 1892 vol. 1, el resto del primer y segundo viaje: sólo se leyeron por patrón (cacique, canoa, Rey, andas, mujeres) los caps. XXIII y XXXI'
+  - 'Ulloa 1571 fuera de los ff. 125-145; la segunda foliación de los pdf 443-533 no se tocó'
+  - 'Bourne 1906, pp. 9-17 y 22-41 (resto de la traducción y la sinonimia final)'
+  - 'Oviedo t. I lib. VI caps. II (batey) y VII-L, lib. VII caps. II-XIV salvo el I, y los libros VIII-XV'
+  - 'Las Casas, Apologética caps. CC-CCIII y el resto de la obra'
+  - 'Anglería vol. 1 fuera de las pp. 243-244 y vol. 4 fuera de las 73-81'
+  ceros_script: 'python 6-fusion/scripts/sondas_hermanas_taino.py: mide cada sonda de abajo sobre los tramos leídos e imprime el contexto (las coincidencias no taínas se descartan leyéndolas)'
+  ceros:
+  - tema: residencia
+    sonda: 'suegr-, «casa de su(s) padre(s)», «se iban a vivir», «moraba/vivía con», resid- — sobre Oviedo t. I pdf 240-399, Las Casas 320-325/444-448/514-540, Pané-Wikisource y Colón 1892 cap. LXI + Pané I-XVII'
+    resultado: 'CERO. Ninguna primaria dice dónde vive la pareja. Lo «avunculocal» de parentesco-026 es modelo de Keegan 1989 y lo «patrilocal» de Rouse (p. 531) no tiene nota: los dos son tercera mano'
+  - tema: linaje-clan
+    sonda: 'linaje, parcialidad, casta, «generación de» — mismos tramos'
+    resultado: 'CERO taíno: las 6 y 12 apariciones son «linaje humano», Plinio o los egipcios. Ningún clan, ninguna parcialidad nombrada'
+  - tema: sociedades-masculinas
+    sonda: 'mancebos, solteros, «casa de los hombres» — mismos tramos'
+    resultado: 'CERO taíno (las apariciones son de Lacedemonia, Capadocia y las amazonas)'
+  - tema: iniciacion-especialista / especialista-formacion
+    sonda: 'aprend-, enseñ-, maestr-, discípul-, novici- — mismos tramos; y en Ulloa «impar-» en los ff. 133-136'
+    resultado: 'CERO sobre cómo se hace un buhuitihu: Pané (XV) dice que «enseñan» a la gente, no cómo aprenden ellos. Lo único de aprendizaje es el de los principales que aprenden «da fanciulli» a tocar y cantar (taino-transmision-001). La frase de Rouse (p. 531) «The chiefs gave their children to the wise men to be taught the origin myths» no tiene primaria en los tramos leídos'
+  - tema: curriculo-edad
+    sonda: 'niños, muchachos, fanciulli, «de poca edad»'
+    resultado: 'sólo tres datos sueltos: los principales aprenden a cantar desde niños (Ulloa f. 133v), las orejas se horadan de niños (f. 129v) y los muchachos guardan los maizales desde las barbacoas (Oviedo pp. 265-266, imagen). No hay un currículo por edades'
+  - tema: tributo-trabajo (La Española)
+    sonda: 'tribut- — mismos tramos'
+    resultado: 'una sola aparición precolombina, y es la lectura de Colón («sacaba á aquellos pueblos todos los tributos que le parecía», p. 279, imagen); los «tributos» de Anglería vol. 1 p. 243 los había impuesto el Adelantado (colonial). Rouse dice que los caciques «exacted no tribute»: sin nota'
+  fuentes_que_faltan:
+  - 'Oliver 2009, Caciques and Cemí Idols (C1 de la nota 08): préstamo controlado'
+  - 'Las Casas, Historia de las Indias lib. I-II en la parte de La Española (los capítulos de Guarionex, Caonabó, Anacaona y Cotubanamá): el repo sólo tiene el t. I de 1875, ver [[las-casas-1875]]'
+  - 'Anglería vol. 2-3 de la ed. 1892 (Déc. II-VI), si las trae; sólo están el 1 y el 4'
+  - 'Keegan 1989 (parentesco-026) en texto completo: el corpus lo cita «no consultado»'
+  temas_propuestos: {}
+  correcciones:
+  - que: 'La foliación de Ulloa 1571 NO es (pdf − 45)/2 en todo el tramo'
+    medido: 'En imagen: pdf 291 = f. 124, pdf 293 = f. 123, pdf 295 = f. 126, pdf 297 = f. 125, pdf 299 = f. 127 y de ahí la fórmula vale (303 = 129, 305 = 130, 309 = 132, 313 = 134, 315 = 135, 317 = 136, 335 = 145). El escaneo trueca las hojas 123/124 y 125/126. El cap. LXI empieza en f. 125r (pdf 297) y la desecación está en f. 126r (pdf 295). Bourne, «folios 125-126», confirma'
+  - que: 'Colón 1892 vol. 1 SÍ trae los caps. I-XVII de Pané (impresas 281-302)'
+    medido: 'la ficha del vol. 2 y la nota 09 lo daban por ausente porque sólo estaba el vol. 2; desde hoy la tercera cadena de P1, P3 y P5 es Colón 1892 además de Anglería'
+  - que: 'Colón 1892 traduce mal dos pasajes de Pané frente a Ulloa'
+    medido: 'cap. XIII: «llaman á la persona que está viva, Goeiz» (p. 294) donde Ulloa dice «chiamano lo spirito Goeiz» (f. 133r); cap. XIV: «aprendiendo de los muchachos á tocarle» (p. 296) donde Ulloa dice «i quali da fanciulli imparano suonarlo» (f. 133v), y omite «per le quali si reggono». Para formas y frases de Pané manda Ulloa'
+  rouse_a_primarias:
+    nota: 'Las afirmaciones de Rouse 1948 p. 532 que la minería 1 dejó sin primaria (§rouse_a_primarias de creencia_taino_2026-10-09.yaml). Todas salen de UNA página de Colón: la relación del segundo viaje que copia Hernando (cap. LXI)'
+    filas:
+    - rouse: '«a chief … was strangled»'
+      primaria: 'Colón 1892 v1 p. 280 / Ulloa f. 126r (imagen): «no los dejan acabarla, que antes los ahogan, y esto se hace entre los Caciques»'
+    - rouse: '«abandoned in his hammock with food and water nearby»'
+      primaria: 'misma página: «á otros los echan en una hamaca … agua y pan á la parte de la cabeza y los dejan solos»; Las Casas p. 535 no trae la hamaca'
+    - rouse: '«the building might be burned with the body inside»'
+      primaria: 'p. 279-280: «á otros queman en la casa donde mueren»'
+    - rouse: '«disemboweled and dried over the fire, apparently to be kept as a fetish (zemi)»'
+      primaria: 'p. 279 / f. 126r (imagen): «Abren al Cacique y le secan al fuego, para que se conserve entero». El «to be kept as a fetish (zemi)» es inferencia de Rouse: la fuente sólo dice «para que se conserve entero»'
+    - rouse: '«The heads of both chiefs and commoners were similarly treated and kept in baskets in their children''s houses»'
+      primaria: 'sólo la primera mitad: «de los demás, solamente la cabeza» (p. 279; «De gli altri solamente pigliano la testa», f. 126r). Las cestas NO: los «cestos de huesos de muerto» con «cabezas de hombres colgadas» son de las casas caribes de Guadalupe, nov. 1493 (p. 209, imagen); en Pané las cestillas guardan las piedras del parto (f. 135v). «In their children''s houses»: cero'
+    - rouse: '«an earthly paradise called Coaibai, which was said to be a remote valley»'
+      primaria: 'mezcla dos fuentes: el Coaibai de Pané (cap. XII, «in una banda dell''Isola»), sin valle; y el valle de Caonabó en el relato de Colón (p. 280 / f. 126v), que no es remoto: «cada cacique principal cree que está en su tierra»'
+    - rouse: 'p. 529-530: matrilinealidad («eldest son of the eldest sister; failing sister''s sons … a brother; and only failing these … a son»)'
+      primaria: 'ninguna dice eso así: Las Casas p. 521 da los hijos de las hermanas (y «no lo penetramos»); Oviedo p. 136 da primero al hijo mayor. «La hermana mayor» y el orden hermano-hijo son de Rouse'
+
+hechos:
+
+# ═══════════════════════════ PARENTESCO ═══════════════════════════
+
+- id: taino-parentesco-001
+  esfera: parentesco
+  tema: sucesion-herencia
+  contenido: >-
+    Según Las Casas, en La Española heredaban el señorío los hijos de las
+    hermanas del señor, no sus hijos, y la razón que se daba era la certeza de
+    la maternidad: de los hijos de una hermana «eran ciertos», de los propios no
+    tanto. Él mismo advierte que no lo entendió bien: «Lo mismo de las
+    herencias, del todo punto no lo penetramos, más de haber entendido que no
+    los hijos de los señores, sino los de sus hermanas sucedian en sus estados».
+  pueblo: taino
+  donde: La Española
+  epoca: 'Las Casas en la isla desde 1502; escribe c. 1550-1559, ya sin señoríos en pie'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CXCIX, p. 521 (imagen)'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 136 (imagen)', independiente: true, nota: 'otro testigo, otra regla: ver taino-parentesco-002'}
+  como_se_escribio: >-
+    Testigo de oídas que confiesa su ignorancia en la misma frase; apologista
+    que busca probar el buen gobierno de los indios. La misma regla y la misma
+    razón las da para Panamá (p. 635, según taino2_las_casas_apologetica i01),
+    que no es arahuaco: el argumento no es exclusivo de la familia.
+  hermanas:
+  - {pueblo: wayuu, obra: jahn-1927, pagina: '171-172 (imagen)', que: '«Antiguamente predominaba la familia materna y tenía la mayor importancia el tío materno, como que cuanto a la consanguinidad materna, no había lugar a dudas, en tanto que sí podían éstas existir con respecto al padre»; la herencia del nombre y la nacionalidad por la madre, «un definido matriarcado»'}
+  caquetio: [parentesco-004, parentesco-005, parentesco-006, parentesco-007, parentesco-026]
+  proyeccion:
+    capa: reconstruido
+    nota: >-
+      Sostiene con primaria taína el núcleo de parentesco-004 —el hijo de la
+      hermana PUEDE heredar el señorío—, con el wayuu como segunda tradición
+      (Jahn). No sostiene la forma fuerte («a su sobrino uterino … no a su
+      propio hijo»): el otro testigo taíno, Oviedo, pone primero al hijo
+      (taino-parentesco-002). En duda entre los dos testigos, la regla
+      exclusiva se degrada. Y una advertencia: la RAZÓN (la certeza de la
+      maternidad) es la misma en Las Casas y en Jahn, pero Las Casas la da
+      también para Panamá, que no es arahuaco, y es un lugar común europeo:
+      la razón no cuenta como rasgo compartido; cuenta la regla.
+  via_a: {parentesco-004: corrobora-en-parte, parentesco-005: corrobora-en-parte, parentesco-006: matiza}
+  audita_corpus: {parentesco-007: corrobora-en-parte}
+  verificado_en_imagen: si
+  dominios: [parentesco, politica, sucesion]
+
+- id: taino-parentesco-002
+  esfera: parentesco
+  tema: sucesion-herencia
+  contenido: >-
+    Oviedo da otra regla, «de muchos informado»: heredaba el hijo mayor de
+    cualquiera de las mujeres del cacique; si ese hijo moría sin hijos, el
+    estado no pasaba al hijo de su hermano sino «al hijo ó hija de su hermana»,
+    porque ése era «mas çierto sobrino ó heredero»; y si el cacique moría sin
+    hijos, la herencia seguía la línea por la que había venido: por el padre,
+    al hermano de padre; por la madre, al pariente más cercano de la madre.
+  pueblo: taino
+  donde: La Española
+  epoca: 'Oviedo en la isla desde 1515; informantes sin nombre; escrito hasta 1548'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 136 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'p. 521 (imagen)', independiente: true, nota: 'contradice el primer paso: para Las Casas suceden los hijos de las hermanas, no los hijos'}
+  como_se_escribio: >-
+    Cronista hostil («No paresçe esto mucha bestialidad ó error, en especial en
+    tierra donde las mugeres eran tan deshonestas»): la razón de la certeza la
+    usa para insultar. La regla es compleja y no parece inventada para el
+    argumento.
+  caquetio: [parentesco-001, parentesco-002, parentesco-003, parentesco-004, parentesco-007]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina el problema de parentesco-001/002/003 (el cacicazgo colonial de
+      Coro hereda de padre a hijo y el canon lo trata como artefacto colonial):
+      en La Española, ya en el registro de 1515-1548, el hijo va primero. La
+      transmisión de padre a hijo, por sí sola, no basta para decir «colonial»
+      ni para decir «precontacto»; la regla del sobrino aparece aquí sólo en
+      la línea colateral. Nada se proyecta.
+  via_a: {parentesco-004: matiza, parentesco-006: matiza}
+  audita_corpus: {parentesco-007: corrobora-en-parte}
+  verificado_en_imagen: si
+  dominios: [parentesco, politica, sucesion]
+
+- id: taino-parentesco-003
+  esfera: parentesco
+  tema: sucesion-herencia
+  contenido: >-
+    La tierra de labor es patrimonio que se hereda. En el mito de Yaya, Pané
+    hace ir al padre «a' suoi Conichi, che uuol dire possessioni, ch'erano di
+    sua heredità» (Ulloa); Oviedo, por su cuenta, dice que junto a sus pueblos
+    tenían «sus labranças é conucos (que assi llaman sus heredamientos)».
+  grafia: 'Conichi (Ulloa f. 131r); Conichis (Colón 1892 p. 290); conucos (Oviedo)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498 (Ulloa 1571); Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'f. 131r (imagen), cap. IX'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. I, p. 163 (imagen)', independiente: true}
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 290 (capa de texto)', independiente: false, nota: 'la misma Escritura retraducida: «que quiere decir posesiones, que eran su patrimonio»'}
+  como_se_escribio: 'dato de paso dentro de un mito (Pané) y glosa de cronista agricultor (Oviedo, que sembró maíz 28 años)'
+  caquetio: [ecologia-029]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      Que el conuco sea herencia y no sólo uso es nuevo para el caquetío y lo
+      da una sola tradición: hipotético. No dice por qué línea se hereda.
+  tierra: [tenencia]
+  verificado_en_imagen: si
+  dominios: [parentesco, cultivo, herencia]
+
+- id: taino-parentesco-004
+  esfera: parentesco
+  tema: matrimonio
+  contenido: >-
+    La gente común tenía una mujer, o las que pudiera mantener; los señores,
+    muchas. Pané: «ne sogliono tener due, e tre, & li principali ne tengono x,
+    xv, e xx» (Ulloa). Oviedo: cada uno una «si no podia sostener mas», muchos
+    dos, «los caçiques ó reyes tres é quatro é quantas querian»; Behechío tuvo
+    treinta. Las Casas: «Los reyes y señores tenian munchas mujeres … del rey
+    Behechío se dijo que tuvo treinta», y los particulares una. En Cuba, igual:
+    los caciques toman cuantas quieren «é los otros las que pueden dar de comer».
+  pueblo: taino
+  donde: 'La Española; Cuba'
+  epoca: 'Pané 1494-1498; Oviedo 1515-1548; Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'f. 145v (imagen), cap. XXV'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 133 (imagen)', independiente: true}
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCIX, p. 521 (imagen); p. 520 (imagen) para los particulares', independiente: true}
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. XVII cap. IV, p. 500 (imagen): Cuba', independiente: false, nota: 'mismo autor'}
+  - {obra: colon-hernando-1892, pagina: 'vol. 2 p. 20 (capa de texto)', independiente: false, nota: 'la misma Escritura: «los principales diez, quince y veinte»'}
+  como_se_escribio: 'tres testigos que no se copian; Pané lo cuenta al elogiar a un cacique que promete quedarse con una'
+  caquetio: [parentesco-015, parentesco-027, parentesco-030]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina parentesco-015 (Manaure, polígamo atestiguado): la poliginia del
+      señor y la monogamia del común es también la regla de las Antillas en
+      contacto. La capa de 015 no cambia; la proyección hacia el XIV-XV sigue
+      siendo la decisión que el canon ya tomó.
+  audita_corpus: {parentesco-027: corrobora}
+  verificado_en_imagen: si
+  dominios: [parentesco, matrimonio, rango]
+
+- id: taino-parentesco-005
+  esfera: parentesco
+  tema: hogar-casa
+  tema_duda: matrimonio
+  contenido: >-
+    Entre las mujeres de un cacique había una principal, la más querida, «sin
+    ultrajar á las demas»; comían todas juntas y vivían «debaxo de una
+    cobertura de casa é junto á la cama del marido», sin rencillas. Las Casas
+    no lo supo: «cuál fuese la principal, ó si eran todas iguales, tambien
+    todos lo ignoramos».
+  pueblo: taino
+  donde: La Española
+  epoca: 'Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 135 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'p. 521 (imagen)', independiente: true, nota: 'declara no saberlo'}
+  como_se_escribio: 'Oviedo lo compara con las gallinas y los tracios: el dato está dentro de una burla'
+  caquetio: [parentesco-015]
+  proyeccion:
+    capa: hipotetico
+    nota: 'La casa común de las esposas del señor, con una principal, sería nueva para el caquetío y la da un solo testigo: hipotético.'
+  verificado_en_imagen: si
+  dominios: [parentesco, casa, matrimonio]
+
+- id: taino-parentesco-006
+  esfera: parentesco
+  tema: matrimonio
+  contenido: >-
+    La prohibición es por grados, no por linaje. Oviedo: no tomaban por mujer
+    ni a la madre, ni a la hija, ni a la hermana, «y en todos los otros grados
+    las tomaban», y creían que «el que se echa con su madre, ó con su hija, ó
+    hermana, muere mala muerte». Las Casas: «no entendimos que tomasen por
+    mujer, hermana, ni prima hija de hermanos». Discrepan en los primos.
+  pueblo: taino
+  donde: La Española
+  epoca: 'Oviedo 1515-1548; Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, pp. 136 y 138 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCIX, p. 520 (imagen)', independiente: true}
+  como_se_escribio: 'los dos escriben contra los moralistas europeos; Oviedo explica el tabú por miedo a la muerte, no por virtud'
+  caquetio: [parentesco-008, parentesco-030]
+  proyeccion:
+    capa: no-proyecta
+    nota: >-
+      La prohibición del incesto nuclear es casi universal y no dice nada de la
+      familia arahuaca. Lo específico que el corpus usa —exogamia de clan,
+      parentesco-008— NO aparece en las primarias taínas (cero de linaje-clan,
+      `meta.ceros`).
+  via_a: {parentesco-008: matiza}
+  verificado_en_imagen: si
+  dominios: [parentesco, matrimonio, tabu]
+
+- id: taino-parentesco-007
+  esfera: parentesco
+  tema: matrimonio
+  tema_duda: alianza-intercambio
+  contenido: >-
+    La mujer se compraba a sus padres. Las Casas: «Los señores y los demás
+    compraban á los padres las hijas que habian de ser sus mujeres» con sartas
+    de cuentas, `çibas` («çibas llamaban á todas las piedras»), y con hojas de
+    guanín que colgaban de las orejas; los españoles llegaron a pagar «ciento y
+    más castellanos» por esas hojas para dárselas a la hija de un cacique. Y el
+    trato roto era causa de guerra: si un señor enviaba «ciertas preseas» por la
+    hija o la hermana de otro y éste no se la enviaba, o la daba a otro.
+  grafia: 'çibas, taguaguas (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Las Casas 1502-1559; el precio en castellanos es ya de contacto'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'caps. CXCVIII-CXCIX, pp. 520-521 (imagen)'}
+  como_se_escribio: 'Las Casas confiesa no haber inquirido las ceremonias; el pago es lo único que da del rito'
+  hermanas:
+  - {pueblo: wayuu, obra: jahn-1927, pagina: '171-172 (imagen de la 171)', que: 'el novio paga la novia al padre; el valor de las otras hijas va a la madre o al tío materno; si la esposa es infiel el marido exige al padre que le devuelva el precio'}
+  caquetio: [parentesco-013, parentesco-015, ecologia-017]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina parentesco-015 y ecologia-017 (la perla «compra alianzas y
+      esposas»): en las Antillas el pago de la novia son cuentas de piedra y
+      guanín. No autoriza a cambiar la perla caquetía por otra cosa.
+  verificado_en_imagen: si
+  dominios: [parentesco, matrimonio, alianza, comercio]
+
+- id: taino-parentesco-008
+  esfera: parentesco
+  tema: matrimonio
+  contenido: >-
+    En La Española, Las Casas vio parejas viejas con hijos grandes en cuyo
+    matrimonio «no haber habido mudanza», pero no supo si los casamientos eran
+    perpetuos. En Cuba, Oviedo dice lo contrario: dejaban las mujeres «por
+    pequeñas causas, é las mas veçes ellas á ellos»; y en la boda los de la
+    condición del novio (caciques, principales o plebeyos) yacen primero con la
+    novia, que sale gritando «Manicato», que quiere decir «esforçada».
+  grafia: 'Manicato (Oviedo, Cuba)'
+  pueblo: taino
+  donde: 'La Española (Las Casas); Cuba (Oviedo)'
+  epoca: 'Las Casas 1502-1559; Oviedo, de Cuba hasta 1548, de oídas'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. XVII cap. IV, pp. 499-500 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCIX, p. 520 (imagen)', independiente: true, nota: 'otra isla'}
+  como_se_escribio: 'Oviedo, hostil y de oídas, pinta a Cuba entera con «vicios é libídine»; el rito por rangos es el dato, el juicio no'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Dos islas, dos noticias opuestas y un cronista hostil: no se proyecta nada. Se registra que la mujer cubana podía dejar al marido.'
+  verificado_en_imagen: si
+  dominios: [parentesco, matrimonio, divorcio, rango]
+
+- id: taino-parentesco-009
+  esfera: parentesco
+  tema: infancia-nombre
+  tema_duda: roles-de-genero
+  contenido: >-
+    El paso a mujer se celebra y se viste. En los Lucayos, al llegar la
+    menstruación, «sus padres, como si las fueran á casar con el marido,
+    convidan á los vecinos y hacen todos las señales de alegría»; desde
+    entonces se cubren con redecillas, y sólo al perder la virginidad usan
+    enaguas hasta la rodilla. En La Española, las casadas llevaban naguas hasta
+    media pierna, las principales hasta los tobillos, y las doncellas nada.
+  grafia: 'naguas (Oviedo)'
+  pueblo: taino
+  donde: 'Lucayas (Anglería); La Española (Oviedo)'
+  epoca: 'Anglería escribe la Déc. VII c. 1524-1525, de informantes; Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: angleria-1892, pagina: 'vol. 4, Déc. VII cap. I, p. 79 (imagen)'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 134 (capa de texto); lib. II, p. 68 (capa de texto)', independiente: true}
+  como_se_escribio: 'Anglería escribe en la Corte, de lo que le cuentan de unos lucayos ya deportados a La Española; idealiza («edad de oro»)'
+  caquetio: [transmision-028]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      Que la menarquia sea un rito público que cambia el estado de la
+      muchacha lo dan dos hermanas (la fiesta lucaya y el encierro wayuu de
+      transmision-028), pero con ritos opuestos —fiesta frente a encierro— y es
+      un rasgo de amplitud americana: en duda, hipotético.
+  verificado_en_imagen: si
+  dominios: [parentesco, pubertad, vestido, mujeres]
+
+- id: taino-parentesco-010
+  esfera: parentesco
+  tema: roles-de-genero
+  contenido: >-
+    Había hombres que tomaban el papel de mujer: al que «toma cargo de ser
+    muger … le dan luego ofiçio de muger é trae naguas, como muger». Oviedo lo
+    cuenta como pecado y lo da por común en «esta isla y las comarcanas» y en
+    Tierra Firme, sin distinguir.
+  grafia: 'naguas'
+  pueblo: taino
+  donde: 'La Española, mezclada por el cronista con Tierra Firme'
+  epoca: 'Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 133 (imagen)'}
+  como_se_escribio: 'pasaje de condena moral; la mezcla con Tierra Firme impide saber qué es de La Española'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Un testigo hostil que mezcla regiones: se registra el rol (oficio y vestido de mujer), no se proyecta.'
+  verificado_en_imagen: si
+  dominios: [parentesco, genero]
+
+# ═══════════════════════ GEOGRAFÍA POLÍTICA ═══════════════════════
+
+- id: taino-geografia_politica-001
+  esfera: geografia_politica
+  tema: jefatura
+  tema_duda: escala-poblacion
+  contenido: >-
+    La Española tenía cinco señores principales —Guarionex, Guacanagarí,
+    Behechío, Caonabó y la vieja señora de Higüey— y bajo ellos «señores …
+    innumerables» con «súbditos infinitos». La sujeción variaba: Uxmatex, señor
+    de Çybao, acudía a Guarionex «con 16.000 hombres de pelea» cuando éste lo
+    llamaba; el señor de Haniguayaba parecía «rey libre por sí» con sus propios
+    señores debajo; de Mayobánex y de Cotubanamá Las Casas no sabe si eran
+    súbditos. Anglería cuenta treinta y dos régulos reunidos en la corte de
+    Behechío.
+  grafia: 'Guarionex, Guacanagarí, Behechío, Caonabó, Hyguanamá, Uxmatex, Haniguayaba, Mayobánex, Cotubanamá (Las Casas); Beuchío Anacauchoa (Anglería)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'situación de 1492-1503; Las Casas escribe c. 1550 («de sabello en aquellos tiempos poco cuidado tuvimos»)'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CXCVII, pp. 515-516 (imagen)'}
+  procedencia_extra:
+  - {obra: angleria-1892, pagina: 'vol. 1, pp. 243-244 (imagen)', independiente: true, nota: 'los régulos esperaban «con los tributos» que les había impuesto el Adelantado: la reunión es colonial'}
+  como_se_escribio: 'Las Casas conoció a varios de estos señores («yo cognoscí grande número dellos») y declara cuánto ignora de la jerarquía'
+  caquetio: [parentesco-034, parentesco-035, parentesco-037, geografia_politica-003]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina el modelo de parentesco-037 (apopo, diao, paramount) y el
+      Manaure de «algunas circunvecinas» (atestiguado): en las Antillas de
+      contacto hay también señores de señores con sujeción variable y no
+      siempre sabida. No autoriza a dar a la Kaketiana cinco cacicazgos ni
+      cifras de guerreros.
+  verificado_en_imagen: si
+  dominios: [politica, jerarquia, escala]
+
+- id: taino-geografia_politica-002
+  esfera: geografia_politica
+  tema: jerarquia-rango
+  contenido: >-
+    Bajo los señores había una nobleza con nombre: «munchos nobles y estimados
+    por de mejor sangre que los demas, y que tenian cargo sobre otros como de
+    regillos y guiallos; éstos, en la lengua comun desta Isla, se llamaban
+    nitaynos». Y tres tratamientos marcaban el grado del señor: Guaoxerí
+    («vuestra merced»), Baharí («señoría») y Matunherí, sólo para los reyes
+    supremos («Vuestra Alteza»).
+  grafia: 'nitaynos, Guaoxerí, Baharí, Matunherí (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CXCVII, p. 516 (imagen)'}
+  como_se_escribio: 'el único que da los tres tratamientos; los traduce a la escala castellana, que es su marco'
+  caquetio: [parentesco-034, parentesco-035, parentesco-036]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina diao y apopo (atestiguados, parentesco-034/035): en las Antillas
+      el rango también se dice con palabras propias, y hay tratamiento de
+      cortesía por grado, como el `kudanga` formal caquetío (d21.10). Ninguna
+      voz pasa al caquetío; las cuatro ya están propuestas para el lexicón en
+      taino2_las_casas_apologetica (lx.01-04).
+  verificado_en_imagen: si
+  dominios: [politica, rango, lengua]
+
+- id: taino-geografia_politica-003
+  esfera: geografia_politica
+  tema: jefatura
+  contenido: >-
+    El señor iba en andas y hablaba por boca de sus viejos. Colón, 18 de
+    diciembre de 1492: el rey de la costa norte de La Española no iba a pie
+    «sino en unas como andas que traían cuatro hombres con gran veneración
+    aunque era muy mozo», con más de doscientos hombres; en la nave, dos viejos
+    que Colón tomó por consejeros se sentaron a sus pies, y «miraban al cacique
+    á la boca y hablaban con él y por él».
+  pueblo: taino
+  donde: 'La Española, costa norte (Marien)'
+  epoca: 'primer viaje, 18-XII-1492: el primer día del contacto con ese señor'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. XXXI, pp. 135-136 (imagen)'}
+  como_se_escribio: 'palabras del diario de Colón copiadas por Hernando, a través de Ulloa; sin lengua común («no me entendían; ni los entendía yo»)'
+  caquetio: [creencia-001b]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      Que el señor caquetío hable por boca de ancianos sería nuevo y lo da una
+      sola tradición: hipotético. Las andas tienen par caquetío fuera del
+      corpus (Aguado vía Arcaya p. 115, la hamaca a hombros: steward_auditado
+      r2 de la minería 1), y Steward mismo no lo da por específico.
+  via_a: {transmision-034: matiza}
+  via_a_nota: {transmision-034: 'en el cacicazgo de Marien la palabra del señor pasa por dos viejos: la mediación no vive sólo «dentro del jefe»'}
+  verificado_en_imagen: si
+  dominios: [politica, jefatura, protocolo]
+
+- id: taino-geografia_politica-004
+  esfera: geografia_politica
+  tema: justicia-norma
+  tema_duda: jefatura
+  contenido: >-
+    La palabra del señor era la ley. Las Casas: los reyes gobernaban «manu
+    regia, conviene á saber, sin leyes, por su buen albedrio». Colón: a los
+    enfermos graves «son llevados al Cacique y él les dice si deben de ser
+    ahogados ó no, y ejecutan lo que manda». En los Lucayos, según Anglería,
+    si el cacique mandaba a alguien despeñarse —«mando que te tires»— lo
+    hacía, y «teníase por ley el arbitrio del cacique».
+  pueblo: taino
+  donde: 'La Española (Las Casas, Colón); Lucayas (Anglería)'
+  epoca: 'Colón 1494-1496; Anglería c. 1524-1525; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, p. 280 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'f. 126v (imagen)', independiente: false, nota: 'el mismo texto de Colón, en el testigo más antiguo'}
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCVIII, p. 520 (imagen)', independiente: true}
+  - {obra: angleria-1892, pagina: 'vol. 4, Déc. VII cap. I, pp. 79-80 (imagen)', independiente: true}
+  como_se_escribio: 'Las Casas lo elogia como gobierno de padres; Anglería lo pinta como edad de oro; Colón lo cuenta sin juicio'
+  caquetio: [creencia-001b, creencia-013, parentesco-037]
+  proyeccion:
+    capa: hipotetico
+    nota: 'El señor que decide sobre la vida de los suyos sin otra ley que su arbitrio sería nuevo para el caquetío y lo da una sola tradición: hipotético.'
+  via_a: {transmision-034: corrobora-en-parte}
+  via_a_nota: {transmision-034: 'la hermana antillana es un cacicazgo con arbitrio del señor: la sociedad sin caciques es wayuu, no arahuaca general'}
+  verificado_en_imagen: si
+  dominios: [politica, justicia, jefatura]
+
+- id: taino-geografia_politica-005
+  esfera: geografia_politica
+  tema: tributo-trabajo
+  contenido: >-
+    En los Lucayos el señor organizaba el trabajo y repartía la cosecha: «Todo
+    lo que se siembra … ó se pesca ó se caza … se hace al arbitrio del rey. El
+    reparte á su arbitrio esos ejercicios á cada individuo. Recogidas las
+    cosechas, se juntan en los graneros del rey; de allí se reparten todo el
+    año para uso del pueblo, según la familia de cada uno». Las Casas lo copia
+    de Anglería. Para La Española, Colón sólo da su sospecha: que el señor, con
+    el cemí que habla, «sacaba á aquellos pueblos todos los tributos que le
+    parecía».
+  pueblo: taino
+  donde: 'Lucayas; La Española (la frase de Colón)'
+  epoca: 'Anglería c. 1524-1525, de oídas, sobre lucayos ya deportados'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: angleria-1892, pagina: 'vol. 4, Déc. VII cap. I, p. 80 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CCV, p. 539 (capa de texto)', independiente: false, nota: 'cita a Anglería, «sétima Década»'}
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, p. 279 (imagen)', independiente: true, nota: 'es la interpretación de Colón, no una descripción'}
+  como_se_escribio: 'Anglería en clave de edad de oro («no había mío y tuyo»); Colón en clave de engaño del cacique'
+  caquetio: [parentesco-037]
+  proyeccion:
+    capa: hipotetico
+    nota: 'El señor como granero y repartidor es nuevo para el caquetío y lo da una sola tradición, idealizada: hipotético.'
+  tierra: [tenencia]
+  verificado_en_imagen: si
+  dominios: [politica, redistribucion, trabajo]
+
+- id: taino-geografia_politica-006
+  esfera: geografia_politica
+  tema: justicia-norma
+  contenido: >-
+    Los dos testigos se contradicen sobre el robo. Oviedo: el hurto era el
+    delito que más aborrecían; al ladrón, «por pequeña cosa que hurtasse, lo
+    empalaban vivo», y pedir clemencia era tenido casi por el mismo delito; lo
+    repite para Cuba. Las Casas: «No se sabia qué cosa fuese hurto ni
+    adulterio», y la venganza por un agravio era un insulto («buticaco», «anda,
+    para zarco de los ojos»).
+  grafia: 'buticaco, xeyticaco, mahite (Las Casas)'
+  pueblo: taino
+  donde: 'La Española; Cuba (Oviedo)'
+  epoca: 'Oviedo 1515-1548; Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 139 (imagen); lib. XVII, p. 499 (capa de texto)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCVIII, p. 518 (imagen)', independiente: true, nota: 'contradice'}
+  como_se_escribio: 'Oviedo busca la crueldad; Las Casas la inocencia: cada uno lee lo que su tesis pide. Pueden convivir —el robo raro porque se pagaba con la vida—, pero ninguno lo dice'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Dos testigos opuestos y sin dato caquetío: no se proyecta.'
+  verificado_en_imagen: 'si (la repetición cubana de Oviedo, p. 499, en capa de texto)'
+  dominios: [justicia, robo]
+
+- id: taino-geografia_politica-007
+  esfera: geografia_politica
+  tema: justicia-norma
+  contenido: >-
+    Pedir cuentas al médico dependía de la fuerza de la parentela. Pané: si el
+    enfermo moría y «il morto ha molti parenti, ouero è Signor di Castella» y
+    puede resistir al buhuitihu, lo interrogaban y castigaban; «quelli, che
+    poco possono, non ardiscono di contendere con questi medici».
+  grafia: 'Buhuitihu (Ulloa)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498, en Ulloa 1571'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'f. 135v (imagen), cap. XVII'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 300 (capa de texto)', independiente: false}
+  - {obra: bourne-1906, pagina: 'cap. XVII de su traducción (capa de texto)', independiente: false, nota: 'control de la lectura'}
+  como_se_escribio: 'fraile que combate a los médicos; el dato social (la parentela da fuerza) está dicho de paso'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Ninguna venganza contra el boratio en la fuente caquetía (ct-t10 de la minería 1). Se registra la condición social, que la minería 1 no recogió.'
+  mineria_1: [ct-t10]
+  mineria_1_nota: 'matiza ct-t10: la venganza contra el médico no era de todos, sino de quien tenía muchos parientes o era señor de vasallos'
+  verificado_en_imagen: si
+  dominios: [justicia, parentela, medicina]
+
+- id: taino-geografia_politica-008
+  esfera: geografia_politica
+  tema: guerra
+  contenido: >-
+    Las guerras eran «rarísimas» y tenían tres causas, según Las Casas: que los
+    de otro reino entraran a cazar en términos ajenos, que vinieran a pescar en
+    sus ríos, o que un señor que había enviado preseas por la hija o la hermana
+    de otro no la recibiera. Las armas: arcos y flechas de cogollo de caña con
+    espinas de pescado o pedernal, «varas tostadas como dardos» y una hierba
+    venenosa que «hacia poco daño». En los Lucayos, Colón vio cicatrices de
+    heridas que, por señas, decían recibidas de gentes de otras islas «que venían
+    á cautivarlos».
+  pueblo: taino
+  donde: 'La Española (Las Casas); Lucayas (Colón)'
+  epoca: 'Colón 13-X-1492; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CXCVIII, p. 520 (imagen)'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 cap. XXIII, p. 105 (imagen)', independiente: true, nota: 'entendido «por señas»'}
+  como_se_escribio: 'Las Casas minimiza la guerra para su tesis; Colón interpreta señas'
+  caquetio: [creencia-004b]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      La tipología —territorio de caza y pesca, y alianza matrimonial rota— es
+      la más cercana documentada para un conflicto entre nodos, pero es de una
+      sola tradición: hipotético.
+  tierra: [tenencia]
+  verificado_en_imagen: si
+  dominios: [guerra, territorio, alianza, armas]
+
+- id: taino-geografia_politica-009
+  esfera: geografia_politica
+  tema: cautivos-esclavitud
+  contenido: >-
+    En La Española no había esclavos entre los indios («en esta isla ninguno
+    hovo entre los indios»). En Cuba, la gente de La Española que la sojuzgó
+    tuvo a los vencidos «como por esclavos y llamábanlos exbuneyes», aunque
+    «ninguna ó cuasi ninguna diferencia» había entre ellos y los hijos de los
+    vencedores. La palabra para el que sirve es naboría, «sirviente ó criado».
+  grafia: 'exbuneyes, naboría (Las Casas)'
+  pueblo: taino
+  donde: 'La Española y Cuba'
+  epoca: 'Las Casas 1502-1559; la conquista de Cuba por gente de La Española es anterior al contacto, según él'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. XLIV, p. 115 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CLXVII, p. 447 (imagen, T9)', independiente: false, nota: 'naboría'}
+  como_se_escribio: 'el único testimonio de una expansión de una isla sobre otra; Las Casas lo cuenta para mostrar que hasta la servidumbre era suave'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Sin ancla caquetía. Se registra porque es un dato de expansión entre islas antes de 1492.'
+  verificado_en_imagen: si
+  dominios: [politica, servidumbre, expansion]
+
+- id: taino-geografia_politica-010
+  esfera: geografia_politica
+  tema: sucesion-politica
+  contenido: >-
+    El señorío también se ganaba. Caonabó, señor de Maguana, «era de nacion
+    Lucayo, natural de las islas de los Lucayos, que se pasó dellas acá, y por
+    ser varon en las guerras y en la paz señalado, llegó á ser rey de aquella
+    provincia y por todos muy estimado».
+  pueblo: taino
+  donde: 'La Española (Maguana); origen lucayo'
+  epoca: 'antes de 1492; Las Casas lo dice «según entendimos los que á los principios á esta Isla venimos»'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CXCVII, p. 515 (imagen)'}
+  como_se_escribio: 'noticia temprana, de oídas'
+  caquetio: [parentesco-038]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      Ilumina la «puerta 2» de parentesco-038 (el reconocimiento político, no
+      la sangre): un forastero llega a señor por méritos. Es un caso y de una
+      sola tradición; 038 sigue hipotético.
+  verificado_en_imagen: si
+  dominios: [politica, sucesion, merito]
+
+- id: taino-geografia_politica-011
+  esfera: geografia_politica
+  tema: jefatura
+  tema_duda: roles-de-genero
+  contenido: >-
+    Mujeres con mando. Anacaona, hermana de Behechío y mujer de Caonabó, tenía
+    en el gobierno del reino de su hermano «no menos importancia y consejo que
+    él mismo» (Anglería); muertos marido y hermano «quedó tan obedesçida é
+    acatada, como ellos mismos ó mas», «absoluta señora» (Oviedo). En Higüey
+    «reinaba una mujer vieja, muy vieja» (Las Casas). En San Juan, Agüeybana
+    era «muy obediente á su madre», que aconsejaba la paz (Oviedo).
+  grafia: 'Anacaona, Hyguanamá, Agueybana'
+  pueblo: taino
+  donde: 'La Española (Xaraguá, Higüey); San Juan (Puerto Rico)'
+  epoca: '1496-1508'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 135 (imagen); lib. XVI cap. II, p. 467 (imagen)'}
+  procedencia_extra:
+  - {obra: angleria-1892, pagina: 'vol. 1, pp. 243-244 (imagen)', independiente: true}
+  - {obra: las-casas-apologetica, pagina: 'cap. CXCVII, p. 515 (imagen)', independiente: true}
+  como_se_escribio: 'tres testigos; Oviedo mezcla el mando de Anacaona con la injuria sexual'
+  caquetio: [parentesco-007, parentesco-027]
+  proyeccion:
+    capa: hipotetico
+    nota: 'Que una mujer de linaje fuerte pueda mandar es lo que el corpus deja como licencia narrativa (parentesco-007): con primaria taína, sigue siendo una tradición: hipotético.'
+  audita_corpus: {parentesco-007: corrobora-en-parte, parentesco-027: corrobora}
+  verificado_en_imagen: si
+  dominios: [politica, mujeres, jefatura]
+
+- id: taino-geografia_politica-012
+  esfera: geografia_politica
+  tema: territorio-asentamiento
+  tema_duda: nombre-propio
+  contenido: >-
+    La gente se llamaba como su tierra, y los de fuera la llamaban de otro
+    modo. Pané: la isla Española «auanti si chiamaua Aiti, & così si chiamano
+    gli habitatori di quella; & quelle, & altre Isole gli chiamauano Bouhi».
+    Las Casas: Haytí era el nombre de la provincia de Çybao, «de donde se
+    denominó toda esta Isla».
+  grafia: 'Aiti, Bouhi (Ulloa); Ahiti, Bouhi (Colón 1892); Haytí (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'f. 128v (imagen), cap. V'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 285 (imagen)', independiente: false}
+  - {obra: las-casas-apologetica, pagina: 'p. 516 (imagen)', independiente: true}
+  como_se_escribio: 'nota etnonímica de Pané, la más antigua que hay; «taíno» no aparece (regla 4)'
+  caquetio: [geografia_politica-025, geografia_politica-007]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina geografia_politica-025 (Paraguaná da nombre a la tierra y a la
+      gente, atestiguado): en La Española la gente también se nombra por su
+      tierra. Es la autodenominación que el vault usa en vez de «taíno».
+  via_a: {geografia_politica-025: corrobora-en-parte}
+  via_a_nota: {geografia_politica-025: 'la gente se llama como su tierra (Aiti); el mar, no'}
+  verificado_en_imagen: si
+  dominios: [territorio, etnonimo]
+
+- id: taino-geografia_politica-013
+  esfera: geografia_politica
+  tema: alianza-intercambio
+  tema_duda: nombre-propio
+  contenido: >-
+    La amistad se sellaba tomando el nombre del otro: «es de costumbre de los
+    indios en estas islas, que quando toman nueva amistad, toman el nombre
+    proprio del capitan ó persona, con quien contraen la paz ó amiçiçia».
+    Agüeybana tomó el de Juan Ponce y su madre, su padrastro y un hermano los
+    de otros españoles; Salazar recibió cuatro naborías por dejar que un
+    cacique tomara su nombre; y Agüeybana llama a uno «mi datihao (que quiere
+    decir mi señor, ó el que, como yo, se nombra)».
+  grafia: 'datihao (Oviedo p. 473); naborías'
+  pueblo: taino
+  donde: 'San Juan (Puerto Rico)'
+  epoca: '1508-1511, en el trato con los conquistadores'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. XVI cap. II, p. 467 (imagen)'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 'pp. 472-473 (473 en imagen por M3, 2026-09-22)', independiente: false}
+  como_se_escribio: 'todos los casos son con españoles: la institución se ve en el contacto, y el intérprete es Johan González'
+  caquetio: [parentesco-012]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina parentesco-012 (daitiao, atestiguado vía Oliver): la palabra
+      `datihao` que Oliver atribuye a Venezuela es, en Oviedo t. I, de San Juan,
+      y es la del trueque de nombres. No se proyecta la institución.
+  verificado_en_imagen: si
+  dominios: [alianza, nombre, contacto]
+
+- id: taino-geografia_politica-014
+  esfera: geografia_politica
+  tema: territorio-asentamiento
+  contenido: >-
+    Los pueblos se asentaban en las costas, en las riberas o en los lugares que
+    les placían, altos o llanos; junto a cada pueblo tenían sus conucos; en cada
+    plaza había un lugar para el juego de pelota (batey), y otro más grande a la
+    salida del pueblo, con asientos para mirar.
+  grafia: 'batey, conucos (Oviedo)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. I, p. 163 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 538 (capa de texto): el batey «ante la puerta de la casa del señor»', independiente: true}
+  como_se_escribio: 'vio los pueblos ya en ruina; dice cómo eran'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'No hay batey ni plaza en la fuente caquetía; se registra el patrón.'
+  verificado_en_imagen: si
+  dominios: [asentamiento, plaza, juego]
+
+# ═══════════════════════════ CREENCIA (101…) ═══════════════════════════
+
+- id: taino-creencia-101
+  esfera: creencia
+  tema: muerte-entierro
+  tema_duda: segundo-entierro
+  contenido: >-
+    Al cacique se lo desecaba al fuego para conservarlo entero. Colón, en la
+    relación de su segundo viaje: «de la que se entierran los Caciques es el
+    siguiente: Abren al Cacique y le secan al fuego, para que se conserve
+    entero». En el italiano: «Aprono il Cacique, & lo seccano al fuoco,
+    accioche si conserui così intero».
+  pueblo: taino
+  donde: La Española
+  epoca: 'Colón, segundo viaje (1494-1496), de lo que «he podido comprender»'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, p. 279 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'f. 126r (imagen; pdf 295)', independiente: false, nota: 'el mismo texto: el testigo más antiguo'}
+  - {obra: bourne-1906, pagina: 'p. 6 (capa de texto)', independiente: false, nota: 'traducción del mismo; control'}
+  como_se_escribio: >-
+    Palabras de Colón citadas por Hernando: no es Pané. Es lo que Rouse (p.
+    532) resume como «dried over the fire»; su «apparently to be kept as a
+    fetish (zemi)» es inferencia suya: la fuente sólo dice «para que se
+    conserve entero».
+  hermanas: []
+  caquetio: [creencia-010b, creencia-010c, creencia-010d]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina creencia-010b (la desecación del díao, atestiguada por Oviedo t.
+      II p. 300): los dos señores, el taíno y el caquetío, se desecan al fuego.
+      La desecación del señor tiene ahora primaria en las dos orillas (r3 de
+      Steward). Lo que difiere es el destino: el taíno se conserva entero; el
+      caquetío se quema años después y se bebe. La capa de 010b no cambia.
+  via_a: {creencia-010d: contradice}
+  mineria_1: [ct-t01, ct-t02]
+  mineria_1_nota: >-
+    Cierra lo que la minería 1 dejó abierto (D-t3): r3 pasa de «imagen» a
+    «imagen + desecación» con primaria taína. Y contradice la generalización
+    de ct-t02 («nadie quema el cuerpo»): ver taino-creencia-102.
+  verificado_en_imagen: si
+  dominios: [muerte, cacique, cuerpo]
+
+- id: taino-creencia-102
+  esfera: creencia
+  tema: muerte-entierro
+  contenido: >-
+    No había un solo funeral. En la misma página Colón da cinco destinos: de
+    los demás (no caciques) guardan «solamente la cabeza»; a otros los entierran
+    en cuevas con «una calabaza de agua y pan» junto a la cabeza; «á otros
+    queman en la casa donde mueren»; a los caciques que están «en el estremo de
+    la vida» no los dejan acabarla, «que antes los ahogan»; a otros los echan
+    fuera de casa o los dejan solos en una hamaca con agua y pan, «no volviendo
+    á verlos más»; y a algunos enfermos graves los llevan al cacique, que decide
+    si se los ahoga.
+  pueblo: taino
+  donde: La Española
+  epoca: 'Colón 1494-1496'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, pp. 279-280 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'ff. 126r-126v (imagen)', independiente: false}
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 134', independiente: true, nota: 'otra manera: fajado y sentado en el duho en un hoyo (ct-t02)'}
+  - {obra: las-casas-apologetica, pagina: 'p. 535 (imagen, minería 1)', independiente: true, nota: 'al enfermo grave lo sacan al monte con agua y comida'}
+  como_se_escribio: 'Colón resume costumbres de toda la isla en un párrafo; no dice de qué provincia es cada una'
+  caquetio: [creencia-010, creencia-010b, creencia-010d]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina creencia-010b por contraste: el caquetío deja la casa del díao
+      muerto, «y en aquella casa no ha de vivir ninguno» (Oviedo t. II p. 300);
+      el taíno, a veces, quema la casa con el muerto dentro. En las dos orillas
+      la casa del muerto deja de ser de los vivos. Quemar el cuerpo existe
+      también en La Española; beber los huesos, no.
+  tierra: [muertos-y-tierra]
+  via_a: {creencia-010d: matiza}
+  mineria_1: [ct-t02, ct-t14]
+  mineria_1_nota: >-
+    ct-t02 decía «El cacique taíno se entierra; nadie quema el cuerpo ni bebe
+    los huesos»: lo de quemar no se sostiene (Colón: «á otros queman en la casa
+    donde mueren»); lo de beber, sí. ct-t14 (el enfermo sacado con agua y
+    comida) gana la primaria de la hamaca que Rouse cita y Las Casas no trae.
+  verificado_en_imagen: si
+  dominios: [muerte, funeral, diversidad]
+
+- id: taino-creencia-103
+  esfera: creencia
+  tema: espiritu-tutelar
+  tema_duda: muerte-entierro
+  contenido: >-
+    Las imágenes llevaban el nombre de un antepasado; en la carta de Colón no
+    llevan huesos. Colón: «á la Estátua referida, la ponen un nombre, que creo
+    sea el de su padre, ó su abuelo, ó de ambos», todas «en memoria … de alguno
+    de sus antecesores». Las Casas, al resumir esa misma carta, añade que dentro
+    «metian los huesos de sus padres». Pané (cap. XV) da cemíes con los huesos
+    del padre y de la madre, pero la frase es ambigua: «Chi ha le ossa di suo
+    padre … ; i quali sono fatti di pietra, o di legno», y Bourne la lee como
+    dos clases distintas.
+  grafia: 'Cemis, Cimi, Cimini (Colón 1892, Ulloa)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Colón 1494-1496; Pané 1494-1498; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, pp. 277-278 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'f. 125r (imagen); Pané XV en f. 134r (imagen)', independiente: false}
+  - {obra: las-casas-apologetica, pagina: 'cap. CXX, p. 321 (imagen)', independiente: false, nota: 'paráfrasis de la misma carta: añade los huesos'}
+  - {obra: bourne-1906, pagina: 'p. 20 (capa de texto)', independiente: false, nota: 'traduce «(and there are others) which are made of stone or of wood»'}
+  como_se_escribio: 'la carta literal (Hernando, Ulloa) y su paráfrasis (Las Casas) no dicen lo mismo; Las Casas parece fundir la carta con Pané XV'
+  caquetio: [creencia-010b, creencia-010c, creencia-025]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina la efigie del díao (creencia-010b/c; ct-c01 de la minería 1): la
+      imagen de madera del muerto principal tiene par taíno en la estatua con
+      nombre de antepasado. El hueso dentro de la estatua queda en duda: lo
+      afirma sólo la paráfrasis de Las Casas.
+  via_a: {creencia-010d: contradice}
+  mineria_1: [ct-t01]
+  mineria_1_nota: >-
+    Matiza ct-t01: la «carta de Colón» que Las Casas copia existe en Hernando
+    y Ulloa, y en ella la estatua lleva nombre pero no huesos. «Estatua de
+    madera con los huesos y el nombre del muerto» es una composición de Las
+    Casas. El paralelo con la efigie del díao se sostiene por la imagen
+    nombrada y por la desecación (taino-creencia-101), no por los huesos.
+  verificado_en_imagen: si
+  dominios: [cemi, antepasados, imagen]
+
+- id: taino-creencia-104
+  esfera: creencia
+  tema: lugar-sagrado
+  tema_duda: espiritu-tutelar
+  contenido: >-
+    Cada señor tenía una casa aparte del pueblo con sólo sus imágenes, adonde
+    iban a hacer ceremonia «como nosotros en la iglesia»; los caciques y los
+    pueblos se jactaban de tener mejor cemí, los escondían de los cristianos y
+    «hay costumbre, entre ellos, de robarse los Cemis unos á otros». Una
+    estatua hueca hablaba por una cerbatana con un hombre escondido, y el
+    cacique rogó que no se dijera a su gente, «porque con aquella estratagema
+    los tenia obedientes». Las Casas, en cambio, dice que no había templos sino
+    la casa del señor, el Caney, donde se ofrecían las primicias al Cemí.
+  grafia: 'Caney (Las Casas p. 445)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Colón 1494-1496; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, pp. 277-279 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'ff. 125r-126r (imagen del 125r y 126r)', independiente: false}
+  - {obra: las-casas-apologetica, pagina: 'cap. CLXVI, p. 445 (imagen)', independiente: true, nota: 'el templo es la casa del señor'}
+  como_se_escribio: 'Colón lo ve con desprecio («lo que causa más risa») y lee el cemí que habla como engaño político del cacique'
+  caquetio: [creencia-008c, creencia-025]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina por contraste creencia-008c (Arcaya: sin culto comunal de
+      ídolos ni templos): la casa de imágenes del señor taíno no tiene par en la
+      fuente caquetía. El robo de cemíes entre pueblos es un dato de rivalidad
+      que el corpus no tiene.
+  tierra: [lugar-sagrado, reciprocidad-ofrenda]
+  verificado_en_imagen: si
+  dominios: [cemi, casa, rivalidad, poder]
+
+- id: taino-creencia-105
+  esfera: creencia
+  tema: alma
+  tema_duda: lugar-sagrado
+  contenido: >-
+    La tierra de los muertos tiene nombre, pero no está en un extremo. Pané, en
+    el italiano: el Coaibai «giace in una banda dell'Isola, che si chiama
+    Soraia» (en una parte de la isla). Colón, preguntando a Caonabó, «principal
+    Rey de la Española, hombre de edad, de mucho saber»: van «á cierto valle,
+    donde cada cacique principal cree que está en su tierra», y allí hallan a
+    sus padres y antepasados, «que comen, tienen mujeres, y muchos placeres».
+  grafia: 'Coaibai, Soraia, Comboi (errata de Ulloa por Coaibai) (Ulloa); Coaibai, Soraya (Colón 1892)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498; Colón 1494-1496, de Caonabó'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'ff. 132v-133r (imagen), caps. XII-XIII; f. 126v (imagen), Caonabó'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 pp. 280 (imagen) y 293 (capa de texto)', independiente: true, nota: 'el relato de Colón (Caonabó) es otro testigo que Pané; la p. 293 es la misma Escritura'}
+  - {obra: bourne-1906, pagina: 'pp. 18-19 (capa de texto)', independiente: false, nota: '«lies in a part of the island called Soraia»; la nota de Bachiller («Soraia means west») es de tercera mano'}
+  como_se_escribio: 'dos noticias del mismo círculo (Colón y su encargado), pero de informantes distintos: Pané en Macorix y en la Vega, Colón de Caonabó'
+  hermanas:
+  - {pueblo: wayuu, obra: jahn-1927, pagina: '184 (imagen)', que: '«Al morir un guajiro va a continuar otra vida en un lugar dotado de espléndidas sabanas con mucho ganado, a donde llega el alma del difunto, pasando por Jepirá, que es el nombre con que designan el Cabo de La Vela»'}
+  caquetio: [creencia-009, creencia-028]
+  proyeccion:
+    capa: reconstruido
+    nota: >-
+      Con el wayuu (Jepira) son dos tradiciones para el núcleo de creencia-009
+      tal como lo escribe el corpus: una tierra de los muertos con nombre
+      propio, donde la vida sigue (comen, tienen mujeres). NO para «en un
+      extremo»: eso era la retraducción de Wikisource, y Caonabó la pone en la
+      tierra de cada cacique. Ningún nombre pasa al caquetío; el `sawaka`
+      («abajo», creencia-028) no se toca.
+  tierra: [muertos-y-tierra, lugar-sagrado]
+  via_a: {creencia-009: corrobora}
+  mineria_1: [ct-t05]
+  mineria_1_nota: >-
+    Contradice en parte ct-t05: «en un extremo de la isla, llamado Soraya» es
+    de Wikisource; Ulloa dice «una banda», Colón 1892 «á la parte», Bourne «a
+    part». El núcleo (nombre propio, vida que sigue) se sostiene y gana un
+    segundo testigo taíno, Caonabó vía Colón. El contraste «extremo frente a
+    abajo» que ct-t05 conservaba se cae del lado taíno.
+  verificado_en_imagen: si
+  dominios: [muertos, mas-alla]
+
+- id: taino-creencia-106
+  esfera: creencia
+  tema: alma
+  contenido: >-
+    Los dos nombres del alma están en el testigo más antiguo: «Essendo uiua la
+    persona, chiamano lo spirito Goeiz, & dopo morta il chiamano Opia» (Ulloa).
+    El que se aparece y lucha es el goeiz: «il qual Goeiz, dicono, che gli appare
+    molte uolte così in forma di huomo, come di donna». Las Casas, por su
+    cuenta, llama `hupía` al ánima y al fantasma de noche.
+  grafia: 'Goeiz, Opia, operito (Ulloa); Goeiz, Opia (Colón 1892: «á la persona que está viva»); hupía (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'f. 133r (imagen), cap. XIII'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 294 (capa de texto)', independiente: false, nota: 'traduce mal: «la persona» por «lo spirito»'}
+  - {obra: bourne-1906, pagina: 'p. 19 (capa de texto)', independiente: false}
+  - {obra: las-casas-apologetica, pagina: 'p. 535 (imagen, minería 1)', independiente: true, nota: 'una sola palabra, hupía'}
+  como_se_escribio: 'Pané aprendió la lengua de Macorix y poco de la universal (Las Casas p. 321-322): la doble forma puede ser de dialecto'
+  caquetio: [creencia-005, creencia-008]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      El doblete no es ruido de la retraducción: está en 1571. Pero el segundo
+      testigo taíno usa una sola palabra, y `opia`/`hupía` parecen la misma
+      voz oída dos veces. Sigue hipotético; sólo autoriza a declarar el hueco
+      (no hay voz caquetía para el muerto que vuelve).
+  via_a: {creencia-005: no-toca, creencia-008: corrobora-en-parte}
+  mineria_1: [ct-t06]
+  mineria_1_nota: 'corrobora ct-t06 en lo que la minería 1 no podía comprobar: la pareja goeiz/opia es de Pané (Ulloa), no de Wikisource'
+  verificado_en_imagen: si
+  dominios: [alma, muertos]
+
+- id: taino-creencia-107
+  esfera: creencia
+  tema: espiritu-tutelar
+  tema_duda: tiempo-calendario
+  contenido: >-
+    En la gruta donde salieron el sol y la luna había dos cemíes de piedra,
+    pequeños, con las manos atadas, que parecían sudar; «quando non pioueua,
+    dicono, che entrauano quiui a uisitarli, & subito pioueua», y se llamaban
+    Boinaiel y Maroio.
+  grafia: 'Giououaua, Boinaiel, Maroio, Cimini (Ulloa); Jovuvava, Boiniael, Maroyo (Colón 1892)'
+  pueblo: taino
+  donde: 'La Española, tierra del cacique Maucia Tiuuel'
+  epoca: 'Pané 1494-1498'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'ff. 132r-132v (imagen), cap. XI'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 293 (capa de texto)', independiente: false}
+  - {obra: bourne-1906, pagina: 'p. 18 (capa de texto)', independiente: false}
+  como_se_escribio: 'mito contado en resumen («Di questo io non ho inteso altro»)'
+  caquetio: [creencia-013]
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina por contraste creencia-013: el poder sobre la lluvia está en un objeto que se visita, no en el señor. Nada se proyecta.'
+  tierra: [lugar-sagrado, dueno-del-lugar]
+  mineria_1: [ct-t11]
+  mineria_1_nota: 'corrige ct-t11: la lluvia de la cueva no está «sólo en Wikisource»; la trae la cadena Colón/Ulloa. Sólo Anglería la cambia por el sol y la luna'
+  verificado_en_imagen: si
+  dominios: [lluvia, cemi, cueva]
+
+- id: taino-creencia-108
+  esfera: creencia
+  tema: espiritu-tutelar
+  tema_duda: ofrenda-fiesta
+  contenido: >-
+    Las piedras tienen virtud y se alimentan. Colón: la mayoría de los caciques
+    tienen tres piedras, una para los frutos, otra «para que paran las mujeres
+    sin dolor» y otra «para tener agua y sol»; mandó tres a los Reyes. Pané: las
+    piedras que el médico saca del enfermo se guardan si son buenas para el
+    parto, «inuolte in bambagia, mettendole in alcune cestelle picciole, & lor
+    danno da mangiar di quel, che essi mangiano», como a los cemíes de casa.
+  pueblo: taino
+  donde: La Española
+  epoca: 'Colón 1494-1496; Pané 1494-1498'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, p. 279 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'ff. 126r y 135v (imagen)', independiente: true, nota: 'f. 135v es Pané (cap. XVI), otro testigo'}
+  como_se_escribio: 'Colón tuvo las piedras en la mano y las envió con Antonio de Torres'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Sin ancla caquetía (los zemi «NO entran al corpus» hasta atestiguarlos, eth-02). Se registra; y explica las «cestillas» que Rouse convierte en cestas de cabezas.'
+  tierra: [dueno-del-lugar]
+  verificado_en_imagen: si
+  dominios: [piedras, parto, ofrenda]
+
+- id: taino-creencia-109
+  esfera: creencia
+  tema: tabu
+  contenido: >-
+    Para coger oro había que ayunar y apartarse de las mujeres. Oviedo cuenta
+    que los indios estaban «veynte dias primero sin llegar á sus mugeres (ni
+    otras)», ayunaban, «é deçian ellos que quando se vian con la muger, que no
+    hallaban el oro»; Colón obligó por eso a los cristianos a confesarse antes
+    de ir a las minas del Cibao.
+  pueblo: taino
+  donde: 'La Española (Cibao)'
+  epoca: 'contacto: 1494-1496, contado por Oviedo hasta 1548'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, pp. 135-136 (imagen)'}
+  como_se_escribio: 'Oviedo lo cuenta para criticar a Colón; el rito indio es el punto de partida'
+  caquetio: [creencia-004b, creencia-023]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina creencia-004b (atestiguado: ayuno de toda la casa antes de la
+      guerra o de una cosa de importancia): en las dos orillas una empresa
+      grave se prepara con ayuno. La abstinencia sexual no tiene par caquetío.
+  tierra: [limite-de-uso]
+  verificado_en_imagen: si
+  dominios: [ayuno, abstinencia, oro]
+
+- id: taino-creencia-110
+  esfera: creencia
+  tema: tiempo-calendario
+  contenido: >-
+    Se sembraba en luna nueva: «siempre quando han de sembrar es al principio
+    de la luna, porque tienen por opinión que, assi como ella va cresciendo,
+    assi lo hace la cosa sembrada».
+  pueblo: taino
+  donde: 'La Española, y «la mayor parte de todas las islas»'
+  epoca: 'Oviedo 1515-1548 (sembró maíz en la isla 28 años)'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VII cap. I, p. 265 (imagen)'}
+  como_se_escribio: 'el cronista labrador; la creencia está dicha sin burla'
+  caquetio: [ecologia-006]
+  proyeccion:
+    capa: hipotetico
+    nota: 'Una regla lunar de siembra sería nueva para el caquetío, de una sola tradición y de amplitud muy grande (también es castellana): hipotético.'
+  tierra: [calendario-del-medio]
+  verificado_en_imagen: si
+  dominios: [siembra, luna, calendario]
+
+# ═══════════════════════════ TRANSMISIÓN ═══════════════════════════
+
+- id: taino-transmision-001
+  esfera: transmision
+  tema: canto-baile
+  tema_duda: curriculo-edad
+  contenido: >-
+    La ley está en las canciones y la aprenden desde niños los principales.
+    Pané: «si come i Mori, hanno la lor legge ridotta in Canzoni antiche; per le
+    quali si reggono, come i Mori per la scrittura», que cantan al son del
+    maiohauau, «Canzoni, che imparano a mente; & lo toccano gli huomini
+    principali, i quali da fanciulli imparano suonarlo, & cantarui dentro».
+  grafia: 'Maiohauau (Ulloa); Baiohabao (Colón 1892); mayohavau (Wikisource)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'f. 133v (imagen), cap. XIV'}
+  procedencia_extra:
+  - {obra: bourne-1906, pagina: 'p. 20 (capa de texto)', independiente: false, nota: '«by which they are ruled … who have learned from childhood»: confirma la lectura'}
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 296 (capa de texto)', independiente: false, nota: 'traduce mal («aprendiendo de los muchachos») y omite «per le quali si reggono»'}
+  como_se_escribio: 'Pané lo sabe «da'' principali, co'' quali ho pratticato più»: es el saber de la élite contado por ella'
+  caquetio: [creencia-010, transmision-016, transmision-018]
+  proyeccion:
+    capa: hipotetico
+    nota: >-
+      Que la memoria cantada sea ley y la aprendan desde niños los principales
+      es nuevo para el caquetío y lo da una sola tradición: hipotético. El
+      jayeechi wayuu (transmision-016) es memoria cantada de especialista y por
+      inmersión, no de los principales: corrobora el canto, no el quién.
+  via_a: {transmision-016: corrobora-en-parte}
+  via_a_nota: {transmision-016: 'memoria cantada sí; pero la llevan los principales, aprendida desde niños, no un especialista por inmersión'}
+  verificado_en_imagen: si
+  dominios: [canto, ley, elite, infancia]
+
+- id: taino-transmision-002
+  esfera: transmision
+  tema: narracion-mito
+  tema_duda: canto-baile
+  contenido: >-
+    El areito es la historia de la gente: con él «resçitan las genealogias de
+    sus caciques y reyes … y las obras que hicieron, y los malos ó buenos
+    temporales», para que «á chicos é grandes se comuniquen é sean muy sabidas
+    é fixamente esculpidas en la memoria», «en especial las famosas victorias
+    por batallas». Lo guía un maestro de danza al que el corro responde verso a
+    verso, tres o cuatro horas o de un día a otro. Las Casas: «la letra de sus
+    cantos era referir cosas antiguas, y otras veces niñerías».
+  grafia: 'areyto (Oviedo)'
+  pueblo: taino
+  donde: 'La Española; Cuba («Sus areytos é cantares son, como en esta isla», p. 499)'
+  epoca: 'Oviedo los vio en 1515; Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. I, pp. 127-128 (imagen)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 538 (imagen)', independiente: true}
+  como_se_escribio: 'Oviedo lo compara con los romances castellanos; es de los pocos pasajes donde no insulta'
+  caquetio: [creencia-010, transmision-018]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina creencia-010 (atestiguado): el canto fúnebre caquetío dice «lo
+      que hizo mientras vivió» el muerto; el areito taíno es la misma memoria
+      de hechos, hecha institución. La capa de 010 no cambia.
+  tierra: [saber-del-medio]
+  audita_corpus: {transmision-018: corrobora}
+  mineria_1: [ct-t03]
+  mineria_1_nota: 'corrobora ct-t03 (las endechas que se vuelven areytos) con el capítulo general del areito'
+  verificado_en_imagen: si
+  dominios: [canto, historia, genealogia, memoria]
+
+- id: taino-transmision-003
+  esfera: transmision
+  tema: canto-baile
+  tema_duda: roles-de-genero
+  contenido: >-
+    Hombres y mujeres bailaban por separado, «con el mismo compás, tono y
+    orden», trescientos o cuatrocientos hombres con los brazos sobre los
+    hombros; las mujeres que rallaban yuca para el pan cantaban «cierto canto
+    que tenia muy buena sonada» (Las Casas). En el areito que hizo Anacaona
+    para el gobernador Ovando bailaron más de trescientas doncellas: no dejó
+    entrar a hombre ni a mujer casada (Oviedo).
+  pueblo: taino
+  donde: 'La Española (Xaraguá para el areito de Anacaona)'
+  epoca: 'Las Casas 1502-1559; el areito de Anacaona, 1503'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 538 (imagen)'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. I, p. 128 (capa de texto)', independiente: true}
+  como_se_escribio: 'Las Casas, testigo de vista y con agrado'
+  caquetio: []
+  proyeccion:
+    capa: hipotetico
+    nota: 'Canto de trabajo de las mujeres y baile por sexos: nuevos para el caquetío y de una sola tradición: hipotético.'
+  verificado_en_imagen: 'parcial: Las Casas p. 538 sí; el areito de Anacaona (Oviedo p. 128) en capa de texto'
+  dominios: [canto, trabajo, mujeres, baile]
+
+- id: taino-transmision-004
+  esfera: transmision
+  tema: escritura-marca
+  contenido: >-
+    El cuerpo lleva marcas. Los de Guanahaní «estaban pintados de blanco, otros
+    de negro y otros de colorado, algunos en la cara, otros en todo el cuerpo y
+    algunos solamente en los ojos ó la nariz» (Colón). Las orejas se horadan de
+    niños para colgar los guanines: «facendosi i fori, quando son piccioli»
+    (Pané). Y el vestido dice el estado de la mujer (taino-parentesco-009).
+  pueblo: taino
+  donde: 'Lucayas (Guanahaní); La Española'
+  epoca: 'Colón 13-X-1492; Pané 1494-1498'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. XXIII, p. 105 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'f. 129v (imagen), cap. VI', independiente: true}
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 287 (imagen)', independiente: false, nota: 'el mismo Pané retraducido'}
+  como_se_escribio: 'Colón describe el primer día; Pané lo dice de paso en el mito de Guahagiona'
+  caquetio: [parentesco-014]
+  proyeccion:
+    capa: lectura
+    nota: >-
+      Ilumina parentesco-014 (Arcaya: el tatuaje caquetío quizá marca linaje):
+      en las Antillas la pintura del cuerpo es de colores y lugares variados,
+      sin que la fuente diga qué marcan. No sostiene la hipótesis del linaje.
+  verificado_en_imagen: si
+  dominios: [cuerpo, pintura, adorno, infancia]
+
+- id: taino-transmision-005
+  esfera: transmision
+  tema: saber-restringido
+  contenido: >-
+    El secreto del cemí que habla lo sabía sólo el cacique: la voz salía de un
+    hombre escondido «que decía lo que el Cacique quería que dijese», y «todos
+    en general eran los engañados, excepto el Cacique, que era el que sabía».
+    A la cohoba de guerra entraban sólo los principales, y del cuarto del
+    enfermo se echaba a todos salvo uno o dos principales (minería 1, ct-t08 y
+    ct-t12).
+  pueblo: taino
+  donde: La Española
+  epoca: 'Colón 1494-1496'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. LXI, pp. 278-279 (imagen)'}
+  procedencia_extra:
+  - {obra: ulloa-1571, pagina: 'f. 125v-126r', independiente: false}
+  como_se_escribio: 'es la lectura de Colón: el saber restringido como engaño político'
+  caquetio: [creencia-025]
+  proyeccion:
+    capa: no-proyecta
+    nota: 'La interpretación es del Almirante; no se proyecta.'
+  verificado_en_imagen: si
+  dominios: [secreto, poder, cemi]
+
+- id: taino-transmision-006
+  esfera: transmision
+  tema: lengua-registro
+  contenido: >-
+    Había una lengua «universal de toda la tierra», más elegante, y dos
+    distintas en el Macoríx de abajo y el de arriba; la de Xaraguá era «más
+    delgada y de mejores y suaves vocablos polida». Al señor se le hablaba por
+    grados con tres tratamientos (taino-geografia_politica-002). Pané sabía la
+    de una provincia chica y poco de la universal.
+  pueblo: taino
+  donde: La Española
+  epoca: 'Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: las-casas-apologetica, pagina: 'caps. CXCVII, pp. 516-517 (516 en imagen; 517 en capa de texto)'}
+  como_se_escribio: 'ya minado por T9 para la lengua (ml.01-08); aquí sólo el registro'
+  caquetio: [geografia_politica-020]
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina geografia_politica-020 (el caquetío, lengua extendida con variación): en La Española hay una lengua general con variedades de prestigio y lenguas aparte. Nada se proyecta.'
+  verificado_en_imagen: 'parcial'
+  dominios: [lengua, registro, prestigio]
+
+- id: taino-transmision-007
+  esfera: transmision
+  tema: nombre-propio
+  contenido: >-
+    En los mitos, el hijo se nombra por el padre: «suo figliuolo da parte di
+    padre si chiamaua Hia Guaili Guanin, che uuol dir figliuolo di Hiauna»; y
+    Iaiael «quiere decir hijo de Iaia». Y el nombre se muda: Guahagiona «si mutò
+    il nome», y se llamó Biberoci Guahagiona.
+  grafia: 'Hia Guaili Guanin, Hiauna, Biberoci (Ulloa); Jayael (Colón 1892)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Pané 1494-1498'
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia: {obra: ulloa-1571, pagina: 'ff. 129r-129v (imagen del 129v), cap. VI'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 pp. 287 (imagen) y 289 (capa de texto)', independiente: false}
+  como_se_escribio: 'dentro del mito; Pané avisa que trabuca el orden'
+  caquetio: []
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Es lengua y mito; ninguna forma pasa. Se registra el patrón «hijo de» en el nombre.'
+  verificado_en_imagen: si
+  dominios: [nombre, mito, filiacion]
+
+# ═══════════════════════════ ECOLOGÍA ═══════════════════════════
+
+- id: taino-ecologia-001
+  esfera: ecologia
+  tema: cultivo
+  contenido: >-
+    El maíz se sembraba en tierra de monte talado y quemado, «como si fuera
+    estercolada»; cinco o seis indios en ala, con palos, abrían un hoyo, echaban
+    cuatro o cinco granos de una taleguilla y lo cerraban con el pie, paso a
+    paso; se cogía a los tres o cuatro meses. Cuando crecía, los muchachos lo
+    guardaban de los papagayos desde andamios cubiertos, «barbacoas». Los
+    conucos estaban junto a los pueblos.
+  grafia: 'mahiz, barbacoas, conucos (Oviedo)'
+  pueblo: taino
+  donde: 'La Española, y «la mayor parte de todas las islas»'
+  epoca: 'Oviedo 1515-1548; sembró a la manera india 28 años'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VII cap. I, pp. 265-266 (imagen; la 264 en capa de texto); lib. VI cap. I, p. 163 (imagen)'}
+  como_se_escribio: 'el cronista que sembró; lo encaja en Plinio y Teofrasto, pero describe'
+  caquetio: [ecologia-029, ecologia-030]
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina ecologia-029 (el conuco de tala y quema, atestiguado): la técnica de siembra en ala con palo y la guarda de los muchachos son de las Antillas; no se proyectan al cardonal.'
+  verificado_en_imagen: si
+  dominios: [maiz, conuco, trabajo, infancia]
+
+- id: taino-ecologia-002
+  esfera: ecologia
+  tema: navegacion
+  contenido: >-
+    La canoa es de un solo tronco, vaciado «con golpes de hachas de piedras
+    enhastadas» y fuego, sin quilla; las mayores llevaban cuarenta y cinco
+    personas (Colón) o cuarenta y cincuenta (Oviedo); se reman con palas
+    («nahes»), de pie, sentados o de rodillas; si se vuelcan las enderezan
+    nadando y achican con calabazas. Servían «para sus guerras y saltos y para
+    sus contractaçiones de una isla á otra, ó para sus pesquerias»; no se
+    apartaban mucho de tierra.
+  grafia: 'canoa, nahes (Oviedo); piraguas, de los caribes'
+  pueblo: taino
+  donde: 'Lucayas (Colón); La Española (Oviedo)'
+  epoca: 'Colón 14-X-1492; Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: colon-hernando-1892, pagina: 'vol. 1 cap. XXIII, p. 106 (imagen)'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. IV, pp. 170-171 (imagen)', independiente: true}
+  - {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (imagen): canoas de cincuenta y cien hombres', independiente: true}
+  como_se_escribio: 'tres testigos de vista'
+  caquetio: [ecologia-031, geografia_politica-015]
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina ecologia-031 (la canoa de un tronco ahuecada con fuego): misma técnica; la medida y el uso entre islas son antillanos. Nada se proyecta.'
+  verificado_en_imagen: si
+  dominios: [canoa, mar, guerra, comercio]
+
+- id: taino-ecologia-003
+  esfera: ecologia
+  tema: pesca
+  tema_duda: caza-recoleccion
+  contenido: >-
+    Cazaban las hutías quemando los herbazales y cercándolas muchos juntos;
+    pescaban con redes en los ríos y en el mar con anzuelos de hueso de pescado,
+    y con flechas los peces grandes; eran «grandes y maravillosos nadadores»
+    (Las Casas). En Cuba pescaban con el «pexe reverso», la rémora atada a un
+    cordel (Oviedo).
+  grafia: 'hutías (Las Casas)'
+  pueblo: taino
+  donde: 'La Española; Cuba'
+  epoca: 'Las Casas 1502-1559; Oviedo hasta 1548'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (imagen)'}
+  procedencia_extra:
+  - {obra: oviedo-y-valdes-1851, pagina: 't. I lib. XVII, p. 500 (imagen)', independiente: true}
+  como_se_escribio: 'Las Casas por columnas con pymupdf: el texto se entrelaza y se reordenó a mano'
+  caquetio: [ecologia-036, ecologia-015]
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina ecologia-036 (el mar como despensa): técnicas de pesca de las Antillas; ninguna se proyecta sin dato caquetío.'
+  verificado_en_imagen: si
+  dominios: [pesca, caza, rio, mar]
+
+- id: taino-ecologia-004
+  esfera: ecologia
+  tema: vivienda
+  contenido: >-
+    Dos clases de casa: la redonda de postes en círculo, varazón en pabellón,
+    paredes de caña atadas con bejucos y un mástil central —«El buhio ó casa de
+    tal manera fecho, llámasse caney»—, y otra «de dos aguas y luengas», mejor y
+    más grande, «para hombres mas principales é caciques». La casa en general es
+    `buhío`, pero «propriamente en la lengua de Hayti … se llama eracra». Las
+    Casas llama `Caney` a la casa grande del señor.
+  grafia: 'buhio, eracra, caney (Oviedo); Caney (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. I, pp. 163-164 (imagen de la 163 y de la col. izq. de la 164)'}
+  procedencia_extra:
+  - {obra: las-casas-apologetica, pagina: 'p. 445 (imagen)', independiente: true, nota: 'caney = casa grande del señor'}
+  como_se_escribio: 'Oviedo dibuja el caney (lám. 1, fig. 9)'
+  caquetio: [geografia_politica-006, parentesco-031]
+  proyeccion:
+    capa: no-proyecta
+    nota: >-
+      Sin dato caquetío de la forma de la casa. Se registra que el nombre
+      «caney» cambia de cosa entre los dos testigos: para Oviedo es la casa
+      redonda; para Las Casas, la del señor (y Rouse, p. 531, invierte a
+      Oviedo).
+  verificado_en_imagen: 'parcial: el caney redondo sí (pp. 163-164 izq.); la casa a dos aguas (p. 164 der.) en capa de texto'
+  dominios: [casa, rango]
+
+- id: taino-ecologia-005
+  esfera: ecologia
+  tema: comida-bebida
+  contenido: >-
+    Comían poco y varias veces: almorzaban de mañana, iban a sus labranzas, a
+    pescar o a cazar, yantaban a mediodía y pasaban la tarde en bailes, cantos o
+    pelota; cenaban y aún hacían colación. El pan era el cazabí; comían pescado
+    de río, ajes y batatas, y casi todo con mucho axí, a veces cocido con el
+    zumo de la yuca, que servía de vinagre.
+  grafia: 'caçabí, ages, batatas, axí (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: 'Las Casas 1502-1559'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: las-casas-apologetica, pagina: 'cap. CCIV, p. 537 (imagen)'}
+  como_se_escribio: 'para probar su templanza frente a los griegos glotones'
+  caquetio: [creencia-023]
+  proyeccion:
+    capa: no-proyecta
+    nota: 'La comida caquetía del rito es de maíz (creencia-023); la taína es de yuca y ají: contraste, no proyección.'
+  verificado_en_imagen: si
+  dominios: [comida, dia, yuca]
+
+- id: taino-ecologia-006
+  esfera: ecologia
+  tema: tecnologia-objetos
+  tema_duda: medio-fisico
+  contenido: >-
+    La sal: donde vivían lejos de las salinas naturales, la hacían «coçiendo el
+    agua» de mar; había salinas naturales en la boca del Yaque, junto a
+    Montecristi, y una sierra de sal en Baynoa, cerca de la laguna de Xaraguá.
+  pueblo: taino
+  donde: La Española
+  epoca: 'Oviedo 1515-1548'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. VI cap. VI, p. 173 (imagen)'}
+  como_se_escribio: 'cronista que vio la sal de Baynoa en San Juan de la Maguana'
+  caquetio: [ecologia-009]
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Contraste con ecologia-009 (la sal caquetía por evaporación solar, reconstruida): la técnica antillana es otra. No se proyecta.'
+  verificado_en_imagen: si
+  dominios: [sal, tecnica]
+
+- id: taino-ecologia-007
+  esfera: ecologia
+  tema: comercio-rutas
+  contenido: >-
+    Trocar era, según Oviedo, «el exerçiçio prinçipal» de la gente de La
+    Española fuera de la guerra y del campo, y lo hacían sin mirar el valor. El
+    guanín venía de fuera: Pané hace de Guanin una isla de donde lo trajo
+    Guahagiona; Colón vio en los Lucayos hojillas de oro en la nariz que decían
+    traídas del Mediodía; y Las Casas dice que el guanín se estimaba «por el olor
+    que en él sentían».
+  grafia: 'guanin, guaninis (Pané); guanín (Las Casas)'
+  pueblo: taino
+  donde: 'La Española; Lucayas'
+  epoca: 'Colón 1492; Pané 1494-1498; Oviedo 1515-1548; Las Casas c. 1550'
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia: {obra: oviedo-y-valdes-1851, pagina: 't. I lib. V cap. III, p. 139 (imagen)'}
+  procedencia_extra:
+  - {obra: colon-hernando-1892, pagina: 'vol. 1 p. 106 (imagen) y p. 286-287 (Pané, imagen de la 287)', independiente: true}
+  - {obra: las-casas-apologetica, pagina: 'p. 521 (imagen)', independiente: true}
+  como_se_escribio: 'Oviedo describe el trueque con los españoles como necedad; el dato es que trocar era actividad central'
+  caquetio: [geografia_politica-018, geografia_politica-019]
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina geografia_politica-018 (el guanín circulaba entre Tierra Firme y las Antillas): en La Española era objeto de fuera, oloroso y de precio de novia. No dice de dónde: el hueco de 019 sigue.'
+  verificado_en_imagen: si
+  dominios: [comercio, guanin, trueque]
+
+# ═══════════════ PARA EL LEXICÓN (no son hechos: propuestas aparte) ═══════════════
+para_el_lexicon:
+- forma: Conichi
+  glosa: 'posesiones, las tierras de herencia («che uuol dire possessioni, ch''erano di sua heredità»)'
+  lengua: taino
+  obra: ulloa-1571
+  pagina: 'f. 131r (imagen)'
+  nota: 'la forma más antigua de la voz que el castellano hizo `conuco`; Colón 1892 «Conichis». Contrastar con `conuco` del lexicón antes de tocar nada'
+- forma: Maiohauau
+  glosa: 'instrumento de madera, cóncavo, para cantar las canciones antiguas'
+  lengua: taino
+  obra: ulloa-1571
+  pagina: 'f. 133v (imagen)'
+  nota: 'Wikisource «mayohavau», Colón 1892 «Baiohabao»: la forma de 1571 es la que se cita'
+- forma: Goeiz / Opia
+  glosa: 'el espíritu de la persona viva / el de la muerta («lo spirito»)'
+  lengua: taino
+  obra: ulloa-1571
+  pagina: 'f. 133r (imagen)'
+  nota: 'ya en las propuestas de la minería 1 y del cruce taíno; lo nuevo es la glosa de 1571 («lo spirito», no «la persona» de Colón 1892)'
+- forma: Soraia
+  glosa: 'la parte («banda») de la isla donde está el Coaibai'
+  lengua: taino
+  obra: ulloa-1571
+  pagina: 'f. 132v (imagen)'
+  nota: 'topónimo mítico de La Española; Bachiller (vía Bourne p. 18) la glosa «oeste», de tercera mano'
+- forma: Aiti / Bouhi
+  glosa: 'nombre de La Española y de su gente / nombre que les daban las otras islas'
+  lengua: taino
+  obra: ulloa-1571
+  pagina: 'f. 128v (imagen)'
+  nota: '`Bouhi` ya está en taino_pane_c1498; lo nuevo es la forma de Ulloa y el sentido de etnónimo'
+- forma: nahes
+  glosa: 'remos'
+  lengua: taino
+  obra: oviedo-y-valdes-1851
+  pagina: 't. I p. 171 (imagen)'
+  nota: 'ya en taino_lista_maestra y en Goeje; se anota la página verificada'
+- forma: Manicato
+  glosa: '«esforçada ó fuerte é de grande ánimo», lo que grita la novia en Cuba'
+  lengua: taino
+  obra: oviedo-y-valdes-1851
+  pagina: 't. I p. 499 (imagen)'
+  nota: 'el lexicón ya tiene `manicato`; esta es la atestación cubana con su contexto'

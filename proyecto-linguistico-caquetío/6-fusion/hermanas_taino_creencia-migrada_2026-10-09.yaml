@@ -1,0 +1,1474 @@
+# ─────────────────────────────────────────────────────────────────────────
+# MIGRACIÓN — creencia taína (minería 1) al esquema único de hermanas
+#   origen: 6-fusion/creencia_taino_2026-10-09.yaml (sin tocar)
+#   esquema: 3-mundo/hermanas/README.md §3 · temas §4 · reglas §5
+#   Trasladado, no reinterpretado: los textos del origen van tal cual; las
+#   decisiones (tema, testigo, etiqueta, procedencia, veredicto) van en
+#   meta.huecos_de_migracion. Las secciones de análisis van al final, sin cambios.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  pueblo: taino
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: migración al esquema de hermanas (Claude Haiku 5.5), rama vault/hermanas-taino-migracion
+  origen: 6-fusion/creencia_taino_2026-10-09.yaml
+  plan: 4-fuentes/sesiones/09_creencia_taino_mineria.md
+  hechos_origen: 14
+  hechos_migrados: 14
+  huecos_de_migracion:
+  - 'base: la rama sale de HEAD (e7be31c). El README, curiana_sim/compilar_hermanas.py y la propuesta origen existen
+    sólo en vault/fuentes-creencia (c7cddef); el reset de la rama a c7cddef fue denegado, así que la validación
+    se hizo fuera del árbol con ese validador y con la bibliografia.yaml y el corpus de HEAD.'
+  - 'proyeccion.capa: el origen usa `no-se-propone` en ct-t09, ct-t10 y ct-t13; el valor cerrado más próximo es
+    `no-proyecta` (registrar sin proponer entrar al corpus). El valor original queda en proyeccion.capa_origen.'
+  - 'via_a: «CORROBORA EN PARTE» (creencia-002, -007), «un eco de UNA cadena» (creencia-003, t10), «sin probarlo»
+    (creencia-008, t06), «con este aviso de testigo único» (creencia-003, t13) y «refuerza el prerrequisito de partir»
+    (creencia-001b) se mapean a `matiza`, por la regla del encargo («si matiza o parte, matiza»). El texto literal
+    queda en via_a_nota.'
+  - 'via_a: «NO CORROBORA» (creencia-012, ct-t11) no tiene valor cerrado propio; se mapea a `matiza` porque Pané
+    separa los cemíes de huesos de los que hacen llover (el texto lo explica). Decisión declarada.'
+  - 'via_a: en ct-t02 el texto dice «no toca lo wayuu; confirma que el par beber/redepositar es caquetío-wayuu y
+    no taíno» para creencia-010d; se mapea a `corrobora` (la confirmación pesa más que el no-toca). Decisión declarada.'
+  - 'via_a: los ids que el efecto_en_via_a no nombra van como `no-toca` (regla del encargo); están en via_a_nota
+    con «sin mención». Lista: ct-t01 (010b, 010c), ct-t02 (010), ct-t03 (010), ct-t04 (008b), ct-t05 (028), ct-t06
+    (005), ct-t11 (013), ct-t14 (010b).'
+  - 'caquetio: sólo ids creencia-NNN. ct-t03 nombra transmision-018 en efecto_en_via_a (otra esfera del corpus caquetío):
+    no entra en caquetio por la regla de ids creencia-NNN.'
+  - 'caquetio_propuesto: ct-c01 (ct-t01), ct-c02 (ct-t08), ct-c03 (ct-t07, ct-t12, ct-t13). Son hechos caquetíos
+    de Oviedo, no del corpus: van en `lado_caqueti`, copiados sin cambios.'
+  - 'tema: los 14 hechos caben en el vocabulario cerrado de creencia. No se propone ningún tema nuevo. Los de duda
+    llevan tema_duda: ct-t01, t03, t05, t09, t11, t12, t13.'
+  - 'testigo: `vio` sólo en ct-t12 y ct-t13 (el origen dice que Las Casas «lo vio» / «la vio»). El resto es `oyo`.
+    ct-t06 es `lexico` (la pieza en disputa son las palabras goeiz/opia y hupía).'
+  - 'etiqueta: `hipotetico` en ct-t06 (el origen lo degrada por la duda entre Pané y Las Casas). El resto `atestiguado`:
+    todos tienen primaria con página. Ningún hecho depende sólo de Steward o Rouse.'
+  - 'procedencia_extra.independiente: null (sin declarar en el origen) en: ct-t06 (las-casas-apologetica), ct-t07
+    (angleria-1892, las-casas-apologetica), ct-t08 (angleria-1892), ct-t11 (colon-hernando-1892, angleria-1892),
+    ct-t12 (colon-hernando-1892, angleria-1892), ct-t13 (angleria-1892, colon-hernando-1892, oviedo-y-valdes-1851).'
+  - 'procedencia_extra.independiente: false donde el origen dice «un solo testimonio», «cadenas de Pané» o «resume
+    a Pané»: ct-t01 (pane-c1498), ct-t04 (angleria-1892), ct-t05 (angleria-1892), ct-t09 (colon-hernando-1892, las-casas-apologetica,
+    angleria-1892), ct-t10 (colon-hernando-1892, angleria-1892).'
+  - 'epoca: todos vienen del origen. No hizo falta epoca_nota.'
+  - 'cita: el origen no separa cita larga de contenido; no se añadió el campo.'
+  - 'hermanas: el origen nombra con obra y página sólo el wayuu de ct-t05 (Jahn 1927 p. 184); se añadió. Las otras
+    menciones de wayuu (ct-t04, ct-t06, ct-t08) no traen página y se omiten.'
+  - 'Rouse (HSAI 4, tercera mano): ct-t14 lo nombra en como_se_escribio («es además la primaria de Rouse p. 532»),
+    pero Rouse no está en el origen como fuente del hecho. No se añade como procedencia_extra.'
+  - 'lectura: el origen la trae en 1 hechos (ct-t01); en 13 no la trae (ct-t02, ct-t03, ct-t04, ct-t05, ct-t06,
+    ct-t07, ct-t08, ct-t09, ct-t10, ct-t11, ct-t12, ct-t13, ct-t14). No se inventó.'
+  - 'sustrato: no aplica (campo de kalinago); omitido.'
+  - 'meta.plan: el encargo pide 4-fuentes/sesiones/09_creencia_taino_mineria.md; el origen tenía 08_creencia_taino_que-minar.md,
+    que queda en meta_origen.plan.'
+  - 'dominios: asignados por mí, libres (no tienen valor de validación).'
+  - 'efecto_en_via_a y pagina_origen: van verbatim en cada hecho, para que el texto del origen no se pierda cuando
+    nombra ids que el veredicto no recoge (ct-t03 nombra transmision-018).'
+hechos:
+- id: taino-creencia-001
+  id_origen: ct-t01
+  esfera: creencia
+  tema: segundo-entierro
+  tema_duda: muerte-entierro
+  contenido: 'El taíno guardaba los huesos de sus señores dentro de una imagen de madera del muerto y la llamaba
+    con el nombre de ese muerto. Colón lo escribió a los Reyes y Las Casas lo copia: «Tenian ciertas estátuas de
+    madera, segun escribió en una carta el almirante don Cristóbal Colon á los Reyes, donde metian los huesos de
+    sus padres (y debian ser los de los Reyes y Señores), y éstas llamaban del nombre de la persona cuyos huesos
+    allí encerraban»; eran huecas y por ellas «hablaba» un hombre escondido. Pané da cemíes, de piedra o de madera,
+    que guardan los huesos del padre, de la madre y de otros antepasados (cap. XV).'
+  grafia: «estátuas de madera» (Las Casas); `cemíes` (Pané-Wikisource)
+  pueblo: taino
+  donde: La Española
+  epoca: contacto (carta de Colón c. 1494-1496; Pané 1494-1498)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: las-casas-apologetica
+    pagina: Apologética cap. CXX, p. 321 (imagen)
+  procedencia_extra:
+  - obra: pane-c1498
+    pagina: cap. XV
+    independiente: false
+    nota: 'mismo círculo que la carta de Colón: «no del todo independientes» (como_se_escribio)'
+  como_se_escribio: 'La carta del Almirante, perdida, llega por Las Casas (escribe c. 1550); Pané por la retraducción
+    de Wikisource. Mismo círculo (Colón y su encargado): no del todo independientes, pero con detalles que sólo
+    trae la carta (el nombre del muerto, la estatua que habla).'
+  caquetio:
+  - creencia-010b
+  - creencia-010c
+  - creencia-010d
+  caquetio_propuesto:
+  - ct-c01
+  proyeccion:
+    capa: lectura
+    nota: 'Nada se proyecta. Ilumina por CONTRASTE la efigie del díao (ct-c01): misma clase de objeto —una imagen
+      de madera del muerto principal— con el destino contrario. El caquetío la pone bajo el cuerpo y la quema con
+      él, y se bebe los huesos; el taíno mete los huesos en ella, la nombra y la consulta. No autoriza a darle nombre
+      a la efigie caquetía ni a hacerla hablar.'
+  via_a:
+    creencia-010b: no-toca
+    creencia-010c: no-toca
+    creencia-010d: contradice
+  via_a_nota:
+    creencia-010b: sin mención en efecto_en_via_a (no-toca por regla)
+    creencia-010c: sin mención en efecto_en_via_a (no-toca por regla)
+    creencia-010d: 'creencia-010d: CONTRADICE la generalización. La disolución del muerto en el colectivo no es
+      arahuaca general: el taíno conserva al muerto individual, con nombre propio. Lo que comparten el caquetío
+      (beber los huesos) y el wayuu (el osario) es justo lo que el taíno no hace.'
+  efecto_en_via_a: 'creencia-010d: CONTRADICE la generalización. La disolución del muerto en el colectivo no es
+    arahuaca general: el taíno conserva al muerto individual, con nombre propio. Lo que comparten el caquetío (beber
+    los huesos) y el wayuu (el osario) es justo lo que el taíno no hace.'
+  pagina_origen: Las Casas, Apologética cap. CXX, p. 321 (imagen); Pané cap. XV
+  lectura: Es el único rasgo de la lista de Steward que sobrevive con primaria en las dos orillas (§steward_auditado,
+    r3), y la comparanda afila lo propio del caquetío en vez de rellenarlo. Que Rouse diga que al cacique se lo
+    «dried over the fire» para guardarlo como zemi no tiene primaria en el repo (§rouse_a_primarias).
+  verificado_en_imagen: si
+  dominios:
+  - muerte
+  - huesos
+  - efigie
+  - memoria
+- id: taino-creencia-002
+  id_origen: ct-t02
+  esfera: creencia
+  tema: muerte-entierro
+  contenido: 'El cacique taíno se entierra; nadie quema el cuerpo ni bebe los huesos. Oviedo da dos maneras: algunas
+    mujeres del cacique entran vivas en la sepultura «con agua é caçabi», o, «despues que era muerto, le faxaban
+    todo con unas vendas de algodon», lo metían en un hoyo «como en un silo» con una bóveda de palos para que la
+    tierra no lo tocase, sentado en un `duho`, con sus joyas. Las Casas, por su cuenta: a los muertos «los enterraban
+    en sepolturas, creo que en el monte, apartados de la casa donde morian, por el miedo que habian de las fantasmas».'
+  grafia: '`duho`, `caçabi`, `athebeane nenuen` (la mujer que se entierra viva: p. 134, capa de texto)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto (Oviedo llega a la isla en 1515; Las Casas en 1502)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: oviedo-y-valdes-1851
+    pagina: Oviedo t. I lib. V cap. III, p. 134 (imagen)
+  procedencia_extra:
+  - obra: las-casas-apologetica
+    pagina: cap. CCIV, p. 535 (imagen; la cabecera del capítulo, «De la Medicina practicada en la isla Española»,
+      en la p. 534)
+    independiente: true
+    nota: dos testigos que vivieron en la isla, independientes entre sí y de Pané (como_se_escribio)
+  como_se_escribio: dos testigos que vivieron en la isla, independientes entre sí y de Pané
+  caquetio:
+  - creencia-010
+  - creencia-010d
+  proyeccion:
+    capa: lectura
+    nota: 'Nada. Es la negativa que delimita el rito caquetío: beber los huesos (creencia-010) no tiene par taíno
+      en ninguna de las cuatro primarias, y el propio Oviedo lo da por costumbre de TIERRA FIRME («en esta Tierra-
+      Firme, de que tractamos, muchos las tragan», t. II p. 297, imagen), con Artemisia y no con La Española.'
+  tierra: [muertos-y-tierra]
+  via_a:
+    creencia-010: no-toca
+    creencia-010d: corrobora
+  via_a_nota:
+    creencia-010: sin mención en efecto_en_via_a (no-toca por regla)
+    creencia-010d: 'creencia-010d: no toca lo wayuu; confirma que el par «beber / redepositar» es caquetío-wayuu
+      y no taíno.'
+  efecto_en_via_a: 'creencia-010d: no toca lo wayuu; confirma que el par «beber / redepositar» es caquetío-wayuu
+    y no taíno.'
+  pagina_origen: Oviedo t. I lib. V cap. III, p. 134 (imagen); Las Casas cap. CCIV, p. 535 (imagen; la cabecera
+    del capítulo, «De la Medicina practicada en la isla Española», en la p. 534)
+  verificado_en_imagen: si
+  dominios:
+  - muerte
+  - entierro
+  - cacique
+- id: taino-creencia-003
+  id_origen: ct-t03
+  esfera: creencia
+  tema: muerte-entierro
+  tema_duda: narracion-mito (transmision)
+  contenido: En el entierro del cacique, «turaban quinçe ó veynte dias las endechas», y en ellas «resçitaban las
+    obras é vida de aquel caçique, y deçian qué batallas avia vençido»; de esas endechas salían los areytos que
+    quedaban por historia.
+  grafia: '`areyto`, «endechas»'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto (Oviedo, 1535-1548)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: oviedo-y-valdes-1851
+    pagina: t. I lib. V cap. III, p. 134 (imagen); el areyto como historia, pp. 127-128
+  como_se_escribio: 'el MISMO autor que describe el llanto caquetío (t. II p. 297): no suma un testigo'
+  caquetio:
+  - creencia-010
+  proyeccion:
+    capa: lectura
+    nota: 'Ninguna. Ilumina creencia-010 («lo lloran de noche … diciendo en aquel cantar lo que hizo mientras vivió»):
+      en las dos orillas el canto fúnebre recita los hechos del muerto. Pero lo dice un solo cronista, que usa la
+      misma fórmula («en tono alto») en los dos tomos, y el rasgo es regional: no prueba nada compartido. Duración
+      distinta: quince o veinte días frente a una noche.'
+  via_a:
+    creencia-010: no-toca
+  via_a_nota:
+    creencia-010: sin mención en efecto_en_via_a (no-toca por regla)
+  efecto_en_via_a: no es de la Vía A; para transmision-018 (el areíto) es la misma fuente.
+  pagina_origen: t. I lib. V cap. III, p. 134 (imagen); el areyto como historia, pp. 127-128
+  verificado_en_imagen: si
+  dominios:
+  - muerte
+  - canto
+  - historia
+- id: taino-creencia-004
+  id_origen: ct-t04
+  esfera: creencia
+  tema: alma
+  contenido: 'Los muertos andan de noche, se aparecen sobre todo a quien va solo por los caminos, no tienen ombligo
+    y se les teme; el encuentro enferma. Pané (proemio y cap. XIII) y Anglería: «Creen que los muertos salen al
+    encuentro de los vivos de noche … principalmente en los caminos y vías públicas, y que si el caminante se planta
+    intrépido frente á ellos, la fantasma se disuelve; pero si tiene miedo … muchos enferman y se quedan lelos».
+    Las Casas, por su cuenta: «el gran miedo que tenian de los fantasmas de noche, y éstas llamaban hupías».'
+  grafia: '`operito` «muerto» (Pané); `hupías` (Las Casas); en Anglería, sin nombre'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: proemio y cap. XIII
+  procedencia_extra:
+  - obra: angleria-1892
+    pagina: vol. 1 pp. 348-349 (imagen de la 349)
+    independiente: false
+    nota: Anglería resume a Pané (como_se_escribio)
+  - obra: las-casas-apologetica
+    pagina: p. 535 (imagen)
+    independiente: true
+    nota: lo dice por su cuenta y no lo saca de Pané (como_se_escribio)
+  como_se_escribio: dos testigos independientes (Pané; Las Casas, que lo dice por su cuenta y no lo saca de Pané);
+    Anglería resume a Pané
+  caquetio:
+  - creencia-008
+  - creencia-008b
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina un hecho caquetío ya atestiguado, creencia-008b (Arcaya: los muertos temidos, el alma que ronda
+      la sepultura o la choza): su capa no cambia. No autoriza el ombligo, la fruta ni los caminos como rasgos caquetíos.'
+  via_a:
+    creencia-008: corrobora
+    creencia-008b: no-toca
+  via_a_nota:
+    creencia-008: 'creencia-008 (wayuu): CORROBORA el núcleo —los muertos recientes rondan de noche, son peligrosos
+      y enferman a los vivos—. Con el wayuu son dos tradiciones: el `reconstruido` queda sostenido por dos. La otra
+      mitad de 008 (el muerto antiguo que protege y avisa en sueños) no la da el taíno.'
+    creencia-008b: sin mención en efecto_en_via_a (no-toca por regla)
+  efecto_en_via_a: 'creencia-008 (wayuu): CORROBORA el núcleo —los muertos recientes rondan de noche, son peligrosos
+    y enferman a los vivos—. Con el wayuu son dos tradiciones: el `reconstruido` queda sostenido por dos. La otra
+    mitad de 008 (el muerto antiguo que protege y avisa en sueños) no la da el taíno.'
+  pagina_origen: Pané proemio y cap. XIII; Anglería vol. 1 pp. 348-349 (imagen de la 349); Las Casas p. 535 (imagen)
+  verificado_en_imagen: si
+  dominios:
+  - muerte
+  - miedo
+  - caminos
+- id: taino-creencia-005
+  id_origen: ct-t05
+  esfera: creencia
+  tema: lugar-sagrado
+  tema_duda: muerte-entierro
+  contenido: 'Hay una tierra de los muertos con nombre propio, en un extremo de la tierra conocida, con su señor,
+    y allí la vida sigue: los muertos comen y yacen. Pané la llama `Coaibai`, «casa y habitación de los muertos»,
+    en un extremo de la isla llamado `Soraya`; de noche los muertos comen `guabaza` y andan con los vivos (caps.
+    XII-XIII). Anglería da la fruta (`guannaba`) y el andar entre los vivos, sin el lugar (p. 348).'
+  grafia: '`Coaibai`, `Soraya`, `Maquetaurie Guayaba`, `guabaza` (Pané-Wikisource); `guannaba` (Anglería)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto (Pané 1494-1498)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: caps. XII-XIII
+  procedencia_extra:
+  - obra: angleria-1892
+    pagina: vol. 1 p. 348
+    independiente: false
+    nota: 'como_se_escribio: «la fruta y el andar, en dos (un testimonio)»; Anglería depende de Pané (bitácora §A2)'
+  como_se_escribio: el lugar con nombre está en UNA cadena (Wikisource); la fruta y el andar, en dos (un testimonio)
+  hermanas:
+  - pueblo: wayuu
+    obra: jahn-1927
+    pagina: p. 184
+    que: 'la tierra de los muertos con nombre propio, Jepira, en el Cabo de la Vela (origen: «el wayuu (Jepira,
+      el Cabo de la Vela; Jahn 1927 p. 184)»)'
+  caquetio:
+  - creencia-009
+  - creencia-028
+  proyeccion:
+    capa: reconstruido
+    nota: 'Dos tradiciones arahuacas independientes dan el núcleo —una tierra de los muertos con nombre propio,
+      en un extremo, donde la vida sigue—: el wayuu (Jepira, el Cabo de la Vela; Jahn 1927 p. 184) y el taíno (Coaibai).
+      Eso sostiene creencia-009 como `reconstruido`. NO autoriza ningún nombre (ni Jepira ni Coaibai) ni el lugar:
+      la única voz atribuida al caquetío dice ABAJO (creencia-028, `sawaka`), y ese contraste se conserva.'
+  tierra: [muertos-y-tierra, lugar-sagrado]
+  via_a:
+    creencia-009: corrobora
+    creencia-028: no-toca
+  via_a_nota:
+    creencia-009: 'creencia-009: CORROBORA (segunda tradición). Sin premio ni castigo: Pané no habla de juicio.'
+    creencia-028: sin mención en efecto_en_via_a (no-toca por regla)
+  efecto_en_via_a: 'creencia-009: CORROBORA (segunda tradición). Sin premio ni castigo: Pané no habla de juicio.'
+  pagina_origen: Pané caps. XII-XIII; Anglería vol. 1 p. 348
+  verificado_en_imagen: 'no'
+  dominios:
+  - muerte
+  - otro-mundo
+  - lugar
+- id: taino-creencia-006
+  id_origen: ct-t06
+  esfera: creencia
+  tema: alma
+  contenido: 'El alma del vivo y el espíritu del muerto podrían tener nombres distintos. Pané: «Mientras vive una
+    persona llaman al alma goeiz, y después de muerta la denominan opia» (cap. XIII). Pero Las Casas, por su cuenta,
+    da una sola palabra: «hupía no era otra cosa sino el ánima del hombre, porque así llamaban al ánima», y el fantasma
+    de la noche es «la hupía … el ánima de alguno que á ellos venia» (p. 535).'
+  grafia: '`goeiz`, `opia` (Pané-Wikisource); `hupía`, `hupías` (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: hipotetico
+  testigo: lexico
+  procedencia:
+    obra: pane-c1498
+    pagina: cap. XIII
+  procedencia_extra:
+  - obra: las-casas-apologetica
+    pagina: p. 535 (imagen)
+    independiente: null
+    nota: sin declarar en el origen
+  como_se_escribio: una cadena para los dos nombres; el segundo testigo lo contradice en parte
+  caquetio:
+  - creencia-005
+  - creencia-008
+  proyeccion:
+    capa: hipotetico
+    nota: 'Con el wayuu (aa''in, el alma del vivo, frente a yoluja, el muerto: creencia-005 y 008) serían dos tradiciones,
+      pero el taíno está en duda —Las Casas no distingue— y en duda se degrada: `hipotetico`. Autoriza, a lo sumo,
+      a DECLARAR un hueco: el canon tiene `barsure` para el alma; no tiene palabra caquetía para el muerto que vuelve.
+      No se llena.'
+  via_a:
+    creencia-005: no-toca
+    creencia-008: matiza
+  via_a_nota:
+    creencia-005: sin mención en efecto_en_via_a (no-toca por regla)
+    creencia-008: sin mención en efecto_en_via_a (no-toca por regla)
+  efecto_en_via_a: no toca el sueño (005); refuerza que 008 habla de los muertos como «otra cosa» que el alma del
+    vivo, sin probarlo.
+  pagina_origen: Pané cap. XIII; Las Casas p. 535 (imagen)
+  verificado_en_imagen: si
+  dominios:
+  - alma
+  - nombres
+- id: taino-creencia-007
+  id_origen: ct-t07
+  esfera: creencia
+  tema: especialista
+  contenido: 'El especialista diagnostica en trance: el `buhuitihu` guarda dieta como el enfermo, toma cohoba por
+    la nariz y dice que los cemíes le han dicho «de dónde provino la enfermedad» (Pané cap. XV); los `boicios` «se
+    obligan á ayunar y á purgarse», toman la hierba en polvo y «han oído de los zemes muchas cosas» (Anglería);
+    los behiques «daban á entender que hablaban con aquellas estatuas y ellas les descubrían los secretos» (Las
+    Casas).'
+  grafia: '`buhuitihu`/`buhitihu`/`bohutis` (Pané); `boicios`, `zemes` (Anglería); `behiques`/`bohique` (Las Casas,
+    capa de texto)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: cap. XV
+  procedencia_extra:
+  - obra: angleria-1892
+    pagina: vol. 1 p. 350
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: las-casas-apologetica
+    pagina: p. 323
+    independiente: null
+    nota: sin declarar en el origen
+  como_se_escribio: tres cadenas; Las Casas generaliza y no cuenta una cura concreta
+  caquetio:
+  - creencia-002
+  caquetio_propuesto:
+  - ct-c03
+  proyeccion:
+    capa: lectura
+    nota: Ilumina el boratio atestiguado (ct-c03), que también consulta en trance con su «diablo» y responde por
+      él —«porque el diablo me lo ha dicho assi» (Oviedo t. II p. 299)—. La capa del boratio no cambia. No autoriza
+      la cohoba ni el cemí.
+  via_a:
+    creencia-002: matiza
+  via_a_nota:
+    creencia-002: 'creencia-002: CORROBORA EN PARTE. El trance en que un espíritu revela la causa del mal lo dan
+      el taíno y el propio boratio caquetío; el SUEÑO como medio, no: cero en Pané-Wikisource (`sueñ-`), y en Anglería
+      las «sombras nocturnas» sólo sirven para hacer zemes de madera (p. 352).'
+  efecto_en_via_a: 'creencia-002: CORROBORA EN PARTE. El trance en que un espíritu revela la causa del mal lo dan
+    el taíno y el propio boratio caquetío; el SUEÑO como medio, no: cero en Pané-Wikisource (`sueñ-`), y en Anglería
+    las «sombras nocturnas» sólo sirven para hacer zemes de madera (p. 352).'
+  pagina_origen: Pané cap. XV; Anglería vol. 1 p. 350; Las Casas p. 323
+  verificado_en_imagen: 'no'
+  dominios:
+  - especialista
+  - trance
+  - cohoba
+- id: taino-creencia-008
+  id_origen: ct-t08
+  esfera: creencia
+  tema: enfermedad-cura
+  contenido: 'La cura tiene una secuencia: el especialista junta o arranca el mal con las manos, lo saca por la
+    puerta o lo sopla y lo despide de palabra, y después chupa y enseña el objeto. Pané: tira del enfermo como quien
+    arranca algo, va a la puerta y lo despide «a la montaña, o al mar», con un soplo «como si despidiese una paja»;
+    junta las manos y se las sopla; sorbe; saca piedra, hueso o carne (cap. XVI). Anglería: «retira de los pies
+    las manos entrelazadas, y con ellas así juntas sale corriendo á la puerta, que está abierta, y abriendo las
+    manos las sacude y persuade que ha quitado la enfermedad». Las Casas, por su cuenta: estregar y soplar «cuasi
+    como que con aquel estregar y soplar echasen el mal fuera».'
+  grafia: '`gueyo` (la hierba del vómito, Pané); «el pedacito de carne» (Anglería)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: cap. XVI
+  procedencia_extra:
+  - obra: angleria-1892
+    pagina: vol. 1 p. 351 (imagen)
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: las-casas-apologetica
+    pagina: p. 535 (imagen)
+    independiente: true
+    nota: 'por su cuenta (como_se_escribio: «dos testigos independientes (Pané; Las Casas por su cuenta)»)'
+  como_se_escribio: dos testigos independientes (Pané; Las Casas por su cuenta), tres cadenas
+  caquetio:
+  - creencia-003
+  - creencia-006
+  caquetio_propuesto:
+  - ct-c02
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina la cura del boratio (ct-c02): «çerrándolas é abriéndolas … como quien quiere juntar otra cosa,
+      diçe que le allega el alma á un cabo, y despues çierra el puño y sóplale con la boca diçiendo: Allá yras mal»;
+      y después chupa y enseña «la espina ó piedra ó palo». La secuencia (juntar con las manos → soplar y despedir
+      de palabra → chupar → mostrar) está en las dos orillas, y Oviedo NO la tenía en su plantilla de La Española
+      (su buhití es sólo herbolario, t. I p. 126): no es calco. Pero sus piezas son regionales y panamericanas —los
+      pemenos de la laguna, «bramar y soplar y echar taco» (t. II p. 293, imagen); la succión es la trampa del `picure`—:
+      paralelo de procedimiento, no prueba de filiación. La capa del hecho caquetío no cambia.'
+  via_a:
+    creencia-003: corrobora
+    creencia-006: matiza
+  via_a_nota:
+    creencia-003: 'creencia-006: el ancla caquetía existe y es ambigua — el boratio «allega el alma» antes de soplar
+      el mal, pero no dice que el mal sea el alma perdida. creencia-003: el taíno añade un testigo ARAHUACO a «cierra
+      la casa para el rito» (Pané cap. XVI cierra la puerta y echa a los niños; Anglería p. 350 «echan del hemiciclo
+      á todos, excepto uno ó dos») y al canto.'
+    creencia-006: 'creencia-006: el ancla caquetía existe y es ambigua — el boratio «allega el alma» antes de soplar
+      el mal, pero no dice que el mal sea el alma perdida. creencia-003: el taíno añade un testigo ARAHUACO a «cierra
+      la casa para el rito» (Pané cap. XVI cierra la puerta y echa a los niños; Anglería p. 350 «echan del hemiciclo
+      á todos, excepto uno ó dos») y al canto.'
+  efecto_en_via_a: 'creencia-006: el ancla caquetía existe y es ambigua — el boratio «allega el alma» antes de soplar
+    el mal, pero no dice que el mal sea el alma perdida. creencia-003: el taíno añade un testigo ARAHUACO a «cierra
+    la casa para el rito» (Pané cap. XVI cierra la puerta y echa a los niños; Anglería p. 350 «echan del hemiciclo
+    á todos, excepto uno ó dos») y al canto.'
+  pagina_origen: Pané cap. XVI; Anglería vol. 1 p. 351 (imagen); Las Casas p. 535 (imagen)
+  verificado_en_imagen: si
+  dominios:
+  - cura
+  - soplo
+  - succion
+- id: taino-creencia-009
+  id_origen: ct-t09
+  esfera: creencia
+  tema: enfermedad-cura
+  tema_duda: espiritu-tutelar
+  contenido: 'El mal lo manda el cemí desatendido: el médico saca lo que el cemí metió en el cuerpo «porque no le
+    hiciste oración, o no le fabricaste algún templo» (Pané cap. XVI); Vaibrama manda enfermedades si no se lleva
+    comida a quienes cuidan su casa (Pané cap. XX; Colón 1892 p. 6; Las Casas p. 446); el zeme enojado «porque no
+    le construyó una casa» (Anglería pp. 351-352).'
+  grafia: '`Vaibrama` (Pané), `Braidama` (Colón), `Vaybrama` (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: caps. XVI y XX
+  procedencia_extra:
+  - obra: colon-hernando-1892
+    pagina: vol. 2 p. 6
+    independiente: false
+    nota: «cuatro cadenas de un solo testimonio (Pané)» (como_se_escribio)
+  - obra: las-casas-apologetica
+    pagina: p. 446
+    independiente: false
+    nota: «cuatro cadenas de un solo testimonio (Pané)» (como_se_escribio)
+  - obra: angleria-1892
+    pagina: vol. 1 pp. 351-352 (imagen de la 351)
+    independiente: false
+    nota: «cuatro cadenas de un solo testimonio (Pané)» (como_se_escribio)
+  como_se_escribio: cuatro cadenas de un solo testimonio (Pané)
+  caquetio:
+  - creencia-006
+  - creencia-007
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Ninguna: importarlo sería importar la lógica del cemí como objeto que exige culto, y no hay cemí caquetío.
+      Se registra porque la etiología taína es INTRUSIÓN (un objeto metido por un espíritu ofendido), no pérdida
+      del alma.'
+    capa_origen: no-se-propone
+  via_a:
+    creencia-006: contradice
+    creencia-007: matiza
+  via_a_nota:
+    creencia-006: 'creencia-006: CONTRADICE la pérdida del alma como etiología única de la región. creencia-007:
+      CORROBORA EN PARTE que hay males «del espíritu» que exigen al especialista (y Oviedo t. I p. 126 hace al buhití
+      a la vez herbolario y adivino); el principio de semejanza no aparece.'
+    creencia-007: 'creencia-006: CONTRADICE la pérdida del alma como etiología única de la región. creencia-007:
+      CORROBORA EN PARTE que hay males «del espíritu» que exigen al especialista (y Oviedo t. I p. 126 hace al buhití
+      a la vez herbolario y adivino); el principio de semejanza no aparece.'
+  efecto_en_via_a: 'creencia-006: CONTRADICE la pérdida del alma como etiología única de la región. creencia-007:
+    CORROBORA EN PARTE que hay males «del espíritu» que exigen al especialista (y Oviedo t. I p. 126 hace al buhití
+    a la vez herbolario y adivino); el principio de semejanza no aparece.'
+  pagina_origen: Pané caps. XVI y XX; Colón 1892 vol. 2 p. 6; Las Casas p. 446; Anglería vol. 1 pp. 351-352 (imagen
+    de la 351)
+  verificado_en_imagen: si
+  dominios:
+  - enfermedad
+  - cemi
+  - castigo
+- id: taino-creencia-010
+  id_origen: ct-t10
+  esfera: creencia
+  tema: muerte-entierro
+  contenido: Si el enfermo muere, los parientes interrogan al muerto —le dan a beber el jugo del `gueyo` con sus
+    uñas y cabellos molidos «entre dos piedras», o lo meten en ascuas cubiertas de tierra— y, si el muerto culpa
+    al médico, lo apalean; los cemíes en forma de culebras lo sueldan, y al final le sacan los ojos y le rompen
+    los testículos (Pané caps. XVII-XVIII bis). A los cadáveres también se les da la cohoba (Pané cap. XIX; Colón
+    1892 p. 5).
+  grafia: '`gueyo`, «zacón» (Pané); `Cogioba` (Colón)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: caps. XVII, XVIII, XVIII bis y XIX
+  procedencia_extra:
+  - obra: colon-hernando-1892
+    pagina: vol. 2 p. 5
+    independiente: false
+    nota: «un testimonio (Pané) en tres cadenas» (como_se_escribio)
+  - obra: angleria-1892
+    pagina: vol. 1 p. 352
+    independiente: false
+    nota: «un testimonio (Pané) en tres cadenas» (como_se_escribio)
+  como_se_escribio: un testimonio (Pané) en tres cadenas; las ascuas y las culebras, sólo en Wikisource
+  caquetio:
+  - creencia-003
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Ninguna. Es la negativa que valía (nota de decisión, P3): el boratio de Oviedo, si no cura, se va con
+      su excusa («Yo me quiero yr, porque tú no sanarás tan ayna desse mal … porque el diablo me lo ha dicho assi»,
+      t. II p. 299) y nadie lo persigue. Ninguna venganza contra el médico ni interrogatorio del muerto en ninguna
+      fuente caquetía del repo. Rima de una sola cadena, que NO se propone: los restos del muerto molidos «entre
+      dos piedras» y dados a beber, al muerto (taíno, Pané cap. XVII) o a los vivos (caquetío, Oviedo t. II p. 297).'
+    capa_origen: no-se-propone
+  via_a:
+    creencia-003: matiza
+  via_a_nota:
+    creencia-003: 'creencia-003: la serpiente auxiliar del especialista tiene un eco taíno de UNA cadena (las culebras
+      que sueldan al médico, cap. XVIII), no de trance.'
+  efecto_en_via_a: 'creencia-003: la serpiente auxiliar del especialista tiene un eco taíno de UNA cadena (las culebras
+    que sueldan al médico, cap. XVIII), no de trance.'
+  pagina_origen: Pané caps. XVII, XVIII, XVIII bis y XIX; Colón 1892 vol. 2 p. 5; Anglería vol. 1 p. 352
+  verificado_en_imagen: 'no'
+  dominios:
+  - muerte
+  - interrogatorio
+  - venganza
+- id: taino-creencia-011
+  id_origen: ct-t11
+  esfera: creencia
+  tema: espiritu-tutelar
+  tema_duda: tiempo-calendario
+  contenido: 'El poder sobre la lluvia y el viento está en objetos que poseen los caciques, no en su persona: los
+    cemíes que «hacen llover» y «correr los vientos» (Pané cap. XV); Boinayol y Maroya, de piedra, en una cueva,
+    que traen la lluvia cuando se los visita (cap. XI); Guabancex, cemí mujer de piedra del cacique Aumatex, que
+    con sus dos ayudantes manda el viento y el agua (Pané cap. XXIII; Colón 1892 pp. 8-9; Anglería pp. 357-358);
+    preguntado por Las Casas, el indio dice que el Cemí es «el que hace llover y hace que haya sol».'
+  grafia: '`Boinayol`, `Maroya`, `Guabancex`, `Guatauva`, `Coatrisquie` (Pané-Wikisource); `Guatauba`, `Coatrisquta`
+    (Colón); `Binthaitel`, `Maroho` (Anglería)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: pane-c1498
+    pagina: caps. XI, XV, XXIII
+  procedencia_extra:
+  - obra: colon-hernando-1892
+    pagina: vol. 2 pp. 8-9
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: angleria-1892
+    pagina: vol. 1 pp. 347 (imagen) y 357-358
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: las-casas-apologetica
+    pagina: pp. 322-323 y 445
+    independiente: true
+    nota: 'de vista (como_se_escribio: «Las Casas de vista»)'
+  como_se_escribio: 'Dos testigos (Pané, cuatro cadenas; Las Casas de vista). La LLUVIA de la cueva sólo está en
+    Wikisource: Anglería da los dos zemes venerados porque de la cueva salieron el sol y la luna (p. 347, imagen).'
+  caquetio:
+  - creencia-012
+  - creencia-013
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina creencia-013 por CONTRASTE: el Manaure «da los temporales» en su persona (Ampíes; Aguado). El
+      corpus puede DECIRLO —el taíno tiene el tiempo en cemíes que posee el cacique; el caquetío, en el señor— y
+      no importa nada. La capa de 013 no cambia. Y lo que sí se parece, que el especialista PREDIGA la lluvia (t.
+      I p. 139; t. II p. 298), lo dice el mismo Oviedo con la misma escena: no cuenta (§oviedo_dos_orillas).'
+  tierra: [dueno-del-lugar]
+  via_a:
+    creencia-012: matiza
+    creencia-013: no-toca
+  via_a_nota:
+    creencia-012: 'creencia-012: NO CORROBORA. Pané pone los cemíes con huesos y los que hacen llover como clases
+      distintas (cap. XV), y ninguna fuente taína enlaza los huesos de los muertos con la lluvia.'
+    creencia-013: sin mención en efecto_en_via_a (no-toca por regla)
+  efecto_en_via_a: 'creencia-012: NO CORROBORA. Pané pone los cemíes con huesos y los que hacen llover como clases
+    distintas (cap. XV), y ninguna fuente taína enlaza los huesos de los muertos con la lluvia.'
+  pagina_origen: Pané caps. XI, XV, XXIII; Colón 1892 vol. 2 pp. 8-9; Anglería vol. 1 pp. 347 (imagen) y 357-358;
+    Las Casas pp. 322-323 y 445
+  verificado_en_imagen: si
+  dominios:
+  - lluvia
+  - clima
+  - cemi
+- id: taino-creencia-012
+  id_origen: ct-t12
+  esfera: creencia
+  tema: especialista
+  tema_duda: jefatura (geografia_politica)
+  contenido: 'El señor adivina el primero: para decidir la guerra los principales entran en una casa a la que no
+    entra nadie más, el cacique toma la cohoba antes que todos, calla un rato con la cabeza vuelta y los brazos
+    sobre las rodillas, alza la cara y habla, y todos responden a una voz. Las Casas lo vio: «El primero que la
+    comenzaba era el señor».'
+  grafia: '`cohoba` (Pané, Las Casas), `Cogioba` (Colón), `cohobba` (Anglería); `duchos`, los banquillos (Las Casas)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: pane-c1498
+    pagina: cap. XIX
+  procedencia_extra:
+  - obra: colon-hernando-1892
+    pagina: vol. 2 p. 4
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: angleria-1892
+    pagina: vol. 1 pp. 354-355
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: las-casas-apologetica
+    pagina: p. 446
+    independiente: true
+    nota: testigo de vista independiente (como_se_escribio)
+  como_se_escribio: cuatro cadenas y un testigo de vista independiente (Las Casas, que llegó en 1502)
+  caquetio:
+  - creencia-001b
+  caquetio_propuesto:
+  - ct-c03
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina por CONTRASTE: en la única primaria caquetía de rito, lo que se le pregunta al especialista —«si
+      deben yr á la guerra»— se le pregunta al BORATIO, uno «en cada pueblo prinçipal», y el díao es otra persona,
+      «el señor prinçipal» (Oviedo t. II pp. 298-299; ct-c03). El paralelo «el señor adivina» no puede apoyar la
+      mitad religiosa de creencia-001b, que T6 ya halló sostenida sólo en Arcaya: la deja más sola.'
+  via_a:
+    creencia-001b: matiza
+  via_a_nota:
+    creencia-001b: no es de la Vía A; refuerza el prerrequisito de partir creencia-001b (taino2-oviedo-ii-iv §3).
+  efecto_en_via_a: no es de la Vía A; refuerza el prerrequisito de partir creencia-001b (taino2-oviedo-ii-iv §3).
+  pagina_origen: Pané cap. XIX; Colón 1892 vol. 2 p. 4; Anglería vol. 1 pp. 354-355; Las Casas p. 446
+  verificado_en_imagen: 'no'
+  dominios:
+  - adivinacion
+  - jefatura
+  - guerra
+- id: taino-creencia-013
+  id_origen: ct-t13
+  esfera: creencia
+  tema: especialista
+  tema_duda: sueno-vision
+  contenido: 'La cohoba es un polvo que se aspira, no tabaco ni humo: lo dicen las cuatro cadenas de Pané y Las
+    Casas, que la vio («polvos … de color leonada», sorbidos con el tubo de dos cañutos). El único que la hace humo
+    es Oviedo: el tubo de dos cañones puesto «en el humo é hierva que estaba ardiendo» (t. I pp. 130-131) y «cahobas
+    ó ahumadas … que assimismo llaman tabacos» (t. I p. 143).'
+  grafia: '`cohoba`; `cohobba` (Anglería); `Cogioba` (Colón); `cahobas` (Oviedo)'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto
+  etiqueta: atestiguado
+  testigo: vio
+  procedencia:
+    obra: pane-c1498
+    pagina: caps. XI, XV, XIX
+  procedencia_extra:
+  - obra: las-casas-apologetica
+    pagina: pp. 445-446
+    independiente: true
+    nota: 'de vista, contra Oviedo (como_se_escribio: «Las Casas de vista contra Oviedo»)'
+  - obra: angleria-1892
+    pagina: vol. 1 pp. 350 y 354
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: colon-hernando-1892
+    pagina: vol. 2 p. 5
+    independiente: null
+    nota: sin declarar en el origen
+  - obra: oviedo-y-valdes-1851
+    pagina: t. I pp. 130-131 (imagen de la 131) y 143
+    independiente: null
+    nota: 'sin declarar en el origen (es el testigo contrario: «Las Casas de vista contra Oviedo»)'
+  como_se_escribio: Las Casas de vista contra Oviedo
+  caquetio:
+  - creencia-003
+  caquetio_propuesto:
+  - ct-c03
+  proyeccion:
+    capa: no-proyecta
+    nota: 'Ninguna, y con una consecuencia para P7: el contraste «el especialista caquetío fuma, el taíno aspira»
+      descansa en UN testigo para el lado caquetío, Oviedo, que es justo el que confundió lo taíno. Lo caquetío
+      queda en pie por el detalle (la hoja quemada en la mazorca, t. II p. 298, es humo sin duda), pero el negativo
+      «sin polvo en la costa» no se puede afirmar más fuerte que un cero de un cronista. Cero de `cohoba`, `yopa`
+      o polvo en el cap. IX.'
+    capa_origen: no-se-propone
+  via_a:
+    creencia-003: matiza
+  via_a_nota:
+    creencia-003: 'creencia-003: el tabaco FUMADO del especialista caquetío es atestiguado (Oviedo t. II p. 298;
+      ct-c03), con este aviso de testigo único.'
+  efecto_en_via_a: 'creencia-003: el tabaco FUMADO del especialista caquetío es atestiguado (Oviedo t. II p. 298;
+    ct-c03), con este aviso de testigo único.'
+  pagina_origen: Pané caps. XI, XV, XIX; Las Casas pp. 445-446; Anglería vol. 1 pp. 350 y 354; Colón 1892 vol. 2
+    p. 5; Oviedo t. I pp. 130-131 (imagen de la 131) y 143
+  verificado_en_imagen: si
+  dominios:
+  - cohoba
+  - tabaco
+  - contraste
+- id: taino-creencia-014
+  id_origen: ct-t14
+  esfera: creencia
+  tema: muerte-entierro
+  contenido: Al enfermo muy grave lo sacaban de la casa al monte con jarros de agua y de comer, solo; y a los muertos
+    los enterraban «en el monte, apartados de la casa donde morian, por el miedo que habian de las fantasmas». Las
+    Casas lo cuenta por su cuenta.
+  grafia: '`hupías`'
+  pueblo: taino
+  donde: La Española
+  epoca: contacto (Las Casas en la isla desde 1502)
+  etiqueta: atestiguado
+  testigo: oyo
+  procedencia:
+    obra: las-casas-apologetica
+    pagina: cap. CCIV, p. 535 (imagen)
+  como_se_escribio: un testigo; es además la primaria de Rouse p. 532 («abandoned … with food and water nearby»)
+  caquetio:
+  - creencia-008
+  - creencia-010b
+  proyeccion:
+    capa: lectura
+    nota: 'Ilumina creencia-010b por contraste: en las dos orillas el vivo y el muerto no comparten casa, por caminos
+      opuestos. El taíno saca al moribundo y entierra lejos; el caquetío deja la casa al díao muerto, «y en aquella
+      casa no ha de vivir ninguno de allí adelante» (Oviedo t. II p. 300, imagen). La capa de 010b no cambia.'
+  tierra: [muertos-y-tierra]
+  via_a:
+    creencia-008: corrobora
+    creencia-010b: no-toca
+  via_a_nota:
+    creencia-008: 'creencia-008: el miedo a los muertos de noche tiene consecuencia espacial en el taíno; la corroboración
+      es la de ct-t04.'
+    creencia-010b: sin mención en efecto_en_via_a (no-toca por regla)
+  efecto_en_via_a: 'creencia-008: el miedo a los muertos de noche tiene consecuencia espacial en el taíno; la corroboración
+    es la de ct-t04.'
+  pagina_origen: Apologética cap. CCIV, p. 535 (imagen)
+  verificado_en_imagen: si
+  dominios:
+  - muerte
+  - miedo
+  - casa
+trasladado_sin_cambios:
+- meta_origen
+- oviedo_dos_orillas
+- cotejo_pane
+- lado_caqueti
+- steward_auditado
+- rouse_a_primarias
+- auditoria_via_a
+- lo_que_no_se_propone
+- ceros
+- lo_que_queda
+meta_origen:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: minero del taíno para la creencia (Claude Opus 5.5)
+  rama: vault/creencia-mineria-taino
+  plan: 4-fuentes/sesiones/08_creencia_taino_que-minar.md
+  bitacora: 4-fuentes/sesiones/09_creencia_taino_mineria.md
+  pregunta: '¿Qué rasgos de la religión taína de época de contacto sobreviven al bajar a las primarias del repo,
+    y qué hacen frente a la creencia caquetía: corroboran, afilan por contraste o no tocan? ¿Y qué queda de la hipótesis
+    de una religión arahuaca compartida (Las Casas p. 321; Steward 1948 p. 21)?'
+  respuesta_corta: 'Una sola semejanza específica sobrevive en las dos orillas con primaria: la imagen de madera
+    del muerto principal. El caquetío la pone «á su semejança» bajo la hamaca del díao desecado y la QUEMA con él
+    años después, y bebe los huesos (Oviedo t. II p. 300); el taíno mete los huesos de sus señores en una estatua
+    de madera que lleva el NOMBRE del muerto y la conserva y la hace hablar (carta de Colón vía Las Casas p. 321;
+    Pané cap. XV). Misma clase de objeto, destino contrario: el contraste afila lo caquetío y contradice que la
+    disolución del muerto (creencia-010d) sea arahuaca general. Lo demás de Steward cae al bajar a la primaria:
+    el adoratorio y el sacrificio son axaguas de Barquisimeto, la adivinación con ceniza de tabaco no tiene par
+    taíno, beber los huesos no es taíno (Oviedo mismo lo llama costumbre de Tierra Firme), y el poder sobre el tiempo
+    está en la persona del señor caquetío y en los cemíes del taíno. El test de plantilla da un resultado doble:
+    Oviedo NO copió el texto de La Española (solapamiento de bigramas igual al de un control caribe), pero sí le
+    puso a los tres pueblos el mismo marco —el especialista encerrado que consulta al diablo, y Plinio sobre medicina
+    y magia— y sus fórmulas de tabaco y hamaca. Lo que Oviedo no tenía en su plantilla de La Española —el funeral
+    del díao y la secuencia de la cura, con «le allega el alma á un cabo»— es testimonio venezolano; y la secuencia
+    de la cura (juntar el mal con las manos, despedirlo con un soplo y una palabra, chupar, mostrar el objeto) tiene
+    par en las tres cadenas taínas.'
+  como_se_midio: (A1) Oviedo t. I lib. V caps. I-III (impresas 124-140) y t. II lib. XXV cap. IX (296-302) leídos
+    enteros en la capa OCR con el guion de fin de línea deshecho; t. I y t. II completos sondados (huess-, enxug-,
+    brasa, enterr-, plinio, magic-); los pasajes marcados «imagen» se vieron con pymupdf; el solapamiento de bigramas,
+    con dos controles del mismo autor, lo mide 6-fusion/scripts/medir_plantilla_oviedo.py. (A2) Pané-Wikisource
+    caps. IX-XXV leídos; Las Casas, Apologética caps. CXX (pp. 320-323), CLXVI-CLXVII (pp. 444-447) y la p. 535
+    leídos; Anglería vol. 1 Déc. I lib. IX (pp. 339-360) entero; Hernando Colón 1892 vol. 2 pp. 1-12 (el final de
+    la Escritura de fray Román) entero. (A3) Steward pp. 21-24 (la p. 21 en imagen) y Rouse «Life cycle», «Religion»
+    y «Shamanism» (pp. 531-538), cada afirmación bajada a la primaria del repo.
+  desfases_medidos: 'Oviedo t. I copia íntegra: índice pdf (base 0) = impresa + 119, es decir pdf 245 = impresa
+    125 (cabeceras de las pp. 120-150). Oviedo t. II: índice = impresa + 13 (pdf 311 = impresa 297); la impresa
+    255 trae el folio «525» por errata de imprenta (254 y 256 la rodean). Las Casas 1909: pdf = impresa + 14. Anglería
+    vol. 1: pdf = impresa + 64. HSAI 4: pdf 45 = p. 21, pdf 48 = p. 24, pdf 676 = p. 532.'
+  cuenta_por_capa:
+    hechos_taino:
+      hipotetico: 1
+      lectura: 9
+      no-se-propone: 3
+      reconstruido: 1
+    lado_caqueti:
+      atestiguado: 3
+  medido:
+    t1_lib5_la_espanola:
+      impresas: 125-139
+      que_es: 't. I lib. V caps. I-III: çemi, buhití, areyto, tabaco, entierro del cacique, oráculo'
+      palabras: 9556
+      voces_de_la_espanola:
+        buhio: 1
+        tabaco: 10
+        ahumada: 5
+        cemi: 6
+        areito: 22
+        duho: 2
+        hamaca: 8
+        macana: 0
+      plinio_sobre_el_arte_magico: 2
+    t2_lib25_cap9_venezuela:
+      impresas: 297-301
+      que_es: 't. II lib. XXV cap. IX: funeral de los çaquitios, boratio, tabaco, cura, díao'
+      palabras: 3370
+      voces_de_la_espanola:
+        buhio: 2
+        tabaco: 4
+        ahumada: 2
+        cemi: 0
+        areito: 0
+        duho: 0
+        hamaca: 6
+        macana: 0
+      plinio_sobre_el_arte_magico: 2
+      bigramas_propios: 1327
+      bigramas_compartidos_con_la_espanola: 25
+      proporcion_compartida: 0.0188
+      los_compartidos:
+      - adelante dira
+      - basallos becinos
+      - beinte cinco
+      - brasa llama
+      - ceneral natural
+      - contra enemigos
+      - contra natura
+      - debaxo amaca
+      - entender abia
+      - indios isla
+      - isla espanola
+      - istoria ceneral
+      - llaman tabaco
+      - medicina arte
+      - mili quinientos
+      - natural istoria
+      - naturales della
+      - plega dios
+      - principal indios
+      - senor cacique
+      - tierra firme
+      - tierra senorio
+      - tono alto
+      - unas ahumadas
+      - unas ojas
+    t2_lib24_cap12_camanagoto:
+      impresas: 254-256
+      que_es: 'control 1, t. II lib. XXIV cap. XII: los piaches de Camanagoto (caribes)'
+      palabras: 2050
+      voces_de_la_espanola:
+        buhio: 1
+        tabaco: 0
+        ahumada: 0
+        cemi: 0
+        areito: 0
+        duho: 0
+        hamaca: 0
+        macana: 0
+      plinio_sobre_el_arte_magico: 1
+      bigramas_propios: 800
+      bigramas_compartidos_con_la_espanola: 16
+      proporcion_compartida: 0.02
+      los_compartidos:
+      - cacique principal
+      - carne umana
+      - cinco palmos
+      - della casa
+      - deste cacique
+      - gran beneracion
+      - indios indias
+      - mili quinientos
+      - muceres muceres
+      - ombres muceres
+      - principales senores
+      - qual llaman
+      - quieren acer
+      - saber futuras
+      - senor cacique
+      - suso qual
+    t2_lib25_cap10_espira:
+      impresas: 302-305
+      que_es: 'control 2, t. II lib. XXV cap. X: la entrada de Espira (narración, sin rito)'
+      palabras: 2572
+      voces_de_la_espanola:
+        buhio: 2
+        tabaco: 0
+        ahumada: 0
+        cemi: 0
+        areito: 0
+        duho: 0
+        hamaca: 0
+        macana: 1
+      plinio_sobre_el_arte_magico: 0
+      bigramas_propios: 1048
+      bigramas_compartidos_con_la_espanola: 15
+      proporcion_compartida: 0.0143
+      los_compartidos:
+      - capitan ceneral
+      - ceneral natural
+      - destos indios
+      - grand senor
+      - indios estaban
+      - istoria ceneral
+      - mili quinientos
+      - poco espacio
+      - qual ceneral
+      - segund bista
+      - seis anos
+      - serbicio dios
+      - tales animales
+      - treinta seis
+      - tubo noticia
+oviedo_dos_orillas:
+  pregunta: Cuando Oviedo describe el rito de los indios de Venezuela (t. II lib. XXV cap. IX), ¿lo describe con
+    la plantilla de La Española (t. I lib. V)? Y donde no hay plantilla, ¿qué es propio de cada lado?
+  quien_habla: 'El cap. IX no declara informante: cero «informado», «voce viva» o «relaçión» de testigo en las pp.
+    297-301; abre con la noticia que dieron a la Corte los procuradores Luis Gonçalez de Leyva y Alonso de la Llana
+    (p. 297) y pasa a «las costumbres de los indios» sin decir de quién las tiene. El obispo Bastidas, «á voce viva»,
+    es el informante del cap. XXII (p. 328), no del IX: la nota de decisión los juntó.'
+  veredicto: 'NO HAY CALCO DE TEXTO, HAY MARCO DEL CRONISTA. Medido: el tramo venezolano comparte con el de La Española
+    la misma proporción de bigramas de contenido que el capítulo de los piaches de Camanagoto, gente caribe (control
+    1), y poco más que la narración de la entrada de Espira (control 2) — `meta.medido`. Lo que comparte es el marco
+    y unas fórmulas, y ese marco Oviedo se lo pone también a Camanagoto: por eso NINGÚN rasgo del marco cuenta como
+    semejanza taíno-caquetía. Lo que la plantilla de La Española no tenía es testimonio de la otra orilla.'
+  lo_que_es_del_cronista:
+  - rasgo: Plinio sobre la medicina, el arte mágico, la religión y la matemática (Hist. Nat. XXX, 1)
+    donde: t. I pp. 126-127 (buhitís de La Española); t. II p. 255 (piaches de Camanagoto, lib. XXIV cap. XII);
+      t. II p. 299 (boratios)
+    cita: «Por manera que la auctoridad de Plinio, que se alegó por mí en el preçedente libro, quadra aqui bien,
+      el qual diçe, que ninguno dubde aver avido prinçipio de la mediçina el arte mágico» (t. II p. 299)
+    verificacion: imagen (t. II pp. 255 y 299; t. I p. 126)
+    lectura: 'El mismo molde interpretativo para tres pueblos: taíno, caribe y caquetío. «El preçedente libro» es
+      el XXIV (p. 255), no el V del t. I: Oviedo ya lo había reusado.'
+  - rasgo: el especialista encerrado que consulta al diablo y responde sobre la lluvia y la guerra
+    donde: t. I pp. 138-139 (las imágenes en «lugares diputados é obscuros», un indio viejo responde «el dia que
+      habia de llover» y, tras los tabacos, «si debia haçerse la guerra»); t. II p. 255 (los piaches «métense en
+      un buhío oscuro, que tienen en los pueblos diputados para ello»); t. II p. 298 (los boratios «se ençierran
+      en un buhío solo»)
+    verificacion: imagen (las tres)
+    lectura: La escena se repite para los tres pueblos con los mismos cuatro pasos (encierro, trance, diablo, respuesta).
+      Es la plantilla de Oviedo, no un rasgo arahuaco; el paralelo P4/P8 de «adivino encerrado» no se puede contar
+      con este cronista.
+  - rasgo: las fórmulas del tabaco y de la hamaca
+    donde: «unas ahumadas que llaman tabacos» (t. II p. 298) ← «aquellos tabacos ó ahumadas» (t. I pp. 131, 139);
+      «brasa sin llama» debajo de la hamaca (t. I p. 132, para calentarse; t. II p. 300, para desecar al díao);
+      «en tono alto» (t. I p. 127, el areyto; t. II p. 297, el llanto del muerto)
+    verificacion: capa de texto (bigramas del script) + imagen de t. II pp. 298 y 300
+    lectura: La desecación del díao se cuenta con la frase con que Oviedo describe cómo se calienta un taíno en
+      su hamaca. La frase es suya; el rito no está en el t. I.
+  - rasgo: el único puente explícito a La Española en el cap. IX
+    donde: t. II p. 298
+    cita: «Y en esta nuestra Isla Española hay mucha en los heredamientos; y los negros, de que nos servimos, la
+      presçian mucho para este efeto, ques echarse ahumadas con esta hierba hásta que caen como muertos»
+    verificacion: imagen
+    lectura: Es el comentario del t. I p. 131 sobre los negros, repetido. Compara el TABACO, no el rito; el rito
+      venezolano lo compara con Artemisia y Juan de Mena (p. 297) y con Plinio (p. 299), nunca con los indios de
+      la isla («como en esta isla» = 0).
+  - rasgo: el vocabulario de La Española en el pasaje venezolano
+    donde: t. II pp. 297-301
+    medido: 'ver `meta.medido.t2_lib25_cap9_venezuela.voces_de_la_espanola`: buhío, tabaco, ahumada y hamaca sí;
+      çemi, areyto y duho, cero'
+    lectura: 'Oviedo no llama `çemi` a nada de Venezuela (lo que pintan es «su figura» del diablo) ni `areyto` al
+      canto fúnebre. `buhío` está en romana, no en la cursiva del editor para las voces indias (imagen, p. 298):
+      para el editor ya era castellano. Es el vector de Oliver (el tainismo llega con el castellano) y va a la bitácora,
+      no al lexicón.'
+  - rasgo: una incoherencia del propio cronista sobre la palabra tabaco
+    donde: t. I p. 131 frente a t. II p. 298
+    cita: «á aquel tal instrumento con que toman el humo, ó á las cañuelas que es dicho llaman los indios tabaco,
+      é no á la hierva» (t. I p. 131) · «Hay en la tierra una hierba que llaman tabaco» (t. II p. 298)
+    verificacion: imagen (las dos)
+    lectura: 'En Venezuela el nombre es de la HIERBA; en La Española Oviedo había negado eso. O cambió su uso o
+      la costa lo usaba distinto: no se decide aquí.'
+  lo_que_es_de_cada_lado:
+    solo_venezuela: 'El funeral del díao entero (desecación en hamaca, casa que nadie vuelve a habitar, hamaca renovada
+      por el hijo, llamamiento general, beber los huesos en maçato, la efigie de madera); la cura del boratio paso
+      a paso (las preguntas de fe, el ayuno de la casa con `caça`, «le allega el alma á un cabo», «Allá yras mal»,
+      los ahullidos, la succión de cinco o seis días, la espina, piedra o palo, la excusa del diablo); la adivinación
+      doméstica con la hoja de tabaco en la mazorca; la pregunta «si los chripstianos son buenos»; el pago con joya
+      de oro; el tabaco como «rescate muy estimado». Nada de esto está en el t. I lib. V: el buhití de La Española
+      es sólo «grandes hervolarios» (p. 126), sin cura descrita.'
+    solo_la_espanola: El çemi figurado en el duho, los moscadores y la frente (pp. 125-126); el çemi que «avia mudado
+      consejo» como excusa (p. 126); el areyto como historia cantada (pp. 127-130); el tabaco por la nariz con el
+      tubo de dos cañones (pp. 130-131); el entierro del cacique —mujeres enterradas vivas, o fajado en algodón,
+      en un hoyo con bóveda de palos, sentado en un duho— con «quinçe ó veynte dias» de endechas (p. 134).
+    los_ceros_que_valen: 'Desecación de un cacique taíno o çemi con huesos en el t. I: CERO (sondas huess-, enxug-,
+      brasa, enterr- sobre el tomo entero; los únicos huesos de un señor son de Cozumel, maya, p. 506, y los cuerpos
+      «asados en barbacoa», de la Florida, p. 561). `çemi`, `areyto` y `duho` en el lib. XXV: cero.'
+cotejo_pane:
+  cadenas:
+    wikisource: 'pane-c1498: retraducción castellana sin identificar del italiano de Ulloa (1571); se cita por capítulo'
+    las_casas: 'las-casas-apologetica: extracta a Pané en los caps. CXX y CLXVI-CLXVII y declara que omite lo demás
+      («confusas y de poca sustancia … es bien no referillas», p. 447); en la p. 535 habla por su cuenta'
+    angleria: 'angleria-1892: resumen latino de 1516 en traducción de 1892, vol. 1 Déc. I lib. IX, pp. 339-360'
+    colon_1892: 'colon-hernando-1892: el vol. 2 sólo trae el FINAL de la Escritura (pp. 1-12: el fin del cap. XIX
+      y los caps. XX-XXV); lo anterior está en el vol. 1, que no está en el repo'
+  filas:
+  - rasgo: cemíes que guardan los huesos de los antepasados
+    wikisource: sí, cap. XV («donde tienen los huesos de su padre, de su madre»; de piedra o de madera)
+    las_casas: 'sí, p. 321 — pero lo atribuye a una CARTA DE COLÓN a los Reyes, no a Pané: estatuas de madera huecas,
+      con los huesos de los señores, que llevan el nombre del muerto y por las que habla un hombre escondido (imagen)'
+    angleria: no (cero en pp. 339-360)
+    colon_1892: fuera del vol. 2
+    veredicto: 'dos testimonios del mismo círculo (Colón y su encargado), con detalles distintos: el nombre del
+      muerto y la estatua parlante sólo en la carta'
+  - rasgo: el muerto sobre ascuas para interrogarlo; cohoba a los cadáveres
+    wikisource: sí, caps. XVII y XIX
+    las_casas: false
+    angleria: 'en parte, p. 352: «con hechizos, hacen que el muerto declare»; sin ascuas'
+    colon_1892: 'sí, p. 5: la Cogioba «la dan también á los Cemis de piedra y de palo, como á los cadáveres, que
+      hemos dicho arriba»'
+    veredicto: tres cadenas (un testimonio); las ascuas, sólo Wikisource
+  - rasgo: los huesos de un hijo en una calabaza dentro de la casa (mito de Yaya)
+    wikisource: sí, cap. IX (huesos en la calabaza colgada del techo; el padre lo mató)
+    las_casas: false
+    angleria: 'sí, p. 345 (imagen): el hijo MUERE y Jaia «lo metió á modo de sepulcro en una calabaza»'
+    colon_1892: fuera del vol. 2
+    veredicto: dos cadenas; difieren en la muerte (matado / muerto)
+  - rasgo: los muertos andan de noche, por los caminos, al que va solo; no tienen ombligo
+    wikisource: sí, proemio y cap. XIII (`operito` = muerto)
+    las_casas: 'por su cuenta, p. 535 (imagen): «el gran miedo que tenian de los fantasmas de noche, y éstas llamaban
+      hupías … hupía no era otra cosa sino el ánima del hombre»'
+    angleria: 'sí, pp. 348-349 (imagen): sin ombligo, en los caminos, y si el caminante tiene miedo «muchos enferman
+      y se quedan lelos»'
+    colon_1892: fuera del vol. 2
+    veredicto: DOS TESTIGOS INDEPENDIENTES (Pané y Las Casas), tres cadenas
+  - rasgo: el alma del vivo (`goeiz`) y la del muerto (`opia`) con nombres distintos
+    wikisource: sí, cap. XIII
+    las_casas: 'NO: para él `hupía` es el ánima a secas, y el fantasma es «la hupía … el ánima de alguno que á ellos
+      venia» (p. 535)'
+    angleria: no nombra a ninguna
+    colon_1892: fuera del vol. 2
+    veredicto: 'una cadena, y Las Casas la contradice en parte: en duda, degradar'
+  - rasgo: la tierra de los muertos con nombre (`Coaibai`, en `Soraya`, un extremo de la isla) y su señor
+    wikisource: sí, cap. XII
+    las_casas: false
+    angleria: no (los muertos comen `guannaba` y andan entre los vivos, p. 348, pero sin lugar)
+    colon_1892: fuera del vol. 2
+    veredicto: una cadena
+  - rasgo: el médico guarda dieta y toma cohoba para saber del cemí la causa del mal
+    wikisource: sí, cap. XV
+    las_casas: 'en general, p. 323: los behiques dan a entender que las estatuas «les descubrían los secretos»'
+    angleria: 'sí, p. 350: los `boicios` «se obligan á ayunar y á purgarse» y, tomada la hierba en polvo, «han oído
+      de los zemes muchas cosas»'
+    colon_1892: fuera del vol. 2
+    veredicto: tres cadenas
+  - rasgo: la cura — juntar o arrancar el mal con las manos, sacarlo por la puerta o soplarlo y despedirlo, chupar,
+      mostrar el objeto
+    wikisource: sí, cap. XVI (tira del enfermo «como si quisiera arrancar alguna cosa», va a la puerta y lo despide
+      hacia «la montaña, o al mar», con un soplo «como si despidiese una paja»; junta las manos y se las sopla;
+      sorbe; saca piedra, hueso o carne)
+    las_casas: 'por su cuenta, p. 535 (imagen): los behicos les estregaban brazos y piernas «soplando … cuasi como
+      que con aquel estregar y soplar echasen el mal fuera»'
+    angleria: 'sí, p. 351 (imagen): «retira de los pies las manos entrelazadas, y con ellas así juntas sale corriendo
+      á la puerta … y abriendo las manos las sacude»; saca el pedacito de carne'
+    colon_1892: fuera del vol. 2
+    veredicto: DOS TESTIGOS INDEPENDIENTES, tres cadenas
+  - rasgo: el mal lo envía el cemí desatendido
+    wikisource: sí, caps. XVI y XX (Vaibrama)
+    las_casas: sí, p. 446 (Vaybrama, extracto de Pané)
+    angleria: sí, pp. 351-352 (el zeme enojado porque no le construyó casa o no le dio finca)
+    colon_1892: sí, p. 6 (Braidama, cap. XX)
+    veredicto: cuatro cadenas, un testimonio
+  - rasgo: la venganza de los parientes contra el médico
+    wikisource: sí, caps. XVII-XVIII bis
+    las_casas: false
+    angleria: 'sí, p. 352: «Si murió por culpa del médico boicio, toman venganza de éste»'
+    colon_1892: fuera del vol. 2
+    veredicto: dos cadenas, un testimonio
+  - rasgo: el poder sobre la lluvia y el viento está en cemíes
+    wikisource: 'sí: Boinayol y Maroya, que traen la lluvia cuando se los visita (cap. XI); cemíes que «hacen llover»
+      y «correr los vientos» (cap. XV); Guabancex (cap. XXIII)'
+    las_casas: 'sí, pp. 322-323 (cemíes que dan «el agua, y el viento y el Sol»; una de tres piedras «para que tuviesen
+      agua») y, por su cuenta, p. 445: preguntado, el indio dice que el Cemí es «el que hace llover y hace que haya
+      sol»'
+    angleria: Guabancex sí (pp. 357-358); la cueva y sus dos zemes `Binthaitel` y `Maroho`, sí, pero venerados porque
+      de ella salieron el sol y la luna — SIN la lluvia (p. 347, imagen)
+    colon_1892: Guabancex sí (pp. 8-9)
+    veredicto: 'el poder sobre el agua en el objeto: cuatro cadenas y dos testigos (Pané, Las Casas); la lluvia
+      de Boinayol y Maroya, una sola cadena'
+  - rasgo: el señor toma la cohoba el primero para decidir la guerra
+    wikisource: sí, cap. XIX
+    las_casas: 'sí y DE VISTA, p. 446: «Yo los vi algunas veces celebrar su cohoba … El primero que la comenzaba
+      era el señor»'
+    angleria: sí, pp. 354-355 (los caciques consultan a los zemes en la casa dedicada)
+    colon_1892: 'sí, p. 4: «su señor es el primero que hace la Cogioba»'
+    veredicto: cuatro cadenas y un testigo de vista independiente
+  - rasgo: la cohoba es polvo aspirado, no tabaco ni humo
+    wikisource: sí, caps. XI, XV, XIX («cierto polvo»)
+    las_casas: sí y DE VISTA, pp. 445-446 (polvos de color leonado en un plato, sorbidos con el tubo de dos cañutos)
+    angleria: sí, pp. 350 y 354 («aquel polvo majado de la cohobba»)
+    colon_1892: sí, p. 5 (la Cogioba «tomado por las narices»)
+    oviedo: 'NO: para Oviedo es humo de una hierba (t. I pp. 130-131) y «cahobas ó ahumadas … que assimismo llaman
+      tabacos» (p. 143); y `cohoba` es además un árbol (p. 347)'
+    veredicto: polvo en las cuatro cadenas de Pané y en Las Casas de vista; Oviedo es el único que la hace humo
+lado_caqueti:
+- id: ct-c01
+  contenido: 'La efigie del díao: «É haçen á su semejança una figura de madera de relieve y pequeña, y el dia que
+    muere el diao, pónenla debaxo de la hamaca en que está el cuerpo muerto hasta que le queman, como es dicho,
+    y queman allí tambien esta imágen suya de palo». La imagen acompaña al cuerpo bajo la hamaca DESDE EL DÍA DE
+    LA MUERTE hasta que, años después, se quema el cuerpo para beber los huesos: no se quema al morir.'
+  capa: atestiguado
+  fuente:
+  - oviedo-y-valdes-1852-1855
+  pagina: t. II lib. XXV cap. IX, p. 300 (imagen)
+  grafia: '`diao`, «figura de madera de relieve», «imágen suya de palo»'
+  pueblo: caquetío — «en algunas partes desta gobernaçion de Veneçuela» (p. 299)
+  polity: la gobernación, sin comarca (regla 4); el funeral común, en cambio, lo da de «los que llaman çaquitios»
+    (p. 297)
+  epoca: contacto (Oviedo escribe 1535-1548; el cap. IX sin informante declarado)
+  como_se_escribio: cronista que no estuvo en Venezuela; el pasaje no está en su plantilla de La Española (§oviedo_dos_orillas)
+  proyeccion: 'Es lo que falta en creencia-010b/010c: completa el rito. «Hasta que le queman, como es dicho» remite
+    a la quema del funeral común (p. 297): al final del ciclo el cuerpo desecado se quema, y con él la imagen. Es
+    la «wooden image below him» de Steward 1948 p. 21.'
+  via_a:
+  - creencia-010b
+  - creencia-010c
+  - creencia-010d
+  efecto_en_via_a: 'creencia-010d: el caquetío destruye la imagen del muerto junto con el cuerpo y se bebe los huesos;
+    la disolución es de los dos, cuerpo e imagen.'
+- id: ct-c02
+  contenido: 'La cura del boratio, paso a paso. Si el enfermo no cree que él lo pueda sanar, se va; si cree, manda
+    ayunar a toda la casa con «maçamorra rala de mahiz que ellos llaman caça»; con las manos «çerrándolas é abriéndolas
+    … como quien quiere juntar otra cosa, diçe que le allega el alma á un cabo, y despues çierra el puño y sóplale
+    con la boca diçiendo: Allá yras mal»; da voces y aullidos hasta quedar ronco; chupa el lugar del dolor cinco
+    o seis días; al final enseña «la espina ó piedra ó palo que él traia en la boca». Si no mejora, se despide:
+    «el diablo me lo ha dicho assi».'
+  capa: atestiguado
+  fuente:
+  - oviedo-y-valdes-1852-1855
+  pagina: t. II lib. XXV cap. IX, p. 299 (imagen)
+  grafia: '`boratio`, `caça`, «maçamorra», «Allá yras mal» (en cursiva: las palabras del boratio, dichas en castellano)'
+  pueblo: caquetío — «los boratios», de los indios de la gobernación de Veneçuela
+  polity: la gobernación (regla 4)
+  epoca: contacto
+  como_se_escribio: Observador hostil («pues que es burla quanto haçe») que enmarca la cura con Plinio (§oviedo_dos_orillas);
+    el rito es utilizable, el juicio no (ficha arcaya-1920). Ninguna de estas piezas está en su buhití de La Española.
+  proyeccion: 'Hecho caquetío que creencia.yaml no tiene (sólo 023, el ayuno). Es el ancla atestiguada del barsure
+    en la cura: el boratio maneja «el alma» con las manos. QUÉ alma —la del enfermo, que se junta, o la del mal,
+    que se echa— no lo dice la fuente: no se decide aquí.'
+  via_a:
+  - creencia-006
+  - creencia-007
+  efecto_en_via_a: 'creencia-006: toca — el alma interviene en la cura caquetía atestiguada, pero no como alma perdida
+    que se negocia.'
+- id: ct-c03
+  contenido: 'El boratio es otro que el señor: «en cada pueblo prinçipal hay un boratio, al qual ocurren todos á
+    le preguntar las cosas que estan por venir, y le preguntan si lloverá ó si el año será seco ó abundante, ó si
+    deben yr á la guerra contra sus enemigos ó dexarlo de haçer, é si los chripstianos son buenos ó si los matarán»;
+    para responder «se ençierran en un buhío solo: y allí se echan unas ahumadas que llaman tabacos con tales hierbas
+    que le sacan de sentido; y está un dia, y dos y tres, é á veçes mas ençerrado»; le pagan con «alguna joya de
+    oro». El tabaco se siembra, se seca al humo en manojos «y es rescate muy estimado entre los indios».'
+  capa: atestiguado
+  fuente:
+  - oviedo-y-valdes-1852-1855
+  pagina: t. II lib. XXV cap. IX, p. 298 (imagen)
+  grafia: '`boratio`/`boratios` (en cursiva), «buhío», «ahumadas», «tabacos» (en romana)'
+  pueblo: caquetío — los indios de la gobernación de Veneçuela
+  polity: la gobernación (regla 4)
+  epoca: 'CONTACTO DECLARADO: la pregunta «si los chripstianos son buenos ó si los matarán» dice que el pasaje describe
+    el presente de la conquista (regla 3): la consulta existe, su temario es de 1530.'
+  como_se_escribio: la escena (encierro + diablo + lluvia y guerra) es plantilla del cronista (también en t. I p.
+    139 y en Camanagoto, t. II p. 255); el temario y el pago son propios
+  proyeccion: 'Separa los papeles en la primaria: el díao es «el señor prinçipal» (p. 299) y el oráculo es el boratio
+    de cada pueblo. El tabaco del boratio es FUMADO (con el aviso de ct-t13). Lo que el boratio adivina es cielo
+    y guerra (ya en la `lectura` de creencia-024).'
+  via_a:
+  - creencia-001b
+  - creencia-002
+  - creencia-003
+  efecto_en_via_a: 'creencia-002: el trance del boratio es de tabaco y en una casa aparte, no de sueño. creencia-003:
+    corrobora el tabaco fumado y la casa cerrada para el rito, y añade el pago (oro, no tabaco y bebida como en
+    Jahn).'
+steward_auditado:
+  cita: «In religion and political organization the Arawakan Jirajara and Caquetio have certain specific resemblances
+    to the Arawakan Taino of the Antilles.» (Steward 1948, p. 21, imagen). El resumen no cita nada; el lado caquetío
+    sale de Hernández de Alba pp. 469-474 (ya bajado a sus primarias en 6-fusion/hsai_caquetios_2026-09-23.yaml),
+    y el lado taíno del capítulo de Rouse, «The Arawak», que empieza en la p. 507 (§rouse_a_primarias).
+  quien_mas_lo_afirma: 'Las Casas, Apologética cap. CXX p. 321: de las islas «hasta la punta de Paria … y todo lo
+    de allí abajo hasta Veragua, cuasi toda era una manera de religión, y poca ó cuasi ninguna» — con interés apologético
+    y sin nombrar a los caquetíos. Ninguna otra primaria del repo compara las dos religiones.'
+  rasgos:
+  - n: r1
+    rasgo: el jefe con poder sobre los fenómenos naturales y el crecimiento de las plantas
+    caqueti: '✅ en la PERSONA del señor: Ampíes, carta (Oviedo y Baños 1885 t. II p. 212); Aguado vía Arcaya p.
+      115 — creencia-013'
+    taino: '❌ en la persona; ✅ en los CEMÍES que posee el cacique (ct-t11). Steward mismo no se lo atribuye al cacique
+      taíno: en la p. 24 sólo le da «civil, military, and religious affairs»'
+    veredicto: cae como semejanza; queda como CONTRASTE (persona / objeto)
+  - n: r2
+    rasgo: el jefe llevado en hamaca (caquetío) / en litera (taíno)
+    caqueti: ✅ Aguado vía Arcaya p. 115 («cargado en los hombros, en un genero de lecho que comunmente llaman hamaca»);
+      Oviedo y Baños p. 27
+    taino: ✅ «lo traían en unas andas cuatro hombres» (Diario de Colón, 18-XII-1492, en Navarrete 1859 t. I; capa
+      de texto, página no fijada)
+    veredicto: 'sobrevive, pero NO es específico: Steward mismo lo pone «to complete the parallel with Colombia»
+      (p. 24)'
+  - n: r3
+    rasgo: el jefe desecado en su casa, en su hamaca, «with a wooden image below him», y después cremado y bebido
+    caqueti: ✅ Oviedo t. II pp. 299-300 (imagen) — creencia-010b, 010c y ct-c01
+    taino: '✅ la imagen de madera con los huesos del señor, con su nombre (carta de Colón vía Las Casas p. 321,
+      imagen; Pané cap. XV) — ct-t01. ❌ la desecación: sin primaria en el repo (Rouse p. 532, §rouse_a_primarias).
+      ❌ cremar y beber'
+    veredicto: 'SOBREVIVE COMO PARALELO PARCIAL: la imagen de madera del muerto principal, con destino contrario.
+      Es el único rasgo específico con primaria en las dos orillas'
+  - n: r4
+    rasgo: los principales quemados y sus cenizas bebidas
+    caqueti: ✅ Oviedo t. II p. 297, «los que llaman çaquitios» — creencia-010
+    taino: ❌ entierro (Oviedo t. I p. 134; Las Casas p. 535); cero de endocanibalismo en las cuatro primarias —
+      ct-t02
+    veredicto: cae; Oviedo mismo lo hace rasgo de Tierra Firme
+  - n: r5
+    rasgo: un adoratorio comunal con ofrendas de los chamanes al sol y la luna
+    caqueti: '❌ son los AXAGUAS de Nueva Segovia, Barquisimeto, 1579 (hda-21; Arcaya p. 102); Arcaya: sin templos
+      (creencia-008c)'
+    taino: casas de los cemíes y caney del señor (Las Casas p. 445; Pané cap. XIX; Oviedo t. I p. 138), pero «no
+      tenian templos en muchas partes … sino una casa de paja como las otras» (Las Casas p. 321)
+    veredicto: cae del lado caquetío (regla 4)
+  - n: r6
+    rasgo: adivinación con ceniza de tabaco
+    caqueti: '✅ Oviedo t. II p. 298, pero doméstica: «cada uno es boratio» — creencia-024'
+    taino: '❌ ninguna adivinación con tabaco en Pané, Las Casas, Anglería ni Oviedo t. I: el taíno adivina con cohoba
+      o con ayuno'
+    veredicto: cae; es rasgo propio caquetío
+  - n: r7
+    rasgo: comunicarse con los espíritus tomando tabaco y una hierba narcótica
+    caqueti: ✅ Oviedo t. II p. 298 (ct-c03)
+    taino: ✅ la cohoba, polvo aspirado (cuatro cadenas y Las Casas de vista) — ct-t13
+    veredicto: 'paralelo de FUNCIÓN con sustancia distinta, y la escena es plantilla de Oviedo (también para Camanagoto):
+      no cuenta como específico'
+  - n: r8
+    rasgo: ídolos en cada casa
+    caqueti: '❌ en la costa: Oviedo dice que pintan la figura del diablo «en sus joyas y en madera de relieve y
+      en todas las cosas y partes que mas estiman» (p. 298, creencia-025), no ídolos; Arcaya: sin culto comunal
+      de ídolos (creencia-008c)'
+    taino: '✅ Pané cap. XV; Oviedo t. I pp. 125 y 138; pero Las Casas: «no tenian ídolos, sino raros» (p. 321)'
+    veredicto: 'cae del lado caquetío; y la lista de soportes de la figura (joyas, madera, relieve) es la de Oviedo
+      para el çemi de La Española (t. I pp. 125-126): plantilla'
+  - n: r9
+    rasgo: sacrificio de niñas al sol por la lluvia
+    caqueti: ❌ axaguas de Nueva Segovia (hda-22)
+    taino: '❌ Steward mismo, p. 24: los arahuacos de las Antillas «lacking cannibalism and human sacrifice»'
+    veredicto: cae por los dos lados
+  - n: r10
+    rasgo: el chamán sacerdote que cura chupando el objeto
+    caqueti: ✅ Oviedo t. II pp. 298-299 (ct-c02, ct-c03)
+    taino: ✅ Pané cap. XVI; Anglería p. 351; Las Casas pp. 323 y 535 (ct-t07, ct-t08)
+    veredicto: la succión es panamericana (trampa del `picure`); lo que sobrevive como paralelo de PROCEDIMIENTO
+      es la secuencia juntar-soplar-despedir-chupar-mostrar (ct-t08), que Oviedo no tenía en su plantilla
+  balance: 'Sobrevive como paralelo específico con primaria en las dos orillas sólo r3 (la imagen de madera del
+    muerto principal, con destino contrario); r7 y r10, como paralelos regionales de función o de procedimiento;
+    r2, sin ser específico. Caen r1, r4, r5, r6, r8 y r9; r5 y r9 porque el dato «caquetío» es de los axaguas de
+    Barquisimeto. La frase de Steward no se sostiene como tesis: queda un rasgo para decirlo, no para importarlo.'
+rouse_a_primarias:
+  nota: 'Rouse, «The Arawak», HSAI 4, desde la p. 507; sus fuentes, declaradas en la p. 520: Pané en tres versiones
+    (F. Columbus, Las Casas, Anghiera; compiladas en Bourne 1907) y los cronistas. No pone nota de fuente en estas
+    afirmaciones.'
+  afirmaciones:
+  - cita: «When it became apparent that a chief was about to die, he was strangled» (p. 532)
+    primaria: no localizada en el repo
+  - cita: «he might be abandoned in his hammock with food and water nearby» (p. 532)
+    primaria: Las Casas p. 535 (los sacan al monte con jarros de agua y de comer); la hamaca, no
+  - cita: «If he had died in his house, the building might be burned with the body inside» (p. 532)
+    primaria: no localizada en el repo
+  - cita: «Often the corpse was flexed, wound with cotton, and placed in a prepared grave, which might be lined
+      with sticks» (p. 532)
+    primaria: Oviedo t. I p. 134 (imagen)
+  - cita: «If the deceased were a chief, his body was sometimes disemboweled and dried over the fire, apparently
+      to be kept as a fetish (zemi). The heads of both chiefs and commoners were similarly treated and kept in baskets
+      in their children's houses» (p. 532, imagen)
+    primaria: 'NO LOCALIZADA en el repo: cero en Oviedo t. I (sondas sobre el tomo entero), en Pané-Wikisource,
+      en Las Casas (sólo el cap. CXX y la p. 535, sin desecación), en Anglería Déc. I lib. IX y en Colón 1892 vol.
+      2; y cero de cabezas en cestas en las cinco obras. Candidata sin verificar: la relación del Almirante que
+      precede a la Escritura de Pané en la Historia de Hernando Colón, que en la edición de 1892 está en el vol.
+      1 (B3 de la nota de decisión, sin descargar). Hasta verla, la desecación del cacique taíno NO es dato y el
+      paralelo r3 se apoya sólo en la imagen.'
+  - cita: «Grave objects … a bowl of water and some bread, the deceased's personal ornaments, and, in the case of
+      a chief, the stool … Several of a chief's wives were often buried alive» (p. 532)
+    primaria: Oviedo t. I p. 134 (imagen)
+  - cita: «composed chants to commemorate his reign, and danced and sang for 15 or 20 days» (p. 532)
+    primaria: Oviedo t. I p. 134 (imagen)
+  - cita: «The spirits of living people were called "goeiz"; those of the deceased "opia" … an earthly paradise
+      called Coaibai, which was said to be a remote valley» (p. 535)
+    primaria: 'Pané caps. XII-XIII; «remote valley» no: Pané dice «un extremo de la isla»'
+  - cita: «the bones of the deceased which some Indians kept as fetishes. Those of a dead chief were often encased
+      in a wooden image of the chief; others were kept in the house in baskets» (p. 535)
+    primaria: 'la imagen: carta de Colón vía Las Casas p. 321 (imagen) y Pané cap. XV; las cestas: no localizadas'
+  - cita: «a chief had constructed a speaking tube between his zemi and a hidden corner … the chief begged them
+      not to [expose it]» (p. 536)
+    primaria: Las Casas p. 321 (la trompa o «cebratana»); el ruego del cacique no está en Las Casas
+  - cita: «Before the shaman visited a sick person both he and his patient fasted … took snuff … blackened his face
+      with soot … drew off an imaginary object, going to the door and throwing it outside» (p. 537)
+    primaria: Pané caps. XV-XVI; Anglería pp. 350-351
+auditoria_via_a:
+  como_leer: una línea por id; «corrobora / contradice / no toca» con la cita. El detalle está en el hecho que se
+    nombra.
+  filas:
+  - id: creencia-002
+    veredicto: corrobora en parte
+    cita: 'el trance en que un espíritu revela la causa del mal: Pané cap. XV; Anglería p. 350; Las Casas p. 323;
+      y el boratio, «el diablo me lo ha dicho» (Oviedo t. II p. 299). El sueño como medio, no: `sueñ-` = 0 en Pané-Wikisource'
+    hecho: ct-t07
+  - id: creencia-003
+    veredicto: corrobora en parte
+    cita: 'casa vaciada y cerrada para curar y canto (Pané cap. XVI; Anglería p. 350); tabaco fumado del especialista
+      caquetío (Oviedo t. II p. 298); serpiente auxiliar con eco de una cadena (Pané cap. XVIII). No toca urari
+      ni licor. Aviso: su `reconstruido` descansa en vecinos NO arahuacos (ayomán, timote) más el wayuu sólo para
+      el tabaco'
+    hecho:
+    - ct-t08
+    - ct-t10
+    - ct-c03
+  - id: creencia-005
+    veredicto: no toca
+    cita: el alma taína se aparece de noche (Pané cap. XIII, `goeiz`; Las Casas p. 535, `hupía`), pero ninguna fuente
+      la hace viajar en el sueño
+    hecho: ct-t06
+  - id: creencia-006
+    veredicto: contradice (como etiología única)
+    cita: 'en lo taíno el mal es intrusión o envío del cemí desatendido (Pané caps. XVI y XX; Anglería pp. 351-352),
+      no alma perdida; el boratio caquetío «allega el alma á un cabo» antes de soplar el mal (Oviedo t. II p. 299):
+      ancla atestiguada, ambigua'
+    hecho:
+    - ct-t09
+    - ct-c02
+  - id: creencia-007
+    veredicto: corrobora en parte
+    cita: males que manda un espíritu y exigen al especialista (Pané caps. XVI y XX; Anglería p. 352); el buhití
+      a la vez herbolario y adivino (Oviedo t. I p. 126). Sin principio de semejanza
+    hecho: ct-t09
+  - id: creencia-008
+    veredicto: corrobora
+    cita: «el gran miedo que tenian de los fantasmas de noche» (Las Casas p. 535, testigo propio); los muertos en
+      los caminos, de noche, y el miedo que enferma (Pané proemio y cap. XIII; Anglería p. 349). Dos tradiciones
+      con el wayuu; la ambivalencia (el muerto antiguo protege) no la da el taíno
+    hecho:
+    - ct-t04
+    - ct-t14
+  - id: creencia-009
+    veredicto: corrobora
+    cita: '`Coaibai`, «en un extremo de la isla, llamado Soraya», donde los muertos comen y yacen (Pané caps. XII-XIII;
+      Anglería p. 348 sin el nombre): con Jepira, dos tradiciones; se conserva el contraste con creencia-028 («abajo»)'
+    hecho: ct-t05
+  - id: creencia-010d
+    veredicto: contradice la generalización
+    cita: 'el taíno CONSERVA al muerto principal, con su nombre, dentro de una estatua de madera (Las Casas p. 321,
+      carta de Colón; Pané cap. XV): la disolución en el colectivo es caquetía y wayuu, no arahuaca general'
+    hecho:
+    - ct-t01
+    - ct-t02
+    - ct-c01
+  - id: creencia-011
+    veredicto: no toca
+    cita: ninguna fuente taína dice quién manipula los huesos ni sus tabúes; del lado caquetío, quien cuida el cuerpo
+      del díao es «su hijo y subçessor en el Estado» (Oviedo t. II p. 300), no una mujer o una anciana
+    hecho: ct-c01
+  - id: creencia-012
+    veredicto: no corrobora
+    cita: Pané cap. XV pone los cemíes con huesos y los que hacen llover como clases distintas; ninguna fuente taína
+      enlaza huesos y lluvia
+    hecho: ct-t11
+  fuera_de_la_via_a: 'creencia-008b y 008c son atestiguados (Arcaya), no wayuu: ct-t04 es `lectura` de 008b; ct-t12
+    deja más sola la mitad religiosa de creencia-001b.'
+lo_que_no_se_propone:
+  cosmogonia: 'El origen en las cuevas (Pané cap. I; Anglería p. 340), Yocahu y su madre, y el mar que sale de la
+    calabaza de Yaya: leídos, sin ancla caquetía. Importarlos sería llenar un hueco con un mito ajeno (nota de decisión
+    §2).'
+  voces_y_teonimos: 'Ninguno: `cemí`, `buhitihu`, `cohoba`, `goeiz`, `opia`, `hupía`, `Coaibai`, `Guabancex`, `Boinayol`…
+    se citan como grafía de la fuente. La voz atestiguada del especialista es `boratio`.'
+  contacto: 'Un paralelo no prueba contacto ni difusión: «primos, no vecinos» (taino-en-la-esfera-2026-09-21.md).'
+ceros:
+- 'Desecación de un cacique taíno, o çemi con huesos, en Oviedo t. I: 0 (huess-, enxug-, brasa, enterr- sobre el
+  tomo entero).'
+- '`çemi`, `areyto`, `duho` en Oviedo t. II lib. XXV: 0. «como en esta isla»: 0.'
+- 'Adivinación con tabaco en las cuatro fuentes taínas: 0.'
+- 'Beber los huesos o las cenizas en las cuatro fuentes taínas: 0.'
+- 'Venganza contra el médico o interrogatorio del muerto en una fuente caquetía del repo: 0.'
+- 'Cabezas guardadas en cestas: 0 en Oviedo t. I, Las Casas, Anglería vol. 1 y 4, Colón 1892 vol. 2 y Navarrete
+  t. I.'
+- '`Coaibai` y `goeiz`: sólo en la cadena de Wikisource (0 en Las Casas, Anglería y Colón vol. 2).'
+- '`sueñ-` en Pané-Wikisource: 0.'
+lo_que_queda:
+- 'La primaria del cacique «dried over the fire» y de las cabezas en cestas (Rouse p. 532): la candidata es el vol.
+  1 de la Historia del Almirante 1892 (B3, 12,9 MB). Si la desecación taína aparece, r3 pasa de imagen a imagen
+  + desecación.'
+- 'Bourne 1906 (B1): el cotejo de las tres versiones de Pané que aquí se hizo a mano para los rasgos de §cotejo_pane;
+  serviría de control.'
+- 'Ulloa 1571 (B2): para citar a Pané sin la retraducción, sobre todo el cap. XIII (goeiz/opia frente a la hupía
+  de Las Casas) y el XVII.'
+- 'Oliver 2009 (C1): si el Oliver de la tesis caquetía tiende él mismo el puente cemí-díao.'
+- 'La fusión que esto pide: ct-c01 (la efigie) y partir creencia-001b siguen esperando desde T6 (taino2-oviedo-ii-iv
+  §3).'

@@ -153,3 +153,12 @@ manatí manso Matum (pp. 319, 323), de segunda mano (la fuente es la Déc. III d
 Anglería, que no está en el repo); Atabey glosada «madre de Dios», no del agua.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana` y Guayana (impresa = pdf − 4). pp. 120-121: Del Monte
+(1853) dice que las terminaciones en *ana* «son aplicables á la agricultura,
+plantas, frutos y sus poseedores», y Bachiller lo da por equivocado; p. 114:
+Habana 'pradera ó tal vez bosque' (conjetura); p. 205: *nacan* 'centro' y el
+*anaca* arahuaco; p. 277, s.v. Guainía: de ahí «han derivado los españoles la
+voz Guiana ó Guayana» (tras Dauxion Lavaysse, tercera mano). Sesión: [[14_cruce_toponimos_hermanas]].

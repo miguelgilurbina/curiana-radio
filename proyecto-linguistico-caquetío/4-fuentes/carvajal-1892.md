@@ -98,4 +98,15 @@ para localizar; la página impresa va en la cabecera de cada imagen, y el
 desfase medido es impresa = pdf − 15 en el tramo 316-317. Ortografía de la
 edición: çedilla, `u`/`v` intercambiadas, `ss` dobles.
 
+## Los Manaure de Colombia (2026-10-09)
+
+Dos cosas para la pregunta por los Manaure colombianos, del `.txt` de
+archive.org (sin imagen): «cataures y **manaures** muy labrados» (p. 168),
+que [[alvarado-1921]] corrige como *manare*, el cernidor; y la nota del
+editor de 1892 en los «Apuntes biográficos» (p. 408 según el OCR), que hace
+al gran cacique Manaure «soberano de las naciones índicas … de la laguna de
+Maracaybo»: la leyenda que hoy repite el Cesar, impresa en el s. XIX. El
+texto de Carvajal (p. 317) manda a Manaure al sur, por los llanos del Apure.
+Detalle en [[13_manaure_colombia]].
+
 Índice: [[INDICE_FUENTES]]

@@ -136,3 +136,9 @@ citar. Cuatro correcciones a lo que dejó la parcela de Zayas (#220):
   él mismo cita son del rollo (tabaco) y del polvo y el rito (cohoba).
 
 Detalle y etiquetas: `6-fusion/fuentes_poporo_coro_zayas_2026-09-23.yaml` §zayas.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana`: s.v. *Abayagua* (t. I) repite la *Maguana* «que
+significaba Vega menor o pequeña»; s.v. *Ana* (t. I p. 34) llama arbitraria la
+lectura de Del Monte y Bachiller. Sesión: [[14_cruce_toponimos_hermanas]].

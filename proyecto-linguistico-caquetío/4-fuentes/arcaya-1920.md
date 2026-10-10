@@ -353,3 +353,25 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** Repite a Oviedo (p. 98-99: «yrán a pescar» en la adivinación con tabaco) y a Pérez de Tolosa («mucha caza y pesca»); cita a Aguado para el poder de Manaure sobre el cielo (p. 115). La pesquería de perlas de su p. 329 es colonial (1599).
 
 **No se halló:** Cero creencia del mar.
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿En qué apoya Arcaya que los ajaguas de Falcón
+sean los achaguas, y dónde los pone? Leídas pp. 8-25, 31-61, 73-75, 83, 91-94,
+101-102, 117, 230-232, 278-279 y 326-328 (impresa = pdf − 8).
+
+**Qué se halló.** El territorio: «los Ajaguas predominaban en las montañas de
+Pedregal» (p. 35), con «documentos inéditos» sin signatura; pueblos de
+encomienda en Utaquire y Pedregal (p. 94); en el s. XVIII, los de Pedregal
+«vagando en pequeñas partidas» (pp. 58-59); y a fines del s. XVI algunos
+ajaguas y jirajaras trasladados a Paraguaná (p. 327). La identidad: el
+nombre, la «constante vecindad» con caquetíos y jirajaras (p. 55) y una
+etimología guajira (p. 35); la filiación lingüística se deduce de la
+identidad, sin voz (pp. 73-74). La grafía: «Predominó en Coro y Barquisimeto
+la forma "Ajaguas"» (p. 35), que es Axagua tras el cambio castellano /ʃ/ → /x/.
+
+**Qué NO.** Ningún ajagua en Mitare: Mitare es pueblo de caquetíos libres
+(p. 230) y el río de los Mitares es la salida del de Pedregal (pp. 14, 17).
+Y escribe «Cocaride» por el Cacaridi de Federmann (p. 56).
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

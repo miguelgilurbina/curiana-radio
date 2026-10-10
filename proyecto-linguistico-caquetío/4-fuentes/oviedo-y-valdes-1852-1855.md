@@ -491,3 +491,22 @@ Española los mismos bigramas que el capítulo caribe de control
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (ct-c01, ct-c02, ct-c03 y
 §oviedo_dos_orillas).
+
+## Los Manaure de Colombia (2026-10-09)
+
+**Qué se preguntó.** ¿Hay un Manaure, o nombres en -aure, en la esfera
+occidental (el lago, el Perijá, el Valle de Upar, la Guajira)?
+
+**Qué se halló.** (1) **Mapaure**, «tierra de Xuduara», donde los cristianos
+de Maracaibo hacían cazabe y maíz en agosto de 1533: t. II, lib. XXV,
+cap. VIII, p. 295 (pdf 309), visto en imagen. Es el único -aure occidental
+del s. XVI en el repo. (2) La **lámina I del t. II** (pdf 533, vista en
+imagen): «Bubures» al pie de la «Sierra de los Bubures» y «Buredes
+coronados» en «El Valle». Ningún Manaure. (3) El final -aure fuera de la
+Kaketiana: Paralaure (Trinidad, p. 210), Parataure (boca del Orinoco,
+p. 217; Harataure en el t. IV, p. 538).
+
+**Qué NO.** Ningún Manaure en los tomos II-IV.
+
+Detalle: [[13_manaure_colombia]] y `6-fusion/manaure_colombia_2026-10-09.yaml`
+(manaure-col-001, 003, 017).

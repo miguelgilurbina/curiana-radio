@@ -1,0 +1,560 @@
+# Generado por 6-fusion/scripts/medir_xaguas_2026-10-09.py — no se edita a mano.
+meta:
+  medido: '2026-10-09'
+  script: 6-fusion/scripts/medir_xaguas_2026-10-09.py
+  estado: PROPUESTA (regla 5). Cifras emitidas por el script; no se editan a mano.
+  propuesta: 6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml
+  aviso_sondas: 'conteo sin distinguir mayúsculas sobre el texto con los blancos colapsados; «achagua» incluye «achaga»
+    (Gumilla, Arcaya); «ajagua» incluye «aj agua» partido por pdftotext; «jagua» cuenta la palabra suelta: en Aguado
+    y Oviedo es el TINTE (Genipa), no el pueblo — leer el pasaje.'
+  aviso_azar: 'NO es un cruce: los dos nombres xaguas no tienen glosa. Mide cuánto se parece CUALQUIER nombre de
+    aldea de la crónica al achagua de Neira por pura forma, para que nadie lea un parecido de Coary o Cacaridi como
+    indicio.'
+sondas:
+  federmann-1916 (Arcaya, trad.):
+    archivo: Federmann_1916_Narracion_Primer_Viaje_Arcaya.txt
+    etnonimo:
+      xagua: 20
+      axagua: 2
+      ajagua: 1
+      achagua: 5
+      jagua: 0
+      achagual: 0
+    lugares:
+      mitare: 0
+      pedregal: 0
+      carora: 6
+      baragua: 1
+      barragua: 0
+      siruma: 0
+      ciruma: 0
+      empalado: 0
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 1
+      avaria: 1
+      tupure: 0
+      coary: 1
+      cacaridi: 1
+  federmann-1916 (Klüpfel 1859, alemán):
+    archivo: Federmann_Kluepfel_1859_Reisen_texto_aleman.txt
+    etnonimo:
+      xagua: 15
+      axagua: 0
+      ajagua: 0
+      achagua: 0
+      jagua: 0
+      achagual: 0
+    lugares:
+      mitare: 0
+      pedregal: 0
+      carora: 0
+      baragua: 0
+      barragua: 0
+      siruma: 0
+      ciruma: 0
+      empalado: 0
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 0
+      avaria: 0
+      tupure: 0
+      coary: 1
+      cacaridi: 1
+  oliver-1989-cap3-vecinos (tesis, OCR §3.3):
+    archivo: Oliver_1989_cap3_s33_falcon_lara.ocr.txt
+    etnonimo:
+      xagua: 18
+      axagua: 3
+      ajagua: 0
+      achagua: 2
+      jagua: 2
+      achagual: 0
+    lugares:
+      mitare: 1
+      pedregal: 2
+      carora: 8
+      baragua: 5
+      barragua: 0
+      siruma: 2
+      ciruma: 0
+      empalado: 0
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 1
+      avaria: 0
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  oliver-1989-cap3 (DOC 2006):
+    archivo: Chapter 3 Ethnohistory.DOC-comprimido.pdf
+    etnonimo:
+      xagua: 24
+      axagua: 8
+      ajagua: 0
+      achagua: 18
+      jagua: 3
+      achagual: 0
+    lugares:
+      mitare: 5
+      pedregal: 4
+      carora: 7
+      baragua: 5
+      barragua: 3
+      siruma: 2
+      ciruma: 0
+      empalado: 0
+      cariagua: 1
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 1
+      quiragua: 1
+      avaria: 0
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  jahn-1927:
+    archivo: Jahn_1927_Aborigenes_Occidente_Venezuela.pdf
+    etnonimo:
+      xagua: 14
+      axagua: 5
+      ajagua: 16
+      achagua: 37
+      jagua: 2
+      achagual: 0
+    lugares:
+      mitare: 0
+      pedregal: 3
+      carora: 9
+      baragua: 1
+      barragua: 0
+      siruma: 1
+      ciruma: 4
+      empalado: 6
+      cariagua: 0
+      mapiare: 1
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 0
+      avaria: 1
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  arcaya-1920:
+    archivo: Arcaya_1920_Historia_Estado_Falcon.pdf
+    etnonimo:
+      xagua: 2
+      axagua: 4
+      ajagua: 28
+      achagua: 17
+      jagua: 2
+      achagual: 0
+    lugares:
+      mitare: 7
+      pedregal: 10
+      carora: 12
+      baragua: 2
+      barragua: 2
+      siruma: 4
+      ciruma: 0
+      empalado: 4
+      cariagua: 1
+      mapiare: 2
+      sibur[uú]a: 2
+      utaquire: 2
+      autaquire: 1
+      acurigua: 6
+      quiragua: 3
+      avaria: 0
+      tupure: 1
+      coary: 1
+      cacaridi: 1
+  perez-de-tolosa-1546 (Fernández Duro t. II):
+    archivo: Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+    etnonimo:
+      xagua: 0
+      axagua: 1
+      ajagua: 1
+      achagua: 2
+      jagua: 0
+      achagual: 0
+    lugares:
+      mitare: 0
+      pedregal: 0
+      carora: 10
+      baragua: 0
+      barragua: 0
+      siruma: 0
+      ciruma: 0
+      empalado: 2
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 0
+      avaria: 0
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  aguado-1581:
+    archivo: Aguado_1918_Historia_Venezuela_t1_gutenberg.txt
+    etnonimo:
+      xagua: 3
+      axagua: 1
+      ajagua: 0
+      achagua: 0
+      jagua: 0
+      achagual: 0
+    lugares:
+      mitare: 0
+      pedregal: 0
+      carora: 11
+      baragua: 0
+      barragua: 0
+      siruma: 0
+      ciruma: 0
+      empalado: 0
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 0
+      avaria: 0
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  rivero-1883:
+    archivo: Rivero_1883_Historia_Misiones_Casanare.txt
+    etnonimo:
+      xagua: 0
+      axagua: 0
+      ajagua: 0
+      achagua: 221
+      jagua: 0
+      achagual: 1
+    lugares:
+      mitare: 0
+      pedregal: 0
+      carora: 0
+      baragua: 0
+      barragua: 22
+      siruma: 0
+      ciruma: 0
+      empalado: 0
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 0
+      avaria: 0
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  urbina-jimenez-2007-2011 (2011):
+    archivo: Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt
+    etnonimo:
+      xagua: 2
+      axagua: 0
+      ajagua: 0
+      achagua: 0
+      jagua: 0
+      achagual: 0
+    lugares:
+      mitare: 5
+      pedregal: 4
+      carora: 1
+      baragua: 0
+      barragua: 0
+      siruma: 1
+      ciruma: 0
+      empalado: 0
+      cariagua: 0
+      mapiare: 0
+      sibur[uú]a: 0
+      utaquire: 0
+      autaquire: 0
+      acurigua: 0
+      quiragua: 0
+      avaria: 0
+      tupure: 0
+      coary: 0
+      cacaridi: 0
+  esteves-1989 (seis partes, OCR):
+    archivo: Esteves_1989_Toponimos_Paraguana_{1..6}.ocr.txt
+    etnonimo:
+      xagua: 0
+      axagua: 0
+      ajagua: 0
+      achagua: 0
+      jagua: 1
+      achagual: 0
+    lugares:
+      mitare: 11
+      pedregal: 19
+      carora: 1
+      baragua: 5
+      barragua: 0
+      siruma: 0
+      ciruma: 0
+      empalado: 0
+      cariagua: 2
+      mapiare: 2
+      sibur[uú]a: 3
+      utaquire: 2
+      autaquire: 2
+      acurigua: 7
+      quiragua: 4
+      avaria: 10
+      tupure: 3
+      coary: 0
+      cacaridi: 0
+azar_nombres_de_aldea:
+  resumen:
+    entradas_neira_con_forma_comparable: 4399
+    entradas_del_vocabulario: 4276
+    umbral_parecido: 0.62
+    umbral_cognado: 0.75
+    control_n_nombres: 13
+    control_mejor_similitud_media: 0.808
+    control_mejor_similitud_min_max:
+    - 0.632
+    - 0.909
+    control_entradas_ge_umbral_parecido_mediana: 81
+    control_nombres_con_alguna_entrada_ge_umbral_cognado: 11
+    xaguas_mejor_similitud:
+      Coary: 0.889
+      Cacaridi: 0.875
+    xaguas_por_encima_del_maximo_del_control: []
+  xaguas:
+    Coary:
+      forma_fonemizada: koari
+      mejor_similitud: 0.889
+      mejor_achagua: Cari
+      su_glosa: Barro
+      entradas_ge_umbral_parecido: 82
+      entradas_ge_umbral_cognado: 5
+    Cacaridi:
+      forma_fonemizada: kakaridi
+      mejor_similitud: 0.875
+      mejor_achagua: Cacaribi
+      su_glosa: Cano
+      entradas_ge_umbral_parecido: 171
+      entradas_ge_umbral_cognado: 13
+  control:
+    Hittova:
+      forma_fonemizada: itoba
+      mejor_similitud: 0.8
+      mejor_achagua: itaba
+      su_glosa: Sobre
+      entradas_ge_umbral_parecido: 51
+      entradas_ge_umbral_cognado: 11
+      pueblo: jirajara
+    Carohana:
+      forma_fonemizada: karoana
+      mejor_similitud: 0.833
+      mejor_achagua: Carran
+      su_glosa: Espuma
+      entradas_ge_umbral_parecido: 128
+      entradas_ge_umbral_cognado: 11
+      pueblo: ayamán
+    Vararida:
+      forma_fonemizada: bararida
+      mejor_similitud: 0.842
+      mejor_achagua: Nubaribaridau
+      su_glosa: Abreviar
+      entradas_ge_umbral_parecido: 183
+      entradas_ge_umbral_cognado: 38
+      pueblo: caquetío (Barquisimeto y Llanos)
+    Itabana:
+      forma_fonemizada: itabana
+      mejor_similitud: 0.875
+      mejor_achagua: Cuitabana
+      su_glosa: Corazon
+      entradas_ge_umbral_parecido: 143
+      entradas_ge_umbral_cognado: 25
+      pueblo: caquetío (Barquisimeto y Llanos)
+    Variquecemeto:
+      forma_fonemizada: barikesemeto
+      mejor_similitud: 0.632
+      mejor_achagua: Abarico
+      su_glosa: Pieza, aposento
+      entradas_ge_umbral_parecido: 3
+      entradas_ge_umbral_cognado: 0
+      pueblo: caquetío (Barquisimeto y Llanos)
+    Todariquiba:
+      forma_fonemizada: todarikiba
+      mejor_similitud: 0.75
+      mejor_achagua: Daquiba
+      su_glosa: Ormigas bravas
+      entradas_ge_umbral_parecido: 42
+      entradas_ge_umbral_cognado: 2
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Mitare:
+      forma_fonemizada: mitare
+      mejor_similitud: 0.909
+      mejor_achagua: Jtaresi
+      su_glosa: Ofensa
+      entradas_ge_umbral_parecido: 73
+      entradas_ge_umbral_cognado: 15
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Capatarida:
+      forma_fonemizada: kapatarida
+      mejor_similitud: 0.737
+      mejor_achagua: Quirratariá
+      su_glosa: Barranca
+      entradas_ge_umbral_parecido: 83
+      entradas_ge_umbral_cognado: 0
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Zazarida:
+      forma_fonemizada: sasarida
+      mejor_similitud: 0.75
+      mejor_achagua: Nubasaidau
+      su_glosa: Absolver, desatar
+      entradas_ge_umbral_parecido: 81
+      entradas_ge_umbral_cognado: 7
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Cumarebo:
+      forma_fonemizada: kumarebo
+      mejor_similitud: 0.778
+      mejor_achagua: cachumarebe
+      su_glosa: Escuridad
+      entradas_ge_umbral_parecido: 26
+      entradas_ge_umbral_cognado: 1
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Guaibacoa:
+      forma_fonemizada: guaibakoa
+      mejor_similitud: 0.8
+      mejor_achagua: Abacoa
+      su_glosa: H.ta q.e se fue un año
+      entradas_ge_umbral_parecido: 110
+      entradas_ge_umbral_cognado: 7
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Moruy:
+      forma_fonemizada: morui
+      mejor_similitud: 0.889
+      mejor_achagua: Numorru
+      su_glosa: Cazar
+      entradas_ge_umbral_parecido: 16
+      entradas_ge_umbral_cognado: 3
+      pueblo: caquetío (costa, otras crónicas del repo)
+    Miraca:
+      forma_fonemizada: miraka
+      mejor_similitud: 0.909
+      mejor_achagua: Jrracasi
+      su_glosa: trago
+      entradas_ge_umbral_parecido: 119
+      entradas_ge_umbral_cognado: 15
+      pueblo: caquetío (costa, otras crónicas del repo)
+lugares:
+  Mitare (pueblo):
+    lat: 11.3499199
+    lon: -70.0327014
+    origen: 'volcado: node 3948744958'
+    km_a_Mitare: 0.0
+    km_a_Pedregal: 37.4
+  Agua Clara:
+    lat: 11.1602136
+    lon: -69.9690056
+    origen: 'nominatim: node 9087415620'
+    km_a_Mitare: 22.2
+    km_a_Pedregal: 22.1
+  Pedregal:
+    lat: 11.0237511
+    lon: -70.1166009
+    origen: 'volcado: node 3948666957'
+    km_a_Mitare: 37.4
+    km_a_Pedregal: 0.0
+  Pecaya:
+    lat: 11.0769628
+    lon: -69.8649275
+    origen: 'nominatim: node 3948667760'
+    km_a_Mitare: 35.4
+    km_a_Pedregal: 28.1
+  Parroquia Avaria (centroide):
+    lat: 10.7898035
+    lon: -70.4165066
+    origen: 'nominatim: relation 11050822'
+    km_a_Mitare: 75.1
+    km_a_Pedregal: 41.8
+  San Luis (Cariagua, según Esteves y Oliver):
+    lat: 11.1203301
+    lon: -69.6843215
+    origen: 'nominatim: node 5327484731'
+    km_a_Mitare: 45.8
+    km_a_Pedregal: 48.4
+  Acurigua:
+    lat: 11.30491
+    lon: -69.4613565
+    origen: 'volcado: node 3942824345'
+    km_a_Mitare: 62.5
+    km_a_Pedregal: 78.0
+  Quiragua (la de Miranda/Zamora del volcado):
+    lat: 11.443864
+    lon: -69.3448556
+    origen: 'volcado: node 5878373894'
+    km_a_Mitare: 75.7
+    km_a_Pedregal: 96.3
+  Churuguara (Mapiare, según Esteves):
+    lat: 10.8116686
+    lon: -69.5382564
+    origen: 'nominatim: node 1616158444'
+    km_a_Mitare: 80.6
+    km_a_Pedregal: 67.4
+  Baragua (capital de la parroquia Xaguas):
+    lat: 10.5832137
+    lon: -69.9484037
+    origen: 'nominatim: node 5334941552'
+    km_a_Mitare: 85.7
+    km_a_Pedregal: 52.3
+  Parroquia Xaguas (centroide):
+    lat: 10.5798039
+    lon: -70.0624958
+    origen: 'nominatim: relation 11073231'
+    km_a_Mitare: 85.7
+    km_a_Pedregal: 49.7
+  Siquisique:
+    lat: 10.5742281
+    lon: -69.7027348
+    origen: 'nominatim: node 5334939689'
+    km_a_Mitare: 93.5
+    km_a_Pedregal: 67.4
+  Río Tocuyo (pueblo):
+    lat: 10.2695086
+    lon: -69.9358819
+    origen: 'nominatim: node 5333399379'
+    km_a_Mitare: 120.6
+    km_a_Pedregal: 86.2
+  Aregue:
+    lat: 10.2399757
+    lon: -70.0339392
+    origen: 'nominatim: node 5227096721'
+    km_a_Mitare: 123.4
+    km_a_Pedregal: 87.6
+  Carora:
+    lat: 10.169534
+    lon: -70.0728483
+    origen: 'nominatim: node 2612573805'
+    km_a_Mitare: 131.3
+    km_a_Pedregal: 95.1

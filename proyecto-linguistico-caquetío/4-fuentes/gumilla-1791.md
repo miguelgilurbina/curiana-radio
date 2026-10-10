@@ -21,13 +21,13 @@ acceso: >-
   0481059ecf1d81d0e4b88f33ac029e20084887dc63a6f37dd7325a5a350b4b6d.
   t. II: 19.819.370 bytes, sha256
   248d1d54bf1af26f2a5e3a9b4b27f46c3f3d8f6eaa840cb4a86385c0120221b4.
-estado_minado: minada-parcial
-cobertura: "2026-09-23: caquetíos y costa (barrido con variantes, los dos tomos), voces achaguas con glosa cotejadas con Neira y Ribero, lo que dice de lenguas (t. II caps. IV-V y anécdotas) y la fauna que colgaba de eso — en 6-fusion/gumilla_1791_2026-09-23.yaml. SIN MINAR: la historia natural del t. II (peces, culebras, aves, plantas), la etnografía general (guerra, matrimonio, ritos, entierros) y el sáliva"
+estado_minado: minado-parcial
+cobertura: "2026-09-23: caquetíos y costa (barrido con variantes, los dos tomos), voces achaguas con glosa cotejadas con Neira y Ribero, lo que dice de lenguas (t. II caps. IV-V y anécdotas) y la fauna que colgaba de eso — en 6-fusion/gumilla_1791_2026-09-23.yaml. SIN MINAR: la historia natural del t. II (peces, culebras, aves, plantas), la etnografía general (guerra, matrimonio, ritos, entierros) y el sáliva; 2026-10-09 (minería 2, lokono): t. I p. 154 (los aruacas sujetos a los caribes); . 2026-10-09 (minería 2 achagua): los pasajes con «Achag-» de los dos tomos (16 + 12 aciertos) leídos en contexto, por sus esferas sociales (6-fusion/hermanas_achagua_2026-10-09.yaml); vistas en imagen t. I p. 200 y t. II p. 92"
 prioridad: baja
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-23
-minado: 2026-09-23
+verificado: 2026-10-09
+minado: 2026-10-09
 aliases: ["Gumilla 1791", "Joseph Gumilla", "El Orinoco Ilustrado"]
 ---
 
@@ -174,3 +174,51 @@ sus sepulturas» (pp. 210-211), también.
 huesos ni iniciación. Los huesos guardados que da son warao (p. 199) y caribe
 (p. 201). Del t. II sólo se leyó el eclipse de los loláca y atabáca (p. 274) y
 la única mención aruaca (pdf 63).
+
+## Minería 2 — esferas lokonas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). La creencia
+de los aruacas ya la minó la minería 1 (arriba). Se volvió sólo a la **p. 154
+del t. I** (pdf 178, vista en imagen) por la guerra: los aruacas, «despues de
+largas y sangrientas guerras con los Caribes, se les han sujetado, y viven
+entre ellos», y son «la Nacion mas amante y leal á la Nacion Española».
+Contradice el «never conquered» de la tradición que recoge [[brett-1868]]
+(p. 493), pero en otra región: Orinoco y costa hacia Cayena frente al
+Pomeroon. Va en `lokono-geografia_politica-004` y `-009`. La p. 114 (los
+achaguas «hijos de los troncos» y «de los ríos») sirve de segunda tradición
+en `lokono-parentesco-002`.
+
+## Minería 2 — esferas achaguas (2026-10-09)
+
+Minería de [[10_hermanas_achagua_esferas]]; propuesta en
+`6-fusion/hermanas_achagua_2026-10-09.yaml`. Se leyeron en contexto los aciertos
+de «Achag-» de los dos tomos (16 en el t. I, 12 en el t. II), por sus esferas
+sociales. Gumilla trató a los achaguas en Casanare y leyó a Rivero (t. II p. 14):
+es testigo independiente en lo que dice haber visto.
+
+**Qué dio:**
+
+| Dato | Página | Tema | Etiqueta | Pueblo |
+|---|---|---|---|---|
+| La tumba con tapa de barro resanada cada mañana, «únicamente con sus Capitanes y Caciques» | t. I p. 200 (imagen) | muerte-entierro | atestiguado | achagua |
+| «No son éstas gente de guerra; y dicen que ni sus mayores lo fueron»: sin exámenes de capitán | t. II p. 92 (imagen) | guerra | atestiguado | achagua |
+| Parcialidades «hijos de los Troncos» (*Aycuhaverrenais*) y de los ríos (*Univerrenais*); los achaguas, maestros de los sálivas en sus orígenes | t. I pp. 113-114 | linaje-clan | atestiguado | achagua |
+| En la maipure «se hallan muchas palabras Achaguas, son introducidas por el comercio» | t. II p. 32 | alianza-intercambio | atestiguado | achagua |
+| Un capitán chiricoa le habla en achagua | t. II p. 18 | alianza-intercambio | atestiguado | achagua |
+| La nación achagua no llega a tres mil almas (1741) | t. II p. 55 | escala-poblacion | atestiguado | achagua |
+| Achaguas y sálivas, naciones dadas al cultivo | t. I p. 105 | cultivo | atestiguado | achagua |
+| La caza de la danta con reclamo y curare | t. I pp. 264-266 | caza-recoleccion | atestiguado | achagua |
+
+**Qué no dio.** La «casa de los hombres» (*daury*) y la palisada que Hernández de
+Alba da para los achaguas (HSAI pp. 402, 405): «daur» da cero en los dos tomos.
+
+**Deuda.** Los capítulos de costumbres (matrimonio, guerra) sin «Achag-» en el
+pasaje no se leyeron; y el *Ciavinavi* de t. I p. 112, que Gilij (t. II p. 205)
+repite.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se buscó** la etimología de Guayana: nombra a la «Nación Guayana» (t. I),
+«de genio duro y belicoso», sin decir de dónde viene el nombre. El pasaje
+donde, según Goeje, emparenta su lengua con el kalina **no se localizó** en
+los dos tomos. Sesión: [[14_cruce_toponimos_hermanas]].

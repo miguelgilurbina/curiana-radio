@@ -21,12 +21,13 @@ acceso: >-
   bytes, sha256
   ca125f99e5ea0da47e34925e33f367eaace58238c384b9400dd5d65576a15c17. Texto:
   `pdftotext -enc UTF-8`, 1,58 MB.
-estado_minado: minada-parcial
-cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura"
+estado_minado: minado-parcial
+minado: 2026-10-09
+cobertura: "2026-09-23: todo lo que el volumen dice de los caquetíos, cotejado contra las primarias del repo — Hernández de Alba noroeste (pp. 469-474) entero, resumen de Steward (pp. 21-22), Kirchhoff (guamo pp. 463-468, guayupé p. 385, con Métraux pp. 353 y 363, «north of the Orinoco» pp. 481-493 por caquetíos/Curiana/comercio/fauna), Kidder noroeste (pp. 425-429, 434-437), Rouse por sondas (negativo) y la fauna. Sin leer: Hernández de Alba «north central» (pp. 475-480) y el resto del volumen. Detalle en 6-fusion/hsai_caquetios_2026-09-23.yaml → meta.cobertura; 2026-10-09 (minería 2, lokono): Kirchhoff sobre el Aruacay, pp. 481-490; 2026-10-09 (minería 2, kalinago): las atribuciones de Rouse «The Carib» (pp. 545, 558-562) cotejadas contra Rochefort y Du Tertre en imagen; 2026-10-09 (minería 2, taíno): Rouse, «Social and political organization» y «Life cycle» (pp. 528-531), auditado contra las primarias; . 2026-10-09 (minería 2 achagua): Hernández de Alba, Achagua and neighbors, pp. 402-408 (organización social, ciclo de vida, guerra), sólo como mapa de afirmaciones que se buscaron en la primaria (6-fusion/hermanas_achagua_2026-10-09.yaml)"
 prioridad: media
 tareas: [F12]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-22
+verificado: 2026-10-09
 aliases: ["HSAI 4", "Handbook vol. 4", "Circum-Caribbean Tribes", "Hernández de Alba 1948", "Kirchhoff 1948"]
 ---
 
@@ -268,3 +269,91 @@ Rouse declara sus fuentes en la p. 520. Equivalencia de páginas: pdf 676 = p.
 El detalle está en [[09_creencia_taino_mineria]] y en
 `6-fusion/creencia_taino_2026-10-09.yaml` (§steward_auditado y
 §rouse_a_primarias).
+
+## Minería 2 — esferas lokonas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). **Qué se
+preguntó:** si el volumen dice algo de los lokono. Medido: `Arawak` 246,
+`Lokono` 0, `Pomeroon` 0, `Essequibo` 0: el «Arawak» de Rouse es el taíno.
+Lo único lokono es el **Aruacay** del bajo Orinoco en Kirchhoff («probably
+Arawakan», p. 481), del s. XVI y de tercera mano. Desfase pdf − 136.
+
+| Dato | Página | Tema | Hecho |
+|---|---|---|---|
+| Un cacique principal y nueve subjefes, uno por barrio; al principal lo distingue la barba | 487 ✅ | jerarquia-rango | lokono-geografia_politica-002 |
+| Pueblo de 200 casas grandes | 483 | escala-poblacion | lokono-geografia_politica-008 |
+| Entierro dentro de la casa, en tumba de barro con figura encima; casabe y chicha; una conmemoración después | 488 | muerte-entierro | lokono-creencia-106, 107 |
+| Dos hombres se retan a aguantar seis latigazos en la borrachera | 490 ✅ | canto-baile | lokono-creencia-107, lokono-transmision-008 |
+| Escudos y yelmo; las mujeres también siembran; maíz en la chicha | 489, 486, 482-483 | guerra, roles, comida | lokono-geografia_politica-004, lokono-parentesco-009, lokono-ecologia-003 |
+
+Es el único lokono de la época del contacto que hay en el repo, junto con
+Navarrete (por [[roth-1915]]). Si el Aruacay era lokono, el reto del látigo y
+el Maquarri de [[brett-1868]] son la misma institución a tres siglos de
+distancia. Todo va como `hipotetico` (tercera mano).
+
+## 2026-10-09 — Minería 2 kalinago: lo que Rouse atribuye, contra sus primarias
+
+Rouse «The Carib» no se releyó: se comprobaron contra Rochefort 1658 y Du
+Tertre 1667 (en imagen) las afirmaciones que la minería 1 dejó pendientes.
+Sesión: [[10_hermanas_kalinago_esferas]].
+
+| Rouse | Primaria | Veredicto |
+|---|---|---|
+| Varias almas por los latidos (p. 561) | Du Tertre p. 372 (tres almas), Rochefort p. 429 | **se sostiene** |
+| La del corazón al cielo; las otras, maboyas del bosque y oumékou de la orilla (pp. 561-562) | Rochefort p. 429; Du Tertre p. 372 | se sostiene (la orilla, sólo Rochefort) |
+| Algunos boyés guardaban en casa el pelo o los huesos de sus antepasados (p. 562) | Du Tertre p. 369; Rochefort pp. 418, 424: huesos de UN muerto sacados del sepulcro y envueltos en algodón, que dan oráculos | **se sostiene a medias**: ni antepasados, ni pelo, ni calabazas, ni en casa |
+| Iniciación con cinco meses de ayuno, Du Tertre t. II pp. 365-366 (p. 562 n. 11) | Du Tertre 1667 pp. 365-366 en imagen: «apres avoir long temps jeûné» | **no se sostiene** en la ed. de 1667 |
+| El jefe quemado y sus cenizas en bebida (p. 559) | 0 en Rochefort y Du Tertre; Rochefort p. 448 lo dice de los TAPUYAS | **no se sostiene** en el grupo |
+| No nombraban a los muertos (p. 558) | 0; sólo la tecnonimia de los vivos | **no se sostiene** en el grupo |
+| Ídolos de algodón de los igneri en cuevas (p. 545) | Du Tertre pp. 369-370 (du Parquet, Martinica) | se sostiene |
+| El espíritu habla a veces por boca de una mujer (p. 562) | Rochefort p. 418 | se sostiene |
+
+Regla que sale: Rouse mezcla a La Borde (fuera del repo) con el grupo
+Breton-Du Tertre-Rochefort sin decir de quién es cada cosa; lo que no está en
+el grupo es candidato a ser de La Borde.
+
+## Minería 2 — esferas taínas (2026-10-09): Rouse a sus primarias
+
+**Qué se preguntó** ([[10_hermanas_taino_esferas]]): ¿de qué primaria sale cada afirmación de Rouse
+sobre la jefatura, el rango, la sucesión y el matrimonio taínos? Tercera mano:
+nada de aquí entra sin su primaria.
+
+**Qué dio** (detalle en `meta.rouse_a_primarias` de `6-fusion/hermanas_taino_2026-10-09.yaml`):
+
+- **La sucesión «eldest son of the eldest sister; failing sister's sons … a
+  brother; and only failing these … a son»** (pp. 529-530) no la dice así
+  ninguna primaria del repo: Las Casas da los hijos de las hermanas y confiesa
+  no entenderlo; Oviedo pone primero al hijo. El orden es de Rouse.
+- **«Residence seems to have been patrilocal»** (p. 531): sin nota, y cero de
+  residencia en las primarias.
+- **«exacted no tribute»** (p. 529): sin nota; la única frase sobre tributo es
+  la sospecha de Colón (p. 279).
+- **«Crimes were judged by the chief … theft … impaled»** (p. 530): es Oviedo
+  p. 139, que Las Casas contradice.
+- **«The chiefs gave their children to the wise men to be taught the origin
+  myths»** (p. 531): sin primaria en los tramos leídos.
+- Las afirmaciones de la p. 532 que la minería 1 dejó sin primaria salen todas
+  de [[colon-hernando-1892]] cap. LXI; las «cestas» son caribes de Guadalupe.
+
+**Deuda:** las secciones de economía y vida material de Rouse, sin auditar.
+
+## Minería 2 — esferas achaguas (2026-10-09)
+
+Usado como mapa para la minería achagua de [[10_hermanas_achagua_esferas]]
+(propuesta `6-fusion/hermanas_achagua_2026-10-09.yaml`): Hernández de Alba,
+«The Achagua and their neighbors», pp. 402-408. Tercera mano: cada afirmación se
+buscó en la primaria.
+
+| Afirmación de HSAI | Página | En la primaria |
+|---|---|---|
+| «seemingly divided into patrilineal sibs» y «some evidence points to patrilocal residence» | p. 404 | Sin pasaje: es inferencia suya («the data… strongly suggest»). Rivero da un caso de pertenencia por la madre (pp. 40-41) y uno de un hombre casado en el pueblo de la mujer (p. 320) |
+| Grupos «totémicos» (Amarizán, Isirriberrenais, troncos, ríos) | p. 404 | Sí: Rivero p. 326 (Mimbela) y Gumilla t. I p. 114 |
+| Poliginia, mujeres iguales, campo propio con estacas; repudio de los dos | p. 404 | Sí: Rivero pp. 107 y 326 |
+| Casa de los hombres *daury*, palisada con entrada alta | pp. 402, 405 | No: «daur» da cero en Rivero y Gumilla; fuente no localizada |
+| Muchachas «vestales» de los jefes, achaguas y píritus | p. 405 | No localizada en lo leído |
+| El mirray, «mude», «cha» | p. 405 | Sí: Rivero pp. 419-421, y bien resumido |
+| La paz por simulacro de batalla | p. 408 | Sí: Rivero pp. 41-42, pero entre chiricoas y achaguas |
+| Encierro de la menarquia con hormigas en la hamaca | p. 407 | El párrafo mezcla píritus: no atribuible a los achaguas |
+
+**Deuda.** Localizar la fuente del *daury* (¿Karsten 1926? ¿Gumilla en otro
+capítulo?) antes de usarlo.

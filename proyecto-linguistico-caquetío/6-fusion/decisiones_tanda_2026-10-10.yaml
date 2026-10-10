@@ -1,0 +1,79 @@
+# Decisiones de Miguel del 2026-10-09 y 2026-10-10 (minería 2: las esferas de
+# las hermanas, el cruce de topónimos y la pregunta de la tierra)
+#
+# Se registran juntas porque salieron en la misma conversación, en la rama
+# vault/fuentes-creencia (PR #269). Dos ya estaban aplicadas al esquema de
+# 3-mundo/hermanas/ cuando se escribió esta tanda; se registran aquí para que
+# la decisión literal no viva sólo en un mensaje de commit.
+
+meta:
+  estado: 'APLICADA (2026-10-10): 3 de 3. Quedan abiertas, sin decidir: la regla para reconstruir con una prima, D2-D4 del cruce de topónimos, y las del issue de Manaure y del de los xaguas'
+  aplicado_por:
+    - 'commit 809fc4c (curiana_sim/compilar_hermanas.py y 3-mundo/hermanas/README.md): t10.1 y t10.2'
+    - 6-fusion/scripts/aplicar_ana_hipotetica_2026-10-10.py   # t10.3
+    - curiana_sim/migrar_toponimos.py                          # t10.3, regenera 2-lengua/morfemas.yaml
+  rama: vault/fuentes-creencia
+
+t10.1_las_lineas_del_arbol:
+  fecha: '2026-10-09'
+  decision_literal: >-
+    «Yo creo que tenemos que revisar y designarla como otra línea subcultural
+    de la gran cultura lingüística maipureana, pero está claro que vienen de
+    otra esfera cultural prima lejana de la caquetía, junto con la añú,
+    paraujano, etc.» (del wayuu) y «tenemos claro que los achaguas serían una
+    línea maipuriana aparte de los caquetíos».
+  lectura_operativa: >-
+    Hermanas = línea lokonoide (taíno, lokono, kalinago por su sustrato iñeri),
+    por Oliver 1989 cap. 2 p. 150 (la 1.ª persona /dA-/ compartida). Primas =
+    guajiro-paraujana (wayuu, paraujano) y orinoco-llanos (achagua, maipure).
+    Vecinas = otras familias, cuando entre la primera. La regla para
+    reconstruir hacia el caquetío con una prima NO se decidió: el validador
+    registra la relación y no la impone.
+  estado: APLICADA (2026-10-09)
+  aplicado_por: ['commit 809fc4c: RELACION y LINEA en curiana_sim/compilar_hermanas.py; 3-mundo/hermanas/README.md §2']
+
+t10.2_la_pregunta_a_cada_pueblo:
+  fecha: '2026-10-09'
+  decision_literal: >-
+    «Yo creo que efectivamente puede ser una pregunta a cada pueblo. Es decir
+    "cuál era su relación con la Tierra". Nuestro centro es el de los
+    caquetíos. Pero es importante darle voz a cada pueblo.»
+  lectura_operativa: >-
+    Campo `tierra` en el esquema de las hermanas, con nueve aspectos cerrados;
+    el lado caquetío se propone aparte (6-fusion/relacion_con_la_tierra_*.yaml)
+    porque el corpus es canon; la matriz comparada abre con esa tabla.
+  estado: APLICADA (2026-10-09)
+  aplicado_por: ['commit 809fc4c', 'rama vault/relacion-con-la-tierra (ab07b16): el etiquetado de los hechos ya minados y la nota 12']
+
+t10.3_D1_la_glosa_de_ana:
+  fecha: '2026-10-10'
+  issue_borrador: 6-fusion/issues-pendientes/cruce-toponimos-hermanas-2026-10-10.md (D1)
+  propuesta: 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana
+  opciones: 'A = sin glosa (como desde #109) · B = candidato «los de X» como hipotético (recomendada por el minero y por la sesión) · C = esperar a Williams 1923 y a Hilhouse'
+  decision_literal: '«Yo también voy por hipotética.»'
+  eleccion: B
+  lectura_operativa: >-
+    `-ana` (morfema-011) sigue siendo una forma atestiguada SIN glosa de
+    fuente caquetía —ningún -ana caquetío está glosado—, y a su lado se
+    registra la glosa candidata 'los de X, la gente de X' con capa
+    HIPOTÉTICA: un colectivo de gente, que en el topónimo sería el nombre de
+    una gente pasado al lugar, como Guayana. Su apoyo es comparado, de dos
+    hermanas lokonoides: el linaje lokono (Ebesō-tu → Ebeso-ana, Brett 1880
+    pp. 178-179) y el gentilicio plural kalinago (isla + -na, Breton 1665 p.
+    416; leído en la capa de texto, falta verlo en imagen). No es
+    `reconstruido` porque el lado caquetío no tiene un solo caso y el paso de
+    gentilicio a topónimo es inferencia nuestra (regla 2). El 'lugar de'
+    sigue retirado: ninguna hermana ni prima lo da.
+  no_cambia:
+    - 'el motor: el prompt sigue enseñando -ana SIN glosa (d21.6, 2026-09-21). Llevar la glosa hipotética al prompt es otro corte de serie y otra decisión (el motor está congelado desde la tanda base)'
+    - 'toponimos.yaml: ninguna entrada cambia de nivel ni de segmentación; Curiana, Chamuriana, Cujicana y Jayana siguen en su nivel'
+  lo_que_la_subiria: 'un -ana caquetío usado por una fuente como nombre de GENTE, o las familias en -ana de Hilhouse con su epónimo (fuentes_a_buscar de la propuesta)'
+  estado: APLICADA (2026-10-10)
+  aplicado_por: [6-fusion/scripts/aplicar_ana_hipotetica_2026-10-10.py, 6-fusion/scripts/colgar_lectura_ana_2026-10-10.py, curiana_sim/migrar_toponimos.py]
+  lecturas_colgadas: [paraguaná (toponimo-018), curiana (toponimo-111), chamuriana (toponimo-109), cujicana (toponimo-268), jayana (toponimo-110)]
+  error_propio_corregido: >-
+    La primera pasada (commit 70f9467) saltó Paraguaná diciendo que no tenía
+    entrada en el canon: la había buscado con un patrón que no reconoció la
+    «á». Está (toponimo-018) y es el único de los cinco con glosa de fuente,
+    «Rodeada del mar»; su lectura dice esa tensión y no desplaza la glosa.
+    Miguel lo preguntó («¿Por qué Paraguaná no entra?») y se corrigió el mismo día.

@@ -8,8 +8,8 @@ local: ["fuentes_caquetios/Breton_1665_Dictionaire_caraibe_francois.pdf", "fuent
 capa_texto: mala
 descargado: 2026-09-23
 origen_digital: "Internet Archive, digitalización de la John Carter Brown Library (dictionairecarai00bret, dictionairefranc00bret, grammairecaraibe00bret); dominio público"
-estado_minado: parcial
-cobertura: "2026-09-24 (campaña cosmovisión marina): el mar, los seres, los tabúes, el lambi, el caracoli y la muerte en los tres libros, por la capa de texto por página y unas 40 páginas en imagen. 2026-10-09 (creencia kalinago): las entradas religiosas de 1665 y 1666 —ichéiri/chemiin, mapoya, opoyem, ioüanni/ánichi, boyé y su sesión, el funeral— en imagen (lista en 6-fusion/creencia_kalinago_2026-10-09.yaml meta.cobertura). Sin leer: los ~400 pares hombre/mujer del françois-caraïbe enteros, la Grammaire y el Catéchisme"
+estado_minado: minado-parcial
+cobertura: "2026-09-24 (campaña cosmovisión marina): el mar, los seres, los tabúes, el lambi, el caracoli y la muerte en los tres libros, por la capa de texto por página y unas 40 páginas en imagen. 2026-10-09 (creencia kalinago): las entradas religiosas de 1665 y 1666 —ichéiri/chemiin, mapoya, opoyem, ioüanni/ánichi, boyé y su sesión, el funeral— en imagen (lista en 6-fusion/creencia_kalinago_2026-10-09.yaml meta.cobertura). Sin leer: los ~400 pares hombre/mujer del françois-caraïbe enteros, la Grammaire y el Catéchisme — 2026-10-09 (minería 2, esferas): 1665 pp. 229-230, 417 y 1666 pp. 60, 92, 265 en imagen (capitán, rey, carbet, primos, tíos)"
 verificado: 2026-10-09
 minado: 2026-10-09
 prioridad: media
@@ -174,3 +174,44 @@ prohíbe ofrecer a los `mapoyanum` (p. 56).
 **Deuda.** Los ~400 pares h/f de 1666 enteros, la Grammaire y el Catéchisme.
 Además, el issue de `maboya` y `bejique`
 (`6-fusion/issues-pendientes/lexicon-maboya-bejique-sin-respaldo-2026-10-09.md`).
+
+## Minería 2 — esferas (2026-10-09)
+
+**Se preguntó**, para las esferas de parentesco y geografía política, por las
+entradas que dan nombre a la sociedad: capitán, rey, carbet, primos, tíos,
+servidor, y el relato de la conquista. Sesión:
+[[10_hermanas_kalinago_esferas]]. Propuesta:
+`6-fusion/hermanas_kalinago_2026-10-09.yaml`. Los PDF siguen sólo en el
+checkout principal (OneDrive); se leyeron desde ahí, sin copiarlos.
+
+| Dato | Página | Tema | Etiqueta | Sustrato |
+|---|---|---|---|---|
+| La conquista: los Galibis «avoit exterminé tous les naturels du pais à la reserve des femmes, qui ont tousiours gardé quelque chose de leur langue»; las cabezas en las cuevas para que los padres las muestren a los hijos; habían tenido reyes, llevados en hombros por los «abouyou»; los del carbet al pie de la Soufrière descienden de ellos | 1665 pp. 229-230 (p. 230 en imagen) | lengua-registro, sucesion-politica, narracion-mito | atestiguado | arahuaco / caribe |
+| «oúboutou, ouboutonū, Capitaine»; «Oúboutou tîmani, Roy»; «Tioüboutouli aute, Capitaine d'un Carbet»; lugarteniente | 1665 p. 417 (imagen) | jefatura | atestiguado | caribe (h.) |
+| «Capitaine oúboutou, f. amachi; mon Capitaine ioubou-toulicou, f. iamáchiri» | 1666 p. 60 (imagen) | jefatura | atestiguado | f. arahuaco (Goeje «1 am 31») |
+| «Cousin Iapatáganum, f. nígatou. Cousine, niouelle àtonum» | 1666 p. 92 (imagen) | matrimonio | atestiguado | sin decidir |
+| «oncle paternel, si les enfans sont de deux freres, ils l'appellent bâba, s'ils sont d'une sœur & d'un frere, iáo, acàtobou» | 1666 p. 265 (imagen) | descendencia (terminología) | atestiguado | caribe (yao hK) |
+| canot: oucounni, f. coulialla | 1666 p. 60 (imagen) | navegacion | atestiguado | — |
+
+**Independencia, medida.** Du Tertre 1667 p. 361 copia 1665 pp. 229-230
+palabra por palabra; Rochefort p. 330 cuenta lo mismo con otras palabras
+(Ouboutou-timani, Labouyou). Ninguno de los dos suma testigo a Breton.
+
+**No dio** (en estas entradas): autoridad del tío materno; linajes con nombre.
+
+**Deuda.** Los ~400 pares h/f de 1666 enteros, la Grammaire y el Catéchisme
+siguen sin leer; para parentesco convendría barrer en imagen 1666 *femme*,
+*mari*, *mariage*, *pere*, *mere*, *frere*, *sœur*, *gendre*, *beau-pere*,
+*esclave*, *serviteur*.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se halló** el gentilicio: «Ouâitoucoubouliri, oüâitoucoubouli-na, vn
+sauuage ou habitant de la Dominique, les habitans de la Dominique. On forme
+des mots pareillement sur le nom des autres Isles, comme caloucaerari,
+caloucaera-na» (p. 416, s.v. Ouâitoucoubouli); y en la *Grammaire* de 1667
+(hoja signada G iij): los derivados en -i son masculinos (*liamaïgari*,
+*caloucaérari*) y «Les pluriers terminez en a, sont du commun» (*aichina*,
+*kaérabona*, *balaourcouna*). Isla + `-na` = 'los habitantes de X'. Ningún
+nombre de isla en `-ana`; *balanna* 'mer' es palabra entera. Capa de texto:
+ver en imagen. Sesión: [[14_cruce_toponimos_hermanas]].

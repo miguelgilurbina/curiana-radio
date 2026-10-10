@@ -1769,6 +1769,13 @@ NIVEL_C = {
                        "rescate de perlas (Cumaná y Cariaco), la de Coro y la de "
                        "La Ramada.",
         "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "-ana 'los de X, la gente de X' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería el de una gente pasado al lugar, como Guayana; X = curi-/cori-, sin glosa acordada (avispa, lagartija, espina o cardón: ver las otras lecturas); y Curiana nombra a la vez el pueblo y la costa (Arcaya p. 169)",
+             "quien": "cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel",
+             "fecha": "2026-10-10", "eje": "significado",
+             "apoyo": "lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
+             "procedencia": dict(obra="brett-1880", pagina="178-179"),
+             "veredicto": "HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel. El 'lugar de' sigue retirado (#109)"},
             {"tipo": "etimologia-analitica",
              "lectura": "coro 'espina' → Coriana 'tierra de las espinas, o la "
                         "tierra del espinar, de vegetación espinosa, e "
@@ -2055,6 +2062,13 @@ NIVEL_C = {
                        "llama taína: lo hizo la lista maestra taína (T3).",
         "fuente": "oviedo-y-valdes-1851", "pagina": 205,
         "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "-ana 'los de X, la gente de X' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería el de una gente pasado al lugar, como Guayana; si la -aná de Paraguaná fuera este formante, se leería 'los del mar', con X = para(gua) 'mar', que el canon ya despeja; pero la fuente glosa «Rodeada del mar» y la -aná es tónica, que #109 §3 da como el dato que separaría este sufijo del -ana de Curiana",
+             "quien": "cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel",
+             "fecha": "2026-10-10", "eje": "significado",
+             "apoyo": "lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
+             "procedencia": dict(obra="brett-1880", pagina="178-179"),
+             "veredicto": "HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.») y EN TENSIÓN con la glosa de fuente, que no desplaza; no cambia el nivel. El 'lugar de' sigue retirado (#109)"},
             {"tipo": "etimologia-analitica",
              "lectura": "para 'agua en grandes cantidades' (Zavala #190) + gua "
                         "'terreno cercado' (#122) + na 'como, semejante' (#184) ≈ "
@@ -2693,6 +2707,13 @@ NIVEL_C = {
                        "Con Moruy, Cayerúa y Maitiruma orbita el Capubana: el otro "
                        "nodo de la era 2.",
         "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "-ana 'los de X, la gente de X' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería el de una gente pasado al lugar, como Guayana; X = chamur-, sin glosa (el canon segmenta chamur- + -iana)",
+             "quien": "cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel",
+             "fecha": "2026-10-10", "eje": "significado",
+             "apoyo": "lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
+             "procedencia": dict(obra="brett-1880", pagina="178-179"),
+             "veredicto": "HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel. El 'lugar de' sigue retirado (#109)"},
             {"tipo": "tradicion-local",
              "lectura": "«elegida por los nativos debido a la abundancia de agua "
                         "dulce que bajaba del cerro»",
@@ -3665,6 +3686,14 @@ DESCARTES = {
     # «Descartado» aquí = sin etimología despejable, NO «no existió»: los
     # dos son lugares vivos del mapa de Miguel.
     "Esteves 1989: sin glosa en la fuente y ningún morfema conocido alinea": {
+        "lecturas": {"jayana": [
+            {"tipo": "hipotesis",
+             "lectura": "-ana 'los de X, la gente de X' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería el de una gente pasado al lugar, como Guayana; X = jay-, sin glosa",
+             "quien": "cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel",
+             "fecha": "2026-10-10", "eje": "significado",
+             "apoyo": "lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
+             "procedencia": dict(obra="brett-1880", pagina="178-179"),
+             "veredicto": "HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel. El 'lugar de' sigue retirado (#109)"}]},
         "formas_vivas": {"jayana": [{"forma": "Nueva Jayama", "tipo": "poblado", "lat": 11.794, "lon": -70.198, "fuente": "osm-kaketiana"}], "guacujúa": [{"forma": "Guacujún", "tipo": "poblado", "lat": 11.827, "lon": -70.073, "fuente": "osm-kaketiana"}], "tequeguacare": [{"forma": "Teteguacure", "tipo": "lugar", "lat": 11.811, "lon": -70.062, "fuente": "osm-kaketiana"}], "sisibauco": [{"forma": "Sisibauco", "tipo": "lugar", "lat": 11.875, "lon": -69.847, "fuente": "osm-kaketiana"}]},
         "razon": "Esteves da referente, censo e historia, pero ninguna glosa "
                  "propia: solo la etimología popular, que él mismo relativiza. "
@@ -3875,7 +3904,14 @@ DESCARTES = {
         "formas": ["arajó", "avotuca", "bajarigua", "biniche", "carajaima", "cucurubano", "cujicana", "duracuaco", "guaricure", "güima", "jabe", "juroguagua", "manichare", "matividiro", "misaray", "muaco", "niraba", "perabay", "pipiacoa", "quipayú", "saguatumo", "sarabón", "sarinao", "siraba", "supideo", "tacuato", "tiraya", "tobagía", "yaguarima", "yaima", "yarí"],
         "verificado": "imagen salvo Arajó y Avotuca-Babahuro (p. 17-18, OCR limpio y p. 18 en imagen) y Guaricure (p. 42, 2026-09-16); Arajó, p. 17, vista en imagen al fusionar (2026-09-24)",
         "observaciones": {"arajó": "cerro erosionado al suroeste de Moruy, lindero con Santa Ana; Esteves sospecha la llana «Arajo», pues las agudas escasean; homónimos en Sabaneta (Miranda) y Arajú (Federación); Arcaya 1920 ya lo nombra", "avotuca": "lugar desconocido; José Luis Cisneros (Descripción de la Provincia de Benezuela, 1764) lo da como vigía de las costas de Paraguaná; Esteves lo supone en La Boca del Caño, al norte de Adícora", "bajarigua": "fundo y salina al norte de El Vínculo, depresión a doce metros bajo el mar; -gua sin glosa", "biniche": "lindero de las tierras comuneras de Guacuira y Urupaguaduco", "carajaima": "ciénaga del caserío San Pedro (Adícora); papeles de 1698 (linderos de Urupaguaduco) la escriben Caramajaima; termina en -aima, afijo de REGLAS_ZAVALA sin glosa", "cucurubano": "lindero de Yauquiba y Guacujúa; «parece voz onomatopéyica»; termina en -bano pero no consta que sea cerro", "cujicana": "antiguo potrero de Carirubana, hoy zona residencial de Punto Fijo; -ana sin glosa (#109)", "duracuaco": "lugar del municipio Moruy, 3 casas y 20 vecinos en 1881; la cabecera impresa es DURACUACO y el índice escribe Duraguaco El índice escribe duraguaco.", "guaricure": "lugar del municipio Moruy, «no tenemos más noticias» (transcrito el 2026-09-16)", "güima": "vecindario de Charaima; nombre de un cacique albino de leyenda; los «montes de Güima» en el título de composición de Urupaguaduco", "jabe": "lugar desaparecido de Jadacaquiva, también San José de Tarbes; ver §mapa_vivo (Tabe)", "juroguagua": "lugar pecuario al este del cementerio de El Vínculo; la entrada sigue en la p. 49 (la p. 48 es una fotografía): Esteves remite a Jahn para un homónimo guajiro que en el texto de Jahn del repo da cero (ver medición)", "manichare": "lugar del municipio Moruy", "matividiro": "cerro de menos de 250 m y aldea (Buenavista); 37 casas y 286 vecinos en 1881; el cerro orienta a los pescadores de pargo", "misaray": "aldea de Santa Ana; deslinde de 1768 (Pedro de Llamas); «Masaray es la forma indígena»; cementerio y petroglifo en Machuruca/Misaray (ficha)", "muaco": "Caño del Muaco, albufera junto a Tacuato; el Río Muáco del mapa vivo es otro, en el Golfete continental", "niraba": "aldea de Moruy, 6 casas y 35 vecinos en 1881; ver §mapa_vivo (La Miraba)", "perabay": "lindero de Jadacaquiva, Pueblo Nuevo y Buenavista, cerca de Piedra Honda; -ay", "pipiacoa": "sabanas dentro del Vínculo de Curaidebo; «leemos en un documento de 1596» — la fecha documental más antigua del lote después del Cocodito de 1590; -coa sin glosa", "quipayú": "cuevas naturales en La Cieneguita, cerca de Punta Salinas (Los Taques)", "saguatumo": "lugar de Moruy, 2 casas y 8 vecinos en 1881; «el nombre es antiquísimo»", "sarabón": "punto costeño al norte de Punta Cardón, atalaya de pescadores", "sarinao": "aldea de Santa Ana, 20 casas y 157 habitantes en 1881; primitivo Sarinaro (la misma erosión -aro > -ao que Guaranaro > Guaranao)", "siraba": "cerro cónico de unos 500 m unido al de Santa Ana; petroglifos «Las Piedras del Almanaque»", "supideo": "lugar de Moruy; cf. «arboleda supide» en la glosa de Zavala para supí, sin que Esteves lo diga", "tacuato": "población de Santa Ana, 37 casas y 237 vecinos en 1881; iglesia en 1773, «Tocato escribe Martí»; ver lecturas", "tiraya": "ensenada al norte de Adícora; Taria y Taría en los papeles de Urupaguaduco", "tobagía": "lindero occidental de Pueblo Nuevo con Guaidabacoa y Chibuche", "yaguarima": "punto costeño del Golfete al este de Punta Cardón; termina en -ima, que Esteves glosa «húmedo» en la p. 93 sin aplicarlo aquí", "yaima": "bahía de aguas profundas al norte de Adícora, puerto colonial de la sal de Las Cumaraguas", "yarí": "sitio en la sabana de Barabara y otro en Santa Ana; Yaride, el primitivo"},
-        "lecturas": {"tacuato": [{"tipo": "etimologia-popular", "lectura": "«Ta a cuatro»: el precio de la sal, cuatro reales el almud", "quien": "informantes de Esteves", "veredicto": "Esteves se declara en desacuerdo y a la vez concede «visos de verosimilitud» por el Resguardo de Salinas colonial: se registra la ambigüedad", "fecha": "2026-09-23", "procedencia": {"obra": "esteves-1989", "pagina": 62}}], "niraba": [{"tipo": "hipotesis", "lectura": "es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano delante", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 54}, "apoyo": "cae en el municipio Moruy; n~m", "veredicto": "confirmada", "validacion": "confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)"}, {"tipo": "testimonio-residente", "lectura": "La Miraba (el poblado y el Cerro La Miraba, municipio Moruy) es la Niraba de Esteves", "quien": "Miguel", "fecha": "2026-09-27", "eje": "referente"}], "jabe": [{"tipo": "hipotesis", "lectura": "es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 44}, "apoyo": "a unos dos kilómetros de Jadacaquiva; Tarbes > Tabe, o Jabe > Tabe", "veredicto": "confirmada", "validacion": "confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)"}, {"tipo": "testimonio-residente", "lectura": "Tabe, a unos dos kilómetros de Jadacaquiva, es la Jabe o San José de Tarbes de Esteves", "quien": "Miguel", "fecha": "2026-09-27", "eje": "referente"}]},
+        "lecturas": {"cujicana": [
+            {"tipo": "hipotesis",
+             "lectura": "-ana 'los de X, la gente de X' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería el de una gente pasado al lugar, como Guayana; X = cujic-, sin glosa",
+             "quien": "cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel",
+             "fecha": "2026-10-10", "eje": "significado",
+             "apoyo": "lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
+             "procedencia": dict(obra="brett-1880", pagina="178-179"),
+             "veredicto": "HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel. El 'lugar de' sigue retirado (#109)"}], "tacuato": [{"tipo": "etimologia-popular", "lectura": "«Ta a cuatro»: el precio de la sal, cuatro reales el almud", "quien": "informantes de Esteves", "veredicto": "Esteves se declara en desacuerdo y a la vez concede «visos de verosimilitud» por el Resguardo de Salinas colonial: se registra la ambigüedad", "fecha": "2026-09-23", "procedencia": {"obra": "esteves-1989", "pagina": 62}}], "niraba": [{"tipo": "hipotesis", "lectura": "es la Niraba de Esteves (p. 54; toponimo-278), aldea del municipio Moruy, con artículo castellano delante", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 54}, "apoyo": "cae en el municipio Moruy; n~m", "veredicto": "confirmada", "validacion": "confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)"}, {"tipo": "testimonio-residente", "lectura": "La Miraba (el poblado y el Cerro La Miraba, municipio Moruy) es la Niraba de Esteves", "quien": "Miguel", "fecha": "2026-09-27", "eje": "referente"}], "jabe": [{"tipo": "hipotesis", "lectura": "es la Jabe o San José de Tarbes de Esteves (p. 44; toponimo-272), lugar desaparecido de Jadacaquiva", "quien": "M6, tercera minería (#216)", "fecha": "2026-09-23", "eje": "referente", "procedencia": {"obra": "esteves-1989", "pagina": 44}, "apoyo": "a unos dos kilómetros de Jadacaquiva; Tarbes > Tabe, o Jabe > Tabe", "veredicto": "confirmada", "validacion": "confirmada sobre el terreno por Miguel (dp.2.09 P3 B de #222, 2026-09-27)"}, {"tipo": "testimonio-residente", "lectura": "Tabe, a unos dos kilómetros de Jadacaquiva, es la Jabe o San José de Tarbes de Esteves", "quien": "Miguel", "fecha": "2026-09-27", "eje": "referente"}]},
         "formas_vivas": {"niraba": [{"forma": "La Miraba", "tipo": "poblado", "lat": 11.834, "lon": -70.054, "fuente": "osm-kaketiana"}, {"forma": "Cerro La Miraba", "tipo": "cerro", "lat": 11.85, "lon": -70.046, "fuente": "osm-kaketiana"}], "jabe": [{"forma": "Tabe", "tipo": "lugar", "lat": 11.917, "lon": -70.104, "fuente": "osm-kaketiana"}]},
     },
     "Esteves 1989, lote de la cola (2026-09-22): no indígena según el autor": {
@@ -4133,9 +4169,38 @@ FORMATIVOS_SIN_GLOSA = {
                 "la raíz, 4 sin glosa, 0 'lugar de'. Compite con na 'como, "
                 "semejante' (Zavala #184) y con -ná tónica de Paraguaná. "
                 "Excluye -bana (#38, resuelto) y los -ana dentro de raíz "
-                "(guariana, maracapana). El motor conserva -ana 'lugar de' "
-                "como convención de la simulación (canon-simulación), no "
-                "como dato.",
+                "(guariana, maracapana). Desde d21.6 (2026-09-21) el motor "
+                "la enseña SIN glosa, como -ubana y -uru.",
+        # t10.3 (2026-10-10), decisión de Miguel: «Yo también voy por
+        # hipotética.» La glosa de abajo es CANDIDATA y comparada; la forma
+        # sigue sin glosa de fuente caquetía (por eso no pasa a
+        # MORFEMAS_DESPEJADOS). Ver 6-fusion/decisiones_tanda_2026-10-10.yaml.
+        "glosa_hipotetica": "los de X, la gente de X (colectivo de gente; en "
+                            "el topónimo, el nombre de una gente pasado al "
+                            "lugar, como Guayana)",
+        "capa_de_la_glosa": "hipotetico",
+        "apoyo_comparado": [
+            "lokono (hermana): el linaje matrilineal toma el nombre de la "
+            "antepasada, Ebesō-tu → Ebeso-ana, Demare-du → Demaré-na "
+            "(Brett 1880, pp. 178-179); el sufijo se separa",
+            "kalinago (hermana, sustrato iñeri): gentilicio plural isla + "
+            "-na, Ouâitoucoubouli-na 'los de Dominica' (Breton 1665 p. 416 "
+            "y Grammaire 1667, hoja G iij); leído en la capa de texto, "
+            "falta verlo en imagen",
+            "Guayana: el país toma el nombre de los Guayana, un pueblo de "
+            "lengua caribe (Goeje 1939 p. 5); la «tierra de muchas aguas» "
+            "no tiene fuente en el repo",
+        ],
+        "no_la_apoyan": [
+            "achagua (prima): el «locativo -ana» de la transcripción es el "
+            "-na relacional de numa 'boca' (Numana 'boca de Casanare')",
+            "taíno: su único caso, Maguana 'cuasi la Vega menor' (Las "
+            "Casas, Apologética cap. VII p. 19), es otra función",
+        ],
+        "decision": "t10.3 (2026-10-10), opción B de la D1 de "
+                    "6-fusion/issues-pendientes/cruce-toponimos-hermanas-"
+                    "2026-10-10.md; propuesta en "
+                    "6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
     },
 }
 

@@ -219,3 +219,11 @@ LXVII; la paginación de esta copia es interpolada). **No se halló:** reverso n
 guaicán (el vol. 1 no llega a la Cuba de 1494).
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para dos glosas, citadas por capítulo: *Cubanacan*, «porque
+nacan quiere decir, en la lengua destas islas, medio ó en medio» (lib. I cap.
+XLIV) —el morfema de 'en medio' que le falta al «conuco en medio del mar» de
+Paraguaná—, y las «campiñas llanas y rasas que […] ellos llaman en su lengua
+çabanas» (cap. LVI), donde el `-ana` no se separa. Sesión: [[14_cruce_toponimos_hermanas]].

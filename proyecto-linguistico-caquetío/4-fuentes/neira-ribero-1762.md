@@ -9,11 +9,12 @@ local: "fuentes_caquetios/Neira_Ribero_1762_Arte_y_Vocabulario_Lengua_Achagua_RB
 paginas: 102
 capa_texto: no
 estado_minado: minado
-cobertura: "LEÍDA ENTERA la copia: vocabulario (pliegos 28-98) y arte (pliegos 7-28 izq.). El vocabulario y el arte de las pp. 33-42, medidos en `6-fusion/achagua_neira_ribero_1762.yaml` → `meta.cobertura` y `meta.censo_de_terminaciones` (los emite `6-fusion/scripts/ensamblar_achagua_neira_ribero.py`). El arte de las pp. 1-32 (declinaciones, conjugaciones, pasiva, géneros, pretéritos, sintaxis, posesión), en `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml` (2026-09-22/23), con cifras en `6-fusion/medicion_arte_achagua_2026-09-22.yaml`. Quedan PREGUNTAS, no páginas: censo de tainismos del lado castellano, censo de préstamos marcados por el autor, y una segunda lectura independiente del arte"
+cobertura: "LEÍDA ENTERA la copia: vocabulario (pliegos 28-98) y arte (pliegos 7-28 izq.). El vocabulario y el arte de las pp. 33-42, medidos en `6-fusion/achagua_neira_ribero_1762.yaml` → `meta.cobertura` y `meta.censo_de_terminaciones` (los emite `6-fusion/scripts/ensamblar_achagua_neira_ribero.py`). El arte de las pp. 1-32 (declinaciones, conjugaciones, pasiva, géneros, pretéritos, sintaxis, posesión), en `6-fusion/achagua_arte_neira_ribero_2026-09-22.yaml` (2026-09-22/23), con cifras en `6-fusion/medicion_arte_achagua_2026-09-22.yaml`. Quedan PREGUNTAS, no páginas: censo de tainismos del lado castellano, censo de préstamos marcados por el autor, y una segunda lectura independiente del arte. 2026-10-09: preguntado por la creencia (minería 1) y por parentesco, rango, oficios, guerra, comercio, casa y comida (minería 2, 6-fusion/hermanas_achagua_2026-10-09.yaml), con los pliegos citados vistos en imagen (60 der., 67 der., 68 izq., 75 der.)"
+minado: 2026-10-09
 prioridad: alta
 tareas: [D11-fase-2]
 sostiene: {hechos_corpus: 0, entradas_lexicon: 0}
-verificado: 2026-09-23
+verificado: 2026-10-09
 descargado: 2026-09-12
 origen_digital: "Real Biblioteca Digital (Patrimonio Nacional), manifiesto IIIF II-2910; también en la Library of Congress (2021667801). Dominio público"
 aliases: ["Neira y Ribero 1762", "Neyra y Ribero", "Arte achagua", "Arte y vocabulario achagua", "Neira 1762"]
@@ -636,3 +637,45 @@ con el script y comprobado en imagen (todas tienen entradas). El ensamblador
 mide los huecos por pliego y no las ve. De dos de ellas se leyeron hoy las
 líneas de creencia (52 izq.: curar, curar soplando, danza; 92 der.: soñar,
 sueño, pesadillas, soplar a los enfermos); el resto sigue por transcribir.
+
+## Minería 2 — esferas (2026-10-09)
+
+Minería de [[10_hermanas_achagua_esferas]]; propuesta en
+`6-fusion/hermanas_achagua_2026-10-09.yaml`. Se le preguntó al vocabulario
+transcrito (consultas por `castellano` sobre `6-fusion/achagua_neira_ribero_1762.yaml`)
+por parentesco, rango, oficios, guerra, comercio, casa y comida, y se vio en imagen
+lo que se cita.
+
+**Qué dio:**
+
+| Dato | Pliego | Tema | Etiqueta | Pueblo |
+|---|---|---|---|---|
+| «Esclavo — Macogerri. El mío = Numacumí», «Esclava — Macagetua», «Esclavitud — Macunaican» | 60 der. (imagen) | cautivos-esclavitud | atestiguado (léxico) | achagua |
+| Hermano mayor / menor; hermana de él / de ella; «Hermano de un vientre — Nugiacaberri»; vocativo por sexo del hablante (tay / tau) | 67 der. (imagen), 69 izq. | terminología (propuesto) | atestiguado (léxico) | achagua |
+| «Hidalgo noble — Cabaunicayi, Cacuisaunacay»; señor, señores, señora; amo principal; mandar; criado | 68 izq. (imagen), 34 der., 51 izq., 65 der., 91 izq. | jerarquia-rango | atestiguado (léxico) | achagua |
+| «Mercado donde se vende — Benidacarrun»; mercader, comprar, vender, precio, sarta de quiripa | 75 der. (imagen), 34 izq., 49 der., 90 der. | comercio-rutas | atestiguado (léxico) | achagua |
+| Labranza, labranza de maíz, labranza quemada, rozar, «Convite p.a Labranza = Vnuma» | 49 izq., 71 der., 90 izq. | cultivo | atestiguado (léxico) | achagua |
+| Yuca brava y mansa, rallo, budare, casabe | 44 izq., 46 der., 71 izq., 87 der. | tecnologia-objetos | atestiguado (léxico) | achagua |
+
+**Corrección para el YAML de la transcripción** (no se tocó: genera
+`lexicon_achagua.py`): «Mercado donde se vende» es *Benidacarrun* en la imagen
+(75 der.), no *Benidacarrusí*; y «Hermano menor de ella» se lee *Ruchamini ruerri*
+(67 der.).
+
+**Qué no dio (con sonda).** Ningún lema para tío, tía, suegro, suegra ni cuñado
+(regex `\bt[ií][oa]s?\b|suegr|cu[ñn]ad` sobre `castellano`); «padre» sólo en
+«Sin Padre = Masaricanayisa» (92 izq.). Ni «cacique» ni «capitán». No se puede
+medir con él la bifurcación de los tíos (parentesco-011).
+
+**Deuda.** Ver en imagen el resto de las voces citadas como transcripción (69
+izq., 74 der., 78 izq., 85 izq., 34 der., 49 izq., 71 der., 90 izq.).
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** (por la transcripción de `6-fusion/`) para `-ana` y para *manare*.
+*Casanare Numana* 'Boca de Casanare' (pliego 42) y *Vní numāna* 'Voca del
+Rio' (pliego 98) son *numa* 'boca' + `-na` relacional: la nota de la
+transcripción «locativo -ana» no se sostiene. *Jarrun* 'lugar' / *Jarruna*
+'espacio, sitio' (pliegos 73 y 61). De paso: *chamanare* 'iguana' (pliego 69),
+*manari-* 'calamidad, perderse' (pliegos 31, 47, 82) y *mapanarí*, una de
+cuatro **palmas** (pliego 80). Sesión: [[14_cruce_toponimos_hermanas]].

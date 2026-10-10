@@ -1,0 +1,488 @@
+# GENERADO por 6-fusion/scripts/medir_manaure_colombia_2026-10-09.py — no editar a mano.
+meta:
+  fecha: '2026-10-09'
+  script: 6-fusion/scripts/medir_manaure_colombia_2026-10-09.py
+  propuesta: 6-fusion/manaure_colombia_2026-10-09.yaml
+  aviso: Medición, no canon (regla 5). Un acierto de sonda lleva a un pasaje; el dato está en el pasaje.
+sondas:
+  total_por_grafia:
+    manaure: 163
+    manavre: 1
+    manahure: 0
+    manaore: 1
+    managuare: 1
+    managuanare|managuarire: 2
+    mauaure (OCR de Castellanos 1857): 2
+    'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 39
+  por_obra:
+    Aguado_1918_Historia_Venezuela_t1_gutenberg.txt:
+      managuare: 1
+    Alvarado_1921_Glosario_Voces_Indigenas_Venezuela.pdf:
+      manaure: 1
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 11
+    Antolinez_1946_Hacia_el_indio_y_su_mundo.pdf:
+      manaure: 3
+    Arcaya_1920_Historia_Estado_Falcon.pdf:
+      manaure: 16
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 2
+    Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt:
+      manaure: 3
+      manavre: 1
+    Castellanos_1857_Elegias_partes_I-II_texto.txt:
+      manaure: 2
+      mauaure (OCR de Castellanos 1857): 2
+    Castellanos_1886_Historia_Nuevo_Reino_Granada_t2.txt:
+      manaure: 2
+    Chapter 3 Ethnohistory.DOC-comprimido.pdf:
+      manaure: 65
+    CollYToste_1897_Prehistoria_Puerto_Rico.ocr.txt:
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 1
+    Esteves_1989_Toponimos_Paraguana_1.ocr.txt:
+      manaure: 1
+    Esteves_1989_Toponimos_Paraguana_2.ocr.txt:
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 2
+    Esteves_1989_Toponimos_Paraguana_3.ocr.txt:
+      manaure: 3
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 1
+    Esteves_1989_Toponimos_Paraguana_4.ocr.txt:
+      manaure: 1
+    Esteves_1989_Toponimos_Paraguana_5.ocr.txt:
+      manaure: 1
+    Esteves_1989_Toponimos_Paraguana_6.ocr.txt:
+      manaure: 2
+    Fabo_1911_Idiomas_y_Etnografia_Region_Oriental_Colombia.txt:
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 16
+    Federmann_1916_Narracion_Primer_Viaje_Arcaya.txt:
+      manaure: 2
+    Gilij_1781_Saggio_Storia_Americana_t2.txt:
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 1
+    Jahn_1927_Aborigenes_Occidente_Venezuela.pdf:
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 1
+    Moron_2012_Petroglifos_Falcon.pdf:
+      manaure: 22
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 2
+    Navarrete_1829_Coleccion_Viages_t3_Viages_Menores_Vespucio.txt:
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 1
+    Oliver_1989_cap3_s33_falcon_lara.ocr.txt:
+      manaure: 2
+    Oliver_1989_cap4_s47_s415_dabajuroide.ocr.txt:
+      manaure: 2
+    Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf:
+      manaure: 2
+    Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt:
+      manaure: 1
+      manaore: 1
+    Palabras Vivas de una Lengua Muerta.pdf:
+      manaure: 7
+      managuanare|managuarire: 2
+    Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.txt:
+      manaure: 2
+    Urbina_2007_El_Carrizal_UCV.txt:
+      manaure: 1
+    Urbina_2011_Archaeological_Survey_Coastal_Falcon_UCL.txt:
+      manaure: 2
+    VanBuurt_2014_CaquetioWords_Papiamentu.txt:
+      manaure: 3
+      'manare (homógrafa: casi siempre el cernidor; Morón la da también como «Arco Manare»)': 1
+    Velasco_2015_Historia_de_una_Resistencia.pdf:
+      manaure: 16
+    ZavalaReyes_et_al_2018_Arqueologia_Medanos_Coro.pdf:
+      manaure: 1
+  obras_leidas: 106
+  obras_sin_texto:
+  - Fernandes_et_al_2020_Nature_Genetic_History_Caribbean.pdf [pdftotext falló]
+  - Oviedo_Valdes_1851_Historia_General_Indias_vol1.pdf [pdftotext falló]
+  - Ramos_Perez_1978_resenia_Persee.pdf [pdftotext falló]
+  - Rouse_Cruxent_1963_Venezuelan_Archaeology.pdf [pdftotext falló]
+oeste:
+  ventana_caracteres: 600
+  n: 17
+  aciertos:
+  - obra: Arcaya_1920_Historia_Estado_Falcon.pdf
+    forma: manaure
+    posicion: 228530
+    palabras_del_oeste:
+    - coquiba
+    - santa marta
+    fragmento: ' gozaba se traslado el mismo a coro, donde debio llegar durante los ultimos meses del propio ano
+      de 1528. todos nuestros cronistas refieren su entre- vista con manaure. la tradicion .dice, aunque sobre esto
+      no hay documentos que lo comprue- ben, que el conquistador y el cacique se dieron un abrazo al pie de un frondoso
+      cuji, '
+  - obra: Arcaya_1920_Historia_Estado_Falcon.pdf
+    forma: manaure
+    posicion: 276375
+    palabras_del_oeste:
+    - maracaib
+    fragmento: storia de oviedo y banos por fernandez duro. de otros documentos que existen en la biblioteca de
+      nuestra academia de la historia consta que el alzamiento de manaure fue despues de la salida de alfinger para
+      maracaibo. 199 pedro m. arcaya pues todavia a mediados del siguiente siglo xviii se conservaba en los llanos
+      de b
+  - obra: Arcaya_1920_Historia_Estado_Falcon.pdf
+    forma: manaure
+    posicion: 276792
+    palabras_del_oeste:
+    - maracaib
+    fragmento: ' los caquetios, a fin de que el cacique pudiera cruzar las sabanas inundadas, habian levantado las
+      calzadas que aun subsisten en aquellas regiones. creiase que manaure habia ido a ocultar sus tesoros a la
+      misteriosa laguna de curanaca; una de tantas transformaciones de la leyenda de el dorado (11). sin embargo,
+      muchos de los '
+  - obra: Arcaya_1920_Historia_Estado_Falcon.pdf
+    forma: manaure
+    posicion: 465114
+    palabras_del_oeste:
+    - maracaib
+    fragmento: on- quista. de estos caquetios del occidente se le habia dado el titulo de cacique general a un indio
+      lla- mado don sancho de uriacoa, que creemos era deudo de manaure. en efecto, sus descendientes usaron como
+      apellido el nombre del celebre cau- dillo caquetio. esta familia, en la cual el cacicazgo era heriditario,
+      fue aument
+  - obra: Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt
+    forma: manaures
+    posicion: 193756
+    palabras_del_oeste:
+    - rancheria
+    fragmento: uita de espana e hilo de a carrete, muchilas te- jidas, panos de lien<;o tejidos com primores, arcos
+      muy primorossos con muchos magos de fiechas, cataures y manaures muy labrados, mavres que son a fuer de faxas
+      mujeriles muy curiossas por extremo, chonchones de que vssan en sus peschas, mucho agy y pajaros, y entre
+      aques
+  - obra: Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt
+    forma: manaure
+    posicion: 544955
+    palabras_del_oeste:
+    - maracayb
+    fragmento: ' de in- dios caribes, compuesta de cien gandules, hananre (cacique).— es un personaje legendario
+      a quien la tradicion india da el nombre de el gran cacique manaure. suponiendole soberano de las naciones
+      indicas que habita- ban las inmediaciones de la laguna de maracaybo. a la lle- gada de los espanoles a tierra
+      firme d'
+  - obra: Chapter 3 Ethnohistory.DOC-comprimido.pdf
+    forma: manaure
+    posicion: 173451
+    palabras_del_oeste:
+    - coquiba
+    fragmento: 'illage called todariquiba) if ampies could guarantee protection from the constant raiding "pirates"
+      out of hispaniola. this was accorded in 1527, when finally, manaure and ampies the elder met in a memorable
+      occasion in coro, an event described by many chroniclers (e.g. aguado [1579] 1950 [1]: 26-29).99 while ampies
+      was strug'
+  - obra: Chapter 3 Ethnohistory.DOC-comprimido.pdf
+    forma: manaure
+    posicion: 173951
+    palabras_del_oeste:
+    - coquiba
+    fragmento: he islands), charles v (charles i of spain) had finally consolidated his power in spain, and ampies
+      --to put it tritely-- lost all his chances. in the process, manaure and his caquetio of "coro" lost the guarantees
+      that ampies had accorded to them.100 between 1528-29, through a series of capitulaciones, charles v left the
+      gob
+  - obra: Chapter 3 Ethnohistory.DOC-comprimido.pdf
+    forma: manaure
+    posicion: 175547
+    palabras_del_oeste:
+    - coquiba
+    - maracaib
+    - rancheria
+    fragmento: ' ampies. this has caused some confusion among historians. it was ampies the younger who first set
+      foot in coro, preparing the way for the big encounter between manaure and his father (ramos perez 1978). 100
+      the reasons for ampies'' loss of his chances to obtain the capitulacion that would have given him the rights
+      to the gober'
+  - obra: Chapter 3 Ethnohistory.DOC-comprimido.pdf
+    forma: manaure
+    posicion: 237198
+    palabras_del_oeste:
+    - bubur
+    - juruara
+    - maracaib
+    fragmento: rilla attacks against federmann by jirajara did not take place until he had reached the churuguara
+      highlands. in other words, it is likely that the alliance of manaure with the jirajaran "carib" women was
+      with those inhabiting the adjoining sierra of san luis. however, one can not disavow the possibility that
+      true carib-speak
+  - obra: Esteves_1989_Toponimos_Paraguana_6.ocr.txt
+    forma: manaure
+    posicion: 12469
+    palabras_del_oeste:
+    - guajir
+    fragmento: ' guasare guasima guasiqui guatacara guatarima guate guay guayabal guaimocho guayana guedeque gueque
+      141 camscanner === pdf 13 · impresa 13 === 223 guide 264 manaure 305 ocorote 224 guinea 265 mangle 306 omomo
+      225 giinf 266 mupara 307 oribor 226 leacales 267 muaparari 308 origuete 227 ilcuiza 268 mabpiare 309 origuaza
+      228 '
+  - obra: Moron_2012_Petroglifos_Falcon.pdf
+    forma: manaure
+    posicion: 15728
+    palabras_del_oeste:
+    - maracaib
+    fragmento: amos ahora las pruebas derivadas del trabajo de campo. en las montanas meridenas y en la cuenca del
+      lago de maracaibo, los campesinos llaman arco manare o arco manaure al fenomeno meteorologico producido por
+      cristales de agua en la alta atmosfera, formando un halo luminoso alrededor de la luna, recomendando cuidarse
+      de su inf
+  - obra: Oliver_1989_cap4_s47_s415_dabajuroide.ocr.txt
+    forma: manaure
+    posicion: 127425
+    palabras_del_oeste:
+    - cabo de la vela
+    - guajir
+    fragmento: onably controlled by caquetio indians, and undoubtedly, by a.d. 1521, it was already organized as
+      hierarchical and centralized polity under the paramount chief manaure (ch.-3). it is more than safe to assume
+      that the late urumaco, as well as the los medanos (a/b) potteries were the product of caquetio manufacture,
+      and that i
+  - obra: Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+    forma: manaure
+    posicion: 711321
+    palabras_del_oeste:
+    - maracaib
+    fragmento: . maldonado, francisco.— ii, 3. 4, 9, 22, 25, 27, 52, i33, i55. maldonado, juan. — i, 244. maldonado,
+      pedro.— ii, :>. 284,376. mamacurii cacique — ii, 5o. 56. manaure (cacique). — i, 36. — ii, 248. 266. manso,
+      bernardino. — ii, 257. manzanedo, alonso de.— i, 364. manzanillo, juan de. — ii, 177, 200. maracaibo (cacique).—
+      ii,
+  - obra: Palabras Vivas de una Lengua Muerta.pdf
+    forma: manaure
+    posicion: 3170
+    palabras_del_oeste:
+    - cabo de la vela
+    fragmento: a hasta el cabo de la vela. todas las aldeas y pueblos que la integraban tenian en similitud la lengua
+      arawak, que brindaba unidad al colectivo liderado por el manaure (2). carrocera (1968) indica que las lenguas
+      pertenecientes a esta agrupacion linguistica extendieron sus dominios en vastos territorios desde la extremidad
+      me
+  - obra: Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.txt
+    forma: manaure
+    posicion: 980712
+    palabras_del_oeste:
+    - goajir
+    fragmento: ' pearls and pearl shells, logwood (haematoxylon campechianum), and divi-divi (caesalpimia coriara).
+      during the salt season the indians of the interior flock to manaure, where they are paid for loading sacks
+      of salt into the warehouse and onto ships. both men and women take part in the work, the men filling the sacks
+      and the w'
+  - obra: VanBuurt_2014_CaquetioWords_Papiamentu.txt
+    forma: manaure
+    posicion: 25402
+    palabras_del_oeste:
+    - guajir
+    fragmento: ' not very numerous, indigenous people were therefore definitely present and part of the substratum
+      when papiamentu emerged. in his book het volk van de grote manaure, father r.h. nooyen gives numerous examples
+      of contacts between people of indigenous and african descent, during the late 17th and the 18th century, that
+      he '
+familia_aure:
+  excluidas_por_no_indigenas:
+  - cadaure
+  - centaure
+  - faure
+  - laure
+  - restaure
+  - taure
+  formas_distintas: 47
+  formas_con_contexto_occidental:
+  - adaure
+  - araure
+  - baure
+  - boraure
+  - cataure
+  - chunaure
+  - juraure
+  - kaure
+  - manaure
+  - mapaure
+  - maure
+  tabla_(veces>=2_o_occidental):
+  - forma: manaure
+    veces: 164
+    obras: 25
+    obras_con_contexto_occidental:
+    - Arcaya_1920_Historia_Estado_Falcon.pdf
+    - Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt
+    - Chapter 3 Ethnohistory.DOC-comprimido.pdf
+    - Esteves_1989_Toponimos_Paraguana_6.ocr.txt
+    - Moron_2012_Petroglifos_Falcon.pdf
+    - Oliver_1989_cap4_s47_s415_dabajuroide.ocr.txt
+    - Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+    - Palabras Vivas de una Lengua Muerta.pdf
+    - Steward_1948_HSAI_vol4_Circum-Caribbean_Tribes.txt
+    - VanBuurt_2014_CaquetioWords_Papiamentu.txt
+  - forma: baure
+    veces: 32
+    obras: 4
+    obras_con_contexto_occidental:
+    - Chapter 2 Linguistics- Oliver 1989.pdf
+  - forma: maure
+    veces: 25
+    obras: 13
+    obras_con_contexto_occidental:
+    - Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt
+  - forma: haure
+    veces: 20
+    obras: 3
+    obras_con_contexto_occidental: []
+  - forma: chaure
+    veces: 17
+    obras: 8
+    obras_con_contexto_occidental: []
+  - forma: cataure
+    veces: 15
+    obras: 8
+    obras_con_contexto_occidental:
+    - Carvajal_1892_Relacion_descubrimiento_rio_Apure.txt
+  - forma: adaure
+    veces: 14
+    obras: 5
+    obras_con_contexto_occidental:
+    - Esteves_1989_Toponimos_Paraguana_2.ocr.txt
+  - forma: naure
+    veces: 11
+    obras: 7
+    obras_con_contexto_occidental: []
+  - forma: perataure
+    veces: 7
+    obras: 1
+    obras_con_contexto_occidental: []
+  - forma: chunaure
+    veces: 7
+    obras: 5
+    obras_con_contexto_occidental:
+    - Esteves_1989_Toponimos_Paraguana_6.ocr.txt
+  - forma: baraure
+    veces: 5
+    obras: 2
+    obras_con_contexto_occidental: []
+  - forma: boraure
+    veces: 4
+    obras: 4
+    obras_con_contexto_occidental:
+    - Oviedo_Banos_1885_FernandezDuro_t2_Documentos.txt
+  - forma: anaure
+    veces: 4
+    obras: 3
+    obras_con_contexto_occidental: []
+  - forma: mapaure
+    veces: 4
+    obras: 2
+    obras_con_contexto_occidental:
+    - Jahn_1927_Aborigenes_Occidente_Venezuela.pdf
+    - Oviedo_Valdes_1852_Historia_General_Indias_vol2.pdf
+  - forma: parataure
+    veces: 4
+    obras: 2
+    obras_con_contexto_occidental: []
+  - forma: araure
+    veces: 3
+    obras: 3
+    obras_con_contexto_occidental:
+    - Oviedo_Banhos_Conquista_Poblacion_Venezuela.pdf
+  - forma: timaure
+    veces: 3
+    obras: 3
+    obras_con_contexto_occidental: []
+  - forma: urimaure
+    veces: 3
+    obras: 2
+    obras_con_contexto_occidental: []
+  - forma: paralaure
+    veces: 3
+    obras: 2
+    obras_con_contexto_occidental: []
+  - forma: buraure
+    veces: 2
+    obras: 1
+    obras_con_contexto_occidental: []
+  - forma: kaure
+    veces: 2
+    obras: 1
+    obras_con_contexto_occidental:
+    - Antolinez_1946_Hacia_el_indio_y_su_mundo.pdf
+  - forma: mauaure
+    veces: 2
+    obras: 1
+    obras_con_contexto_occidental: []
+  - forma: beaure
+    veces: 2
+    obras: 1
+    obras_con_contexto_occidental: []
+  - forma: yaraure
+    veces: 2
+    obras: 2
+    obras_con_contexto_occidental: []
+  - forma: juraure
+    veces: 1
+    obras: 1
+    obras_con_contexto_occidental:
+    - Jahn_1927_Aborigenes_Occidente_Venezuela.pdf
+donde:
+  lugares:
+    Manaure (La Guajira):
+      lat: 11.7771128
+      lon: -72.4469366
+      origen: 'overpass: node 313909383 (place=town)'
+    Manaure Balcón del Cesar:
+      lat: 10.3910411
+      lon: -73.0270699
+      origen: 'overpass: node 468769318 (place=town)'
+    Río Manaure (Cesar), un tramo:
+      lat: 10.3876865
+      lon: -73.052632
+      origen: 'overpass: way 279294636 (centro)'
+    La Paz (Cesar), municipio:
+      lat: 10.3866045
+      lon: -73.1710014
+      origen: 'nominatim: relation 11890104 (centroide)'
+    Cabo de la Vela (el cabo):
+      lat: 12.2071342
+      lon: -72.1802153
+      origen: 'nominatim: node 1181556217'
+    Coro:
+      lat: 11.4055796
+      lon: -69.6679115
+      origen: 'nominatim: way 1374792076'
+    Yaracal (cabecera del municipio Cacique Manaure, Falcón):
+      lat: 10.974934
+      lon: -68.5452435
+      origen: 'nominatim: way 1426715582'
+    Bobures (Zulia, costa sur del lago):
+      lat: 9.2396047
+      lon: -71.1728089
+      origen: 'nominatim: node 930222815'
+  distancias_km:
+  - de: Manaure (La Guajira)
+    a: Coro
+    km: 305.5
+  - de: Manaure (La Guajira)
+    a: Cabo de la Vela (el cabo)
+    km: 55.9
+  - de: Manaure Balcón del Cesar
+    a: Coro
+    km: 383.7
+  - de: Manaure Balcón del Cesar
+    a: La Paz (Cesar), municipio
+    km: 15.7
+  - de: Manaure Balcón del Cesar
+    a: Bobures (Zulia, costa sur del lago)
+    km: 240.1
+  - de: Manaure (La Guajira)
+    a: Manaure Balcón del Cesar
+    km: 166.6
+  - de: Coro
+    a: Yaracal (cabecera del municipio Cacique Manaure, Falcón)
+    km: 131.5
+  overpass_oeste:
+    consultado: '2026-10-09'
+    servidor: overpass.kumi.systems (el de overpass-api.de dio 504)
+    caja_s_o_n_e:
+    - 8.5
+    - -74.5
+    - 12.6
+    - -70.9
+    consultas:
+    - node[place][name~"aure",i](caja)
+    - (node[name~"aure",i][natural](caja); way[name~"aure",i][waterway](caja); node[name~"ure$",i][place](caja))
+    respuesta_literal:
+    - Manaure | node 313909383 | 11.7771128, -72.4469366 | town
+    - Manaure Balcón del Cesar | node 468769318 | 10.3910411, -73.0270699 | town
+    - Los Laureles | node 703271144 | locality
+    - El Laurel | node 703272754 | locality
+    - Cashaurechon | node 703381222 | locality
+    - Juguey Maurepa | node 703382683 | locality
+    - Los Laureles | node 703490444 | locality
+    - Finca Los Laureles | node 9142959540 | isolated_dwelling
+    - Mauren | node 10563311320 | hamlet
+    - Atasure | node 703380690 | locality
+    - Merrure | node 703382313 | locality
+    - Río Manaure | way 279294636 | river
+    - Río Manaure | way 871531038 | river
+    nombres_con_una_palabra_en_aure:
+    - Manaure
+    - Manaure Balcón del Cesar
+    - Río Manaure
+    n_nombres_distintos: 3

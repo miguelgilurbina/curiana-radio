@@ -25,7 +25,8 @@ ya estaba en el repo: Gumilla t. I, Brinton 1871 y Goeje 1939, leídos para la
 creencia lokona y cruzados con Pané y con Oviedo. La propuesta está en
 `6-fusion/creencia_lokono_2026-10-09.yaml`; esta nota es la bitácora. No toca
 el corpus, el lexicón, el ensayo ni los índices (regla 5). No se descargó nada:
-Roth 1915 y Brett 1868 esperan el «adelante» de Miguel.
+Roth 1915 y Brett 1868 llegaron el 2026-10-09 ([[roth-1915]], [[brett-1868]],
+y de paso [[brett-1880]]): esperan la minería 2.
 
 **La regla de capa** es la decisión de Miguel del 2026-10-09 (opción C de la
 nota 08 §3.3) para lo nuevo: `reconstruido` sólo con dos tradiciones
@@ -208,7 +209,9 @@ está en Rybka 2018 y en Brett, fuera del repo.
 
 ## 6. Cuánto queda
 
-- **Roth 1915 y Brett 1868**, localizados en la nota 08 §3.2, sin descargar.
+- **Roth 1915 y Brett 1868**, localizados en la nota 08 §3.2 y **descargados
+  el 2026-10-09** ([[roth-1915]], [[brett-1868]] y, de paso, [[brett-1880]]):
+  medidos, sin leer.
   Son los que pueden subir `lok-04` y `lok-09` a `reconstruido` o tumbarlos, y
   los únicos que contestarían R2 (la persona y el sueño), R4 (los huesos) y
   B4 (cerrar `cm24-c-l01` con la página de Brett).

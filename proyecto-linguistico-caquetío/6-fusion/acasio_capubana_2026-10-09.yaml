@@ -1,0 +1,784 @@
+# ─────────────────────────────────────────────────────────────────────────
+# MINERÍA — Acasio 2023, la estación Capubana y el «Calendario de las Calzadas»
+#
+# Regla 5: PROPONE. No toca 3-mundo/corpus/, 2-lengua/toponimos.yaml,
+# curiana_lexicon.py, 6-fusion/sitios_era2.yaml ni ningún índice compartido.
+# La entrada de topónimo de §toponimia_propuesta es para la campaña de
+# topónimos (se edita lexicon_toponimos.py y se regenera; toponimos.yaml no
+# se toca a mano).
+#
+# Páginas: «impresa (pdf N)». El artículo va de la 305 a la 325 del volumen;
+# impresa = pdf + 304, constante en las 21 (medido en el pie de cada página).
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: minero (Claude Opus 5.5), rama vault/acasio-capubana
+  pedido_por: Miguel (vía sesión principal)
+  obra: acasio-2023-capubana-calendario
+  cobertura: >-
+    Las 21 páginas leídas en texto (fuentes_caquetios/Acasio_2023_Capubana_Calendario.txt,
+    que es la salida de pdftotext byte a byte: 29.912 bytes los dos, acentos
+    enteros, 0 acentos descompuestos) y en imagen (render a 150 ppp con
+    pymupdf). Las figuras se leyeron además desde la imagen incrustada a su
+    resolución nativa: Fig. 1 (pdf 5, 1256×576 px), Fig. 2 (pdf 6: calco,
+    ficha técnica y foto tratada), Fig. 3 (pdf 9), Figs. 4-8 (pdf 14, 15, 16,
+    17 y 19) y la Tabla 1 (pdf 12). Las pp. 15 y 19 del PDF se leyeron por la
+    figura nativa y el pie en texto, sin render de página entera.
+  conteo: >-
+    21 hechos (acasio-001 a acasio-021) en cuatro secciones, más 12 ceros
+    medidos, 8 obras a buscar y 1 propuesta de topónimo. La BANDEJA cuenta
+    la lista más larga del archivo, no la suma.
+  no_leido: >-
+    Nada del artículo queda sin leer. Lo que NO se ha leído son las obras que
+    cita y de las que depende: Salazar 2017 (el origen del nombre de la
+    estación), Acasio 2013 (Siraba) y 2016 (Misaray), y Rebullida 1990/1999
+    (el método). Ver §fuentes_nuevas_a_buscar. No se descargó nada.
+  sondas: >-
+    Regla 6. Antes de contar se midió la ortografía: el .txt conserva los
+    acentos (179 «ó», 86 «í», 0 acentos descompuestos «´»). Cada sonda es una
+    raíz corta buscada sin acentos y en minúsculas sobre el texto entero
+    (normalización NFD, se quitan las marcas), y los conteos se repitieron
+    sobre una extracción nueva con pdftotext: mismo tamaño, mismos conteos.
+    Cada negativa de este archivo nombra su sonda. Las coincidencias
+    parciales se miraron en contexto: «teresa» (3) es «interesante», «ipc»
+    (1) es «descripción», «sur» (1) es «apresurarnos», «°» (21) es el «N°» de
+    la cabecera, «longitud» (1) son los «4 metros de longitud».
+  resumen: >-
+    Acasio llama «Capubana» a una ESTACIÓN de arte rupestre de la falda del
+    cerro, a 210 m, nunca al cerro, que es siempre «Cerro de Santa Ana». El
+    nombre no es suyo: lo trae ya el título de Salazar 2017 (Inparques). No
+    da coordenadas, ni glosa, ni tradición del nombre. El petroglifo existe y
+    está bien descrito (atestiguado, moderno); la lectura metónica es una
+    hipótesis de autor único que no se puede refutar tal como está
+    construida. No atribuye el grabado a ningún pueblo ni lo fecha. «Las
+    Calzadas» es el nombre de un lugar junto a la estación, sin definir.
+    Distingue la estación de la Piedra de Siraba y de la de Misaray, que son
+    obras suyas anteriores: la estación Capubana no es, por él, las «Piedras
+    del Almanaque».
+
+veredicto_nombre: >-
+  Acasio NO dice que el Cerro de Santa Ana se llamara Capubana: en las seis
+  apariciones del nombre (pp. 305 ×2, 306 ×2, 307, 325) es «estación», y el
+  cerro es siempre «Cerro de Santa Ana» o «monumento natural Cerro de Santa
+  Ana». Lo que sí da es un uso vivo e institucional del nombre, con b, para un
+  lugar de la falda del macizo (2017 en Salazar, 2023 en Acasio). Eso afina
+  toponimo-113 en dos sentidos: (1) el nombre está pegado hoy a la falda del
+  Santa Ana, no sólo a un «pequeño cerro cerca de Misaray»; (2) la forma con
+  -b- coincide con el capubana de Zavala Reyes 2015 #61, cuya sigla es HB
+  (Hernández Baño, que escribió también sobre los petroglifos de Falcón). Por
+  eso NO se puede contar todavía como atestación independiente: si Salazar
+  tomó el nombre de Hernández Baño o del glosario de Zavala, es el mismo dato
+  con otro sello (minar-fuente §8). Para la lectura de Miguel (2026-09-01:
+  el Capubana es el Santa Ana entero) el artículo es compatible y no
+  confirmatorio. No decide entre las tres salidas que la entrada deja
+  abiertas: dos Capubana, el nombre bajó del grande al pequeño, o un nombre
+  de sector de la falda. Lo decide Salazar 2017 con coordenadas.
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. EL NOMBRE
+# ══════════════════════════════════════════════════════════════════════
+nombre_capubana:
+
+  - id: acasio-001
+    contenido: >-
+      Acasio llama «Capubana» a una estación de arte rupestre, no a un cerro.
+      Título: «petroglifo geométrico de la estación Capubana, en el Cerro de
+      Santa Ana». Resumen: «en la estación de arte rupestre Capubana, en la
+      falda del cerro de Santa Ana, en la Península de Paraguaná».
+      Introducción: «el calendario de Las Calzadas, estación Capubana». El
+      nombre sale seis veces en 21 páginas (título y resumen en castellano y en
+      inglés, la introducción y la referencia [4]) y las seis va con
+      «estación».
+    fuente: atestiguado
+    capa: moderno (2023)
+    referencia: 'Acasio 2023, pp. 305, 306, 307 y 325 (pdf 1, 2, 3 y 21), vistas en imagen'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '305, 307 y 325 (pdf 1, 3 y 21)'}
+    dominios: [toponimia, arte-rupestre]
+    esfera_destino: toponimia
+    toca_canon: [toponimo-113, 'sitios_era2 §Capubana', D9]
+    implicacion_simulacion: >-
+      Ninguna directa. El canon puede seguir llamando Capubana al cerro (D9 y
+      sitios_era2 lo hacen como canon-simulacion); este artículo no lo
+      autoriza ni lo contradice.
+
+  - id: acasio-002
+    contenido: >-
+      El cerro, en todo el artículo, se llama «Cerro de Santa Ana» o
+      «monumento natural Cerro de Santa Ana». «Santa Ana» sale siete veces:
+      seis para el cerro (título y resumen en las dos lenguas, dos en la
+      introducción) y una en el título de Salazar 2017. En ninguna parte dice
+      que el cerro se llamara Capubana, ni de dónde sale el nombre de la
+      estación, ni qué significa: no hay glosa, ni tradición, ni mapa.
+    fuente: atestiguado
+    capa: 'moderno; el cero es de esta fuente'
+    referencia: >-
+      Sondas sin acentos sobre el texto entero: «santa ana» 7; «llamad» 0,
+      «nombre» 0, «denomin» 0, «toponim» 0, «duende» 0; «capu» 6, todas
+      «Capubana» (las de acasio-001), así que «capuh» y «capuan» dan 0.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '305-325 (barrido entero)'}
+    dominios: [toponimia]
+    esfera_destino: toponimia
+    toca_canon: [toponimo-113]
+    implicacion_simulacion: >-
+      La frase «Acasio confirma que el Santa Ana se llamaba Capubana» no se
+      puede escribir con esta fuente.
+
+  - id: acasio-003
+    contenido: >-
+      El nombre no es de Acasio: lo trae ya el título de la referencia [4],
+      «Salazar E. Primera Caracterización de los Petroglifos de la estación
+      Capubana – Santa Ana. Inparques: Instituto Nacional de Parques; 2017».
+      Acasio sólo la cita para la vegetación del sitio (p. 308). Es el uso
+      más antiguo del nombre que el artículo deja ver. «– Santa Ana» puede ser
+      el cerro o el municipio Santa Ana: no se decide.
+    fuente: atestiguado
+    capa: moderno (2017, citado en 2023)
+    referencia: 'Acasio 2023, p. 325 (pdf 21), ref. [4], vista en imagen; p. 308 (pdf 4) para el uso que hace de ella'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308 y 325 (pdf 4 y 21)'}
+    dominios: [toponimia, fuentes]
+    esfera_destino: fuentes
+    toca_canon: [toponimo-113]
+    implicacion_simulacion: >-
+      Salazar 2017 es la obra que decide de dónde sale el nombre. Va primera
+      en §fuentes_nuevas_a_buscar.
+
+  - id: acasio-004
+    contenido: >-
+      Dónde está la estación, con sus palabras: «en la falda del cerro de
+      Santa Ana» (p. 305 y 307); una de «las estaciones de arte rupestre
+      presentes en las inmediaciones del monumento natural Cerro de Santa Ana»
+      (p. 307); «muy cerca de las calzadas, en el primer piso biótico del
+      monumento natural a una altura de 210 m.s.n.m, enclavada en una
+      topografía con cierta pendiente y un suelo rocoso con poca materia
+      orgánica» (p. 308). No da coordenadas, ni vertiente, ni rumbo, ni la
+      distancia a ningún pueblo. Misaray y Siraba salen sólo como otras
+      piedras y otras obras, no como vecinos de la estación.
+    fuente: atestiguado
+    capa: moderno (2023)
+    referencia: >-
+      Acasio 2023, pp. 305, 307 y 308 (pdf 1, 3 y 4), vistas en imagen.
+      Sondas: «coorden» 0, «utm» 0, «latitud» 0, «gps» 0, «norte» 0, «oeste»
+      0, «noreste» 0, «vertiente» 0, «ladera» 0, «moruy» 0, «machuruca» 0,
+      «maitiruma» 0, «chamuriana» 0, «buena vista» 0; «misaray» 6 y
+      «siraba» 4, todas como obra o piedra aparte.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '305, 307 y 308 (pdf 1, 3 y 4)'}
+    dominios: [toponimia, geografia, arte-rupestre]
+    esfera_destino: toponimia
+    toca_canon: [toponimo-113, 'sitios_era2 §Capubana']
+    implicacion_simulacion: >-
+      Si la estación entra en sitios_era2, entra sin coordenada propia: «en la
+      falda, a 210 m», no un punto.
+
+  - id: acasio-005
+    contenido: >-
+      (Medición del minador.) Con lo que hay en el repo la estación no se
+      puede situar. En OSM (paraguana-1.json) el Cerro Capuana está a 6,7 km
+      al ENE (rumbo 65°) de la cumbre del Santa Ana, y Misaray a 3,9 km al NE;
+      el Cerro Capuana queda a 3,3 km al E de Misaray. Las 1.900 ha del
+      monumento equivalen a un círculo de unos 2,5 km de radio. Si la estación
+      está «en el primer piso biótico del monumento natural», lo más probable
+      es que esté en la falda del macizo y no en el Cerro Capuana de OSM. Pero
+      el polígono del monumento no está en el repo, OSM no da la cota del
+      Cerro Capuana y el artículo no da coordenadas: no se decide.
+    fuente: hipotetico
+    capa: 'inferencia del minador, 2026-10-09'
+    referencia: >-
+      Distancias por haversine sobre los nodos OSM «Cerro Santa Ana» (11.8183,
+      -69.9524, ele 830), «Cerro Capuana» (11.8440, -69.8963, sin ele) y
+      «Misaray» (11.8425, -69.9265); las 1.900 ha son de monumento-cerro-santa-ana.
+    procedencia: {obra: osm-kaketiana, pagina: 'paraguana-1.json'}
+    dominios: [toponimia, geografia]
+    esfera_destino: toponimia
+    toca_canon: [toponimo-113]
+    implicacion_simulacion: >-
+      Ninguna mientras no haya coordenadas. Deuda: el polígono del monumento
+      (Decreto 1005 de 1972, o el de 2019) y la cota del Cerro Capuana.
+
+  - id: acasio-006
+    contenido: >-
+      La forma con b de la estación coincide con la de `kapubana` 'duende del
+      cerro' del lexicón, que viene de Zavala Reyes 2015 #61 con sigla HB:
+      Adrián Hernández Baño. Hernández Baño escribió también «Petroglifos.
+      Estado Falcón» (2000), que Morón 2012 cita con reservas («una tendencia
+      literaria dada a la hipérbole»). Esteves escribe «Capuhana» y OSM
+      «Capuana». Si Salazar 2017 tomó el nombre de Hernández Baño o del
+      glosario de Zavala, la estación no es una atestación nueva del
+      compuesto, sino el mismo dato repetido.
+    fuente: hipotetico
+    capa: 'inferencia del minador sobre la cadena de la forma'
+    referencia: >-
+      curiana_sim/lexicon_zavala.py, entrada kapubana («Duende del cerro
+      [Zavala Reyes 2015 #61 (HB)]»); 4-fuentes/zavala-reyes-2015.md (HB =
+      Adrián Hernández Baño); 4-fuentes/moron-2012-petroglifos.md (la reserva
+      sobre Hernández Baño 2000). Acasio no cita a Hernández Baño: sondas
+      «hernandez» 0 y «baño» 0.
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario #61 (HB)'}
+    dominios: [toponimia, lengua]
+    esfera_destino: toponimia
+    toca_canon: [toponimo-113, kapubana]
+    implicacion_simulacion: >-
+      Hasta leer Salazar 2017, el nivel de toponimo-113 no sube por esta
+      fuente.
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. EL PETROGLIFO Y LA LECTURA
+# ══════════════════════════════════════════════════════════════════════
+petroglifo_y_lectura:
+
+  - id: acasio-007
+    contenido: >-
+      El soporte: una «roca satélite de 0.76 x 0,70 m de largo y ancho»,
+      «muy cerca de una pieza monolítica de casi 4 metros de longitud, también
+      con una serie de glifos en su superficie» (p. 308). La ficha técnica de
+      la Fig. 2 (p. 310) añade: perímetro 2,38 m, área del soporte 0,40 m²,
+      área del petroglifo 0,026 m² (6,56 % del soporte), surco tallado de
+      1,60 m, glifo de 0,33 × 0,19 m. El texto da 330 × 190 mm (p. 312). La
+      foto de la Fig. 2 está tratada con DStretch y en la reproducción del
+      PDF el motivo no se distingue: lo que se ve del grabado es el calco.
+    fuente: atestiguado
+    capa: moderno (medición del autor, 2023)
+    referencia: 'Acasio 2023, pp. 308, 310 y 312 (pdf 4, 6 y 8); ficha técnica leída en la imagen nativa de la Fig. 2'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308, 310 y 312 (pdf 4, 6 y 8)'}
+    dominios: [arte-rupestre, geografia]
+    esfera_destino: geografia_politica
+    toca_canon: ['sitios_era2 §Capubana (materiales)']
+    implicacion_simulacion: >-
+      Un objeto del paisaje con medidas: una piedra grabada de menos de un
+      metro junto a un bloque de cuatro. Sirve a [Tu tierra] como cosa que se
+      ve, no como cosa que se sabe leer.
+
+  - id: acasio-008
+    contenido: >-
+      El motivo, como lo describe (p. 311-312) y como se ve en el redibujo
+      (Fig. 3, p. 313): un rectángulo horizontal dividido en dos filas y tres
+      columnas, con el sector izquierdo de cada fila más ancho que los otros
+      dos (seis sectores: dos rectangulares y cuatro casi cuadrados). Dentro
+      de cada sector salen de la base trazos verticales cortos, hasta un
+      tercio de la altura: dos en cada sector ancho y uno en cada cuadrado,
+      ocho en total. Encima, en el lado opuesto al apéndice, tres trazos
+      cortos: uno en cada extremo y uno sobre el sector central de arriba.
+      Once trazos. Del centro del lado inferior sale un trazo largo que
+      remata en una figura cuadrangular menor y abierta, atravesada por él
+      («apéndice» y «caja»). Comprobado en imagen: 8 + 3 = 11 en las Figs. 3 y
+      4; el apéndice y la caja se ven sólo en el calco de la Fig. 2, porque la
+      Fig. 3 los corta.
+    fuente: atestiguado
+    capa: moderno (calco y redibujo del autor, 2023)
+    referencia: 'Acasio 2023, pp. 311-313 (pdf 7-9) y Fig. 2 (p. 310, pdf 6); visto en la imagen nativa de las Figs. 2, 3 y 4'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '311-313 (pdf 7-9)'}
+    dominios: [arte-rupestre]
+    esfera_destino: creencia
+    toca_canon: ['6-fusion/petroglifos_imagenes_2026-10-05.yaml (entrada acasio)']
+    implicacion_simulacion: >-
+      Es el motivo que el catálogo de imágenes resume como «rectángulos
+      encadenados»: no lo son. Es un solo rectángulo partido en seis, con
+      trazos dentro y encima, sobre un vástago. Si el catálogo se corrige, lo
+      hace quien lo mantiene.
+
+  - id: acasio-009
+    contenido: >-
+      Los otros grabados de la estación. La roca satélite tiene un segundo
+      motivo geométrico, «mucho más elaborado» y con «perfectos trazos
+      paralelos como cuentas» (Fig. 2, p. 310; p. 309), que el autor da por
+      «otro instrumento calendárico» de «otro ciclo astronómico»: la
+      existencia es dato, el ciclo es su lectura. La Fig. 1 (p. 309) es un
+      mosaico de fotos cenitales de varios bloques contorneados, con los
+      grabados resaltados en amarillo y una escala roja y blanca: en la roca
+      satélite, el calendario y el motivo de trazos paralelos; en el bloque
+      grande del centro, dos surcos largos paralelos en diagonal, un círculo
+      con segmentos radiales sobre un vástago que acaba en una base, una
+      figura horizontal con un anillo y un remate de trazos, y una figura de
+      líneas quebradas con una espiral. El texto no describe ninguno de esos
+      grabados del bloque grande.
+    fuente: atestiguado
+    capa: moderno (2023)
+    referencia: 'Acasio 2023, pp. 309-310 (pdf 5-6); Fig. 1 leída en la imagen nativa (1256×576 px). La descripción de la Fig. 1 es del minador'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '309-310 (pdf 5-6)'}
+    dominios: [arte-rupestre]
+    esfera_destino: creencia
+    toca_canon: ['sitios_era2 §Capubana (materiales)', creencia-022]
+    implicacion_simulacion: >-
+      La estación es un conjunto, no una piedra: varios bloques grabados en
+      pocos metros. El círculo con radios es el único motivo que alguien
+      podría leer como astro, y el autor no lo lee.
+
+  - id: acasio-010
+    contenido: >-
+      La lectura: el motivo sería «un calendario que incorpora en su diseño el
+      ciclo metónico» (p. 310), 19 años solares = 235 lunaciones. El método es
+      de Rebullida (1990, 1999), escrito para el arte rupestre del Neolítico y
+      el Bronce de España (p. 313-314): años de 12 o 13 lunas que empiezan con
+      el primer plenilunio tras el solsticio de invierno, y un patrón de
+      cuatro años (13, 25, 38, 50) que se repite. La cuenta (pp. 317-323,
+      Figs. 4-8): el trazo exterior de arriba a la izquierda es la luna 1;
+      cada trazo siguiente recibe el total de lunaciones al cerrar cada año
+      (13, 25, 38…), de izquierda a derecha y de arriba abajo, «saltándose»
+      el primer trazo de cada sector ancho; los años 1 a 8 llenan ocho trazos
+      (99 lunaciones), los años 9 a 16 caen en los mismos ocho (112…198), los
+      años 17 y 18 en los trazos exteriores (211, 223), el año 19 (235) en el
+      primer trazo del primer rectángulo, «por apartarse de la regla», y el
+      último trazo libre recibe 118 = 235 / 2 redondeado, «la mitad del ciclo».
+      Conclusión del autor: «La hipótesis ha sido comprobada con total
+      propiedad» (p. 322); «Se trata de un auténtico calendario Lunar» (p. 324).
+    fuente: hipotetico
+    capa: 'lectura de autor único, s. XXI; «Revisión preliminar / Artículo de divulgación» (p. 305); recibido el 15 y aceptado el 25 de mayo de 2023'
+    referencia: 'Acasio 2023, pp. 305, 310, 313-324 (pdf 1, 6, 9-20); asignaciones comprobadas en las imágenes nativas de las Figs. 4-8'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '310, 313-324 (pdf 6, 9-20)'}
+    dominios: [creencia, calendario, arqueoastronomia]
+    esfera_destino: creencia
+    toca_canon: [creencia-013, creencia-014, creencia-022]
+    implicacion_simulacion: >-
+      No sube. Una cuenta metónica en el motor sería importar una hipótesis
+      del s. XXI (reglas 2 y 3).
+
+  - id: acasio-011
+    contenido: >-
+      (Lectura del minador.) Por qué la lectura no se puede refutar tal como
+      está. (1) Los trazos no cuentan lunaciones: once trazos no son 235, ni
+      19, ni 50. Lo que se pone en cada trazo es un rótulo, el total al cerrar
+      cada año; un trazo es, a lo más, un año. (2) La repetición desde el año
+      9 descansa en que 99 lunaciones son casi 8 años solares, el ciclo de
+      ocho años; eso no es el metónico y el autor no lo nombra. (3) La regla
+      de «saltar» el primer trazo de los sectores anchos no sale del diseño
+      ni de Rebullida: es la que deja libres justo los trazos que luego
+      reciben el 235 y el 118. (4) La excepción del año 19 se toma de la cita
+      de Rebullida («al ocupar el número 37, indicaba ser el final», p. 315),
+      que la deriva de contar sobre una serie de 50; Acasio no cuenta sobre
+      50, coloca el 235 donde queda sitio. (5) El 118 no se calcula: se busca
+      un valor para el trazo que sobra y se declara comprobado. (6) Son libres
+      la orientación del redibujo, el sentido de lectura, el trazo inicial,
+      qué trazos cuentan (el apéndice y la caja quedan fuera, p. 312), la
+      regla del salto, la excepción y el valor del hueco. Con esas siete
+      elecciones la cuenta no tiene cómo fallar: no hay resultado posible que
+      hubiera contado en contra. (7) No hay nada medido en el cielo: ni orientación de la roca,
+      ni horizonte, ni azimut, ni observación de solsticio, ni si la roca
+      satélite está en su sitio. Lo que la haría refutable: aplicar las mismas
+      reglas, sin elecciones nuevas, al segundo motivo de la roca o a rejillas
+      de control, y medir la orientación en el sitio.
+    fuente: hipotetico
+    capa: 'crítica del minador, 2026-10-09'
+    referencia: >-
+      Sobre Acasio 2023, pp. 312, 315, 317-323 (pdf 8, 11, 13-19). Sondas:
+      «orient» 0, «azimut» 0, «horizonte» 0, «equinoccio» 0; «solsticio» 4,
+      las cuatro generales (la teoría de Rebullida y la ilustración del
+      ciclo, pp. 311, 314 y 324), ninguna en el sitio.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '312, 315, 317-323 (pdf 8, 11, 13-19)'}
+    dominios: [creencia, calendario, metodo]
+    esfera_destino: creencia
+    toca_canon: [creencia-022]
+    implicacion_simulacion: >-
+      Ninguna. Es la razón para no llevar la lectura al corpus como nada más
+      que «lectura de autor».
+
+  - id: acasio-012
+    contenido: >-
+      Errores y descuidos del texto, que pesan en la etiqueta. Da el ciclo
+      metónico como de «19 años, 18.61 años para ser más exactos» (p. 314):
+      18,61 años es la regresión de los nodos lunares, otro ciclo; el
+      metónico son 19 años. Rebullida es «(1990) [6]» y «(1999) [7]», pero la
+      Tabla 1 es «la aportada por Rebullida (1990) [7]» (p. 315) y el método
+      el de «Rebudilla (1990) [7]» (p. 317). Las secciones saltan de la 2 a
+      la 4. «Navaja de Ocan» (p. 322). Diez días entre recibido y aceptado
+      (p. 305).
+    fuente: atestiguado
+    capa: 'sobre el texto; la corrección del ciclo es del minador'
+    referencia: 'Acasio 2023, pp. 305, 314, 315, 317, 322 (pdf 1, 10, 11, 13, 18), vistas en imagen'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '305, 314, 315, 317 y 322 (pdf 1, 10, 11, 13 y 18)'}
+    dominios: [metodo]
+    esfera_destino: fuentes
+    toca_canon: []
+    implicacion_simulacion: >-
+      Ninguna. Confirma «hipotético» para toda lectura de esta serie de
+      trabajos mientras no aparezca una revisión de pares.
+
+  - id: acasio-013
+    contenido: >-
+      Quién, cuándo y para qué, según el autor: los que lo hicieron son
+      «nuestros arcanos escudriñadores del firmamento», «nuestros
+      originarios», «nuestros astrónomos ancestrales», «culturas pretéritas»;
+      nunca un pueblo con nombre. No da fecha, ni material asociado, ni
+      contexto excavado. La función es computar el tiempo y predecir la luna,
+      con «su debida implementación en la vida social de las culturas
+      pretéritas: la caza, pesca, la cosecha, la siembra, la tala etc.»
+      (p. 324), sin prueba. Llama a estos sitios «santuarios astronómicos»
+      (p. 307). Nada de navegación.
+    fuente: atestiguado
+    capa: 'lo que el autor afirma; el cero de atribución y de fecha es de esta fuente'
+    referencia: >-
+      Acasio 2023, pp. 307, 311 y 324 (pdf 3, 7 y 20). Sondas: «caquet» 0,
+      «aquet» 0, «caiquet» 0, «indigen» 0, «indio» 0, «aborig» 0, «prehisp»
+      0, «precolomb» 0, «arahu» 0, «arawak» 0, «aruac» 0, «jirajar» 0,
+      «datac» 0, «ceramic» 0, «dabaj» 0, «ritual» 0, «sagrad» 0, «ceremon» 0;
+      «siglo» 1 y «a.c» 1, los dos de Metón; «ancestr» 9, «originari» 3.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '307, 311 y 324 (pdf 3, 7 y 20)'}
+    dominios: [creencia, cronologia]
+    esfera_destino: creencia
+    toca_canon: [creencia-022]
+    implicacion_simulacion: >-
+      Regla 3: atribuir el grabado a los caquetíos de los s. XIV-XV es
+      hipotético, y el autor ni siquiera lo hace. Zavala Reyes 2015 (Chirache)
+      al menos asocia sus grabados a cerámica dabajuroide cercana; Acasio no
+      trae ni eso. Morón 2012 da los motivos geométricos como los propios de
+      la costa y la sabana árida: el de Capubana encaja en el estilo, y el
+      estilo no fecha.
+
+  - id: acasio-014
+    contenido: >-
+      (Lectura del minador.) Lo que un pueblo que cuenta lunas sabría, y lo
+      que el canon ya tiene. El lexicón trae `apana` «Una luna. Medición de
+      tiempo» y `buiamati` «dos lunas. Medición de tiempo», las dos
+      caquetío-atestiguadas en Zavala Reyes 2015 (#10 y #47) con sigla GC,
+      Galeotto Cey, del s. XVI; y `kati` 'luna' (#71), que manda desde el
+      2026-09-19 (`kasha` está archivada). Ésa es la base atestiguada de una
+      cuenta de lunas, de época de contacto e independiente de Acasio. Contar
+      lunas da, sin escritura, el año de doce o trece (se ve en el cielo), las
+      noches oscuras y claras para la pesca nocturna del Golfete y una medida
+      para las tres estaciones del canon. Un ciclo de 19 años pide registro
+      sostenido o un instrumento; de eso no hay prueba.
+    fuente: hipotetico
+    capa: 'lectura del minador; lo atestiguado son las tres voces del lexicón'
+    referencia: 'curiana_sim/curiana_lexicon.py, entradas apana, buiamati, kati y kasha (archivada); 4-fuentes/zavala-reyes-2015.md (GC = Galeotto Cey)'
+    procedencia: {obra: zavala-reyes-2015, pagina: 'glosario #10, #47 y #71'}
+    dominios: [creencia, calendario, lengua]
+    esfera_destino: creencia
+    toca_canon: [creencia-014, apana, buiamati, kati]
+    implicacion_simulacion: >-
+      El motor tiene un año de tres períodos (viento 50 / seca larga 40 /
+      siembra 30) y un ciclo ritual mayor en el Capubana. Si Miguel quiere
+      lunas en ese calendario, la base es `apana`/`buiamati`, no Acasio. Este
+      artículo no da base para una cuenta lunar en el canon. No se diseña
+      nada aquí.
+
+  - id: acasio-015
+    contenido: >-
+      El medio de la estación, según Salazar 2017 vía Acasio: a 210 m,
+      vegetación xerófita con «quipito hediondo (Anagyris foetida), dividive
+      (Caesalpinia coriaria), cují yaque (Prosoplis juliflora), el buche
+      (Melocactus caeseus y/o Melocactus lobelli), salvia (Salvia coccínea),
+      tuna brava (Opuntia wentiana), cardón o dato (Ritterocereus griceus),
+      trompillo (Jacquinia aristata y/o Jacquinea revoluta), urupaguita
+      (Castela erecta Turpin), cruceta (Guettarda divaricata…) y varios tipos
+      de pastos», que «no proporcionan sombra» a la roca. Dos pistas para
+      otras esferas: «urupaguita» lleva binomio (Castela erecta), y el
+      lexicón tiene `urupagua` 'arbusto espinoso usado para cercar conucos'
+      sin taxón («árbol indeterminado», Alvarado); y «dato» nombra aquí la
+      planta, no sólo el fruto. Anagyris foetida es una especie mediterránea:
+      el binomio hay que verlo en Salazar.
+    fuente: atestiguado
+    capa: 'moderno, de segunda mano (Salazar 2017 vía Acasio 2023); la duda del binomio es del minador'
+    referencia: 'Acasio 2023, p. 308 (pdf 4), vista en imagen'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308 (pdf 4)'}
+    dominios: [ecologia, flora]
+    esfera_destino: ecologia
+    toca_canon: [urupagua, kadushi, ecologia-005]
+    implicacion_simulacion: >-
+      Confirma lo que sitios_era2 ya dice de las partes bajas del cerro (monte
+      xerófilo y espinar). «urupaguita» = Castela erecta es una pista para la
+      glosa de `urupagua`, no una identificación: el diminutivo puede nombrar
+      otra planta.
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. LAS OTRAS PIEDRAS Y LA BIBLIOGRAFÍA
+# ══════════════════════════════════════════════════════════════════════
+otras_piedras_y_bibliografia:
+
+  - id: acasio-016
+    contenido: >-
+      Acasio separa tres piedras del cerro, y una cuarta sin lugar en este
+      texto, todas leídas por él como calendarios o cielo: la Piedra de Siraba («glifos lunares
+      estudiados en la Piedra de Siraba», p. 313; obra de 2013), la Piedra de
+      Misaray («calendario Luni-solar de Misaray», p. 313; «Calendario
+      Perpetuo Luni-solar», p. 308; obra de 2016), la estación Capubana (este
+      artículo) y «la manifestación rupestre de los Santos – El Mestizo»
+      (2022, sin lugar en este texto). El diseño de Capubana «se aleja un
+      poco» de los de Siraba y Misaray (p. 313), y el sentido de lectura lo
+      toma del de Misaray (p. 317). Su investigación viene «desde el año 2012»
+      (p. 308).
+    fuente: atestiguado
+    capa: moderno (2023, sobre obras de 2013-2022)
+    referencia: 'Acasio 2023, pp. 308, 313, 317, 324-325 (pdf 4, 9, 13, 20-21), vistas en imagen'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308, 313 y 317 (pdf 4, 9 y 13)'}
+    dominios: [arte-rupestre, toponimia]
+    esfera_destino: creencia
+    toca_canon: [creencia-022, 'sitios_era2 §Capubana (materiales)']
+    implicacion_simulacion: >-
+      El cerro tiene al menos tres sitios grabados con nombre propio, más la
+      «Piedra de la Teresa» junto a un manantial que da INPARQUES por extracto
+      (barrido_web_cerro_laguna_2026-09-16.yaml h06), que Acasio no nombra
+      (sonda «teresa» 3, las tres dentro de «interesante»).
+
+  - id: acasio-017
+    contenido: >-
+      ¿Es la estación Capubana las «Piedras del Almanaque» de Esteves (cerro
+      de Siraba, p. 60)? Por lo que dice Acasio, no: él trata Siraba como
+      piedra y obra aparte, y de Siraba dice que tiene «glifos lunares», que
+      es lo que el nombre «del Almanaque» hace esperar. La candidata a las
+      Piedras del Almanaque es la Piedra de Siraba de Acasio 2013, no la
+      estación Capubana. Y la «Piedra del Calendario» del sendero de Misaray
+      (Aular Leal 2014) es, por el lugar, más probablemente la Piedra de
+      Misaray de Acasio 2016 que el «Calendario de las Calzadas». Queda una
+      duda que el artículo no resuelve: la «pieza monolítica de casi 4
+      metros» junto a la roca satélite, que no nombra, y el «monolito de
+      Siraba» de Morón 2015 y Velasco 2015. En la Fig. 1 no se reconoce la
+      rana con que Velasco describe el de Siraba.
+    fuente: hipotetico
+    capa: 'inferencia del minador sobre lo que Acasio distingue'
+    referencia: >-
+      Acasio 2023, pp. 308, 309 y 313 (pdf 4, 5 y 9). Sondas: «almanaque» 0.
+      Esteves 1989, p. 60 (OCR, archivo 3: «En el cerro de Siraba están
+      localizadas unos petroglifos que llaman: "Las Piedras del Almanaque"»).
+      barrido_web_cerro_laguna_2026-09-16.yaml h04, h05; velasco-2015-resistencia §6.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308, 309 y 313 (pdf 4, 5 y 9)'}
+    dominios: [arte-rupestre, creencia, toponimia]
+    esfera_destino: creencia
+    toca_canon: [creencia-022]
+    implicacion_simulacion: >-
+      creencia-022 no sube con este artículo: no es la lectura de esas
+      piedras. Su «que lo subiría» cambia: la lectura publicada de Siraba
+      existe (Acasio 2013; Caguao y Morón 2024) y no está en el repo. Y aun
+      leída, una lectura de Acasio sería hipotética. Distinción que conviene
+      fijar: «del Almanaque» es nombre de la tradición local (Esteves: «que
+      llaman»); «Calendario de las Calzadas» es un rótulo del autor.
+
+  - id: acasio-018
+    contenido: >-
+      Una discordancia de mapa que esta minería no resuelve: Esteves pone el
+      cerro de Siraba «unido al cerro de Santa Ana por el lado Noreste»
+      (p. 60), y el nodo «Siraba» de OSM (place=locality) está a 2,3 km al SSE
+      de la cumbre (rumbo 148°). Puede ser que la localidad y el cerro no
+      estén en el mismo sitio.
+    fuente: atestiguado
+    capa: 'las dos fuentes; la discordancia es medida del minador'
+    referencia: 'Esteves 1989, p. 60; OSM paraguana-1.json, nodo Siraba (11.8004, -69.9409)'
+    procedencia: {obra: esteves-1989, pagina: '60'}
+    dominios: [toponimia, geografia]
+    esfera_destino: toponimia
+    toca_canon: ['sitios_era2 §Capubana (materiales)', creencia-022]
+    implicacion_simulacion: >-
+      Antes de pintar las Piedras del Almanaque en un mapa, decidir qué
+      Siraba es.
+
+  - id: acasio-019
+    contenido: >-
+      La bibliografía completa del artículo son siete obras: tres del propio
+      autor (2013, 2016, 2022), Salazar 2017 (Inparques), una página web de la
+      Universidad de Barcelona sobre el ciclo de Metón y las dos de Rebullida
+      (1990, página web; 1999, «Astronomía y Religión en el
+      Neolítico-Bronce», Madrid). No cita a ningún autor de arqueología
+      venezolana fuera de sí mismo y de Salazar.
+    fuente: atestiguado
+    capa: 'sobre el texto; el cero es de esta fuente'
+    referencia: >-
+      Acasio 2023, pp. 324-325 (pdf 20-21), vistas en imagen. Sondas:
+      «esteves» 0, «moron» 0, «zavala» 0, «hernandez» 0, «oliver» 0,
+      «arcaya» 0, «cruxent» 0, «rouse» 0, «reichel» 0, «patrimonio» 0,
+      «fal-» 0.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '324-325 (pdf 20-21)'}
+    dominios: [fuentes]
+    esfera_destino: fuentes
+    toca_canon: []
+    implicacion_simulacion: >-
+      El artículo no se apoya en la cadena que el proyecto ya conoce
+      (Esteves, Morón, Zavala Reyes, Hernández Baño): ni la confirma ni la
+      contradice. Lo nuevo a buscar está en §fuentes_nuevas_a_buscar.
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. «CALZADAS»
+# ══════════════════════════════════════════════════════════════════════
+calzadas:
+
+  - id: acasio-020
+    contenido: >-
+      «Calzadas» es nombre de lugar y el artículo no dice qué es. Sale nueve
+      veces: como palabra clave (pp. 305, 306), como nombre del petroglifo
+      («calendario de Las Calzadas», «Calendario de las Calzadas», «modelo
+      geométrico-matemático de Las Calzadas»: pp. 307, 312, 321, 322, 323,
+      324) y una sola vez como lugar: «Esta estación rupestre se localiza muy
+      cerca de las calzadas» (p. 308). No hay descripción: ni piedra, ni
+      empedrado, ni muro, ni alineamiento, ni camino. Lo más probable es que
+      sea el nombre de un sector de la falda, y que el petroglifo tome de él
+      su nombre de autor.
+    fuente: atestiguado
+    capa: 'moderno; el cero de definición es de esta fuente'
+    referencia: >-
+      Acasio 2023, pp. 305-324 (pdf 1-20), las nueve vistas en imagen.
+      Sondas: «calzad» 9; «camino» 0, «sendero» 0, «empedr» 0, «muro» 0,
+      «trocha» 0, «carretera» 0; «alinea» 2, las dos sobre el glifo. Fuera
+      del artículo: «calzad» 0 en los seis OCR de Esteves 1989 («alzad» 3,
+      las tres «poca alzada» de un animal) y 0 en los seis extractos OSM de
+      la Kaketiana.
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308 (pdf 4)'}
+    dominios: [toponimia, geografia]
+    esfera_destino: toponimia
+    toca_canon: []
+    implicacion_simulacion: >-
+      Ninguna para creencia. Si «Las Calzadas» es un sector con nombre, va a
+      la cola de topónimos (castellano, moderno) para situar la estación.
+
+  - id: acasio-021
+    contenido: >-
+      Aviso para no confundir: las «calzadas» de este artículo no tienen nada
+      que ver con las calzadas y terraplenes de los Llanos que la tradición
+      atribuye a los caquetíos de Manaure (Carvajal 1646-47 vía Alvarado y
+      Arcaya, en petroglifos_y_manaure.yaml §manaure-en-los-llanos). Son otra
+      región, otra polity (regla 4) y otra cosa. Nada en Acasio enlaza unas
+      con otras.
+    fuente: atestiguado
+    capa: 'distinción del minador sobre dos fuentes'
+    referencia: 'Acasio 2023, p. 308 (pdf 4); 6-fusion/petroglifos_y_manaure.yaml §manaure-en-los-llanos'
+    procedencia: {obra: acasio-2023-capubana-calendario, pagina: '308 (pdf 4)'}
+    dominios: [geografia]
+    esfera_destino: geografia_politica
+    toca_canon: []
+    implicacion_simulacion: >-
+      Ninguna obra pública en el Capubana sale de esta fuente.
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. LO QUE NO DICE (cada cero con su sonda)
+# ══════════════════════════════════════════════════════════════════════
+lo_que_no_dice:
+  - {que: 'que el cerro de Santa Ana se llamara Capubana', sonda: '«llamad» 0, «nombre» 0, «denomin» 0, «toponim» 0; las 6 de «capu» son «estación»'}
+  - {que: 'qué significa Capubana, ni nada del duende o dueño del cerro', sonda: '«duende» 0, «capuh» 0, «capuan» 0'}
+  - {que: 'coordenadas o rumbo de la estación', sonda: '«coorden» 0, «utm» 0, «latitud» 0, «gps» 0, «norte» 0, «oeste» 0, «noreste» 0'}
+  - {que: 'qué son «las calzadas»', sonda: '«camino» 0, «sendero» 0, «empedr» 0, «muro» 0'}
+  - {que: 'qué pueblo hizo el grabado', sonda: '«caquet» 0, «indigen» 0, «aborig» 0, «arahu» 0, «arawak» 0, «jirajar» 0'}
+  - {que: 'fecha, material asociado o excavación', sonda: '«datac» 0, «ceramic» 0, «dabaj» 0; «siglo» 1 (Metón)'}
+  - {que: 'medidas astronómicas en el sitio', sonda: '«orient» 0, «azimut» 0, «horizonte» 0, «equinoccio» 0'}
+  - {que: 'rito, lugar sagrado o ceremonia', sonda: '«ritual» 0, «sagrad» 0, «ceremon» 0; «santuario» 2, genérico'}
+  - {que: 'las «Piedras del Almanaque»', sonda: '«almanaque» 0'}
+  - {que: 'ninguna voz indígena', sonda: '«kati» 0, «apana» 0; los únicos nombres no castellanos son Capubana, Siraba y Misaray'}
+  - {que: 'la lectura de Siraba ni la de Misaray: sólo las nombra', sonda: '«siraba» 4 y «misaray» 6, leídas en contexto'}
+  - {que: 'a Esteves, Morón, Zavala Reyes, Hernández Baño, Oliver, Arcaya, Cruxent', sonda: 'las siete sondas en 0'}
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. FUENTES NUEVAS A BUSCAR (no se descargó nada: descargar lo decide Miguel)
+# ══════════════════════════════════════════════════════════════════════
+fuentes_nuevas_a_buscar:
+
+  - obra: 'Salazar, Eva (2017). «Primera Caracterización de los Petroglifos de la estación Capubana – Santa Ana». Inparques'
+    citada_en: 'Acasio 2023, ref. [4], p. 325'
+    prioridad: 1
+    por_que: >-
+      ⭐ Es la que decide el nombre: de dónde sale «Capubana» (tradición
+      local, un mapa, Hernández Baño, el glosario de Zavala), dónde está la
+      estación (con coordenadas, si es una caracterización de Inparques) y
+      qué grabados tiene. También el binomio de «quipito hediondo» y el de
+      «urupaguita».
+    donde: 'probablemente literatura gris de Inparques (informe técnico); sin localizar en línea'
+    estado: sin localizar
+
+  - obra: 'Acasio, Enrique (2013). «Piedras Parlantes de Siraba». Wordpress / libro presentado en Punto Fijo en 2014'
+    citada_en: 'Acasio 2023, ref. [1], p. 324'
+    prioridad: 2
+    por_que: >-
+      La lectura de la Piedra de Siraba, candidata a las «Piedras del
+      Almanaque» de Esteves (creencia-022). Velasco 2015 la resume (la rana
+      leída como Atabey/Pléyades). Sería hipotética, pero diría DÓNDE está la
+      piedra.
+    donde: 'https://obrasliterariasacasio.wordpress.com/piedras-parlantes-de-siraba/ (la página trae prólogo y fotos, no el texto: barrido 2026-09-16 h02)'
+    estado: localizada, sin texto
+
+  - obra: 'Acasio, Enrique (2016). «Piedra de Misaray: Calendario Perpetuo Luni-solar». Wordpress'
+    citada_en: 'Acasio 2023, ref. [2], p. 325, y pp. 308, 313 y 317'
+    prioridad: 3
+    por_que: >-
+      De ahí sale el sentido de lectura que aplica en Capubana. Probable
+      «Piedra del Calendario» del sendero de Misaray (Aular Leal 2014), y
+      probable sitio FAL-152 de Morón 2015 («cementerio y petroglifo de
+      Machuruca-Misaray»).
+    donde: 'https://obrasliterariasacasio.wordpress.com/piedra-de-misaray/'
+    estado: localizada, sin abrir
+
+  - obra: 'Hernández Baño, Adrián (2000). «Petroglifos. Estado Falcón»; y (1984) «Los Caquetíos de Falcón», INCUDEF'
+    citada_en: 'NO la cita Acasio. Morón 2012 cita la de 2000; Zavala Reyes 2015 cita a HB (#61 capubana)'
+    prioridad: 2
+    por_que: >-
+      Es el origen probable de la forma «capubana» con b y un autor de
+      petroglifos de Falcón: puede ser la raíz común del glosario de Zavala y
+      del nombre de la estación (acasio-006). Ya estaba en
+      fuentes_que_faltan_2026-09-22.yaml como adquisición.
+    donde: 'sin localizar en línea; impreso regional'
+    estado: sin localizar
+
+  - obra: 'Caguao, Alfredo y Morón, Camilo (2024). «La Piedra de Siraba: Mitología, Simbología y Arqueoastronomía». BACOA n.º 20; Cruxentiana n.º 16 (2025)'
+    citada_en: 'NO la cita Acasio (es posterior); localizada en el barrido del 2026-09-16 (h03)'
+    prioridad: 2
+    por_que: 'La segunda lectura de Siraba, con Morón detrás. Ficha propuesta: 6-fusion/fichas_propuestas/caguao-moron-2024-piedra-de-siraba.md'
+    donde: 'número entero en Google Drive (ids en el barrido h03)'
+    estado: localizada, sin descargar
+
+  - obra: 'Acasio, Enrique (2022). «Cielo Ancestral. Decodificación de la manifestación rupestre de los Santos – El Mestizo». INCUDEF, Fondo Editorial Oikos'
+    citada_en: 'Acasio 2023, ref. [3], p. 325'
+    prioridad: 4
+    por_que: 'Otro sitio, sin lugar en este artículo; sólo si resulta estar en la Kaketiana'
+    donde: 'impreso regional'
+    estado: sin localizar
+
+  - obra: 'Rebullida, A. (1990). «Astronomía en la prehistoria» (página web); (1999). «Astronomía y Religión en el Neolítico-Bronce», Madrid'
+    citada_en: 'Acasio 2023, refs. [6] y [7], p. 325'
+    prioridad: 5
+    por_que: 'Sólo para auditar el método (la serie de 50 y la excepción del año 19). Es arqueoastronomía del Neolítico europeo: no da nada caquetío'
+    donde: 'https://folkva.fortunecity.ws/astrono1.htm (1990)'
+    estado: localizada, sin abrir
+
+  - obra: 'Universidad de Barcelona. «Ciclo de Metón o Calendario lunar» (página web, 2023)'
+    citada_en: 'Acasio 2023, ref. [5], p. 325'
+    prioridad: 6
+    por_que: 'Referencia general de astronomía; nada que buscar'
+    estado: no se busca
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. TOPONIMIA — propuesta para la campaña (formato de 2-lengua/toponimos.yaml)
+# Se fusiona editando curiana_sim/lexicon_toponimos.py y regenerando con
+# migrar_toponimos.py; toponimos.yaml NO se edita a mano.
+# ══════════════════════════════════════════════════════════════════════
+toponimia_propuesta:
+
+  - id: toponimo-113
+    accion: 'añadir una lectura y una frase a `observacion`; nivel, forma y glosa sin cambios'
+    lecturas_nuevas:
+      - tipo: glosa-fuente
+        lectura: >-
+          Acasio (2023) usa «Capubana», con b, como nombre de una estación de
+          arte rupestre «en la falda del cerro de Santa Ana», a 210 m s. n. m.,
+          «en el primer piso biótico del monumento natural» y «muy cerca de las
+          calzadas». Al cerro lo llama siempre «Cerro de Santa Ana». No da
+          glosa ni origen del nombre, que toma ya hecho del título de Salazar
+          2017 (Inparques): «estación Capubana – Santa Ana».
+        quien: Enrique Acasio (UNEFM); minado el 2026-10-09
+        fecha: '2026-10-09'
+        eje: referente
+        procedencia:
+          obra: acasio-2023-capubana-calendario
+          pagina: '305, 307, 308 y 325 (pdf 1, 3, 4 y 21)'
+        veredicto: >-
+          No da glosa: sólo el referente. Ancla el nombre en la falda del
+          macizo del Santa Ana y no en el «pequeño cerro cerca de Misaray» de
+          Esteves, sin decir si son el mismo sitio. No confirma que el macizo
+          se llamara Capubana. La -b- coincide con el capubana de Zavala #61
+          (sigla HB, Hernández Baño): mientras no se lea Salazar 2017, no
+          cuenta como atestación independiente. No mueve el nivel.
+    observacion_añadido: >-
+      Tercera forma viva (2026-10-09): «estación Capubana», una estación de
+      petroglifos en la falda del Santa Ana a 210 m (Acasio 2023, tomando el
+      nombre de Salazar 2017, Inparques); sin coordenadas. Es la única forma
+      viva con -b- y ancla el nombre en el macizo, pero no decide entre dos
+      Capubana, el nombre que bajó y un nombre de sector.
+    alternativa_no_recomendada:
+      forma_viva:
+        - forma: estación Capubana
+          tipo: lugar
+          lat: null
+          lon: null
+          fuente: acasio-2023-capubana-calendario
+          nota: 'sin coordenadas: el artículo no las da'
+      por_que_no: >-
+        Todas las formas_vivas del canon llevan lat/lon de OSM y el mapa las
+        dibuja (export_mapa_seed.py); una sin punto habría que ver si el
+        exportador la tolera. La lectura dice lo mismo sin ese riesgo.
+    pregunta_para_la_campana: >-
+      La lista cerrada de tipos de lectura (compilar_lengua.TIPOS_LECTURA) no
+      tiene uno para «fuente impresa que usa el nombre sin glosarlo»: aquí se
+      usa glosa-fuente con eje referente y el veredicto lo declara. Si la
+      campaña prefiere otro, que lo diga; esta propuesta no toca la lista.

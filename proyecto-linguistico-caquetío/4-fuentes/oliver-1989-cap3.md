@@ -420,3 +420,21 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** Confirma el cero de oliver1989_restante §mar. Lo único ritual con instrumentos de viento es de los GIRARA de los Llanos (Mercado 1685: «fututos» en la casa de los hombres, donde se recuerdan los agravios de los abuelos): regla 4.
 
 **No se halló:** Cero.
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** Lo mismo que en [[oliver-1989-cap3-vecinos]],
+en la edición DOC: pp. 225, 239, 253-254, 262, 272 y 287-288.
+
+**Qué se halló.** Tres cosas que la tesis escaneada del repo no traía a mano:
+(1) el censo de Martí (1773-1782), DOC p. 254, visto en imagen: los axaguas,
+«mostly "nomadic"», en las montañas de Pedregal y Pecaya, bajaban a
+Pedregal, Pecaya, Siquisique y Aregue; Mitare, 374 caquetíos. (2) DOC
+pp. 287-288: la primera mención segura del achagua es de 1583, en el alto Meta
+(Useche 1987: 201), y los «Jaguas carniceros» de 1535 en la boca del Meta son
+dudosos; la expansión achagua por los Llanos es tardía. (3) La Barraguá de
+Rivero (Airico) no es «the "other" Barraguán» del bajo Meta (DOC p. 287).
+
+**Qué NO.** Las «few words» tampoco están en esta edición.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

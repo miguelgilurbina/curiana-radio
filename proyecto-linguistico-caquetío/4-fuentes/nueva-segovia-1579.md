@@ -159,3 +159,18 @@ precontacto sin decirlo (regla 3). Medido en
 `6-fusion/hsai_caquetios_2026-09-23.yaml` hda-21 y hda-22.
 
 Índice: [[INDICE_FUENTES]]
+
+## Xaguas en Falcón (2026-10-09)
+
+**Qué se preguntó.** ¿Qué dice la Relación de los axaguas? Sigue sin
+estar en el repo; se leyó por Arcaya (pp. 57 y 102), Jahn (p. 226) y Oliver
+(tesis p. 244).
+
+**Qué se halló.** Tres datos axaguas de 1579: se extendían «desde cuatro o
+cinco leguas de la ciudad hacia los Llanos»; vivían, con gayones, xidaharas y
+camagos, en la sierra a tres leguas al norte, «diferentes en lenguas [en] cada
+nación»; y el culto al sol y la luna con el sacrificio de una niña para que
+llueva. Ninguna palabra axagua citada. Pedir la Relación (Arellano 1964)
+respondería si trae voces.
+
+Propuesta: `6-fusion/xaguas_achaguas_falcon_2026-10-09.yaml`; bitácora: [[11_xaguas_achaguas_falcon]].

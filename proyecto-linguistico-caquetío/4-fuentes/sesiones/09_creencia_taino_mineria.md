@@ -223,6 +223,9 @@ En el t. II, la impresa 255 lleva el folio «525» por errata de imprenta.
     a «imagen + desecación».
   - B1, Bourne 1906, como control del cotejo.
   - B2, Ulloa 1571, para la `opia` frente a la `hupía` sin la retraducción.
+  - **Las tres llegaron el 2026-10-09**: [[colon-hernando-1892]] (el vol. 1,
+    con su desfase medido), [[bourne-1906]] y [[ulloa-1571]] (se cita por
+    folio, y la foliación está medida). Sin leer: esperan la minería 2.
 - **Lo que pide préstamo o compra:** Oliver 2009 (C1).
 - **Lo que pide fusión (ya lo pedía T6):** la efigie (ct-c01), la cura y la
   consulta del boratio (ct-c02, ct-c03) y partir creencia-001b.

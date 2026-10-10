@@ -9,11 +9,11 @@ paginas: "1-120"
 capa_texto: si
 descargado: 2026-09-22
 origen_digital: "Biblioteca Digital Curt Nimuendajú (etnolinguistica.org), espejo del PDF abierto de Persée"
-estado_minado: parcial
-cobertura: "el vocabulario TAÍNO entero (pp. 6-17; T10); las 23 voces kalinago del lexicón cruzadas con el vocabulario kalinago, cada una leída en imagen, y el «dialecte de Aruba» localizado (M5, 2026-09-23); vocabulario kalinago transcrito en pp. 31-34, 44-48, 68-69, 85-93 y 102. Sin transcribir: pp. 35-43, 49-67 (animales y plantas), 70-84, 94-101, 103-118"
+estado_minado: minado-parcial
+cobertura: "el vocabulario TAÍNO entero (pp. 6-17; T10); las 23 voces kalinago del lexicón cruzadas con el vocabulario kalinago, cada una leída en imagen, y el «dialecte de Aruba» localizado (M5, 2026-09-23); vocabulario kalinago transcrito en pp. 31-34, 44-48, 68-69, 85-93 y 102. Sin transcribir: pp. 35-43, 49-67 (animales y plantas), 70-84, 94-101, 103-118; 2026-10-09 (minería 2, lokono): pp. 42-43 (parentesco y «chef» de la columna A) en imagen; 2026-10-09 (minería 2, kalinago): pp. 41 y 43 en imagen (tío materno, capitán h/f, servidor, esclavo, etnónimos)"
 prioridad: alta
-verificado: 2026-09-23
-minado: 2026-09-23
+verificado: 2026-10-09
+minado: 2026-10-09
 aliases: ["Goeje 1939", "de Goeje 1939"]
 ---
 
@@ -246,3 +246,52 @@ cause les naufrages *Umeku, Umoku*», con el kalina de Penard *Semuye* y «K?»
 (p. 38, imagen): Goeje no dice de quién toma la glosa marina.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Minería 2 — esferas lokonas (2026-10-09)
+
+Minero lokono de la minería 2 ([[10_hermanas_lokono_esferas]]). Se miraron en
+imagen las pp. 42-43 (pdf 43-44), el parentesco y los títulos de la columna
+A: *augi-ti* / *augi-tu* 'hermano / hermana menor', *iti* 'padre',
+*kubakadi* 'antepasados' y **«chef, prince […] A *afudi*»** (p. 43). Van en
+`lokono-parentesco-007` y `lokono-geografia_politica-003`, y *afudi* en
+`para_el_lexicon`. Goeje compila de su Arawak de 1928: no cuenta como testigo
+independiente de [[brett-1868]].
+
+## Minería 2 — esferas kalinago (2026-10-09)
+
+**Se usó** como tamiz de las palabras sociales que salieron de Rochefort,
+Du Tertre y Breton. Vistas en imagen las pp. 41 y 43 (columna de siglas);
+copyright: sólo forma, glosa corta y sigla. Sesión:
+[[10_hermanas_kalinago_esferas]].
+
+| Forma | Sigla | Página | Para qué |
+|---|---|---|---|
+| oncle (frère de ma mère) *yao* | hK (kalina *yawo*) | p. 41 | el tío materno tiene término propio, de hombres y caribe |
+| id. *akatobu* | — | p. 41 | la forma que Rochefort marca F. |
+| tante paternelle *ahöpu* | K | p. 41 | término propio para la tía paterna |
+| capitaine *yubutuli* | hK (kalina *yopoto-li*) | p. 43 | el capitán en boca de hombres es caribe |
+| id. f *amaši* | 1 am 31 | p. 43 | **el capitán en boca de mujeres es arahuaco** |
+| serviteur *abuyuku* | — | p. 43 | los Labouyou/abouyou de la conquista |
+| homme esclave *tamon* | K? | p. 43 | los Tamons de Rochefort |
+| *Kalinago* h / *Kaliponam* f; Indien Arawak f *Aluague* | voir T / id. / f- | p. 43 | los etnónimos del par h/f |
+
+Y su tesis (pp. 3-4, capa de texto, paráfrasis): la lengua de base es el
+iñeri (arahuaco) con palabras kalina sustituidas; las voces de hombres son de
+origen kalina; los hijos de las cautivas fueron de la tribu del padre. Es la
+hipótesis de 1939 contra la que se lee kalinago-parentesco-013.
+
+**Deuda.** Las pp. 35-43 siguen sin transcribir enteras (sólo las entradas
+consultadas).
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana` y para el cruce. p. 5: «Les Guayana qui ont laissé
+leur nom au pays “la Guyane”» vivían junto a la boca del Caroní, y su lengua
+era caribe (Gumilla; Raleigh y Keymis): Guayana es un etnónimo caribe, no un
+`-ana` lokono. p. 13: *magua* 'la grande plaine' / *magüana* 'la petite
+plaine' (de Las Casas) y taíno *xagueye* 'citerne naturelle' junto al
+kalinago *šauai*. Habla de mujeres: *šiba* 'pierre' y *šauai* 'côte rocheuse,
+falaise, caverne' (p. 57), *balaua* 'la mer' (p. 55): son las voces que
+empujan al kalinago por encima del azar en el cruce, y casi todas eran ya
+cognados conocidos. Cita su propio «Guayana and Carib tribal names» y a
+Williams 1923 sobre el nombre de Guiana: los dos, a buscar. Sesión: [[14_cruce_toponimos_hermanas]].

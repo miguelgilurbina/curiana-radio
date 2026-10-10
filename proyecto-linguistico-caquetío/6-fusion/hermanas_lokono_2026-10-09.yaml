@@ -1,0 +1,2088 @@
+# ─────────────────────────────────────────────────────────────────────────
+# PROPUESTA — Las cinco esferas LOKONO (minería 2, «esferas de las hermanas»)
+# 2026-10-09. Esquema: 3-mundo/hermanas/README.md §3-§5. Valida con
+#   python curiana_sim/compilar_hermanas.py --check
+#
+# Qué es: lo que Brett 1868, Brett 1880, Roth 1915 y, de paso, el HSAI 4
+# (Kirchhoff), Gumilla t. I, Perea 1942 y Goeje 1939 dicen de los LOKONO
+# («Arawaks», «Aruacas», «Aruacay») sobre parentesco, geografía política,
+# creencia, ecología y transmisión. La creencia de la minería 1 la migró otra
+# rama (6-fusion/hermanas_lokono_creencia-migrada_2026-10-09.yaml,
+# lokono-creencia-001…008); aquí la creencia empieza en 101 y sólo trae lo
+# nuevo o lo que corrige a la minería 1 (campo `mineria_1`).
+#
+# EL FILTRO «ESPECÍFICO, NO PAN-AREAL» (pendiente de decisión de Miguel) se
+# APLICA declarándolo, no se decide: cada hecho lleva en `dominios` primero
+# `especifico-lokono` o `areal-guayana`. Lo areal (lo que Brett o Roth dan de
+# «the Indians» en general, o compartido con caribes, warao o akawaio) lleva
+# `proyeccion.capa: comparanda-esfera`, `no-proyecta` o, si sólo ilumina un
+# hecho caquetío ya atestiguado, `lectura` (que no añade nada al caquetío).
+# Nunca reconstruido ni hipotético. El campo `filtro` dice qué cambiaría si
+# Miguel no adopta el filtro.
+#
+# Regla 3: todo esto es colonial tardío (Brett 1840-1879, Roth 1907-1913,
+# Gumilla 1731-1741, Perea = moravos 1802) salvo dos datos de tercera mano
+# del s. XVI: Navarrete (vía Rodway vía Roth) y el «Aruacay» del bajo Orinoco
+# (vía Kirchhoff, HSAI 4). `epoca` en cada hecho.
+# Regla 5: esto PROPONE. No toca 3-mundo/, 2-lengua/, curiana_lexicon.py ni
+# los lexicon_*.py. Las palabras van en `grafia` y en `para_el_lexicon`.
+# ─────────────────────────────────────────────────────────────────────────
+meta:
+  pueblo: lokono
+  recogido: '2026-10-09'
+  estado: sin-fusionar
+  quien: 'minero lokono, minería 2 (Claude Opus 5.5), rama vault/hermanas-lokono'
+  plan: 4-fuentes/sesiones/08_creencia_lokono_que-minar.md
+  nota_de_sesion: 4-fuentes/sesiones/10_hermanas_lokono_esferas.md
+  bitacora_anterior: 4-fuentes/sesiones/09_creencia_lokono_mineria.md
+  pregunta: >-
+    ¿Qué dicen las fuentes de los lokono, tema a tema (README §4), sobre su
+    parentesco, su jefatura y su guerra, su creencia, su ecología y su
+    transmisión del saber; qué es específico de ellos y qué es de toda la
+    Guayana; y qué le hace eso a la Vía A wayuu en las cinco esferas?
+  fuentes_leidas: [brett-1868, brett-1880, roth-1915, steward-1948-hsai-4, gumilla-1791, perea-alonso-1942, goeje-1939]
+  cobertura:
+    brett-1868: >-
+      Leído en texto (capa OCR por página, pymupdf) el cap. VI entero («The
+      Arawaks or Lokono», pp. 96-118), cap. III (pp. 36-58, ideas de Dios),
+      cap. V (pp. 79-95), cap. IX (Maquarri, pp. 147-160), parte II caps.
+      IX-X (pp. 343-403), la nota de lenguas (pp. 404-419), el cap. XII
+      (montículos, pp. 420-443, por sondas) y el cap. XIII (historia,
+      pp. 480-495). VISTO EN IMAGEN: pp. 58, 87, 97, 98, 101, 103, 117, 155,
+      156, 158, 352, 361, 362, 365, 367, 398, 401, 402, 416, 417, 484, 487,
+      490, 492, 493. Desfase medido en la cabecera: impresa = pdf − 24
+      (pp. 58-110), − 26 (pp. 111-120), − 30 (pp. 155-158), − 52 (pp. 352-367), − 54 (pp.
+      398-402 y 416-418), − 58 (pp. 484-493).
+    brett-1880: >-
+      Sondas en todo el libro; leídas las pp. 18-21 (Arawanili y el Orehu, en
+      verso; la capa lee «8» en la cabecera de la p. 18) y 178-179 (las familias Ebesoana, Demaréna y Korobohána, en las
+      notas en prosa). VISTO EN IMAGEN: pp. 178, 179. Desfase pdf − 14.
+    roth-1915: >-
+      Leídos en texto los caps. I-II (pp. 117-121), V-VI (pp. 149-166), XII
+      (pp. 241-253), XIII (pp. 254-270), XV (pp. 292-307), XVI (pp. 308-326),
+      XVII (pp. 327-353) y el comienzo del XVIII (p. 354-357); el resto por
+      sondas (`Arawak`, `(A)`). VISTO EN IMAGEN: pp. 119, 152, 156, 157,
+      158, 161, 252, 256, 257, 268, 305, 307, 316, 319, 334, 340, 345, 348,
+      354. Desfase: impresa = pdf + 98 (pp. 117-161), + 96 (pp. 252-319),
+      + 94 (p. 334), + 92 (pp. 340-354): baja con las láminas. OJO: la capa
+      OCR desplaza los números de sección (lee «366A» por 266A y «364» por
+      264): se citan las PÁGINAS.
+    steward-1948-hsai-4: >-
+      Kirchhoff, «The tribes north of the Orinoco river», sólo lo que dice
+      del Aruacay (pp. 481-490, sonda `Aruacay` 14). VISTO EN IMAGEN:
+      pp. 487, 490. Desfase pdf − 136.
+    gumilla-1791: 't. I p. 154 (vista en imagen): los aruacas sujetos a los caribes. Lo demás de los aruacas ya lo minó la minería 1 (lokono-creencia-001…008).'
+    perea-alonso-1942: 'p. 556 (pdf 778, vista en imagen): términos de parentesco de Schumann.'
+    goeje-1939: 'p. 42-43 (pdf 43-44, vista en imagen en bandas): parentesco y «chef» en la columna A.'
+  no_leido:
+    - 'Brett 1868 parte I caps. I-II, IV, VII-VIII, X-XIII (misiones, caribes, akawaio, warao) salvo sondas; parte II caps. I-VIII salvo sondas `Arawak`.'
+    - 'Brett 1880 entero salvo las pp. 18-21 y 178-179 y sondas: depende de 1868 (no es segunda atestación).'
+    - 'Roth 1915 caps. III-IV, VII-XI, XIV, XIX-XXI y el glosario, salvo sondas `Arawak` y `(A)`.'
+    - 'HSAI 4 fuera de Kirchhoff (el «Arawak» de Rouse es el taíno, no el lokono: medido 246 `Arawak`, 0 `Lokono`, 0 `Pomeroon`).'
+  ortografia_medida: >-
+    Antes de contar (minar-fuente §2): Brett escribe Arawâk(s) con circunflejo
+    (la capa lo da `Arawak`), Lokono, yauhahū/Yauhahu, ōrehū/Orehu,
+    Semecici (p. 58), semecihi (p. 401), semi-cici (p. 400), Arawânili (la
+    capa lee «Arawcinili»), Maquarri, Owiarri, Kaieri. Roth: Yawahu (0
+    `Yauhahu`), semi-chichi con guion, Ori-yu/Oriyu, Makuari/Mora-kúyuha,
+    Hauyari, (h)iyaloko; el OCR de Roth lee «burokwa» como «hurokwa» y
+    «babui» como «labui»: lo citado sale de la imagen. Kirchhoff: Aruacay.
+    Gumilla: Aruacas (la capa: «AriMca» una vez).
+  ceros:
+    - tema: sucesion-politica
+      sonda: '`succe` (94 Brett / 50 Roth), `nephew` (1/8), `heir`, `uncle` (3/26), `sister''s son` (0/0), leídas en contexto'
+      resultado: 'Ningún dato de cómo se sucedía un jefe lokono. Brett sólo dice que el gobernador nombraba o confirmaba a los capitanes (p. 103). Kirchhoff da la sucesión por sobrino en «una parte de Trinidad», sin pueblo (HSAI 4 p. 487). Cero lokono.'
+    - tema: tributo-trabajo
+      sonda: '`tribute` (14/22), `labour`, `chief` + `work` en contexto'
+      resultado: 'Ningún tributo ni trabajo para el jefe. Lo único: el servicio del yerno al suegro (lokono-parentesco-004) y las flechas de «un año» hechas por «all hands» para la guerra (Brett p. 489).'
+    - tema: segundo-entierro
+      sonda: '`bones` (42/55), `skeleton` (4/6), `exhum` (0/2), `disinter` (2/2)'
+      resultado: 'Negativa medida (R4 de la nota 08): ningún tratamiento de huesos lokono. Los huesos que da Roth son warao (canasto, p. 159), caribe (p. 159) o de otros pueblos; los de Brett son los de los montículos de conchas, que «no tribe» reconocía (p. 430). Lo que hay es una FIESTA posterior al entierro (lokono-creencia-107), sin huesos.'
+    - tema: sueno-vision
+      sonda: '`dream` en los caps. V-VI de Roth y en todo Brett'
+      resultado: 'Ninguna teoría lokona del sueño como viaje del alma (R2): la del cap. VI de Roth es caribe (akari, p. 165). Lo único lokono del sueño es el sueño DIAGNÓSTICO del piache (lokono-creencia-102).'
+    - tema: escritura-marca
+      sonda: '`Timehri` (7/5), `tattoo` (5/0), `paint` (35/31)'
+      resultado: 'Los timehri (petroglifos) Brett los da a «former Indian inhabitants», sin pueblo (p. 314 y cap. XIII); el tatuaje y la pintura facial, a «some tribes» (p. 343). Cero lokono.'
+    - tema: sociedades-masculinas
+      sonda: '`men''s house` (0/0), `secret` (14/18) en contexto'
+      resultado: 'Cero. Las danzas de látigo son de los varones jóvenes, pero no hay casa ni sociedad de hombres.'
+    - tema: caza-recoleccion
+      sonda: '`hunt` + `Arawak` en contexto'
+      resultado: 'Sólo lo general («the Indian hunter», Brett p. 346-347) y el ave Palamedea que los arawak del Moruca no comen (Roth p. 297, de Schomburgk). Nada que proponer.'
+  fuentes_que_faltan:
+    - 'Rybka 2018, Lokono sky culture (web, CC BY-NC; nota 08 §3.2): el mito lunar de Kathi con informantes de hoy y la lista de Schulz c. 1803.'
+    - 'Roth 1924, An introductory study of the arts, crafts, and customs of the Guiana Indians (38th Annual Report BAE): la ecología, la vivienda, la pesca y el parentesco que el 1915 no trata.'
+    - 'Goeje 1942, «De inwijding tot medicijnman bij de Arawakken» (BKI 101): la iniciación del piache lokono con textos en arawak.'
+    - 'Navarrete, Relación de las provincias y naciones de los Aruacas (AGI, Patronato; ed. Arellano Moreno 1964, pp. 83-87): el único lokono del s. XVI; hoy sólo lo tenemos por Roth, que lo toma de Rodway (Timehri 1895, pp. 9-10).'
+    - 'Hilhouse 1832/1834 (Journal of the Royal Geographical Society), la primaria de las 27 familias lokonas que cita Brett (p. 98) y del Aluberi «supreme being» que Roth critica (p. 119).'
+    - 'Im Thurn 1883: no descargado; Roth lo cita para el eclipse arawak (p. 254).'
+  temas_propuestos:
+    parentesco: [terminologia]
+  temas_propuestos_nota: >-
+    `terminologia`: la forma de los términos de parentesco (raíces distintas
+    según el sexo de quien habla, términos de edad relativa). No es
+    descendencia ni linaje-clan, y el corpus caquetío ya tiene un hecho así
+    (parentesco-011, la terminología guajiro/paraujano). Si Miguel no lo
+    adopta, el hecho cae en `descendencia`.
+
+hechos:
+
+# ══════════════════════════════════════════════════════════════════
+# PARENTESCO
+# ══════════════════════════════════════════════════════════════════
+
+  - id: lokono-parentesco-001
+    esfera: parentesco
+    tema: descendencia
+    tema_duda: linaje-clan
+    contenido: >-
+      Los lokono se dividen en «families» con nombre propio (Siwidi,
+      Karuafudi, Onisidi…) que «all descend in the female line»: la hija de
+      una Siwidi es Siwidi, y lo son los hijos de sus hijas, pero no su padre
+      ni su marido. Hillhouse contó veintisiete nombres; M'Clintock, más de
+      cincuenta. Brett los da como «strictly observed».
+    cita: >-
+      «They are divided into families, each of which has a distinct name, as
+      the Siwidi, Karuafudi, Onisidi, &c. Unlike our families, these all
+      descend in the female line» (p. 98).
+    grafia: 'Siwidi, Karuafudi, Onisidi (Brett 1868) · Ebesoana, Demaréna, Korobohána (Brett 1880)'
+    pueblo: lokono
+    donde: 'Pomeroon y costa occidental de la Guayana Británica'
+    epoca: 'Brett, misionero en el Pomeroon desde 1840; publicado 1868. Hillhouse escribe hacia 1832.'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '98 (pdf 122; imagen)'}
+    procedencia_extra:
+      - {obra: brett-1880, pagina: '178, nota (pdf 192; imagen)', independiente: false, nota: 'mismo autor: «The names of those families all descend in the female line»'}
+      - {obra: roth-1915, pagina: '318-319 (pdf 222-223; imagen la 319)', independiente: true, nota: 'Roth, magistrado en el Pomeroon 1907-1913, generaliza: «all the Guiana Indian tribes are exogamous and trace descent exclusively through the mother»'}
+    como_se_escribio: >-
+      Brett cuenta la regla como quien la vio cumplirse en su misión; la
+      cifra de familias la toma de Hillhouse y de M'Clintock (post-holder).
+      Roth, en cambio, la extiende a toda la Guayana sin dar fuente.
+    caquetio: [parentesco-005, parentesco-023, parentesco-004]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        La matrilinealidad ya está en el caquetío como `reconstruido`
+        (parentesco-005), apoyada sólo en el wayuu, que no es hermana (D11).
+        Esto le da una hermana con página. Para que con la regla C se quede
+        `reconstruido` le falta la segunda pata: la sucesión matrilineal
+        taína de parentesco-007, que hoy cita «literatura tainista general»
+        sin página. Si la minería taína le pone página, este hecho sube a
+        `reconstruido`. Además paga la deuda de procedencia de
+        parentesco-023 (que cita «etnografía secundaria web»).
+    filtro: >-
+      Declarado `especifico-lokono` porque Brett lo da de los arawak y en el
+      mismo libro dice lo contrario de los caribes («The Carib woman is
+      always in bondage to her male relations», p. 353). Roth lo da por
+      pan-guayanés (pp. 318-319). Si se acepta la generalización de Roth, el
+      hecho es areal y bajaría a `comparanda-esfera`.
+    via_a: {parentesco-005: corrobora}
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, matrilinealidad, familia-con-nombre]
+
+  - id: lokono-parentesco-002
+    esfera: parentesco
+    tema: linaje-clan
+    contenido: >-
+      Algunas familias lokonas tienen su leyenda de origen: los Ebesoana
+      toman el nombre de Ebesōtu, la hija del piache cambiada en perra; los
+      Demaréna nacen de la unión de un hombre con una muchacha «Demaredu» de
+      bajo la tierra o el agua, y «en los días antiguos» se casaban sólo con
+      la familia de su padre, los Korobohána, que bajaron del cielo por una
+      soga y se volvieron loros (Koriouka). Roth no pudo confirmar la regla
+      Demaréna-Korobohána y no halló ningún tabú del animal-tótem en toda la
+      Guayana.
+    cita: >-
+      «From the above union, the existing Demaréna (Arawâk family) are
+      supposed to have sprung. They bear, of course, their mother's family
+      name; and in ancient days considered it "the correct thing" […] to
+      intermarry solely with their father's family—the "Korobohána"» (Brett
+      1880 p. 179, nota).
+    grafia: 'Ebesōtu, Ebesoana, Demaréna, Demaredu, Korobohána, Koriouka (Brett 1880)'
+    pueblo: lokono
+    donde: 'Guayana Británica (Pomeroon)'
+    epoca: 'Brett 1880 (tradiciones recogidas desde 1840); Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1880, pagina: '178-179, notas (pdf 192-193; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '318 (pdf 222; texto)', independiente: true, nota: '«I have been unable to confirm Brett''s statement as to the members of the Demarena […] being restricted to connubium only with those of the Korobohana»'}
+      - {obra: roth-1915, pagina: '297 (pdf 201; texto)', independiente: true, nota: 'ningún tabú del animal-tótem registrado en la Guayana; la única noticia es negativa'}
+    como_se_escribio: >-
+      Las leyendas van en verso para un público inglés; los datos de familia,
+      en notas en prosa. La leyenda de los Korobohána (bajar del cielo, la
+      soga rota por una mujer pesada) es la del origen warao que Brett cuenta
+      en 1868: la familia lokona la comparte con sus vecinos.
+    hermanas:
+      - {pueblo: achagua, obra: gumilla-1791, pagina: 't. I p. 114', que: 'unos achaguas se dicen hijos de los troncos (Aycubaverrenais) y otros de los ríos (Univerrenais): grupos de filiación con antepasado no humano (leído en imagen por la campaña del 2026-09-24, ficha de gumilla-1791)'}
+    caquetio: [parentesco-022, parentesco-014]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que los linajes caquetíos tuvieran un antepasado mítico no humano
+        sería nuevo. Hay dos tradiciones arahuacas independientes (lokono de
+        Brett, achagua de Gumilla), pero el rasgo —un grupo de filiación con
+        un antepasado no humano— es muy general en la Amazonía, y la mitad
+        lokona choca con la negativa de Roth sobre el tótem. En duda,
+        degradar.
+    tierra: [origen-en-la-tierra]
+    filtro: 'Con el filtro y sin él, `hipotetico`: el rasgo es demasiado amplio para la regla C (precedente: lok-03 de la minería 1).'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, linaje, mito-de-origen]
+
+  - id: lokono-parentesco-003
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      Nadie se casa con alguien de su propio nombre de familia (es decir, de
+      su línea materna), pero sí puede casarse «into the family of their
+      father, if they choose»; romper la regla «would be considered as
+      wicked». Roth añade que entre arawak y warao la unión entre ciertos
+      grados de primos se mira como el incesto.
+    cita: >-
+      «both her sons and daughters are prohibited from an alliance with any
+      individual bearing the same name; though they may marry into the
+      family of their father, if they choose» (Brett 1868 p. 98).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '98 (pdf 122; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '319 (pdf 223; imagen)', independiente: true, nota: '«Certainly among the Arawaks and Warraus, sexual union between persons of certain degrees of cousinship is regarded in the same light as is incest by Europeans»'}
+      - {obra: brett-1880, pagina: '179, nota (imagen)', independiente: false, nota: 'la preferencia antigua de los Demaréna por la familia del padre'}
+    como_se_escribio: 'Regla dicha por los propios lokono al misionero; Roth no dice qué primos.'
+    caquetio: [parentesco-008, parentesco-030]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        La exogamia de linaje ya está en el caquetío (parentesco-008), como
+        reconstruida desde el wayuu. Esto le da una hermana. Lo que el lokono
+        añade —que casarse en la familia del padre está permitido y hasta
+        bien visto— sería hipotético con una sola hermana.
+    via_a: {parentesco-008: corrobora}
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, exogamia]
+
+  - id: lokono-parentesco-004
+    esfera: parentesco
+    tema: residencia
+    contenido: >-
+      No hay ceremonia de boda: el suegro espera que el yerno trabaje para él
+      desmontando monte, y la pareja vive con el padre de ella hasta que los
+      hijos piden casa propia. Los viejos de Roth recuerdan las pruebas del
+      pretendiente —flecha al nido del carpintero, un conuco en pocos días,
+      las cestas de cangrejo llenas en una marea— tras las cuales el yerno
+      «became henceforth one of the legal heirs of the house». Brett conoció
+      una aldea con tres hermanas arawak y sus tres maridos.
+    cita: >-
+      «The wife's father expects the bridegroom to work for him in clearing
+      the forest, and in other things, and the young couple often remain with
+      him until an increasing family renders a separate establishment
+      necessary» (Brett 1868 p. 101).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth, de «very old people», 1907-1913, sobre «bygone days»'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '101 (pdf 125; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '315-316 (pdf 219-220; imagen la 316)', independiente: true, nota: '«he would take up residence in his father-in-law''s house» y, en el cuento arawak de la p. 316, «with us a husband always lives with his bride before he completes the tests»'}
+      - {obra: brett-1868, pagina: '352 (pdf 404; imagen)', independiente: false, nota: '«Three Arawâk sisters lived, with their respective husbands, at one settlement»'}
+    como_se_escribio: 'Brett lo ve y lo combate (el yerno de Ituribisi, pp. 100-101); Roth lo reconstruye de memorias de viejos.'
+    caquetio: [parentesco-023, parentesco-016]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        La residencia con la familia de la esposa sólo la dice hoy, para el
+        caquetío, parentesco-023, que cita una web. Esto le da la fuente que
+        le faltaba. Con una sola hermana es hipotético. El achagua de
+        parentesco-022 («las hijas casadas permanecían con sus familias»)
+        sería la segunda pata, pero su fuente es también secundaria.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, uxorilocalidad, servicio-del-yerno]
+
+  - id: lokono-parentesco-005
+    esfera: parentesco
+    tema: matrimonio
+    contenido: >-
+      Los padres comprometen a los hijos de niños, y la niña puede quedar
+      prometida a un hombre que ya tiene mujer. La poliginia era corriente
+      antes de la misión y se tenía por señal de grandeza; las mujeres no la
+      aguantaban siempre: la mayor de tres hermanas arawak, con las otras
+      dos, echó a golpes a la segunda esposa que trajo su marido.
+    cita: >-
+      «Sometimes they are promised to persons who have already one or more
+      wives» (p. 100). «the first wife […] commenced an assault on her,
+      supported by her two sisters, whose husbands looked quietly on» (p. 352).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett, 1840-1868 (el caso de las hermanas, «the year before the introduction of Christianity»)'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '99-100 y 352-353 (pdf 123-124 y 404-405; imagen la 352)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '120 (pdf 22; texto)', independiente: true, nota: 'el cuento arawak de Hariwali, piache con dos mujeres que viven en su casa con su hermano'}
+    como_se_escribio: 'Misionero en campaña contra la poligamia («that odious process»): exagera el daño y calla el porqué.'
+    caquetio: [parentesco-015, parentesco-030]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina parentesco-015 (atestiguado: la poligamia cacical como
+        alianza). No añade capa: la poliginia es de toda la Guayana (Brett
+        la da también de caribes y warao, pp. 351-353).
+    verificado_en_imagen: si
+    dominios: [areal-guayana, poliginia, esponsales]
+
+  - id: lokono-parentesco-006
+    esfera: parentesco
+    tema: matrimonio
+    tema_duda: linaje-clan
+    contenido: >-
+      La danza de los látigos (Maquarri) que Brett vio en el Koraia la daba
+      un hombre «in honour of his sister, who had been dead many months»;
+      el viudo estaba presente, y le dijeron que tras la danza «his
+      connexion with her family would entirely cease». Es el hermano, no el
+      viudo, quien despide a la muerta, y la muerte deshace la alianza.
+    cita: >-
+      «This entertainment had been given by one of the men in honour of his
+      sister, who had been dead many months; her husband was present, and I
+      was told that, after the dance, his connexion with her family would
+      entirely cease» (p. 158).
+    pueblo: lokono
+    donde: 'Koraia, cerca del lago Wakapoa (Pomeroon)'
+    epoca: 'Brett, 1842'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '158 (pdf 188; imagen)'}
+    como_se_escribio: 'Lo vio una vez; el sentido se lo explicaron («I was told»).'
+    caquetio: [parentesco-006, parentesco-009]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Nuevo para el caquetío: que la viudez cierre el vínculo del viudo con
+        la familia de la mujer, y que lo cierre un rito dado por el hermano
+        de ella. Una sola hermana.
+    via_a:
+      parentesco-006: matiza
+      parentesco-009: matiza
+    via_a_nota:
+      parentesco-006: 'el hermano de la muerta preside su último rito: es el polo materno el que actúa, como en el tío wayuu, pero aquí como hermano y no como tío'
+      parentesco-009: 'el levirato wayuu prolonga la alianza tras la muerte del marido; lo lokono la corta tras la muerte de la mujer. No es el mismo caso (viudo, no viuda): matiza, no contradice'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, viudez, alianza]
+
+  - id: lokono-parentesco-007
+    esfera: parentesco
+    tema: terminologia
+    contenido: >-
+      Los términos de hermano y hermana cambian según el sexo y la edad de
+      quien habla: el varón dice d'abugíci 'mi hermano mayor', d'augíci 'mi
+      hermano menor', d'aiyūradātu 'mi hermana'; la mujer, d'atilātu 'mi
+      hermana mayor', d'augitu 'mi hermana menor', d'aciligíci 'mi hermano'.
+      Los moravos de 1802 dan las mismas raíces (a-buki-ti, u-yurda-tu,
+      a-ttilliki-tti, ittilla-tu).
+    cita: >-
+      «in the words "brother" and "sister," each has three forms, according
+      to the age and sex of the speaker» (Brett 1868 p. 117, nota).
+    grafia: "d'abugíci, d'augíci, d'aiyūradātu, d'atilātu, d'augitu, d'aciligíci (Brett) · a-buki-ti, a-ttilliki-tti, u-yurda-tu, ittilla-tu (Perea, de Schumann) · augi-ti, augi-tu (Goeje)"
+    pueblo: lokono
+    donde: 'Pomeroon (Brett); Berbice y Surinam (moravos)'
+    epoca: 'moravos 1802 (Perea); Brett 1840-1868; Goeje 1939 (compilación)'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: brett-1868, pagina: '117, nota (pdf 143; imagen)'}
+    procedencia_extra:
+      - {obra: perea-alonso-1942, pagina: '556 (pdf 778; imagen)', independiente: true, nota: 'manuscrito moravo de 1802, sin relación con Brett'}
+      - {obra: goeje-1939, pagina: '42 (pdf 43; imagen)', independiente: false, nota: 'Goeje compila de su Arawak de 1928'}
+    como_se_escribio: 'Dato de gramático; Brett lo cuenta como prueba de que la lengua es «copious in words expressing family relationship».'
+    caquetio: [parentesco-011, parentesco-012]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que el caquetío tuviera raíces de hermano distintas según el sexo
+        de quien habla sería nuevo: el caquetío sólo atestigua daitiao
+        (parentesco-012). Dos registros lokonos independientes, una sola
+        hermana: hipotético. No entra al habla (es lokono).
+    via_a: {parentesco-011: matiza}
+    via_a_nota:
+      parentesco-011: 'el wayuu separa el tío materno del paterno; el lokono separa además los hermanos por el sexo de quien habla. Misma lógica de distinguir por el lado y el sexo; otros términos'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, terminologia, sexo-del-hablante]
+
+  - id: lokono-parentesco-008
+    esfera: parentesco
+    tema: infancia-nombre
+    tema_duda: roles-de-genero
+    contenido: >-
+      Al nacer el hijo, el padre se echa en su hamaca «as if he were sick»
+      y recibe visitas mientras la madre cocina (covada). Treinta años
+      después las parientas todavía la exigían a un joven cristiano. Roth y
+      Dance la explican así entre arawak y warao: el espíritu del niño sigue
+      al padre «as a second shadow» hasta que gatea, y el padre no puede
+      hachar, trepar ni cazar sin herirlo.
+    cita: >-
+      «On the birth of a child, the ancient Indian etiquette requires the
+      father to take to his hammock, where he remains for some days as if he
+      were sick» (Brett 1868 p. 101).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913 (con Dance, 1881)'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '101 y 355 (pdf 125 y 407; imagen la 101)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '324-325 (pdf 228-229; texto)', independiente: true, nota: 'Dance «presumably» de arawak; Roth: «among Arawaks as well as Warraus»'}
+      - {obra: roth-1915, pagina: '319 (pdf 223; imagen)', independiente: true, nota: 'tabúes del embarazo en los arawak del Pomeroon: matar o comer culebra (el niño no hablaría ni andaría), doblar el casabe (orejas dobladas)'}
+    como_se_escribio: 'Brett lo ridiculiza («in the most provoking manner»); Roth busca el porqué.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        El corpus caquetío no tiene covada (sonda `couvade`, `covada`: 0).
+        La covada es de toda la Guayana (Brett la da también de akawaio y
+        caribes, p. 355): con el filtro, comparanda para un personaje de la
+        esfera, no rasgo caquetío.
+    tierra: [limite-de-uso]
+    filtro: 'Sin el filtro, una sola hermana: hipotético.'
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, covada, alma-del-niño]
+
+  - id: lokono-parentesco-009
+    esfera: parentesco
+    tema: roles-de-genero
+    contenido: >-
+      Los niños aprenden pronto a pescar y a remar, y de mozos acompañan a
+      los hombres de caza; las niñas trabajan desde chicas con las mujeres,
+      «whose time is much more fully occupied than that of the men». Los
+      padres casi no castigan, y el niño apenas obedece a la madre. En el
+      s. XVI, entre los aruacay del bajo Orinoco, también las mujeres
+      sembraban.
+    cita: >-
+      «The boys are early trained to fish and paddle, and as they get older
+      they accompany the men on their hunting expeditions. The girls are
+      obliged to labour at an early age» (Brett 1868 p. 102).
+    pueblo: lokono
+    donde: 'Pomeroon; Aruacay (bajo Orinoco) para el s. XVI'
+    epoca: 'Brett 1840-1868; el dato del Aruacay es del s. XVI resumido por Kirchhoff (1948)'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '99 y 102 (pdf 123 y 126; texto)'}
+    procedencia_extra:
+      - {obra: steward-1948-hsai-4, pagina: '486 (pdf 622; texto)', independiente: true, nota: 'Kirchhoff: «Among the Aruacay, however, women also planted the crops» (tercera mano)'}
+    como_se_escribio: 'Observación de maestro de escuela de misión.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Reparto de tareas de toda la Guayana; sirve para escribir personajes, no para afirmar nada del caquetío.'
+    via_a: {transmision-020: corrobora-en-parte}
+    via_a_nota:
+      transmision-020: 'el adiestramiento temprano del varón (arco, aquí remo y pesca) y el trabajo temprano de la niña también son lokonos; pero es areal'
+    verificado_en_imagen: 'no'
+    dominios: [areal-guayana, division-del-trabajo, infancia]
+
+# ══════════════════════════════════════════════════════════════════
+# GEOGRAFÍA POLÍTICA
+# ══════════════════════════════════════════════════════════════════
+
+  - id: lokono-geografia_politica-001
+    esfera: geografia_politica
+    tema: jefatura
+    contenido: >-
+      En tiempos de Brett los «chiefs, or captains» los nombraba o
+      confirmaba el gobernador; antes juntaban a sus hombres por orden suya
+      y los llevaban a la guerra, y ya no tienen «the shadow of authority
+      […] except over his own family»: «The power of the ancient cacique has
+      perished with the title». El capitán Waramaraka era reconocido como
+      cabeza por varias aldeas, y un lokono no aceptaba la misión sin que el
+      capitán lo hubiera dicho a todos; el viejo Sabaiko, con su placa de
+      plata y su bastón, le dijo a Brett: «I have no power over my people».
+    cita: >-
+      «Their chiefs, or captains, were either appointed, or confirmed in
+      their office, by the governor of the colony […] The power of the
+      ancient cacique has perished with the title» (p. 103).
+    grafia: 'capitan, Waramaraka, Sabaiko'
+    pueblo: lokono
+    donde: 'Pomeroon y Wakapoa'
+    epoca: 'Brett, 1840-1844'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '103, 87-88, 155 y 158 (pdf 127, 111-112, 185, 188; imagen)'}
+    como_se_escribio: 'Un misionero que necesita al capitán para entrar en la aldea y lo describe por lo que puede o no ordenar.'
+    capa_colonial: >-
+      El cargo es colonial de punta a punta: nombramiento del gobernador,
+      placa de plata y bastón, obligación de dar hombres a la colonia.
+    caquetio: [parentesco-034, parentesco-037]
+    proyeccion:
+      capa: no-proyecta
+      nota: >-
+        Lo que se ve es la capitanía colonial, no el cacicazgo lokono. Que
+        «the ancient cacique» tuviera más poder lo dice Brett sin dato. No
+        se proyecta; para el s. XVI ver lokono-geografia_politica-002.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, capitania-colonial, consentimiento]
+
+  - id: lokono-geografia_politica-002
+    esfera: geografia_politica
+    tema: jerarquia-rango
+    tema_duda: jefatura
+    contenido: >-
+      En el s. XVI el pueblo del Aruacay, en el bajo Orinoco, «probably
+      Arawakan», tenía un cacique principal y nueve subjefes, cada uno al
+      frente de un barrio; al principal lo distinguía la barba. El pueblo
+      tenía unas doscientas casas grandes.
+    cita: >-
+      «The Aruacay had a principal chief and nine subchiefs, each of whom
+      governed a barrio. The principal chief was distinguished by a beard»
+      (HSAI 4 p. 487).
+    grafia: 'Aruacay'
+    pueblo: lokono
+    donde: 'Aruacay, bajo Orinoco (borde oriental del área de Kirchhoff)'
+    epoca: 's. XVI (cronistas resumidos por Kirchhoff en 1948, sin decir cuál para este dato)'
+    etiqueta: hipotetico
+    testigo: tercera-mano
+    procedencia: {obra: steward-1948-hsai-4, pagina: '487 y 483 (pdf 623 y 619; imagen la 487)'}
+    como_se_escribio: >-
+      Síntesis de Kirchhoff; la filiación lokona del Aruacay es suya
+      («probably Arawakan», p. 481), aunque el nombre es el de los aruacas.
+    caquetio: [parentesco-034, parentesco-035, parentesco-037]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Es el único dato político lokono de la época del contacto. Ilumina el
+        modelo caquetío de dos títulos atestiguados (diao, apopo:
+        parentesco-034/035) y su ensamble reconstruido en tres niveles
+        (037): un jefe principal sobre jefes de barrio es lo que el modelo
+        dice. No cambia ninguna capa.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, contacto-s-XVI, subjefes]
+
+  - id: lokono-geografia_politica-003
+    esfera: geografia_politica
+    tema: jerarquia-rango
+    contenido: >-
+      Los títulos lokonos que dan las fuentes: un niño puede llamarse
+      «Ifili, the great» o «Adaiahu, the governor» (nombres de cualidad o
+      título que pone el piache); a Brett los lokono lo llamaban «Adaieli»;
+      Goeje da A afudi 'chef, prince'; y Roth, shidu, «a term applied to any
+      chief or boss» (Uni-shidu, el «jefe» de la lluvia).
+    cita: >-
+      «Others again are named from some quality or title, as "Ifili," the
+      great; "Adaiahu," the governor» (Brett 1868 p. 367).
+    grafia: 'Ifili, Adaiahu, Adaieli (Brett 1868) · afudi (Goeje) · shidu, Uni-shidu (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913; Goeje 1939'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: brett-1868, pagina: '367 y 261 (pdf 421 y 301; imagen la 367)'}
+    procedencia_extra:
+      - {obra: goeje-1939, pagina: '43 (pdf 44; imagen)', independiente: true, nota: '«chef, prince […] A afudi»'}
+      - {obra: roth-1915, pagina: '268 (pdf 172; imagen)', independiente: true, nota: '«Uni-shidu, so called by the Arawaks from Uni, the Rain, and Shidu, a term applied to any chief or boss»'}
+    como_se_escribio: 'Palabras sueltas; ninguna fuente describe un escalafón.'
+    caquetio: [parentesco-034, parentesco-035]
+    proyeccion:
+      capa: no-proyecta
+      nota: >-
+        Son palabras lokonas: no entran al habla. Lo que puedan decir de diao
+        o apopo es asunto del lexicón (para_el_lexicon, `adaiahu`), con la
+        advertencia que allí va.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, titulos]
+
+  - id: lokono-geografia_politica-004
+    esfera: geografia_politica
+    tema: guerra
+    contenido: >-
+      La tradición oral lokona recuerda las guerras con los caribes de antes
+      de los holandeses: masacres en el Arapaiaco y el Ituribisi, y victorias
+      por emboscada en el Waini y el Haimara-Cabura. Ante la invasión «they
+      all placed themselves under the command of one chief, a man of
+      experience and skill»; en el Pomeroon levantaron una casa-fuerte con
+      empalizada y la llenaron con las flechas de un año, hechas por todos;
+      mujeres y niños las acarreaban en el combate; usaban escudos de
+      madera. Al jefe caribe Manarrawa, preso, lo juzgaron «their old men
+      and chief warriors» y lo soltaron a cambio de la paz, que dicen que se
+      cumplió. Gumilla, al revés, da a los aruacas del Orinoco y de la costa
+      de Cayena «sujetados» por los caribes tras «largas y sangrientas
+      guerras».
+    cita: >-
+      «Expecting to be followed by the Caribs, they all placed themselves
+      under the command of one chief, a man of experience and skill» (Brett
+      1868 p. 487). «Manarrawa was brought by the victors before their old
+      men and chief warriors» (p. 492).
+    grafia: 'Bohirasiri, Manarrawa, sarapa (flecha de tres puntas), Haimara-Cabura, Tuyuro-konelli'
+    pueblo: lokono
+    donde: 'Pomeroon, Moruca y Waini (Brett); Orinoco y costa hacia Cayena (Gumilla)'
+    epoca: 'tradición contada a Brett 1840-1868 de hechos «long—long—long time before the birth of his grandfather»; Gumilla 1731-1741'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '486-493 (pdf 544-551; imagen las 487, 490, 492, 493)'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. I p. 154 (pdf 178; imagen)', independiente: true, nota: 'los aruacas «despues de largas y sangrientas guerras con los Caribes, se les han sujetado, y viven entre ellos»: contradice el «never conquered» de Brett (p. 493), en otra región'}
+      - {obra: steward-1948-hsai-4, pagina: '489 (pdf 625; texto)', independiente: true, nota: 'el Aruacay del s. XVI tenía escudos y un yelmo especial (tercera mano)'}
+    como_se_escribio: >-
+      Historia oral de una sola parte («chiefly, though not entirely, of one
+      side», p. 493), contada a un misionero que quería a los arawak como
+      pueblo pacífico.
+    caquetio: [geografia_politica-013, geografia_politica-012]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        La frontera caribe de la esfera vista desde una hermana: útil para
+        un personaje o un relato del borde caribe. No afirma nada de la
+        guerra caquetía.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, tradicion-oral, frontera-caribe]
+
+  - id: lokono-geografia_politica-005
+    esfera: geografia_politica
+    tema: cautivos-esclavitud
+    contenido: >-
+      Los caribes entraban al Pomeroon «carrying off prisoners and spoil»;
+      una muchacha arawak raptada en el Berbice apareció años después casada
+      con un caribe y con dos hijos, y su hermano la reconoció. Los arawak
+      también tomaban cautivos: uno regaló a un colono un niño akawaio
+      «whom he had taken in war». A los dos caribes que sobrevivieron a una
+      emboscada los soltaron por un rescate en hamacas de algodón. Los
+      holandeses eximieron a los arawak de la esclavitud a la que vendían a
+      los de otras naciones.
+    cita: >-
+      «the Dutch, who by law exempted them from that slavery to which
+      individuals of the other tribes were then liable on their being sold
+      by each other» (Brett 1868 p. 96).
+    pueblo: lokono
+    donde: 'Pomeroon, Berbice, Corentyn'
+    epoca: 'Brett 1840-1868, con datos del s. XVIII (Stedman) y tradición oral'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '96-97, 317, 488-489 (pdf 120-121, 363, 546-547; imagen la 97)'}
+    procedencia_extra:
+      - {obra: steward-1948-hsai-4, pagina: '487 (pdf 623; imagen)', independiente: true, nota: 'al norte del Orinoco «Slaves seem to have been common in the whole area and were traded or presented as gifts by one chief to another»: areal'}
+    como_se_escribio: 'Brett toma de Stedman la anécdota del niño akawaio; el resto, de la tradición y de su misión.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'El cautivo y el rescate son de toda la esfera; no toca ningún hecho caquetío.'
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, rescate, rapto]
+
+  - id: lokono-geografia_politica-006
+    esfera: geografia_politica
+    tema: justicia-norma
+    contenido: >-
+      Una ofensa se muestra no hablándole al ofensor, y llamar a alguien
+      «malo» «is almost looked upon as a curse». El homicidio se paga con la
+      vida: cuando un joven mató a su mujer, el pariente más cercano de ella
+      salió a vengarla, pero antes lo mató a palos su propio hermano
+      mayor, Kaikaiko. Para saber de dónde vino el que mató por kanaima, los
+      arawak hierven hojas en una olla: hacia donde cae la espuma, de ahí
+      vino. La palabra arawak para el kanaima es mahui, y la aplican a todos
+      los akawaio.
+    cita: >-
+      «When any crime, such as murder, was committed, they followed strictly
+      the law of retaliation» (Brett 1868 p. 104).
+    grafia: 'Kaikaiko (Brett) · Mahui (Roth)'
+    pueblo: lokono
+    donde: 'Arapaiaco (Pomeroon)'
+    epoca: 'Brett, 1839-1840 («the year before I went among them»); Roth 1907-1913 (con Bernau, 1847)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '103-105 (pdf 127-129; imagen la 103)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '354 y 356 (pdf 262 y 264; imagen la 354)', independiente: true, nota: 'Mahui; los arawak saben del kanaima «only at second-hand»; la olla, de Bernau'}
+    como_se_escribio: 'Brett lo cuenta para mostrar el mal de las borracheras; le contaron el caso colonos y la familia.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        La ley del talión la da Roth por pan-guayanesa (p. 354, de Dance);
+        el caso lokono es un ejemplo, no un rasgo propio.
+    filtro: 'Sin el filtro, una sola hermana: hipotético (justicia por represalia dentro de la parentela).'
+    via_a:
+      transmision-019: contradice
+      transmision-034: matiza
+    via_a_nota:
+      transmision-019: 'el wayuu cobra «precio de sangre»; el lokono de Brett se cobra la vida, y la ejecuta la propia familia del culpable. Ninguna fuente lokona da compensación'
+      transmision-034: 'tampoco hay mediador: lo que hace el palabrero wayuu no tiene par lokono en estas fuentes'
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, talion, kanaima]
+
+  - id: lokono-geografia_politica-007
+    esfera: geografia_politica
+    tema: territorio-asentamiento
+    contenido: >-
+      Cada arawak se llama a sí mismo «Loko», y Lokono, su plural, «literally
+      means "the people"». Sus aldeas se extienden en línea, a menos de cien
+      millas del mar, del Orinoco al Marowini, junto a lagos y sabanas
+      anegadas; la casa del principal de Akawini estaba en una isla de un
+      lago. Un viejo piache situaba el origen de su saber «at Kaieri» (una
+      isla), señalando al norte, y Brett deduce que la tribu tuvo «some
+      connexion with the islands»; kaieri es 'isla' en arawak, y la palabra
+      con que los de Trinidad llamaron su isla a Colón.
+    cita: >-
+      «Each Arawâk calls himself a "Loko;" and speaks of his tribe and
+      language as those of the "Lokono," which word is the plural of the
+      former, and literally means "the people"» (p. 97).
+    grafia: 'Loko, Lokono, Kaieri, Caeri'
+    pueblo: lokono
+    donde: 'costa de las Guayanas, del Orinoco al Marowini'
+    epoca: 'Brett 1840-1868; la cita de Raleigh sobre Caeri es de 1595'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '97, 58, 116, 402, 483 (pdf 121, 82, 142, 456, 541; imagen 97, 58, 402)'}
+    como_se_escribio: 'La deducción del vínculo con las islas es de Brett, apoyada en la palabra y en el gesto del viejo.'
+    caquetio: [geografia_politica-015, geografia_politica-001]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        Un pueblo arahuaco de costa que se nombra «la gente» y guarda un
+        origen en una isla al norte: es el espejo de lo que la esfera dice
+        del caquetío (esfera-de-interaccion §1: caquetío ~ kakitho 'gente';
+        las islas ABC al norte). Pero Lokono no es kakitho (otra palabra) y
+        el origen insular es de Trinidad, no de las ABC: comparanda.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, etnonimo, origen-insular]
+
+  - id: lokono-geografia_politica-008
+    esfera: geografia_politica
+    tema: escala-poblacion
+    contenido: >-
+      En el s. XVI el Aruacay del bajo Orinoco tenía doscientas casas
+      grandes. Brett los cree «numerous and powerful» al contacto. En su
+      tiempo la tribu dio a la colonia 400 hombres «at short notice»; hacia
+      1866 había unos 500 arawak en el distrito misional del Berbice y 137
+      en el Corentyn; a la principal fiesta de los Mahaiconi acudieron unos
+      doscientos.
+    cita: '«This tribe furnished 400 men at short notice» (Brett 1868 p. 97).'
+    pueblo: lokono
+    donde: 'Aruacay; Berbice, Corentyn, Mahaiconi'
+    epoca: 's. XVI (Kirchhoff); 1844-1866 (Brett)'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '97, 201, 311, 319, 483 (pdf 121, 235, 355, 365, 541; imagen la 97)'}
+    procedencia_extra:
+      - {obra: steward-1948-hsai-4, pagina: '483 (pdf 619; texto)', independiente: true, nota: 'Aruacay, 200 casas grandes en el s. XVI'}
+    como_se_escribio: 'Cifras de misión y de post-holder, sin método.'
+    caquetio: []
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Cifras coloniales de un pueblo diezmado por la viruela y el cólera (Brett, parte II cap. II). Las 200 casas del Aruacay son el único orden de magnitud precolonial.'
+    verificado_en_imagen: parcial
+    dominios: [especifico-lokono, demografia]
+
+  - id: lokono-geografia_politica-009
+    esfera: geografia_politica
+    tema: alianza-intercambio
+    contenido: >-
+      Los arawak fueron los primeros en aliarse con los holandeses, que los
+      eximieron de la esclavitud y les daban regalos anuales (paz de 1686);
+      Gumilla los da como la nación más leal a los españoles, que avisa en
+      secreto de las rebeliones. Comerciaban con los caribes; en la frontera
+      con los akawaio, el mestizo Mombaca «acted as a sort of consul for
+      both»; y en el Berbice unos arawak contrataron akawaio para atacar
+      una aldea de su propia nación.
+    cita: >-
+      «The Arawâks, though at first opposed to them, soon saw that an
+      alliance would be more profitable than war» (Brett 1868 p. 493).
+    pueblo: lokono
+    donde: 'Guayana holandesa y británica; Orinoco (Gumilla)'
+    epoca: 's. XVII-XIX'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '493, 120, 261 y 302 (pdf 551, 146, 301 y 344; imagen la 493)'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. I p. 154 (pdf 178; imagen)', independiente: true, nota: '«la Nacion mas amante y leal á la Nacion Española»'}
+    como_se_escribio: 'Historia colonial vista desde los aliados de la colonia.'
+    caquetio: [geografia_politica-010, geografia_politica-017]
+    proyeccion:
+      capa: no-proyecta
+      nota: >-
+        Es la alianza colonial. Hay un paralelo de forma con el caquetío que
+        elige socios (los wanebucanes y coanaos de la Guajira,
+        geografia_politica-010) y con Manaure pactando con Ampíes (017),
+        pero es de otra época y otra costa.
+    verificado_en_imagen: parcial
+    dominios: [especifico-lokono, alianza-colonial, frontera]
+
+# ══════════════════════════════════════════════════════════════════
+# CREENCIA (lo nuevo; 001-008 son la migración de la minería 1)
+# ══════════════════════════════════════════════════════════════════
+
+  - id: lokono-creencia-101
+    esfera: creencia
+    tema: enfermedad-cura
+    contenido: >-
+      Los yauhahu, en plural, «occasion sickness and death», y el dolor se
+      llama en arawak «yauhahu simaira, the evil spirit's arrow». El piache
+      cura chupando y saca de la boca «a thorn or gravel-stone, a fish-bone
+      or bird's claw, a snake's tooth, or a piece of wire, which some
+      malicious yauhahu is supposed to have inserted». Si el enfermo muere,
+      la culpa es del yauhahu o de un piache rival. Sólo la herida, el golpe
+      o el hambre no son obra suya.
+    cita: >-
+      «Pain is called, in the poetical idiom of the Arawâks, "yauhahu
+      simaira," the evil spirit's arrow» (pp. 361-362).
+    grafia: 'yauhahū, yauhahu simaira (Brett) · Yawahu (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '361-362 y 364-365 (pdf 413-414, 416, 419; imagen 361, 362, 365)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '348 y 352 (pdf 256 y 260; imagen la 348)', independiente: true, nota: 'la enfermedad viene del espíritu de un muerto, del de un vivo (kanaima) o del Oriyu; y «the Arawak Indians'' belief (Br, 361) that all pain is due to the Evil Spirit''s arrow»'}
+      - {obra: brinton-1871, pagina: '18', independiente: false, nota: 'Brinton copia a Brett y le añade «a supreme spiritual being», que Brett no dice'}
+    como_se_escribio: >-
+      Brett describe la cura para «the Indians» en general, con nombres
+      arawak; la frase «yauhahu simaira» sí es lokona. Brett NUNCA llama al
+      yauhahu ser supremo: el título de su cap. es «Yauhahu or Demons». El
+      «supreme spiritual being» de lokono-creencia-004 (de Brinton p. 18) es
+      de Brinton.
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. XVI (Wikisource, sin página)', que: 'el behique saca lo que «tu cemí te lo había puesto» en el cuerpo'}
+    caquetio: [creencia-008b]
+    mineria_1: [lok-04]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina la cura caquetía atestiguada (Oviedo t. II p. 299: el
+        boratio chupa y saca «la espina ó piedra ó palo»; sin hecho propio
+        en el corpus, ver lokono-creencia-004) y 008b (la muerte por
+        conjuros). Lo que añadiría —que lo metido en el cuerpo lo puso un
+        espíritu— es areal (Brett: los yauhahu son «objects of faith to the
+        other tribes», p. 361).
+    filtro: >-
+      Sin el filtro, lokono (Brett, ahora de primera mano) + taíno (Pané)
+      harían `reconstruido` el «lo puso un espíritu». Con el filtro, no se
+      proyecta. lok-04 BAJA: era hipotético por la regla y ahora es lectura.
+    via_a:
+      creencia-006: contradice
+      creencia-007: corrobora-en-parte
+    via_a_nota:
+      creencia-006: 'confirmado en primera mano: la causa es algo metido en el cuerpo por un espíritu, no el alma que se aleja'
+      creencia-007: 'la minería 1 dijo «no toca» porque para Brinton toda enfermedad es flecha. Brett (p. 365) separa la herida, el golpe y el hambre, y Roth (pp. 345-346) da la «ordinary home treatment and household remedies» antes del piache: hay males comunes y males del espíritu, como en 007, aunque en lo lokono casi todo es del espíritu'
+    verificado_en_imagen: si
+    dominios: [areal-guayana, intrusion, yauhahu]
+
+  - id: lokono-creencia-102
+    esfera: creencia
+    tema: sueno-vision
+    tema_duda: especialista
+    contenido: >-
+      La cura del piache arawak del Pomeroon, como la vio Roth: de noche,
+      con las mujeres fuera y los fuegos apagados, invoca y canta con la
+      maraca hasta las dos o las tres; luego, en su banco, «will proceed to
+      smoke and dream, and in his dream he will discover at whose instigation
+      the sickness has been sent», si viene de un muerto, de un vivo
+      (kanaima) o del Oriyu, «and the mode of cure». Si el enfermo no mejora,
+      repite «smoking, singing, and dreaming» una segunda y una tercera
+      noche.
+    cita: >-
+      «Our medicine-man, seated on his divining stool, will proceed to smoke
+      and dream, and in his dream he will discover at whose instigation the
+      sickness has been sent» (p. 348).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Roth, 1907-1913 («the present-day Arawak procedure»); aprendió con el piache Bariki'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: roth-1915, pagina: '347-348 (pdf 255-256; imagen la 348)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '341-342 (pdf 249-250; texto)', independiente: false, nota: '«The piai''s reputation as an interpreter of dreams was second to none»: general'}
+    como_se_escribio: 'Roth fue alumno de un piache y describe desde dentro; es de un siglo y medio de misión después.'
+    caquetio: [creencia-025, creencia-001]
+    mineria_1: [lok-01, lok-05]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina el encierro atestiguado del boratio (Oviedo t. II p. 298,
+        humo de tabaco y el espíritu que «le ven y hablan»). No añade capa.
+        CORRIGE a la minería 1: lok-05 decía «ninguna fuente arahuaca del
+        repo pone la cura en el sueño». Roth sí pone el DIAGNÓSTICO en el
+        sueño del piache, después de la vigilia: vigilia y sueño no se
+        excluyen, se suceden.
+    filtro: 'El piache que sueña es de toda la Guayana (Roth, p. 341): areal. El procedimiento descrito es arawak de primera mano.'
+    via_a: {creencia-002: corrobora-en-parte}
+    via_a_nota:
+      creencia-002: 'la Vía A dice que el piache «diagnostica, prescribe y pronostica» por el sueño: lo lokono de Roth lo corrobora para el diagnóstico y la receta, no para la cura, que es de vigilia y de succión. La minería 1 había dicho «contradice»: queda «corrobora en parte»'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, sueño-diagnostico, vigilia]
+
+  - id: lokono-creencia-103
+    esfera: creencia
+    tema: enfermedad-cura
+    contenido: >-
+      El piache arawak manda comer al enfermo «and his relatives» lo mismo,
+      con tres reglas: nada se añade ni se quita (ni sal ni ají), se cocina
+      en el fuego del piache o en uno nuevo de palos frotados, y la olla no
+      debe rebosar. Si el enfermo muere, es porque alguien rompió la dieta.
+      Roth lo da igual para caribes y warao: «the whole family—father,
+      mother, brothers, and sisters—is dieted on exactly the same lines».
+    cita: >-
+      «the medicine-man then gives careful directions as to how the patient
+      and his relatives are to be fed» (p. 348).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Roth, 1907-1913'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: roth-1915, pagina: '348 y 352 (pdf 256 y 260; imagen la 348)'}
+    procedencia_extra:
+      - {obra: gumilla-1791, pagina: 't. I p. 210', independiente: true, nota: 'el ayuno «al enfermo y á toda la parentela» de «los mas de ellos» en el Orinoco (minería 1, lok-06): areal'}
+    como_se_escribio: 'De primera mano para los arawak; la extensión a caribes y warao, también de Roth.'
+    caquetio: [creencia-023]
+    mineria_1: [lok-06]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina creencia-023 (atestiguado: el boratio manda a toda la casa
+        comer sólo mazamorra rala de maíz). La minería 1 dejó el ayuno de la
+        parentela como areal por Gumilla; Roth lo confirma ahora para los
+        arawak, pero también para caribes y warao: sigue siendo areal, con
+        el lokono dentro del área.
+    verificado_en_imagen: si
+    dominios: [areal-guayana, dieta-de-la-parentela]
+
+  - id: lokono-creencia-104
+    esfera: creencia
+    tema: iniciacion-especialista
+    contenido: >-
+      Quien decide hacerse piache se pone en manos de un maestro, en una
+      choza aparte, con soledad y dieta corta; bebe agua de diez hojas de
+      tabaco hervida a un cuarto, y en el desmayo «his spirit is supposed to
+      leave the body, and to visit and receive power from the yauhahu, or
+      hebo, as the Waraus call» los. Se anuncia su muerte; sale al décimo día
+      consumido, y por diez meses no come aves ni bestias, sólo pescado
+      menudo y poco casabe, y nada que no sea de la tierra. Entre arawak y
+      warao del Pomeroon el aspirante llevaba un tocado de algodón al
+      instalarse.
+    cita: >-
+      «When an Indian has made up his mind to become a sorcerer, or
+      "doctor," he applies to some professor of that art» (Brett 1868
+      p. 362).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868 (con M''Clintock); Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '362-363 (pdf 414-415; imagen la 362)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '340 (pdf 248; imagen)', independiente: true, nota: '«Among the Pomeroon District Arawaks and Warraus it would seem that the aspirant wore a special cotton headdress at the time of installation»'}
+    como_se_escribio: >-
+      Brett lo da para «an Indian» y su nota (M'Clintock) dice que las reglas
+      son «common to the Caribs as well as the Waraus»: es areal.
+    caquetio: [creencia-004]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-004 (atestiguado: el piache se forma con «prolongado ayuno»). Areal: no añade capa.'
+    via_a: {transmision-017: contradice}
+    via_a_nota:
+      transmision-017: 'en lo wayuu la vocación «se revela por un sueño, no se elige»; en Brett el aspirante «has made up his mind» y busca maestro. Es areal, pero va contra la Vía A'
+    verificado_en_imagen: si
+    dominios: [areal-guayana, iniciacion, tabaco]
+
+  - id: lokono-creencia-105
+    esfera: creencia
+    tema: alma
+    contenido: >-
+      Para los arawak de hoy, dice Roth, lo que sale del cuerpo al morir se
+      liga a la sombra: «their terms for a dead person's spirit and a
+      person's shadow are (h)iyaloko and (h)iyá». Según ayude o dañe, el
+      espíritu del muerto es satu-(h)iyaloko o wakaiatu-(h)iyaloko. Roth
+      sospecha que hiyaloko es la misma palabra que el espíritu del monte de
+      toda la Guayana (Yolok, Hyorokon). El espíritu del recién nacido no
+      está todavía fijo al cuerpo: sigue al padre hasta que el niño gatea.
+    cita: >-
+      «their terms for a dead person's spirit and a person's shadow are
+      (h)iyaloko and (h)iyá, respectively» (p. 152).
+    grafia: '(h)iyá, (h)iyaloko, satu-(h)iyaloko, wakaiatu-(h)iyaloko (Roth) · (h)ialoko «esprit» (Goeje, según la minería 1)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: roth-1915, pagina: '152 (pdf 54; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '324-325 (pdf 228-229; texto)', independiente: false, nota: 'el espíritu del niño sigue al padre «as a second shadow»'}
+    como_se_escribio: 'Dato léxico de Roth; dice que la palabra no vuelve a salir en su folklore.'
+    caquetio: [creencia-005, creencia-008, creencia-006]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que el alma caquetía (barsure, palabra atestiguada; concepto
+        reconstruido) fuera ante todo la sombra, y que el muerto fuera
+        «bueno» o «malo» según ayude o dañe, sería hipotético con una sola
+        hermana. No toca la palabra barsure.
+    filtro: >-
+      La pareja sombra/espíritu del muerto con la misma raíz es lokona; la
+      palabra hiyaloko puede ser la del espíritu del monte pan-guayanés (la
+      sospecha es de Roth). Si se lee así, el hecho es areal y bajaría a
+      comparanda.
+    via_a:
+      creencia-005: matiza
+      creencia-008: corrobora-en-parte
+    via_a_nota:
+      creencia-005: 'ninguna fuente lokona da el sueño como viaje del alma (R2: cero; la teoría del cap. VI de Roth es caribe). El alma lokona es la sombra'
+      creencia-008: 'el muerto lokono es ambivalente —satu- o wakaiatu-hiyaloko— como los yoluja wayuu; y yoluja / hiyaloko / Yolok parecen la misma familia de palabras de toda la región (para_el_lexicon): el parecido con la Vía A puede ser areal'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, sombra, muertos-ambivalentes]
+
+  - id: lokono-creencia-106
+    esfera: creencia
+    tema: muerte-entierro
+    contenido: >-
+      La muerte se anuncia a las aldeas vecinas con tiros. Al muerto se lo
+      metía en un tronco ahuecado o en media canoa, y se lo enterraba en la
+      casa. Hay arawak del Pomeroon que siembran yuca o ponen un sebucán
+      sobre la tumba para que el espíritu no quiera salir. Una familia arawak
+      cristiana le puso a su niño el arco y las flechas al lado y le habló:
+      «be good and don't trouble me». En el s. XVI el Aruacay enterraba
+      dentro de la casa, en una tumba de barro con una figura encima, con
+      casabe y una totuma de chicha.
+    cita: >-
+      «They formerly used to make a rude coffin, by hollowing a solid piece
+      of wood, or by cutting a small canoe in halves to receive the body»
+      (Brett 1868 p. 103).
+    pueblo: lokono
+    donde: 'Pomeroon (Brett, Roth); Aruacay, bajo Orinoco (s. XVI)'
+    epoca: 'Brett 1840-1868; Roth 1907-1913 (con Dance); Aruacay s. XVI vía Kirchhoff'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '103 y 156 (pdf 127 y 186; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '155 y 158 (pdf 57 y 60; imagen la 158)', independiente: true, nota: 'el sebucán sobre la tumba; el niño con su arco'}
+      - {obra: steward-1948-hsai-4, pagina: '488 (pdf 624; texto)', independiente: true, nota: 'Aruacay: «buried the body inside the hut in a kind of tomb built of clay […] with a clay figure on top»; casabe y chicha en la tumba (tercera mano)'}
+    como_se_escribio: 'Brett, lo que vio y lo que «formerly» se hacía; Roth, de oídas («are said»).'
+    caquetio: [creencia-008c, creencia-010, creencia-010b]
+    mineria_1: [lok-07, lok-08]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        Ilumina 008c (atestiguado: el muerto con sus enseres) y el díao en
+        su casa (010b). Que el lokono entierre dentro de la casa —en el
+        s. XVI y en el XIX— es el dato nuevo, pero el caquetío común no
+        tiene hecho de lugar de entierro: queda como lectura de 008c.
+    tierra: [muertos-y-tierra]
+    via_a:
+      creencia-008: corrobora-en-parte
+      creencia-010d: no-toca
+    via_a_nota:
+      creencia-008: 'el muerto se teme y se le habla para que no moleste («don''t trouble me») y se le sujeta en la tumba: muertos peligrosos, como en la Vía A; nada de muertos antiguos protectores'
+      creencia-010d: 'ningún segundo tratamiento de huesos lokono (R4: negativa medida)'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, entierro-en-casa, canoa-ataud]
+
+  - id: lokono-creencia-107
+    esfera: creencia
+    tema: muerte-entierro
+    tema_duda: segundo-entierro
+    contenido: >-
+      Meses después de la muerte, la familia da la fiesta del Maquarri: en
+      la casa donde está enterrada la muerta, procesión con una tabla, dos
+      pájaros y dos niños de madera tallados y los restos de la pita de los
+      látigos; uno canta en voz baja y los demás responden «with four moans»;
+      todo se entierra en un hoyo, y a los látigos les cortan la tralla. Roth
+      dice que el Makuari (Mora-kúyuha, la cigüeña) es para los varones y el
+      Hauyari para las mujeres; Brett vio el Maquarri por una mujer. En el
+      s. XVI el Aruacay hacía «some time later […] a ceremony […] in
+      commemoration of the dead», y en sus borracheras dos hombres se
+      retaban a aguantar seis latigazos.
+    cita: >-
+      «The dance was given in honour of a deceased female, who had been
+      buried in the house» (Brett 1868 p. 156).
+    grafia: 'Maquarri, Owiarri (Brett) · Makuari, Mora-kúyuha, Hauyari (Roth)'
+    pueblo: lokono
+    donde: 'Koraia y Mahaiconi (Brett); Pomeroon (Roth); Aruacay (s. XVI)'
+    epoca: 'Brett 1842 y 1844; Roth 1907-1913; Aruacay s. XVI vía Kirchhoff'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '154-158 y 201-202 (pdf 182-188, 235-236; imagen 155, 156, 158)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '156-157 (pdf 58-59; imagen)', independiente: true, nota: 'Makuari para los varones y Hauyari para las mujeres: contradice a Brett, que lo vio por una mujer'}
+      - {obra: steward-1948-hsai-4, pagina: '488 y 490 (pdf 624 y 626; imagen la 490)', independiente: true, nota: 'la conmemoración posterior y el reto de los latigazos del Aruacay (tercera mano)'}
+    como_se_escribio: >-
+      Brett: «With respect to the images I could learn nothing […] they
+      seemed to have lost their original meaning» (p. 159), y no vio nada
+      igual en otras tribus. Roth lo compara con el látigo de la fiesta de
+      muertos roucouyenne (caribe).
+    caquetio: [creencia-010, creencia-010b, creencia-010c]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Nuevo para el caquetío: una fiesta para el muerto COMÚN meses después
+        del entierro, sin desenterrar nada. El caquetío atestigua un segundo
+        tiempo sólo para el díao (010b-c), con huesos. Una hermana, pero de
+        dos épocas (s. XVI y XIX): hipotético.
+    filtro: 'Brett: no lo vio en otras tribus (específico). Roth: paralelo caribe roucouyenne (areal). Se declara específico; si pesa lo de Roth, baja a comparanda.'
+    via_a:
+      creencia-010d: matiza
+      creencia-011: no-toca
+    via_a_nota:
+      creencia-010d: 'el lokono también tiene un segundo tiempo funerario, pero es una fiesta de propiciación y de cierre de la alianza, sin huesos. El «por qué» wayuu del segundo velorio no tiene par lokono'
+      creencia-011: 'sin exhumación no hay tabúes de quien toca los huesos'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, fiesta-de-muertos, latigo]
+
+  - id: lokono-creencia-108
+    esfera: creencia
+    tema: alma
+    tema_duda: muerte-entierro
+    contenido: >-
+      Adónde va el muerto lokono: según Navarrete (s. XVI, por Rodway y
+      Roth), «when they die, their souls will go with Hubuiri, as they call
+      the great and powerful lord in heaven», y su objeto de adoración es
+      «the firmament or heavens». Según Schomburgk (por Roth), los
+      espíritus de los malos vagan por un páramo y los de los buenos «occupy
+      the air above their former huts»: el cobarde o borracho es
+      mako-burokwa, el valiente kaka-burokwa. El héroe Arawanili «went up,
+      and did not die». Ninguna fuente lokona pone a los muertos abajo.
+    cita: >-
+      «The Arawaks maintain that the spirits of "evil" people wander
+      continually around an uninhabited desolate, barren place, while those
+      of the "good" occupy the air above their former huts» (Roth p. 161).
+    grafia: 'Hubuiri (Navarrete) · mako-burokwa, kaka-burokwa (Roth, de Schomburgk)'
+    pueblo: lokono
+    donde: 'Guayana (Navarrete: provincias de los aruacas)'
+    epoca: 'Navarrete, último cuarto del s. XVI según Roth (c. 1550 según Rybka); Schomburgk 1848'
+    etiqueta: hipotetico
+    testigo: tercera-mano
+    procedencia: {obra: roth-1915, pagina: '119 y 161 (pdf 21 y 63; imagen)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '401 (pdf 455; imagen)', independiente: true, nota: 'Arawanili «went up, and did not die»; Brett 1880 p. 21: «"high above," grown old, they say, Rests Arawanili»'}
+    como_se_escribio: >-
+      Navarrete llega por Rodway (Timehri 1895, p. 9); Roth advierte que la
+      separación de buenos y malos «may be but a borrowed one» (los arawak
+      son los de más contacto). El «lord» y la «great lady» del cielo de
+      Navarrete pueden ser lectura de un cronista cristiano.
+    caquetio: [creencia-028, creencia-009]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        No se propone sustituir nada. Se anota que la hermana lingüística
+        más cercana pone a los muertos ARRIBA (el cielo con Hubuiri; el aire
+        sobre las casas), mientras creencia-028 pone la tierra de los
+        muertos abajo desde la palabra waka. La palabra lokona es un dato
+        léxico; la creencia lokona, de tercera mano, va al revés. Lo decide
+        Miguel; ninguna de las dos fuentes es caquetía.
+    tierra: [muertos-y-tierra]
+    via_a: {creencia-009: matiza}
+    via_a_nota:
+      creencia-009: 'hay un destino del alma, pero arriba y sin topónimo, y en el s. XIX condicionado a la conducta (quizás prestado); el wayuu da un lugar con nombre (Jepira) y sin premio ni castigo'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, destino-arriba, contacto-s-XVI]
+
+  - id: lokono-creencia-109
+    esfera: creencia
+    tema: cosmos-origen
+    contenido: >-
+      Lo que la misión puso en boca lokona, según la critica de Roth: Brett
+      da al «Supreme Being» los nombres Wa'cinaci (nuestro Padre),
+      Wa'murretikwonci (nuestro Hacedor) y Aiomun Kondi (el que mora en lo
+      alto), cuenta la creación del hombre y los animales de trozos de
+      corteza de una ceiba y dos destrucciones del mundo, por fuego y por
+      agua, «on account of the evil doings of men», con Marerewana salvado
+      en su canoa. Roth: ningún mito arawak de creación usa esos nombres;
+      Aluberi y Kururumanni, los «dioses» de Hilhouse, son héroes.
+    cita: >-
+      «in none of the Arawak myths and legends relative to the Creation,
+      even in those published by clerics, is there a single reference to the
+      All-Maker […] under the term of Wa'chinachi, Our Father» (Roth p. 118).
+    grafia: "Wa'cinaci, Wa'murretikwonci, Aiomun Kondi, Marerewana (Brett) · Wa'chinachi, Aluberi, Alubiri, Hubuiri, Kururumanni (Roth)"
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '58, 377 y 398-399 (pdf 82, 431, 452-453; imagen 58 y 398)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '117-119 (pdf 19-21; imagen la 119)', independiente: true, nota: 'la crítica: los nombres de Dios son de misión; los «dioses» de Hilhouse son héroes'}
+    como_se_escribio: 'Brett, misionero; él mismo marca el diluvio como paralelo bíblico (p. 399).'
+    capa_colonial: 'El ser supremo, la creación de la nada y el castigo por los pecados.'
+    caquetio: []
+    proyeccion:
+      capa: no-proyecta
+      nota: 'Es la lista de lo que NO se proyecta (R5 de la nota 08): ser supremo y diluvio como castigo.'
+    tierra: [origen-en-la-tierra]
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, capa-misional, ser-supremo]
+
+  - id: lokono-creencia-110
+    esfera: creencia
+    tema: cosmos-origen
+    tema_duda: especialista
+    contenido: >-
+      La tradición del origen del piache, de primera mano: Maraka-kore, «an
+      old semi-cici of the Arawâks», la contó en 1841 ante varios, con el
+      jefe de intérprete. Los yauhahu acosaban a la gente; junto al agua el
+      arawak Arawânili vio subir a la Orehu, que le dio un ramo; plantado,
+      dio el primer totumo; ella le trajo después piedrecitas blancas para
+      encerrarlas en él, le enseñó «the mysteries of semecihi» y volvió al
+      agua. Arawânili «went up, and did not die», y todo pasó «at Kaieri» —
+      una isla—, al norte. La versión en verso de 1880 lo hace jefe de
+      Kaieri y le añade el tabaco.
+    cita: >-
+      «After instructing him in the mysteries of semecihi, she again retired
+      to her watery abode» (Brett 1868 p. 401).
+    grafia: 'Maraka-kore, semi-cici, Arawânili, Orowâma, Orehu, semecihi, Kaieri (Brett 1868)'
+    pueblo: lokono
+    donde: 'Pomeroon (contado en 1841)'
+    epoca: 'Brett, 1841; publicado 1868 y, en verso, 1880'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '400-402 (pdf 454-456; imagen 401 y 402)'}
+    procedencia_extra:
+      - {obra: brett-1880, pagina: '18-21 (pdf 32-35; texto)', independiente: false, nota: 'mismo informante y mismo autor; añade el tabaco y llama a Arawanili «chief of Kaieri»'}
+      - {obra: roth-1915, pagina: '246 (pdf 150; texto)', independiente: false, nota: 'Roth lo cuenta de Brett 1880 («BrB, 18»)'}
+      - {obra: brinton-1871, pagina: '18', independiente: false, nota: 'Brinton lo toma de aquí (su nota 49)'}
+    como_se_escribio: >-
+      El viejo se resistió a contarlo; lo tradujo el jefe. Brett lo usa para
+      explicar el origen del sistema del piache, que según el relato «has
+      since prevailed among all the Indian tribes».
+    hermanas:
+      - {pueblo: taino, obra: pane-c1498, pagina: 'cap. VI (Wikisource, sin página)', que: 'Guabonito, mujer dejada en el mar, cura a Guahayona, le da guanines y cibas, y él cambia de nombre'}
+    caquetio: []
+    mineria_1: [lok-09]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Cierra B4 y la cadena de cm24-c-l01: lo que Brinton (p. 18) contaba
+        de tercera mano está en Brett 1868 pp. 400-402, y ahora es primera
+        mano. lok-09 SE QUEDA hipotético: el molde coincide con Guabonito
+        (mujer del agua, héroe, objetos, cambio de condición) y hay un
+        detalle más —Guabonito da «cibas», piedras, y la Orehu da piedras
+        blancas—, pero el contenido no (sonajero frente a adornos). No hace
+        sagrado el mar caquetío (cc.10).
+    tierra: [lugar-sagrado]
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, origen-del-piache, mujer-del-agua]
+
+  - id: lokono-creencia-111
+    esfera: creencia
+    tema: espiritu-tutelar
+    tema_duda: lugar-sagrado
+    contenido: >-
+      Los Oriyu (Orehu) viven en el agua; según el consenso arawak que
+      recoge Roth, al menos uno acompaña a cada canoa y se le culpa de cada
+      accidente; la mujer se peina en la orilla con un peine de plata. Brett
+      la da caprichosa: asusta, hunde canoas y saca a veces cabeza de
+      caballo; un barranco hundido del Pomeroon era su sitio, y de noche se
+      pasaba por la otra orilla. El manatí (Koiamoora) no es ella y se come.
+      Hay arawak que creen que la Oriyu puede meter un niño en el vientre de
+      la mujer que lo desea.
+    cita: >-
+      «The Oriyus always live in the water and one at least accompanies every
+      corial. If an accident takes place the Spirit is blamed for it» (Roth
+      p. 242).
+    grafia: 'ōrehū, Orehu, Koiamoora (Brett) · Ori-yu, Oriyu, Kuyu-moro, kassi-kuyuha (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: brett-1868, pagina: '367-368 y 371 (pdf 421-422 y 425; imagen la 367)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '241-243 y 247 (pdf 145-147 y 151; texto)', independiente: true, nota: 'Ori-yu u Orehu (Arawak), Ho-aránni (Warrau), Oko-yumo (Carib): los espíritus del agua son de toda la Guayana'}
+    como_se_escribio: 'Brett lo compara con la sirena y con la «water-mama» de los negros; Roth separa lo indígena de lo criollo.'
+    caquetio: [creencia-015, creencia-021]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        El dueño del agua es pan-guayanés (warao, caribe). No reabre cc.10
+        (cero dueños del mar caquetíos) ni hace sagrado el mar: es la
+        comparanda de un pueblo de canoas de río y de costa baja.
+    tierra: [dueno-del-lugar, lugar-sagrado, limite-de-uso]
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, espiritu-del-agua, canoa]
+
+  - id: lokono-creencia-112
+    esfera: creencia
+    tema: tiempo-calendario
+    contenido: >-
+      Lo que los arawak del Pomeroon le dijeron a Roth del eclipse de luna:
+      la luna va por el camino del sol, se duerme y no se aparta a tiempo.
+      Para despertarla tocan tambores, soplan caracoles y hacen ruido; esa
+      noche hay que estar despierto y no comer nada, o uno se convierte en
+      lo que come, porque durante el eclipse los animales y las plantas
+      cambian de forma (una culebra se volvió danta y luego manatí). Brett:
+      el eclipse les asustaba más que el cometa. En el de sol, los hombres
+      salían gritando para separar al Sol y la Luna que peleaban.
+    cita: >-
+      «The phenomenon is due to its traveling along the Sun's path, falling
+      asleep, and so not being able to get out of the way quickly enough»
+      (Roth p. 257).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Roth 1907-1913, «at first-hand»; Brett 1840-1868'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '257 (pdf 161; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '254 (pdf 158; texto)', independiente: false, nota: 'el eclipse de sol, de Im Thurn'}
+      - {obra: brett-1868, pagina: '107-108 (pdf 131-132; texto)', independiente: true, nota: '«The Arawâks seemed to think an eclipse much more portentous than the "star with the tail"»'}
+      - {obra: gumilla-1791, pagina: 't. II p. 274', independiente: true, nota: 'loláca y atabáca: la luna se muere (areal; minería 1)'}
+    como_se_escribio: 'De primera mano; Roth lo pone junto a las teorías orinoquenses.'
+    caquetio: [creencia-014, creencia-022]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        La luna que se duerme y el ayuno del eclipse son lokonos (los del
+        Orinoco dicen que muere). Es el mejor dato de creencia para el
+        puente léxico kati ~ kathi (para_el_lexicon lok-L1 de la minería 1):
+        una práctica lunar en la lengua hermana que dice la misma palabra
+        para 'luna'. Una sola hermana: hipotético.
+    tierra: [limite-de-uso]
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, eclipse, luna]
+
+  - id: lokono-creencia-113
+    esfera: creencia
+    tema: cosmos-origen
+    tema_duda: tiempo-calendario
+    contenido: >-
+      La luna es un hermano que visitaba de noche a su hermana; ella le
+      manchó la cara con el hollín de la olla, y avergonzado se fue a vivir
+      solo: es la Luna, y sus manchas son el hollín (versión arawak; la
+      warao usa pintura azul). En el cielo arawak, la Vía Láctea es el
+      camino de la danta o el de los que cargan la arcilla blanca waie, y
+      las manchas son huellas de espíritus; hay una constelación Camudi, la
+      barbacoa y la camudi del cuento del yerno, Venus es Warakoma y
+      Júpiter Wiwa kalimero. Las Pléyades abren el año del Orinoco a
+      Cayena.
+    cita: >-
+      «I have heard the following tradition among both Arawaks and Warraus»
+      (Roth p. 256, el mito de la luna).
+    grafia: 'Warakoma, Wiwa kalimero, Waie onnakici abonaha, Camudi (Brett) · Wiwa-kihi-koro, Mabukuli (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '256 (pdf 160; imagen)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '107 (pdf 131; texto)', independiente: true, nota: 'Camudi, la Vía Láctea, Warakoma, Wiwa kalimero'}
+      - {obra: roth-1915, pagina: '260-262 (pdf 164-166; texto)', independiente: false, nota: 'la Babracote y la Camudi (A); las Pléyades marcan el año nuevo en toda la región'}
+    como_se_escribio: 'Roth pone el mito de la luna en arawak y warao a la vez.'
+    caquetio: [creencia-014, creencia-022]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        El mito lunar lo comparten arawak y warao, y el calendario de las
+        Pléyades es de toda la región: areal. Es, con todo, el mito lunar
+        lokono que la nota 08 echaba en falta (el «mito de incesto» de
+        Rybka está ya en Roth 1915).
+    tierra: [calendario-del-medio]
+    filtro: 'Sin el filtro, el mito de la luna sería hipotético (una sola hermana).'
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, mito-lunar, estrellas]
+
+  - id: lokono-creencia-114
+    esfera: creencia
+    tema: especialista
+    contenido: >-
+      Maraka es palabra arawak. El sonajero del piache arawak lleva plumas
+      de un loro que hay que arrancar al ave viva; el piache trabaja en un
+      banco grande tallado con animales y adivina con un muñequito que, si
+      cae, anuncia la muerte; sus cosas van en una cesta de tapa cóncava.
+      Durante la cura se manda fuera a las mujeres. Y había piaches mujeres:
+      un catequista arawak contó a Roth que entre los suyos las muchachas se
+      formaban como los muchachos, y que su abuela paterna y una prima de su
+      padre fueron piaches.
+    cita: >-
+      «young women, certainly among his own tribe, used to be trained in the
+      same manner as the boys for the profession of piai» (Roth p. 334).
+    grafia: 'mardka/maraka (Roth), marakka (Brett), semi-chichi, semi-cihi'
+    pueblo: lokono
+    donde: 'Pomeroon, Moruca y Barama'
+    epoca: 'Roth 1907-1913; la abuela del catequista, s. XIX'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '329-331 y 334 (pdf 233-237 y 240; imagen la 334)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '363-364 (pdf 415-416; texto)', independiente: true, nota: 'el sonajero: calabaza pintada de rojo con piedrecitas blancas y plumas en espiral; las mujeres fuera durante la cura'}
+    como_se_escribio: 'Roth dice no hallar ninguna mujer piache en la literatura antigua: el dato es de su informante.'
+    caquetio: [creencia-003, creencia-001]
+    mineria_1: [lok-02]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        La maraca sigue como en lok-02 (hipotético). Lo nuevo —que el oficio
+        del boratio admitiera mujeres— sería hipotético con una sola hermana;
+        el corpus caquetío no lo dice (creencia-001 no habla de sexo).
+    via_a:
+      creencia-003: matiza
+      transmision-033: corrobora-en-parte
+    via_a_nota:
+      creencia-003: 'la parafernalia lokona es sonajero, banco y muñeco; nada de urari ni de espíritu-serpiente'
+      transmision-033: 'la ouutsü wayuu es mujer; también hubo piaches mujeres lokonas'
+    verificado_en_imagen: parcial
+    dominios: [especifico-lokono, maraca, mujer-piache]
+
+  - id: lokono-creencia-115
+    esfera: creencia
+    tema: tabu
+    contenido: >-
+      Tabúes arawak del Pomeroon: al llegar por primera vez a un sitio se
+      ponen agua del río en los ojos, para que los Yawahu no manden mal de
+      ojos ni otra enfermedad; nadie pasa por encima de otro tendido («You
+      can cross me only when I am dead»); la mujer no se abanica con el
+      aventador del fuego, o enflaquece; en el embarazo, ni el padre ni la
+      madre matan ni comen culebra.
+    cita: >-
+      «if a person should step over another lying down, the latter would be
+      mortally offended, and would say, "You can cross me only when I am
+      dead. I am not dead yet."» (Roth pp. 154-155).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '154-155, 299, 303 y 319 (pdf 56-57, 203, 207 y 223; imagen la 319)'}
+    como_se_escribio: 'Lo que «the Pomeroon Arawaks tell me».'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Tabúes menudos de un pueblo; ninguno tiene par caquetío. Sirven para un personaje, no para el canon.'
+    tierra: [limite-de-uso]
+    verificado_en_imagen: parcial
+    dominios: [especifico-lokono, tabu]
+
+  - id: lokono-creencia-116
+    esfera: creencia
+    tema: tabu
+    tema_duda: cosmos-origen
+    contenido: >-
+      La lluvia se hace y se para. Arawak y warao queman el cuerpo de una
+      camudi para que llueva; maldecir al pájaro kurri-kurri que canta al
+      alba trae lluvia ese día; al que va en canoa por el mar o un río
+      grande le está vedado lavar la paleta de cocina (hararo) fuera de la
+      canoa, o vienen chubascos. A la lluvia la llaman Uni-shidu, «jefe de la
+      lluvia», y la espantan señalándole otro rumbo. Si llueve durante la
+      cura, el piache la deja para la noche siguiente.
+    cita: >-
+      «The Being thus addressed is Uni-shidu, so called by the Arawaks from
+      Uni, the Rain, and Shidu, a term applied to any chief or boss» (Roth
+      p. 268).
+    grafia: 'Uni-shidu, uni, hararo (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon y Moruca'
+    epoca: 'Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '267-268 y 345 nota (pdf 171-172 y 253; imagen 268 y 345)'}
+    como_se_escribio: 'De primera mano, con Bancroft (1769) para lo del piache y la lluvia.'
+    caquetio: [creencia-013, creencia-012]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        Cualquiera hace llover; la lluvia es un «jefe» al que se le habla.
+        Ilumina, de lejos, creencia-013 (al cacique se le atribuye poder
+        sobre las lluvias), pero lo lokono es de todos, no del jefe: areal y
+        de otro tipo.
+    tierra: [dueno-del-lugar, limite-de-uso]
+    via_a: {creencia-012: no-toca}
+    via_a_nota:
+      creencia-012: 'la lluvia lokona no se liga a los muertos ni a sus huesos: se hace con la camudi, con el kurri-kurri o se pide al Uni-shidu'
+    verificado_en_imagen: si
+    dominios: [areal-guayana, lluvia, tabu-del-agua]
+
+# ══════════════════════════════════════════════════════════════════
+# ECOLOGÍA
+# ══════════════════════════════════════════════════════════════════
+
+  - id: lokono-ecologia-001
+    esfera: ecologia
+    tema: vivienda
+    contenido: >-
+      Brett explica el taíno bohío por el arawak bohío o bohyo, «a common
+      abbreviation of bawhu-yuho, "house-many," a term always used to denote
+      a place where there are many human habitations»; bawhu es 'casa' y
+      bawn-boho un cobertizo. Los muertos se entierran en la casa; a la
+      muchacha en su primera regla se la encierra en un cuarto aparte
+      (aibona-lehi) o en una choza marcada con hilachas de moriche, y el
+      piache tiene su casita propia.
+    cita: >-
+      «It seems to be identical with the Arawâk phrase bohio or bohyo, a
+      common abbreviation of bawhu-yuho, "house-many"» (Brett 1868 p. 484,
+      nota).
+    grafia: 'bawhu, bohio, bohyo, bawhu-yuho, bawn-boho (Brett) · aibona-lehi (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: brett-1868, pagina: '484, nota C (pdf 542; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '311 y 334 (pdf 215 y 240; imagen la 334)', independiente: true, nota: 'el cuarto aibona-lehi; la casita del piache'}
+    como_se_escribio: 'La etimología de bohío es de Brett, aficionado; no se da por buena.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'La casa lokona de selva no es la casa del cardonal. La etimología de bohío va al lexicón con cautela.'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, casa, reclusion]
+
+  - id: lokono-ecologia-002
+    esfera: ecologia
+    tema: pesca
+    contenido: >-
+      En ciertas épocas los lokono del Arapaiaco iban en canoa hasta el mar,
+      se embarraban el cuerpo contra los mosquitos, cogían cangrejos morados
+      y volvían con las canoas cargadas de cestas (quakes). Llenar las
+      cestas de cangrejo en una marea era una de las pruebas del
+      pretendiente. Los niños aprenden pronto a pescar y remar; pescan
+      envenenando el caño con raíces de haiarri; y en su cuento el pez
+      low-low es «the fisherman's water-jug» y el imiri sus batatas.
+    cita: >-
+      «the Indians go in their canoes to the sea, at certain seasons; and,
+      having first plastered their naked bodies with mud and clay […] they
+      catch the crabs, and put them into quakes» (Brett 1868 p. 88).
+    grafia: 'quake (cesta), haiarri, low-low, imiri'
+    pueblo: lokono
+    donde: 'Pomeroon y Tapacuma'
+    epoca: 'Brett, 1840; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '88 (pdf 112; texto)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '246 y 316 (pdf 150 y 220; imagen la 316)', independiente: true, nota: 'el pez del cuento; las cestas de la prueba'}
+    como_se_escribio: 'Brett, comiendo cangrejos en las aldeas.'
+    caquetio: [ecologia-012, ecologia-036]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'El cangrejo del manglar y la marea son también del Golfete (ecologia-012), pero el medio lokono es otro: comparanda.'
+    verificado_en_imagen: parcial
+    dominios: [especifico-lokono, cangrejo, marea]
+
+  - id: lokono-ecologia-003
+    esfera: ecologia
+    tema: comida-bebida
+    tema_duda: cultivo
+    contenido: >-
+      La bebida de fiesta es el paiwari: casabe tostado, agua hirviendo y la
+      masa mascada por las mujeres; el kasiri, de batata, es «more cleanly».
+      La fiesta dura lo que el licor; a una danza grande se hacían dos
+      canoas llenas. Se siembra para doce meses y se pasa fuera hasta tres
+      de visita. En el s. XVI el Aruacay sembraba en la tierra que dejaba la
+      creciente del Orinoco y echaba harina de maíz a la chicha de yuca.
+    cita: >-
+      «The flat cakes of cassava bread are toasted brown, boiling water is
+      poured on them, and the lumps which remain are masticated by Indian
+      women» (Brett 1868 p. 102).
+    grafia: 'paiwari, kasiri'
+    pueblo: lokono
+    donde: 'Pomeroon; Aruacay (s. XVI)'
+    epoca: 'Brett 1840-1868; Aruacay s. XVI vía Kirchhoff'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '102, 157 y 347 (pdf 126, 187 y 397; texto)'}
+    procedencia_extra:
+      - {obra: steward-1948-hsai-4, pagina: '482-483 (pdf 618-619; texto)', independiente: true, nota: 'Aruacay: cultivo de inundación; maíz en la chicha (tercera mano)'}
+    como_se_escribio: 'Brett lo llama «disgusting»: mira el mascado, no la receta.'
+    caquetio: [creencia-023]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Bebida de yuca mascada de toda la Guayana. El maíz en la chicha del Aruacay es el único puente con la comida ritual caquetía de maíz (creencia-023), y es de tercera mano.'
+    verificado_en_imagen: 'no'
+    dominios: [areal-guayana, chicha, yuca]
+
+  - id: lokono-ecologia-004
+    esfera: ecologia
+    tema: tecnologia-objetos
+    contenido: >-
+      La maza lokona, sapakana, era de madera durísima, de hoja ancha y
+      filos agudos, con el mango forrado de algodón y una gaza para la
+      muñeca; ya sólo se hacía de muestra. En la guerra usaban arcos,
+      flechas —la sarapa de tres puntas— y escudos de madera, como el
+      Aruacay del s. XVI. Las vasijas se hacen de la arcilla blanca waie. El
+      piache tiene banco tallado y sonajero; y la trama de la cesta de
+      cangrejo se llama kassaroa, 'cuatro ojos'.
+    cita: >-
+      «It is made of the hardest and heaviest wood, and has a broad blade,
+      thick in the middle, and with sharp edges […] They call it
+      "sapakana."» (Brett 1868 p. 97).
+    grafia: 'sapakana, sarapa, waie (Brett) · kassaroa (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913; Aruacay s. XVI'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '97, 107, 489 y 492 (pdf 121, 131, 547 y 550; imagen 97 y 492)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '317 nota y 330 (pdf 221 y 234; texto)', independiente: true, nota: 'kassaroa; el banco del piache'}
+      - {obra: steward-1948-hsai-4, pagina: '489 (pdf 625; texto)', independiente: true, nota: 'escudos y yelmo del Aruacay'}
+    como_se_escribio: 'Inventario de visitante.'
+    caquetio: []
+    proyeccion:
+      capa: comparanda-esfera
+      nota: 'Objetos de un pueblo de selva y río; para personajes.'
+    verificado_en_imagen: parcial
+    dominios: [especifico-lokono, armas, cesteria]
+
+  - id: lokono-ecologia-005
+    esfera: ecologia
+    tema: navegacion
+    tema_duda: comercio-rutas
+    contenido: >-
+      Los lokono son remeros y nadadores desde niños; el ataúd antiguo era
+      media canoa. Hacían viajes largos a las aldeas warao para comprar
+      canoas y revenderlas a los colonos; la Oriyu va en cada canoa, y en el
+      agua hay que callar ciertas palabras (lokono-transmision-006). Arawak,
+      warao y caribes le aseguraron a Roth que el tabaco vino de las islas.
+      Brett cree que su saber de las estrellas venía de «former voyages».
+    cita: >-
+      «members of all these tribes assure me that tobacco was brought here
+      from the islands» (Roth p. 334).
+    pueblo: lokono
+    donde: 'Pomeroon y Waini'
+    epoca: 'Brett 1840-1868; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '334 (pdf 240; imagen)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '103, 110-111 y 168 (pdf 127, 134-137 y 198; texto la 168)', independiente: true, nota: 'el ataúd de canoa; los niños nadadores; el comercio de canoas warao'}
+    como_se_escribio: 'Lo de las estrellas y los viajes es inferencia de Brett (p. 107).'
+    caquetio: [geografia_politica-015, ecologia-021]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        Un pueblo arahuaco de canoa que dice que el tabaco llegó por mar
+        desde las islas: comparanda del horizonte marítimo caquetío
+        (geografia_politica-015, ecologia-021). No dice nada de las ABC.
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, canoa, tabaco-de-las-islas]
+
+# ══════════════════════════════════════════════════════════════════
+# TRANSMISIÓN
+# ══════════════════════════════════════════════════════════════════
+
+  - id: lokono-transmision-001
+    esfera: transmision
+    tema: narracion-mito
+    tema_duda: saber-restringido
+    contenido: >-
+      Navarrete, en el s. XVI: los aruacas tienen un lugar de reunión «or
+      school» donde los viejos sabios, a los que llaman Cemetu, cuentan «the
+      traditions and exploits of their ancestors and great men» y lo que
+      ellos oyeron a los suyos, y predican de «the heavens, the sun, moon,
+      and stars». Roth lo trae para decir que los piaches eran a veces los
+      guardianes de la tradición.
+    cita: >-
+      «There are among them old and wise men whom they call Cemetu […] these
+      assemble in the houses designed for their meetings and there these old
+      men recount the traditions and exploits of their ancestors» (Roth
+      p. 345).
+    grafia: 'Cemetu (Navarrete, por Rodway)'
+    pueblo: lokono
+    donde: 'provincias de los aruacas (Guayana)'
+    epoca: 'último cuarto del s. XVI según Roth; c. 1550 según Rybka'
+    etiqueta: hipotetico
+    testigo: tercera-mano
+    procedencia: {obra: roth-1915, pagina: '345 (pdf 253; imagen)'}
+    como_se_escribio: >-
+      Navarrete por Rodway (Timehri 1895, p. 10) por Roth: tres manos. La
+      palabra Cemetu (cf. semecihi, cemí) ya es de un oído castellano.
+    caquetio: [transmision-006, transmision-018]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Es el lokono más cercano a la época del caquetío. Que los viejos
+        sabios del boratio guardaran la memoria en una casa de reunión sería
+        hipotético. La segunda tradición sería el areíto taíno
+        (transmision-018, atestiguado de Pedro Mártir), pero «los viejos
+        cuentan a los antepasados» es demasiado general para la regla C.
+    filtro: 'Con o sin filtro, hipotético: tercera mano.'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, contacto-s-XVI, memoria-oral]
+
+  - id: lokono-transmision-002
+    esfera: transmision
+    tema: saber-restringido
+    contenido: >-
+      El origen del sistema del piache era un saber que nadie quería contar:
+      «none were willing, or dared, to communicate that legend to me». Sólo
+      lo contó, tras resistirse, un viejo piache, «the great oracle of his
+      tribe», y lo hizo delante de varios y con el jefe de intérprete. El
+      aprendiz de piache tenía que saber, además, las constelaciones y las
+      leyendas de su tribu.
+    cita: >-
+      «It seemed evident that they must be based on some ancient legend, but
+      none were willing, or dared, to communicate that legend to me» (Brett
+      1868 p. 400).
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett, 1841'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '400-401 (pdf 454-455; imagen la 401)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '339 (pdf 247; texto)', independiente: true, nota: 'el aprendiz debía conocer «the grouping of the stars into constellations, and the legends connected […] with his own tribe»: general'}
+    como_se_escribio: 'El misionero que pregunta es un extraño: el silencio también puede ser hacia él.'
+    caquetio: [creencia-001b]
+    proyeccion:
+      capa: hipotetico
+      nota: 'Que el saber del origen del boratio fuera restringido a los viejos boratios sería hipotético (una hermana).'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, secreto, piache-viejo]
+
+  - id: lokono-transmision-003
+    esfera: transmision
+    tema: especialista-formacion
+    contenido: >-
+      El piache se hace por elección y por maestro: el aspirante «has made
+      up his mind» y busca «some professor of that art». Roth aprendió de
+      Bariki, que había recibido el oficio y el amuleto del pecho de su
+      abuelo; las muchachas arawak se formaban como los muchachos. El
+      aprendizaje pedía meses de dieta y saber de animales, plantas,
+      estaciones, estrellas, cantos y voces.
+    cita: >-
+      «It had been given Bariki by his grandfather when the latter taught
+      him his profession, and when the old man died, he left it to me»
+      (Roth p. 332).
+    pueblo: lokono
+    donde: 'Pomeroon y Moruca'
+    epoca: 'Brett 1840-1868; Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '332, 334 y 339 (pdf 238, 240 y 247; imagen la 334)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '362 (pdf 414; imagen)', independiente: true, nota: 'el aspirante elige y busca maestro (para «an Indian»: areal)'}
+    como_se_escribio: 'Roth habla de su propio maestro; el amuleto (fig. 6) es «(Arawak), Moruca River».'
+    caquetio: [creencia-004, transmision-001]
+    proyeccion:
+      capa: lectura
+      nota: 'Ilumina creencia-004 (atestiguado: el piache se forma con ayuno prolongado). Lo del abuelo y las mujeres es de un solo pueblo y de época tardía.'
+    tierra: [saber-del-medio]
+    via_a:
+      transmision-017: contradice
+      transmision-030: contradice
+    via_a_nota:
+      transmision-017: 'la vocación wayuu «no se elige», la revela un sueño; la lokona se elige y se aprende de un maestro, a veces el abuelo'
+      transmision-030: 'en lo wayuu eligen los espíritus aliados; en lo lokono, el aspirante. Pero la fuente lokona (Brett) habla de «an Indian»: contradice desde un dato areal'
+    verificado_en_imagen: parcial
+    dominios: [areal-guayana, maestro, abuelo]
+
+  - id: lokono-transmision-004
+    esfera: transmision
+    tema: curriculo-edad
+    contenido: >-
+      En su primera regla la muchacha arawak se encierra con su madre en un
+      cuarto aparte, come sólo pescado menudo y el centro del casabe, no se
+      peina hasta que la madre la peina, y por seis meses no come carne
+      grande. Un viejo de buen carácter, extraño a la casa, le pone en la
+      frente, las manos y los pies una trama con hormigas, para que tenga
+      fuerza y ganas de trabajar. Al salir, un hombre maduro la presenta, se
+      sienta en un banco de caimán o de jaguar, y cada invitado come un poco
+      de colibrí con casabe para que a ella le toque su parte de lo bueno.
+    cita: >-
+      «some old stranger whose character is known to be strong and good, and
+      a willing worker, is chosen to place an ant-frame on the young woman's
+      forehead, hands, and feet» (Roth p. 310).
+    pueblo: lokono
+    donde: 'Pomeroon («old days» y presente)'
+    epoca: 'Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '309-312 (pdf 213-216; texto)'}
+    como_se_escribio: 'Roth mezcla lo que se hacía «in the old days» y lo de su tiempo, pueblo por pueblo.'
+    caquetio: [transmision-028]
+    proyeccion:
+      capa: comparanda-esfera
+      nota: >-
+        La reclusión de la primera regla es de toda la Guayana (makusi,
+        caribe, warao: misma página); el caquetío no tiene hecho propio.
+    filtro: 'Lo específico (la trama de hormigas puesta por un extraño de buen carácter, el colibrí) daría un hipotético; el rito como tal es areal.'
+    via_a: {transmision-028: corrobora-en-parte}
+    via_a_nota:
+      transmision-028: 'también hay encierro puberal lokono con la madre, consejo y reglas de comida y de pelo; pero es areal'
+    verificado_en_imagen: 'no'
+    dominios: [areal-guayana, menarquia, hormigas]
+
+  - id: lokono-transmision-005
+    esfera: transmision
+    tema: lengua-registro
+    contenido: >-
+      En lokono hay unas pocas palabras que cambian según el sexo de quien
+      habla y de quien escucha: para «seguro», el hombre dice tashi a una
+      mujer y tade a un hombre; la mujer dice tara a otra mujer y tashi a un
+      hombre; para «¡sí, claro!», babui entre mujeres o de mujer a hombre,
+      dadai de hombre a mujer, daido entre hombres. Roth subraya que no es
+      una lengua de mujeres como la de los caribes insulares. Al enfermo se
+      le pregunta con un tono quejumbroso propio. Y el dicho: nadie domina
+      la lengua «unless his mother were one of the lokono».
+    cita: >-
+      «a man will say tashi to a woman, but tade to a man, whereas a woman
+      will use the term tara when conversing with one of her own sex, but
+      tashi when talking to one of the opposite» (Roth p. 307).
+    grafia: 'tashi, tade, tara, babui, dadai, daido (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Roth 1907-1913; el tono, de Hilhouse (1834); el dicho, Brett 1868'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: roth-1915, pagina: '307 (pdf 211; imagen)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '416 (pdf 470; imagen)', independiente: true, nota: '«None can thoroughly master their tongue, unless his mother were one of the lokono»'}
+    como_se_escribio: 'Roth no sabe explicarlo y lo dice.'
+    caquetio: [transmision-035]
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Sería nuevo y fino: que el habla caquetía marcara el sexo de quien
+        habla y de quien escucha en unas pocas partículas, sin ser dos
+        lenguas. Una hermana: hipotético. Las partículas no entran al habla.
+    via_a: {transmision-035: matiza}
+    via_a_nota:
+      transmision-035: 'el habla de mujeres kalinago es un vocabulario entero; el lokono marca el sexo en un puñado de partículas de conversación. Son dos cosas distintas, y la lokona no viene de mezcla de pueblos'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, sexo-del-hablante, particulas]
+
+  - id: lokono-transmision-006
+    esfera: transmision
+    tema: lengua-registro
+    tema_duda: saber-restringido
+    contenido: >-
+      Los arawak del Pomeroon y del Moruca, en la canoa, no dicen ciertas
+      palabras y las rodean, para no enojar a los espíritus del agua: el
+      fusil es kataroro 'pie (la culata)', el perro kariro 'el de los
+      dientes', la gallina kanakara-shiro, el caballo akwadoa-kotiro 'pie
+      redondo', el jaguar ehedoa 'el que espumea' y el piache katau-chi 'el
+      que sabe'. La mayoría de las palabras vedadas son préstamos del
+      español. A los espíritus del agua tampoco se los nombra.
+    cita: >-
+      «of katau-chi (the one with wisdom) instead of semi-chichi
+      (medicine-man)» (Roth p. 252).
+    grafia: 'kataroro, kariro, kanakara-shiro, akwadoa-kotiro, kakwaro, tataro, majeriki, ehedoa, katau-chi (Roth)'
+    pueblo: lokono
+    donde: 'Pomeroon y Moruca'
+    epoca: 'Roth 1907-1913'
+    etiqueta: atestiguado
+    testigo: lexico
+    procedencia: {obra: roth-1915, pagina: '252 (pdf 156; imagen)'}
+    procedencia_extra:
+      - {obra: roth-1915, pagina: '304-305 (pdf 208-209; imagen la 305)', independiente: false, nota: 'en general: no se nombra al vivo en su presencia ni al muerto'}
+    como_se_escribio: 'De primera mano. Las palabras vedadas son en su mayoría de cosas llegadas con los europeos: el uso, tal como se ve, es colonial.'
+    capa_colonial: 'Casi todo el vocabulario vedado es de animales y objetos europeos (fusil, perro, gallina, caballo, vaca, sierra).'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que en la canoa caquetía hubiera palabras que no se dicen y se
+        rodean sería hipotético (una hermana; la forma del uso es colonial).
+    tierra: [dueno-del-lugar, limite-de-uso]
+    via_a: {transmision-021: corrobora-en-parte}
+    via_a_nota:
+      transmision-021: 'el nombre del muerto no se dice (Roth p. 305, general): también en la Guayana; y en la canoa lokona tampoco se dicen ciertas palabras'
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, palabras-vedadas, canoa]
+
+  - id: lokono-transmision-007
+    esfera: transmision
+    tema: nombre-propio
+    contenido: >-
+      La madre arawak pone el primer nombre al nacer (Satu 'querida',
+      Kakushika 'ojos grandes', Korelyaro 'niña' / Korelyali 'niño'…), y es
+      el que usan hermanos y amigos toda la vida. Después lo nombra el
+      piache, a cambio de un regalo; en 1832 se decía que era cuando el niño
+      empezaba a gatear y que el que no tenía nombre caía con la primera
+      enfermedad. Los nombres de piache salen del aspecto (Ka-barra-li 'con
+      pelo'), de aves (Koiali), del tabaco (Yuri-tokoro 'flor de tabaco'),
+      de los objetos del piache (Wara-maraka) o de un título. El piache
+      puede cambiar el nombre al niño que cura; y el menor toma el nombre
+      del mayor en prueba de amistad.
+    cita: >-
+      «Among the Pomeroon Arawaks the mother always gives the name first to
+      her child, independently of the piai, who bestows one subsequently»
+      (Roth p. 305).
+    grafia: 'Satu, Kakushika, Korelyaro/Korelyali, Kabararo/Kabarali, Natukoro, Kuyari (Roth) · Ka-barra-li, Ma-barra-''si-li, Koiali, Yuri, Yuri-banna, Yuri-tokoro, Ifili, Adaiahu (Brett)'
+    pueblo: lokono
+    donde: 'Pomeroon'
+    epoca: 'Brett 1840-1868; Roth 1907-1913 (con Hilhouse 1832)'
+    etiqueta: atestiguado
+    testigo: oyo
+    procedencia: {obra: roth-1915, pagina: '305-307 y 345 (pdf 209-211 y 253; imagen 305, 307, 345)'}
+    procedencia_extra:
+      - {obra: brett-1868, pagina: '367 (pdf 421; imagen)', independiente: true, nota: 'el piache pone el nombre y recibe un regalo; los ejemplos de nombres'}
+    como_se_escribio: 'Roth avisa que los arawak del Pomeroon son los de más contacto: el nombre de la madre puede ser nuevo.'
+    caquetio: []
+    proyeccion:
+      capa: hipotetico
+      nota: >-
+        Que el boratio pusiera el nombre al niño, y que el nombre lo
+        protegiera, sería hipotético (una hermana). Los nombres son lokonos:
+        no entran al elenco.
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, nombre, piache]
+
+  - id: lokono-transmision-008
+    esfera: transmision
+    tema: canto-baile
+    contenido: >-
+      La danza del Maquarri: los varones jóvenes, pintados y emplumados, en
+      dos filas frente a frente, con el látigo en la mano derecha, gritan
+      como un pájaro del monte y se azotan las piernas por parejas sin
+      mostrar dolor, delante de las mujeres sentadas; después, en el
+      Owiarri, doce mozos golpean el suelo con varas de doce pies que llevan
+      calabacitos con piedras, y las muchachas bailan con ellos un momento.
+      En el entierro uno canta y los demás responden con cuatro gemidos. Los
+      látigos «have a sort of sacred character».
+    cita: >-
+      «The young men and boys, fantastically adorned, were ranged in two
+      parallel rows, facing each other, each holding in his right hand the
+      Maquarri from which the dance takes its name» (Brett 1868 p. 154).
+    grafia: 'Maquarri, Owiarri'
+    pueblo: lokono
+    donde: 'Koraia (1842) y Mahaiconi (1844)'
+    epoca: 'Brett 1842-1844'
+    etiqueta: atestiguado
+    testigo: vio
+    procedencia: {obra: brett-1868, pagina: '154-157 y 201-202 (pdf 182-187 y 235-236; imagen 155, 156)'}
+    procedencia_extra:
+      - {obra: steward-1948-hsai-4, pagina: '490 (pdf 626; imagen)', independiente: true, nota: 'el reto de los seis latigazos del Aruacay, s. XVI (tercera mano)'}
+    como_se_escribio: 'Lo vio dos veces; lo compara con los juegos fúnebres clásicos y con el duelo europeo.'
+    caquetio: [creencia-010]
+    proyeccion:
+      capa: lectura
+      nota: >-
+        El canto de entierro (uno canta, los demás responden con gemidos)
+        ilumina el llanto nocturno «en tono a manera de canto» del funeral
+        caquetío atestiguado (creencia-010). La danza de látigos como tal va
+        en lokono-creencia-107 (hipotético).
+    verificado_en_imagen: si
+    dominios: [especifico-lokono, danza-de-latigos, canto-funebre]
+
+# ══════════════════════════════════════════════════════════════════
+# PARA EL LEXICÓN — no son hechos; las decide quien fusione el lexicón
+# (fusionar-propuesta). Nada se toca aquí. Ninguna voz lokona entra al habla
+# (CLAUDE.md: hablar lokono penaliza): lo que sigue son comparandas y avisos.
+# ══════════════════════════════════════════════════════════════════
+para_el_lexicon:
+
+  - forma: 'Loko, Lokono'
+    glosa: 'un arawak; «the people» (plural)'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '97 (pdf 121; imagen)'
+    nota: >-
+      Para esfera-de-interaccion §1: la autodenominación lokona es Lokono
+      'la gente', no kakitho. El cognado de «caquetío» que cita la esfera
+      (kakitho) no aparece en estas fuentes con esa forma: verificar de
+      dónde sale antes de seguir citándolo.
+
+  - forma: 'adaiahu, adaieli'
+    glosa: '«the governor»; título que los lokono le daban a Brett'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '367 (imagen) y 261 (texto)'
+    nota: >-
+      Glosa y forma rozan el caquetío díao 'señor principal' (parentesco-034):
+      a-dai-a-hu / di-a-o. Es un parecido de forma CON glosa coincidente, que
+      es lo mínimo que pide minar-fuente §2; pero no hay regla fonética
+      detrás y el lokono da también afudi 'chef' (Goeje p. 43) y shidu
+      'jefe' (Roth p. 268). No se celebra: se anota para cuando haya una
+      segunda hermana con la misma raíz.
+
+  - forma: 'afudi'
+    glosa: 'chef, prince'
+    lengua: lokono
+    obra: goeje-1939
+    pagina: '43 (pdf 44; imagen)'
+    nota: 'Una de las familias de Brett se llama Karuafudi (p. 98): si contiene afudi es conjetura, no dato.'
+
+  - forma: 'shidu, Uni-shidu'
+    glosa: '«any chief or boss»; el «jefe» de la lluvia'
+    lengua: lokono
+    obra: roth-1915
+    pagina: '268 (imagen)'
+    nota: >-
+      Roth glosa uni 'the Rain'; Brett da oini 'rain' y oniabu 'water'
+      (vocabulario, p. 415) y Perea wuni-abu 'agua' (p. 559). En lokono uni
+      parece 'lluvia' y 'agua' es uni-abu. El núcleo de las hermanas enseña
+      uni 'agua' (CLAUDE.md §morfología): no se toca, pero la glosa lokona
+      fina es 'lluvia'.
+
+  - forma: "(h)iyá, (h)iyaloko"
+    glosa: 'sombra; espíritu de un muerto'
+    lengua: lokono
+    obra: roth-1915
+    pagina: '152 (imagen)'
+    nota: >-
+      Compárese el wayuu yoluja (los muertos, creencia-008) y el espíritu del
+      monte de toda la Guayana (Yolok, Hyorokon, según Roth). Si son la misma
+      palabra, es AREAL: un parecido entre el wayuu y el lokono que no prueba
+      herencia. Aviso para cualquier cognado de 'espíritu' que se proponga.
+
+  - forma: 'yauhahu simaira'
+    glosa: '«the evil spirit''s arrow»: el dolor'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '361-362 (imagen)'
+    nota: 'simaira es la flecha corriente (symare 1598, semaara 1800: Brinton p. 9). La minería 1 ya lo anotó.'
+
+  - forma: 'Semecici, semi-cici, semecihi; katau-chi'
+    glosa: 'el piache; «the one with wisdom» (la palabra que lo sustituye en la canoa)'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '58, 400, 401 (imagen); Roth p. 252 (imagen)'
+    nota: 'Tres grafías en un libro. Brett lo deriva del cemí taíno (p. 485): derivación suya.'
+
+  - forma: 'Kaieri, Caeri'
+    glosa: 'isla'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '402 y 483 (imagen la 402); vocabulario p. 415'
+    nota: 'Brett: «Caeri» es el nombre que los de Trinidad dieron a su isla en 1498 (Raleigh); y acaera «isla» del habla de mujeres de San Vicente (p. 485).'
+
+  - forma: 'bawhu, bohio/bohyo < bawhu-yuho'
+    glosa: 'casa; «house-many», lugar de muchas casas'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '484, nota C (imagen)'
+    nota: 'Etimología de Brett para el taíno bohío. Sin verificar contra Perea; no se da por buena.'
+
+  - forma: 'Ka-barra-li / Ma-barra-''si-li; kaka-burokwa / mako-burokwa; Mabukuli'
+    glosa: '«con pelo» / «cabeza sin pelo»; valiente / «el que olvida»; «sin pierna» (Orión)'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '367 (imagen); Roth pp. 161 (imagen) y 262'
+    nota: >-
+      Tres pares más del atributivo ka- frente al privativo ma- en nombres
+      propios y apodos, del Pomeroon del s. XIX. Corroboran lo que el canon
+      ya enseña (atributivo ka- / privativo ma-, d21.5, apoyado en Perea
+      p. 555 y van Buurt §8). OJO: el OCR de Roth lee «hurokwa»; la imagen
+      dice «burokwa».
+
+  - forma: 'Korelyaro / Korelyali; Kabararo / Kabarali; Ilihiro / Ilihili'
+    glosa: 'nombres de niña / niño'
+    lengua: lokono
+    obra: roth-1915
+    pagina: '305 (imagen)'
+    nota: 'El par -ro (no varonil) / -li (varonil) de los nombres es el de Perea (hia-ru / wadi-li, p. 556).'
+
+  - forma: 'abar-dakabo, biam-dakabo, abar-kuti-bana, abar-loko'
+    glosa: '5 («mi una mano»), 10, 11 (con los dedos del pie), 20 («un hombre»)'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '417 (imagen)'
+    nota: >-
+      Coincide con Perea (pp. 565-568: abba luccu 'un hombre' = 20). El
+      -bana de abar-kuti-bana y el Yuri-banna 'hoja de tabaco' (p. 367) son
+      dos atestaciones más de una forma bana(na) lokona que no es 'cerro':
+      se anotan para el expediente de -bana (D9), sin cambiar nada.
+
+  - forma: "d'abugíci, d'augíci, d'aiyūradātu, d'atilātu, d'augitu, d'aciligíci; Dai-iyu, Wa-iyu-na-tu"
+    glosa: 'hermano mayor / menor y hermana (hablante varón); hermana mayor / menor y hermano (hablante mujer); mi madre, nuestra madre'
+    lengua: lokono
+    obra: brett-1868
+    pagina: '117 nota (imagen) y 418 (texto)'
+    nota: 'Las mismas raíces que Perea p. 556 (imagen): abuki, ittilla, yurda, ttilliki. Ver lokono-parentesco-007.'
+
+  - forma: 'tashi, tade, tara; babui, dadai, daido'
+    glosa: '«seguro» y «¡sí, claro!» según el sexo de quien habla y de quien escucha'
+    lengua: lokono
+    obra: roth-1915
+    pagina: '307 (imagen)'
+    nota: 'El OCR lee «labui»; la imagen, babui. Ver lokono-transmision-005.'
