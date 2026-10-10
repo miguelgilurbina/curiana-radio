@@ -473,10 +473,23 @@ componentes del cronista.
   sin scroll horizontal. El diccionario filtra con la fila «TODO ▮ ◆ ◇ ~» de
   44px y cada voz cierra con su etiqueta. **Un solo sistema de etiquetas**: los
   círculos de `CapaGlifo`/`CapaSello` pasan a la escala del manual.
-- **Pendiente:** la bibliografía con anclas, separar lectura de cuaderno de trabajo
-  (las líneas de sesión, rutas y hojas de fuentes del vault siguen en los
-  ensayos), el marco de imagen, el modo oscuro de lectura, el índice de certeza
-  (pide etiquetar las afirmaciones en el vault) y los experimentales §07–09.
+- **Aplicado (2026-10-07): la bibliografía** (Vistas §04;
+  `components/kaketiana/BibliografiaViva.tsx`). De la crónica a hoy en orden de
+  año; el filtro por disciplina en la fila de 44px (los grupos salen del
+  `genero` del vault, `lib/wiki.ts` `GRUPOS_BIBLIO`; lo que no tiene grupo va a
+  «Sin clasificar», nunca desaparece); cada obra como entrada del manual —el año
+  en mono y rúbrica, autor y título, `#ancla · disciplina`, lo que aporta, las
+  voces que sostiene como forma del comparatista y `[ LEER → ]`—. «Dónde está»
+  largo (notas de trabajo del vault) queda tras `[ DÓNDE ESTÁ ↓ ]`. **El Ancla**:
+  la obra a la que se llega desde una cita (`#slug`, el que generan los enlaces
+  del export) queda resaltada en rúbrica sobre papel hundido, respira una vez y
+  dice «llegaste desde una cita»; se trae a la vista sin animación porque el
+  `scroll-behavior: smooth` del sitio se cortaba con la hidratación.
+- **Pendiente:** separar lectura de cuaderno de trabajo (las líneas de sesión,
+  rutas y hojas de fuentes del vault siguen en los ensayos, y en el «dónde está»
+  de algunas obras), el marco de imagen, el modo oscuro de lectura, el índice de
+  certeza (pide etiquetar las afirmaciones en el vault) y los experimentales
+  §07–09.
 
 ---
 
