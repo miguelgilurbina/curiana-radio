@@ -840,7 +840,9 @@ se reduplica a `shishiri`, lo que queda detrás es `-bana` entero, no `-ana`.
   gente de X'**, capa **hipotética**: el topónimo sería el nombre de una gente
   pasado al lugar. No es reconstruido porque ningún `-ana` caquetío está
   glosado y el paso de gentilicio a topónimo es inferencia nuestra. Está colgada
-  como lectura en Curiana, Chamuriana, Cujicana y Jayana. **El prompt no cambia**:
+  como lectura en los cinco nombres: Paraguaná, Curiana, Chamuriana, Cujicana y
+  Jayana. En Paraguaná choca con la glosa de fuente, «Rodeada del mar», y con la
+  -aná tónica: allí la lectura lo dice y no desplaza a la glosa. **El prompt no cambia**:
   enseñarla a los agentes sería otro corte de serie y otra decisión.
 
   *Paraguana* dejó de ser su apoyo: la fuente imprime **Paraguaná** con tilde,

@@ -8,7 +8,7 @@ meta:
     descartado: 143
   con_procedencia: 244
   con_lecturas: 47
-  lecturas: 86
+  lecturas: 87
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -1975,6 +1975,23 @@ toponimos:
     ''Rodeada del mar'', que sigue abierta en #109. Ninguna fuente la llama taína: lo hizo la lista maestra
     taína (T3).'
   lecturas:
+  - tipo: hipotesis
+    lectura: '-ana ''los de X, la gente de X'' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería
+      el de una gente pasado al lugar, como Guayana; si la -aná de Paraguaná fuera este formante, se leería
+      ''los del mar'', con X = para(gua) ''mar'', que el canon ya despeja; pero la fuente glosa «Rodeada
+      del mar» y la -aná es tónica, que #109 §3 da como el dato que separaría este sufijo del -ana de
+      Curiana'
+    quien: cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel
+    fecha: '2026-10-10'
+    eje: significado
+    apoyo: lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago
+      isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml
+      §ana
+    procedencia:
+      obra: brett-1880
+      pagina: 178-179
+    veredicto: 'HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.») y EN TENSIÓN con la
+      glosa de fuente, que no desplaza; no cambia el nivel. El ''lugar de'' sigue retirado (#109)'
   - tipo: etimologia-analitica
     lectura: 'para ''agua en grandes cantidades'' (Zavala #190) + gua ''terreno cercado'' (#122) + na
       ''como, semejante'' (#184) ≈ ''a manera de tierra cercada por el mar'': explica el ''rodeada'' que

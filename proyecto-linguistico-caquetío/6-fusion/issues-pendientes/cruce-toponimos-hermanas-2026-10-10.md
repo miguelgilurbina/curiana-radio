@@ -68,8 +68,9 @@ cada candidato dice de qué línea viene, y nada más.
 
 > ✅ **Decidida el 2026-10-10: B.** Miguel: «Yo también voy por hipotética.»
 > Registro: t10.3 en `6-fusion/decisiones_tanda_2026-10-10.yaml`. Aplicada:
-> glosa hipotética en `morfema-011` y lectura en Curiana, Chamuriana, Cujicana
-> y Jayana. Paraguaná no tiene entrada en el canon de topónimos y quedó fuera.
+> glosa hipotética en `morfema-011` y lectura en los cinco nombres: Paraguaná,
+> Curiana, Chamuriana, Cujicana y Jayana. La de Paraguaná dice su tensión con la
+> glosa de fuente («Rodeada del mar») y con su -aná tónica.
 
 - **A.** Dejarlo como está: forma atestiguada **sin glosa** (#109, d21.6). El
   pase confirma que 'lugar de' no tiene base en ninguna línea y no aporta una

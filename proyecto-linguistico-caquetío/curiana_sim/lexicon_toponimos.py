@@ -2062,6 +2062,13 @@ NIVEL_C = {
                        "llama taína: lo hizo la lista maestra taína (T3).",
         "fuente": "oviedo-y-valdes-1851", "pagina": 205,
         "lecturas": [
+            {"tipo": "hipotesis",
+             "lectura": "-ana 'los de X, la gente de X' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería el de una gente pasado al lugar, como Guayana; si la -aná de Paraguaná fuera este formante, se leería 'los del mar', con X = para(gua) 'mar', que el canon ya despeja; pero la fuente glosa «Rodeada del mar» y la -aná es tónica, que #109 §3 da como el dato que separaría este sufijo del -ana de Curiana",
+             "quien": "cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel",
+             "fecha": "2026-10-10", "eje": "significado",
+             "apoyo": "lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana",
+             "procedencia": dict(obra="brett-1880", pagina="178-179"),
+             "veredicto": "HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.») y EN TENSIÓN con la glosa de fuente, que no desplaza; no cambia el nivel. El 'lugar de' sigue retirado (#109)"},
             {"tipo": "etimologia-analitica",
              "lectura": "para 'agua en grandes cantidades' (Zavala #190) + gua "
                         "'terreno cercado' (#122) + na 'como, semejante' (#184) ≈ "

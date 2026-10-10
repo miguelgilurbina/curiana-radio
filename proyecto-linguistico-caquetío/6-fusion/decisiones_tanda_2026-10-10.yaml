@@ -69,4 +69,11 @@ t10.3_D1_la_glosa_de_ana:
     - 'toponimos.yaml: ninguna entrada cambia de nivel ni de segmentación; Curiana, Chamuriana, Cujicana y Jayana siguen en su nivel'
   lo_que_la_subiria: 'un -ana caquetío usado por una fuente como nombre de GENTE, o las familias en -ana de Hilhouse con su epónimo (fuentes_a_buscar de la propuesta)'
   estado: APLICADA (2026-10-10)
-  aplicado_por: [6-fusion/scripts/aplicar_ana_hipotetica_2026-10-10.py, curiana_sim/migrar_toponimos.py]
+  aplicado_por: [6-fusion/scripts/aplicar_ana_hipotetica_2026-10-10.py, 6-fusion/scripts/colgar_lectura_ana_2026-10-10.py, curiana_sim/migrar_toponimos.py]
+  lecturas_colgadas: [paraguaná (toponimo-018), curiana (toponimo-111), chamuriana (toponimo-109), cujicana (toponimo-268), jayana (toponimo-110)]
+  error_propio_corregido: >-
+    La primera pasada (commit 70f9467) saltó Paraguaná diciendo que no tenía
+    entrada en el canon: la había buscado con un patrón que no reconoció la
+    «á». Está (toponimo-018) y es el único de los cinco con glosa de fuente,
+    «Rodeada del mar»; su lectura dice esa tensión y no desplaza la glosa.
+    Miguel lo preguntó («¿Por qué Paraguaná no entra?») y se corrigió el mismo día.
