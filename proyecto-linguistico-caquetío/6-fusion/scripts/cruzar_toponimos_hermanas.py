@@ -654,6 +654,7 @@ META = {
         "una glosa al -ana caquetío («hasta el día de hoy está solamente en Chamuriana, Jayana, "
         "Curiana, Cujicana»)."),
     "estado": "PROPUESTA (regla 5): no toca 2-lengua/, curiana_sim/, 3-mundo/ ni ningún YAML generado",
+    "obra": "varias (ver fuentes_leidas)",
     "quien": "minero del cruce (Claude Opus 5.5), rama vault/cruce-toponimos",
     "fuentes_leidas": {
         "las-casas-apologetica": "cap. VII p. 19 (Maguana); capa de texto, desfase constante pdf − 14",
@@ -749,7 +750,7 @@ ANA = {
             "con_glosa": [
                 {"nombre": "Ebesoana, Demaréna (y Korobohána)",
                  "glosa": "«From the "
-                          "“Ebesoru” (changed or transformed), heroine of the above legend, the Ebesoana (Arawak family) take their name»",
+                          "“Ebesotu” (changed or transformed), heroine of the above legend, the Ebesoana (Arawak family) take their name»",
                  "procedencia": {"obra": "brett-1880", "pagina": "178-179, notas", "visto": "imagen (minería 2, lokono-parentesco-002)"},
                  "que_hace_el_ana": "hace del nombre de la antepasada el nombre del LINAJE matrilineal: Ebesō-tu → Ebeso-ana, Demare-du → Demaré-na: 'los de X, la gente que viene de X'",
                  "separable": "sí en los dos primeros (la antepasada está nombrada en la misma nota)"},
@@ -943,7 +944,7 @@ def main():
     voces, medida_voces = cargar_voces()
     lenguas = sorted({v["lengua"] for v in voces})
     print(f"topónimos C+descartado con forma de una palabra: {len(tops)}; con algún campo de referente: "
-          f"{sum(1 for t in tops if t['campos'] or t['especies'])}")
+          f"{sum(1 for t in tops if t['campos'])}")
     print("voces cargadas:", medida_voces)
     pares = similares(tops, voces)
     print(f"pares con parecido de forma ≥ {UMBRAL_PARECIDO}: {len(pares)}")

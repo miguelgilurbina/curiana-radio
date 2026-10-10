@@ -133,3 +133,11 @@ Maorocotí equivale a Yuca Blanca, grande y poderosa, como el mar y la montaña�
 Rafinesque), no dato taíno.
 
 COMPARANDA, no dato caquetío. Detalle en `6-fusion/cosmovision_marina_2026-09-24.yaml` §comparanda.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó**, por `6-fusion/taino3_coll_y_toste_1897.yaml`, para los `-ana`
+taínos: *Maguana* «vega menor» (p. 240, de Las Casas); *Habana* 'sitio grande',
+que él parte en *ha* + *bana* 'grande' (pp. 169, 227); *Sibana* 'pedregoso' y
+*Sibanacán* 'piedras muchas' (pp. 166-167). Sin cronista detrás: conjetura de
+compilador. Sesión: [[14_cruce_toponimos_hermanas]].

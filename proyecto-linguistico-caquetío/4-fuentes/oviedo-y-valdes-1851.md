@@ -437,3 +437,9 @@ como ya sabía T1. Oviedo no nombra la nobleza de La Española.
 
 **Deuda:** lib. VI caps. II (batey) y VII-L y lib. VII caps. II-XIV, sin
 leer por las esferas.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se barrió** el vol. 1 (capa extraída al vuelo) por *Maguana* y *sabana*:
+sólo la villa de San Juan de la Maguana, sin glosa del nombre. **No se buscó**
+un `-ana` glosado en el resto de la obra. Sesión: [[14_cruce_toponimos_hermanas]].

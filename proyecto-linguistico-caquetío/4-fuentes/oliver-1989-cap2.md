@@ -405,3 +405,9 @@ ofrenda, un tabú)? Rama `campana/cosmovision-marina-2026-09-24`; propuesta en
 **Se halló:** Ninguna ventana creencia × mar.
 
 **No se halló:** Cero.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana`: los sufijos toponímicos caquetíos que lista (pp.
+148-149: *-bana, -coa, -oa, -kiva, -(e)bo, -wa*) no incluyen `-ana`; p. 150,
+*watapana* con *-pana* 'hoja, alrededor'. Sesión: [[14_cruce_toponimos_hermanas]].

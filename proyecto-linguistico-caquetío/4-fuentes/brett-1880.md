@@ -110,3 +110,11 @@ Demaréna-Korobohána.
 jefatura ni de guerra que 1868 no tenga.
 
 **Deuda.** El resto del libro, sólo por sondas.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana`: las notas de pp. 178-179 (ya vistas en imagen por la
+minería 2) derivan el nombre del linaje del de la antepasada —*Ebesō-tu* →
+*Ebeso-ana*, *Demare-du* → *Demaré-na*—. Es un `-(a)na` de GENTE, separable y
+glosado, en una hermana. Ningún nombre de lugar en `-ana` con glosa. Sesión:
+[[14_cruce_toponimos_hermanas]].

@@ -6,6 +6,7 @@ meta:
     los nombres taínos— para saber si se le puede devolver una glosa al -ana caquetío («hasta el día de hoy está
     solamente en Chamuriana, Jayana, Curiana, Cujicana»).'
   estado: 'PROPUESTA (regla 5): no toca 2-lengua/, curiana_sim/, 3-mundo/ ni ningún YAML generado'
+  obra: varias (ver fuentes_leidas)
   quien: minero del cruce (Claude Opus 5.5), rama vault/cruce-toponimos
   fuentes_leidas:
     las-casas-apologetica: cap. VII p. 19 (Maguana); capa de texto, desfase constante pdf − 14
@@ -264,7 +265,7 @@ ana:
       linea: hermana (lokonoide)
       con_glosa:
       - nombre: Ebesoana, Demaréna (y Korobohána)
-        glosa: «From the “Ebesoru” (changed or transformed), heroine of the above legend, the Ebesoana (Arawak family)
+        glosa: «From the “Ebesotu” (changed or transformed), heroine of the above legend, the Ebesoana (Arawak family)
           take their name»
         procedencia:
           obra: brett-1880

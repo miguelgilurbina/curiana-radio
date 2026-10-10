@@ -203,3 +203,15 @@ palabra por palabra; Rochefort p. 330 cuenta lo mismo con otras palabras
 siguen sin leer; para parentesco convendría barrer en imagen 1666 *femme*,
 *mari*, *mariage*, *pere*, *mere*, *frere*, *sœur*, *gendre*, *beau-pere*,
 *esclave*, *serviteur*.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se halló** el gentilicio: «Ouâitoucoubouliri, oüâitoucoubouli-na, vn
+sauuage ou habitant de la Dominique, les habitans de la Dominique. On forme
+des mots pareillement sur le nom des autres Isles, comme caloucaerari,
+caloucaera-na» (p. 416, s.v. Ouâitoucoubouli); y en la *Grammaire* de 1667
+(hoja signada G iij): los derivados en -i son masculinos (*liamaïgari*,
+*caloucaérari*) y «Les pluriers terminez en a, sont du commun» (*aichina*,
+*kaérabona*, *balaourcouna*). Isla + `-na` = 'los habitantes de X'. Ningún
+nombre de isla en `-ana`; *balanna* 'mer' es palabra entera. Capa de texto:
+ver en imagen. Sesión: [[14_cruce_toponimos_hermanas]].

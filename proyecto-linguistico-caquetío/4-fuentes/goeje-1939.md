@@ -282,3 +282,16 @@ hipótesis de 1939 contra la que se lee kalinago-parentesco-013.
 
 **Deuda.** Las pp. 35-43 siguen sin transcribir enteras (sólo las entradas
 consultadas).
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana` y para el cruce. p. 5: «Les Guayana qui ont laissé
+leur nom au pays “la Guyane”» vivían junto a la boca del Caroní, y su lengua
+era caribe (Gumilla; Raleigh y Keymis): Guayana es un etnónimo caribe, no un
+`-ana` lokono. p. 13: *magua* 'la grande plaine' / *magüana* 'la petite
+plaine' (de Las Casas) y taíno *xagueye* 'citerne naturelle' junto al
+kalinago *šauai*. Habla de mujeres: *šiba* 'pierre' y *šauai* 'côte rocheuse,
+falaise, caverne' (p. 57), *balaua* 'la mer' (p. 55): son las voces que
+empujan al kalinago por encima del azar en el cruce, y casi todas eran ya
+cognados conocidos. Cita su propio «Guayana and Carib tribal names» y a
+Williams 1923 sobre el nombre de Guiana: los dos, a buscar. Sesión: [[14_cruce_toponimos_hermanas]].

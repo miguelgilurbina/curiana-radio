@@ -312,3 +312,13 @@ Pané cap. XV (taino-creencia-103).
 behique: cero en los tramos leídos (sondas en `meta.ceros` de la propuesta).
 
 **Deuda:** caps. CC-CCIII sin releer.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se preguntó** qué hace `-ana` en los nombres taínos con glosa. **Se halló**
+la primaria de *Maguana*: «Llamaban los indios á la Vega grande Magua […] y á
+esta provincia decían con adición Maguana, cuasi la Vega menor» (cap. VII,
+p. 19 = pdf 33). Es un `-na` sobre nombre de lugar con valor de 'la menor'; la
+lista maestra taína (T10) tenía *maguana* como sólo secundaria (Goeje, Coll y
+Toste). Capa de texto: verificar en imagen antes de citar fuera. Sesión:
+[[14_cruce_toponimos_hermanas]].

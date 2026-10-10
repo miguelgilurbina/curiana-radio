@@ -181,3 +181,11 @@ Ningún mito de la luna (está en Roth).
 **Deuda.** Las partes I caps. VII-VIII y X-XII y la parte II caps. I-VIII se
 leyeron sólo por sondas `Arawak`. Hilhouse (las 27 familias) no está en el
 repo.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana` y Guayana. Ninguna de sus menciones de *Guiana* da
+etimología; p. 98, las familias lokonas (Siwidi, Karuafudi, Onisidi) y las
+veintisiete de Hilhouse, que no están en el repo; p. 485, «anakabo n
+signifying “in the midst”» frente al taíno *nacan*. *Yuri-banna* 'hoja de
+tabaco' es nombre de persona (-banna 'hoja'), no topónimo. Sesión: [[14_cruce_toponimos_hermanas]].

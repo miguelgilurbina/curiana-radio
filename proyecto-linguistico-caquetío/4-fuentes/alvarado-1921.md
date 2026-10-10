@@ -410,3 +410,14 @@ manaure». Es la homógrafa que hay que contar aparte cuando se sondea
 recoge [[moron-2012-petroglifos]]. Detalle en [[13_manaure_colombia]].
 
 **No se halló:** Cero.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se halló**, en la misma entrada MANARE (p. 200), lo que la sesión de los
+Manaure no recogió: «CULEBRA-SAPA manare. Pequeña serpiente que suele hallarse
+a orillas de las vertientes y arroyos hecha un rollo, cazando pequeños sapos
+y ranillas. Es mui ponzoñosa» (E. Portuguesa), y la «Avispa MANARE», amarilla,
+nombrada por su nido «a modo de manare». Es un referente documentado para la
+lectura de Miguel (Manare culebra), en los Llanos y sin el color de los ojos.
+MAPANARE (p. 205) describe la serpiente y su variante *mapanarí* sin dar
+etimología. **No se halló** el origen de *mapanare*. Sesión: [[14_cruce_toponimos_hermanas]].

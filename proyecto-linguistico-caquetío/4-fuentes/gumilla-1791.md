@@ -215,3 +215,10 @@ Alba da para los achaguas (HSAI pp. 402, 405): «daur» da cero en los dos tomos
 **Deuda.** Los capítulos de costumbres (matrimonio, guerra) sin «Achag-» en el
 pasaje no se leyeron; y el *Ciavinavi* de t. I p. 112, que Gilij (t. II p. 205)
 repite.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se buscó** la etimología de Guayana: nombra a la «Nación Guayana» (t. I),
+«de genio duro y belicoso», sin decir de dónde viene el nombre. El pasaje
+donde, según Goeje, emparenta su lengua con el kalina **no se localizó** en
+los dos tomos. Sesión: [[14_cruce_toponimos_hermanas]].

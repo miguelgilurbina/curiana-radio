@@ -669,3 +669,13 @@ medir con él la bifurcación de los tíos (parentesco-011).
 
 **Deuda.** Ver en imagen el resto de las voces citadas como transcripción (69
 izq., 74 der., 78 izq., 85 izq., 34 der., 49 izq., 71 der., 90 izq.).
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** (por la transcripción de `6-fusion/`) para `-ana` y para *manare*.
+*Casanare Numana* 'Boca de Casanare' (pliego 42) y *Vní numāna* 'Voca del
+Rio' (pliego 98) son *numa* 'boca' + `-na` relacional: la nota de la
+transcripción «locativo -ana» no se sostiene. *Jarrun* 'lugar' / *Jarruna*
+'espacio, sitio' (pliegos 73 y 61). De paso: *chamanare* 'iguana' (pliego 69),
+*manari-* 'calamidad, perderse' (pliegos 31, 47, 82) y *mapanarí*, una de
+cuatro **palmas** (pliego 80). Sesión: [[14_cruce_toponimos_hermanas]].

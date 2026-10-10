@@ -352,3 +352,10 @@ con los moravos: dos registros independientes del mismo pueblo
 (`lokono-parentesco-007`). Y el par *hia-ru* / *wadi-li* explica las
 terminaciones *-ro* / *-li* de los nombres de niña y de niño de
 [[roth-1915]] p. 305.
+
+## Cruce de topónimos (2026-10-10)
+
+**Se usó** para `-ana`: el `-coa-na` que nombra lugar o instrumento sobre un
+verbo (p. 561: *a-ha-cuba-coa-na* 'lugar de reposo') no forma nombres de
+lugar sobre nombres; *a-nnakù-di* 'estar en medio' (p. 647) es la hermana de
+'en medio'. Guayana sin etimología en sus menciones. Sesión: [[14_cruce_toponimos_hermanas]].

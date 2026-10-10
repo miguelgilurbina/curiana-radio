@@ -13,9 +13,9 @@ editar_a_mano: no
 > python curiana_sim/generar_bandeja.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-09**.
+<!--GENERADO--> Generado el **2026-10-10**.
 
-**8468 ítems propuestos** en 177 propuestas, más **64 issue(s)/comentario(s) redactados sin publicar**.
+**8482 ítems propuestos** en 178 propuestas, más **65 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -53,6 +53,7 @@ editar_a_mano: no
 | `cruce_taino_caquetio_2026-09-21.yaml` | ? | 180 |  |
 | `cruce_taino_caquetio_2026-09-22.yaml` | ? | 182 |  |
 | `cruce_taino_caquetio_2026-09-24.yaml` | ? | 174 |  |
+| `cruce_toponimos_hermanas_2026-10-10.yaml` | varias (ver fuentes_leidas) | 14 |  |
 | `curacion_glosas_pares_2026-09-19.yaml` | ? | 11 |  |
 | `decisiones_222_documentacion_2026-09-24.yaml` | ? | 11 |  |
 | `decisiones_222_mundo_2026-09-24.yaml` | ? | 0 |  |
@@ -251,6 +252,7 @@ con `gh issue create --body-file` / `gh issue comment --body-file`.
 | `correo-cihpma-arcaya-1995-p247-2026-09-24.md` | Correo — al CIHPMA (UNEFM, Coro): el escaneo de la p. 247 de Arcaya, *Obra inédita y dispe |
 | `cosmovision-marina-2026-09-24.md` | El mar caquetío: economía, moneda, camino, parientes y nombre, con fuente; creencia, ningu |
 | `cronicas-contacto-costa-occidental-2026-09-22.md` | La costa occidental en las crónicas del primer contacto (1499-1502) |
+| `cruce-toponimos-hermanas-2026-10-10.md` | El cruce de los topónimos con las hermanas, y qué hace `-ana` fuera del caquetío |
 | `d11-fase3-pronombres-aspectos-2026-09-23.md` | D11 fase 3: los pronombres y el aspecto, sacados del wayuu — qué forma entra en cada casil |
 | `d11-voces-wayuu-2026-09-23.md` | D11 · las voces wayuu que quedan en el habla — qué pasa con cada una |
 | `decision-d11-fase3-nucleo-lokono-achagua.md` | D11 fase 3: el núcleo re-derivado desde lokono + achagua, y un perfil de run para medirlo |
