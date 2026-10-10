@@ -171,5 +171,22 @@ morfemas:
     del mar» en Esteves p. 56) y Curiana no tiene glosa de fuente. Censo de Esteves: 13 formas en -ana,
     6 son -bana, 1 es -bana con h (Capuhana), 2 llevan el -ana en la raíz, 4 sin glosa, 0 ''lugar de''.
     Compite con na ''como, semejante'' (Zavala #184) y con -ná tónica de Paraguaná. Excluye -bana (#38,
-    resuelto) y los -ana dentro de raíz (guariana, maracapana). El motor conserva -ana ''lugar de'' como
-    convención de la simulación (canon-simulación), no como dato.'
+    resuelto) y los -ana dentro de raíz (guariana, maracapana). Desde d21.6 (2026-09-21) el motor la enseña
+    SIN glosa, como -ubana y -uru.'
+  glosa_hipotetica: los de X, la gente de X (colectivo de gente; en el topónimo, el nombre de una gente
+    pasado al lugar, como Guayana)
+  capa_de_la_glosa: hipotetico
+  apoyo_comparado:
+  - 'lokono (hermana): el linaje matrilineal toma el nombre de la antepasada, Ebesō-tu → Ebeso-ana, Demare-du
+    → Demaré-na (Brett 1880, pp. 178-179); el sufijo se separa'
+  - 'kalinago (hermana, sustrato iñeri): gentilicio plural isla + -na, Ouâitoucoubouli-na ''los de Dominica''
+    (Breton 1665 p. 416 y Grammaire 1667, hoja G iij); leído en la capa de texto, falta verlo en imagen'
+  - 'Guayana: el país toma el nombre de los Guayana, un pueblo de lengua caribe (Goeje 1939 p. 5); la
+    «tierra de muchas aguas» no tiene fuente en el repo'
+  no_la_apoyan:
+  - 'achagua (prima): el «locativo -ana» de la transcripción es el -na relacional de numa ''boca'' (Numana
+    ''boca de Casanare'')'
+  - 'taíno: su único caso, Maguana ''cuasi la Vega menor'' (Las Casas, Apologética cap. VII p. 19), es
+    otra función'
+  decision: t10.3 (2026-10-10), opción B de la D1 de 6-fusion/issues-pendientes/cruce-toponimos-hermanas-2026-10-10.md;
+    propuesta en 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml §ana

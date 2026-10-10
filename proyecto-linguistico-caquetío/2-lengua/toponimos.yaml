@@ -7,8 +7,8 @@ meta:
     C: 110
     descartado: 143
   con_procedencia: 244
-  con_lecturas: 45
-  lecturas: 82
+  con_lecturas: 47
+  lecturas: 86
   con_definicion_aceptada: 0
   corroboraciones_del_lexicon: 17
   nota: 'El nivel de confianza es un CAMPO, no un contenedor: antes eran NIVEL_A/B/C separados y para
@@ -1702,6 +1702,22 @@ toponimos:
     (lectura de abajo) son TRES Curianas en tres costas: la del rescate de perlas (Cumaná y Cariaco),
     la de Coro y la de La Ramada.'
   lecturas:
+  - tipo: hipotesis
+    lectura: '-ana ''los de X, la gente de X'' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería
+      el de una gente pasado al lugar, como Guayana; X = curi-/cori-, sin glosa acordada (avispa, lagartija,
+      espina o cardón: ver las otras lecturas); y Curiana nombra a la vez el pueblo y la costa (Arcaya
+      p. 169)'
+    quien: cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel
+    fecha: '2026-10-10'
+    eje: significado
+    apoyo: lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago
+      isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml
+      §ana
+    procedencia:
+      obra: brett-1880
+      pagina: 178-179
+    veredicto: 'HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel.
+      El ''lugar de'' sigue retirado (#109)'
   - tipo: etimologia-analitica
     lectura: coro 'espina' → Coriana 'tierra de las espinas, o la tierra del espinar, de vegetación espinosa,
       e indirectamente, tierra de cardones' (con paragua 'mar' + na 'tierra' = Paraguaná como paralelo);
@@ -2617,6 +2633,21 @@ toponimos:
     la da como franciscana. Con Moruy, Cayerúa y Maitiruma orbita el Capubana: el otro nodo de la era
     2.'
   lecturas:
+  - tipo: hipotesis
+    lectura: '-ana ''los de X, la gente de X'' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería
+      el de una gente pasado al lugar, como Guayana; X = chamur-, sin glosa (el canon segmenta chamur-
+      + -iana)'
+    quien: cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel
+    fecha: '2026-10-10'
+    eje: significado
+    apoyo: lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago
+      isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml
+      §ana
+    procedencia:
+      obra: brett-1880
+      pagina: 178-179
+    veredicto: 'HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel.
+      El ''lugar de'' sigue retirado (#109)'
   - tipo: tradicion-local
     lectura: «elegida por los nativos debido a la abundancia de agua dulce que bajaba del cerro»
     quien: crónica local, recogida por Miguel
@@ -4193,6 +4224,21 @@ toponimos:
   razon: 'Esteves da referente, censo e historia, pero ninguna glosa propia: solo la etimología popular,
     que él mismo relativiza. Sin ecuación bilingüe no hay morfema que despejar; se registra para que la
     campaña no lo vuelva a abrir sin dato nuevo.'
+  lecturas:
+  - tipo: hipotesis
+    lectura: '-ana ''los de X, la gente de X'' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería
+      el de una gente pasado al lugar, como Guayana; X = jay-, sin glosa'
+    quien: cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel
+    fecha: '2026-10-10'
+    eje: significado
+    apoyo: lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago
+      isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml
+      §ana
+    procedencia:
+      obra: brett-1880
+      pagina: 178-179
+    veredicto: 'HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel.
+      El ''lugar de'' sigue retirado (#109)'
   forma_viva:
   - forma: Nueva Jayama
     tipo: poblado
@@ -4838,6 +4884,21 @@ toponimos:
   razon: Esteves da referente, a veces censo y forma documental, pero ninguna etimología; y ningún morfema
     del canon alinea sin forzar. Los formantes que se ven se anotan, sin subirlos.
   observacion: antiguo potrero de Carirubana, hoy zona residencial de Punto Fijo; -ana sin glosa (#109)
+  lecturas:
+  - tipo: hipotesis
+    lectura: '-ana ''los de X, la gente de X'' (glosa HIPOTÉTICA de morfema-011 (t10.3)): el nombre sería
+      el de una gente pasado al lugar, como Guayana; X = cujic-, sin glosa'
+    quien: cruce de topónimos con las hermanas (2026-10-10), adoptada como hipotética por Miguel
+    fecha: '2026-10-10'
+    eje: significado
+    apoyo: lokono Ebeso-ana, el linaje con el nombre de la antepasada (Brett 1880 pp. 178-179); kalinago
+      isla + -na 'los habitantes' (Breton 1665 p. 416, falta verlo en imagen); 6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml
+      §ana
+    procedencia:
+      obra: brett-1880
+      pagina: 178-179
+    veredicto: 'HIPOTÉTICA (Miguel, 2026-10-10: «Yo también voy por hipotética.»); no cambia el nivel.
+      El ''lugar de'' sigue retirado (#109)'
   procedencia:
     obra: esteves-1989
     pagina: 32

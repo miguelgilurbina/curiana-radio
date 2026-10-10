@@ -66,6 +66,11 @@ cada candidato dice de qué línea viene, y nada más.
 
 ### D1 · La glosa de `-ana` (la principal)
 
+> ✅ **Decidida el 2026-10-10: B.** Miguel: «Yo también voy por hipotética.»
+> Registro: t10.3 en `6-fusion/decisiones_tanda_2026-10-10.yaml`. Aplicada:
+> glosa hipotética en `morfema-011` y lectura en Curiana, Chamuriana, Cujicana
+> y Jayana. Paraguaná no tiene entrada en el canon de topónimos y quedó fuera.
+
 - **A.** Dejarlo como está: forma atestiguada **sin glosa** (#109, d21.6). El
   pase confirma que 'lugar de' no tiene base en ninguna línea y no aporta una
   glosa caquetía.

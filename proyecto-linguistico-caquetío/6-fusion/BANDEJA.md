@@ -15,7 +15,7 @@ editar_a_mano: no
 
 <!--GENERADO--> Generado el **2026-10-10**.
 
-**8482 ítems propuestos** en 178 propuestas, más **65 issue(s)/comentario(s) redactados sin publicar**.
+**8483 ítems propuestos** en 179 propuestas, más **65 issue(s)/comentario(s) redactados sin publicar**.
 
 ## Propuestas de datos (`6-fusion/*.yaml`)
 
@@ -72,6 +72,7 @@ editar_a_mano: no
 | `decisiones_tanda_2026-09-17.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-19.yaml` | ? | 0 |  |
 | `decisiones_tanda_2026-09-21.yaml` | ? | 0 |  |
+| `decisiones_tanda_2026-10-10.yaml` | ? | 0 |  |
 | `decisiones_tanda_final_2026-09-23.yaml` | ? | 0 |  |
 | `decisiones_tanda_hermanas_2026-09-24.yaml` | ? | 0 |  |
 | `descastellanizar_esfera_2026-09-18.yaml` | ? | 6 |  |
@@ -231,7 +232,7 @@ falsa y se corrigió). Entradas contadas por patrón de dict.
 | `lexicon_alvarado.py` | alvarado-1921 | 218 | lo importan generar_tablero y auditar_82 |
 | `lexicon_gatschet.py` | gatschet-1885 | 88 | lo importan generar_tablero y auditar_82 |
 | `lexicon_van_buurt.py` | van-buurt-2014 | 231 | lo importan generar_tablero y auditar_82 |
-| `lexicon_toponimos.py` | varias (F11) | 274 | lo importa migrar_toponimos |
+| `lexicon_toponimos.py` | varias (F11) | 275 | lo importa migrar_toponimos |
 | `lexicon_candidatos.py` | aisladas 2026-06-28 | 441 | lo importa generar_tablero |
 | `lexicon_perea.py` | perea-alonso-1942 | 173 | comparanda lokono; el motor NO lo importa a propósito (ver su cabecera) |
 

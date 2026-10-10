@@ -355,7 +355,9 @@ Atributivo: ka- (hay X, tiene X) / privativo ma- (sin X) — NO son posesivos:
 Locativos:  -bana (cerro, sitio alto — D9 resuelta 2026-08-31, seis apoyos;
             homónimo de bana 'hígado' reconstruido), -ana (forma atestiguada,
             glosa 'lugar de' RETIRADA el 2026-09-07 — #109; desde d21.6 se
-            enseña SIN GLOSA, como -ubana y -uru), -wa (la `-gua` de las
+            enseña SIN GLOSA, como -ubana y -uru; desde t10.3, 2026-10-10,
+            el canon le cuelga la glosa HIPOTÉTICA 'los de X, la gente de X',
+            de lokono y kalinago, que el prompt todavía no enseña), -wa (la `-gua` de las
             fuentes: sufijo toponímico en Oliver 1989 cap. 2 p. 148, sin valor
             anotado; la glosa 'región' no tenía fuente y desde la tanda de la
             base se enseña SIN GLOSA, junto a -ana — dc.2 C + E)

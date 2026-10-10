@@ -826,6 +826,23 @@ se reduplica a `shishiri`, lo que queda detrás es `-bana` entero, no `-ana`.
   los agentes propongan la glosa, que es para lo que existe esta simulación. Uso
   actual: **290 sobre 53 raíces**. **[aplicado en el corte 13]**
 
+  **2026-10-10 — una glosa hipotética, de las hermanas** (t10.3 en
+  `6-fusion/decisiones_tanda_2026-10-10.yaml`; Miguel: «Yo también voy por
+  hipotética.»). El cruce de los topónimos con las hermanas
+  (`6-fusion/cruce_toponimos_hermanas_2026-10-10.yaml` §ana) confirmó que nadie
+  glosa un `-ana` como 'lugar de', y encontró en dos hermanas lokonoides un
+  `-(a)na` de **gente**: el linaje lokono toma el nombre de la antepasada
+  (*Ebesō-tu* → *Ebeso-ana*, [[brett-1880]] pp. 178-179) y el kalinago forma el
+  gentilicio plural con isla + *-na* ([[breton-1665]] p. 416, falta verlo en
+  imagen). Guayana es lo mismo visto desde fuera: el nombre de un pueblo de
+  lengua caribe pasado al país ([[goeje-1939]] p. 5). `morfema-011` sigue **sin
+  glosa de fuente caquetía** y lleva al lado la glosa candidata **'los de X, la
+  gente de X'**, capa **hipotética**: el topónimo sería el nombre de una gente
+  pasado al lugar. No es reconstruido porque ningún `-ana` caquetío está
+  glosado y el paso de gentilicio a topónimo es inferencia nuestra. Está colgada
+  como lectura en Curiana, Chamuriana, Cujicana y Jayana. **El prompt no cambia**:
+  enseñarla a los agentes sería otro corte de serie y otra decisión.
+
   *Paraguana* dejó de ser su apoyo: la fuente imprime **Paraguaná** con tilde,
   la glosa «Rodeada del mar» no despeja con 'lugar de', y existe la segmentación
   alternativa `para` + `gua` 'terreno cercado' + `ná` (los tres atestiguados en

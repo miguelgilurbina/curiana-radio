@@ -13,7 +13,7 @@ editar_a_mano: no
 > python curiana_sim/generar_tablero.py
 > ```
 
-<!--GENERADO--> Generado el **2026-10-05 01:39**.
+<!--GENERADO--> Generado el **2026-10-10 15:04**.
 
 ## ¿Vamos bien?
 
@@ -143,24 +143,25 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 
 Índice: [[INDICE_FUENTES]]. **La nota de cada obra es la fuente de verdad**; esta tabla lee su frontmatter (`estado_minado`, `prioridad`, `capa_texto`, `sostiene`), no una lista cableada.
 
-**113 notas de obra.**
+**121 notas de obra.**
 
 | `estado_minado` | n |
 |---|---|
-| minado | 52 |
-| parcial | 26 |
+| minado | 54 |
+| parcial | 21 |
+| minado-parcial | 16 |
 | no-disponible | 11 |
-| sin-minar | 7 |
-| minada-parcial | 7 |
 | segunda-mano | 5 |
+| sin-minar | 5 |
+| minada-parcial | 4 |
 | puntual | 2 |
 | dictado-terminado | 1 |
 | en-curso | 1 |
 | completo-con-reserva | 1 |
 
-**Prioridad ALTA sin minar (24):** [[acasio-2023-capubana-calendario]] (`sin-minar`), [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minada-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[van-koolwijk-1882]] (`sin-minar`), [[zavala-reyes-2015-petroglifos]] (`sin-minar`), [[zavala-reyes-2015]] (`completo-con-reserva`).
+**Prioridad ALTA sin minar (22):** [[ampies-1526-carta]] (`parcial`), [[angleria-1892]] (`parcial`), [[angulo-molina]] (`no-disponible`), [[arcaya-obra-inedita-1995]] (`no-disponible`), [[bachiller-morales-1883]] (`parcial`), [[ballesteros-1550]] (`segunda-mano`), [[brito-figueroa-poblacion-economia]] (`no-disponible`), [[castellanos-elegias]] (`parcial`), [[esteves-1989]] (`parcial`), [[fabo-1911]] (`minada-parcial`), [[federmann-1916]] (`parcial`), [[goeje-1939]] (`minado-parcial`), [[gonzalez-batista-nombre-de-coro]] (`parcial`), [[medina-colina-sxx]] (`dictado-terminado`), [[navarrete-1829-viages-menores]] (`parcial`), [[navarrete-1859-viages-colon]] (`parcial`), [[oliver-1989-apendice-a]] (`parcial`), [[oliver-1989-cap4]] (`parcial`), [[oviedo-y-valdes-1851]] (`minado-parcial`), [[oviedo-y-valdes-1852-1855]] (`minada-parcial`), [[zavala-reyes-2015-petroglifos]] (`sin-minar`), [[zavala-reyes-2015]] (`completo-con-reserva`).
 
-<details><summary>Las 113 notas, una por fila</summary>
+<details><summary>Las 121 notas, una por fila</summary>
 
 | Nota | minado | prioridad | capa texto | lexicón (declarado) | lexicón (medido) | hechos corpus |
 |---|---|---|---|---|---|---|
@@ -186,7 +187,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[angleria-1892]] | parcial | alta | si | 0 | 0 | 1 |
 | [[oviedo-y-banos]] | minado | baja | si | 0 | 1 | 1 |
 | [[van-buurt-2014]] | minado | alta | si | 0 | 14 | 1 |
-| [[acasio-2023-capubana-calendario]] | sin-minar | alta | si | 0 | 0 | 0 |
+| [[acasio-2023-capubana-calendario]] | minado | alta | si | 0 | 0 | 0 |
 | [[aguado-1581]] | parcial | media | si | 0 | 0 | 0 |
 | [[ampies-1526-carta]] | parcial | alta | si | 0 | 0 | 0 |
 | [[angulo-molina]] | no-disponible | alta | no | 0 | 3 | 0 |
@@ -199,7 +200,10 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[bachiller-morales-1883]] | parcial | alta | si | 0 | 0 | 0 |
 | [[barrios-garrido-2018]] | parcial | media | si | 0 | 0 | 0 |
 | [[bisbal-1990]] | parcial | media | web | 0 | 0 | 0 |
-| [[breton-1665]] | parcial | media | mala | 0 | 0 | 0 |
+| [[bourne-1906]] | minado-parcial | — | si | 0 | 0 | 0 |
+| [[breton-1665]] | minado-parcial | media | mala | 0 | 0 | 0 |
+| [[brett-1868]] | minado-parcial | — | si | 0 | 0 | 0 |
+| [[brett-1880]] | minado-parcial | — | si | 0 | 0 | 0 |
 | [[brett-martinez-aquella-paraguana]] | no-disponible | media | no | 0 | 0 | 0 |
 | [[brito-figueroa-poblacion-economia]] | no-disponible | alta | no | 0 | 0 | 0 |
 | [[carvajal-1892]] | parcial | baja | no — el PDF es sólo imagen; el .txt es el OCR del ítem de archive.org (djvu.txt), sin saltos de página: sirve para LOCALIZAR, la cita se saca de la imagen | 0 | 1 | 0 |
@@ -207,9 +211,11 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[castellanos-elegias]] | parcial | alta | si | 0 | 7 | 0 |
 | [[castellanos-nuevo-reino-1886]] | minada-parcial | baja | si | 0 | 7 | 0 |
 | [[coll-y-toste-1897]] | parcial | media | no | 0 | 7 | 0 |
-| [[colon-hernando-1892]] | parcial | media | si | 0 | 0 | 0 |
+| [[colon-hernando-1892]] | minado-parcial | media | si | 0 | 0 | 0 |
 | [[cook-forrest-2005]] | minado | baja | si | 0 | 0 | 0 |
+| [[davies-1666]] | minado-parcial | media | si | 0 | 0 | 0 |
 | [[dijkhoff-1997]] | minado | alta | si | 0 | 0 | 0 |
+| [[du-tertre-1667]] | minado-parcial | media | si | 0 | 0 | 0 |
 | [[esteves-1989]] | parcial | alta | ocr | 0 | 0 | 0 |
 | [[fabo-1911]] | minada-parcial | alta | si | 0 | 0 | 0 |
 | [[federmann-1916]] | parcial | alta | si | 0 | 1 | 0 |
@@ -218,12 +224,12 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[fishsounds]] | parcial | media | web | 0 | 0 | 0 |
 | [[gbif-aves-paraguana-2026]] | minado | alta | datos | 0 | 0 | 0 |
 | [[gbif-paraguana-2026]] | minado | media | web | 0 | 0 | 0 |
-| [[gilij-1780-1783]] | parcial | baja | no | 0 | 0 | 0 |
-| [[goeje-1939]] | parcial | alta | si | 0 | 32 | 0 |
+| [[gilij-1780-1783]] | minado-parcial | baja | si | 0 | 0 | 0 |
+| [[goeje-1939]] | minado-parcial | alta | si | 0 | 32 | 0 |
 | [[gonzalez-batista-2002-fundacion]] | minado | media | si | 0 | 2 | 0 |
 | [[gonzalez-batista-nombre-de-coro]] | parcial | alta | no | 0 | 2 | 0 |
 | [[granberry-vescelius-2004]] | no-disponible | media | no | 0 | 0 | 0 |
-| [[gumilla-1791]] | minada-parcial | baja | si | 0 | 0 | 0 |
+| [[gumilla-1791]] | minado-parcial | baja | si | 0 | 0 | 0 |
 | [[haviser-1990]] | minado | media | si | 0 | 0 | 0 |
 | [[haviser-strecker-2006]] | sin-minar | baja | si | 0 | 0 | 0 |
 | [[knaf-2021]] | minado | baja | si | 0 | 0 | 0 |
@@ -251,7 +257,7 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[oliver-1989-cap4]] | parcial | alta | ocr | 0 | 20 | 0 |
 | [[oliver-2000-guanin]] | no-disponible | media | no-disponible | 0 | 20 | 0 |
 | [[osm-kaketiana]] | en-curso | media | datos | 0 | 0 | 0 |
-| [[oviedo-y-valdes-1851]] | minada-parcial | alta | si | 0 | 4 | 0 |
+| [[oviedo-y-valdes-1851]] | minado-parcial | alta | si | 0 | 4 | 0 |
 | [[oviedo-y-valdes-1852-1855]] | minada-parcial | alta | si | 0 | 2 | 0 |
 | [[pane-c1498]] | minado | alta | si | 0 | 3 | 0 |
 | [[perea-alonso-1942]] | minado | alta | si | 0 | 29 | 0 |
@@ -260,16 +266,19 @@ Las obras que no aparecen tienen **penetración cero** en el lexicón. Entradas 
 | [[polar-el-maiz-glosario]] | puntual | baja | si | 0 | 0 | 0 |
 | [[queffelec-2024]] | minado | media | si | 0 | 0 | 0 |
 | [[ramos-perez-1978]] | no-disponible | baja | archivo-vacio | 0 | 0 | 0 |
-| [[rivero-1883]] | parcial | media | no — el PDF es sólo imagen; el .txt es el OCR del ítem de archive.org (djvu.xml) pasado a texto con un salto de página por hoja, así que la página del PDF se cuenta como con pdftotext | 0 | 0 | 0 |
+| [[rivero-1883]] | minado-parcial | media | no — el PDF es sólo imagen; el .txt es el OCR del ítem de archive.org (djvu.xml) pasado a texto con un salto de página por hoja, así que la página del PDF se cuenta como con pdftotext | 0 | 0 | 0 |
+| [[rochefort-1658]] | minado-parcial | media | si | 0 | 0 | 0 |
 | [[romero-mayayo-agudo-1991]] | parcial | media | no (escaneo); se leyó con OCR (ocr_fuente.py --lang spa --offset 168) y las páginas citadas se verificaron en imagen. El OCR tampoco se sube: es el texto entero de una obra con derechos | 0 | 0 | 0 |
 | [[rondon-medicci-2013]] | minado | alta | si | 0 | 0 | 0 |
+| [[roth-1915]] | minado-parcial | — | si | 0 | 0 | 0 |
 | [[rouse-cruxent-1963]] | no-disponible | media | archivo-vacio | 0 | 0 | 0 |
 | [[schroeder-2018]] | minado | media | si | 0 | 0 | 0 |
 | [[sherwood-gianni-zurita-2023]] | minado | alta | si | 0 | 0 | 0 |
-| [[steward-1948-hsai-4]] | minada-parcial | media | si | 0 | 0 | 0 |
+| [[steward-1948-hsai-4]] | minado-parcial | media | si | 0 | 0 | 0 |
 | [[steward-1949]] | minada-parcial | baja | si | 0 | 0 | 0 |
+| [[ulloa-1571]] | minado-parcial | — | si | 0 | 0 | 0 |
 | [[urbina-jimenez-2007-2011]] | minado | alta | si | 0 | 0 | 0 |
-| [[van-koolwijk-1882]] | sin-minar | alta | si | 0 | 0 | 0 |
+| [[van-koolwijk-1882]] | minado | alta | si | 0 | 0 | 0 |
 | [[velasco-2015-resistencia]] | minado | alta | si | 0 | 0 | 0 |
 | [[wagenaar-hummelinck-1953]] | sin-minar | media | si | 0 | 0 | 0 |
 | [[wagenaar-hummelinck-1962]] | sin-minar | media | si | 0 | 0 | 0 |
@@ -360,7 +369,7 @@ Las simulaciones están **en pausa** ([[PLAN_MAESTRO]] §0). Se reanudan cuando 
 
 |  | Medido |  |
 |---|---|---|
-| Wikilinks | 1605 en 888 notas indexadas | 🟢 0 rotos |
+| Wikilinks | 2217 en 966 notas indexadas | 🟢 0 rotos |
 | Tests (`curiana_sim/tests/`) | 1129 passed, 0 failed | 🟢 |
 | Canon ↔ polity simulada | 2 aviso(s) — ver abajo | 🟡 |
 
